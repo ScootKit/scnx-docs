@@ -1,0 +1,22 @@
+{
+  "name": "SCNX Documentation",
+  "short_name": "SCNX Docs",
+  "theme_color": "#4ADE80",
+  "background_color": "#23304a",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://docs.scootkit.net"
+    }
+  ],
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ]
+}
