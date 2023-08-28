@@ -20,7 +20,7 @@ scopes"), you can find the answere [in our FAQ](./scnx/account-and-billing/faq#d
 
 ![](assets/setup/setup-1.png)
 
-## 2. Add the server to SCNX
+## 2. Add the server to SCNX {#step-2}
 
 Next, you'll see the [server overview page](https://scnx.app/user/guilds). Here you can see all servers you have access
 to. Select the server you want to set up SCNX on.
@@ -32,7 +32,7 @@ visible in the dashboard, refresh the server list using the "Refresh data" butto
 :::
 ![](assets/setup/setup-2.png)
 
-## 3. Add the SCNX Bot to your server
+## 3. Add the SCNX Bot to your server {#step-3}
 
 Next, you'll need to add the SCNX Bot to your server. This bot allows our Dashboard to work and is able
 to [create server backups](./scnx/guilds/backups), [show analytics into your server](./scnx/guilds/analytics) and
@@ -46,7 +46,7 @@ SCNX).
 
 Next, return to SCNX and click on "Done, check again" to continue the setup process.
 
-## 4. Accept our Terms of Service & Privacy Policy
+## 4. Accept our Terms of Service & Privacy Policy {#step-4}
 
 To finish setup, you'll need to to agree to our [SCNX Terms of Service](https://sc-net.work/scnx-tos)
 and [SCNX Privacy Note](https://sc-net.work/scnx-privacy). These documents contain important information about how you
@@ -54,7 +54,7 @@ can use SCNX and how we will process data (tl;dr: We only process data to provid
 
 ![](assets/setup/setup-4.png)
 
-## 5. You are done
+## 5. You are done {#step-5}
 
 Your server has been successfully added to SCNX :tada:
 You can now start by [creating your own bot](custom-bot) or [modmail-bot](modmail) or explore all features on your own -

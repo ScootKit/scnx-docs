@@ -4,6 +4,8 @@
   "collapsible": true,
   "collapsed": false,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "title": "Servers on SCNX",
+    "description": "Servers are the main way you'll interact with SCNX: You can add as many as you like and each of them will be able to create their own Discord-Bots."
   }
 }
