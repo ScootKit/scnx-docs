@@ -41,7 +41,7 @@ const config = {
             announcementBar: {
                 id: 'wip',
                 content:
-                    'This documentation is currently work in progress and it does not yet meet our high quality expectations. Thank you for your understanding.',
+                    'This documentation is currently work in progress, and it does not yet meet our high quality expectations - we\'ll fix that in the followings weeks and add localization. For now, please use resources on <a href="https://faq.scnx.app">faq.scnx.app</a> or on our <a href="https://scootk.it">Discord</a>. Thank you for your understanding.',
                 backgroundColor: '#B45309',
                 textColor: '#fff',
                 isCloseable: false
