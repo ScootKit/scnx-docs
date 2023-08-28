@@ -1,0 +1,9 @@
+{
+  "position": 2,
+  "label": "Servers",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index"
+  }
+}
