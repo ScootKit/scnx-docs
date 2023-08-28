@@ -43,7 +43,8 @@ Here are a few possible reasons why this is happening:
 * Our payment provided deemed your transaction as high-risk and has denied it
 * Your card has been reported as stolen
 * You card could not be verified using 3DS
-  Please [contact our staff](https://scnx.app/help) if you think non of these reasons apply.
+
+Please [contact our staff](https://scnx.app/help) if you think none of these reasons apply.
 
 ## Other questions
 
