@@ -22,6 +22,12 @@ The reason for it is that hosting more bots would be very expensive for us, but 
 design of SCNX:
 We designed our system to replace often multiple generic bots on a server by one, custom bot.
 
+## Can I remove the SCNX Manager Bot? {#scnx-manager-bot}
+
+No. The SCNX Manager bot is needed for your dashboard to work. But if you are not interested in
+using [analytics](./analytics) or [backups](./backups) on your server, you can remove the "View Channel"
+permission on every channel from the bot - this hides the SCNX Bot from the member-list.
+
 ## What counts as commercial usage? {#commercial-usage}
 
 To use SCNX in any commercial manner or situation, you'll need to purchase the [SCNX PRO Plan](https://scnx.xyz/plans).
