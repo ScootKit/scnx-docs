@@ -26,7 +26,7 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     editUrl:
-                        'https://github.com/ScootKit/scnx-docs/tree/main/docs'
+                        'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')
