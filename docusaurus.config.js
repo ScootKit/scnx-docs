@@ -16,6 +16,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
+    scripts: [{src: 'https://analytics.scootkit.net/js/script.js', defer: true, 'data-domain': 'docs.scnx.xyz'}],
     presets: [
         [
             'classic',
@@ -183,13 +184,6 @@ const config = {
         }),
     plugins: [
         '@cmfcmf/docusaurus-search-local',
-        [
-            'docusaurus-plugin-plausible',
-            {
-                domain: 'docs.scnx.xyz',
-                customDomain: 'analytics.scootkit.net'
-            }
-        ],
         [
             '@docusaurus/plugin-pwa',
             {
