@@ -78,7 +78,7 @@ const config = {
                         label: 'Modmail'
                     },
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        href: 'https://github.com/ScootKit/scnx-docs',
                         label: 'GitHub',
                         position: 'right'
                     },
