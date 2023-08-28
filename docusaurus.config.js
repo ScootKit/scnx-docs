@@ -23,6 +23,8 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/docs'
                 },
