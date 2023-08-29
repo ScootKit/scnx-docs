@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Frequently asked questions
 
 ## Billing related {#billing}
