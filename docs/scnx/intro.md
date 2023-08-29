@@ -53,6 +53,10 @@ questions you might have.
 * [ScootKit Merch Store](https://scnx.app/user/merch): Purchase physical SCNX Merch.
 * [Feature Board](https://features.sc-network.net): Suggest new features for SCNX Products.
 * SCNX Marketplace: A system for third-parties to integrate new and existing products into SCNX.
+* [SCNX Documentation](/): This documentation aimed to explain as many features of SCNX in detail as possible.
+* [SCNX FAQ](https://faq.scnx.app): Legacy articles about a few topics on SCNX (mostly used for legal stuff). Previosly
+  used as documentation and was replaced by this newer site.
+* [scnx.tips](https://scnx.tips): Helpful tips, guides & ticks about SCNX and Discord.
 * SCNX Dynamic Image Generation: A system to generate dynamic images for your bots.
 * [ScootKit Paste](https://paste.scootkit.net): A pastebin-like system to store pasted unencrypted. Used by your bot to
   store, for example, logs or ticket transcripts.
