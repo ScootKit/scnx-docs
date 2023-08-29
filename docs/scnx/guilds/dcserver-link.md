@@ -5,7 +5,8 @@ sidebar_position: 4
 # dcserver.link
 
 :::info Beta-Alert
-This documentation is for a unreleased product that is only available for a certain number of servers on SCNX. Check our [server settings page](https://scnx.app/glink?page=settings) on SCNX to see if you can use dcserver.link URLs.
+This documentation is for a unreleased product that is only available for a certain number of servers on SCNX. Check
+your [server settings page](https://scnx.app/glink?page=settings) on SCNX to see if you can use dcserver.link URLs.
 :::
 
 Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`).
