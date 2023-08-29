@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Dokumentation",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "SCNX Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Getting started": {
+    "message": "Loslegen",
+    "description": "Navbar item with label Getting started"
+  },
+  "item.label.SCNX": {
+    "message": "SCNX",
+    "description": "Navbar item with label SCNX"
+  },
+  "item.label.CustomBot": {
+    "message": "Eigener Bot",
+    "description": "Navbar item with label CustomBot"
+  },
+  "item.label.Modmail": {
+    "message": "Modmail",
+    "description": "Navbar item with label Modmail"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

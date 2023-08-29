@@ -46,7 +46,7 @@ questions you might have.
 
 ## Other (behind-the-scenes) parts of SCNX {#behinde-the-scenes}
 
-:::info
+:::note
 [ScootKit](https://scootkit.net) is a German-based company running SCNX and other service-as-a-service products.
 :::
 

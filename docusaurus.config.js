@@ -26,6 +26,7 @@ const config = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
+                    editLocalizedFiles: true,
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
@@ -161,7 +162,7 @@ const config = {
                                 href: 'https://scnx.app/help'
                             },
                             {
-                                label: 'Open SCNX Dashboard?',
+                                label: 'Open SCNX Dashboard',
                                 href: 'https://scnx.app/'
                             },
                             {

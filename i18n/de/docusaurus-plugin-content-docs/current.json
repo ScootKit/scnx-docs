@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.startSidebar.category.Getting Started": {
+    "message": "Getting Started",
+    "description": "The label for category Getting Started in sidebar startSidebar"
+  },
+  "sidebar.startSidebar.category.Getting Started.link.generated-index.title": {
+    "message": "Getting started on SCNX",
+    "description": "The generated-index page title for category Getting Started in sidebar startSidebar"
+  },
+  "sidebar.startSidebar.category.Getting Started.link.generated-index.description": {
+    "message": "Easily get started on SCNX - here you'll find all guides you need",
+    "description": "The generated-index page description for category Getting Started in sidebar startSidebar"
+  },
+  "sidebar.startSidebar.category.Detailed documentation": {
+    "message": "Detailed documentation",
+    "description": "The label for category Detailed documentation in sidebar startSidebar"
+  },
+  "sidebar.startSidebar.doc.Custom-Bot": {
+    "message": "Custom-Bot",
+    "description": "The label for the doc item Custom-Bot in sidebar startSidebar, linking to the doc custom-bot/intro"
+  },
+  "sidebar.startSidebar.doc.SCNX": {
+    "message": "SCNX",
+    "description": "The label for the doc item SCNX in sidebar startSidebar, linking to the doc scnx/intro"
+  },
+  "sidebar.startSidebar.doc.Modmail-Bot": {
+    "message": "Modmail-Bot",
+    "description": "The label for the doc item Modmail-Bot in sidebar startSidebar, linking to the doc modmail/intro"
+  },
+  "sidebar.scnxSidebar.category.Servers": {
+    "message": "Servers",
+    "description": "The label for category Servers in sidebar scnxSidebar"
+  },
+  "sidebar.scnxSidebar.category.Servers.link.generated-index.title": {
+    "message": "Servers on SCNX",
+    "description": "The generated-index page title for category Servers in sidebar scnxSidebar"
+  },
+  "sidebar.scnxSidebar.category.Servers.link.generated-index.description": {
+    "message": "Servers are the main way you'll interact with SCNX: You can add as many as you like and each of them will be able to create their own Discord-Bots.",
+    "description": "The generated-index page description for category Servers in sidebar scnxSidebar"
+  },
+  "sidebar.scnxSidebar.category.User Accounts & Billing": {
+    "message": "User Accounts & Billing",
+    "description": "The label for category User Accounts & Billing in sidebar scnxSidebar"
+  }
+}
