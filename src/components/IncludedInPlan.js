@@ -4,7 +4,8 @@ import Link from '@docusaurus/Link';
 
 export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
     return <div className="card padding--md margin-bottom--md">
-        <p style={{fontWeight: 700, textTransform: 'uppercase'}}><Translate id="plans.included.header">Included in these
+        <p style={{fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.4rem'}}><Translate
+            id="plans.included.header">Included in these
             plans</Translate></p>
         <div>
             <div style={{display: 'flex', fontWeight: 500}}>
@@ -25,8 +26,12 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                             <Translate id="plans.included.starterNotIncluded">Not included in the
                                 Starter-Plan</Translate>}
                     </div>
-                    {additionalDetails['STARTER'] &&
-                        <div style={{fontWeight: 400, color: '#A3A3A3'}}>{additionalDetails['STARTER']}</div>}
+                    {additionalDetails['STARTER'] && <div style={{
+                        fontWeight: 400,
+                        color: '#A3A3A3',
+                        marginTop: '-2px',
+                        marginBottom: '3px'
+                    }}>{additionalDetails['STARTER']}</div>}
                 </div>
             </div>
             <div style={{display: 'flex', fontWeight: 500}}>
@@ -47,8 +52,12 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                             <Translate id="plans.included.starterNotIncluded">Not included in the
                                 Active-Guild-Plan</Translate>}
                     </div>
-                    {additionalDetails['ACTIVE_GUILD'] &&
-                        <div style={{fontWeight: 400, color: '#A3A3A3'}}>{additionalDetails['ACTIVE_GUILD']}</div>}
+                    {additionalDetails['ACTIVE_GUILD'] && <div style={{
+                        fontWeight: 400,
+                        marginTop: '-2px',
+                        color: '#A3A3A3',
+                        marginBottom: '3px'
+                    }}>{additionalDetails['ACTIVE_GUILD']}</div>}
                 </div>
             </div>
             <div style={{display: 'flex', fontWeight: 500}}>
@@ -67,8 +76,12 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                         {data['PRO'] ? <Translate id="plans.included.proIncluded">Included in the PRO-Plan</Translate> :
                             <Translate id="plans.included.starterNotIncluded">Not included in the PRO-Plan</Translate>}
                     </div>
-                    {additionalDetails['PRO'] &&
-                        <div style={{fontWeight: 400, color: '#A3A3A3'}}>{additionalDetails['PRO']}</div>}
+                    {additionalDetails['PRO'] && <div style={{
+                        fontWeight: 400,
+                        marginTop: '-2px',
+                        color: '#A3A3A3',
+                        marginBottom: '3px'
+                    }}>{additionalDetails['PRO']}</div>}
                 </div>
             </div>
         </div>
