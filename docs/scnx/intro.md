@@ -24,7 +24,7 @@ be able to use their own set of features:
 * dcserver.link: Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`). You
   can [open dcserver.link documentation](./guilds/dcserver-link).
 * Trusted-Admins: Using Trusted Admins, server owners can give access to SCNX to administrators on their
-  server. [Open the Trusted-Admin documentation](./guilds/trusted-admins.md) to learn more.
+  server. [Open the Trusted-Admin documentation](./guilds/trusted-admins) to learn more.
 
 To learn more about prices, subscriptions and plans on SCNX, visit
 the [Subscriptions & Plans documentation](./guilds/plans). Additionally, we've added a
