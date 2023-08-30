@@ -32,7 +32,7 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten werden si
 Um manuell Backups zu erstellen, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) im SCNX Dashboard. Klicke danach auf "Backup erstellen" und wähle was [in deinem Backup enthalten sein soll](#included). Bestätige danach nocheinmal dein Backup.
 Ein Backup zu erstellen kann bis zu 15 Minuten dauern. Dies ist abhängig von der Anzahl der zu speichernden Nachrichten.
 
-![](./../../assets/scnx/guilds/backups/create.png)
+![](@site/docs/assets/scnx/guilds/backups/create.png)
 
 Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in der Backup-Liste ansehen und verwalten. Folgende Optionen sind verfügbar:
 * Backup wiederherstellen: Erm,öglicht dir das Backup auf diesem oder einem anderen Server wiederherzustellen. Im Abschnitt [Backups wiederherstellen](#restore) kannst du mehr darüber erfahren.
@@ -40,7 +40,7 @@ Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in de
 * Backup löschen: Löscht das Backup dauerhaft von unseren Server. Diese Option ist endgültig und kann nicht rückgängig gemacht werden.
 * Backup exportieren: Exportiert das Backup als JSON-Datei. Im Abschnitt [Backups wiederherstellen](#export) kannst du mehr darüber erfahren.
 
-![](./../../assets/scnx/guilds/backups/backup.png)
+![](@site/docs/assets/scnx/guilds/backups/backup.png)
 
 
 ## Automatische Backups {#automatic}
@@ -50,7 +50,7 @@ Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in de
 
 Um automatische Backups einzurichten, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) und wähle die Anzahl der zu erstellenden Backups unter "Automatische Backups" und speichere die Änderung.
 
-![](./../../assets/scnx/guilds/backups/automatic-backups.png)
+![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
 
 Basierend auf deinen Einstellungen wird SCNX bis zu zwei Backups täglich erstellen. Dies passiert immer um die selbe Uhrzeit, genauer um 6:00 Uhr und 18:00 Uhr (Mitteleuropäischer Zeit). Bitte beachte, dass die Sommerzeit ggf. die angezeigte Uhrzeit der Erstellung deines Backups beeinflussen kann.
 
@@ -69,7 +69,7 @@ Bevor du ein Backup wiederherstellst, passe bitte folgende Einstellungen an dein
 
 Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups) deines Servers und klicke auf das Backup, das du wiederherstellen möchtest. Als nächstes klicke auf "Backup wiederherstellen". Dir wird ein Befehl angezeigt werden. Kopiere ihn mit dem "Befehl kopieren" Button und füge ihn in deinem Server ein. Stelle sicher, dass du den Befehl mit dem (verifizierten) SCNX-Bot ausführst.
 
-![](./../../assets/scnx/guilds/backups/execute-command.png)
+![](@site/docs/assets/scnx/guilds/backups/execute-command.png)
 
 Bestätige als Nächstes deine Anfrage mit dem Button unter der Antwort in Discord.
 
@@ -77,7 +77,7 @@ Bestätige als Nächstes deine Anfrage mit dem Button unter der Antwort in Disco
 Die Bestätigung dieser Anfrage wird alle aktuellen Kanäle und Rollen deines Discors löschen und mit denen des Backups ersetzen.
 :::
 
-![](./../../assets/scnx/guilds/backups/confirm.png)
+![](@site/docs/assets/scnx/guilds/backups/confirm.png)
 
 Nach der Bestätigung beginnt der SCNX Bot mit dem Löschen aller existierenden Kanäle und Rollen deines Servers. Sobald das erledigt ist wird der SCNX Bot anfangen deine Daten wiederherzustellen. Das kann bis zu **20 Minuten** oder mehr dauern. Sobald alles erledigt ist erwähnt der SCNX Bot dich (oder schreibt dir eine PN). Sollte irgendein Fehler auftreten wird er das auch tun.
 
@@ -90,7 +90,7 @@ Der Server auf dem du das Backup wiederherstellen möchtest muss nicht zu SCNX h
 Der Wiederherstellungsprozess ist größtenteils identisch zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self) - selbst der verwendete Befehl bleibt gleich. Du musst allerdings die Server-Sperre auf deinem Server deaktivieren.
 
 Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deaktiviert ist, kann jeder mit dem Backup-Code (der Befehl der im Dashboard angezeigt wird) das Backup auf jedem Server wiederherstellen. Zum Glück ist die Sperre standardmäßig aktiviert. Um sie zu deaktivieren,öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups), wähle dein Backup und klicke auf "Server-Sperre deaktivieren".
-![](./../../assets/scnx/guilds/backups/disable-guild-lock.png)
+![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
 Nachdem du die Server-Sperre deaktiviert hast folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
 
