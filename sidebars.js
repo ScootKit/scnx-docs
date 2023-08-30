@@ -19,7 +19,7 @@ const sidebars = {
             link: {
                 type: 'generated-index',
                 title: 'Getting started on SCNX',
-                description: 'Easily get started on SCNX - here you\'ll find all guides you need',
+                description: 'Easily get started on SCNX - here you\'ll find all guides you need.',
                 slug: '/intro'
             },
             label: 'Getting Started',
