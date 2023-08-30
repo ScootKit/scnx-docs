@@ -132,7 +132,7 @@ Nachdem du die Server-Sperre deaktiviert hast folge bitte den Anweisungen zur [W
         SCNX erstellt keine automatischen Backups auf deinem Server
     </summary>
     <li>Stelle sicher, dass der (verifizierte) SCNX Bot die Administrator Berechtigung hat und versuche es erneut.</li>
-    <li>Stelle sicher, dasss du [diese Funktion](#automatic] wirklich aktiviert hast und alle Änderungen gespeichert hast.</li>
+    <li>Stelle sicher, dasss du [diese Funktion](#automatic) wirklich aktiviert hast und alle Änderungen gespeichert hast.</li>
     <li>Stelle sicher, dass mindestens ein Backup-Slot nicht von einem manuellen Backup verwendet wird.</li>
     <li>Bitte warte 24 Stunden, damit automatisch ein Backup erstellt wird</li>
 </details>
