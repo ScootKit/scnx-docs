@@ -69,7 +69,7 @@ Generally speaking, dcserver.link URLs are first-come, first-serve. We do not us
 </details>
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
-    When a server is <a href="./faq#deletion"></a>, their dcserver.link URL will be deleted permanently. This does not
+    When a server is <a href="./faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.
 </details>
