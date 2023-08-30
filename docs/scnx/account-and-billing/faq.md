@@ -4,6 +4,8 @@ sidebar_position: 5
 
 # Frequently asked questions
 
+Frequently asked questions about user-features & billing on SCNX.
+
 ## Billing related {#billing}
 
 ### What are SCNX Credits? {#scnx-credits}
