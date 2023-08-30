@@ -71,7 +71,7 @@ Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard
 
 ![](@site/docs/assets/scnx/guilds/backups/execute-command.png)
 
-Bestätige als Nächstes deine Anfrage mit dem Button unter der Antwort in Discord.
+Bestätige als Nächstes deine Anfrage mit dem Knopf unter der Antwort in Discord.
 
 :::danger
 Die Bestätigung dieser Anfrage wird alle aktuellen Kanäle und Rollen deines Discors löschen und mit denen des Backups ersetzen.
