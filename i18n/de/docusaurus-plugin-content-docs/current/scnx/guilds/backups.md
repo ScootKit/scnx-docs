@@ -18,7 +18,7 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden s
 | Rollen              | Backups werden jede Rolle auf deinem Discord enthalten. Gespeicherte Rollen-Daten beinhalten: Berechtigungen, Name, Farbe und mehr                                       |
 | Emojis              | Backups werden jedes Emoji auf deinem Discord enthalten. Dies Beinhaltet das Emoji-Bild an sich sowie den emoji-name. Sticker sind ggf. auch mit inbegriffen.                |
 | Banns               | Backups werden jeden Bann auf deinem Discord enthalten. Jeder Bann beinhaltet den Grund und den gebannten Nutzer.                                                       |
-| Mitglieder          | Backups werden beinhalten welcher Nutzer welche Rolle zum Zeitpunkt der Backup-Erstellung hatte.<br/> **THIS FEATURE MIGHT NOT BE ABLE TO EVERYONE**                        |
+| Mitglieder          | Backups werden beinhalten welcher Nutzer welche Rolle zum Zeitpunkt der Backup-Erstellung hatte.<br/> **DIESE FUNKTION IST EVENTUELL NICHT FÜR ALLE VERFÜGBAR**                        |
 | Servereinstellungen | Backups werden Server-Namen, -Icon, -Einstellungen (wie den AFK-Kanal), Auto-Moderations-Regeln und mehr beinhalten.                                                  |
 
 ## Manuelle Backups {#manual}
