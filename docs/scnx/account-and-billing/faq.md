@@ -6,6 +6,13 @@ sidebar_position: 5
 
 ## Billing related {#billing}
 
+### What are SCNX Credits?
+
+SCNX Credits are a virtual currency on SCNX. You can purchase them in
+your [payment page](https://scnx.app/user/payments) and can redeem them for AI Credits, User
+Storage, [Server Upgrades](./../guilds/plans#upgrade) and other purchases on SCNX. You can not pay-out purchased SCNX
+Credits.
+
 ### How do I manage my subscription? {#manage-subscription}
 
 To manage your subscription, visit your [payment page](https://scnx.app/user/payments) on your dashboard. There, you'll
@@ -30,11 +37,39 @@ account (or take other actions, if necessary).
 Please read this [FAQ Article](https://faq.scnx.app/sepa-lastschrift/) to review information about SEPA Direct Debit
 payments.
 
+### How do I pay on SCNX with a standing bank order (/ reoccurring bank transfer)? {#reoccurring-transfer}
+
+1. First, enable the subscription on SCNX. To do so, open
+   the [pricing page](https://scnx.app/glink?page=pricing?showUpgradeModal=true) of your server and open the upgrade
+   window. Next, select your payment interval and plan. When asked for a payment method, please select "Reoccurring
+   Bank-Transfer". You'll be shown unique payment instructions and [a unique IBAN](#wire-transfer).
+2. Next, set up the reoccurring wire transfer at your bank:
+   * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
+   * [Deutsche Bank](https://www.deutsche-bank.de/pk/shared/trxm/help-de/konten/konten-dauerauftraege.html)
+   * [Volksbanken / Raiffeisenbanken](https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/online-banking/dauerauftrag-einrichten-oder-aendern.html)
+   * [Commerzbank](https://service.commerzbank.de/wie-richte-ich-einen-dauerauftrag-ein)
+   * [ING](https://www.ing.de/hilfe/banking/)
+   * [Hypovereinsbank](https://www.hypovereinsbank.de/hvb/kontaktwege/dauerauftrag)
+   * [BUNQ](https://together.bunq.com/d/84-schedule-a-payment)
+   * [N26](https://support.n26.com/de-de/zahlungen-ueberweisungen-und-abhebungen/lastschriften-und-dauerauftrage/wie-erstelle-und-verwalte-ich-dauerauftrage)
+   * [Revolut](https://help.revolut.com/de-LU/help/receiving-payments/sending-money-to-an-external-bank-account/how-to-schedule-recurring-payments/business/)
+   * Your bank is not listed? Just google the name of your bank combined with "reoccurring wire transfer" (or "
+     Dauerauftrag" in German) to find guides. If you are still having trouble, please reach out to your bank.
+3. Make sure all details match the details shown in your dashboard and confirm your reoccurring wire transfer with your
+   bank.
+4. Enjoy your SCNX Subscription 🚀
+
 ### How does SCNX know that I wired a bill? {#wire-transfer}
 
 When paying with wire transfer, you'll be assigned a custom IBAN on a virtual bank account. Every payment that arrives
 at that account will be credited towards your bills - the transaction reference is not required (but recommended for
-one-time purchases), as we can easily assign a payment to your account based on the IBAN the money was recived on.
+one-time purchases), as we can easily assign a payment to your account based on the IBAN the money was received on.
+
+Wired to much money on accident? Don't worry: You money will be automatically used for future payments - if you do not
+use it within 90 days, our payment provider will return the money back to the bank account that the transfer originated
+from (if that's not possible, Stripe will reach out and ask for bank details). You can
+also [reach out to our staff](https://scnx.app/help) to get the money back sooner (please note that this is only
+possible when you have unreconciled bank transfer balance).
 
 ### My card was declined, but all my data is valid {#no-reason-decline}
 
