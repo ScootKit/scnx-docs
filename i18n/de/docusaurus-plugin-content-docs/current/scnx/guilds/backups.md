@@ -35,7 +35,7 @@ Ein Backup zu Erstellen kann bis zu 15 Minuten dauern. Dies ist abhängig von de
 ![](@site/docs/assets/scnx/guilds/backups/create.png)
 
 Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in der Backup-Liste ansehen und verwalten. Folgende Optionen sind verfügbar:
-* Backup wiederherstellen: Erm,öglicht dir das Backup auf diesem oder einem anderen Server wiederherzustellen. Im Abschnitt [Backups wiederherstellen](#restore) kannst du mehr darüber erfahren.
+* Backup wiederherstellen: Ermöglicht dir das Backup auf diesem oder einem anderen Server wiederherzustellen. Im Abschnitt [Backups wiederherstellen](#restore) kannst du mehr darüber erfahren.
 * Server-Sperre deaktivieren / aktivieren: Erlaubt / Verbietet die Wiederherstellung deines Backups auf anderen Servern. Im Abschnitt [Backups auf anderen Servern wiederherstellen](#restore-other-server) kannst du mehr darüber erfahren.
 * Backup löschen: Löscht das Backup dauerhaft von unseren Server. Diese Option ist endgültig und kann nicht rückgängig gemacht werden.
 * Backup exportieren: Exportiert das Backup als JSON-Datei. Im Abschnitt [Backups wiederherstellen](#export) kannst du mehr darüber erfahren.
