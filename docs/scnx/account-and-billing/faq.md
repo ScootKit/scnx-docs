@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Billing related {#billing}
 
-### What are SCNX Credits?
+### What are SCNX Credits? {#scnx-credits}
 
 SCNX Credits are a virtual currency on SCNX. You can purchase them in
 your [payment page](https://scnx.app/user/payments) and can redeem them for AI Credits, User

@@ -39,6 +39,28 @@ commercial usage on SCNX.
 Oh no - please follow the instructions on your dashboard. If you need help,
 please [reach out to our staff](https://scnx.app/help).
 
+## Can I transfer all my SCNX Data from one server to another? {#transfer}
+
+You can request a "complete data transfer" if both of your servers are currently active on SCNX
+(please add the new server before creating a request), and you are the owner of both servers.
+
+As this process involves manual labor from our site, the following policies apply:
+
+* Your (your user-account's) first complete data transfer is free, if at least one of your servers has an active, paid
+  plan.
+* If you have already requested a complete data transfer for this or any other server, you will be
+  charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
+  left on your balance.
+* If none of your servers have an active paid plan, you will be
+  charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
+  left on your balance
+
+:::danger
+ALL data will be completely transferred to your new server. This will overwrite existing settings for your new server.
+:::
+
+To request a complete data transfer, please [contact our team](https://scnx.app/help).
+
 ## How can I remove my server from SCNX? {#deletion}
 
 We're sorry that you want to leave SCNX - if you are only experiencing an issue with SCNX, we
