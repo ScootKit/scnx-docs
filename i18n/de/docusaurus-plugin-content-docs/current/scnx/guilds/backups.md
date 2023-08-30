@@ -89,7 +89,7 @@ Der Server auf dem du das Backup wiederherstellen möchtest muss nicht zu SCNX h
 
 Der Wiederherstellungsprozess ist größtenteils identisch zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self) - selbst der verwendete Befehl bleibt gleich. Du musst allerdings die Server-Sperre auf deinem Server deaktivieren.
 
-Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deaktiviert ist, kann jeder mit dem Backup-Code (der Befehl der im Dashboard angezeigt wird) das Backup auf jedem Server wiederherstellen. Zum Glück ist die Sperre standardmäßig aktiviert. Um sie zu deaktivieren,öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups), wähle dein Backup und klicke auf "Server-Sperre deaktivieren".
+Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deaktiviert ist, kann jeder mit dem Backup-Code (der Befehl der im Dashboard angezeigt wird) das Backup auf jedem Server wiederherstellen. Zum Glück ist die Sperre standardmäßig aktiviert. Um sie zu deaktivieren, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups), wähle dein Backup und klicke auf "Server-Sperre deaktivieren".
 ![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
 Nachdem du die Server-Sperre deaktiviert hast folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
