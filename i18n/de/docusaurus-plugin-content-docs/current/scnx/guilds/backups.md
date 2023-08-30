@@ -67,7 +67,7 @@ Bevor du ein Backup wiederherstellst, passe bitte folgende Einstellungen an dein
 * Deaktiviere die "Community"-Einstellung deines Servers in den Einstellungen (du kannst sie danach wieder aktivieren)
 * Verstehe, dass dieser Vorgang alle Nachrichten, Kanäle und Rollen von deinem Server löscht
 
-Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups) deines Servers und klicke auf das Backup, das du wiederherstellen möchtest. Als nächstes klicke auf "Backup wiederherstellen". Dir wird ein Befehl angezeigt werden. Kopiere ihn mit dem "Befehl kopieren" Button und füge ihn in deinem Server ein. Stelle sicher, dass du den Befehl mit dem (verifizierten) SCNX-Bot ausführst.
+Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups) deines Servers und klicke auf das Backup, das du wiederherstellen möchtest. Als nächstes klicke auf "Backup wiederherstellen". Dir wird ein Befehl angezeigt werden. Kopiere ihn mit dem "Befehl kopieren" Knopf und füge ihn in deinem Server ein. Stelle sicher, dass du den Befehl mit dem (verifizierten) SCNX-Bot ausführst.
 
 ![](@site/docs/assets/scnx/guilds/backups/execute-command.png)
 
