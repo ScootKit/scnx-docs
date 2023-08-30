@@ -23,7 +23,7 @@ that. [Users can opt out](#user-opt-out) and no message (or attachment) content 
 To enable analytics, visit the [analytics page](https://scnx.app/glink?page=analytics) of your Discord on SCNX and click
 on "Enable analytics".
 
-![](./../../assets/scnx/guilds/analytics/setup.png)
+![](@site/docs/assets/scnx/guilds/analytics/setup.png)
 
 ## Use in Dashboard {#dashboard}
 
@@ -43,7 +43,7 @@ In your [analytics dashboard](https://scnx.app/glink?page=analytics) you will be
 
 *Please note that, depending on your timeframe, some of these parts might be unavailable.*
 
-![](./../../assets/scnx/guilds/analytics/dashboard.png)
+![](@site/docs/assets/scnx/guilds/analytics/dashboard.png)
 
 
 ## Use analytics as Slash-Commands {#slash-commands}
@@ -57,7 +57,7 @@ days.
 * `/stats user`: Shows a statistics overview of any user on your server. This includes the 10 most active channels (and the number of messages sent in them) and an "At a glance" section where you can find the total number of messages and commands in the last 30
 days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use this command (/ shown data about).
 
-![](./../../assets/scnx/guilds/analytics/commands.png)
+![](@site/docs/assets/scnx/guilds/analytics/commands.png)
 
 
 ## Troubleshooting {#throubleshooting}

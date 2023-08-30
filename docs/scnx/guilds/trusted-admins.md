@@ -27,7 +27,7 @@ Trusted-Admin-Modal. Here you can enter the Discord-ID of the Trusted-Admin you 
 configure [their permissions](#permissions) (please review the [permissions](#permissions) section first!). Once done,
 save the changes to grant access.
 
-![](./../../assets/scnx/guilds/trusted-admins/add.png)
+![](@site/docs/assets/scnx/guilds/trusted-admins/add.png)
 
 ## Manage {#manage}
 

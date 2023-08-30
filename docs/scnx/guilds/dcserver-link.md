@@ -30,7 +30,7 @@ Before setting up a dcserver.link URL for your server, please make sure your ser
 
 To get started, visit the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX. Scroll down to the "dcserver.link-URL" section and click on "Get started".
 
-![](./../../assets/scnx/guilds/dcserver-link/enable.png)
+![](@site/docs/assets/scnx/guilds/dcserver-link/enable.png)
 
 A unique URL for your server will be generated based on the name of your server and the Server-ID - you can easily change this later.
 

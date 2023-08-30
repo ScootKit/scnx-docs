@@ -2,22 +2,23 @@
 sidebar_position: 1
 ---
 
-# Toolbox
+# Werkzeuge
 
-The SCNX Toolbox is a set of tools designed to make your life as a professional Discord-User easier.
+Die SCNX Werkzeuge sind eine Ansammlung von hilfreichen Werkzeugen, um dein Leben als professioneller Discord-Nutzer
+einfacher zu machen.
 
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} />
 
-## Discord-User-Lookup {#user-lookup}
+## Discord-Nutzer-Nachschlagen {#user-lookup}
 
-Lookup any Discord-User or Bot by their Discord-ID! Simply enter it above and see their banner, profile picture, badges
-and more. To copy a User-ID, first
-enable [discord developer mode](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), then right-click on the user
-and click on "Copy User ID".
+Schlage jeden Discord-Nutzer oder Bot nur mit ihrer Discord-ID nach! Füge die ID einfach oben ein, um das Banner, das
+Profilbild, die Abzeichen und mehr des Nutzers zu sehen. Um eine Nutzer-ID zu kopieren, aktiviere zunächst
+den  [discord developer mode](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), , rechts-klicke auf den Nutzer
+und klicke auf "Nutzer ID kopieren".
 
-Next, enter the ID in the [User-Lookup tool](https://scnx.app/user/tools?page=user-lookup). Click on "Fetch user" to
-finish your request. You'll be shown details about the user and can download their banner and profile picture (if
-applicable). Here's how the result will look like:
+Füge als Nächstes diese ID in das [Nutzer-Nachschlagen Werkzeug](https://scnx.app/user/tools?page=user-lookup). Klicke
+dann auf "Nutzer nachschlagen", um deine Anfrage durchzuführen.Du kannst danach die Daten des Nutzers sehen und (falls
+vorhanden) das Banner- oder Profilbild des Nutzers herunterladen. Hier ist ein Beispiel, wie das aussehen wird:
 
 ![](@site/docs/assets/scnx/user/toolbox/result.png)
 
