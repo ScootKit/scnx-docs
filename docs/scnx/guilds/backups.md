@@ -19,7 +19,7 @@ that get backed up.
 | Roles          | Backups will include every role role on your Discord. Saved Role-Data includes: Permission, Name, Color and more                                       |
 | Emojis         | Backups will include every Emoji on your Discord. This includes the actual emoji-image and emoji-name. Stickers might also be included.                |
 | Bans           | Backups will include every Ban on your Discord. Every ban includes a reason and the banned user.                                                       |
-| Members        | Backups will include which user had which role when the backup was created.<br/> **THIS FEATURE MIGHT NOT BE ABLE TO EVERYONE**                        |
+| Members        | Backups will include which user had which role when the backup was created.<br/> **THIS FEATURE MIGHT NOT BE AVAILABLE TO EVERYONE**                        |
 | Guild-Settings | Backups will include Server-Name, -Icon, -Settings (like AFK-Channel), Auto-Moderation-Rules and more                                                  |
 
 ## Manual backups {#manual}
