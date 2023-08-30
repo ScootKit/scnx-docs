@@ -40,6 +40,26 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            typesense: {
+                typesenseCollectionName: 'scnx-docs',
+
+                typesenseServerConfig: {
+                    nodes: [
+                        {
+                            host: 'search.scootkit.net',
+                            port: 443,
+                            protocol: 'https'
+                        }
+                    ],
+                    apiKey: 'E4IKHSM7gzZw50lbIzbpuSKhbUN5o7uq'
+                },
+
+                // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
+                typesenseSearchParameters: {},
+
+                // Optional
+                contextualSearch: true
+            },
             announcementBar: {
                 id: 'wip',
                 content:
@@ -184,7 +204,7 @@ const config = {
             }
         }),
     plugins: [
-        '@cmfcmf/docusaurus-search-local',
+        'docusaurus-theme-search-typesense',
         [
             '@docusaurus/plugin-pwa',
             {
