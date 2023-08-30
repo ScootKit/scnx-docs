@@ -33,7 +33,7 @@ that get backed up.
 To create a manual backup, please visit your [backup dashboard](https://scnx.app/glink?page=backups) in your SCNX Dashboard. Next, click on "Create backup" and select what [parts the backup should include](#included). Then, confirm your backup.
 Creating a backup might take up to 15 minutes, depending on the number of messages that need to get stored.
 
-![](./../../assets/scnx/guilds/backups/create.png)
+![](@site/docs/assets/scnx/guilds/backups/create.png)
 
 After the backup has been created (this can take a while), you'll be able to view the backup in your backup-list and manage it. These options are availible:
 * Restore backup: Allows you to restore the backup on this or another server. Please read more in the [restore backups](#restore) section.
@@ -41,7 +41,7 @@ After the backup has been created (this can take a while), you'll be able to vie
 * Delete backup: Permanently deletes the backup from our servers. This can not be reversed.
 * Export backup: Exports the backup as a JSON-File.  Please read more in the [export backups](#export) section.
 
-![](./../../assets/scnx/guilds/backups/backup.png)
+![](@site/docs/assets/scnx/guilds/backups/backup.png)
 
 
 ## Automatic backups {#automatic}
@@ -51,7 +51,7 @@ After the backup has been created (this can take a while), you'll be able to vie
 
 To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink?page=backups) and select the amount of backups you want to be created below "Automatic backups" and save the change.
 
-![](./../../assets/scnx/guilds/backups/automatic-backups.png)
+![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
 
 Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day, namely at 6:00 and 18:00 (Central European Time). Please note that summer might affect the display time of creation on your backup.
 
@@ -70,7 +70,7 @@ Before restoring a backup, please adjust the following settings on your Discord:
 
 To restore a backup on your server, visit the [backup dashboard](https://scnx.app/glink?page=backups) of your server and click on the backup you want to restore. Next, click on "Restore backup". You'll be shown a command. Use the "Copy command" button to copy the command and paste it into Discord on your server. Make sure that you are executing this command with the (verified) SCNX-Bot.
 
-![](./../../assets/scnx/guilds/backups/execute-command.png)
+![](@site/docs/assets/scnx/guilds/backups/execute-command.png)
 
 Next, confirm your request using the button below the answer in Discord.
 
@@ -78,7 +78,7 @@ Next, confirm your request using the button below the answer in Discord.
 Confirming this request will delete all current channels & roles on your Discord and replace them with the channels & roles stored in your backup.
 :::
 
-![](./../../assets/scnx/guilds/backups/confirm.png)
+![](@site/docs/assets/scnx/guilds/backups/confirm.png)
 
 After confirming, the SCNX Bot will start by deleting all existing channels and roles from your server. Once that's done, the SCNX Bot will start restoring your data. This might take up to **20 minutes** or even more. Once done, the SCNX Bot will ping you (or DM you). This will also happen if something went wrong.
 
@@ -92,7 +92,7 @@ The server you want to restore the backup on does not need to be added to SCNX, 
 The restoration process is widely the same as [restoring the backup on your own server](#restore-self) - even the command used is the same. Still, before restoring a backup on another server, you'll need to disable the Guild-Lock on your server.
 
 The guild lock is a protection mechanism for your backup: Anyone with the backup code (the command displayed in the dashboard) can restore the backup on any server if it is disabled. Luckily, it's enabled by default. To disable it, visit the [backup dashboard](https://scnx.app/glink?page=backups), select your backup and click on "Disable Guild-Lock".
-![](./../../assets/scnx/guilds/backups/disable-guild-lock.png)
+![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
 After disabling the guild-lock, please follow the same instructions as [restoring on the original server](#restore-self). When you are done, we highly recommend re-enabling the Guild-Lock - you can do that the same way you enabled it.
 

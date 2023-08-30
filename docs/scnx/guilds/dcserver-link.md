@@ -30,7 +30,7 @@ Before setting up a dcserver.link URL for your server, please make sure your ser
 
 To get started, visit the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX. Scroll down to the "dcserver.link-URL" section and click on "Get started".
 
-![](./../../assets/scnx/guilds/dcserver-link/enable.png)
+![](@site/docs/assets/scnx/guilds/dcserver-link/enable.png)
 
 A unique URL for your server will be generated based on the name of your server and the Server-ID - you can easily change this later.
 
@@ -69,7 +69,7 @@ Generally speaking, dcserver.link URLs are first-come, first-serve. We do not us
 </details>
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
-    When a server is <a href="./faq#deletion"></a>, their dcserver.link URL will be deleted permanently. This does not
+    When a server is <a href="./faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.
 </details>

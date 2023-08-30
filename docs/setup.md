@@ -18,7 +18,7 @@ Head over to [scnx.app](https://scnx.app) to get started. You'll be asked to log
 that, just click on the "Login with Discord" button. If you're wondering why we need access to certain data of you ("
 scopes"), you can find the answere [in our FAQ](./scnx/account-and-billing/faq#discord-access).
 
-![](assets/setup/setup-1.png)
+![](@site/docs/assets/setup/setup-1.png)
 
 ## 2. Add the server to SCNX {#step-2}
 
@@ -30,7 +30,7 @@ Please make sure you are the **owner of a server** in order to add it to SCNX. I
 give you [Trusted Admin Permissions](scnx/guilds/trusted-admins). If you've recently created a server and it is not
 visible in the dashboard, refresh the server list using the "Refresh data" button on the bottom of the page.
 :::
-![](assets/setup/setup-2.png)
+![](@site/docs/assets/setup/setup-2.png)
 
 ## 3. Add the SCNX Bot to your server {#step-3}
 
@@ -42,7 +42,7 @@ To invite the SCNX Bot, click on the "Invite verified SCNX Manager-Bot" in your 
 add the bot. Please make sure to leave the "Create invite" permission enabled (this is required if you want to use
 SCNX).
 
-![](assets/setup/setup-3.png)
+![](@site/docs/assets/setup/setup-3.png)
 
 Next, return to SCNX and click on "Done, check again" to continue the setup process.
 
