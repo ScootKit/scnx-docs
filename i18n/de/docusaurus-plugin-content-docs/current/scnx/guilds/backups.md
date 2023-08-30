@@ -30,7 +30,7 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden s
 }}/>
 
 Um manuell Backups zu erstellen, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) im SCNX Dashboard. Klicke danach auf "Backup erstellen" und wähle was [in deinem Backup enthalten sein soll](#included). Bestätige danach nocheinmal dein Backup.
-Ein Backup zu erstellen kann bis zu 15 Minuten dauern. Dies ist abhängig von der Anzahl der zu speichernden Nachrichten.
+Ein Backup zu Erstellen kann bis zu 15 Minuten dauern. Dies ist abhängig von der Anzahl der zu speichernden Nachrichten.
 
 ![](@site/docs/assets/scnx/guilds/backups/create.png)
 
