@@ -24,7 +24,8 @@ ihnen kann eigene Discord-Bots erstellen.
 * [Discord Modmail Bot](https://modmail.net) (kurz: "Modmail Bot"): Ein komplett anpassbares Discord-Support-System mit
   dem Modmail-Prinzip, gebaut, um Support-Tickets professionell zu bearbeiten - gehostet ab nur 3.00€ / Monat. Du kannst
   entweder [mit Modmail loslegen](./../modmail) or [die gesamte Modmail-Dokumentation](./../modmail/intro) öffnen.
-* [SCNX Backups](https://scnx.xyz/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
+* [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
+´´´
   Ernstfall zu speichern. Du kannst die
   [Backup-Dokumentation](./guilds/backups) öffnen.
 * dcserver.link: Erstelle deine eigene eindeutige URL für deinen Server (z.B. `https://dcserver.link/yourservername`).
