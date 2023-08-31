@@ -39,7 +39,7 @@ Um deine dcserver.link-URL zu ändern, öffne bitte die [Einstellungen-Seite](ht
 
 Die neue URL kann nur kleine Buchstaben, Zahlen und dieses Sonderzeichen enthalten: `-`.
 
-Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn du eine URL verwenden möchtest, die bereits genutzt wird, wird dir eine Fehler-Nachricht angezeigt. Bitte gehe zu [Missbrauch](#disputes) um zu sehen, was du in einem solchen Fall tun kannst.
+Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn du eine URL verwenden möchtest, die bereits genutzt wird, wird dir eine Fehler-Nachricht angezeigt. Bitte gehe zu [Konflikte](#disputes) um zu sehen, was du in einem solchen Fall tun kannst.
 
 ## URL-Missbrauch {#disputes}
 
