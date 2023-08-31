@@ -18,7 +18,7 @@ Erstelle eine einzigartige Vanity-URL für deinen Server(z.B. `https://dcserver.
 ## Nutzung {#usage}
 
 Eine dcserver.link erlaubt es deinen Nutzern, anstatt einer von Discord generierten Einladung, deinen Server mit einer einzigartigen Vanity-URL beizutreten. Ein Beispiel: Anstatt dass Nutzer mit der URL `https://discord.gg/WxB3z5YJh9` beitreten, 
-können sie dem (deutschen) ScootKit Discord mit `https://dcserver.link/scootkit` beitreten - dieser Weg ist einfacher zum erinnern.
+können sie dem (deutschen) ScootKit Discord mit `https://dcserver.link/scootkit` beitreten - das ist wesentlich einfacher zu merken.
 
 Der (verifizierte) SCNX Bot wird automatisch Einladungen für Nutzer erstellen, die mit deinem Link deinem Server beitreten wollen - so musst du dir keine Sorgen über abgelaufene Einladungen machen.
 
