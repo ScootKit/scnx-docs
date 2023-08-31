@@ -41,7 +41,7 @@ Die neue URL kann nur kleine Buchstaben, Zahlen und dieses Sonderzeichen enthalt
 
 Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn du eine URL verwenden möchtest, die bereits genutzt wird, wird dir eine Fehler-Nachricht angezeigt. Bitte gehe zu [Konflikte](#disputes) um zu sehen, was du in einem solchen Fall tun kannst.
 
-## URL-Missbrauch {#disputes}
+## URL-Konflikte {#disputes}
 
 Generell gilt: dcserver.link-URLS werden von dem genutzt, der sie zuerst beansprucht. Normalerweise weichen wir davon auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 
