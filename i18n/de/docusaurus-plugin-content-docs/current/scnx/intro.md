@@ -40,7 +40,7 @@ Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen]
 ## Funktionen für Nutzer {#users}
 
 * SCNX Werkzeuge: Eine Ansammlung von Werkzeugen, um dein Leben als professioneller Discord-Nutzer einfacher zu machen.
-  Du kannst die [Werkzeuge Dokumentation](./account-and-billing/toolbox) öffnen.
+  Du kannst die [Werkzeuge-Dokumentation](./account-and-billing/toolbox) öffnen.
 * SCNX Werbung: Bewerbe deinen Server oder dein Produkt auf SCNX. Du kannst
   die [Werbung auf SCNX Dokumentation](./account-and-billing/ads) öffnen.
 * SCNX Empfehlungen: Verdiene für jeden Plan, den ein Server, der mit deinem Link hinzugefügt wurde, einen Plan kauft,
