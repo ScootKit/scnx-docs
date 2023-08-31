@@ -35,7 +35,7 @@ ihnen kann eigene Discord-Bots erstellen.
   Öffne die [Trusted-Admin-Dokumentation](./guilds/trusted-admins), um mehr zu erfahren.
 
 Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](./guilds/plans).
-Außerdem haben wir noch eine Seite mit detaillierten [Häufig gestellten Fragen](./guilds/faq) über Server auf SCNX.
+Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen](./guilds/faq) über Server auf SCNX.
 
 ## Funktionen für Nutzer {#users}
 
