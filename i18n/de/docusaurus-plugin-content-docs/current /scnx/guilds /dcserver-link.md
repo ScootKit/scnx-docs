@@ -35,7 +35,7 @@ Um zu starten, öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=s
 Eine einzigartige URL für deinen Server wird auf Basis des Server-Namens und der Server-ID generiert - du kannst das später ändern.
 
 ## URL ändern {#change-url}
-Um deine dcserver.link-URL zu ändern, öffne bitte die [Server Einstellungen-Seite](https://scnx.app/de/glink?page=settings) auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Link ändern". Gib nun deine neue URL ein. Wenn du fertig bist, klicke auf "Speichern", um deine Änderungen zu speichern.
+Um deine dcserver.link-URL zu ändern, öffne bitte die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Link ändern". Gib nun deine neue URL ein. Wenn du fertig bist, klicke auf "Speichern", um deine Änderungen zu speichern.
 
 Die neue URL kann nur kleine Buchstaben, Zahlen und dieses Sonderzeichen enthalten: `-`.
 
