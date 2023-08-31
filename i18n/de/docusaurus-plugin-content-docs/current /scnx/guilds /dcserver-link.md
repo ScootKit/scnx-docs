@@ -22,7 +22,7 @@ können sie dem (deutschen) ScootKit Discord mit `https://dcserver.link/scootkit
 
 Der (verifizierte) SCNX Bot wird automatisch Einladungen für Nutzer erstellen, die mit deinem Link deinem Server beitreten wollen - so musst du dir keine Sorgen über abgelaufene Einladungen machen.
 
-Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#change-url), öffne die [Server Einstellungen-Seite](https://scnx.app/de/glink?page=settings) auf SCNX und scrolle bis zum "dcserver.link-URL"-Abschnitt.
+Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#change-url), öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX und scrolle bis zum "dcserver.link-URL"-Abschnitt.
 
 ## Einrichtung {#setup}
 
