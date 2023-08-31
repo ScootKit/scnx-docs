@@ -6,7 +6,7 @@ sidebar_position: 4
 
 :::info Beta-Info
 Diese Dokumentation ist für ein noch nicht fertiges Produkt, welches nur für eine bestimmte Anzahl an Servern auf SCNX verfügbar ist. 
-Überprüfe deine [Server Einstellungen-Seite](https://scnx.app/de/glink?page=settings) auf SCNX, um zu sehen, ob du dcserver.link-URLS verwenden kannst.
+Überprüfe die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX, um zu sehen, ob du dcserver.link-URLS verwenden kannst.
 :::
 
 Erstelle eine einzigartige Vanity-URL für deinen Server(z.B. `https://dcserver.link/yourservername`).
