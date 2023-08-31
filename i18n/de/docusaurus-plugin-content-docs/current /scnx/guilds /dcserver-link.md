@@ -69,6 +69,6 @@ Generell gilt: dcserver.link-URLS werden von dem genutzt, der sie zuerst beanspr
 <details>
     <summary>Inaktive / gelöschte Server auf SCNX</summary>
     Wenn ein Server von SCNX <a href="./faq#deletion">gelöscht wird</a>, wird die dcserver.link URL permanent gelöscht. Das passiert nicht, 
-    wenn ein Server auf SCNX deaktiviert / geflagged ist - in einigen Fällen wird die URL einfach nur unnutzbar, bleibt aber 
+    wenn ein Server auf SCNX deaktiviert / geflagged ist - in diesen Fällen wird die URL einfach nur unnutzbar, bleibt aber 
     trotzdem beansprucht. Abgelaufene Starter-Pläne haben keinen Einfluss auf die Nutzbarkeit von dcserver.link URLs.
 </details>
