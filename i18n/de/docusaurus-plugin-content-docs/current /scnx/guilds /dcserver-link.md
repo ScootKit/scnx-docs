@@ -63,7 +63,7 @@ Generell gilt: dcserver.link-URLS werden von dem genutzt, der sie zuerst beanspr
     <summary>Markenrechtsverletzungen</summary>
     Wenn eine dcserver.link URL dein Markenrecht verletzt, kontaktiere bitte unser rechtliches Team (<a
     href="mailto:legal@scootkit.net">legal@scootkit.net</a>) mit einer rechtlichen Anfrage zum Entfernen. Wenn die Anfrage angenommen
-    wurde(und der Inhalt entfernt), 
+    (und der Inhalt entfernt) wurde, 
     kannst du eventuell selbst die dcserver.link URL durch Antwort auf die Bestätigungs E-Mail (optional) beanspruchen.
 </details>
 <details>
