@@ -46,7 +46,7 @@ Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn d
 Generell gilt: dcserver.link-URLS werden von dem genutzt, der sie zuerst beansprucht. Normalerweise weichen wir davon auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 
 <details>
-    <summary>Missbrauch von dcserver.link-URLS</summary>
+    <summary>Missbrauch von dcserver.link-URLs</summary>
     Wenn du denkst, dass eine dcserver.link-URL zum betrügen genutzt wird oder anderweitig Discords Community-Richtlinien bricht, 
     melde es bitte unserem Team (<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a>) und wir werden nötige Aktionen veranlassen. 
     Die URL kann dannach nicht mehr genutzt werden.
