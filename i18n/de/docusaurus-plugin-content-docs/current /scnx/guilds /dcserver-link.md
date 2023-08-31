@@ -12,7 +12,7 @@ Diese Dokumentation ist für ein noch nicht fertiges Produkt, welches nur für e
 Erstelle eine einzigartige Vanity-URL für deinen Server(z.B. `https://dcserver.link/yourservername`).
 
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}
-                additionalDetails={{STARTER: 'Nur für Server mit mehr als 50 Mitgliedern(ohne Bots) oder mit einem bezahltem Plan verfügbar.'}}/>
+                additionalDetails={{STARTER: 'Nur für Server mit mehr als 50 Mitgliedern (ohne Bots) oder mit einem bezahltem Plan verfügbar.'}}/>
 
 
 ## Nutzung {#usage}
