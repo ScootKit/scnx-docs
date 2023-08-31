@@ -28,7 +28,7 @@ Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#chang
 
 Vor dem Einrichten einer dcserver.link-URL für deinen Server stelle bitte sicher, dass dein Server einen bezahlten Plan (keine Testversion) oder mindestens 50 Mitglieder (ohne Bots) hat.
 
-Um zu starten, öffne die [Server Einstellungen-Seite](https://scnx.app/de/glink?page=settings) auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Loslegen".
+Um zu starten, öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Loslegen".
 
 ![](./../../assets/scnx/guilds/dcserver-link/enable.png)
 
