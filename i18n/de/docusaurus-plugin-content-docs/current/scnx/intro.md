@@ -44,7 +44,7 @@ Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen]
 * SCNX Werbung: Bewerbe deinen Server oder dein Produkt auf SCNX. Du kannst
   die [Werbung auf SCNX Dokumentation](./account-and-billing/ads) öffnen.
 * SCNX Empfehlungen: Verdiene für jeden Plan, den ein Server, der mit deinem Link hinzugefügt wurde, einen Plan kauft,
-  eine Kommission. Du kannst die [Empfehlungen Dokumentation](./account-and-billing/referrals) öffnen.
+  eine Kommission. Du kannst die [Empfehlungen-Dokumentation](./account-and-billing/referrals) öffnen.
 * SCNX Dateien-Speicher: Hoste Bilder und mehr für deine Discord Server und füge sie direkt in SCNX ein.
 * SC Network Mitgliedschaften (outdated): *Mehr Informationen werden bald verfügbar sein*.
 
