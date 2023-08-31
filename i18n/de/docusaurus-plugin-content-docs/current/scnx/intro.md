@@ -30,7 +30,7 @@ ihnen kann eigene Discord-Bots erstellen.
 * dcserver.link: Erstelle deine eigene eindeutige URL für deinen Server (z.B. `https://dcserver.link/yourservername`).
   Du kannst
   die [dcserver.link-Dokumentation](./guilds/dcserver-link) öffnen.
-* Trusted-Admins: Mit Trusted-Admins können Serverbesitzer anpassbaren Zugriff für ihre Administratoren SCNX geben.
+* Trusted-Admins: Mit Trusted-Admins können Serverbesitzer ihren Administratoren anpassbaren Zugriff auf SCNX geben.
   Öffne die [Trusted-Admin-Dokumentation](./guilds/trusted-admins), um mehr zu erfahren.
 
 Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](./guilds/plans).
