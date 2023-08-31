@@ -17,7 +17,7 @@ ihnen kann eigene Discord-Bots erstellen.
 * Das [SCNX Dashboard](https://scnx.app/de): Hier können Serverbesitzer & Admins ihre Server verwalten und Funktionen
   von
   SCNX nutzen.
-* [Eigener Discord Bot](https://scnx.xyz/bot) (kurz, auf English: "Custom Bot"): Ein komplett anpassbarer universeller
+* [Eigener Discord Bot](https://scnx.xyz/de/bot) (kurz, auf English: "Custom Bot"): Ein komplett anpassbarer universeller
   Discord-Bot für
   eine Community, kostenfrei gehostet auf SCNX. Du kannst [mit einem eigenen Bot loslegen](./../custom-bot)
   oder [die gesamte Eigene-Bot-Dokumentation](./../custom-bot/intro) öffnen.
