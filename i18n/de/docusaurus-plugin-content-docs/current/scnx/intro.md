@@ -10,7 +10,7 @@ Discord-Bots.
 
 ## Funktionen für Server {#servers}
 
-Server sind der Hauptweg, wie du mit SCNX interagieren wirst: Du kannst so viele  [zu SCNX hinzufügen](./../setup), wie
+Server sind der Hauptweg, wie du mit SCNX interagieren wirst: Du kannst so viele [zu SCNX hinzufügen](./../setup), wie
 du willst und jeder von
 ihnen kann eigene Discord-Bots erstellen.
 
