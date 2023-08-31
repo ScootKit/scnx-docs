@@ -49,7 +49,7 @@ Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen]
 * SC Network Mitgliedschaften (outdated): *Mehr Informationen werden bald verfügbar sein*.
 
 Wir haben auch eine Ansammlung von [häufig gestellten Fragen über Nutzer & Abbrechnung](./account-and-billing/faq),
-damit immer Antworten auf deine Fragen bekommst.
+damit du immer Antworten auf deine Fragen bekommst.
 
 ## Andere (Hintergrund-)Teile von SCNX {#behinde-the-scenes}
 
