@@ -53,7 +53,7 @@ Generell gilt: dcserver.link-URLS werden von dem genutzt, der sie zuerst beanspr
 </details>
 <details>
     <summary>Kleiner Server VS. Großer Server</summary>
-    Dieses Szenario tritt ein, wenn ein großer Server(&gt;10.000 Mitglieder ohne Bots und aktiv) mit dem gleichem Namen eine 
+    Dieses Szenario tritt ein, wenn ein großer Server (&gt;10.000 Mitglieder ohne Bots und aktiv) mit dem gleichem Namen eine 
     dcserver.link-URL will, welche momentan von einem kleinem Server(&lt;1.000 Mitglieder) verwendet wird. In solch einem Fall wird unser Team 
     die Anfrage auf einer Fall-für-Fall-Basis prüfen und sich eventuell für eine Übertragung der dcserver.link URL entscheiden. Um solch eine Anfrage zu stellen, 
      <a
