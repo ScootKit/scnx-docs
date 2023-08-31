@@ -61,7 +61,7 @@ questions you might have.
 * [ScootKit Paste](https://paste.scootkit.net): A pastebin-like system to store and share text files in an encrypted
   way. Used by your bot to
   store, for example, logs or ticket transcripts.
-* Bot-Manger: A system to manage hosted bots and communicating with Bot-Hosts on SCNX.
+* Bot-Manager: A system to manage hosted bots and communicating with Bot-Hosts on SCNX.
 * Bot-Host: A server hosting bots. Users can switch their Bot-Host in the dashboard.
 * [SCNX Helper Program](https://scnx.app/user/helper-application): A program to allow involved community members with
   technical knowledge about SCNX to
