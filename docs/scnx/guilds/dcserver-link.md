@@ -46,7 +46,7 @@ Please note that **URLs need to be unique** on the whole network. If a URL you w
 Generally speaking, dcserver.link URLs are first-come, first-serve. We do not usually interfere in this practice. There are, however, a few exemptions:
 
 <details>
-    <summary>Abuse or dcserver.link URLs</summary>
+    <summary>Abuse of dcserver.link URLs</summary>
     If you believe that a dcserver.link URL is being used to scam or otherwise break Discord Community Guidelines,
     please report it to our staff (<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a>) and we'll take appropriate
     action. The URL can then no longer be
