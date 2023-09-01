@@ -61,3 +61,7 @@ a.card:hover {
     --ifm-color-primary-lightest: #16A34A;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.DocSearch-Logo a {
+    display: none !important;
+}
