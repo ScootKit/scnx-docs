@@ -15,6 +15,12 @@ Before you can create your Custom-Bot on SCNX, please make sure that
 
 ## 1. Create your Discord-Application & -Bot 🤖 {#step-1}
 
+:::caution
+Do **not reuse** an existing application. You'll need a new application for your Custom-Bot. SCNX does not support
+running Modmail and Custom-Bot any another, third-party Bot (like txadmin) with the same token / application - please
+create a new one for each bot.
+:::
+
 First, visit the [Discord Developer Portal](https://discord.com/developers/applications). There, create a new
 application by clicking on "New Application" on the upper-left side of your Developer Portal. A modal will open. Enter
 the name of the application (you can change this later), read & accept
@@ -43,6 +49,12 @@ to enter a 2FA-Code for your Discord-Account.
 Once done, please **copy the token of your bot**. You'll need it in the next step.
 
 ![](@site/docs/assets/setup/custom-bot-3.png)
+
+:::danger
+**Only** paste your token in the Dashboard. **Never** send a token to another user, trusted-admins or a member
+of our staff. Treat tokens like a password - users with access to your token are able to use your bot to perform
+harmful actions.
+:::
 
 ## 2. Create your Bot on SCNX 🚀 {#step-2}
 
