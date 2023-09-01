@@ -2,7 +2,7 @@
 
 Bevor du mit SCNX loslegen kannst, musst du ein paar Dinge einrichten. Aber deinen eigenen Discord-Bot kannst du schon direkt danach erstellen.
 
-## 0. Was ist SCNX (nicht)
+## 0. Was ist SCNX (nicht) {#step-0}
 
 SCNX ist **für Communitys entwickelt**. Du kannst __**keinen öffentlichen Bot**__ mit SCNX erstellen, aber du kannst einen Bot für
 *deinen* Server erstellen, den du vollständig anpassen kannst.
