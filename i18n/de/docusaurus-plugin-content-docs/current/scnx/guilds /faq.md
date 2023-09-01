@@ -37,7 +37,7 @@ bei kommerzieller Nutzung auf SCNX zu erfahren.
 Oh nein - bitte folge den Anweisungen im Dashboard. [Kontaktiere unser Team](https://scnx.app/help), 
 wenn du Hilfe benötigst.
 
-## Kann ich alle Daten von einem Server bei SCNX zu einem anderem transferieren? {#transfer}
+## Kann ich alle Daten von einem Server bei SCNX zu einem anderem übertragen? {#transfer}
 
 Du kannst eine Anfrage für die Übertragung aller Daten stellen, wenn beide Server momentan auf SCNX aktiv sind 
 (bitte füge den neuen Server hinzu, bevor du eine Anfrage stellst) und du der Eigentümer dieser beiden Server bist.
