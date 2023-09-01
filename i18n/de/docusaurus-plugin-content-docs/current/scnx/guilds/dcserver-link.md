@@ -30,7 +30,7 @@ Vor dem Einrichten einer dcserver.link-URL für deinen Server stelle bitte siche
 
 Um zu starten, öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Loslegen".
 
-![](./../../assets/scnx/guilds/dcserver-link/enable.png)
+![](@site/docs/assets/scnx/guilds/dcserver-link/enable.png)
 
 Eine einzigartige URL für deinen Server wird auf Basis des Server-Namens und der Server-ID generiert - du kannst das später ändern.
 
