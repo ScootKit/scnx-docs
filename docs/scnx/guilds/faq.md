@@ -53,7 +53,7 @@ As this process involves manual labor from our site, the following policies appl
   left on your balance.
 * If none of your servers have an active paid plan, you will be
   charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
-  left on your balance
+  left on your balance.
 
 :::danger
 ALL data will be completely transferred to your new server. This will overwrite existing settings for your new server.
