@@ -1,6 +1,6 @@
 # Erste Schritte mit SCNX
 
-Bevor du mit SCNX loslegen kannst musst du ein paar Dinge einrichten. Aber deinen eigenen Discord-Bot kannst du schon direkt danach erstellen.
+Bevor du mit SCNX loslegen kannst, musst du ein paar Dinge einrichten. Aber deinen eigenen Discord-Bot kannst du schon direkt danach erstellen.
 
 ## 0. Was ist SCNX (nicht)
 
