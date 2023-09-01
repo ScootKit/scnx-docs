@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Server Backups
 
-Sichere die Nachrichten, Kanäle, Rollen und mehr deines Server automatisch und stelle es wieder her sobald irgendetwas mal schiefgehen sollte.
+Sichere Nachrichten, Kanäle, Rollen und mehr deines Server automatisch und stelle es wieder her, sobald irgendetwas mal schiefgehen sollte.
 
 :::tip Deine Privatsphäre ist uns wichtig
 Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden sie verschlüsselt gespeichert und nur während sie aktiv verwendet werden (z.B. während der Wiederherstellung) entschlüsselt. Trotzdem weisen wir dich darauf hin, möglichst keine Nachrichten, die private Daten enthalten (wie Kreditkartendaten, Sozialversicherungsnummern oder ähnliches), in Kanäle, die in Backups enthalten sind, zu senden.
@@ -18,7 +18,7 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden s
 | Rollen              | Backups werden jede Rolle auf deinem Discord enthalten. Gespeicherte Rollen-Daten beinhalten: Berechtigungen, Name, Farbe und mehr                                       |
 | Emojis              | Backups werden jedes Emoji auf deinem Discord enthalten. Dies Beinhaltet das Emoji-Bild an sich sowie den emoji-name. Sticker sind ggf. auch mit inbegriffen.                |
 | Banns               | Backups werden jeden Bann auf deinem Discord enthalten. Jeder Bann beinhaltet den Grund und den gebannten Nutzer.                                                       |
-| Mitglieder          | Backups werden beinhalten welcher Nutzer welche Rolle zum Zeitpunkt der Backup-Erstellung hatte.<br/> **DIESE FUNKTION IST EVENTUELL NICHT FÜR ALLE VERFÜGBAR**                        |
+| Mitglieder          | Backups werden beinhalten, welcher Nutzer welche Rolle zum Zeitpunkt der Backup-Erstellung hatte.<br/> **DIESE FUNKTION IST EVENTUELL NICHT FÜR ALLE VERFÜGBAR**                        |
 | Servereinstellungen | Backups werden Server-Namen, -Icon, -Einstellungen (wie den AFK-Kanal), Auto-Moderations-Regeln und mehr beinhalten.                                                  |
 
 ## Manuelle Backups {#manual}
@@ -29,7 +29,7 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden s
     ACTIVE_GUILD: 'Speicherung von bis zu 5 Backups gleichzeitig, jedes mit bis zu 20 Nachrichten pro Kanal'
 }}/>
 
-Um manuell Backups zu erstellen, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) im SCNX Dashboard. Klicke danach auf "Backup erstellen" und wähle was [in deinem Backup enthalten sein soll](#included). Bestätige danach nocheinmal dein Backup.
+Um manuell Backups zu erstellen, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) im SCNX Dashboard. Klicke danach auf "Backup erstellen" und wähle was [in deinem Backup enthalten sein soll](#included). Bestätige danach noch einmal dein Backup.
 Ein Backup zu Erstellen kann bis zu 15 Minuten dauern. Dies ist abhängig von der Anzahl der zu speichernden Nachrichten.
 
 ![](@site/docs/assets/scnx/guilds/backups/create.png)
@@ -79,12 +79,12 @@ Die Bestätigung dieser Anfrage wird alle aktuellen Kanäle und Rollen deines Di
 
 ![](@site/docs/assets/scnx/guilds/backups/confirm.png)
 
-Nach der Bestätigung beginnt der SCNX Bot mit dem Löschen aller existierenden Kanäle und Rollen deines Servers. Sobald das erledigt ist wird der SCNX Bot anfangen deine Daten wiederherzustellen. Das kann bis zu **20 Minuten** oder mehr dauern. Sobald alles erledigt ist erwähnt der SCNX Bot dich (oder schreibt dir eine PN). Sollte irgendein Fehler auftreten wird er das auch tun.
+Nach der Bestätigung beginnt der SCNX Bot mit dem Löschen aller existierenden Kanäle und Rollen deines Servers. Sobald das erledigt ist, wird der SCNX Bot anfangen deine Daten wiederherzustellen. Das kann bis zu **20 Minuten** oder mehr dauern. Sobald alles erledigt ist erwähnt der SCNX Bot dich (oder schreibt dir eine PN). Sollte irgendein Fehler auftreten, wird er das auch tun.
 
 ### Wiederherstellung auf anderen Servern {#restore-other-server}
 
 :::tip
-Der Server auf dem du das Backup wiederherstellen möchtest muss nicht zu SCNX hinzugefügt sein, aber der [SCNX Bot muss eingeladen werden](https://sc-net.work/invite-scnx).
+Der Server, auf dem du das Backup wiederherstellen möchtest, muss nicht zu SCNX hinzugefügt sein, aber der [SCNX Bot muss eingeladen werden](https://sc-net.work/invite-scnx).
 :::
 
 Der Wiederherstellungsprozess ist größtenteils identisch zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self) - selbst der verwendete Befehl bleibt gleich. Du musst allerdings die Server-Sperre auf deinem Server deaktivieren.
@@ -92,7 +92,7 @@ Der Wiederherstellungsprozess ist größtenteils identisch zur [Wiederherstellun
 Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deaktiviert ist, kann jeder mit dem Backup-Code (der Befehl der im Dashboard angezeigt wird) das Backup auf jedem Server wiederherstellen. Zum Glück ist die Sperre standardmäßig aktiviert. Um sie zu deaktivieren, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups), wähle dein Backup und klicke auf "Server-Sperre deaktivieren".
 ![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
-Nachdem du die Server-Sperre deaktiviert hast folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
+Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist, unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
 
 
 ## Behebung häufiger Fehler {#throbleshooting}
@@ -109,7 +109,7 @@ Nachdem du die Server-Sperre deaktiviert hast folge bitte den Anweisungen zur [W
         Wenn ich ein Backup erstelle sehe ich die Nachricht "Oh no, you got ratelimited"
     </summary>
     Um die sichere Durchführung aller Aktivitäten sicherzustellen, begrenzen wir die Zahl der manuellen Backups die ein Server in einem bestimmten Zeitraum erstellen kann.
-    <li>Bitte warte so lange wie es in der Nachricht angegeben ist.</li>
+    <li>Bitte warte so lange, wie es in der Nachricht angegeben ist.</li>
 </details>
 <details>
     <summary>
