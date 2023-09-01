@@ -17,7 +17,7 @@ Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](./../../setup) und
 
 Du kannst einen [eigenen Bot](../../custom-bot/intro) und einen [Modmail Bot](../../modmail/intro) pro Server erstellen und Funktionen nicht auf mehrere eigene Bots aufteilen (z.B. einen Bot nur für temporäre Sprachkanäle).  
 Du kannst deinen Bot zu anderen Servern hinzufügen, jedoch wird dieser dort nicht funktionieren. 
-Ein Grund dafür ist, dass das hosten von mehr Bots sehr teuer für uns wäre, doch der deutlich größere Grund ist der Aufbau von SCNX: 
+Ein Grund dafür ist, dass das Hosten von mehr Bots sehr teuer für uns wäre, doch der deutlich größere Grund ist der Aufbau von SCNX: 
 SCNX ist dafür gedacht, oft mehrere, normale Bots durch einen zu ersetzen - den eigenen Bot.
 
 ## Kann ich den SCNX-Manager-Bot entfernen? {#scnx-manager-bot}
