@@ -8,7 +8,7 @@ Häufig gestellte Fragen, wie Server auf SCNX funktionieren.
 
 ## Wieso muss ich der EIgentümer sein, um einen Server zu SCNX hinzuzufügen? {owner}
 
-Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Grund dafür hat mit rechtlichem zu tun und basiert auf 
+Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Grund dafür hat mit Rechtlichem zu tun und basiert auf 
 unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan kannst du einfach den 
 Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](./../../setup) und dir 
 [Trusted-Admin-Rechte](./trusted-admins) geben kann.
