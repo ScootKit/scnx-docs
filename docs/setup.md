@@ -2,7 +2,7 @@
 
 Getting started on SCNX requires a quick setup, but you'll be able to create your own Discord-Bot right after that.
 
-## 0. What is SCNX (not)
+## 0. What is SCNX (not) {#step-0}
 
 SCNX is **desinged for communities**. You can __**not create a public bot**__ on SCNX, instead you can create a bot for
 *your* server that you can completely customize.
@@ -52,7 +52,7 @@ To finish setup, you'll need to to agree to our [SCNX Terms of Service](https://
 and [SCNX Privacy Note](https://sc-net.work/scnx-privacy). These documents contain important information about how you
 can use SCNX and how we will process data (tl;dr: We only process data to provide the service).
 
-![](assets/setup/setup-4.png)
+![](@site/docs/assets/setup/setup-4.png)
 
 ## 5. You are done {#step-5}
 
@@ -60,4 +60,4 @@ Your server has been successfully added to SCNX :tada:
 You can now start by [creating your own bot](custom-bot) or [modmail-bot](modmail) or explore all features on your own -
 our [documentation](/) & [staff](https://scnx.app/help) on our [Discord](https://sc-net.work/dc) is always here to help.
 
-![](assets/setup/setup-5.png)
+![](@site/docs/assets/setup/setup-5.png)
