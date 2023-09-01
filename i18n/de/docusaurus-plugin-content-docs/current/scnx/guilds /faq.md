@@ -58,8 +58,7 @@ Um eine Übertragung aller Daten zu beantragen, [kontaktiere bitte unser Team](h
 
 ## Wie kann ich meinen Server von SCNX löschen? {#deletion}
 
-Schade, dass du SCNX verlassen möchtest - wenn du nur ein Problem mit SCNX hast, sind wir 
-erfreut darüber, auf unserem [Discord](https://sc-net.work/dc) [helfen zu können](https://scnx.app/help).
+Schade, dass du SCNX verlassen möchtest - wenn du nur ein Problem mit SCNX hast, [helfen wir dir gerne](https://scnx.app/help) auf unserem [Discord](https://sc-net.work/dc).
 
 :::danger
 Das Löschen eines Servers auf SCNX kann nicht rückgängig gemacht werden. Du musst der Eigentümer des Servers sein, um diesen von SCNX zu löschen. Wenn du einen aktiven 
