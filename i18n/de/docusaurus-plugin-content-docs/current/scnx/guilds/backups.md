@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Server Backups
 
-Sichere Nachrichten, Kanäle, Rollen und mehr deines Server automatisch und stelle es wieder her, sobald irgendetwas mal schiefgehen sollte.
+Sichere Nachrichten, Kanäle, Rollen und mehr deines Server automatisch und stelle sie wieder her, sollte irgendetwas mal schiefgehen.
 
 :::tip Deine Privatsphäre ist uns wichtig
 Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden sie verschlüsselt gespeichert und nur während sie aktiv verwendet werden (z.B. während der Wiederherstellung) entschlüsselt. Trotzdem weisen wir dich darauf hin, möglichst keine Nachrichten, die private Daten enthalten (wie Kreditkartendaten, Sozialversicherungsnummern oder ähnliches), in Kanäle, die in Backups enthalten sind, zu senden.
