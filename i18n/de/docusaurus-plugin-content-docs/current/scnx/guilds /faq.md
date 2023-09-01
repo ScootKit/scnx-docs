@@ -22,7 +22,7 @@ SCNX ist dafür gedacht, oft mehrere, normale Bots durch einen zu ersetzen - den
 
 ## Kann ich den SCNX-Manager-Bot entfernen? {#scnx-manager-bot}
 
-Nein. Der SCNX-Manager-Bot wird gebraucht, damit das Dashbaord funktioniert. Wenn du jedoch 
+Nein. Der SCNX-Manager-Bot wird gebraucht, damit das Dashboard funktionieren kann. Wenn du jedoch 
 [Statistiken](./analytics) oder [Backups](./backups) nicht auf deinem Server brauchst, kannst du dem Bot die Berechtigung "Kanal anzeigen" ("View Channel") 
 in jedem Kanal entziehen - so erscheint der Bot nicht mehr in der Mitglieder-Liste.
 
