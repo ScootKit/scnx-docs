@@ -10,7 +10,7 @@ SCNX ist **für Communitys entwickelt**. Du kannst __**keinen öffentlichen Bot*
 ## 1. Bei SCNX anmelden {#step-1}
 
 :::info
-Um SCNX zu benutzen, musst du unseren [SCNX Nutzungsbedingungen](https://sc-net.work/scnx-tos) und anderen richtlichen Dokumenten zustimmen. Bitte
+Um SCNX zu benutzen, musst du unseren [SCNX Nutzungsbedingungen](https://sc-net.work/scnx-tos) und anderen rechtlichen Dokumenten zustimmen. Bitte
 lese diese vollständig bevor du weitermachst :wink:
 :::
 
