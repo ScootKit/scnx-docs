@@ -51,7 +51,7 @@ Um die Einrichtung abzuschließen, musst du unseren [SCNX Nutzungsbedingungen](h
 und den [SCNX Datenschutzrichtlinien](https://sc-net.work/scnx-privacy) zustimmen. Diese Dokumente enthalten Informationen, wie und wofür du SCNX nutzen kannst
 und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die benötigt werden, um SCNX zu betreiben).
 
-![](assets/setup/setup-4.png)
+![](@site/docs/assets/setup/setup-4.png)
 
 ## 5. Du bist fertig {#step-5}
 
