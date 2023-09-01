@@ -47,7 +47,7 @@ Danach, kehre bitte zu SCNX zurück und klicke auf "Fertig, erneut überprüfen"
 
 ## 4. Akzeptiere unsere Nutzungsbedingungen & Datenschutzerklärung {#step-4}
 
-Um die Einrichtung abzuschließen musst du unseren [SCNX Nutzungsbedingungen](https://sc-net.work/scnx-tos)
+Um die Einrichtung abzuschließen, musst du unseren [SCNX Nutzungsbedingungen](https://sc-net.work/scnx-tos)
 und den [SCNX Datenschutzrichtlinien](https://sc-net.work/scnx-privacy) zustimmen. Diese Dokumente enthalten Informationen, wie und wofür du SCNX nutzen kannst
 und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die benötigt werden, um SCNX zu betreiben).
 
