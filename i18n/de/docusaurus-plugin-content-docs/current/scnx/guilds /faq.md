@@ -34,7 +34,7 @@ bei kommerzieller Nutzung auf SCNX zu erfahren.
 
 ## Mein Server auf SCNX wurde gebannt / deaktiviert / geflagged - Was kann ich tun? {#banned}
 
-Oh nein - bite folge den Anweisungen im Dashboard. [Kontaktiere unser Team](https://scnx.app/help), 
+Oh nein - bitte folge den Anweisungen im Dashboard. [Kontaktiere unser Team](https://scnx.app/help), 
 wenn du Hilfe benötigst.
 
 ## Kann ich alle Daten von einem Server bei SCNX zu einem anderem transferieren? {#transfer}
