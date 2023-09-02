@@ -76,7 +76,7 @@ korrekten Preise in deiner Währung zu sehen, öffne [scnx.xyz/de/plans](https:/
         <td>4</td>
         <td>10</td>
     </tr><br/>
-Beachte bitte, dass bestimmte Funktionen oder Felder von einigen Modulen, die eine weitgehende Anpassung des Bots erlauben, eventuell nur mit dem PRO-Plan anpassbar sind. Du kannst das Modul auch ohne PRO-Plan verwenden, dass betroffene Feld aber nicht anpassen.
+Beachte bitte, dass bestimmte Funktionen oder Felder von einigen Modulen, die eine weitgehende Anpassung des Bots erlauben, eventuell nur mit dem PRO-Plan anpassbar sind. Du kannst das Modul auch ohne PRO-Plan verwenden, das betroffene Feld aber nicht anpassen.
 </table>
 </details>
 
