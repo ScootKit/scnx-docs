@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Pläne & Abonnements
 
-Pläne auf SCNX sind server-spezifische Zahlungs-Optionen, die mehr Funktionen für Server auf SCNX freischalten.
+Pläne auf SCNX sind server-spezifische Zahlungsoptionen, die mehr Funktionen für Server auf SCNX freischalten.
 
 ## Alle verfügbaren SCNX-Pläne und ihre Funktionen {#features}
 
