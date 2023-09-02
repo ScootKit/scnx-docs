@@ -87,7 +87,7 @@ die [Zahlungs-Seite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=tru
 Zahlungs-Dialog.
 Wähle hier die Abrechnungsart (verfügbare Optionen: "Einmalig", "Monatlich", "Jährlich", ["Lebenslänglich"](#lifetime))
 und deine Währung.
-currency. Wenn du mit [SCNX Credits](./../account-and-billing/faq#scnx-credits) zahlen willst, musst du das jetzt
+Wenn du mit [SCNX Credits](./../account-and-billing/faq#scnx-credits) zahlen willst, musst du das jetzt
 auswählen.
 
 ![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
