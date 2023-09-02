@@ -50,7 +50,7 @@ Da dieser Prozess manuelle Arbeit unsererseits erfordert, gelten folgende Richtl
 * Wenn keiner deiner Server einen aktiven, bezahlten Plan hat, wird dir
   [ein SCNX Credit](./../account-and-billing/faq#scnx-credits) berechnet. Bitte stelle sicher, dass du mindestens einen SCNX Credit aufgeladen hast.
 
-:::Warnung
+:::warning
 ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuen Server
 überschreiben.
 :::
