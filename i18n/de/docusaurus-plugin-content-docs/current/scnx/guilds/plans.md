@@ -106,7 +106,7 @@ Lebenslängliche Pläne
   vergleiche [SCNX Nutzungsbedingungen](https://faq.scnx.app/scnx-nutzungsbedingungen/#pl%C3%A4ne)) - auch wenn wir die
   Namen oder Plan-Inhalte ändern sollten.
 * werden nur für eine bestimmte Zeit angeboten, damit wir wachsen können - danach werden sie entfernt.
-* stellen sicher, dass du nie erneut berechnet wirst, auch wenn wir die Preise erhöhen sollten.
+* stellen sicher, dass du nie erneut bezahlen musst, auch wenn wir die Preise erhöhen sollten.
 * erlauben es uns, diesen Dienst anzubieten :heart:
 
 ### Lebenslänglichen Plan kaufen {#lifetime-purchase}
