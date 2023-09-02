@@ -17,7 +17,8 @@ be able to use their own set of features:
   one community, hosted completely free on SCNX. You can [get started with Custom-Bot](./../custom-bot)
   or [open the full Custom-Bot Documentation](./../custom-bot/intro).
 * [Discord Modmail Bot](https://modmail.net) (short: "Modmail Bot"): A fully configurable Discord-Support system based
-  on the Modmail-principle built to handel tickets professionally, starting at $3.50 / month. You
+  on the Modmail-principle built to handel tickets professionally, starting
+  at <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />. You
   can [get started with Modmail](./../modmail) or [open the full Modmail Documentation](./../modmail/intro).
 * [SCNX Backups](https://scnx.xyz/backups): A system to back up messages, channels, roles and more of your server. You
   can [open the Backups documentation](./guilds/backups).

@@ -469,5 +469,20 @@
   "theme.SearchModal.placeholder": {
     "message": "Dokumentation durchsuchen",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "freeForEver": {
+    "message": "für immer kostenfrei"
+  },
+  "price-disclaimer": {
+    "message": "Finale Preise hängen von deiner Währung und deinem Zahlungs-Interval ab und werden dir vor dem Kauf angezeigt."
+  },
+  "interval.monthly": {
+    "message": "/ Monat"
+  },
+  "interval.yearly": {
+    "message": "/ Jahr"
+  },
+  "interval.lifetime": {
+    "message": "einmalig"
   }
 }

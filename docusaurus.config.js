@@ -16,7 +16,11 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
-    scripts: [{src: 'https://analytics.scootkit.net/js/script.js', defer: true, 'data-domain': 'docs.scnx.xyz'}],
+    scripts: [{src: '/scnx-environment.js', defer: true}, {
+        src: 'https://analytics.scootkit.net/js/script.js',
+        defer: true,
+        'data-domain': 'docs.scnx.xyz'
+    }],
     presets: [
         [
             'classic',
