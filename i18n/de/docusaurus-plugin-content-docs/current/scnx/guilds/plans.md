@@ -165,7 +165,7 @@ unten nach, wie du mit dem Fehler umgehen kannst.
 Server ohne einem bezahlten Plan, müssen regelmässig sogenannte "Checkin-Video-Werbungen" anschauen, da ansonsten ihr
 eigener Bot angehalten wird, nachdem ihr kostenfreier Plan abgelaufen ist, bis sie diesen durch Anschauen einer weiteren
 Werbung wieder verlängern. Diese Werbungen sind nur 15-60 Sekunden lang und der Werbetreibender der angeschauten Werbung
-übernehmen die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 7 Tage stattfinden.
+übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 7 Tage stattfinden.
 Du kannst diese Zeit aber auch auf bis zu 14 Tage erhöhen, indem du gleich zwei Checkin-Werbungen hintereinander
 anschaust. Du kannst diese Checkin-Werbungen auf der
 [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers anschauen.
