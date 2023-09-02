@@ -28,13 +28,13 @@ in jedem Kanal entziehen - so erscheint der Bot nicht mehr in der Mitglieder-Lis
 
 ## Was zählt als kommerzielle Nutzung? {#commercial-usage}
 
-Um SCNX in irgendeiner kommerziellen Art oder Situation zu nutzen, musst du den [SCNX PRO-Plan](https://scnx.xyz/plans) erwerben. 
+Um SCNX in irgendeiner kommerziellen Art oder Situation zu nutzen, musst du den [SCNX PRO-Plan](https://scnx.xyz/de/plans) erwerben. 
 Bitte lese dir diesen [FAQ-Artikel](https://faq.scnx.app/commercial-usage-of-scnx/) durch, um mehr über Einspruch oder Meldungen 
 bei kommerzieller Nutzung auf SCNX zu erfahren.
 
 ## Mein Server auf SCNX wurde gebannt / deaktiviert / geflagged - Was kann ich tun? {#banned}
 
-Oh nein - bitte folge den Anweisungen im Dashboard. [Kontaktiere unser Team](https://scnx.app/help), 
+Oh nein - bitte folge den Anweisungen im Dashboard. [Kontaktiere unser Team](https://scnx.app/de/help), 
 wenn du Hilfe benötigst.
 
 ## Kann ich alle Daten von einem Server bei SCNX zu einem anderem übertragen? {#transfer}
@@ -55,18 +55,18 @@ ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existi
 überschreiben.
 :::
 
-Um eine Übertragung aller Daten zu beantragen, [kontaktiere bitte unser Team](https://scnx.app/help).
+Um eine Übertragung aller Daten zu beantragen, [kontaktiere bitte unser Team](https://scnx.app/de/help).
 
 ## Wie kann ich meinen Server von SCNX löschen? {#deletion}
 
-Schade, dass du SCNX verlassen möchtest - wenn du nur ein Problem mit SCNX hast, [helfen wir dir gerne](https://scnx.app/help) auf unserem [Discord](https://sc-net.work/dc).
+Schade, dass du SCNX verlassen möchtest - wenn du nur ein Problem mit SCNX hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://sc-net.work/dc).
 
 :::danger
 Das Löschen eines Servers auf SCNX kann nicht rückgängig gemacht werden. Du musst der Eigentümer des Servers sein, um diesen von SCNX zu löschen. Wenn du einen aktiven 
 Plan, ein Abonnement oder einen einmaligen Kauf für den Server, den du löschen möchtest, abgeschlossen hast, geht dies verloren.
 :::
 Wenn du den Server permanent von SCNX löschen willst, öffne 
-die [Server-Einstellungen](https://scnx.app/glink?page=settings), scrolle bis zum Abschnitt "Rechtliches" und klicke auf "Server aus SCNX löschen".
+die [Server-Einstellungen](https://scnx.app/de/glink?page=settings), scrolle bis zum Abschnitt "Rechtliches" und klicke auf "Server aus SCNX löschen".
 Du wirst aufgefordert, einen Grund für die Löschung auszuwählen (du musst nicht näher darauf eingehen). Als Nächstes
 wirst du eine PN erhalten,
 um die Löschung zu bestätigen. Klicke auf den Button unter der PN, um deine Löschungsanfrage zu bestätigen und dein Server wird von SCNX gelöscht -
