@@ -1,5 +1,5 @@
 window.addEventListener('load', function (event) {
-    fetch('https://live.local/api/environment').then(async res => {
+    fetch('https://scnx.app/api/environment').then(async res => {
         if (!res.ok) return;
         const body = (await res.json()).pricing;
         console.log(body);
@@ -36,15 +36,3 @@ window.addEventListener('load', function (event) {
         observer.observe(document, config);
     });
 });
-/*
- fetch('https://scnx.app/api/environment').then(async res => {
-            if (!res.ok) return;
-            const body = await res.json();
-            const e = document.getElementById('ai-credits');
-            let aiPackagesHTML = '';
-            for (const item of body.aiPackages) {
-                aiPackagesHTML = aiPackagesHTML + `<tr><td>${item.price}</td><td>${item.amount}</td></tr>`
-            }
-            e.innerHTML = aiPackagesHTML;
-        })
- */
