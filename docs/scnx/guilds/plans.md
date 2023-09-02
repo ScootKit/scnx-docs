@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Plans on SCNX are server-specific payment options unlocking more features on SCNX.
 
-## All availible plans and their features {#features}
+## All available plans and their features {#features}
 
 :::info
 Prices in this documentation might differ from the actual prices. To view the accurate and current prices in your
@@ -19,16 +19,16 @@ currency, please visit [scnx.xyz/plans](https://scnx.xyz/plans).
 | Full access to the SCNX Dashboard                                                         | Included                                                                       | Included                                    | Included                                     |
 | [dcserver.link](./dcserver-link)                                                          | 50+ members without bots required                                              | Included                                    | Included                                     |
 | [Custom Discord-Bot](./../../custom-bot/intro), hosted 24/7                               | Included, but needs to be [extended](#starter-plan) every week by watching ads | Included                                    | Included                                     |
-| [Custom Modmail-Bot](./../../modmail/intro), hosted 24/7                                  | *Not availible*                                                                | Included                                    | Included                                     |
-| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                        | *Not availible*                                                                | *Not availible*                             | Included                                     |
-| Server analyitcs                                                                          | Included                                                                       | Included                                    | Included                                     |
+| [Custom Modmail-Bot](./../../modmail/intro), hosted 24/7                                  | *Not available*                                                                | Included                                    | Included                                     |
+| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                        | *Not available*                                                                | *Not available*                             | Included                                     |
+| [Server analytics](./analytics)                                                           | Included                                                                       | Included                                    | Included                                     |
 | Amount of [AI Credits](https://faq.scnx.app/ai-on-scnx/) awarded on the 25. of each month | 20                                                                             | 50                                          | 100                                          |
 | [Commercial usage](./faq#commercial-usage)                                                | Not allowed                                                                    | Not allowed                                 | Allowed                                      |
 | **Custom-Bot**: Custom-Commands                                                           | 10                                                                             | 42                                          | *unlimited*                                  |
 | **[SCNX Backups](./backups)**: Available Backup-Slots                                     | 2                                                                              | 5                                           | 10                                           |
-| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not availible*                                                                | Once a day                                  | Twice a day                                  |                                                    
-| **[SCNX Backups](./backups)**: Messages stored per channel  per backup                    | 10                                                                             | 20                                          | 50                                           |
-| **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                         | *Not availible*                                                                | *Not availible*                             | Included                                     |
+| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not available*                                                                | Once a day                                  | Twice a day                                  |                                                    
+| **[SCNX Backups](./backups)**: Messages stored per channel per backup                     | 10                                                                             | 20                                          | 50                                           |
+| **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                         | *Not available*                                                                | *Not available*                             | Included                                     |
 
 <details>
     <summary>Additional Plan-Restrictions for certain Custom-Bot Modules</summary>
@@ -89,7 +89,7 @@ Here, select the Payment-Terms (available options: "One-Time", "Monthly", "Yearl
 currency. If
 you want to pay using [SCNX Credits](./../account-and-billing/faq#scnx-credits), please indicate this now.
 
-![](./../../assets/scnx/guilds/plans/subscription-setup.png)
+![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
 
 Your next steps will be different, depending on what Payment-Terms you've selected. Please follow the instructions in
 the dashboard and return to this page if you have any questions or concerns — we'll do our best to cover them in
@@ -99,12 +99,13 @@ our [Frequently asked questions](#faq) section.
 
 Lifetime plans
 
-* are not bound to servers, instead to users - they can be [transferred](#lifetime-apply) every 7 days
+* are not bound to servers, instead to users - they can be [transferred](#lifetime-apply) every 7 days (this is
+  optional).
 * will include features of the respective plan as long as SCNX exists (
   see [SCNX Terms of Service](https://faq.scnx.app/scnx-nutzungsbedingungen/#pl%C3%A4ne)) - even if we change the name
-  of plans or package content
-* are offered for a limited-time-only to allow us to expand - they will be removed in the future
-* ensure that you will not get charged again, even if we increase the prices of plans
+  of plans or package content.
+* are offered for a limited-time-only to allow us to expand - they will be removed in the future.
+* ensure that you will not get charged again, even if we increase the prices of plans.
 * allow us to keep improving this service :heart:
 
 ### Purchase a Lifetime-Plan {#lifetime-purchase}
@@ -140,11 +141,11 @@ details.
 <summary>A warning or error is being shown when I want to transfer my Lifetime-Plan</summary>
 <table>
 <tr><td>Error</td><td>Reason</td><td>Solution</td></tr>
-<tr><td>This guild is already using a Lifetime-Plan. Remove that Lifetime-Plan or contact our billing-team for help.</td><td>Another (or this) Lifetime-Plan is already applied to this guild.</td><td><ul><li>Remove the Lifetime-Plan from this guild.</li><li><a href="https://scnx.app/help">Contact our staff</a> for advice.</li></ul></td></tr>
-<tr><td>This guild as an active subscription. Either cancel the subscription and wait for it to expire or contact our billing-team.</td><td>This guild is currently subscribed to a subscription. Lifetime-Plans can not be applied to servers with an active subscription.</td><td>
+<tr><td>This guild is already using a Lifetime-Plan.</td><td>Another (or this) Lifetime-Plan is already applied to this guild.</td><td><ul><li>Remove the Lifetime-Plan from this guild.</li><li><a href="https://scnx.app/help">Contact our staff</a> for advice.</li></ul></td></tr>
+<tr><td>This guild as an active subscription.</td><td>This guild is currently subscribed to a subscription. Lifetime-Plans can not be applied to servers with an active subscription.</td><td>
 <ul><li>Cancel the subscription and wait until it expires.</li><li><a href="https://scnx.app/help">Contact our staff</a> to remove it immediately.</li></ul></td></tr>
-<tr><td>This guild has [a plan]. Continuing will overwrite this plan. Please note that the current billing period of this server can not be restored.</td><td>This means that the server still has some time left in its current plan. Continuing will remove this time, and we can not restore it.</td><td>You can continue by acknowledging that the server will lose its current Plan-Time (the Lifetime-Plan will still be applied).</td></tr>
-<tr><td>This guild has [a plan]. You can not continue as this action would overwrite the plan of this guild, and you are not the owner. Contact our support for advice.</td><td>Only the server owner can apply their own Lifetime-Plan if such application leads to Plan-Time loss.</td><td><ul><li>Contact the Server-Owner that you want to apply a Lifetime-Plan and that they should no longer extend the Plan-Time of their server. Wait until the current Server-Plan expires.</li><li><a href="https://scnx.app/help">Contact our staff</a> for advice.</li></ul></td></tr>
+<tr><td>This guild has [a plan]. Continuing will overwrite this plan.</td><td>This means that the server still has some time left in its current plan. Continuing will remove this time, and we can not restore it.</td><td>You can continue by acknowledging that the server will lose its current Plan-Time (the Lifetime-Plan will still be applied). Alternatively, you can wait until the current plan has expired.</td></tr>
+<tr><td>This guild has [a plan]. You can not continue as this action would overwrite the plan of this guild, and you are not the owner.</td><td>Only the server owner can apply their own Lifetime-Plan if such application leads to Plan-Time loss.</td><td><ul><li>Contact the Server-Owner that you want to apply a Lifetime-Plan and that they should no longer extend the Plan-Time of their server. Wait until the current Server-Plan expires.</li><li><a href="https://scnx.app/help">Contact our staff</a> for advice.</li></ul></td></tr>
 <tr><td>This Lifetime-Plan needs to cool down</td><td>Lifetime-Plans can only be transferred every 7 days between servers. This Lifetime-Plan has been transferred in the last 7 days.</td><td>Wait until the cooldown-period expires.</td></tr>
 </table>
 </details>
@@ -165,8 +166,8 @@ running.
 You can watch up to two ads at a time which sumps up to 14 days of hosting time. You can not have more than 14 days of
 hosting time at a time. You can also ask your [Trusted Admins](./trusted-admins) to watch videos for your server.
 
-If you forget to extend your hosting time, your bots will shut down and you won't be able to start them again without
-extending your hosting time. You can set up notifications in your
+If you forget to extend your hosting time, your bots will shut down, and you won't be able to start them again without
+extending your hosting time. No data will be deleted in such a case. You can set up a notification 24 hours before your Hosting-Time ends in your
 server's [pricing page](https://scnx.app/glink?page=pricing) under "Manage Free-Plan" -> "Manage notifications" to
 prevent this from happening in the future.
 
@@ -179,14 +180,6 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
     Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic. 
 </details>
 <details>
-<summary>Can I transfer my plan and remaining Plan-Time or subscriptions to another server?</summary>
-Our team can manually transfer your plan and associated data (like remaining Plan-Time and subscriptions) if one of the following conditions is being met:
-<ul>
-<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan-Time is more than a month</li></ul>
-<b>You can only request a Plan-Transfer once every 6 months</b>. <br/>
-To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
-If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible. 
-</details>
 <details>
 <summary>I can't upgrade my subscription to the PRO-Plan because it's shown as "inactive"</summary>
 <ul>
@@ -195,7 +188,7 @@ If you plan to <a href="./faq#transfer">request a complete data transfer</a> to 
 <li><a href="https://scnx.app/help">Contact our staff</a>, so they can look into this issue.</li></ul>
 </details>
 <details>
-<summary>Is there a free trial availible?</summary>
+<summary>Is there a free trial available?</summary>
 Yes, you can start a free trial in your dashboard if these requirements are meet:
 <ul>
     <li>Your server has not participated in a free trial before.</li>
@@ -210,11 +203,11 @@ To check if you are eligible, open the <a href="https://scnx.app/glink?page=pric
 Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">pricing page</a> of open the upgrade-modal by clicking "Extend". There, simply select the Payment-Terms / Interval of the subscription you want - any time left on your current plan will be credited towards your subscription.
 </details>
 <details>
-<summary>What payment methods are availible?</summary>
+<summary>What payment methods are available?</summary>
 <table>
     <tr>
     <td>Currency</td>
-    <td>Payment Methods for one-time purchases</td>
+    <td>Payment Methods for one-time purchases (including Lifetime-Plans)</td>
     <td>Payment Methods for subscriptions</td>
 </tr>
 <tr>
@@ -242,4 +235,15 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 
 <details>
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
-If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">conact our staff</a>.</details>
+If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.</details>
+
+<summary>Can I transfer my plan and remaining Plan-Time or subscriptions to another server?</summary>
+Our team can manually transfer your plan and associated data (like remaining Plan-Time and subscriptions) if <b>one</b> of the following conditions is being met:
+<ul>
+<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan-Time is more than a month</li></ul>
+<b>You can only request a Plan-Transfer once every 6 months</b>. <br/>
+To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
+If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible. 
+
+Please note: Transferring your plan data will <b>overwrite</b> existing Plan-Date. Plan-Time from both server will not be summed up.
+</details>
