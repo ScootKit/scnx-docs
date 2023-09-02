@@ -13,19 +13,19 @@ einfacher zu machen.
 
 Schlage jeden Discord-Nutzer oder Bot nur mit ihrer Discord-ID nach! Füge die ID einfach oben ein, um das Banner, das
 Profilbild, die Abzeichen und mehr des Nutzers zu sehen. Um eine Nutzer-ID zu kopieren, aktiviere zunächst
-den  [discord developer mode](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), , rechts-klicke auf den Nutzer
+den [Discord Entwicklermodus](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), rechts-klicke auf den Nutzer
 und klicke auf "Nutzer ID kopieren".
 
 Füge als Nächstes diese ID in das [Nutzer-Nachschlagen Werkzeug](https://scnx.app/de/user/tools?page=user-lookup).
 Klicke
-dann auf "Nutzer nachschlagen", um deine Anfrage durchzuführen.Du kannst danach die Daten des Nutzers sehen und (falls
+dann auf "Nutzer nachschlagen", um deine Anfrage durchzuführen. Du kannst danach die Daten des Nutzers sehen und (falls
 vorhanden) das Banner- oder Profilbild des Nutzers herunterladen. Hier ist ein Beispiel, wie das aussehen wird:
 
 ![](@site/docs/assets/scnx/user/toolbox/result.png)
 
 ## Zeitstempel-Ersteller {#timestamp-generator}
 
-Nutze den Zeitstempel-Generator, um Daten und Zeitpunkte in Nachricht auf Discord einzufügen. Der Zeitpunkt wird immer
+Nutze den Zeitstempel-Generator, um Daten und Zeitpunkte in Nachrichten auf Discord einzufügen. Der Zeitpunkt wird immer
 in der Zeitzone des Endnutzers angezeigt - keine Verwirrung mit den ganzen Zeitzonen mehr. Wähle einfach einen Zeitpunkt
 oben, wähle das passende Format, kopiere das Ergebnis und es in
 das [Zeitstempel-Generator Werkzeug](https://scnx.app/de/user/tools?page=timestamp-generator) ein. Die Zeit wird dann
@@ -46,8 +46,8 @@ Hier sind alle verfügbaren Formate:
 
 ## SCNX Level-XP-Rechner {#level-generator}
 
-Verwende den Level-XP-Rechner, um zu berechnen, wie viel XP ein Nutzer braucht, um ein bestimmtes Level im Levelsystem
-des SCNX CustomBots zu erreichen.
+Verwende den Level-XP-Rechner, um zu berechnen, wie viel XP ein Nutzer braucht, um ein bestimmtes Level beim eigenen Bot im Levelsystem
+von SCNX zu erreichen.
 Gebe dafür einfach das gewünschte Level in
 das [Level-XP-Rechner Werkzeug](https://scnx.app/de/user/tools?page=level-calculator) ein, um zu sehen, wie viel XP für
 das
