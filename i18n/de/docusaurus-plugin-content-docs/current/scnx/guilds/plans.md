@@ -170,7 +170,7 @@ Du kannst diese Zeit aber auch auf bis zu 14 Tage erhöhen, indem du gleich zwei
 anschaust. Du kannst diese Checkin-Werbungen auf der
 [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers anschauen.
 
-Bitte beachte, dass es keine Drittanbieterwerbung in deinen Eigenen- oder Modmail-Bot gibt (und geben wird). Die Bots an
+Bitte beachte, dass es keine Drittanbieterwerbung in deinem Eigenen- oder Modmail-Bot gibt (und geben wird). Die Bots an
 sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle 7 Tage angeschaut werden, damit der Bot online
 bleibt.
 
