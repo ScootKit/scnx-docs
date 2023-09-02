@@ -162,7 +162,7 @@ unten nach, wie du mit dem Fehler umgehen kannst.
 
 ## Werbegestützer Starter-Plan {#starter-plan}
 
-Server ohne einem bezahlten Plan, müssen regelmässig sogenannte "Checkin-Video-Werbungen" anschauen, da ansonsten ihr
+Server ohne bezahlten Plan, müssen regelmäßig sogenannte "Checkin-Video-Werbungen" anschauen, da ansonsten ihr
 eigener Bot angehalten wird, nachdem ihr kostenfreier Plan abgelaufen ist, bis sie diesen durch Anschauen einer weiteren
 Werbung wieder verlängern. Diese Werbungen sind nur 15-60 Sekunden lang und der Werbetreibende der angeschauten Werbung
 übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 7 Tage stattfinden.
