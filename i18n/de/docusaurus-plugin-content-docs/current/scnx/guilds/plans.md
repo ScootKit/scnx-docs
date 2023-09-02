@@ -174,7 +174,7 @@ Bitte beachte, dass es keine Drittanbieterwerbung in deinen Eigenen- oder Modmai
 sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle 7 Tage angeschaut werden, damit der Bot online
 bleibt.
 
-Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 14 Tagen an Hosting-Zeit bedeutet. Du kannst nicht mehr als
+Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 14 Tagen an Hosting-Zeit entspricht. Du kannst nicht mehr als
 14 Tage Host-Zeit gleichzeit haben. Du kannst auch deine [Trusted Admins](./trusted-admins) bitten, Werbung für deinen
 Server anzuschauen.
 
