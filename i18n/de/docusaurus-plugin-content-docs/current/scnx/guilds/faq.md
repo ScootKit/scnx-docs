@@ -2,11 +2,11 @@
 sidebar_position: 6
 ---
 
-# Frequently asked questions
+# Häufig gestellte Fragen
 
 Häufig gestellte Fragen, wie Server auf SCNX funktionieren.
 
-## Wieso muss ich der EIgentümer sein, um einen Server zu SCNX hinzuzufügen? {owner}
+## Wieso muss ich der Eigentümer sein, um einen Server zu SCNX hinzuzufügen? {#owner}
 
 Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Grund dafür hat mit Rechtlichem zu tun und basiert auf 
 unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan kannst du einfach den 
@@ -50,8 +50,9 @@ Da dieser Prozess manuelle Arbeit unsererseits erfordert, gelten folgende Richtl
 * Wenn keiner deiner Server einen aktiven, bezahlten Plan hat, wird dir
   [ein SCNX Credit](./../account-and-billing/faq#scnx-credits) berechnet. Bitte stelle sicher, dass du mindestens einen SCNX Credit aufgeladen hast.
 
-:::Warnung
-ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuem Server überschreiben.
+:::warning
+ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuen Server
+überschreiben.
 :::
 
 Um eine Übertragung aller Daten zu beantragen, [kontaktiere bitte unser Team](https://scnx.app/help).
@@ -65,7 +66,9 @@ Das Löschen eines Servers auf SCNX kann nicht rückgängig gemacht werden. Du m
 Plan, ein Abonnement oder einen einmaligen Kauf für den Server, den du löschen möchtest, abgeschlossen hast, geht dies verloren.
 :::
 Wenn du den Server permanent von SCNX löschen willst, öffne 
-die [Server-Einstellungen](https://scnx.app/glink?page=settings), scrolle bis zum Abschnitt "Rechtliches" und klicke auf "Server aus SCNX löschen". 
-Du wirst aufgefordert, einen Grund für die Löschung auszuwählen (du musst nicht näher darauf eingehen). Als nächstes wirst du eine PN erhalten, 
-um die Löschung zu bestätigen. Klicke auf den Button unter der PN, um deine Löschungsanfrage zu bestätigen und dein Server wird von SCNX gelöscht - 
-du wirst eine Bestätigung über eine PN erhalten, wnen die Löschung abgeschlossen wurde - das braucht normalerweise 1-5 Minuten.
+die [Server-Einstellungen](https://scnx.app/glink?page=settings), scrolle bis zum Abschnitt "Rechtliches" und klicke auf "Server aus SCNX löschen".
+Du wirst aufgefordert, einen Grund für die Löschung auszuwählen (du musst nicht näher darauf eingehen). Als Nächstes
+wirst du eine PN erhalten,
+um die Löschung zu bestätigen. Klicke auf den Button unter der PN, um deine Löschungsanfrage zu bestätigen und dein Server wird von SCNX gelöscht -
+du wirst eine Bestätigung über eine PN erhalten, wenn die Löschung abgeschlossen wurde - das braucht normalerweise 1-5
+Minuten.

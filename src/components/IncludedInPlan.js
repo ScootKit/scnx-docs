@@ -1,6 +1,7 @@
 import React from 'react';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import PlanPrice from './PlanPrice';
 
 export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
     return <div className="card padding--md margin-bottom--md">
@@ -24,13 +25,10 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                         {data['STARTER'] ?
                             <Translate id="plans.included.starterIncluded">Included in the Starter-Plan</Translate> :
                             <Translate id="plans.included.starterNotIncluded">Not included in the
-                                Starter-Plan</Translate>}
+                                Starter-Plan</Translate>} (<Translate id="freeForEver">free for ever</Translate>)
                     </div>
                     {additionalDetails['STARTER'] && <div style={{
-                        fontWeight: 400,
-                        color: '#A3A3A3',
-                        marginTop: '-2px',
-                        marginBottom: '3px'
+                        fontWeight: 400, color: '#A3A3A3', marginTop: '-2px', marginBottom: '3px'
                     }}>{additionalDetails['STARTER']}</div>}
                 </div>
             </div>
@@ -50,13 +48,10 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                         {data['ACTIVE_GUILD'] ? <Translate id="plans.included.activeGuildIncluded">Included in the
                                 Active-Guild-Plan</Translate> :
                             <Translate id="plans.included.starterNotIncluded">Not included in the
-                                Active-Guild-Plan</Translate>}
+                                Active-Guild-Plan</Translate>} (<PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/>)
                     </div>
                     {additionalDetails['ACTIVE_GUILD'] && <div style={{
-                        fontWeight: 400,
-                        marginTop: '-2px',
-                        color: '#A3A3A3',
-                        marginBottom: '3px'
+                        fontWeight: 400, marginTop: '-2px', color: '#A3A3A3', marginBottom: '3px'
                     }}>{additionalDetails['ACTIVE_GUILD']}</div>}
                 </div>
             </div>
@@ -74,7 +69,8 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 <div>
                     <div>
                         {data['PRO'] ? <Translate id="plans.included.proIncluded">Included in the PRO-Plan</Translate> :
-                            <Translate id="plans.included.starterNotIncluded">Not included in the PRO-Plan</Translate>}
+                            <Translate id="plans.included.starterNotIncluded">Not included in the
+                                PRO-Plan</Translate>} (<PlanPrice plan="PRO" type="MONTHLY"/>)
                     </div>
                     {additionalDetails['PRO'] && <div style={{
                         fontWeight: 400,
@@ -85,7 +81,7 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 </div>
             </div>
         </div>
-        <div style={{marginTop: '10px', gap: '5px'}} className="flex">
+        <div style={{marginTop: '10px', gap: '5px'}} className="flex flex-wrap">
             <Link href="https://scnx.xyz/plans" className="button button--primary flex">
                 <Translate id="plans.included.compare">Compare SCNX Plans</Translate>
                 <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22"
@@ -99,6 +95,10 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 <Translate id="plans.included.upgrade">Upgrade SCNX Plan</Translate></Link>}
             <Link to="/docs/scnx/guilds/plans" className="button button--secondary">
                 <Translate id="plans.included.learnMoreAboutPricing">Learn more about Pricing on SCNX</Translate></Link>
+        </div>
+        <div style={{marginTop: '8px', fontSize: '10px', color: 'lightgray', marginBottom: '-7px'}}>
+            <Translate id="price-disclaimer">Final prices depend on your currency and payment interval and will be
+                displayed before purchase.</Translate>
         </div>
     </div>;
 }

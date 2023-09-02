@@ -15,7 +15,7 @@ you [trusted admin permissions](./trusted-admins).
 
 ## Can I create multiple Discord-Bots for a server? {#multiple-bots}
 
-Sort off - you can create one [Custom Bot](../../custom-bot/intro) and one [Modmail Bot](../../modmail/intro) per
+Sort of - you can create one [Custom Bot](../../custom-bot/intro) and one [Modmail Bot](../../modmail/intro) per
 server. But you can not split features of the Custom-Bot into multiple bots (for example one bot for just
 Temp-Channels). While you can add your bot to other servers, they won't work on them.
 The reason for it is that hosting more bots would be very expensive for us, but the even bigger reason is the very
@@ -53,7 +53,7 @@ As this process involves manual labor from our site, the following policies appl
   left on your balance.
 * If none of your servers have an active paid plan, you will be
   charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
-  left on your balance
+  left on your balance.
 
 :::danger
 ALL data will be completely transferred to your new server. This will overwrite existing settings for your new server.
