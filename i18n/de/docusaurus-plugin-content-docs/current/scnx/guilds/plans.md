@@ -93,7 +93,7 @@ auswählen.
 ![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
 
 Deine nächsten Schritte werden sich nach deiner Auswahl der Abrechnungsart unterscheiden. Bitte befolge die Anweisungen
-im Dashboard und kehre zu dieser Dokumentation-Seite zurück, wenn du Fragen oder Bedenken hast - wir werden uns bestes
+im Dashboard und kehre zu dieser Dokumentations-Seite zurück, wenn du Fragen oder Bedenken hast - wir werden unser bestes
 tun, diese in der [Häufig gestellte Fragen](#faq)-Sektion zu beantworten.
 
 ## Lebenslängliche Pläne {#lifetime}
