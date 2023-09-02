@@ -113,7 +113,7 @@ Lebenslängliche Pläne
 
 Um einen lebenslänglichen Plan zu kaufen, öffne
 dein [Lebenslängliche-Pläne-Panel](https://scnx.app/de/user/lifetime-plans) und
-wähle den Plan aus, denn du kaufen willst. Vervollständige als nächstes den Kauf mit deiner bevorzugten
+wähle den Plan aus, den du kaufen willst. Vervollständige als nächstes den Kauf mit deiner bevorzugten
 Zahlungsmethode - du kannst später dann auswählen, welcher deiner Server den Plan erhalten soll.
 
 Nachdem du den Kauf abgeschlossen hast, kehre zum [Lebenslängliche-Pläne-Panel](https://scnx.app/de/user/lifetime-plans)
