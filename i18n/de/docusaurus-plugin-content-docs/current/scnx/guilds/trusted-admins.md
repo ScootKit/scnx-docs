@@ -11,17 +11,17 @@ Server-Eigentümer können ihren Admins mit Hilfe der Funktion "Trusted Admins" 
 ## Einrichtung {#setup}
 
 :::caution
-Erteile Trusted-Admin-Rechte nur an Nutzer, welchen du voll und ganz vertrauen tust - diese können dann in deinem Namen mit SCNX interagieren.
-Bitte lese [den Absatz über Funktion](https://faq.scnx.app/scnx-nutzungsbedingungen/#trusted-admins) in
+Erteile Trusted-Admin-Rechte nur an Nutzer, welchen du voll und ganz vertraust - diese können dann in deinem Namen mit SCNX interagieren.
+Bitte lese dir [den Absatz über diese Funktion](https://faq.scnx.app/scnx-nutzungsbedingungen/#trusted-admins) in
 unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) durch.
 :::
 :::info
-Um einen neuen Nutzer als Trusted Admin hinzuzufügen, musst du sicherstellen das der Nutzer sich mindestens einmal bei SCNX eingeloggt hat - Du kannst ihn diesen Link zum einloggen senden: [https://scnx.app/de/auth/login](https://scnx.app/de/auth/login).
-Wenn der Nutzer bestätigt hat dass er sich bei SCNX einloggt hat, kannst du mit der Anleitung fortfahren.
+Um einen neuen Nutzer als Trusted Admin hinzuzufügen, musst du sicherstellen, dass der Nutzer sich mindestens einmal bei SCNX eingeloggt hat - Du kannst ihn diesen Link zum einloggen senden: [https://scnx.app/de/auth/login](https://scnx.app/de/auth/login).
+Wenn der Nutzer bestätigt hat, dass er sich bei SCNX einloggt hat, kannst du mit der Anleitung fortfahren.
 :::
 
 Um einen Trusted Admin hinzuzufügen, besuche deine [Server Einstellungen Seite](https://scnx.app/de/glink?page=settings) in deinem SCNX Dashboard und scrolle zur "Trusted-Admins" Sektion. 
-Als nächstes klickst du auf "Trusted-Admin hinzufügen", um den
+Als nächstes klickst du auf "Trusted-Admin hinzufügen", um dir den
 Trusted-Admin-Dialog anzeigen zu lassen. Hier kannst du die Discord-Nutzer-ID des gewünschten Trusted-Admins eingeben und [seine Berechtigungen](#permissions) konfigurieren (Bitte lese zuerst den Abschnitt [Berechtigungen](#permissions)!). Wenn Du fertig bist,
 speichere die Änderungen, um den Zugriff zu gewähren.
 
@@ -29,9 +29,9 @@ speichere die Änderungen, um den Zugriff zu gewähren.
 
 ## Verwalten {#manage}
 
-Um die Berechtigungen eines Trusted Admins zu ändern, öffne dazu deine [Server Einstellungs Seite](https://scnx.app/de/glink?page=settings) in deinem SCNX Dashboard
-und scrolle zur Trusted Admins Sektion und klicke auf deinen Trusted Admin, welche du ändern möchtest. Das Trusted Admin-Modal wird angezeigt - Hier kannst du [seine Berechtigungen](#permissions) ändern. Um die Änderungen zu speichern, klicke auf "Änderungen speichern". 
-Um einen Trusted Admin zu entfernen, klicke auf "Zugang entfernen" im Trusted Admin-Dialog.
+Um die Berechtigungen eines Trusted Admins zu ändern, öffne die [Server Einstellungs Seite](https://scnx.app/de/glink?page=settings) in deinem SCNX Dashboard, 
+scrolle zur "Trusted-Admins" Sektion und klicke auf den Trusted Admin, von dem du die Berechtigungen ändern möchtest. Der Trusted-Admin-Dialog wird angezeigt - Hier kannst du [seine Berechtigungen](#permissions) ändern. Um die Änderungen zu speichern, klicke auf "Änderungen speichern". 
+Um einen Trusted Admin zu entfernen, klicke auf "Zugang entfernen" im Trusted-Admin-Dialog.
 
 ## Berechtigungen {#permissions}
 
@@ -39,18 +39,18 @@ Die folgenden Berechtigungen können per Trusted Admin-Berechtigungen vergeben w
 
 | Berechtigung                                                     |   Erklärung                                                                                                                                                                      |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Administrator                                                    | Dieser Nutzer kann die meisten Aktionen auf deinem Server ausführen, außer Aktionen welche für den Server-Eigetümer limitiert sind.                                              |
+| Administrator                                                    | Dieser Nutzer kann die meisten Aktionen auf deinem Server ausführen, außer Aktionen welche auf den Server-Eigetümer limitiert sind.                                              |
 | **Eigener Bot**: Bot-Administrator                                | Dieser Nutzer hat jegliche verfügbare Berechtigung auf den eigenen Bot des Servers.                                                                                                                 |
-| **Eigener Bot**: Kann Bot-Login nutzen                            | Dieser Nutzer kann Nachrichten senden, editieren und löschen und kann bestimmte Module im Webpanel des Als Bot einloggen nutzen.                                                 |
+| **Eigener Bot**: Kann Bot-Login nutzen                            | Dieser Nutzer kann Nachrichten senden, editieren und löschen und kann bestimmte Module im Webpanel des "Als Bot anmelden" nutzen.                                                 |
 | **Eigener Bot**: Bot-Module aktivieren und deaktivieren           | Dieser Nutzer kann Bot-Module aktivieren und deaktivieren.                                                                                                                       |
 | **Eigener Bot**: Konfigurationen & Eigene Befehle ändern und neu laden | Dieser Nutzer kann die Bot-Konfiguration, Fehler und eigene Befehle von deinem Bot Sehen, Bearbeiten und Neuladen. Dazu gehört auch die Möglichkeit, Konfigurationsdateien auf ihren Standardwert zurückzusetzen. |
 | **Eigener Bot**: Bot verwalten                                       | Dieser Nutzer kann den Bot neustarten und stoppen, sowie seine Einstellungen und das Bot-Profil ändern.                                                                                                    |
-| **Modmail-Bot**: Modmail Administrator                           | Dieser Nutzer hat jeglich mögliche Berechtigung zum ModMail-Bot.                                                                                                                    |
-| **Modmail-Bot**: Modmail verwalten                                  | Dieser Nutzer kann den Modmail-Bot neustarten und stoppen sowie seine Einstellungen und das Modmail-Bot Profil ändern.                                                                                             |
+| **Modmail-Bot**: Modmail Administrator                           | Dieser Nutzer hat jede mögliche Berechtigung zum ModMail-Bot.                                                                                                                    |
+| **Modmail-Bot**: Modmail verwalten                                  | Dieser Nutzer kann den Modmail-Bot neustarten und stoppen, sowie seine Einstellungen und das Modmail-Bot Profil ändern.                                                                                             |
 | **Modmail-Bot**: Modmail-Konfiguration bearbeiten und neu laden                   | Dieser Nutzer kann die Konfiguration sowie Fehler sehen, neuladen und editieren.                                                                                            |
 | **Modmail-Bot**: Modmail-Bewertungen anzeigen                            | Dieser Nutzer kann Modmail Support-Bewertungen und Ergebnisberichte ansehen.                                                                                                        |
-| **Modmail-Bot**: Modmail-Statistiken anzeigen                          | Dieser Nutzer kann die Modmail Statistiken einsehen.                                                                                                                                            |
-| **Backups**: Verwalte Backups                                      | Dieser Nutzer kann Backups erstellen, exportieren und löschen und seine Einstellungen verändern.                                                                                                  |
+| **Modmail-Bot**: Modmail-Statistiken anzeigen                          | Dieser Nutzer kann die Modmail-Statistiken einsehen.                                                                                                                                            |
+| **Backups**: Verwalte Backups                                      | Dieser Nutzer kann Backups erstellen, exportieren, löschen und seine Einstellungen verändern.                                                                                                  |
 | **Analytics**: Anzeigen und Verwenden von Analysen                              | Dieser Nutzer kann deine Server Statistiken anzeigen und verwenden.                                                                                                                             |
 | **Integrations**: Integrationen ansehen & bearbeiten                       | Dieser Nutzer kann alle Funktionen jeglicher Integrationen anschauen und editieren, aber keine neuen Integrationen hinzufügen.                                                                                |
 
@@ -78,7 +78,7 @@ Trusted-Admins können nicht mehr auf deinen Server zugreifen, wenn sie den Serv
 <details>
 <summary>Wenn ich meine Nutzer-ID eingebe, zeigt SCNX mir einen "Fehler beim Abrufen des Nutzers" an</summary>
 Die Discord Nutzer-ID des Nutzers, den du probierst hinzuzufügen ist wahrscheinlich ungültig. Nutzer-IDs bestehen nur aus Nummern und sind nicht das gleiche wie Tags, oder Nutzernamen. Um eine Discord Nutzer-ID zu erhalten, befolge diesen
-<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"> offiziellen Discord Support Artikel um eine ID zu erhalten</a>.
+<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"> offiziellen Discord Support Artikel, um eine ID zu erhalten</a>.
 </details>
 
 <details>
