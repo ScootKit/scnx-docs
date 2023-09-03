@@ -72,9 +72,9 @@ const sidebars = {
             },
             items: [
                 {
-                    type: 'doc',
+                    type: 'link',
                     label: 'Get started',
-                    id: 'custom-bot'
+                    href: '/docs/custom-bot'
                 },
                 {
                     type: 'doc',
