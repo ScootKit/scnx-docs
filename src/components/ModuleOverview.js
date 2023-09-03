@@ -97,7 +97,7 @@ export default function ModuleOverview({moduleName}) {
                         prices</Translate></Link>.
                 </div>
             </div>
-            <div className="margin-top--md flex" style={{gap: '5px'}}>
+            <div className="margin-top--md flex flex-wrap" style={{gap: '5px'}}>
                 <Link href={`https://scnx.app/${i18n.currentLocale}/glink?page=bot/modules?query=${moduleData.name}`}
                       className="button button--primary flex items-center">
                     <Translate id="modules.enable">Enable module on SCNX</Translate>
