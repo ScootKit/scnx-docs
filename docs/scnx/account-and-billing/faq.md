@@ -89,9 +89,9 @@ Please [contact our staff](https://scnx.app/help) if you think none of these rea
 
 ## Other questions
 
-### Requires scopes for Discord {#discord-access}
+### Required scopes for Discord {#discord-access}
 
-To use SCNX, you'll need to authorized certain access to your Discord account. Our access is strictly limited, but we
+To use SCNX, you'll need to authorize certain access to your Discord account. Our access is strictly limited, but we
 understand that you might be worried about sharing personal data with a third party. Here's an explanation about why we
 require which scope.
 
