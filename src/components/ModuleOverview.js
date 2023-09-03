@@ -13,6 +13,7 @@ import {
     faFileCircleXmark,
     faHeart,
     faInfoCircle,
+    faServer,
     faZap
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -88,6 +89,15 @@ export default function ModuleOverview({moduleName}) {
                         <Translate id="module.oneConfigFile">This module has one configuration file.</Translate> :
                         <Translate values={{count: moduleData.configFileCount}}
                                    id="module.moreConfigFile">{'This module has {count} configuration files.'}</Translate>)}
+                </div>
+                <div>
+                    <FontAwesomeIcon width={14} icon={faServer} style={{marginRight: '0.25rem'}}/> <Translate
+                    id="module.serverCount" values={{
+                    count: new Intl.NumberFormat(i18n.currentLocale, {
+                        compactDisplay: 'short',
+                        notation: 'compact'
+                    }).format(moduleData.approximateEnableBotCount)
+                }}>{'This servers is being used over {count} other servers on SCNX.'}</Translate>
                 </div>
                 <div>
                     <FontAwesomeIcon width={14} icon={faCheckCircle} style={{marginRight: '0.25rem'}}/> <Translate
