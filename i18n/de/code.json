@@ -484,5 +484,41 @@
   },
   "interval.lifetime": {
     "message": "einmalig"
+  },
+  "modules.oss": {
+    "message": "Dieses Modul ist {ossLink}."
+  },
+  "modules.ossLink": {
+    "message": "Open-Source"
+  },
+  "module.earlyAccess": {
+    "message": "Dieses Modul ist aktuell nur für Nutzer mit Early-Access verfügbar."
+  },
+  "module.hasDB": {
+    "message": "Dieses Modul speichert Daten in der Datenbank deines Bots."
+  },
+  "module.usesAICredits": {
+    "message": "Dieses Modul verwendet das KI Guthaben deines Servers."
+  },
+  "module.noConfig": {
+    "message": "Dieses Modul hat keine verfügbaren Konfigurationsdateien."
+  },
+  "module.moreConfigFile": {
+    "message": "Dieses Modul hat {count} Konfigurationsdateien."
+  },
+  "module.includedInEveryPlan": {
+    "message": "Dieses Modul ist bei jedem Plan kostenlos dabei."
+  },
+  "module.plansLink": {
+    "message": "Mehr über Preise erfahren"
+  },
+  "modules.enable": {
+    "message": "Modul auf SCNX aktivieren"
+  },
+  "module.donate": {
+    "message": "Spende an den Entwickler"
+  },
+  "module.oneConfigFile": {
+    "message": "Dieses Modul eine verfügbare Konfigurationsdatei."
   }
 }

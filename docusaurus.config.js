@@ -222,6 +222,34 @@ const config = {
                 }
             };
         },
+        function () {
+            return {
+                name: 'scnx-custom-bot-modules',
+                async loadContent() {
+                    const scnxOrgAuthorData = {};
+                    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    for (const botModule of moduleData) {
+                        if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;
+                        const res = await fetch('https://scnx.app/api/marketplace/organizations/' + botModule.author.scnxOrgID);
+                        scnxOrgAuthorData[botModule.author.scnxOrgID] = {};
+                        const result = await res.json();
+                        for (const key in result) {
+                            if (!['slug', 'displayName', 'iconUrl'].includes(key)) continue;
+                            scnxOrgAuthorData[botModule.author.scnxOrgID][key] = result[key];
+                        }
+                    }
+                    const moduleDataWithOrgs = [];
+                    for (const botModule of moduleData) {
+                        if (!botModule.author.scnxOrgID) continue;
+                        moduleDataWithOrgs.push({...botModule, orgData: scnxOrgAuthorData[botModule.author.scnxOrgID]});
+                    }
+                    return moduleDataWithOrgs;
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
         'docusaurus-theme-search-typesense',
         [
             '@docusaurus/plugin-pwa',

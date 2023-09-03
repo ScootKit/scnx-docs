@@ -2,6 +2,8 @@
 
 Simple module to have a channel with a message that shows the users some information about your guild
 
+<ModuleOverview moduleName="serverinfo" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

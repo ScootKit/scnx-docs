@@ -2,6 +2,8 @@
 
 Publishes messages in announcement channels
 
+<ModuleOverview moduleName="auto-publisher" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

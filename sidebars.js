@@ -170,7 +170,7 @@ const sidebars = {
                         type: 'generated-index',
                         title: 'Game & Fun Modules',
                         description: 'Make your server more fun with fun-modules! Play Games (like UNO, Connect Four, Counter, Emoji-Quiz and more) on your Discord and engage your community.',
-                        slug: '/custom-bot/modules/fun'
+                        slug: '/custom-bot/modules/fun-and-games'
                     },
                     items: [
                         {
@@ -202,7 +202,7 @@ const sidebars = {
                         type: 'generated-index',
                         title: 'Moderation Modules',
                         description: 'Protect your server from Raiders, Spammers and more. Track invites, moderate misbehavior and detect Ghost-Pings with these modules.',
-                        slug: '/custom-bot/modules/moderation'
+                        slug: '/custom-bot/modules/moderation-and-security'
                     },
                     items: [
                         {

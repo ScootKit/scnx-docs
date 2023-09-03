@@ -2,6 +2,9 @@
 
 Easy to use levelsystem with a lot of customization!
 
+
+<ModuleOverview moduleName="levels" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

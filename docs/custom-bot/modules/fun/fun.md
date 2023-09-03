@@ -2,6 +2,8 @@
 
 Some random fun commands like /hug or /random
 
+<ModuleOverview moduleName="fun" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

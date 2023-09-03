@@ -2,6 +2,8 @@
 
 Allow users to set their AFK-Status and notify other users if they try to reach them
 
+<ModuleOverview moduleName="afk-system" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

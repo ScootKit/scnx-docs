@@ -2,8 +2,13 @@ import React from 'react';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import PlanPrice from './PlanPrice';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
+    const {i18n} = useDocusaurusContext();
+
     return <div className="card padding--md margin-bottom--md">
         <p style={{fontWeight: 700, textTransform: 'uppercase', marginBottom: '0.4rem'}}><Translate
             id="plans.included.header">Included in these
@@ -82,19 +87,17 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
             </div>
         </div>
         <div style={{marginTop: '10px', gap: '5px'}} className="flex flex-wrap">
-            <Link href="https://scnx.xyz/plans" className="button button--primary flex">
+            <Link href={`https://scnx.xyz/${i18n.currentLocale}/plans`}
+                  className="button button--primary flex items-center">
                 <Translate id="plans.included.compare">Compare SCNX Plans</Translate>
-                <svg xmlns="http://www.w3.org/2000/svg" height="22" viewBox="0 -960 960 960" width="22"
-                     style={{marginLeft: '5px'}}>
-                    <path
-                        d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
-                </svg>
+                <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
             </Link>
-            {!data['STARTER'] && <Link href="https://scnx.app/glink?page=pricing?showUpgradeModal=true"
+            {!data['STARTER'] &&
+                <Link href={`https://scnx.app/${i18n.currentLocale}/glink?page=pricing?showUpgradeModal=true`}
                                        className="button button--secondary">
                 <Translate id="plans.included.upgrade">Upgrade SCNX Plan</Translate></Link>}
             <Link to="/docs/scnx/guilds/plans" className="button button--secondary">
-                <Translate id="plans.included.learnMoreAboutPricing">Learn more about Pricing on SCNX</Translate></Link>
+                <Translate id="plans.included.learnMoreAboutPricing">Learn more about pricing on SCNX</Translate></Link>
         </div>
         <div style={{marginTop: '8px', fontSize: '10px', color: 'lightgray', marginBottom: '-7px'}}>
             <Translate id="price-disclaimer">Final prices depend on your currency and payment interval and will be

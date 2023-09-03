@@ -2,6 +2,8 @@
 
 Let users set reminders for themselves - either via DMs or Channels
 
+<ModuleOverview moduleName="reminders" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

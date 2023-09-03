@@ -2,6 +2,8 @@
 
 Module that sends a message to a channel, when a TikToker posts a TikTok (brain damage included)
 
+<ModuleOverview moduleName="tiktok-notifications" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

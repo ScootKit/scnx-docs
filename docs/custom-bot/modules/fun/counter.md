@@ -2,6 +2,8 @@
 
 Allow your users to count together
 
+<ModuleOverview moduleName="counter" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

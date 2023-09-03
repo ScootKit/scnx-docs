@@ -25,6 +25,30 @@
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.module-name {
+    align-items: center;
+    display: flex;
+    color: #D4D4D4;
+    font-weight: 600;
+}
+
+.module-name:hover {
+    text-decoration: none;
+    color: #FAFAFA
+}
+
+.items-center {
+    align-items: center;
+}
+
+.card-h {
+    background-color: #2e3c59;
+}
+
+.data-warning {
+    color: #F1C40F;
+}
+
 .footer--dark {
     background-color: #101929 !important;
 }

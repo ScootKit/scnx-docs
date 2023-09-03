@@ -2,6 +2,8 @@
 
 You can - with this module - send automatic messages
 
+<ModuleOverview moduleName="auto-messager" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

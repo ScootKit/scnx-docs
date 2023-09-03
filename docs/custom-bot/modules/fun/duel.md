@@ -2,6 +2,8 @@
 
 Let users play the game "Duel" on your discord
 
+<ModuleOverview moduleName="duel" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

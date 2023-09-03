@@ -35,7 +35,8 @@ Creating a backup might take up to 15 minutes, depending on the number of messag
 
 ![](@site/docs/assets/scnx/guilds/backups/create.png)
 
-After the backup has been created (this can take a while), you'll be able to view the backup in your backup-list and manage it. These options are availible:
+After the backup has been created (this can take a while), you'll be able to view the backup in your backup-list and
+manage it. These options are available:
 * Restore backup: Allows you to restore the backup on this or another server. Please read more in the [restore backups](#restore) section.
 * Disable / enable Guild-Lock: Allows / Disallows your Backup to be restored on other servers. Please read more in the [restore backups on other servers](#restore-other-server) section.
 * Delete backup: Permanently deletes the backup from our servers. This can not be reversed.

@@ -2,6 +2,8 @@
 
 Let users create tickets to message your staff
 
+<ModuleOverview moduleName="tickets" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

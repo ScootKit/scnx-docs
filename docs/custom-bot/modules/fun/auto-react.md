@@ -2,6 +2,8 @@
 
 Automatically reacts with selected emojis in selected channels or if a user gets pinged
 
+<ModuleOverview moduleName="auto-react" />
+
 ---
 
 <center><h1>Coming soon</h1></center>
