@@ -16,7 +16,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
-    scripts: [{src: '/scnx-environment.js', defer: true}, {
+    scripts: [{
         src: 'https://analytics.scootkit.net/js/script.js',
         defer: true,
         'data-domain': 'docs.scnx.xyz'
@@ -203,7 +203,7 @@ const config = {
                         ]
                     }
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 2px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://sc-net.work/scnx-tos">SCNX Terms of Service</a></div>`
+                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 7px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://sc-net.work/scnx-tos">SCNX Terms of Service</a><br/>"ScootKit" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>`
             },
             prism: {
                 theme: lightCodeTheme,
@@ -211,6 +211,17 @@ const config = {
             }
         }),
     plugins: [
+        function () {
+            return {
+                name: 'scnx-environment',
+                async loadContent() {
+                    return await (await fetch('https://scnx.app/api/environment')).json();
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
         'docusaurus-theme-search-typesense',
         [
             '@docusaurus/plugin-pwa',
