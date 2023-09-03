@@ -16,7 +16,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
-    scripts: [{src: '/scnx-environment.js', defer: true}, {
+    scripts: [{
         src: 'https://analytics.scootkit.net/js/script.js',
         defer: true,
         'data-domain': 'docs.scnx.xyz'
@@ -211,6 +211,17 @@ const config = {
             }
         }),
     plugins: [
+        function () {
+            return {
+                name: 'scnx-environment',
+                async loadContent() {
+                    return await (await fetch('https://scnx.app/api/environment')).json();
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
         'docusaurus-theme-search-typesense',
         [
             '@docusaurus/plugin-pwa',
