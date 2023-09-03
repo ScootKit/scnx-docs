@@ -11,7 +11,7 @@ Server-Eigentümer können ihren Admins mit Hilfe der Funktion "Trusted Admins" 
 ## Einrichtung {#setup}
 
 :::caution
-Erteile Trusted-Admin-Permissions nur an Nutzer, welchen du voll und ganz vertrauen tust - diese können dann in deinem Namen mit SCNX interagieren.
+Erteile Trusted-Admin-Rechte nur an Nutzer, welchen du voll und ganz vertrauen tust - diese können dann in deinem Namen mit SCNX interagieren.
 Bitte lese [den Absatz über Funktion](https://faq.scnx.app/scnx-nutzungsbedingungen/#trusted-admins) in
 unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) durch.
 :::
