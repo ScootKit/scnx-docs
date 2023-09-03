@@ -520,5 +520,8 @@
   },
   "module.oneConfigFile": {
     "message": "Dieses Modul eine verfügbare Konfigurationsdatei."
+  },
+  "module.serverCount": {
+    "message": "Dieses Modul wird auf über {count} Servern auf SCNX aktiv verwendet."
   }
 }

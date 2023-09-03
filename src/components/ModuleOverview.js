@@ -97,7 +97,7 @@ export default function ModuleOverview({moduleName}) {
                         compactDisplay: 'short',
                         notation: 'compact'
                     }).format(moduleData.approximateEnableBotCount)
-                }}>{'This servers is being used over {count} other servers on SCNX.'}</Translate>
+                }}>{'This module is being actively used on over {count} other servers on SCNX.'}</Translate>
                 </div>
                 <div>
                     <FontAwesomeIcon width={14} icon={faCheckCircle} style={{marginRight: '0.25rem'}}/> <Translate

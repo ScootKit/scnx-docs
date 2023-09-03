@@ -198,5 +198,9 @@
   "sidebar.customBotSidebar.doc.Send messages / embeds, Self-Roles & more": {
     "message": "Versende Nachrichten / Embeds, Self-Rollen & mehr",
     "description": "The label for the doc item Send messages / embeds, Self-Roles & more in sidebar customBotSidebar, linking to the doc custom-bot/login-as-bot"
+  },
+  "sidebar.customBotSidebar.link.Get started": {
+    "message": "Get started",
+    "description": "The label for link Get started in sidebar customBotSidebar, linking to /docs/custom-bot"
   }
 }
