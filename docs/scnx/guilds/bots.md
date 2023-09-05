@@ -163,7 +163,6 @@ To change the language of your bot, please
 2. Next, click "Change" next to "Server" in the "Status"-Section.
 3. Select the new language you want to switch to.
 4. Save the changes. Your bot will automatically restart to apply the changes.
-5.
 
 ![](@site/docs/assets/scnx/guilds/bots/change-language.png)
 
@@ -173,6 +172,32 @@ To change the language of your bot, please
     Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
     focus on our current Target-Groups.
 </details>
+
+## Remove mentions of SCNX {#offbrand}
+
+<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
+
+You can always edit the footer of every editable message on SCNX, but you can also overwrite the default value used by
+every message that is missing a configuration field or where you did not set a different footer manually.
+
+To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please follow these instructions:
+
+<Tabs groupId="scnx-bot-type-k">
+    <TabItem value="customBot" label="Custom Bot">
+        <ol>
+            <li>Open the <a href="https://scnx.app/glink?page=bot/configuration?file=bot%7Cstrings">Messages & Appearance</a> configuration file of your bot's built in configuration.</li>
+            <li>Change the "Embed-Footer" and "Embed-Footer-Image-URL" value to your liking. You can obtain an image URL in your <a href="https://scnx.app/user/files">files panel</a> - simply upload a file and click on "Copy public URL".</li>
+            <li>Save the changes & restart your bot to apply these changes.</li>
+        </ol>
+    </TabItem> 
+     <TabItem value="modmailBot" label="Modmail-Bot">
+        <ol>
+            <li>Open the <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> section of your Modmail's configuration.</li>
+            <li>Change the "Default Embed-Footer" and "Default Embed-Footer-Image" value to your liking. You can simply upload an image if you like or remove it if not needed.</li>
+            <li>Save the changes & reload the configuration your bot to apply these changes.</li>
+        </ol>
+    </TabItem>
+</Tabs>
 
 ## Change username or Profile-Picture of my bot {#change-profile}
 
