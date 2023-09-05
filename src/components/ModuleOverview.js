@@ -62,7 +62,7 @@ export default function ModuleOverview({moduleName}) {
         <div className="padding--md">
             <div>{moduleData.description[i18n.currentLocale] || moduleData.description.en}</div>
             <div className="margin-top--md" style={{color: 'rgb(156 163 175)', fontSize: '0.9rem'}}>
-                {moduleData.openSourceURL && <div>
+                {moduleData.openSourceURL && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faHeart} style={{marginRight: '0.25rem'}}/> <Translate
                     id="modules.oss" values={{
                     ossLink: <a target="_blank" href={moduleData.openSourceURL}><Translate
@@ -74,15 +74,15 @@ export default function ModuleOverview({moduleName}) {
                     id="module.earlyAccess">This module is currently only available to users with
                     Early-Access.</Translate>
                 </div>}
-                {moduleData.hasDB && <div>
+                {moduleData.hasDB && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faDatabase} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.hasDB">This module is storing data in your bot's database.</Translate>
                 </div>}
-                {moduleData.usesAICredits && <div>
+                {moduleData.usesAICredits && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faZap} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.usesAICredits">This module uses your server's AI Credits.</Translate>
                 </div>}
-                {moduleData.commandsCount && <div>
+                {moduleData.commandsCount && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faTerminal}
                                      style={{marginRight: '0.25rem'}}/> {moduleData.commandsCount === 1 ? <Translate
                     id="module.oneCommands">This module creates one top-level Slash-Command on your
@@ -90,7 +90,7 @@ export default function ModuleOverview({moduleName}) {
                     id="module.moreCommands"
                     values={{count: moduleData.commandsCount}}>{'This module creates {count} top-level Slash-Commands on your server.'}</Translate>}
                 </div>}
-                <div>
+                <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={moduleData.configFileCount === 0 ? faFileCircleXmark : faFile}
                                      style={{marginRight: '0.25rem'}}/> {moduleData.configFileCount === 0 ?
                     <Translate id="module.noConfig">This module has no available configuration
@@ -99,7 +99,7 @@ export default function ModuleOverview({moduleName}) {
                         <Translate values={{count: moduleData.configFileCount}}
                                    id="module.moreConfigFile">{'This module has {count} configuration files.'}</Translate>)}
                 </div>
-                <div>
+                <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faServer} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.serverCount" values={{
                     count: new Intl.NumberFormat(i18n.currentLocale, {
@@ -108,7 +108,7 @@ export default function ModuleOverview({moduleName}) {
                     }).format(moduleData.approximateEnableBotCount)
                 }}>{'This module is being actively used on over {count} other servers on SCNX.'}</Translate>
                 </div>
-                <div>
+                <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faCheckCircle} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.includedInEveryPlan">This module is included for free in every plan.</Translate>
                     <span>{' '}</span>
