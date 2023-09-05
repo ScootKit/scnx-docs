@@ -14,6 +14,7 @@ import {
     faHeart,
     faInfoCircle,
     faServer,
+    faTerminal,
     faZap
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -80,6 +81,14 @@ export default function ModuleOverview({moduleName}) {
                 {moduleData.usesAICredits && <div>
                     <FontAwesomeIcon width={14} icon={faZap} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.usesAICredits">This module uses your server's AI Credits.</Translate>
+                </div>}
+                {moduleData.commandsCount && <div>
+                    <FontAwesomeIcon width={14} icon={faTerminal}
+                                     style={{marginRight: '0.25rem'}}/> {moduleData.commandsCount === 1 ? <Translate
+                    id="module.oneCommands">This module creates one top-level Slash-Command on your
+                    server.</Translate> : <Translate
+                    id="module.moreCommands"
+                    values={{count: moduleData.commandsCount}}>{'This module creates {count} top-level Slash-Commands on your server.'}</Translate>}
                 </div>}
                 <div>
                     <FontAwesomeIcon width={14} icon={moduleData.configFileCount === 0 ? faFileCircleXmark : faFile}

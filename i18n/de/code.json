@@ -523,5 +523,11 @@
   },
   "module.serverCount": {
     "message": "Dieses Modul wird auf über {count} Servern auf SCNX aktiv verwendet."
+  },
+  "module.oneCommands": {
+    "message": "Dieses Modul erstellt einen Haupt-Slash-Befehl auf deinem Server."
+  },
+  "module.moreCommands": {
+    "message": "Dieses Modul erstellt {count} Haupt-Slash-Befehle auf deinem Server."
   }
 }

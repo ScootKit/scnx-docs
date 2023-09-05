@@ -179,10 +179,6 @@
     "message": "Trage zum eigenen Bot auf GitHub bei",
     "description": "The label for link Contribute to the Custom-Bot on GitHub in sidebar customBotSidebar, linking to https://github.com/ScootKit/CustomDCBot"
   },
-  "sidebar.customBotSidebar.doc.Get started": {
-    "message": "Loslegen",
-    "description": "The label for the doc item Get started in sidebar customBotSidebar, linking to the doc custom-bot"
-  },
   "sidebar.customBotSidebar.doc.Basics about Bots on SCNX": {
     "message": "Grundlagen über Bots auf SCNX",
     "description": "The label for the doc item Basics about Bots on SCNX in sidebar customBotSidebar, linking to the doc scnx/guilds/bots"
@@ -200,7 +196,7 @@
     "description": "The label for the doc item Send messages / embeds, Self-Roles & more in sidebar customBotSidebar, linking to the doc custom-bot/login-as-bot"
   },
   "sidebar.customBotSidebar.link.Get started": {
-    "message": "Get started",
+    "message": "Loslegen",
     "description": "The label for link Get started in sidebar customBotSidebar, linking to /docs/custom-bot"
   }
 }
