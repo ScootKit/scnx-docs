@@ -95,6 +95,11 @@ const sidebars = {
                     type: 'doc',
                     label: 'Send messages / embeds, Self-Roles & more',
                     id: 'custom-bot/login-as-bot'
+                },
+                {
+                    type: 'doc',
+                    label: 'Slash commands & Permissions',
+                    id: 'custom-bot/slash-commands'
                 }
             ]
         },
