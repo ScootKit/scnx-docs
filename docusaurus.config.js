@@ -4,6 +4,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const fetch = require('node-fetch');
+const fs = require('fs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -216,6 +217,7 @@ const config = {
             return {
                 name: 'scnx-environment',
                 async loadContent() {
+                    if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').environment;
                     return await (await fetch('https://scnx.app/api/environment')).json();
                 },
                 async contentLoaded({content, actions}) {
@@ -223,10 +225,11 @@ const config = {
                 }
             };
         },
-        function () {
+        function (context, options) {
             return {
                 name: 'scnx-custom-bot-modules',
                 async loadContent() {
+                    if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').modules;
                     const scnxOrgAuthorData = {};
                     let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
                     for (const botModule of moduleData) {
