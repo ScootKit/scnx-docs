@@ -4,6 +4,12 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 
 <ModuleOverview moduleName="admin-tools" />
 
+## Features {#features}
+
+* Move channels and roles via commands
+* Set the category of a channel via commands
+* Import an emoji from another server into your server
+
 ## Setup {#setup}
 
 * Please [set up permissions](./../../slash-commands) for Slash-Commands to avoid unauthorized usage of them.
