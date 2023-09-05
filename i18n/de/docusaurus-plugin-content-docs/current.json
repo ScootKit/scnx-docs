@@ -198,5 +198,9 @@
   "sidebar.customBotSidebar.link.Get started": {
     "message": "Loslegen",
     "description": "The label for link Get started in sidebar customBotSidebar, linking to /docs/custom-bot"
+  },
+  "sidebar.customBotSidebar.doc.Slash commands & Permissions": {
+    "message": "Slash commands & Permissions",
+    "description": "The label for the doc item Slash commands & Permissions in sidebar customBotSidebar, linking to the doc custom-bot/slash-commands"
   }
 }

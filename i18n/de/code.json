@@ -529,5 +529,35 @@
   },
   "module.moreCommands": {
     "message": "Dieses Modul erstellt {count} Haupt-Slash-Befehle auf deinem Server."
+  },
+  "understandDocs": {
+    "message": "Dokumentation Verstehen"
+  },
+  "slashCommands.description": {
+    "message": "In dieser Dokumentation bezeichnen wir eine verpflichtende Slash-Befehl-Option mit dem Namen {n} und dem Typen {t} als {cR}. Optionen, die nicht Pflichtfelder sind, werden als {notR} angegeben. Wenn sich die Aktionen eines Befehls zwischen Pflichtfeldern und Nicht-Pflichtfeldern sehr unterscheiden, listen wir sie eventuell separat."
+  },
+  "examples": {
+    "message": "Beispiele"
+  },
+  "slashCommands.example1": {
+    "message": "Dieser Befehl (/moderate ban) hat nur eine verpflichtende Option mit dem Namen \"user\", die nur ein Mitglied akzeptiert."
+  },
+  "slashCommands.example2": {
+    "message": "Dieser Befehl (/moderate ban) hat eine Option mit dem Namen \"victim\" als Pflichtangabe, die nur ein Mitglied akzeptiert, und ein weiteres Pflichtfeld mit dem Namen \"reason\", das jeglichen Text als Wert akzeptiert."
+  },
+  "slashCommands.example3": {
+    "message": "Dieser Befehl (/moderate ban) hat eine Option mit dem Namen \"victim\" als Pflichtangabe, die nur ein Mitglied akzeptiert, und ein weiteres Pflichtfeld mit dem Namen \"reason\", das jeglichen Text als Wert akzeptiert. Zusätzlich gibt es eine optionale Option mit dem Namen \"proof\", die einen Anhang als Wert akzeptiert."
+  },
+  "slashCommands.type": {
+    "message": "Typ"
+  },
+  "slashCommands.memberType": {
+    "message": "Mitglied"
+  },
+  "slashCommands.textType": {
+    "message": "Text"
+  },
+  "slashCommands.attachmentType": {
+    "message": "Anhang"
   }
 }

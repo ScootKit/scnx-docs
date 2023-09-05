@@ -30,6 +30,14 @@
     margin-top: 3px;
 }
 
+.command-examples {
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 3px;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
+
 .module-name {
     align-items: center;
     display: flex;

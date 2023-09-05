@@ -4,6 +4,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import PlanPrice from '../components/PlanPrice';
 import ModuleOverview from '../components/ModuleOverview';
+import SlashCommandExplanation from '../components/SlashCommandExplanation';
 
 export default {
     ...MDXComponents,
@@ -11,5 +12,6 @@ export default {
     TabItem,
     ModuleOverview,
     Tabs,
+    SlashCommandExplanation,
     PlanPrice
 };
