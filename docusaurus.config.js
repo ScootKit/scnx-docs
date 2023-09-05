@@ -108,8 +108,8 @@ const config = {
                         label: 'Modmail'
                     },
                     {
-                        href: 'https://github.com/ScootKit/scnx-docs',
-                        label: 'GitHub',
+                        href: 'https://scnx.app',
+                        label: 'SCNX Dashboard',
                         position: 'right'
                     },
                     {
