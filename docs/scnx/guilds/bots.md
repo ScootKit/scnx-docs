@@ -13,7 +13,7 @@ the [Get started with Custom Bot](../../custom-bot) or the [Get started with Mod
 The steps to troubleshoot are different between the two bots. Please continue in the two different troubleshooting
 guides:
 
-* Custom Bot
+* [Custom Bot](./../../custom-bot/troubleshooting)
 * Modmail-Bot
 
 ## The Basics {#basics}
