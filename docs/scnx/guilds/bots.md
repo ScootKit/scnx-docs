@@ -206,6 +206,21 @@ You can change the Profile-Picture and username of your bot without ever leaving
     </ul>
 </details>
 
+## Change Bot's About me {#bot-about-me}
+
+You can easily change the about me of your bot in the Discord Developer Portal. You can not do this on SCNX due to
+technical limitations on the side of Discord.
+
+1. Visit the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Select the Application of your bot. Please note that the name and picture of the application might not be the same as
+   the username / profile-picture of your bot.
+3. Locate the "Description" field in the "General Information"-Tab of your application.
+4. Enter the About me you want to be displayed in Discord.
+5. Click on "Save Changes" to apply the changes to your bot.
+6. The About me will be updated in the next few hours on Discord 🎉
+
+![](@site/docs/assets/scnx/guilds/bots/change-about-me.png)
+
 ## Invite my Bot {#invite-bot}
 
 :::info Before you continue
