@@ -51,7 +51,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-delete%
 | Purge on Start             | When enabled, your bot will delete every message in the channel (that these configuration options apply to) automatically on restart of your bot. If disabled, no existing messages will get deleted. The bot can only delete up to 100 messages at a time and no messages older than 14 days due to a limitation from Discord's side. |
 | Amount of messages to keep | When enabled, this number of messages will always be exempt from automatic deletion. The newest messages are always kept, meaning that, once more than x messages are sent into this channel, the bot will delete the oldest one. This number has to be below 50.                                                                      |
 
-### Voice-Channels {#voice-channels}
+### Voice-Channels {#config-voice-channels}
 
 This configuration file allows
 specifying from which channels messages should get deleted automatically
