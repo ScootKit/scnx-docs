@@ -262,6 +262,10 @@ const sidebars = {
             collapsed: false,
             items: [
                 {
+                    type: 'doc',
+                    id: 'custom-bot/additional-features'
+                },
+                {
                     type: 'link',
                     href: 'https://features.sc-network.net/board/custombot',
                     label: 'Suggest new features'
