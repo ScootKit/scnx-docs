@@ -10,7 +10,7 @@ const fs = require('fs');
 const config = {
     title: 'SCNX Documentation',
     favicon: 'img/favicon.ico',
-    url: 'https://docs.scnx.app',
+    url: 'https://docs.scnx.xyz',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
