@@ -1,0 +1,130 @@
+---
+sidebar_position: 2
+---
+
+# Serveranalyse
+
+Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
+Schau dir die Mitgliederaktivität an und erhalte eine Prognosen für die Zukunft 🔮
+
+<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
+
+
+:::tip Der Datenschutz liegt uns am Herzen
+Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese dir
+für weitere Informationen folgendes durch [FAQ-Artikel](https://faq.scnx.app/de/data-collection-with-analytics/).
+
+**tl;dr**: Wir speichern die Daten über Nachrichten nur 30 Tage lang und speichern die Zählungen erst danach
+[Benutzer können sich abmelden](#user-opt-out) und es werden niemals Inhalte von Nachrichten (oder Anhängen) gespeichert.
+:::
+
+## Analyse aktivieren {#enable}
+
+Um Analysen zu aktivieren, besuche bitte die [Analyseseite](https://scnx.app/de/glink?page=analytics) Ihres Discords auf SCNX und klicke auf
+„Analyse aktivieren“.
+
+![](@site/docs/assets/scnx/guilds/analytics/setup.png)
+
+## Verwendung im Dashboard {#dashboard}
+
+In deinem [Analyse-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend eines Zeitrahmens sehen, den Du oben in deinem Dashboard auswählen kannst:
+* Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitrahmen gesendet wurden.
+* 10 am häufigsten verwendete Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten über welchen Kanal gesendet wurden.
+* Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus] (#user-opt-out) nicht aktiviert haben).
+* Mitgliederaktivität (immer letzten 30 Tage): Hier wird die Anzahl der Bots, Benutzer und aktive Mitglieder an jedem Tag im Zeitrahmen angezeigt.
+* Aktivste Stunden am Tag: Diese Grafik zeigt, wie viele Nachrichten durchschnittlich zu welcher Zeit auf Ihrem Server gesendet wurden.
+* Zusammenfassung: In diesem Abschnitt erhalten Sie einen schnellen Überblick über Ihren Server. Es umfasst folgende Daten:
+* Anzahl der im Zeitrahmen gesendeten Nachrichten
+* Anzahl der im Zeitrahmen verwendeten Befehle
+* Durchschnittliche Nachrichten pro Tag
+* Anzahl der aktiven Mitglieder auf Ihrem Server (ausgenommen Benutzer, die den [Datenschutzmodus] nicht aktiviert haben (#user-opt-out))
+* Anzahl der Benutzer auf Ihrem Server
+* Anzahl der Bots auf Ihrem Server
+
+*Bitte beachte, dass einige dieser Teile je nach Zeitrahmen möglicherweise nicht verfügbar sind.*
+
+![](@site/docs/assets/scnx/guilds/analytics/dashboard.png)
+
+
+## Analysen als Slash-Commands verwenden {#slash-commands}
+
+Jeder Benutzer auf deinem Server kann die Slash-Befehle des verifizierten SCNX-Bots verwenden (du kannst dies unter
+Discord-Server-Einstellungen unter „Integrationen“ konfigurieren). Folgende Befehle stehen zur Verfügung:
+
+* `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
+letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung“, in der Sie die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen finden.
+* „/stats user“: Zeigt eine Statistikübersicht aller Benutzer auf deinem Server an. Dazu gehören die 10 aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Zusammenfassung“, in dem Du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 findest
+Tage. Benutzer, die den [Datenschutzmodus] (#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden (/ zeigt Daten darüber an).
+
+![](@site/docs/assets/scnx/guilds/analytics/commands.png)
+
+
+## Fehlerbehebung {#troubleshooting}
+
+<details>
+    <summary>Nachrichten werden nicht im SCNX Analytics-Dashboard angezeigt</summary>
+    <ul>
+        <li>Bitte stell sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal anzuzeigen, über den die Nachricht gesendet wurden.
+        </li>
+        <li>Bitte beachte, dass das Dashboard ein Ergebnis einige Minuten lang zwischenspeichert. Bitte überprüfe den Zeitpunkt, an dem
+            das Ergebnis im Dashboard generiert wurde ( dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde
+            generiert um 11:30:28 Uhr").
+        </li>
+        <li>Versuche, das Analyse-Dashboard in ein paar Minuten zu aktualisieren.</li>
+        <li>Benutzer, für die der <a href="#user-opt-out">Datenschutzmodus</a> aktiviert ist, werden nicht im Dashboard angezeigt.
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Ein Benutzer fehlt im Dashboard</summary>
+    <ul>
+        <li>Stell sicher, dass der Benutzer eine Nachricht an einen Kanal gesendet hat, auf den der (verifizierte) SCNX-Bot zugriff hat.</li>
+        <li>Versuche, das Analyse-Dashboard in ein paar Minuten zu aktualisieren.</li>
+        <li>Benutzer, für die der <a href="#user-opt-out">Datenschutzmodus</a> aktiviert ist, werden nicht im Dashboard angezeigt.
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Ich sehe die Meldung „Es gibt nicht viele Nachrichten im ausgewählten Zeitraum, daher sehen deine Diagramme möglicherweise etwas seltsam aus.“
+        ^^" Warnung in deinem Dashboard
+    </summary>
+    <ul>
+        <li>Stell sicher, dass die Analyse länger als 48 Stunden aktiviert war.</li>
+        <li>Aktualisiere dein Dashboard.</li>
+        <li>Stell sicher, dass Du einen ausreichenden Zeitrahmen ausgewählt hast (z. B. „Letzte 30 Tage“ statt „Letzten 24 Stunden“).</li>
+        <li>Stell sicher, dass im ausgewählten Zeitraum mehr als 100 Nachrichten gesendet wurden.</li>
+        <li>Bitte stell sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, auf den Kanal zuzugreifen und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.
+        </li>
+    </ul>
+</details>
+<details>
+    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen,
+        musst du die Analyse seit mindestens 48 Stunden aktiviert haben.“
+    </summary>
+    <ul>
+        <li>Stell sicher, dass die Analyse länger als 48 Stunden aktiviert war.</li>
+        <li>Aktualisieren das Dashboard.</li>
+        <li>Stell sicher, dass SCNX mindestens einen Kanal auf deinem Server sehen und zugreifen kann.</li>
+    </ul>
+</details>
+
+## Benutzer-Opt-Out {#user-opt-out}
+
+:::info Kurze Erinnerung
+Wir speichern keine Nachrichteninhalte, sondern nur Metadaten zu Nachrichten (und das nur für 30 Tage nach dem Absenden einer Nachricht).
+Alle infos findest Du unter [FAQ-Artikel](https://faq.scnx.app/de/data-collection-with-analytics/).
+:::
+
+Wenn Du (oder ein Benutzer deines Servers) nicht möchte, dass der Serverbesitzer und die Administratoren sehen können, wie viele Nachrichten Du erhalten oder
+gesendet hast oder Du befürchtest, dass personenbezogene Daten über Dich oder deine Nuztzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus“ aktivieren.
+Verwenden folgenden Befehl „/privacy enable“ auf deinem Server. Das ist global (das bedeutet, dass SCNX auf keinem Server Daten über Dich speichert)
+wird sich auf Folgendes auswirken:
+
+* Alle Daten über von Dir gesendete Nachrichten werden anonymisiert (= Deine Discord-Benutzer-ID wird aus der Datenbank entfernt)
+- das bedeutet, dass wir nicht wissen, dass *Du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
+* Alle zukünftig von Dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit Deiner Discord-Benutzer-ID verknüpft) – dies
+bedeutet, dass wir nicht wissen, dass *Du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
+* Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
+
+Datenschutzmodus kann mit (Opt-Back) mit „/privacy enable“ deaktiviert werden. Bitte beachte, dass dadurch Frühere Nachrichten nicht erneut verknüpft werden
+Die von dir gesendete wurden (das ist nicht mehr möglich), d. h., dass nur neue Nachrichten in Befehlen und im Dashboard angezeigt werden.
