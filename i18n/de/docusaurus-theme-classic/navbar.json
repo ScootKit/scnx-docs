@@ -23,8 +23,8 @@
     "message": "Modmail",
     "description": "Navbar item with label Modmail"
   },
-  "item.label.GitHub": {
-    "message": "GitHub",
-    "description": "Navbar item with label GitHub"
+  "item.label.SCNX Dashboard": {
+    "message": "SCNX Dashboard",
+    "description": "Navbar item with label SCNX Dashboard"
   }
 }

@@ -13,7 +13,7 @@ the [Get started with Custom Bot](../../custom-bot) or the [Get started with Mod
 The steps to troubleshoot are different between the two bots. Please continue in the two different troubleshooting
 guides:
 
-* Custom Bot
+* [Custom Bot](./../../custom-bot/troubleshooting)
 * Modmail-Bot
 
 ## The Basics {#basics}
@@ -163,7 +163,6 @@ To change the language of your bot, please
 2. Next, click "Change" next to "Server" in the "Status"-Section.
 3. Select the new language you want to switch to.
 4. Save the changes. Your bot will automatically restart to apply the changes.
-5.
 
 ![](@site/docs/assets/scnx/guilds/bots/change-language.png)
 
@@ -173,6 +172,32 @@ To change the language of your bot, please
     Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
     focus on our current Target-Groups.
 </details>
+
+## Remove mentions of SCNX {#offbrand}
+
+<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
+
+You can always edit the footer of every editable message on SCNX, but you can also overwrite the default value used by
+every message that is missing a configuration field or where you did not set a different footer manually.
+
+To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please follow these instructions:
+
+<Tabs groupId="scnx-bot-type-k">
+    <TabItem value="customBot" label="Custom Bot">
+        <ol>
+            <li>Open the <a href="https://scnx.app/glink?page=bot/configuration?file=bot%7Cstrings">Messages & Appearance</a> configuration file of your bot's built in configuration.</li>
+            <li>Change the "Embed-Footer" and "Embed-Footer-Image-URL" value to your liking. You can obtain an image URL in your <a href="https://scnx.app/user/files">files panel</a> - simply upload a file and click on "Copy public URL".</li>
+            <li>Save the changes & restart your bot to apply these changes.</li>
+        </ol>
+    </TabItem> 
+     <TabItem value="modmailBot" label="Modmail-Bot">
+        <ol>
+            <li>Open the <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> section of your Modmail's configuration.</li>
+            <li>Change the "Default Embed-Footer" and "Default Embed-Footer-Image" value to your liking. You can simply upload an image if you like or remove it if not needed.</li>
+            <li>Save the changes & reload the configuration your bot to apply these changes.</li>
+        </ol>
+    </TabItem>
+</Tabs>
 
 ## Change username or Profile-Picture of my bot {#change-profile}
 
@@ -205,6 +230,21 @@ You can change the Profile-Picture and username of your bot without ever leaving
         <li>You'll find the exact reason for this issue in your Bot's log. Please <a href="#sharing-logs">share your logs</a> and try finding the issue in them. If you are unsuccessful, please <a href="https://scnx.app/help">contact our staff</a>.</li>
     </ul>
 </details>
+
+## Change Bot's About me {#bot-about-me}
+
+You can easily change the about me of your bot in the Discord Developer Portal. You can not do this on SCNX due to
+technical limitations on the side of Discord.
+
+1. Visit the [Discord Developer Portal](https://discord.com/developers/applications).
+2. Select the Application of your bot. Please note that the name and picture of the application might not be the same as
+   the username / profile-picture of your bot.
+3. Locate the "Description" field in the "General Information"-Tab of your application.
+4. Enter the About me you want to be displayed in Discord.
+5. Click on "Save Changes" to apply the changes to your bot.
+6. The About me will be updated in the next few hours on Discord 🎉
+
+![](@site/docs/assets/scnx/guilds/bots/change-about-me.png)
 
 ## Invite my Bot {#invite-bot}
 

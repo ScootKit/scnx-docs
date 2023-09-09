@@ -2,6 +2,8 @@
 
 Select a number and let your users guess
 
+<ModuleOverview moduleName="guess-the-number" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

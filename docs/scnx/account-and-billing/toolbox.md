@@ -28,7 +28,7 @@ of the user - no more confusion with all these timezones. Simply select a time &
 the [Timestamp-Generator tool](https://scnx.app/user/tools?page=timestamp-generator), select a format, copy the
 result and paste in discord. Your time will be displayed in Discord once you send your message.
 
-Here are all availible formats:
+Here are all available formats:
 
 | Format                    | Example                             |
 |---------------------------|-------------------------------------|

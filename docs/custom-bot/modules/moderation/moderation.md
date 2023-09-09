@@ -2,6 +2,8 @@
 
 Advanced security- and moderation-system with tons of features
 
+<ModuleOverview moduleName="moderation" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

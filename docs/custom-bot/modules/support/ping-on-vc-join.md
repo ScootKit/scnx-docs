@@ -2,6 +2,8 @@
 
 Sends a message when someone joins a voicechat
 
+<ModuleOverview moduleName="ping-on-vc-join" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

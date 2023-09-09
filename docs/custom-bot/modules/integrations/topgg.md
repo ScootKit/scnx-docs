@@ -2,6 +2,8 @@
 
 Say thanks to voters on top.gg, remind them and reward them with roles with the top.gg-module.
 
+<ModuleOverview moduleName="topgg" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

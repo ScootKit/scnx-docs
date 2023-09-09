@@ -2,6 +2,8 @@
 
 This module detects ghost-pings and sends a message if one occurs
 
+<ModuleOverview moduleName="anti-ghostping" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

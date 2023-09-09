@@ -2,6 +2,8 @@
 
 Simple module to create fresh polls on your server!
 
+<ModuleOverview moduleName="polls" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

@@ -92,7 +92,8 @@ Create bot".
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
 :::tip Running into issues?
-We have a [troubleshooting guide for Custom-Bots] ready for you. If that didn't help, we're always happy to help, just
+We have a [troubleshooting guide for Custom-Bots](./custom-bot/troubleshooting) ready for you. If that didn't help,
+we're always happy to help, just
 visit [scnx.app/help](https://scnx.app/help).
 :::
 

@@ -2,6 +2,8 @@
 
 Let your users play Connect Four against each other!
 
+<ModuleOverview moduleName="connect-four" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

@@ -2,6 +2,8 @@
 
 Track who invited who
 
+<ModuleOverview moduleName="invite-tracking" />
+
 ---
 
 <center><h1>Coming soon</h1></center>

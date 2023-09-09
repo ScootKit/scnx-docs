@@ -3,12 +3,14 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const fetch = require('node-fetch');
+const fs = require('fs');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'SCNX Documentation',
     favicon: 'img/favicon.ico',
-    url: 'https://docs.scnx.app',
+    url: 'https://docs.scnx.xyz',
     baseUrl: '/',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -107,8 +109,8 @@ const config = {
                         label: 'Modmail'
                     },
                     {
-                        href: 'https://github.com/ScootKit/scnx-docs',
-                        label: 'GitHub',
+                        href: 'https://scnx.app',
+                        label: 'SCNX Dashboard',
                         position: 'right'
                     },
                     {
@@ -215,7 +217,37 @@ const config = {
             return {
                 name: 'scnx-environment',
                 async loadContent() {
+                    if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').environment;
                     return await (await fetch('https://scnx.app/api/environment')).json();
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
+        function (context, options) {
+            return {
+                name: 'scnx-custom-bot-modules',
+                async loadContent() {
+                    if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').modules;
+                    const scnxOrgAuthorData = {};
+                    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    for (const botModule of moduleData) {
+                        if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;
+                        const res = await fetch('https://scnx.app/api/marketplace/organizations/' + botModule.author.scnxOrgID);
+                        scnxOrgAuthorData[botModule.author.scnxOrgID] = {};
+                        const result = await res.json();
+                        for (const key in result) {
+                            if (!['slug', 'displayName', 'iconUrl'].includes(key)) continue;
+                            scnxOrgAuthorData[botModule.author.scnxOrgID][key] = result[key];
+                        }
+                    }
+                    const moduleDataWithOrgs = [];
+                    for (const botModule of moduleData) {
+                        if (!botModule.author.scnxOrgID) continue;
+                        moduleDataWithOrgs.push({...botModule, orgData: scnxOrgAuthorData[botModule.author.scnxOrgID]});
+                    }
+                    return moduleDataWithOrgs;
                 },
                 async contentLoaded({content, actions}) {
                     actions.setGlobalData(content);

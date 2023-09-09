@@ -12,7 +12,9 @@ your [server settings page](https://scnx.app/glink?page=settings) on SCNX to see
 Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`).
 
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}
-                additionalDetails={{STARTER: 'Only availible for servers with more than 50 members (without bots) on their server or with a payed plan.'}}/>
+additionalDetails={{
+STARTER: 'Only available for servers with more than 50 members (without bots) on their server or with a payed plan.'
+}}/>
 
 
 ## Usage {#usage}
