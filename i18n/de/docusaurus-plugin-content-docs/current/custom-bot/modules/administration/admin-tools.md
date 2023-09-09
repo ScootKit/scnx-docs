@@ -30,8 +30,8 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 
 | Command                                                      | Description                                                                     |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------|
-| `/admin movechannel channel:<Kanal>`                         | Zeigt die API-Position des angegebenen Kanals.                                    | 
-| `/admin movechannel channel:<Kanal> new-position:<Zahl>`     | Verschiebt den angegebenen Kanal zu der angegebenen API-Position.                |
+| `/admin movechannel channel:<Kanal>`                         | Zeigt die API-Position des angegebenen Kanals.                                  | 
+| `/admin movechannel channel:<Kanal> new-position:<Zahl>`     | Verschiebt den angegebenen Kanal zu der angegebenen API-Position.               |
 | `/admin moverole role:<Rolle>`                               | Zeigt die API-Position der angegebenen Rolle.                                   | 
 | `/admin moverole role:<Rolle> new-position:<Zahl>`           | Verschiebt die angegebene Rolle zu der angegebenen API-Position.                | 
 | `/admin setcategory channel:<Kanal> category:<Kategorie> `   | Aktualisiert die Kategorie des angegebenen Kanals zu der angegebenen Kategorie. |
@@ -51,8 +51,9 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 <details>
   <summary>Das Verschieben eines Kanals funktioniert nicht / Der Bot verschiebt den Kanal zur falschen Position</summary>
   <ul>
-    <li>Make sure your bot has the "Manage channels" permission on your server.</li>
-    <li>Discord is restricting some positions. For example, you might be unable to move a voice-channel above a text-channel in a category.</li>
-    <li>Make sure you entered the right position. To do this, run the command without the "new-position" option and calculate the new position relative to the current position obtained.</li>
+    <li>Stelle sicher, dass dein Bot die Berechtigung "Kanäle verwalten" auf deinem Server hat.</li>
+    <li>Discord schränkt einige Positionen ein. So kannst du z.B. keinen Sprachkanal über einen Textkanal schieben.</li>
+    <li>Stelle sicher, dass du die richtige Position eingegeben hast. Um dies zu überprüfen, führe den Command ohne den "new-position"-Parameter und berechne die neue 
+     Position mithilfe der jetzigen.</li>
   </ul>
 </details>
