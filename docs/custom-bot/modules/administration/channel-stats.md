@@ -6,7 +6,7 @@ Create channels containing stats about your server - updated automatically.
 
 ## Features {#features}
 
-Create Voice-Channels and categories on your server that automatically display up-to-date stats - like the number of members on your
+Create Voice-Channels on your server that automatically display up-to-date stats - like the number of members on your
 Discord with a specific role.
 
 Here's an example showing how three different Voice-Channels show some stats about a server:
@@ -16,9 +16,9 @@ Here's an example showing how three different Voice-Channels show some stats abo
 ## Setup {#setup}
 
 1. Create a channel that you want to use for statistics (we recommend using a category or voice channel).
-2. Make sure your bot has "View channel" and "Manage channel" permissions on the category or channel.
+2. Make sure your bot has "View channel" and "Manage channel" permissions on the channel.
 3. Open the [Channel-Stats configuration](https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannels).
-4. Click on "Add new Statistic-Channel" and configure it as described [here](#configuration).
+4. Click on "Add new Statistics-Channel" and configure it as described [here](#configuration).
 5. Reload your bot's configuration to apply the changes.
 6. The channel will be edited automatically to the values configured.
 
@@ -42,12 +42,12 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=channel-stat
 ## Troubleshooting {#troubleshooting}
 
 <details>
-<summary>I tried editing the name of my category or channel, but the bot changes it back</summary>
-    If you want to edit the name of the category or channel, you need to update the "Channel-Name"-field of the channel in your <a href="https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannel">module configuration</a>.
+<summary>I tried editing the name of my channel, but the bot changes it back</summary>
+    If you want to edit the name of the channel, you need to update the "Channel-Name"-field of the channel in your <a href="https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannel">module configuration</a>.
 </details>
 
 <details>
-    <summary>My category or channel name is not being updated</summary>
+    <summary>My channel name is not being updated</summary>
     <ul>
         <li>Make sure you have waited for the configured Update-Interval, as the channel name will only be updated if the interval has past.</li>
         <li>It might take more than the configured interval for the channel to be updated due to Discord's rate-limiting. Please wait up to three hours.</li>
