@@ -49,7 +49,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel
     <summary>Mein Kanal wird nicht aktualisiert</summary>
     <ul>
         <li>Stelle sicher, dass du das festgelegte Aktualisierungs-Intervall abgewartet hast, da der Kanalname nur aktualisiert wird, wenn das Intervall abgelaufen ist.</li>
-        <li>Es dauert eventuell länger als das für diesen Kanal festgelegte Aktualisierungs-Intervall aufgrund Limitierungen von Discord. Bitte warte bis zu drei Stunden.</li>
+        <li>Es dauert eventuell, aufgrund von Limitierungen von Discord, länger als das für diesen Kanal festgelegte Intervall. Bitte warte bis zu drei Stunden.</li>
         <li>Stelle sicher, dass du den korrekten Parameter Wort für Wort (Groß- und Kleinschreibung beachten!) eingegeben hast. Ungültige Parameter werden nicht ersetzt.</li>
         <li>Stelle sicher, dass dein Bot die Berechtigungen "Kanal sehen" und "Kanal verwalten" auf den festgelegten Kanal hat.</li>
         <li>Aktualisiere deinen Discord-Client, wenn eine Änderung nicht sichtbar ist.</li>
