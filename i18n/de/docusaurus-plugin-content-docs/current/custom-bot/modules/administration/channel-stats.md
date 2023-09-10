@@ -1,4 +1,4 @@
-# Channel-Statistiken
+# Kanal-Statistiken
 
 Erstelle Kanäle mit Statistiken über deinen Server - automatisch aktualisiert.
 
