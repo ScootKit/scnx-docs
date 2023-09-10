@@ -130,6 +130,6 @@ entries) - this means that we will not know that *you* sent a message, we'll onl
 means that we will not know that *you* sent a message, we'll only know that a message was sent
 * Users who have enabled privacy mode will still count towards memberflow data (as this does not incldue storing Discord-User-IDs)
 
-You disable this privacy mode (opt back) using `/privacy enable`. Please note that this will not re-associate past
+You disable this privacy mode (opt back) using `/privacy disable`. Please note that this will not re-associate past
 messages sent by you (this is not even possible), meaning that only new messages will be shown in commands and in the
 dashboard.
