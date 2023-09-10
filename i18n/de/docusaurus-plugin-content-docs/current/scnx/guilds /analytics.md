@@ -64,13 +64,13 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
 <details>
     <summary>Nachrichten werden nicht im SCNX Analytics-Dashboard angezeigt</summary>
     <ul>
-        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal anzuzeigen, in den die Nachricht gesendet wurden.
+         <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal anzuzeigen, in den die Nachricht gesendet wurden.
         </li>
         <li>Bitte beachte, dass das Dashboard ein Ergebnis einige Minuten lang zwischenspeichert. Bitte überprüfe den Zeitpunkt, an dem
-            das Ergebnis im Dashboard generiert wurde (dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde
+             das Ergebnis im Dashboard generiert wurde (dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde
             generiert um 11:30:28 Uhr").
         </li>
-        <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
+          <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
         <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.
         </li>
     </ul>
@@ -79,18 +79,18 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
     <summary>Ein Benutzer fehlt im Dashboard</summary>
     <ul>
         <li>Stell sicher, dass der Benutzer eine Nachricht an einen Kanal gesendet hat, auf den der (verifizierte) SCNX-Bot zugriff hat.</li>
-        <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
+                <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
         <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.
         </li>
     </ul>
 </details>
 <details>
-    <summary>Ich sehe die Meldung „Es gibt nicht viele Nachrichten im ausgewählten Zeitraum, daher sehen deine Diagramme möglicherweise etwas seltsam aus. ^^"  im Dashboard
+     <summary>Ich sehe die Meldung „Es gibt nicht viele Nachrichten im ausgewählten Zeitraum, daher sehen deine Diagramme möglicherweise etwas seltsam aus. ^^"  im Dashboard
     </summary>
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
         <li>Aktualisiere dein Dashboard.</li>
-        <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage“ statt „Letzte 24 Stunden“).</li>
+         <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage“ statt „Letzte 24 Stunden“).</li>
         <li>Stelle sicher, dass im ausgewählten Zeitraum mehr als 100 Nachrichten gesendet wurden.</li>
         <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot auf den Kanal zugreifen kann und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.
         </li>
@@ -98,7 +98,7 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
 </details>
 <details>
     <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen,
-        musst du Statistiken seit mindestens 48 Stunden aktiviert haben.“
+         musst du Statistiken seit mindestens 48 Stunden aktiviert haben.“
     </summary>
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
