@@ -1,9 +1,6 @@
-# Automatisch löschen
+# Automatisches Löschen
 
 Mit diesem Modul kannst du Nachrichten nach einer bestimmten Zeit löschen lassen, um den Kanal sauber zu halten.
-(Nachrichten die älter als 14 Tage sind, können nicht mehr per Bot oder Automatischem, gelöscht werden)
-Die maximale Zeit die Du einstellen kannst ist also - ( 13 Tage das sind 18720 Minuten )
-Diese müssen dann Manuell gelöscht werden.
 
 <ModuleOverview moduleName="auto-delete" />
 
@@ -11,13 +8,13 @@ Diese müssen dann Manuell gelöscht werden.
 
 ## Funktionen {#features}
 
-* Nachrichten in Kanälen nach einer bestimmten Zeit automatisch löschen
-  * Optional kannst Du immer eine bestimmte Anzahl an Nachrichten in einem Kanal behalten
-  * Kein Löschen angehefteter Nachrichten
-* Nachrichten automatisch aus einem Sprachkanal löschen, nachdem jedes Mitglied den Kanal verlassen hat
-  * Füge optional eine Verzögerung vor dem Löschen der Nachricht hinzu
+* Lösche Nachrichten in Kanälen nach einer bestimmten Zeit automatisch
+  * Optional kannst du immer eine bestimmte Anzahl an Nachrichten in einem Kanal behalten
+  * Angepinnte Nachrichten werden nicht gelöscht
+* Automatische Löschung von Nachrichten aus Sprachkanälen, nachdem jedes Mitglied den Kanal verlassen hat
+  * Füge optional eine Verzögerung vor dem Löschen der Nachrichten hinzu
 
-## Setup {#setup}
+## Einrichtung {#setup}
 
 * Stell sicher, dass Dein Bot über die Berechtigungen „Nachrichten verwalten“, „Kanal anzeigen“ und „Nachrichtenverlauf anzeigen“ für den von Dir verwendeten Kanal verfügt
   und du die Funktion Aktiviert hast.
@@ -59,13 +56,13 @@ Dein [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-dele
 Diese Konfigurationsdatei ermöglicht,
 von welchen Kanälen Nachrichten automatisch gelöscht werden sollen
 sobald alle Benutzer den Sprachkanal verlassen haben.
-Öffne Dein [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels).
+Du kannst diese Datei in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) öffnen.
 
 | Konfigurationsoption | Beschreibung |
 |--------|------------ -------------------------------------------------- -------------------------------------------------- -----------------------------------------------|
-| Kanal | Dies ist der Kanal, auf den dieser spezifische Befehlssatz angewendet werden soll. Die automatische Löschung wird in diesem Kanal durchgeführt, sobald alle Mitglieder den Kanal verlassen haben. |
-| Zeitüberschreitung | Dies ist die Verzögerung (in Minuten) zwischen dem letzten Verlassen des Kanals durch den Benutzer und der Durchführung des Löschvorgangs. Setzen Sie diesen Wert auf Null, um das sofortige Löschen zu ermöglichen. |
-| Beim Start bereinigen | Wenn diese Option aktiviert ist, löscht Ihr Bot beim Neustart Ihres Bots jede Nachricht, wenn kein Mitglied im Sprachkanal vorhanden ist. Wenn deaktiviert, werden keine vorhandenen Nachrichten gelöscht. |
+| Kanal | Dies ist der Kanal, auf den diese Konfigurationswerte angewendet werden sollen. Die automatische Löschung wird in diesem Kanal durchgeführt, sobald alle Mitglieder den Kanal verlassen haben. |
+| Timeout | Dies ist die Verzögerung (in Minuten) zwischen dem letzten Verlassen des Kanals durch den Benutzer und der Durchführung des Löschvorgangs. Setzen Sie diesen Wert auf Null, um sofort bei Verlassen die Löschung durchzuführen. |
+| Kanal beim Start leeren | Wenn diese Option aktiviert ist, löscht dein Bot beim Neustart deines Bots jede Nachricht, wenn kein Mitglied im Sprachkanal ist. Wenn deaktiviert, werden keine vorhandenen Nachrichten gelöscht. |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -74,4 +71,4 @@ Wenn die automatische Löschung nicht durchgeführt wird, überprüfe bitte Folg
 * Dein Bot benötigt folgende Rechte auf deinem Kanal: „Kanal anzeigen“, „Nachrichten verwalten“, „Nachrichtenverlauf anzeigen“, auf dem die Automatische Löschung durchgeführt werden soll.
 * Bitte stell sicher, dass die Anzahl der zu behaltenden Nachrichten unter 50 liegt.
 * Bitte stell sicher, dass neue Nachrichten an den Kanal gesendet wurden, wenn Du „Beim Start löschen“ nicht aktiviert hast.
-* Bitte stell sicher, dass die Nachricht, die Du löschen möchten, nicht angepinnt ist.
+* Bitte stell sicher, dass die Nachricht, die du löschen möchtes, nicht angepinnt ist.
