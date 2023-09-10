@@ -42,7 +42,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel
 
 <details>
 <summary>Ich versuche den Namen des Kanals zu ändern, doch der Bot ändert ihn zurück</summary>
-    Wenn du den Namen des Kanals verändern willst, musst du das Feld "Kanalname" in der <a href="https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannel">Modul-Konfiguration</a> des Kanals aktualisieren.
+    Wenn du den Namen des Kanals verändern willst, musst du das Feld "Kanalname" in der <a href="https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannel">Modul-Konfiguration</a> des Kanals aktualisieren.
 </details>
 
 <details>
