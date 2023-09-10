@@ -17,7 +17,7 @@ Hier ist ein Beispiel, wie 3 Sprachkanäle einige Statistiken über einen Server
 
 1. Erstelle einen Kanal, den du für die Statistiken verwendet willst (wir empfehlen das Benutzen einer Kategorie oder eines Sprachkanals).
 2. Stelle sicher, dass dein Bot die Berechtigungen "Kanal sehen" und "Kanal verwalten" auf den Kanal hat.
-3. Öffne die [Channel-Statistiken-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
+3. Öffne die [Kanal-Statistiken-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
 4. Klicke auf "Statistik-Kanal hinzufügen" und konfiguriere den Kanal wie [hier](#configuration) beschrieben.
 5. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen.
 6. Der Kanal wird automatisch zu den konfigurierten Werte bearbeitet.
