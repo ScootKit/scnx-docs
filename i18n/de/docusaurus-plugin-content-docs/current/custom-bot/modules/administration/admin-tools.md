@@ -28,7 +28,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 
 <SlashCommandExplanation />
 
-| Command                                                      | Description                                                                     |
+| Befehl                                                      | Beschreibung                                                                     |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------|
 | `/admin movechannel channel:<Kanal>`                         | Zeigt die API-Position des angegebenen Kanals.                                  | 
 | `/admin movechannel channel:<Kanal> new-position:<Zahl>`     | Verschiebt den angegebenen Kanal zu der angegebenen API-Position.               |
