@@ -40,7 +40,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-  <summary>Importieren eines Emojis Fehler</summary>
+  <summary>Fehler beim Importieren eines Emojis</summary>
   <ul>
     <li>Stelle sicher, dass du das Emoji beim Emoji-Picker auswählst, anstatt es auszuschreiben.</li>
     <li>Stelle sicher, dass du <i>nur</i> das Emoji und nichts weiteres eingegeben hast.</li>
