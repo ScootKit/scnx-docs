@@ -52,7 +52,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel
         <li>Es dauert eventuell länger als das für diesen Kanal festgelegte Aktualisierungs-Intervall aufgrund Limitierungen von Discord. Bitte warte bis zu drei Stunden.</li>
         <li>Stelle sicher, dass du den korrekten Parameter Wort für Wort (Groß- und Kleinschreibung beachten!) eingegeben hast. Ungültige Parameter werden nicht ersetzt.</li>
         <li>Stelle sicher, dass dein Bot die Berechtigungen "Kanal sehen" und "Kanal verwalten" auf den festgelegten Kanal hat.</li>
-        <li>Aktualisiere deinen Client, wenn eine Änderung nicht sichtbar ist.</li>
+        <li>Aktualisiere deinen Discord-Client, wenn eine Änderung nicht sichtbar ist.</li>
     </ul>
     Der Name des Channels wird nicht aktualisiert, wenn der neue dem Altem gleicht.
 </details>
