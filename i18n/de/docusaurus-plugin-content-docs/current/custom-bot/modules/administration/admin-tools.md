@@ -53,7 +53,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
   <ul>
     <li>Stelle sicher, dass dein Bot die Berechtigung "Kanäle verwalten" auf deinem Server hat.</li>
     <li>Discord schränkt einige Positionen ein. So kannst du z.B. keinen Sprachkanal über einen Textkanal schieben.</li>
-    <li>Stelle sicher, dass du die richtige Position eingegeben hast. Um dies zu überprüfen, führe den Command ohne den "new-position"-Parameter und berechne die neue 
+    <li>Stelle sicher, dass du die richtige Position eingegeben hast. Um dies zu überprüfen, führe den Befehl ohne den "new-position"-Parameter aus und berechne die neue 
      Position mithilfe der jetzigen.</li>
   </ul>
 </details>
