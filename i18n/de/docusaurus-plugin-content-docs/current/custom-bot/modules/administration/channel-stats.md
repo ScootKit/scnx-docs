@@ -54,5 +54,5 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel
         <li>Stelle sicher, dass dein Bot die Berechtigungen "Kanal sehen" und "Kanal verwalten" auf den festgelegten Kanal hat.</li>
         <li>Aktualisiere deinen Client, wenn eine Änderung nicht sichtbar ist.</li>
     </ul>
-    Der Name des Channels wird nicht aktualisiert, wenn der neue dem altem gleicht.
+    Der Name des Channels wird nicht aktualisiert, wenn der neue dem Altem gleicht.
 </details>
