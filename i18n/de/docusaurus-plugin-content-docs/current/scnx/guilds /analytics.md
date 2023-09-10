@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Serveranalyse
+# Serverstatistiken
 
 Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
 Schau dir die Mitgliederaktivität an und erhalte eine Prognosen für die Zukunft 🔮
@@ -10,24 +10,24 @@ Schau dir die Mitgliederaktivität an und erhalte eine Prognosen für die Zukunf
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
 
 
-:::tip Der Datenschutz liegt uns am Herzen
-Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese dir
-für weitere Informationen folgendes durch [FAQ-Artikel](https://faq.scnx.app/de/data-collection-with-analytics/).
+:::tip Datenschutz liegt uns am Herzen
+Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese 
+unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.
 
-**tl;dr**: Wir speichern die Daten über Nachrichten nur 30 Tage lang und speichern die Zählungen erst danach
+**tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und dannach nur noch die Anzahl.
 [Benutzer können sich abmelden](#user-opt-out) und es werden niemals Inhalte von Nachrichten (oder Anhängen) gespeichert.
 :::
 
-## Analyse aktivieren {#enable}
+## Statistiken aktivieren {#enable}
 
-Um Analysen zu aktivieren, besuche bitte die [Analyseseite](https://scnx.app/de/glink?page=analytics) Ihres Discords auf SCNX und klicke auf
-„Analyse aktivieren“.
+Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) deines Servers auf SCNX und klicke auf
+„Statistiken aktivieren“.
 
 ![](@site/docs/assets/scnx/guilds/analytics/setup.png)
 
 ## Verwendung im Dashboard {#dashboard}
 
-In deinem [Analyse-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend eines Zeitrahmens sehen, den Du oben in deinem Dashboard auswählen kannst:
+Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend auf einem Zeitraum sehen, den Du oben in deinem Dashboard auswählen kannst:
 * Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitrahmen gesendet wurden.
 * 10 am häufigsten verwendete Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten über welchen Kanal gesendet wurden.
 * Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus] (#user-opt-out) nicht aktiviert haben).
@@ -117,14 +117,14 @@ Alle infos findest Du unter [FAQ-Artikel](https://faq.scnx.app/de/data-collectio
 
 Wenn Du (oder ein Benutzer deines Servers) nicht möchte, dass der Serverbesitzer und die Administratoren sehen können, wie viele Nachrichten Du erhalten oder
 gesendet hast oder Du befürchtest, dass personenbezogene Daten über Dich oder deine Nuztzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus“ aktivieren.
-Verwenden folgenden Befehl „/privacy enable“ auf deinem Server. Das ist global (das bedeutet, dass SCNX auf keinem Server Daten über Dich speichert)
-wird sich auf Folgendes auswirken:
+Verwende den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
+wird sich auf folgendes auswirken:
 
-* Alle Daten über von Dir gesendete Nachrichten werden anonymisiert (= Deine Discord-Benutzer-ID wird aus der Datenbank entfernt)
-- das bedeutet, dass wir nicht wissen, dass *Du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
-* Alle zukünftig von Dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit Deiner Discord-Benutzer-ID verknüpft) – dies
-bedeutet, dass wir nicht wissen, dass *Du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
+* Alle Daten über von dir gesendete Nachrichten werden anonymisiert (= Deine Discord-Benutzer-ID wird aus der Datenbank entfernt)
+ - das bedeutet, dass wir nicht wissen, dass *du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
+* Alle zukünftig von dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit deiner Discord-Benutzer-ID verknüpft) – dies
+bedeutet, dass wir nicht wissen, dass *du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
 * Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
 
-Datenschutzmodus kann mit (Opt-Back) mit „/privacy enable“ deaktiviert werden. Bitte beachte, dass dadurch Frühere Nachrichten nicht erneut verknüpft werden
-Die von dir gesendete wurden (das ist nicht mehr möglich), d. h., dass nur neue Nachrichten in Befehlen und im Dashboard angezeigt werden.
+Der Datenschutzmodus kann mit (Opt-Back) mit „/privacy enable“ deaktiviert werden. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden 
+(das ist nicht mehr möglich), d. h., dass nur neue Nachrichten in Befehlen und im Dashboard angezeigt werden.
