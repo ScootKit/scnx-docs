@@ -6,7 +6,7 @@ Erstelle Kanäle mit Statistiken über deinen Server - automatisch aktualisiert.
 
 ## Funktionen {#features}
 
-Erstelle Sprachkanäle auf deinem Server, welche automatisch aktuelle Statistiken anzeigen - wie die Anzahl der Mitglieder 
+Erstelle Sprachkanäle auf deinem Server, welche automatisch aktuelle Statistiken anzeigen, wie z.B. die Anzahl der Mitglieder 
 auf deinem Server, die eine bestimmte Rolle haben.
 
 Hier ist ein Beispiel, wie 3 Sprachkanäle einige Statistiken über einen Server zeigen:
