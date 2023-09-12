@@ -66,7 +66,7 @@ auf diesem Konto wird deiner Rechnungen gutgeschrieben – die Angabe der Transa
 
 Durch einen Unfall zu viel Geld verdrahtet? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet.
 Wenn du es nicht innerhalb von 90 Tagen verwendest, erstattet unser Zahlungsanbieter das Geld auf das Bankkonto zurück, von dem die Überweisung stammt
-von (falls dies nicht möglich ist, wird sich Stripe mit Ihnen in Verbindung setzen und nach den Bankdaten fragen). Du kannst
+von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
 von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
 wenn dein Banküberweisungssaldo nicht abgeglichen ist).
 
