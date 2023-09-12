@@ -1,6 +1,6 @@
 # Partner-Liste
 
-Verwalte deine Partnerschaften mit anderen Servern ganz einfach.
+Erstelle eine Liste mit allen Partnern deines Servers - nach Kategorie sortiert.
 
 <ModuleOverview moduleName="partner-list" />
 
@@ -10,10 +10,10 @@ Verwalte deine Partnerschaften mit anderen Servern ganz einfach.
 
 Dieses Modul soll die Verwaltung von Partnerschaften mit anderen Discord-Servern vereinfachen.
 
-* Erstelle stets eine aktuelle Einbettungsliste von all deinen aktuellen Partner´n.
+* Erstelle stets eine aktuelle Embed-Liste von all deinen aktuellen Partnern.
 * Erstelle benutzerdefinierte Kategorien, um deine Partnerschaften zu sortieren.
-* Rollen von Partnern automatisch zuweisen und entfernen.
-* Sende deinen Partner´n automatisch eine Benachrichtigungen über Statusänderungen.
+* Weiße und entferne automatisch Rollen von Partnern.
+* Sende deinen Partnern automatisch eine Benachrichtigungen über Änderungen ihres Partner-Statuses.
 
 Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpassen):
 
@@ -22,12 +22,12 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 ## Einrichtung {#setup}
 
 * Bitte [richte die Berechtigungen für Slash-Befehle](./../../slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
-* Anschließend konfigurierst Due die Partnerliste:
-    1. Erstell einen Kanal, in den der Bot die Partnerliste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen
+* Konfiguriere anschließlich die Partnerliste:
+    1. Erstelle einen Kanal, in den der Bot die Partnerliste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen
     2. „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachricht senden“ verfügen.
     3. Öffne die [Modulkonfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
-       und [Modul konfigurieren](#configuration).
-    4. Lade die Konfiguration Deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partnerliste.
+       und [konfiguriere das Modul](#configuration).
+    4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partnerliste.
 
 ## Verwendung {#usage}
 
