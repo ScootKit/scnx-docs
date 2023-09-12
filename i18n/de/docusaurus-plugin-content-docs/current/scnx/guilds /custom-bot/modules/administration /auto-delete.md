@@ -16,7 +16,7 @@ Mit diesem Modul kannst du Nachrichten nach einer bestimmten Zeit löschen lasse
 
 ## Einrichtung {#setup}
 
-* Stell sicher, dass dein Bot über die Berechtigungen „Nachrichten verwalten“, „Kanal anzeigen“ und „Nachrichtenverlauf anzeigen“ für den von Dir verwendeten Kanal verfügt
+* Stell sicher, dass dein Bot über die Berechtigungen „Nachrichten verwalten“, „Kanal anzeigen“ und „Nachrichtenverlauf anzeigen“ für den von dir verwendeten Kanal verfügt
 * Um das automatische Löschen von Nachrichten einzurichten, öffne
   die [Text-Kanäle](https://scnx.app/de/glink?page=bot/configuration?file=auto-delete%7Cchannels) Konfigurationsdatei und
   1. Klick auf „Neues Konfigurationselement hinzufügen“.
@@ -39,7 +39,7 @@ vor dem Löschen zu bewahren, pinne sie einfach an.
 
 ### Textkanäle {#config-channels}
 
-Mit dieser Konfigurationsdatei kannst Du festlegen, von welchen Kanälen Nachrichten automatisch gelöscht werden sollen. Öffnen
+Mit dieser Konfigurationsdatei kannst du festlegen, von welchen Kanälen Nachrichten automatisch gelöscht werden sollen. Öffnen
 sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-delete%7Cchannels).
 
 | Konfigurationsoption | Beschreibung |
@@ -66,5 +66,5 @@ Wenn die automatische Löschung nicht durchgeführt wird, überprüfe bitte Folg
 
 * Dein Bot benötigt folgende Rechte auf deinem Kanal: „Kanal anzeigen“, „Nachrichten verwalten“, „Nachrichtenverlauf anzeigen“, auf dem die Automatische Löschung durchgeführt werden soll.
 * Bitte stell sicher, dass die Anzahl der zu behaltenden Nachrichten unter 50 liegt.
-* Bitte stell sicher, dass neue Nachrichten an den Kanal gesendet wurden, wenn Du „Beim Start löschen“ nicht aktiviert hast.
+* Bitte stell sicher, dass neue Nachrichten an den Kanal gesendet wurden, wenn du „Beim Start löschen“ nicht aktiviert hast.
 * Bitte stell sicher, dass die Nachricht, die du löschen möchtes, nicht angepinnt ist.
