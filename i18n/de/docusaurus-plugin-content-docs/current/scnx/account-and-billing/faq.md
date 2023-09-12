@@ -11,26 +11,26 @@ Häufig gestellte Fragen zu Benutzerfunktionen und Abrechnung bei SCNX.
 ### Was sind SCNX-Credits? {#scnx-credits}
 
 SCNX-Credits sind eine virtuelle Währung auf SCNX. Du kannst sie auf 
-deiner [Zahlungsseite](https://scnx.app/de/user/zahlungen) Erwerben und gegen AI-Credits einlösen, Benutzer
-Speicher, [Server-Upgrades](./../guilds/plans#upgrade) oder andere Käufe auf SCNX. Eine Auszahlung erworbener SCNX-Credits ist nicht möglich.
+deiner [Zahlungsseite](https://scnx.app/de/user/zahlungen) Erwerben und gegen AI-Credits einlösen, dein
+Speicher erweitern oder [Server-Upgrades](./../guilds/plans#upgrade) durchführen und viele weitere Möglichkeiten. Eine Auszahlung erworbener SCNX-Credits ist nicht möglich.
 
 ### Wie verwalte ich mein Abonnement? {#manage-subscription}
 
-Um Dein Abonnement zu verwalten, besuche deine [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort kannst du 
+Um dein Abonnement zu verwalten, besuche deine [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort kannst du 
 alle laufenden Abonnements überprüfen und kündigen.
 
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
 
-Wir nehmen derzeit nicht am Umsatzsteuer-Reverse-Charge-System teil, müssen aber für niemanden Umsatzsteuer berechnen,
-unabhängig von ihrem Umsatzsteuerstatus.
+Wir nehmen derzeit nicht am Umsatzsteuer-Reverse-Charge-System teil, müssen daher für niemanden Umsatzsteuer berechnen,
+unabhängig von deinem Umsatzsteuerstatus.
 
 ### Wie lege ich meine Rechnungsadresse fest? {#Rechnungsdetails}
 
-Um Deine Rechnungsadresse festzulegen, gehe zur [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Findest du einen Abschnitt „Rechnungsdaten“. 
-Dort kannst Du deine Rechnungsdaten eingeben. Wenn Du eine neu generierte Rechnung benötigst,
+Um deine Rechnungsadresse festzulegen, gehe zur [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort findest du einen Abschnitt „Rechnungsdaten“. 
+Dort kannst du deine Rechnungsdaten eingeben. Wenn du eine neu generierte Rechnung benötigst,
 Kontaktiere bitte einen [unserer Mitarbeiter](https://scnx.app/de/help).
-Bitte beachte: Abhängig von deinen Eingaben werden wir Di´ch ggf. um eine Überprüfung der Angaben bitten (in manchen Fällen gesetzlich vorgeschrieben).
-Wenn wir feststellen, dass Du dies missbraucht hast (z. B. ungültige Adressen eingegeben hast), können wir diese Funktion für Dein Konto deaktivieren 
+Bitte beachte: Abhängig von deinen Eingaben werden wir dich ggf. um eine Überprüfung der Angaben bitten (in manchen Fällen gesetzlich vorgeschrieben).
+Wenn wir feststellen, dass du dies missbraucht hast (z. B. ungültige Adressen eingegeben hast), können wir diese Funktion für dein Konto deaktivieren 
 (oder gegebenenfalls andere Maßnahmen ergreifen).
 
 ### Warum kann ich nicht mit SEPA-Lastschrift bezahlen? {#Lastschrift}
@@ -41,7 +41,7 @@ Bitte lese dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 
 1. Aktiviere zunächst das Abonnement auf SCNX. Öffnen dazu
    die [Preisseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade
-   Fenster. Wähle als Nächstes Dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn Du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrend Banküberweisung“ aus
+   Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrend Banküberweisung“ aus
    Dir werden eindeutige Zahlungsanweisungen und [eine eindeutige IBAN](#Überweisung) angezeigt.
 2. Richte als Nächstes die wiederkehrende Überweisung bei deiner Bank ein:
    * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
@@ -53,23 +53,23 @@ Bitte lese dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
    * [BUNQ](https://together.bunq.com/d/84-schedule-a-zahlung)
    * [N26](https://support.n26.com/de-de/zahlungen-ueberweisungen-und-abhebungen/lastschriften-und-dauerauftrage/wie-erstelle-und-verwalte-ich-dauerauftrage)
    * [Revolut](https://help.revolut.com/de-LU/help/receiving-zahlungen/sending-money-to-an-external-bank-account/how-to-schedule-recurring-zahlungen/business /)
-   * Deine Bank ist nicht aufgeführt? Googel einfach den Namen Deiner Bank in Kombination mit „wiederkehrende Überweisung“ (oder „
-     Dauerauftrag), um Ratgeber zu finden. Sollten weiterhin Probleme auftreten, wende dich bitte an Deine Bank.
-3. Stell sicher, dass alle Details mit den in Deinem Dashboard angezeigten Details übereinstimmen, und bestätige deine wiederkehrende Überweisung mit diener
+   * Deine Bank ist nicht aufgeführt? Googel einfach den Namen deiner Bank in Kombination mit „wiederkehrende Überweisung“ (oder „
+     Dauerauftrag), um Ratgeber zu finden. Sollten weiterhin Probleme auftreten, wende dich bitte an deine Bank.
+3. Stell sicher, dass alle Details mit denen, in deinem Dashboard angezeigten Details übereinstimmen, und bestätige deine wiederkehrende Überweisung von deiner
    Bank.
-4. Viel Spaß mit Deinem SCNX-Abonnement 🚀
+4. Viel Spaß mit deinem SCNX-Abonnement 🚀
 
 ### Woher weiß SCNX, dass ich eine Rechnung überwiesen habe? {#Banküberweisung}
 
-Wenn Du per Banküberweisung bezahlst, wird Dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die eintrifft
+Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die eintrifft
 auf diesem Konto wird deiner Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen).
 Einmalkäufe), da wir anhand der IBAN, mit der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
 
 Durch einen Unfall zu viel Geld verdrahtet? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet.
-Wenn Du es nicht innerhalb von 90 Tagen verwendest, erstattet unser Zahlungsanbieter das Geld auf das Bankkonto zurück, von dem die Überweisung stammt
+Wenn du es nicht innerhalb von 90 Tagen verwendest, erstattet unser Zahlungsanbieter das Geld auf das Bankkonto zurück, von dem die Überweisung stammt
 von (falls dies nicht möglich ist, wird sich Stripe mit Ihnen in Verbindung setzen und nach den Bankdaten fragen). Du kannst
-Wende Dich auch an unsere Mitarbeiter (https://scnx.app/de/help), um das Geld schneller zurückzubekommen (bitte beachte, dass dies nur möglich ist),
-wenn Dein Banküberweisungssaldo nicht abgeglichen ist).
+Wende dich auch an unsere Mitarbeiter (https://scnx.app/de/help), um das Geld schneller zurückzubekommen (bitte beachte, dass dies nur möglich ist),
+wenn dein Banküberweisungssaldo nicht abgeglichen ist).
 
 ### Meine Karte wurde abgelehnt, aber alle meine Daten sind gültig {#no-reason-decline}
 
@@ -83,23 +83,23 @@ Hier sind einige mögliche Gründe, warum dies geschieht:
 * Deine Karte wurde als gestohlen gemeldet
 * Deine Karte konnte mit 3DS nicht verifiziert werden
 
-Bitte [kontaktieren unsere Mitarbeiter](https://scnx.app/de/help), wenn Du der Meinung bist, dass keiner dieser Gründe zutrifft.
+Bitte [kontaktieren unsere Mitarbeiter](https://scnx.app/de/help), wenn du der Meinung bist, dass keiner dieser Gründe zutrifft.
 
 ## Andere Fragen
 
 ### Erforderliche Bereiche für Discord {#discord-access}
 
-Um SCNX nutzen zu können, musst Du einen bestimmten Zugriff auf Dein Discord-Konto autorisieren. 
-Unser Zugriff ist streng eingeschränkt, wir verstehen jedoch, dass Du möglicherweise Bedenken hast, personenbezogene Daten an Dritte weiterzugeben. 
-Hier findest Du eine Erklärung, warum wir welchen Umfang benötigen.
+Um SCNX nutzen zu können, musst du einen bestimmten Zugriff auf dein Discord-Konto autorisieren. 
+Unser Zugriff ist streng eingeschränkt, wir verstehen jedoch, dass du möglicherweise Bedenken hast, das personenbezogene Daten an Dritte weiterzugeben werden. 
+Hier findest du eine Erklärung, warum wir welche Daten benötigen.
 
 :::tipp
-Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie die [Datenverarbeitungs-Grundverordnung](https://gdpr-info.eu/) (eines der strengsten Datenschutzgesetze). Du kannst jederzeit die Löschung gespeicherter Daten verlangen. Wir respektieren Deine Privatsphäre, da wir glauben, dass Privatsphäre ein Menschenrecht ist. 
+Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie die [Datenverarbeitungs-Grundverordnung](https://gdpr-info.eu/) (eines der strengsten Datenschutzgesetze). Du kannst jederzeit die Löschung gespeicherter Daten verlangen. Wir respektieren deine Privatsphäre, da wir glauben, dass Privatsphäre ein Menschenrecht ist. 
 Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 :::
 
 | Geltungsbereich | Erklärung |
 |-------------|------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -----------|
-| Greifen auf Deinen Benutzernamen, Deinen Avatar und Dein Banner zu | Wir benötigen diese Informationen, um Dich zu identifizieren und das Dashboard auszuführen. Wir zeigen beispielsweise Dein Profilbild im Dashboard | an |
-| Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um Dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden Dir niemals Marketing-E-Mails senden. |
-| Wusstest Du, auf welchen Servern Du dich befindedst | Im Dashboard zeigen wir alle Server an, auf die Du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern Du sich derzeit befindest. |
+| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im auszuführen. Wir zeigen beispielsweise dein Profilbild im Dashboard | an |
+| Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
+| Wusstest du, auf welchen Servern du dich befindedst | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
