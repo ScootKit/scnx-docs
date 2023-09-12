@@ -34,7 +34,7 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 * Um einen neuen Partner hinzuzufügen, verwende [`/partner add`](#commands).
 * Um einen Partner zu bearbeiten, verwende [`/partner edit`](#commands).
 * Um einen Partner zu löschen, verwende [`/partner delete`](#commands).
-* Die Partnerliste wird automatisch aktualisiert, es sind keine manuellen Maßnahmen erforderlich.
+* Die Partner-Liste wird automatisch aktualisiert, es sind keine manuellen Aktionen erforderlich.
 
 ## Befehle {#commands}
 
