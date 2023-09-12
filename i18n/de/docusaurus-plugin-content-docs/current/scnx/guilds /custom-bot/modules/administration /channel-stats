@@ -1,0 +1,59 @@
+# Kanal-Statistiken
+
+Erstelle Kanäle mit Statistiken über deinen Server – die sich automatisch aktualisieren.
+
+<ModuleOverview moduleName="channel-stats" />
+
+## Funktionen {#features}
+
+Erstelle Sprachkanäle auf deinem Server, die automatisch aktuelle Statistiken anzeigen – wie die Anzahl der Mitglieder auf deinem
+Discord-Server, oder Mitglieder einer bestimmten Rolle.
+
+Hier ist ein Beispiel, das zeigt, wie drei verschiedene Sprachkanäle einige Statistiken über einen Server anzeigen:
+
+![](@site/docs/assets/custom-bot/modules/channel-stats/example.png)
+
+## Einstellungen {#setup}
+
+1. Erstelle einen Kanal, den du für Statistiken verwenden möchten (wir empfehlen die Verwendung eines Kategorie- oder Sprachkanals).
+2. Stelle sicher, dass dein Bot über die Berechtigungen „Kanal anzeigen“ und „Kanal verwalten“ für den Kanal verfügt.
+3. Öffne die [Channel-Stats-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
+4. Klick auf „Neuen Statistik-Kanal hinzufügen“ und konfiguriere ihn wie [hier] beschrieben (#configuration).
+5. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen.
+6. Der Kanal wird automatisch auf die konfigurierten Werte bearbeitet.
+
+## Nutzung {#usage}
+
+Nach dem [Einrichten](#setup) und [Konfigurieren](#configuration) dieses Moduls sind keine weiteren Aktionen erforderlich – die
+konfigurierten Kanäle werden im angegebenen Intervall automatisch aktualisiert.
+
+## Konfiguration {#configuration}
+
+Mit dieser Konfigurationsdatei kannst du festlegen, welche Kanäle als Statistikkanäle fungieren sollen, und diese konfigurierten
+Werte anzuzeigen. Öffne dein
+[Dashboard](https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannels).
+
+| Feld | Beschreibung |
+|-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kanal | Dies ist der Kanal, der als Statistikkanal verwendet werden sollte. Der Wert im „Channel-Name“ wird automatisch aktualisiert. |
+| Kanalname | Dies ist der Kanal-Name, den der Bot automatisch aktualisiert. <br/><i>Bitte überprüfe die verfügbaren Parameter in deinem Dashboard.</i> |
+| Aktualisierungsintervall | Dies ist das Intervall in Minuten, in dem dein Bot den Kanals aktualisiert. Aufgrund technischer Einschränkungen von Discord aus, muss dieser Wert höher als sieben sein. |
+
+## Fehlerbehebung {#troubleshooting}
+
+<details>
+<summary>Ich habe versucht, den Namen meines Kanals zu bearbeiten, aber der Bot ändert ihn wieder</summary>
+    Wenn du den Namen des Kanals bearbeiten möchtest, musst du das „Channel-Name“-Feld des Kanals in deinem <a href="https://scnx.app/de/glink?page=bot/configuration?file aktualisieren =channel-stats%7Cchannel">Modulkonfiguration</a>.
+</details>
+
+<details>
+    <summary>Mein Kanalname wird nicht aktualisiert</summary>
+    <ul>
+        <li>Stell sicher, dass du die Zeit im konfigurierte Aktualisierungsintervall vergangen ist, da der Kanalname nur aktualisiert wird, wenn die angegebene Zeit im Intervall abgelaufen ist.</li>
+        <li>Aufgrund der Begrenzung von Discord kann bis zu drei Stunden dauern, bis der Kanal aktualisiert wird. Bitte hab etwas Geduld.</li>
+        <li>Stell sicher, dass du den richtigen Parameter Wort für Wort eingegeben hast (Groß- und Kleinschreibung beachten!). Ungültige Parameter werden nicht ersetzt.</li>
+        <li>Bitte stell sicher, dass dein Bot über die Berechtigung „Kanal verwalten“ und „Kanal anzeigen“ für den konfigurierten Kanal verfügt.</li>
+        <li>Aktualisiere deinen Client, wenn eine Änderung nicht sichtbar ist.</li>
+    </ul>
+    Der Name des Kanals wird nicht aktualisiert, wenn der neue Name mit dem alten Namen übereinstimmt.
+</details>
