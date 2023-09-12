@@ -1,4 +1,4 @@
-# Partnerliste
+# Partner-Liste
 
 Verwalte deine Partnerschaften mit anderen Servern ganz einfach.
 
@@ -15,7 +15,7 @@ Dieses Modul soll die Verwaltung von Partnerschaften mit anderen Discord-Servern
 * Rollen von Partnern automatisch zuweisen und entfernen.
 * Sende deinen Partner´n automatisch eine Benachrichtigungen über Statusänderungen.
 
-Hier ist ein Beispiel einer Partnerliste (Du kannst das Erscheinungsbild anpassen):
+Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpassen):
 
 ![](@site/docs/assets/custom-bot/modules/partner-list/example.png)
 
@@ -48,18 +48,18 @@ Hier ist ein Beispiel einer Partnerliste (Du kannst das Erscheinungsbild anpasse
 
 ## Konfiguration {#configuration}
 
-Mit dieser Konfigurationsdatei kannst du Benachrichtigungen für Partner einrichten, die Einbettung der Partnerliste bearbeiten und vieles mehr. 
+Mit dieser Konfigurationsdatei kannst du Benachrichtigungen für Partner einrichten, die Einbettung der Partner-Liste bearbeiten und vieles mehr. 
 Öffnen es in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).
 
 | Feld | Beschreibung |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kanal | Dies ist der Kanal, in den die Partnerliste gesendet wird. Wenn der Bot in der Vergangenheit bereits eine Nachricht gesendet hat, wird die neueste Nachricht in die Partnerliste aufgenommen. Wir empfehlen einen leeren Kanal. |
-| Partner-Liste-Einbetten | Dies ist die Konfiguration der Partnerliste. |
-| Partner-List-Embed: Titel | Titel der Partner-List-Embed. |
-| Partner-List-Embed: Beschreibung | Beschreibung der Partner-List-Embed. |
-| Partner-List-Embed: Partner-String | Dies ist das Format eines Partners, der in der Partner-List-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig). |
-| Partner-List-Embed: Farbe | Dies ist die Farbe der Partner-List-Embed. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert] sein (./../../additional-features#embed-colors). |
+| Kanal | Dies ist der Kanal, in den die Partner-Liste gesendet wird. Wenn der Bot in der Vergangenheit bereits eine Nachricht gesendet hat, wird die neueste Nachricht in die Partnerliste aufgenommen. Wir empfehlen einen leeren Kanal. |
+| Partner-Liste-Einbetten | Dies ist die Konfiguration der Partner-Liste. |
+| Partner-Liste-Embed: Titel | Titel der Partner-List-Embed. |
+| Partner-Liste-Embed: Beschreibung | Beschreibung der Partner-List-Embed. |
+| Partner-Liste-Embed: Partner-String | Dies ist das Format eines Partners, der in der Partner-Liste-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig). |
+| Partner-Liste-Embed: Farbe | Dies ist die Farbe der Partner-List-Embed. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert] sein (./../../additional-features#embed-colors). |
 | Kategorien | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden. |
 | Kategorie-Rollen | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle |
 | Partner-Benachrichtigungen senden | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden. |
@@ -69,7 +69,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-    <summary>Die Partnerliste wird nicht im konfigurierten Kanal angezeigt</summary>
+    <summary>Die Partner-Liste wird nicht im konfigurierten Kanal angezeigt</summary>
     <ul>
         <li>Stell sicher, dass der gewünschte Kanal leer ist.</li>
         <li>Stell sicher, dass der Bot über die Berechtigungen „Kanal anzeigen“, „Nachrichten senden“ und „Nachrichtenverlauf anzeigen“ für den Kanal verfügt.</li>
@@ -81,7 +81,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 
 <details>
     <summary>Kann ich den ID-Counter neu starten?</summary>
-    Nein. Die ID ist eine eindeutige Identifikationsnummer und kann nicht zurückgesetzt werden. Dies ist eine technische Einschränkung – du kannst den Parameter <code>%id%</code> aus deinem „partner-string“ unter „Partner-List-Embed“ in deiner <a href="https://scnx.app" entfernen /de/glink?page=bot/configuration?file=partner-list%7Cconfig">Modulkonfiguration</a>, falls dich das stört.
+    Nein. Die ID ist eine eindeutige Identifikationsnummer und kann nicht zurückgesetzt werden. Dies ist eine technische Einschränkung – du kannst den Parameter <code>%id%</code> aus deinem „partner-string“ unter „Partner-Liste-Embed“ in deiner <a href="https://scnx.app" entfernen /de/glink?page=bot/configuration?file=partner-list%7Cconfig">Modulkonfiguration</a>, falls dich das stört.
 </details>
 
 ## Gespeicherte Daten {#data-usage}
