@@ -14,7 +14,7 @@ Schau dir die Mitgliederaktivität an und erhalte eine Prognosen für die Zukunf
 Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese 
 unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.
 
-**tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und dannach nur noch die Anzahl.
+**tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und danach nur noch die Anzahl.
 [Benutzer können sich abmelden](#user-opt-out) und es werden niemals Inhalte von Nachrichten (oder Anhängen) gespeichert.
 :::
 
@@ -53,7 +53,7 @@ Discord-Server-Einstellungen unter „Integrationen“ konfigurieren). Folgende 
 
 * `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
 letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung“, in der Sie die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen finden.
-* `/stats user`: Zeigt eine Statistikübersicht eines Benutzer auf deinem Server an. Dazu gehören die 10 aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick“, indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
+* `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die 10 aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick“, indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
 Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden (/ zeigt Daten darüber an).
 
 ![](@site/docs/assets/scnx/guilds/analytics/commands.png)
