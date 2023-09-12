@@ -6,7 +6,7 @@ Lass deinen Bot alle Änderungen an deinem Sever und deinen Kanälen Protokollie
 
 ## Funktionen {#features}
 
-Mit dem erweiterten Protokollierungsmodul kannst Du dies ganz einfach tun
+Mit dem erweiterten Protokollierungsmodul kannst du dies ganz einfach tun
 
 * Protokolliere Kanalaktualisierungen (wie Kanalbearbeitungen, Kanalberechtigungsänderungen und mehr) in jedem gewünschten Kanal.
 * Protokolliere Rollenaktualisierungen (wie Rollenänderungen, Berechtigungsänderungen und mehr) in jedem gewünschten Kanal.
@@ -26,18 +26,18 @@ Mit dem erweiterten Protokollierungsmodul kannst Du dies ganz einfach tun
 
 ## Verwendung {#usage}
 
-Sobald dieses Modul [konfiguriert](#configuration) aktiviert ist, protokolliert es automatisch die konfigurierten Änderungen in den angegebenen Kanälen.
+Sobald dieses Modul [konfiguriert](#configuration) und aktiviert ist, protokolliert es automatisch die konfigurierten Änderungen in den angegebenen Kanälen.
 Es sind keine weiteren Maßnahmen erforderlich.
 
-Bitte beachten Sie, dass Ihre Administratoren die protokollierten Nachrichten möglicherweise löschen 
+Bitte beachte, dass deine Administratoren die protokollierten Nachrichten möglicherweise löschen 
 (oder mithilfe der Funktion [Als Bot anmelden](./../../login-as-bot)-Bearbeiten und Fälschen ) können. Dies ist mit dem Discord-Audit-Log nicht möglich. 
-Wenn Du also sicherstellen möchten, dass eine Aktion korrekt ist, überprüfe bitte das Discord-Audit-Protokoll. 
-Änderungen in der Nachrichtenprotokollierung werden auch nie automatisch bearbeitet. Wenn Du also in einer der Protokollnachrichten die Bezeichnung „Bearbeitet“ siehst, wurde sie wahrscheinlich mit der Funktion
+Wenn du also sicherstellen möchten, dass eine Aktion korrekt ist, überprüfe bitte das Discord-Audit-Protokoll. 
+Änderungen in der Nachrichtenprotokollierung werden auch nie automatisch bearbeitet. Wenn du also in einer der Protokollnachrichten die Bezeichnung „Bearbeitet“ siehst, wurde sie wahrscheinlich mit der Funktion
 [Als Bot anmelden](./../../login-as-bot) geändert.
 
 ## Konfiguration {#configuration}
 
-Mit dieser Konfigurationsdatei kannst Du festlegen, welche Änderungen an deinem Server in welchem ​​Kanal protokolliert werden sollen. 
+Mit dieser Konfigurationsdatei kannst du festlegen, welche Änderungen an deinem Server in welchem ​​Kanal protokolliert werden sollen. 
 Öffne dein Dashboard [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=logging%7Cconfig).
 
 | Feld | Beschreibung |
