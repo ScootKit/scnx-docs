@@ -52,7 +52,7 @@ Die folgenden Berechtigungen können per Trusted Admin-Berechtigungen vergeben w
 | **Modmail-Bot**: Modmail-Statistiken anzeigen                          | Dieser Nutzer kann die Modmail-Statistiken einsehen.                                                                                                                                            |
 | **Backups**: Verwalte Backups                                          | Dieser Nutzer kann Backups erstellen, exportieren, löschen und seine Einstellungen verändern.                                                                                                  |
 | **Analytics**: Anzeigen und Verwenden von Analysen                     | Dieser Nutzer kann deine Server Statistiken anzeigen und verwenden.                                                                                                                             |
-| **Integrations**: Integrationen ansehen & bearbeiten                   | Dieser Nutzer kann alle Funktionen jeglicher Integrationen anschauen und editieren, aber keine neuen Integrationen hinzufügen.                                                                                |
+| **Integrationen**: Integrationen ansehen & bearbeiten                   | Dieser Nutzer kann alle Funktionen jeglicher Integrationen anschauen und editieren, aber keine neuen Integrationen hinzufügen.                                                                                |
 
 Außerdem verfügt jeder Trusted-Admin über eine **Basis von Berechtigungen**:
 
