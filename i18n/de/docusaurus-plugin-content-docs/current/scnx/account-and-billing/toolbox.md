@@ -26,7 +26,7 @@ vorhanden) das Banner- oder Profilbild des Nutzers herunterladen. Hier ist ein B
 
 Nutze den Zeitstempel-Generator, um Daten und Zeitpunkte in Nachrichten auf Discord einzufügen. Der Zeitpunkt wird immer
 in der Zeitzone des Endnutzers angezeigt - keine Verwirrung mit den ganzen Zeitzonen mehr. Wähle einfach einen Zeitpunkt
-oben, wähle das passende Format, kopiere das Ergebnis und es in
+oben, wähle das passende Format, kopiere das Ergebnis und füge es in
 das [Zeitstempel-Generator-Werkzeug](https://scnx.app/de/user/tools?page=timestamp-generator) ein. Die Zeit wird dann
 angezeigt, sobald die Nachricht abgesendet wurde.
 
