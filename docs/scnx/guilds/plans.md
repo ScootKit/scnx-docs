@@ -180,7 +180,6 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
     Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
 </details>
 <details>
-<details>
 <summary>I can't upgrade my subscription to the PRO-Plan because it's shown as "inactive"</summary>
 <ul>
 <li>Please make sure you haven't canceled your subscription.</li>
@@ -239,6 +238,7 @@ If your plan or subscription has more than two months left, we might be able to 
 
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
+<details>
 <ul>
 <li>Your plan is being paid by an active subscription</li><li>Your remaining Plan time is more than a month</li></ul>
 <b>You can only request a Plan transfer once every 6 months</b>. <br/>
