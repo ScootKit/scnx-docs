@@ -180,7 +180,6 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
     Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic. 
 </details>
 <details>
-<details>
 <summary>I can't upgrade my subscription to the PRO-Plan because it's shown as "inactive"</summary>
 <ul>
 <li>Please make sure you haven't canceled your subscription.</li>
@@ -236,7 +235,7 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 <details>
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
 If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.</details>
-
+<details>
 <summary>Can I transfer my plan and remaining Plan-Time or subscriptions to another server?</summary>
 Our team can manually transfer your plan and associated data (like remaining Plan-Time and subscriptions) if <b>one</b> of the following conditions is being met:
 <ul>
