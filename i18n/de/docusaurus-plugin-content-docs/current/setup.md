@@ -57,7 +57,7 @@ und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die b
 
 Dein Server wurde erfolgreich zu SCNX hinzugefügt :tada:
 
-Du kannst jetzt damit anfangen [deinen eigenen Bot](custom-bot) oder [einen Modmail-Bot](modmail) zu erstellen oder einfach alle Features auszuprobieren, die dich interessieren -
+Du kannst jetzt damit anfangen [deinen eigenen Bot](custom-bot) oder [einen Modmail-Bot](modmail) zu erstellen oder einfach alle Funktionen auszuprobieren, die dich interessieren -
 Unsere [Dokumentation](/) und unsere [Teammitglieder](https://scnx.app/help) auf dem [Discord](https://sc-net.work/dc) werden dir bei allem weiterhelfen.
 
 ![](@site/docs/assets/setup/setup-5.png)
