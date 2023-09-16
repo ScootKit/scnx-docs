@@ -234,11 +234,12 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 
 <details>
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
-If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.</details>
+If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.
+</details>
 
+<details>
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
-<details>
 <ul>
 <li>Your plan is being paid by an active subscription</li><li>Your remaining Plan time is more than a month</li></ul>
 <b>You can only request a Plan transfer once every 6 months</b>. <br/>
