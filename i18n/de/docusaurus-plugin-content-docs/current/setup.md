@@ -27,7 +27,7 @@ Wähle den Server, auf welchem du SCNX einrichten möchtest.
 
 :::tip Du kannst deinen Server nicht finden?
 Bitte stelle sicher, dass du der **Eigentümer eines Servers** bist, um ihn zu SCNX hinzuzufügen. Wenn nicht, bitte den Eigentümer SCNX einzurichten
-und dir ["Trusted Admin"-Rechte](scnx/guilds/trusted-admins). Wenn du einen Server erst vor kurzem erstellt hast und er dir nicht angezeigt wird,
+und dir ["Trusted Admin"-Rechte](scnx/guilds/trusted-admins) zu geben. Wenn du einen Server erst vor kurzem erstellt hast und er dir nicht angezeigt wird,
 aktualisiere die Serverliste mit dem "Daten neuladen" Knopf unten auf der Seite.
 :::
 ![](@site/docs/assets/setup/setup-2.png)
