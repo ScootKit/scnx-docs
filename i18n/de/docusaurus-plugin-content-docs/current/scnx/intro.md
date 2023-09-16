@@ -67,7 +67,7 @@ anbietet.
 * [scnx.tips](https://scnx.tips): Hilfreiche Tipps, Tricks und Anleitungen über Discord & SCNX.
 * SCNX Dynamic Image Generation: Ein System, um dynamische Bilder für deine Bots zu generieren.
 * [ScootKit Paste](https://paste.scootkit.net): Ein pastebin-ähnliches System, um Text-Dateien verschlüsselt zu
-  speichern und teilen. Wird von deinem Bot z. B. verwendet, um Logs oder Ticket-Transcripte zu speichern.
+  speichern und teilen. Wird von deinem Bot z. B. verwendet, um Logs oder Ticket-Transkripte zu speichern.
 * Bot-Manager: Ein System, um gehostete Bots auf SCNX zu verwalten und mit einzelnen Bot-Hosts zu kommunizieren.
 * Bot-Host: Ein Server, der Bots von SCNX-Nutzern speichert. Nutzer können ihren Bot-Host im Dashboard jederzeit
   wechseln.
