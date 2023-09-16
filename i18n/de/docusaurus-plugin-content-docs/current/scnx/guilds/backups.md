@@ -120,7 +120,7 @@ Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [
 </details>
 <details>
     <summary>
-        Beim Versuch ein Backup wiederherzustellen schreibt mir der SCNX-Bot "An error occurred when trying to restore your backup ):"
+        Beim Versuch, ein Backup wiederherzustellen, schreibt mir der SCNX-Bot "An error occurred when trying to restore your backup ):"
     </summary>
     <li>Stelle sicher, dass der (verifizierte) SCNX-Bot die Administrator Berechtigung hat und versuche es erneut.</li>
     <li>Stelle sicher, dass du die "Community"-Einstellung deaktiviert hast und versuche es erneut.</li>

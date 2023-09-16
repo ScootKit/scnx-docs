@@ -97,9 +97,9 @@ auswählen.
 
 ![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
 
-Deine nächsten Schritte werden sich nach deiner Auswahl der Abrechnungsart unterscheiden. Bitte befolge die Anweisungen
-im Dashboard und kehre zu dieser Dokumentations-Seite zurück, wenn du Fragen oder Bedenken hast - wir werden unser bestes
-tun, diese in der [häufig gestellten Fragen](#faq)-Sektion zu beantworten.
+Deine nächsten Schritte unterscheiden sich je nach ausgewählter Abrechnungsart. Bitte befolge die Anweisungen
+im Dashboard und kehre zu dieser Dokumentationsseite zurück, wenn du Fragen oder Bedenken hast - wir werden unser bestes
+tun, diese im Abschnitt mit den [häufig gestellten Fragen](#faq) zu beantworten.
 
 ## Lebenslängliche Pläne {#lifetime}
 
@@ -125,7 +125,7 @@ Nachdem du den Kauf abgeschlossen hast, kehre zum [Lebenslängliche-Pläne-Panel
 zurück und
 befolge die Anweisungen zur [Anwendung eines lebenslänglichen-Plans](#lifetime-apply).
 
-Du kannst so viele lebenslange Pläne besitzen willst - du kannst jeden von ihnen zwischen Servern übertragen.
+Du kannst so viele lebenslange Pläne besitzen, wie du willst - du kannst jeden von ihnen zwischen Servern übertragen.
 
 ### Lebenslänglichen Plan anwenden oder übertragen {#lifetime-apply}
 

@@ -63,8 +63,8 @@ um zu sehen, wie viel XP für das Level notwendig sind.
 
 ## SCNX GLink-Ersteller {#glink-generator}
 
-So genannte "GLink"s werden oft verwendet, um Nutzer auf SCNX zu einer bestimmten Ressource im Dashboard seines Nutzers
-zu leiten. Um einen GLink zu erstellen, öffne zunächst eine Seite auf scnx.app mit deinem Server. Kopiere dann die
+So genannte "GLink"s werden oft verwendet, um Nutzer auf SCNX zu einer bestimmten Ressource im Dashboard zu leiten.
+Um einen GLink zu erstellen, öffne zunächst eine Seite auf scnx.app mit deinem Server. Kopiere dann die
 vollständige URL der Seite und füge sie in
 das [GLink-Ersteller-Werkzeug](https://scnx.app/de/user/tools?page=glink-generator) ein. Das Ergebnis kannst du dann mit
 jedem teilen - sie können dann dieselbe Seite, die du mit deinem Server offen hattest, mit ihrem Server öffnen.

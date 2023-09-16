@@ -168,7 +168,7 @@
     "description": "The label for link Artificial intelligence in sidebar customBotSidebar, linking to https://faq.scnx.app/ai-on-scnx/"
   },
   "sidebar.customBotSidebar.link.The most advanced Discord Support-System": {
-    "message": "Das fortgeschrittenste Discord Support-System",
+    "message": "Das fortgeschrittenste Discord-Support-System",
     "description": "The label for link The most advanced Discord Support-System in sidebar customBotSidebar, linking to https://modmail.net"
   },
   "sidebar.customBotSidebar.link.Suggest new features": {
@@ -200,7 +200,7 @@
     "description": "The label for link Get started in sidebar customBotSidebar, linking to /docs/custom-bot"
   },
   "sidebar.customBotSidebar.doc.Slash commands & Permissions": {
-    "message": "Slash commands & Permissions",
+    "message": "Slashcommands & Berechtigungen",
     "description": "The label for the doc item Slash commands & Permissions in sidebar customBotSidebar, linking to the doc custom-bot/slash-commands"
   }
 }
