@@ -214,7 +214,7 @@ Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne di
 </details>
 <details>
 <summary>Kann ich von einem einmaligen Upgrade zu einem Abo wechseln?</summary>
-Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgradeModal=1">Zahlungsseite</a> deines Servers und öffne den Upgrade-Dialog durch Klicken auf "Verlängern". Dort gib einfach als Zahlungsintervall das Intervall an, dass du für dein Abo verwenden willst - deine übrige Laufzeit wird automatisch an dein Abo angerechnet.
+Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgradeModal=1">Zahlungsseite</a> deines Servers und öffne den Upgrade-Dialog durch Klicken auf "Verlängern". Gib dort einfach als Zahlungsintervall das Intervall an, das du für dein Abo verwenden willst - deine übrige Laufzeit wird automatisch an dein Abo angerechnet.
 </details>
 <details>
 <summary>Welche Zahlungsmethoden sind verfügbar?</summary>
