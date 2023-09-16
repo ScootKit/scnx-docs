@@ -15,7 +15,7 @@ lies diese vollständig bevor du weitermachst :wink:
 :::
 
 Gehe auf [scnx.app](https://scnx.app/de), um zu beginnen. Dort wirst du gebeten, dich mit deinem Discord-Account anzumelden. Klicke dafür einfach auf
-den "Mit Discord anmelden" Knopf. Wenn du dich Fragst warum wir Zugriff auf bestimmte Bereiche deiner Informationen brauchen
+den "Mit Discord anmelden" Knopf. Wenn du dich fragst, warum wir Zugriff auf bestimmte Bereiche deiner Informationen brauchen
 ("scopes"), findest du die Antworten [in unserem FAQ](./scnx/account-and-billing/faq#discord-access).
 
 ![](@site/docs/assets/setup/setup-1.png)
