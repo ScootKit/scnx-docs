@@ -4,13 +4,13 @@
 
 :::tip
 This is only relevant if you are editing the color of an embed not supporting our Message-Editor. In the message editor,
-you can either enter a HEX-Color or use the built-in Color-Picker to select the desired color.
+you can either enter a HEX color or use the built-in Color-Picker to select the desired color.
 :::
 
 You can use one of these options:
 
 * [HEX-Color-Value](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet), please also include the "#" before the
-  HEX-Value itself. These can be obtained via
+  HEX value itself. These can be obtained via
   * a [Color-Picker](https://www.w3schools.com/colors/colors_picker.asp)
   * a [color pallet generator](https://coolors.co/)
   * the [Flat UI](https://materialui.co/flatuicolors/) color collection

@@ -26,14 +26,14 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
 | [Commercial usage](./faq#commercial-usage)                                                | Not allowed                                                                    | Not allowed                                                                                                                                            | Allowed                                                                                                                     |
 | **Custom-Bot**: Custom-Commands                                                           | 10                                                                             | 42                                                                                                                                                     | *unlimited*                                                                                                                 |
 | **[SCNX Backups](./backups)**: Available Backup-Slots                                     | 2                                                                              | 5                                                                                                                                                      | 10                                                                                                                          |
-| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not available*                                                                | Once a day                                                                                                                                             | Twice a day                                                                                                                 |                                                    
+| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not available*                                                                | Once a day                                                                                                                                             | Twice a day                                                                                                                 |
 | **[SCNX Backups](./backups)**: Messages stored per channel per backup                     | 10                                                                             | 20                                                                                                                                                     | 50                                                                                                                          |
 | **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                         | *Not available*                                                                | *Not available*                                                                                                                                        | Included                                                                                                                    |
 
 <details>
     <summary>Additional Plan-Restrictions for certain Custom-Bot Modules</summary>
 <table>
-    Some modules include additional plan requirement for creating multiple items (e.g. users to monitor in case of Twitter-Notifications). 
+    Some modules include additional plan requirement for creating multiple items (e.g. users to monitor in case of Twitter-Notifications).
     <tr style={{fontWeight: 700}}>
         <td>Module</td>
         <td>Starter-Plan</td>
@@ -91,7 +91,7 @@ you want to pay using [SCNX Credits](./../account-and-billing/faq#scnx-credits),
 
 ![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
 
-Your next steps will be different, depending on what Payment-Terms you've selected. Please follow the instructions in
+Your next steps will be different, depending on what Payment terms you've selected. Please follow the instructions in
 the dashboard and return to this page if you have any questions or concerns — we'll do our best to cover them in
 our [Frequently asked questions](#faq) section.
 
@@ -156,7 +156,7 @@ Every server without a paid plan is required to periodically watch a so-called C
 will temporarily
 stop after their free plan ends, until they watch another ad. These are short 15-60s videos from advertisers. The
 advertiser you watch this advertisement from is then paying for your hosting costs. These Checkins need to happen every
-7 days. You can also extend this time to 14 days by watching two Checkin-Ads at a time. You can watch these Video-Ads on
+7 days. You can also extend this time to 14 days by watching two Checkin-Ads at a time. You can watch these video ads on
 your server's [pricing page](https://scnx.app/glink?page=pricing).
 
 Please remember: There are no (and there never will be) third-party-ads in your Custom- or Modmail-Bots. The bots
@@ -177,7 +177,7 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 
 <details>
 <summary>I have a question about using SEPA reoccurring payments / standing orders for my subscription</summary>
-    Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic. 
+    Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
 </details>
 <details>
 <details>
@@ -237,13 +237,13 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
 If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.</details>
 
-<summary>Can I transfer my plan and remaining Plan-Time or subscriptions to another server?</summary>
-Our team can manually transfer your plan and associated data (like remaining Plan-Time and subscriptions) if <b>one</b> of the following conditions is being met:
+<summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
+Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
 <ul>
-<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan-Time is more than a month</li></ul>
-<b>You can only request a Plan-Transfer once every 6 months</b>. <br/>
+<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan time is more than a month</li></ul>
+<b>You can only request a Plan transfer once every 6 months</b>. <br/>
 To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
-If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible. 
+If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible.
 
-Please note: Transferring your plan data will <b>overwrite</b> existing Plan-Date. Plan-Time from both server will not be summed up.
+Please note: Transferring your plan will <b>overwrite</b> an existing Plan date. Plan times from both servers will not be summed up.
 </details>

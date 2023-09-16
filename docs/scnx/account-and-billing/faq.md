@@ -28,7 +28,7 @@ regardless of their VAT status.
 ### How do I set my billing address? {#billing-details}
 
 To set your billing address, please visit the [payment page](https://scnx.app/user/payments) on your dashboard. There,
-you'll find a Invoice-Data section. You can enter your invoice details there. If you need an invoice re-generated,
+you'll find the invoice data section. You can enter your invoice details there. If you need an invoice re-generated,
 please contact [our staff](https://scnx.app/help).
 Please note: Depending on your entries, we might ask you to verify the details (as required by law in certain
 scenarios). If we find that you have abuse this (e.g. entered invalid addresses), we may disable this feature for your
@@ -81,7 +81,7 @@ Here are a few possible reasons why this is happening:
 * Your card was issued in a nation affected by international sanctions / by a bank in such nation
 * Your card has been involved in fraud previously
 * The data your entered is invalid
-* Our payment provided deemed your transaction as high-risk and has denied it
+* Our payment provider deemed your transaction as high-risk and has denied it
 * Your card has been reported as stolen
 * You card could not be verified using 3DS
 

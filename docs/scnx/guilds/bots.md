@@ -65,7 +65,7 @@ about:
             <li>We publish regular updates for Custom-Bots - we usually bundle a bunch of features into one release for the public version. For the <a href="#beta">beta version</a>, there are a bunch of releases, sometimes even multiple ones a day.</li>
             <li>Your Bot will send a message in your Bot-Log-Channel (if configured) when a new update is available.</li>
             <li>We'll announce every update on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
-            <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog-Page</a>.</li>
+            <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog page</a>.</li>
             <li>To apply the newest version of the Custom-Bot ("upgrade"), simply restart the Bot in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> (updates will only apply when there's an update notice visible). Updates are always free of charge.</li>
             <li>You won't be able to use certain features if your bot is not on the latest version until you upgrade to a newer version.</li>
         </ul>
@@ -77,9 +77,9 @@ about:
           <li>When there's a new version available, your Modmail will automatically restart to apply it.</li>
           <li>We'll announce big updates on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
           <li>Some small updates and bug-fixes won't be announced - your Modmail simply applies them without any commotion.</li>
-          <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=modmail/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog-Page</a>.</li>
+          <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=modmail/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog page</a>.</li>
           <li>When updating, your Modmail might be offline for a short period of time while applying database changes. This takes less than a minute and startup will continue as usual afterward.</li>
-        </ul>    
+        </ul>
     </TabItem>
 </Tabs>
 
@@ -91,9 +91,9 @@ about:
         <ul>
           <li>Public Beta Releases might be unstable. This means that your bot might crash or certain features might stop working without any reason.</li>
           <li>New features in Public Beta Releases might be untranslated. This means that your bot might speak English instead of a configured language in new features.</li>
-          <li>While you can leave the Public Beta anytime, it might break your bot when the Beta-Version is on a higher release number than the older version. Additionally, configuration files might be corrupted after a switch-back and need to be reset, leading to data-loss.</li>
+          <li>While you can leave the Public Beta anytime, it might break your bot when the Beta-Version is on a higher release number than the older version. Additionally, configuration files might be corrupted after switching back and need to be reset, leading to data-loss.</li>
         </ul>
-        Here are the steps to join the Custom-Bot-Beta:
+        Here are the steps to join the Custom-Bot beta:
         <ol>
           <li>Open the <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
           <li>In the Status-Panel, click on "Change" next to the "Branch"-Setting.</li>
@@ -101,7 +101,7 @@ about:
           <li>Confirm your change by clicking "Confirm".</li>
           <li>To receive update-notifications about Beta-Releases on our <a href="https://scootk.it/dc">Discord</a>, opt-in to the Beta-Channels in #beta.</li>
         </ol>
-        Here are te steps to leave the Custom-Bot-Beta:
+        Here are the steps to leave the Custom-Bot beta:
         <ol>
           <li>Open the <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
           <li>In the Status-Panel, click on "Change" next to the "Branch"-Setting.</li>
@@ -109,7 +109,7 @@ about:
           <li>Confirm your change by clicking "Confirm".</li>
         </ol>
     </TabItem>
-    <TabItem value="modmailBot" label="Modmail-Bot">There's no public Beta-Version available for Modmail at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed Testing-Series and ensure that each release is fully stable when releasing to Modmail.</TabItem>
+    <TabItem value="modmailBot" label="Modmail-Bot">There's no public Beta version available for Modmail at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed testing series and ensure that each release is fully stable when released to Modmail.</TabItem>
 </Tabs>
 
 ### Change Bot-Host {#bot-host}
@@ -141,7 +141,7 @@ the world. Here's how to switch a Bot-Host:
 <details>
     <summary>I was asked to give up certain European Data Protection Rights when moving my bot outside the EU</summary>
     When you move your bot's data outside the European Union, the General Data Protection Regulation won't apply to your data anymore. This is only affecting your bot's data, like Leveling-Stats, configuration and the actual hosting of the bot. Please also keep in mind that Discord themselves
-    are also storing most of their data outside the EU, and we only work with trusted hosting providers with high-security & privacy standards; the data protection laws of the country will apply. This sometimes means that we are unable to protect your data from being used / inspected by state agencies. 
+    are also storing most of their data outside the EU, and we only work with trusted hosting providers with high-security & privacy standards; the data protection laws of the country will apply. This sometimes means that we are unable to protect your data from being used / inspected by state agencies.
     As is legal requirement (at least for our EU customers ♥), you have to agree to such data transfer. You can always switch back the hosting location of your bot to Bot-Host inside the EU:
 </details>
 
@@ -189,7 +189,7 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
             <li>Change the "Embed-Footer" and "Embed-Footer-Image-URL" value to your liking. You can obtain an image URL in your <a href="https://scnx.app/user/files">files panel</a> - simply upload a file and click on "Copy public URL".</li>
             <li>Save the changes & restart your bot to apply these changes.</li>
         </ol>
-    </TabItem> 
+    </TabItem>
      <TabItem value="modmailBot" label="Modmail-Bot">
         <ol>
             <li>Open the <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> section of your Modmail's configuration.</li>
@@ -256,7 +256,7 @@ technical limitations on the side of Discord.
 :::
 
 :::caution
-Your bot **will not work on other servers** then the server it was created for. If you want to switch to another
+Your bot **will not work on other servers** than the server it was created for. If you want to switch to another
 server, please follow the [transfer SCNX data guide](./faq#transfer) in our FAQ. If you want a bot for another
 server, please first [add your server to SCNX](./../../setup) and then [set up the Custom-Bot](./../../custom-bot).
 :::
@@ -270,7 +270,7 @@ server, please first [add your server to SCNX](./../../setup) and then [set up t
 ## Sharing Logs {#sharing-logs}
 
 Before we start, a quick explanation about Logs and why you might get asked to share them. Each bot is its own process
-on SCNX, hosted on a real, physical server. As such process, it generates Log-Files. In these Logs-Files your bot
+on SCNX, hosted on a real, physical server. As such process, it generates log files. In these logs files your bot
 documents what it's doing and writes down the reason for failures or issues. Our staff needs these logs to diagnose
 problems and offer your solutions - or if they are bugs in the bot themselves - to fix them.
 
@@ -292,7 +292,7 @@ Here's how you can share the logs of your bot:
 2. Next, click on "More options" in the Bot-Status-Panel.
 3. Click on "Share your bot's logs" and then press the button "Share logs". Your Bot-Host will now upload the logs of
    your bot to [paste.scootkit.net](https://paste.scootkit.net). This might take a few seconds.
-4. Copy **both** the Log-URL and Error-Log and send them **both** to our staff to investigate. If you have technical
+4. Copy **both** the log URL and error log and send them **both** to our staff to investigate. If you have technical
    experience, you might also be able to use the logs to diagnose the issue yourself.
 
 ![](@site/docs/assets/scnx/guilds/bots/share-logs.png)
