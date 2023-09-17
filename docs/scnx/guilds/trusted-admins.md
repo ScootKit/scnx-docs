@@ -61,7 +61,7 @@ The following permissions can be given via Trusted-Admin-Permissions:
 Additionally, every Trusted-Admin has a **baseline of permissions**:
 
 * View every setting (and change some) in the [server settings](https://scnx.app/guild/489786377261678592/settings) tab
-* View Metadata about your server (like name, icon, owner, ...)
+* View Metadata about your server (like name, icon, owner, …)
 * View purchase data about your server (this includes transaction history, but never personal data of subscriptions)
 * Upgrade or set-up subscriptions for your server
 * Top-Up AI-Credits on your server
@@ -81,13 +81,13 @@ Trusted-Admins can no longer access your server when they leave it (or get remov
 
 <details>
 <summary>When entering my User-ID, SCNX shows me a "Could not fetch user error"</summary>
-The Discord-ID of the user you are trying to add is invalid. User-IDs consist of only numbers and are not the same as tags, discriminators, or usernames. To obtain a Discord-ID, follow this 
+The Discord-ID of the user you are trying to add is invalid. User-IDs consist of only numbers and are not the same as tags, discriminators, or usernames. To obtain a Discord-ID, follow this
 <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Discord Guide</a>.
 </details>
 
 <details>
 <summary>When I try to add a Trusted-Admin, SCNX shows me a "This user never logged into SCNX…" error </summary>
-This means that this user never logged in into SCNX before. 
+This means that this user never logged in into SCNX before.
 <ul>
     <li>Send them
 this link to log-in: <a href="https://scnx.app/auth/login">https://scnx.app/auth/login</a>. Once they have confirmed that they have

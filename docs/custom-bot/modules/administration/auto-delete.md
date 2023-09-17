@@ -4,8 +4,6 @@ This module allows you to delete messages from a channel after a specified timeo
 
 <ModuleOverview moduleName="auto-delete" />
 
----
-
 ## Features {#features}
 
 * Automatically delete messages in channels after a specified time
@@ -19,13 +17,13 @@ This module allows you to delete messages from a channel after a specified timeo
 * Make sure that your bot has "Manage messages", "View channel", "View message history" permissions on the channel you
   want to enable this feature on.
 * To set up automatic deletion of messages, open
-  the [Text-Channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels) configuration file and
+  the [Text channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels) configuration file and
   1. Click on "Add new Config-Element".
   2. Select the channel this configuration element should apply to.
   3. Configure the element as described [here](#config-channels).
   4. Reload your bot to apply changes.
-* To set up automatic deletion of messages in Voice-Channels after every user has left the channel, open
-  the [Voice-Channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) configuration
+* To set up automatic deletion of messages in Voice channels after every user has left the channel, open
+  the [Voice channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) configuration
   file and
   1. Click on "Add new Config-Element".
   2. Select the channel this configuration element should apply to.
@@ -37,9 +35,9 @@ This module allows you to delete messages from a channel after a specified timeo
 Once configured, the bot will automatically work in the background without any user action required. To protect a
 message from being deleted, pin the message in the channel.
 
-## Configuration {#configuraiton}
+## Configuration {#configuration}
 
-### Text-Channels {#config-channels}
+### Text channels {#config-channels}
 
 This configuration file allows specifying from which channels messages should get deleted automatically from. Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels).

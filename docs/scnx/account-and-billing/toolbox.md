@@ -32,12 +32,12 @@ Here are all available formats:
 
 | Format                    | Example                             |
 |---------------------------|-------------------------------------|
-| Short time                | 09:52 PM                            |
+| Short time                | 9:52 PM                             |
 | Long time                 | 9:52:29 PM                          |
-| Short date                | 8/30/2023                           |
+| Short date                | 08/30/2023                          |
 | Long date                 | August 30, 2023                     |
-| Short Date/Time (default) | August 30, 2023 09:52 PM            |
-| Long Date/Time            | Wednesday, August 30, 2023 09:52 PM |
+| Short Date/Time (default) | August 30, 2023 9:52 PM             |
+| Long Date/Time            | Wednesday, August 30, 2023 9:52 PM  |
 | Relative time             | 3 minutes ago                       |
 
 ## SCNX Level-XP-Calculator {#level-generator}

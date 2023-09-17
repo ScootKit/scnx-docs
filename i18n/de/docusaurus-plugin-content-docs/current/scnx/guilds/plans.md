@@ -20,18 +20,18 @@ korrekten Preise in deiner Währung zu sehen, öffne [scnx.xyz/de/plans](https:/
 | [dcserver.link](./dcserver-link)                                                                  | 50+ Mitglieder ohne Bots notwendig                                                           | Enthalten                                                                                                                                                | Enthalten                                                                                                                     |
 | [Eigener Discord-Bot](./../../custom-bot/intro), 24/7 gehostet                                    | Enthalten, aber muss durch Schauen von Werbung jede Woche [verlängert](#starter-plan) werden | Enthalten                                                                                                                                                | Enthalten                                                                                                                     |
 | [Custom Modmail-Bot](./../../modmail/intro), 24/7 gehostet                                        | *Nicht enthalten*                                                                            | Enthalten                                                                                                                                                | Enthalten                                                                                                                     |
-| Entferne alle Erwähnungen von SCNX von allen deinen Bots (z.B. Embed-Fußzeile)                    | *Nicht enthalten*                                                                            | *Nicht enthalten*                                                                                                                                        | Enthalten                                                                                                                     |
+| Entferne alle Erwähnungen von SCNX von allen deinen Bots (z. B. Embed-Fußzeile)                   | *Nicht enthalten*                                                                            | *Nicht enthalten*                                                                                                                                        | Enthalten                                                                                                                     |
 | [Server Analysen](./analytics)                                                                    | Enthalten                                                                                    | Enthalten                                                                                                                                                | Enthalten                                                                                                                     |
 | Anzahl von [KI Guthaben](https://faq.scnx.app/ki-auf-scnx/), das jeden Monat am 25. vergeben wird | 20                                                                                           | 50                                                                                                                                                       | 100                                                                                                                           |
 | [Komerzielle Nutzung](./faq#commercial-usage)                                                     | Nicht erlaubt                                                                                | Nicht erlaubt                                                                                                                                            | Erlaubt                                                                                                                       |
 | **Eigener Discord-Bot**: Eigene Befehle                                                           | 10                                                                                           | 42                                                                                                                                                       | *unendlich*                                                                                                                   |
 | **[SCNX Backups](./backups)**: Verfügbare Backup-Slots                                            | 2                                                                                            | 5                                                                                                                                                        | 10                                                                                                                            |
-| **[SCNX Backups](./backups)**: [Automatische Backups](./backups#automatic)                        | *Nicht enthalten*                                                                            | Einmal pro Tag                                                                                                                                           | Zweimal pro Tag                                                                                                               |                                                    
+| **[SCNX Backups](./backups)**: [Automatische Backups](./backups#automatic)                        | *Nicht enthalten*                                                                            | Einmal pro Tag                                                                                                                                           | Zweimal pro Tag                                                                                                               |
 | **[SCNX Backups](./backups)**: Pro Kanal pro Backup gespeicherte Nachrichten                      | 10                                                                                           | 20                                                                                                                                                       | 50                                                                                                                            |
 | **[SCNX Backups](./backups)**: [Backups exportieren](./backups#export)                            | *Nicht enthalten*                                                                            | *Nicht enthalten*                                                                                                                                        | Enthalten                                                                                                                     |
 
 <details>
-    <summary>Zusätzliche Einschränkungen für Pläne im Eigenen Bot</summary>
+    <summary>Zusätzliche Einschränkungen für Pläne im eigenen Bot</summary>
 <table>
     Einige Module beschränken die Anzahl von Elementen (im Falle vom Twitter-Benachrichtigungen zum Beispiel Twitter-Nutzer), die mit einem Plan eingestellt werden können.
     <tr style={{fontWeight: 700}}>
@@ -50,28 +50,34 @@ korrekten Preise in deiner Währung zu sehen, öffne [scnx.xyz/de/plans](https:/
         <td>Bewerbungs-Kategorien</td>
         <td>2</td>
         <td>7</td>
-        <td>25</td></tr><tr>
-<td>RSS-Benachrichtigungen</td>
-        <td>1</td>
-        <td>4</td>
-        <td>10</td>
-    </tr><tr>
-<td>TikTok-Benachrichtigungen</td>
-        <td>1</td>
-        <td>4</td>
-        <td>10</td>
-    </tr><tr>
-<td>Twitter-Benachrichtigungen</td>
-        <td>1</td>
-        <td>4</td>
-        <td>10</td>
-    </tr><tr>
-<td>YouTube-Benachrichtigungen</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>RSS-Benachrichtigungen</td>
         <td>1</td>
         <td>4</td>
         <td>10</td>
     </tr>
-<tr><td>Reddit-Benachrichtigungen</td>
+    <tr>
+        <td>TikTok-Benachrichtigungen</td>
+        <td>1</td>
+        <td>4</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Twitter-Benachrichtigungen</td>
+        <td>1</td>
+        <td>4</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>YouTube-Benachrichtigungen</td>
+        <td>1</td>
+        <td>4</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>Reddit-Benachrichtigungen</td>
         <td>1</td>
         <td>4</td>
         <td>10</td>
@@ -83,27 +89,26 @@ Beachte bitte, dass bestimmte Funktionen oder Felder von einigen Modulen, die ei
 ## Deinen Plan upgraden {#upgrade}
 
 Um deinen Server-Plan zu upgraden, öffne bitte
-die [Zahlungs-Seite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne den
-Zahlungs-Dialog.
+die [Zahlungs-Seite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne den Zahlungs-Dialog.
 Wähle hier die Abrechnungsart (verfügbare Optionen: "Einmalig", "Monatlich", "Jährlich", ["Lebenslänglich"](#lifetime))
 und deine Währung.
-Wenn du mit [SCNX Credits](./../account-and-billing/faq#scnx-credits) zahlen willst, musst du das jetzt
+Wenn du mit [SCNX-Credits](./../account-and-billing/faq#scnx-credits) zahlen willst, musst du das jetzt
 auswählen.
 
 ![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
 
-Deine nächsten Schritte werden sich nach deiner Auswahl der Abrechnungsart unterscheiden. Bitte befolge die Anweisungen
-im Dashboard und kehre zu dieser Dokumentations-Seite zurück, wenn du Fragen oder Bedenken hast - wir werden unser bestes
-tun, diese in der [Häufig gestellte Fragen](#faq)-Sektion zu beantworten.
+Deine nächsten Schritte unterscheiden sich je nach ausgewählter Abrechnungsart. Bitte befolge die Anweisungen
+im Dashboard und kehre zu dieser Dokumentationsseite zurück, wenn du Fragen oder Bedenken hast - wir werden unser bestes
+tun, diese im Abschnitt mit den [häufig gestellten Fragen](#faq) zu beantworten.
 
 ## Lebenslängliche Pläne {#lifetime}
 
-Lebenslängliche Pläne
+Lebenslängliche Pläne…
 
-* sind nicht an Server, sondern an Nutzer, gebunden - sie können deshalb alle 7 Tage [übertragen](#lifetime-apply)
+* sind nicht an Server, sondern an Nutzer, gebunden - sie können deshalb alle sieben Tage [übertragen](#lifetime-apply)
   werden, müssen das aber nicht.
 * werden alle Funktionen des Planes enthalten, zu welchem sie gekauft wurden (
-  vergleiche [SCNX Nutzungsbedingungen](https://faq.scnx.app/scnx-nutzungsbedingungen/#pl%C3%A4ne)) - auch wenn wir die
+  vergleiche [SCNX-Nutzungsbedingungen](https://faq.scnx.app/scnx-nutzungsbedingungen/#pl%C3%A4ne)) - auch wenn wir die
   Namen oder Plan-Inhalte ändern sollten.
 * werden nur für eine bestimmte Zeit angeboten, damit wir wachsen können - danach werden sie entfernt.
 * stellen sicher, dass du nie erneut bezahlen musst, auch wenn wir die Preise erhöhen sollten.
@@ -120,14 +125,13 @@ Nachdem du den Kauf abgeschlossen hast, kehre zum [Lebenslängliche-Pläne-Panel
 zurück und
 befolge die Anweisungen zur [Anwendung eines lebenslänglichen-Plans](#lifetime-apply).
 
-Du kannst so viele lebenslange Pläne besitzen willst - du kannst jeden von ihnen zwischen Servern übertragen.
+Du kannst so viele lebenslange Pläne besitzen, wie du willst - du kannst jeden von ihnen zwischen Servern übertragen.
 
 ### Lebenslänglichen Plan anwenden oder übertragen {#lifetime-apply}
 
 :::info
 Du kannst einen lebenslänglichen Plan auf jeden Server anwenden, auf den du Zugriff hast. Ein lebenslanger Plan kann
-alle 7
-Tage zwischen Servern übertragen werden, muss das aber nicht.
+alle sieben Tage zwischen Servern übertragen werden, muss das aber nicht.
 :::
 
 Nach dem Kauf eines lebenslänglichen Planes muss dieser auch auf einen Server angewendet werden. Das bedeutet, dass der
@@ -138,13 +142,10 @@ Planes.
 Um einen lebenslänglichen Plan anzuwenden oder zu übertragen, öffne
 das [Lebenslängliche-Pläne-Panel](https://scnx.app/user/lifetime-plans) in deinem Dashboard. Klicke dort auf den "
 Lebenslänglichen Plan verwalten"-Knopf neben dem lebenslänglichen Plan, den du verwalten willst. Ein Dialog mit Infos
-über
-deinen lebenslänglichen Plan wird sich öffnen. Wähle dort "lebenslänglichen Plan auf einen anderen Server übertragen"
-aus. Du
-kannst jetzt den Server auswählen, zu dem du den lebenslänglichen Plan übertragen bzw. anwenden willst. SCNX wird einige
-Überprüfungen durchführen, um sicherstellen, dass der Server bereit für deinen lebenslänglichen Plan ist - sobald das
-fertig
-ist, bestätige bitte deine Anfrage. Sollte eine Warnung oder ein Fehler angezeigt werden, schaue bitte in der Tabelle
+über deinen lebenslänglichen Plan wird sich öffnen. Wähle dort "lebenslänglichen Plan auf einen anderen Server übertragen"
+aus. Du kannst jetzt den Server auswählen, zu dem du den lebenslänglichen Plan übertragen bzw. anwenden willst. SCNX wird einige
+Überprüfungen durchführen, um sicherstellen, dass der Server bereit für deinen lebenslänglichen Plan ist - sobald diese Überprüfung
+beendet ist, bestätige bitte deine Anfrage. Sollte eine Warnung oder ein Fehler angezeigt werden, schaue bitte in der Tabelle
 unten nach, wie du mit dem Fehler umgehen kannst.
 
 <details>
@@ -156,7 +157,7 @@ unten nach, wie du mit dem Fehler umgehen kannst.
 <ul><li>Kündige das Abo und warte, bis es abgelaufen ist.</li><li><a href="https://scnx.app/de/help">Kontaktiere unser Team</a>, um es sofort zu entfernen.</li></ul></td></tr>
 <tr><td>Der Server hat aktuell [einen Plan]. Beachte, dass die alte Zahlungsperiode nicht zurückgesetzt werden kann.</td><td>Dies ist nur eine Warnung, welche auftritt, wenn der Server bereits einen Plan hat. Das Fortfahren wird diesen Plan überschreiben - im Klartext heißt das, dass wir dir eventuelle Laufzeit nicht mehr zurückerstatten können, nachdem du den lebenslänglichen Plan angewendet hast.</td><td>Du kannst unter der Meldung trotzdem fortfahren, indem du dem Plan-Verlust zustimmst, oder warten, bis der aktuelle Plan abgelaufen ist.</td></tr>
 <tr><td>Der Server hat aktuell [einen Plan]. Du kannst nicht fortfahren, da du nicht der Besitzer bist.</td><td>Wie im vorherigen Punkt beschrieben, überschreibt das Anwenden des lebenslänglichen Plans die Zahlungsperiode. Um eventuelle Missverständnisse zu vermeiden, kann nur der Serverowner diese zurücksetzen.</td><td><ul><li>Kontaktiere den Server-Besitzer, dass du einen lebenslänglichen Plan anwenden willst und das dieser den Plan des Servers daher nicht verlängern sollen. Warte, bis der aktuelle Server-Plan abgelaufen ist.</li><li><a href="https://scnx.app/de/help">Kontaktiere unser Team</a> für Unterstützung.</li></ul></td></tr>
-<tr><td>Dieser lebenslängliche Plan ist im Cooldown.</td><td>Der Server jedes lebenslänglichen Plans kann nur alle 7 Tage geändert werden. Dieser lebenslängliche Plan wurde in den letzten 7 Tagen übertragen.</td><td>Warte, bis die Cooldown-Periode abgelaufen ist.</td></tr>
+<tr><td>Dieser lebenslängliche Plan ist im Cooldown.</td><td>Der Server jedes lebenslänglichen Plans kann nur alle sieben Tage geändert werden. Dieser lebenslängliche Plan wurde in den letzten sieben Tagen übertragen.</td><td>Warte, bis die Cooldown-Periode abgelaufen ist.</td></tr>
 </table>
 </details>
 
@@ -165,17 +166,17 @@ unten nach, wie du mit dem Fehler umgehen kannst.
 Server ohne bezahlten Plan, müssen regelmäßig sogenannte "Checkin-Video-Werbungen" anschauen, da ansonsten ihr
 eigener Bot angehalten wird, nachdem ihr kostenfreier Plan abgelaufen ist, bis sie diesen durch Anschauen einer weiteren
 Werbung wieder verlängern. Diese Werbungen sind nur 15-60 Sekunden lang und der Werbetreibende der angeschauten Werbung
-übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 7 Tage stattfinden.
+übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle sieben Tage stattfinden.
 Du kannst diese Zeit aber auch auf bis zu 14 Tage erhöhen, indem du gleich zwei Checkin-Werbungen hintereinander
 anschaust. Du kannst diese Checkin-Werbungen auf der
 [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers anschauen.
 
-Bitte beachte, dass es keine Drittanbieterwerbung in deinem Eigenen- oder Modmail-Bot gibt (und geben wird). Die Bots an
-sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle 7 Tage angeschaut werden, damit der Bot online
+Bitte beachte, dass es keine Drittanbieterwerbung in deinem eigenen oder Modmail-Bot gibt (und geben wird). Die Bots an
+sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle sieben Tage angeschaut werden, damit der Bot online
 bleibt.
 
 Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 14 Tagen an Hosting-Zeit entspricht. Du kannst nicht mehr als
-14 Tage Host-Zeit gleichzeit haben. Du kannst auch deine [Trusted Admins](./trusted-admins) bitten, Werbung für deinen
+14 Tage Host-Zeit gleichzeitig haben. Du kannst auch deine [Trusted Admins](./trusted-admins) bitten, Werbung für deinen
 Server anzuschauen.
 
 Solltest du mal vergessen, deine Hosting-Zeit zu verlängern, werden deine Bots heruntergefahren und du wirst sie nicht
@@ -184,20 +185,20 @@ der [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers unter
 Benachrichtigungen verwalten" auch eine Benachrichtigungen 24 Stunden vor dem Ablauf deiner Hosting-Zeit einrichten, um
 das in Zukunft zu vermeiden.
 
-Wenn du auf SCNX werben willst, schau dir doch mal unsere [auf SCNX Werben](./../account-and-billing/ads) Dokumentation
+Wenn du auf SCNX werben willst, schau dir doch mal unsere [auf SCNX werben](./../account-and-billing/ads) Dokumentation
 an.
 
 ## Häufig gestellte Fragen {#faq}
 
 <details>
 <summary>Ich habe eine Frage über Zahlungen per Dauerüberweisung</summary>
-    Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem Thema</a>. 
+    Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem Thema</a>.
 </details>
 <details>
 <summary>Ich kann mein Abo nicht zum PRO-Server-Plan upgraden, mir wird angezeigt, dass mein Abo nicht aktiv wäre</summary>
 <ul>
 <li>Bitte stelle sicher, dass du dein Abo nicht gekündigt hast</li>
-<li>Bitte stelle sicher, dass dein Abo nicht in der Zukunft starten (das passiert, wenn du von einem einmaligen Upgrade zu einem Abo wechselst) - in diesem Fall muss unser Team das Upgrade manuell durchführen.</li>
+<li>Bitte stelle sicher, dass dein Abo nicht in der Zukunft startet (das passiert, wenn du von einem einmaligen Upgrade zu einem Abo wechselst) - in diesem Fall muss unser Team das Upgrade manuell durchführen.</li>
 <li><a href="https://scnx.app/de/help">Kontaktiere unser Team</a>, damit wir uns das anschauen können.</li></ul>
 </details>
 <details>
@@ -206,14 +207,14 @@ Ja, du kannst eine kostenfreie Testphase im Dashboard starten, wenn dein Server 
 <ul>
     <li>Dein Server hat noch in keiner kostenfreien Testphase zuvor teilgenommen.</li>
     <li>Dein Server wurde noch nie geupgradet.</li>
-    <li>Dein Server wurde noch nie zuvor von SCNX gelöscht. .</li>
+    <li>Dein Server wurde noch nie zuvor von SCNX gelöscht.</li>
 </ul>
-Du musst keine Zahlungsmethode angeben, um eine kostenfreie Testphase zu starten - du musst nur einen Knopf drücken. 
+Du musst keine Zahlungsmethode angeben, um eine kostenfreie Testphase zu starten - du musst nur einen Knopf drücken.
 Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne die <a href="https://scnx.app/de/glink?page=pricing">Zahlungsseite</a> deines Servers - wenn dein Server für eine Testphase berechtigt ist, wird hier ein Banner angezeigt.
 </details>
 <details>
 <summary>Kann ich von einem einmaligen Upgrade zu einem Abo wechseln?</summary>
-Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgradeModal=1">Zahlungsseite</a> deines Servers und öffne den Upgrade-Dialog durch Klicken auf "Verlängern". Dort gebe einfach als Zahlungsintervall das Intervall an, dass du für dein Abo verwenden willst - deine übrige Laufzeit wird automatisch an dein Abo angerechnet.
+Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgradeModal=1">Zahlungsseite</a> deines Servers und öffne den Upgrade-Dialog durch Klicken auf "Verlängern". Gib dort einfach als Zahlungsintervall das Intervall an, das du für dein Abo verwenden willst - deine übrige Laufzeit wird automatisch an dein Abo angerechnet.
 </details>
 <details>
 <summary>Welche Zahlungsmethoden sind verfügbar?</summary>
@@ -251,11 +252,11 @@ Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgra
 Wenn dein Plan oder Abo mehr als zwei Monate Laufzeit übrig hat, können wir das entweder an deinen Lebenslänglichen-Plan-Kauf anrechnen oder dir den anteilsmässigen Preis zurückerstatten. Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.</details>
 <details>
 <summary>Kann ich die Laufzeit & den Plan meines Servers auf einen anderen Server übertragen?</summary>
-Unser Team kann die Laufzeit und damit verbunde Daten (wie den Plan und eventuelle Abos) auf einen anderen Server übertragen, wenn <b>eine</b> der folgenden Bedingungen erfüllt wird: 
+Unser Team kann die Laufzeit und damit verbunde Daten (wie den Plan und eventuelle Abos) auf einen anderen Server übertragen, wenn <b>eine</b> der folgenden Bedingungen erfüllt wird:
 <ul>
 <li>Dein Plan wird mit einem aktiven Abo bezahlt</li><li>Die restliche Laufzeit beträgt mehr als zwei Monate</li></ul>
 <b>Du kannst eine Übertragung maximal alle 6 Monate beantragen</b>. <br/>
-Um eine solche Übertragung zu beantragen, <a href="https://scnx.app/de/help">kontaktiere unser Team</a>. Bitte beachte, dass wir deine Anfrage ablehnen können, wenn wir glauben, dass du diese Regelung missbrauchst. Es macht übrigens auch Sinn, unser Team zu kontaktieren, solltest du diese Bedingungen nicht erfüllen, denn unser Team kann einmalige Ausnahme auf einer Fall-zu-Fall-Basis vornehmen. 
+Um eine solche Übertragung zu beantragen, <a href="https://scnx.app/de/help">kontaktiere unser Team</a>. Bitte beachte, dass wir deine Anfrage ablehnen können, wenn wir glauben, dass du diese Regelung missbrauchst. Es macht übrigens auch Sinn, unser Team zu kontaktieren, solltest du diese Bedingungen nicht erfüllen, denn unser Team kann einmalige Ausnahme auf einer Fall-zu-Fall-Basis vornehmen.
 
 Wenn du planst, eine <a href="./faq#transfer">Übertragung aller Daten deines Servers</a> zu beantragen (das enthält alle
 Daten deines Servers, inklusive Bot-Konfiguration), beantrage bitte keine Plan-Übertragung, denn das macht eine gesamte

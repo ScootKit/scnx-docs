@@ -8,7 +8,7 @@
     "description": "The label for category Getting Started in sidebar startSidebar"
   },
   "sidebar.startSidebar.category.Getting Started.link.generated-index.title": {
-    "message": "Auf SCNX Loslegen",
+    "message": "Auf SCNX loslegen",
     "description": "The generated-index page title for category Getting Started in sidebar startSidebar"
   },
   "sidebar.startSidebar.category.Getting Started.link.generated-index.description": {
@@ -36,7 +36,7 @@
     "description": "The label for category Servers in sidebar scnxSidebar"
   },
   "sidebar.scnxSidebar.category.Servers.link.generated-index.title": {
-    "message": "Servers auf SCNX",
+    "message": "Server auf SCNX",
     "description": "The generated-index page title for category Servers in sidebar scnxSidebar"
   },
   "sidebar.scnxSidebar.category.Servers.link.generated-index.description": {
@@ -56,7 +56,7 @@
     "description": "The label for category Modules in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Modules.link.generated-index.title": {
-    "message": "Eigener Bot Module",
+    "message": "Eigener-Bot-Module",
     "description": "The generated-index page title for category Modules in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Modules.link.generated-index.description": {
@@ -68,11 +68,11 @@
     "description": "The label for category Administration in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Administration.link.generated-index.title": {
-    "message": "Administration-Module",
+    "message": "Administrations-Module",
     "description": "The generated-index page title for category Administration in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Administration.link.generated-index.description": {
-    "message": "Verwende Administration-Module, um dein Leben als Server-Admin einfacher zu machen. Diese Module sind gebaut, um die Routine-Aufgaben als Admin zu übernehmen: Verwalte Vorschläge, liste Partner, erstelle Statistik-Kanäle, begrüße neue Mitglieder und mehr.",
+    "message": "Verwende Administrations-Module, um dein Leben als Server-Admin einfacher zu machen. Diese Module sind gebaut, um die Routine-Aufgaben als Admin zu übernehmen: Verwalte Vorschläge, liste Partner, erstelle Statistik-Kanäle, begrüße neue Mitglieder und mehr.",
     "description": "The generated-index page description for category Administration in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Bot": {
@@ -92,7 +92,7 @@
     "description": "The label for category Community in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Community.link.generated-index.title": {
-    "message": "Community Module",
+    "message": "Community-Module",
     "description": "The generated-index page title for category Community in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Community.link.generated-index.description": {
@@ -104,7 +104,7 @@
     "description": "The label for category Games & Fun in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Games & Fun.link.generated-index.title": {
-    "message": "Spiele & Spaß Module",
+    "message": "Spiele & Spaß-Module",
     "description": "The generated-index page title for category Games & Fun in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Games & Fun.link.generated-index.description": {
@@ -116,11 +116,11 @@
     "description": "The label for category Integrations in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Integrations.link.generated-index.title": {
-    "message": "Integration Module",
+    "message": "Integrations-Module",
     "description": "The generated-index page title for category Integrations in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Integrations.link.generated-index.description": {
-    "message": "Integriere Drittanbieterdienste direkt in deinen eigenen Bot: Schicke Benachrichtigungen, wenn jemand Tweetet, auf YouTube / TikTok / etc postet und belohne Nutzer, die für deinen Server auf top.gg gestimmt haben.",
+    "message": "Integriere Drittanbieterdienste direkt in deinen eigenen Bot: Schicke Benachrichtigungen, wenn jemand Tweetet, auf YouTube / TikTok / etc. postet und belohne Nutzer, die für deinen Server auf top.gg gestimmt haben.",
     "description": "The generated-index page description for category Integrations in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Moderation": {
@@ -128,7 +128,7 @@
     "description": "The label for category Moderation in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Moderation.link.generated-index.title": {
-    "message": "Moderation Module",
+    "message": "Moderations-Module",
     "description": "The generated-index page title for category Moderation in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Moderation.link.generated-index.description": {
@@ -140,7 +140,7 @@
     "description": "The label for category Support in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Support.link.generated-index.title": {
-    "message": "Support Module",
+    "message": "Support-Module",
     "description": "The generated-index page title for category Support in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Support.link.generated-index.description": {
@@ -152,11 +152,11 @@
     "description": "The label for category Tools in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Tools.link.generated-index.title": {
-    "message": "Werkzeuge Module",
+    "message": "Werkzeug-Module",
     "description": "The generated-index page title for category Tools in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.Tools.link.generated-index.description": {
-    "message": "Mit den Werkzeuge-Modulen, kannst du dein Leben als Server-Admin einfacher machen. Stelle einfach ein, dass Nachrichten automatisch versandt, Ankündigen in Ankündigungskanälen automatisch veröffentlicht werden und vergebe jedem Nutzer eine Rolle auf einmal.",
+    "message": "Mit den Werkzeuge-Modulen, kannst du dein Leben als Server-Admin einfacher machen. Stelle einfach ein, dass Nachrichten automatisch versandt, Ankündigen in Ankündigungskanälen automatisch veröffentlicht werden und vergib allen Nutzern eine Rolle auf einmal.",
     "description": "The generated-index page description for category Tools in sidebar customBotSidebar"
   },
   "sidebar.customBotSidebar.category.More": {
@@ -168,7 +168,7 @@
     "description": "The label for link Artificial intelligence in sidebar customBotSidebar, linking to https://faq.scnx.app/ai-on-scnx/"
   },
   "sidebar.customBotSidebar.link.The most advanced Discord Support-System": {
-    "message": "Das fortgeschrittenste Discord Support-System",
+    "message": "Das fortgeschrittenste Discord-Support-System",
     "description": "The label for link The most advanced Discord Support-System in sidebar customBotSidebar, linking to https://modmail.net"
   },
   "sidebar.customBotSidebar.link.Suggest new features": {
@@ -200,7 +200,7 @@
     "description": "The label for link Get started in sidebar customBotSidebar, linking to /docs/custom-bot"
   },
   "sidebar.customBotSidebar.doc.Slash commands & Permissions": {
-    "message": "Slash commands & Permissions",
+    "message": "Slashcommands & Berechtigungen",
     "description": "The label for the doc item Slash commands & Permissions in sidebar customBotSidebar, linking to the doc custom-bot/slash-commands"
   }
 }

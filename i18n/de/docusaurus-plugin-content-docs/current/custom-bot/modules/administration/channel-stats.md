@@ -6,7 +6,7 @@ Erstelle Kanäle mit Statistiken über deinen Server - automatisch aktualisiert.
 
 ## Funktionen {#features}
 
-Erstelle Sprachkanäle auf deinem Server, welche automatisch aktuelle Statistiken anzeigen, wie z.B. die Anzahl der Mitglieder 
+Erstelle Sprachkanäle auf deinem Server, welche automatisch aktuelle Statistiken anzeigen, wie z. B. die Anzahl der Mitglieder
 auf deinem Server, die eine bestimmte Rolle haben.
 
 Hier ist ein Beispiel von drei Sprachkanälen, die einige Statistiken über einen Server zeigen:
@@ -20,23 +20,23 @@ Hier ist ein Beispiel von drei Sprachkanälen, die einige Statistiken über eine
 3. Öffne die [Kanal-Statistiken-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
 4. Klicke auf "Statistik-Kanal hinzufügen" und konfiguriere den Kanal wie [hier](#configuration) beschrieben.
 5. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen.
-6. Der Kanal wird automatisch zu den konfigurierten Werte bearbeitet.
+6. Der Kanal wird automatisch so bearbeitet, wie du diesen konfiguriert hast.
 
 ## Nutzung {#usage}
 
-Nach dem [einrichten](#setup) und [konfigurieren](#configuration) des Moduls sind keine weiteren Aktionen nötig - die
+Nach dem [Einrichten](#setup) und [Konfigurieren](#configuration) des Moduls sind keine weiteren Aktionen nötig - die
 konfigurierten Kanäle werden automatisch in dem angegebenem Intervall aktualisiert.
 
 ## Konfiguration {#configuration}
 
-Mit dieser Konfigurationsdatei kannst du festlegen, welche Kanäle Statistik-Kanäle seien sollen und die angezeigten Werte einstellen. Öffne sie in 
+Mit dieser Konfigurationsdatei kannst du festlegen, welche Kanäle Statistik-Kanäle sein sollen und die angezeigten Werte einstellen. Öffne sie in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
 
-| Feld                     | Beschreibung                                                                                                                                                            |
-|---------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kanal                     | Das ist der Kanal, welcher als Statistik-Kanal genutzt wird. Sein Name wird automatisch zum Wert von "Kanalname" aktualisiert.                                         |
-| Kanalname                 | Das ist der Name, zu dem der Kanal automatisch aktualisiert wird. <br/><i>Bitte überprüfe verfügbare Parameter in deinem Dashboard.</i>                                | 
-| Aktualisierungsintervall  | Das ist das Intervall in Minuten, in welchem dein Bot den Name des Kanals aktualisiert. Aufgrund technischen Limititationen Discords muss dies höher als sieben sein.  |
+| Feld                     | Beschreibung                                                                                                                                                           |
+|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kanal                    | Das ist der Kanal, welcher als Statistik-Kanal genutzt wird. Sein Name wird automatisch zum Wert von "Kanalname" aktualisiert.                                        |
+| Kanalname                | Das ist der Name, zu dem der Kanal automatisch aktualisiert wird. <br/><i>Bitte überprüfe verfügbare Parameter in deinem Dashboard.</i>                               |
+| Aktualisierungsintervall | Das ist das Intervall in Minuten, in welchem dein Bot den Name des Kanals aktualisiert. Aufgrund technischen Limititationen Discords muss dies höher als sieben sein. |
 
 ## Fehlerbehebung {#troubleshooting}
 

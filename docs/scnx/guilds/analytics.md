@@ -119,10 +119,10 @@ We do not store any message content, only metadata about messages (and that only
 To review our data practises, please our [FAQ Article](https://faq.scnx.app/data-collection-with-analytics/).
 :::
 
-If you (or a user of your server) do nopt want that the server owner and administrators can view how many messages you
+If you (or a user of your server) do not want that the server owner and administrators can view how many messages you
 sent, or you are worried about personal data being stored about you, you can enable the "Privacy mode" on SCNX
 using `/privacy enable` on any server. This global (meaning that SCNX will store no data about you on any server)
-will affect the following:
+toggle will affect the following:
 
 * All data about messages sent by you will be anonymized (= your Discord-User-ID will be removed from the database
 entries) - this means that we will not know that *you* sent a message, we'll only know that a message was sent

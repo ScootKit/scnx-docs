@@ -4,8 +4,6 @@ Manage your partnerships with other guilds easily.
 
 <ModuleOverview moduleName="partner-list" />
 
----
-
 ## Features {#features}
 
 This module is designed to make managing partnerships with other Discord servers easy.
@@ -42,9 +40,9 @@ Here's an example of a partner-list (you can customize appearance):
 
 | Command                                                                                                                  | Description                                                                                                                                                                                                                                                     |
 |--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/partner add name:<Text> category:<Category> owner:<Member> invite-url:<Text>`                                          | Creates a new partner. You can enter any text as the name of the partner and link any URL as an Invite-URL and select a category from the [configured categories](#configuration). If enabled, this will send a message to the partner.                         | 
-| `/partner edit id:<PartnerID> [name:<Text>] [category:<Category>] [owner:<Member>] [invite-url:<Text>] [staff:<Member>]` | Edits an existing partner. You can update the name, Invite-URL, Owner, Category and the assigned Staff-Member - only options you specify will be updated. You can either enter an ID of an existing partner or use auto-complete to select the correct partner. | 
-| `/partner delete id:<PartnerID>`                                                                                         | Deletes an existing partner. You can either enter an ID of an existing partner or use auto-complete to select the correct partner. Deleted partners can't be restored.                                                                                          | 
+| `/partner add name:<Text> category:<Category> owner:<Member> invite-url:<Text>`                                          | Creates a new partner. You can enter any text as the name of the partner and link any URL as an Invite-URL and select a category from the [configured categories](#configuration). If enabled, this will send a message to the partner.                         |
+| `/partner edit id:<PartnerID> [name:<Text>] [category:<Category>] [owner:<Member>] [invite-url:<Text>] [staff:<Member>]` | Edits an existing partner. You can update the name, Invite-URL, Owner, Category and the assigned Staff-Member - only options you specify will be updated. You can either enter an ID of an existing partner or use auto-complete to select the correct partner. |
+| `/partner delete id:<PartnerID>`                                                                                         | Deletes an existing partner. You can either enter an ID of an existing partner or use auto-complete to select the correct partner. Deleted partners can't be restored.                                                                                          |
 
 ## Configuration {#configuration}
 
@@ -80,8 +78,8 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 </details>
 
 <details>
-    <summary>Can I restart the ID-Counter?</summary>
-    No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a>, if this is anoying you.
+    <summary>Can I restart the ID counter?</summary>
+    No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a>, if this is annoying you.
 </details>
 
 ## Stored data {#data-usage}

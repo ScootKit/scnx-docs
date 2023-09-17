@@ -15,12 +15,12 @@ that get backed up.
 
 | Feature        | Description                                                                                                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Channels       | Backups will include every channel on your Discord. Channel-Data includes: Channel-Name, Channel-Topic, Channel-Cooldown, Channel-Permissions and more |
-| Roles          | Backups will include every role role on your Discord. Saved Role-Data includes: Permission, Name, Color and more                                       |
+| Channels       | Backups will include every channel on your Discord. Channel data includes: Channel name, Channel topic, Channel cooldown, Channel permissions and more |
+| Roles          | Backups will include every role on your Discord. Saved Role data includes: Permissions, name, color and more                                           |
 | Emojis         | Backups will include every Emoji on your Discord. This includes the actual emoji-image and emoji-name. Stickers might also be included.                |
 | Bans           | Backups will include every Ban on your Discord. Every ban includes a reason and the banned user.                                                       |
-| Members        | Backups will include which user had which role when the backup was created.<br/> **THIS FEATURE MIGHT NOT BE AVAILABLE TO EVERYONE**                        |
-| Guild-Settings | Backups will include Server-Name, -Icon, -Settings (like AFK-Channel), Auto-Moderation-Rules and more                                                  |
+| Members        | Backups will include which user had which role when the backup was created.<br/> **THIS FEATURE MIGHT NOT BE AVAILABLE TO EVERYONE**                   |
+| Guild-Settings | Backups will include Server name, icon, settings (like the AFK channel), Auto-Moderation rules and more                                                |
 
 ## Manual backups {#manual}
 
@@ -54,7 +54,7 @@ To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink
 
 ![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
 
-Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day, namely at 6:00 and 18:00 (Central European Time). Please note that summer might affect the display time of creation on your backup.
+Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day, namely at 6:00 AM and 18:00 (6:00 PM, Central European Time). Please note that summer might affect the display time of creation on your backup.
 
 Automated backups will use the backup-slots available to your guild. If there aren't any available, the system will overwrite the oldest automatic backup. Your manual backups never get touched. If manual backups occupy all backup-slots, no automatic backups will be created.
 

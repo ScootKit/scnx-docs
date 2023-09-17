@@ -15,7 +15,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 * Bitte [setze Berechtigungen](./../../slash-commands) für Slash-Befehle, um ungewollte Nutzung zu verhindern.
 * Stelle sicher, dass dein Bot folgende Berechtigungen auf deinem Server hat:
   * Um Emojis von anderen Servern zu importieren (`/stealemote`): "Ausdrücke erstellen"
-  * Um Kanäle zu verändern (alle `/admin` Befehle): "Kanäle verwalten"
+  * Um Kanäle zu verändern (alle `/admin`-Befehle): "Kanäle verwalten"
 
 ## Nutzung {#usage}
 
@@ -28,14 +28,14 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 
 <SlashCommandExplanation />
 
-| Befehl                                                      | Beschreibung                                                                     |
-|--------------------------------------------------------------|---------------------------------------------------------------------------------|
-| `/admin movechannel channel:<Kanal>`                         | Zeigt die API-Position des angegebenen Kanals.                                  | 
-| `/admin movechannel channel:<Kanal> new-position:<Zahl>`     | Verschiebt den angegebenen Kanal zu der angegebenen API-Position.               |
-| `/admin moverole role:<Rolle>`                               | Zeigt die API-Position der angegebenen Rolle.                                   | 
-| `/admin moverole role:<Rolle> new-position:<Zahl>`           | Verschiebt die angegebene Rolle zu der angegebenen API-Position.                | 
-| `/admin setcategory channel:<Kanal> category:<Kategorie> `   | Aktualisiert die Kategorie des angegebenen Kanals zu der angegebenen Kategorie. |
-| `/stealemote emote:<Emoji>`                                  | Kopiert ein Emoji von einem anderem Server zu deinem Server.                    |
+| Befehl                                                    | Beschreibung                                                                    |
+|-----------------------------------------------------------|---------------------------------------------------------------------------------|
+| `/admin movechannel channel:<Kanal>`                      | Zeigt die API-Position des angegebenen Kanals.                                  |
+| `/admin movechannel channel:<Kanal> new-position:<Zahl>`  | Verschiebt den angegebenen Kanal zu der angegebenen API-Position.               |
+| `/admin moverole role:<Rolle>`                            | Zeigt die API-Position der angegebenen Rolle.                                   |
+| `/admin moverole role:<Rolle> new-position:<Zahl>`        | Verschiebt die angegebene Rolle zu der angegebenen API-Position.                |
+| `/admin setcategory channel:<Kanal> category:<Kategorie>` | Aktualisiert die Kategorie des angegebenen Kanals zu der angegebenen Kategorie. |
+| `/stealemote emote:<Emoji>`                               | Kopiert ein Emoji von einem anderem Server zu deinem Server.                    |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -52,8 +52,8 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
   <summary>Das Verschieben eines Kanals funktioniert nicht / Der Bot verschiebt den Kanal zur falschen Position</summary>
   <ul>
     <li>Stelle sicher, dass dein Bot die Berechtigung "Kanäle verwalten" auf deinem Server hat.</li>
-    <li>Discord schränkt einige Positionen ein. So kannst du z.B. keinen Sprachkanal über einen Textkanal schieben.</li>
-    <li>Stelle sicher, dass du die richtige Position eingegeben hast. Um dies zu überprüfen, führe den Befehl ohne den "new-position"-Parameter aus und berechne die neue 
+    <li>Discord schränkt einige Positionen ein. So kannst du z. B. keinen Sprachkanal über einen Textkanal schieben.</li>
+    <li>Stelle sicher, dass du die richtige Position eingegeben hast. Um dies zu überprüfen, führe den Befehl ohne den "new-position"-Parameter aus und berechne die neue
      Position mithilfe der jetzigen.</li>
   </ul>
 </details>
