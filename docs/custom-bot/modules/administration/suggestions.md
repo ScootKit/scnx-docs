@@ -4,7 +4,7 @@ Advanced module to manage suggestions on your guild.
 
 <ModuleOverview moduleName="suggestions" />
 
-## Features {#feautres}
+## Features {#features}
 
 * Let your users submit suggestions on Discord using
     * commands
