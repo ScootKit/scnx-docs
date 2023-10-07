@@ -61,7 +61,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=suggestions%
 | DM-Status-Notification                      | *Only visible if "Send DM-Notifications" is enabled*<br/>This is the message that will get sent to the creator of the thread when their suggestion was answered by an administrator.                                  |
 | Unanswered Suggestion-Message               | This is how a suggestion without an admin-answer will look in the suggestion-channel. This will be edited when an admin responds.                                                                                     |
 | Denied Suggestion-Message                   | This is how a suggestion that has been denied by an admin will look like. The original message ("unanswered suggestion-message") will be edited to this value when an admin denies the suggestion.                    |
-| Approved Suggestion-Message                 | This is how a suggestion that has been accepted by an admin will look like. TThe original message ("unanswered suggestion-message") will be edited to this value when an admin approves the suggestion.               |
+| Approved Suggestion-Message                 | This is how a suggestion that has been accepted by an admin will look like. The original message ("unanswered suggestion-message") will be edited to this value when an admin approves the suggestion.               |
 
 ## Troubleshooting {#troubleshooting}
 
