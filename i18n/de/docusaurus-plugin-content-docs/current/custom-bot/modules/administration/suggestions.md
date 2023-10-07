@@ -10,7 +10,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
     * Befehle nutzen
     * Nachrichten in einen ausgewählten Kanal schicken (optional)
 * Nimm Vorschläge von Nutzern an / lehne sie ab
-* Lasse Nutzer für Vorschläge abstimmen, indem sie Reaktionen nutzen
+* Lasse Nutzer über Vorschläge mit Reaktionen abstimmen
 * Öffne automatisch Threads unter neuen Vorschlägen (optional)
 
 ## Einrichtung {#setup}
