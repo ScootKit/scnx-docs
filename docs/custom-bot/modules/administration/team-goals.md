@@ -22,8 +22,9 @@ Set weekly messages-goals for your staff-members.
 ## Usage {#usage}
 
 * The requirements get [evaluated](#module-terms) every 7 days after module activation automatically.
-* You can always check the progress of you or another user with [`/team-goals progress`] and see their goal-history
-  with [`/team-goals history`].
+* You can always check the progress of you or another user with [`/team-goals progress`](#commands) and see their
+  goal-history
+  with [`/team-goals history`](#commands).
 
 ## Commands {#commands}
 
