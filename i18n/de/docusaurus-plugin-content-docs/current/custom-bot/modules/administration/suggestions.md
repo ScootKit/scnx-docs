@@ -17,7 +17,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 
 1. Erstelle für die Vorschläge einen Kanal (oder wähle einen aus). Der Bot benötigt folgende Rechte auf diesen: "Kanal
    anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history")
-2. Stelle sicher, dass [Berechtigungen](./../../slash-commands) auf `/manage-suggestions` richtig konfiguriert sind, um zu verhindern, 
+2. Stelle sicher, dass [Berechtigungen](./../../slash-commands) für `/manage-suggestions` richtig konfiguriert sind, um zu verhindern, 
    dass Nutzer Vorschläge als Admin verwalten können.
 3. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=suggestions%7Cconfig).
 4. [Konfiguriere](#configuration) das Modul.
