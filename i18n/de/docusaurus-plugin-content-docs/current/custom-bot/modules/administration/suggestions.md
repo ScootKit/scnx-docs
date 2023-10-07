@@ -28,8 +28,8 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 * Nutzer können einen neuen Vorschlag mit `/suggestion` einreichen. Neue Vorschläge werden in den konfigurierten Kanal gesendet.
 * Wenn aktiviert, werden Nachrichten, die in den Vorschläge-Kanal gesendet werden, automatisch zu Vorschlägen konvertiert.
 * Andere Nutzer können mit den konfigurierten Reaktionen abstimmen und mit Threads zu den Vorschlägen kommentieren.
-* Admins können Vorschläge mit `/manage-suggestions` annnehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Das 
-  wird den Vorschlags-Ersteller, wenn konfiguriert, über PNs informieren.
+* Admins können Vorschläge mit `/manage-suggestions` annnehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Darüber 
+  wird der Vorschlag-Ersteller, wenn konfiguriert, über PNs informiert.
 
 ## Befehle {#commands}
 
