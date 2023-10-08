@@ -4,19 +4,19 @@ sidebar_position: 5
 
 # Häufig gestellte Fragen
 
-Häufig gestellte Fragen zu Benutzerfunktionen und Abrechnung bei SCNX.
+Häufig gestellte Fragen zu Benutzerfunktionen und Abrechnung auf SCNX.
 
 ## Abrechnungsbezogen {#billing}
 
-### Was sind SCNX-Credits? {#scnx-credits}
+### Was sind SCNX Credits? {#scnx-credits}
 
-SCNX-Credits sind eine virtuelle Währung auf SCNX. Du kannst sie auf 
-deiner [Zahlungsseite](https://scnx.app/de/user/zahlungen) Erwerben und gegen AI-Credits einlösen, dein
-Speicher erweitern oder [Server-Upgrades](./../guilds/plans#upgrade) durchführen und viele weitere Möglichkeiten. Eine Auszahlung erworbener SCNX-Credits ist nicht möglich.
+SCNX Credits sind eine virtuelle Währung auf SCNX. Du kannst sie auf 
+deiner [Zahlungsseite](https://scnx.app/de/user/zahlungen) erwerben und gegen AI-Credits einlösen, deinen
+Speicherplatz erweitern, [Server-Upgrades](./../guilds/plans#upgrade) durchführen und viele weitere Möglichkeiten. Eine Auszahlung erworbener SCNX Credits ist nicht möglich.
 
 ### Wie verwalte ich mein Abonnement? {#manage-subscription}
 
-Um dein Abonnement zu verwalten, besuche deine [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort kannst du 
+Um dein Abonnement zu verwalten, besuche die [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort kannst du 
 alle laufenden Abonnements überprüfen und kündigen.
 
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
@@ -82,7 +82,7 @@ Hier sind einige mögliche Gründe, warum dies geschieht:
 * Deine Karte wurde als gestohlen gemeldet
 * Deine Karte konnte mit 3DS nicht verifiziert werden
 
-Bitte [kontaktieren unsere Mitarbeiter](https://scnx.app/de/help), wenn du der Meinung bist, dass keiner dieser Gründe zutrifft.
+Bitte [kontaktiere unser Team](https://scnx.app/de/help), wenn du der Meinung bist, dass keiner dieser Gründe zutrifft.
 
 ## Andere Fragen {#other-questions}
 
