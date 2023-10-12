@@ -4,7 +4,7 @@ Zeige alle deine Teammitglieder und erkläre Teamrollen in einem immer aktuellen
 
 <ModuleOverview moduleName="team-list" />
 
-## Features {#features}
+## Funktionen {#features}
 
 * Zeige Mitglieder ausgewählter Rollen in einem immer aktuellen Embed an.
 * Zeige optional deren aktuellen Online-Status an.
