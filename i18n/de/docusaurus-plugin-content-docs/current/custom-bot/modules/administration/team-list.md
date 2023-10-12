@@ -16,7 +16,7 @@ Hier ist ein Beispiel (du kannst das Aussehen anpassen):
 
 ## Einrichtung {#setup}
 
-1. Erstelle einen Kanal, in welchem der Bot die Teamliste senden soll. Dieser Kanal muss leer sein, und der Bot muss die Berechtigung "Kanal ansehen", "Nachrichtenverlauf anzeigen" und "Nachricht senden" haben.
+1. Erstelle einen Kanal, in welchem der Bot die Teamliste senden soll. Dieser Kanal muss leer sein, und der Bot muss die Berechtigung "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" haben.
 2. Öffne die [Modulkonfiguration](https://scnx.app/de/glink?page=bot/configuration?file=team-list%7Cconfig) und [konfiguriere das Modul](#configuration).
 3. Lade die Konfiguration deines Bot neu, um die Änderungen anzuwenden - der Bot wird automatisch eine Teamliste senden.
 
@@ -46,7 +46,7 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 	<summary>Die Teamliste wird im ausgewählten Kanal nicht angezeigt</summary>
 	<ul>
 		<li>Stelle sicher, dass der ausgewählte Kanal leer ist.</li>
-		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichtenverlauf anzeigen" und "Nachrichten senden" in dem Kanal hat.</li>
+		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" in dem Kanal hat.</li>
 		<li>Stelle sicher, dass das Rollen-Feld keine inzwischen gelöschten Rollen enthält und versuche, die Konfiguration erneut zu speichern.</li>
 		<li>Stelle sicher, dass du <a href="./../../additional-features#embed-colors">richtige Farbwerte</a> in deiner Konfiguration verwendest.</li>
 		<li>Starte deinen Bot neu.</li>
@@ -67,7 +67,7 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 	<summary>Ein Mitglied fehlt in der Teamliste / Die Teamliste ist nicht aktuell</summary>
 	<ul>
 		<li>Stelle sicher, dass der ausgewählte Kanal leer ist.</li>
-		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichtenverlauf anzeigen" und "Nachrichten senden" in dem Kanal hat.</li>
+		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" in dem Kanal hat.</li>
 		<li>Stelle sicher, dass du mindestens 15 Minuten lang gewartet hast, da dies das Intervall ist, in dem sich das Embed aktualisiert.</li>
 		<li>Stelle sicher, dass du dem Nutzer genau die ausgewählte Rolle zugewiesen hast. Beachte, dass Rollen mit demselben Namen immer noch eine unterschiedliche ID haben, was bedeutet, dass diese nicht zusammen gruppiert werden können und separat konfiguriert werden müssen.</li>
 		<li>Stelle sicher, dass das Rollen-Feld keine inzwischen gelöschten Rollen enthält und versuche, die Konfiguration erneut zu speichern.</li>

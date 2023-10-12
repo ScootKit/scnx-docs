@@ -17,7 +17,7 @@ Here's an example (you can customize appearance):
 ## Setup {#setup}
 
 1. Create a channel in which the bot should send the staff-list. This channel needs to be empty, and the bot has
-   to have the "View channel", "View message history" and "Send message" permissions on it.
+   to have the "View channel", "Send messages" and "View message history" permissions on it.
 2. Open the [Module configuration](https://scnx.app/glink?page=bot/configuration?file=team-list%7Cconfig)
    and [configure the module](#configuration).
 3. Reload the configuration of your bot to apply changes - the bot will send a team-list automatically.
@@ -50,7 +50,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=team-list%7C
     <summary>The Staff-List is not appearing in the configured channel</summary>
     <ul>
          <li>Make sure the desired channel is empty.</li>
-         <li>Make sure bot has "View channel", "View message history" and "Send messages" permissions on the channel.</li>
+         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
          <li>Make sure that the roles field does not include any now deleted roles and try re-saving the configuration.</li>
          <li>Make sure you supplied a <a href="./../../additional-features#embed-colors">correct color value</a> in your configuration.</li>
          <li>Restart your bot.</li>
@@ -71,7 +71,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=team-list%7C
     <summary>A member is missing from the Staff-List / My Staff-List is not up to date</summary>
     <ul>
          <li>Make sure the desired channel is empty.</li>
-         <li>Make sure bot has "View channel", "View message history" and "Send messages" permissions on the channel.</li>
+         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
          <li>Make sure you have waited at least 15 minutes as this is interval the embed is refreshed.</li>
          <li>Please make sure you have given the user the exact configured role. Please note that roles with the same name still have different IDs, meaning that they can not be grouped together and need to be configured separately.</li>
          <li>Make sure that the roles field does not include any now deleted roles and try re-saving the configuration.</li>
