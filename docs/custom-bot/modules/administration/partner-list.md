@@ -71,7 +71,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
     <ul>
         <li>Make sure the desired channel is empty.</li>
         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
-        <li>Make sure non of your category fiels are empty.</li>
+        <li>Make sure non of your category fields are empty.</li>
         <li>Make sure you supplied a <a href="./../../additional-features#embed-colors">correct color value</a> in your configuration.</li>
         <li>Restart your bot.</li>
     </ul>
