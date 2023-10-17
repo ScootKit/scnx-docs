@@ -12,8 +12,8 @@ Dieses Modul soll die Verwaltung von Partnerschaften mit anderen Discord-Servern
 
 * Erstelle stets eine aktuelle Embed-Liste von all deinen aktuellen Partnern.
 * Erstelle benutzerdefinierte Kategorien, um deine Partnerschaften zu sortieren.
-* Weise und entferne automatisch Rollen von Partnern.
-* Sende deinen Partnern automatisch eine Benachrichtigungen über Änderungen ihres Partner-Status.
+* Weise zu und entferne automatisch Rollen von Partnern.
+* Sende deinen Partnern automatisch Benachrichtigungen über Änderungen ihres Partner-Status.
 
 Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpassen):
 
@@ -24,9 +24,9 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 * Bitte [richte die Berechtigungen für Slash-Befehle](./../../slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
 * Konfiguriere anschließend die Partner-Liste:
     1. Erstelle einen Kanal, in den der Bot die Partner-Liste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachrichten senden“ verfügen.
-    2. „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachricht senden“ verfügen.
-    3. Öffne die [Modulkonfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
+        2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
        und [konfiguriere das Modul](#configuration).
+    3. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
     4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
 
 ## Verwendung {#usage}
@@ -48,7 +48,7 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 
 ## Konfiguration {#configuration}
 
-Mit dieser Konfigurationsdatei kannst du Benachrichtigungen für Partner einrichten, die Einbettung der Partner-Liste bearbeiten und vieles mehr. 
+Mit dieser Konfigurationsdatei kannst du Benachrichtigungen für Partner einrichten, das Embed der Partner-Liste bearbeiten und vieles mehr. 
 Öffne die Konfigurationsdatei in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).
 
@@ -63,9 +63,8 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 | Kategorien | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden. |
 | Kategorie-Rollen | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle |
 | Partner-Benachrichtigung senden | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden. |
-| Partner-Willkommens-PN | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an Partner gesendet, wenn dieser hinzugefügt wird. |
-| Partner-Entfernung-PN | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an Partner gesendet, wenn dieser entfernt wird. |
-
+| Partner-Willkommens-PN | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser hinzugefügt wird. |
+| Partner-Entfernung-PN | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser entfernt wird. |
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
@@ -86,7 +85,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 
 ## Gespeicherte Daten {#data-usage}
 
-Über jeden über [commands](#commands) angelegten Partner werden folgende Daten gespeichert:
+Über jeden über [Befehle](#commands) angelegten Partner werden folgende Daten gespeichert:
 
 * Eine eindeutige ID, die den Datenbankeintrag identifiziert
 * Der für diesen Partner angegebene Einladungslink
