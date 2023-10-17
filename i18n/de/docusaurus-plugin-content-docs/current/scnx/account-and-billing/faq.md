@@ -11,12 +11,12 @@ Häufig gestellte Fragen zu Benutzerfunktionen und Abrechnung auf SCNX.
 ### Was sind SCNX Credits? {#scnx-credits}
 
 SCNX Credits sind eine virtuelle Währung auf SCNX. Du kannst sie auf 
-deiner [Zahlungsseite](https://scnx.app/de/user/zahlungen) erwerben und gegen AI-Credits einlösen, deinen
+deiner [Zahlungsseite](https://scnx.app/de/user/payments) erwerben und gegen KI Guthaben einlösen, deinen
 Speicherplatz erweitern, [Server-Upgrades](./../guilds/plans#upgrade) durchführen und viele weitere Möglichkeiten. Eine Auszahlung erworbener SCNX Credits ist nicht möglich.
 
 ### Wie verwalte ich mein Abonnement? {#manage-subscription}
 
-Um dein Abonnement zu verwalten, besuche die [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort kannst du 
+Um dein Abonnement zu verwalten, besuche die [Zahlungsseite](https://scnx.app/de/user/payments) in deinem Dashboard. Dort kannst du 
 alle laufenden Abonnements überprüfen und kündigen.
 
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
@@ -26,22 +26,22 @@ unabhängig von deinem Umsatzsteuerstatus.
 
 ### Wie lege ich meine Rechnungsadresse fest? {#billing-details}
 
-Um deine Rechnungsadresse festzulegen, gehe zur [Zahlungsseite](https://scnx.app/de/user/zahlungen) in deinem Dashboard. Dort findest du einen Abschnitt „Rechnungsdaten“. 
+Um deine Rechnungsadresse festzulegen, gehe zur [Zahlungsseite](https://scnx.app/de/user/payments) in deinem Dashboard. Dort findest du einen Abschnitt „Rechnungsdaten“. 
 Dort kannst du deine Rechnungsdaten eingeben. Wenn du eine neu generierte Rechnung benötigst,
-Kontaktiere bitte einen [unser Team](https://scnx.app/de/help).
+kontaktiere bitte [unser Team](https://scnx.app/de/help).
 Bitte beachte: Abhängig von deinen Eingaben werden wir dich ggf. um eine Überprüfung der Angaben bitten (in manchen Fällen gesetzlich vorgeschrieben).
 Wenn wir feststellen, dass du dies missbraucht hast (z. B. ungültige Adressen eingegeben hast), können wir diese Funktion für dein Konto deaktivieren 
 (oder gegebenenfalls andere Maßnahmen ergreifen).
 
 ### Warum kann ich nicht mit SEPA-Lastschrift bezahlen? {#direct-debit}
 
-Bitte lese dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) durch, um Informationen zum SEPA-Lastschriftverfahren einzusehen.
+Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) durch, um Informationen zum SEPA-Lastschriftverfahren einzusehen.
 
 ### Wie bezahle ich bei SCNX mit einem Dauerauftrag (/einer wiederkehrenden Banküberweisung)? {#reoccurring-transfer}
 
-1. Aktiviere zunächst das Abonnement auf SCNX. Öffnen dazu
+1. Aktiviere zunächst das Abonnement auf SCNX. Öffne dazu
       die [Zahlungsseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade
-   Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrend Banküberweisung“ aus
+   Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrende Banküberweisung“ aus
       Dir werden nun einmalige Zahlungsdaten und [eine eindeutige IBAN](#Überweisung) angezeigt.
 2. Richte als Nächstes die wiederkehrende Überweisung bei deiner Bank ein:
    * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
@@ -55,20 +55,18 @@ Bitte lese dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
    * [Revolut](https://help.revolut.com/de-LU/help/receiving-zahlungen/sending-money-to-an-external-bank-account/how-to-schedule-recurring-zahlungen/business/)
    * Deine Bank ist nicht aufgeführt? Googel einfach den Namen deiner Bank in Kombination mit „wiederkehrende Überweisung“ (oder „
      Dauerauftrag), um Ratgeber zu finden. Sollten weiterhin Probleme auftreten, wende dich bitte an deine Bank.
-3. Stell sicher, dass alle Details mit denen, in deinem Dashboard angezeigten Details übereinstimmen, und bestätige deine wiederkehrende Überweisung von deiner
+3. Stell sicher, dass alle Details mit denen, in deinem Dashboard angezeigten Details übereinstimmen, und bestätige deine wiederkehrende Überweisung bei deiner
    Bank.
 4. Viel Spaß mit deinem SCNX-Abonnement 🚀
 
 ### Woher weiß SCNX, dass ich eine Rechnung überwiesen habe? {#wire-transfer}
 
-Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die eintrifft
-auf diesem Konto wird deiner Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen bei Einmalkäufen empfohlen), da wir anhand der IBAN, auf der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
+Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die auf diesem Konto eintrifft, wird deinen Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen bei Einmalkäufen empfohlen), da wir anhand der IBAN, auf der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
 
-Durch einen Unfall zu viel Geld verdrahtet? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet.
-Wenn du es nicht innerhalb von 90 Tagen verwendest, erstattet unser Zahlungsanbieter das Geld auf das Bankkonto zurück, von dem die Überweisung stammt
+Durch einen Unfall zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet.
 von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
 von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
-wenn dein Banküberweisungssaldo nicht abgeglichen ist).
+ (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
 
 ### Meine Karte wurde abgelehnt, aber alle meine Daten sind gültig {#no-reason-decline}
 
@@ -80,7 +78,7 @@ Hier sind einige mögliche Gründe, warum dies geschieht:
 * Die von dir eingegebenen Daten sind ungültig
 * Unsere Zahlung hat Deine Transaktion als risikoreich eingestuft und abgelehnt
 * Deine Karte wurde als gestohlen gemeldet
-* Deine Karte konnte mit 3DS nicht verifiziert werden
+* Unsere Zahlung hat deine Transaktion als risikoreich eingestuft und abgelehnt
 
 Bitte [kontaktiere unser Team](https://scnx.app/de/help), wenn du der Meinung bist, dass keiner dieser Gründe zutrifft.
 
@@ -101,4 +99,5 @@ Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 |-------------|------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -----------|
 | Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im auszuführen. Wir zeigen beispielsweise dein Profilbild im Dashboard | an |
 | Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
-| Wusstest du, auf welchen Servern du dich befindedst | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
+| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard auszuführen. Wir zeigen beispielsweise dein Profilbild im Dashboard an |
+| Wissen, auf welchen Servern du dich befindest | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
