@@ -168,7 +168,7 @@ To change the language of your bot, please
 
 <details>
     <summary>The language of my server is not supported</summary>
-    We're sorry to hear that your langauge is not supported by SCNX. However, we are quite a small team here at ScootKit with <i>very</i> limited resources and can currently not afford to add support for other languages except German and English.
+    We're sorry to hear that your language is not supported by SCNX. However, we are quite a small team here at ScootKit with <i>very</i> limited resources and can currently not afford to add support for other languages except German and English.
     Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
     focus on our current Target-Groups.
 </details>
