@@ -63,10 +63,9 @@ Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 
 Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die auf diesem Konto eintrifft, wird deinen Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen bei Einmalkäufen empfohlen), da wir anhand der IBAN, auf der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
 
-Durch einen Unfall zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet.
-von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
-von (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
- (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Du kannst
+Durch einen Unfall zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Andernfalls kannst
+du [unser Team kontaktieren](https://scnx.app/help), um das Geld früher zurück zu erhalten to get the money back sooner (bitte beachte, dass dies nur möglich ist, 
+wenn dein Banküberweisungssaldo abgeglichen ist).
 
 ### Meine Karte wurde abgelehnt, aber alle meine Daten sind gültig {#no-reason-decline}
 
@@ -76,7 +75,7 @@ Hier sind einige mögliche Gründe, warum dies geschieht:
 * Deine Karte wurde in einem Land ausgestellt, das von internationalen Sanktionen betroffen ist, bzw. von einer Bank in diesem Land
 * Deine Karte war schon einmal in einen Betrug verwickelt
 * Die von dir eingegebenen Daten sind ungültig
-* Unsere Zahlung hat Deine Transaktion als risikoreich eingestuft und abgelehnt
+* Unser Zahlungsanbieter hat deine Transaktion als risikoreich eingestuft und abgelehnt
 * Deine Karte wurde als gestohlen gemeldet
 * Unsere Zahlung hat deine Transaktion als risikoreich eingestuft und abgelehnt
 
@@ -97,7 +96,6 @@ Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 
 | Zugriffsrecht | Erklärung |
 |-------------|------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -----------|
-| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im auszuführen. Wir zeigen beispielsweise dein Profilbild im Dashboard | an |
+| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an. |
 | Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
-| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard auszuführen. Wir zeigen beispielsweise dein Profilbild im Dashboard an |
 | Wissen, auf welchen Servern du dich befindest | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
