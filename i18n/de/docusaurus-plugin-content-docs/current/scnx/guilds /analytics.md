@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Serverstatistiken
+# Server-Statistiken
 
 Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
 Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
