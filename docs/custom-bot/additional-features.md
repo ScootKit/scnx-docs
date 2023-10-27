@@ -57,3 +57,21 @@ To reset your Module-Database, follow these instructions:
 5. Restart your bot to apply changes.
 
 ![](@site/docs/assets/custom-bot/additional-features/purge-database.png)
+
+## Enter durations {#durations}
+
+To enter durations in the CustomBot, enter a text using these units:
+
+* seconds (as `s` or `sec`)
+* minutes (as `m` or `min`)
+* hours (as `h` or `hr`)
+* days (as `d`)
+* weeks (as `w`, as `wk`)
+
+Here are a few examples:
+
+* One day and two hours: `1d 2h`
+* Three weeks, two days and thirty minutes: `3w 2d 30m`
+* Seven days, nine hours: `7d 9h` or `1w 9h`
+
+You can combine these units as you like, but make sure to leave an empty space between units. 
