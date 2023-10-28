@@ -43,20 +43,20 @@ Mit dieser Konfigurationsdatei kannst du festlegen, welche Änderungen an deinem
 | Feld | Beschreibung |
 |--------------|----- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- --------------|
 | Kanal-Änderungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Kanälen (z. B. Kanalbearbeitungen, Berechtigungsänderungen und mehr). |
-| Kanal für das Dokumentieren von Kanal-Änderungen | <i>Nur sichtbar, wenn „Channel-Updates“ aktiviert ist.</i><br/>Änderungen an Kanälen werden in diesem Kanal protokolliert. |
+| Kanal für das Dokumentieren von Kanal-Änderungen | <i>Nur sichtbar, wenn „Kanal-Änderungen“ aktiviert ist.</i><br/>Änderungen an Kanälen werden in diesem Kanal protokolliert. |
 | Rollen-Änderungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Rollen (wie Rollenänderungen, Berechtigungsänderungen und mehr). |
-| Kanal für das Dokumentieren von Rollen-Änderungen | <i>Nur sichtbar, wenn „Rollenaktualisierungen“ aktiviert ist.</i><br/>Änderungen an Rollen werden in diesem Kanal protokolliert. |
-| Mitglieder-Updates | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Mitgliedern (z. B. Spitznamen- oder Rollenänderungen und mehr). |
-| Kanal zur Protokollierung von Mitglieder-Updates | <i>Nur sichtbar, wenn „Mitglieder-Updates“ aktiviert ist.</i><br/>Änderungen an Mitgliedern werden in diesem Kanal protokolliert. |
-| Nachrichtenaktualisierungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an der Nachricht (z. B. Bearbeitungen und Löschungen). |
-| Kanal zur Protokollierung von Nachrichten-Änderungen | <i>Nur sichtbar, wenn „Nachrichtenaktualisierungen“ aktiviert ist.</i><br/>Änderungen an Nachrichten werden in diesem Kanal protokolliert. |
-| Kanal zur Protokollierung von Nachrichtenlöschungen | <i>Nur sichtbar, wenn „Nachrichtenaktualisierungen“ aktiviert ist.</i><br/>Das Löschen von Nachrichten wird in diesem Kanal protokolliert. |
-| Kanäle für Nachrichtenaktualisierungen ignorieren | <i>Nur sichtbar, wenn „Nachrichtenaktualisierungen“ aktiviert ist.</i><br/>Diese Kanäle und Kategorien sind von der Überwachung auf Nachrichtenbearbeitungen und -löschungen ausgeschlossen. |
-| Gilden-Updates | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen auf Ihrem Server (z. B. Servereinstellungen und mehr). |
-| Kanal zur Protokollierung von Gilden-Updates | <i>Nur sichtbar, wenn „Gilden-Updates“ aktiviert ist.</i><br/>Änderungen deines Servers werden in diesem Kanal protokolliert. |
-| Emoji-Updates | Wenn aktiviert, protokolliert der Bot Änderungen an Emojis (und Stickern) Ihres Servers (wie das Hochladen, Löschen und Bearbeiten von Emojis). |
-| Kanal zur Protokollierung von Emoji-Updates | <i>Nur sichtbar, wenn „Emoji-Updates“ aktiviert ist.</i><br/>Änderungen an Emojis Ihres Servers werden in diesem Kanal protokolliert. |
-| Bots ignorieren | <i>Diese Funktion ist immer für Server ohne <a href="./../../../scnx/guilds/plans">PRO-Plan</a> aktiviert.</i><br/ >Wenn deaktiviert, dokumentiert der Bot von ihm selbst oder anderen Bots vorgenommene Änderungen – dies kann zu Spam im Log-Channel führen. |
+| Kanal für das Dokumentieren von Rollen-Änderungen | <i>Nur sichtbar, wenn „Rollen-Änderungen“ aktiviert ist.</i><br/>Änderungen an Rollen werden in diesem Kanal protokolliert. |
+| Mitglieder-Änderungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Mitgliedern (z. B. Nicknamen- oder Rollenänderungen und mehr). |
+| Kanal für das Dokumentieren von Mitglieder-Änderungen | <i>Nur sichtbar, wenn „Mitglieder-Änderungen“ aktiviert ist.</i><br/>Änderungen an Mitgliedern werden in diesem Kanal protokolliert. |
+| Nachrichten-Änderungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Nachrichten (z. B. Bearbeitungen und Löschungen). |
+| Kanal für das Dokumentieren von Nachrichten-Bearbeitungen | <i>Nur sichtbar, wenn „Nachrichten-Änderungen“ aktiviert ist.</i><br/>Änderungen an Nachrichten werden in diesem Kanal protokolliert. |
+| Kanal für das Dokumentieren von Nachrichten-Löschungen | <i>Nur sichtbar, wenn „Nachrichten-Änderungen“ aktiviert ist.</i><br/>Das Löschen von Nachrichten wird in diesem Kanal protokolliert. |
+| Ignorierte Kanäle für Nachrichten-Änderungen | <i>Nur sichtbar, wenn „Nachrichten-Änderungen“ aktiviert ist.</i><br/>Diese Kanäle und Kategorien sind von der Überwachung auf Nachrichtenbearbeitungen und -Löschungen ausgeschlossen. |
+| Server-Änderungen | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen auf deinem Server (z. B. Servereinstellungen und mehr). |
+| Kanal für das Dokumentieren von Server-Änderungen | <i>Nur sichtbar, wenn „Server-Änderungen“ aktiviert ist.</i><br/>Änderungen deines Servers werden in diesem Kanal protokolliert. |
+| Emoji-Änderungen | Wenn aktiviert, protokolliert der Bot Änderungen an Emojis (und Stickern) deines Servers (wie das Hochladen, Löschen und Bearbeiten von Emojis). |
+| Kanal für das Dokumentieren von Emoji-Änderungen | <i>Nur sichtbar, wenn „Emoji-Änderungen“ aktiviert ist.</i><br/>Änderungen an Emojis deines Servers werden in diesem Kanal protokolliert. |
+| Bots ignorieren | <i>Diese Funktion ist immer für Server ohne <a href="./../../../scnx/guilds/plans">PRO-Plan</a> aktiviert.</i><br/>Wenn deaktiviert, dokumentiert der Bot von ihm selbst oder anderen Bots vorgenommene Änderungen – dies kann zu Spam im Log-Kanal führen. |
 
 ## Fehlerbehebung {#troubleshooting}
 
