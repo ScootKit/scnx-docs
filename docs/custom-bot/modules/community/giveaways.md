@@ -123,6 +123,8 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=giveaways%7C
 For every giveaway the following data will be saved:
 
 * An unique integer identifying the database entry
+* The ID of the giveaway message
+* The ID of the channel the giveaway has been started in, based on the [`channel`](#commands) command parameter
 * The exact time the giveaway will end / has ended, based on the [`duration`](#commands) command parameter
 * Whether the giveaway has ended yet
 * The price of the giveaway, based on the [`price`](#commands) command parameter
@@ -137,8 +139,6 @@ For every giveaway the following data will be saved:
 * The User ID of the sponsor (if not specified the creator) of the giveaway
 * The provided link to the sponsor's website, based on the [`sponsor-url`](#commands) command parameter
 * The amount of winners, based on the [`winner-count`](#commands) command parameter
-* The ID of the channel the giveaway has been started in, based on the [`channel`](#commands) command parameter
-* The ID of the giveaway message
 * Metadata about the entry (date when created and last updated)
 
 There is no way to remove a giveaway from the database (you can always delete the giveaway-message regardless). To
