@@ -6,7 +6,7 @@ Lass deinen Bot alle Änderungen an deinem Sever und deinen Kanälen protokollie
 
 ## Funktionen {#features}
 
-Mit dem Fortgeschrittenes Logging-Modul kannst du folgendes ganz einfach tun:
+Mit dem fortgeschrittenen Logging-Modul kannst du folgendes ganz einfach tun:
 
 * Protokolliere Kanalaktualisierungen (wie Kanalbearbeitungen, Kanalberechtigungsänderungen und mehr) in jedem gewünschten Kanal.
 * Protokolliere Rollenaktualisierungen (wie Rollenänderungen, Berechtigungsänderungen und mehr) in jedem gewünschten Kanal.

@@ -63,7 +63,7 @@ Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 
 Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die auf diesem Konto eintrifft, wird deinen Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen bei Einmalkäufen empfohlen), da wir anhand der IBAN, auf der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
 
-Durch einen Unfall zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Andernfalls kannst
+Aus Versehen zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Andernfalls kannst
 du [unser Team kontaktieren](https://scnx.app/help), um das Geld früher zurück zu erhalten to get the money back sooner (bitte beachte, dass dies nur möglich ist, 
 wenn dein Banküberweisungssaldo abgeglichen ist).
 
