@@ -12,6 +12,15 @@ an [issue](https://github.com/ScootKit/scnx-docs/issues)
 or [discussions](https://github.com/ScootKit/scnx-docs/discussions) first in order to communicate who is working on
 what.
 
+## Scripts
+
+Execute all scripts inside the `bin` directory.
+
+* Do avoid having to re-fetch data on every render, you can execute `node download-api-repsonses.js`. This will create
+  a `api-repsones.json` file that acts as a cache for SCN API Resources. This is required for all other scripts.
+* Run `node generate-progress.js` to view module translation progress. Include an argument (SCNX Org ID) to hide modules
+  that were not created by your organization. Items will be sorted based on their usage count.
+
 ## Development
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
