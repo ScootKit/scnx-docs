@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Serverstatistiken
+# Server-Statistiken
 
 Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
 Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
@@ -115,8 +115,8 @@ Alle infos findest du in unserem [FAQ-Artikel](https://faq.scnx.app/de/data-coll
 :::
 
 Wenn du (oder ein Benutzer deines Servers) nicht möchte, dass der Serverbesitzer und die Administratoren sehen können, wie viele Nachrichten du
-gesendet hast oder du befürchtest, dass personenbezogene Daten über Dich oder deine Nutzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus“ aktivieren.
-Verwende den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
+gesendet hast oder du befürchtest, dass personenbezogene Daten über dich oder deine Nutzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus“ aktivieren.
+Verwende dafür den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
 wird sich auf folgendes auswirken:
 
 
@@ -124,5 +124,5 @@ wird sich auf folgendes auswirken:
 bedeutet, dass wir nicht wissen, dass *du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
 * Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
 
-Der Datenschutzmodus kann mit (Opt-Back) mit „/privacy enable“ deaktiviert werden. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden 
-Der Datenschutzmodus kann mit (Opt-Back) mit `/privacy disable` deaktiviert werden. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden 
+
+Den Datenschutzmodus deaktivierst du mit `/privacy disable`. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden können. Das heißt, nur neue Nachrichten werden wieder in Befehlen und im Dashboard angezeigt.
