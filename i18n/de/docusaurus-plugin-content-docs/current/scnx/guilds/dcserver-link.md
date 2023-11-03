@@ -5,45 +5,80 @@ sidebar_position: 4
 # dcserver.link
 
 :::info Beta-Info
-Diese Dokumentation ist für ein noch nicht fertiges Produkt, welches nur für eine bestimmte Anzahl an Servern auf SCNX verfügbar ist.
-Überprüfe die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX, um zu sehen, ob du dcserver.link-URLs verwenden kannst.
+Diese Dokumentation ist für ein noch nicht fertiges Produkt, welches nur für eine bestimmte Anzahl an Servern auf SCNX
+verfügbar ist.
+Überprüfe die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX, um zu sehen, ob du
+dcserver.link-URLs verwenden kannst.
 :::
 
 Erstelle eine einzigartige Vanity-URL für deinen Server (z. B. `https://dcserver.link/yourservername`).
 
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}
-                additionalDetails={{STARTER: 'Nur für Server mit mehr als 50 Mitgliedern (ohne Bots) oder mit einem bezahltem Plan verfügbar.'}}/>
-
+additionalDetails={{STARTER: 'Nur für Server mit mehr als 50 Mitgliedern (ohne Bots) oder mit einem bezahltem Plan
+verfügbar.'}}/>
 
 ## Nutzung {#usage}
 
-Eine dcserver.link erlaubt es deinen Nutzern, anstatt einer von Discord generierten Einladung, deinen Server mit einer einzigartigen Vanity-URL beizutreten. Ein Beispiel: Anstatt dass Nutzer mit der URL `https://discord.gg/WxB3z5YJh9` beitreten,
-können sie dem (deutschen) ScootKit-Discord mit `https://dcserver.link/scootkit` beitreten - das ist wesentlich einfacher zu merken.
+Eine dcserver.link erlaubt es deinen Nutzern, anstatt einer von Discord generierten Einladung, deinen Server mit einer
+einzigartigen Vanity-URL beizutreten. Ein Beispiel: Anstatt dass Nutzer mit der URL `https://discord.gg/WxB3z5YJh9`
+beitreten,
+können sie dem (deutschen) ScootKit-Discord mit `https://dcserver.link/scootkit` beitreten - das ist wesentlich
+einfacher zu merken.
 
-Der (verifizierte) SCNX-Bot wird automatisch Einladungen für Nutzer erstellen, die mit deinem Link deinem Server beitreten wollen - so musst du dir keine Sorgen über abgelaufene Einladungen machen.
+Der (verifizierte) SCNX-Bot wird automatisch Einladungen für Nutzer erstellen, die mit deinem Link deinem Server
+beitreten wollen - so musst du dir keine Sorgen über abgelaufene Einladungen machen.
 
-Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#change-url), öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX und scrolle bis zum "dcserver.link-URL"-Abschnitt.
+Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#change-url), öffne
+die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX und scrolle bis zum "
+dcserver.link-URL"-Abschnitt.
 
 ## Einrichtung {#setup}
 
-Vor dem Einrichten einer dcserver.link-URL für deinen Server stelle bitte sicher, dass dein Server einen bezahlten Plan (keine Testversion) oder mindestens 50 Mitglieder (ohne Bots) hat.
+Vor dem Einrichten einer dcserver.link-URL für deinen Server stelle bitte sicher, dass dein Server einen bezahlten
+Plan (keine Testversion) oder mindestens 50 Mitglieder (ohne Bots) hat.
 
-Um zu starten, öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Loslegen".
+Um zu starten, öffne die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle
+zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Loslegen".
 
 ![](@site/docs/assets/scnx/guilds/dcserver-link/enable.png)
 
-Eine einzigartige URL für deinen Server wird auf Basis des Server-Namens und der Server-ID generiert - du kannst das später ändern.
+Eine einzigartige URL für deinen Server wird auf Basis des Server-Namens und der Server-ID generiert - du kannst das
+später ändern.
 
 ## URL ändern {#change-url}
-Um deine dcserver.link-URL zu ändern, öffne bitte die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Link ändern". Gib nun deine neue URL ein. Wenn du fertig bist, klicke auf "Speichern", um deine Änderungen zu speichern.
+
+Um deine dcserver.link-URL zu ändern, öffne bitte die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings)
+deines Servers auf SCNX. Scrolle zu dem "dcserver.link-URL"-Abschnitt und klicke auf "Link ändern". Gib nun deine neue
+URL ein. Wenn du fertig bist, klicke auf "Speichern", um deine Änderungen zu speichern.
 
 Die neue URL kann nur kleine Buchstaben, Zahlen und dieses Sonderzeichen enthalten: `-`.
 
-Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn du eine URL verwenden möchtest, die bereits genutzt wird, wird dir eine Fehler-Nachricht angezeigt. Bitte gehe zu [Konflikte](#disputes), um zu sehen, was du in einem solchen Fall tun kannst.
+Bitte beachte, dass die **URL einzigartig** im ganzen Netzwerk sein muss. Wenn du eine URL verwenden möchtest, die
+bereits genutzt wird, wird dir eine Fehler-Nachricht angezeigt. Bitte gehe zu [Konflikte](#disputes), um zu sehen, was
+du in einem solchen Fall tun kannst.
+
+## Wie werden Einladungen generiert? {#invites}
+
+Wenn aktiviert, wird der SCNX Bot automatisch eine Einladung generieren, wenn ein Nutzer deine dcserver.link URL
+aufruft. Diese Einladung wird nach drei Stunden automatisch ablaufen und wird von SCNX so lange gespeichert und für
+weitere Anfragen verwendet. Nachdem die drei Stunden abgelaufen sind, wird SCNX erneut eine neue Einladung erstellen,
+wenn ein Nutzer auf deine URL zugreifen will.
+
+Wenn das Erstellen einer Einladung fehlschlägt (das kann passieren, wenn du z.B. Einladungen auf deinem Server temporär
+deaktivierst), wird ein Fehler angezeigt. Bitte beachte, dass SCNX in bestimmten Situation auch mehrere Einladungen pro
+Stunde erstellen kann, um Endnutzern eine angenehme Erfahrung zu gewährleisten.
+
+Bitte stelle sicher, dass du den (verifizierten) SCNX Bot von Sicherheitssystemen, wie WickBot, ausschließest, um zu
+vermeiden, dass diese Bots mit der Erstellung von dcserver.link interferieren.
+
+Aktuell wählt der SCNX Bot den Kanal zur Erstellung der Einladung zufällig. Wir arbeiten daran, diesen Prozess anpassbar
+zu
+machen.
 
 ## URL-Konflikte {#disputes}
 
-Generell gilt: dcserver.link-URLs werden von dem genutzt, der sie zuerst beansprucht. Normalerweise weichen wir davon auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
+Generell gilt: dcserver.link-URLs werden von dem genutzt, der sie zuerst beansprucht. Normalerweise weichen wir davon
+auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 
 <details>
     <summary>Missbrauch von dcserver.link-URLs</summary>
