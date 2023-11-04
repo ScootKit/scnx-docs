@@ -1,4 +1,4 @@
-# Custom-Bot einrichten
+# Eigenen Bot einrichten
 
 Erstellt deinen ganz eigenen Discord-Bot auf SCNX. Die Einrichtung dauert nur wenige Minuten.
 
@@ -9,7 +9,7 @@ PRO: "24/7 gehosted, solange dein Abonnement aktiv ist."}} />
 
 ## 0. Vorbereitungs-Checkliste 🛫 {#step-0}
 
-Bevor du deinen eigenen Custom-Bot auf SCNX erstellen kannst, stelle sicher, dass
+Bevor du deinen Eigenen Bot auf SCNX erstellen kannst, stelle sicher, dass
 
 * du [deinen Server zu SCNX hinzugefügt](./setup) hast.
 * du der Besitzer des Servers bist, auf dem du diese Funktion aktivieren
@@ -21,8 +21,8 @@ Bevor du deinen eigenen Custom-Bot auf SCNX erstellen kannst, stelle sicher, das
 ## 1. Erstelle deine Discord-Applikation & deinen -Bot 🤖 {#step-1}
 
 :::caution
-Verwende **keine** vorhandene Applikation. Du brauchst eine neue für deinen Custom-Bot. SCNX unterstützt das gleichzeitige
-Verwenden von Modmail, Custom-Bot und einem weiteren Drittanbieter-Bot (wie txadmin) mit demselben Token / Applikation nicht - bitte
+Verwende **keine** vorhandene Applikation. Du brauchst eine neue für deinen Eigenen Bot. SCNX unterstützt das gleichzeitige
+Verwenden von Modmail, Eigener Bot und einem weiteren Drittanbieter-Bot (wie txadmin) mit demselben Token / Applikation nicht - bitte
 erstelle eine neue für jeden Bot.
 :::
 
@@ -42,7 +42,7 @@ weil du das auch [direkt in SCNX tun kannst](./scnx/guilds/bots#change-profile).
 Als nächstes musst du alle sogenannten "Intents" deines Bots aktivieren. Diese erlauben deinem Bot, auf bestimmte
 Daten auf
 deinem Server zuzugreifen. Dies ist für bestimmte Funktionen notwendig. Zusätzlich empfehlen wir das Deaktivieren der "Public Bot"-Einstellung,
-da dein Custom-Bot nur auf deinem Server funktionieren wird. Stelle sicher, dass du nicht "Requires OAuth2 Code Grant"
+da dein Eigener Bot nur auf deinem Server funktionieren wird. Stelle sicher, dass du nicht "Requires OAuth2 Code Grant"
 aktivierst.
 
 ![](@site/docs/assets/setup/custom-bot-2.png)
@@ -69,8 +69,8 @@ Wähle dann "Discord-Bot" in der Sidebar aus.
 ![](@site/docs/assets/setup/custom-bot-4.png)
 
 Hier findest du ein Video, was dir zeigt, wie du deinen Discord-Bot erstellst. Wenn du dieser Anleitung gefolgt bist kannst du
-das Video sicher mit dem Button "Ich habe einen Bot erstellt" überspringen. Next, you'll be asked to enter the token you obtained
-in [step 1](#step-1). Mach das und klicke auf "Überprüfe meinen Token". SCNX prüft nun deinen Token. Sobald SCNX fertig ist,
+das Video sicher mit dem Button "Ich habe einen Bot erstellt" überspringen. Als nächstes wirst du nach deinem Token gefragt, den
+du in [Schritt 1](#step-1) erhalten hast, anschließend klicke auf "Überprüfe meinen Token". SCNX prüft nun deinen Token. Sobald SCNX fertig ist,
 lade bitte deinen Bot mit dem Button "Bot einladen" ein - wenn du diesen Schritt nicht durchgeführt hast, nicht
 schlimm; du kannst den [Bot auch später einladen](./scnx/guilds/bots#invite-bot). Schließe den Tab noch nicht - du musst noch
 auf "Bot erstellen" klicken, um den Prozess abzuschließen.
@@ -86,13 +86,13 @@ Berechtigungen einzelner Funktionen anzuzeigen und Fehler, die mit Berechtigunge
 
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
-Als letzten Schritt musst du bestätigen, dass du deinen Bot im SCNX-Dashboard erstellen willst - klicke dazu einfach auf "
-Bot erstellen".
+Als letzten Schritt musst du bestätigen, dass du deinen Bot im SCNX-Dashboard erstellen willst - klicke dazu einfach auf
+"Bot erstellen".
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
 :::tip Es läuft nicht alles wie geplant?
-Wir haben einen [Leitfaden zur Fehlerbehebung für Custom-Bots](./custom-bot/troubleshooting) für dich. Wenn das nicht geholfen hat,
+Wir haben einen [Leitfaden zur Fehlerbehebung für Eigene Bots](./custom-bot/troubleshooting) für dich. Wenn das nicht geholfen hat,
 wir sind immer da, um zu helfen, besuche
 einfach [scnx.app/de/help](https://scnx.app/de/help).
 :::
@@ -105,8 +105,8 @@ bist jetzt bereit, das Universum eines sehr konfigurierbaren Discord-Bots für d
 
 Hier sind einige Sachen, die du jetzt tun kannst:
 
-* aktiviere einige der vielen Custom-Bot-Module.
-* use Bot-Log-In to create messages with Self-Roles and more.
+* aktiviere einige der vielen Eigener-Bot-Module.
+* nutze den Bot-Login, um Nachrichten mit Self-Roles und mehr zu erstellen.
 * erstelle Custom-Commands, um lustige Dinge zu tun.
 * verändere das Verhalten deines Bots.
-* und vieles mehr, öffne die [Custom-Bot-Dokumentation](./custom-bot/intro), um alle Möglichkeiten zu sehen.
+* und vieles mehr, öffne die [Eigener-Bot-Dokumentation](./custom-bot/intro), um alle Möglichkeiten zu sehen.

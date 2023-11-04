@@ -86,8 +86,8 @@ which feature needs what permissions and handle permission-related error correct
 
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
-Last, but not least, you'll need to confirm that you want to create your bot in the SCNX Dashboard - simply click on "
-Create bot".
+Last, but not least, you'll need to confirm that you want to create your bot in the SCNX Dashboard - simply click on
+"Create bot".
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
