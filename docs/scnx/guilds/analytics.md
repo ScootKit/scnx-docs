@@ -65,16 +65,10 @@ days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use 
 <details>
     <summary>Messages are not showing up in the SCNX Analytics dashboard</summary>
     <ul>
-        <li>Please make sure that the (verified) SCNX Bot has permissions to view the channel the message has been sent
-            into.
-        </li>
-        <li>Please note that the dashboard is caching a result for a few minutes. Please review the time at which your
-            result was generated in the dashboard (displayed at the top of the page, should look like "This summary got
-            generated at 11:30:28 AM").
-        </li>
+        <li>Please make sure that the (verified) SCNX Bot has permissions to view the channel the message has been sent into.</li>
+        <li>Please note that the dashboard is caching a result for a few minutes. Please review the time at which your result was generated in the dashboard (displayed at the top of the page, should look like "This summary got generated at 11:30:28 AM").</li>
         <li>Try refreshing the analytics dashboard in a few minutes.</li>
-        <li>Users that have <a href="#user-opt-out">privacy mode</a> enabled will not be displayed in the dashboard.
-        </li>
+        <li>Users that have <a href="#user-opt-out">privacy mode</a> enabled will not be displayed in the dashboard.</li>
     </ul>
 </details>
 <details>
@@ -82,29 +76,21 @@ days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use 
     <ul>
         <li>Make sure the user has sent a message into a channel that the (verified) SCNX Bot can view.</li>
         <li>Try refreshing the analytics dashboard in a few minutes.</li>
-        <li>Users that have <a href="#user-opt-out">privacy mode</a> enabled will not be displayed in the dashboard.
-        </li>
+        <li>Users that have <a href="#user-opt-out">privacy mode</a> enabled will not be displayed in the dashboard.</li>
     </ul>
 </details>
 <details>
-    <summary>I see a "There aren't a lot of messages in the selected time-period, so your charts may look a bit weird
-        ^^" warning in my dashboard
-    </summary>
+    <summary>I see a "There aren't a lot of messages in the selected time-period, so your charts may look a bit weird ^^" warning in my dashboard</summary>
     <ul>
         <li>Make sure you had analytics enabled for more than 48 hours.</li>
         <li>Refresh your dashboard.</li>
         <li>Make sure you have selected a sufficient timeframe (like "Last 30 days" instead of "Last 24 hours").</li>
         <li>Make sure more than 100 messages have been sent in the selected timeframe.</li>
-        <li>Please make sure that the (verified) SCNX Bot has permissions to view the channel that messages have been
-            sent
-            into.
-        </li>
+        <li>Please make sure that the (verified) SCNX Bot has permissions to view the channel that messages have been sent into.</li>
     </ul>
 </details>
 <details>
-    <summary>Instead of seeing my memberflow, the dashboard shows me this warning: "To see data about your memberflow,
-        you need to have had analytics enabled for at least 48 hours."
-    </summary>
+    <summary>Instead of seeing my memberflow, the dashboard shows me this warning: "To see data about your memberflow, you need to have had analytics enabled for at least 48 hours."</summary>
     <ul>
         <li>Make sure you had analytics enabled for more than 48 hours.</li>
         <li>Refresh your dashboard.</li>

@@ -50,7 +50,9 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
         <td>Application-Categories</td>
         <td>2</td>
         <td>7</td>
-        <td>25</td></tr><tr>
+        <td>25</td>
+    </tr>
+  <tr>
 <td>RSS-Notifications</td>
         <td>1</td>
         <td>4</td>
@@ -71,11 +73,13 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
         <td>4</td>
         <td>10</td>
     </tr>
-<tr><td>Reddit-Notifications</td>
+<tr>
+<td>Reddit-Notifications</td>
         <td>1</td>
         <td>4</td>
         <td>10</td>
-    </tr><br/>
+    </tr>
+<br/>
 Please note that certain features or fields allowing greater customizations might be locked behind the PRO-Plan in certain modules.
 You can still use the module without a PRO-Plan, but you might be unable to edit a certain field.
 </table>
@@ -186,7 +190,8 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 <ul>
 <li>Please make sure you haven't canceled your subscription.</li>
 <li>Make sure your subscription does not start in the future (this happens when you switch from One-Time-Upgrades to a subscription) - in such case, our staff needs to perform the upgrade manually.</li>
-<li><a href="https://scnx.app/help">Contact our staff</a>, so they can look into this issue.</li></ul>
+<li><a href="https://scnx.app/help">Contact our staff</a>, so they can look into this issue.</li>
+</ul>
 </details>
 <details>
 <summary>Is there a free trial available?</summary>
@@ -243,7 +248,9 @@ If your plan or subscription has more than two months left, we might be able to 
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
 <ul>
-<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan time is more than a month</li></ul>
+<li>Your plan is being paid by an active subscription</li>
+<li>Your remaining Plan time is more than a month</li>
+</ul>
 <b>You can only request a Plan transfer once every 6 months</b>. <br/>
 To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
 If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible.

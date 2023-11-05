@@ -194,14 +194,15 @@ an.
 
 <details>
 <summary>Ich habe eine Frage über Zahlungen per Dauerüberweisung</summary>
-    Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem Thema</a>.
+Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem Thema</a>.
 </details>
 <details>
 <summary>Ich kann mein Abo nicht zum PRO-Server-Plan upgraden, mir wird angezeigt, dass mein Abo nicht aktiv wäre</summary>
 <ul>
 <li>Bitte stelle sicher, dass du dein Abo nicht gekündigt hast</li>
 <li>Bitte stelle sicher, dass dein Abo nicht in der Zukunft startet (das passiert, wenn du von einem einmaligen Upgrade zu einem Abo wechselst) - in diesem Fall muss unser Team das Upgrade manuell durchführen.</li>
-<li><a href="https://scnx.app/de/help">Kontaktiere unser Team</a>, damit wir uns das anschauen können.</li></ul>
+<li><a href="https://scnx.app/de/help">Kontaktiere unser Team</a>, damit wir uns das anschauen können.</li>
+</ul>
 </details>
 <details>
 <summary>Ist eine kostenfreie Testphase verfügbar?</summary>
@@ -251,13 +252,16 @@ Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgra
 
 <details>
 <summary>Ich habe bereits ein Abo oder einen Plan und möchte zu einem lebenslänglichen Plan wechseln. Kann ich restliche Laufzeit anrechnen lassen - geht das?</summary>
-Wenn dein Plan oder Abo mehr als zwei Monate Laufzeit übrig hat, können wir das entweder an deinen Lebenslänglichen-Plan-Kauf anrechnen oder dir den anteilsmässigen Preis zurückerstatten. Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.</details>
+Wenn dein Plan oder Abo mehr als zwei Monate Laufzeit übrig hat, können wir das entweder an deinen Lebenslänglichen-Plan-Kauf anrechnen oder dir den anteilsmässigen Preis zurückerstatten. Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.
+</details>
 <details>
 <summary>Kann ich die Laufzeit & den Plan meines Servers auf einen anderen Server übertragen?</summary>
 Unser Team kann die Laufzeit und damit verbunde Daten (wie den Plan und eventuelle Abos) auf einen anderen Server übertragen, wenn <b>eine</b> der folgenden Bedingungen erfüllt wird:
 <ul>
-<li>Dein Plan wird mit einem aktiven Abo bezahlt</li><li>Die restliche Laufzeit beträgt mehr als zwei Monate</li></ul>
+<li>Dein Plan wird mit einem aktiven Abo bezahlt</li><li>Die restliche Laufzeit beträgt mehr als zwei Monate</li>
+</ul>
 <b>Du kannst eine Übertragung maximal alle 6 Monate beantragen</b>. <br/>
+
 Um eine solche Übertragung zu beantragen, <a href="https://scnx.app/de/help">kontaktiere unser Team</a>. Bitte beachte, dass wir deine Anfrage ablehnen können, wenn wir glauben, dass du diese Regelung missbrauchst. Es macht übrigens auch Sinn, unser Team zu kontaktieren, solltest du diese Bedingungen nicht erfüllen, denn unser Team kann eine einmalige Ausnahme auf einer Fall-zu-Fall-Basis vornehmen.
 
 Wenn du planst, eine <a href="./faq#transfer">Übertragung aller Daten deines Servers</a> zu beantragen (das enthält alle
