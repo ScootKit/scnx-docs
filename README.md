@@ -21,6 +21,7 @@ Execute all scripts inside the `bin` directory.
 * Run `node generate-progress.js` to view module translation progress. Include an argument (SCNX Org ID) to hide modules
   that were not created by your organization. Items will be sorted based on their usage count.
 * Run `node generate-docs-file.js <moduleName>` to generate a template for a documentation file of a custom bot module.
+* Run `node generate-missing-files.js` to generate WIP files for modules that are missing in the documentation.
 
 ## Development
 
