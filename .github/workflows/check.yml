@@ -1,0 +1,17 @@
+name: Check for markdown issues
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  sync:
+    name: 'Check for MDX Markdown issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@master
+      - name: Install dependencies
+        run: npm i docusaurus-mdx-checker
+      - name: Run next lint
+        run: npx docusaurus-mdx-checker
