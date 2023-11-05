@@ -12,6 +12,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@master
       - name: Install dependencies
-        run: npm i docusaurus-mdx-checker
+        run: yarn add docusaurus-mdx-checker
       - name: Run next lint
         run: npx docusaurus-mdx-checker
