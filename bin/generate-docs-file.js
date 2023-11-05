@@ -29,7 +29,7 @@ ${moduleData.commandsCount ? `
 
 | Command                  | Description                |                                                                                                                                                               |
 |--------------------------|----------------------------|
-| *Command-Name here**      | *Command description here* |
+| *Command-Name here*      | *Command description here* |
 ` : ''}
 ${moduleData.configFileCount ? `
 ## Configuration {#configuration}
@@ -57,8 +57,8 @@ You can layout this section as you want - feel free to "peak" in other documenta
 ${moduleData.hasDB ? `
 ## Stored data {#data-usage}
 As part of our transparency commitment, please explain what data is stored, when it is stored and how users can delete it. Need inspiration?
-Look at other docs-files.` : ''}
-`;
+Look at other docs-files.
+` : ''}`;
 
 const fileContent = fs.existsSync(`./../docs/custom-bot/modules/${moduleData.tags[0]}/${moduleData.name}.md`) ? fs.readFileSync(`./../docs/custom-bot/modules/${moduleData.tags[0]}/${moduleData.name}.md`).toString() : 'Coming soon';
 if (!fileContent.includes('Coming soon')) throw new Error('File already exists');
