@@ -13,7 +13,7 @@ Before you can create your Custom-Bot on SCNX, please make sure that
 
 * you have [added your Server to SCNX](./setup).
 * you are the owner of the server you want to enable this feature
-  on ([why?](./scnx/guilds/trusted-admins#throubleshooting)) - if you are not the owner, please ask them to enable this
+  on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
   feature for you and grant you access as a [Trusted Admin](./scnx/guilds/trusted-admins).
 * you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.

@@ -223,7 +223,7 @@ You can change the Profile-Picture and username of your bot without ever leaving
 <details>
     <summary>An issue occurred when I tried changing my bot's username</summary>
     <ul>
-        <li>Please make sure your bot is online and running without issues. Refer to the <a href="#throubleshooting">troubleshooting guides</a> if this is not the case.</li>
+        <li>Please make sure your bot is online and running without issues. Refer to the <a href="#troubleshooting">troubleshooting guides</a> if this is not the case.</li>
         <li>Some usernames are reserved or over-used and can not be used for your bot. Try another, less common username.</li>
         <li>Uploading your image to SCNX uses your account's storage spaces. Please open your <a href="https://scnx.app/user/files">Files-Dashboard</a> and check if there's enough space left for the new Profile-Picture.</li>
         <li>You (or your bot) might be rate-limited. Please try again in 1-4 hours.</li>

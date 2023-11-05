@@ -73,7 +73,7 @@ Trusted Admins **können niemals**:
 
 Trusted-Admins können nicht mehr auf deinen Server zugreifen, wenn sie den Server verlassen (oder entfernt werden).
 
-## Fehlerbehebung {#throubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
 <details>
 <summary>Wenn ich meine Nutzer-ID eingebe, zeigt SCNX mir einen "Fehler beim Abrufen des Nutzers" an</summary>

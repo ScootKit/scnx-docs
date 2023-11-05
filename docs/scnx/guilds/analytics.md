@@ -60,7 +60,7 @@ days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use 
 ![](@site/docs/assets/scnx/guilds/analytics/commands.png)
 
 
-## Troubleshooting {#throubleshooting}
+## Troubleshooting {#troubleshooting}
 
 <details>
     <summary>Messages are not showing up in the SCNX Analytics dashboard</summary>

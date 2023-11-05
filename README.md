@@ -16,8 +16,8 @@ what.
 
 Execute all scripts inside the `bin` directory.
 
-* Do avoid having to re-fetch data on every render, you can execute `node download-api-repsonses.js`. This will create
-  a `api-repsones.json` file that acts as a cache for SCN API Resources. This is required for all other scripts.
+* Do avoid having to re-fetch data on every render, you can execute `node download-api-responses.js`. This will create
+  a `api-responses.json` file that acts as a cache for SCN API Resources. This is required for all other scripts.
 * Run `node generate-progress.js` to view module translation progress. Include an argument (SCNX Org ID) to hide modules
   that were not created by your organization. Items will be sorted based on their usage count.
 * Run `node generate-docs-file.js <moduleName>` to generate a template for a documentation file of a custom bot module.

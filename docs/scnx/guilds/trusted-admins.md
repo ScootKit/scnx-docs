@@ -77,7 +77,7 @@ Trusted Admins **never can**:
 
 Trusted-Admins can no longer access your server when they leave it (or get removed).
 
-## Troubleshooting {#throubleshooting}
+## Troubleshooting {#troubleshooting}
 
 <details>
 <summary>When entering my User-ID, SCNX shows me a "Could not fetch user error"</summary>

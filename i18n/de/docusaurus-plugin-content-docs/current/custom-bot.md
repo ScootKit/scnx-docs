@@ -13,7 +13,7 @@ Bevor du deinen Eigenen Bot auf SCNX erstellen kannst, stelle sicher, dass
 
 * du [deinen Server zu SCNX hinzugefügt](./setup) hast.
 * du der Besitzer des Servers bist, auf dem du diese Funktion aktivieren
-  willst ([warum?](./scnx/guilds/trusted-admins#throubleshooting)) - wenn du nicht der Besitzer bist, bitte diesen, die
+  willst ([warum?](./scnx/guilds/trusted-admins#troubleshooting)) - wenn du nicht der Besitzer bist, bitte diesen, die
   Funktion für dich zu aktivieren und dich als [Trusted Admin](./scnx/guilds/trusted-admins) hinzuzufügen.
 * du einige Minuten Zeit hast (nach unseren Schätzungen dauert die Einrichtung am Computer etwa zwei Minuten, am Handy könnte
   es etwas länger dauern), um dieser Anleitung zur folgen - stoppe nicht mittendrin; dein Fortschritt wird nicht gespeichert.
