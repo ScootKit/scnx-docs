@@ -38,12 +38,22 @@ Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configurati
 | Excluded channels | These are channels in which users cannot star a message. Their reaction won't be removed, instead your bot silently ignores it. |
 | Excluded roles | These are roles whose members cannot star a message. Their reaction won't be removed, instead your bot silently ignores it. |
 | Minimum stars | This is the minimum amount of stars a message needs to be sent to the starboard channel. Burst reactions count as a normal reaction. |
-| Stars per user per hour | This configures how many times a user can react on messages per hour. This uses a rolling window, so this value is set to 10 and a user reacts 5 times at 12:00 and 5 times at 12:59, they can react 5 times again at 13:00. |
+| Stars per user per hour | This configures how many times a user can react on messages per hour. This uses a rolling window, so this value is set to 10 and a user reacts 5 times at 12:00 and 5 times at 12:59, they can react 5 times again at 13:00. Users will receive a DM once they hit this limit. |
 | Self-Star | This configures whether users can star their own messages. If a user reacts on a message they sent themselves, their reaction removed to prevent confusion. |
 
 ## Troubleshooting {#troubleshooting}
-Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to avoid / fix them.
-You can layout this section as you want - feel free to "peak" in other documentation files for inspiration.
+
+<details>
+  <summary>Nothing happens when reacting</summary>
+  <ul>
+    <li>Make sure you selected a valid starboard channel and the bot has at least the permissions <code>View Channel</code>, <code>Send Messages</code>,
+      <code>Read Message History</code> and <code>Embed Links</code> in it.</li>
+    <li>Make sure the starboard emoji is entered correctly and valid.</li>
+    <li>Make sure users are actually reacting with the starboard emoji.</li>
+    <li>Make sure your configured starboard message is valid - check the error log in your dashboard to find errors.</li>
+    <li>Make sure the users try to react haven't reached their star limit within the last hour. Consider increasing the limit or waiting until it ran out.</li>
+  </ul>
+</details>
 
 ## Stored data {#data-usage}
 
