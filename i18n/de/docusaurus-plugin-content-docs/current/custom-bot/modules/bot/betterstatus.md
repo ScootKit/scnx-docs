@@ -39,7 +39,7 @@ Um einen Status einzurichten, der automatisch gesetzt wird, wenn ein neuer Nutze
 ## Verwendung {#usage}
 
 * Nach [der Einrichtung](#setup) wird das Intervall den Status automatisch basierend auf deiner
-  Statusintervall-[Konfiguration] ändern. Es ist keine zusätzliche Eingabe erforderlich und dies geschieht automatisch.
+  Statusintervall-[Konfiguration](#configuration) ändern. Es ist keine zusätzliche Eingabe erforderlich und dies geschieht automatisch.
 * Nach [der Einrichtung](#setup) wird der Beitrittsstatus jedes Mal automatisch gesetzt, wenn ein neuer Nutzer deinem Server
   beitritt. Es ist keine zusätzliche Eingabe erforderlich und dies geschieht automatisch. Bitte beachte, dass dieser Status
   nicht automatisch entfernt wird.
