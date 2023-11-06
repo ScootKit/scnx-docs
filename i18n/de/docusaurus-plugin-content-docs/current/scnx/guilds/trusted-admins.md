@@ -77,12 +77,14 @@ Trusted-Admins können nicht mehr auf deinen Server zugreifen, wenn sie den Serv
 
 <details>
 <summary>Wenn ich meine Nutzer-ID eingebe, zeigt SCNX mir einen "Fehler beim Abrufen des Nutzers" an</summary>
+
 Die Discord Nutzer-ID des Nutzers, den du probierst hinzuzufügen, ist wahrscheinlich ungültig. Nutzer-IDs bestehen nur aus Nummern und sind nicht das gleiche wie Tags, oder Nutzernamen. Um eine Discord Nutzer-ID zu erhalten, befolge diesen
 <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-"> offiziellen Discord-Support-Artikel, um eine ID zu erhalten</a>.
 </details>
 
 <details>
 <summary>Wenn ich probiere einen Trusted Admin hinzuzufügen, steht da "Dieser Nutzer hat sich noch nie bei SCNX angemeldet…"</summary>
+
 Das bedeutet das der Nutzer sich noch nie bei SCNX angemeldet hat.
 <ul>
     <li>Sende ihm
@@ -95,11 +97,13 @@ Letztendlich kannst du keinen anderen Benutzer dazu zwingen, sich bei SCNX anzum
 
 <details>
 <summary>Meinem Trusted Admin wird "Keine Rechte auf diesem Server" im Dashboard angezeigt</summary>
+
 Bitte stelle sicher, das du dem Nutzer bzw. dem Trusted Admin die korrekten <a href="#permissions">Rechte</a> vergeben hast. Du kannst die Berechtigungen deines Trusted Admins einfach bearbeiten indem du in die <a href="#manage">Sektion über die Verwaltung von Trusted-Admins</a> gehst.
 </details>
 
 <details>
 <summary>Mein Trusted-Admin kann keinen Eigenen Bot, Modmail-Bot, … einrichten.</summary>
+
 Trusted Admins können keine sensiblen Aktionen, wie z. B. die Aktivierung und Deaktivierung von Produkten ausführen. Bitte lies den Abschnitt <a href="#permissions">Berechtigungen</a>, um mehr über diese Einschränkungen zu erfahren. Der Trusted Admin kann die Produkte bearbeiten, nachdem der Server-Besitzer sie freigegeben/eingestellt hat.
 </details>
 

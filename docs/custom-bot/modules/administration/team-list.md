@@ -59,6 +59,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=team-list%7C
 
 <details>
    <summary>Members / Content is being truncated (replaced by "…")</summary>
+
    This is a limitation from Discord regarding embed length limits. You can try the following:
    <ul>
       <li>Try <a href="#configuration">configuring</a> a role with fewer members.</li>

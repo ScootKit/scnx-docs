@@ -194,6 +194,7 @@ an.
 
 <details>
 <summary>Ich habe eine Frage über Zahlungen per Dauerüberweisung</summary>
+
 Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem Thema</a>.
 </details>
 <details>
@@ -206,6 +207,7 @@ Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring
 </details>
 <details>
 <summary>Ist eine kostenfreie Testphase verfügbar?</summary>
+
 Ja, du kannst eine kostenfreie Testphase im Dashboard starten, wenn dein Server folgende Bedingungen erfüllst:
 <ul>
     <li>Dein Server hat noch in keiner kostenfreien Testphase zuvor teilgenommen.</li>
@@ -217,6 +219,7 @@ Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne di
 </details>
 <details>
 <summary>Kann ich von einem einmaligen Upgrade zu einem Abo wechseln?</summary>
+
 Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgradeModal=1">Zahlungsseite</a> deines Servers und öffne den Upgrade-Dialog durch Klicken auf "Verlängern". Gib dort einfach als Zahlungsintervall das Intervall an, das du für dein Abo verwenden willst - deine übrige Laufzeit wird automatisch an dein Abo angerechnet.
 </details>
 <details>
@@ -252,10 +255,12 @@ Ja, öffne einfach die <a href="https://scnx.app/de/glink?page=pricing?showUpgra
 
 <details>
 <summary>Ich habe bereits ein Abo oder einen Plan und möchte zu einem lebenslänglichen Plan wechseln. Kann ich restliche Laufzeit anrechnen lassen - geht das?</summary>
+
 Wenn dein Plan oder Abo mehr als zwei Monate Laufzeit übrig hat, können wir das entweder an deinen Lebenslänglichen-Plan-Kauf anrechnen oder dir den anteilsmässigen Preis zurückerstatten. Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.
 </details>
 <details>
 <summary>Kann ich die Laufzeit & den Plan meines Servers auf einen anderen Server übertragen?</summary>
+
 Unser Team kann die Laufzeit und damit verbunde Daten (wie den Plan und eventuelle Abos) auf einen anderen Server übertragen, wenn <b>eine</b> der folgenden Bedingungen erfüllt wird:
 <ul>
 <li>Dein Plan wird mit einem aktiven Abo bezahlt</li><li>Die restliche Laufzeit beträgt mehr als zwei Monate</li>

@@ -13,5 +13,5 @@ jobs:
         uses: actions/checkout@master
       - name: Install dependencies
         run: yarn add docusaurus-mdx-checker
-      - name: Run next lint
+      - name: Check MDX markdown
         run: npx docusaurus-mdx-checker

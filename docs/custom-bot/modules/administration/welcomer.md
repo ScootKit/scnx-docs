@@ -177,11 +177,13 @@ to our friendly staff at [scnx.app/help](https://scnx.app/help).
 
 <details>
    <summary>I am experiencing issues with a dynamically generated image.</summary>
+
    Please visit <a href="https://sc-net.work/imgen">sc-net.work/imgen</a>, as shown in the error image.
 </details>
 
 <details>
    <summary>No message is being sent when a user adds another boost to their existing server boost.</summary>
+
    This happens due to a <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API limitation</a>. We cannot change this behavior.
 </details>
 
