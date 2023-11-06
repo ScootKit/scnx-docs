@@ -55,6 +55,7 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 
 <details>
 	<summary>Mitglieder / Inhalt wird abgeschnitten (ersetzt mit "…")</summary>
+
 	Das ist eine Begrenzung von Discord für die maximale Länge von Embeds. Du kannst folgendes versuchen:
 	<ul>
 		<li>Versuche, eine Rolle mit weniger Mitgliedern <a href="#configuration">zu konfigurieren</a>.</li>

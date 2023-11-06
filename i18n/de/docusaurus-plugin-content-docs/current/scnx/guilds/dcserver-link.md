@@ -83,12 +83,14 @@ auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 
 <details>
     <summary>Missbrauch von dcserver.link-URLs</summary>
+
     Wenn du denkst, dass eine dcserver.link-URL zum Betrügen genutzt wird oder anderweitig Discords Community-Richtlinien bricht,
     melde es bitte unserem Team (<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a>) und wir werden nötige Aktionen veranlassen.
     Die URL kann danach nicht mehr genutzt werden.
 </details>
 <details>
     <summary>Kleiner Server vs. großer Server</summary>
+
     Dieses Szenario tritt ein, wenn ein großer Server (&gt;10.000 Mitglieder ohne Bots und aktiv) mit dem gleichem Namen eine
     dcserver.link-URL will, welche momentan von einem kleinem Server (&lt;1.000 Mitglieder) verwendet wird. In solch einem Fall wird unser Team
     die Anfrage auf einer Fall-für-Fall-Basis prüfen und sich eventuell für eine Übertragung der dcserver.link-URL entscheiden. Um solch eine Anfrage zu stellen, 
@@ -97,6 +99,7 @@ auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 </details>
 <details>
     <summary>Markenrechtsverletzungen</summary>
+
     Wenn eine dcserver.link-URL dein Markenrecht verletzt, kontaktiere bitte unser rechtliches Team (<a
     href="mailto:legal@scootkit.net">legal@scootkit.net</a>) mit einer rechtlichen Anfrage zum Entfernen. Wenn die Anfrage angenommen
     (und der Inhalt entfernt) wurde,
@@ -104,6 +107,7 @@ auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 </details>
 <details>
     <summary>Inaktive / gelöschte Server auf SCNX</summary>
+
     Wenn ein Server von SCNX <a href="./faq#deletion">gelöscht wird</a>, wird die dcserver.link-URL permanent gelöscht. Das passiert nicht,
     wenn ein Server auf SCNX deaktiviert / geflagged ist - in diesen Fällen wird die URL einfach nur unnutzbar, bleibt aber
     trotzdem beansprucht. Abgelaufene Starter-Pläne haben keinen Einfluss auf die Nutzbarkeit von dcserver.link-URLs.

@@ -183,6 +183,7 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 
 <details>
 <summary>I have a question about using SEPA reoccurring payments / standing orders for my subscription</summary>
+
     Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
 </details>
 <details>
@@ -195,6 +196,7 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 </details>
 <details>
 <summary>Is there a free trial available?</summary>
+
 Yes, you can start a free trial in your dashboard if these requirements are meet:
 <ul>
     <li>Your server has not participated in a free trial before.</li>
@@ -206,6 +208,7 @@ To check if you are eligible, open the <a href="https://scnx.app/glink?page=pric
 </details>
 <details>
 <summary>Can I switch my One-Time-Upgrade to a subscription?</summary>
+
 Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">pricing page</a> of open the upgrade-modal by clicking "Extend". There, simply select the Payment-Terms / Interval of the subscription you want - any time left on your current plan will be credited towards your subscription.
 </details>
 <details>
@@ -241,11 +244,13 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 
 <details>
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
+
 If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.
 </details>
 
 <details>
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
+
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
 <ul>
 <li>Your plan is being paid by an active subscription</li>

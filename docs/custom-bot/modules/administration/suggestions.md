@@ -67,6 +67,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=suggestions%
 
 <details>
 <summary>A suggestion is not being created</summary>
+
 Please check the following:
 <ul>
     <li>Make sure the "Unanswered Suggestion-Message", "Denied Suggestion-Message" and "Approved Suggestion-Message" fields are correctly configured.</li>
@@ -80,6 +81,7 @@ Please check the following:
 
 <details>
     <summary>I can't respond to a suggestion as an admin</summary>
+
 Please check the following:
 <ul>
     <li>Make sure the "Denied Suggestion-Message" and "Approved Suggestion-Message" fields are correctly configured.</li>

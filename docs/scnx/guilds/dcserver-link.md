@@ -76,6 +76,7 @@ are, however, a few exemptions:
 
 <details>
     <summary>Abuse of dcserver.link URLs</summary>
+
     If you believe that a dcserver.link URL is being used to scam or otherwise break Discord Community Guidelines,
     please report it to our staff (<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a>) and we'll take appropriate
     action. The URL can then no longer be
@@ -83,6 +84,7 @@ are, however, a few exemptions:
 </details>
 <details>
     <summary>Small server VS. Big server</summary>
+
     This scenario happens when a big server (&gt;10.000 members without bots and active) with the same name want a
     dcserver.link URL that is currently being used by a small server (&lt;1.000 members). In such a case, our staff will
     examine a request on a case-by-case basis and might decide to transfer a dcserver.link URL. To start such a
@@ -91,6 +93,7 @@ are, however, a few exemptions:
 </details>
 <details>
     <summary>Trademark infringements</summary>
+
     If a dcserver.link URL infringes on your trademarks, please contact our legal team (<a
     href="mailto:legal@scootkit.net">legal@scootkit.net</a>) with a legal request for removal. After that request went
     through (and the content was removed),
@@ -98,6 +101,7 @@ are, however, a few exemptions:
 </details>
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
+
     When a server is <a href="./faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.

@@ -94,8 +94,8 @@ Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie di
 Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 :::
 
-| Zugriffsrecht | Erklärung |
-|-------------|------ -------------------------------------------------- -------------------------------------------------- -------------------------------------------------- -----------|
-| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an. |
-| Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
-| Wissen, auf welchen Servern du dich befindest | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
+| Zugriffsrecht                                                          | Erklärung                                                                                                                                                                                                              |
+|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an.                                               |
+| Zugriff auf E-Mail-Adresse                                             | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
+| Wissen, auf welchen Servern du dich befindest                          | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest.                                                            |

@@ -54,11 +54,11 @@ sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=
 Mit dieser Konfigurationsdatei kannst du einstellen, von welchen Kanälen Nachrichten automatisch gelöscht werden sollen, sobald alle Benutzer den Sprachkanal verlassen haben.
 Du kannst diese Datei in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) öffnen.
 
-| Konfigurationsoption | Beschreibung |
-|--------|------------ -------------------------------------------------- -------------------------------------------------- -----------------------------------------------|
-| Kanal | Dies ist der Kanal, auf den diese Konfigurationswerte angewendet werden sollen. Die automatische Löschung wird in diesem Kanal durchgeführt, sobald alle Mitglieder den Kanal verlassen haben. |
-| Timeout | Dies ist die Verzögerung (in Minuten) zwischen dem letzten Verlassen des Kanals durch den Benutzer und der Durchführung des Löschvorgangs. Setzen Sie diesen Wert auf Null, um sofort bei Verlassen die Löschung durchzuführen. |
-| Kanal beim Start leeren | Wenn diese Option aktiviert ist, löscht dein Bot beim Neustart deines Bots jede Nachricht, wenn kein Mitglied im Sprachkanal ist. Wenn deaktiviert, werden keine vorhandenen Nachrichten gelöscht. |
+| Konfigurationsoption    | Beschreibung                                                                                                                                                                                                                    |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kanal                   | Dies ist der Kanal, auf den diese Konfigurationswerte angewendet werden sollen. Die automatische Löschung wird in diesem Kanal durchgeführt, sobald alle Mitglieder den Kanal verlassen haben.                                  |
+| Timeout                 | Dies ist die Verzögerung (in Minuten) zwischen dem letzten Verlassen des Kanals durch den Benutzer und der Durchführung des Löschvorgangs. Setzen Sie diesen Wert auf Null, um sofort bei Verlassen die Löschung durchzuführen. |
+| Kanal beim Start leeren | Wenn diese Option aktiviert ist, löscht dein Bot beim Neustart deines Bots jede Nachricht, wenn kein Mitglied im Sprachkanal ist. Wenn deaktiviert, werden keine vorhandenen Nachrichten gelöscht.                              |
 
 ## Fehlerbehebung {#troubleshooting}
 

@@ -43,6 +43,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=channel-stat
 
 <details>
 <summary>I tried editing the name of my channel, but the bot changes it back</summary>
+
     If you want to edit the name of the channel, you need to update the "Channel-Name"-field of the channel in your <a href="https://scnx.app/glink?page=bot/configuration?file=channel-stats%7Cchannel">module configuration</a>.
 </details>
 
