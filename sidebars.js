@@ -267,7 +267,7 @@ const sidebars = {
                 },
                 {
                     type: 'link',
-                    href: 'https://features.sc-network.net/board/custombot',
+                    href: 'https://feedback.scnx.xyz',
                     label: 'Suggest new features'
                 },
                 {
