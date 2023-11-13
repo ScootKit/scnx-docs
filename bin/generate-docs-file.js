@@ -29,14 +29,14 @@ ${moduleData.commandsCount ? `
 
 | Command                  | Description                |                                                                                                                                                               |
 |--------------------------|----------------------------|
-| *Command-Name here**      | *Command description here* |
+| *Command-Name here*      | *Command description here* |
 ` : ''}
 ${moduleData.configFileCount ? `
 ## Configuration {#configuration}
 ${moduleData.configFileCount === 1 ? `
 Explain what users can configure and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to the SCNX Dashboard to open this file.
 
-| Field        | Description                                                                                                                                                                                                 | 
+| Field        | Description                                                                                                                                                                                                 |
 |--------------|------------------------------------------------------------|
 | *Field-Name* | Describe what this field does - be as detailed as possible. |
 ` : [...Array(moduleData.configFileCount)].map((_, k) => {
@@ -45,22 +45,22 @@ Explain what users can configure and include a [GLink](https://scnx.app/user/too
 Explain what users can configure in this file and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to the SCNX Dashboard to open this file.
 Please make sure that you replace the heading id with the correct file-name.
 
-| Field        | Description                                                                                                                                                                                                 | 
+| Field        | Description                                                                                                                                                                                                 |
 |--------------|------------------------------------------------------------|
 | *Field-Name* | Describe what this field does - be as detailed as possible. |`;
 }).join('\n')}
 ` : ''}
 
-## Troubleshooting {#throubleshooting}
-Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to avoid / fix them. 
+## Troubleshooting {#troubleshooting}
+Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to avoid / fix them.
 You can layout this section as you want - feel free to "peak" in other documentation files for inspiration.
 ${moduleData.hasDB ? `
 ## Stored data {#data-usage}
-As part of our transparency commitment, please explain what data is stored, when it is stored and how users can delete it. Need inspiration? 
+As part of our transparency commitment, please explain what data is stored, when it is stored and how users can delete it. Need inspiration?
 Look at other docs-files.
-` : ''}
-`;
+` : ''}`;
 
 const fileContent = fs.existsSync(`./../docs/custom-bot/modules/${moduleData.tags[0]}/${moduleData.name}.md`) ? fs.readFileSync(`./../docs/custom-bot/modules/${moduleData.tags[0]}/${moduleData.name}.md`).toString() : 'Coming soon';
 if (!fileContent.includes('Coming soon')) throw new Error('File already exists');
 fs.writeFileSync(`./../docs/custom-bot/modules/${moduleData.tags[0]}/${moduleData.name}.md`, content);
+console.log('Docs template successfully created at ./../docs/custom-bot/modules/' + moduleData.tags[0] + '/' + moduleData.name + '.md')
