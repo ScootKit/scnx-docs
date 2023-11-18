@@ -20,7 +20,7 @@ Simple module to say "Hi" to new mebers, give them roles automatically and say "
 
 ### Set up Welcome Messages {#setup-welcome-messages}
 
-Welcome messages get sent every time a new member joins the server. You add a welcome-button to these messages which
+Welcome messages get sent every time a new member joins the server. You can add a welcome-button to these messages which
 allows your existing members to welcome the new user. Additionally, if [enabled](#configuration-config), the message
 will get deleted if the user leaves your server within seven days.
 
