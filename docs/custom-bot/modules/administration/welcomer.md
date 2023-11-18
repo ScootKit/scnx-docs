@@ -1,6 +1,6 @@
 # Welcome and Boosts
 
-Simple module to say "Hi" to new mebers, give them roles automatically and say "thanks" to users who boosted.
+Simple module to say "Hi" to new members, give them roles automatically and say "thanks" to users who boosted.
 
 <ModuleOverview moduleName="welcomer" />
 
