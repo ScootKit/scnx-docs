@@ -77,16 +77,18 @@ Trusted Admins **never can**:
 
 Trusted-Admins can no longer access your server when they leave it (or get removed).
 
-## Troubleshooting {#throubleshooting}
+## Troubleshooting {#troubleshooting}
 
 <details>
 <summary>When entering my User-ID, SCNX shows me a "Could not fetch user error"</summary>
+
 The Discord-ID of the user you are trying to add is invalid. User-IDs consist of only numbers and are not the same as tags, discriminators, or usernames. To obtain a Discord-ID, follow this
 <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Discord Guide</a>.
 </details>
 
 <details>
 <summary>When I try to add a Trusted-Admin, SCNX shows me a "This user never logged into SCNX…" error </summary>
+
 This means that this user never logged in into SCNX before.
 <ul>
     <li>Send them
@@ -99,11 +101,13 @@ Ultimately, you can not force another use to log into SCNX. There is no way to a
 
 <details>
 <summary>My Trusted Admin is shown a "No permissions on this server" error in the dashboard</summary>
+
 Please make sure you have assigned the right <a href="#permissions">permissions</a> to your Trusted-Admin. You can easily edit the permissions of the Trusted-Admin by following this <a href="#manage">section about managing Trusted-Admins</a>.
 </details>
 
 <details>
 <summary>My Trusted-Admin can not set up a Custom-Bot, Modmail-Bot, …</summary>
+
 Trusted Admins can not run sensitve actions like enabling or deleting products. Please review the <a href="#permissions">permissions section</a>  to learn more about these restrictions. They will be able to edit the products after the Server-Owner enables it.
 </details>
 

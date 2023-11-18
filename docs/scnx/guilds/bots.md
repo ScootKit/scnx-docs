@@ -135,11 +135,13 @@ the world. Here's how to switch a Bot-Host:
 
 <details>
   <summary>Which Bot-Host is the best? / Which Bot-Host should I choose?</summary>
+
   Ultimately, it doesn't matter (except for the Premium-Servers). Each Bot-Host is designed to host bots, just like yours. We have high-quality standards for each of the hosts and can guarantee the same experience on each of them. We might even move your bots around if you do not have a paid plan to distribute resources.
 </details>
 
 <details>
     <summary>I was asked to give up certain European Data Protection Rights when moving my bot outside the EU</summary>
+
     When you move your bot's data outside the European Union, the General Data Protection Regulation won't apply to your data anymore. This is only affecting your bot's data, like Leveling-Stats, configuration and the actual hosting of the bot. Please also keep in mind that Discord themselves
     are also storing most of their data outside the EU, and we only work with trusted hosting providers with high-security & privacy standards; the data protection laws of the country will apply. This sometimes means that we are unable to protect your data from being used / inspected by state agencies.
     As is legal requirement (at least for our EU customers ♥), you have to agree to such data transfer. You can always switch back the hosting location of your bot to Bot-Host inside the EU:
@@ -168,6 +170,7 @@ To change the language of your bot, please
 
 <details>
     <summary>The language of my server is not supported</summary>
+
     We're sorry to hear that your language is not supported by SCNX. However, we are quite a small team here at ScootKit with <i>very</i> limited resources and can currently not afford to add support for other languages except German and English.
     Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
     focus on our current Target-Groups.
@@ -223,7 +226,7 @@ You can change the Profile-Picture and username of your bot without ever leaving
 <details>
     <summary>An issue occurred when I tried changing my bot's username</summary>
     <ul>
-        <li>Please make sure your bot is online and running without issues. Refer to the <a href="#throubleshooting">troubleshooting guides</a> if this is not the case.</li>
+        <li>Please make sure your bot is online and running without issues. Refer to the <a href="#troubleshooting">troubleshooting guides</a> if this is not the case.</li>
         <li>Some usernames are reserved or over-used and can not be used for your bot. Try another, less common username.</li>
         <li>Uploading your image to SCNX uses your account's storage spaces. Please open your <a href="https://scnx.app/user/files">Files-Dashboard</a> and check if there's enough space left for the new Profile-Picture.</li>
         <li>You (or your bot) might be rate-limited. Please try again in 1-4 hours.</li>

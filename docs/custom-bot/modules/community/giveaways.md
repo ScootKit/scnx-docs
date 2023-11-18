@@ -105,12 +105,14 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=giveaways%7C
 
 <details>
   <summary>Additional entries are not working correctly (/ entries are calculated wrongly)</summary>
+
   First, Make sure that you have configured <a href="#configuration-config">additional entries</a> correctly.<br/>
   Every user starts with one entry by default. For every role configured in the <a href="#configuration-config">additional entries</a> field they will receive additional entries. The amount received depends on your configuration. It's currently not possible to grant less than one additional entry to users.  
 </details>
 
 <details>
   <summary>How does SCNX determine who wins? / Can I get a certificate of Authenticity? / Can giveaways be rigged?</summary>
+
   When a giveaway ends (or a reroll is triggered) your bot will first evaluate the requirements (and with that recalculate their entries), ensuring that every user still meets.
   Every eligible user will then be added into a digital equivalent of a box. Users with <a href="#configuration-config">multiple entries</a> will be added to this box multiple times, depending on the amount of their entries.
   Next, we will draw a user from the box. If this user already won in this drawing, we'll redraw until the amount of winners is correct.<br/><br/>

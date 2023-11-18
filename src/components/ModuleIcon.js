@@ -22,6 +22,7 @@ import {
     faDiceD20,
     faDiceFive,
     faDoorOpen,
+    faFaceSmile,
     faFileCirclePlus,
     faFolder,
     faGears,
@@ -41,10 +42,12 @@ import {
     faRss,
     faScissors,
     faSignInAlt,
+    faStar,
     faStream,
     faTableCells,
     faTags,
     faTerminal,
+    faThumbtack,
     faTicketSimple,
     faTools,
     faUserGear,
@@ -138,8 +141,12 @@ const icons = {
     'fa-solid fa-puzzle-piece': faPuzzlePiece,
     'fas fa-gun': faGun,
     'fas fa-ranking-stars': faRankingStar,
+    'fas fa-star': faStar,
+    'fas fa-smile': faFaceSmile,
+    'fas fa-thumbtack': faThumbtack,
     'fa-solid fa-file-circle-check': faFileCirclePlus
 };
+
 export default function ModuleIcon({icon, width = 23}) {
     if (icon === 'top-gg') return <svg viewBox="120 120 580 580" style={{padding: '11px'}}
                                        width={width - 4}>

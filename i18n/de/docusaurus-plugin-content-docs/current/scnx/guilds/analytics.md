@@ -64,15 +64,10 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
 <details>
     <summary>Nachrichten werden nicht im SCNX Analytics-Dashboard angezeigt</summary>
     <ul>
-                 <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal zu sehen, in den die Nachricht gesendet wurden.
-        </li>
-        <li>Bitte beachte, dass das Dashboard ein Ergebnis einige Minuten lang zwischenspeichert. Bitte überprüfe den Zeitpunkt, an dem
-                          das Ergebnis im Dashboard generiert wurde (dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde frisch für dich
-            um 11:30:28 Uhr generiert").
-        </li>
-          <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
-        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.
-        </li>
+        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal zu sehen, in den die Nachricht gesendet wurden.</li>
+        <li>Bitte beachte, dass das Dashboard ein Ergebnis einige Minuten lang zwischenspeichert. Bitte überprüfe den Zeitpunkt, an dem das Ergebnis im Dashboard generiert wurde (dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde frisch für dich um 11:30:28 Uhr generiert").</li>
+        <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
+        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.</li>
     </ul>
 </details>
 <details>
@@ -80,26 +75,21 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
     <ul>
                 <li>Stelle sicher, dass der Benutzer eine Nachricht in einen Kanal gesendet hat, auf den der (verifizierte) SCNX-Bot Zugriff hat.</li>
                 <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
-        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.
-        </li>
+        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.</li>
     </ul>
 </details>
 <details>
-         <summary>Ich sehe die Meldung „Es existieren nur wenige Nachrichten im gewählten Zeitraum, deswegen können einige Diagramme merkwürdig aussehen ^^"  im Dashboard
-    </summary>
+         <summary>Ich sehe die Meldung „Es existieren nur wenige Nachrichten im gewählten Zeitraum, deswegen können einige Diagramme merkwürdig aussehen ^^"  im Dashboard</summary>
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
         <li>Aktualisiere dein Dashboard.</li>
          <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage“ statt „Letzte 24 Stunden“).</li>
         <li>Stelle sicher, dass im ausgewählten Zeitraum mehr als 100 Nachrichten gesendet wurden.</li>
-        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot auf den Kanal zugreifen kann und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.
-        </li>
+        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot auf den Kanal zugreifen kann und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.</li>
     </ul>
 </details>
 <details>
-    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen,
-         musst du Statistiken seit mindestens 48 Stunden aktiviert haben.“
-    </summary>
+    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen, musst du Statistiken seit mindestens 48 Stunden aktiviert haben.“</summary>
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
         <li>Aktualisiere das Dashboard.</li>

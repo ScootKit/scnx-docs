@@ -65,6 +65,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
 
 <details>
   <summary>Messages sent by my staff members are not counted correctly</summary>
+
   Please make sure that
   <ul>
     <li>the bot has access to every channel that messages from staff members should be counted in and that the channel is not in the <a href="#configuration">blacklist</a>.</li>
@@ -74,6 +75,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
 
 <details>
   <summary>How can I change the time when users get evaluated?</summary>
+
   There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need 
 another evaluation time, you could disable the module, <a href="./../../additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
   evaluations to happen and enable the module then.
@@ -81,6 +83,7 @@ another evaluation time, you could disable the module, <a href="./../../addition
 
 <details>
   <summary>Evaluation isn't working correctly (e.g. evaluation messages aren't send)</summary>
+
   Please make sure that
    <ul>
     <li>the bot has the permissions to send message into the <a href="#configuration">configured channel</a>, if enabled.</li>
@@ -92,6 +95,7 @@ another evaluation time, you could disable the module, <a href="./../../addition
 
 <details>
   <summary>Can I use this module to evaluate the message activity of my members? / SCNX is adding a "Report Abuse" button below my DM messages</summary>
+
   Such usage would violate our <a href="https://sc-net.work/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
   to evaluate activity of your staff members and only with their consent.
   If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of 

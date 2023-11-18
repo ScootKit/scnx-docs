@@ -13,22 +13,22 @@ Final prices depend on your currency and payment interval and will be displayed 
 including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
 :::
 
-| Feature                                                                                   | Starter-Plan                                                                   | Active Guild Plan                                                                                                                                      | PRO-Plan                                                                                                                    |
-|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| Price                                                                                     | *Free for ever*                                                                | <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />, <PlanPrice plan="ACTIVE_GUILD" type="YEARLY" /> or <PlanPrice plan="ACTIVE_GUILD" type="LIFETIME" /> | <PlanPrice plan="PRO" type="MONTHLY" />, <PlanPrice plan="PRO" type="YEARLY" /> or <PlanPrice plan="PRO" type="LIFETIME" /> |
-| Full access to the SCNX Dashboard                                                         | Included                                                                       | Included                                                                                                                                               | Included                                                                                                                    |
-| [dcserver.link](./dcserver-link)                                                          | 50+ members without bots required                                              | Included                                                                                                                                               | Included                                                                                                                    |
-| [Custom Discord-Bot](./../../custom-bot/intro), hosted 24/7                               | Included, but needs to be [extended](#starter-plan) every week by watching ads | Included                                                                                                                                               | Included                                                                                                                    |
-| [Custom Modmail-Bot](./../../modmail/intro), hosted 24/7                                  | *Not available*                                                                | Included                                                                                                                                               | Included                                                                                                                    |
-| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                        | *Not available*                                                                | *Not available*                                                                                                                                        | Included                                                                                                                    |
-| [Server analytics](./analytics)                                                           | Included                                                                       | Included                                                                                                                                               | Included                                                                                                                    |
-| Amount of [AI Credits](https://faq.scnx.app/ai-on-scnx/) awarded on the 25. of each month | 20                                                                             | 50                                                                                                                                                     | 100                                                                                                                         |
-| [Commercial usage](./faq#commercial-usage)                                                | Not allowed                                                                    | Not allowed                                                                                                                                            | Allowed                                                                                                                     |
-| **Custom-Bot**: Custom-Commands                                                           | 10                                                                             | 42                                                                                                                                                     | *unlimited*                                                                                                                 |
-| **[SCNX Backups](./backups)**: Available Backup-Slots                                     | 2                                                                              | 5                                                                                                                                                      | 10                                                                                                                          |
-| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not available*                                                                | Once a day                                                                                                                                             | Twice a day                                                                                                                 |
-| **[SCNX Backups](./backups)**: Messages stored per channel per backup                     | 10                                                                             | 20                                                                                                                                                     | 50                                                                                                                          |
-| **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                         | *Not available*                                                                | *Not available*                                                                                                                                        | Included                                                                                                                    |
+| Feature                                                                                   | Starter-Plan                                                                        | Active Guild Plan                                                                                                                                      | PRO-Plan                                                                                                                    |
+|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| Price                                                                                     | *Free for ever*                                                                     | <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />, <PlanPrice plan="ACTIVE_GUILD" type="YEARLY" /> or <PlanPrice plan="ACTIVE_GUILD" type="LIFETIME" /> | <PlanPrice plan="PRO" type="MONTHLY" />, <PlanPrice plan="PRO" type="YEARLY" /> or <PlanPrice plan="PRO" type="LIFETIME" /> |
+| Full access to the SCNX Dashboard                                                         | Included                                                                            | Included                                                                                                                                               | Included                                                                                                                    |
+| [dcserver.link](./dcserver-link)                                                          | 50+ members without bots required                                                   | Included                                                                                                                                               | Included                                                                                                                    |
+| [Custom Discord-Bot](./../../custom-bot/intro), hosted 24/7                               | Included, but needs to be [extended](#starter-plan) every two weeks by watching ads | Included                                                                                                                                               | Included                                                                                                                    |
+| [Custom Modmail-Bot](./../../modmail/intro), hosted 24/7                                  | *Not available*                                                                     | Included                                                                                                                                               | Included                                                                                                                    |
+| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                        | *Not available*                                                                     | *Not available*                                                                                                                                        | Included                                                                                                                    |
+| [Server analytics](./analytics)                                                           | Included                                                                            | Included                                                                                                                                               | Included                                                                                                                    |
+| Amount of [AI Credits](https://faq.scnx.app/ai-on-scnx/) awarded on the 25. of each month | 20                                                                                  | 50                                                                                                                                                     | 100                                                                                                                         |
+| [Commercial usage](./faq#commercial-usage)                                                | Not allowed                                                                         | Not allowed                                                                                                                                            | Allowed                                                                                                                     |
+| **Custom-Bot**: Custom-Commands                                                           | 10                                                                                  | 42                                                                                                                                                     | *unlimited*                                                                                                                 |
+| **[SCNX Backups](./backups)**: Available Backup-Slots                                     | 2                                                                                   | 5                                                                                                                                                      | 10                                                                                                                          |
+| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                   | *Not available*                                                                     | Once a day                                                                                                                                             | Twice a day                                                                                                                 |
+| **[SCNX Backups](./backups)**: Messages stored per channel per backup                     | 10                                                                                  | 20                                                                                                                                                     | 50                                                                                                                          |
+| **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                         | *Not available*                                                                     | *Not available*                                                                                                                                        | Included                                                                                                                    |
 
 <details>
     <summary>Additional Plan-Restrictions for certain Custom-Bot Modules</summary>
@@ -50,7 +50,9 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
         <td>Application-Categories</td>
         <td>2</td>
         <td>7</td>
-        <td>25</td></tr><tr>
+        <td>25</td>
+    </tr>
+  <tr>
 <td>RSS-Notifications</td>
         <td>1</td>
         <td>4</td>
@@ -71,11 +73,13 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
         <td>4</td>
         <td>10</td>
     </tr>
-<tr><td>Reddit-Notifications</td>
+<tr>
+<td>Reddit-Notifications</td>
         <td>1</td>
         <td>4</td>
         <td>10</td>
-    </tr><br/>
+    </tr>
+<br/>
 Please note that certain features or fields allowing greater customizations might be locked behind the PRO-Plan in certain modules.
 You can still use the module without a PRO-Plan, but you might be unable to edit a certain field.
 </table>
@@ -156,14 +160,16 @@ Every server without a paid plan is required to periodically watch a so-called C
 will temporarily
 stop after their free plan ends, until they watch another ad. These are short 15-60s videos from advertisers. The
 advertiser you watch this advertisement from is then paying for your hosting costs. These Checkins need to happen every
-7 days. You can also extend this time to 14 days by watching two Checkin-Ads at a time. You can watch these video ads on
+14 days. You can also extend this time to 28 days by watching two Checkin-Ads at a time. You can watch these video ads
+on
 your server's [pricing page](https://scnx.app/glink?page=pricing).
 
 Please remember: There are no (and there never will be) third-party-ads in your Custom- or Modmail-Bots. The bots
-themselves are free of ads. You only need to watch an advertisement in your SCNX-Dashboard every 7 days to keep your bot
+themselves are free of ads. You only need to watch an advertisement in your SCNX-Dashboard every 14 days to keep your
+bot
 running.
 
-You can watch up to two ads at a time which sumps up to 14 days of hosting time. You can not have more than 14 days of
+You can watch up to two ads at a time which sumps up to 28 days of hosting time. You can not have more than 28 days of
 hosting time at a time. You can also ask your [Trusted Admins](./trusted-admins) to watch videos for your server.
 
 If you forget to extend your hosting time, your bots will shut down, and you won't be able to start them again without
@@ -177,6 +183,7 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 
 <details>
 <summary>I have a question about using SEPA reoccurring payments / standing orders for my subscription</summary>
+
     Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
 </details>
 <details>
@@ -184,10 +191,12 @@ If you want to advertise on SCNX, please check our [advertising on SCNX](./../ac
 <ul>
 <li>Please make sure you haven't canceled your subscription.</li>
 <li>Make sure your subscription does not start in the future (this happens when you switch from One-Time-Upgrades to a subscription) - in such case, our staff needs to perform the upgrade manually.</li>
-<li><a href="https://scnx.app/help">Contact our staff</a>, so they can look into this issue.</li></ul>
+<li><a href="https://scnx.app/help">Contact our staff</a>, so they can look into this issue.</li>
+</ul>
 </details>
 <details>
 <summary>Is there a free trial available?</summary>
+
 Yes, you can start a free trial in your dashboard if these requirements are meet:
 <ul>
     <li>Your server has not participated in a free trial before.</li>
@@ -199,6 +208,7 @@ To check if you are eligible, open the <a href="https://scnx.app/glink?page=pric
 </details>
 <details>
 <summary>Can I switch my One-Time-Upgrade to a subscription?</summary>
+
 Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">pricing page</a> of open the upgrade-modal by clicking "Extend". There, simply select the Payment-Terms / Interval of the subscription you want - any time left on your current plan will be credited towards your subscription.
 </details>
 <details>
@@ -234,14 +244,18 @@ Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">
 
 <details>
 <summary>I already have a subscription or Plan and want to switch to a Lifetime-Plan. Can my existing plan be prorated?</summary>
+
 If your plan or subscription has more than two months left, we might be able to prorate your Lifetime-Purchase or issue a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.
 </details>
 
 <details>
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
+
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b> of the following conditions is being met:
 <ul>
-<li>Your plan is being paid by an active subscription</li><li>Your remaining Plan time is more than a month</li></ul>
+<li>Your plan is being paid by an active subscription</li>
+<li>Your remaining Plan time is more than a month</li>
+</ul>
 <b>You can only request a Plan transfer once every 6 months</b>. <br/>
 To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
 If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible.

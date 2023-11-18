@@ -80,6 +80,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 
 <details>
     <summary>Kann ich den ID-Counter neu starten?</summary>
+
     Nein. Die ID ist eine eindeutige Identifikationsnummer und kann nicht zurückgesetzt werden. Dies ist eine technische Einschränkung – du kannst den Parameter <code>%id%</code> aus deinem „partner-string“ unter „Partner-Liste-Embed“ in deiner <a href="https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig">Modulkonfiguration</a> entfernen, falls dich das stört.
 </details>
 

@@ -66,6 +66,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=suggest
 
 <details>
 <summary>Ein Vorschlag wird nicht erstellt</summary>
+
 Bitte überprüfe folgendes:
 <ul>
     <li>Stelle sicher, dass die Felder "Unbeantwortete Vorschlags-Nachricht", "Abgelehnte Vorschlags-Nachricht" und "Angenommene Vorschlags-Nachricht" richtig konfiguriert sind.</li>
@@ -79,6 +80,7 @@ Bitte überprüfe folgendes:
 
 <details>
     <summary>Ich kann nicht als Admin auf einen Vorschlag antworten</summary>
+
 Bitte überprüfe folgendes:
 <ul>
     <li>Stelle sicher, dass die Felder "Abgelehnte Vorschlags-Nachricht" und "Angenommene Vorschlags-Nachricht" richtig konfiguriert sind.</li>
