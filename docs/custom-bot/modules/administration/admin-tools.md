@@ -30,10 +30,10 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 
 | Command                                                      | Description                                                              |
 |--------------------------------------------------------------|--------------------------------------------------------------------------|
-| `/admin movechannel channel:<Channel>`                       | Displays the API-Position of the specified channel.                      | 
+| `/admin movechannel channel:<Channel>`                       | Displays the API-Position of the specified channel.                      |
 | `/admin movechannel channel:<Channel> new-position:<Number>` | Moves the specified channel to the specified API-Position.               |
-| `/admin moverole role:<Role>`                                | Display the API-Position of the specified role.                          | 
-| `/admin moverole role:<Role> new-position:<Number>`          | Moves the specified role to the specified API-Position.                  | 
+| `/admin moverole role:<Role>`                                | Display the API-Position of the specified role.                          |
+| `/admin moverole role:<Role> new-position:<Number>`          | Moves the specified role to the specified API-Position.                  |
 | `/admin setcategory channel:<Channel> category:<Category> `  | Updates the category of the specified channel to the specified category. |
 | `/stealemote emote:<Emoji>`                                  | Copies an emote from another server to your server.                      |
 
