@@ -30,15 +30,15 @@ result and paste in discord. Your time will be displayed in Discord once you sen
 
 Here are all available formats:
 
-| Format                    | Example                             |
-|---------------------------|-------------------------------------|
-| Short time                | 9:52 PM                             |
-| Long time                 | 9:52:29 PM                          |
-| Short date                | 08/30/2023                          |
-| Long date                 | August 30, 2023                     |
-| Short Date/Time (default) | August 30, 2023 9:52 PM             |
-| Long Date/Time            | Wednesday, August 30, 2023 9:52 PM  |
-| Relative time             | 3 minutes ago                       |
+| Format                    | Example                            |
+|---------------------------|------------------------------------|
+| Short time                | 9:52 PM                            |
+| Long time                 | 9:52:29 PM                         |
+| Short date                | 08/30/2023                         |
+| Long date                 | August 30, 2023                    |
+| Short Date/Time (default) | August 30, 2023 9:52 PM            |
+| Long Date/Time            | Wednesday, August 30, 2023 9:52 PM |
+| Relative time             | 3 minutes ago                      |
 
 ## SCNX Level-XP-Calculator {#level-generator}
 

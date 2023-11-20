@@ -36,7 +36,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=channel-stat
 | Field           | Description                                                                                                                                                            |
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Channel         | This is the channel that should get used as a statistics channel. It's name will be updated automatically to the "Channel-Name" value.                                 |
-| Channel-Name    | This will be the name the channel gets updated to automatically. <br/><i>Please review available parameters in your dashboard.</i>                                     | 
+| Channel-Name    | This will be the name the channel gets updated to automatically. <br/><i>Please review available parameters in your dashboard.</i>                                     |
 | Update-Interval | This is the interval in minutes in which your bot will update name of the channel. Due to technical limitations on Discord's side, this needs to be higher than seven. |
 
 ## Troubleshooting {#troubleshooting}
