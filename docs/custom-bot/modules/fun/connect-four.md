@@ -23,4 +23,4 @@ After accepting, your bot sends a message with the game field and buttons number
 
 | Command                  | Description                |
 |--------------------------|----------------------------|
-| connect-four             | This command starts a Connect Four game against the specified user. You can also use the `field_size` option to define the width and height of the game field - it is 7 by default, but you can enter any value from 4 to 10. |
+| `/connect-four`             | This command starts a Connect Four game against the specified user. You can also use the `field_size` option to define the width and height of the game field - it is 7 by default, but you can enter any value from 4 to 10. |
