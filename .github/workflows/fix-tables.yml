@@ -19,4 +19,4 @@ jobs:
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'scderox@users.noreply.github.com'
           git commit -am "Fixed markdown tables"
-          git push
+          git push --force
