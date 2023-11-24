@@ -1,6 +1,8 @@
 name: Fix markdown tables
 on:
   push:
+    branches:
+      - '!main'
   workflow_dispatch:
 
 jobs:
