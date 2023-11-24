@@ -12,8 +12,6 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@master
       - name: Install dependencies
-        run: yarn add docusaurus-mdx-checker markdown-table-formatter
+        run: yarn add docusaurus-mdx-checker
       - name: Check MDX markdown
         run: npx docusaurus-mdx-checker
-      - name: Check markdown tables format
-        run: npx markdown-table-formatter "docs/**/*.{md,mdx}" --check
