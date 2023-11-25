@@ -19,33 +19,27 @@ Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um si
 
 ### Willkommens-Nachricht einrichten {#setup-welcome-messages}
 
-Willkommens-Nachrichten werdenWelcome messages get sent every time a new member joins the server. You can add a welcome-button to these messages which
-allows your existing members to welcome the new user. Additionally, if [enabled](#configuration-config), the message
-will get deleted if the user leaves your server within seven days.
+Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinen Server betritt. Du kannst einen Willkommen-Button hinzufügen, welcher es bestehenden Nutzern erlaubt, den neuen Nutzer willkommen zu heißen. Zusätzlich wird, falls [aktiviert](#configuration-config), die Nachricht gelöscht, wenn der Nutzer den Server innerhalb 7 Tage wieder verlässt.
 
-1. Create or select one of your channels in which the bot should send your message when a new member join. The bot has
-   to have the "View channel", "Send messages" and "View message history" permissions on it.
-2. Add the channel to
-   the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) using
-   the "join" Message-Type
-   and [configure it](#configuration-channels).
-3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
-     the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
-     configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
-     join".
-   * If you want to send the same message every time, use
-     the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
-     to [configure the message](#configuration-channels).
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot muss die Berechtigungen "Kanal 
+   ansehen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf einsehen" ("View message history") auf diesem haben.
+3. Füge den Kanal zur 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu. Nutze dafür als Kanal-Typ "join" und 
+   [konfiguriere es](#configuration-channels).
+4. Konfiguriere die Nachrichten:
+   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
+     [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
+     Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
+     "join".
+   * Wenn du immer die gleiche Nachricht gesendet haben willst, nutze die 
+     [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+     [Nachricht zu konfigurieren](#configuration-channels).
 
-### Set up Boost / Unboost Messages {#setup-boost-messages}
+### Boost / Unboost Nachrichten einreichten {#setup-boost-messages}
 
-Boost-Messages gets send when a user boosts the server *for the first time* and the Unboost-Message will get send when a
-user removes *all of their* boosts from your server. This messages will not get resend if a user increases or decreases
-the amount of boosts on your server due to
-a [Discord API limitation](https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560).
+Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API]((https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560)) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
-1. Create or select one of your channels in which the bot should send when a member boosts your server. The bot has
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben sollcCreate or select one of your channels in which the bot should send when a member boosts your server. The bot has
    to have the "View channel", "Send messages" and "View message history" permissions on it.
 2. Add the channel to
    the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) using
@@ -79,10 +73,10 @@ Leave messages will get send every time a user leaves your server.
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
      to [configure the message](#configuration-channels).
 
-### Setup Join or Boost Roles {#setup-join-roles}
+### Beitritts- und Boost-Rollen einrichten {#setup-join-roles}
 
 :::caution
-Currently, Join-Roles might overwrite or remove roles from users that have assigned themselves roles using Discord's
+Momentan werden Currently, Join-Roles might overwrite or remove roles from users that have assigned themselves roles using Discord's
 onboarding.
 This issue is known and is being worked on.
 :::
@@ -186,15 +180,15 @@ to our friendly staff at [scnx.app/help](https://scnx.app/help).
    This happens due to a <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API limitation</a>. We cannot change this behavior.
 </details>
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#data-usage}
 
 The following data will get stored for every configured welcome messsage every time when a new member joins:
 
 * An unique integer identifying the database entry
-* The unique Discord User-ID of the member who just joined and triggered the welcome message
-* The unique Discord Message-ID of the welcome message that got sent by the bot
-* The unique Discord Channel-ID of the channel the welcome message got sent in by the bot
-* The exact time the member joined the server
+* Die einzigartige Discord Nutzer-ID des Nutzers, der deinem Server beigetreten ist und die Willkommens-Nachricht ausgelöst hat
+* Die einzigartige Discord Nachrichten-ID der Willkommens-Nachricht, die vom Bot gesendet wurde
+* Die einzigartige Discord Kanal-ID des Kanals, in welchen der Bot die Willkommens-Nachricht geschrieben hat
+* Der genaue Zeitpunkt, wann der Nutzer deinem Server beigetreten ist
 * Metadata about the entry (date when created and last updated)
 
 This data will get used to delete the sent welcome messages if the user leaves the server within seven days after
