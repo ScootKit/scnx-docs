@@ -20,7 +20,7 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
   * what invites the user has created.
 * Easily revoke all invites created by a user.
 * Distinguish between active invites and invites where the invited user has already left the server.
-* Integrates with the [Info Commands](./info-commands) and [Moderation & Security](./moderation) modules.
+* Integrates with the [Info Commands](./info-commands) and [Moderation & Security](./) modules.
 
 ## Setup {#setup}
 
@@ -39,7 +39,7 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
   the [`/trace-invites`](#commands) Slash-Command.
 * To revoke all invites of a user, run the [`/trace-invites`](#commands) Slash-Command and click on "Remove all invites
   by this user" button below the message.
-* If this module is enabled, other modules (such as [Moderation & Security](./moderation)
+* If this module is enabled, other modules (such as [Moderation & Security](./)
   and [Info Commands](./info-commands)) will use data about tracked invites to improve functionality - this is done
   automatically.
 
