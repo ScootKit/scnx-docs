@@ -12,6 +12,8 @@ an [issue](https://github.com/ScootKit/scnx-docs/issues)
 or [discussions](https://github.com/ScootKit/scnx-docs/discussions) first in order to communicate who is working on
 what.
 
+Please run `yarn fix-tables` in the root directory of the project to fix and markdown table issues.
+
 ## Scripts
 
 Execute all scripts inside the `bin` directory.
