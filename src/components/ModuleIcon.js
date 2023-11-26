@@ -2,7 +2,6 @@
 Internally, this way of importing module icons is configured to reduce load size. In this built with docosarus, this increases it drastically. This should get replaced by deferred loading at some point instead of bundling.
  */
 
-import React from 'react';
 import {
     faArrowUp19,
     faBank,
@@ -54,11 +53,13 @@ import {
     faUserPlus,
     faUsersViewfinder,
     faUserTag,
-    faUserTie
+    faUserTie,
+    faVolumeHigh
 } from '@fortawesome/free-solid-svg-icons';
 import {
     faBellSlash,
     faComment,
+    faCommentDots as faCommentDotsRegular,
     faComments,
     faImage,
     faLightbulb,
@@ -134,6 +135,7 @@ const icons = {
     'fa-solid fa-check-to-slot': faCheckToSlot,
     'fa-solid fa-users-viewfinder': faUsersViewfinder,
     'fa-solid fa-tags': faTags,
+    'fa-solid fa-volume-high': faVolumeHigh,
     'fa-solid fa-user-tag': faUserTag,
     'fa-solid fa-table-cells': faTableCells,
     'fa-solid fa-clipboard-check': faClipboardCheck,
@@ -144,14 +146,14 @@ const icons = {
     'fas fa-star': faStar,
     'fas fa-smile': faFaceSmile,
     'fas fa-thumbtack': faThumbtack,
+    'far fa-comment-dots': faCommentDotsRegular,
     'fa-solid fa-file-circle-check': faFileCirclePlus
 };
-
-export default function ModuleIcon({icon, width = 23}) {
-    if (icon === 'top-gg') return <svg viewBox="120 120 580 580" style={{padding: '11px'}}
+export default function ModuleIcon({icon, className, width = 23, hMe}) {
+    if (icon === 'top-gg') return <svg viewBox="120 120 580 580" className={`${className} ${hMe ? 'h-5' : 'h-10'}`}
                                        width={width - 4}>
         <path fill="white"
               d="M655.711 247H330.71v325h66.403a96.097 96.097 0 0096.097-96.098V409.5h66.403a96.102 96.102 0 0096.098-96.098V247zM144 247h162.5v162.5H193.657a49.49 49.49 0 01-49.492-49.492L144 247z"></path>
     </svg>;
-    return <FontAwesomeIcon icon={icons[icon] || faFolder} width={width}/>;
+    return <FontAwesomeIcon icon={icons[icon] || faFolder} width={width} className={className}/>;
 }
