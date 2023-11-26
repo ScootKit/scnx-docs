@@ -15,8 +15,8 @@ The Einrichtigung ist sehr einfach - aktiviere einfach das Modul und du bist sta
 Ein Vier gewinnt-Spiel kann mit dem Slash-Befehl `/connect-four` gestartet werden - du kannst im [Befehle](#commands)-Abschnitt mehr über in erfahren.
 Wenn ein Nutzer den Befehl ausgeführt hat, muss der ausgewählte Nutzer die Einladung mit dem Button annehmen. Wenn er dies innerhalb zwei Minuten tut, startet das Spiel.
 
-Nach dem Akzeptieren sendet der Bot eine Nachricht mit dem Spielfeld und Buttons, nummeriert von 1 bis zur Spielfeld-Größe.
-Beide Spieler nehmen nun Züge vor, indem sie die Marken durch Klicken auf die Buttons auf das Feld fallen lassen.
+Nach dem Akzeptieren sendet der Bot eine Nachricht mit dem Spielfeld und Knöpfe, nummeriert von 1 bis zur Spielfeld-Größe.
+Beide Spieler nehmen nun Züge vor, indem sie die Marken durch Klicken auf die Knöpfe auf das Feld fallen lassen.
 Die Marken fallen zur tiefstmöglichen Position in der gewählten Spalte, genau wie im echten Vier gewinnt.
 
 Der erste Spieler, der vier Rechtecke seiner Farbe in einer beliebigen Reihe hat, gewinnt das Spiel. Die Rechtecke können horizontal, vertikal oder diagonal sein.
