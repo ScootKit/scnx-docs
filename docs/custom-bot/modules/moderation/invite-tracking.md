@@ -47,7 +47,7 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 
 <SlashCommandExplanation />
 
-| Command                      | Description                                                                                                                                                                                                                                               | 
+| Command                      | Description                                                                                                                                                                                                                                               |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/trace-invites user:<User>` | This commands shows the invite activity of a user. Information includes who invited the user, who the user invited and what invites the user created. Additionally, a button to revoke all invites created by this user will be added below the response. |
 
