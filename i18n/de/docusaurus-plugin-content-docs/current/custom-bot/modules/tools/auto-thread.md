@@ -10,14 +10,14 @@ Lasse automatisch Threads unter jeder Nachricht erstellen, die in einen ausgewä
 
 ## Einrichtung {#setup}
 
-1. Stelle sicher, dass dein Bot auf dem Kanal, für den du diese Funktion verwenden willst, über die Berechtigungen "Öffentliche Threads erstellen" ("Create public thread") und "Nachrichten senden" ("Send messages") verfügt.
+1. Stelle sicher, dass dein Bot in deinem Kanal, für den du diese Funktion verwenden willst, über die Berechtigungen "Öffentliche Threads erstellen" ("Create public thread") und "Nachrichten senden" ("Send messages") verfügt.
 2. [Konfiguriere](#configuration), in welchen Kanälen Threads automatisch erstellt werden sollen.
 3. Lade deine Konfiguration neu, um die Änderungen zu übernehmen.
 
 ## Nutzung {#usage}
 
 Nach dem [Einrichten](#setup) des Moduls wird der Bot automatisch unter jeder Nachricht, welche in einen konfigurierten Kanal gesendet wurde, 
-einen Thread erstellen - keine weiteren Aktionen erforderlich.
+einen Thread erstellen - es sind keine weiteren Aktionen erforderlich.
 
 ## Konfiguration {#configuration}
 
