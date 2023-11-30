@@ -12,7 +12,7 @@ Publishes messages in announcement channels
 
 ## Setup {#setup}
 
-1. Make sure the bot has the "Manage messages" and "Send message" on all announcement channels the bot should follow.
+1. Make sure the bot has the "Manage messages" and "Send message" permission on all announcement channels the bot should follow.
 2. [Configure](#configuration) the module.
 3. Reload your configuration to apply changes.
 
