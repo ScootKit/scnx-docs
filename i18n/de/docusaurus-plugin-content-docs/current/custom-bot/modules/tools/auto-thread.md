@@ -22,7 +22,7 @@ einen Thread erstellen - keine weiteren Aktionen erforderlich.
 ## Konfiguration {#configuration}
 
 In dieser Konfigurationsdatei kannst du konfigurieren, in welchen Kanälen der Bot automatisch Threads erstellen soll. 
-Öffne [diese Datei in deinem Dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-thread|config).
+Öffne [diese Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-thread|config).
 
 | Feld               | Beschreibung                                                                                                                                                                                                           |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
