@@ -95,7 +95,7 @@ Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deak
 Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist, unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
 
 
-## Behebung häufiger Fehler {#throubleshooting}
+## Fehlerbehebung {#throubleshooting}
 
 <details>
     <summary>
