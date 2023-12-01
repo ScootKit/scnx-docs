@@ -8,7 +8,7 @@ Let your users play Connect Four against each other!
 Connect Four is a really old game - you can find more information about it on [Wikipedia](https://en.wikipedia.org/wiki/Connect_Four). The game is played on a 7x6 field, where two players take turns dropping their tokens into the field. The first player to connect four of their tokens in a row wins the game.
 
 ## Setup {#setup}
-The setup is really simple - just enable the module in your SCNX dashboard and you're good to go!
+The setup is really simple - just enable the module in [your SCNX dashboard](https://scnx.app/glink?page=bot/modules?query=connect-four&ref=scnx-app-docs) and you're good to go!
 
 ## Usage {#usage}
 A Connect Four game can be started using the slash command `/connect-four` - you can find out more about the command in the [Commands](#commands) section below.
