@@ -18,17 +18,20 @@ A Rock paper scissors game can be started using the slash command `/rock-paper-s
 If the user option of the command is left empty or a bot is provided, the game starts automatically in the current channel.
 Otherwise, the targeted user has to accept the invitation to play a game against you using the button on the message. If they accept within two minutes, the game starts.
 
-After accepting, the bot edits the initial message to add three buttons for the three options. Once both users made their choice, the bot announces the winner of the game. If you want to play another round, simply click the "Play again" button.
+After accepting, the bot edits the initial message to add three buttons for the three options, displayed as emojis. Once both users made their choice, the bot announces the winner of the game. If you want to play another round, simply click the "Play again" button.
 
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command                  | Description                |                                                                                                                                                               |
-|--------------------------|----------------------------|
-| `/rock-paper-scissors`   | This command starts a Rock paper scissors game if no user or a bot has been entered, or sends an invite to another user to play the game. |
+| Command                | Description              |                                                                                                                                                               |
+|------------------------|----------------------------|
+| `/rock-paper-scissors` | This command starts a Rock paper scissors game if no user or a bot has been entered, or sends an invite to another user to play the game. |
 
 
 ## Troubleshooting {#troubleshooting}
-Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to avoid / fix them.
-You can layout this section as you want - feel free to "peak" in other documentation files for inspiration.
+
+<details>
+    <summary>I chose the correct option, but the bot still says that I lost!</summary>
+    <li>Try looking at the color of the button with your choice - if it's green, you won! Otherwise, you might have to read the Rock paper scissor rules again...</li>
+</details>
