@@ -15,7 +15,7 @@ The setup is really simple - just enable the module in your SCNX dashboard and y
 ## Usage {#usage}
 A Rock paper scissors game can be started using the slash command `/rock-paper-scissors` - you can find out more about the command in the [Commands](#commands) section below.
 
-If the user option of the command is left empty or a bot is provided, the game starts automatically in the current channel.
+If the user option of the command is left empty or a bot is provided, the game starts automatically in the current channel playing against CustomBot's AI.
 Otherwise, the targeted user has to accept the invitation to play a game against you using the button on the message. If they accept within two minutes, the game starts.
 
 After accepting, the bot edits the initial message to add three buttons for the three options, displayed as emojis. Once both users made their choice, the bot announces the winner of the game. If you want to play another round, simply click the "Play again" button.
