@@ -27,7 +27,7 @@ The game itself has no time limit.
 ### How to play {#how-to-play}
 Players can only play cards that match the current value or color of the last played card. Exceptions apply to the "Color choice" special cards.
 
-In most cases, every player uses one card by selecting a card from their card deck and then it's the next players turn - note that the order can be reversed using the "Reverse" special card.
+In most cases, every player uses one card by selecting a card from their card deck and then it's the next players turn - note that the turn order can be reversed using the "Reverse" special card.
 
 ### Cards and special effects {#cards}
 There are normal number cards from 0-9 in blue, green, red and yellow as well as special cards. The special cards include "Color choice", which can be used to select a desired color for the next card; "Reverse", which changes the direction of play; and "Skip", which causes the next player to be skipped.
