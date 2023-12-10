@@ -7,7 +7,7 @@ Let your users play Rock Paper Scissors against the bot and each other!
 ## Features {#features}
 Rock paper scissors is a game which can be easily played with just two players, requiring no additional equipment. If you want to learn more about the game and its rules, you can check out [Wikipedia](https://en.wikipedia.org/wiki/Rock_paper_scissors).
 
-By default, there are three options to choose from: Rock, Paper and Scissors - just like the name says. Using your Custom Bot, you can play against the bot itself or another user on your Discord server!
+By default, there are three options to choose from: Rock, Paper and Scissors - just like the name says. Using your CustomBot, you can play against the bot itself or another user on your Discord server!
 
 ## Setup {#setup}
 The setup is really simple - just enable the module in your SCNX dashboard and you're good to go!
