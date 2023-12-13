@@ -62,7 +62,7 @@ If there are quizzes created in the [quiz list](#config-quiz), every user can st
 
 ## Troubleshooting {#troubleshooting}
 
-Got a question which isn't answered here? Join the [support server](https://sc-net.work/dc-en) and create a post in the `support` forum.
+Got a question which isn't answered here? Join the [support server](https://scootk.it/dc) and create a post in the `support` forum.
 
 ## Stored data {#data-usage}
 
