@@ -68,6 +68,6 @@ The bot also stores the following data about every user that has reacted to a me
 * The message ID of the message they starred
 * Metadata about the entry (date when created and last updated)
 
-Every day at 00:01 local time at the bot host location, all starboard user data older than one hour is removed from the database.
+Once a day, all starboard user data older than one hour is removed from the database.
 You can remove a starboard message from the database by removing all reactions from it. To
 remove all starboard related data, [purge the module database](./../../additional-features#reset-module-database).
