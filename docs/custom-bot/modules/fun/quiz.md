@@ -89,6 +89,7 @@ Every quiz question has the following fields:
 			Make sure the <a href="#config-strings">strings configuration</a> is valid, this especially applies to the field values which may not be left empty.
 			Also, make sure the used embed color is valid, you can find a full list of all accepted colors on <a href="https://old.discordjs.dev/#/docs/discord.js/v13/typedef/Color">the discord.js docs</a>.
 		</li>
+	</ul>
 </details>
 <details>
     <summary>Leaderboard message not being sent</summary>
