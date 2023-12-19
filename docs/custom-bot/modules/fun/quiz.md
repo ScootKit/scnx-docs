@@ -49,20 +49,20 @@ Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=q
 
 The [strings](https://scnx.app/glink?page=bot/configuration?file=quiz%7Cstrings) configuration allows you to customize the output messages of the module.
 
-| Field               | Description                                                                                                                                                                |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| title               | The title of the quiz shown in the embed title.                                                                                                                            |
-| color               | The default embed color of active quiz messages.                                                                                                                           |
-| options             | A text introducing the possible quiz options.                                                                                                                              |
-| liveView            | Displayed before the live view section of the quiz message, if enabled.                                                                                                    |
-| expiresOn           | The name of the extra field displayed if a quiz has an end date set.                                                                                                       |
-| thisQuizExpiresOn   | The extra text displayed in the extra fields value if a quiz has an end date set. The `%date%` displays a Discord timestamp with the end date in the current users locale. |
-| endedQuizTitle      | The title of a quiz message embed if the quiz ended.                                                                                                                       |
-| endedQuizColor      | The color of a quiz message embed if the quiz ended.                                                                                                                       |
-| leaderboardTitle    | The title of the leaderboard displayed in the embed title.                                                                                                                 |
-| leaderboardSubtitle | The subtitle of the leaderboard displayed in the embed description.                                                                                                        |
-| leaderboardColor    | The color of the leaderboard embed.                                                                                                                                        |
-| leaderboardButton   | The text displayed on the leaderboard button.                                                                                                                              |
+| Field               | Description                                                                                                                                                                              |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| title               | The title of the quiz shown in the embed title.                                                                                                                                          |
+| color               | The default embed color of active quiz messages, refer to [supported colors](https://docs.scnx.xyz/docs/custom-bot/additional-features#embed-colors) for a list of all supported values. |
+| options             | A text introducing the possible quiz options.                                                                                                                                            |
+| liveView            | Displayed before the live view section of the quiz message, if enabled.                                                                                                                  |
+| expiresOn           | The name of the extra field displayed if a quiz has an end date set.                                                                                                                     |
+| thisQuizExpiresOn   | The extra text displayed in the extra fields value if a quiz has an end date set. The `%date%` displays a Discord timestamp with the end date in the current users locale.               |
+| endedQuizTitle      | The title of a quiz message embed if the quiz ended.                                                                                                                                     |
+| endedQuizColor      | The color of a quiz message embed if the quiz ended.                                                                                                                                     |
+| leaderboardTitle    | The title of the leaderboard displayed in the embed title.                                                                                                                               |
+| leaderboardSubtitle | The subtitle of the leaderboard displayed in the embed description.                                                                                                                      |
+| leaderboardColor    | The color of the leaderboard embed.                                                                                                                                                      |
+| leaderboardButton   | The text displayed on the leaderboard button.                                                                                                                                            |
 
 ### Available quiz {#config-quiz}
 
@@ -87,7 +87,7 @@ Every quiz question has the following fields:
 		<li>Make sure the quiz has a title.</li>
 		<li>
 			Make sure the <a href="#config-strings">strings configuration</a> is valid, this especially applies to the field values which may not be left empty.
-			Also, make sure the used embed color is valid, you can find a full list of all accepted colors on <a href="https://old.discordjs.dev/#/docs/discord.js/v13/typedef/Color">the discord.js docs</a>.
+			Also, make sure the used embed color is valid, you can find a full list of all accepted colors on the <a href="https://docs.scnx.xyz/docs/custom-bot/additional-features#embed-colors">"Additional Custom-Bot features" page</a>.
 		</li>
 	</ul>
 </details>
