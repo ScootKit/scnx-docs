@@ -70,7 +70,9 @@ import {
 import {
     faFacebook,
     faInstagram,
+    faMastodon,
     faReddit,
+    faThreads,
     faTiktok,
     faTwitch,
     faXTwitter,
@@ -128,6 +130,8 @@ const icons = {
     'fas fa-door-open': faDoorOpen,
     'fas fa-gears': faGears,
     'fa-user-tie': faUserTie,
+    'fa-brands fa-threads': faThreads,
+    'fa-brands fa-mastodon': faMastodon,
     'far fa-gear': faUserGear,
     'far fa-terminal': faTerminal,
     'fa-solid fa-border-all': faBorderAll,
