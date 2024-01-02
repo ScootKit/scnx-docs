@@ -9,10 +9,10 @@ Vier gewinnt ist ein sehr altes Spiel - erfahre mehr über es auf [Wikipedia](ht
 Züge spielen, indem sie die Marken auf die Felder fallen lassen. Der Spieler, der zuerst vier Marken in einer Reihe hat, gewinnt.
 
 ## Einrichtung {#setup}
-The Einrichtigung ist sehr einfach - aktiviere einfach das Modul und du bist startklar!
+Die Einrichtigung ist sehr einfach - aktiviere einfach das Modul und du bist startklar!
 
 ## Verwendung {#usage}
-Ein Vier gewinnt-Spiel kann mit dem Slash-Befehl `/connect-four` gestartet werden - du kannst im [Befehle](#commands)-Abschnitt mehr über in erfahren.
+Ein Vier gewinnt-Spiel kann mit dem Slash-Befehl `/connect-four` gestartet werden - du kannst im [Befehle](#commands)-Abschnitt mehr über ihn erfahren.
 Wenn ein Nutzer den Befehl ausgeführt hat, muss der ausgewählte Nutzer die Einladung mit dem Button annehmen. Wenn er dies innerhalb zwei Minuten tut, startet das Spiel.
 
 Nach dem Akzeptieren sendet der Bot eine Nachricht mit dem Spielfeld und Knöpfe, nummeriert von 1 bis zur Spielfeld-Größe.
