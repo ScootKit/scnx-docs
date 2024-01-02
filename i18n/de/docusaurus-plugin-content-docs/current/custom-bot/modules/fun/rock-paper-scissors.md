@@ -17,7 +17,7 @@ Ein Schere Stein Papier-Spiel kann mit dem Slash-Befehl `/rock-paper-scissors` g
 Wenn die user (Nutzer)-Option leergelassen oder ein Bot angegeben wird, startet das Spiel automatisch im aktuellen Kanal mit der eigenen Bot-KI.
 Andernfalls muss der ausgewählte Nutzer die Einladung zum Spielen gegen dich mit dem Button annehmen. Wenn er dies innerhalb zwei Minuten tut, startet das Spiel.
 
-Nach dem Akzeptieren ändert der Bot die Nachricht und fügt drei Buttons für die drei Optionen, angezeigt als Emojis, hinzu. Wenn beide Nutzer ihre Wahl getroffen haben, zeigt der Bot den Gewinner des Spiels an. Wenn du eine weitere Runde spielen möchtest, klicke einfach auf den "Erneut spielen"-Button.
+Nach dem Akzeptieren ändert der Bot die Nachricht und fügt drei Knöpfe für die drei Optionen, angezeigt als Emojis, hinzu. Wenn beide Nutzer ihre Wahl getroffen haben, zeigt der Bot den Gewinner des Spiels an. Wenn du eine weitere Runde spielen möchtest, klicke einfach auf den "Erneut spielen"-Knopf.
 
 ## Befehle {#commands}
 
@@ -32,5 +32,5 @@ Nach dem Akzeptieren ändert der Bot die Nachricht und fügt drei Buttons für d
 
 <details>
     <summary>Ich habe die richtige Option gewählt, aber der Bot sagt, ich habe verloren!</summary>
-    <li>Schaue dir die Farbe des Buttons mit deiner Wahl an - wenn er grün ist, hast du gewonnen! Andernfalls musst du eventuell noch einmal die Schere Stein Papier-Regeln lesen...</li>
+    <li>Schaue dir die Farbe des Knopfes mit deiner Wahl an - wenn er grün ist, hast du gewonnen! Andernfalls musst du eventuell noch einmal die Schere Stein Papier-Regeln lesen...</li>
 </details>
