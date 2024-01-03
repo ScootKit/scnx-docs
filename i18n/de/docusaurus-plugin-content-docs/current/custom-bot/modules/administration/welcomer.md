@@ -35,20 +35,20 @@ Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinen 
      [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
      [Nachricht zu konfigurieren](#configuration-channels).
 
-### Boost / Unboost Nachrichten einreichten {#setup-boost-messages}
+### Boost / Unboost Nachrichten einrichten {#setup-boost-messages}
 
 Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API]((https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560)) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben sollcCreate or select one of your channels in which the bot should send when a member boosts your server. The bot has
-   to have the "View channel", "Send messages" and "View message history" permissions on it.
-2. Add the channel to
-   the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) using
-   the "Boost" or "Unboost" Message-Type
-   and [configure it](#configuration-channels).
-3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
-     the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
-     configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Mitglied deinen Server geboostet hat. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+2. Füge den Kanal zur
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du 
+   den Kanal-Typ "Boost" or "Unboost" benutzt
+   und das Element [konfigurierst](#configuration-channels).
+3. Konfiguriere die Nachricht:
+   * Wenn du zufällige Nachrichten verwendest willst, aktivierst du die "Zufällige Nachrichten?"-Option, öffnest
+     die [Zufällige Nachrichten](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei 
+     und [configure](#configuration-random-messages) the random messages with the Message-Type "
      boost" or "unboost".
    * If you want to send the same message every time, use
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
