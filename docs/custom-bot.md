@@ -2,6 +2,11 @@
 
 Easily create your very own Discord-Bot on SCNX. Setup only takes a few minutes.
 
+:::danger Outdated guide
+This guide is outdated - SCNX has improved the process of creating a bot. While most information here is accurate, steps
+have been simplified in the SCNX Dashboard and won't match the details described here. We'll update this guide shortly.
+:::
+
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} additionalDetails={{
 STARTER: "Hosted 24/7, needs to be extended every two weeks by watching an ad.",
 ACTIVE_GUILD: "Hosted 24/7, as long as your plan is active.",
@@ -15,7 +20,8 @@ Before you can create your Custom-Bot on SCNX, please make sure that
 * you are the owner of the server you want to enable this feature
   on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
   feature for you and grant you access as a [Trusted Admin](./scnx/guilds/trusted-admins).
-* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile it may take
+* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
+  it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
 
 ## 1. Create your Discord-Application & -Bot 🤖 {#step-1}

@@ -98,7 +98,7 @@ The guild lock is a protection mechanism for your backup: Anyone with the backup
 After disabling the guild-lock, please follow the same instructions as [restoring on the original server](#restore-self). When you are done, we highly recommend re-enabling the Guild-Lock - you can do that the same way you enabled it.
 
 
-## Troubleshooting {#throbleshooting}
+## Troubleshooting {#throubleshooting}
 
 <details>
     <summary>

@@ -29,6 +29,8 @@ Here's an example of a Custom-Bot-Status-Panel:
 As you can see, there are quite a few things you can do here. Here are the main ones you are going to need to know
 about:
 
+* The tag and profile picture of your bot (only visible if your bot is online). To change the profile of your bot,
+  simply click on this or follow [this guide](#change-profile).
 * "Reload configuration": When you reload your configuration, your bot will automatically apply all changes you have
   made to your configuration files (including Module-Changes) without any downtime. Generally speaking, you should use
   this rather than restarting your bot.
@@ -136,7 +138,9 @@ the world. Here's how to switch a Bot-Host:
 <details>
   <summary>Which Bot-Host is the best? / Which Bot-Host should I choose?</summary>
 
-  Ultimately, it doesn't matter (except for the Premium-Servers). Each Bot-Host is designed to host bots, just like yours. We have high-quality standards for each of the hosts and can guarantee the same experience on each of them. We might even move your bots around if you do not have a paid plan to distribute resources.
+Ultimately, it doesn't matter (except for the Premium-Servers). Each Bot-Host is designed to host bots, just like yours.
+We have high-quality standards for each of the hosts and can guarantee the same experience on each of them. We might
+even move your bots around if you do not have a paid plan to distribute resources.
 </details>
 
 <details>
@@ -144,7 +148,8 @@ the world. Here's how to switch a Bot-Host:
 
     When you move your bot's data outside the European Union, the General Data Protection Regulation won't apply to your data anymore. This is only affecting your bot's data, like Leveling-Stats, configuration and the actual hosting of the bot. Please also keep in mind that Discord themselves
     are also storing most of their data outside the EU, and we only work with trusted hosting providers with high-security & privacy standards; the data protection laws of the country will apply. This sometimes means that we are unable to protect your data from being used / inspected by state agencies.
-    As is legal requirement (at least for our EU customers ♥), you have to agree to such data transfer. You can always switch back the hosting location of your bot to Bot-Host inside the EU:
+    As is legal requirement (at least for our EU customers ♥), you have to agree to such data transfer. You can always switch back the hosting location of your bot to Bot-Host inside the EU.
+
 </details>
 
 ### Change Bot-Language {#bot-language}
@@ -174,6 +179,7 @@ To change the language of your bot, please
     We're sorry to hear that your language is not supported by SCNX. However, we are quite a small team here at ScootKit with <i>very</i> limited resources and can currently not afford to add support for other languages except German and English.
     Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
     focus on our current Target-Groups.
+
 </details>
 
 ## Remove mentions of SCNX {#offbrand}
@@ -202,7 +208,7 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
     </TabItem>
 </Tabs>
 
-## Change username or Profile-Picture of my bot {#change-profile}
+## Change username, About Me or Profile-Picture of my bot {#change-profile}
 
 :::info Before you continue
 
@@ -215,16 +221,19 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
 
 You can change the Profile-Picture and username of your bot without ever leaving SCNX:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click on the username of your bot in the Bot-Status-Panel.
-3. Enter the details you want to change and upload a new Profile-Picture.
+1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage?showEditProfile=true)
+   or [CustomBot-](https://scnx.app/glink?page=bot/manage?showEditProfile=true) Dashboard.
+2. Next, click on the username of your bot in the Bot-Status-Panel (if you used the links above you can skip this steps,
+   the modal will open automatically).
+3. Enter the details you want to change and upload a new Profile-Picture. You'll find a live-preview of your bot's
+   profile.
 4. Save the changes.
+5. It might take a few minutes for the changes to propagate to Discord, so please be patient.
 
 ![](@site/docs/assets/scnx/guilds/bots/edit-profile.png)
 
 <details>
-    <summary>An issue occurred when I tried changing my bot's username</summary>
+    <summary>An issue occurred when I tried changing my bot's profile</summary>
     <ul>
         <li>Please make sure your bot is online and running without issues. Refer to the <a href="#troubleshooting">troubleshooting guides</a> if this is not the case.</li>
         <li>Some usernames are reserved or over-used and can not be used for your bot. Try another, less common username.</li>
@@ -233,21 +242,6 @@ You can change the Profile-Picture and username of your bot without ever leaving
         <li>You'll find the exact reason for this issue in your Bot's log. Please <a href="#sharing-logs">share your logs</a> and try finding the issue in them. If you are unsuccessful, please <a href="https://scnx.app/help">contact our staff</a>.</li>
     </ul>
 </details>
-
-## Change Bot's About me {#bot-about-me}
-
-You can easily change the about me of your bot in the Discord Developer Portal. You can not do this on SCNX due to
-technical limitations on the side of Discord.
-
-1. Visit the [Discord Developer Portal](https://discord.com/developers/applications).
-2. Select the Application of your bot. Please note that the name and picture of the application might not be the same as
-   the username / profile-picture of your bot.
-3. Locate the "Description" field in the "General Information"-Tab of your application.
-4. Enter the About me you want to be displayed in Discord.
-5. Click on "Save Changes" to apply the changes to your bot.
-6. The About me will be updated in the next few hours on Discord 🎉
-
-![](@site/docs/assets/scnx/guilds/bots/change-about-me.png)
 
 ## Invite my Bot {#invite-bot}
 
@@ -266,7 +260,7 @@ server, please first [add your server to SCNX](./../../setup) and then [set up t
 
 1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click on the username of your bot in the Bot-Status-Panel.
+2. Next, click on "Advanced options" in the bot status card.
 3. Click on "View Invite-URL" and click on "Copy Invite-URL to clipboard".
 4. Click on "Cancel".
 
