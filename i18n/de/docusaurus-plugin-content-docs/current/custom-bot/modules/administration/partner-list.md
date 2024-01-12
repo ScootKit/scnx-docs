@@ -4,8 +4,6 @@ Erstelle eine Liste mit allen Partnern deines Servers - nach Kategorie sortiert.
 
 <ModuleOverview moduleName="partner-list" />
 
----
-
 ## Funktionen {#features}
 
 Dieses Modul soll die Verwaltung von Partnerschaften mit anderen Discord-Servern vereinfachen.
