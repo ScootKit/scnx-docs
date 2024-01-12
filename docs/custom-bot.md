@@ -81,7 +81,7 @@ which feature needs what permissions and handle permission-related error correct
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
 Once this is done, your bot is fully ready to use SCNX. Return to the setup flow to edit the bot
-profile with the "Edit profile" button ([you can also do this later](./scnx/guilds/bots.md#change-profile)), enable
+profile with the "Edit profile" button ([you can also do this later](./scnx/guilds/bots#change-profile)), enable
 modules or explore all features your bot.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)

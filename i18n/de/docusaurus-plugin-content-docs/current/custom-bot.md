@@ -101,7 +101,7 @@ Berechtigungen einzelner Funktionen anzuzeigen und Fehler, die mit Berechtigunge
 Sobald du deinen Bot zu deinem Server hinzugefügt hast, ist dein Bot bereit, SCNX zu verwenden. Kehre zu der Einrichtung
 zurück und editierte das Profil
 deines Bots mit dem "Bot-Profil bearbeiten"
-Knopf ([das kannst du auch später machen](./scnx/guilds/bots.md#change-profile)), Module aktivieren oder alle Funktionen
+Knopf ([das kannst du auch später machen](./scnx/guilds/bots#change-profile)), Module aktivieren oder alle Funktionen
 deines Bots entdecken.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
