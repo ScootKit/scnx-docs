@@ -24,8 +24,8 @@ After accepting, the bot edits the initial message to add three buttons for the 
 
 <SlashCommandExplanation />
 
-| Command                | Description              |                                                                                                                                                               |
-|------------------------|----------------------------|
+| Command                | Description                                                                                                                               |                     
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | `/rock-paper-scissors` | This command starts a Rock paper scissors game if no user or a bot has been entered, or sends an invite to another user to play the game. |
 
 
