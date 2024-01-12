@@ -41,8 +41,9 @@ There, you can configure the avatar and username - you don't need to,
 as you can also [do this directly on SCNX](./scnx/guilds/bots#change-profile) and get prompted to do so when your bot
 got created.
 
-The final step in the Developer Dashboard is to generate a token and copy it. To do so,
-scroll up and click on "Reset token" (still on the Bot page) and confirm your request in the modal. You might get asked
+The final step in the Developer Dashboard is to generate a token and copy it. To do so, open the "Bot" page of your
+application
+and click on "Reset token" (still on the Bot page) and confirm your request in the modal. You might get asked
 to enter a 2FA-Code for your Discord-Account.
 
 Once done, please **copy the token of your bot**. You'll need it in the next step.
