@@ -2,12 +2,6 @@
 
 Erstellt deinen ganz eigenen Discord-Bot auf SCNX. Die Einrichtung dauert nur wenige Minuten.
 
-:::danger Veraltete Anleitung
-Diese Anleitung ist veraltet - SCNX hat den Boterstellungsprozess verbessert. Die meisten Informationen sind hier zwar
-korrekt, allerdings wurden die Schritte im SCNX Dashboard vereinfacht und werden nicht den hier beschrieben Schritten
-entsprechen. Wir werden diese Anleitung bald anpassen.
-:::
-
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} additionalDetails={{
 STARTER: "24/7 gehosted, muss alle zwei Wochen durch das Anschauen von Werbung verlängert werden.",
 ACTIVE_GUILD: "24/7 gehosted, solange dein Abonnement aktiv ist.",
@@ -50,22 +44,14 @@ Bestätigen mit "Create".
 
 ![](@site/docs/assets/setup/custom-bot-1.png)
 
-Öffne als nächstes die "Bot"-Einstellungen in der Navigationsleiste am linken Bildschirmrand.
+Öffne als Nächstes die "Bot"-Einstellungen in der Navigationsleiste am linken Bildschirmrand.
 Dort kannst du den Avatar und den Benutzernamen anpassen - musst du aber nicht,
-weil du das auch [direkt in SCNX tun kannst](./scnx/guilds/bots#change-profile).
+weil du das auch [direkt in SCNX tun kannst](./scnx/guilds/bots#change-profile) und SCNX dich dazu direkt nach
+Erstellung deines Bots auffordert.
 
-Als nächstes musst du alle sogenannten "Intents" deines Bots aktivieren. Diese erlauben deinem Bot, auf bestimmte
-Daten auf
-deinem Server zuzugreifen. Dies ist für bestimmte Funktionen notwendig. Zusätzlich empfehlen wir das Deaktivieren der "
-Public Bot"-Einstellung,
-da dein Eigener Bot nur auf deinem Server funktionieren wird. Stelle sicher, dass du nicht "Requires OAuth2 Code Grant"
-aktivierst.
-
-![](@site/docs/assets/setup/custom-bot-2.png)
-
-Du bist im Discord-Developer-Dashboard fast fertig - der letzte Schritt ist, ein Token zu generieren und es zu kopieren.
-Scrolle
-dazu nach oben und klicke auf "Reset token" (immer noch auf der Bot-Seite) und bestätige deine Anfrage im Popup.
+Als letzten Schnitt im Developer Dashboard musst du ein Token generieren und diesen kopieren.
+Öffne dazu die "Bot"-Seite deiner Anwendung und klicke auf "Reset token" (immer noch auf der Bot-Seite) und bestätige
+deine Anfrage im Popup.
 Möglicherweise wirst
 du nach einem 2FA-Code für deinen Discord-Account gefragt.
 
@@ -91,22 +77,19 @@ Wähle dann "Discord-Bot" in der Sidebar aus.
 
 Hier findest du ein Video, was dir zeigt, wie du deinen Discord-Bot erstellst. Wenn du dieser Anleitung gefolgt bist
 kannst du
-das Video sicher mit dem Button "Ich habe einen Bot erstellt" überspringen. Als nächstes wirst du nach deinem Token
+das Video sicher mit dem Button "Ich habe einen Bot erstellt" überspringen. Als Nächstes wirst du nach deinem Token
 gefragt, den
-du in [Schritt 1](#step-1) erhalten hast, anschließend klicke auf "Überprüfe meinen Token". SCNX prüft nun deinen Token.
-Sobald SCNX fertig ist,
-lade bitte deinen Bot mit dem Button "Bot einladen" ein - wenn du diesen Schritt nicht durchgeführt hast, nicht
-schlimm; du kannst den [Bot auch später einladen](./scnx/guilds/bots#invite-bot). Schließe den Tab noch nicht - du musst
-noch
-auf "Bot erstellen" klicken, um den Prozess abzuschließen.
+du in [Schritt 1](#step-1) erhalten hast, anschließend klicke auf "Token überprüfen & Bot erstellen".
+SCNX prüft nun deinen Token und richtet dann Hosting für deinen Discord-Bot ein - das kann einige Sekunden dauern.
 
 ![](@site/docs/assets/setup/custom-bot-5.png)
 
-Um deinen Bot einzuladen musst du nur auf den "Bot einladen"-Button drücken. Damit öffnet du Discord's
+Sobald SCNX deinen Bot erstellt hat, musst du nur noch auf den "Bot einladen"-Button drücken. Damit öffnest du Discord's
 OAuth2-Grant-Seite
 (das ist, wie Nerds den Bereich unten nennen 🤓). SCNX hat bereits den Server für dich ausgewählt. Klick einfach auf "
 Weiter" und
-"Authorisieren", um den Prozess abzuschließen. Wenn du willst kannst du die "Administrator"-Berechtigung entfernen, aber
+"Authorisieren", um den Prozess abzuschließen. Wenn du willst, kannst du die "Administrator"-Berechtigung entfernen,
+aber
 dadurch wird
 es
 schwieriger, den Bot ohne Probleme zu verwenden, weil SCNX aktuell noch nicht in der Lage ist (die Nerds arbeiten immer
@@ -115,8 +98,11 @@ Berechtigungen einzelner Funktionen anzuzeigen und Fehler, die mit Berechtigunge
 
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
-Als letzten Schritt musst du bestätigen, dass du deinen Bot im SCNX-Dashboard erstellen willst - klicke dazu einfach auf
-"Bot erstellen".
+Sobald du deinen Bot zu deinem Server hinzugefügt hast, ist dein Bot bereit, SCNX zu verwenden. Kehre zu der Einrichtung
+zurück und editierte das Profil
+deines Bots mit dem "Bot-Profil bearbeiten"
+Knopf ([das kannst du auch später machen](./scnx/guilds/bots.md#change-profile)), Module aktivieren oder alle Funktionen
+deines Bots entdecken.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
