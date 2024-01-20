@@ -83,13 +83,13 @@ In dieser Konfigurations-datei kannst du einstellen, wie Nachrichten in diesem M
 | Knopf inhalt                            | Der Inhalt, den die Knöpfe unter der Gewinnspiel Nachricht enthalten wird. Indem Nutzer auf den Button klickt, nimmt er an dem Gewinnspiel teil.                                                                                                                                                |
 | Gewinner DM-nachricht                        | *Dies wird nur funktionieren, wenn du "Send DM-Message to winner" in deiner [modul Konfiguration](#configuration-config) aktiviert hast.* <br/>Diese Nachricht wird dem Nutzer per DM gesendet, wenn dieser in einem Gewinnspiel gewinnt..<br/>Du kannst alle verfügbaren Parameter im Dashboard finden. |
 
-## Troubleshooting {#troubleshooting}
+## Problemlösungen {#troubleshooting}
 
 <details>
-  <summary>The messages for entry requirements are not being calculated correctly</summary>
+  <summary>Die Gewinnspiel-vorrausetzungen werden nicht richtig berechnet</summary>
   <ul>
-    <li>Make sure that you have configured the <a href="#configuration-config">counting mode</a> correctly.</li>
-    <li>If you set "blacklist" as the counting mode: Make sure the channel you want messages to be counted in isn't <a href="#configuration-config">blacklisted</a>.</li>
+    <li>Stelle sicher dass du den <a href="#configuration-config">Zähl Modus</a> richtig eingestellt hast.</li>
+    <li>Wenn du "blacklist" als zähl modus eingestellt hast: Stelle sicher, dass der Kanal, in dem du Nachrichten zählen lassen möchtest <a href="#configuration-config">blacklisted</a> ist.</li>
     <li>If you set "whitelist" as the counting mode: Make sure the channel you want messages to be counted in is configured in the <a href="#configuration-config">whitelist</a>.</li>
     <li>Make sure the bot has <code>Read messages</code> and <code>View message history</code> permissions on the channel you want messages to be counted in.</li>
   </ul>
