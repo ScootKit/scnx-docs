@@ -90,15 +90,15 @@ In dieser Konfigurations-datei kannst du einstellen, wie Nachrichten in diesem M
   <ul>
     <li>Stelle sicher dass du den <a href="#configuration-config">Zähl Modus</a> richtig eingestellt hast.</li>
     <li>Wenn du "blacklist" als zähl modus eingestellt hast: Stelle sicher, dass der Kanal, in dem du Nachrichten zählen lassen möchtest <a href="#configuration-config">blacklisted</a> ist.</li>
-    <li>If you set "whitelist" as the counting mode: Make sure the channel you want messages to be counted in is configured in the <a href="#configuration-config">whitelist</a>.</li>
-    <li>Make sure the bot has <code>Read messages</code> and <code>View message history</code> permissions on the channel you want messages to be counted in.</li>
+    <li>Wenn du "whitelist" als Zähl modus eingestellt hast: Make sure the channel you want stelle sicher, dass der channel,in dem die Nachrichten gezählt werden sollen auf der <a href="#configuration-config">whitelist</a> ist.</li>
+    <li>Stelle sicher, dass der bot in dem Kanal, wo der Bot die Nachrichten zählen soll die Berechtigungen <code>Read messages</code> and <code>View message history</code> hat.</li>
   </ul>
 </details>
 
 <details>
-  <summary>Additional entries are not working correctly (/ entries are calculated wrongly)</summary>
+  <summary>Zusätzliche Teilnahmen werden falsch berechnet (/ entries are calculated wrongly)</summary>
 
-  First, Make sure that you have configured <a href="#configuration-config">additional entries</a> correctly.<br/>
+  Als erstes stelle   <a href="#configuration-config">additional entries</a> correctly.<br/>
   Every user starts with one entry by default. For every role configured in the <a href="#configuration-config">additional entries</a> field they will receive additional entries. The amount received depends on your configuration. It's currently not possible to grant less than one additional entry to users.  
 </details>
 
