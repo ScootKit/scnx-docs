@@ -112,14 +112,14 @@ In dieser Konfigurations-datei kannst du einstellen, wie Nachrichten in diesem M
   Server unseren Service in einer nicht konformen Weise nutzt, melde es bitte an<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> und wir werden entsprechende Maßnahmen ergreifen.
 </details>
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#data-usage}
 
-For every giveaway the following data will be saved:
+Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 
-* An unique integer identifying the database entry
-* The ID of the giveaway message
-* The ID of the channel the giveaway has been started in, based on the [`channel`](#commands) command parameter
-* The exact time the giveaway will end / has ended, based on the [`duration`](#commands) command parameter
+* Eine eindeutige Zahl, die den Teilnahmen identifiziert
+* Die ID der Gewinnspiel-nachricht
+* Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Kommand-parameter
+* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Kommand-parameter
 * Whether the giveaway has ended yet
 * The price of the giveaway, based on the [`price`](#commands) command parameter
 * The requirements of the giveaway (like which roles and how many messages are required, if enabled), based on
