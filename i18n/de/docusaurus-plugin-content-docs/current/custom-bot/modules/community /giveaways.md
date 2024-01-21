@@ -116,24 +116,22 @@ In dieser Konfigurations-datei kannst du einstellen, wie Nachrichten in diesem M
 
 Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 
-* Eine eindeutige Zahl, die den Teilnahmen identifiziert
+* Eine eindeutige Zahl, die die Teilnahmen identifiziert
 * Die ID der Gewinnspiel-nachricht
-* Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Kommand-parameter
-* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Kommand-parameter
-* Whether the giveaway has ended yet
-* The price of the giveaway, based on the [`price`](#commands) command parameter
-* The requirements of the giveaway (like which roles and how many messages are required, if enabled), based on
-  your [command parameters](#commands)
-* If the giveaway requires new messages for entry:
-  * The amount of messages sent by every user after the giveaway has started
-* Data about every valid entry to the giveaway:
-  * ID of the user who entered the giveaway
-  * The amount of entries they entered the giveaway with, based on your [configuration](#configuration)
-  * Whether they entered the giveaway using the requirement skip [configuration option](#configuration)
-* The User ID of the sponsor (if not specified the creator) of the giveaway
-* The provided link to the sponsor's website, based on the [`sponsor-url`](#commands) command parameter
-* The amount of winners, based on the [`winner-count`](#commands) command parameter
-* Metadata about the entry (date when created and last updated)
+* Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Befehl-parameter
+* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Befehl-parameter
+* Ob das Gewinnspiel schon geendet hat
+* Den Preis des Gewinnspiels, abhängig von dem [`Preis`](#commands) Befehl-parameter
+* Die Vorrausetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf deinen [Befehl-parametern](#commands)
+* Wenn das Teilnehmen bei dem Gewinnspiel eine bestimmte Anzahl an Nachrichten vorrausetzt:
+  * Die Anzahl von Nachrichten von allen Nutzern nach dem Start des Gewinnspiels
+* Daten über jede berechtigte Teilnahme an dem Gewinnspiel: 
+  * ID von den Nutzern, die an dem Gewinnspiel teilgenommen haben
+  * Die Anzahl von Teilnahmen die Nutzer insgesammt teilgenommen haben, abhängig von deiner [Konfiguration](#configuration)
+  * Ob der Nutzer teilgenommen hat, indem er die Vorrausetzungen übersprungen hat abhängig von deiner [Konfiguration](#configuration)
+* Die ID des Sponsors vom Gewinnspiel (falls nicht der Ersteller des Gewinnspiels) 
+* Der Sposor-link, abhängig von deiner konfigurierten [`sponsor-url`](#commands) 
+* Die Anzahl von Gewinnern, abhängig von dem [`winner-count`](#commands) Befehl-parameter
+* Metadaten über die Teilnahme (Datum der Erstellung und letzten Aktualisierung)
 
-There is no way to remove a giveaway from the database (you can always delete the giveaway-message regardless). To
-remove all giveaways, [purge the module database](./../../additional-features#reset-module-database).
+Es gibt keine Möglichkeit, ein Gewinnspiel aus der Datenbank zu entfernen (Du kannst die Gewinnspiel-Nachricht trotzdem jederzeit löschen). Um alle Gewinnspiele zu löschen, [lösche die modul datenbank](./../../additional-features#reset-module-database).
