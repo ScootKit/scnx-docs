@@ -103,13 +103,13 @@ In dieser Konfigurations-datei kannst du einstellen, wie Nachrichten in diesem M
 </details>
 
 <details>
-  <summary>How does SCNX determine who wins? / Can I get a certificate of Authenticity? / Can giveaways be rigged?</summary>
+  <summary>Wie bestimmt mein Bot den Gewinner? / Kann ich ein zertifikat erhalten? / Kann ein Gewinnspiel manipuliert sein?</summary>
 
-  When a giveaway ends (or a reroll is triggered) your bot will first evaluate the requirements (and with that recalculate their entries), ensuring that every user still meets.
-  Every eligible user will then be added into a digital equivalent of a box. Users with <a href="#configuration-config">multiple entries</a> will be added to this box multiple times, depending on the amount of their entries.
-  Next, we will draw a user from the box. If this user already won in this drawing, we'll redraw until the amount of winners is correct.<br/><br/>
-  As server admins can manipulate winning changes, requirements and more, we're unable to generate a certificate of Authenticity or similar documentation. The giveaway organizer is required to comply with local laws and regulation, including our own <a href="https://scootk.it/scnx-tos">Terms of Service</a>. If you 
-  think that a specific server is using our offering in a way that is not compliant, please report it to <a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> and we will take appropriate action.
+  Wenn ein Gewinnspiel endet (Oder eine Neuauslosung wurde angewand) wird deon bot als erstes die Vorrausetzungen prüfen (und damit die zusätzlichen teilnahmebedingungen neu berechnen), um sicherzustellen, dass jeder Nutzer immernoch teilnimmt.
+  Jeder berechtigte Nutzer wird in eine digitale Kiste gepackt. Nutzer mit <a href="#configuration-config">Zusätzlichen Teilnahmen</a> werden in diese Box mehrmals gepackt, abhänging von den zusätzlichen Teilnahmen die sie durch ihre Rolle(n) erhalten.
+  Als nächstes zieht der Bot einen Nutzer aus der Box. Wenn dieser Benutzer bei dieser Ziehung bereits gewonnen hat, zieht der Bot erneut, bis die Anzahl der Gewinner korrekt ist.<br/><br/>
+  Da Serveradministratoren gewinnende Änderungen, Anforderungen und mehr manipulieren können, sind wir nicht in der Lage, ein Zertifikat oder eine ähnliche Dokumentation zu erstellen. Der Organisator des Gewinnspiels ist verpflichtet, die örtlichen Gesetze und Vorschriften einzuhalten, einschließlich unserer eigenen <a href="https://scootk.it/scnx-tos">Terms of Service</a>. Wenn du der Meinung bist, dass ein 
+  Server unseren Service in einer nicht konformen Weise nutzt, melde es bitte an<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> und wir werden entsprechende Maßnahmen ergreifen.
 </details>
 
 ## Stored data {#data-usage}
