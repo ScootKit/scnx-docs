@@ -52,7 +52,9 @@ Um automatische Backups einzurichten, öffne dein [Backup-Dashboard](https://scn
 
 ![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
 
-Basierend auf deinen Einstellungen wird SCNX bis zu zwei Backups täglich erstellen. Dies passiert immer um die selbe Uhrzeit, genauer um 6:00 Uhr und 18:00 Uhr Mitteleuropäischer Zeit. Bitte beachte, dass die Sommerzeit ggf. die angezeigte Uhrzeit der Erstellung deines Backups beeinflussen kann.
+Basierend auf deinen Einstellungen wird SCNX bis zu zwei Backups täglich erstellen. Dies passiert immer um dieselbe
+Uhrzeit, welche von dem Zeitslot deines Servers abhängig ist. Diesen findest du im Dashboard. Bitte beachte, dass die
+Sommerzeit ggf. die angezeigte Uhrzeit der Erstellung deines Backups beeinflussen kann.
 
 Automatische Backups verwenden die Backup-Slots deines Servers. Wenn keine mehr verfügbar sind, wird das System automatisch das älteste Backup überschreiben. Deine manuellen Backups werden jedoch nie verändert. Sollten alle Backup-Slots von manuellen Backups verwendet werden, werden keine automatischen Backups erstellt.
 
@@ -74,7 +76,8 @@ Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard
 Bestätige als Nächstes deine Anfrage mit dem Knopf unter der Antwort in Discord.
 
 :::danger
-Die Bestätigung dieser Anfrage wird alle aktuellen Kanäle und Rollen deines Discors löschen und mit denen des Backups ersetzen.
+Die Bestätigung dieser Anfrage wird alle aktuellen Kanäle und Rollen deines Discords löschen und mit denen des Backups
+ersetzen.
 :::
 
 ![](@site/docs/assets/scnx/guilds/backups/confirm.png)
@@ -132,9 +135,10 @@ Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [
         SCNX erstellt keine automatischen Backups auf deinem Server
     </summary>
     <li>Stelle sicher, dass der (verifizierte) SCNX-Bot die Administrator Berechtigung hat und versuche es erneut.</li>
-    <li>Stelle sicher, dasss du [diese Funktion](#automatic) wirklich aktiviert hast und alle Änderungen gespeichert hast.</li>
+    <li>Stelle sicher, das du [diese Funktion](#automatic) wirklich aktiviert hast und alle Änderungen gespeichert hast.</li>
     <li>Stelle sicher, dass mindestens ein Backup-Slot nicht von einem manuellen Backup verwendet wird.</li>
     <li>Bitte warte 24 Stunden, damit automatisch ein Backup erstellt wird</li>
+    <li>Du kannst den deinem Server zugewiesen Zeitpunkt nicht ändern, sondern ihn nur im Dashboard einsehen.</li>
 </details>
 
 ## Backups exportieren {#export}
