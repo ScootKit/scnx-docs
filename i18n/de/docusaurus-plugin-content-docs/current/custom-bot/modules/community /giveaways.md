@@ -49,8 +49,8 @@ Dieses Modul verfügt über mehrere Konfigurationsdateien. Bitte überprüfe sie
 ### Modul-Konfiguration {#configuration-config}
 
 :::Achtung:
-Nutzer für Invites zu Belohnen indem du mehrere Teilnahmen erlaubst verstößt gegen die
-[Discord's Developer Policy](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und
+Nutzer für Einladungen zu belohnen, indem du mehrere Teilnahmen erlaubst, verstößt gegen die 
+[Discord Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und
 unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos); Verstöße werden direkt zu unserem Team weitergeleitet und dein Server oder auch dein Account wird von SCNX gesperrt. Melde Missbrauch hier: [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 :::
 
