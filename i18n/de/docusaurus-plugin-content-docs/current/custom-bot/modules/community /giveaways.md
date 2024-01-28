@@ -1,6 +1,6 @@
 # Gewinnspiele
 
-Gewinnspiele einfach in deinem Server erstellen.
+Erstelle einfach Gewinnspiele auf deinem Server.
 
 <ModuleOverview moduleName="giveaways" />
 
@@ -103,13 +103,13 @@ In dieser Konfigurationsdatei kannst du einstellen, wie Nachrichten in diesem Mo
 </details>
 
 <details>
-  <summary>Wie bestimmt mein Bot den Gewinner? / Kann ich ein zertifikat erhalten? / Kann ein Gewinnspiel manipuliert sein?</summary>
+  <summary>Wie bestimmt mein Bot den Gewinner? / Kann ich ein Zertifikat erhalten? / Kann ein Gewinnspiel manipuliert sein?</summary>
 
-  Wenn ein Gewinnspiel endet (Oder eine Neuauslosung wurde angewand) wird deon bot als erstes die Vorrausetzungen prüfen (und damit die zusätzlichen teilnahmebedingungen neu berechnen), um sicherzustellen, dass jeder Nutzer immernoch teilnimmt.
-  Jeder berechtigte Nutzer wird in eine digitale Kiste gepackt. Nutzer mit <a href="#configuration-config">Zusätzlichen Teilnahmen</a> werden in diese Box mehrmals gepackt, abhänging von den zusätzlichen Teilnahmen die sie durch ihre Rolle(n) erhalten.
-  Als nächstes zieht der Bot einen Nutzer aus der Box. Wenn dieser Benutzer bei dieser Ziehung bereits gewonnen hat, zieht der Bot erneut, bis die Anzahl der Gewinner korrekt ist.<br/><br/>
-  Da Serveradministratoren gewinnende Änderungen, Anforderungen und mehr manipulieren können, sind wir nicht in der Lage, ein Zertifikat oder eine ähnliche Dokumentation zu erstellen. Der Organisator des Gewinnspiels ist verpflichtet, die örtlichen Gesetze und Vorschriften einzuhalten, einschließlich unserer eigenen <a href="https://scootk.it/scnx-tos">Terms of Service</a>. Wenn du der Meinung bist, dass ein 
-  Server unseren Service in einer nicht konformen Weise nutzt, melde es bitte an<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> und wir werden entsprechende Maßnahmen ergreifen.
+Wenn ein Gewinnspiel endet (oder eine Neuauslosung wurde angewandt wurde), wird dein bot als erstes die Vorrausetzungen prüfen (und damit die zusätzlichen Teilnahmebedingungen neu berechnen), um sicherzustellen, dass jeder Nutzer immer noch teilnimmt.
+Jeder berechtigte Nutzer wird in eine digitale Kiste gepackt. Nutzer mit <a href="#configuration-config">Zusätzlichen Teilnahmen</a> werden in diese Kiste mehrmals gepackt, abhänging von den zusätzlichen Teilnahmen die sie durch ihre Rolle(n) erhalten.
+Als nächstes zieht der Bot einen Nutzer aus der Kiste. Wenn dieser Benutzer bei dieser Ziehung bereits gewonnen hat, zieht der Bot erneut, bis die Anzahl der Gewinner korrekt ist.<br/><br/>
+Da Serveradministratoren Gewinnchancen, Anforderungen und mehr manipulieren können, sind wir nicht in der Lage, ein Zertifikat oder eine ähnliche Dokumentation zu erstellen. Der Organisator des Gewinnspiels ist verpflichtet, die örtlichen Gesetze und Vorschriften einzuhalten, einschließlich unserer eigenen <a href="https://scootk.it/scnx-tos">Nutzungsbedingungen</a>. Wenn du der Meinung bist, dass ein 
+Server unseren Service in einer nicht konformen Weise nutzt, melde es bitte an<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> und wir werden entsprechende Maßnahmen ergreifen.
 </details>
 
 ## Gespeicherte Daten {#data-usage}
@@ -117,21 +117,21 @@ In dieser Konfigurationsdatei kannst du einstellen, wie Nachrichten in diesem Mo
 Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 
 * Eine eindeutige Zahl, die die Teilnahmen identifiziert
-* Die ID der Gewinnspiel-nachricht
-* Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Befehl-parameter
-* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Befehl-parameter
+* Die ID der Gewinnspiel-Nachricht
+* Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Befehl-Parameter
+* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Befehl-Parameter
 * Ob das Gewinnspiel schon geendet hat
-* Den Preis des Gewinnspiels, abhängig von dem [`Preis`](#commands) Befehl-parameter
-* Die Vorrausetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf deinen [Befehl-parametern](#commands)
-* Wenn das Teilnehmen bei dem Gewinnspiel eine bestimmte Anzahl an Nachrichten vorrausetzt:
+* Den Preis des Gewinnspiels, abhängig von dem [`Preis`](#commands) Befehl-Parameter
+* Die Vorrausetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf deinen [Befehl-Parametern](#commands)
+* Wenn das Teilnehmen bei dem Gewinnspiel eine bestimmte Anzahl an Nachrichten voraussetzt:
   * Die Anzahl von Nachrichten von allen Nutzern nach dem Start des Gewinnspiels
 * Daten über jede berechtigte Teilnahme an dem Gewinnspiel: 
   * ID von den Nutzern, die an dem Gewinnspiel teilgenommen haben
-  * Die Anzahl von Teilnahmen die Nutzer insgesammt teilgenommen haben, abhängig von deiner [Konfiguration](#configuration)
-  * Ob der Nutzer teilgenommen hat, indem er die Vorrausetzungen übersprungen hat abhängig von deiner [Konfiguration](#configuration)
+  * Die Anzahl von Teilnahmen die Nutzer insgesamt teilgenommen haben, abhängig von deiner [Konfiguration](#configuration)
+  * Ob der Nutzer teilgenommen hat, indem er die Vorrausetzungen übersprungen hat, abhängig von deiner [Konfiguration](#configuration)
 * Die ID des Sponsors vom Gewinnspiel (falls nicht der Ersteller des Gewinnspiels) 
-* Der Sposor-link, abhängig von deiner konfigurierten [`sponsor-url`](#commands) 
-* Die Anzahl von Gewinnern, abhängig von dem [`winner-count`](#commands) Befehl-parameter
+* Der Sponsor-Link, abhängig von deiner konfigurierten [`sponsor-url`](#commands) 
+* Die Anzahl von Gewinnern, abhängig von dem [`winner-count`](#commands) Befehl-Parameter
 * Metadaten über die Teilnahme (Datum der Erstellung und letzten Aktualisierung)
 
-Es gibt keine Möglichkeit, ein Gewinnspiel aus der Datenbank zu entfernen (Du kannst die Gewinnspiel-Nachricht trotzdem jederzeit löschen). Um alle Gewinnspiele zu löschen, [lösche die modul datenbank](./../../additional-features#reset-module-database).
+Es gibt keine Möglichkeit, ein Gewinnspiel aus der Datenbank zu entfernen (du kannst die Gewinnspiel-Nachricht trotzdem jederzeit löschen). Um alle Gewinnspiele zu löschen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database).
