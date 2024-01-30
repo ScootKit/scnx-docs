@@ -10,7 +10,7 @@ Erstelle einfach Gewinnspiele auf deinem Server.
 * Lasse Mitglieder eine bestimmte Anzahl neuer Nachrichten senden, um am Gewinnspiel teilzunehmen zu können (du kannst auch Kanäle erlauben / blockieren, 
 dort werden Nachrichten von Mitgliedern dann nicht gezählt).
 * Lasse nur Mitglieder mit einer bestimmten Rolle teilnehmen.
-* Lasse Mitglieder mit bestimmten Rollen die Vorraussetzungen der Gewinnnspiele überspringen.
+* Lasse Mitglieder mit bestimmten Rollen die Voraussetzungen der Gewinnspiele überspringen.
 * Gebe zusätzliche Gewinnchancen an Mitglieder mit bestimmten Rollen.
 
 ## Einrichtung {#setup}
@@ -88,7 +88,7 @@ In dieser Konfigurationsdatei kannst du einstellen, wie Nachrichten in diesem Mo
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-  <summary>Die Gewinnspiel-Vorrausetzungen werden nicht richtig berechnet</summary>
+  <summary>Die Gewinnspiel-Vorbausetzungen werden nicht richtig berechnet</summary>
   <ul>
     <li>Stelle sicher, dass du den <a href="#configuration-config">Nachrichten-Zähl-Modus</a> richtig eingestellt hast.</li>
     <li>Wenn du "blacklist" als Nachrichten-Zähl-Modus eingestellt hast: Stelle sicher, dass der Kanal, indem du Nachrichten zählen lassen möchtest, <a href="#configuration-config">nicht blockiert</a> ist.</li>
@@ -107,8 +107,8 @@ In dieser Konfigurationsdatei kannst du einstellen, wie Nachrichten in diesem Mo
 <details>
   <summary>Wie bestimmt mein Bot den Gewinner? / Kann ich ein Zertifikat erhalten? / Kann ein Gewinnspiel manipuliert sein?</summary>
 
-Wenn ein Gewinnspiel endet (oder eine Neuauslosung wurde angewandt wurde), wird dein bot als erstes die Vorrausetzungen prüfen (und damit die zusätzlichen Teilnahmebedingungen neu berechnen), um sicherzustellen, dass jeder Nutzer immer noch teilnimmt.
-Jeder berechtigte Nutzer wird in eine digitale Kiste gepackt. Nutzer mit <a href="#configuration-config">Zusätzlichen Teilnahmen</a> werden in diese Kiste mehrmals gepackt, abhänging von den zusätzlichen Teilnahmen die sie durch ihre Rolle(n) erhalten.
+Wenn ein Gewinnspiel endet (oder eine Neuauslosung wurde angewandt wurde), wird dein bot als Erstes die Vorbausetzungen prüfen (und damit die zusätzlichen Teilnahmebedingungen neu berechnen), um sicherzustellen, dass jeder Nutzer immer noch teilnimmt.
+Jeder berechtigte Nutzer wird in eine digitale Kiste gepackt. Nutzer mit <a href="#configuration-config">Zusätzlichen Teilnahmen</a> werden in diese Kiste mehrmals gepackt, abhängig von den zusätzlichen Teilnahmen die sie durch ihre Rolle(n) erhalten.
 Als nächstes zieht der Bot einen Nutzer aus der Kiste. Wenn dieser Benutzer bei dieser Ziehung bereits gewonnen hat, zieht der Bot erneut, bis die Anzahl der Gewinner korrekt ist.<br/><br/>
 Da Serveradministratoren Gewinnchancen, Anforderungen und mehr manipulieren können, sind wir nicht in der Lage, ein Zertifikat oder eine ähnliche Dokumentation zu erstellen. Der Organisator des Gewinnspiels ist verpflichtet, die örtlichen Gesetze und Vorschriften einzuhalten, einschließlich unserer eigenen <a href="https://scootk.it/scnx-tos">Nutzungsbedingungen</a>. Wenn du der Meinung bist, dass ein 
 Server unseren Service in einer nicht konformen Weise nutzt, melde es bitte an<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a> und wir werden entsprechende Maßnahmen ergreifen.
@@ -124,7 +124,7 @@ Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 * Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Befehl-Parameter
 * Ob das Gewinnspiel schon geendet hat
 * Den Preis des Gewinnspiels, abhängig von dem [`Preis`](#commands) Befehl-Parameter
-* Die Vorrausetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf deinen [Befehl-Parametern](#commands)
+* Die Vorbausetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf deinen [Befehl-Parametern](#commands)
 * Wenn das Teilnehmen bei dem Gewinnspiel eine bestimmte Anzahl an Nachrichten voraussetzt:
   * Die Anzahl von Nachrichten von allen Nutzern nach dem Start des Gewinnspiels
 * Daten über jede berechtigte Teilnahme an dem Gewinnspiel: 
