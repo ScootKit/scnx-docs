@@ -90,7 +90,7 @@ Unser Zugriff ist streng eingeschränkt, wir verstehen jedoch, dass du mögliche
 Hier findest du eine Erklärung, warum wir welche Daten benötigen.
 
 :::tip
-Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie die [Datenverarbeitungs-Grundverordnung](https://gdpr-info.eu/) (eines der strengsten Datenschutzgesetze). Du kannst jederzeit die Löschung gespeicherter Daten verlangen. Wir respektieren deine Privatsphäre, da wir glauben, dass Privatsphäre ein Menschenrecht ist. 
+Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie die [Datenschutz-Grundverordnung](https://dsgvo-gesetz.de/) (eines der strengsten Datenschutzgesetze). Du kannst jederzeit die Löschung gespeicherter Daten verlangen. Wir respektieren deine Privatsphäre, da wir glauben, dass Privatsphäre ein Menschenrecht ist. 
 Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 :::
 
