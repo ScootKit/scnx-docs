@@ -34,20 +34,20 @@ siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 
 In dieser Datei kannst du die Ticket-Kategorie einstellen. Jedes Ticket wird ihre eigene Ticket-Erstellungs-Nachricht haben welche in den Kanal gesendet wird, den du eingestellt hast. Die Ticket-Kategorie wird unabhängig von den anderen Kategorien agieren. Du kannst die [Datei in deinem dashboard](https://scnx.app/glink?page=bot/configuration?file=tickets|config) öffnen um zu starten.
 
-It's not possible to configure multiple ticket categories into one ticket creation message. If you are not a PRO user
-and the field values are on a different language,
-consider [switching the language](./../../../scnx/guilds/bots#bot-language) of your bot.
+Es ist nicht möglich mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nachricht zu senden. Wenn du kein PRO Nutzer bist
+und die Felder eine andere Sprache haben,
+kannst du die [Sprache von deinem Bot wechseln](./../../../scnx/guilds/bots#bot-language).
 
 | Field                                | Description                                                                                                                                                                                         |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name                                 | Name of the ticket category. This will be displayed to users and staff members.                                                                                                                     |
-| Ticket create category               | New ticket channels will be created in this category on your Discord when a user opens a new ticket.                                                                                                |
-| Ticket create channel                | The ticket creation message will be sent into this channel. Users will be able to open a ticket in this category by clicking on a button below the message sent into this channel.                  |
-| Ticket roles                         | These roles will be pinged when a new ticket gets opened in this category and these roles will be given access to ticket channels.                                                                  |
-| Log channel                          | The transcript of closed channels will be sent into this channel.                                                                                                                                   |
-| Ticket create message                | This message will be sent in the "Ticket create channel" and users will be able to open a ticket in this category by clicking on a button below this message.                                       |
+| Name                                 | Name der Ticket Kategorie. Dies wird der Nutzer und deine Team-Mitglieder sehen können.                                                                                                                     |
+| Ticketerstellungs-Kategorie               | Ein neuer Ticket-Kanal wird in der ausgewählten Kategorie auf deinem Discord-Server erstellt.                                                                                                |
+| Ticketerstellungs-Kanal               | Die Ticket-Erstellungsmachricht wird in diesen Kanal gesendet. Nutzer können ein Ticket erstelle indem sie auf den Knopf unter der Nachricht klicken.                  |
+| Ticketrollen                         | Diese Rollen werden erwähnt wenn ein neues Ticket geöffnet wurde und diesen Rollen wurde auch Zugriff auf alle Ticket Kanäle gegeben.                                                                  |
+| Log-Kanal                          | Das Transcript wird in diesen Kanal gesendet, nachdem ein Ticket geschlossen wurde.                                                                                                                                   |
+| Ticketerstellungs-Nachricht                | Diese Nachricht wird in den "Ticketerstellungs-Kanal" gesendet and users will be able to open a ticket in this category by clicking on a button below this message.                                       |
 | Send user DM when ticket gets closed | If enabled, users will be sent a DM when their ticket gets closed.                                                                                                                                  |
-| User DM                              | <i>Only visible if "Send user DM when ticket gets closed" is enabled.</i><br/>This message will be sent to the user when their ticket gets closed. You can include a link to the ticket transcript. |
+| Nach schließen PN an Nutzer senden                              | <i>Only visible if "Send user DM when ticket gets closed" is enabled.</i><br/>This message will be sent to the user when their ticket gets closed. You can include a link to the ticket transcript. |
 | Ticket-Created Message               | This message will be sent into new tickets when they get created. A button to close the ticket will be added below this message.                                                                    |
 | Ticket create button                 | This will be the content of the button below the ticket creation message and will open a new ticket when clicked.                                                                                   |
 | Ticket close button                  | This will be the content of the button below the ticket created message and will close the ticket when clicked.                                                                                     |
