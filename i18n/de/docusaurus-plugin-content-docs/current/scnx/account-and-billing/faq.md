@@ -42,7 +42,7 @@ Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 1. Aktiviere zunächst das Abonnement auf SCNX. Öffne dazu
       die [Zahlungsseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade
    Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrende Banküberweisung“ aus
-      Dir werden nun einmalige Zahlungsdaten und [eine eindeutige IBAN](#Überweisung) angezeigt.
+   Dir werden nun einmalige Zahlungsdaten und [eine eindeutige IBAN](#wire-transfer) angezeigt.
 2. Richte als Nächstes die wiederkehrende Überweisung bei deiner Bank ein:
    * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
    * [Deutsche Bank](https://www.deutsche-bank.de/pk/shared/trxm/help-de/konten/konten-dauerauftraege.html)
