@@ -1,5 +1,8 @@
 name: Check for markdown issues
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
