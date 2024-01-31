@@ -27,18 +27,12 @@ siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 * Nutzer können ein neues Ticket öffnen indem sie auf den Knopf unter der Ticket-Erstellungs-Nachricht klicken. 
 * Wenn ein Ticket erstellt wurde, wird der Bot einen neuen Kanal in der eingestellten Kategorie erstellen, mit den
   eingestellten Berechtigungen und Erwähnungen.
-* Staff members and the user who created the ticket will be able to close the ticket by clicking on the "Close Ticket"
-  button below the first message sent in the ticket by the bot (will also be pinned).
-* Once a ticket has been closed, the bot will generate a ticket transcript containing all message sent. This transcript
-  will be sent
-  in the configured log channel and to the user (if enabled).
+* Team Mitglieder und der Nutzer, der das Ticket erstellt hat kann das Ticket mit dem Button "Ticket schließen" unter der 1. Nachricht des Kanals schließen. (diese ist immer angepinnt)
+* Nachdem das Ticket geschlossen wurde wird der Bot ein Transcript mit allen gesendeten Nachrichten senden. Dies wird in den eingestellten Log-Kanal gesendet und an den Nutzer (falls aktiviert).
 
-## Configuration {#configuration}
+## Konfiguration {#configuration}
 
-In this file, you can configure Ticket-Category. Each ticket category will have its own ticket creation message sent in
-the
-channel you selected. Ticket-Category operate independently of each other. You can open
-the [file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=tickets|config) to get started.
+In dieser Datei kannst du die Ticket-Kategorie einstellen. Jedes Ticket wird ihre eigene Ticket-Erstellungs-Nachricht haben welche in den Kanal gesendet wird, den du eingestellt hast. Die Ticket-Kategorie wird unabhängig von den anderen Kategorien agieren. Du kannst die [Datei in deinem dashboard](https://scnx.app/glink?page=bot/configuration?file=tickets|config) öffnen um zu starten.
 
 It's not possible to configure multiple ticket categories into one ticket creation message. If you are not a PRO user
 and the field values are on a different language,
