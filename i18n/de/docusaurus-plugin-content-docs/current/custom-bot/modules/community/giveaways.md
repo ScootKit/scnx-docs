@@ -59,14 +59,12 @@ In dieser Konfigurationsdatei kannst du die Funktionalität von diesem Modul ein
 
 | Feld                                                                                                                   | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Gewinnspiel-Voraussetzungen-Ignorierung-Rollen                                                                         
-| Nutzer mit dieser Rolle können ohne die Vorrausetzungen zu erfüllen an den Gewinnspielen auf deinem Server teilnehmen. |
+| Gewinnspiel-Voraussetzungen-Ignorierung-Rollen                                                                         | Nutzer mit dieser Rolle können ohne die Vorrausetzungen zu erfüllen an den Gewinnspielen auf deinem Server teilnehmen.                                                                                                                                                                                                                                                                                                                                                     |
 | Nachrichten-Zähl-Modus                                                                                                 | Modus, in dem Nachrichten für Gewinnspiel-Anforderungen gezählt werden sollen.<br/><ul><li><code>all</code>: In diesem Modus wird jede Nachricht auf deinem Server auf die Gewinnspiel-Anforderungen angerechnet.</li><li><code>whitelist</code>: In diesem Modus werden nur Nachrichten in ausgewählten Kanälen gezählt.</li><li><code>blacklist</code>: In diesem Modus wird jede Nachricht auf deinem Server gezählt, außer du setzt diese auf die Blacklist.</li></ul> |
 | Blacklist                                                                                                              | *Dieses Feld wird nur funktionieren, wenn "Nachrichten-Zähl-Modus" auf "blacklist" gesetzt wurde.*<br/>Nachrichten, die in diesen Kanälen gesendet werden, werden nicht für die Gewinnspiel-Voraussetzungen gezählt.                                                                                                                                                                                                                                                       |
 | Whitelist                                                                                                              | *Dieses Feld wird nur funktionieren, wenn "Nachrichten-Zähl-Modus" auf "whitelist" gesetzt wurde.*<br/>Nur von Kanälen, die in diesem Feld eingetragen sind, werden Nachrichten für die Gewinnspiel-Voraussetzungen gezählt.                                                                                                                                                                                                                                               |
 | Zusätzliche Teilnahmen                                                                                                 | Für jede hier konfigurierte Rolle (die ein Nutzer hat), werden zusätzliche Teilnahmen vergeben. Normalerweise haben Mitglieder 1 Teilnahme. Für jede konfigurierte Rolle hier erhalten diese zusätzliche Teilnahmen, abhängig von dieser Konfiguration.<br/><ul><li>Erstes Feld: Rollen ID</li><li>Anzahl von *zusätzlichen** Teilnahmen, die Mitglieder mit einer bestimmten Rolle erhalten.</li></ul>                                                                    |
-| 
- PN-Nachricht an Gewinner senden                                                                                        | Falls Nutzer bei einem Gewinnspiel gewinnen, werden sie zusätzlich zu dem Ping in dem Gewinnspiel-channel eine DM erhalten.. Du kannst die Nachricht in dem [modul Nachrichten](#configuration-strings} einstellen.                                                                                                                                                                                                                                                        |
+ PN-Nachricht an Gewinner senden                                                                                        | Falls Nutzer bei einem Gewinnspiel gewinnen, werden sie zusätzlich zu dem Ping in dem Gewinnspiel-channel eine DM erhalten.. Du kannst die Nachricht in dem [Modul-Nachrichten](#configuration-strings) einstellen.                                                                                                                                                                                                                                                        |
 
 ### Modul-Nachrichten {#configuration-strings}
 
@@ -124,9 +122,9 @@ Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 * Eine eindeutige Zahl, die die Teilnahmen identifiziert
 * Die ID der Gewinnspiel-Nachricht
 * Die ID des Kanals, in dem das Gewinnspiel gestartet wurde, abhängig von dem [`channel`](#commands) Befehl-Parameter
-* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`zeit`](#commands) Befehl-Parameter
+* Die Zeit, wann das Gewinnspiel enden wird  / geendet hat, abhängig von dem [`duration`](#commands) Befehl-Parameter
 * Ob das Gewinnspiel schon geendet hat
-* Den Preis des Gewinnspiels, abhängig von dem [`Preis`](#commands) Befehl-Parameter
+* Den Preis des Gewinnspiels, abhängig von dem [`price`](#commands) Befehl-Parameter
 * Die Voraussetzungen des Gewinnspiels (wie Rollen oder die Anzahl von Nachrichten, falls angeschaltet), basierend auf
   deinen [Befehl-Parametern](#commands)
 * Wenn das Teilnehmen bei dem Gewinnspiel eine bestimmte Anzahl an Nachrichten voraussetzt:
@@ -134,7 +132,7 @@ Für jedes Gewinnspiel werden die folgenen Daten gespeichert:
 * Daten über jede berechtigte Teilnahme an dem Gewinnspiel: 
   * ID von den Nutzern, die an dem Gewinnspiel teilgenommen haben
   * Die Anzahl von Teilnahmen die Nutzer insgesamt teilgenommen haben, abhängig von deiner [Konfiguration](#configuration)
-  * Ob der Nutzer teilgenommen hat, indem er die Vorrausetzungen übersprungen hat, abhängig von deiner [Konfiguration](#configuration)
+  * Ob der Nutzer teilgenommen hat, indem er die Voraussetzungen übersprungen hat, abhängig von deiner [Konfiguration](#configuration)
 * Die ID des Sponsors vom Gewinnspiel (falls nicht der Ersteller des Gewinnspiels) 
 * Der Sponsor-Link, abhängig von deiner konfigurierten [`sponsor-url`](#commands) 
 * Die Anzahl von Gewinnern, abhängig von dem [`winner-count`](#commands) Befehl-Parameter
