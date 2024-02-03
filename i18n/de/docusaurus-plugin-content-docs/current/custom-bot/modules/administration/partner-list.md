@@ -22,7 +22,7 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 * Bitte [richte die Berechtigungen für Slash-Befehle](./../../slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
 * Konfiguriere anschließend die Partner-Liste:
     1. Erstelle einen Kanal, in den der Bot die Partner-Liste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachrichten senden“ verfügen.
-        2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
+    2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
        und [konfiguriere das Modul](#configuration).
     3. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
     4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
@@ -50,19 +50,19 @@ Mit dieser Konfigurationsdatei kannst du Benachrichtigungen für Partner einrich
 Öffne die Konfigurationsdatei in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).
 
-| Feld                                | Beschreibung                                                                                                                                                                                                                     |
-|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Feld                                | Beschreibung                                                                                                                                                                                                                    |
+|-------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kanal                               | Dies ist der Kanal, in den die Partner-Liste gesendet wird. Wenn der Bot in der Vergangenheit bereits eine Nachricht gesendet hat, wird die neueste Nachricht in die Partnerliste aufgenommen. Wir empfehlen einen leeren Kanal. |
-| Partner-Liste-Embed                 | Dies ist die Konfiguration der Partner-Liste.                                                                                                                                                                                    |
-| Partner-Liste-Embed: Titel          | Titel des Partner-Listen-Embeds.                                                                                                                                                                                                 |
-| Partner-Liste-Embed: Beschreibung   | Beschreibung des Partner-Listen-Embeds.                                                                                                                                                                                          |
-| Partner-Liste-Embed: Partner-String | Dies ist das Format eines Partners, der in dem Partner-Listen-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).                 |
-| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert] sein (./../../additional-features#embed-colors).                                                                          |
-| Kategorien                          | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden.                                                                   |
-| Kategorie-Rollen                    | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle                                 |
-| Partner-Benachrichtigung senden     | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden.                                                                                                           |
-| Partner-Willkommens-PN              | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser hinzugefügt wird.                                                                       |
-| Partner-Entfernung-PN               | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser entfernt wird.                                                                          |
+| Partner-Liste-Embed                 | Dies ist die Konfiguration der Partner-Liste.                                                                                                                                                                                   |
+| Partner-Liste-Embed: Titel          | Titel des Partner-Listen-Embeds.                                                                                                                                                                                                |
+| Partner-Liste-Embed: Beschreibung   | Beschreibung des Partner-Listen-Embeds.                                                                                                                                                                                         |
+| Partner-Liste-Embed: Partner-String | Dies ist das Format eines Partners, der in dem Partner-Listen-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).                |
+| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert](./../../additional-features#embed-colors) sein.                                                                          |
+| Kategorien                          | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden.                                                                  |
+| Kategorie-Rollen                    | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle                                |
+| Partner-Benachrichtigung senden     | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden.                                                                                                          |
+| Partner-Willkommens-PN              | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser hinzugefügt wird.                                                                      |
+| Partner-Entfernung-PN               | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser entfernt wird.                                                                         |
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
