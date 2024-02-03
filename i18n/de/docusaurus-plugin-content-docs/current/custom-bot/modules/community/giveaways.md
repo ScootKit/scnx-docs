@@ -46,9 +46,10 @@ erneut überprüft, was bedeutet, dass Nutzer, die beispielsweise ihre Rolle nac
 ## Konfiguration {#configuration}
 
 Dieses Modul verfügt über mehrere Konfigurationsdateien. Bitte überprüfe sie unten.
+
 ### Modul-Konfiguration {#configuration-config}
 
-:::Achtung:
+:::caution
 Nutzer für Einladungen zu belohnen, indem du mehrere Teilnahmen erlaubst, verstößt gegen die 
 [Discord Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und
 unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos); Verstöße werden direkt zu unserem Team weitergeleitet und dein Server oder auch dein Account wird von SCNX gesperrt. Melde Missbrauch hier: [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
