@@ -38,8 +38,8 @@ Then there are the "Draw 2" and the "Color choice and draw 4" cards: This forces
 
 <SlashCommandExplanation />
 
-| Command | Description                |                                                                                                                                                               
-|---------|----------------------------|
+| Command | Description                                                                                                            |
+|---------|------------------------------------------------------------------------------------------------------------------------|
 | `/uno`  | Starts an Uno game in the current channel - you can find more about how it works in the [usage section](#usage) above. |
 
 
