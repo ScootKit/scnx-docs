@@ -1,5 +1,8 @@
 name: Check for markdown issues
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -12,6 +15,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@master
       - name: Install dependencies
-        run: yarn add docusaurus-mdx-checker
+        run: yarn add docusaurus-mdx-checker markdown-table-formatter
       - name: Check MDX markdown
         run: npx docusaurus-mdx-checker
+      - name: Check markdown tables format
+        run: npx markdown-table-formatter "docs/**/*.{md,mdx}" --check
+      - name: Check markdown tables format for translations
+        run: npx markdown-table-formatter "i18n/**/*.{md,mdx}" --check

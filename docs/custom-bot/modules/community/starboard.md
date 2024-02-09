@@ -30,16 +30,16 @@ Let users highlight messages into a starboard channel by reacting.
 In this configuration file, you can [set up](#setup) the starboard channel, message and how users can use it in
 Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=starboard%7Cconfig).
 
-| Field | Description |
-|--------------|------------------------------------------------------------|
-| Starboard channel | This configures the channel into which messages starred by users are sent. |
-| Emoji | Users can "star" a message by reacting on it with this emoji. |
-| Message | This is the message sent in the starboard channel if users react to a message using the configured emoji. There available parameters are visible in your dashboard. |
-| Excluded channels | These are channels in which users cannot star a message. Their reaction won't be removed, instead your bot silently ignores it. |
-| Excluded roles | These are roles whose members cannot star a message. Their reaction won't be removed, instead your bot silently ignores it. |
-| Minimum stars | This is the minimum amount of stars a message needs to be sent to the starboard channel. Burst reactions count as a normal reaction. |
+| Field                   | Description                                                                                                                                                                                                                                                                    |
+|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Starboard channel       | This configures the channel into which messages starred by users are sent.                                                                                                                                                                                                     |
+| Emoji                   | Users can "star" a message by reacting on it with this emoji.                                                                                                                                                                                                                  |
+| Message                 | This is the message sent in the starboard channel if users react to a message using the configured emoji. There available parameters are visible in your dashboard.                                                                                                            |
+| Excluded channels       | These are channels in which users cannot star a message. Their reaction won't be removed, instead your bot silently ignores it.                                                                                                                                                |
+| Excluded roles          | These are roles whose members cannot star a message. Their reaction won't be removed, instead your bot silently ignores it.                                                                                                                                                    |
+| Minimum stars           | This is the minimum amount of stars a message needs to be sent to the starboard channel. Burst reactions count as a normal reaction.                                                                                                                                           |
 | Stars per user per hour | This configures how many times a user can react on messages per hour. This uses a rolling window, so this value is set to 10 and a user reacts 5 times at 12:00 and 5 times at 12:59, they can react 5 times again at 13:00. Users will receive a DM once they hit this limit. |
-| Self-Star | This configures whether users can star their own messages. If a user reacts on a message they sent themselves, their reaction removed to prevent confusion. |
+| Self-Star               | This configures whether users can star their own messages. If a user reacts on a message they sent themselves, their reaction removed to prevent confusion.                                                                                                                    |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -68,6 +68,6 @@ The bot also stores the following data about every user that has reacted to a me
 * The message ID of the message they starred
 * Metadata about the entry (date when created and last updated)
 
-Every day at 00:01 local time at the bot host location, all starboard user data older than one hour is removed from the database.
+Once a day, all starboard user data older than one hour is removed from the database.
 You can remove a starboard message from the database by removing all reactions from it. To
 remove all starboard related data, [purge the module database](./../../additional-features#reset-module-database).

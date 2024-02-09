@@ -27,7 +27,7 @@ ${moduleData.commandsCount ? `
 
 <SlashCommandExplanation />
 
-| Command                  | Description                |                                                                                                                                                               |
+| Command                  | Description                |                                                                                                                                                               
 |--------------------------|----------------------------|
 | *Command-Name here*      | *Command description here* |
 ` : ''}
@@ -36,7 +36,7 @@ ${moduleData.configFileCount ? `
 ${moduleData.configFileCount === 1 ? `
 Explain what users can configure and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to the SCNX Dashboard to open this file.
 
-| Field        | Description                                                                                                                                                                                                 |
+| Field        | Description                                                |                                                                                                                                                
 |--------------|------------------------------------------------------------|
 | *Field-Name* | Describe what this field does - be as detailed as possible. |
 ` : [...Array(moduleData.configFileCount)].map((_, k) => {
@@ -45,7 +45,7 @@ Explain what users can configure and include a [GLink](https://scnx.app/user/too
 Explain what users can configure in this file and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to the SCNX Dashboard to open this file.
 Please make sure that you replace the heading id with the correct file-name.
 
-| Field        | Description                                                                                                                                                                                                 |
+| Field        | Description                                                |                                                                                                                                                 
 |--------------|------------------------------------------------------------|
 | *Field-Name* | Describe what this field does - be as detailed as possible. |`;
 }).join('\n')}

@@ -15,7 +15,8 @@ Before you can create your Custom-Bot on SCNX, please make sure that
 * you are the owner of the server you want to enable this feature
   on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
   feature for you and grant you access as a [Trusted Admin](./scnx/guilds/trusted-admins).
-* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile it may take
+* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
+  it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
 
 ## 1. Create your Discord-Application & -Bot 🤖 {#step-1}
@@ -37,18 +38,12 @@ policies also apply to your use of the Discord API as part of SCNX) and create y
 
 Next, open the "Bot"-Settings in the navigation bar on the left-hand side.
 There, you can configure the avatar and username - you don't need to,
-as you can also [do this directly on SCNX](./scnx/guilds/bots#change-profile).
+as you can also [do this directly on SCNX](./scnx/guilds/bots#change-profile) and get prompted to do so when your bot
+got created.
 
-What you need to do next is enabling all the so-called "Intents" of your bot. These allow your bot to access certain
-data on
-your server. This is required for certain features to work. Additionally, we suggest disabling the "Public bot"-Setting,
-as your Custom-Bot will only work on your server. Take extra care to not enable the "Requires OAuth2 Code Grant"
-functionality.
-
-![](@site/docs/assets/setup/custom-bot-2.png)
-
-You are almost done in the Discord Developer Dashboard - the last step is to generate a token and copy it. To do so,
-scroll up and click on "Reset token" (still on the Bot page) and confirm your request in the modal. You might get asked
+The final step in the Developer Dashboard is to generate a token and copy it. To do so, open the "Bot" page of your
+application
+and click on "Reset token" (still on the Bot page) and confirm your request in the modal. You might get asked
 to enter a 2FA-Code for your Discord-Account.
 
 Once done, please **copy the token of your bot**. You'll need it in the next step.
@@ -70,14 +65,13 @@ select "Discord-Bot" in the sidebar.
 
 You'll find a video showing how you should create the Discord-Bot. If you've followed this guide, you can confidently
 skip this using the "I have created a bot"-button. Next, you'll be asked to enter the token you obtained
-in [step 1](#step-1). Do this and click on "Check my token". SCNX will now verify your token. Once SCNX finished
-processing, please invite your Bot to your server using the button labeld "Invite Bot" - if you missed this step, don't
-worry; you can also [invite the bot](./scnx/guilds/bots#invite-bot) later. Don't close this tab yet - you'll need to
-click on "Create bot" to finish the process.
+in [step 1](#step-1). Do this and click on "Check my token & create bot". SCNX will now verify your token, configure the
+Discord-Bot for you and set up hosting at SCNX - this might take a few seconds.
 
 ![](@site/docs/assets/setup/custom-bot-5.png)
 
-To invite your bot, you only need to click on the "Invite Bot"-Button. This will open Discord's OAuth2 Grant Screen
+Once SCNX has set up your bot, you'll need to invite your bot to your server. To do this, you only need to click on
+the "Add the bot to your Discord"-Button. This will open Discord's OAuth2 Grant Screen
 (that's how nerds call the screen below 🤓). SCNX already selected your server for you. Simply click "Continue" and
 "Authorize" to finish the process. If you want, you can remove the "Administrator" permission, but this will make it
 more
@@ -86,8 +80,9 @@ which feature needs what permissions and handle permission-related error correct
 
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
-Last, but not least, you'll need to confirm that you want to create your bot in the SCNX Dashboard - simply click on
-"Create bot".
+Once this is done, your bot is fully ready to use SCNX. Return to the setup flow to edit the bot
+profile with the "Edit profile" button ([you can also do this later](./scnx/guilds/bots#change-profile)), enable
+modules or explore all features your bot.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 

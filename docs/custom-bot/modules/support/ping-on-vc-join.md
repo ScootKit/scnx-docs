@@ -1,6 +1,6 @@
-# Ping-On-VC-Join
+# Voice-Channel Actions
 
-Sends a message when someone joins a voicechat
+Sends messages when someone joins a voicechat and assign roles to users in Voice-Channels
 
 <ModuleOverview moduleName="ping-on-vc-join" />
 
