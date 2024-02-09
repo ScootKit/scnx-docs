@@ -23,8 +23,8 @@ Nach dem Akzeptieren ändert der Bot die Nachricht und fügt drei Knöpfe für d
 
 <SlashCommandExplanation />
 
-| Befehle                | Beschreibung              |                                                                                                                                                               |
-|------------------------|----------------------------|
+| Befehle                | Beschreibung                                                                                                                                             |
+|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/rock-paper-scissors` | Dieser Befehl startet, wenn kein Nutzer oder ein Bot angegeben wurde, ein Schere Stein Papier-Spiel oder sendet eine Einladung an einen anderen Spieler. |
 
 

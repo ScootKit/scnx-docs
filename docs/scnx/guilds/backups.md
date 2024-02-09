@@ -50,11 +50,14 @@ manage it. These options are available:
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: false}}
                 additionalDetails={{PRO: 'Two times a day', ACTIVE_GUILD: 'Once a day'}}/>
 
-To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink?page=backups) and select the amount of backups you want to be created below "Automatic backups" and save the change.
+To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink?page=backups) and select the number of
+backups you want to be created below "Automatic backups" and save the change.
 
 ![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
 
-Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day, namely at 6:00 AM and 18:00 (6:00 PM, Central European Time). Please note that summer might affect the display time of creation on your backup.
+Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day,
+based on your server's timeslot. You can find the timeslot of your server in your dashboard. Please note that summer
+might affect the display time of creation on your backup.
 
 Automated backups will use the backup-slots available to your guild. If there aren't any available, the system will overwrite the oldest automatic backup. Your manual backups never get touched. If manual backups occupy all backup-slots, no automatic backups will be created.
 
@@ -140,6 +143,7 @@ After disabling the guild-lock, please follow the same instructions as [restorin
     <li>Please make sure you've actually [enabled this feature](#automatic] and saved the change.</li>
     <li>Please make sure you have at least one backup-slot not occupied by a manual backup.</li>
     <li>Please wait 24 hours for a backup to be created automatically.</li>
+    <li>You can't change the timeslot assigned to your server. You can always view the timeslot in your dashboard.</li>
 </details>
 
 ## Export backups {#export}

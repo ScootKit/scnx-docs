@@ -1,5 +1,8 @@
 name: Check for markdown issues
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -17,3 +20,5 @@ jobs:
         run: npx docusaurus-mdx-checker
       - name: Check markdown tables format
         run: npx markdown-table-formatter "docs/**/*.{md,mdx}" --check
+      - name: Check markdown tables format for translations
+        run: npx markdown-table-formatter "i18n/**/*.{md,mdx}" --check
