@@ -43,13 +43,13 @@ Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal*
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
 2. Füge den Kanal zur
    [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du 
-   den Kanal-Typ "Boost" or "Unboost" benutzt
+   den Kanal-Typ "Boost" oder "Unboost" benutzt
    und das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
-   * Wenn du zufällige Nachrichten verwendest willst, aktivierst du die "Zufällige Nachrichten?"-Option, öffnest
+   * Wenn du zufällige Nachrichten verwendest willst, aktiviere die "Zufällige Nachrichten?"-Option, öffne
      die [Zufällige Nachrichten](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei 
-     und [configure](#configuration-random-messages) the random messages with the Message-Type "
-     boost" or "unboost".
+     und [konfigure](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ "
+     boost" oder "unboost".
    * If you want to send the same message every time, use
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
      to [configure the message](#configuration-channels).
@@ -69,35 +69,35 @@ Leave messages will get send every time a user leaves your server.
      the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
      configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
      leave".
-   * If you want to send the same message every time, use
-     the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
-     to [configure the message](#configuration-channels).
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
+     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), 
+     um die [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Beitritts- und Boost-Rollen einrichten {#setup-join-roles}
 
 :::caution
-Momentan werden Currently, Join-Roles might overwrite or remove roles from users that have assigned themselves roles using Discord's
-onboarding.
-This issue is known and is being worked on.
+Momentan werden Beitritts-Rollen Rollen, die sich Nutzer selbst über 
+Discords Einführung gegeben haben, überschreiben oder entfernen.
+Dieser Fehler ist bekannt und wird bearbeitet.
 :::
 
-1. Open the [module configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
-2. Select the desired roles in the [respective configuration fields](#configuration-config).
+1. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
+2. Wähle die gewünschten Rollen in dem [jeweiligen Konfigurationsfeld](#configuration-config).
 
-## Usage {#usage}
+## Nutzung {#usage}
 
-After [setting up](#setup) the module, messages will get automatically sent every time the event gets triggered.
+Nach dem [Einrichten](#setup) des Moduls werden die Nachrichten automatisch jedes mal gesendet, wenn die Aktion ausgelöst wird.      
 
-To allow your members to use a Welcome button, simply [enable this feature](#configuration-config) in your
-configuration. Once done, new messages will have a (configurable) button. When this button is pressed by one of your
-members, it will get inactive (= it can't be pressed by anyone another time) and a [configurable](#configuration-config)
-message will get sent in the configured channel.
+Um Nutzern zu erlauben, einen Willkommen-Button zu benutzen, [aktiviere diese Funktion](#configuration-config) einfach in deiner Konfiguration. 
+Nach dem Einstellen werden neue Nachrichten einen (konfigurierbaren) Knopf haben. Wenn dieser Knopf von einem deiner Mitglieder gedrückt wird, 
+wird er inaktiv (= kann nicht mehr gedrückt werden) und eine [konfigurierbare](#configuration-config)
+Nachricht wird in den konfigurierten Kanal gesendet.
 
-## Configuration {#configuration}
+## Konfiguration {#configuration}
 
-This module is split in multiple configuration files. You can find them below.
+Dieses Modul ist in mehrere Konfigurationsdateien unteteilt. Du kannst diese weiter unten finden.
 
-### Channels {#configuration-channels}
+### Kanäle {#configuration-channels}
 
 In this configuration file, you can set up the channels in which this module is supposed to operate in and allows
 configuration of these channels. Open it in
