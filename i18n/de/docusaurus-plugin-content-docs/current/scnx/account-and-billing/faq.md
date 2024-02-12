@@ -40,8 +40,7 @@ Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 ### Wie bezahle ich bei SCNX mit einem Dauerauftrag (/einer wiederkehrenden Banküberweisung)? {#reoccurring-transfer}
 
 1. Aktiviere zunächst das Abonnement auf SCNX. Öffne dazu
-      die [Zahlungsseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade
-   Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Zahlungsplan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrende Banküberweisung“ aus
+      die [Zahlungsseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade-Fenster. Wähle als Nächstes dein Zahlungsintervall und deinen Plan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrende Banküberweisung“ aus.
    Dir werden nun einmalige Zahlungsdaten und [eine eindeutige IBAN](#wire-transfer) angezeigt.
 2. Richte als Nächstes die wiederkehrende Überweisung bei deiner Bank ein:
    * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
@@ -64,7 +63,7 @@ Bitte lies dir diesen [FAQ-Artikel](https://faq.scnx.app/de/sepa-lastschrift/) d
 Wenn du per Banküberweisung bezahlst, wird dir eine individuelle IBAN auf einem virtuellen Bankkonto zugewiesen. Jede Zahlung, die auf diesem Konto eintrifft, wird deinen Rechnungen gutgeschrieben – die Angabe der Transaktionsreferenz ist nicht erforderlich (wird jedoch empfohlen bei Einmalkäufen empfohlen), da wir anhand der IBAN, auf der das Geld eingegangen ist, eine Zahlung problemlos deinem Konto zuordnen können.
 
 Aus Versehen zu viel Geld verschickt? Keine Sorge: Dein Geld wird automatisch für zukünftige Zahlungen verwendet (falls dies nicht möglich ist, wird sich Stripe mit dir in Verbindung setzen und nach den Bankdaten fragen). Andernfalls kannst
-du [unser Team kontaktieren](https://scnx.app/help), um das Geld früher zurück zu erhalten to get the money back sooner (bitte beachte, dass dies nur möglich ist, 
+du [unser Team kontaktieren](https://scnx.app/help), um das Geld früher zurück zu erhalten (bitte beachte, dass dies nur möglich ist, 
 wenn dein Banküberweisungssaldo abgeglichen ist).
 
 ### Meine Karte wurde abgelehnt, aber alle meine Daten sind gültig {#no-reason-decline}
@@ -94,8 +93,8 @@ Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie di
 Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 :::
 
-| Zugriffsrecht                                                          | Erklärung                                                                                                                                                                                                              |
-|------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Wir greifen auf deinen Benutzernamen, deinen Avatar und dein Banner zu | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an.                                               |
-| Zugriff auf E-Mail-Adresse                                             | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
-| Wissen, auf welchen Servern du dich befindest                          | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest.                                                            |
+| Zugriffsrecht                                                   | Erklärung                                                                                                                                                                                                              |
+|-----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Zugriff auf deinen Benutzernamen, deinen Avatar und dein Banner | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an.                                               |
+| Zugriff auf E-Mail-Adresse                                      | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
+| Wissen, auf welchen Servern du dich befindest                   | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest.                                                            |
