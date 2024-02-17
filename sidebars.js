@@ -59,6 +59,16 @@ const sidebars = {
                     id: 'modmail/intro'
                 }
             ]
+        },
+        {
+            type: 'category',
+            label: 'Discord',
+            items: [
+                {
+                    type: 'doc',
+                    id: 'discord-formatting'
+                }
+            ]
         }
     ],
     customBotSidebar: [
