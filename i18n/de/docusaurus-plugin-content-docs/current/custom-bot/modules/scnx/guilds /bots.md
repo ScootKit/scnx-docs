@@ -35,26 +35,13 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
 * zusätzlich wird der Bot für eine kurze Zeit offline sein, in dieser Zeit wird der Bot nicht erreichbar sein.
  Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, are experiencing weird
   issues or want to [apply an update](#bot-updates).
-* "Stop bot": This shuts down the process of your bot. It won't be reachable on Discord. It might take up to five
-  minutes for your bot to be displayed as offline in Discord.
-* "Log" / "Error log": In these Logs-Files your bot
-  documents what it's doing and writes down the reason for failures or issues. Our staff (and technical experts) need
-  these logs to diagnose
-  problems and offer your solutions - or if they are bugs in the bot themselves - to fix them. You might get asked
-  to [share them](#sharing-logs).
-* Language: This is the (human) language your bot will use for any default-configuration-values and messages that can't
-  be configured. Modmail might, in some cases, use the language of the user that is executing a command instead of this
-  value. You can always [change the language](#bot-language) of your bot.
-* Server: This is the physical server - also called Bot-Host - your bot is being hosted on. You
-  can [change the Bot-Host](#bot-host) if you want.
-* Branch (only available for Custom-Bots): The branch is a completely different code base for your bot. You should leave
-  this on "v3" (Stable version), but can change it to the "beta"-Branch (Public beta; might be unstable).
-* Version (only visible for Custom-Bots): This is a unique number identifying a published code-version. Depending on
-  your version, your bot might not be able to use certain new features or take advanced of newly published releases. If
-  your version is not up-to-date, you'll find a warning indicating this. Your Modmail is always up-to-date. Learn more
-  about [Updates & Versions](#bot-updates).
-* RAM / CPU Values: These are right below the "Online"-Status. You can safely ignore them, they are only there as a
-  gimmick and show the RAM / CPU Usage of your Bot. These are irrelevant as SCNX is automatically optimizing your bot if
+* "Bot anhalten": Dies wird den Prozess deines Bots beenden. Es wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
+* "Log" / "Fehler-Log": In diesen Log-Datein wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und Technische Eyperten) benötigen die Probleme um diese zu analysieren und dir eine Lösung vorschlagen - oder falls es Fehler im Bot selbst sind - diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
+* Sprache: Das ist die (Menschliche) Sprache die dein Bot für alle Standart-onfiguration-Werte und Nachrichten, die nicht konfiguriert werden können. Der Modmail könnte in manchen Fällen die Sprache des ausführenden Nutzer benutzen, statt der eingestellten Sprache. Du kannst jederzeit [die Sprache des Bots ändern](#bot-language).
+* Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host) wenn du möchtest.
+* Branch (Nur bei Custom-Bots verfügbar): Diese Branch ist eine komplett andere Programmier-Basis für deinen Bot. Du solltest es bei "v3" (Stabie Version) belassen, du kannst es aber auch zu der "Beta"-Branch wechseln (Öffentliche Beta; kann aber instabil sein).
+* Version (Nur bei Custom-Bots sichtbar): Dies ist die ANzahl an veröffentlichen code-versionen. Abhängig von deiner Version wird dein Bot eventuell keine neuen Funktionen nutzen können. Wenn deine Version nicht aktuell ist wird es eine Warnung geben, die dies zeigt. Dein Modmail Bot wird immer auf dem neusten Stand sein. Erfahre mehr über [Updates & Versionen](#bot-updates).
+* RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen übersehen, sie zeigen nur die RAM / CPU Usage of your Bot. These are irrelevant as SCNX is automatically optimizing your bot if
   it is eatin[g](https://www.linuxatemyram.com/) more RAM than it should.
 
 ### Bot-Updates {#bot-updates}
