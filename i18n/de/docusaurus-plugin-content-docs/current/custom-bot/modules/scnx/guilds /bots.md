@@ -33,23 +33,21 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
   ohne dass der Bot offline geht. Generell solltest du lieber die Konfiguration neu laden als den Bot neuzustarten.
 * "Bot neustarten": Dies wird den Prozess deines Bots neustarten. Dies wird eventuell einige Minuten in Anspruch nehmen,
 * zusätzlich wird der Bot für eine kurze Zeit offline sein, in dieser Zeit wird der Bot nicht erreichbar sein.
- Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, are experiencing weird
-  issues or want to [apply an update](#bot-updates).
+ Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, komische Fehler auftreten oder du ein [Update machen willst](#bot-updates).
 * "Bot anhalten": Dies wird den Prozess deines Bots beenden. Es wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
 * "Log" / "Fehler-Log": In diesen Log-Datein wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und Technische Eyperten) benötigen die Probleme um diese zu analysieren und dir eine Lösung vorschlagen - oder falls es Fehler im Bot selbst sind - diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
 * Sprache: Das ist die (Menschliche) Sprache die dein Bot für alle Standart-onfiguration-Werte und Nachrichten, die nicht konfiguriert werden können. Der Modmail könnte in manchen Fällen die Sprache des ausführenden Nutzer benutzen, statt der eingestellten Sprache. Du kannst jederzeit [die Sprache des Bots ändern](#bot-language).
 * Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host) wenn du möchtest.
 * Branch (Nur bei Custom-Bots verfügbar): Diese Branch ist eine komplett andere Programmier-Basis für deinen Bot. Du solltest es bei "v3" (Stabie Version) belassen, du kannst es aber auch zu der "Beta"-Branch wechseln (Öffentliche Beta; kann aber instabil sein).
 * Version (Nur bei Custom-Bots sichtbar): Dies ist die ANzahl an veröffentlichen code-versionen. Abhängig von deiner Version wird dein Bot eventuell keine neuen Funktionen nutzen können. Wenn deine Version nicht aktuell ist wird es eine Warnung geben, die dies zeigt. Dein Modmail Bot wird immer auf dem neusten Stand sein. Erfahre mehr über [Updates & Versionen](#bot-updates).
-* RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen übersehen, sie zeigen nur die RAM / CPU Usage of your Bot. These are irrelevant as SCNX is automatically optimizing your bot if
-  it is eatin[g](https://www.linuxatemyram.com/) more RAM than it should.
+* RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen übersehen, sie zeigen nur die RAM / CPU Nutzung deines Bots anzeigt. Diese sind irrelevant, da SCNX automatisch deinen Bot optimiert falls dein Bot zu viel RAM friss[t](https://www.linuxatemyram.com/) als er soll.
 
 ### Bot-Updates {#bot-updates}
 
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Custom Bot">
         <ul>
-            <li>We publish regular updates for Custom-Bots - we usually bundle a bunch of features into one release for the public version. For the <a href="#beta">beta version</a>, there are a bunch of releases, sometimes even multiple ones a day.</li>
+            <li>Wir veröffentlichen regelmäßig Updates für Discord-Bots - wir stellen meist mehrere Funktionen in ein Update für die öffentliche Version. into one release for the public version. For the <a href="#beta">beta version</a>, there are a bunch of releases, sometimes even multiple ones a day.</li>
             <li>Your Bot will send a message in your Bot-Log-Channel (if configured) when a new update is available.</li>
             <li>We'll announce every update on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
             <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog page</a>.</li>
