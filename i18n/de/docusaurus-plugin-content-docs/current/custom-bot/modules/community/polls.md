@@ -4,7 +4,7 @@ Einfaches Modul zum Erstellen neuer Umfragen auf Ihrem Server!
 
 <ModuleOverview moduleName="polls" />
 
-## Funktionen {#funktionen}
+### Funktionen {#funktionen}
 
 * Erstelle anonyme und öffentliche Umfragen mit bis zu neun Optionen pro Umfrage.
 * Nutzer können via ein Dropdown-Menü ihre Option auswählen.
@@ -15,7 +15,7 @@ Hier ist ein Beispiel, wenn eine Umfrage beendet, ist:
 
 ![](@site/docs/assets/custom-bot/modules/polls/example.png)
 
-## Einrichtung {#einrichtung}
+### Einrichtung {#einrichtung}
 
 * Um mit dem Modul Umfragen zu starten, stelle sicher, dass dein Bot in jedem Channel, in dem du Umfragen verwenden willst,
   folgende Rechte hat: Nachrichten lesen, Nachrichten senden, Links einbetten..
@@ -37,7 +37,7 @@ Benutzer können:
 * Sich anschauen, wer für welche Option gestimmt hat, indem Sie auf den Button „Aktuelle
   Stimmen anzeigen“ unter dem Abstimmungs-Embed klicken (falls die Umfrage auf Öffentlich gestellt ist).
 
-## Befehle {#befehle}
+### Befehle {#befehle}
 
 <SlashCommandExplanation />
 
@@ -46,7 +46,7 @@ Benutzer können:
 | `/polls create description:<Text> channel:<TextChannel> option1:<Text> option2:<Text> [option{n}:<Text>] [duration:<TimeDuration>] [public:<Boolean>]` | Erstelle im gewünschten Kanal eine neue Umfrage. Geben Sie die Umfragefrage als `description` Wert ein und fügen Sie mögliche Optionen mit dem Element `option{n}` hinzu. Optional können Sie eine Umfrage mit der Option `public` öffentlich machen (das bedeutet, dass jeder sehen kann, wofür Benutzer gestimmt haben). Wenn diese Option aktiviert ist, wird unterhalb der Umfrage die Schaltfläche „Aktuelle Stimmen anzeigen“ hinzugefügt. Um eine Umfrage automatisch zu beenden, geben Sie eine `duration` in einem [unterstützten Zeitdauerwert](./../../additional-features#durations) an. |
 | `/polls end msg-id:<PollMessageID>`                                                                                                                    | Beendet eine bereits bestehende Umfrage, die noch nicht beendet wurde, sofort. Die Option `msg-id` unterstützt die automatische Vervollständigung, sodass Sie problemlos nach der Umfragebeschreibung der Umfrage suchen können, die Sie beenden möchten.                                                                                                                                                                                                                        |
 
-## Konfiguration {#konfiguration}
+### Konfiguration {#konfiguration}
 
 ### Konfiguration {#konfiguration-config}
 
