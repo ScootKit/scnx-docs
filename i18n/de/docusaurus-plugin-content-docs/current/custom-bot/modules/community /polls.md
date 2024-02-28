@@ -51,7 +51,7 @@ Benutzer können:
 ### Konfiguration {#konfiguration-config}
 
 In dieser Datei können Sie die Emojis neben den Abstimmungsoptionen anpassen. Öffnen Sie es in 
-Ihrem [dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
+Ihrem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
 
 | Feld  | Beschreibung                                                                                                                                                                                                                                            |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ Ihrem [dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&fi
 ### Nachricht {#konfigurations-string}
 
 In dieser Datei kannst du anpassen, wie die Umfrageeinbettung in Discord angezeigt wird. Öffnen Sie es in Ihrem
-[dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/strings).
+[Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/strings).
 
 | Feld | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
