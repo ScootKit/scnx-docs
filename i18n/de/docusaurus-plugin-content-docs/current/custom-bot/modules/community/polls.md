@@ -92,7 +92,7 @@ Darüber hinaus werden die folgenden Daten über jeden Benutzer gespeichert, wen
 * Die ID des Benutzers
 * Die Nummer der Option, für die Du gestimmt haben
 
-Wenn die Umfrage noch nicht beendet ist, können Benutzer [ihre Stimme entfernen](#usage). ANach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
+Wenn die Umfrage noch nicht beendet ist, können Benutzer [Ihre Stimme entfernen](#usage). Nach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
 
 Es gibt keine Möglichkeit, Umfragen aus der Datenbank zu entfernen (Du kannst die Umfrage trotzdem jederzeit löschen). Zum
 löschen aller Umfragen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
