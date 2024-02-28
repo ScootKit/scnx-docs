@@ -48,7 +48,7 @@ Benutzer können:
 
 ## Konfiguration {#konfiguration}
 
-### Konfiguration {#konfiguration-konfig}
+### Konfiguration {#konfiguration-config}
 
 In dieser Datei können Sie die Emojis neben den Abstimmungsoptionen anpassen. Öffnen Sie es in 
 Ihrem [dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
@@ -66,37 +66,33 @@ In dieser Datei kannst du anpassen, wie die Umfrageeinbettung in Discord angezei
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Embed | Mit dieser Konfigurationsoption können Sie anpassen, wie die Umfrageeinbettung in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a>.</li><li><code>options</code>: Die Kopfzeile des Optionsfelds inm Embed.</li><li><code>liveView</code>: Der Header der (Live-)Ergebnisanzeige in der Einbettung.</li><li><code>expiresOn</code>: Der Header der Anzeige der Ablaufzeit im Embed.</li><li><code>endedPollTitle</code>: Der Header von embed, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds wenn die Umfrage beendet ist, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Kopfzeile des Sichtbarkeitsabschnitts der Umfrageeinbettung.</li></ul> |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#fehlerbehebung}
 
-If you are experiencing issues with the poll module please make sure that
+Wenn Sie Probleme mit dem Umfragemodul haben, stellen Sie bitte sicher, dass
 
-* you haven't started a poll in an announcement channel (as messages can't be updated as frequently in such channels).
-* your [message configuration](#configuration-strings) doesn't include any empty fields and that
-  are [color values are valid](../../additional-features#embed-colors).
-* your [configuration](#configuration-config) only includes valid emoji values (unicode for built-in emojis and full
-  emoji IDs for custom emojis).
-* the bot has the following permissions on the channel you want to start a poll in: Read messages, Send messages, Embed
-  Links.
+* Sie haben keine Umfrage in einem Ankündigungskanal gestartet (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
+* Ihre [Nachrichtenkonfiguration](#konfigurations-string) keine leeren Felder enthält, und das [Farbwerte gültig sind](../../additional-features#embed-colors).    
+* Ihre [Konfiguration](#konfiguration-config) onnur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis)enthält .
+* Der Bot über die folgenden Berechtigungen für den Kanal, in dem Sie eine Umfrage starten möchten: Nachrichten lesen, Nachrichten senden, Links einbetten verfügt.
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#gespeicherte-daten}
 
-The following data is being stored about every poll created via [commands](#commands):
+Die folgenden Daten werden über jede Abfrage gespeichert, die über [Befehle](#befehle) erstellt wird :
 
-* The ID of the poll message sent after creation
-* The ID of the channel the poll was created in
-* The question of the poll (`description` value in the command), including whether the poll is public or not
-* The value of every voting option (`option{n}` values in the command)
-* If enabled: Exact time at which the poll will expire (controlled by the `duration` option in the command) and whether
-  the poll has ended
-* View Metadata about your server (like name, icon, owner, …)
+* Die ID der Umfragenachricht, die nach der Erstellung gesendet wurde
+* Die ID des Kanals, in dem die Umfrage erstellt wurde
+* Die Frage nach der Umfrage (Wert im Befehl), einschließlich der Frage, ob die Umfrage öffentlich ist oder nicht (`description` value in the command), einschließlich der Frage, ob die Umfrage öffentlich ist oder nicht
+* Der Wert jeder Abstimmungsoption ( Werte im Befehl) (`option{n}` values in the command)
+* Falls aktiviert: Genaue Uhrzeit, zu der die Abfrage abläuft (gesteuert durch die Option im Befehl) und ob Die Umfrage ist beendet (controlled by the `duration` option in the command) und ob
+  die Umfrage ist beendet
+* Metadaten über Ihren Server anzeigen (z. B. Name, Symbol, Besitzer, ...)
 
-Additionally, the following data will be stored about every user when they vote for an option:
+Darüber hinaus werden die folgenden Daten über jeden Benutzer gespeichert, wenn er für eine Option abstimmt:
 
-* The ID of the user
-* The number of the option they voted for
+* Die ID des Benutzers
+* Die Nummer der Option, für die sie gestimmt haben
 
-If the poll hasn't ended yet, users can [remove their vote](#usage). After a poll has ended, this option isn't available
-anymore.
+Wenn die Umfrage noch nicht beendet ist, können Benutzer [ihre Stimme entfernen](#verwendung). ANach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
 
-There is no way to remove polls from the database (you can always delete the poll regardless). To
-remove all polls, [purge the module database](./../../additional-features#reset-module-database).
+Es gibt keine Möglichkeit, Umfragen aus der Datenbank zu entfernen (Sie können die Umfrage trotzdem jederzeit löschen). Zum
+löschen aller Umfragen, [löschen Sie die Moduldatenbank](./../../additional-features#reset-module-database).
