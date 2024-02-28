@@ -21,7 +21,7 @@ Hier ist ein Beispiel, wenn eine Umfrage beendet, ist:
   folgende Rechte hat: Nachrichten lesen, Nachrichten senden, Links einbetten..
 * Stellen Sie sicher, dass Sie [die Rechte](./../../slash-commands) für [`/poll`](#befehle) korrekt eingestellt haben.
 
-## Verwendung {#verwendung}
+### Verwendung {#verwendung}
 
 Administratoren können Umfragen mit folgenden Commands managen:
 
@@ -66,7 +66,7 @@ In dieser Datei kannst du anpassen, wie die Umfrageeinbettung in Discord angezei
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Embed | Mit dieser Konfigurationsoption können Sie anpassen, wie die Umfrageeinbettung in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a>.</li><li><code>options</code>: Die Kopfzeile des Optionsfelds inm Embed.</li><li><code>liveView</code>: Der Header der (Live-)Ergebnisanzeige in der Einbettung.</li><li><code>expiresOn</code>: Der Header der Anzeige der Ablaufzeit im Embed.</li><li><code>endedPollTitle</code>: Der Header von embed, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds wenn die Umfrage beendet ist, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Kopfzeile des Sichtbarkeitsabschnitts der Umfrageeinbettung.</li></ul> |
 
-## Fehlerbehebung {#fehlerbehebung}
+### Fehlerbehebung {#fehlerbehebung}
 
 Wenn Sie Probleme mit dem Umfragemodul haben, stellen Sie bitte sicher, dass
 
@@ -75,7 +75,7 @@ Wenn Sie Probleme mit dem Umfragemodul haben, stellen Sie bitte sicher, dass
 * Ihre [Konfiguration](#konfiguration-config) onnur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis)enthält .
 * Der Bot über die folgenden Berechtigungen für den Kanal, in dem Sie eine Umfrage starten möchten: Nachrichten lesen, Nachrichten senden, Links einbetten verfügt.
 
-## Gespeicherte Daten {#gespeicherte-daten}
+### Gespeicherte Daten {#gespeicherte-daten}
 
 Die folgenden Daten werden über jede Abfrage gespeichert, die über [Befehle](#befehle) erstellt wird :
 
