@@ -47,11 +47,11 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Custom Bot">
         <ul>
-            <li>Wir veröffentlichen regelmäßig Updates für Discord-Bots - wir stellen meist mehrere Funktionen in ein Update für die öffentliche Version. into one release for the public version. For the <a href="#beta">beta version</a>, there are a bunch of releases, sometimes even multiple ones a day.</li>
-            <li>Your Bot will send a message in your Bot-Log-Channel (if configured) when a new update is available.</li>
-            <li>We'll announce every update on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
-            <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog page</a>.</li>
-            <li>To apply the newest version of the Custom-Bot ("upgrade"), simply restart the Bot in your <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> (updates will only apply when there's an update notice visible). Updates are always free of charge.</li>
+            <li>Wir veröffentlichen regelmäßig Updates für Discord-Bots - wir stellen meist mehrere Funktionen in ein Update für die öffentliche Version. Für die <a href="#beta">Öffentliche Beta</a> gibt es viele Veröffentlichungen, manchmal mehrere an einem Tag.</li>
+            <li>Dein Bot wird eine Nachricht in deinen Bot-Log-Channel (falls eingestellt) senden, wenn ein neues Update verfügbar ist.</li>
+            <li>Wir kündingen jedes Update auf unserem <a href="https://scootk.it/dc">Discord-Server</a> an und senden einen Link zu dem Changelog.</li>
+            <li>YDu findest alle Changelogs in deinem <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> und in unsrer <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog-seite</a>.</li>
+            <li>Um die neuste Version des Bots zu nutzen, starte den Bot ganz einfach in deinem <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> neu. Updates Updates sind immer kostenlos.</li>
             <li>You won't be able to use certain features if your bot is not on the latest version until you upgrade to a newer version.</li>
         </ul>
     </TabItem>
