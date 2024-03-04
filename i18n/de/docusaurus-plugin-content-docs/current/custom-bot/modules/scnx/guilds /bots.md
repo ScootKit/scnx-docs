@@ -52,18 +52,18 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
             <li>Wir kündingen jedes Update auf unserem <a href="https://scootk.it/dc">Discord-Server</a> an und senden einen Link zu dem Changelog.</li>
             <li>YDu findest alle Changelogs in deinem <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> und in unsrer <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Changelog-seite</a>.</li>
             <li>Um die neuste Version des Bots zu nutzen, starte den Bot ganz einfach in deinem <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> neu. Updates Updates sind immer kostenlos.</li>
-            <li>You won't be able to use certain features if your bot is not on the latest version until you upgrade to a newer version.</li>
+            <li>Du wirst keine neuen Funktionen nutzen können bis dein Bot auf die neuste Version gebracht wurde, falls dein Bot nicht auf der neusten Version ist.</li>
         </ul>
     </TabItem>
     <TabItem value="modmailBot" label="Modmail-Bot">
         <ul>
-          <li>We publish regular updates for Modmail, sometimes even multiple versions a day. All updates are free of charge.</li>
-          <li>Your Modmail is always running the newest version available for it.</li>
-          <li>When there's a new version available, your Modmail will automatically restart to apply it.</li>
-          <li>We'll announce big updates on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
-          <li>Some small updates and bug-fixes won't be announced - your Modmail simply applies them without any commotion.</li>
-          <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=modmail/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog page</a>.</li>
-          <li>When updating, your Modmail might be offline for a short period of time while applying database changes. This takes less than a minute and startup will continue as usual afterward.</li>
+          <li>Wir veröffentlichen regelmäßig Updates für den Modmail Bot, manchmal mehrere an einem Tag. Alle Updates sind kostenlos.</li>
+          <li>Dein Modmail Bot wird sich immer auf der neusten ihm verfügbaren Version befinden.</li>
+          <li>Wenn ein neues Update für deinen Modmail Bot verfügbar ist, wird dein Bot das Update automatisch installieren.</li>
+          <li>Wir kündigen größere Updates auf unserem <a href="https://scootk.it/dc">Discord-Server</a> an und posten einen Link zu dem changelog.</li>
+          <li>Manche Updates oder Fehler-behebungen werden nicht angekündigt - dein Modmail Bot wird sie einfach istallieren.</li>
+          <li>Du findest alle Changelogs in deinem <a href="https://scnx.app/glink?page=modmail/manage">Bot-Dashboard</a> und auf unserer <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog Seite</a>.</li>
+          <li>Wenn dein Bot ein Update ein Update macht, wird er für eine kurze Zeit offline sein während er die Datenbanken-änderungen macht. Dies wird normalerweise unter einer Minute dauern und dein Bot wird wieder arbeiten wie davor. </li>
         </ul>
     </TabItem>
 </Tabs>
