@@ -8,18 +8,18 @@ Einfaches Modul zum Erstellen neuer Umfragen auf deinem Server!
 
 * Erstelle anonyme und öffentliche Umfragen mit bis zu neun Optionen pro Umfrage.
 * Nutzer können via ein Dropdown-Menü ihre Option auswählen.
-* Automatisch endende Umfragen, nach Ablauf einer festgelegten Zeit.
-* Leicht verständliche Ergebnisanzeige, welche live geupdatet wird.
+* Automatisch nach Ablauf einer festgelegten Zeit endende Umfragen.
+* Leicht verständliche Ergebnisanzeige, welche live aktualisiert wird.
 
-Hier ist ein Beispiel, einer beendeten Umfrage:
+Hier ist ein Beispiel einer beendeten Umfrage:
 
 ![](@site/docs/assets/custom-bot/modules/polls/example.png)
 
 ## Einrichtung {#setup}
 
-* Um mit dem Modul Umfragen zu starten, stelle sicher, dass dein Bot in jedem Channel, in dem du Umfragen verwenden willst,
+* Um mit dem Modul Umfragen zu starten, stelle sicher, dass dein Bot in jedem Kanal, in dem du Umfragen verwenden willst,
   folgende Rechte hat: Nachrichten lesen, Nachrichten senden, Links einbetten.
-* Stelle sicher, dass Du [die Rechte](./../../slash-commands) für [`/poll`](#commands) korrekt eingestellt haben.
+* Stelle sicher, dass du [die Rechte](./../../slash-commands) für [`/poll`](#commands) korrekt eingestellt hast.
 
 ## Verwendung {#usage}
 
@@ -34,8 +34,8 @@ Benutzer können:
 * Ihre Antwort einsehen, für die Du gestimmt haben, über den Knopf „Für was habe ich abgestimmt“ unter der Abstimmung.
 * Ihre Stimme entfernen, wenn Du zuerst „Für was habe ich gestimmt“ ausgewählt haben und danach auf „Meine Stimme entfernen“ unter der Rückmeldung klicken.
 * Liveergebnisse im Umfragen Embed sehen.
-* Sich anschauen, wer für welche Option gestimmt hat, indem Du auf den Button „Aktuelle
-  Stimmen anzeigen“ unter dem Abstimmungs-Embed klicken (falls die Umfrage auf Öffentlich gestellt ist).
+* Sich anschauen, wer für welche Option gestimmt hat, indem sie auf den Knopf „Aktuelle
+  Stimmen anzeigen“ unter dem Abstimmungs-Embed klicken (falls die Umfrage auf öffentlich gestellt ist).
 
 ## Befehle {#commands}
 
@@ -50,16 +50,16 @@ Benutzer können:
 
 ### Konfiguration {#configuration-config}
 
-In dieser Datei kannst DU die Emojis neben den Abstimmungsoptionen anpassen. Öffne es in 
-Ihrem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
+In dieser Datei kannst du die Emojis neben den Abstimmungsoptionen anpassen. Öffne es in 
+deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
 
 | Feld  | Beschreibung                                                                                                                                                                                                                                            |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Emojis | In diesen Feldern kannst Du die Emojis anpassen, die neben jeder Abstimmungsoption im Dropdown-Menü und in der Einbettung angezeigt werden. Stelle sicher, dass Du Unicode-Werte für integrierte Emojis oder gültige Emoji-IDs (nicht nur den Namen) für benutzerdefinierte Emojis eingeben. |
+| Emojis | In diesen Feldern kannst du die Emojis anpassen, die neben jeder Abstimmungsoption im Dropdown-Menü und im Embed angezeigt werden. Stelle sicher, dass Du Unicode-Werte für integrierte Emojis oder gültige Emoji-IDs (nicht nur den Namen) für benutzerdefinierte Emojis eingibst. |
 
-### Nachricht {#configuration-strings}
+### Nachrichten {#configuration-strings}
 
-In dieser Datei kannst du anpassen, wie die Umfrageeinbettung in Discord angezeigt wird. Öffne es in Deinem
+In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Öffnen sie es in deinem
 [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/strings).
 
 | Feld | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
