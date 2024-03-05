@@ -23,17 +23,17 @@ Hier ist ein Beispiel einer beendeten Umfrage:
 
 ## Verwendung {#usage}
 
-Administratoren können Umfragen mit folgenden Commands managen:
+Administratoren können Umfragen mit folgenden Befehlen verwalten:
 
-* [`/poll create`](#commands) Zum Erstellen neuer Umfragen.
-* [`/poll end`](#commands) Zum Beenden einer Umfrage (Umfragen enden automatisch, wenn du `/poll create` den Dauerparameter gesetzt haben).
+* [`/poll create`](#commands) zum erstellen neuer Umfragen.
+* [`/poll end`](#commands) zum Beenden einer Umfrage (Umfragen enden automatisch, wenn du bei `/poll create` den zeitparameter gesetzt hast).
 
 Benutzer können:
 
-* Über Umfragen abstimmen, unter Verwendung des Auswahl Menüs unter der Umfrage.
-* Ihre Antwort einsehen, für die Du gestimmt haben, über den Knopf „Für was habe ich abgestimmt“ unter der Abstimmung.
-* Ihre Stimme entfernen, wenn Du zuerst „Für was habe ich gestimmt“ ausgewählt haben und danach auf „Meine Stimme entfernen“ unter der Rückmeldung klicken.
-* Liveergebnisse im Umfragen Embed sehen.
+* Mit dem Dropdown-Menü unter Umfragen abstimmen.
+* Sehen, für was sie gestimmt haben, indem sie den Knopf „Für was habe ich abgestimmt?“ unter der Abstimmung nutzen.
+* Ihre Stimme entfernen, wenn sie zuerst „Für was habe ich abgestimmt?“ auswählen und danach auf „Meine Stimme entfernen“ unter der Antwort klicken.
+* Liveergebnisse im Umfragen-Embed sehen.
 * Sich anschauen, wer für welche Option gestimmt hat, indem sie auf den Knopf „Aktuelle
   Stimmen anzeigen“ unter dem Abstimmungs-Embed klicken (falls die Umfrage auf öffentlich gestellt ist).
 
