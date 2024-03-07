@@ -43,32 +43,32 @@ Benutzer können:
 
 | Befehl                                                                                                                                                | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/polls create description:<Text> channel:<TextChannel> option1:<Text> option2:<Text> [option{n}:<Text>] [duration:<TimeDuration>] [public:<Boolean>]` | Erstelle im gewünschten Kanal eine neue Umfrage. Gib die Umfragefrage als `description` Wert ein und füge mögliche Optionen mit dem Element `option{n}` hinzu. Optional kannst Du eine Umfrage mit der Option `public` öffentlich machen (das bedeutet, dass jeder sehen kann, wofür Benutzer gestimmt haben). Wenn diese Option aktiviert ist, wird unterhalb der Umfrage die Schaltfläche „Aktuelle Stimmen anzeigen“ hinzugefügt. Um eine Umfrage automatisch zu beenden, gibst Du eine `duration` in einem [unterstützten Zeitdauerwert](./../../additional-features#durations) an. |
-| `/polls end msg-id:<PollMessageID>`                                                                                                                    | Beendet eine bereits bestehende Umfrage, die noch nicht beendet wurde, sofort. Die Option `msg-id` unterstützt die automatische Vervollständigung, sodass Du problemlos nach der Umfragebeschreibung der Umfrage suchen können, die Du beenden möchten.                                                                                                                                                                                                                        |
+| `/polls create description:<Text> channel:<TextKanal> option1:<Text> option2:<Text> [option{n}:<Text>] [duration:<ZeitDauer>] [public:<Boolean>]` | Erstelle im gewünschten Kanal eine neue Umfrage. Gib die Umfragefrage als `description` Wert ein und füge mögliche Optionen mit dem Element `option{n}` hinzu. Optional kannst Du eine Umfrage mit der Option `public` öffentlich machen (das bedeutet, dass jeder sehen kann, wofür Benutzer gestimmt haben). Wenn diese Option aktiviert ist, wird unterhalb der Umfrage die Schaltfläche „Aktuelle Stimmen anzeigen“ hinzugefügt. Um eine Umfrage automatisch zu beenden, gibst du eine `duration` in einem [unterstützten Zeitdauerwert](./../../additional-features#durations) an. |
+| `/polls end msg-id:<UmfragenNachrichtID>`                                                                                                                    | Beendet sofort eine bereits bestehende Umfrage, die noch nicht beendet wurde. Die Option `msg-id` unterstützt die automatische Vervollständigung, sodass du problemlos nach der Umfragebeschreibung der Umfrage suchen kannst, die du beenden möchtest.                                                                                                                                                                                                                        |
 
 ## Konfiguration {#configuration}
 
 ### Konfiguration {#configuration-config}
 
-In dieser Datei kannst du die Emojis neben den Abstimmungsoptionen anpassen. Öffne es in 
+In dieser Datei kannst du die Emojis neben den Abstimmungsoptionen anpassen. Öffnen sie es in 
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
 
 | Feld  | Beschreibung                                                                                                                                                                                                                                            |
 |--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Emojis | In diesen Feldern kannst du die Emojis anpassen, die neben jeder Abstimmungsoption im Dropdown-Menü und im Embed angezeigt werden. Stelle sicher, dass Du Unicode-Werte für integrierte Emojis oder gültige Emoji-IDs (nicht nur den Namen) für benutzerdefinierte Emojis eingibst. |
+| Emojis | In diesen Feldern kannst du die Emojis anpassen, die neben jeder Abstimmungsoption im Dropdown-Menü und im Embed angezeigt werden. Stelle sicher, dass du Unicode-Werte für integrierte Emojis oder gültige Emoji-IDs (nicht nur den Namen) für benutzerdefinierte Emojis eingibst. |
 
 ### Nachrichten {#configuration-strings}
 
-In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Öffnen sie es in deinem
+In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Öffne sie in deinem
 [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/strings).
 
 | Feld | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Embed | Mit dieser Konfigurationsoption kannst Du anpassen, wie die Umfrageeinbettung in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a>.</li><li><code>options</code>: Die Kopfzeile des Optionsfelds im Embed.</li><li><code>liveView</code>: Der Header der (Live-)Ergebnisanzeige in der Einbettung.</li><li><code>expiresOn</code>: Der Header der Anzeige der Ablaufzeit im Embed.</li><li><code>endedPollTitle</code>: Der Header von Embed, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds wenn die Umfrage beendet ist, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Kopfzeile des Sichtbarkeitsabschnitts der Umfrageeinbettung.</li></ul> |
+| Embed | Mit dieser Konfigurationsoption kannst Du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>options</code>: Die Überschrift des Optionsfelds im Embed.</li><li><code>liveView</code>: Die Überschrift der (Live-)Ergebnisanzeige im Embed.</li><li><code>expiresOn</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollTitle</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds, wenn die Umfrage beendet ist. Muss ein <a href="../../additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Überschrift des Öffentlichkeitsabschnitts des Embeds.</li></ul> |
 
 ## Fehlerbehebung {#troubleshooting}
 
-Wenn Du Probleme mit dem Umfragemodul haben, stelle bitte sicher, dass
+Wenn du Probleme mit dem Umfragemodul hast, stelle bitte sicher, dass
 
 * Du hast keine Umfrage in einem Ankündigungskanal gestartet (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
 * Ihre [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält, und das [Farbwerte gültig sind](../../additional-features#embed-colors).    
@@ -77,22 +77,21 @@ Wenn Du Probleme mit dem Umfragemodul haben, stelle bitte sicher, dass
 
 ## Gespeicherte Daten {#data-usage}
 
-Die folgenden Daten werden über jede Abfrage gespeichert, die über [Befehle](#commands) erstellt wird :
+Die folgenden Daten werden über jede Umfrage gespeichert, die über [Befehle](#commands) erstellt wird :
 
 * Die ID der Umfragenachricht, die nach der Erstellung gesendet wurde
 * Die ID des Kanals, in dem die Umfrage erstellt wurde
-* Die Frage nach der Umfrage (Wert im Befehl), einschließlich der Frage, ob die Umfrage öffentlich ist oder nicht (`description` value in the command), einschließlich der Frage, ob die Umfrage öffentlich ist oder nicht
-* Der Wert jeder Abstimmungsoption ( Werte im Befehl) (`option{n}` values in the command)
-* Falls aktiviert: Genaue Uhrzeit, zu der die Abfrage abläuft (gesteuert durch die Option im Befehl) und ob Die Umfrage ist beendet (controlled by the `duration` option in the command) und ob
-  die Umfrage ist beendet
+* Die Frage der Umfrage (`description`-Wert im Befehl), inkludiert, ob die Umfrage öffentlich ist oder nicht
+* Der Wert jeder Abstimmungsoption (`option{n}`-Wert im Befehl)
+* Falls aktiviert: Genaue Uhrzeit, zu der die Umfrage abläuft (gesteuert durch den `duration`-Wert im Befehl) und ob die Umfrage beendet ist
 * Metadaten über Ihren Server anzeigen (z. B. Name, Symbol, Besitzer, ...)
 
 Darüber hinaus werden die folgenden Daten über jeden Benutzer gespeichert, wenn er für eine Option abstimmt:
 
 * Die ID des Benutzers
-* Die Nummer der Option, für die Du gestimmt haben
+* Die Nummer der Option, für die abgestimmt wurde
 
-Wenn die Umfrage noch nicht beendet ist, können Benutzer [Ihre Stimme entfernen](#usage). Nach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
+Wenn die Umfrage noch nicht beendet ist, können Benutzer [ihre Stimme entfernen](#usage). Nach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
 
-Es gibt keine Möglichkeit, Umfragen aus der Datenbank zu entfernen (Du kannst die Umfrage trotzdem jederzeit löschen). Zum
-löschen aller Umfragen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
+Es gibt keine Möglichkeit, Umfragen aus der Datenbank zu entfernen (du kannst die Umfrage trotzdem jederzeit löschen). Zum
+Löschen aller Umfragen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
