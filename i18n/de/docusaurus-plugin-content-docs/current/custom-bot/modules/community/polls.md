@@ -70,10 +70,10 @@ In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt w
 
 Wenn du Probleme mit dem Umfragemodul hast, stelle bitte sicher, dass
 
-* Du hast keine Umfrage in einem Ankündigungskanal gestartet hast (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
-* Ihre [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält, und das [Farbwerte gültig sind](../../additional-features#embed-colors).    
-* Ihre [Konfiguration](#configuration-config) nur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis)enthält .
-* Der Bot über die folgenden Berechtigungen für den Kanal, in dem Du eine Umfrage starten möchten: Nachrichten lesen, Nachrichten senden, Links einbetten verfügt.
+* du keine Umfrage in einem Ankündigungskanal gestartet hast (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
+* deine [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält, und das [Farbwerte gültig sind](../../additional-features#embed-colors).    
+* deine [Konfiguration](#configuration-config) nur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis)enthält .
+* der Bot über die folgenden Berechtigungen in dem Kanal, in dem du eine Umfrage starten möchtest, verfügt: Nachrichten lesen, Nachrichten senden, Links einbetten.
 
 ## Gespeicherte Daten {#data-usage}
 
