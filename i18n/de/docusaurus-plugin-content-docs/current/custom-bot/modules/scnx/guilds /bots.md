@@ -72,26 +72,26 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
 
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Custom Bot">
-        Before joining the public beta please keep in mind:
+        Bevor du die öffentliche Beta verwendest, bitte beachte:
         <ul>
-          <li>Public Beta Releases might be unstable. This means that your bot might crash or certain features might stop working without any reason.</li>
-          <li>New features in Public Beta Releases might be untranslated. This means that your bot might speak English instead of a configured language in new features.</li>
-          <li>While you can leave the Public Beta anytime, it might break your bot when the Beta-Version is on a higher release number than the older version. Additionally, configuration files might be corrupted after switching back and need to be reset, leading to data-loss.</li>
+          <li>Die öffentliche Beta kann instabil sein. Das bedeutet, dass es passieren kann, dass dein Bot crashed oder neue Funktionen nicht mehr gehen.</li>
+          <li>Manche neue Funktionen in der Beta sind noch nicht übersetzt. Das bedeutet, dass dein Bot eventuell Englisch spricht, anstatt deine voreingestellte Sprache.</li>
+          <li>Da du die öffentliche Beta jederzeit verlassen kannst, kann es sein, dass dein Bot kaputt geht wenn die Beta-Version eine höhere Veröffentlichungsnummer als die ältere Version hat. Darüber hinaus könnten Konfigurationsdateien nach dem Zurückschalten beschädigt sein und müssen zurückgesetzt werden, was zu Datenverlust führt.</li>
         </ul>
-        Here are the steps to join the Custom-Bot beta:
+        So kannst du die Custom-Bot Beta verwenden:
         <ol>
-          <li>Open the <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
-          <li>In the Status-Panel, click on "Change" next to the "Branch"-Setting.</li>
-          <li>Select "Public Beta (might be unstable)".</li>
-          <li>Confirm your change by clicking "Confirm".</li>
-          <li>To receive update-notifications about Beta-Releases on our <a href="https://scootk.it/dc">Discord</a>, opt-in to the Beta-Channels in #beta.</li>
+          <li>öffne das <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
+          <li>In dem Status-Panel, klicke auf "Wechseln" dann auf "Branch"-Einstellungen.</li>
+          <li>Wähle "Öffentliche Beta (kann instabil sein)"aus.</li>
+          <li>Bestätige die Änderung, indem du auf "Speichern" klickst.</li>
+          <li>Um Update Benachrichtigungen über Beta Veröffentlichungen auf unserem <a href="https://scootk.it/dc">Discord</a> zu erhalten, aktiviere die Beat Kanäle in #beta.</li>
         </ol>
-        Here are the steps to leave the Custom-Bot beta:
+        So kannst du die Beta Version deaktivieren:
         <ol>
-          <li>Open the <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
-          <li>In the Status-Panel, click on "Change" next to the "Branch"-Setting.</li>
-          <li>Select "Stable Version (recommended)".</li>
-          <li>Confirm your change by clicking "Confirm".</li>
+          <li>Öffne das <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a>.</li>
+          <li>In dem Status-Panel, klicke auf "Change" dann auf "Branch"-Einstellung.</li>
+          <li>Wähle "Stabile Version (empfohlen)" aus.</li>
+          <li>Bestätige die Änderung, indem du auf "Speichern" klickst.</li>
         </ol>
     </TabItem>
     <TabItem value="modmailBot" label="Modmail-Bot">There's no public Beta version available for Modmail at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed testing series and ensure that each release is fully stable when released to Modmail.</TabItem>
