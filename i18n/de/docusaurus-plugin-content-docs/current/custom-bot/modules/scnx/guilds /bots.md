@@ -94,55 +94,49 @@ Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier si
           <li>Bestätige die Änderung, indem du auf "Speichern" klickst.</li>
         </ol>
     </TabItem>
-    <TabItem value="modmailBot" label="Modmail-Bot">There's no public Beta version available for Modmail at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed testing series and ensure that each release is fully stable when released to Modmail.</TabItem>
+    <TabItem value="modmailBot" label="Modmail-Bot">Momentan gibt es keine öffentliche Beta Version für unseren Modmail Bot. Ausgewählte Nutzer erhalten Zugriff auf die Private Beta, aber sonst werden alle neuen Funktionen für alle Nutzer verfügbar sein. Im Gegensatz zu unserem Custom-Bot testen wir die Modmail Funktionen ausführlichund stellen sicher, dass jede neue Version komplett sicher ist. </TabItem>
 </Tabs>
 
-### Change Bot-Host {#bot-host}
+### Den Bot-Host wechseln {#bot-host}
 
-The Bot-Host is the physical server your bot is running on. We offer several Bot-Hosts running in different regions of
-the world. Here's how to switch a Bot-Host:
-
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click "Change" next to "Server" in the "Status"-Section.
-3. Select the Bot-Host you want to switch to.
-4. Save the changes.
+Der Bot-Host ist der physikale Server auf dem dein Bot läuft.Wir bieten viele Bot Hosts an, die rund um die Welt verteilt sind. So kannst du den Bot-Host wechseln:
+1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
+   oder das [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
+2. Als nächstes klicke auf "wechseln" in dem "Status" Bereich.
+3. Wähle den Bot-Host aus, auf den  du welchseln willst.
+4. Klicke auf "Bestätigen".
 
 <details>
-  <summary>What is the difference between a Bot-Host labeled "Premium" and other Bot-Hosts?</summary>
+  <summary>Was ist der Unterschied zwischen dem "Premium"  und den anderen Bot-Hosts?</summary>
   <ul>
-    <li>Most of these Bot-Hosts are located in North America and have a faster connection to Discord's infrastructure.</li>
-    <li>Premium Hosting infrastructure (higher reliability, higher bandwidth, …).</li>
-    <li>Each Bot is allocated more resources.</li>
-    <li>Premium Bot-Hosts are configured to take twice as many backups and store them offsite than other Bot-Hosts.</li>
+    <li>Die meisten Bot-Hosts liegen in Nord Amerika und ahben eine schellere Verbindung zu der Infrastruktur von Discord.</li>
+    <li> Die Infrastruktur von Premium Host höhere Zuverlässigkeit, höhere Bandbreite und mehr.</li>
+    <li>Jedem Bot werden mehr Ressourcen zugewiesen.</li>
+    <li>Premium Bot-Hosts können doppelt so viele Backups speichern undlagern sie woanders als die anderen Bot-Hosts.</li>
   </ul>
 </details>
 
 <details>
-  <summary>Which Bot-Host is the best? / Which Bot-Host should I choose?</summary>
+  <summary>Welcher Bot-Host ist der beste? / Welchen Bot-Host sollte ich nehmen?</summary>
 
-Ultimately, it doesn't matter (except for the Premium-Servers). Each Bot-Host is designed to host bots, just like yours.
-We have high-quality standards for each of the hosts and can guarantee the same experience on each of them. We might
-even move your bots around if you do not have a paid plan to distribute resources.
+Letzten Endes ist es egal (bis auf die Premium-Server). Jeder Bot-Host ist dafür da, Bots zu hosten, genau wie deiner.
+Wir haben hohe Standarts bei den Bot-Hosts und können versichern, dass alle das gleiche Erlebniss geben. Eventuell werden wir deinen Bot zwischen den Bot-Hosts verschieben, wenn du keinen bezahlten Plan hast, um Ressourcen zu sparen.
 </details>
 
 <details>
-    <summary>I was asked to give up certain European Data Protection Rights when moving my bot outside the EU</summary>
+    <summary>Ich wurde gebeten, bestimmte europäische Datenschutzrechte aufzugeben, wenn ich meinen Bot außerhalb der EU verlagere</summary>
 
-    When you move your bot's data outside the European Union, the General Data Protection Regulation won't apply to your data anymore. This is only affecting your bot's data, like Leveling-Stats, configuration and the actual hosting of the bot. Please also keep in mind that Discord themselves
-    are also storing most of their data outside the EU, and we only work with trusted hosting providers with high-security & privacy standards; the data protection laws of the country will apply. This sometimes means that we are unable to protect your data from being used / inspected by state agencies.
-    As is legal requirement (at least for our EU customers ♥), you have to agree to such data transfer. You can always switch back the hosting location of your bot to Bot-Host inside the EU.
+    Wenn du die Daten deines Bots außerhalb der Europäischen Union verschiebst, gilt die Datenschutz-Grundverordnung nicht mehr für deine Daten. Dies betrifft nur die Daten deines Bots, wie Leveling-Stats, Konfiguration und das eigentliche Hosting deines Bots. Bitte bedenke auch, dass Discord selbst
+     die meisten ihrer Daten auch außerhalb der EU speichert und nur mit vertrauenswürdigen Hosting-Anbietern mit hohen Sicherheits- und Datenschutzstandards zusammen arbeitet; Es gelten die Datenschutzgesetze des jeweiligen Landes. Dies bedeutet manchmal, dass wir deine Daten nicht vor der Nutzung/Einsichtnahme durch staatliche Stellen schützen können.
+    Da es gesetzlich vorgeschrieben ist (zumindest für unsere EU-Kunden ♥), müssen Sie einer solchen Datenübermittlung zustimmen. Sie können den Hosting-Standort Ihres Bots jederzeit wieder auf Bot-Host innerhalb der EU umstellen.
 
 </details>
 
-### Change Bot-Language {#bot-language}
+### Die Bot-Sprache ändern {#bot-language}
 
-The (human) language your bot will be used for any default-configuration-values and messages that can't
-be configured. Modmail might, in some cases, use the language of the user that is executing a command instead of this
-value.
-
+Die (Menschliche) Sprache wird für alle standart-konfiguration-eingaben und Nachrichten die nicht eingestellt werden können. Es kann vorkommen, dass der Modmail Bot nicht diese, sondern die Sprache, die der ausführende Nutzer eingestellt hat nutzt.
 :::info
-Changing your Bot-Language will not re-generate already generated or configured configuration files - you'll need to
+Wenn du die Bot Sprache wechselst, bitte beachte dass du nicht die eingestellten Datein neu generierst - you'll need to
 either reset these files or translate fields yourself.
 :::
 
