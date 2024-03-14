@@ -136,50 +136,47 @@ Wir haben hohe Standarts bei den Bot-Hosts und können versichern, dass alle das
 
 Die (Menschliche) Sprache wird für alle standart-konfiguration-eingaben und Nachrichten die nicht eingestellt werden können. Es kann vorkommen, dass der Modmail Bot nicht diese, sondern die Sprache, die der ausführende Nutzer eingestellt hat nutzt.
 :::info
-Wenn du die Bot Sprache wechselst, bitte beachte dass du nicht die eingestellten Datein neu generierst - you'll need to
-either reset these files or translate fields yourself.
+Wenn du die Bot Sprache wechselst, bitte beachte dass du nicht die eingestellten Datein neu generierst - du müsstest die Datei zurücksetzen oder es selbst übersetzen.
 :::
 
-To change the language of your bot, please
+Um die Sprache deines Bots zu ändern,
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click "Change" next to "Server" in the "Status"-Section.
+1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
+   oder das [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
+2. Als nächtes klicke auf "Wechseln", dann auf "Server" in der "Status"-Abteilung.
 3. Select the new language you want to switch to.
 4. Save the changes. Your bot will automatically restart to apply the changes.
 
 ![](@site/docs/assets/scnx/guilds/bots/change-language.png)
 
 <details>
-    <summary>The language of my server is not supported</summary>
+    <summary>Die Sprache von meinem Server wird nicht unterstützt</summary>
 
-    We're sorry to hear that your language is not supported by SCNX. However, we are quite a small team here at ScootKit with <i>very</i> limited resources and can currently not afford to add support for other languages except German and English.
-    Feel free to reach out <a href="https://scnx.app/help">to our team</a> if you want to help translate, but please understand that we might not be able to accept your request. We'd definitely love to support every language of the world, but first we need to
-    focus on our current Target-Groups.
+    Wir entschuldigen uns dafür dass deine Serversprache nicht auf SCNX verfügbar ist, aber wir, dass Scootkit Team sind sehr klein und wir sind <i>wirklich</i> begrenzt an Resourcen und können nicht Support für andere Sprachen außer Englisch und Deutsch anbieten.
+    Du kannst gerne <a href="https://scnx.app/help">unser Team fragen</a> ob du mithelfen kannst zu übersetzen, aber bitte verstehe dass wir nicht jede Anfrage annehmen können. Wir würden gerne jede Sprache der Welt unterstützen, aber zuerst müssen wir uns momentan auf unsere Ziel-Gruppen fokusieren.
 
 </details>
 
-## Remove mentions of SCNX {#offbrand}
+## Erwähnung von SCNX entfernen {#offbrand}
 
 <IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
 
-You can always edit the footer of every editable message on SCNX, but you can also overwrite the default value used by
-every message that is missing a configuration field or where you did not set a different footer manually.
+Du kannst immer den Footer von allen Nachrichten ändern von allen Nachrichten die du auf SCNX bearbeiten kannst, aber du kannst auch die voreingestellte Nachricht ändern wo du den Footer nicht manuell ändern kannst oder es dafür kein vorgesehenes Feld gibt. 
 
-To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please follow these instructions:
+Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, folge bitte diesen Schritten:
 
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Custom Bot">
         <ol>
-            <li>Open the <a href="https://scnx.app/glink?page=bot/configuration?file=bot%7Cstrings">Messages & Appearance</a> configuration file of your bot's built in configuration.</li>
-            <li>Change the "Embed-Footer" and "Embed-Footer-Image-URL" value to your liking. You can obtain an image URL in your <a href="https://scnx.app/user/files">files panel</a> - simply upload a file and click on "Copy public URL".</li>
-            <li>Save the changes & restart your bot to apply these changes.</li>
+            <li>Öffne die <a href="https://scnx.app/glink?page=bot/configuration?file=bot%7Cstrings">Nachrichten & Aussehen</a> Einstellung von der Eingebauten-konfiguration deines Bots.</li>
+            <li>Verändere den "Embed-Footer" und die "Embed-Footer-Image-URL" wie du möchtest. Du kannst eine Bild-URL in deinem<a href="https://scnx.app/user/files">Datein Speicher</a> hochladen - lade einfach ein Bild dort hoch und klicke auf "Öffentliche URL kopieren".</li>
+            <li>Speichere die Änderungen & starte den Bot neu um die Änderungen anzunehmen.</li>
         </ol>
     </TabItem>
      <TabItem value="modmailBot" label="Modmail-Bot">
         <ol>
-            <li>Open the <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> section of your Modmail's configuration.</li>
-            <li>Change the "Default Embed-Footer" and "Default Embed-Footer-Image" value to your liking. You can simply upload an image if you like or remove it if not needed.</li>
+            <li>Öffne die <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> Abteilung von deiner Modmail Konfiguration.</li>
+            <li>Ändere den "Standart-Embed-Fußzeile" und das "Standart-Fußzeilen-Bild" wie du möchtest. You can simply upload an image if you like or remove it if not needed.</li>
             <li>Save the changes & reload the configuration your bot to apply these changes.</li>
         </ol>
     </TabItem>
