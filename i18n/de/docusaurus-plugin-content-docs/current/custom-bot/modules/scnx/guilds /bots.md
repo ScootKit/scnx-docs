@@ -144,8 +144,8 @@ Um die Sprache deines Bots zu ändern,
 1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
    oder das [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Als nächtes klicke auf "Wechseln", dann auf "Server" in der "Status"-Abteilung.
-3. Select the new language you want to switch to.
-4. Save the changes. Your bot will automatically restart to apply the changes.
+3. Wähle die Sprache aus, in die du wechseln möchtest.
+4. Sichere die Änderungen. Dein Bot wird automatisch neustarten um die Änderungen anzunehmen.
 
 ![](@site/docs/assets/scnx/guilds/bots/change-language.png)
 
@@ -176,21 +176,18 @@ Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, 
      <TabItem value="modmailBot" label="Modmail-Bot">
         <ol>
             <li>Öffne die <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> Abteilung von deiner Modmail Konfiguration.</li>
-            <li>Ändere den "Standart-Embed-Fußzeile" und das "Standart-Fußzeilen-Bild" wie du möchtest. You can simply upload an image if you like or remove it if not needed.</li>
-            <li>Save the changes & reload the configuration your bot to apply these changes.</li>
+            <li>Ändere den "Standart-Embed-Fußzeile" und das "Standart-Fußzeilen-Bild" wie du möchtest. Du kannst ganz einfach ein Bild hinzufügen oder entfernen, falls du es nicht mehr brauchst.</li>
+            <li>Sichere die Änderungen & lade die Konfiguration neu um die Änderungen abzunehmen. </li>
         </ol>
     </TabItem>
 </Tabs>
 
-## Change username, About Me or Profile-Picture of my bot {#change-profile}
+##  Namen, Über mich oder Prodil-bild bei meinem Bot ändern {#change-profile}
 
-:::info Before you continue
+:::info Bevor du weiterliest:
 
-* For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please visit
-  the [troubleshooting guide](#troubleshooting).
-* If you are not the owner of the server, you'll need "Manage
-  Bot" [Trusted-Admin permissions](./trusted-admins#permissions) on the product you want to edit.
-
+* damit dies funktioniert muss dein Bot auf SCNX online sein. Wenn dein Bot nicht auf SCNX online sein sollte, schaue bitte in den [Fehlerbehebungs Abschnitt](#troubleshooting).
+* Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](./trusted-admins#permissions) "Bot verwalten" auf dem Produkt dass du ändern möchtest, haben.
 :::
 
 You can change the Profile-Picture and username of your bot without ever leaving SCNX:
