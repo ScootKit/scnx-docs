@@ -32,7 +32,7 @@ konfigurierten Kanäle werden automatisch in dem angegebenem Intervall aktualisi
 Mit dieser Konfigurationsdatei kannst du festlegen, welche Kanäle Statistik-Kanäle sein sollen und die angezeigten Werte einstellen. Öffne sie in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
 
-| Feld                     | Beschreibung                                                                                                                                                           |
+| Feld                     | Beschreibung                                                                                                                                                          |
 |--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kanal                    | Das ist der Kanal, welcher als Statistik-Kanal genutzt wird. Sein Name wird automatisch zum Wert von "Kanalname" aktualisiert.                                        |
 | Kanalname                | Das ist der Name, zu dem der Kanal automatisch aktualisiert wird. <br/><i>Bitte überprüfe verfügbare Parameter in deinem Dashboard.</i>                               |
