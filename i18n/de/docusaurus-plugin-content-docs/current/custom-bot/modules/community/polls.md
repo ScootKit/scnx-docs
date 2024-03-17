@@ -8,7 +8,7 @@ Einfaches Modul zum Erstellen neuer Umfragen auf deinem Server!
 
 * Erstelle anonyme und öffentliche Umfragen mit bis zu neun Optionen pro Umfrage.
 * Nutzer können via ein Dropdown-Menü ihre Option auswählen.
-* Automatisch nach Ablauf einer festgelegten Zeit endende Umfragen.
+* Umfragen können nach Ablauf einer festgelegten Zeit automatisch enden.
 * Leicht verständliche Ergebnisanzeige, welche live aktualisiert wird.
 
 Hier ist ein Beispiel einer beendeten Umfrage:
@@ -25,7 +25,7 @@ Hier ist ein Beispiel einer beendeten Umfrage:
 
 Administratoren können Umfragen mit folgenden Befehlen verwalten:
 
-* [`/poll create`](#commands) zum erstellen neuer Umfragen.
+* [`/poll create`](#commands) zum Erstellen neuer Umfragen.
 * [`/poll end`](#commands) zum Beenden einer Umfrage (Umfragen enden automatisch, wenn du bei `/poll create` den zeitparameter gesetzt hast).
 
 Benutzer können:
@@ -73,23 +73,23 @@ Wenn du Probleme mit dem Umfragemodul hast, stelle bitte sicher, dass
 
 * du keine Umfrage in einem Ankündigungskanal gestartet hast (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
 * deine [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält und das [Farbwerte gültig sind](../../additional-features#embed-colors).    
-* deine [Konfiguration](#configuration-config) nur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis) enthält .
+* deine [Konfiguration](#configuration-config) nur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis) enthält.
 * der Bot über die folgenden Berechtigungen in dem Kanal, in dem du eine Umfrage starten möchtest, verfügt: Nachrichten lesen, Nachrichten senden, Links einbetten.
 
 ## Gespeicherte Daten {#data-usage}
 
-Die folgenden Daten werden über jede Umfrage gespeichert, die über [Befehle](#commands) erstellt wird :
+Die folgenden Daten werden über jede Umfrage gespeichert, die über [Befehle](#commands) erstellt wird:
 
-* Die ID der Umfragenachricht, die nach der Erstellung gesendet wurde
-* Die ID des Kanals, in dem die Umfrage erstellt wurde
+* Die eindeutige Identifikationsnummer der Umfragenachricht, die nach der Erstellung gesendet wurde
+* Die eindeutige Identifikationsnummer des Kanals, in dem die Umfrage erstellt wurde
 * Die Frage der Umfrage (`description`-Wert im Befehl), inkludiert, ob die Umfrage öffentlich ist oder nicht
 * Der Wert jeder Abstimmungsoption (`option{n}`-Wert im Befehl)
 * Falls aktiviert: Genaue Uhrzeit, zu der die Umfrage abläuft (gesteuert durch den `duration`-Wert im Befehl) und ob die Umfrage beendet ist
-* Metadaten über Ihren Server anzeigen (z. B. Name, Symbol, Besitzer, ...)
+* Metadaten über deinen Server anzeigen (z. B. Name, Symbol, Besitzer, ...)
 
 Darüber hinaus werden die folgenden Daten über jeden Benutzer gespeichert, wenn er für eine Option abstimmt:
 
-* Die ID des Benutzers
+* Die eindeutige Identifikationsnummer des Benutzers
 * Die Nummer der Option, für die abgestimmt wurde
 
 Wenn die Umfrage noch nicht beendet ist, können Benutzer [ihre Stimme entfernen](#usage). Nach Beendigung einer Umfrage ist diese Option nicht mehr verfügbar.
