@@ -224,56 +224,45 @@ So kannst du das Profil-Bild und den Nutzernamen deines Bots ändern ohne SCNX z
 Dein Bot **wird nicht auf anderen Servern funkrionieren** als für den Server, für den es erstellt wurde. Wenn du den Server wechseln willst, folge bitte dem [SCNX Data übertragen](./faq#transfer)-Leitfaden in unserem FAQ. Wenn du einen Bot für einen anderen Server haben möchtest,  [füge bitte deinen Server zu  SCNX hinzu](./../../setup) und [stelle dann deinen Custom-Bot ein](./../../custom-bot).
 :::
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click on "Advanced options" in the bot status card.
-3. Click on "View Invite-URL" and click on "Copy Invite-URL to clipboard".
-4. Click on "Cancel".
+1. öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
+   oder das [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
+2. Klicke anschließend in der Bot-Statuskarte auf „Erweiterte Optionen“.
+3. Klicke auf "Invite-URL anzeigen" und klicke dann auf "Invite-URL kopieren".
+4. Klicke auf "abbrechen".
 
-## Sharing Logs {#sharing-logs}
+## Logs teilen {#sharing-logs}
 
-Before we start, a quick explanation about Logs and why you might get asked to share them. Each bot is its own process
-on SCNX, hosted on a real, physical server. As such process, it generates log files. In these logs files your bot
-documents what it's doing and writes down the reason for failures or issues. Our staff needs these logs to diagnose
-problems and offer your solutions - or if they are bugs in the bot themselves - to fix them.
+Bevor wir loslegen, eine kurze erklärung was Logs überhaupt sind und warum du sie teilen solltest. Jeder Bot hat seinen eigenen Prozess auf SCNX, der auf einem echten,  physischen Server verwaltet wird. Während des Prozesses produziert der Bot solche Log-Datein. In diesen Datein dokumentiert dein Bot alles was er macht und schreibt den Grund bei Fehlern auf. Unser Team benötigt diese Logs um das Problem zu diagnostizieren und dir eine Lösung anzubieten - oder wenn es Fehler direkt am Bot sind - diese zu beheben.
 
 :::info
-Sharing your logs is a "one-time-capture" of them - they won't get updated as your bot writes new lines. Shared logs
-expire 7 days after sharing. Logs don't usually contain any sensitive information, but please check them before
-publishing logs publicly.
+Bot Logs zu teilen ist eine „Einmalige Erfassung“ davon - sie werden nicht überschrieben wenn dein Bot etwas neues dokumentiert. Die geteilten Logs werden nach 7 Tagen gelöscht nachdem du sie geteilt hast. Logs beinhalten meinst keine privaten Informationen, aber bitte schaue trotzdem nach bevor du sie veröffentlichst.
 :::
 
 :::caution
-Please don't waste the time of our staff if you find something in your log. It's normal that your bot sometimes logs
-issue, and we get these reported automatically. Only share them if you are experiencing an actual issue using your bot.
+Bitte verschwende keine Zeit von unserem Team falls du einen Fehler in den Logs findest. Es ist normal, dass dein Bot manchmal Fehler dokumentiert, Wir erhalten diese automatisch um diese zu beheben. Teile diese bitte nur, wenn du wirklich Probleme am Bot feststellst.
 :::
 
-Here's how you can share the logs of your bot:
+So kannst du die Bot Logs teilen:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Next, click on "More options" in the Bot-Status-Panel.
-3. Click on "Share your bot's logs" and then press the button "Share logs". Your Bot-Host will now upload the logs of
-   your bot to [paste.scootkit.net](https://paste.scootkit.net). This might take a few seconds.
-4. Copy **both** the log URL and error log and send them **both** to our staff to investigate. If you have technical
-   experience, you might also be able to use the logs to diagnose the issue yourself.
+1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
+   oder das [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
+2. Als nächstes klicke auf "mehr Optionen" in deinem Bot-Status-Panel.
+3. Klicke auf "Teile deine Bot-Logs" und danach auf "Logs teilen". Dein Bot-Host wird nun die Logs auf [paste.scootkit.net](https://paste.scootkit.net) hochladen, dies kann ein paar Sekunden dauern.
+4. Kopiere **beide** log-URLs (log und Fehler Log) und sende auch **beide** an unser Team. Wenn du technische Erfahrung hast, kannst eventuell den Fehler durch die Logs selbst beheben.
 
 ![](@site/docs/assets/scnx/guilds/bots/share-logs.png)
 
-## Change Bot-Token {#change-token}
+## Den Bot-Token ändern {#change-token}
 
 :::danger
-You can **only** change your token in the Dashboard. **Never** send a token to another user, trusted-admins or a member
-of our staff. Treat tokens like a password - users with access to your token are able to use your bot to perform
-harmful actions.
+Du kannst **nur** deinen Bot Token in deinem Bot Dashboard ändern. Sende **niemals** deinen Token zu einem anderen Nutzer, trusted-admin oder einem unserer Team Mitglieder. Behandle deinen Token wie ein Passwort - Nutzer mit dem Zugriff auf deinen Token können alle Änderungen an deinem Bot vornehmen.
 :::
 
 :::caution
 
-* You need to be the owner of the server to change the Bot-Token.
-* Changing your bot's token will **not solve any issues** you are experiencing. Please use
-  the [troubleshooting guide](#troubleshooting) to diagnose and fix them like the Pro you are :wink:
-* If you want to change the username or profile picture of your bot, follow [this guide](#change-profile).
+* Du musst der Besitzer des Servers sein um den Bot token zu ändern.
+* Das ändern deines Bot Tokens wird **keine Probleme lösen**. Bitte nutze die [Anleitung zur Fehlerbehebung](#troubleshooting) um Fehler zu erkennen und zu beheben.
+* Wenn du den Namen oder das Profilbild deines Bots ändern willst, folge [dieser Anleitung](#change-profile).
 * Changing your Bot's token might create new issues or complications. Please avoid changing your token if possible.
 
 :::
