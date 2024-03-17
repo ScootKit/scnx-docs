@@ -190,43 +190,38 @@ Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, 
 * Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](./trusted-admins#permissions) "Bot verwalten" auf dem Produkt dass du ändern möchtest, haben.
 :::
 
-You can change the Profile-Picture and username of your bot without ever leaving SCNX:
+So kannst du das Profil-Bild und den Nutzernamen deines Bots ändern ohne SCNX zu verlassen:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage?showEditProfile=true)
-   or [CustomBot-](https://scnx.app/glink?page=bot/manage?showEditProfile=true) Dashboard.
-2. Next, click on the username of your bot in the Bot-Status-Panel (if you used the links above you can skip this steps,
-   the modal will open automatically).
-3. Enter the details you want to change and upload a new Profile-Picture. You'll find a live-preview of your bot's
-   profile.
-4. Save the changes.
-5. It might take a few minutes for the changes to propagate to Discord, so please be patient.
+1.Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage?showEditProfile=true)
+   oder [CustomBot-](https://scnx.app/glink?page=bot/manage?showEditProfile=true) Dashboard.
+2. Als nächstes klicke auf den Bot Namen in deinem Bot-Status-Panel (wenn du einen der Links oben nutzt kannst du diese Schritte überspringen, das Modal wird sich automatisch öffnen).
+3. Nun kannst du an dem Bot ändern was du möchtest. Wenn du das Profilbild gewechselt hast, wirst du eine Vorschau des Profil Bildes sehen.
+4. Sichere die Änderungen
+5. Es kann ein paar Minuten dauern bis es auf Discord angezeigt wird also bitte gedulde dich.
 
 ![](@site/docs/assets/scnx/guilds/bots/edit-profile.png)
 
 <details>
-    <summary>An issue occurred when I tried changing my bot's profile</summary>
+    <summary>Ein Fehler erscheint wenn ich versuche, das Profil meines Bots zu ändern</summary>
     <ul>
-        <li>Please make sure your bot is online and running without issues. Refer to the <a href="#troubleshooting">troubleshooting guides</a> if this is not the case.</li>
-        <li>Some usernames are reserved or over-used and can not be used for your bot. Try another, less common username.</li>
-        <li>Uploading your image to SCNX uses your account's storage spaces. Please open your <a href="https://scnx.app/user/files">Files-Dashboard</a> and check if there's enough space left for the new Profile-Picture.</li>
-        <li>You (or your bot) might be rate-limited. Please try again in 1-4 hours.</li>
-        <li>You'll find the exact reason for this issue in your Bot's log. Please <a href="#sharing-logs">share your logs</a> and try finding the issue in them. If you are unsuccessful, please <a href="https://scnx.app/help">contact our staff</a>.</li>
+        <li>Bitte stelle sicher, dass dein Bot online ist und keine Fehler hat. Wenn dies nicht der Fall ist, schaue dir bitte unsere <a href="#troubleshooting">Anleitung zur Fehlerbehebung</a> an.</li>
+        <li>Manche Namen sind reserviert oder wurden bereits zu oft genutzt und können nicht für deinen Bot verwendet werden. Versuche es bitte ernueut mit einem anderen, weniger beliebten Namen.</li>
+        <li>Wenn du ein Prodil Bild für deinen Bot hochlädst verbraucht dies Acoount Speicher. Bitte öffne das <a href="https://scnx.app/user/files">Datein-Dashboard</a> und schaue nach ob genug Platz für dein neues Prodil-Bild ist.</li>
+        <li>Du (oder dein Bot) könnten rate-limitiert sein. Bitte versuche es in 1-4 Stunden erneut.</li>
+        <li>Du wirst den genauen Grund in dem Log deines Bots finden. Bitte <a href="#sharing-logs">teile deine Logs</a> und versuche den Fehler darin zu finden Wenn du ihn nicht findest, bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.</li>
     </ul>
 </details>
 
-## Invite my Bot {#invite-bot}
+## Meinen Bot einladen {#invite-bot}
 
-:::info Before you continue
+:::info Bevor du weiterliest
 
-* For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please open the "The Bot is
-  not on my sever" section in the right [troubleshooting guide](#troubleshooting).
+* Dafür muss dein Bot online sein. Wenn dein Bot nicht online in SCNX ist, öffne bitte den Abschnitt „Der Bot ist nicht auf meinem Server“ im rechten [Leitfaden zur Fehlerbehebung](#troubleshooting).
 
 :::
 
 :::caution
-Your bot **will not work on other servers** than the server it was created for. If you want to switch to another
-server, please follow the [transfer SCNX data guide](./faq#transfer) in our FAQ. If you want a bot for another
-server, please first [add your server to SCNX](./../../setup) and then [set up the Custom-Bot](./../../custom-bot).
+Dein Bot **wird nicht auf anderen Servern funkrionieren** als für den Server, für den es erstellt wurde. Wenn du den Server wechseln willst, folge bitte dem [SCNX Data übertragen](./faq#transfer)-Leitfaden in unserem FAQ. Wenn du einen Bot für einen anderen Server haben möchtest,  [füge bitte deinen Server zu  SCNX hinzu](./../../setup) und [stelle dann deinen Custom-Bot ein](./../../custom-bot).
 :::
 
 1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
