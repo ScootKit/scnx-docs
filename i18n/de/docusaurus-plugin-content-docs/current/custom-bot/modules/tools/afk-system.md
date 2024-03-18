@@ -1,6 +1,6 @@
 # AFK-System
 
-Erlaube Nutzern einen AFK-Status zu setzen der anderen Nutzern automatisch mitgeteilt wird, wenn sie versuchen ihn/sie zu erreichen.
+Erlaube Nutzern einen AFK-Status zu setzen, der anderen Nutzern automatisch mitgeteilt wird, wenn sie versuchen ihn/sie zu erreichen.
 
 <ModuleOverview moduleName="afk-system" />
 
