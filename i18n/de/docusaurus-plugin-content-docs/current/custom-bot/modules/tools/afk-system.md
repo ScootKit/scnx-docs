@@ -50,7 +50,7 @@ Bearbeite Informations- und Befehlantwortnachrichten in der
 | AFK-Sitzung erfolgreich gestartet | Diese Nachricht wird einem Nutzer angezeigt, wenn er seine AFK-Sitzung mit [`/afk start`](#commands) startet.                                                                                  |
 | Nutzer ist mit Begründung AFK          | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung eine Begründung angegeben hat.                                  |
 | Nutzer ist ohne Begründung AFK       | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung keine Begründung angegeben hat.                              |
-| AFK-Sitzung automatisch beendet  | Diese Nachricht wird gesendet, wenn ein Nutzer, der aktuell AFK ist und das Automatische Ende der AFK-Sitzung nicht deaktiviert hat, eine Nachricht auf deinem Server schreibt. Dies beendet die AFK-Sitzung |
+| AFK-Sitzung automatisch beendet  | Diese Nachricht wird gesendet, wenn ein Nutzer, der aktuell AFK ist und das Automatische Ende der AFK-Sitzung nicht deaktiviert hat, eine Nachricht auf deinem Server schreibt. Dies beendet die AFK-Sitzung. |
 
 ## Fehlerbehebung {#troubleshooting}
 
