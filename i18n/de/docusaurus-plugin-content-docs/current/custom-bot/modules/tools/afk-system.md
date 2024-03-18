@@ -15,7 +15,7 @@ Erlaube Nutzern einen AFK-Status zu setzen, der anderen Nutzern automatisch mitg
 
 ## Einrichtung {#setup}
 
-1. Stelle sicher, dass der Bot die Berechtigungen "Kanal anzeigen", "Nachrichtenverlauf anzeigen" und "Nachrichten senden" in jedem Kanal hat, in dem er auf Erwähnungen von Nutzern, die AFK sind reagieren soll.
+1. Stelle sicher, dass der Bot die Berechtigungen "Kanal anzeigen", "Nachrichtenverlauf anzeigen" und "Nachrichten senden" in jedem Kanal hat, in welchen er auf Erwähnungen von Nutzern, die AFK sind, reagieren soll.
 2. Stelle sicher, dass der Bot die Berechtigung hat die Nicknames anderer Nutzer auf deinem Server zu verwalten.
 3. Aktiviere das Modul - Nutzer können jetzt AFK-Sitzungs starten.
 4. Optional, [passe die Informationsnachrichten an](#configuration).
