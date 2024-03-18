@@ -62,7 +62,7 @@ Bearbeite Informations- und Befehlantwortnachrichten in der
 
 Über alle Nutzer mit laufender AFK-Sitzung werden die folgenden Daten gespeichert:
 
-* Ihre eindeutige Discord User-ID.
+* Ihre eindeutige Discord Nutzer-Indentifikationsnummer.
 * Der Grund ihrer Abwensenheit, wenn dieser mit dem `reason` Parameter im [`/afk start`](#commands) Befehl festgelegt wurde.
 * Der aktuelle Nickname des Nutzers zu Beginn der AFK-Sitzung.
 * Ob die AFK-Sitzung automatisch beendet werden soll, durch den `auto-end` Parameter im [`/afk start`](#commands) festgelegt.
