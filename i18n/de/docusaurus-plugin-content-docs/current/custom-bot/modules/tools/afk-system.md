@@ -56,7 +56,7 @@ Bearbeite Informations- und Befehlantwortnachrichten in der
 
 * Wenn der Bot deinen Nickname nicht ändert, stelle sicher, dass du nicht der Eigentümer des Servers bist. Der Bot kann den Nickname des Eigentümers nicht bearbeiten, selbst wenn er eine höhere Rolle als der Eigentümer hat. Dies ist eine Beschränkung durch Discord.
 * Wenn der Bot die AFK-Nachricht nicht sendet, stelle sicher, dass der Nutzer eine AFK-Sitzung gestartet hat und diese noch nicht beendet wurde.
-* Wenn der Bot eine AFK-Sitzung nicht automatisch beendet, stelle sicher, dass `auto-end` nicht zu Beginn der AFK-Sitzung deaktiviert wurde
+* Wenn der Bot eine AFK-Sitzung nicht automatisch beendet, stelle sicher, dass `auto-end` nicht zu Beginn der AFK-Sitzung deaktiviert wurde.
 
 ## Gespeicherte Daten {#data-usage}
 
