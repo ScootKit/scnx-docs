@@ -8,7 +8,7 @@ Erlaube Nutzern einen AFK-Status zu setzen, der anderen Nutzern automatisch mitg
 
 * Nutzer können mit [`/afk start`](#commands) eine AFK-Sitzung starten und dabei einen (optionalen) Grund dafür angeben.
 * Wenn ein Nutzer ein Mitglied, das aktuell AFK ist, erwähnt, wird der Bot dem Nutzer mitteilen, dass der Erwähnte Nutzer nicht verfügbar ist. 
-* AFK-Sitzungen werden automatisch beendet, wenn der AFK Nutzer eine Nachricht in einen beliebigen Kanal auf deinem Server sendet (sofern sie dies nicht zu beginn der AFK-Sitzung deaktiviert haben).
+* AFK-Sitzungen werden automatisch beendet, wenn der AFK Nutzer eine Nachricht in einen beliebigen Kanal auf deinem Server sendet (sofern sie dies nicht zu Beginn der AFK-Sitzung deaktiviert haben).
 * AFK-Sitzungen können manuell mit [`/afk end`](#commands) beendet werden.
 * Während einer AFK-Sitzung fügt der Bot zum Namen des Nutzers ein `[AFK]` als Präfix hinzu.
 * AFK-Informationsnachrichten [können angepasst werden](#configuration).
