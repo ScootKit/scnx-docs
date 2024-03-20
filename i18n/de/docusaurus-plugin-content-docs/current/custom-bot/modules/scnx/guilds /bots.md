@@ -6,31 +6,31 @@ sidebar_position: 1
 
 Diese Dokumente beinhaltet anwendbare Hilfen für den [Custom Bot](../../custom-bot/intro) und den
  [Modmail Bot](../../modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
- [mit dem Custom Bot starten](../../custom-bot) oder den [mit dem Modmail-Bot starten](../../modmail) Artikel.
+ [mit dem eigenen  Bot loslegen](../../custom-bot) oder den [mit dem Modmail-Bot loslegen](../../modmail) Artikel.
 
 ## Fehlerbehebung {#troubleshooting}
 
 Die Schritte, um Fehler zu beheben, sind bei den beiden Bots unterschiedlich. Bitte schaue dir den passenden Abschnitt an:
 
-* [Custom Bot](./../../custom-bot/troubleshooting)
+* [Eigener Bot](./../../custom-bot/troubleshooting)
 * Modmail-Bot
 
-## Die Basics {#basics}
+## Die Grundlagen {#basics}
 
 Jeder Bot auf SCNX ist ein eigener Prozess, der auf einem echten Server ausgeführt wird. Du kannst den Status im 
 Bot-Status-Panel von deinem [Modmail-](https://scnx.app/glink?page=modmail/manage)
-oder [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard einsehen.
+oder [Eigenen-Bot-](https://scnx.app/glink?page=bot/manage) Dashboard einsehen.
 
-Hier ist ein Beispiel von einem Custom-Bot-Status-Panel:
+Hier ist ein Beispiel von einem eigenen Bot-Status-Panel:
 
 ![](@site/docs/assets/scnx/guilds/bots/bot-status-example.png)
 
-Wie du sehen kannst, gibt es ein paar sachen dort, die du machen kannst. Hier sind die Hauptsachen, die du darüber wissen musst:
+Wie du sehen kannst, gibt es hier beriets einige Möglichkeiten. Hier sind die wichtigsten Informationen, die du darüber wissen musst:
 
-* Der Tag und das Profilbild deines Bots (nur sichbar wenn dein bot online ist). Um das Profil deines Bots zu wechseln,
- klicke auf es oder folge [diesem Artikel](#change-profile).
-* "Konfiguration neu laden":Wenn du deine Konfiguration neu lädst, wird dein Bot alle Änderungen übenehmen (auch Modul-Änderungen)
-  ohne dass der Bot offline geht. Generell solltest du lieber die Konfiguration neu laden als den Bot neuzustarten.
+* Der Tag und das Profilbild deines Bots (nur sichbar wenn dein Bot online ist). Um das Profil deines Bots zu wechseln,
+ klicke auf dieses oder befolge [diesem Artikel](#change-profile).
+* "Konfiguration neu laden": Wenn du deine Konfiguration neu lädst, wird dein Bot alle Änderungen übernommen (auch Modul-Änderungen)
+  ohne dass der Bot offline geht. Generell solltest du lieber die Konfiguration neuladen, als den Bot neuzustarten.
 * "Bot neustarten": Dies wird den Prozess deines Bots neustarten. Dies wird eventuell einige Minuten in Anspruch nehmen,
   zusätzlich wird der Bot für eine kurze Zeit offline sein, in dieser Zeit wird der Bot nicht erreichbar sein.
  Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, seltsame Fehler auftreten oder du ein [Update machen willst](#bot-updates).
