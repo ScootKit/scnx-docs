@@ -51,6 +51,6 @@ Außerdem gibt es noch die Karten „Ziehe 2“ und „Farbwahl und ziehe 4“: 
     <li>Du kannst eine neue Nachricht mit deinem aktuellen Kartendeck erhalten, einschließlich einer Schaltfläche zum Aktualisieren, indem du auf die Schaltfläche „Deck anzeigen“ in der ursprünglichen Spielnachricht klickst.</li>
 </details>
 <details>
-    <summary>Der Bot sagt: "⚠️️ Du musst die Uno!-BHutton nutzen, bevor du die vorletzte Karte legst!" - aber wieso?</summary>
+    <summary>Der Bot sagt: "⚠️️ Du musst die Uno!-Button nutzen, bevor du die vorletzte Karte legst!" - aber wieso?</summary>
     <li>u musst zuerst auf "Uno!"-Knopf der ursprünglichen Spielnachricht klicken, bevor du deine vorletzte Karte ausspielst. Das gilt nicht für das Ausspielen der letzten Karte.</li>
 </details>
