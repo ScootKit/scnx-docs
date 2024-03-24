@@ -1,6 +1,6 @@
 # Uno
 
-Lasse deine User gegeneinander Uno spielen!
+Lasse deine Nutzer gegeneinander Uno spielen!
 
 <ModuleOverview moduleName="uno" />
 
