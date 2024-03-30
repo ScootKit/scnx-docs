@@ -143,7 +143,7 @@ Um die Sprache deines Bots zu ändern,
 
 1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
    oder das [eigene Bot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Als nächtes klicke auf "Wechseln", dann auf "Server" in der "Status"-Abteilung.
+2. Klicke als Nächtes auf "Wechseln", dann auf "Server" in der "Status"-Abteilung.
 3. Wähle die Sprache aus, zu welcher du wechseln möchtest.
 4. Speichere die Änderungen. Dein Bot wird automatisch neustarten um die Änderungen anzunehmen.
 
