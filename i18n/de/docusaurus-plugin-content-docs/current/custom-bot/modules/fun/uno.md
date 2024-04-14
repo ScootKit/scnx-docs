@@ -5,7 +5,7 @@ Lasse deine Nutzer gegeneinander Uno spielen!
 <ModuleOverview moduleName="uno" />
 
 ## Funktionen {#features}
-Uno ist ein klassisches Kartenspiel - jetzt auch für deinen eigenen Bot verfügbar! Wenn du mehr über das Spiel erfahren möchten, schau dir den [Wikipedia Artikel](https://de.wikipedia.org/wiki/Uno_(Kartenspiel)) an.
+Uno ist ein klassisches Kartenspiel - jetzt auch für deinen eigenen Bot verfügbar! Wenn du mehr über das Spiel erfahren möchtest, schau dir den [Wikipedia Artikel](https://de.wikipedia.org/wiki/Uno_(Kartenspiel)) an.
 
 Jeder Spieler beginnt mit sieben Karten. Die anderen Spieler können nur die Anzahl der Karten jedes Spielers sehen. Wenn ein Spieler keine Karte spielen kann, muss er eine Karte ziehen. Wenn ein Spieler keine Karten mehr hat, gewinnt er das Spiel.
 
@@ -14,7 +14,7 @@ Die Einrichtung ist wirklich einfach – aktiviere einfach das Modul in [deinem 
 
 ## Verwendung {#usage}
 
-Um ein Uno-Spiel zu starten, führe den Slash-Befehl `/uno` aus - andere Spieler können dann über den Knopf „Spiel beitreten“ beitreten. Nach 90 Sekunden oder nachdem der Benutzer, der den Befehl ausführt, auf den Knopf „Spiel sofort starten“ geklickt hat, beginnt das Spiel.
+Um ein Uno-Spiel zu starten, führe den Slash-Befehl `/uno` aus - andere Spieler können dann über den Knopf „Spiel beitreten“ beitreten. Nach 90 Sekunden oder nachdem der Benutzer, der den Befehl ausgeführt hat, auf den Knopf „Spiel sofort starten“ geklickt hat, beginnt das Spiel.
 
 :::tip Spiel-Thread 
 Es ist am besten, einen Thread für Spieldiskussionen zu erstellen, damit der Kanal nicht zu voll mit spielbezogenen Nachrichten wird.
