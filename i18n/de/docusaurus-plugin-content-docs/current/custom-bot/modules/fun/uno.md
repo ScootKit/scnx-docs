@@ -27,10 +27,10 @@ Das Spiel selbst hat keine zeitliche Begrenzung.
 ### Wie man spielt {#how-to-play}
 Spieler können nur Karten spielen, die dem aktuellen Wert oder der aktuellen Farbe der zuletzt gespielten Karte entsprechen. Ausnahmen gelten für die Sonderkarten „Farbwahl“.
 
-In den meisten Fällen verwendet jeder Spieler eine Karte, indem er eine Karte aus seinem Kartenstapel auswählt, wonach der nächste Spieler an der Reihe ist - beachte, dass die Zugreihenfolge mithilfe der Sonderkarte „Umkehren“ umgekehrt werden kann.
+In den meisten Fällen verwendet jeder Spieler eine Karte, indem er eine Karte aus seinem Kartenstapel auswählt, wonach der nächste Spieler an der Reihe ist - beachte, dass die Zugreihenfolge mithilfe der Sonderkarte „Reverse“ umgekehrt werden kann.
 
 ### Karten und Spezialeffekte {#cards}
-Es gibt normale Zahlenkarten von 0-9 in den Farben Blau, Grün, Rot und Gelb sowie Sonderkarten. Zu den Sonderkarten gehört die „Farbwahl“, mit der eine gewünschte Farbe für die nächste Karte ausgewählt werden kann; „Umkehren“, was die Spielrichtung ändert; und „Überspringen“, wodurch der nächste Spieler übersprungen wird.
+Es gibt normale Zahlenkarten von 0-9 in den Farben Blau, Grün, Rot und Gelb sowie Sonderkarten. Zu den Sonderkarten gehört die „Farbwahl“, mit der eine gewünschte Farbe für die nächste Karte ausgewählt werden kann; „Reverse“, was die Spielrichtung ändert; und „Überspringen“, wodurch der nächste Spieler übersprungen wird.
 
 Außerdem gibt es noch die Karten „Ziehe 2“ und „Farbwahl und ziehe 4“: Dadurch wird der nächste Spieler gezwungen, zwei oder vier Karten zu ziehen, sofern er nicht auch eine dieser Karten in seinem Kartenstapel hat. Hat er eine solche Karte, kann er damit die Anzahl der zu ziehenden Karten erhöhen und an den nächsten Spieler weitergeben, wo sich der ganze Vorgang wiederholt.
 
