@@ -2,5 +2,5 @@
 
 ---
 
-<center><h1>Coming soon</h1></center>
-<center>We're still working on adding this documentation file - please check back later or raise a PR.</center>
+<center><h1>How To Use Formatting</h1></center>
+<center>Formatting Is When Some Symbols (Or One) Are Before And Atfer Text.</center>
