@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const data = JSON.parse(fs.readFileSync('./../api-responses.json').toString());
 
-let countData = {newGenerated: 0, alreadyExists: 0};
+let countData = {newGenerated: 0, alreadyExists: 0, deleted: 0};
 
 for (const m of data.modules) {
     if (m.tags[0] === 'ai') continue;
@@ -22,4 +22,13 @@ ${m.description.en}
     countData.newGenerated++;
 }
 
-console.log(`Done! ${countData.newGenerated} files newly generated, ${countData.alreadyExists} files already exist. Don't forget to commit them!`);
+for (const category of fs.readdirSync('./../docs/custom-bot/modules/')) {
+    for (const moduleName of fs.readdirSync(`./../docs/custom-bot/modules/${category}/`)) {
+        if (!data.modules.find(m => m.name === moduleName.replaceAll('.md', ''))) {
+            fs.unlinkSync(`./../docs/custom-bot/modules/${category}/${moduleName}`);
+            countData.deleted++;
+        }
+    }
+}
+
+console.log(`Done! ${countData.newGenerated} files newly generated, ${countData.alreadyExists} files already exist, ${countData.deleted} were deleted. Don't forget to commit them!`);
