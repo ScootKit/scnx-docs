@@ -81,7 +81,6 @@ Die folgenden Daten werden über die Ticketerstellungs-Nachricht (mit denen Nutz
 * Die ID des Kanals, in welchem die Nachricht gesendet wurde.
 * Die Kategorie des Tickets.
 * Metadata über den Eintrag (wann er erstellt und zuletzt geändert wurde).
-* ```
 
 Ticket-Protokolle werden verschlüsselt und dann auf [ScootKit Paste](https://paste.scootkit.net) hochgeladen, einem Dienst, der auf [PrivateBin](https://github.com/PrivateBin/PrivateBin) basiert. Das bedeutet, dass Scootkit Ticket-Protokolle nicht entschlüsseln kann. Ticket-Protokolle werden in deinem Browser entschlüsselt, wenn du auf die URL klickst hast. Dies passiert zur zur Sicherheit deiner Nutzer. Ticket-Protkolle werden nach einem Jahr automatisch gelöscht.
 
