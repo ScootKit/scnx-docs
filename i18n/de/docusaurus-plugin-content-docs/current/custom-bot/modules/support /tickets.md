@@ -4,16 +4,16 @@ Erlaube deinen Mitgliedern, dass Serverteam deines Servers zu kontaktieren!
 
 <ModuleOverview moduleName="tickets" />
 
-:::Info
+:::info
 Du suchst nach einem professionellen Support-System mit Ticket-Zuweisungen, Ticket-Themen, Formularen und mehr?
 Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/> (<PlanPrice plan="ACTIVE_GUILD" type="YEARLY"/>).
 :::
 
-## Features {#features}
+## Funktionen {#features}
 
 * Nutzer können ein Ticket öffnen, indem sie einen Knopf unter einer einstellbaren Nachricht klicken. 
-* Erstelle mehrere Ticket-Themen mit unabhäniger Konfiguration.
-* Lasse automatisch Ticket-Transcript erstellen.
+* Erstelle mehrere Ticket-Themen mit unabhängiger Konfiguration.
+* Lasse automatisch Ticket-Protokoll erstellen.
 
 ## Einstellung {#setup}
 
@@ -41,10 +41,10 @@ Es ist nicht möglich, mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nac
 | Ticketerstellungs-Kategorie               | Neue Ticket-Kanäle werden in der hier ausgewählten Kategorie auf deinem Discord-Server erstellt.                                                                                                |
 | Ticketerstellungs-Kanal               | Die Ticket-Erstellungsnachricht wird in diesen Kanal gesendet. Nutzer können ein Ticket erstellen, indem sie auf den Knopf unter der Nachricht klicken.                  |
 | Ticketrollen                         | Diese Rollen werden erwähnt, wenn ein neues Ticket geöffnet wurde und diesen Rollen wird Zugriff auf erstellte Ticket-Kanäle gegeben.                                                                  |
-| Log-Kanal                          | Das Transcript wird in diesen Kanal gesendet, nachdem ein Ticket geschlossen wurde.                                                                                                                                   |
+| Log-Kanal                          | Das Protokoll wird in diesen Kanal gesendet, nachdem ein Ticket geschlossen wurde.                                                                                                                                   |
 | Ticketerstellungs-Nachricht                | Diese Nachricht wird in den "Ticketerstellungs-Kanal" gesendet und Nutzer können mit einem Knopf unter der Nachricht ein neues Ticket öffnen.                                       |
-| Nach schließen PN an Nutzer senden | Falls aktiviert werden die Nutzer eine PN nach Schließung des Tickets erhalten.                                                                                                                                  |
-| Nutzer PN                              | <i>Nur sichbar wenn "Nach schließen PN an Nutzer senden" aktiviert ist.</i><br/>Diese Nachricht wird der Nutzer erhalten, nachdem sein Ticket geschlossen wurde. Du kannst einen Link zum Ticket Transcript hinzufügen. |
+| Nach Schließen PN an Nutzer senden | Falls aktiviert, werden die Nutzer eine PN nach Schließung des Tickets erhalten. |
+| Nutzer PN                              | <i>Nur sichbar wenn "Nach Schließen PN an Nutzer senden" aktiviert ist.</i><br/>Diese Nachricht wird der Nutzer per Privatnachricht erhalten, nachdem sein Ticket geschlossen wurde. Du kannst einen Link zum Ticket-Protkoll hinzufügen. |
 | Ticket-Erstellt Nachricht               | Diese Nachricht wird in ein Ticket gesendet, nachdem es erstellt wurde. Ein Knopf zum Schließen des Tickets wird hinzugefügt.                                                                    |
 | Ticketerstellungs-Knopf                 | Dies wird der Inhalt des Knopfes unter der Ticketerstellungs-Nachricht sein.                                                                                   |
 | Ticketschließungs-Knopf                  | Dies wird der Inhalt des Knopfes unter der Ticketschließungs-Nachricht sein, der das Ticket schließt.                                                                                     |
@@ -53,9 +53,9 @@ Es ist nicht möglich, mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nac
 
 Falls bei dir Fehler auftreten, stelle bitte sicher, dass
 
-* der Bot genügend Berechtigungenhat um Kanäle zu erstellen, zu löschen und zu verwalten. 
-* deine [Kategorie Konfiguration](#configuration) ist gültig und du hast keine leeren Kategorien hinzugefügt. 
-* dein Server hat maximal 500 Kanäle (Discord Limit).
+* der Bot genügend Berechtigungen hat, um Kanäle zu erstellen, zu löschen und zu verwalten. 
+* deine [Kategorie-Konfiguration](#configuration) ist gültig und du hast keine leeren Kategorien hinzugefügt hast. 
+* dein Server nicht die maximal 500 zugelassene Kanäle hat (Discord Limit).
 * der Ticket-Log Kanal richtig eingestellt ist und der Bot hat die Berechtigung zum Senden von Nachrichten hat.
 * der Inhalt des Ticketerstellungs- und Ticketschließungs-Knopfes korrekt ist.
 * der Ticketerstellungs-Kanal ist leer ist.
