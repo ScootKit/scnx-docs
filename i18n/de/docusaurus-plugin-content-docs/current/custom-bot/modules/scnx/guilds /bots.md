@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Bots von SCNX
+# Bots auf SCNX
 
-Diese Dokumente beinhaltet anwendbare Hilfen für den [Eigenen Bot](../../custom-bot/intro) und den
+Diese Dokumente beinhalten anwendbare Hilfen für den [Eigenen Bot](../../custom-bot/intro) und den
  [Modmail Bot](../../modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
  [mit dem eigenen  Bot loslegen](../../custom-bot) oder den [mit dem Modmail-Bot loslegen](../../modmail) Artikel.
 
@@ -27,19 +27,19 @@ Hier ist ein Beispiel von einem eigenen Bot-Status-Panel:
 
 Wie du sehen kannst, gibt es hier bereits einige Möglichkeiten. Hier sind die wichtigsten Informationen über das Panel:
 
-* Der Tag und das Profilbild deines Bots (nur sichtbar wenn dein Bot online ist). Um das Profil deines Bots zu wechseln,
- klicke auf dieses oder befolge [diesem Artikel](#change-profile).
-* "Konfiguration neuladen": Wenn du deine Konfiguration neulädst, wird dein Bot alle ausstehenden Änderungen an Konfigurationsdatein übernehmen (auch Modul-Änderungen)
+* Der Tag und das Profilbild deines Bots (nur sichtbar, wenn dein Bot online ist). Um das Profil deines Bots zu verändern,
+ klicke auf dieses oder befolge [diesen Artikel](#change-profile).
+* "Konfiguration neuladen": Wenn du deine Konfiguration neulädst, wird dein Bot alle ausstehenden Änderungen an Konfigurationsdateien übernehmen (auch Modul-Änderungen)
   ohne dass der Bot offline geht. Generell solltest du lieber die Konfiguration neuladen, als den Bot neuzustarten.
 * "Bot neustarten": Dies wird den Prozess deines Bots neustarten. Dies wird eventuell einige Minuten in Anspruch nehmen,
   zusätzlich wird der Bot für eine kurze Zeit offline sein, in welcher der Bot nicht erreichbar sein wird.
  Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, seltsame Fehler auftreten oder du ein [Update durchführen willst](#bot-updates).
-* "Bot anhalten": Dies wird den Prozess deines Bots beenden. Es wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
-* "Log" / "Fehler-Log": In diesen Log-Datein wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und technische Experten) benötigen diese Logs, um eventuelle Probleme zu analysieren und dir eine Lösung vorzuschlagen - oder, falls es Fehler im Bot selbst sind, diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
+* "Bot anhalten": Dies wird den Prozess deines Bots beenden. Er wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
+* "Log" / "Fehler-Log": In diesen Log-Dateien wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und technische Experten) benötigen diese Logs, um eventuelle Probleme zu analysieren und dir eine Lösung vorzuschlagen - oder, falls es Fehler im Bot selbst sind, diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
 * Sprache: Das ist die (menschliche) Sprache die dein Bot für alle Standardkonfigurationswerte und Nachrichten, die nicht konfiguriert werden können, nutzt. Der Modmail kann in manchen Fällen die Sprache des ausführenden Nutzer benutzen, statt der hier eingestellten Sprache. Du kannst jederzeit [die Sprache deines Bots ändern](#bot-language).
-* Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host) wenn du möchtest.
-* Branch (Nur bei Custom-Bots verfügbar): Der aktuelle Zweig (englisch "branch") ist eine Version deines eigenen Bots auf einer anderen Programmier-Basis. Du solltest es diesen bei "v3" (Stabile Version) belassen, aber wenn du willst, kannst du auch zu dem "Beta"-Branch wechseln (das ist die Öffentliche Beta; kann aber instabil sein).
-* Version (Nur bei eigenen Bots sichtbar): Dies ist die aktuelle Version des Codes deines Bots. Abhängig von deiner Version wird dein Bot eventuell neuen Funktionen nicht nutzen können. Wenn deine Version nicht aktuell ist, wird eine Warnung angezeigt. Dein Modmail Bot wird immer automatisch auf dem neusten Stand aktualisiert. Erfahre mehr über [Updates & Versionen](#bot-updates).
+* Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host), wenn du möchtest.
+* Branch (nur beim eigenen Bot verfügbar): Der aktuelle Zweig (englisch "branch") ist eine Version deines eigenen Bots auf einer anderen Programmier-Basis. Du solltest es diesen bei "v3" (Stabile Version) belassen, aber wenn du willst, kannst du auch zu dem "Beta"-Branch wechseln (das ist die öffentliche Beta; kann aber instabil sein).
+* Version (nur bei eigenen Bots sichtbar): Dies ist die aktuelle Version des Codes deines Bots. Abhängig von deiner Version wird dein Bot eventuell neue Funktionen nicht nutzen können. Wenn deine Version nicht aktuell ist, wird eine Warnung angezeigt. Dein Modmail-Bot wird immer automatisch auf den neusten Stand aktualisiert. Erfahre mehr über [Updates & Versionen](#bot-updates).
 * RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen ignorieren, sie zeigen nur die RAM / CPU Nutzung deines Bots an. Diese sind irrelevant, da SCNX automatisch deinen Bot optimiert, falls dein Bot zu viel RAM friss[t](https://www.linuxatemyram.com/) als er tun sollte.
 
 ### Bot-Updates {#bot-updates}
