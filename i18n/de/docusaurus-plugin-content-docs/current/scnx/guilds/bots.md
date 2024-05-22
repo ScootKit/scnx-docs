@@ -49,7 +49,7 @@ Wie du sehen kannst, gibt es hier bereits einige Möglichkeiten. Hier sind die w
         <ul>
             <li>Wir veröffentlichen regelmäßig Updates für Discord-Bots - wir fassen meist mehrere Funktionen in einem Update für die stabile Version zusammen. Für die <a href="#beta">Öffentliche Beta</a> gibt es viele Veröffentlichungen mit weniger Änderungen pro Veröffentlichung, manchmal mehrere an einem Tag.</li>
             <li>Dein Bot wird eine Nachricht in deinen Bot-Log-Channel (falls eingestellt) senden, wenn ein neues Update verfügbar ist.</li>
-            <li>Wir kündingen jedes Update auf unserem <a href="https://scootk.it/dc">Discord-Server</a> an und senden einen Link zu einem Änderungsbericht.</li>
+            <li>Wir kündigen jedes Update auf unserem <a href="https://scootk.it/dc">Discord-Server</a> an und senden einen Link zu einem Änderungsbericht.</li>
             <li>Du findest alle Änderungsberichte in deinem <a href="https://scnx.app/glink?page=bot/manage">Bot-Dashboard</a> und auf unserer <a href="https://scnx.app/changelogs?branch=v3&type=CUSTOM_BOT">Änderungsberichte-Seite</a>.</li>
             <li>Um die neuste Version des Bots zu nutzen, starte den Bot ganz einfach in deinem <a href="https://scnx.app/de/glink?page=bot/manage">Bot-Dashboard</a> neu. Updates Updates sind immer kostenlos.</li>
             <li>Du wirst keine neuen Funktionen nutzen können, wenn dein Bot nicht auf der aktuellsten Version ist, bis du deinen Bot auf die neuste Version bringst.</li>
@@ -86,10 +86,10 @@ Wie du sehen kannst, gibt es hier bereits einige Möglichkeiten. Hier sind die w
           <li>Bestätige die Änderung, indem du auf "Speichern" klickst.</li>
           <li>Um Benachrichtigungen über die Veröffentlichung von neuen Beta-Version auf unserem <a href="https://scootk.it/dc">Discord</a> zu erhalten, aktiviere die Beta-Kanäle in #beta.</li>
         </ol>
-        So kannst du die Beta Version deaktivieren:
+        So kannst du die Beta-Version deaktivieren:
         <ol>
           <li>Öffne das <a href="https://scnx.app/de/glink?page=bot/manage">Bot-Dashboard</a>.</li>
-          <li>In dem Status-Panel, klicke auf "Ändern" dann auf "Branch"-Einstellung.</li>
+          <li>Klicke in dem Status-Panel auf "Ändern" dann auf "Branch"-Einstellung.</li>
           <li>Wähle "Stabile Version (empfohlen)" aus.</li>
           <li>Bestätige die Änderung, indem du auf "Speichern" klickst.</li>
         </ol>
@@ -136,7 +136,7 @@ Wir haben hohe Standards bei den Bot-Hosts und können versichern, dass alle das
 
 Die (menschliche) Sprache wird für alle Standardtkonfigurationwerte und Nachrichten, die nicht eingestellt werden können, verwendet. Es kann vorkommen, dass der Modmail Bot nicht diese, sondern die Sprache des ausführenden Nutzers verwendet.
 :::info
-Beachte bitte, dass du beim Wechseln der Bot-Sprache nicht bereits erstellte Datein neu generierst - du müsstest die Datei zurücksetzen oder es selbst übersetzen.
+Beachte bitte, dass du beim Wechseln der Bot-Sprache nicht bereits erstellte Dateien neu generierst - du müsstest die Datei zurücksetzen oder es selbst übersetzen.
 :::
 
 Um die Sprache deines Bots zu ändern,
@@ -145,7 +145,7 @@ Um die Sprache deines Bots zu ändern,
    oder das [eigene Bot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Klicke unter "Bot-Status" bei der Sprache deines Bots auf "Wechseln".
 3. Wähle die Sprache aus, zu welcher du wechseln möchtest.
-4. Speichere die Änderungen. Dein Bot wird automatisch neustarten um die Änderungen anzunehmen.
+4. Speichere die Änderungen. Dein Bot wird automatisch neustarten, um die Änderungen anzunehmen.
 
 ![](@site/docs/assets/scnx/guilds/bots/change-language.png)
 
@@ -299,7 +299,7 @@ Wenn du deinen Bot löschst, wird dies nicht nur für immer die Bot Konfiguratio
 
 Es tut uns leid, dass du SCNX verlassen willst - wenn du Probleme mit SCNX hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://sc-net.work/dc).
 
-Um deinen Bot  (für immer) zu löschen, folge dieser Anleitung:
+Um deinen Bot (für immer) zu löschen, folge dieser Anleitung:
 
 1. Öffne das [Modmail-](https://scnx.app/de/glink?page=modmail/manage)
    oder das [eigene Bot-](https://scnx.app/de/glink?page=bot/manage) Dashboard.

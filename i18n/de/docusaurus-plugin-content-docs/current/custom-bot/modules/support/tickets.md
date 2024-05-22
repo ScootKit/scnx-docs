@@ -56,7 +56,7 @@ Falls bei dir Fehler auftreten, stelle bitte sicher, dass
 * der Bot genügend Berechtigungen hat, um Kanäle zu erstellen, zu löschen und zu verwalten. 
 * deine [Kategorie-Konfiguration](#configuration) ist gültig und du hast keine leeren Kategorien hinzugefügt hast. 
 * dein Server nicht die maximal 500 zugelassene Kanäle hat (Discord Limit).
-* der Ticket-Log Kanal richtig eingestellt ist und der Bot hat die Berechtigung zum Senden von Nachrichten hat.
+* der Ticket-Log-Kanal richtig eingestellt ist und der Bot hat die Berechtigung zum Senden von Nachrichten hat.
 * der Inhalt des Ticketerstellungs- und Ticketschließungs-Knopfes korrekt ist.
 * der Ticketerstellungs-Kanal ist leer ist.
 
