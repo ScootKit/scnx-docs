@@ -28,10 +28,10 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 
 <SlashCommandExplanation />
 
-| Befehl                              | Beschreibung                                                                                                                                                                              |
-|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Befehl                                 | Beschreibung                                                                                                                                                                                                                        |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/team-goals progress [user:<Nutzer>]` | Zeigt den Fortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, …) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
-| `/team-goals history [user:<Nutzer>]`  | Zeigt die Zielhistorie (Anzahl der Nachrichten, Ziel erreicht oder nicht, Prozentsatz der erreichten Ziele) der letzten 10 Wochen des angegebenen Benutzers an (wenn leer, wird dein Fortschritt angezeigt).        |
+| `/team-goals history [user:<Nutzer>]`  | Zeigt die Zielhistorie (Anzahl der Nachrichten, Ziel erreicht oder nicht, Prozentsatz der erreichten Ziele) der letzten 10 Wochen des angegebenen Benutzers an (wenn leer, wird dein Fortschritt angezeigt).                        |
 
 ## Definition von modulspezifischen Begriffen {#module-terms}
 
@@ -45,44 +45,42 @@ Diese Konfigurationsdatei ermöglicht es dir, die Funktionsweise des Moduls und 
 Öffne sie in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&file=team-goals%7Cconfig).
 
-| Feld                                    | Beschreibung                                                                                                                                                                                                 | 
-|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Team-Rollen                              | Diese Rollen werden jede Woche hinsichtlich ihres Fortschritts zum Ziel [ausgewertet](#module-terms). Nur von Nutzern mit diesen Rollen werden die Nachrichten gezählt.                                           |
-| Wöchentliche Nachrichten Ziele                      | Die Anzahl der Nachrichten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) senden müssen, um das Ziel zu erreichen.                                                                                           | 
-| Ziel erfüllt-Nachricht                    | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel erreicht wurde.         |
-| Ziel fehlgeschlagen-Nachricht                      | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel **nicht** erreicht wurde. |
-| Nachrichten in Kanal statt per PN schicken | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                 |
-| Kanal, in welchen die Nachrichten gesendet werden sollen              | *Nur sichtbar, wenn "Nachrichten in Kanal statt per PN schicken" aktiviert ist.*<br/>Die [Auswertung](#module-terms) wird in diesen Kanal statt per PN gesendet.                           |
-| Nutzer können ihre gegenseitige Statistiken sehen     | Wenn aktiviert, können Nutzer den `[user:<Nutzer>]`-Paramete zu ihrem Befehl hinzufügen und können so Statistiken anderer sehen.                                                                                |                         
-| Ignored channels                         | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                        |
+| Feld                                                     | Beschreibung                                                                                                                                                                                                                                  | 
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Team-Rollen                                              | Diese Rollen werden jede Woche hinsichtlich ihres Fortschritts zum Ziel [ausgewertet](#module-terms). Nur von Nutzern mit diesen Rollen werden die Nachrichten gezählt.                                                                       |
+| Wöchentliche Nachrichten Ziele                           | Die Anzahl der Nachrichten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) senden müssen, um das Ziel zu erreichen.                                                                                                          | 
+| Ziel erfüllt-Nachricht                                   | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel erreicht wurde.           |
+| Ziel fehlgeschlagen-Nachricht                            | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel **nicht** erreicht wurde. |
+| Nachrichten in Kanal statt per PN schicken               | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                                                  |
+| Kanal, in welchen die Nachrichten gesendet werden sollen | *Nur sichtbar, wenn "Nachrichten in Kanal statt per PN schicken" aktiviert ist.*<br/>Die [Auswertung](#module-terms) wird in diesen Kanal statt per PN gesendet.                                                                              |
+| Ignorierte Channel                                       | Nachrichten von Nutzern mit mindestens einer der Teammitglieder-Rollen werden in diesen Kanälen nicht zu ihrem Ziel hinzugerechnet.                                                                                                           |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
 <details>
-  <summary>Messages sent by my staff members are not counted correctly</summary>
-  Please make sure that
+  <summary>Von meinem Team gesendete Nachrichten werden nicht richtig gezählt</summary>
+  Bitte stelle sicher, dass
   <ul>
-    <li>the bot has access to every channel that messages from staff members should be counted in and that the channel is not in the <a href="#configuration">blacklist</a>.</li>
-    <li>the user has at least one of the <a href="#configuration">Configured Staff-Roles</a>. Only message sent while they have the rolle will get counted - messages sent before the user had the role are never counted.</li>
+    <li>der Bot Zugriff auf jeden Kanal hat, von welchem Nachrichten gezählt werden sollen und dass der Kanal kein <a href="#configuration">ignorierter Kanal</a> ist.</li>
+    <li>der Nutzer mindestens eine der <a href="#configuration">konfigurierten Teammitglieder-Rollen</a> hat. Es werden nur Nachrichten gezählt, die gesendet wurden, während mindestens eine Teammitglieder-Rolle besessen wurde - Nachrichten, die gesendet wurden, bevor Nutzer die Teammitglieder-Rolle hatten, werden nie gezählt.</li>
   </ul>
 </details>
 
 <details>
-  <summary>How can I change the time when users get evaluated?</summary>
-  There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need 
-another evaluation time, you could disable the module, <a href="./../../additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
-  evaluations to happen and enable the module then.
+  <summary>Wie kann ich die Zeit verändern, wann Nutzer ausgewertet werden?</summary>
+  Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren, 
+  die <a href="./../../additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
 </details>
 
 <details>
-  <summary>Evaluation isn't working correctly (e.g. evaluation messages aren't send)</summary>
-  Please make sure that
+  <summary>Die Auswertung funktioniert nicht richtig (z.B. werden Auswertungsnachrichten nicht gesendet)</summary>
+  Bitte stelle sicher, dass
    <ul>
-    <li>the bot has the permissions to send message into the <a href="#configuration">configured channel</a>, if enabled.</li>
-    <li>your staff members have at least one of the <a href="#configuration">configured staff-roles</a>.</li>
-    <li>that the <a href="#configuration">configured messages</a> are not incorrect.</li>
+    <li>der Bot die Berecchtigung hat, Nachrichten in den <a href="#configuration">konfigurierten Kanal</a> zu senden, wenn aktiviert.</li>
+    <li>deine Teammitglieder mindestens eine der <a href="#configuration">konfigurierten Team-Rollen</a> besitzen.</li>
+    <li>die <a href="#configuration">konfigurierte Nachricht</a> nicht inkorrekt ist.</li>
   </ul>
-  Even if no evaluation messages get sent, you can always view the goal history using the <a href="#commands"><code>/team-goals history</code></a> slash command.
+  Selbst wenn keine Auswertung gesendet wurde, kannst du immer die Zielhistorie mit dem Slash-Befehl <a href="#commands"><code>/team-goals history</code></a> einsehen.
 </details>
 
 <details>
