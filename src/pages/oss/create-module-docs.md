@@ -15,18 +15,9 @@ Please follow it closely, as end-user documentation will be required for every m
 End-User Documentation allows your users to get familiar with your module, diagnose issues and use it to the full
 potential. Additionally, the documentation will be used by our Helpers to assist your users when setting up your module.
 
-To ensure a great user experience, the following guidelines apply to modules published on SCNX:
-
-* Existing modules will need to publish end-user documentation before Q2 2024, otherwise new users might receive a
-  warning when enabling your module.
-* New modules won't be able to get released to the stable branch on SCNX unless end-user documentation has been
-  published.
-* New modules in the beta branch will need to publish end-user documentation within a month, otherwise their
-  availability
-  might be limited on SCNX.
-* End-User-Documentation must be in sync with the current stable version (not beta-version) of your module.
-* While you can publish translations for your docs, this is optional. If no translation is published, ScootKit might
-  translate your documentation file.
+:::info
+Requirements for End-User documentation are not enforced and have been removed to avoid confusion.
+:::
 
 Contributions (including creating module documentation) to
 the [ScootKit/scnx-docs](https://github.com/ScootKit/scnx-docs) are eligible for bounties as part of

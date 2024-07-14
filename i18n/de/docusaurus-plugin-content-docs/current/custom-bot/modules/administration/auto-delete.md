@@ -4,8 +4,6 @@ Mit diesem Modul kannst du Nachrichten nach einer bestimmten Zeit löschen lasse
 
 <ModuleOverview moduleName="auto-delete" />
 
----
-
 ## Funktionen {#features}
 
 * Lösche Nachrichten in Kanälen nach einer bestimmten Zeit automatisch
