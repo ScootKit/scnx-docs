@@ -7,7 +7,7 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 ## Funktionen {#features}
 
 * Setze ein Nachrichtenziel für deine Teammitglieder.
-* Der Bot wird jede Woche überprüfen, ob die Teammitglieder genug Nachrichten gesendet haben, um das Ziel zu erreichen.
+* Der Bot wird jede Woche überprüfen, ob die Teammitglieder das Nachrichtenziel erreicht haben.
 * Überprüfe mit [Befehlen](#commands) deinen aktuellen Fortschritt und Erfolge in der Vergangenheit.
 * Sende Nutzern jede Woche über PNs ihr Ergebnis oder in einen konfigurierten Kanal.
 * Lasse Kanäle optional von den Zielen ignorieren.
@@ -22,101 +22,95 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 ## Nutzung {#usage}
 
 * Die Anforderungen werden alle 7 Tage nach Aktivierung des Moduls automatisch [ausgewertet](#module-terms).
-* Du kannst immer den Fortschritt von dir oder einem anderem Nutzer mit [`/team-goals progress`](#commands) sehen und den Ziel-Verlauf
-  mit [`/team-goals history`](#commands) einsehen.
+* Du kannst immer den Fortschritt von dir oder einem anderem Nutzer mit [`/team-goals progress`](#commands) und die Zielhistorie mit [`/team-goals history`](#commands) einsehen.
 
 ## Befehle {#commands}
 
 <SlashCommandExplanation />
 
-| Command                              | Description                                                                                                                                                                              |
-|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/team-goals progress [user:<Nutzer>]` | Zeigt den Fortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, übrige Zeit, …) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). |
-| `/team-goals history [user:<Nutzer>]`  | Zeigt den Ziel-Verlauf (amount of messages, goal reached or not, percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).        |
+| Befehl                                 | Beschreibung                                                                                                                                                                                                                        |
+|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/team-goals progress [user:<Nutzer>]` | Zeigt den Fortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, …) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
+| `/team-goals history [user:<Nutzer>]`  | Zeigt die Zielhistorie (Anzahl der Nachrichten, Ziel erreicht oder nicht, Prozentsatz der erreichten Ziele) der letzten 10 Wochen des angegebenen Benutzers an (wenn leer, wird dein Fortschritt angezeigt).                        |
 
-## Definition of module-specific terms {#module-terms}
+## Definition von modulspezifischen Begriffen {#module-terms}
 
-* An **evaluation** is the time when a user gets evaluated. This happens once a week. The actual time is dependent on
-  the time the module got first enabled - the first evaluation will happen exactly one week after that. In an
-  evaluation, the bot will compare the amount messages sent in the current evaluation period to
-  the [configured goal](#configuration), triggering the [configured failed / archived message](#configuration) to be
-  sent. Once all users got evaluated, the next evaluation period starts.
-* An **evaluation period** is the time between the last and the next evaluation and is exactly one week long.
+* Eine **Auswertung** ist der Zeitpunkt, zu dem ein Nutzer ausgewertet wird. Dies geschieht einmal pro Woche. Der eigentliche         Zeitpunkt ist davon abhängig, wann das Modul zum ersten mal aktiviert wurde - die erste Auswertung wird genau eine Woche
+  später stattfinden. Bei der Auswertung vergleicht der Bot die Anzahl der im aktuellen Bewertungszeitraum gesendeten Nachrichten mit dem [konfigurierten Ziel](#configuration) und löst die konfigurierten Nachrichten für [Fehlgeschlagen / Erreicht](#configuration) aus. Sobald alle Benutzer ausgewertet wurden, beginnt der nächste Bewertungszeitraum.
+* Ein **Bewertungszeitraum** ist die Zeit zwischen der letzten und der nächsten Auswertung und ist genau eine Woche lang.
 
-## Configuration {#configuration}
+## Konfiguration {#configuration}
 
-This configuration file allows you to configure how this module will behave and the goal itself.
-Open it in
-your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=team-goals%7Cconfig).
+Diese Konfigurationsdatei ermöglicht es dir, die Funktionsweise des Moduls und das Ziel selbst zu konfigurieren.
+Öffne sie in
+deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&file=team-goals%7Cconfig).
 
-| Field                                    | Description                                                                                                                                                                                                 | 
-|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Staff-Roles                              | These roles will get [evaluated](#module-terms) every week regarding their progress towards the goal. Only messages from users with these roles will get tracked.                                           |
-| Weekly Message Goal                      | The amount of messages staff members need to send in each [evaluation period](#module-terms) to archive the goal.                                                                                           | 
-| Goal-Archived-Message                    | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they reach their goals.         |
-| Goal-Failed-Message                      | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they fail to reach their goals. |
-| Send messages in channels instead of DMs | If enabled, staff members will receive their [goal evaluation](#module-terms) in a channel instead via DMs.                                                                                                 |
-| Channel to send messages in              | *Only visible if "Send messages in channels instead of DMs" is enabled.*<br/>Every [evaluation](#module-terms), the goal message will get sent into this channel instead via DMs.                           |
-| Users can see each others statistics     | If enabled, users will be able to add the `[user:<User>]` to their command and will be able to see each others statistics.                                                                                  |                         
-| Ignored channels                         | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                        |
+| Feld                                                     | Beschreibung                                                                                                                                                                                                                                  | 
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Team-Rollen                                              | Diese Rollen werden jede Woche hinsichtlich ihres Fortschritts zum Ziel [ausgewertet](#module-terms). Nur von Nutzern mit diesen Rollen werden die Nachrichten gezählt.                                                                       |
+| Wöchentliche Nachrichten Ziele                           | Die Anzahl der Nachrichten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) senden müssen, um das Ziel zu erreichen.                                                                                                          | 
+| Ziel erfüllt-Nachricht                                   | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel erreicht wurde.           |
+| Ziel fehlgeschlagen-Nachricht                            | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel **nicht** erreicht wurde. |
+| Nachrichten in Kanal statt per PN schicken               | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                                                  |
+| Kanal, in welchen die Nachrichten gesendet werden sollen | *Nur sichtbar, wenn "Nachrichten in Kanal statt per PN schicken" aktiviert ist.*<br/>Die [Auswertung](#module-terms) wird in diesen Kanal statt per PN gesendet.                                                                              |
+| Ignorierte Channel                                       | Nachrichten von Nutzern mit mindestens einer der Teammitglieder-Rollen werden in diesen Kanälen nicht zu ihrem Ziel hinzugerechnet.                                                                                                           |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
 <details>
-  <summary>Messages sent by my staff members are not counted correctly</summary>
-  Please make sure that
+  <summary>Von meinem Team gesendete Nachrichten werden nicht richtig gezählt</summary>
+  Bitte stelle sicher, dass
   <ul>
-    <li>the bot has access to every channel that messages from staff members should be counted in and that the channel is not in the <a href="#configuration">blacklist</a>.</li>
-    <li>the user has at least one of the <a href="#configuration">Configured Staff-Roles</a>. Only message sent while they have the rolle will get counted - messages sent before the user had the role are never counted.</li>
+    <li>der Bot Zugriff auf jeden Kanal hat, von welchem Nachrichten gezählt werden sollen und dass der Kanal kein <a href="#configuration">ignorierter Kanal</a> ist.</li>
+    <li>der Nutzer mindestens eine der <a href="#configuration">konfigurierten Teammitglieder-Rollen</a> hat. Es werden nur Nachrichten gezählt, die gesendet wurden, während mindestens eine Teammitglieder-Rolle besessen wurde - Nachrichten, die gesendet wurden, bevor Nutzer die Teammitglieder-Rolle hatten, werden nie gezählt.</li>
   </ul>
 </details>
 
 <details>
-  <summary>How can I change the time when users get evaluated?</summary>
-  There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need 
-another evaluation time, you could disable the module, <a href="./../../additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
-  evaluations to happen and enable the module then.
+  <summary>Wie kann ich die Zeit verändern, wann Nutzer ausgewertet werden?</summary>
+  Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren, 
+  die <a href="./../../additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
 </details>
 
 <details>
-  <summary>Evaluation isn't working correctly (e.g. evaluation messages aren't send)</summary>
-  Please make sure that
+  <summary>Die Auswertung funktioniert nicht richtig (z.B. werden Auswertungsnachrichten nicht gesendet)</summary>
+  Bitte stelle sicher, dass
    <ul>
-    <li>the bot has the permissions to send message into the <a href="#configuration">configured channel</a>, if enabled.</li>
-    <li>your staff members have at least one of the <a href="#configuration">configured staff-roles</a>.</li>
-    <li>that the <a href="#configuration">configured messages</a> are not incorrect.</li>
+    <li>der Bot die Berecchtigung hat, Nachrichten in den <a href="#configuration">konfigurierten Kanal</a> zu senden, wenn aktiviert.</li>
+    <li>deine Teammitglieder mindestens eine der <a href="#configuration">konfigurierten Team-Rollen</a> besitzen.</li>
+    <li>die <a href="#configuration">konfigurierte Nachricht</a> nicht inkorrekt ist.</li>
   </ul>
-  Even if no evaluation messages get sent, you can always view the goal history using the <a href="#commands"><code>/team-goals history</code></a> slash command.
+  Selbst wenn keine Auswertung gesendet wurde, kannst du immer die Zielhistorie mit dem Slash-Befehl <a href="#commands"><code>/team-goals history</code></a> einsehen.
 </details>
 
 <details>
-  <summary>Can I use this module to evaluate the message activity of my members? / SCNX is adding a "Report Abuse" button below my DM messages</summary>
-  Such usage would violate our <a href="https://sc-net.work/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
-  to evaluate activity of your staff members and only with their consent.
-  If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of 
-  members of your server. You can learn more about this behavior on <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> (this is also the URL linked in the button).
-  Most of our users never fit this category, and you usually do not need to worry about this if you are using this module as intended.
+  <summary>Kann ich das Modul nutzen, um die Aktivität meiner Nutzer auszuwerten? / SCNX fügt einen "Missbrauch melden"-Knopf an meine Nachrichten an</summary>
+  Eine solche Nutzung verstößt gegen unsere <a href="https://sc-net.work/scnx-tos">Nutzungsbedingungen</a>, da du unsere Software nutzt, um deine mit Spam zu belästigen. Du darfst das Modul nur
+  zum Auswerten der Aktivität deiner Teammitglieder und nur mit deren Einverständnis nutzen.
+  Wenn du die PN-Funktion von diesem Modul nutzt und eine ungewöhnlich hohe Anzahl an Mitgliedern auf deinem Server auswertest, wird SCNX eventuell automatisch einen "Missbrauch melden"-Knopf an deine Nachrichten anhängen.
+  Du kannst auf <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> mehr darüber erfahren (das ist auch der im Knopf verlinkte Link).
+  Die meisten unserer Nutzer sind nie davon betroffen, und du musst dir normalerweise keine Gedanken machen, wenn du das Modul wie beschrieben benutzt.
 </details>
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#data-usage}
 
-The following data is being stored about every user with a [configured Staff-Role](#configuration) once they send a
-message ("User Entry"):
+Die folgenden Daten werden über jeden Nutzer mit einer [konfigurierten Team-Rolle](#configuration) gespeichert, sobald sie eine
+Nachricht gesendet haben ("Nutzer-Eintrag"):
 
-* Their unique Discord User-ID
-* The amount of messages they sent in the [current evaluation period](#module-terms)
-* Metadata about the entry (date when created and last updated)
+* Die eindeutige Discord-Nutzer-ID
+* Die Anzahl der Nachrichten, die in dem [aktuellen Bewertungszeitraum](#module-terms) gesendet wurden
+* Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
-The following is stored at every [evaluation](#module-terms) about every user that has one of
-the [configured Staff-Roles](#configuration) ("Goal History Entry"):
+Das folgende wird bei jeder [Auswertung](#module-terms) für jeden Nutzer gespeichert, der eine der
+[konfigurierten Team-Rollen](#configuration) hat ("Zielhistorie-Eintrag"):
 
-* An unique integer identifying the database entry
-* Their unique Discord User-ID
-* The amount of messages they sent in the [evaluation period](#module-terms)
-* The [configured goal](#configuration) in the current [evaluation period](#module-terms)
-* Metadata about the entry (date when created and last updated)
+* Eine eindeutige Zahl zur Identifizierung des Datenbankeintrags
+* Die eindeutige Discord-Nutzer-ID
+* Die Anzahl der Nachrichten, die sie im [Bewertungszeitraum](#module-terms) gesendet haben
+* Das [konfigurierte Ziel](#configuration) des aktuellen [Bewertungszeitraums](#module-terms)
+* Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
-There is no way to remove the user entry or the goal history entry from the database. Messages sent by users without
-any [configured Staff-Roles](#configuration) will never be counted and will not create a User entry.
+Es gibt keine Möglichkeit, den Nutzer-Eintrag oder den Zielhistorie-Eintrag aus der Datenbank zu entfernen.
+Nachrichten, die von Nutzern ohne eine [konfigurierte Team-Rolle](#configuration) gesendet werden, werden niemals gezählt und erstellen keinen Nutzer-Eintrag.
 
-To remove all data, [purge the module database](./../../additional-features#reset-module-database). 
+Um alle Daten zu löschen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database).
