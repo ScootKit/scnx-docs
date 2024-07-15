@@ -84,33 +84,33 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 </details>
 
 <details>
-  <summary>Can I use this module to evaluate the message activity of my members? / SCNX is adding a "Report Abuse" button below my DM messages</summary>
-  Such usage would violate our <a href="https://sc-net.work/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
-  to evaluate activity of your staff members and only with their consent.
-  If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of 
-  members of your server. You can learn more about this behavior on <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> (this is also the URL linked in the button).
-  Most of our users never fit this category, and you usually do not need to worry about this if you are using this module as intended.
+  <summary>Kann ich das Modul nutzen, um die Aktivität meiner Nutzer auszuwerten? / SCNX fügt einen "Missbrauch melden"-Knopf an meine Nachrichten an</summary>
+  Eine solche Nutzung verstößt gegen unsere <a href="https://sc-net.work/scnx-tos">Nutzungsbedingungen</a>, da du unsere Software nutzt, um deine mit Spam zu belästigen. Du darfst das Modul nur
+  zum Auswerten der Aktivität deiner Teammitglieder und nur mit deren Einverständnis nutzen.
+  Wenn du die PN-Funktion von diesem Modul nutzt und eine ungewöhnlich hohe Anzahl an Mitgliedern auf deinem Server auswertest, wird SCNX eventuell automatisch einen "Missbrauch melden"-Knopf an deine Nachrichten anhängen.
+  Du kannst auf <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> mehr darüber erfahren (das ist auch der im Knopf verlinkte Link).
+  Die meisten unserer Nutzer sind nie davon betroffen, und du musst dir normalerweise keine Gedanken machen, wenn du das Modul wie beschrieben benutzt.
 </details>
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#data-usage}
 
-The following data is being stored about every user with a [configured Staff-Role](#configuration) once they send a
-message ("User Entry"):
+Die folgenden Daten werden über jeden Nutzer mit einer [konfigurierten Team-Rolle](#configuration) gespeichert, sobald sie eine
+Nachricht gesendet haben ("Nutzer-Eintrag"):
 
-* Their unique Discord User-ID
-* The amount of messages they sent in the [current evaluation period](#module-terms)
-* Metadata about the entry (date when created and last updated)
+* Die eindeutige Discord-Nutzer-ID
+* Die Anzahl der Nachrichten, die in dem [aktuellen Bewertungszeitraum](#module-terms) gesendet wurden
+* Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
-The following is stored at every [evaluation](#module-terms) about every user that has one of
-the [configured Staff-Roles](#configuration) ("Goal History Entry"):
+Das folgende wird bei jeder [Auswertung](#module-terms) für jeden Nutzer gespeichert, der eine der
+[konfigurierten Team-Rollen](#configuration) hat ("Zielhistorie-Eintrag"):
 
-* An unique integer identifying the database entry
-* Their unique Discord User-ID
-* The amount of messages they sent in the [evaluation period](#module-terms)
-* The [configured goal](#configuration) in the current [evaluation period](#module-terms)
-* Metadata about the entry (date when created and last updated)
+* Eine eindeutige Zahl zur Identifizierung des Datenbankeintrags
+* Die eindeutige Discord-Nutzer-ID
+* Die Anzahl der Nachrichten, die sie im [Bewertungszeitraum](#module-terms) gesendet haben
+* Das [konfigurierte Ziel](#configuration) des aktuellen [Bewertungszeitraums](#module-terms)
+* Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
-There is no way to remove the user entry or the goal history entry from the database. Messages sent by users without
-any [configured Staff-Roles](#configuration) will never be counted and will not create a User entry.
+Es gibt keine Möglichkeit, den Nutzer-Eintrag oder den Zielhistorie-Eintrag aus der Datenbank zu entfernen.
+Nachrichten, die von Nutzern ohne eine [konfigurierte Team-Rolle](#configuration) gesendet werden, werden niemals gezählt und erstellen keinen Nutzer-Eintrag.
 
-To remove all data, [purge the module database](./../../additional-features#reset-module-database). 
+Um alle Daten zu löschen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database). 
