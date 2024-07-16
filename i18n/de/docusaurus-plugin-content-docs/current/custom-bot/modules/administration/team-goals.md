@@ -9,7 +9,7 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 * Setze ein Nachrichtenziel für deine Teammitglieder.
 * Der Bot überprüft jede Woche, ob die Teammitglieder das gesetze Nachrichtenziel erreicht haben.
 * Mit [Befehlen](#commands) kannst du deinen aktuellen Fortschritt und deinen Zielverlauf in der Vergangenheit überprüfen.
-* Sende Nutzern jede Woche über PNs ihr Ergebnis oder in einen konfigurierten Kanal.
+* Sende Nutzern ihr Ergebnis jede Woche per PN oder in einen konfigurierten Kanal.
 * Lasse Kanäle optional von den Zielen ignorieren.
 
 ## Einrichtung {#setup}
@@ -35,7 +35,7 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 
 ## Definition von modulspezifischen Begriffen {#module-terms}
 
-* Eine **Auswertung** ist der Zeitpunkt, zu dem ein Nutzer ausgewertet wird. Dies geschieht einmal pro Woche. Der eigentliche         Zeitpunkt ist davon abhängig, wann das Modul zum ersten mal aktiviert wurde - die erste Auswertung wird genau eine Woche
+* Eine **Auswertung** ist der Zeitpunkt, zu dem ein Nutzer ausgewertet wird. Dies geschieht einmal pro Woche. Der eigentliche Zeitpunkt ist abhängig davon, wann das Modul zum ersten mal aktiviert wurde - die erste Auswertung wird genau eine Woche
   später stattfinden. Bei der Auswertung vergleicht der Bot die Anzahl der im aktuellen Bewertungszeitraum gesendeten Nachrichten mit dem [konfigurierten Ziel](#configuration) und löst die konfigurierten Nachrichten für [Fehlgeschlagen / Erreicht](#configuration) aus. Sobald alle Benutzer ausgewertet wurden, beginnt der nächste Bewertungszeitraum.
 * Ein **Bewertungszeitraum** ist die Zeit zwischen der letzten und der nächsten Auswertung und ist genau eine Woche lang.
 
