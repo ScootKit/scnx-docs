@@ -53,7 +53,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 | Ziel fehlgeschlagen-Nachricht                            | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel **nicht** erreicht wurde. |
 | Nachrichten in Kanal statt per PN schicken               | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                                                  |
 | Kanal, in welchen die Nachrichten gesendet werden sollen | *Nur sichtbar, wenn "Nachrichten in Kanal statt per PN schicken" aktiviert ist.*<br/>Die [Auswertung](#module-terms) wird in diesen Kanal statt per PN gesendet.                                                                              |
-| Ignorierte Channel                                       | Nachrichten von Nutzern mit mindestens einer der Teammitglieder-Rollen werden in diesen Kanälen nicht zu ihrem Ziel hinzugerechnet.                                                                                                           |
+| Ignorierte Kanäle                                        | Nachrichten von Nutzern mit mindestens einer der Teammitglieder-Rollen werden in diesen Kanälen nicht zu ihrem Ziel hinzugerechnet.                                                                                                           |
 
 ## Fehlerbehebung {#troubleshooting}
 
