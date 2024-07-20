@@ -22,7 +22,7 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 ## Nutzung {#usage}
 
 * Die Anforderungen werden alle 7 Tage nach Aktivierung des Moduls automatisch [ausgewertet](#module-terms).
-* Du kannst immer den Fortschritt von dir oder einem anderem Nutzer mit [`/team-goals progress`](#commands) und den früheren Zielverlauf mit [`/team-goals history`](#commands) einsehen.
+* Du kannst immer den Fortschritt von dir oder einem anderen Nutzer mit [`/team-goals progress`](#commands) und den früheren Zielverlauf mit [`/team-goals history`](#commands) einsehen.
 
 ## Befehle {#commands}
 
