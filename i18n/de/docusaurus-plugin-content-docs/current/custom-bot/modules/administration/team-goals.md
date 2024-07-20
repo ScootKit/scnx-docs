@@ -59,6 +59,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 
 <details>
   <summary>Von meinem Team gesendete Nachrichten werden nicht richtig gezählt</summary>
+
   Bitte stelle sicher, dass
   <ul>
     <li>der Bot Zugriff auf jeden Kanal hat, in welchem Nachrichten gezählt werden sollen, und dass der Kanal kein <a href="#configuration">ignorierter Kanal</a> ist.</li>
@@ -68,12 +69,14 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 
 <details>
   <summary>Wie kann ich die Zeit verändern, wann Nutzer ausgewertet werden?</summary>
+
   Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren, 
   die <a href="./../../additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
 </details>
 
 <details>
   <summary>Die Auswertung funktioniert nicht richtig (z.B. werden Auswertungsnachrichten nicht gesendet)</summary>
+
   Bitte stelle sicher, dass
    <ul>
     <li>der Bot die Berechtigung hat, Nachrichten in den <a href="#configuration">konfigurierten Kanal</a> zu senden, wenn aktiviert.</li>
