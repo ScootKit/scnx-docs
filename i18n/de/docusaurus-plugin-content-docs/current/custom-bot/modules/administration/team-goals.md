@@ -76,7 +76,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
   <summary>Die Auswertung funktioniert nicht richtig (z.B. werden Auswertungsnachrichten nicht gesendet)</summary>
   Bitte stelle sicher, dass
    <ul>
-    <li>der Bot die Berecchtigung hat, Nachrichten in den <a href="#configuration">konfigurierten Kanal</a> zu senden, wenn aktiviert.</li>
+    <li>der Bot die Berechtigung hat, Nachrichten in den <a href="#configuration">konfigurierten Kanal</a> zu senden, wenn aktiviert.</li>
     <li>deine Teammitglieder mindestens eine der <a href="#configuration">konfigurierten Team-Rollen</a> besitzen.</li>
     <li>die <a href="#configuration">konfigurierte Nachricht</a> nicht inkorrekt ist.</li>
   </ul>
