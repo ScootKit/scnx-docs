@@ -28,7 +28,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 * Nutzer können einen neuen Vorschlag mit `/suggestion` einreichen. Neue Vorschläge werden in den konfigurierten Kanal gesendet.
 * Wenn aktiviert, werden Nachrichten, die in den Vorschläge-Kanal gesendet werden, automatisch zu Vorschlägen konvertiert.
 * Andere Nutzer können mit den konfigurierten Reaktionen abstimmen und mit Threads zu den Vorschlägen kommentieren.
-* Admins können Vorschläge mit `/manage-suggestions` annnehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Darüber 
+* Admins können Vorschläge mit `/manage-suggestions` annehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Darüber 
   wird der Vorschlag-Ersteller, wenn konfiguriert, über PNs informiert.
 
 ## Befehle {#commands}
@@ -54,9 +54,9 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=suggest
 | Reaktionen                                    | Der Bot wird diese Reaktionen unter Vorschläge hinzufügen. Du kannst diese Reaktionen als Abstimmung verwenden (z. B. mit „👍“ und „👎“). Bitte gib entweder die Unicode-Version (für integrierte Emojis) oder die Emoji-ID (für benutzerdefinierte Emojis) an. |
 | Nutzerkommentare in Threads                   | Wenn aktiviert, wird der Bot unter jedem Vorschlag einen neuen Thread erstellen, damit Nutzer kommentieren können. Kommentieren über Befehle wurde entfernt.                                                                                                    |
 | Thread-Name                                   | *Nur sichtbar, wenn "Nutzerkommentare in Threads" aktiviert ist*<br/>Das ist der Name der Threads, die unter Vorschlägen erstellt werden.                                                                                                                       |
-| "Erfolgreich eingreicht"-Nachricht            | Dies ist die Nachricht, welche Nutzer sehen, nachdem sie ihren Vorschlag über den Befehl [`/suggestion`](#commands) eingereicht haben.                                                                                                                          |
+| "Erfolgreich eingereicht"-Nachricht           | Dies ist die Nachricht, welche Nutzer sehen, nachdem sie ihren Vorschlag über den Befehl [`/suggestion`](#commands) eingereicht haben.                                                                                                                          |
 | Benachrichtigungsrolle                        | Diese Rolle wird jedes mal erwähnt, wenn ein neuer Vorschlag erstellt wurde.                                                                                                                                                                                    |
-| PN-Benachrichtugungen senden                  | Wenn aktiviert, bekommt der Ersteller eine PN, wenn ein Administrator seinen Vorschlag bearbeitet hat.                                                                                                                                                          |
+| PN-Benachrichtigungen senden                  | Wenn aktiviert, bekommt der Ersteller eine PN, wenn ein Administrator seinen Vorschlag bearbeitet hat.                                                                                                                                                          |
 | PN-Statusbenachrichtigung                     | *Nur sichtbar, wenn "PN-Benachrichtugungen senden" aktiviert ist*<br/>Das ist die Nachricht, welche dem Ersteller gesendet wird, wenn sein Vorschlag von einem Administrator bearbeitet wurde.                                                                  |
 | Unbeantwortete Vorschlags-Nachricht           | So sieht ein Vorschlag im Vorschläge-Kanal aus, wenn noch kein Admin den Vorschlag bearbeitet hat. Die Nachricht wird bearbeitet, wenn ein Admin den Vorschlag bearbeitet hat.                                                                                  |
 | Abgelehnte Vorschlags-Nachricht               | So sieht ein Vorschlag im Vorschläge-Kanal aus, wenn ein Admin den Vorschlag abgelehnt hat. Die originale Nachricht ("Unbeantwortete Vorschlags-Nachricht") wird zu diesem Wert verändert, wenn ein Admin den Vorschlag abgelehnt hat.                          |
@@ -67,7 +67,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=suggest
 <details>
 <summary>Ein Vorschlag wird nicht erstellt</summary>
 
-Bitte überprüfe folgendes:
+Bitte überprüfe Folgendes:
 <ul>
     <li>Stelle sicher, dass die Felder "Unbeantwortete Vorschlags-Nachricht", "Abgelehnte Vorschlags-Nachricht" und "Angenommene Vorschlags-Nachricht" richtig konfiguriert sind.</li>
     <li>Stelle sicher, dass der Bot die benötigten Berechtigungen auf den Vorschläge-Kanal hat: "Kanal anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history").</li>
@@ -81,7 +81,7 @@ Bitte überprüfe folgendes:
 <details>
     <summary>Ich kann nicht als Admin auf einen Vorschlag antworten</summary>
 
-Bitte überprüfe folgendes:
+Bitte überprüfe Folgendes:
 <ul>
     <li>Stelle sicher, dass die Felder "Abgelehnte Vorschlags-Nachricht" und "Angenommene Vorschlags-Nachricht" richtig konfiguriert sind.</li>
     <li>Stelle sicher, dass der Bot die benötigten Berechtigungen auf den Vorschläge-Kanal hat: "Kanal anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history").</li>
