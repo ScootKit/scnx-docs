@@ -88,7 +88,8 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 
 <details>
   <summary>Kann ich das Modul nutzen, um die Aktivität meiner Nutzer auszuwerten? / SCNX fügt einen "Missbrauch melden"-Knopf an meine Nachrichten an</summary>
-  Eine solche Nutzung verstößt gegen unsere <a href="https://sc-net.work/scnx-tos">Nutzungsbedingungen</a>, da du unsere Software nutzt, um deine Nutzer mit Spam zu belästigen. Du darfst das Modul nur
+ 
+Eine solche Nutzung verstößt gegen unsere <a href="https://sc-net.work/scnx-tos">Nutzungsbedingungen</a>, da du unsere Software nutzt, um deine Nutzer mit Spam zu belästigen. Du darfst das Modul nur
   zum Auswerten der Aktivität deiner Teammitglieder und nur mit deren Einverständnis nutzen.
   Wenn du die PN-Funktion von diesem Modul nutzt und eine ungewöhnlich hohe Anzahl an Mitgliedern auf deinem Server auswertest, wird SCNX eventuell automatisch einen "Missbrauch melden"-Knopf an deine Nachrichten anhängen.
   Du kannst auf <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> mehr darüber erfahren (das ist auch der im Knopf verlinkte Link).
