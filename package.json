@@ -2,7 +2,7 @@
   "name": "scnx-docs",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "yarn@1.22.19",
+  "packageManager": "yarn@4.4.0",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start -p 2912",
