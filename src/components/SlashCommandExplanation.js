@@ -1,7 +1,7 @@
 import React from 'react';
 import Admonition from '@theme/Admonition';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBook} from '@fortawesome/free-solid-svg-icons';
+import {faBook} from '@fortawesome/pro-solid-svg-icons';
 import Translate from '@docusaurus/Translate';
 
 export default function SlashCommandExplanation() {
