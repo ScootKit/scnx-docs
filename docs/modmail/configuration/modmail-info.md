@@ -1,8 +1,10 @@
-# top.gg
+---
+sidebar_position: 7
+---
 
-Say thanks to voters on top.gg, remind them and reward them with roles with the top.gg-module.
+# Modmail-Info-Message
 
-<ModuleOverview moduleName="topgg" />
+Create a modmail info message to allow customers to open tickets without messaging the modmail via DMs.
 
 ---
 

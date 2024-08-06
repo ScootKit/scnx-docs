@@ -13,6 +13,8 @@ our [Terms of Service](https://sc-net.work/scnx-tos) - we might change this in t
 the owner to [set up SCNX](./../../setup) on their server and ask them to give
 you [trusted admin permissions](./trusted-admins).
 
+---
+
 ## Can I create multiple Discord-Bots for a server? {#multiple-bots}
 
 Sort of - you can create one [Custom Bot](../../custom-bot/intro) and one [Modmail Bot](../../modmail/intro) per
@@ -22,11 +24,80 @@ The reason for it is that hosting more bots would be very expensive for us, but 
 design of SCNX:
 We designed our system to replace often multiple generic bots on a server by one, custom bot.
 
-## Can I remove the SCNX Manager Bot? {#scnx-manager-bot}
+---
 
-No. The SCNX Manager bot is needed for your dashboard to work. But if you are not interested in
-using [analytics](./analytics) or [backups](./backups) on your server, you can remove the "View Channel"
-permission on every channel from the bot - this hides the SCNX Bot from the member-list.
+## Can I remove the SCNX Management Bot? {#scnx-manager-bot}
+
+:::info
+Do not simply kick the SCNX Management Bot, this will cause your server to be disabled on SCNX. Follow this guide to remove the SCNX Management Bot from your server.
+:::
+
+<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
+
+Servers with a [PRO Plan](./plans) can remove the SCNX Management Bot from their server.
+
+### Requirements to remove the SCNX Bot {#scnx-manager-bot-requirements}
+
+* The server needs to be on the [PRO Plan](./plans).
+* The server needs to have no previous strikes against our [Terms of Service](https://scootk.it/scnx-tos).
+* The server needs to have a [Custom Bot](./../../custom-bot/intro) created on SCNX.
+* The server does not have a special billing agreement with ScootKit that might restrict this feature availability.
+
+### Important information about this feature {#scnx-manager-bot-warning}
+
+SCNX was designed with the SCNX Bot invited on servers. Due to this, certain functionality can't be used without the
+SCNX Bot invited. You can find which features are affected below. Additionally, please keep the following information in
+mind when using SCNX without the management bot:
+
+* Certain features won't be available without the SCNX Bot invited, please review them carefully (see below).
+* If your server gets downgraded (= loses its PRO-Plan), your bots on SCNX will stop until you re-invite the SCNX Bot to
+  your server. No data will be lost, but your bots won't be available. Consider a [subscription](./plans#upgrade) or
+  a [lifetime plan](./plans#lifetime) to avoid complications.
+* The SCNX bot won't be able to message you via DMs if you do not share any server with the bot. This is important for
+  invoice delivery or account information. You'll still receive these legally required notices via E-Mail, but consider
+  joining our [Discord](https://scootk.it/dc) if you want to receive them on Discord as well.
+* If the owner of the server changes, they will need to invite the SCNX Bot again due to legal reasons, but will be able
+  to follow the [removal steps](#scnx-manager-bot-features-setup) again after agreeing to our Terms of Service.
+
+### Features still supported without the SCNX Bot {#scnx-manager-bot-features-available}
+
+The following features will still be available even if you have removed the SCNX Bot:
+
+* [Custom Bot](./../../custom-bot/intro): You can still fully manage your existing custom bot on SCNX, but can't view
+  chat history in [Login as Bot](./../../custom-bot/login-as-bot). You can still send messages or edit previously sent
+  messages by ID.
+* [Modmail Bot](./../../modmail/intro): You can still create and manage your SCNX Modmail Bot.
+* SCNX Integrations: You can still add, manage and configure integrations normally.
+* The SCNX Dashboard will work as normal, but will load slower compared to having the SCNX Management Bot invited.
+
+### Features NOT supported without the SCNX Bot {#scnx-manager-bot-features-disabled}
+
+* [SCNX Backups](./backups): The server can't use SCNX Backups without the SCNX Bot invited.
+* [SCNX Analytics](./analytics): The server can't use SCNX Analytics without the SCNX Bot invited.
+* [dcserver.link](./dcserver-link): The server's dcserver.link can't be used without the SCNX Bot invited.
+* The SCNX Dashboard won't be always up-to-date with the server's current state (e.g. channel or role updates might be
+  delayed).
+
+### How to remove the SCNX Management Bot {#scnx-manager-bot-features-setup}
+
+1. Click [here](https://scnx.app/glink?page=manager-bot) or visit
+   the [settings page](https://scnx.app/glink?page=settings) of your server and click on "Learn how to remove teh SCNX
+   Manager Bot".
+2. Read the displayed information about feature availability without the SCNX Management Bot and click on "Continue".
+3. Review your server's eligibility and click on "Continue" to continue.
+4. Review final information and warnings about this feature and click on "Remove SCNX Management Bot and switch to
+   reduced
+   dashboard".
+5. The SCNX bot will now leave your server, and SCNX will switch your server to the reduced dashboard mode.
+
+### How to re-invite the SCNX Management Bot {#scnx-manager-bot-features-reinvite}
+
+You'll find personalized invite links in the dashboard if your server is in reduced dashboard mode and try to access
+disabled features (like Backups). Otherwise, you can always invite the SCNX Bot
+with [this link](https://scootk.it/invite-scnx). Once invited, your SCNX Dashboard will automatically switch back to
+normal mode, meaning that restricted features can be used again.
+
+---
 
 ## What counts as commercial usage? {#commercial-usage}
 
@@ -34,10 +105,14 @@ To use SCNX in any commercial manner or situation, you'll need to purchase the [
 Please read this [FAQ-Article](https://faq.scnx.app/commercial-usage-of-scnx/) to learn more about, appeal or report
 commercial usage on SCNX.
 
+---
+
 ## My server got banned / deactivated / flagged on SCNX - what can I do now? {#banned}
 
 Oh no - please follow the instructions on your dashboard. If you need help,
 please [reach out to our staff](https://scnx.app/help).
+
+---
 
 ## Can I transfer all my SCNX Data from one server to another? {#transfer}
 
@@ -60,6 +135,8 @@ ALL data will be completely transferred to your new server. This will overwrite 
 :::
 
 To request a complete data transfer, please [contact our team](https://scnx.app/help).
+
+---
 
 ## How can I remove my server from SCNX? {#deletion}
 

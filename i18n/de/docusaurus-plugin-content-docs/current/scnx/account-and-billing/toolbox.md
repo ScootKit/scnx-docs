@@ -11,7 +11,7 @@ einfacher zu machen.
 
 ## Discord-Nutzer-Nachschlagen {#user-lookup}
 
-Schlage jeden Discord-Nutzer oder -Bot nur mit ihrer Discord-ID nach! Füge die ID einfach oben ein, um das Banner, das
+Schlage jeden Discord-Nutzer oder -Bot nur mit seiner Discord-ID nach! Füge die ID einfach oben ein, um das Banner, das
 Profilbild, die Abzeichen und mehr des Nutzers zu sehen. Um eine Nutzer-ID zu kopieren, aktiviere zunächst
 den [Discord-Entwicklermodus](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), rechtsklicke auf den Nutzer
 und klicke auf "Nutzer-ID kopieren".

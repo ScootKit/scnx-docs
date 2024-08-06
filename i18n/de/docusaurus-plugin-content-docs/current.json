@@ -173,7 +173,7 @@
   },
   "sidebar.customBotSidebar.link.Suggest new features": {
     "message": "Schlage neue Funktionen vor",
-    "description": "The label for link Suggest new features in sidebar customBotSidebar, linking to https://features.sc-network.net/board/custombot"
+    "description": "The label for link Suggest new features in sidebar customBotSidebar, linking to https://feedback.scnx.xyz"
   },
   "sidebar.customBotSidebar.link.Contribute to the Custom-Bot on GitHub": {
     "message": "Trage zum eigenen Bot auf GitHub bei",
@@ -202,5 +202,53 @@
   "sidebar.customBotSidebar.doc.Slash commands & Permissions": {
     "message": "Slashcommands & Berechtigungen",
     "description": "The label for the doc item Slash commands & Permissions in sidebar customBotSidebar, linking to the doc custom-bot/slash-commands"
+  },
+  "sidebar.startSidebar.category.Discord": {
+    "message": "Discord",
+    "description": "The label for category Discord in sidebar startSidebar"
+  },
+  "sidebar.modmailSidebar.category.SCNX Modmail": {
+    "message": "SCNX Modmail",
+    "description": "The label for category SCNX Modmail in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Configure Modmail": {
+    "message": "Modmail anpassen",
+    "description": "The label for category Configure Modmail in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Configure Modmail.link.generated-index.title": {
+    "message": "Modmail Konfiguration",
+    "description": "The generated-index page title for category Configure Modmail in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Configure Modmail.link.generated-index.description": {
+    "message": "Entdecke noch mehr Funktionen und passe deinen Modmail an deine Anforderungen an. Der SCNX Modmail ist für professionelle Supportteams auf Discord perfekt geeignet.",
+    "description": "The generated-index page description for category Configure Modmail in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Advanced features": {
+    "message": "Fortgeschrittene Funktionen",
+    "description": "The label for category Advanced features in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Advanced features.link.generated-index.title": {
+    "message": "Fortgeschrittene Funktionen",
+    "description": "The generated-index page title for category Advanced features in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.category.Advanced features.link.generated-index.description": {
+    "message": "Der SCNX Modmail bietet eine große Auswahl an Funktionen für professionelle Support-Teams auf Discord an und für diese gebaut.",
+    "description": "The generated-index page description for category Advanced features in sidebar modmailSidebar"
+  },
+  "sidebar.modmailSidebar.link.Get started": {
+    "message": "Loslegen",
+    "description": "The label for link Get started in sidebar modmailSidebar, linking to /docs/modmail"
+  },
+  "sidebar.modmailSidebar.doc.Basics about Bots on SCNX": {
+    "message": "Grundlagen über auf SCNX",
+    "description": "The label for the doc item Basics about Bots on SCNX in sidebar modmailSidebar, linking to the doc scnx/guilds/bots"
+  },
+  "sidebar.modmailSidebar.doc.Modmail Starter Guide (Modmail 101)": {
+    "message": "Modmail für Anfänger (Modmail 101)",
+    "description": "The label for the doc item Modmail Starter Guide (Modmail 101) in sidebar modmailSidebar, linking to the doc modmail/basics"
+  },
+  "sidebar.modmailSidebar.doc.Troubleshooting issues": {
+    "message": "Fehlerbehebung",
+    "description": "The label for the doc item Troubleshooting issues in sidebar modmailSidebar, linking to the doc modmail/troubleshooting"
   }
 }
