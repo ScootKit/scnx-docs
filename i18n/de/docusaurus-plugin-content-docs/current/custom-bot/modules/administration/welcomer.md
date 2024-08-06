@@ -7,31 +7,31 @@ Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um si
 ## Funktionen {#features}
 
 * Heiße neue Nutzer mit eigenen Nachrichten (und dynamischen Bildern) willkommen.
-* Sage Tschüss zu Nutzern, die deinen Server verlassen haben.
-* Bedanke dich bei Nutzern, die deinen Server geboostet haben mit eigenen Nachrichten Thank users who boosted your server with custom messages und erpresse sie emotional, indem du ihnen eine Nachricht sendest, wenn sie deinen Server entboostet haben.
-* Füge unbegrenzt viele an Nachrichten zum Beitritt, Boost oder Verlassen in verschiedenen Kanälen hinzu.
-* Füge neuen Nutzern und Boostern automatisch Rollen hinzu.
-* Lasse den Bot zufällige Nachrichten nutzen, um ein wenig Verschiedenheit in deine Willkommens, Verlassen, Boost und Entboost-Nachrichten zu bekommen.
-* Lösche Willkommens-Nachrichten von Nutzern, die deinen Server innerhalb von 7 Tagen wieder verlassen haben, automatisch.
+* Verabschiede Nutzer, die deinen Server verlassen.
+* Bedanke dich bei Nutzern mit eigenen Nachrichten, die deinen Server geboostet haben und erpresse sie emotional, indem du ihnen eine Nachricht sendest, wenn sie        deinen Server entboosten.
+* Füge unbegrenzt viele Nachrichten zum Beitritt, Boost oder Verlassen in verschiedenen Kanälen hinzu.
+* Gebe neuen Nutzern und Boostern automatisch Rollen.
+* Lasse den Bot zufällige Nachrichten nutzen, um ein wenig Verschiedenheit in deine Willkommens-, Verlassens-, Boost- und Entboost-Nachrichten zu bekommen.
+* Lösche automatisch Willkommens-Nachrichten von Nutzern, die deinen Server innerhalb von 7 Tagen wieder verlassen haben.
 * Füge einen Button unter Willkommens-Nachrichten hinzu, der es deinen bestehenden Nutzern erlaubt, Mitglieder willkommen zu heißen.
 
 ## Einrichtung {#setup}
 
 ### Willkommens-Nachricht einrichten {#setup-welcome-messages}
 
-Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinen Server betritt. Du kannst einen Willkommen-Button hinzufügen, welcher es bestehenden Nutzern erlaubt, den neuen Nutzer willkommen zu heißen. Zusätzlich wird, falls [aktiviert](#configuration-config), die Nachricht gelöscht, wenn der Nutzer den Server innerhalb 7 Tage wieder verlässt.
+Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinem Server betritt. Du kannst einen Willkommen-Button hinzufügen, welcher es bestehenden Nutzern erlaubt, den neuen Nutzer willkommen zu heißen. Zusätzlich wird, falls [aktiviert](#configuration-config), die Nachricht gelöscht, wenn der Nutzer den Server innerhalb von 7 Tagen wieder verlässt.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot muss die Berechtigungen "Kanal 
-   ansehen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf einsehen" ("View message history") auf diesem haben.
-3. Füge den Kanal zur 
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu. Nutze dafür als Kanal-Typ "join" und 
-   [konfiguriere es](#configuration-channels).
-4. Konfiguriere die Nachrichten:
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+2. Füge den Kanal zur 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "join" nutzt und 
+   das Element [konfigurierst](#configuration-channels).
+3. Konfiguriere die Nachricht:
    * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
      [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
      Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
      "join".
-   * Wenn du immer die gleiche Nachricht gesendet haben willst, nutze die 
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze die 
      [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
      [Nachricht zu konfigurieren](#configuration-channels).
 
@@ -39,36 +39,35 @@ Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinen 
 
 Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API]((https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560)) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Mitglied deinen Server geboostet hat. Der Bot benötigt 
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen Server boostet. Der Bot benötigt 
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
 2. Füge den Kanal zur
    [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du 
-   den Kanal-Typ "Boost" oder "Unboost" benutzt
+   den Kanal-Typ "boost" oder "unboost" benutzt
    und das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
    * Wenn du zufällige Nachrichten verwendest willst, aktiviere die "Zufällige Nachrichten?"-Option, öffne
-     die [Zufällige Nachrichten](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei 
+     die [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei 
      und [konfigure](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ "
      boost" oder "unboost".
-   * If you want to send the same message every time, use
-     the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
-     to [configure the message](#configuration-channels).
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
+     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+     [Nachricht zu konfigurieren](#configuration-channels).
 
-### Set up Leave Messages {#setup-leave-messages}
+### Verlassens-Nachrichten einrichten {#setup-leave-messages}
 
-Leave messages will get send every time a user leaves your server.
+Verlassens-Nachrichten werden jedes mal gesendet, wenn ein Nutzer deinen Server verlässt.
 
-1. Create or select one of your channels in which the bot should send when a member leaves your server. The bot has
-   to have the "View channel", "Send messages" and "View message history" permissions on it.
-2. Add the channel to
-   the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) using
-   the "leave" Message-Type
-   and [configure it](#configuration-channels).
-3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
-     the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
-     configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
-     leave".
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer deinen Server verlässt. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+2. Füge den Kanal zur 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "leave" nutzt und 
+   das Element [konfigurierst](#configuration-channels).
+3. Konfiguriere die Nachricht:
+   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
+     [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
+     Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
+     "leave".
    * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
      die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), 
      um die [Nachricht zu konfigurieren](#configuration-channels).
@@ -86,7 +85,7 @@ Dieser Fehler ist bekannt und wird bearbeitet.
 
 ## Nutzung {#usage}
 
-Nach dem [Einrichten](#setup) des Moduls werden die Nachrichten automatisch jedes mal gesendet, wenn die Aktion ausgelöst wird.      
+Nach dem [Einrichten](#setup) des Moduls werden Nachrichten automatisch jedes mal gesendet, wenn die jeweilige Aktion ausgelöst wird.      
 
 Um Nutzern zu erlauben, einen Willkommen-Button zu benutzen, [aktiviere diese Funktion](#configuration-config) einfach in deiner Konfiguration. 
 Nach dem Einstellen werden neue Nachrichten einen (konfigurierbaren) Knopf haben. Wenn dieser Knopf von einem deiner Mitglieder gedrückt wird, 
