@@ -3312,7 +3312,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@docusaurus/theme-common@npm:3.4.0":
+"@docusaurus/theme-common@npm:3.4.0, @docusaurus/theme-common@npm:^3.4.0":
   version: 3.4.0
   resolution: "@docusaurus/theme-common@npm:3.4.0"
   dependencies:
@@ -12583,6 +12583,7 @@ __metadata:
     "@docusaurus/plugin-pwa": 3.4.0
     "@docusaurus/plugin-sitemap": 3.4.0
     "@docusaurus/preset-classic": 3.4.0
+    "@docusaurus/theme-common": ^3.4.0
     "@fortawesome/fontawesome-svg-core": 6.5.2
     "@fortawesome/free-brands-svg-icons": ^6.5.2
     "@fortawesome/pro-duotone-svg-icons": ^6.5.2
