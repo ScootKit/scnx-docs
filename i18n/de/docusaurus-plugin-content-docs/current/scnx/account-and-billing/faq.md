@@ -19,6 +19,8 @@ Speicherplatz erweitern, [Server-Upgrades](./../guilds/plans#upgrade) durchführ
 Um dein Abonnement zu verwalten, besuche die [Zahlungsseite](https://scnx.app/de/user/payments) in deinem Dashboard. Dort kannst du 
 alle laufenden Abonnements überprüfen und kündigen.
 
+Wenn du auf Discord abonniert hast, musst du dein Abo auf Discord verwalten. Wir können dir bei Problemen mit einem Abo auf Discord nicht helfen.
+
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
 
 Wir nehmen derzeit nicht am Umsatzsteuer-Reverse-Charge-System teil, müssen daher für niemanden Umsatzsteuer berechnen,

@@ -10,6 +10,10 @@ Sichere Nachrichten, Kanäle, Rollen und mehr deines Server automatisch und stel
 Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden sie verschlüsselt gespeichert und nur während sie aktiv verwendet werden (z. B. während der Wiederherstellung) entschlüsselt. Trotzdem weisen wir dich darauf hin, möglichst keine Nachrichten, die private Daten enthalten (wie Kreditkartendaten, Sozialversicherungsnummern oder ähnliches), in Kanäle, die in Backups enthalten sind, zu senden.
 :::
 
+:::info
+Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einladen](https://scootk.it/invite-scnx). Einige Funktionen benötigen ein separate erwerbliches Backups+-Abonnent.
+:::
+
 ## Was ist in Backups enthalten? {#included}
 
 | Funktion            | Beschreibung                                                                                                                                                     |
@@ -22,12 +26,6 @@ Da Backups vertrauliche Nutzerinformationen und Nachrichten beinhalten, werden s
 | Servereinstellungen | Backups werden Server-Namen, -Icon, -Einstellungen (wie den AFK-Kanal), Auto-Moderations-Regeln und mehr beinhalten.                                             |
 
 ## Manuelle Backups {#manual}
-
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} additionalDetails={{
-    STARTER: 'Speicherung von bis zu 2 Backups gleichzeitig, jedes mit bis zu 10 Nachrichten pro Kanal',
-    PRO: 'Speicherung von bis zu 10 Backups gleichzeitig, jedes mit bis zu 50 Nachrichten pro Kanal',
-    ACTIVE_GUILD: 'Speicherung von bis zu 5 Backups gleichzeitig, jedes mit bis zu 20 Nachrichten pro Kanal'
-}}/>
 
 Um manuell Backups zu erstellen, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) im SCNX Dashboard. Klicke danach auf "Backup erstellen" und wähle, was [in deinem Backup enthalten sein soll](#included). Bestätige danach noch einmal dein Backup.
 Das Erstellen eines Backups kann bis zu 15 Minuten dauern. Dies ist abhängig von der Anzahl der zu speichernden Nachrichten.
@@ -45,9 +43,6 @@ Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in de
 
 ## Automatische Backups {#automatic}
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: false}}
-                additionalDetails={{PRO: 'Zwei am Tag', ACTIVE_GUILD: 'Eines am Tag'}}/>
-
 Um automatische Backups einzurichten, öffne dein [Backup-Dashboard](https://scnx.app/de/glink?page=backups) und wähle die Anzahl der zu erstellenden Backups unter "Automatische Backups" und speichere die Änderung.
 
 ![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
@@ -60,7 +55,6 @@ Automatische Backups verwenden die Backup-Slots deines Servers. Wenn keine mehr 
 
 
 ## Backups wiederherstellen {#restore}
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
 
 ### Wiederherstellung auf dem ursprünglichen Server {#restore-self}
 
@@ -142,8 +136,6 @@ Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [
 </details>
 
 ## Backups exportieren {#export}
-
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}}/>
 
 Um ein Backup zu exportieren, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups), wähle dein Backup und klicke auf "Backup exportieren". Dein Browser wird - ggf. nach kurzer Ladedauer - anfangen, eine JSON-Datei auf deinen PC herunterzuladen.
 Bevor du die Datei herunterlädst, überprüfe die berechnete Größe, um zu wissen wie viele Daten du herunterlädst.
