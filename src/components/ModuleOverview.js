@@ -16,7 +16,7 @@ import {
     faServer,
     faTerminal,
     faZap
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/pro-solid-svg-icons';
 
 export default function ModuleOverview({moduleName}) {
     const modules = usePluginData('scnx-custom-bot-modules');

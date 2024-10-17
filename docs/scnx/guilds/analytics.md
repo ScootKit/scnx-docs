@@ -7,15 +7,16 @@ sidebar_position: 2
 Unlock great detailed statistics about your server - see which members, channels and days are most active on your
 server, unlock information about your member-flow and projections about the future 🔮
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
-
-
 :::tip We care about privacy
 Wondering what data we store about your server and how we use it? Please read
 our [FAQ Article](https://faq.scnx.app/data-collection-with-analytics/) to learn more.
 
 **tl;dr**: We only store data about messages for 30 days and only store the counts after
 that. [Users can opt out](#user-opt-out) and no message (or attachment) content will ever be saved.
+:::
+
+:::info 
+To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to your server.
 :::
 
 ## Enable analytics {#enable}

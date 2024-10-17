@@ -30,82 +30,9 @@ SCNX ist dafür gedacht, oft mehrere, normale Bots durch Einen zu ersetzen - dei
 
 ## Kann ich den SCNX-Manager-Bot entfernen? {#scnx-manager-bot}
 
-:::info
-Kicke den SCNX Management Bot nicht einfach von deinem Server, denn dies führt zu einer Deaktivierung von SCNX. Befolge
-stattdessen diese Anleitung, um den SCNX Management Bot zu entfernen.
-:::
-
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
-
-Server mit einem [PRO-Plan](./plans) können den SCNX Management Bot von ihrem Server entfernen.
-
-### Bedingungen für die Entfernung des SCNX Managment Bots {#scnx-manager-bot-requirements}
-
-* Der Server benötigt einen [PRO-Plan](./plans).
-* Der Server darf bisher nicht gegen unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos) verstoßen haben.
-* Der Server muss bereits einen [eigenen Bot](./../../custom-bot/intro) auf SCNX erstellt haben.
-* Der Server darf keine besondere vertragliche Zahlungsabmachung mit ScootKit getroffen haben, die die Verfügbarkeit
-  dieser Funktion einschränken könnte.
-
-### Wichtige Hinweise zu dieser Funktion {#scnx-manager-bot-warning}
-
-SCNX wurde so entwickelt, dass der SCNX Bot auf jedem Server eingeladen ist. Deswegen können einige Funktionen nicht
-ohne den SCNX Bot funktionieren. Du findest diese Funktionen im Detail unten. Beachte außerdem bitte folgende Hinweise:
-
-* Einige Funktionen sind ohne eingeladenen SCNX Bot nicht verfügbar, bitte prüfe diese sorgfältig unten.
-* Wenn dein Server heruntergestuft wird (also seinen PRO-Plan verliert), werden deine Bots auf SCNX angehalten und du
-  musst den SCNX Bot erneut auf deinen Server einladen. Dabei gehen keine Daten verloren, aber deine Bots werden nicht
-  verfügbar sein. Überlege dir, [ein Abo](./plans#upgrade) oder einen [lebenslangen Plan](./plans#lifetime) anzulegen,
-  um Probleme zu vermeiden.
-* Der SCNX-Bot kann dir keine Nachrichten per Privatnachricht auf Discord schicken, wenn du auf keinem Server gemeinsam
-  mit dem Bot bist. Wir schicken dir per PN wichtige Informationen, wie Rechnungen oder Kontoänderungen. Du wirst diese
-  rechtlich notwendigen Informationen weiterhin per E-Mail bekommen, aber um diese Informationen auch per Discord-PN zu
-  bekommen, trete unserem [Discord](https://scootk.it/dc) Discord bei.
-* Wenn sich der Serverbesitzer des Servers ändert, musst dieser den SCNX Bot aus rechtlichen Gründen erneut einladen, um
-  unseren Nutzungsbedingungen zuzustimmen. Danach kann dieser
-  die [Entfernungsschritte](#scnx-manager-bot-features-setup) befolgen, um den Bot erneut zu entfernen.
-
-### Auch ohne SCNX Bot unterstütze Funktionen {#scnx-manager-bot-features-available}
-
-Folgende Funktionen sind auch ohne den eingeladenen SCNX Manager verfügbar:
-
-* [Eigener Bot](./../../custom-bot/intro): Du kannst deinen bereits auf SCNX erstellten eigenen Bot vollständig
-  verwalten, aber kannst keinen Nachrichtenverlauf in [Als-Bot-Anmelden](./../../custom-bot/login-as-bot) sehen.
-  Trotzdem kannst du neue Nachrichten senden oder bestehende Nachrichten per ID editieren.
-* [Modmail Bot](./../../modmail/intro): Du kannst weiterhin einen SCNX Modmail erstellen oder verwalten.
-* SCNX Integrations: Du kannst weiterhin Integrationen hinzufügen, verwalten und konfigurieren.
-* Das SCNX Dashboard wird weiterhin wie gewohnt funktionieren, nur kann es zu erhöhten Ladezeiten aufgrund des fehlenden
-  SCNX Managers kommen.
-
-### Ohne SCNX Bot NICHT unterstütze Funktionen {#scnx-manager-bot-features-disabled}
-
-* [SCNX Backups](./backups): Der Server kann SCNX Backups nicht verwenden, ohne das der SCNX Bot eingeladen wurde.
-* [SCNX Statistiken](./analytics): Der Server kann SCNX Statistiken nicht verwenden, ohne das der SCNX Bot eingeladen
-  wurde.
-* [dcserver.link](./dcserver-link): Der dcserver.link des Servers kann ohne den eingeladenen SCNX Bot nicht verwendet
-  werden.
-* Das SCNX Dashboard wird nicht immer auf dem selben Stand sein, wie dein Discord (Kanal- und Rollenänderungen könnten
-  z.B. verzögert sein)
-
-### Entfernung des SCNX Management Bots {#scnx-manager-bot-features-setup}
-
-1. Klicke entweder [hier](https://scnx.app/de/glink?page=manager-bot) oder besuche
-   die [Einstellungsseite](https://scnx.app/de/glink?page=settings) deines Servers und wähle "Mehr über die Entfernung
-   des SCNX Manager Bots erfahren" aus.
-2. Lese dir die Informationen über die Funktionsverfügbarkeit sorgfältig durch und klicke auf "Weiter", um fortzufahren.
-3. Überprüfe die Verfügbarkeit dieser Funktion auf deinem Server und wähle "Weiter" aus.
-4. Lese dir die abschließenden Hinweise und Warnungen durch und klicke auf "SCNX Management Bot entfernen und zum
-   reduzierten Dashboardmodus wechseln".
-5. Der SCNX Bot wird deinen Server jetzt verlassen und SCNX wechselt deinen Server zum reduzierten Dashboardmodus. Dies
-   kann etwas dauern.
-
-### Erneute Einladung des SCNX Management Bots {#scnx-manager-bot-features-reinvite}
-
-Im reduzierten Dashboardmodus wird dir immer einen personalisierten Link zum erneuten Einladen des SCNX Management Bots
-angezeigt, wenn du auf eine Funktion zugreifen willst, die für deinen Server nicht verfügbar ist (wie z.B. Backups).
-Ansonsten kannst du den SCNX Bot jederzeit mit [diesem Link](https://scootk.it/invite-scnx) erneut einladen. Sobald du
-den Bot eingeladen hast, wird das Dashboard erneut zurück zum normalen Modus wechseln, was bedeutet, dass alle
-Funktionen erneut verfügbar sein werden.
+Ja. Du kannst den Bot einfach von deinem Server kicken. Server ohne den SCNX-Bot können dessen Funktionen,
+wie [Backups](./backups) or [Statistiken](./analytics) nicht verwenden. Alle Hosting-Funktionen, auch alle Funktionen
+deiner Bots, sind davon nicht betroffen.
 
 ---
 

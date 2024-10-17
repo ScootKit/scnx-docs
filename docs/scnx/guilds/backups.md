@@ -11,6 +11,10 @@ Because backups may contain sensitive user information and sensitive message con
 that get backed up.
 :::
 
+:::info
+To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to your server. Some feature require a separate Backups+ subscription.
+:::
+
 ## What is included in Backups? {#included}
 
 | Feature        | Description                                                                                                                                            |
@@ -23,12 +27,6 @@ that get backed up.
 | Guild-Settings | Backups will include Server name, icon, settings (like the AFK channel), Auto-Moderation rules and more                                                |
 
 ## Manual backups {#manual}
-
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} additionalDetails={{
-    STARTER: 'Up to 2 backups at a time, each with up to 10 messages per channel',
-    PRO: 'Up to 10 backups at a time, each with up to 50 messages per channel',
-    ACTIVE_GUILD: 'Up to 5 backups at a time, each with up to 20 messages per channel'
-}}/>
 
 To create a manual backup, please visit your [backup dashboard](https://scnx.app/glink?page=backups) in your SCNX Dashboard. Next, click on "Create backup" and select what [parts the backup should include](#included). Then, confirm your backup.
 Creating a backup might take up to 15 minutes, depending on the number of messages that need to get stored.
@@ -47,9 +45,6 @@ manage it. These options are available:
 
 ## Automatic backups {#automatic}
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: false}}
-                additionalDetails={{PRO: 'Two times a day', ACTIVE_GUILD: 'Once a day'}}/>
-
 To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink?page=backups) and select the number of
 backups you want to be created below "Automatic backups" and save the change.
 
@@ -63,7 +58,6 @@ Automated backups will use the backup-slots available to your guild. If there ar
 
 
 ## Restore backups {#restore}
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
 
 ### Restore on original server {#restore-self}
 
@@ -147,8 +141,6 @@ After disabling the guild-lock, please follow the same instructions as [restorin
 </details>
 
 ## Export backups {#export}
-
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}}/>
 
 To export a backup, visit the [backup dashboard](https://scnx.app/glink?page=backups), select your backup and click on "Export backup". Your browser will - after a short delay - start downloading a JSON-File to your PC.
 Before downloading, please check the "Calculated size" of the backup to make sure you know how much data you are downloading.

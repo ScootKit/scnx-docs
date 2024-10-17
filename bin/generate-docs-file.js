@@ -53,7 +53,7 @@ Please make sure that you replace the heading id with the correct file-name.
 
 ## Troubleshooting {#troubleshooting}
 Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to avoid / fix them.
-You can layout this section as you want - feel free to "peak" in other documentation files for inspiration.
+You can lay out this section as you want - feel free to "peak" in other documentation files for inspiration.
 ${moduleData.hasDB ? `
 ## Stored data {#data-usage}
 As part of our transparency commitment, please explain what data is stored, when it is stored and how users can delete it. Need inspiration?

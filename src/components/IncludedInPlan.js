@@ -3,7 +3,7 @@ import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import PlanPrice from './PlanPrice';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faArrowCircleRight} from '@fortawesome/free-solid-svg-icons';
+import {faArrowCircleRight} from '@fortawesome/pro-solid-svg-icons';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
