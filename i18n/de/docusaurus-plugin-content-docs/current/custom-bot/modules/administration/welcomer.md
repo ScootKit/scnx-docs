@@ -1,6 +1,6 @@
 # Willkommen und Boosts
 
-Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um sich bei Nutzern, die deinen Server geboostet haben, zu bedanken.
+Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um sich bei Nutzern, die deinen Server boosten, zu bedanken.
 
 <ModuleOverview moduleName="welcomer" />
 
@@ -101,12 +101,10 @@ Dieses Modul ist in mehrere Konfigurationsdateien unteteilt. Du kannst diese wei
 In dieser Konfigurationsdatei kannst du die Kanäle einrichten und konfigurieren, in denen das Modul funktionieren soll. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels).
 
 :::info
-This configuration file uses "Config-Elements". One Config-Element represents each channel that should receive messages
-when a supported event is triggered. You can add a channel multiple times, this is especially required if you want to
-send different event types in the same channel.
+Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsentiert einen Kanal, in den Nachrichten geschickt werden sollen, wenn eine Aktion ausgelöst wird. Du kannst einen Kanal mehrmals hinzufügen, das ist vor allem notwendig wenn du verschiedene Event-Typen in den selben Kanal senden willst.l.
 :::
 
-Each Channel has the following configuration options:
+Jeder Kanal hat die folgenden Konfigurationsoptionen:
 
 | Feld                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -137,9 +135,8 @@ Diese Konfigurationsdatei wird genutzt, wenn ein [konfigurierter Kanal](#configu
 Option nutzt. In diesem Fall wird der Bot zufällig eine der in dieser Datei konfigurierten Nachrichten mit dem selben Kanal-Typ auswählen.
 
 :::info
-This configuration file uses "Config-Elements". One Config-Element represents a message which a specified type.
-When [a channel](#configuration-channels) uses the "Random messages" option, a random message with the same type will
-get selected.
+Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsentiert eine Nachricht mit einem bestimmten Typ. Wenn [ein Kanal](#configuration-channels) die "Zufällige Nachrichten?" Option nutzt, wird eine zufällige Nachricht mit dem selben Typ ausgewählt.
+
 :::
 
 | Feld           | Beschreibung                                                                                                                                                                                                                       |
