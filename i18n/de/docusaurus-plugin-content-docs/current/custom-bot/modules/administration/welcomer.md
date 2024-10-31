@@ -8,7 +8,7 @@ Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um si
 
 * Heiße neue Nutzer mit eigenen Nachrichten (und dynamischen Bildern) willkommen.
 * Verabschiede Nutzer, die deinen Server verlassen.
-* Bedanke dich bei Nutzern mit eigenen Nachrichten, die deinen Server geboostet haben und erpresse sie emotional, indem du ihnen eine Nachricht sendest, wenn sie        deinen Server entboosten.
+* Bedanke dich bei Nutzern mit eigenen Nachrichten, die deinen Server geboostet haben und erpresse sie emotional, indem du ihnen eine Nachricht sendest, wenn sie deinen Server entboosten.
 * Füge unbegrenzt viele Nachrichten zum Beitritt, Boost oder Verlassen in verschiedenen Kanälen hinzu.
 * Gebe neuen Nutzern und Boostern automatisch Rollen.
 * Lasse den Bot zufällige Nachrichten nutzen, um ein wenig Verschiedenheit in deine Willkommens-, Verlassens-, Boost- und Entboost-Nachrichten zu bekommen.
@@ -21,28 +21,28 @@ Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um si
 
 Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinem Server betritt. Du kannst einen Willkommen-Button hinzufügen, welcher es bestehenden Nutzern erlaubt, den neuen Nutzer willkommen zu heißen. Zusätzlich wird, falls [aktiviert](#configuration-config), die Nachricht gelöscht, wenn der Nutzer den Server innerhalb von 7 Tagen wieder verlässt.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot benötigt 
-   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer             beitritt. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf           anzeigen" ("View message history") in diesem Kanal.
 2. Füge den Kanal zur 
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "join" nutzt und 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu,      indem du als Kanal-Typ "join" nutzt und 
    das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
    * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
      [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
-     Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
+     Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem              Nachrichten-Typ
      "join".
    * Wenn du jedes mal die gleiche Nachricht senden willst, nutze die 
-     [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+     [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um         die 
      [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Boost / Unboost Nachrichten einrichten {#setup-boost-messages}
 
 Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API]((https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560)) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen Server boostet. Der Bot benötigt 
-   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen      Server boostet. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf           anzeigen" ("View message history") in diesem Kanal.
 2. Füge den Kanal zur
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu,      indem du 
    den Kanal-Typ "boost" oder "unboost" benutzt
    und das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
@@ -51,17 +51,17 @@ Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal*
      und [konfigure](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ "
      boost" oder "unboost".
    * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
-     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels),        um die 
      [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Verlassens-Nachrichten einrichten {#setup-leave-messages}
 
 Verlassens-Nachrichten werden jedes mal gesendet, wenn ein Nutzer deinen Server verlässt.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer deinen Server verlässt. Der Bot benötigt 
-   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer deinen      Server verlässt. Der Bot benötigt 
+   die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf           anzeigen" ("View message history") auf diesen Kanal.
 2. Füge den Kanal zur 
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "leave" nutzt und 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu,      indem du als Kanal-Typ "leave" nutzt und 
    das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
    * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
@@ -76,7 +76,7 @@ Verlassens-Nachrichten werden jedes mal gesendet, wenn ein Nutzer deinen Server 
 
 :::caution
 Momentan werden Beitritts-Rollen Rollen, die sich Nutzer selbst über 
-Discords Einführung gegeben haben, überschreiben oder entfernen.
+Discords Einführung gegeben haben, überschrieben oder entfernt.
 Dieser Fehler ist bekannt und wird bearbeitet.
 :::
 
@@ -98,9 +98,7 @@ Dieses Modul ist in mehrere Konfigurationsdateien unteteilt. Du kannst diese wei
 
 ### Kanäle {#configuration-channels}
 
-In this configuration file, you can set up the channels in which this module is supposed to operate in and allows
-configuration of these channels. Open it in
-your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels).
+In dieser Konfigurationsdatei kannst du die Kanäle einrichten und konfigurieren, in denen das Modul funktionieren soll. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels).
 
 :::info
 This configuration file uses "Config-Elements". One Config-Element represents each channel that should receive messages
@@ -110,35 +108,33 @@ send different event types in the same channel.
 
 Each Channel has the following configuration options:
 
-| Field                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Channel                                                   | This is the channel the message will get sent in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Channel-Type                                              | Depending on this value, this particular Config-Element will represent the configuration for a specific event type (see [setup](#setup). The following options are available: <ul><li><code>join</code>: This Config-Element will be applied when a new member joins your server.</li><li><code>leave</code>: This Config-Element will be applied when a member leaves your server.</li><li><code>boost</code>: This Config-Element will be applied when a member boosts your server for the first time.</li><li><code>unboost</code>: This Config-Element will be applied when a member removes their last boost from your server.</li></ul> |
-| Random messages                                           | If this option is enabled, the "Message" value will *NOT* be applied. Instead, a [random message](#configuration-random-messages) with the same Channel-Type will get sent randomly.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Message                                                   | This will be the message sent in this channel, if "Random messages" is not enabled. This option [supports dynamic image generation](https://sc-net.work/imgen) to make your messages even more pretty ✨.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Welcome Button                                            | *This option is only available, when "Channel Type" is set to "join"*<br/>If enabled, a button will get added below each message. One other member can then click on this button, which will trigger the configured message to be sent.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Welcome Button Content                                    | *Only visible if "Welcome Button" is enabled.*<br/>This will be the content of the button added below messages. The value needs to be less than 100 characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Channel in which the welcome-button should send a message | *Only visible if "Welcome Button" is enabled.*<br/>This is the channel the welcome message will get sent in once another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Welcome Button Message                                    | *Only visible if "Welcome Button" is enabled.*<br/>This is the message that gets sent in the configured channel when another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Feld                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kanal                                                            | Das ist der Kanal, in welchen die Nachricht gesendet wird.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Kanal-Typ                                                        | Abhängig von diesem Wert wird das Config-Element die Konfiguration für ein bestimmten Event-Typ wiederspiegeln (siehe [Einrichtung](#setup). Die folgenden Optionen sind verfügbar: <ul><li><code>join</code>: Dieses Config-Element wird angewandt, wenn ein neues Mitglied deinem Server beitritt.</li><li><code>leave</code>: Dieses Config-Element wird angewandt, wenn ein Mitglied deinen Server verlässt.</li><li><code>boost</code>: Dieses Config-Element wird angewandt, wenn ein Mitglied deinen Server zum ersten Mal boostet.</li><li><code>unboost</code>: Dieses Config-Element wird angewandt, wenn ein Mitglied seinen letzten Boost von deinem Server entfernt.</li></ul> |
+| Zufällige Nachrichten?                                           | Wenn diese Option aktivert ist, wird der Wert "Nachricht" *NICHT* genutzt. Stattdessen wird eine der [zufälligen Nachrichten](#configuration-random-messages) mit dem selben Kanal-Typ gesendet.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Nachricht                                                        | Das ist die in den Kanal gesendete Nachricht, wenn "Zufällige Nachrichten?" nicht aktiviert ist. Diese Option [unterstützt dynamische Bildgeneration](https://sc-net.work/imgen), um deine Nachrichten noch schöner zu machen✨.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Willkommens-Knopf                                                | *Diese Option ist nur verfügbar, wenn "Kanal-Typ" auf "join" gesetzt ist*<br/>Wenn aktviert wird unter jede Nachricht ein Knopf angehangen. Ein anderes Mitglied kann diesen Knopf drücken, worauf die konfigurierte Nachricht gesendet wird.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Willkommens-Knopf-Inhalt                                         | *Nur sichtbar, wenn "Willkommens-Knopf" aktiviert ist.*<br/>Das ist der Inhalt des unter die Nachricht angehangenen Knopfs. Dieser Wert muss kürzer als 100 Zeichen sein.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Kanal, in welchen der Willkommensknopf die Nachricht senden soll | *Nur sichtbar, wenn "Willkommens-Knopf" aktiviert ist.*<br/>Das ist der Kanal, in den die Willkommens-Knopf-Nachricht gesendet wird, wenn ein anderes Mitglied den Willkommens-Knopf drückt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Willkommens-Knopf-Nachricht                                      | *Nur sichtbar, wenn "Willkommens-Knopf" aktiviert ist.*<br/>Das ist die in den konfigurierten Kanal gesendete Nachricht, wenn ein anderes Mitglied den Willkommens-Knopf drückt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
-### Module configuration {#configuration-config}
+### Modul-Konfiguration {#configuration-config}
 
-In this configuration file allows you to [set up welcome- and boost roles](#setup-join-roles) and configure other basic
-features of this module. Open it in
-your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
+Diese Konfigurationsdatei erlaubt es dir, [Willkommen- und Boost-Rollen einzurichten](#setup-join-roles) und andere grundlegende Funktionen dieses Moduls zu konfigurieren. Öffne sie
+in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 
-| Field                          | Description                                                                                                                                                                          |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](./../tools/massrole) to do this.                        |
-| Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                          |
-| Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts. |
-| Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                        |
+| Feld                                | Beschreibung                                                                                                                                                                                             |
+|-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nutzern Rollen beim Beitreten geben | Diese Rollen werden Mitgliedern gegeben, die deinem Server beitreten. Das wird nicht rückwirkend angewandt, nutze dafür das [Massrole-Modul](./../tools/massrole).                                       |
+| Bots ignorieren?                    | Wenn aktiviert (und das ist sehr empfehlenswert), werden keine Willkommens- und Verlassensnachrichten verschickt, wenn das Mitglied ein Bot ist.                                                         |
+| Zusätzliche Rollen beim Boost geben | Diese Rollen werden einem Mitglied zusätzlich zu der von Discord vergebenen Boost-Rolle gegeben, wenn es deinen Server boostet. Die Rollen werden entfernt, wenn das Mitglied all seine Boosts entfernt. |
+| Willkommensnachricht löschen        | Wenn aktiviert werden Willkommensnachrichten automatisch gelöscht, wenn das Mitglied deinen Server innerhalb von sieben Tagen wieder verlässt.                                                           |
 
-### Random messages {#configuration-random-messages}
+### Zufällige Nachrichten {#configuration-random-messages}
 
-This configuration file will get used if a [configured channel](#configuration-channels) uses the "Random messages"
-option. In this case, the bot will randomly select one of the messages configured in this file with the same type as
-configured in the channel.
+Diese Konfigurationsdatei wird genutzt, wenn ein [konfigurierter Kanal](#configuration-channels) die "Zufällige Nachrichten?"-
+Option nutzt. In diesem Fall wird der Bot zufällig eine der in dieser Datei konfigurierten Nachrichten mit dem selben Kanal-Typ auswählen.
 
 :::info
 This configuration file uses "Config-Elements". One Config-Element represents a message which a specified type.
@@ -146,52 +142,51 @@ When [a channel](#configuration-channels) uses the "Random messages" option, a r
 get selected.
 :::
 
-| Field        | Description                                                                                                                                                                                                |
-|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Message-Type | *see the "Channel-Type" option in the [channel configuration](#configuration-channels).*                                                                                                                   |
-| Message      | This is the message that gets send if this message object will get selected randomly. This option [supports dynamic image generation](https://sc-net.work/imgen) to make your messages even more pretty ✨. |
+| Feld           | Beschreibung                                                                                                                                                                                                                       |
+|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nachricht-Typ  | *Schau dir dazu "Kanal-Typ" in der [Kanal-Konfiguration](#configuration-channels) an.*                                                                                                                                             |
+| Nachricht      | Das ist die Nachricht, die versendet wird, wenn dieses Nachrichtenobjekt zufällig ausgewählt wird. Diese Option [unterstützt dynamische Bildgeneration](https://sc-net.work/imgen), um deine Nachrichten noch schöner zu machen✨. |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
-This module is notoriously trick to troubleshoot, as its highly flexible and customizable design introduces a
-complicated configuration structure. If none of the steps below help (please try them first!), you can always reach out
-to our friendly staff at [scnx.app/help](https://scnx.app/help).
+Dieses Modul ist bekanntermaßen schwierig zu beheben, da sein hochflexibles und anpassbares Design eine komplizierte Konfigurationsstruktur mit sich bringt. 
+Wenn keinder der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
+freundlichen Teammitglieder über [scnx.app/help](https://scnx.app/help) kontaktieren.
 
 <details>
-   <summary>A message is not being sent or the message is "Message not found".</summary>
+   <summary>Eine Nachricht wird nicht gesendet oder der Inhalt der Nachricht ist "Message not found".</summary>
    <ul>
-      <li>Make sure your bot has the "View channel", "Send messages" and "View message history" permissions on the configured channel.</li>
+      <li>Stelle sicher, dass der Bot die Berechtigungen "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") im konfigurierten Kanal besitzt.</li>
       <li>Make sure a correct <a href="#configuration-channels">channel entry</a> is set up of the correct channel and correct event type.</li>
-      <li>If you are using Random Messages: Make sure at least one <a href="#configuration-random-message">random message</a> is configured for this event-type. The message in the <a href="#configuration-channels">channel entry</a> will be ignored.</li>
-      <li>If you are not using Random Messages: Make sure you have configured a valid message in your <a href="#configuration-channels">channel entry</a>.</li>
+      <li>Wenn du zufällige Nachrichten nutzt: Stelle sicher, dass mindenstens eine <a href="#configuration-random-message">zufällige Nachricht</a> für diesen Event-Typ konfiguriert ist. Die Nachricht in der <a href="#configuration-channels">Kanal-Konfiguration</a> wird ignoriert.</li>
+      <li>Wenn du zufällige Nachrichten nicht nutzt: Stelle sicher, dass du eine gültige Nachricht in der <a href="#configuration-channels">Kanal-Konfiguration</a> konfiguriert hast.</li>
    </ul>
 </details>
 
 <details>
-   <summary>I am experiencing issues with a dynamically generated image.</summary>
+   <summary>Ich habe Probleme mit einem dynamischen Bild.</summary>
 
-   Please visit <a href="https://sc-net.work/imgen">sc-net.work/imgen</a>, as shown in the error image.
+   Bitte schaue dir, wie im Fehlerbild angzeigt, <a href="https://sc-net.work/imgen">sc-net.work/imgen</a> an.
 </details>
 
 <details>
-   <summary>No message is being sent when a user adds another boost to their existing server boost.</summary>
+   <summary>Es wird keine Nachricht gesendet, wenn ein Mitglied meinen Server ein weiteres Mal boostet.</summary>
 
-   This happens due to a <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API limitation</a>. We cannot change this behavior.
+   Das liegt an einer <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API Limitation</a>. Wir können daran nichts ändern.
 </details>
 
 ## Gespeicherte Daten {#data-usage}
 
-The following data will get stored for every configured welcome messsage every time when a new member joins:
+Die folgenden Daten werden über jede konfigurierte Willkommensnachricht jedes mal gespeichert, wenn ein Mitglied deinem Server beitritt:
 
-* An unique integer identifying the database entry
+* Eine eindeutige ID, die den Datenbankeintrag identifiziert
 * Die einzigartige Discord Nutzer-ID des Nutzers, der deinem Server beigetreten ist und die Willkommens-Nachricht ausgelöst hat
 * Die einzigartige Discord Nachrichten-ID der Willkommens-Nachricht, die vom Bot gesendet wurde
 * Die einzigartige Discord Kanal-ID des Kanals, in welchen der Bot die Willkommens-Nachricht geschrieben hat
 * Der genaue Zeitpunkt, wann der Nutzer deinem Server beigetreten ist
-* Metadata about the entry (date when created and last updated)
+* Metadaten zum Eintrag (Datum der Erstellung und letzten Aktualisierung)
 
-This data will get used to delete the sent welcome messages if the user leaves the server within seven days after
-joins (if [enabled](#configuration-config)). There is no way to stop the bot from storing data (as toggling this feature
-should be retroactive), but the data won't get used unless the feature is enabled.
+Diese Daten werden genutzt, um gesendete Willkommensnachrichten wieder zu löschen, wenn ein Nutzer den Server innerhalb von sieben Tagen nach dem Beitreten wieder verlässt (falls [aktviert](#configuration-config)). Es gibt keinen Weg, den Bot davon abzuhalten, diese Daten zu speichern (falls die Funktion im Nachhinein aktiviert wird),
+aber die Daten werden nicht genutzt, bis die Funktion aktiviert ist.
 
-To remove all data, [purge the module database](./../../additional-features#reset-module-database).
+Um alle Daten zu löschen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
