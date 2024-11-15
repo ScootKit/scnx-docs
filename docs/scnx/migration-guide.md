@@ -129,6 +129,7 @@ The following other changes were also conducted:
   significantly.
 * **AI Credits**: We've improved the packages you can purchase AI credits in. They are now more streamlined and more
   accurately reflect our customers needs.
+* **Marketplace**: Payouts can now only be made by submitting a valid VAT E-Invoice to ScootKit. We're working on a better solution.
 * We've also fixed a bunch of bugs and have added a lot of other small features to improve your customer experience.
 
 ## Plans for the future {#plans}
