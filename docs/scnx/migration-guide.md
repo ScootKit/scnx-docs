@@ -28,7 +28,7 @@ To avoid issues with your account, please
 ## New legal operator & new Terms of Service {#legal-entity}
 
 Before the migration date, SCNX was run by an individual. After the migration, SCNX will be run by a registered company.
-This allows us to growth easier, protect our employees and provide a better service to our customers. You can find the
+This allows us to grow easier, protect our employees and provide a better service to our customers. You can find the
 company details of the new entity [here](https://scootkit.com/imprint).
 
 We can't automatically transfer your account to the new legal entity due legal restrictions. This is the reason why when
@@ -50,7 +50,7 @@ deleting deactivated accounts in accordance with European privacy laws.
 <details>
 <summary>I don't want to accept the new Terms and operator</summary>
 
-You can inform us via E-Mail to [legal@scootkit.com](mailto:scootkit.com) or by sending a certified letter to
+You can inform us via E-Mail to [legal@scootkit.com](mailto:legal@scootkit.com) or by sending a certified letter to
 our [address](https://scootkit.com/imprint). If you do so, we'll cancel your contract and delete your account.
 </details>
 
