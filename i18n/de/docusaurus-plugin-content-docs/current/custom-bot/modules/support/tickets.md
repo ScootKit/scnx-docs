@@ -6,7 +6,7 @@ Erlaube deinen Mitgliedern, dass Serverteam deines Servers zu kontaktieren!
 
 :::info
 Du suchst nach einem professionellen Support-System mit Ticket-Zuweisungen, Ticket-Themen, Formularen und mehr?
-Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/> (<PlanPrice plan="ACTIVE_GUILD" type="YEARLY"/>).
+Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (oder <PlanPrice plan="UNLIMITED" type="YEARLY"/>).
 :::
 
 ## Funktionen {#features}

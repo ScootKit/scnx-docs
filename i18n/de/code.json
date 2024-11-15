@@ -9,10 +9,10 @@
     "message": "Nicht im Starter-Plan enthalten"
   },
   "plans.included.activeGuildIncluded": {
-    "message": "Enthalten im Aktiven Server Plan"
+    "message": "Im Unlimited Plan enthalten"
   },
   "plans.included.proIncluded": {
-    "message": "Im PRO-Plan enthalten"
+    "message": "Im Professional Plan enthalten"
   },
   "plans.included.compare": {
     "message": "SCNX Pläne vergleichen"

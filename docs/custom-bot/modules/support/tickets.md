@@ -7,7 +7,7 @@ Let users create tickets to message your staff
 :::info
 Looking for a more professional support experience with claiming, ticket-topics, forms and more?
 Check [Modmail](https://modmail.net) at SCNX - starting at
-only <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/> (<PlanPrice plan="ACTIVE_GUILD" type="YEARLY"/>).
+only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" type="YEARLY"/>).
 :::
 
 ## Features {#features}

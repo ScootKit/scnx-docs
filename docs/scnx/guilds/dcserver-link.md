@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`).
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
 ## Usage {#usage}
 

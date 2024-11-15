@@ -32,20 +32,7 @@ aktualisiere die Serverliste mit dem "Daten neuladen" Knopf unten auf der Seite.
 :::
 ![](@site/docs/assets/setup/setup-2.png)
 
-## 3. Füge den SCNX Bot zu deinem Server hinzu {#step-3}
-
-Als nächstes must du den SCNX Bot zu deinem Server hinzufügen. Das ist notwendig, damit unser Dashboard funktioniert,
-[um Backups zu erstellen](./scnx/guilds/backups), [Server Analysen anzuzeigen](./scnx/guilds/analytics) und
-mehr (alle diese Funktionen werden nur auf Wunsch aktiviert - standardmäßig werden keine Daten gespeichert). Dieser Bot ist notwendig um fortzufahren.
-
-Um den SCNX Bot einzuladen, klicke auf den Knopf "Verifizierten SCNX-Manager-Bot hinzufügen" in deinem Dashboard und bestätige, dass du den Bot hinzufügen willst.
-Bitte lasse die "Einladungen erstellen"-Berechtigung aktiviert (dies ist notwendig, wenn du SCNX nutzen willst).
-
-![](@site/docs/assets/setup/setup-3.png)
-
-Danach, kehre bitte zu SCNX zurück und klicke auf "Fertig, erneut überprüfen" um den Einrichtungsprozess fortzusetzen.
-
-## 4. Akzeptiere unsere Nutzungsbedingungen & Datenschutzerklärung {#step-4}
+## 4. Akzeptiere unsere Nutzungsbedingungen & Datenschutzerklärung {#step-3}
 
 Um die Einrichtung abzuschließen, musst du unseren [SCNX-Nutzungsbedingungen](https://sc-net.work/scnx-tos)
 und den [SCNX-Datenschutzrichtlinien](https://sc-net.work/scnx-privacy) zustimmen. Diese Dokumente enthalten Informationen, wie und wofür du SCNX nutzen kannst
@@ -53,7 +40,7 @@ und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die b
 
 ![](@site/docs/assets/setup/setup-4.png)
 
-## 5. Du bist fertig {#step-5}
+## 5. Du bist fertig {#step-4}
 
 Dein Server wurde erfolgreich zu SCNX hinzugefügt :tada:
 

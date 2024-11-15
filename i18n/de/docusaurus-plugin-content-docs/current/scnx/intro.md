@@ -21,7 +21,7 @@ du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
   oder [die gesamte Eigene-Bot-Dokumentation](./../custom-bot/intro) öffnen.
 * [Discord-Modmail-Bot](https://modmail.net) (kurz: "Modmail Bot"): Ein komplett anpassbares Discord-Support-System mit
   dem Modmail-Prinzip, gebaut, um Support-Tickets professionell zu bearbeiten - gehostet ab
-  nur <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />. Du kannst
+  nur <PlanPrice plan="UNLIMITED" type="MONTHLY" />. Du kannst
   entweder [mit Modmail loslegen](./../modmail) or [die gesamte Modmail-Dokumentation](./../modmail/intro) öffnen.
 * [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
   Ernstfall zu speichern. Du kannst die

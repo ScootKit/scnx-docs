@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Owners can give their admins access to certain resources on SCNX easily using the Trusted Admins feature on SCNX.
 
-<IncludedInPlan data={{STARTER: true, PRO: true, ACTIVE_GUILD: true}} />
+<IncludedInPlan data={{STARTER: true, PROFESSIONAL: true, UNLIMITED: true}} />
 
 ## Setup {#setup}
 

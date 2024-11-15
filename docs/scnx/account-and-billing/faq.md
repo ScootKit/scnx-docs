@@ -8,12 +8,11 @@ Frequently asked questions about user-features & billing on SCNX.
 
 ## Billing related {#billing}
 
-### What are SCNX Credits? {#scnx-credits}
+:::warning
+These answers apply to customers inside the European Union. Outside the European Union, we partner with other companies,
+who will be the Merchant of Record for your purchase. Please [contact them](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) if you have any questions regarding your purchase.
 
-SCNX Credits are a virtual currency on SCNX. You can purchase them in
-your [payment page](https://scnx.app/user/payments) and can redeem them for AI Credits, User
-Storage, [Server Upgrades](./../guilds/plans#upgrade) and other purchases on SCNX. You can not pay-out purchased SCNX
-Credits.
+:::
 
 ### How do I manage my subscription? {#manage-subscription}
 
@@ -25,22 +24,21 @@ with billing issues, if you subscribed on Discord.
 
 ### I am VAT exempt {#vat}
 
-We are currently not participating in the VAT-Reverse-Charge-System, but do not need to charge VAT for anyone,
-regardless of their VAT status.
+Please contact our [billing@scootkit.net](mailto:billing@scootkit.net) to verify your account.
 
 ### How do I set my billing address? {#billing-details}
 
 To set your billing address, please visit the [payment page](https://scnx.app/user/payments) on your dashboard. There,
-you'll find the invoice data section. You can enter your invoice details there. If you need an invoice re-generated,
-please contact [our staff](https://scnx.app/help).
+you'll find the invoice data section. You can enter your invoice details there. Your details wil only be used for new
+invoices.
 Please note: Depending on your entries, we might ask you to verify the details (as required by law in certain
 scenarios). If we find that you have abuse this (e.g. entered invalid addresses), we may disable this feature for your
 account (or take other actions, if necessary).
 
 ### Why can't I pay with SEPA Direct Debit? {#direct-debit}
 
-Please read this [FAQ Article](https://faq.scnx.app/sepa-lastschrift/) to review information about SEPA Direct Debit
-payments.
+Right now, we only offer SEPA Direct Debits to customers who have had a long positive payment history with us. If you
+are unable to access SEPA Direct Debit payments, you are ineligible for now.
 
 ### How do I pay on SCNX with a standing bank order (/ reoccurring bank transfer)? {#reoccurring-transfer}
 
@@ -70,11 +68,7 @@ When paying with wire transfer, you'll be assigned a custom IBAN on a virtual ba
 at that account will be credited towards your bills - the transaction reference is not required (but recommended for
 one-time purchases), as we can easily assign a payment to your account based on the IBAN the money was received on.
 
-Wired to much money on accident? Don't worry: You money will be automatically used for future payments - if you do not
-use it within 90 days, our payment provider will return the money back to the bank account that the transfer originated
-from (if that's not possible, Stripe will reach out and ask for bank details). You can
-also [reach out to our staff](https://scnx.app/help) to get the money back sooner (please note that this is only
-possible when you have unreconciled bank transfer balance).
+Wired too much money on accident? Don't worry: Your money will be automatically used for future payments.
 
 ### My card was declined, but all my data is valid {#no-reason-decline}
 

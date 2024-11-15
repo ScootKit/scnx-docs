@@ -2,7 +2,7 @@
 
 Set up the world's most advanced Modmail-Bot in just a few minutes.
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: false}} additionalDetails={{
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{
 ACTIVE_GUILD: "Hosted 24/7, as long as your plan is active.",
 PRO: "Hosted 24/7, as long as your plan is active."}} />
 
@@ -11,8 +11,8 @@ PRO: "Hosted 24/7, as long as your plan is active."}} />
 Before you can create your own Modmail on SCNX, please make sure that
 
 * you have [added your Server to SCNX](./setup).
-* your server has the paid [Active Guild](./scnx/guilds/plans) (<PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/>)
-  or [PRO](./scnx/guilds/plans) (<PlanPrice plan="PRO" type="MONTHLY"/>) plan, or consider using a free trial, if
+* your server has the paid [Unlimited](./scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+  or [Professional](./scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a free trial, if
   available for you.
 * you are the owner of the server you want to enable this feature
   on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this

@@ -71,10 +71,10 @@ const config = {
             announcementBar: {
                 id: 'wip',
                 content:
-                    'This documentation is currently work in progress, and it does not yet meet our high quality expectations - we\'ll fix that in the followings weeks and add localization. For now, please use resources on <a href="https://faq.scnx.app">faq.scnx.app</a> or on our <a href="https://scootk.it">Discord</a>. Thank you for your understanding.',
+                    'Some pages are still missing - our team is working hard on adding them asap.',
                 backgroundColor: '#B45309',
                 textColor: '#fff',
-                isCloseable: false
+                isCloseable: true
             },
             navbar: {
                 title: 'Docs',

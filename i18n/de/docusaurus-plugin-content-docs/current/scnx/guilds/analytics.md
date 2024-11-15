@@ -7,9 +7,6 @@ sidebar_position: 2
 Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
 Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
-
-
 :::tip Datenschutz liegt uns am Herzen
 Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese 
 unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.

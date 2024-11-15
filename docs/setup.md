@@ -32,21 +32,7 @@ visible in the dashboard, refresh the server list using the "Refresh data" butto
 :::
 ![](@site/docs/assets/setup/setup-2.png)
 
-## 3. Add the SCNX Bot to your server {#step-3}
-
-Next, you'll need to add the SCNX Bot to your server. This bot allows our Dashboard to work and is able
-to [create server backups](./scnx/guilds/backups), [show analytics into your server](./scnx/guilds/analytics) and
-more (all these features are opt-in - no data gets stored by default). This bot is required to work.
-
-To invite the SCNX Bot, click on the "Invite verified SCNX Manager-Bot" in your dashboard and confirm that you want to
-add the bot. Please make sure to leave the "Create invite" permission enabled (this is required if you want to use
-SCNX).
-
-![](@site/docs/assets/setup/setup-3.png)
-
-Next, return to SCNX and click on "Done, check again" to continue the setup process.
-
-## 4. Accept our Terms of Service & Privacy Policy {#step-4}
+## 3. Accept our Terms of Service & Privacy Policy {#step-3}
 
 To finish setup, you'll need to to agree to our [SCNX Terms of Service](https://sc-net.work/scnx-tos)
 and [SCNX Privacy Note](https://sc-net.work/scnx-privacy). These documents contain important information about how you
@@ -54,7 +40,7 @@ can use SCNX and how we will process data (tl;dr: We only process data to provid
 
 ![](@site/docs/assets/setup/setup-4.png)
 
-## 5. You are done {#step-5}
+## 4. You are done {#step-4}
 
 Your server has been successfully added to SCNX :tada:
 You can now start by [creating your own bot](custom-bot) or [modmail-bot](modmail) or explore all features on your own -
