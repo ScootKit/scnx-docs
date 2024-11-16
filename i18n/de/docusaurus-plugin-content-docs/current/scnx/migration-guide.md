@@ -30,10 +30,10 @@ Vor dem Migrationszeitpunkt wurde SCNX von einer Einzelperson betrieben. Nach de
 Das erlaubt es uns einfacher zu wachsen, unsere Angestellten besser zu schützen und unseren Kunden einen besseren Dienst anzubieten. Du kannst die 
 Unternehmensdetails der neuen juristischen Person [hier](https://scootkit.com/imprint) finden.
 
-Wir können deinen Account, aufgrund von rechtlichen Einschränkungen, nicht automatisch zur neuen juristischen Person übertragen. Deshalb wirst du bei Anmeldung
+Wir können deinen Account, aufgrund von rechtlichen Einschränkungen nicht automatisch zur neuen juristischen Person übertragen. Deshalb wirst du bei Anmeldung
 bei SCNX mit einem bereits existierenden Account einen "Stimme unseren neuen Nutzungsbedingungen zu"-Banner auf deiner Seite sehen.
 Bitte klicke auf den Button im Banner oder auf [diesen Link](https://scnx.app/user/tos-update), um zuerst der Datenübertragung zum neuen
-Betreiber und dann unseren Nutzungsbedingungen zuzustimmen. Sobald das erledigt ist, wird dir angeboten
+Betreiber und dann unseren Nutzungsbedingungen zuzustimmen. Sobald das erledigt ist, wird dir angeboten,
 [deine Abonnements zu migrieren](#migrate-subscriptions), wenn du welche hattest.
 
 Die neue juristische Person ist vollständig im Besitz des Gründers von SCNX (Simon, @scderox) und hat keine außenstehenden Investoren - so können wir uns
@@ -49,14 +49,14 @@ aufgrund von europäischen Datenschutzgesetzen, beginnen, deaktivierte Accounts 
 <details>
 <summary>Ich will den neuen Bedingungen und dem neuen Betreiber nicht zustimmen</summary>
 
-Du kannst uns darüber per E-Mail [legal@scootkit.com](mailto:legal@scootkit.com) oder einem Brief an unsere
+Du kannst uns darüber per E-Mail an [legal@scootkit.com](mailto:legal@scootkit.com) oder einem Brief an unsere
 [Adresse](https://scootkit.com/imprint) informieren. Wenn du das tust, werden wir deinen Vertrag beenden und deinen Account löschen.
 </details>
 
 ## Neues Preismodell {#new-pricing}
 
 Um sicherzustellen, dass wir SCNX weiter anbieten können, haben wir die Preise unseres Dienstes angepasst, um mit der aktuellen Marktsituation
-mitzuhalten. Dies war notwendig, da wir ab sofort Umsatzsteuer auf unsere Preise erheben müssen und um höhere Hosting- und Infrastrukturkosten zu decken.
+mitzuhalten. Dies war notwendig, da wir ab sofort Mehrwertsteuer auf unsere Preise erheben müssen und um höhere Hosting- und Infrastrukturkosten zu decken.
 
 Wir stellen euch zwei neue Pläne vor: Unlimited und Professional. Du kannst alle Details zu den Plänen
 [auf unserer Docs-Seite zur Preisgestaltung](./guilds/plans) finden. Alte Pläne werden als "Ausgemustert" angesehen und können nicht mehr gekauft werden.
@@ -71,13 +71,13 @@ wenn du mehrere Server bei SCNX hast, werden Premium-Pläne deutlich günstiger 
 
 ### Auswirkungen auf existierende Server {#effect-on-servers}
 
-Diefolgende Tabelle erklärt, welche Art wie betroffen ist:
+Die folgende Tabelle erklärt, welche Art wie betroffen ist:
 
 | Upgrade-Art                                      | Änderungen                                                                                                                                                                                                                                                                                                                              | 
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Starter-Plan                                     | Der Starter-Plan ist dauerhaft kostenlos und nicht von den Änderungen betroffen.                                                                                                                                                                                                                                                        |
 | Einmalige Upgrades                               | Wenn du für deinen Server ein einmaliges Upgrade gekauft hast, wird dieses nicht entfernt, bis es abläuft. Solange kannst du den Plan wie gewohnt weiterverwenden. Dein alter Plan kann nicht verlängert werden.                                                                                                                        |
-| Abonnements                                      | Wenn du deine Abonnements nicht im Migrationszeitraum [migrierst](#migrate-subscription), werden sie gekündigt und dein Plan zum Ende des Abrechnungszeitraums heruntergestuft. [Migriere dein Abonnement](#migrate-subscriptions) um deinen alten Preis zu behalten, bis du kündigst.                                                  |
+| Abonnements                                      | Wenn du deine Abonnements nicht im Migrationszeitraum [migrierst](#migrate-subscription), werden sie gekündigt und dein Plan zum Ende des Abrechnungszeitraums heruntergestuft. [Migriere dein Abonnement](#migrate-subscriptions), um deinen alten Preis zu behalten, bis du kündigst.                                                  |
 | [Lebenslängliche Pläne](./guilds/plans#lifetime) | Lebenslängliche Pläne werden weiterhin funktionieren und weiterhin alle Features deines Plans freischalten. Du kannst deinen Plan jederzeit übertragen. Wenn du zu einem neuen Plan upgraden willst, musst du unser Team kontaktieren, da der Preis des Upgrades abhängig von deiner bisherigen Nutzung des lebenslänglichen Plans ist. |
 
 ### Abonnements übertragen {#migrate-subscriptions}
@@ -89,16 +89,16 @@ Migriere dein Abonnement bevor es abläuft um deinen aktuellen Preis zu behalten
 
 Bitte beachte die folgenden Einschränkungen:
 
-* Nur für Kunden in der EU verfügbar. Nur für aktive Abonnements die in Euro bezahlt werden.
+* Nur für Kunden in der EU verfügbar. Nur für aktive Abonnements, die in Euro bezahlt werden.
 * Wenn du mehrere Abonnements hattest, werden sie zu einem kombiniert. Der vollständige Preis für alle
   vorherigen Abonnements wird ein Mal pro Abrechnungszeitraum abgebucht. Das Abonnement kann nur zusammen gekündigt werden. Es könnte
-  wirtschaftlicher sein zu unserem neuen Preismodell zu wechseln, welches
-  [Server Bundles](./guilds/plans) erlaubt.
+  günstiger sein, zu unserem neuen Preismodell zu wechseln, welches
+  [Server-Bundles](./guilds/plans) erlaubt.
 * Die Migration muss abgeschlossen werden, bevor dein Abrechnungszeitraum endet oder der Migrationszeitraum abläuft.
 * Deine Zahlungsmethode muss erneut hinzugefügt werden. Wenn du per Dauerüberweisung zahlst, stelle sicher, dass du auch
   unsere Bankverbindung bei deiner Bank aktualisierst.
 * Nicht rechtzeitige Zahlung deines neuen Abonnements, abgelehnte Zahlungen oder andere Probleme mit deiner Zahlungsmethode führen zur Kündigung deines Abonnements. Damit verlierst du Zugriff auf das Angebot.
-* Du kannst jederzeit kündigen. In diesem Fall kann dein Abonnement nicht mehr verlängert werden und nach deinem aktuellen Abrechnungszeitraum. Dein Zugriff auf dieses Angebot endet hiermit ebenfalls.
+* Du kannst jederzeit kündigen. In diesem Fall kann dein Abonnement nicht mehr verlängert werden und nach deinem aktuellen Abrechnungszeitraum endet dein Zugriff auf dieses Angebot hiermit ebenfalls.
 
 Um dein Abonnement zu migrieren, besuche [scnx.app/user/tos-update](https://scnx.app/user/tos-update) und folge den Anweisungen.
 
@@ -108,7 +108,7 @@ Die folgenden Änderungen wurden ebenfalls durchgeführt:
 
 * **Kunden außerhalb der EU**: Kunden außerhalb der EU können nun unsere Dienste gemäß unseren neuen
   [Nutzungsbedingungen](https://scootk.it/scnx-tos) ebenfalls nutzen. Bitte beachte, dass ScootKit aktuell keine Zahlungen
-  von Kunden außerhalb der EU annimmt. Wir arbeiten mit einem Partner um in Zukunft weltweit Zahlungen akzeptieren zu können und werden hierzu bald weitere Informationen veröffentlichen.
+  von Kunden außerhalb der EU annimmt. Wir arbeiten mit einem Partner, um in Zukunft weltweit Zahlungen akzeptieren zu können und werden hierzu bald weitere Informationen veröffentlichen.
 * **Empfehlungen**: Unser Empfehlungsprogramm wird bis auf Weiteres pausiert. Wir überarbeiten unser Affiliate System und werden bald weitere Informationen dazu veröffentlichen.
 * **Mehrwertsteuer**: ScootKit UG (haftungsbeschränkt) wird ab sofort nach deutschen und europäischen Vorgaben Mehrwertsteuer berechnen.
   Die Mehrwertsteuer wird auf deiner Rechnung aufgeführt.
@@ -125,8 +125,8 @@ Die folgenden Änderungen wurden ebenfalls durchgeführt:
 
 ## Pläne für die Zukunft {#plans}
 
-Nach diesen Änderungen, können wir Stabilität schaffen: Keine geplanten Preiserhöhungen in den nächsten Jahren -
+Nach diesen Änderungen können wir Stabilität schaffen: Keine geplanten Preiserhöhungen in den nächsten Jahren -
 stattdessen arbeiten wir an unzähligen neuen Ideen, Projekten, Funktionen und Verbesserungen. Darunter ein komplett neugestaltetes
-Ticket-System, ein verbessertes Modmail Verwaltungssystem für deinen Kundenservice - alles enthalten in den neuen Plänen.
+Ticket-System, ein verbessertes Modmail-Verwaltungssystem für deinen Kundenservice - alles enthalten in den neuen Plänen.
 
 Bei jeglichen Fragen [kontaktiere gerne unser Team](https://scnx.app/help), wir freuen uns, dir zu helfen.
