@@ -1,6 +1,6 @@
 # Migrations Guide (Q4, 2024)
 
-Hi, vielen Dank, dass du SCNX benutzt. Wir freuen uns, dir mitteilen zu dürfen, dass wir einige Änderungen vornehmen um unseren Service zu verbessern. In diesem Dokument erklären wir,
+Hi, vielen Dank, dass du SCNX benutzt. Wir freuen uns, dir mitteilen zu dürfen, dass wir einige Änderungen vornehmen, um unseren Service zu verbessern. In diesem Dokument erklären wir,
 was du tun musst, um SCNX weiterzunutzen und was sich geändert hat. Außerdem beantworten wir häufig gestellte Fragen zur Migration.
 
 ## Übersicht {#overview}
@@ -30,7 +30,7 @@ Vor dem Migrationszeitpunkt wurde SCNX von einer Einzelperson betrieben. Nach de
 Das erlaubt es uns einfacher zu wachsen, unsere Angestellten besser zu schützen und unseren Kunden einen besseren Dienst anzubieten. Du kannst die 
 Unternehmensdetails der neuen juristischen Person [hier](https://scootkit.com/imprint) finden.
 
-Wir können deinen Account, aufgrund von rechtlichen Einschränkungen nicht automatisch zur neuen juristischen Person übertragen. Deshalb wirst du bei Anmeldung
+Wir können deinen Account aufgrund von rechtlichen Einschränkungen nicht automatisch zur neuen juristischen Person übertragen. Deshalb wirst du bei Anmeldung
 bei SCNX mit einem bereits existierenden Account einen "Stimme unseren neuen Nutzungsbedingungen zu"-Banner auf deiner Seite sehen.
 Bitte klicke auf den Button im Banner oder auf [diesen Link](https://scnx.app/user/tos-update), um zuerst der Datenübertragung zum neuen
 Betreiber und dann unseren Nutzungsbedingungen zuzustimmen. Sobald das erledigt ist, wird dir angeboten,
