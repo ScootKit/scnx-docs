@@ -92,7 +92,7 @@ Bitte beachte die folgenden Einschränkungen:
 * Nur für Kunden in der EU verfügbar. Nur für aktive Abonnements, die in Euro bezahlt werden.
 * Wenn du mehrere Abonnements hattest, werden sie zu einem kombiniert. Der vollständige Preis für alle
   vorherigen Abonnements wird ein Mal pro Abrechnungszeitraum abgebucht. Das Abonnement kann nur zusammen gekündigt werden. Es könnte
-  günstiger sein, zu unserem neuen Preismodell zu wechseln, welches
+  wirtschaftlicher sein, zu unserem neuen Preismodell zu wechseln, welches
   [Server-Bundles](./guilds/plans) erlaubt.
 * Die Migration muss abgeschlossen werden, bevor dein Abrechnungszeitraum endet oder der Migrationszeitraum abläuft.
 * Deine Zahlungsmethode muss erneut hinzugefügt werden. Wenn du per Dauerüberweisung zahlst, stelle sicher, dass du auch
