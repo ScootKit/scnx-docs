@@ -147,7 +147,7 @@ Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsent
 ## Fehlerbehebung {#troubleshooting}
 
 Dieses Modul ist bekanntermaßen schwierig zu beheben, da sein hochflexibles und anpassbares Design eine komplizierte Konfigurationsstruktur mit sich bringt. 
-Wenn keinder der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
+Wenn keiner der der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
 freundlichen Teammitglieder über [scnx.app/de/help](https://scnx.app/help) kontaktieren.
 
 <details>
