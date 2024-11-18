@@ -94,4 +94,4 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 * Metadaten zum Eintrag (Datum der Erstellung und letzten Aktualisierung)
 
 Um gespeicherte Daten zu löschen, verwende [`/partner delete`](#commands)
-oder [Moduldatenbank löschen](./../../additional-features#reset-module-database).
+oder [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
