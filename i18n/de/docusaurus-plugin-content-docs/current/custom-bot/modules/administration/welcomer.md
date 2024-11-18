@@ -148,13 +148,13 @@ Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsent
 
 Dieses Modul ist bekanntermaßen schwierig zu beheben, da sein hochflexibles und anpassbares Design eine komplizierte Konfigurationsstruktur mit sich bringt. 
 Wenn keiner der der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
-freundlichen Teammitglieder über [scnx.app/de/help](https://scnx.app/help) kontaktieren.
+freundlichen Teammitglieder über [scnx.app/de/help](https://scnx.app/de/help) kontaktieren.
 
 <details>
    <summary>Eine Nachricht wird nicht gesendet oder der Inhalt der Nachricht ist "Message not found".</summary>
    <ul>
       <li>Stelle sicher, dass der Bot die Berechtigungen "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") im konfigurierten Kanal besitzt.</li>
-      <li>Make sure a correct <a href="#configuration-channels">channel entry</a> is set up of the correct channel and correct event type.</li>
+      <li>Stelle sicher, dass ein <a href="#configuration-channels">Kanal-Element</a> mit dem richtigen Kanal und Event-Typ eingerichtet ist.</li>
       <li>Wenn du zufällige Nachrichten nutzt: Stelle sicher, dass mindenstens eine <a href="#configuration-random-message">zufällige Nachricht</a> für diesen Event-Typ konfiguriert ist. Die Nachricht in der <a href="#configuration-channels">Kanal-Konfiguration</a> wird ignoriert.</li>
       <li>Wenn du zufällige Nachrichten nicht nutzt: Stelle sicher, dass du eine gültige Nachricht in der <a href="#configuration-channels">Kanal-Konfiguration</a> konfiguriert hast.</li>
    </ul>
