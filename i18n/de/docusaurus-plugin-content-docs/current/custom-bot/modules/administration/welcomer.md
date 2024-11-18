@@ -37,7 +37,7 @@ Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinem 
 
 ### Boost / Unboost Nachrichten einrichten {#setup-boost-messages}
 
-Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API]((https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560)) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
+Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API](https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
 1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen Server boostet. Der Bot benötigt 
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") in diesem Kanal.
@@ -147,7 +147,7 @@ Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsent
 ## Fehlerbehebung {#troubleshooting}
 
 Fehler in diesem Modul sind bekanntermaßen schwierig zu beheben, da es hochflexible und anpassbar ist und dies eine komplizierte Konfigurationsstruktur mit sich bringt. 
-Wenn keiner der der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
+Wenn keiner der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
 freundlichen Teammitglieder über [scnx.app/de/help](https://scnx.app/de/help) kontaktieren.
 
 <details>
