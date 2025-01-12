@@ -2,11 +2,11 @@
 
 ## General overview
 
-Translating our software is handled through [weblate](https://localize.scootkit.net/engage/scnx/), a continues
+Translating our software is handled through [weblate](https://localize.scootkit.com/engage/scnx/), a continues
 localization platform.
 
 To get started with contributing to translations, please create an account by singing in
-on [Weblate](https://localize.scootkit.net/engage/scnx/).
+on [Weblate](https://localize.scootkit.com/engage/scnx/).
 
 If you only want to report issues, please either use [this form](https://scnx.app/typo) or suggest a correction to a
 string on weblate.
