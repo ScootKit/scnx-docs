@@ -41,7 +41,7 @@ Please follow the following rules when translating:
   rephrase the structure of the english sentence to a structure that is more widely used in your native language.
 * DO use your brain to translate things - always check the meaning and context of any translations you make.
 * If you use translating software, DO check if the translated sentence makes sense before saving the changes.
-* DO use the comments for clarification if if you are unsure t know how to translate a string or the context is unclear.
+* DO use the comments for clarification if you are unsure or don't know how to translate a string or the context is unclear.
 * DO NOT post about unannounced features or strings. Keep these features confidential.
 * DO NOT translate strings that are part of the checkout process or include legally relevant information.
 
