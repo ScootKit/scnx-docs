@@ -63,11 +63,9 @@ Da dieser Prozess manuelle Arbeit unsererseits erfordert, gelten folgende Richtl
 * Deine erste Übertragung aller Daten ist kostenfrei, wenn mindestens einer der Server einen aktiven, bezahlten Plan
   hat.
 * Wenn du bereits eine Übertragung aller Daten für diesen oder einen anderen Server beantragt hast, wird dir
-  [ein SCNX-Credit](./../account-and-billing/faq#scnx-credits) berechnet. Bitte stelle sicher, dass du mindestens einen
-  SCNX-Credit aufgeladen hast.
+  4,99 € (inklusive MwSt) berechnet.
 * Wenn keiner deiner Server einen aktiven, bezahlten Plan hat, wird dir
-  [ein SCNX-Credit](./../account-and-billing/faq#scnx-credits) berechnet. Bitte stelle sicher, dass du mindestens einen
-  SCNX-Credit aufgeladen hast.
+  4,99 € (inklusive MwSt) berechnet.
 
 :::warning
 ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuen Server

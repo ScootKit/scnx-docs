@@ -12,7 +12,7 @@ Die folgenden Änderungen werden beeinflussen, wie du SCNX nutzt:
 * [Der rechtliche Betreiber von SCNX hat sich geändert](#legal-entity)
 * [Es wird ein neues Preismodell geben](#new-pricing)
 * Einige weitere [kleinere Änderungen](#other-changes)
-* Und unsere [Pläne für die Zukunft](#future)
+* Und unsere [Pläne für die Zukunft](#plans)
 
 ### Was musst du jetzt tun
 
@@ -77,7 +77,7 @@ Die folgende Tabelle erklärt, welche Art wie betroffen ist:
 |--------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Starter-Plan                                     | Der Starter-Plan ist dauerhaft kostenlos und nicht von den Änderungen betroffen.                                                                                                                                                                                                                                                        |
 | Einmalige Upgrades                               | Wenn du für deinen Server ein einmaliges Upgrade gekauft hast, wird dieses nicht entfernt, bis es abläuft. Solange kannst du den Plan wie gewohnt weiterverwenden. Dein alter Plan kann nicht verlängert werden.                                                                                                                        |
-| Abonnements                                      | Wenn du deine Abonnements nicht im Migrationszeitraum [migrierst](#migrate-subscription), werden sie gekündigt und dein Plan zum Ende des Abrechnungszeitraums heruntergestuft. [Migriere dein Abonnement](#migrate-subscriptions), um deinen alten Preis zu behalten, bis du kündigst.                                                  |
+| Abonnements                                      | Wenn du deine Abonnements nicht im Migrationszeitraum [migrierst](#migrate-subscriptions), werden sie gekündigt und dein Plan zum Ende des Abrechnungszeitraums heruntergestuft. [Migriere dein Abonnement](#migrate-subscriptions), um deinen alten Preis zu behalten, bis du kündigst.                                                  |
 | [Lebenslängliche Pläne](./guilds/plans#lifetime) | Lebenslängliche Pläne werden weiterhin funktionieren und weiterhin alle Features deines Plans freischalten. Du kannst deinen Plan jederzeit übertragen. Wenn du zu einem neuen Plan upgraden willst, musst du unser Team kontaktieren, da der Preis des Upgrades abhängig von deiner bisherigen Nutzung des lebenslänglichen Plans ist. |
 
 ### Abonnements übertragen {#migrate-subscriptions}

@@ -13,7 +13,7 @@ The following changes will affect your usage of SCNX:
 * [The legal operator of SCNX has changed](#legal-entity)
 * [New pricing will apply](#new-pricing)
 * And some other [minor changes](#other-changes)
-* And some [plans for the future](#future)
+* And some [plans for the future](#plans)
 
 ### What you need to do
 

@@ -59,11 +59,9 @@ As this process involves manual labor from our site, the following policies appl
 * Your (your user-account's) first complete data transfer is free, if at least one of your servers has an active, paid
   plan.
 * If you have already requested a complete data transfer for this or any other server, you will be
-  charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
-  left on your balance.
+  charged 4,99 € (including VAT).
 * If none of your servers have an active paid plan, you will be
-  charged [one SCNX Credit](./../account-and-billing/faq#scnx-credits), please make sure you have at least one credit
-  left on your balance.
+  charged 4,99 € (including VAT).
 
 :::danger
 ALL data will be completely transferred to your new server. This will overwrite existing settings for your new server.
