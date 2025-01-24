@@ -3,8 +3,8 @@
 Set up the world's most advanced Modmail-Bot in just a few minutes.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{
-ACTIVE_GUILD: "Hosted 24/7, as long as your plan is active.",
-PRO: "Hosted 24/7, as long as your plan is active."}} />
+UNLIMITED: "Hosted 24/7, as long as your plan is active.",
+PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 
 ## 0. Pre-Flight-Checklist 🛫 {#step-0}
 

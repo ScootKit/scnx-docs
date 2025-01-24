@@ -4,8 +4,8 @@ Easily create your very own Discord-Bot on SCNX. Setup only takes a few minutes.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
 STARTER: "Hosted 24/7, needs to be extended every two weeks by watching an ad.",
-ACTIVE_GUILD: "Hosted 24/7, as long as your plan is active.",
-PRO: "Hosted 24/7, as long as your plan is active."}} />
+UNLIMITED: "Hosted 24/7, as long as your plan is active.",
+PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 
 ## 0. Pre-Flight-Checklist 🛫 {#step-0}
 

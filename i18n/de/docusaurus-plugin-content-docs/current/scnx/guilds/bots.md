@@ -159,7 +159,7 @@ Um die Sprache deines Bots zu ändern,
 
 ## Erwähnung von SCNX entfernen {#offbrand}
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: false, STARTER: false}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: false, STARTER: false}} />
 
 Du kannst die Fußzeile jeder Nachricht, die du auf SCNX bearbeiten kannst, anpassen. Um nicht immer manuell die Fußzeile zu ändern oder die Fußzeile von voreingestellte Nachricht, die du nicht Bearbeiten kannst, anzupassen, kannst du einen globalen Standard-Fußzeilenwert setzen.
 
