@@ -16,7 +16,8 @@ message, where the user can reply. Any messages sent via DM to the bot will auto
 
 Staff members can coordinate with each other or make notes that are not sent to users by prefixing their message with
 `!`. By default, anyone who has access to the ticket channel will be treated as a staff member, so make sure to
-configure the correct permissions for the ticket category.
+configure the correct permissions for the ticket category. Sometimes, you might not want the name of the staff member to
+be shown to your user. For this, you can send [anonymous messages](#anonymous-messages).
 
 In big servers, tickets might need to be assigned to specific staff members. For this,
 the [Claiming](./advanced-features/ticket-claiming) feature can be used.
@@ -91,6 +92,8 @@ Your message here").
 While the identity of staff members won't be displayed to users when using anonymous messages, their identity will still
 be visible in the log and the ticket channel.
 
+* Anonymous messages can be sent by sending `!ar <Message>`. Any content behind the `!ar ` prefix will be treated as the
+  message content.
 * [Snippets](#snippets) can be sent as anonymous by either writing `!!!<SnippetKey>` or using the `/as` slash command.
 
 ## Blocklisting users {#blacklist}
