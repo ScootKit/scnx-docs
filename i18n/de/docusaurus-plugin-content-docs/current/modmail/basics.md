@@ -1,6 +1,6 @@
 # Modmail-Starterguide (Modmail 101)
 
-In diesem Dokument haben wir alles gesammelt, was hilfreich ist, um zu verstehen, wie man Modmail auf jedem Server verwendet.
+In diesem Dokument haben wir alles gesammelt, was hilfreich ist, um zu verstehen, wie man Modmail auf Servern verwendet.
 
 :::info
 Du kannst dieses Dokument auch an dein Support-Team weiterleiten, damit sie verstehen, wie der Modmail-Bot funktioniert.
@@ -8,15 +8,15 @@ Du kannst dieses Dokument auch an dein Support-Team weiterleiten, damit sie vers
 
 ## Erstellen und Bearbeiten von Tickets {#basics}
 
-Nutzer können Tickets erstellen, indem sie entweder eine Direktnachricht an den Modmail-Bot senden oder eine Schaltfläche unter einer [Informationsnachricht](./configuration/modmail-info) verwenden. Wenn ein Nutzer ein Ticket eröffnet, kann er ein [Ticket-Thema auswählen](./advanced-features/ticket-topics), sofern diese Funktion aktiviert ist. Danach wird ein Ticket-Kanal erstellt, in dem dein Support-Team Nachrichten senden kann. Nachrichten, die in diesen Kanal gesendet werden, werden dem Nutzer per Direktnachricht übermittelt, woraufhin der Nutzer antworten kann. Alle Nachrichten, die per DM an den Bot gesendet werden, erscheinen automatisch im Ticket-Kanal.
+Nutzer können Tickets erstellen, indem sie entweder eine Direktnachricht an den Modmail-Bot senden oder eine Schaltfläche unter der [Informationsnachricht](./configuration/modmail-info) verwenden. Wenn ein Nutzer ein Ticket eröffnet, kann er ein [Ticket-Thema auswählen](./advanced-features/ticket-topics), sofern diese Funktion aktiviert ist. Danach wird ein Ticket-Kanal erstellt, in dem dein Support-Team Nachrichten senden kann. Nachrichten, die in diesen Kanal gesendet werden, werden dem Nutzer per Direktnachricht übermittelt, woraufhin der Nutzer antworten kann. Alle Nachrichten, die per DM an den Bot gesendet werden, erscheinen automatisch im Ticket-Kanal.
 
 Teammitglieder können sich untereinander besprechen oder Notizen hinterlassen, die nicht an Nutzer gesendet werden, indem sie ihre Nachricht mit `!` beginnen. Standardmäßig wird jeder, der Zugriff auf den Ticket-Kanal hat, als Teammitglied behandelt. Stelle daher sicher, dass die richtigen Berechtigungen für die Ticket-Kategorie konfiguriert sind. Manchmal möchtest du möglicherweise nicht, dass der Name des Teammitglieds dem Nutzer angezeigt wird. Dafür kannst du [anonyme Nachrichten](#anonymous-messages) senden.
 
-Auf großen Servern müssen Tickets möglicherweise bestimmten Teammitgliedern zugewiesen werden. Dafür kann die Funktion [Ticket-Zuweisung](./advanced-features/ticket-claiming) genutzt werden.
+Auf großen Servern müssen Tickets möglicherweise bestimmten Teammitgliedern zugewiesen werden. Dafür kann die Funktion [Ticket-Claiming](./advanced-features/ticket-claiming) genutzt werden.
 
 Sobald ein Ticket gelöst wurde, können die Teammitglieder (und der Nutzer, wenn [konfiguriert](./configuration/ticket-close)) das Ticket mit dem `/close`-Slash-Befehl schließen.
 
-Wenn ein Ticket geschlossen wird, wird ein Protokoll namens "Log" erstellt. Dieses Protokoll wird in einen [Log-Kanal](./configuration/bot-configuration) gesendet und kann auch an den Nutzer gesendet werden, wenn [konfiguriert](./configuration/ticket-close).
+Wenn ein Ticket geschlossen wird, wird ein Protokoll namens "Log" erstellt. Dieses Protokoll wird in einen [Log-Kanal](./configuration/bot-configuration) gesendet und kann, wenn [konfiguriert](./configuration/ticket-close), auch an den Nutzer gesendet werden.
 
 Manchmal müssen ähnliche Informationen von Nutzern gesammelt werden, um ihre Anfragen zu bearbeiten. Dafür können [Formulare](./advanced-features/forms) erstellt werden, die es Nutzern ermöglichen, benötigte Informationen über ein integriertes Formular einzugeben. Um einem Nutzer ein Formular zu senden, verwende den Befehl `/form`.
 
