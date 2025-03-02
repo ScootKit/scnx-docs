@@ -26,22 +26,22 @@ Teammitglieder können die Support-Aktivität überwachen und Support-Prozesse m
 
 ## Snippets {#snippets}
 
-Manchmal müssen ähnliche oder sich wiederholende Nachrichten an Nutzer gesendet werden. Um zu vermeiden, dass dieselbe Nachricht immer wieder eingegeben werden muss, können Snippets verwendet werden. Snippets sind Textbausteine, die Teammitglieder erstellen und in Tickets nutzen können. Jedes Snippet hat einen eindeutigen Snippet-Name, der beim Erstellen eines Snippets festgelegt wird. Optional kann auch ein [Formular](./advanced-features/forms) an ein Snippet angehängt werden, um zu vermeiden, dass mehrere Befehle eingegeben werden müssen, um sowohl ein Snippet als auch ein Formular gleichzeitig zu senden. Snippets können auch Schaltflächen enthalten, mit denen Nutzer das Ticket direkt schließen können.
+Manchmal müssen ähnliche oder sich wiederholende Nachrichten an Nutzer gesendet werden. Um zu vermeiden, dass dieselbe Nachricht immer wieder eingegeben werden muss, können Snippets verwendet werden. Snippets sind Textbausteine, die Teammitglieder erstellen und in Tickets nutzen können. Jedes Snippet hat einen eindeutigen Snippet-Schlüssel, der beim Erstellen eines Snippets festgelegt wird. Optional kann auch ein [Formular](./advanced-features/forms) an ein Snippet angehängt werden, um zu vermeiden, dass mehrere Befehle eingegeben werden müssen, um sowohl ein Snippet als auch ein Formular gleichzeitig zu senden. Snippets können auch Schaltflächen enthalten, mit denen Nutzer das Ticket direkt schließen können.
 
 <SlashCommandExplanation />
 
 Um Snippets zu verwenden, können Teammitglieder:
 
-* den Befehl `/s snippet:<SnippetName>` nutzen, um ein Snippet direkt in ein Ticket zu senden. Dies ist die einfachste Methode, da ein Auto-Vervollständigungsmenü Teammitgliedern hilft, das richtige Snippet auszuwählen.
-* `!!<SnippetName>` schreiben (ersetze `<SnippetName>` mit dem Schlüssel des Snippets), um den Inhalt eines Snippets direkt in ein Ticket zu senden.
-* `{{<SnippetName}}` in eine beliebige Nachricht einfügen, die an einen Nutzer gesendet wird. `{{<SnippetName}}` wird durch den Snippet-Inhalt ersetzt, während der Rest der Nachricht unverändert bleibt.
+* den Befehl `/s snippet:<SnippetSchlüssel>` nutzen, um ein Snippet direkt in ein Ticket zu senden. Dies ist die einfachste Methode, da ein Auto-Vervollständigungsmenü Teammitgliedern hilft, das richtige Snippet auszuwählen.
+* `!!<SnippetSchlüssel>` schreiben (ersetze `<SnippetSchlüssel>` mit dem Schlüssel des Snippets), um den Inhalt eines Snippets direkt in ein Ticket zu senden.
+* `{{<SnippetSchlüssel}}` in eine beliebige Nachricht einfügen, die an einen Nutzer gesendet wird. `{{<SnippetSchlüssel}}` wird durch den Snippet-Inhalt ersetzt, während der Rest der Nachricht unverändert bleibt.
 
 Zur Verwaltung von Snippets stehen Teammitgliedern folgende Befehle zur Verfügung:
 
-* Erstelle ein neues Snippet mit `/snippets create key:<SnippetName> [close-buttons:<Boolean>] [form:<Formular>]`.
-* Bearbeite ein bestehendes Snippet mit `/snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Formular>]`.
-* Lösche ein Snippet mit `/snippet delete key:<SnippetName>`.
-* Vorschau eines Snippets mit `/snippet preview key:<SnippetName>`.
+* Erstelle ein neues Snippet mit `/snippets create key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
+* Bearbeite ein bestehendes Snippet mit `/snippets edit key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
+* Lösche ein Snippet mit `/snippet delete key:<SnippetSchlüssel>`.
+* Vorschau eines Snippets mit `/snippet preview key:<SnippetSchlüssel>`.
 * Liste aller Snippets mit `/snippets list [page:<Nummer>]`.
 
 ## Anonyme Nachrichten {#anonymous-messages}
@@ -51,7 +51,7 @@ Manchmal möchten Teammitglieder ihren Namen nicht mit Nutzern teilen. Um dies z
 Die Identität der Teammitglieder wird bei anonymen Nachrichten nicht für Nutzer sichtbar sein, jedoch weiterhin im Log und im Ticket-Kanal angezeigt.
 
 * Anonyme Nachrichten können mit `!ar <Nachricht>` gesendet werden.
-* [Snippets](#snippets) können anonym gesendet werden, indem entweder `!!!<SnippetName>` geschrieben oder der Befehl `/as` verwendet wird.
+* [Snippets](#snippets) können anonym gesendet werden, indem entweder `!!!<SnippetSchlüssel>` geschrieben oder der Befehl `/as` verwendet wird.
 
 ## Nutzer auf die Blockliste setzen {#blacklist}
 
