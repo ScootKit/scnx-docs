@@ -58,14 +58,7 @@ wenn du Hilfe benötigst.
 Du kannst eine Anfrage für die Übertragung aller Daten stellen, wenn beide Server momentan auf SCNX aktiv sind
 (bitte füge den neuen Server hinzu, bevor du eine Anfrage stellst) und du der Eigentümer dieser beiden Server bist.
 
-Da dieser Prozess manuelle Arbeit unsererseits erfordert, gelten folgende Richtlinien:
-
-* Deine erste Übertragung aller Daten ist kostenfrei, wenn mindestens einer der Server einen aktiven, bezahlten Plan
-  hat.
-* Wenn du bereits eine Übertragung aller Daten für diesen oder einen anderen Server beantragt hast, wird dir
-  4,99 € (inklusive MwSt) berechnet.
-* Wenn keiner deiner Server einen aktiven, bezahlten Plan hat, wird dir
-  4,99 € (inklusive MwSt) berechnet.
+Da dieser Prozess manuelle Arbeit unsererseits erfordert, berechnen wird dir 4,99 € (inklusive MwSt) für eine Übertragung berechnet.
 
 :::warning
 ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuen Server

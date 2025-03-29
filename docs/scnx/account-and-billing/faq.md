@@ -10,7 +10,9 @@ Frequently asked questions about user-features & billing on SCNX.
 
 :::warning
 These answers apply to customers inside the European Union. Outside the European Union, we partner with other companies,
-who will be the Merchant of Record for your purchase. Please [contact them](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) if you have any questions regarding your purchase.
+who will be the Merchant of Record for your purchase.
+Please [contact them](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) if you have any questions
+regarding your purchase.
 
 :::
 
@@ -35,10 +37,24 @@ Please note: Depending on your entries, we might ask you to verify the details (
 scenarios). If we find that you have abuse this (e.g. entered invalid addresses), we may disable this feature for your
 account (or take other actions, if necessary).
 
-### Why can't I pay with SEPA Direct Debit? {#direct-debit}
+### Request access to SEPA Direct Debit payments {#direct-debit}
 
-Right now, we only offer SEPA Direct Debits to customers who have had a long positive payment history with us. If you
-are unable to access SEPA Direct Debit payments, you are ineligible for now.
+By default, SEPA Direct payments aren't available for customers due to the high-risk nature of the payment method.
+
+You can request access to pay with SEPA Direct Debit if you meet the following requirements:
+
+* You have a positive payment history with your first payment going back at least two months.
+* You have spent at least 20,00 € in total at SCNX.
+* Only payments made directly to the ScootKit UG (haftungsbeschränkt) are eligible.
+
+You can check your [payment history in your SCNX Dashboard](https://scnx.app/user/payments).
+
+To request access to SEPA Direct Debit payments on SCNX, please contact us via E-Mail at [billing@scootkit.com](mailto:billing@scootkit.com) where
+we'll guide you through the process of getting access to SEPA Direct Debits. You might be asked to provide documents
+proofing that you own the bank accounts.
+
+Regardless of your verification, we work with our partners to reduce the risk of disputes, leading to some payments
+being denied based on an automated risk assessments and payments made from your bank account at other businesses.
 
 ### How do I pay on SCNX with a standing bank order (/ reoccurring bank transfer)? {#reoccurring-transfer}
 

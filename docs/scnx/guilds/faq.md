@@ -54,14 +54,7 @@ please [reach out to our staff](https://scnx.app/help).
 You can request a "complete data transfer" if both of your servers are currently active on SCNX
 (please add the new server before creating a request), and you are the owner of both servers.
 
-As this process involves manual labor from our site, the following policies apply:
-
-* Your (your user-account's) first complete data transfer is free, if at least one of your servers has an active, paid
-  plan.
-* If you have already requested a complete data transfer for this or any other server, you will be
-  charged 4,99 € (including VAT).
-* If none of your servers have an active paid plan, you will be
-  charged 4,99 € (including VAT).
+As this process involves manual labor from our site, you will be charged 4,99 € (including VAT) for a transfer.
 
 :::danger
 ALL data will be completely transferred to your new server. This will overwrite existing settings for your new server.

@@ -39,10 +39,25 @@ Wenn wir feststellen, dass du dies missbraucht hast (z. B. ungültige Adressen e
 Funktion für dein Konto deaktivieren
 (oder gegebenenfalls andere Maßnahmen ergreifen).
 
-### Warum kann ich nicht mit SEPA-Lastschrift bezahlen? {#direct-debit}
+### SEPA-Lastschrift-Zahlungen freischalten {#direct-debit}
 
-Aktuell bieten wir das SEPA Lastschriftverfahren nur für Kunden an, die einen langen positven Zahlungsverlauf bei uns
-hatten. Wenn bei dir die Zahlungsmethode nicht funktioniert, bist du dafür aktuell nicht berechtigt.
+Standardmäßig sind SEPA Lastschriftzahlungen aufgrund des hohen Ausfallrisikos nicht für Kunden verfügbar.
+
+Du kannst Zugriff auf SEPA Lastschriftzahlungen anfragen, wenn du folgende Bedingungen erfüllst:
+
+* Du hast einen positiven Zahlungsverlauf bei uns und deine erste Zahlung liegt mindestens zwei Monate zurück.
+* Du hast mindestens 20,00€ auf SCNX ausgeben.
+* Nur Zahlungen, die direkt bei der ScootKit UG (haftungsbeschränkt) getätigt wurden, sind für diese Kriterien relevant.
+
+Du findest deinen [Zahlungsverlauf im SCNX Dashboard](https://scnx.app/user/payments).
+
+Um Zugriff auf SEPA Lastschriftzahlungen auf SCNX zu beantragen, kontaktiere uns bitte per E-Mail
+an [billing@scootkit.com](mailto:billing@scootkit.com), wo wir dir gerne bei der Freischaltung helfen. Eventuell musst
+du uns Dokumente schicken, welche Nachweisen, dass dir das Bankkonto gehört.
+
+Unabhängig von dieser Verifikation arbeiten wir mit unseren Partnern zusammen, um das Risiko von Zahlungsausfall zu
+senken, was bedeuten kann, dass einige Zahlungen aufgrund automatischer Risikobewertung, basierend auf einer Vielzahl
+von Faktoren, darunter dein Zahlungsverhalten bei anderen Unternehmen, abgelehnt werden.
 
 ### Wie bezahle ich bei SCNX mit einem Dauerauftrag (/einer wiederkehrenden Banküberweisung)? {#reoccurring-transfer}
 
