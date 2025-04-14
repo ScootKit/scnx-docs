@@ -38,6 +38,22 @@ const config = {
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
+                blog: {
+                    feedOptions: {
+                        type: 'all',
+                        title: 'SCNX News',
+                        description: 'Receive semi-regular news about SCNX',
+                        copyright: `Copyright © ${new Date().getFullYear()} ScootKit UG (haftungsbeschränkt)`,
+                        createFeedItems: async (params) => {
+                            const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+                            return defaultCreateFeedItems({
+                                // keep only the 10 most recent blog posts in the feed
+                                blogPosts: blogPosts.filter((item, index) => index < 10),
+                                ...rest,
+                            });
+                        },
+                    },
+                },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')
                 }
@@ -68,14 +84,6 @@ const config = {
                 // Optional
                 contextualSearch: true
             },
-            announcementBar: {
-                id: 'wip',
-                content:
-                    'Some pages are still missing - our team is working hard on adding them asap.',
-                backgroundColor: '#B45309',
-                textColor: '#fff',
-                isCloseable: true
-            },
             navbar: {
                 title: 'Docs',
                 logo: {
@@ -89,6 +97,7 @@ const config = {
                         position: 'left',
                         label: 'Getting started'
                     },
+                    {to: 'blog', label: 'News', position: 'left'},
                     {
                         type: 'docSidebar',
                         sidebarId: 'scnxSidebar',
