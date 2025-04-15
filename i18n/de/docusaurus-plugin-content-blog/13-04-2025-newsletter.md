@@ -9,7 +9,6 @@ tags:
   - Newsletter
   - SCNX
   - Events
-unlisted: true
 ---
 
 Huhu,
