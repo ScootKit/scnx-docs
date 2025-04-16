@@ -35,6 +35,7 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     editLocalizedFiles: true,
+                    remarkPlugins: [],
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
@@ -115,6 +116,12 @@ const config = {
                         sidebarId: 'modmailSidebar',
                         position: 'left',
                         label: 'Modmail'
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'linkedRolesSidebar',
+                        position: 'left',
+                        label: 'Linked Roles'
                     },
                     {
                         href: 'https://scnx.app',

@@ -41,6 +41,11 @@ function HomepageHeader() {
                             to="/docs/modmail/intro">
                             🎧 <Translate id="main.mm">Modmail Documentation</Translate>
                         </Link>
+                        <Link
+                            className="button button--secondary button--lg"
+                            to="/docs/linked-roles/intro">
+                            🔗 <Translate id="main.linked-roles">Linked Roles</Translate>
+                        </Link>
                     </div>
                 </div>
             </div>
