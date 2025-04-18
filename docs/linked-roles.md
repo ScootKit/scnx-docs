@@ -137,7 +137,7 @@ SCNX Dashboard and click on "Create Linked-Roles" to finish setup.
 ## 5. Time to party 🎉 {#step-5}
 
 :::info Don't worry
-Your new Linked Role Bot won't stay online unless 
+Your new Linked Role Bot won't stay online unless you use another SCNX product with the same credentials.
 :::
 
 Finally, finish setup by inviting the Linked Roles Bot to your server. Do so by clicking "Invite Linked-Roles-Bot" in
