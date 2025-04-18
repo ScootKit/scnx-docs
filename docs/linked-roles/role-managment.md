@@ -5,3 +5,5 @@
 ## Set up Linked Role on Discord {#linked-role-on-discord}
 
 ## Display Linked Role in chat {#display-in-chat}
+
+## Public roles {#public-roles}

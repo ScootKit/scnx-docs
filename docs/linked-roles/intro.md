@@ -35,6 +35,7 @@ role [can be removed via the SCNX Dashboard](./user-managment#remove-role).
 Linked Roles can be displayed in the chat next to the username
 by [configuring chat permissions](./role-managment#display-in-chat). While a user can have multiple Linked Roles, only
 one can be displayed in a chat. Roles with a higher position on your Discord will be displayed with a higher priority.
+Having a Linked Role does not remove the role icon of another role.
 
 To [claim a Linked Role](./claim-roles), users will need to authorize their account with your custom Discord application
 using a
@@ -64,6 +65,5 @@ The following features are available on SCNX:
 * Authorization with your custom Discord App.
 * Multiple themes available for the [authorization page](./settings#authorization-page).
 * Off-Brand options available with the [Professional Plan](./../scnx/guilds/plans).
-* You can set up Linked Roles that can be claimed by any user.
-
-### Authorization page {#scnx-authorization}
+* You can set up [public linked roles](./role-managment#public-roles) that can be claimed by any user.
+* Excellent customer support on [our Discord](https://scootk.it/dc-en) in English and German.

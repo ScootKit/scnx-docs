@@ -7,13 +7,14 @@ import {faArrowCircleRight} from '@fortawesome/pro-solid-svg-icons';
 
 export default function Video({url}) {
     const [allowed, setAllowed] = useState(false);
-    const urlData = new URL(url);
+    if (url.includes('youtu.be')) url = url.replace('youtu.be', 'youtube.com')
+    const urlData = new URL(url.replaceAll('www.', ''));
 
     useEffect(() => {
         if (localStorage.getItem(`scootkit.privacy.consent-${urlData.hostname}`) === '1') setAllowed(true);
     }, [urlData]);
 
-    if (!allowed && urlData.hostname === 'youtu.be') return <div style={{width: '640px', height: '360px', justifyContent: 'center'}}
+    if (!allowed && urlData.hostname === 'youtube.com') return <div style={{width: '640px', height: '360px', justifyContent: 'center'}}
                               className="card flex items-center">
         <div>
             <div style={{textAlign: 'center'}}><FontAwesomeIcon icon={faYoutube} style={{fontSize: '60px'}}/></div>
@@ -42,7 +43,7 @@ export default function Video({url}) {
         </div>
     </div>;
 
-    return <div>
-        <ReactPlayer url={url} controls={true}/>
+    return <div className='player-wrapper'>
+        <ReactPlayer url={url}           className='react-player' controls={true}/>
     </div>;
 }

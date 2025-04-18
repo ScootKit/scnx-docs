@@ -103,6 +103,26 @@ a.card:hover {
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+img {
+    padding: 2px;
+    border-radius: 15px;
+    background-color: #0d1524;
+}
+
 .DocSearch-Logo a {
     display: none !important;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 360px;
+    border-radius: 5px;
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    overflow: hidden;
 }
