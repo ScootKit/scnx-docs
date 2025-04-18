@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 description: Follow this guide to claim a Linked Role that has been assigned to you.
 ---
 

@@ -62,8 +62,8 @@ The following features are available on SCNX:
 
 * Easy management of [Linked Roles](./role-managment) in the SCNX Dashboard.
 * [Assign and remove](./user-managment) roles from users.
-* Authorization with your custom Discord App.
 * Multiple themes available for the [authorization page](./settings#authorization-page).
 * Off-Brand options available with the [Professional Plan](./../scnx/guilds/plans).
+* Authorization with your custom Discord App.
 * You can set up [public linked roles](./role-managment#public-roles) that can be claimed by any user.
 * Excellent customer support on [our Discord](https://scootk.it/dc-en) in English and German.
