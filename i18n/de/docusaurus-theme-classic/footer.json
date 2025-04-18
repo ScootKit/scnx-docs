@@ -74,5 +74,9 @@
   "link.item.label.Open SCNX Dashboard": {
     "message": "SCNX Dashboard öffnen",
     "description": "The label of footer link with label=Open SCNX Dashboard linking to https://scnx.app/"
+  },
+  "link.item.label.Linked Roles": {
+    "message": "Linked Rollen",
+    "description": "The label of footer link with label=Linked Roles linking to /docs/linked-roles/intro"
   }
 }

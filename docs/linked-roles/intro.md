@@ -1,8 +1,15 @@
-# About SCNX Linked Roles
+---
+sidebar_position: 1
+description: Linked Roles allow you to easily display the role of a user next to their username in your chat.
+---
+
+# About Linked Roles
 
 :::warning This feature is Early Access
 Linked roles are Early Access. This means that in addition to a paid plan,
-a [membership](https://membership.scootkit.com) with Early Access is also required. Early Access helps us invest money & time in developing new features and products. We plan to make this feature available to everyone with Unlimited / Professional plan without memberships in late Q2 2025.
+a [membership](https://membership.scootkit.com) with Early Access is also required. Early Access helps us invest money &
+time in developing new features and products. We plan to make this feature available to everyone with Unlimited /
+Professional plan without memberships in late Q2 2025.
 :::
 
 Linked-Roles allow you, to display the role of a user next to their name on your Discord server. To do this, the user
@@ -14,10 +21,49 @@ Here's how Linked-Roles could look on your server:
 
 ![SCNX Linked Roles usage shown on a Discord server, the position of the user is displayed next to their username](https://scnx.app/img/linked-roles-example.png)
 
-## Linked Roles at SCNX
+## How it works {#how-it-works}
+
+To use Linked Roles, you'll need to first [set up Linked Roles](./../linked-roles) on your server. Once done, you
+can [create and configure Linked Roles](./role-managment) on SCNX and Discord which can
+be [assigned to users](./user-managment). Once a linked role hsa been assigned to a user, the user
+can [claim the role](./claim-roles) on Discord.
+
+In contrast to actual roles on Discord, Linked Roles can't be directly assigned to members, instead, members will need
+to manually [claim roles on Discord](./claim-roles). After a user has claimed a role, the
+role [can be removed via the SCNX Dashboard](./user-managment#remove-role).
+
+Linked Roles can be displayed in the chat next to the username
+by [configuring chat permissions](./role-managment#display-in-chat). While a user can have multiple Linked Roles, only
+one can be displayed in a chat. Roles with a higher position on your Discord will be displayed with a higher priority.
+
+To [claim a Linked Role](./claim-roles), users will need to authorize their account with your custom Discord application
+using a
+[customizable authorization page](./settings#authorization-page). Once done, they'll be redirected back to Discord,
+where they can claim their role. Once authorized, future role changes can be claimed without the need of an additional
+authorization.
+
+## Linked Roles at SCNX {#scnx}
 
 SCNX makes it easy to set up and manage Linked Roles on your very own Discord - there's no coding required and setup can
 be done in a few easy steps in our easy-to-use dashboard.
 
 To use Linked Roles, you need [add your server to SCNX](./../setup) and to have a [paid plan](../scnx/guilds/plans) that
 includes access to this feature - you can also try a paid plan for free if you are eligible.
+
+### Features of Linked Roles on SCNX {#scnx-features}
+
+Linked Roles on SCNX makes using Linked Roles on your server easy. While [initial setup](./../linked-roles) takes a few
+minutes, later management of [roles](./role-managment) and [member roles](./user-managment) is straightforward.
+Additionally, SCNX
+offers multiple features and customizability options.
+
+The following features are available on SCNX:
+
+* Easy management of [Linked Roles](./role-managment) in the SCNX Dashboard.
+* [Assign and remove](./user-managment) roles from users.
+* Authorization with your custom Discord App.
+* Multiple themes available for the [authorization page](./settings#authorization-page).
+* Off-Brand options available with the [Professional Plan](./../scnx/guilds/plans).
+* You can set up Linked Roles that can be claimed by any user.
+
+### Authorization page {#scnx-authorization}

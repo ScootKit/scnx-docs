@@ -16,6 +16,8 @@ Hey there,
 
 The holidays are just around the corner! Easter is coming up, so it's time to prepare an event for your Discord – and it's super easy with SCNX!
 
+<!-- truncate -->
+
 ## Easter is Just Around the Corner
 
 Easter is just around the corner, and what could be better than going on an Easter egg hunt together – even if it's digital this year.
