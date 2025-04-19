@@ -104,9 +104,10 @@ a.card:hover {
 }
 
 .theme-doc-markdown img {
-    padding: 2px;
+    padding: 4px;
     border-radius: 15px;
     background-color: #0d1524;
+    box-shadow: 0 10px 15px -3px #0000001a,  0 4px 6px -4px #0000001a;
 }
 
 .DocSearch-Logo a {

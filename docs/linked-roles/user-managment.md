@@ -7,3 +7,5 @@ Your admins can also manage Linked Roles of users! Add them as a [Trusted Admin]
 ## Add Linked Role {#add-role}
 
 ## Remove Linked-Role {#remove-role}
+
+## Delete user {#delete-user}
