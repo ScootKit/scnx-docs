@@ -29,7 +29,7 @@ Um [eine verknüpfte Rolle zu beanspruchen](./claim-roles), müssen sich Nutzer 
 
 SCNX macht das Einrichten und Verwalten verknüpfter Rollen auf deinem eigenen Discord ganz einfach – es ist kein Coding erforderlich und die Einrichtung erfolgt in wenigen einfachen Schritten über unser benutzerfreundliches Dashboard.
 
-Um verknüpfte Rollen nutzen zu können, musst du [deinen Server bei SCNX hinzufügen](./../setup) und über einen [kostenpflichtigen Plan](../scnx/guilds/plans) verfügen, der Zugriff auf diese Funktion beinhaltet – wenn du berechtigt bist, kannst du den kostenpflichtigen Plan auch kostenlos testen.
+Um verknüpfte Rollen nutzen zu können, musst du [deinen Server zu SCNX hinzufügen](./../setup) und über einen [kostenpflichtigen Plan](../scnx/guilds/plans) verfügen, der Zugriff auf diese Funktion beinhaltet – wenn du berechtigt bist, kannst du den kostenpflichtigen Plan auch kostenlos testen.
 
 ### Funktionen verknüpfter Rollen auf SCNX {#scnx-features}
 
