@@ -596,7 +596,7 @@
     "message": "Akzeptieren und YouTube Video laden"
   },
   "main.linked-roles": {
-    "message": "Linked Rollen"
+    "message": "Verknüpfte Rollen"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
     "message": "1 Eintrag|{count} Einträge",

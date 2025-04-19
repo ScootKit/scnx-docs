@@ -252,11 +252,11 @@
     "description": "The label for the doc item Troubleshooting issues in sidebar modmailSidebar, linking to the doc modmail/troubleshooting"
   },
   "sidebar.startSidebar.doc.Linked Roles": {
-    "message": "Linked Rollen",
+    "message": "Verknüpfte Rollen",
     "description": "The label for the doc item Linked Roles in sidebar startSidebar, linking to the doc linked-roles/intro"
   },
   "sidebar.linkedRolesSidebar.category.SCNX Linked Roles": {
-    "message": "SCNX Linked Rollen",
+    "message": "SCNX verknüpfte Rollen",
     "description": "The label for category SCNX Linked Roles in sidebar linkedRolesSidebar"
   },
   "sidebar.linkedRolesSidebar.link.Get started": {

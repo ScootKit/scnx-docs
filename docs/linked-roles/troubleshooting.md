@@ -21,6 +21,7 @@ Issues when using Linked Roles:
 * [The Linked Role is not displayed in the chat](#display-missing).
 * [Users are not being give the Linked Role](#role-not-given).
 * ["Invalid OAuth2 redirect_url" when claiming Linked Roles](#oauth2-redirect-url).
+* ["No roles were assigned to you" when claiming Linked Roles](#roles-missing)
 * ["Seems like the configuration by the server owner is wrong." when claiming Linked Roles](#generic-api-error).
 
 If your issue isn't listed here, [click here](#other).
@@ -45,9 +46,31 @@ When using Linked Roles, you might run into an issue where the role is not displ
 "View channel" permission for the Linked Role in every channel. You
 can [learn more in our guide about this](./role-managment#display-in-chat).
 
-## "Seems like the configuration by the server owner is wrong." when claiming Linked Roles {#generic-api-error}
+## "Seems like the configuration by the server owner is wrong" when claiming Linked Roles {#generic-api-error}
 
+If a step during setup has been missed or a wrong value has been entered, Linked Roles are unable to sync correctly.
 
+**Solution**:
+
+To fix this issue, you'll need to redo some steps of the [setup procedure](../linked-roles) which may take some time.
+Follow these steps to fix this issue:
+
+1. First, reset the Authentification details on
+   your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration). To do this, click
+   on "Reset authentification details" or follow [this guide](./settings#reset-auth-details).
+2. Once done, your dashboard will prompt you to re-do all setup steps.
+3. Please follow our [setup guide](./../linked-roles#step-2) starting at Step 2. Make sure to follow all instructions
+   carefully, as any mistakes will result in this error re-appearing.
+4. Once you've finished the setup, please retry [claiming the role](./claim-roles).
+
+## "No roles were assigned to you" when claiming Linked Roles {#roles-missing}
+
+By default, users need to be assigned roles manually in your dashboard. If no roles were assigned, this error will be
+shown.
+
+**Solution**: [Assign roles to the user in question](./user-managment#add-role) or make
+the [role public](./role-managment#public-roles) so it can be claimed by everyone. If you believe that a role has been
+assigned, please make sure the user is logged in with the correct account when attempting to claim the role.
 
 ## "Invalid OAuth2 redirect_url" when claiming Linked Roles {#oauth2-redirect-url}
 
@@ -56,8 +79,8 @@ will be shown.
 
 **Solution**:
 
-1. Open your [Linked Roles configuration pag](https://scnx.app/glink?page=linked-roles/configuration) and copy the "
-   Redirect URL" in the "Authorization details" card. It should look like this:
+1. Open your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration) and copy the
+   "Redirect URL" in the "Authorization details" card. It should look like this:
    `https://linked-roles.scnx.app/api/b4e5e89a-1c92-11f0-b688-03c2706e348f/callback` (the middle part might change based
    on
    your server).
@@ -72,8 +95,8 @@ will be shown.
 
 When using Linked Roles, users won't receive the role automatically.
 
-**Solution**: Users need to manually [claim the Linked Role](./claim-roles). You can send them a link to our guide: [
-`https://scootk.it/claim-linked-roles`](https://scootk.it/claim-linked-roles).
+**Solution**: Users need to manually [claim the Linked Role](./claim-roles). You can send them a link to our guide:
+[`https://scootk.it/claim-linked-roles`](https://scootk.it/claim-linked-roles).
 
 ## Other issues {#other}
 
