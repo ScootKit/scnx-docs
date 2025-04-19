@@ -35,6 +35,7 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     editLocalizedFiles: true,
+                    remarkPlugins: [],
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
@@ -97,7 +98,6 @@ const config = {
                         position: 'left',
                         label: 'Getting started'
                     },
-                    {to: 'blog', label: 'News', position: 'left'},
                     {
                         type: 'docSidebar',
                         sidebarId: 'scnxSidebar',
@@ -116,6 +116,13 @@ const config = {
                         position: 'left',
                         label: 'Modmail'
                     },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'linkedRolesSidebar',
+                        position: 'left',
+                        label: 'Linked Roles'
+                    },
+                    {to: 'blog', label: 'News', position: 'right'},
                     {
                         href: 'https://scnx.app',
                         label: 'SCNX Dashboard',
@@ -159,6 +166,10 @@ const config = {
                             {
                                 label: 'Modmail',
                                 to: '/docs/modmail/intro'
+                            },
+                            {
+                                label: 'Linked Roles',
+                                to: '/docs/linked-roles/intro'
                             }
                         ]
                     },

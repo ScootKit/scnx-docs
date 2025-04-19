@@ -26,5 +26,13 @@
   "item.label.SCNX Dashboard": {
     "message": "SCNX Dashboard",
     "description": "Navbar item with label SCNX Dashboard"
+  },
+  "item.label.Linked Roles": {
+    "message": "Verknüpfte Rollen",
+    "description": "Navbar item with label Linked Roles"
+  },
+  "item.label.News": {
+    "message": "Neuigkeiten",
+    "description": "Navbar item with label News"
   }
 }
