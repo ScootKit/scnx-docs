@@ -24,4 +24,4 @@ our [troubleshooting page](./troubleshooting), where we go into detail on how to
 
 ## Claim your role on Discord {#claim-role}
 
-To get started, please click on the name of the server in Discord. There you'll be able to select the option "Linked-Roles".
+To get started, please click on the name of the server in Discord. There you'll be able to select the option "Linked-Roles". 

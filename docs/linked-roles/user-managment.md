@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Manage member's Linked Roles
 
 :::success Give your admins access!
