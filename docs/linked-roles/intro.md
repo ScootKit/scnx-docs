@@ -25,7 +25,7 @@ Here's how Linked-Roles could look on your server:
 
 To use Linked Roles, you'll need to first [set up Linked Roles](./../linked-roles) on your server. Once done, you
 can [create and configure Linked Roles](./role-managment) on SCNX and Discord which can
-be [assigned to users](./user-managment). Once a linked role hsa been assigned to a user, the user
+be [assigned to users](./user-managment). Once a linked role has been assigned to a user, the user
 can [claim the role](./claim-roles) on Discord.
 
 In contrast to actual roles on Discord, Linked Roles can't be directly assigned to members, instead, members will need
