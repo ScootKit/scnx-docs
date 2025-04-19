@@ -14,15 +14,15 @@ export default function Video({url}) {
         if (localStorage.getItem(`scootkit.privacy.consent-${urlData.hostname}`) === '1') setAllowed(true);
     }, [urlData]);
 
-    if (!allowed && urlData.hostname === 'youtube.com') return <div style={{width: '640px', height: '360px', justifyContent: 'center'}}
-                              className="card flex items-center">
+    if (!allowed && urlData.hostname === 'youtube.com') return <div style={{justifyContent: 'center'}}
+                              className="card flex items-center video-consent">
         <div>
-            <div style={{textAlign: 'center'}}><FontAwesomeIcon icon={faYoutube} style={{fontSize: '60px'}}/></div>
-            <div style={{marginTop: '5px', fontWeight: 'bold', fontSize: '24px', textAlign: 'center'}}>
+            <div style={{textAlign: 'center'}}><FontAwesomeIcon icon={faYoutube} className="video-consent-icon"/></div>
+            <div className="video-consent-header" style={{marginTop: '5px', fontWeight: 'bold', textAlign: 'center'}}>
                 <Translate
                     id="youtubeHidden.header">There's a YouTube Video here</Translate>
             </div>
-            <div style={{marginTop: '3px', textAlign: 'center'}}>
+            <div className="video-consent-description" style={{marginTop: '3px', textAlign: 'center'}}>
                 <Translate
                     id="youtubeHidden.header" values={{
                     link: <a href="https://policies.google.com/privacy?hl=en-US" target="_blank"><Translate

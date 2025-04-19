@@ -90,7 +90,7 @@ const sidebars = {
                 type: 'generated-index',
                 title: 'Linked Roles on SCNX',
                 description: 'Use Linked Roles to display the role of a user next to their username in your Discord chats.',
-                slug: '/linked-roles/index'
+                slug: '/linked-roles/overview'
             },
             items: [
                 {
