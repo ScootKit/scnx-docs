@@ -27,7 +27,7 @@ Um [eine verknüpfte Rolle zu beanspruchen](./claim-roles), müssen sich Nutzer 
 
 ## Verknüpfte Rollen bei SCNX {#scnx}
 
-SCNX macht das Einrichten und Verwalten verknüpfter Rollen auf deinem eigenen Discord ganz einfach – es ist kein Coding erforderlich und die Einrichtung erfolgt in wenigen einfachen Schritten über unser benutzerfreundliches Dashboard.
+SCNX macht das Einrichten und Verwalten verknüpfter Rollen auf deinem eigenen Discord ganz einfach – es ist kein Programmieren erforderlich und die Einrichtung erfolgt in wenigen einfachen Schritten über unser benutzerfreundliches Dashboard.
 
 Um verknüpfte Rollen nutzen zu können, musst du [deinen Server zu SCNX hinzufügen](./../setup) und über einen [kostenpflichtigen Plan](../scnx/guilds/plans) verfügen, der Zugriff auf diese Funktion beinhaltet – wenn du berechtigt bist, kannst du den kostenpflichtigen Plan auch kostenlos testen.
 
@@ -39,8 +39,8 @@ Folgende Funktionen sind auf SCNX verfügbar:
 
 * Einfache Verwaltung von [verknüpften Rollen](./role-managment) im SCNX-Dashboard.
 * [Rollen zuweisen und entfernen](./user-managment) bei Nutzern.
-* Verschiedene Themes für die [Autorisierungsseite](./settings#authorization-page) verfügbar.
+* Verschiedene Farbschemata für die [Autorisierungsseite](./settings#authorization-page) verfügbar.
 * Off-Brand-Optionen mit dem [Professional-Plan](./../scnx/guilds/plans).
 * Autorisierung mit deiner eigenen Discord-App.
 * Du kannst [öffentliche verknüpfte Rollen](./role-managment#public-roles) erstellen, die von jedem Nutzer beansprucht werden können.
-* Ausgezeichneter Kundensupport auf [unserem Discord](https://scootk.it/dc-de) auf Deutsch und Englisch.
+* Exzellenter Kundensupport auf [unserem Discord](https://scootk.it/dc-de) auf Deutsch und Englisch.
