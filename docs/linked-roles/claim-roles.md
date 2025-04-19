@@ -24,6 +24,11 @@ our [troubleshooting page](./troubleshooting), where we go into detail on how to
 
 ## Claim your role on Discord {#claim-role}
 
+:::info This also works on your phone!
+While this guide shows the steps on a desktop device, you can follow the same instructions on your phone to claim your
+Linked Role.
+:::
+
 To get started, please click on the name of the server in Discord. There you'll be able to select the option "Linked
 Roles". A modal showing all available roles will now appear. Select the role you want to claim. Next, you will be shown
 the requirements you need to pass to claim the role. If you already pass the requirement, you can click on "Finish",
@@ -58,3 +63,14 @@ our [troubleshooting guide](./troubleshooting), in particular, the following iss
 
 If you run into other issues or have questions, check or [troubleshooting guide](./troubleshooting) or contact us
 on [scnx.app/help](https://scnx.app/help) - we're always happy to help!
+
+## Remove a claimed role {#remove-claimed-role}
+
+Annoyed by your Linked Role? You can either ask an administrator
+to [remove the Linked Role](./user-managment#remove-role) or you can remove the role yourself.
+
+To do so, open Discord and open your profile on your server. There, hover over the Linked Role you want to remove. You
+will see an "X" on the left side. Click on it to remove your Linked Role. If you ever change your mind, you can
+always [re-claim your Linked Role](#claim-role) unless an administrator removes it from you.
+
+![How to remove a claimed role](@site/docs/assets/linked-roles/claim/remove-role.png)
