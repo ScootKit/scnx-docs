@@ -129,7 +129,7 @@ entering to avoid issues later. For this step, you'll need the **Client Secret**
 
 Once you've entered and saved the Redirect URL, please stay on the "Oauth2 page". Below "Client Information", generate
 the Client secret, by clicking on "Reset Secret" below the "Client Secret" field. Discord might ask you to verify your
-account by entering a 2FA code. Once this is done, you'll be able to copy the Client-ID. Enter the copied value in your
+account by entering a 2FA code. Once this is done, you'll be able to copy the Client secret. Enter the copied value in your
 SCNX Dashboard and click on "Create Linked-Roles" to finish setup.
 
 ![This screenshot shows how to copy the client secret](@site/docs/assets/linked-roles/setup/copy-client-secret.png)
