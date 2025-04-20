@@ -579,5 +579,59 @@
   "theme.unlistedContent.message": {
     "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht listen und nur Nutzer mit Direktlink können auf diese Seite zugreifen.",
     "description": "The unlisted content banner message"
+  },
+  "plans.included.activeGuildNotIncluded": {
+    "message": "Nicht im Unlimited Plan enthalten"
+  },
+  "plans.included.proNotIncluded": {
+    "message": "Nicht im Professional Plan enthalten"
+  },
+  "youtubeHidden.header": {
+    "message": "Durch das Klicken unten, stimmst du der {link} von YouTube zu."
+  },
+  "youtubeHidden.privacyLink": {
+    "message": "Datenschutzerklärung"
+  },
+  "youtubeHidden.button": {
+    "message": "Akzeptieren und YouTube Video laden"
+  },
+  "main.linked-roles": {
+    "message": "Verknüpfte Rollen"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 Eintrag|{count} Einträge",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autoren",
+    "description": "The title of the authors page"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Alle Autoren anzeigen",
+    "description": "The label of the link targeting the blog authors page"
+  },
+  "theme.blog.author.noPosts": {
+    "message": "Dieser Author hat noch keine Posts geschrieben.",
+    "description": "The text for authors with 0 blog post"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Geheime Seite",
+    "description": "The unlisted content banner title"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht speichern und nur Nutzer mit einem Direkt-Link können zugreifen.",
+    "description": "The unlisted content banner message"
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Diese Seite ist ein Entwurf",
+    "description": "The draft content banner title"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird in production nicht angezeigt.",
+    "description": "The draft content banner message"
   }
 }
