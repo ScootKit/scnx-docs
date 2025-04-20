@@ -30,7 +30,7 @@ can [claim the role](./claim-roles) on Discord.
 
 In contrast to actual roles on Discord, Linked Roles can't be directly assigned to members, instead, members will need
 to manually [claim roles on Discord](./claim-roles). After a user has claimed a role, the
-role [can be removed via the SCNX Dashboard](./user-management#remove-role).
+role [can only be removed via the SCNX Dashboard](./user-management#remove-role).
 
 Linked Roles can be displayed in the chat next to the username
 by [configuring chat permissions](./role-management#display-in-chat). While a user can have multiple Linked Roles, only
