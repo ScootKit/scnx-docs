@@ -1,6 +1,6 @@
 ---
 description: Using Linked Roles can be complicated and it's easy to run into issues.
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 # Troubleshooting
@@ -19,10 +19,12 @@ Issues during setup:
 Issues when using Linked Roles:
 
 * [The Linked Role is not displayed in the chat](#display-missing).
-* [Users are not being give the Linked Role](#role-not-given).
+* [Users are not being given the Linked Role](#role-not-given).
 * ["Invalid OAuth2 redirect_url" when claiming Linked Roles](#oauth2-redirect-url).
-* ["No roles were assigned to you" when claiming Linked Roles](#roles-missing)
+* ["No roles were assigned to you" when claiming Linked Roles](#roles-missing).
 * ["Seems like the configuration by the server owner is wrong." when claiming Linked Roles](#generic-api-error).
+* ["The SCNX-Plan of this server expired" when claiming Linked Roles](#plan-expired).
+* ["This feature requires Early Access, which this server does not have anymore" when claiming Linked Roles](#early-access-required).
 
 If your issue isn't listed here, [click here](#other).
 
@@ -46,7 +48,7 @@ When using Linked Roles, you might run into an issue where the role is not displ
 "View channel" permission for the Linked Role in every channel. You
 can [learn more in our guide about this](./role-managment#display-in-chat).
 
-## "Seems like the configuration by the server owner is wrong" when claiming Linked Roles {#generic-api-error}
+### "Seems like the configuration by the server owner is wrong" when claiming Linked Roles {#generic-api-error}
 
 If a step during setup has been missed or a wrong value has been entered, Linked Roles are unable to sync correctly.
 
@@ -63,7 +65,7 @@ Follow these steps to fix this issue:
    carefully, as any mistakes will result in this error re-appearing.
 4. Once you've finished the setup, please retry [claiming the role](./claim-roles).
 
-## "No roles were assigned to you" when claiming Linked Roles {#roles-missing}
+### "No roles were assigned to you" when claiming Linked Roles {#roles-missing}
 
 By default, users need to be assigned roles manually in your dashboard. If no roles were assigned, this error will be
 shown.
@@ -72,7 +74,7 @@ shown.
 the [role public](./role-managment#public-roles) so it can be claimed by everyone. If you believe that a role has been
 assigned, please make sure the user is logged in with the correct account when attempting to claim the role.
 
-## "Invalid OAuth2 redirect_url" when claiming Linked Roles {#oauth2-redirect-url}
+### "Invalid OAuth2 redirect_url" when claiming Linked Roles {#oauth2-redirect-url}
 
 When setting up Linked-Roles, the redirect URL needs to be saved in the Discord Developer Portal; otherwise this error
 will be shown.
@@ -91,12 +93,29 @@ will be shown.
 
 ![This screenshot shows where to paste the copied redirect URL](@site/docs/assets/linked-roles/setup/enter-redirect-url.webp)
 
-## Users are not being given the Linked Role {#role-not-given}
+### Users are not being given the Linked Role {#role-not-given}
 
 When using Linked Roles, users won't receive the role automatically.
 
 **Solution**: Users need to manually [claim the Linked Role](./claim-roles). You can send them a link to our guide:
 [`https://scootk.it/claim-linked-roles`](https://scootk.it/claim-linked-roles).
+
+### "The SCNX-Plan of this server expired" when claiming Linked Roles {#plan-expired}
+
+To use Linked Roles, a plan that includes Linked Roles is required.
+
+**Solution**: Upgrade your plan to a paid plan that includes Linked Roles. Learn more
+about [plans and its features in our documentation](./../scnx/guilds/plans).
+
+### "This feature requires Early Access, which this server does not have anymore" when claiming Linked Roles {#early-access-required}
+
+To use Linked Roles, Early Access is required. Early Access helps us invest money &
+time in developing new features and products. We plan to make this feature available to everyone with Unlimited /
+Professional plan without memberships in late Q2 2025.
+
+**Solution**: The server needs at least one owner or [trusted admin](./../scnx/guilds/trusted-admins) with Early Access.
+Early access can be purchased with a [ScootKit Membership](https://membership.scootkit.com). You can also consider
+waiting a few months for the feature to be made available for everyone.
 
 ## Other issues {#other}
 
