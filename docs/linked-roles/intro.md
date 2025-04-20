@@ -12,7 +12,7 @@ time in developing new features and products. We plan to make this feature avail
 Professional plan without memberships in late Q2 2025.
 :::
 
-Linked-Roles allow you, to display the role of a user next to their name on your Discord server. To do this, the user
+Linked Roles allow you to display the role of a user next to their name on your Discord server. To do this, the user
 needs to authorize with your Discord Bot and claim their role manually. Displaying the role next to the username makes
 your Discord appear professionally and increases the user experience on your Discord server; your users can see at a
 glance that they are talking to a staff member, to a moderator or to an admin.
