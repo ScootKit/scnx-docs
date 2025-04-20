@@ -15,8 +15,8 @@ Hier ist die URL zum Teilen: [`https://scootk.it/claim-linked-roles`](https://sc
 ## Voraussetzungen {#requirements}
 
 Bevor du deine verknüpfte Rolle beanspruchen kannst, muss ein Administrator die
-[verknüpfte Rolle auf SCNX erstellt](./role-managment#create-linked-scnx-role), [sie auf Discord konfiguriert](./role-managment#linked-role-on-discord)
-und dir dann die [Rolle zugewiesen](./user-managment#add-role) haben. Wenn diese Schritte nicht abgeschlossen sind, kannst du deine Rolle nicht beanspruchen.
+[verknüpfte Rolle auf SCNX erstellt](./role-management#create-linked-scnx-role), [sie auf Discord konfiguriert](./role-management#linked-role-on-discord)
+und dir dann die [Rolle zugewiesen](./user-management#add-role) haben. Wenn diese Schritte nicht abgeschlossen sind, kannst du deine Rolle nicht beanspruchen.
 
 Wenn du beim Befolgen dieser Anleitung auf Probleme stößt, wende dich bitte an deinen Serveradministrator und verlinke ihn mit
 unserer [Seite zur Fehlerbehebung](./troubleshooting), wo wir detailliert auf die Behebung von Problemen eingehen.
@@ -57,7 +57,7 @@ unter [scnx.app/help](https://scnx.app/help) – wir helfen dir gerne weiter!
 ## Eine beanspruchte Rolle entfernen {#remove-claimed-role}
 
 Genervt von deiner verknüpften Rolle? Du kannst entweder einen Administrator bitten, die
-[verknüpfte Rolle zu entfernen](./user-managment#remove-role) oder du kannst die Rolle selbst entfernen.
+[verknüpfte Rolle zu entfernen](./user-management#remove-role) oder du kannst die Rolle selbst entfernen.
 
 Öffne dazu Discord und öffne dein Profil auf deinem Server. Bewege dort den Mauszeiger über die verknüpfte Rolle, die du entfernen möchtest. Du
 siehst ein „X“ auf der linken Seite. Klicke darauf, um deine verknüpfte Rolle zu entfernen. Wenn du es dir jemals anders überlegst, kannst du

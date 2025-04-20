@@ -15,7 +15,7 @@ gib ihnen diese Anleitung, damit sie Nutzer bearbeiten können!
 
 ## Verknüpfte Rolle hinzufügen {#add-role}
 
-Bevor du einem Nutzer eine Rolle zuweist, stelle sicher, dass du die [verknüpfte Rolle erstellt hast](./role-managment#create-linked-scnx-role).
+Bevor du einem Nutzer eine Rolle zuweist, stelle sicher, dass du die [verknüpfte Rolle erstellt hast](./role-management#create-linked-scnx-role).
 Du benötigst außerdem die Nutzer-ID des Nutzers, den du hinzufügen möchtest. Um diese Nutzer-ID zu erhalten,
 folge [dieser Anleitung von Discord](https://support.discord.com/hc/de/articles/206346498-Wo-kann-ich-meine-Benutzer-Server-Nachrichten-ID-finden).
 
@@ -24,7 +24,7 @@ Klicke auf
 „Nutzer hinzufügen“, um einen weiteren Nutzer hinzuzufügen.
 
 Gib als Nächstes die zuvor kopierte Nutzer-ID ein, gib optional eine Tagline ein und wähle aus, welche Rollen der Nutzer erhalten soll.
-Bitte beachte, dass [öffentliche Rollen](./role-managment#public-roles) nicht zugewiesen oder entfernt werden können, da diese Rollen von
+Bitte beachte, dass [öffentliche Rollen](./role-management#public-roles) nicht zugewiesen oder entfernt werden können, da diese Rollen von
 jedem Nutzer beansprucht werden können.
 
 ![Screenshot der Nutzeroberfläche für die Nutzerverwaltung](@site/docs/assets/linked-roles/add-role.png)
@@ -36,7 +36,7 @@ zu unserer Anleitung senden, damit er weiß, was zu tun ist:
 ## Nutzerrollen verwalten {#remove-role}
 
 :::info Öffentliche Rollen können nicht entfernt werden
-Alle [öffentlichen Rollen](./role-managment#public-roles) können nicht von Nutzern entfernt werden, da sie von jedem Nutzer beansprucht werden können.
+Alle [öffentlichen Rollen](./role-management#public-roles) können nicht von Nutzern entfernt werden, da sie von jedem Nutzer beansprucht werden können.
 :::
 
 Um die verknüpften Rollen eines Nutzers zu verwalten, öffne die [Nutzerseite für verknüpfte Rollen](https://scnx.app/de/glink?page=linked-roles/users)
@@ -59,4 +59,4 @@ nach Rollen filtern, um den gewünschten Nutzer zu finden.
 Sobald du den Nutzer gefunden hast, klicke auf seinen Dashboard-Eintrag, um die Nutzeroberfläche für die Nutzerverwaltung anzuzeigen. Dort kannst du
 auf „Nutzer entfernen“ klicken, um die Nutzerdaten zu löschen. Das Entfernen des Nutzers führt dazu, dass alle seine Rollen entfernt werden und
 er sich erneut autorisieren muss, wenn er plant, Rollen erneut zu beanspruchen. Bitte beachte, dass dies Nutzer nicht daran hindert,
-[öffentliche Rollen](./role-managment#public-roles) jederzeit erneut zu beanspruchen.
+[öffentliche Rollen](./role-management#public-roles) jederzeit erneut zu beanspruchen.
