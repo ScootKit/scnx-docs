@@ -48,7 +48,7 @@ authorization.
 SCNX makes it easy to set up and manage Linked Roles on your very own Discord - there's no coding required and setup can
 be done in a few easy steps in our easy-to-use dashboard.
 
-To use Linked Roles, you need [add your server to SCNX](./../setup) and to have a [paid plan](../scnx/guilds/plans) that
+To use Linked Roles, you need to [add your server to SCNX](./../setup) and have a [paid plan](../scnx/guilds/plans) that
 includes access to this feature - you can also try a paid plan for free if you are eligible.
 
 ### Features of Linked Roles on SCNX {#scnx-features}
