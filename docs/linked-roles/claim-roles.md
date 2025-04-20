@@ -15,8 +15,8 @@ Here's the URL to share: [`https://scootk.it/claim-linked-roles`](https://scootk
 ## Requirements {#requirements}
 
 Before you can claim your Linked Role, an administrator needs to
-have [created the Linked-Role on SCNX](./role-managment#create-linked-scnx-role), [configure it on Discord](./role-managment#linked-role-on-discord)
-and then [assign the role](./user-managment#add-role) to you. If these steps aren't finished, you won't be able to claim
+have [created the Linked-Role on SCNX](./role-management#create-linked-scnx-role), [configure it on Discord](./role-management#linked-role-on-discord)
+and then [assign the role](./user-management#add-role) to you. If these steps aren't finished, you won't be able to claim
 your role.
 
 If you run into issues when following this guide, please contact your server administrator and link them to
@@ -67,7 +67,7 @@ on [scnx.app/help](https://scnx.app/help) - we're always happy to help!
 ## Remove a claimed role {#remove-claimed-role}
 
 Annoyed by your Linked Role? You can either ask an administrator
-to [remove the Linked Role](./user-managment#remove-role) or you can remove the role yourself.
+to [remove the Linked Role](./user-management#remove-role) or you can remove the role yourself.
 
 To do so, open Discord and open your profile on your server. There, hover over the Linked Role you want to remove. You
 will see an "X" on the left side. Click on it to remove your Linked Role. If you ever change your mind, you can

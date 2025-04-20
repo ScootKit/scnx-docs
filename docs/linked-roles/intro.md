@@ -24,16 +24,16 @@ Here's how Linked-Roles could look on your server:
 ## How it works {#how-it-works}
 
 To use Linked Roles, you'll need to first [set up Linked Roles](./../linked-roles) on your server. Once done, you
-can [create and configure Linked Roles](./role-managment) on SCNX and Discord which can
-be [assigned to users](./user-managment). Once a linked role has been assigned to a user, the user
+can [create and configure Linked Roles](./role-management) on SCNX and Discord which can
+be [assigned to users](./user-management). Once a linked role has been assigned to a user, the user
 can [claim the role](./claim-roles) on Discord.
 
 In contrast to actual roles on Discord, Linked Roles can't be directly assigned to members, instead, members will need
 to manually [claim roles on Discord](./claim-roles). After a user has claimed a role, the
-role [can be removed via the SCNX Dashboard](./user-managment#remove-role).
+role [can be removed via the SCNX Dashboard](./user-management#remove-role).
 
 Linked Roles can be displayed in the chat next to the username
-by [configuring chat permissions](./role-managment#display-in-chat). While a user can have multiple Linked Roles, only
+by [configuring chat permissions](./role-management#display-in-chat). While a user can have multiple Linked Roles, only
 one can be displayed in a chat. Roles with a higher position on your Discord will be displayed with a higher priority.
 Having a Linked Role does not remove the role icon of another role.
 
@@ -54,16 +54,16 @@ includes access to this feature - you can also try a paid plan for free if you a
 ### Features of Linked Roles on SCNX {#scnx-features}
 
 Linked Roles on SCNX makes using Linked Roles on your server easy. While [initial setup](./../linked-roles) takes a few
-minutes, later management of [roles](./role-managment) and [member roles](./user-managment) is straightforward.
+minutes, later management of [roles](./role-management) and [member roles](./user-management) is straightforward.
 Additionally, SCNX
 offers multiple features and customizability options.
 
 The following features are available on SCNX:
 
-* Easy management of [Linked Roles](./role-managment) in the SCNX Dashboard.
-* [Assign and remove](./user-managment) roles from users.
+* Easy management of [Linked Roles](./role-management) in the SCNX Dashboard.
+* [Assign and remove](./user-management) roles from users.
 * Multiple themes available for the [authorization page](./settings#authorization-page).
 * Off-Brand options available with the [Professional Plan](./../scnx/guilds/plans).
 * Authorization with your custom Discord App.
-* You can set up [public linked roles](./role-managment#public-roles) that can be claimed by any user.
+* You can set up [public linked roles](./role-management#public-roles) that can be claimed by any user.
 * Excellent customer support on [our Discord](https://scootk.it/dc-en) in English and German.

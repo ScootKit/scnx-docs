@@ -33,10 +33,10 @@ To set up a Linked Role on Discord, please follow these steps:
 3. There, click on "Add requirement".
 4. Select your bot in the "Apps" section.
 5. Select the desired Linked Role. The role you select needs to
-   be [assigned to users on SCNX](./user-managment#add-role) to claim the newly created Discord role.
+   be [assigned to users on SCNX](./user-management#add-role) to claim the newly created Discord role.
 
 Once you've finished these steps your members can [can claim the role](./claim-roles.md), if they have
-been [assigned the Linked Role](./user-managment#add-role).
+been [assigned the Linked Role](./user-management#add-role).
 To actually display the role next to the username of a user, you'll need
 to [setup permissions correctly](#display-in-chat).
 
@@ -58,7 +58,7 @@ After making a role public, you can't undo this decision. If you want to make a 
 to [delete the role](#delete-role).
 :::
 
-By default, rules need to manually be [assigned to members](./user-managment). Enabling the "Public role" option, allows
+By default, rules need to manually be [assigned to members](./user-management). Enabling the "Public role" option, allows
 roles to be claimed by any user on your Discord and removes your ability to manually assign or remove the role. This
 might be helpful if you want a "Member"-role to be displayed next to users in chat.
 
@@ -66,7 +66,7 @@ After creating a role, you can manage it
 in your [Linked Roles dashboard](https://scnx.app/glink?page=linked-roles/roles), where you can enable the "Public role"
 option for your role. Once you've enabled the "Public role" option, all users can [claim the role](./claim-roles) on
 your Discord without any
-additional checks. While you can manually [remove users](./user-managment#delete-user) in the dashboard, they will be
+additional checks. While you can manually [remove users](./user-management#delete-user) in the dashboard, they will be
 able to re-claim the role again since the role is public.
 
 ![This screenshot shows where the \"Public role\" role can be found](@site/docs/assets/linked-roles/role-managment/public-role.png)

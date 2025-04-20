@@ -15,7 +15,7 @@ share this guide with them to allow them to edit users!
 
 ## Add Linked Role {#add-role}
 
-Before assigning a role to a user, make sure you've [created the Linked Role](./role-managment#create-linked-scnx-role).
+Before assigning a role to a user, make sure you've [created the Linked Role](./role-management#create-linked-scnx-role).
 You'll also need the User-ID of the user you want to add. To get this user ID,
 follow [this guide from Discord](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID).
 
@@ -24,7 +24,7 @@ Click on
 "Add user" to add another user.
 
 Next, enter the User-ID you previously copied, enter an optional tagline and select which roles the user should receive.
-Please note that [public roles](./role-managment#public-roles) can't be assigned or removed, as these roles can be
+Please note that [public roles](./role-management#public-roles) can't be assigned or removed, as these roles can be
 claimed by any user.
 
 ![Screenshot showing the user management interface](@site/docs/assets/linked-roles/add-role.png)
@@ -36,7 +36,7 @@ to our guide, so they know what to do:
 ## Manage user roles {#remove-role}
 
 :::info Public roles can't be removed
-Any [public roles](./role-managment#public-roles) can't be removed from users, as they can be claimed by any user.
+Any [public roles](./role-management#public-roles) can't be removed from users, as they can be claimed by any user.
 :::
 
 To manage the Linked Roles of a user, open the [Linked Roles user page](https://scnx.app/glink?page=linked-roles/users)
@@ -59,4 +59,4 @@ filter by roles to find the desired user.
 Once you have located the user, click on their dashboard entry to view the user management interface. There, you can
 click on "Delete user" to delete the user data. Deleting the user will result in all of their roles being removed and
 them needing to re-authorize if they plan to claim roles again. Please note that this won't prevent users from
-re-claiming [public roles](./role-managment#public-roles) at any time.
+re-claiming [public roles](./role-management#public-roles) at any time.

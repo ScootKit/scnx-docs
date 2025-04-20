@@ -32,7 +32,7 @@ If your issue isn't listed here, [click here](#other).
 
 ### Can't save Link requirement on Discord role {#link-requirement}
 
-When [setting up a Linked Role on Discord](./role-managment#linked-role-on-discord), you might run into an "Invalid
+When [setting up a Linked Role on Discord](./role-management#linked-role-on-discord), you might run into an "Invalid
 role" error when adding the Link requirement to a Discord role.
 
 **Solution**: You can't add Link requirements to roles that has members. Consider removing the role from all of your
@@ -46,7 +46,7 @@ When using Linked Roles, you might run into an issue where the role is not displ
 
 **Solution**: To display the Linked Role next to the username, you'll need to create a permission overwrite with the
 "View channel" permission for the Linked Role in every channel. You
-can [learn more in our guide about this](./role-managment#display-in-chat).
+can [learn more in our guide about this](./role-management#display-in-chat).
 
 ### "Seems like the configuration by the server owner is wrong" when claiming Linked Roles {#generic-api-error}
 
@@ -70,8 +70,8 @@ Follow these steps to fix this issue:
 By default, users need to be assigned roles manually in your dashboard. If no roles were assigned, this error will be
 shown.
 
-**Solution**: [Assign roles to the user in question](./user-managment#add-role) or make
-the [role public](./role-managment#public-roles) so it can be claimed by everyone. If you believe that a role has been
+**Solution**: [Assign roles to the user in question](./user-management#add-role) or make
+the [role public](./role-management#public-roles) so it can be claimed by everyone. If you believe that a role has been
 assigned, please make sure the user is logged in with the correct account when attempting to claim the role.
 
 ### "Invalid OAuth2 redirect_url" when claiming Linked Roles {#oauth2-redirect-url}

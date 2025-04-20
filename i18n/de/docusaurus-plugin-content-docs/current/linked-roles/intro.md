@@ -17,11 +17,11 @@ So könnten verknüpfte Rollen auf deinem Server aussehen:
 
 ## So funktioniert es {#how-it-works}
 
-Um verknüpfte Rollen nutzen zu können, musst du zunächst auf deinem Server [verknüpfte Rollen einrichten](./../linked-roles). Danach kannst du auf SCNX und Discord [verknüpfte Rollen erstellen und konfigurieren](./role-managment), die dann [Nutzern zugewiesen werden können](./user-managment). Sobald eine verknüpfte Rolle einem Nutzer zugewiesen wurde, kann dieser sie [auf Discord beanspruchen](./claim-roles).
+Um verknüpfte Rollen nutzen zu können, musst du zunächst auf deinem Server [verknüpfte Rollen einrichten](./../linked-roles). Danach kannst du auf SCNX und Discord [verknüpfte Rollen erstellen und konfigurieren](./role-management), die dann [Nutzern zugewiesen werden können](./user-management). Sobald eine verknüpfte Rolle einem Nutzer zugewiesen wurde, kann dieser sie [auf Discord beanspruchen](./claim-roles).
 
-Im Gegensatz zu regulären Discord-Rollen können verknüpfte Rollen nicht direkt zugewiesen werden – die Mitglieder müssen sie manuell [auf Discord beanspruchen](./claim-roles). Nachdem ein Nutzer eine Rolle beansprucht hat, kann diese [über das SCNX-Dashboard entfernt werden](./user-managment#remove-role).
+Im Gegensatz zu regulären Discord-Rollen können verknüpfte Rollen nicht direkt zugewiesen werden – die Mitglieder müssen sie manuell [auf Discord beanspruchen](./claim-roles). Nachdem ein Nutzer eine Rolle beansprucht hat, kann diese [über das SCNX-Dashboard entfernt werden](./user-management#remove-role).
 
-Verknüpfte Rollen können im Chat neben dem Benutzernamen angezeigt werden, indem du die [Chat-Berechtigungen konfigurierst](./role-managment#display-in-chat). Ein Nutzer kann zwar mehrere verknüpfte Rollen besitzen, aber es kann jeweils nur eine im Chat angezeigt werden. Rollen mit höherer Position im Discord werden mit höherer Priorität angezeigt. Eine verknüpfte Rolle ersetzt nicht das Rollensymbol einer anderen Rolle.
+Verknüpfte Rollen können im Chat neben dem Benutzernamen angezeigt werden, indem du die [Chat-Berechtigungen konfigurierst](./role-management#display-in-chat). Ein Nutzer kann zwar mehrere verknüpfte Rollen besitzen, aber es kann jeweils nur eine im Chat angezeigt werden. Rollen mit höherer Position im Discord werden mit höherer Priorität angezeigt. Eine verknüpfte Rolle ersetzt nicht das Rollensymbol einer anderen Rolle.
 
 Um [eine verknüpfte Rolle zu beanspruchen](./claim-roles), müssen sich Nutzer mit deiner benutzerdefinierten Discord-Anwendung über eine [anpassbare Autorisierungsseite](./settings#authorization-page) autorisieren. Anschließend werden sie zurück zu Discord geleitet, wo sie ihre Rolle beanspruchen können. Nach der Autorisierung können zukünftige Rollenänderungen beansprucht werden, ohne dass eine erneute Autorisierung erforderlich ist.
 
@@ -33,14 +33,14 @@ Um verknüpfte Rollen nutzen zu können, musst du [deinen Server zu SCNX hinzuf�
 
 ### Funktionen verknüpfter Rollen auf SCNX {#scnx-features}
 
-Verknüpfte Rollen auf SCNX machen die Nutzung auf deinem Server besonders einfach. Während die [Ersteinrichtung](./../linked-roles) nur wenige Minuten dauert, ist auch die spätere Verwaltung von [Rollen](./role-managment) und [Mitgliedsrollen](./user-managment) unkompliziert. Darüber hinaus bietet SCNX zahlreiche Funktionen und Anpassungsmöglichkeiten.
+Verknüpfte Rollen auf SCNX machen die Nutzung auf deinem Server besonders einfach. Während die [Ersteinrichtung](./../linked-roles) nur wenige Minuten dauert, ist auch die spätere Verwaltung von [Rollen](./role-management) und [Mitgliedsrollen](./user-management) unkompliziert. Darüber hinaus bietet SCNX zahlreiche Funktionen und Anpassungsmöglichkeiten.
 
 Folgende Funktionen sind auf SCNX verfügbar:
 
-* Einfache Verwaltung von [verknüpften Rollen](./role-managment) im SCNX-Dashboard.
-* [Rollen zuweisen und entfernen](./user-managment) bei Nutzern.
+* Einfache Verwaltung von [verknüpften Rollen](./role-management) im SCNX-Dashboard.
+* [Rollen zuweisen und entfernen](./user-management) bei Nutzern.
 * Verschiedene Farbschemata für die [Autorisierungsseite](./settings#authorization-page) verfügbar.
 * Off-Brand-Optionen mit dem [Professional-Plan](./../scnx/guilds/plans).
 * Autorisierung mit deiner eigenen Discord-App.
-* Du kannst [öffentliche verknüpfte Rollen](./role-managment#public-roles) erstellen, die von jedem Nutzer beansprucht werden können.
+* Du kannst [öffentliche verknüpfte Rollen](./role-management#public-roles) erstellen, die von jedem Nutzer beansprucht werden können.
 * Exzellenter Kundensupport auf [unserem Discord](https://scootk.it/dc-de) auf Deutsch und Englisch.

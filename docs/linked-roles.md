@@ -142,7 +142,7 @@ Your new Linked Role Bot won't stay online unless you use another SCNX product w
 
 Finally, finish setup by inviting the Linked Roles Bot to your server. Do so by clicking "Invite Linked-Roles-Bot" in
 the dashboard. Once done, you can continue by creating your first Linked Role. To learn more about that, continue in
-our [Role management documentation](./linked-roles/role-managment#create-linked-scnx-role), where we explain how to
+our [Role management documentation](./linked-roles/role-management#create-linked-scnx-role), where we explain how to
 create your Linked Roles on SCNX and on Discord. You can also jump
 to [the Linked Roles index page](/docs/linked-roles/overview) if you are looking for something else to continue with.
 
