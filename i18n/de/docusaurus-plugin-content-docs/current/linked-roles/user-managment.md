@@ -17,7 +17,7 @@ gib ihnen diese Anleitung, damit sie Nutzer bearbeiten können!
 
 Bevor du einem Nutzer eine Rolle zuweist, stelle sicher, dass du die [verknüpfte Rolle erstellt hast](./role-managment#create-linked-scnx-role).
 Du benötigst außerdem die Nutzer-ID des Nutzers, den du hinzufügen möchtest. Um diese Nutzer-ID zu erhalten,
-folge [dieser Anleitung von Discord](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID).
+folge [dieser Anleitung von Discord](https://support.discord.com/hc/de/articles/206346498-Wo-kann-ich-meine-Benutzer-Server-Nachrichten-ID-finden).
 
 Sobald du die Nutzer-ID kopiert hast, öffne die [Nutzerseite für verknüpfte Rollen](https://scnx.app/de/glink?page=linked-roles/users).
 Klicke auf
