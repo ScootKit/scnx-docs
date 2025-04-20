@@ -44,7 +44,7 @@ confirming that the roles have been applied successfully. You can close this win
 ![How to authorize your account](@site/docs/assets/linked-roles/claim/2.png)
 
 Once done, go back to Discord. There, you will be prompted to confirm the connection by clicking on "Done". After that,
-you can finally claim the Liked Role by clicking "Finish". Discord will grant you the Linked Role now, which will also
+you can finally claim the Linked Role by clicking "Finish". Discord will grant you the Linked Role now, which will also
 appear in your member profile.
 
 ![Final step to claim the role](@site/docs/assets/linked-roles/claim/3.png)
