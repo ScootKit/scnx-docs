@@ -15,7 +15,7 @@ Here's the URL to share: [`https://scootk.it/claim-linked-roles`](https://scootk
 ## Requirements {#requirements}
 
 Before you can claim your Linked Role, an administrator needs to
-have [created the Linked-Role on SCNX](./role-management#create-linked-scnx-role), [configure it on Discord](./role-management#linked-role-on-discord)
+have [created the Linked Role on SCNX](./role-management#create-linked-scnx-role), [configure it on Discord](./role-management#linked-role-on-discord)
 and then [assign the role](./user-management#add-role) to you. If these steps aren't finished, you won't be able to claim
 your role.
 
