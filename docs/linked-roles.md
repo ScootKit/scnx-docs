@@ -37,7 +37,7 @@ we're working on an English translation.
 
 ## 0. Pre-Flight-Checklist 🛫 {#step-0}
 
-Before you can create your own Modmail on SCNX, please make sure that
+Before you can enable Linked Roles on your server, please ensure that
 
 * you have [added your Server to SCNX](./setup).
 * your server has the paid [Unlimited](./scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
