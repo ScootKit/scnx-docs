@@ -16,7 +16,7 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 
 1. Wähle (oder erstelle) eine Rolle. Die Aktivität von Nutzern mit dieser Rolle wird gewertet.
 2. [Konfiguriere das Modul](#configuration).
-3. [Setze bitte Berechtigungen](./../../slash-commands) für Slash-Befehle, um unerlaubte Nutzung zu unterbinden.
+3. [Setze bitte Berechtigungen](/docs/custom-bot/slash-commands) für Slash-Befehle, um unerlaubte Nutzung zu unterbinden.
 4. Gebe Mitgliedern, deren Aktivität ausgewertet werden soll, die Rolle.
 
 ## Nutzung {#usage}
@@ -71,7 +71,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
   <summary>Wie kann ich die Zeit verändern, wann Nutzer ausgewertet werden?</summary>
 
   Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren, 
-  die <a href="./../../additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
+  die <a href="/docs/custom-bot/additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
 </details>
 
 <details>
@@ -117,4 +117,4 @@ Das folgende wird bei jeder [Auswertung](#module-terms) für jeden Nutzer gespei
 Es gibt keine Möglichkeit, den Nutzer-Eintrag oder den Zielverlauf-Eintrag aus der Datenbank zu entfernen.
 Nachrichten, die von Nutzern ohne eine [konfigurierte Team-Rolle](#configuration) gesendet werden, werden niemals gezählt und erstellen keinen Nutzer-Eintrag.
 
-Um alle Daten zu löschen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database).
+Um alle Daten zu löschen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).

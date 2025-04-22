@@ -23,7 +23,7 @@ the [server settings page](https://scnx.app/glink?page=settings) of your server 
 
 ## Setup {#setup}
 
-Before you start, make sure that you have create a [CustomBot](./../../custom-bot/intro) that has the "Create invites" permission on your server.
+Before you start, make sure that you have create a [CustomBot](/docs/custom-bot/intro) that has the "Create invites" permission on your server.
 
 To get started, visit the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX. Scroll
 down to the "dcserver.link-URL" section and click on "Get started".
@@ -93,7 +93,7 @@ are, however, a few exemptions:
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
 
-    When a server is <a href="./faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
+    When a server is <a href="/docs/scnx/guilds/faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.
 </details>

@@ -70,4 +70,4 @@ The bot also stores the following data about every user that has reacted to a me
 
 Once a day, all starboard user data older than one hour is removed from the database.
 You can remove a starboard message from the database by removing all reactions from it. To
-remove all starboard related data, [purge the module database](./../../additional-features#reset-module-database).
+remove all starboard related data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

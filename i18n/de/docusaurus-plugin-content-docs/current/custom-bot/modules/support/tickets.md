@@ -33,7 +33,7 @@ Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 
 In dieser Datei kannst du die Ticket-Kategorie einstellen. Jedes Ticket hat seine eigene Ticket-Erstellungs-Nachricht haben, welche in den eingestellten Kanal gesendet wird. Die Ticket-Kategorie wird unabhängig von den anderen Kategorien agieren. Du kannst die [Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=tickets|config) öffnen, um zu loszulegen.
 
-Es ist nicht möglich, mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nachricht zu senden. Wenn du kein PRO Nutzer bist und die Felder eine andere Sprache haben sollten, kannst du die [Sprache von deinem Bot wechseln](./../../../scnx/guilds/bots#bot-language).
+Es ist nicht möglich, mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nachricht zu senden. Wenn du kein PRO Nutzer bist und die Felder eine andere Sprache haben sollten, kannst du die [Sprache von deinem Bot wechseln](/docs/scnx/guilds/bots#bot-language).
 
 | Feld                                | Beschreibung                                                                                                                                                                                         |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -85,4 +85,4 @@ Die folgenden Daten werden über die Ticketerstellungs-Nachricht (mit denen Nutz
 Ticket-Protokolle werden verschlüsselt und dann auf [ScootKit Paste](https://paste.scootkit.net) hochgeladen, einem Dienst, der auf [PrivateBin](https://github.com/PrivateBin/PrivateBin) basiert. Das bedeutet, dass Scootkit Ticket-Protokolle nicht entschlüsseln kann. Ticket-Protokolle werden in deinem Browser entschlüsselt, wenn du auf die URL klickst hast. Dies passiert zur zur Sicherheit deiner Nutzer. Ticket-Protkolle werden nach einem Jahr automatisch gelöscht.
 
 Du kannst keine Tickets aus der Datenbank löschen.
-Um alle Daten über Tickets zu löschen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database).
+Um alle Daten über Tickets zu löschen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).

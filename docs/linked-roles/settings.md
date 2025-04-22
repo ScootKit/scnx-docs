@@ -10,7 +10,7 @@ At SCNX, we're always about offering as many configuration options as possible. 
 
 ## Authorization page {#authorization-page}
 
-The authorization page is the page that users need to open when [claiming their role](./claim-roles) before being
+The authorization page is the page that users need to open when [claiming their role](/docs/linked-roles/claim-roles) before being
 redirected to Discord. The page features a short explainer, your server name and image.
 
 You can configure the following attributes of your authorization page:
@@ -21,7 +21,7 @@ You can configure the following attributes of your authorization page:
   your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration).
 * Disable or enable a short advertisement for SCNX on your authorization page. When enabled, the page will include a
   short message about the features of the SCNX platform. Servers with
-  a [paid plan that has the off-brand functionality](./../scnx/guilds/plans)
+  a [paid plan that has the off-brand functionality](/docs/scnx/guilds/plans)
   will have this feature disabled by default. Servers without such a plan won't be able to remove the message.
 
 To adjust these fields and see a live preview of themes and changes,
@@ -34,7 +34,7 @@ adjust the fields there.
 
 You can review your authentification details used by your Linked Roles to communicate with Discord on
 your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration). These values are helpful
-if you missed a step during [setup](./../linked-roles). You won't be able to see entered tokens or secrets for security
+if you missed a step during [setup](/docs/linked-roles). You won't be able to see entered tokens or secrets for security
 reasons.
 
 You can always [reset the details](#reset-auth-details) if you want to change your token or OAuth2 secret.
@@ -44,9 +44,9 @@ You can always [reset the details](#reset-auth-details) if you want to change yo
 To reset the authentication details of your Linked Roles, visit
 your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration). There, click on "Reset
 authentification details" to reset the authentification details. While resetting authentification details does not
-delete your Linked Roles and role assignments, you'll need to redo the [setup steps](./../linked-roles). If you use a
+delete your Linked Roles and role assignments, you'll need to redo the [setup steps](/docs/linked-roles). If you use a
 different bot after resetting, you'll need to remove the old bot from your server and instruct your members
-to [claim their roles](./claim-roles) again.
+to [claim their roles](/docs/linked-roles/claim-roles) again.
 
 ![Screenshot where the \"Reset authentification details\" is located](@site/docs/assets/linked-roles/reset.png)
 

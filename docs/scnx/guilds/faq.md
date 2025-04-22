@@ -10,14 +10,14 @@ Frequently asked questions about how servers work on SCNX.
 
 Only the owner can sign up a new Discord-Server to SCNX. The reason for this is legal and based on
 our [Terms of Service](https://sc-net.work/scnx-tos) - we might change this in the future. For now, you can simply ask
-the owner to [set up SCNX](./../../setup) on their server and ask them to give
-you [trusted admin permissions](./trusted-admins).
+the owner to [set up SCNX](/docs/setup) on their server and ask them to give
+you [trusted admin permissions](/docs/scnx/guilds/trusted-admins).
 
 ---
 
 ## Can I create multiple Discord-Bots for a server? {#multiple-bots}
 
-Sort of - you can create one [Custom Bot](../../custom-bot/intro) and one [Modmail Bot](../../modmail/intro) per
+Sort of - you can create one [Custom Bot](/docs/custom-bot/intro) and one [Modmail Bot](/docs/modmail/intro) per
 server. But you can not split features of the Custom-Bot into multiple bots (for example one bot for just
 Temp-Channels). While you can add your bot to other servers, they won't work on them.
 The reason for it is that hosting more bots would be very expensive for us, but the even bigger reason is the very
@@ -29,7 +29,7 @@ We designed our system to replace often multiple generic bots on a server by one
 ## Can I remove the SCNX Management Bot? {#scnx-manager-bot}
 
 Yes. Simply kick the bot from your server. Servers without the SCNX-Bot can't use SCNX-Bot features,
-like [backups](./backups) or [analytics](./analytics). All hosting features, including all features of your bots, are
+like [backups](/docs/scnx/guilds/backups) or [analytics](/docs/scnx/guilds/analytics). All hosting features, including all features of your bots, are
 unaffected.
 
 ---

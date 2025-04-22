@@ -9,8 +9,8 @@ You can also send this document to your support team so they understand how the 
 ## Creating and processing tickets {#basics}
 
 Users can create tickets by either sending a direct message to the Modmail-Bot or using a button below
-an [information message](./configuration/modmail-info). When a user opens a ticket, they
-can [select a Ticket Topic](./advanced-features/ticket-topics) if enabled. Once done, a ticket channel will be created
+an [information message](/docs/modmail/configuration/modmail-info). When a user opens a ticket, they
+can [select a Ticket Topic](/docs/modmail/advanced-features/ticket-topics) if enabled. Once done, a ticket channel will be created
 in which staff members can send messages. Messages sent into this channel will be transmitted to the user via a direct
 message, where the user can reply. Any messages sent via DM to the bot will automatically show up in the ticket channel.
 
@@ -20,31 +20,31 @@ configure the correct permissions for the ticket category. Sometimes, you might 
 be shown to your user. For this, you can send [anonymous messages](#anonymous-messages).
 
 In big servers, tickets might need to be assigned to specific staff members. For this,
-the [Claiming](./advanced-features/ticket-claiming) feature can be used.
+the [Claiming](/docs/modmail/advanced-features/ticket-claiming) feature can be used.
 
-Once a ticket has been resolved, the staff members (and the user if [configured](./configuration/ticket-close)) can
+Once a ticket has been resolved, the staff members (and the user if [configured](/docs/modmail/configuration/ticket-close)) can
 close the ticket using the `/close` slash-command.
 
 When a ticket gets closed, a transcript called "Log" will be generated. The transcript will be sent into
-a [Log channel](./configuration/bot-configuration) and can also be sent to the user,
-if [configured](./configuration/ticket-close).
+a [Log channel](/docs/modmail/configuration/bot-configuration) and can also be sent to the user,
+if [configured](/docs/modmail/configuration/ticket-close).
 
 Sometimes similar information needs to be collected from users to process their requests. For
-this [Forms](./advanced-features/forms) can be created that allow users to enter required information using a native
+this [Forms](/docs/modmail/advanced-features/forms) can be created that allow users to enter required information using a native
 form. To send a form to a user, use the `/form` command.
 
-When closing a ticket, the user will receive a notification that [can be configured](./configuration/bot-configuration).
-You can also collect feedback from users using the [Feedback](./advanced-features/support-feedback) feature.
+When closing a ticket, the user will receive a notification that [can be configured](/docs/modmail/configuration/bot-configuration).
+You can also collect feedback from users using the [Feedback](/docs/modmail/advanced-features/support-feedback) feature.
 
 Staff members can monitor support activity and optimize support processes using
-the [Analytics](./advanced-features/analytics) feature.
+the [Analytics](/docs/modmail/advanced-features/analytics) feature.
 
 ## Snippets {#snippets}
 
 Sometimes, similar or repetitive messages need to be sent to users. To avoid typing out the same message over and over,
 snippets can be used. Snippets are text-modules that staff members can create and use in tickets. Each snippet has their
 own unique Snippet-Key that can be set when creating a snippet. Optionally, you can also attach
-a [form](./advanced-features/forms) to a snippet to avoid typing multiple commands to send a snippet and a form at the
+a [form](/docs/modmail/advanced-features/forms) to a snippet to avoid typing multiple commands to send a snippet and a form at the
 same time. Snippets can also include buttons that allow users to close the ticket directly.
 
 <SlashCommandExplanation />
@@ -63,12 +63,12 @@ To manage snippets, the following commands are available to staff members:
 * Create a new snippet with `/snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Enter a new,
   unused snippet key as the `key` parameter. If you want to give users the option to directly close tickets using
   buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
-  a [form](./advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
+  a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
   will appear in which you can enter your snippet content.
 * To edit an existing snippet, use `/snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Select an
   existing snippet as the `key` parameter. If you want to give users the option to directly close tickets using
   buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
-  a [form](./advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
+  a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
   will appear in which you can edit your snippet key and content.
 * To delete a snippet, use the `/snippet delete key:<SnippetKey>` slash command. Select an existing snippet as the `key`
   parameter and submit the command to delete the snippet. Once submitted, the snippet will be deleted permanently. This
@@ -84,7 +84,7 @@ To manage snippets, the following commands are available to staff members:
 
 Sometimes, staff members are not comfortable sharing their name with staff members. To fit your need, you can always
 adjust
-your [message configuration](./configuration/advanced-messaging), to hide the identity of staff members. Still, you
+your [message configuration](/docs/modmail/configuration/advanced-messaging), to hide the identity of staff members. Still, you
 might want a setup were staff members appear with their name in most cases, but in certain tickets you want them to send
 messages that are credited to their highest role (e.g. send a message that will be displayed to users as "Moderator:
 Your message here").
@@ -99,7 +99,7 @@ be visible in the log and the ticket channel.
 ## Blocklisting users {#blacklist}
 
 Sometimes users abuse support services. To avoid these users spamming your Modmail-system, consider using the blocklist
-feature. Once the feature [is enabled](./configuration/bot-configuration), staff members can use the following commands
+feature. Once the feature [is enabled](/docs/modmail/configuration/bot-configuration), staff members can use the following commands
 to manage the blocklist:
 
 <SlashCommandExplanation />

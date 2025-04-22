@@ -32,10 +32,10 @@ Um eine verknüpfte Rolle auf Discord einzurichten, befolge bitte diese Schritte
 3. Klicke dort auf „Anforderung hinzufügen“.
 4. Wähle deinen Bot im Abschnitt „Apps“ aus.
 5. Wähle die gewünschte verknüpfte Rolle aus. Die Rolle, die du auswählst, muss
-   [Benutzern auf SCNX zugewiesen werden](./user-management#add-role), damit diese die neu erstellte Discord-Rolle beanspruchen können.
+   [Benutzern auf SCNX zugewiesen werden](/docs/linked-roles/user-management#add-role), damit diese die neu erstellte Discord-Rolle beanspruchen können.
 
-Sobald du diese Schritte abgeschlossen hast, können deine Mitglieder die Rolle [beanspruchen](./claim-roles.md), wenn sie
-die [verknüpfte Rolle zugewiesen bekommen haben](./user-management#add-role).
+Sobald du diese Schritte abgeschlossen hast, können deine Mitglieder die Rolle [beanspruchen](/docs/linked-roles/claim-roles), wenn sie
+die [verknüpfte Rolle zugewiesen bekommen haben](/docs/linked-roles/user-management#add-role).
 Um die Rolle tatsächlich neben dem Benutzernamen eines Benutzers anzuzeigen, musst du
 die [Berechtigungen korrekt einrichten](#display-in-chat).
 
@@ -57,14 +57,14 @@ Nachdem du eine Rolle öffentlich gemacht hast, kannst du diese Entscheidung nic
 die [Rolle löschen](#delete-role).
 :::
 
-Standardmäßig müssen Rollen manuell [Mitgliedern zugewiesen werden](./user-management). Das Aktivieren der Option „Öffentliche Rolle“ ermöglicht es
+Standardmäßig müssen Rollen manuell [Mitgliedern zugewiesen werden](/docs/linked-roles/user-management). Das Aktivieren der Option „Öffentliche Rolle“ ermöglicht es
 jedem Benutzer auf deinem Discord, die Rolle zu beanspruchen, und entfernt deine Möglichkeit, die Rolle manuell zuzuweisen oder zu entfernen. Dies
 kann hilfreich sein, wenn du möchtest, dass eine „Mitglied“-Rolle neben Benutzern im Chat angezeigt wird.
 
 Nachdem du eine Rolle erstellt hast, kannst du sie
 in deinem [Dashboard für verknüpfte Rollen](https://scnx.app/glink?page=linked-roles/roles) verwalten, wo du die Option „Öffentliche Rolle“
 für deine Rolle aktivieren kannst. Sobald du die Option „Öffentliche Rolle“ aktiviert hast, können alle Benutzer die Rolle 
-auf deinem Discord ohne weitere Überprüfungen [beanspruchen](./claim-roles). Obwohl du Benutzer im Dashboard manuell [entfernen](./user-management#delete-user) kannst,
+auf deinem Discord ohne weitere Überprüfungen [beanspruchen](/docs/linked-roles/claim-roles). Obwohl du Benutzer im Dashboard manuell [entfernen](/docs/linked-roles/user-management#delete-user) kannst,
 werden sie die Rolle erneut beanspruchen können, da die Rolle öffentlich ist.
 
 ![Dieser Screenshot zeigt, wo die Option „Öffentliche Rolle“ zu finden ist](@site/docs/assets/linked-roles/role-managment/public-role.png)

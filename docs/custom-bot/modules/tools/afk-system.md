@@ -81,4 +81,4 @@ All data will be deleted when the AFK session ends. Users can end a session usin
 sessions
 end automatically when they post a message on your server (unless they disabled this feature) at creation of the
 session.
-To end and delete all AFK sessions, [purge the module database](./../../additional-features#reset-module-database).
+To end and delete all AFK sessions, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

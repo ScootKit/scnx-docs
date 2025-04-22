@@ -12,7 +12,7 @@ Unsure what Linked Roles are? Linked Roles allow you to display the role of a us
 
 ![SCNX Linked Roles usage shown on a Discord server, the position of the user is displayed next to their username](https://scnx.app/img/linked-roles-example.png)
 
-If you want to learn more about Linked Roles, you can do so in our [About Linked Roles](./linked-roles/intro) section.
+If you want to learn more about Linked Roles, you can do so in our [About Linked Roles](/docs/linked-roles/intro) section.
 
 :::
 
@@ -39,14 +39,14 @@ we're working on an English translation.
 
 Before you can enable Linked Roles on your server, please ensure that
 
-* you have [added your Server to SCNX](./setup).
-* your server has the paid [Unlimited](./scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
-  or [Professional](./scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
+* you have [added your Server to SCNX](/docs/setup).
+* your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+  or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
   free trial, if
   available for you.
 * you are the owner of the server you want to enable this feature
-  on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
-  feature for you and grant you access as a [Trusted Admin](./scnx/guilds/trusted-admins).
+  on ([why?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
+  feature for you and grant you access as a [Trusted Admin](/docs/scnx/guilds/trusted-admins).
 * you (or one of your trusted admins) have Early Access (purchasable with
   a [ScootKit Membership Level 2 or higher](https://membership.scootkit.com)) during the beta trial. After the beta
   trial ends (likely in Q2 2025), this requirement will be removed.
@@ -63,7 +63,7 @@ this guide, but you can also click "Continue" there, since you are already here 
 ## 2. Select credentials {#step-2}
 
 Next, SCNX will prompt you to select which Discord credentials you want to use for Linked Roles. If you are using other
-SCNX products, like [Modmail](./modmail/intro) or the [Custom Bot](./custom-bot/custom-commands), you can select them
+SCNX products, like [Modmail](/docs/modmail/intro) or the [Custom Bot](/docs/custom-bot/custom-commands), you can select them
 from this list and [skip to step 3](#step-3). If you are not using any other product, please
 follow [these instructions](#step-2-app).
 
@@ -142,7 +142,7 @@ Your new Linked Role Bot won't stay online unless you use another SCNX product w
 
 Finally, finish setup by inviting the Linked Roles Bot to your server. Do so by clicking "Invite Linked-Roles-Bot" in
 the dashboard. Once done, you can continue by creating your first Linked Role. To learn more about that, continue in
-our [Role management documentation](./linked-roles/role-management#create-linked-scnx-role), where we explain how to
+our [Role management documentation](/docs/linked-roles/role-management#create-linked-scnx-role), where we explain how to
 create your Linked Roles on SCNX and on Discord. You can also jump
 to [the Linked Roles index page](/docs/linked-roles/overview) if you are looking for something else to continue with.
 

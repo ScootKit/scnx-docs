@@ -33,34 +33,34 @@ Once [configured](#configuration), this module will automatically log the config
 There's no additional action needed.
 
 Please bear in mind your administrators might be able to delete (or edit & forge, using
-the [Login as Bot](./../../login-as-bot) functionality) the logged messages. This is not possible with the Discord Audit
+the [Login as Bot](/docs/custom-bot/login-as-bot) functionality) the logged messages. This is not possible with the Discord Audit
 Log, so if you want to make sure an action is correct, please review it in the Discord Audit Log. Messages logging
 changes will also never be edited automatically, so if you see a "Edited" label on one of the log-messages, its likely
 it got changed with the
-[Login as Bot](./../../login-as-bot) feature.
+[Login as Bot](/docs/custom-bot/login-as-bot) feature.
 
 ## Configuration {#configuration}
 
 This configuration file allows specifying which changes to your server should get logged in which channel. Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=logging%7Cconfig).
 
-| Field                                     | Description                                                                                                                                                                                                                              |
-|-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Channel-Updates                           | If enabled, the bot will log changes to channels (like channel edits, permission changes and more).                                                                                                                                      |
-| Channel for Logging of Channel-Updates    | <i>Only visible if "Channel-Updates" is enabled.</i><br/>Changes to channels will be logged in this channel.                                                                                                                             |
-| Role-Updates                              | If enabled, the bot will log changes to roles (like role edits, permission changes and more).                                                                                                                                            |
-| Channel for Logging of Role-Updates       | <i>Only visible if "Role-Updates" is enabled.</i><br/>Changes to roles will be logged in this channel.                                                                                                                                   |
-| Member-Updates                            | If enabled, the bot will log changes to members (like nickname or role changes and more).                                                                                                                                                |
-| Channel for Logging of Member-Updates     | <i>Only visible if "Member-Updates" is enabled.</i><br/>Changes to members will be logged in this channel.                                                                                                                               |
-| Message-Updates                           | If enabled, the bot will log changes to message (like edits and deletions).                                                                                                                                                              |
-| Channel for Logging of Messsage-Edits     | <i>Only visible if "Message-Updates" is enabled.</i><br/>Edits to messages will be logged in this channel.                                                                                                                               |
-| Channel for Logging of Messsage-Deletions | <i>Only visible if "Message-Updates" is enabled.</i><br/>Deletion of messages will be logged in this channel.                                                                                                                            |
-| Ignore channels for Message-Updates       | <i>Only visible if "Message-Updates" is enabled.</i><br/>These channels & categories are excluded from being monitored for Message-Edits and -Deletions.                                                                                 |
-| Guild-Updates                             | If enabled, the bot will log changes your server (like Server-Settings and more).                                                                                                                                                        |
-| Channel for Logging of Guild-Updates      | <i>Only visible if "Guild-Updates" is enabled.</i><br/>Changes your server will be logged in this channel.                                                                                                                               |
-| Emoji-Updates                             | If enabled, the bot will log changes to emojis (and stickers) of your server (like uploading, deleting and editing emojis).                                                                                                              |
-| Channel for Logging of Emoji-Updates      | <i>Only visible if "Emoji-Updates" is enabled.</i><br/>Changes to emojis of your server will be logged in this channel.                                                                                                                  |
-| Ignore bots                               | <i>This feature is always enabled for servers without a <a href="./../../../scnx/guilds/plans">PRO-Plan</a>.</i><br/>If disabled, the bot will document changes made by itself or other bots - this can lead to spam in the Log-Channel. |
+| Field                                     | Description                                                                                                                                                                                                                                  |
+|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Channel-Updates                           | If enabled, the bot will log changes to channels (like channel edits, permission changes and more).                                                                                                                                          |
+| Channel for Logging of Channel-Updates    | <i>Only visible if "Channel-Updates" is enabled.</i><br/>Changes to channels will be logged in this channel.                                                                                                                                 |
+| Role-Updates                              | If enabled, the bot will log changes to roles (like role edits, permission changes and more).                                                                                                                                                |
+| Channel for Logging of Role-Updates       | <i>Only visible if "Role-Updates" is enabled.</i><br/>Changes to roles will be logged in this channel.                                                                                                                                       |
+| Member-Updates                            | If enabled, the bot will log changes to members (like nickname or role changes and more).                                                                                                                                                    |
+| Channel for Logging of Member-Updates     | <i>Only visible if "Member-Updates" is enabled.</i><br/>Changes to members will be logged in this channel.                                                                                                                                   |
+| Message-Updates                           | If enabled, the bot will log changes to message (like edits and deletions).                                                                                                                                                                  |
+| Channel for Logging of Messsage-Edits     | <i>Only visible if "Message-Updates" is enabled.</i><br/>Edits to messages will be logged in this channel.                                                                                                                                   |
+| Channel for Logging of Messsage-Deletions | <i>Only visible if "Message-Updates" is enabled.</i><br/>Deletion of messages will be logged in this channel.                                                                                                                                |
+| Ignore channels for Message-Updates       | <i>Only visible if "Message-Updates" is enabled.</i><br/>These channels & categories are excluded from being monitored for Message-Edits and -Deletions.                                                                                     |
+| Guild-Updates                             | If enabled, the bot will log changes your server (like Server-Settings and more).                                                                                                                                                            |
+| Channel for Logging of Guild-Updates      | <i>Only visible if "Guild-Updates" is enabled.</i><br/>Changes your server will be logged in this channel.                                                                                                                                   |
+| Emoji-Updates                             | If enabled, the bot will log changes to emojis (and stickers) of your server (like uploading, deleting and editing emojis).                                                                                                                  |
+| Channel for Logging of Emoji-Updates      | <i>Only visible if "Emoji-Updates" is enabled.</i><br/>Changes to emojis of your server will be logged in this channel.                                                                                                                      |
+| Ignore bots                               | <i>This feature is always enabled for servers without a <a href="/docs/scnx/guilds/plans">Professional Plan</a>.</i><br/>If disabled, the bot will document changes made by itself or other bots - this can lead to spam in the Log-Channel. |
 
 ## Troubleshooting {#troubleshooting}
 

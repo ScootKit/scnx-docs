@@ -70,4 +70,4 @@ Bearbeite Informations- und Befehlantwortnachrichten in der
 
 Mit dem Ende der AFK-Sitzung werden alle Daten gelöscht. Nutzer können ihre Sitzung mit dem Befehl [`/afk end`](#commands) beenden. Außerdem enden aktive Sitzungen automatisch,
 wenn der Nutzer eine Nachricht auf deinem Server schreibt (sofern dies nicht beim Beginn der AFK-Sitzung deaktiviert wurde).
-Um alle AFK-Sitzungen zu beenden und zu löschen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
+Um alle AFK-Sitzungen zu beenden und zu löschen, [lösche die Moduldatenbank](/docs/custom-bot/additional-features#reset-module-database).

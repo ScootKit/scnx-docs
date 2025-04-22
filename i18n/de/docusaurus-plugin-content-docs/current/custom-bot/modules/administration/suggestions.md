@@ -17,7 +17,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 
 1. Erstelle für die Vorschläge einen Kanal (oder wähle einen aus). Der Bot benötigt folgende Rechte auf diesen: "Kanal
    anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history")
-2. Stelle sicher, dass [Berechtigungen](./../../slash-commands) für `/manage-suggestions` richtig konfiguriert sind, um zu verhindern, 
+2. Stelle sicher, dass [Berechtigungen](/docs/custom-bot/slash-commands) für `/manage-suggestions` richtig konfiguriert sind, um zu verhindern, 
    dass Nutzer Vorschläge als Admin verwalten können.
 3. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=suggestions%7Cconfig).
 4. [Konfiguriere](#configuration) das Modul.
@@ -85,7 +85,7 @@ Bitte überprüfe Folgendes:
 <ul>
     <li>Stelle sicher, dass die Felder "Abgelehnte Vorschlags-Nachricht" und "Angenommene Vorschlags-Nachricht" richtig konfiguriert sind.</li>
     <li>Stelle sicher, dass der Bot die benötigten Berechtigungen auf den Vorschläge-Kanal hat: "Kanal anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history").</li>
-    <li>Stelle sicher, dass der Vorschlag nicht bereits von einem Admin beantwortet wurde. Wenn du noch nicht die <a href="./../../slash-commands">Berechtigungen</a> für <code>/manage-suggestion</code> <a href="./../../slash-commands">eingestellt hast</a>, können Nutzer eventuell als Admin auf den Vorschlag geantwortet haben.</li>
+    <li>Stelle sicher, dass der Vorschlag nicht bereits von einem Admin beantwortet wurde. Wenn du noch nicht die <a href="/docs/custom-bot/slash-commands">Berechtigungen</a> für <code>/manage-suggestion</code> <a href="/docs/custom-bot/slash-commands">eingestellt hast</a>, können Nutzer eventuell als Admin auf den Vorschlag geantwortet haben.</li>
 </ul>
 </details>
 
@@ -109,4 +109,4 @@ den [konfigurierten](#configuration) Kanal (wenn aktiviert) gespeichert:
 * Metadaten zum Eintrag (Datum der Erstellung und letzte Aktualisierung)
 
 Es gibt keinen Weg, einen Vorschlag aus der Datenbank zu entfernen (du kannst natürlich die Vorschlags-Nachricht löschen). Um 
-alle Vorschläge zu entfernen, [lösche die Modul-Datenbank](./../../additional-features#reset-module-database).
+alle Vorschläge zu entfernen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).

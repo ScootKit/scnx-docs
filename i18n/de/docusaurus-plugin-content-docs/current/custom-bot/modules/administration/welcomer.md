@@ -124,7 +124,7 @@ in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=welc
 
 | Feld                                | Beschreibung                                                                                                                                                                                             |
 |-------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nutzern Rollen beim Beitreten geben | Diese Rollen werden Mitgliedern gegeben, die deinem Server beitreten. Das wird nicht rückwirkend angewandt, nutze dafür das [Massrole-Modul](./../tools/massrole).                                       |
+| Nutzern Rollen beim Beitreten geben | Diese Rollen werden Mitgliedern gegeben, die deinem Server beitreten. Das wird nicht rückwirkend angewandt, nutze dafür das [Massrole-Modul](/docs/custom-bot/modules/tools/massrole).                   |
 | Bots ignorieren?                    | Wenn aktiviert (und das ist sehr empfehlenswert), werden keine Willkommens- und Verlassensnachrichten verschickt, wenn das Mitglied ein Bot ist.                                                         |
 | Zusätzliche Rollen beim Boost geben | Diese Rollen werden einem Mitglied zusätzlich zu der von Discord vergebenen Boost-Rolle gegeben, wenn es deinen Server boostet. Die Rollen werden entfernt, wenn das Mitglied all seine Boosts entfernt. |
 | Willkommensnachricht löschen        | Wenn aktiviert werden Willkommensnachrichten automatisch gelöscht, wenn das Mitglied deinen Server innerhalb von sieben Tagen wieder verlässt.                                                           |
@@ -186,4 +186,4 @@ Die folgenden Daten werden über jede konfigurierte Willkommensnachricht jedes m
 Diese Daten werden genutzt, um gesendete Willkommensnachrichten wieder zu löschen, wenn ein Nutzer den Server innerhalb von sieben Tagen nach dem Beitreten wieder verlässt (falls [aktiviert](#configuration-config)). Es gibt keinen Weg, den Bot davon abzuhalten, diese Daten zu speichern (falls die Funktion im Nachhinein aktiviert wird),
 aber die Daten werden nicht genutzt, bis die Funktion aktiviert ist.
 
-Um alle Daten zu löschen, [lösche die Moduldatenbank](./../../additional-features#reset-module-database).
+Um alle Daten zu löschen, [lösche die Moduldatenbank](/docs/custom-bot/additional-features#reset-module-database).

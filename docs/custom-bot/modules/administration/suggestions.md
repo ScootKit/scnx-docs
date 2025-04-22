@@ -17,7 +17,7 @@ Advanced module to manage suggestions on your guild.
 
 1. Create (or designate) a channel for suggestions. The bot needs the following permissions on this channel: "View
    channel", "Send messages" and "View message history"
-2. Make sure that [the permissions](./../../slash-commands) `/manage-suggestions` are configured correctly to avoid
+2. Make sure that [the permissions](/docs/custom-bot/slash-commands) `/manage-suggestions` are configured correctly to avoid
    users managing suggestions
    as admins.
 3. Open the [Module configuration](https://scnx.app/glink?page=bot/configuration?file=suggestions%7Cconfig).
@@ -86,7 +86,7 @@ Please check the following:
 <ul>
     <li>Make sure the "Denied Suggestion-Message" and "Approved Suggestion-Message" fields are correctly configured.</li>
     <li>Make sure the bot has the required permissions on the suggestion channel: "View channel", "Send messages" and "View message history".</li>
-    <li>Make sure that the suggestion hasn't been answered by an admin yet. If you didn't <a href="./../../slash-commands">set up the permissions</a> for <code>/manage-suggestion</code>, a user might have been able to respond to the suggestion as an admin.</li>
+    <li>Make sure that the suggestion hasn't been answered by an admin yet. If you didn't <a href="/docs/custom-bot/slash-commands">set up the permissions</a> for <code>/manage-suggestion</code>, a user might have been able to respond to the suggestion as an admin.</li>
 </ul>
 </details>
 
@@ -110,4 +110,4 @@ the [configured](#configuration) channel (if enabled):
 * Metadata about the entry (date when created and last updated)
 
 There is no way to remove a suggestion from the database (you can always delete the suggestion-message regardless). To
-remove all suggestions, [purge the module database](./../../additional-features#reset-module-database).
+remove all suggestions, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
