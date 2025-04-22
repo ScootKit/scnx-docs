@@ -17,6 +17,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
+    trailingSlash: true,
     scripts: [{
         src: 'https://analytics.scootkit.net/js/script.js',
         defer: true,
