@@ -587,7 +587,7 @@
     "message": "Nicht im Professional Plan enthalten"
   },
   "youtubeHidden.header": {
-    "message": "Durch das Klicken unten, stimmst du der {link} von YouTube zu."
+    "message": "Hier ist ein YouTube Video"
   },
   "youtubeHidden.privacyLink": {
     "message": "Datenschutzerklärung"
@@ -633,5 +633,8 @@
   "theme.contentVisibility.draftBanner.message": {
     "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird in production nicht angezeigt.",
     "description": "The draft content banner message"
+  },
+  "youtubeHidden.description": {
+    "message": "Durch das Klicken unten, stimmst du der {link} von YouTube zu."
   }
 }
