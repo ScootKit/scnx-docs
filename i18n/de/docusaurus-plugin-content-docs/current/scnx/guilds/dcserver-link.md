@@ -101,7 +101,7 @@ auch nicht in der Praxis ab, doch es gibt - wie immer - ein paar Ausnahmen:
 <details>
     <summary>Inaktive / gelöschte Server auf SCNX</summary>
 
-    Wenn ein Server von SCNX <a href="./faq#deletion">gelöscht wird</a>, wird die dcserver.link-URL permanent gelöscht. Das passiert nicht,
+    Wenn ein Server von SCNX <a href="/de/docs/scnx/guilds/faq#deletion">gelöscht wird</a>, wird die dcserver.link-URL permanent gelöscht. Das passiert nicht,
     wenn ein Server auf SCNX deaktiviert / geflagged ist - in diesen Fällen wird die URL einfach nur unnutzbar, bleibt aber
     trotzdem beansprucht. Abgelaufene Starter-Pläne haben keinen Einfluss auf die Nutzbarkeit von dcserver.link-URLs.
 

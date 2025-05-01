@@ -11,7 +11,7 @@ Adds info-commands with information about specific parts of your server
 * Member statistics, guild features and more are supported by [`/info server`](#commands) command.
 * [`/info role`](#commands) can show members that have a role, permissions and role information.
 * Use the [`/info user`](#commands) command to view information about users, including support for
-  the [Birthday Module](./../community/birthday), [Level System](../community/levels), [Invite Tracking Module](./../moderation/invite-tracking)
+  the [Birthday Module](/docs/custom-bot/modules/community/birthday), [Level System](/docs/custom-bot/modules/community/levels), [Invite Tracking Module](/docs/custom-bot/modules/moderation/invite-tracking)
   and more.
 
 ## Setup {#setup}

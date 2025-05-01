@@ -59,7 +59,7 @@ Um sicherzustellen, dass wir SCNX weiter anbieten können, haben wir die Preise 
 mitzuhalten. Dies war notwendig, da wir ab sofort Mehrwertsteuer auf unsere Preise erheben müssen und um höhere Hosting- und Infrastrukturkosten zu decken.
 
 Wir stellen euch zwei neue Pläne vor: Unlimited und Professional. Du kannst alle Details zu den Plänen
-[auf unserer Docs-Seite zur Preisgestaltung](./guilds/plans) finden. Alte Pläne werden als "Ausgemustert" angesehen und können nicht mehr gekauft werden.
+[auf unserer Docs-Seite zur Preisgestaltung](/docs/scnx/guilds/plans) finden. Alte Pläne werden als "Ausgemustert" angesehen und können nicht mehr gekauft werden.
 
 Wenn du mehr über die Begründung hinter den neuen Preisen und darüber wie wir uns dazu entschieden haben erfahren willst,
 [sieh dir diese Aufnahme](https://www.youtube.com/watch?v=di_TeQt_rQ8) unseres "Membership-Meetings" an - [ScootKit Mitglieder](https://membership.scootkit.com) 
@@ -67,7 +67,7 @@ erhalten regelmäßige Behind-The-Scenes Updates, erhalten Zugang zu neuen Funkt
 über neue Funktionen und Änderungen (wie diese Preisänderung) teilnehmen.
 
 Zusätzlich haben wir Server-Bundles hinzugefügt: Du kannst jetzt zusätzliche Server für einen niedrigeren Preis hinzufügen - das heißt,
-wenn du mehrere Server bei SCNX hast, werden Premium-Pläne deutlich günstiger werden. [Erfahre mehr](./guilds/plans#additional-servers) darüber.
+wenn du mehrere Server bei SCNX hast, werden Premium-Pläne deutlich günstiger werden. [Erfahre mehr](/docs/scnx/guilds/plans#additional-servers) darüber.
 
 ### Auswirkungen auf existierende Server {#effect-on-servers}
 
@@ -78,7 +78,7 @@ Die folgende Tabelle erklärt, welche Art wie betroffen ist:
 | Starter-Plan                                     | Der Starter-Plan ist dauerhaft kostenlos und nicht von den Änderungen betroffen.                                                                                                                                                                                                                                                        |
 | Einmalige Upgrades                               | Wenn du für deinen Server ein einmaliges Upgrade gekauft hast, wird dieses nicht entfernt, bis es abläuft. Solange kannst du den Plan wie gewohnt weiterverwenden. Dein alter Plan kann nicht verlängert werden.                                                                                                                        |
 | Abonnements                                      | Wenn du deine Abonnements nicht im Migrationszeitraum [migrierst](#migrate-subscriptions), werden sie gekündigt und dein Plan zum Ende des Abrechnungszeitraums heruntergestuft. [Migriere dein Abonnement](#migrate-subscriptions), um deinen alten Preis zu behalten, bis du kündigst.                                                  |
-| [Lebenslängliche Pläne](./guilds/plans#lifetime) | Lebenslängliche Pläne werden weiterhin funktionieren und weiterhin alle Features deines Plans freischalten. Du kannst deinen Plan jederzeit übertragen. Wenn du zu einem neuen Plan upgraden willst, musst du unser Team kontaktieren, da der Preis des Upgrades abhängig von deiner bisherigen Nutzung des lebenslänglichen Plans ist. |
+| [Lebenslängliche Pläne](/docs/scnx/guilds/plans#lifetime) | Lebenslängliche Pläne werden weiterhin funktionieren und weiterhin alle Features deines Plans freischalten. Du kannst deinen Plan jederzeit übertragen. Wenn du zu einem neuen Plan upgraden willst, musst du unser Team kontaktieren, da der Preis des Upgrades abhängig von deiner bisherigen Nutzung des lebenslänglichen Plans ist. |
 
 ### Abonnements übertragen {#migrate-subscriptions}
 
@@ -93,7 +93,7 @@ Bitte beachte die folgenden Einschränkungen:
 * Wenn du mehrere Abonnements hattest, werden sie zu einem kombiniert. Der vollständige Preis für alle
   vorherigen Abonnements wird ein Mal pro Abrechnungszeitraum abgebucht. Das Abonnement kann nur zusammen gekündigt werden. Es könnte
   wirtschaftlicher sein, zu unserem neuen Preismodell zu wechseln, welches
-  [Server-Bundles](./guilds/plans) erlaubt.
+  [Server-Bundles](/docs/scnx/guilds/plans) erlaubt.
 * Die Migration muss abgeschlossen werden, bevor dein Abrechnungszeitraum endet oder der Migrationszeitraum abläuft.
 * Deine Zahlungsmethode muss erneut hinzugefügt werden. Wenn du per Dauerüberweisung zahlst, stelle sicher, dass du auch
   unsere Bankverbindung bei deiner Bank aktualisierst.

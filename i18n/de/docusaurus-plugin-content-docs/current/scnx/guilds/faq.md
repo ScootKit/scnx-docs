@@ -12,14 +12,14 @@ Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Gru
 basiert auf
 unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan
 kannst du einfach den
-Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](./../../setup) und dir
-[Trusted-Admin-Rechte](./trusted-admins) geben kann.
+Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](/docs/setup) und dir
+[Trusted-Admin-Rechte](/docs/scnx/guilds/trusted-admins) geben kann.
 
 ---
 
 ## Kann ich mehrere Discord-Bots für den gleichen Server erstellen? {#multiple-bots}
 
-Du kannst einen [eigenen Bot](../../custom-bot/intro) und einen [Modmail-Bot](../../modmail/intro) pro Server erstellen
+Du kannst einen [eigenen Bot](/docs/custom-bot/intro) und einen [Modmail-Bot](/docs/modmail/intro) pro Server erstellen
 und Funktionen nicht auf mehrere eigene Bots aufteilen (z. B. einen Bot nur für temporäre Sprachkanäle).
 Du kannst deinen Bot zu anderen Servern hinzufügen, jedoch wird dieser dort nicht funktionieren.
 Ein Grund dafür ist, dass das Hosten von mehr Bots sehr teuer für uns wäre, doch der deutlich größere Grund ist der
@@ -31,7 +31,7 @@ SCNX ist dafür gedacht, oft mehrere, normale Bots durch Einen zu ersetzen - dei
 ## Kann ich den SCNX-Manager-Bot entfernen? {#scnx-manager-bot}
 
 Ja. Du kannst den Bot einfach von deinem Server kicken. Server ohne den SCNX-Bot können dessen Funktionen,
-wie [Backups](./backups) or [Statistiken](./analytics) nicht verwenden. Alle Hosting-Funktionen, auch alle Funktionen
+wie [Backups](/docs/scnx/guilds/backups) or [Statistiken](/docs/scnx/guilds/analytics) nicht verwenden. Alle Hosting-Funktionen, auch alle Funktionen
 deiner Bots, sind davon nicht betroffen.
 
 ---

@@ -4,15 +4,15 @@ sidebar_position: 1
 
 # Bots auf SCNX
 
-Diese Dokumente beinhalten anwendbare Hilfen für den [Eigenen Bot](../../custom-bot/intro) und den
- [Modmail Bot](../../modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
- [mit dem eigenen  Bot loslegen](../../custom-bot) oder den [mit dem Modmail-Bot loslegen](../../modmail) Artikel.
+Diese Dokumente beinhalten anwendbare Hilfen für den [Eigenen Bot](/docs/custom-bot/intro) und den
+ [Modmail Bot](/docs/modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
+ [mit dem eigenen  Bot loslegen](/docs/custom-bot) oder den [mit dem Modmail-Bot loslegen](/docs/modmail) Artikel.
 
 ## Fehlerbehebung {#troubleshooting}
 
 Die Schritte, um Fehler zu beheben, sind bei den beiden Bots unterschiedlich. Bitte schaue dir den passenden Abschnitt an:
 
-* [Eigener Bot](./../../custom-bot/troubleshooting)
+* [Eigener Bot](/docs/custom-bot/troubleshooting)
 * Modmail-Bot
 
 ## Die Grundlagen {#basics}
@@ -187,7 +187,7 @@ Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, 
 :::info Bevor du weiterliest:
 
 * Damit dies funktioniert muss dein Bot auf SCNX online sein. Wenn dein Bot nicht auf SCNX online sein sollte, schaue bitte in die [Anleitung zur Fehlerbehebung](#troubleshooting).
-* Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](./trusted-admins#permissions) "Bot verwalten" auf dem Produkt haben, dessen Einstellungen du ändern möchtest.
+* Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](/docs/scnx/guilds/trusted-admins#permissions) "Bot verwalten" auf dem Produkt haben, dessen Einstellungen du ändern möchtest.
 :::
 
 So kannst du das Profil-Bild und den Nutzernamen deines Bots ändern, ohne SCNX zu verlassen:
@@ -221,7 +221,7 @@ Dafür muss dein Bot online sein. Wenn dein Bot nicht auf SCNX online ist, öffn
 :::
 
 :::caution
-Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, für den der Bot erstellt wurde. Wenn du deinen Server wechseln willst, befolge bitte die Anleitung zum [Übertragen von SCNX-Daten](./faq#transfer) in unserem FAQ. Wenn du einen seperaten Bot für einen anderen Server erstellen möchtest,  [füge deinen Server zu  SCNX hinzu](./../../setup) und [erstelle dann einen eigenen Bot](./../../custom-bot).
+Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, für den der Bot erstellt wurde. Wenn du deinen Server wechseln willst, befolge bitte die Anleitung zum [Übertragen von SCNX-Daten](/docs/scnx/guilds/faq#transfer) in unserem FAQ. Wenn du einen seperaten Bot für einen anderen Server erstellen möchtest,  [füge deinen Server zu  SCNX hinzu](/docs/setup) und [erstelle dann einen eigenen Bot](/docs/custom-bot).
 :::
 
 1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)

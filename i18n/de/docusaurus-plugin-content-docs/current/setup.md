@@ -16,7 +16,7 @@ lies diese vollständig bevor du weitermachst :wink:
 
 Gehe auf [scnx.app](https://scnx.app/de), um zu beginnen. Dort wirst du gebeten, dich mit deinem Discord-Account anzumelden. Klicke dafür einfach auf
 den "Mit Discord anmelden" Knopf. Wenn du dich fragst, warum wir Zugriff auf bestimmte Bereiche deiner Informationen brauchen
-("scopes"), findest du die Antworten [in unserem FAQ](./scnx/account-and-billing/faq#discord-access).
+("scopes"), findest du die Antworten [in unserem FAQ](/docs/scnx/account-and-billing/faq#discord-access).
 
 ![](@site/docs/assets/setup/setup-1.png)
 
@@ -27,7 +27,7 @@ Wähle den Server, auf welchem du SCNX einrichten möchtest.
 
 :::tip Du kannst deinen Server nicht finden?
 Bitte stelle sicher, dass du der **Eigentümer eines Servers** bist, um ihn zu SCNX hinzuzufügen. Wenn nicht, bitte den Eigentümer SCNX einzurichten
-und dir ["Trusted Admin"-Rechte](scnx/guilds/trusted-admins) zu geben. Wenn du einen Server erst vor kurzem erstellt hast und er dir nicht angezeigt wird,
+und dir ["Trusted Admin"-Rechte](/docs/scnx/guilds/trusted-admins) zu geben. Wenn du einen Server erst vor kurzem erstellt hast und er dir nicht angezeigt wird,
 aktualisiere die Serverliste mit dem "Daten neuladen" Knopf unten auf der Seite.
 :::
 ![](@site/docs/assets/setup/setup-2.png)
@@ -44,7 +44,7 @@ und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die b
 
 Dein Server wurde erfolgreich zu SCNX hinzugefügt :tada:
 
-Du kannst jetzt damit anfangen [deinen eigenen Bot](custom-bot) oder [einen Modmail-Bot](modmail) zu erstellen oder einfach alle Funktionen auszuprobieren, die dich interessieren -
+Du kannst jetzt damit anfangen [deinen eigenen Bot](/docs/custom-bot) oder [einen Modmail-Bot](/docs/modmail) zu erstellen oder einfach alle Funktionen auszuprobieren, die dich interessieren -
 Unsere [Dokumentation](/) und unsere [Teammitglieder](https://scnx.app/help) auf dem [Discord-Server](https://sc-net.work/dc) werden dir bei allem weiterhelfen.
 
 ![](@site/docs/assets/setup/setup-5.png)

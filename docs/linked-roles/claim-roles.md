@@ -15,12 +15,12 @@ Here's the URL to share: [`https://scootk.it/claim-linked-roles`](https://scootk
 ## Requirements {#requirements}
 
 Before you can claim your Linked Role, an administrator needs to
-have [created the Linked Role on SCNX](./role-management#create-linked-scnx-role), [configure it on Discord](./role-management#linked-role-on-discord)
-and then [assign the role](./user-management#add-role) to you. If these steps aren't finished, you won't be able to claim
+have [created the Linked Role on SCNX](/docs/linked-roles/role-management#create-linked-scnx-role), [configure it on Discord](/docs/linked-roles/role-management#linked-role-on-discord)
+and then [assign the role](/docs/linked-roles/user-management#add-role) to you. If these steps aren't finished, you won't be able to claim
 your role.
 
 If you run into issues when following this guide, please contact your server administrator and link them to
-our [troubleshooting page](./troubleshooting), where we go into detail on how to fix issues.
+our [troubleshooting page](/docs/linked-roles/troubleshooting), where we go into detail on how to fix issues.
 
 ## Claim your role on Discord {#claim-role}
 
@@ -36,7 +36,7 @@ otherwise click on the requirement field to claim your role.
 
 ![How to open the Linked Role claim site on Discord](@site/docs/assets/linked-roles/claim/1.png)
 
-Now, the [authorization page](./settings#authorization-page) of the server will open. There, click on "Authorize with
+Now, the [authorization page](/docs/linked-roles/settings#authorization-page) of the server will open. There, click on "Authorize with
 Discord". You will be redirected to Discord to authorize your account. Please make sure you are logging in with the
 right account, then click on "Authorise" to finish the request. After that, you will be shown a success message
 confirming that the roles have been applied successfully. You can close this window now.
@@ -55,19 +55,19 @@ need to authenticate again, you can simply claim the role in Discord.
 ## Issues when claiming roles? {#issues}
 
 If you are running into any issues when you are trying to claim a role, please check
-our [troubleshooting guide](./troubleshooting), in particular, the following issues might occur:
+our [troubleshooting guide](/docs/linked-roles/troubleshooting), in particular, the following issues might occur:
 
-* [Error message: "Invalid OAuth2 redirect_url"](./troubleshooting#oauth2-redirect-url).
-* [Error message: "No roles were assigned to you"](./troubleshooting#roles-missing)
-* [Error message: "Seems like the configuration by the server owner is wrong."](./troubleshooting#generic-api-error).
+* [Error message: "Invalid OAuth2 redirect_url"](/docs/linked-roles/troubleshooting#oauth2-redirect-url).
+* [Error message: "No roles were assigned to you"](/docs/linked-roles/troubleshooting#roles-missing)
+* [Error message: "Seems like the configuration by the server owner is wrong."](/docs/linked-roles/troubleshooting#generic-api-error).
 
-If you run into other issues or have questions, check or [troubleshooting guide](./troubleshooting) or contact us
+If you run into other issues or have questions, check or [troubleshooting guide](/docs/linked-roles/troubleshooting) or contact us
 on [scnx.app/help](https://scnx.app/help) - we're always happy to help!
 
 ## Remove a claimed role {#remove-claimed-role}
 
 Annoyed by your Linked Role? You can either ask an administrator
-to [remove the Linked Role](./user-management#remove-role) or you can remove the role yourself.
+to [remove the Linked Role](/docs/linked-roles/user-management#remove-role) or you can remove the role yourself.
 
 To do so, open Discord and open your profile on your server. There, hover over the Linked Role you want to remove. You
 will see an "X" on the left side. Click on it to remove your Linked Role. If you ever change your mind, you can

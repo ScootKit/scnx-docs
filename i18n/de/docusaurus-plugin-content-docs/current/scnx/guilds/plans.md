@@ -23,14 +23,14 @@ benötigen ein separates Abonnement.
 | Preis (für EU-Kunden)                                                                              | *Für immer kostenlos*                                                                | <PlanPrice plan="UNLIMITED" type="MONTHLY" />, <PlanPrice plan="UNLIMITED" type="YEARLY" /> oder <PlanPrice plan="UNLIMITED" type="LIFETIME" /> | <PlanPrice plan="PROFESSIONAL" type="MONTHLY" />, <PlanPrice plan="PROFESSIONAL" type="YEARLY" /> oder <PlanPrice plan="PROFESSIONAL" type="LIFETIME" /> |
 | Reduzierter Preis für zusätzliche Server[¹](#additional-servers)                                   | *n/a*                                                                                | <PlanPrice plan="UNLIMITED" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                       | <PlanPrice plan="PROFESSIONAL" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                             |
 | Vollständiger Zugriff auf das SCNX Dashboard                                                       | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [dcserver.link](./dcserver-link)                                                                   | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Eigener Discord-Bot](./../../custom-bot/intro), 24/7 gehostet                                     | Enthalten, but needs to be [extended](#starter-plan) every two weeks by watching ads | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Eigener Modmail-Bot](./../../modmail/intro), 24/7 gehostet                                        | *Not available*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                | 
-| [Custom Discord-Bot](./../../custom-bot/intro), hosted 24/7                                        | Included, but needs to be [extended](#starter-plan) every two weeks by watching ads  | Included                                                                                                                                        | Included                                                                                                                                                 |
-| [Verknüpfte Rollen](./../../linked-roles/intro)                                                    | *Not available*                                                                      | Für Nutzer mit [Early Access](https://membership.scootkit.com/de) enthalten                                                                     | Für Nutzer mit [Early Access](https://membership.scootkit.com) enthalten.                                                                                |
+| [dcserver.link](/docs/scnx/guilds/dcserver-link)                                                   | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Eigener Discord-Bot](/docs/custom-bot/intro), 24/7 gehostet                                       | Enthalten, but needs to be [extended](#starter-plan) every two weeks by watching ads | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Eigener Modmail-Bot](/docs/modmail/intro), 24/7 gehostet                                          | *Not available*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                | 
+| [Custom Discord-Bot](/docs/custom-bot/intro), hosted 24/7                                          | Included, but needs to be [extended](#starter-plan) every two weeks by watching ads  | Included                                                                                                                                        | Included                                                                                                                                                 |
+| [Verknüpfte Rollen](/docs/linked-roles/intro)                                                      | *Not available*                                                                      | Für Nutzer mit [Early Access](https://membership.scootkit.com/de) enthalten                                                                     | Für Nutzer mit [Early Access](https://membership.scootkit.com) enthalten.                                                                                |
 | Entferne alle Erwähnungen von SCNX aus deinen Bots (z.B. Embed-Fußzeile)                           | *Not available*                                                                      | *Nicht verfügbar*                                                                                                                               | Enthalten                                                                                                                                                |
 | Kostenloses [KI-Guthaben](https://faq.scnx.app/ai-on-scnx/), das am 25. jeden Monats vergeben wird | 20                                                                                   | 300                                                                                                                                             | 600                                                                                                                                                      |
-| [Kommerzielle Nutzung](./faq#commercial-usage)                                                     | Untersagt                                                                            | Untersagt                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Kommerzielle Nutzung](/docs/scnx/guilds/faq#commercial-usage)                                     | Untersagt                                                                            | Untersagt                                                                                                                                       | Enthalten                                                                                                                                                |
 | Zugriff auf Premium-Hosting-Infrastruktur                                                          | *Nicht verfügbar*                                                                    | *Nicht verfügbar*                                                                                                                               | Erlaubt                                                                                                                                                  |
 | **Eigener Bot**: Eigene Befehle                                                                    | 10                                                                                   | *unbegrenzt*                                                                                                                                    | *unbegrenzt*                                                                                                                                             |
 
@@ -199,7 +199,7 @@ bleibt.
 
 Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 28 Tagen an Hosting-Zeit entspricht. Du kannst nicht mehr
 als
-28 Tage Host-Zeit gleichzeitig haben. Du kannst auch deine [Trusted Admins](./trusted-admins) bitten, Werbung für deinen
+28 Tage Host-Zeit gleichzeitig haben. Du kannst auch deine [Trusted Admins](/docs/scnx/guilds/trusted-admins) bitten, Werbung für deinen
 Server anzuschauen.
 
 Solltest du mal vergessen, deine Hosting-Zeit zu verlängern, werden deine Bots heruntergefahren und du wirst sie nicht
@@ -208,7 +208,7 @@ der [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers unter
 Benachrichtigungen verwalten" auch eine Benachrichtigungen 24 Stunden vor dem Ablauf deiner Hosting-Zeit einrichten, um
 das in Zukunft zu vermeiden.
 
-Wenn du auf SCNX werben willst, schau dir doch mal unsere [auf SCNX werben](./../account-and-billing/ads) Dokumentation
+Wenn du auf SCNX werben willst, schau dir doch mal unsere [auf SCNX werben](/docs/scnx/account-and-billing/ads) Dokumentation
 an.
 
 ## Häufig gestellte Fragen {#faq}
@@ -216,7 +216,7 @@ an.
 <details>
 <summary>Ich habe eine Frage über Zahlungen per Dauerüberweisung</summary>
 
-Alle Infos findest du in unserer <a href="../account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem
+Alle Infos findest du in unserer <a href="/de/docs/account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem
 Thema</a>.
 </details>
 <details>
@@ -252,8 +252,8 @@ Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne di
 <tr>
     <td>Europäische Union</td>
     <td>Euro</td>
-    <td>Kreditkarte, PayPal, SEPA-Banküberweisung, Klarna, paysafecard, <a href="./../account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, EPS, iDEAL, Przelewy24, Bancontact, Revolut Pay, WeChat Pay, Alipay, Apple Pay, Google Pay</td>
-    <td>Credit Card, PayPal, Apple Pay, Google Pay, Revolut Pay, <a href="./../account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, <a href="./../account-and-billing/faq#reoccurring-transfer">Dauerauftrag</a></td>
+    <td>Kreditkarte, PayPal, SEPA-Banküberweisung, Klarna, paysafecard, <a href="/de/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, EPS, iDEAL, Przelewy24, Bancontact, Revolut Pay, WeChat Pay, Alipay, Apple Pay, Google Pay</td>
+    <td>Credit Card, PayPal, Apple Pay, Google Pay, Revolut Pay, <a href="/de/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, <a href="/docs/scnx/account-and-billing/faq#reoccurring-transfer">Dauerauftrag</a></td>
 </tr>
 <tr>
     <td>Sonstiges (über Paddle)</td>
@@ -294,7 +294,7 @@ dass wir deine Anfrage ablehnen können, wenn wir glauben, dass du diese Regelun
 Sinn, unser Team zu kontaktieren, solltest du diese Bedingungen nicht erfüllen, denn unser Team kann eine einmalige
 Ausnahme auf einer Fall-zu-Fall-Basis vornehmen.
 
-Wenn du planst, eine <a href="./faq#transfer">Übertragung aller Daten deines Servers</a> zu beantragen (das enthält alle
+Wenn du planst, eine <a href="/de/docs/faq#transfer">Übertragung aller Daten deines Servers</a> zu beantragen (das enthält alle
 Daten deines Servers, inklusive Bot-Konfiguration), beantrage bitte keine Plan-Übertragung, denn das macht eine gesamte
 Datenübertragung unmöglich. Bitte beachte außerdem, dass im Falle einer Übertragung die Laufzeiten der beiden Server
 nicht addiert werden, sondern die Laufzeit des alten Servers die des neuen Servers überschreibt.

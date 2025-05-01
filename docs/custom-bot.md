@@ -11,10 +11,10 @@ PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 
 Before you can create your Custom-Bot on SCNX, please make sure that
 
-* you have [added your Server to SCNX](./setup).
+* you have [added your Server to SCNX](/docs/setup).
 * you are the owner of the server you want to enable this feature
-  on ([why?](./scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
-  feature for you and grant you access as a [Trusted Admin](./scnx/guilds/trusted-admins).
+  on ([why?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
+  feature for you and grant you access as a [Trusted Admin](/docs/scnx/guilds/trusted-admins).
 * you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
@@ -38,7 +38,7 @@ policies also apply to your use of the Discord API as part of SCNX) and create y
 
 Next, open the "Bot"-Settings in the navigation bar on the left-hand side.
 There, you can configure the avatar and username - you don't need to,
-as you can also [do this directly on SCNX](./scnx/guilds/bots#change-profile) and get prompted to do so when your bot
+as you can also [do this directly on SCNX](/docs/scnx/guilds/bots#change-profile) and get prompted to do so when your bot
 got created.
 
 The final step in the Developer Dashboard is to generate a token and copy it. To do so, open the "Bot" page of your
@@ -81,13 +81,13 @@ which feature needs what permissions and handle permission-related error correct
 ![](@site/docs/assets/setup/custom-bot-6.png)
 
 Once this is done, your bot is fully ready to use SCNX. Return to the setup flow to edit the bot
-profile with the "Edit profile" button ([you can also do this later](./scnx/guilds/bots#change-profile)), enable
+profile with the "Edit profile" button ([you can also do this later](/docs/scnx/guilds/bots#change-profile)), enable
 modules or explore all features your bot.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
 :::tip Running into issues?
-We have a [troubleshooting guide for Custom-Bots](./custom-bot/troubleshooting) ready for you. If that didn't help,
+We have a [troubleshooting guide for Custom-Bots](/docs/custom-bot/troubleshooting) ready for you. If that didn't help,
 we're always happy to help, just
 visit [scnx.app/help](https://scnx.app/help).
 :::
@@ -104,4 +104,4 @@ Here are a few things you can do now:
 * use Bot-Log-In to create messages with Self-Roles and more.
 * create Custom-Commands to do fun things.
 * configure the behavior of your bot.
-* and much more, open the [Custom-Bot Documentation](./custom-bot/intro) to view every option.
+* and much more, open the [Custom-Bot Documentation](/docs/custom-bot/intro) to view every option.

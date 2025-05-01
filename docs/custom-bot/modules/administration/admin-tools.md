@@ -12,7 +12,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 
 ## Setup {#setup}
 
-* Please [set up permissions](./../../slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+* Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
 * Make sure your bot has the following permissions on your server:
   * To import emojis from another server (`/stealemote`): "Create expressions"
   * To update any channels (all `/admin` commands): "Manage channels"

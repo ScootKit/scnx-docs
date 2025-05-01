@@ -16,7 +16,7 @@ Set weekly messages-goals for your staff-members.
 
 1. Select (or create) a role. The activity of users with this role will get evaluated.
 2. [Configure the module](#configuration).
-3. Please [set up permissions](./../../slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+3. Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
 4. Assign the role to members whose activity should get evaluated every week.
 
 ## Usage {#usage}
@@ -77,7 +77,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
   <summary>How can I change the time when users get evaluated?</summary>
 
   There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need 
-another evaluation time, you could disable the module, <a href="./../../additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
+another evaluation time, you could disable the module, <a href="/docs/custom-bot/additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
   evaluations to happen and enable the module then.
 </details>
 
@@ -124,4 +124,4 @@ the [configured Staff-Roles](#configuration) ("Goal History Entry"):
 There is no way to remove the user entry or the goal history entry from the database. Messages sent by users without
 any [configured Staff-Roles](#configuration) will never be counted and will not create a User entry.
 
-To remove all data, [purge the module database](./../../additional-features#reset-module-database). 
+To remove all data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database). 

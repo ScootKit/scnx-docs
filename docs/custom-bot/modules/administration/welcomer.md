@@ -137,7 +137,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cc
 
 | Field                          | Description                                                                                                                                                                          |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](./../tools/massrole) to do this.                        |
+| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.    |
 | Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                          |
 | Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts. |
 | Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                        |
@@ -202,4 +202,4 @@ This data will get used to delete the sent welcome messages if the user leaves t
 joins (if [enabled](#configuration-config)). There is no way to stop the bot from storing data (as toggling this feature
 should be retroactive), but the data won't get used unless the feature is enabled.
 
-To remove all data, [purge the module database](./../../additional-features#reset-module-database).
+To remove all data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

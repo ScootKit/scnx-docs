@@ -61,7 +61,7 @@ realities. This was required, as we need to start collecting sales tax and to ke
 and infrastructure.
 
 We're introducing two new plans: Unlimited and Professional. You can find all details about these
-plans [on our pricing docs page](./guilds/plans). Old plans are considered legacy and can't be purchased anymore.
+plans [on our pricing docs page](/docs/scnx/guilds/plans). Old plans are considered legacy and can't be purchased anymore.
 
 If you want to hear our reasoning for the new prices and want to hear how we decided on
 them, [watch this German recording](https://www.youtube.com/watch?v=di_TeQt_rQ8) of our membership
@@ -71,7 +71,7 @@ change).
 
 Additionally, we've added Server-Bundles: You can now add additional servers for a lower price - this means that if
 you have multiple servers on SCNX, premium plans will be significantly less
-expensive. [Learn more](./guilds/plans#additional-servers) about this.
+expensive. [Learn more](/docs/scnx/guilds/plans#additional-servers) about this.
 
 ### Effect on existing servers {#effect-on-servers}
 
@@ -82,7 +82,7 @@ The following table explains which type of upgrade is affected in what way:
 | Starter-Plan                              | The Starter plan is free for ever and is not affected in any way.                                                                                                                                                                                                                            |
 | One-Time Upgrades                         | If you have upgraded your server using a one-time upgrade, this upgrade won't be removed until it expires. Your old plan can't be renewed.                                                                                                                                                   |
 | Subscriptions                             | Unless you [migrate your subscriptions](#migrate-subscriptions) in the migration period, your subscription will be canceled and your plan will be downgraded at the end of your billing period. [Migrate your subscription](#migrate-subscriptions) to keep your old price until you cancel. |
-| [Lifetime-Plans](./guilds/plans#lifetime) | Lifetime plans will continue to work and they'll continue to unlock all features for your plan. You can always transfer your plan. If you want to upgrade to one of the new plans, you'll need to contact our team, as upgrade pricing depends on your usage of your lifetime plan.          |
+| [Lifetime-Plans](/docs/scnx/guilds/plans#lifetime) | Lifetime plans will continue to work and they'll continue to unlock all features for your plan. You can always transfer your plan. If you want to upgrade to one of the new plans, you'll need to contact our team, as upgrade pricing depends on your usage of your lifetime plan.          |
 
 ### Migrate subscriptions {#migrate-subscriptions}
 
@@ -97,7 +97,7 @@ Please consider the following restrictions:
 * If you had multiple subscriptions, these subscriptions will be combined into one subscription. The full price of all
   previous subscriptions will be charged once per billing period. The subscription can only be canceled together. It
   might be more economical to consider switching to our new pricing structure, which
-  allows [server bundles](./guilds/plans).
+  allows [server bundles](/docs/scnx/guilds/plans).
 * Migration must be completed before your billing period ends and before the migration period expires.
 * Your payment method needs to be re-entered. If you pay using reoccurring bank transfer, please also make sure to
   update our bank details with your bank.

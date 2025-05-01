@@ -7,7 +7,7 @@ import {faArrowCircleRight} from '@fortawesome/pro-solid-svg-icons';
 
 export default function Video({url}) {
     const [allowed, setAllowed] = useState(false);
-    if (url.includes('youtu.be')) url = url.replace('youtu.be', 'youtube.com')
+    if (url.includes('youtu.be')) url = url.replace('youtu.be', 'youtube.com');
     const urlData = new URL(url.replaceAll('www.', ''));
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function Video({url}) {
     }, [urlData]);
 
     if (!allowed && urlData.hostname === 'youtube.com') return <div style={{justifyContent: 'center'}}
-                              className="card flex items-center video-consent">
+                                                                    className="card flex items-center video-consent">
         <div>
             <div style={{textAlign: 'center'}}><FontAwesomeIcon icon={faYoutube} className="video-consent-icon"/></div>
             <div className="video-consent-header" style={{marginTop: '5px', fontWeight: 'bold', textAlign: 'center'}}>
@@ -24,7 +24,7 @@ export default function Video({url}) {
             </div>
             <div className="video-consent-description" style={{marginTop: '3px', textAlign: 'center'}}>
                 <Translate
-                    id="youtubeHidden.header" values={{
+                    id="youtubeHidden.description" values={{
                     link: <a href="https://policies.google.com/privacy?hl=en-US" target="_blank"><Translate
                         id="youtubeHidden.privacyLink">Privacy Policy</Translate></a>
                 }}>{'By clicking below, you agree to YouTube\'s {link}.'}</Translate>
@@ -32,18 +32,18 @@ export default function Video({url}) {
             <div style={{marginTop: '12px', textAlign: 'center'}}>
                 <button className="button button--primary" onClick={() => {
                     setAllowed(true);
-                    localStorage.setItem(`scootkit.privacy.consent-${urlData.hostname}`, '1')
+                    localStorage.setItem(`scootkit.privacy.consent-${urlData.hostname}`, '1');
                 }}>
                     <Translate
                         id="youtubeHidden.button">Accept and load YouTube video
-                    </Translate>  <FontAwesomeIcon
+                    </Translate> <FontAwesomeIcon
                     icon={faArrowCircleRight} style={{marginLeft: '5px'}}/>
                 </button>
             </div>
         </div>
     </div>;
 
-    return <div className='player-wrapper'>
-        <ReactPlayer url={url}           className='react-player' controls={true}/>
+    return <div className="player-wrapper">
+        <ReactPlayer url={url} className="react-player" controls={true}/>
     </div>;
 }
