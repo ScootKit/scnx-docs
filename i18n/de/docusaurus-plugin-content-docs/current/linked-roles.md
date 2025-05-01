@@ -30,8 +30,7 @@ PROFESSIONAL: "Zusätzliches Early Access Abonnement während der Beta-Phase erf
 ## Video (Deutsch) {#video}
 
 Unser Entwickler Simon führt dich gerne durch diesen Einrichtungsprozess in
-unserem [Tutorial-Video auf YouTube](https://www.youtube.com/watch?v=HR3yvTVpkOI). Dieses Video ist derzeit nur auf Deutsch verfügbar, aber
-wir arbeiten an einer englischen Übersetzung.
+unserem [Tutorial-Video auf YouTube](https://www.youtube.com/watch?v=HR3yvTVpkOI).
 
 <Video url="https://www.youtube.com/watch?v=HR3yvTVpkOI" />
 
