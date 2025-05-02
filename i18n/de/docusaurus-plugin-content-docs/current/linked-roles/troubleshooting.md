@@ -83,16 +83,16 @@ Beim Einrichten von Verknüpften Rollen muss die Weiterleitungs-URL im Discord D
 
 Bei der Verwendung von Verknüpften Rollen erhalten Nutzer die Rolle nicht automatisch.
 
-**Lösung**: Nutzer müssen die [Verknüpfte Rolle manuell einfordern](./claim-roles). Du kannst ihnen folgenden Link senden: [`https://scootk.it/claim-linked-roles`](https://scootk.it/claim-linked-roles).
+**Lösung**: Nutzer müssen die [Verknüpfte Rolle manuell abholen](./claim-roles). Du kannst ihnen folgenden Link senden: [`https://scootk.it/claim-linked-roles`](https://scootk.it/claim-linked-roles).
 
-### "Der SCNX-Plan dieses Servers ist abgelaufen" beim Einfordern von Verknüpften Rollen {#plan-expired}
+### "Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen {#plan-expired}
 
 Für die Nutzung von Verknüpften Rollen ist ein Plan erforderlich, der diese Funktion beinhaltet.
 
 **Lösung**: Upgrade auf einen kostenpflichtigen Plan, der Verknüpfte Rollen unterstützt. Erfahre mehr
 über [Pläne und deren Funktionen in unserer Dokumentation](./../scnx/guilds/plans).
 
-### "Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Einfordern von Verknüpften Rollen {#early-access-required}
+### "Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Abholen von Verknüpften Rollen {#early-access-required}
 
 Für die Nutzung von Verknüpften Rollen ist Early Access erforderlich. Early Access ermöglicht es uns, Zeit und Geld in die Entwicklung neuer Funktionen zu investieren. Wir planen, diese Funktion ab Ende Q2 2025 für alle mit dem Unlimited- oder Professional-Plan ohne Mitgliedschaft freizugeben.
 
