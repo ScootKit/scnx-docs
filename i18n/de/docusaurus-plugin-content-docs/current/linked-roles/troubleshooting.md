@@ -19,7 +19,7 @@ Probleme bei der Verwendung von Verknüpften Rollen:
 
 * [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
 * [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
-* ["Invalid OAuth2 redirect_url" beim Einfordern von Verknüpften Rollen](#oauth2-redirect-url).
+* ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
 * ["Es wurden dir noch keine Rollen zugewiesen" beim Einfordern von Verknüpften Rollen](#roles-missing).
 * ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Einfordern von Verknüpften Rollen](#generic-api-error).
 * ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
