@@ -20,10 +20,10 @@ Probleme bei der Verwendung von Verknüpften Rollen:
 * [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
 * [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
 * ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
-* ["Es wurden dir noch keine Rollen zugewiesen" beim Einfordern von Verknüpften Rollen](#roles-missing).
-* ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Einfordern von Verknüpften Rollen](#generic-api-error).
+* ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
+* ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
 * ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
-* ["Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Einfordern von Verknüpften Rollen](#early-access-required).
+* ["Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Abholen von Verknüpften Rollen](#early-access-required).
 
 Wenn dein Problem hier nicht aufgeführt ist, [klicke hier](#other).
 
@@ -44,7 +44,7 @@ Bei der Verwendung von Verknüpften Rollen kann es vorkommen, dass die Rolle nic
 **Lösung**: Damit die Verknüpfte Rolle neben dem Benutzernamen angezeigt wird, musst du in jedem Kanal eine Berechtigungsüberschreibung mit der Berechtigung „Kanal ansehen“ für die Verknüpfte Rolle erstellen.
 [Mehr dazu findest du in unserem Leitfaden](./role-management#display-in-chat).
 
-### "Es scheint, als wäre die Konfiguration des Servers falsch" beim Einfordern von Verknüpften Rollen {#generic-api-error}
+### "Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholen von Verknüpften Rollen {#generic-api-error}
 
 Wenn ein Schritt während der Einrichtung übersprungen wurde oder ein falscher Wert eingegeben wurde, können Verknüpfte Rollen nicht korrekt synchronisiert werden.
 
@@ -57,14 +57,14 @@ Um dieses Problem zu beheben, musst du einige Schritte der [Einrichtung](../link
 3. Folge unserem [Einrichtungsleitfaden](./../linked-roles#step-2) ab Schritt 2. Achte genau auf alle Anweisungen, da Fehler zu diesem Problem führen können.
 4. Sobald du fertig bist, versuche erneut, die [Rolle einzufordern](./claim-roles).
 
-### "Es wurden dir noch keine Rollen zugewiesen" beim Einfordern von Verknüpften Rollen {#roles-missing}
+### "Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen {#roles-missing}
 
 Standardmäßig müssen Rollen im Dashboard manuell zugewiesen werden. Wenn keine Rollen zugewiesen wurden, erscheint dieser Fehler.
 
 **Lösung**: [Weise dem entsprechenden Nutzer eine Rolle zu](./user-management#add-role) oder mache
 die [Rolle öffentlich](./role-management#public-roles), sodass sie von allen beansprucht werden kann. Wenn du denkst, dass eine Rolle zugewiesen wurde, vergewissere dich, dass der Nutzer mit dem richtigen Account eingeloggt ist.
 
-### "Invalid OAuth2 redirect_url" beim Einfordern von Verknüpften Rollen {#oauth2-redirect-url}
+### "Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen {#oauth2-redirect-url}
 
 Beim Einrichten von Verknüpften Rollen muss die Weiterleitungs-URL im Discord Developer Portal gespeichert werden, sonst erscheint dieser Fehler.
 
