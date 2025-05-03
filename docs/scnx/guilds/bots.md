@@ -184,7 +184,7 @@ To change the language of your bot, please
 
 ## Remove mentions of SCNX {#offbrand}
 
-<IncludedInPlan data={{STARTER: false, UNLIMITED: false, PROFESSIONAL: false}} />
+<IncludedInPlan data={{STARTER: false, UNLIMITED: false, PROFESSIONAL: true}} />
 
 You can always edit the footer of every editable message on SCNX, but you can also overwrite the default value used by
 every message that is missing a configuration field or where you did not set a different footer manually.
