@@ -122,11 +122,6 @@ export default function ModuleOverview({moduleName}) {
                     <Translate id="modules.enable">Enable module on SCNX</Translate>
                     <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
                 </Link>
-                {moduleData.orgData && <Link
-                    href={`https://scnx.app/${i18n.currentLocale}/marketplace/organizations/${moduleData.orgData.slug}`}
-                    className="button button--secondary">
-                    <FontAwesomeIcon icon={faHeart} style={{marginRight: '0.25rem'}}/> <Translate id="module.donate">Donate
-                    to developer</Translate></Link>}
             </div>
         </div>
     </div>;
