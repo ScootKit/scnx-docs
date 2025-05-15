@@ -20,13 +20,13 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
   * what invites the user has created.
 * Easily revoke all invites created by a user.
 * Distinguish between active invites and invites where the invited user has already left the server.
-* Integrates with the [Info Commands](./info-commands) and [Moderation & Security](./) modules.
+* Integrates with the [Info Commands](/docs/custom-bot/modules/moderation/info-commands) and [Moderation & Security](/docs/custom-bot/modules/moderation) modules.
 
 ## Setup {#setup}
 
 * Make sure your bot has "Manage invites" permissions on your server.
 * Enable the module to start tracking invites - you might need to restart your bot to initiate the required hook.
-* Please [set up permissions](./../../slash-commands) for [`/trace-invites`](#commands) to avoid unauthorized usage.
+* Please [set up permissions](/docs/custom-bot/slash-commands) for [`/trace-invites`](#commands) to avoid unauthorized usage.
 * To log new joins and their invitees, [configure](#configuration) a log-channel - make sure the bot has the "Send
   messages" permissions on the channel. Please note that users with the "Manage invites" permission on your server will
   be able to revoke invites by clicking on the "Remove this invite" button below the log entry message.
@@ -39,8 +39,8 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
   the [`/trace-invites`](#commands) Slash-Command.
 * To revoke all invites of a user, run the [`/trace-invites`](#commands) Slash-Command and click on "Remove all invites
   by this user" button below the message.
-* If this module is enabled, other modules (such as [Moderation & Security](./)
-  and [Info Commands](./info-commands)) will use data about tracked invites to improve functionality - this is done
+* If this module is enabled, other modules (such as [Moderation & Security](/docs/custom-bot/modules/moderation)
+  and [Info Commands](/docs/custom-bot/modules/moderation/info-commands)) will use data about tracked invites to improve functionality - this is done
   automatically.
 
 ## Commands {#commands}
@@ -85,5 +85,5 @@ When a user joins your server and the module is enabled, the following data will
 When a user leaves your server, the invite entry will be marked as "inactive", but won't be deleted.
 
 To avoid manipulation of data, this stored data can't be deleted on case-by-case basis. Instead, you
-can [purge the module database](./../../additional-features#reset-module-database) to delete all data stored about
+can [purge the module database](/docs/custom-bot/additional-features#reset-module-database) to delete all data stored about
 invites.

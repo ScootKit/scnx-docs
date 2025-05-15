@@ -1,0 +1,21 @@
+scderox:
+  name: Simon
+  title: scderox - ScootKit Mitarbeiter
+  url: https://scderox.de
+  email: simon@scootkit.com
+  page: true
+  image_url: https://scnx-cdn.scootkit.net/1744474461725-1dLgEpfMVrF0Wp5qmMlTS7NUzhuX1uWINT2y52zISdJO9qhg.jpeg
+  socials:
+    x: scderox
+    github: scderox
+    instagram: scderox
+    threads: scderox
+    twitch: scderox
+    youtube: scderox
+hörnchen:
+  name: Hörnchen
+  page: true
+  image_url: https://scnx-cdn.scootkit.net/1744663922690-kAT5LJZSoVXViyMUOSjsk0SlYgAIoIZPVk5Gx4wwHaUCSkSb.png
+  title: hoernchen_0 - SCNX Helfer
+  socials:
+    github: hoernchen-from-hotel

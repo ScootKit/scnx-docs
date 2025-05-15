@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The SCNX Toolbox is a set of tools designed to make your life as a professional Discord-User easier.
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
 ## Discord-User-Lookup {#user-lookup}
 

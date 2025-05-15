@@ -7,7 +7,7 @@ Let users create tickets to message your staff
 :::info
 Looking for a more professional support experience with claiming, ticket-topics, forms and more?
 Check [Modmail](https://modmail.net) at SCNX - starting at
-only <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/> (<PlanPrice plan="ACTIVE_GUILD" type="YEARLY"/>).
+only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" type="YEARLY"/>).
 :::
 
 ## Features {#features}
@@ -44,7 +44,7 @@ the [file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=
 
 It's not possible to configure multiple ticket categories into one ticket creation message. If you are not a PRO user
 and the field values are on a different language,
-consider [switching the language](./../../../scnx/guilds/bots#bot-language) of your bot.
+consider [switching the language](/docs/scnx/guilds/bots#bot-language) of your bot.
 
 | Field                                | Description                                                                                                                                                                                         |
 |--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,4 +100,4 @@ transcripts. Ticket transcripts will be decrypted by your browser when accessing
 your users. Ticket transcripts will be deleted after one year.
 
 There is no way to remove a ticket from the database.  
-To remove all data stored about tickets, [purge the module database](./../../additional-features#reset-module-database).
+To remove all data stored about tickets, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

@@ -7,7 +7,7 @@ sidebar_position: 1
 Die SCNX Werkzeuge sind eine Ansammlung von hilfreichen Werkzeugen, um dein Leben als professioneller Discord-Nutzer
 einfacher zu machen.
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
 ## Discord-Nutzer-Nachschlagen {#user-lookup}
 

@@ -19,7 +19,7 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 
 ## Einrichtung {#setup}
 
-* Bitte [richte die Berechtigungen für Slash-Befehle](./../../slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
+* Bitte [richte die Berechtigungen für Slash-Befehle](/docs/custom-bot/slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
 * Konfiguriere anschließend die Partner-Liste:
     1. Erstelle einen Kanal, in den der Bot die Partner-Liste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachrichten senden“ verfügen.
     2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
@@ -57,7 +57,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 | Partner-Liste-Embed: Titel          | Titel des Partner-Listen-Embeds.                                                                                                                                                                                                 |
 | Partner-Liste-Embed: Beschreibung   | Beschreibung des Partner-Listen-Embeds.                                                                                                                                                                                          |
 | Partner-Liste-Embed: Partner-String | Dies ist das Format eines Partners, der in dem Partner-Listen-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).                 |
-| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert](./../../additional-features#embed-colors) sein.                                                                           |
+| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert](/docs/custom-bot/additional-features#embed-colors) sein.                                                                           |
 | Kategorien                          | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden.                                                                   |
 | Kategorie-Rollen                    | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle                                 |
 | Partner-Benachrichtigung senden     | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden.                                                                                                           |
@@ -71,7 +71,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
         <li>Stelle sicher, dass der gewünschte Kanal leer ist.</li>
         <li>Stelle sicher, dass der Bot über die Berechtigungen „Kanal anzeigen“, „Nachrichten senden“ und „Nachrichtenverlauf anzeigen“ für den Kanal verfügt.</li>
         <li>Stelle sicher, dass keiner deiner Kategoriefelder leer ist.</li>
-        <li>Stelle sicher, dass du in der Konfiguration einen <a href="./../../additional-features#embed-colors">richtigen Farbwert</a> angegeben hast.</li>
+        <li>Stelle sicher, dass du in der Konfiguration einen <a href="/de/docs/custom-bot/additional-features#embed-colors">richtigen Farbwert</a> angegeben hast.</li>
         <li>Starte deinen Bot neu.</li>
     </ul>
 </details>
@@ -94,4 +94,4 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 * Metadaten zum Eintrag (Datum der Erstellung und letzten Aktualisierung)
 
 Um gespeicherte Daten zu löschen, verwende [`/partner delete`](#commands)
-oder [Moduldatenbank löschen](./../../additional-features#reset-module-database).
+oder [lösche die Moduldatenbank](/docs/custom-bot/additional-features#reset-module-database).

@@ -9,27 +9,31 @@ Plans on SCNX are server-specific payment options unlocking more features on SCN
 ## All available plans and their features {#features}
 
 :::info
-Final prices depend on your currency and payment interval and will be displayed before purchase. To view prices
-including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
+Final prices depend on your currency and payment interval and will be displayed before purchase. To view prices for your
+local region and currency,
+visit [scnx.xyz/plans](https://scnx.xyz/plans).
 :::
 
-| Feature                                                                                                                                                            | Starter-Plan                                                                        | Active Guild Plan                                                                                                                                      | PRO-Plan                                                                                                                    |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| Price                                                                                                                                                              | *Free for ever*                                                                     | <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />, <PlanPrice plan="ACTIVE_GUILD" type="YEARLY" /> or <PlanPrice plan="ACTIVE_GUILD" type="LIFETIME" /> | <PlanPrice plan="PRO" type="MONTHLY" />, <PlanPrice plan="PRO" type="YEARLY" /> or <PlanPrice plan="PRO" type="LIFETIME" /> |
-| Full access to the SCNX Dashboard                                                                                                                                  | Included                                                                            | Included                                                                                                                                               | Included                                                                                                                    |
-| [dcserver.link](./dcserver-link)                                                                                                                                   | 50+ members without bots required                                                   | Included                                                                                                                                               | Included                                                                                                                    |
-| [Custom Discord-Bot](./../../custom-bot/intro), hosted 24/7                                                                                                        | Included, but needs to be [extended](#starter-plan) every two weeks by watching ads | Included                                                                                                                                               | Included                                                                                                                    |
-| [Custom Modmail-Bot](./../../modmail/intro), hosted 24/7                                                                                                           | *Not available*                                                                     | Included                                                                                                                                               | Included                                                                                                                    |
-| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                                                                                                 | *Not available*                                                                     | *Not available*                                                                                                                                        | Included                                                                                                                    |
-| [Server analytics](./analytics)                                                                                                                                    | Included                                                                            | Included                                                                                                                                               | Included                                                                                                                    |
-| Amount of [AI Credits](https://faq.scnx.app/ai-on-scnx/) awarded on the 25. of each month                                                                          | 20                                                                                  | 50                                                                                                                                                     | 100                                                                                                                         |
-| [Commercial usage](./faq#commercial-usage)                                                                                                                         | Not allowed                                                                         | Not allowed                                                                                                                                            | Allowed                                                                                                                     |
-| **Custom-Bot**: Custom-Commands                                                                                                                                    | 10                                                                                  | 42                                                                                                                                                     | *unlimited*                                                                                                                 |
-| **[SCNX Backups](./backups)**: Available Backup-Slots                                                                                                              | 2                                                                                   | 5                                                                                                                                                      | 10                                                                                                                          |
-| **[SCNX Backups](./backups)**: [Automatic Backups](./backups#automatic)                                                                                            | *Not available*                                                                     | Once a day                                                                                                                                             | Twice a day                                                                                                                 |
-| **[SCNX Backups](./backups)**: Messages stored per channel per backup                                                                                              | 10                                                                                  | 20                                                                                                                                                     | 50                                                                                                                          |
-| **[SCNX Backups](./backups)**: [Export Backups](./backups#export)                                                                                                  | *Not available*                                                                     | *Not available*                                                                                                                                        | Included                                                                                                                    |
-| **[Remove the SCNX Manager Bot](./faq#scnx-manager-bot)**<br />:warning: Removing the SCNX Manager bot will disable some SCNX features, like Backups or Analytics. | *Not available*                                                                     | *Not available*                                                                                                                                        | Possible, but disables certain SCNX features.                                                                               |
+:::warning
+Plans do not include premium Backup features or other premium features offered by the SCNX-Bot. Those features require a
+separate subscription.
+:::
+
+| Feature                                                                                | Starter Plan                                                                        | Unlimited Plan                                                                                                                                | Professional plan                                                                                                                                      |
+|----------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Price (for customers in the EU)                                                        | *Free for ever*                                                                     | <PlanPrice plan="UNLIMITED" type="MONTHLY" />, <PlanPrice plan="UNLIMITED" type="YEARLY" /> or <PlanPrice plan="UNLIMITED" type="LIFETIME" /> | <PlanPrice plan="PROFESSIONAL" type="MONTHLY" />, <PlanPrice plan="PROFESSIONAL" type="YEARLY" /> or <PlanPrice plan="PROFESSIONAL" type="LIFETIME" /> |
+| Reduced price for additional servers[¹](#additional-servers)                           | *n/a*                                                                               | <PlanPrice plan="UNLIMITED" type="ADDITIONAL_SERVERS" /> / month / server                                                                     | <PlanPrice plan="PROFESSIONAL" type="ADDITIONAL_SERVERS" /> / month / server                                                                           |
+| Full access to the SCNX Dashboard                                                      | Included                                                                            | Included                                                                                                                                      | Included                                                                                                                                               |
+| [dcserver.link](/docs/scnx/guilds/dcserver-link)                                                   | Included                                                                            | Included                                                                                                                                      | Included                                                                                                                                               |
+| [Custom Discord-Bot](/docs/custom-bot/intro), hosted 24/7                              | Included, but needs to be [extended](#starter-plan) every two weeks by watching ads | Included                                                                                                                                      | Included                                                                                                                                               |
+| [Custom Modmail-Bot](/docs/modmail/intro), hosted 24/7                                 | *Not available*                                                                     | Included                                                                                                                                      | Included                                                                                                                                               |
+| [Linked Roles](/docs/linked-roles/intro)                                               | *Not available*                                                                     | Included for users with [Early Access](https://membership.scootkit.com)                                                                       | Included for users with [Early Access](https://membership.scootkit.com)                                                                                |
+| Remove mention of SCNX from your all your bots (e.g. Embed-Footer)                     | *Not available*                                                                     | *Not available*                                                                                                                               | Included                                                                                                                                               |
+| Amount of [AI Credits](https://faq.scnx.app/ai-on-scnx/) awarded on the 25. of each month | 20                                                                                  | 300                                                                                                                                           | 600                                                                                                                                                    |
+| [Commercial usage](/docs/scnx/guilds/faq#commercial-usage)                                         | Not allowed                                                                         | Not allowed                                                                                                                                   | Included                                                                                                                                               |
+| Access to Premium Hosting Infrastructure                                               | *Not available*                                                                     | *Not available*                                                                                                                               | Allowed                                                                                                                                                |
+| **Custom-Bot**: Custom-Commands                                                        | 10                                                                                  | *unlimited*                                                                                                                                   | *unlimited*                                                                                                                                            |
+
 
 <details>
     <summary>Additional Plan-Restrictions for certain Custom-Bot Modules</summary>
@@ -38,8 +42,8 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
     <tr style={{fontWeight: 700}}>
         <td>Module</td>
         <td>Starter-Plan</td>
-        <td>Active Guild Plan</td>
-        <td>PRO-Plan</td>
+        <td>Unlimited plan</td>
+        <td>Professional plan</td>
     </tr>
     <tr>
         <td>Automatic Messages (per category)</td>
@@ -81,8 +85,8 @@ including currency, visit [scnx.xyz/plans](https://scnx.xyz/plans).
         <td>10</td>
     </tr>
 <br/>
-Please note that certain features or fields allowing greater customizations might be locked behind the PRO-Plan in certain modules.
-You can still use the module without a PRO-Plan, but you might be unable to edit a certain field.
+Please note that certain features or fields allowing greater customizations might be locked behind the Professional plan in certain modules.
+You can still use the module without a Professional plan, but you might be unable to edit a certain field.
 </table>
 </details>
 
@@ -90,15 +94,28 @@ You can still use the module without a PRO-Plan, but you might be unable to edit
 
 To upgrade your SCNX Server plan, please visit
 the [pricing page](https://scnx.app/glink?page=pricing?showUpgradeModal=true) of your server and open the upgrade modal.
-Here, select the Payment-Terms (available options: "One-Time", "Monthly", "Yearly", ["Lifetime"](#lifetime)) and your
-currency. If
-you want to pay using [SCNX Credits](./../account-and-billing/faq#scnx-credits), please indicate this now.
-
-![](@site/docs/assets/scnx/guilds/plans/subscription-setup.png)
+Here, select your desired plan. After that, please select your payment terms. Once done, you can add additional servers
+at a discounted price.
 
 Your next steps will be different, depending on what Payment terms you've selected. Please follow the instructions in
 the dashboard and return to this page if you have any questions or concerns — we'll do our best to cover them in
 our [Frequently asked questions](#faq) section.
+
+## Add additional servers {#additional-servers}
+
+When upgrading the plan of a server, you can easily add additional servers for a reduced price for each server. This
+allows you to save money even if you want to use SCNX on multiple servers.
+
+You can add up to five additional servers to a plan in addition to at least one server that that has the base price.
+This means that you can have a total of six servers in one subscription, five of which receive a discount.
+
+Please note that subscriptions containing additional servers can't be modified, meaning that you'll need to cancel to
+remove an additional server. We're working on a better solution.
+
+Please also note that reselling plans is a violation of our [Terms of Service](https://scootk.it/scnx-tos) and will
+result in getting your account restricted in addition to potential legal procedures. Please note that purchasing plans
+from sellers that are not [authorized](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) is also
+considered a violation.
 
 ## Lifetime-Plans {#lifetime}
 
@@ -171,7 +188,7 @@ bot
 running.
 
 You can watch up to two ads at a time which sumps up to 28 days of hosting time. You can not have more than 28 days of
-hosting time at a time. You can also ask your [Trusted Admins](./trusted-admins) to watch videos for your server.
+hosting time at a time. You can also ask your [Trusted Admins](/docs/scnx/guilds/trusted-admins) to watch videos for your server.
 
 If you forget to extend your hosting time, your bots will shut down, and you won't be able to start them again without
 extending your hosting time. No data will be deleted in such a case. You can set up a notification 24 hours before your
@@ -179,18 +196,18 @@ Hosting-Time ends in your
 server's [pricing page](https://scnx.app/glink?page=pricing) under "Manage Free-Plan" -> "Manage notifications" to
 prevent this from happening in the future.
 
-If you want to advertise on SCNX, please check our [advertising on SCNX](./../account-and-billing/ads) documentation.
+If you want to advertise on SCNX, please check our [advertising on SCNX](/docs/scnx/account-and-billing/ads) documentation.
 
 ## Frequently asked questions {#faq}
 
 <details>
 <summary>I have a question about using SEPA reoccurring payments / standing orders for my subscription</summary>
 
-    Please refer to our <a href="../account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
+    Please refer to our <a href="/docs/scnx/account-and-billing/faq#reoccurring-transfer">guide</a> on this topic.
 
 </details>
 <details>
-<summary>I can't upgrade my subscription to the PRO-Plan because it's shown as "inactive"</summary>
+<summary>I can't upgrade my subscription to the Professional plan because it's shown as "inactive"</summary>
 <ul>
 <li>Please make sure you haven't canceled your subscription.</li>
 <li>Make sure your subscription does not start in the future (this happens when you switch from One-Time-Upgrades to a subscription) - in such case, our staff needs to perform the upgrade manually.</li>
@@ -210,39 +227,25 @@ You do not need to provide any payment method to start a free trial - the only t
 To check if you are eligible, open the <a href="https://scnx.app/glink?page=pricing">pricing page</a> of your server where a free-trial banner will be displayed in case you are eligible.
 </details>
 <details>
-<summary>Can I switch my One-Time-Upgrade to a subscription?</summary>
-
-Yes, visit the <a href="https://scnx.app/glink?page=pricing?showUpgradeModal=1">pricing page</a> of open the
-upgrade-modal by clicking "Extend". There, simply select the Payment-Terms / Interval of the subscription you want - any
-time left on your current plan will be credited towards your subscription.
-</details>
-<details>
-<summary>What payment methods are available?</summary>
+<summary>What payment methods & currencies are available?</summary>
 <table>
     <tr>
+    <td>Location</td>
     <td>Currency</td>
     <td>Payment Methods for one-time purchases (including Lifetime-Plans)</td>
     <td>Payment Methods for subscriptions</td>
 </tr>
 <tr>
+    <td>European Union</td>
     <td>Euro</td>
-    <td>Credit-Card, PayPal, SEPA-Bank-Transfer, paysafecard, Sofort, <a href="./../account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, EPS, Giropay, iDEAL, Przelewy24, Bancontact, WeChat Pay, Alipay</td>
-    <td>Credit-Card, PayPal, <a href="./../account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, <a href="./../account-and-billing/faq#reoccurring-transfer">Reoccurring Bank-Transfer</a></td>
+    <td>Credit Card, PayPal, SEPA-Bank-Transfer, Klarna, paysafecard, <a href="/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, EPS, iDEAL, Przelewy24, Bancontact, Revolut Pay, WeChat Pay, Alipay, Apple Pay, Google Pay</td>
+    <td>Credit Card, PayPal, Apple Pay, Google Pay, Revolut Pay, <a href="/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, <a href="/docs/scnx/account-and-billing/faq#reoccurring-transfer">Reoccurring Bank-Transfer</a></td>
 </tr>
 <tr>
-    <td>US-Dollar</td>
-    <td>Credit-Card, PayPal</td>
-    <td>Credit-Card, PayPal</td>
-</tr>
-<tr>
-    <td>Swiss Franc</td>
-    <td>Credit-Card, PayPal</td>
-    <td>Credit-Card, PayPal</td>
-</tr>
-<tr>
-    <td>British pound</td>
-    <td>Credit-Card, PayPal</td>
-    <td>Credit-Card, PayPal</td>
+    <td>Anywhere else (via Paddle)</td>
+    <td>Localized currencies and pricing is available</td>
+    <td>Credit Card, PayPal, Apple Pay, Google Pay</td>
+    <td>Credit-Card, PayPal, Apple Pay, Google Pay</td>
 </tr>
 </table>
 </details>
@@ -255,6 +258,14 @@ a prorated refund. Please <a href="https://scnx.app/help">contact our staff</a>.
 </details>
 
 <details>
+<summary>I want to remove an additional server from my subscription.</summary>
+
+Right now, we're unable to modify your subscription in that way. You'll need to cancel your subscription and resubscribe
+once it expires. We're working on a better solution.
+</details>
+
+<details>
+
 <summary>Can I transfer my plan and remaining Plan time or subscriptions to another server?</summary>
 
 Our team can manually transfer your plan and associated data (like remaining Plan time and subscriptions) if <b>one</b>
@@ -265,7 +276,7 @@ of the following conditions is being met:
 </ul>
 <b>You can only request a Plan transfer once every 6 months</b>. <br/>
 To start such a transfer, please <a href="https://scnx.app/help">contact our staff</a>. Please note that we might deny your request if we believe you abuse this policy. It also makes sense to reach out if you do not meet these requirements, as our staff can make exceptions on a case-to-case-basis.
-If you plan to <a href="./faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible.
+If you plan to <a href="/docs/scnx/guilds/faq#transfer">request a complete data transfer</a> to another server (this includes configuration data of bots and more), please do not request a plan-transfer as this makes a complete data transfer impossible.
 
 Please note: Transferring your plan will <b>overwrite</b> an existing Plan date. Plan times from both servers will not
 be summed up.

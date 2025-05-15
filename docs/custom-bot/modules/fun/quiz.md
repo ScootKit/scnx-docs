@@ -124,4 +124,4 @@ The bot also stores the following data about every user that has participated in
 * Metadata about the entry (date when created and last updated)
 
 Once a day, the amount of quiz users done on the day before are removed from the database.
-To remove all quiz related data, [purge the module database](./../../additional-features#reset-module-database).
+To remove all quiz related data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

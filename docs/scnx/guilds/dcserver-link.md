@@ -4,17 +4,9 @@ sidebar_position: 4
 
 # dcserver.link
 
-:::info Beta-Alert
-This documentation is for a unreleased product that is only available for a certain number of servers on SCNX. Check
-your [server settings page](https://scnx.app/glink?page=settings) on SCNX to see if you can use dcserver.link URLs.
-:::
-
 Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`).
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}
-additionalDetails={{
-STARTER: 'Only available for servers with more than 50 members (without bots) on their server or with a payed plan.'
-}}/>
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
 ## Usage {#usage}
 
@@ -22,17 +14,16 @@ Create a dcserver.link to allow users to join your server by a unique vanity url
 example: Instead of users joining with the URL `https://discord.gg/WxB3z5YJh9`
 users can join the (German) ScootKit Discord with `https://dcserver.link/scootkit` - this is way easier to remember.
 
-The (verified) SCNX Bot will automatically create invites for members wanting to join with your link - there's no need
+Your own CustomBot will automatically create invites for members wanting to join with your link - there's no need
 to worry about expiring invites.
 
 To view, copy or [change](#change-url) your current dcserver.link-URL, open
-the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the "
-dcserver.link-URL" section.
+the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the 
+"dcserver.link-URL" section.
 
 ## Setup {#setup}
 
-Before setting up a dcserver.link URL for your server, please make sure your server either has a paid plan (no trial
-version) or has at least 50 members (without bots).
+Before you start, make sure that you have create a [CustomBot](/docs/custom-bot/intro) that has the "Create invites" permission on your server.
 
 To get started, visit the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX. Scroll
 down to the "dcserver.link-URL" section and click on "Get started".
@@ -63,7 +54,7 @@ If creating an invite fails (this might happen if you temporarily block invites 
 shown. Please note that SCNX might in certain situations create multiple invites an hour to ensure a smooth experience
 for your users.
 
-Please make sure you whitelist the (verified) SCNX bot from security systems such as WickBot, as these bots might
+Please make sure you whitelist the your CustomBot from security systems such as WickBot, as these bots might
 interfere with the generation of dcserver.link URLs.
 
 At this time, SCNX will choose a channel at random to create an invite in. We're still working on making this process
@@ -102,7 +93,7 @@ are, however, a few exemptions:
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
 
-    When a server is <a href="./faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
+    When a server is <a href="/docs/scnx/guilds/faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.
 </details>

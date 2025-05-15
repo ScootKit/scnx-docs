@@ -66,5 +66,5 @@ the [configuration](https://scnx.app/glink?page=bot/configuration?query=anti&fil
   deleted the message.
 
 :::info Looking for something else?
-If you want to log the content of all messages, please use the [advanced logging](./../administration/logging) module.
+If you want to log the content of all messages, please use the [advanced logging](/docs/custom-bot/modules/administration/logging) module.
 :::

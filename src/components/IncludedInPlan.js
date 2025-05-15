@@ -38,8 +38,8 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 </div>
             </div>
             <div style={{display: 'flex', fontWeight: 500}}>
-                <span style={{fill: data['ACTIVE_GUILD'] ? '#2ECC71' : '#E74C3C', marginRight: '5px'}}>
-                    {data['ACTIVE_GUILD'] ?
+                <span style={{fill: data['UNLIMITED'] ? '#2ECC71' : '#E74C3C', marginRight: '5px'}}>
+                    {data['UNLIMITED'] ?
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                             <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                         </svg> :
@@ -50,19 +50,19 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 </span>
                 <div>
                     <div>
-                        {data['ACTIVE_GUILD'] ? <Translate id="plans.included.activeGuildIncluded">Included in the
-                                Active-Guild-Plan</Translate> :
-                            <Translate id="plans.included.starterNotIncluded">Not included in the
-                                Active-Guild-Plan</Translate>} (<PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/>)
+                        {data['UNLIMITED'] ? <Translate id="plans.included.activeGuildIncluded">Included in the
+                                Unlimited-Plan</Translate> :
+                            <Translate id="plans.included.activeGuildNotIncluded">Not included in the
+                                Unlimited Plan</Translate>} (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
                     </div>
-                    {additionalDetails['ACTIVE_GUILD'] && <div style={{
+                    {additionalDetails['UNLIMITED'] && <div style={{
                         fontWeight: 400, marginTop: '-2px', color: '#A3A3A3', marginBottom: '3px'
-                    }}>{additionalDetails['ACTIVE_GUILD']}</div>}
+                    }}>{additionalDetails['UNLIMITED']}</div>}
                 </div>
             </div>
             <div style={{display: 'flex', fontWeight: 500}}>
-                <span style={{fill: data['PRO'] ? '#2ECC71' : '#E74C3C', marginRight: '5px'}}>
-                    {data['PRO'] ?
+                <span style={{fill: data['PROFESSIONAL'] ? '#2ECC71' : '#E74C3C', marginRight: '5px'}}>
+                    {data['PROFESSIONAL'] ?
                         <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
                             <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
                         </svg> :
@@ -73,16 +73,16 @@ export default function IncludedInPlan({data = {}, additionalDetails = {}}) {
                 </span>
                 <div>
                     <div>
-                        {data['PRO'] ? <Translate id="plans.included.proIncluded">Included in the PRO-Plan</Translate> :
-                            <Translate id="plans.included.starterNotIncluded">Not included in the
-                                PRO-Plan</Translate>} (<PlanPrice plan="PRO" type="MONTHLY"/>)
+                        {data['PROFESSIONAL'] ? <Translate id="plans.included.proIncluded">Included in the Professional Plan</Translate> :
+                            <Translate id="plans.included.proNotIncluded">Not included in the
+                                Professional Plan</Translate>} (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>)
                     </div>
-                    {additionalDetails['PRO'] && <div style={{
+                    {additionalDetails['PROFESSIONAL'] && <div style={{
                         fontWeight: 400,
                         marginTop: '-2px',
                         color: '#A3A3A3',
                         marginBottom: '3px'
-                    }}>{additionalDetails['PRO']}</div>}
+                    }}>{additionalDetails['PROFESSIONAL']}</div>}
                 </div>
             </div>
         </div>

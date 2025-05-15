@@ -17,6 +17,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en', 'de']
     },
+    trailingSlash: true,
     scripts: [{
         src: 'https://analytics.scootkit.net/js/script.js',
         defer: true,
@@ -35,8 +36,25 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     editLocalizedFiles: true,
+                    remarkPlugins: [],
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
+                },
+                blog: {
+                    feedOptions: {
+                        type: 'all',
+                        title: 'SCNX News',
+                        description: 'Receive semi-regular news about SCNX',
+                        copyright: `Copyright © ${new Date().getFullYear()} ScootKit UG (haftungsbeschränkt)`,
+                        createFeedItems: async (params) => {
+                            const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+                            return defaultCreateFeedItems({
+                                // keep only the 10 most recent blog posts in the feed
+                                blogPosts: blogPosts.filter((item, index) => index < 10),
+                                ...rest,
+                            });
+                        },
+                    },
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css')
@@ -67,14 +85,6 @@ const config = {
 
                 // Optional
                 contextualSearch: true
-            },
-            announcementBar: {
-                id: 'wip',
-                content:
-                    'This documentation is currently work in progress, and it does not yet meet our high quality expectations - we\'ll fix that in the followings weeks and add localization. For now, please use resources on <a href="https://faq.scnx.app">faq.scnx.app</a> or on our <a href="https://scootk.it">Discord</a>. Thank you for your understanding.',
-                backgroundColor: '#B45309',
-                textColor: '#fff',
-                isCloseable: false
             },
             navbar: {
                 title: 'Docs',
@@ -107,6 +117,13 @@ const config = {
                         position: 'left',
                         label: 'Modmail'
                     },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'linkedRolesSidebar',
+                        position: 'left',
+                        label: 'Linked Roles'
+                    },
+                    {to: 'blog', label: 'News', position: 'right'},
                     {
                         href: 'https://scnx.app',
                         label: 'SCNX Dashboard',
@@ -150,6 +167,10 @@ const config = {
                             {
                                 label: 'Modmail',
                                 to: '/docs/modmail/intro'
+                            },
+                            {
+                                label: 'Linked Roles',
+                                to: '/docs/linked-roles/intro'
                             }
                         ]
                     },
@@ -204,7 +225,7 @@ const config = {
                         ]
                     }
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 7px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://sc-net.work/scnx-tos">SCNX Terms of Service</a><br/>"ScootKit" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>`
+                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 7px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://sc-net.work/scnx-tos">SCNX Terms of Service</a> &bullet; <a href="https://scootk.it/scnx-spa">Bot Hosting Service Provider Agreement</a><br/>"ScootKit" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>`
             },
             prism: {
                 theme: lightCodeTheme,

@@ -10,43 +10,43 @@ Discord-Bots.
 
 ## Funktionen für Server {#servers}
 
-Server sind der Hauptweg, wie du mit SCNX interagieren wirst: Du kannst so viele [zu SCNX hinzufügen](./../setup), wie
+Server sind der Hauptweg, wie du mit SCNX interagieren wirst: Du kannst so viele [zu SCNX hinzufügen](/docs/setup), wie
 du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
 
 * Das [SCNX Dashboard](https://scnx.app/de): Hier können Serverbesitzer & Admins ihre Server verwalten und Funktionen
   von SCNX nutzen.
 * [Eigener-Discord-Bot](https://scnx.xyz/de/bot) (kurz, auf English: "Custom Bot"): Ein komplett anpassbarer universeller
   Discord-Bot für
-  eine Community, kostenfrei gehostet auf SCNX. Du kannst [mit einem eigenen Bot loslegen](./../custom-bot)
-  oder [die gesamte Eigene-Bot-Dokumentation](./../custom-bot/intro) öffnen.
+  eine Community, kostenfrei gehostet auf SCNX. Du kannst [mit einem eigenen Bot loslegen](/docs/custom-bot)
+  oder [die gesamte Eigene-Bot-Dokumentation](/docs/custom-bot/intro) öffnen.
 * [Discord-Modmail-Bot](https://modmail.net) (kurz: "Modmail Bot"): Ein komplett anpassbares Discord-Support-System mit
   dem Modmail-Prinzip, gebaut, um Support-Tickets professionell zu bearbeiten - gehostet ab
-  nur <PlanPrice plan="ACTIVE_GUILD" type="MONTHLY" />. Du kannst
-  entweder [mit Modmail loslegen](./../modmail) or [die gesamte Modmail-Dokumentation](./../modmail/intro) öffnen.
+  nur <PlanPrice plan="UNLIMITED" type="MONTHLY" />. Du kannst
+  entweder [mit Modmail loslegen](/docs/modmail) or [die gesamte Modmail-Dokumentation](/docs/modmail/intro) öffnen.
 * [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
   Ernstfall zu speichern. Du kannst die
-  [Backup-Dokumentation](./guilds/backups) öffnen.
+  [Backup-Dokumentation](/docs/scnx/guilds/backups) öffnen.
 * dcserver.link: Erstelle deine eigene eindeutige URL für deinen Server (z. B. `https://dcserver.link/yourservername`).
   Du kannst
-  die [dcserver.link-Dokumentation](./guilds/dcserver-link) öffnen.
+  die [dcserver.link-Dokumentation](/docs/scnx/guilds/dcserver-link) öffnen.
 * Trusted-Admins: Mit Trusted-Admins können Serverbesitzer ihren Administratoren anpassbaren Zugriff auf SCNX geben.
-  Öffne die [Trusted-Admin-Dokumentation](./guilds/trusted-admins), um mehr zu erfahren.
+  Öffne die [Trusted-Admin-Dokumentation](/docs/scnx/guilds/trusted-admins), um mehr zu erfahren.
 
-Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](./guilds/plans).
-Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen](./guilds/faq) über Server auf SCNX.
+Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](/docs/scnx/guilds/plans).
+Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen](/docs/scnx/guilds/faq) über Server auf SCNX.
 
 ## Funktionen für Nutzer {#users}
 
 * SCNX Werkzeuge: Eine Ansammlung von Werkzeugen, um dein Leben als professioneller Discord-Nutzer einfacher zu machen.
-  Du kannst die [Werkzeuge-Dokumentation](./account-and-billing/toolbox) öffnen.
+  Du kannst die [Werkzeuge-Dokumentation](/docs/scnx/account-and-billing/toolbox) öffnen.
 * SCNX Werbung: Bewerbe deinen Server oder dein Produkt auf SCNX. Du kannst
-  die [Werbung-auf-SCNX-Dokumentation](./account-and-billing/ads) öffnen.
+  die [Werbung-auf-SCNX-Dokumentation](/docs/scnx/account-and-billing/ads) öffnen.
 * SCNX Empfehlungen: Verdiene für jeden Plan, den ein Server, der mit deinem Link hinzugefügt wurde, einen Plan kauft,
-  eine Kommission. Du kannst die [Empfehlungen-Dokumentation](./account-and-billing/referrals) öffnen.
+  eine Kommission. Du kannst die [Empfehlungen-Dokumentation](/docs/scnx/account-and-billing/referrals) öffnen.
 * SCNX Dateien-Speicher: Hoste Bilder und mehr für deine Discord Server und füge sie direkt in SCNX ein.
 * SC Network Mitgliedschaften (outdated): *Mehr Informationen werden bald verfügbar sein*.
 
-Wir haben auch eine Ansammlung von [häufig gestellten Fragen über Nutzer & Abrechnung](./account-and-billing/faq),
+Wir haben auch eine Ansammlung von [häufig gestellten Fragen über Nutzer & Abrechnung](/docs/scnx/account-and-billing/faq),
 damit du immer Antworten auf deine Fragen bekommst.
 
 ## Andere (Hintergrund-)Teile von SCNX {#behinde-the-scenes}

@@ -7,9 +7,6 @@ sidebar_position: 2
 Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
 Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: true}}/>
-
-
 :::tip Datenschutz liegt uns am Herzen
 Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese 
 unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.
@@ -17,6 +14,11 @@ unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um m
 **tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und danach nur noch die Anzahl.
 [Benutzer können sich abmelden](#user-opt-out) und es werden niemals Inhalte von Nachrichten (oder Anhängen) gespeichert.
 :::
+
+:::info
+Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einladen](https://scootk.it/invite-scnx).
+:::
+
 
 ## Statistiken aktivieren {#enable}
 
@@ -27,7 +29,7 @@ Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx
 
 ## Verwendung im Dashboard {#dashboard}
 
-Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend auf einem Zeitraum sehen, den Du oben in deinem Dashboard auswählen kannst:
+Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend auf einem Zeitraum sehen, den du oben in deinem Dashboard auswählen kannst:
 * Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitraum gesendet wurden.
 * Zehn am meisten genutzte Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten in welchem Kanal gesendet wurden.
 * Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus](#user-opt-out) nicht aktiviert haben).

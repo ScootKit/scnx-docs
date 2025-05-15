@@ -12,7 +12,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 
 ## Einrichtung {#setup}
 
-* Bitte [setze Berechtigungen](./../../slash-commands) für Slash-Befehle, um ungewollte Nutzung zu verhindern.
+* Bitte [setze Berechtigungen](/docs/custom-bot/slash-commands) für Slash-Befehle, um ungewollte Nutzung zu verhindern.
 * Stelle sicher, dass dein Bot folgende Berechtigungen auf deinem Server hat:
   * Um Emojis von anderen Servern zu importieren (`/stealemote`): "Ausdrücke erstellen"
   * Um Kanäle zu verändern (alle `/admin`-Befehle): "Kanäle verwalten"

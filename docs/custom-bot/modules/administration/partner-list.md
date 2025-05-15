@@ -19,7 +19,7 @@ Here's an example of a partner-list (you can customize appearance):
 
 ## Setup {#setup}
 
-* Please [set up permissions](./../../slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+* Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
 * Then, configure the partner-list:
     1. Create a channel in which the bot should send the partner-list. This channel needs to be empty, and the bot has
        to have the "View channel", "View message history" and "Send message" permissions on it.
@@ -57,7 +57,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 | Partner-List-Embed: title          | Title of the Partner-List-Embed.                                                                                                                                                                      |
 | Partner-List-Embed: description    | Description of the Partner-List-Embed.                                                                                                                                                                |
 | Partner-List-Embed: partner-string | This is the format of a partner displayed in the Partner-List-Embed. You can find availible parameters in the [Dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig).  |
-| Partner-List-Embed: color          | This will be the color of the Partner-List-Embed. Must be a [HEX-Color or supported color value](./../../additional-features#embed-colors).                                                           |
+| Partner-List-Embed: color          | This will be the color of the Partner-List-Embed. Must be a [HEX-Color or supported color value](/docs/custom-bot/additional-features#embed-colors).                                                  |
 | Categories                         | These are the categories that partners can be assigned to. Each category needs to be unique. Only these categories can be selected via commands.                                                      |
 | Category-Roles                     | These are the roles that will get assigned to new partners and removed from deleted partners.<br />First field: Category-Name (case-sensitive)<br/>Second field: ID of the role                       |
 | Send Partner-Notifications         | If enabled, partners will be sent a message when they get added or removed.                                                                                                                           |
@@ -72,7 +72,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
         <li>Make sure the desired channel is empty.</li>
         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
         <li>Make sure non of your category fields are empty.</li>
-        <li>Make sure you supplied a <a href="./../../additional-features#embed-colors">correct color value</a> in your configuration.</li>
+        <li>Make sure you supplied a <a href="/docs/custom-bot/additional-features#embed-colors">correct color value</a> in your configuration.</li>
         <li>Restart your bot.</li>
     </ul>
 </details>
@@ -95,4 +95,4 @@ The following data is being stored about every partner created via [commands](#c
 * Metadata about the entry (date when created and last updated)
 
 To delete stored data, use [`/partner delete`](#commands)
-or [purge the module database](./../../additional-features#reset-module-database).
+or [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

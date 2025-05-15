@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Server-Eigentümer können ihren Admins mit Hilfe der Funktion "Trusted Admins" auf SCNX ganz einfach Zugriff auf bestimmte Funktionen, Produkte etc. geben.
 
-<IncludedInPlan data={{STARTER: true, PRO: true, ACTIVE_GUILD: true}} />
+<IncludedInPlan data={{STARTER: true, PROFESSIONAL: true, UNLIMITED: true}} />
 
 ## Einrichtung {#setup}
 
