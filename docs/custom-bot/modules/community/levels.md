@@ -1,3 +1,5 @@
+import LevelSimulator from '/src/components/LevelSimulator';
+
 # Level-System
 
 Easy to use levelling system with a lot of customization!
@@ -25,7 +27,8 @@ Easy to use levelling system with a lot of customization!
 
 *Explain how admins and users can use levels*
 
-### Level messages {#level-up-messages}
+### Level simulator {#level-simulator}
+<LevelSimulator />
 
 ### Level curves {#level-curves}
 
@@ -36,6 +39,8 @@ Easy to use levelling system with a lot of customization!
 ### Level rewards {#level-rewards}
 
 ### Live leaderboard {#live-leaderboard}
+
+### Level messages {#level-up-messages}
 
 ### Manage user XP and levels on your server {#manage-levels}
 
