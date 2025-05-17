@@ -49,7 +49,7 @@ export default function ModuleOverview({moduleName}) {
                 }} className="flex">
                     {moduleData.orgData ? <a className="module-name"
                                              href={`https://scnx.app/marketplace/organizations/${moduleData.orgData.slug}`}>
-                        {moduleData.orgData.iconUrl && <img src={moduleData.orgData.iconUrl} style={{
+                        {moduleData.orgData.iconUrl && <img src={moduleData.orgData.iconUrl} className="ignore-image" style={{
                             borderRadius: '9999px',
                             height: '25px',
                             width: '25px'
