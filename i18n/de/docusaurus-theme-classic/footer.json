@@ -64,7 +64,7 @@
     "description": "The label of footer link with label=Help us improve these docs linking to https://github.com/ScootKit/scnx-docs"
   },
   "copyright": {
-    "message": "Copyright © 2024 <a href=\"https://scootkit.net\">ScootKit</a> - Gebaut mit Docusaurus 🦖<br/><div style=\"font-size: 14px; margin-top: 7px\"><a href=\"https://scootkit.net/imprint\">Impressum</a> &bullet; <a href=\"https://scootkit.net/privacy\">Datenschutzerklärung</a> &bullet; <a href=\"https://sc-net.work/scnx-tos\">SCNX Nutzungsbedingungen</a><br />\"ScootKit\" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>",
+    "message": "Copyright © 2024 <a href=\"https://scootkit.com\">ScootKit</a> - Gebaut mit Docusaurus 🦖<br/><div style=\"font-size: 14px; margin-top: 7px\"><a href=\"https://scootkit.com/imprint\">Impressum</a> &bullet; <a href=\"https://scootkit.com/privacy\">Datenschutzerklärung</a> &bullet; <a href=\"https://scootk.it/scnx-tos\">SCNX Nutzungsbedingungen</a> &bullet; <a href=\"https://scootk.it/scnx-spa\">Bot-Hosting Dienstanbietervereinbarung</a><br />\"ScootKit\" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>",
     "description": "The footer copyright"
   },
   "logo.alt": {

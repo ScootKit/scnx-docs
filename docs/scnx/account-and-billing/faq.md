@@ -26,7 +26,7 @@ with billing issues, if you subscribed on Discord.
 
 ### I am VAT exempt {#vat}
 
-Please contact our [billing@scootkit.net](mailto:billing@scootkit.net) to verify your account.
+Please contact our [billing@scootkit.com](mailto:billing@scootkit.com) to verify your account.
 
 ### How do I set my billing address? {#billing-details}
 
