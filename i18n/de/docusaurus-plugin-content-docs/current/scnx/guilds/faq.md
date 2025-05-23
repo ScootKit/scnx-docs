@@ -10,7 +10,7 @@ Häufig gestellte Fragen, wie Server auf SCNX funktionieren.
 
 Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Grund dafür hat mit Rechtlichem zu tun und
 basiert auf
-unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan
+unseren [Nutzungsbedingungen](https://scootk.it/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan
 kannst du einfach den
 Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](/docs/setup) und dir
 [Trusted-Admin-Rechte](/docs/scnx/guilds/trusted-admins) geben kann.
@@ -72,7 +72,7 @@ Um eine Übertragung aller Daten zu beantragen, [kontaktiere bitte unser Team](h
 ## Wie kann ich meinen Server von SCNX löschen? {#deletion}
 
 Schade, dass du SCNX verlassen möchtest - wenn du nur ein Problem mit SCNX
-hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://sc-net.work/dc).
+hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://scootk.it/dc).
 
 :::danger
 Das Löschen eines Servers auf SCNX kann nicht rückgängig gemacht werden. Du musst der Eigentümer des Servers sein, um

@@ -33,23 +33,23 @@
   },
   "link.item.label.Twitter": {
     "message": "Twitter",
-    "description": "The label of footer link with label=Twitter linking to https://sc-net.work/twitter"
+    "description": "The label of footer link with label=Twitter linking to https://scootk.it/twitter"
   },
   "link.item.label.Instagram": {
     "message": "Instagram",
-    "description": "The label of footer link with label=Instagram linking to https://sc-net.work/insta"
+    "description": "The label of footer link with label=Instagram linking to https://scootk.it/insta"
   },
   "link.item.label.GitHub": {
     "message": "GitHub",
-    "description": "The label of footer link with label=GitHub linking to https://sc-net.work/gh"
+    "description": "The label of footer link with label=GitHub linking to https://scootk.it/gh"
   },
   "link.item.label.Facebook": {
     "message": "Facebook",
-    "description": "The label of footer link with label=Facebook linking to https://sc-net.work/facebook"
+    "description": "The label of footer link with label=Facebook linking to https://scootk.it/facebook"
   },
   "link.item.label.YouTube": {
     "message": "YouTube",
-    "description": "The label of footer link with label=YouTube linking to https://sc-net.work/yt"
+    "description": "The label of footer link with label=YouTube linking to https://scootk.it/yt"
   },
   "link.item.label.Need help with SCNX?": {
     "message": "Du brauchst Hilfe mit SCNX?",
@@ -64,7 +64,7 @@
     "description": "The label of footer link with label=Help us improve these docs linking to https://github.com/ScootKit/scnx-docs"
   },
   "copyright": {
-    "message": "Copyright © 2024 <a href=\"https://scootkit.net\">ScootKit</a> - Gebaut mit Docusaurus 🦖<br/><div style=\"font-size: 14px; margin-top: 7px\"><a href=\"https://scootkit.net/imprint\">Impressum</a> &bullet; <a href=\"https://scootkit.net/privacy\">Datenschutzerklärung</a> &bullet; <a href=\"https://sc-net.work/scnx-tos\">SCNX Nutzungsbedingungen</a><br />\"ScootKit\" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>",
+    "message": "Copyright © 2024 <a href=\"https://scootkit.net\">ScootKit</a> - Gebaut mit Docusaurus 🦖<br/><div style=\"font-size: 14px; margin-top: 7px\"><a href=\"https://scootkit.net/imprint\">Impressum</a> &bullet; <a href=\"https://scootkit.net/privacy\">Datenschutzerklärung</a> &bullet; <a href=\"https://scootk.it/scnx-tos\">SCNX Nutzungsbedingungen</a><br />\"ScootKit\" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>",
     "description": "The footer copyright"
   },
   "logo.alt": {

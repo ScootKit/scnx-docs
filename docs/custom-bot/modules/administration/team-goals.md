@@ -96,10 +96,10 @@ another evaluation time, you could disable the module, <a href="/docs/custom-bot
 <details>
   <summary>Can I use this module to evaluate the message activity of my members? / SCNX is adding a "Report Abuse" button below my DM messages</summary>
 
-  Such usage would violate our <a href="https://sc-net.work/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
+  Such usage would violate our <a href="https://scootk.it/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
   to evaluate activity of your staff members and only with their consent.
   If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of 
-  members of your server. You can learn more about this behavior on <a href="https://sc-net.work/report-mass-dm">sc-net.work/report-mass-dm</a> (this is also the URL linked in the button).
+  members of your server. You can learn more about this behavior on <a href="https://scootk.it/report-mass-dm">scootk.it/report-mass-dm</a> (this is also the URL linked in the button).
   Most of our users never fit this category, and you usually do not need to worry about this if you are using this module as intended.
 </details>
 

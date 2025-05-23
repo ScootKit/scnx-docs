@@ -84,7 +84,7 @@ After confirming, the SCNX Bot will start by deleting all existing channels and 
 ### Restore on other servers {#restore-other-server}
 
 :::tip
-The server you want to restore the backup on does not need to be added to SCNX, but the [SCNX bot needs to be invited](https://sc-net.work/invite-scnx).
+The server you want to restore the backup on does not need to be added to SCNX, but the [SCNX bot needs to be invited](https://scootk.it/invite-scnx).
 :::
 
 The restoration process is widely the same as [restoring the backup on your own server](#restore-self) - even the command used is the same. Still, before restoring a backup on another server, you'll need to disable the Guild-Lock on your server.

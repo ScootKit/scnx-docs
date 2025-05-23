@@ -13,7 +13,7 @@ Owners can give their admins access to certain resources on SCNX easily using th
 :::caution
 Only grant Trusted-Admin-Permissions to users you fully trust - they will be able to interact with SCNX in your name.
 Please review the [section about this feature](https://faq.scnx.app/scnx-nutzungsbedingungen/#trusted-admins) in
-our [Terms of Service](https://sc-net.work/scnx-tos).
+our [Terms of Service](https://sccootk.it/scnx-tos).
 :::
 :::info
 To add a new user as a Trusted-Admin, please make sure they have logged in into SCNX at least once - you can send them

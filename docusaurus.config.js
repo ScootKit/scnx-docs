@@ -182,24 +182,24 @@ const config = {
                                 href: 'https://scootk.it/dc'
                             },
                             {
-                                label: 'Twitter',
-                                href: 'https://sc-net.work/twitter'
+                                label: 'Twitter / X',
+                                href: 'https://scootk.it/twitter'
                             },
                             {
                                 label: 'Instagram',
-                                href: 'https://sc-net.work/insta'
+                                href: 'https://scootk.it/insta'
                             },
                             {
                                 label: 'GitHub',
-                                href: 'https://sc-net.work/gh'
+                                href: 'https://scootk.it/gh'
                             },
                             {
                                 label: 'Facebook',
-                                href: 'https://sc-net.work/facebook'
+                                href: 'https://sccootk.it/facebook'
                             },
                             {
                                 label: 'YouTube',
-                                href: 'https://sc-net.work/yt'
+                                href: 'https://scootk.it/yt'
                             }
                         ]
                     },
@@ -225,7 +225,7 @@ const config = {
                         ]
                     }
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 7px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://sc-net.work/scnx-tos">SCNX Terms of Service</a> &bullet; <a href="https://scootk.it/scnx-spa">Bot Hosting Service Provider Agreement</a><br/>"ScootKit" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>`
+                copyright: `Copyright © ${new Date().getFullYear()} <a href="https://scootkit.net">ScootKit</a> - Built with Docusaurus 🦖<br/><div style="font-size: 14px; margin-top: 7px"><a href="https://scootkit.net/imprint">Impressum</a> &bullet; <a href="https://scootkit.net/privacy">Privacy Policy</a> &bullet; <a href="https://scootk.it/scnx-tos">SCNX Terms of Service</a> &bullet; <a href="https://scootk.it/scnx-spa">Bot Hosting Service Provider Agreement</a><br/>"ScootKit" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>`
             },
             prism: {
                 theme: lightCodeTheme,
