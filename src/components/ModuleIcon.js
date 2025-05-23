@@ -6,10 +6,10 @@ import {
     faArrowUp19,
     faBank,
     faBell,
-    faBorderAll,
+    faBorderAll, faBox, faCalendarDays,
     faCheckToSlot,
     faCircleChevronUp,
-    faCircleInfo,
+    faCircleInfo, faCode, faCodeBranch,
     faCommentDots,
     faComments as faSolidComments,
     faDoorOpen,
@@ -17,20 +17,20 @@ import {
     faFileCirclePlus,
     faFolder,
     faGears,
-    faHandScissors,
+    faHandScissors, faHashtag,
     faHourglassHalf,
-    faLaughSquint,
+    faLaughSquint, faListDropdown, faMessages, faMousePointer, faPlus,
     faPuzzlePiece,
-    faRankingStar,
-    faRightFromBracket,
+    faRankingStar, faReel,
+    faRightFromBracket, faRobot,
     faRss,
-    faSignInAlt,
+    faSignInAlt, faSlashForward,
     faStar,
     faStream,
     faTableCells,
     faTerminal,
     faThumbtack,
-    faTools
+    faTools, faUser, faUsers, faUserSecret, faWebhook
 } from '@fortawesome/pro-solid-svg-icons';
 import {
     faBellSlash,
@@ -42,6 +42,7 @@ import {
     faUserCircle
 } from '@fortawesome/pro-regular-svg-icons';
 import {
+    faDiscord,
     faFacebook,
     faInstagram,
     faMastodon,
@@ -98,7 +99,10 @@ const icons = {
     'fas fa-tools': faTools,
     'fas fa-dice-d20': faDiceD20,
     'far fa-bell-slash': faBellSlash,
+    'far fa-slash': faSlashForward,
     'far fa-bell': faBell,
+    'far fa-code': faCode,
+    'far fa-robot': faRobot,
     'fas fa-right-from-bracket': faRightFromBracket,
     'fa-regular fa-trash-can': faTrashCan,
     'fas fa-comment-dots': faCommentDots,
@@ -108,19 +112,25 @@ const icons = {
     'fa fa-bell-exclamation': faBellExclamation,
     'far fa-user-circle': faUserCircle,
     'far fa-image': faImage,
+    'fa-solid fa-user': faUser,
+    'fa-solid fa-users': faUsers,
     'fa fa-message-bot': faMessageBot,
+    'fa fa-messages': faMessages,
     'fa fa-file-user': faFileUser,
     'far fa-icons': faIcons,
     'fas fa-birthday-cake': faCakeCandles,
     'fas fa-stream': faStream,
     'fas fa-arrow-up-1-9': faArrowUp19,
     'fa-solid fa-bank': faBank,
+    'fa-solid fa-calendar-days': faCalendarDays,
     'fas fa-block-brick': faBlockBrick,
     'fas fa-laugh-squint': faLaughSquint,
     'fas fa-gift': faGift,
     'fa-solid fa-cards-blank': faCardsBlank,
     'fas fa-dice-five': faDiceFive,
     'fa-solid fa-circle-info': faCircleInfo,
+    'fa-solid fa-list-dropdown': faListDropdown,
+    'fa-solid fa-mouse': faMousePointer,
     'fa-solid fa-user-plus': faUserPlus,
     'fa-solid fa-user-pen': faUserPen,
     'fas fa-moon-stars': faMoonStars,
@@ -171,18 +181,22 @@ const icons = {
     'fas fa-gun': faGun,
     'fa-solid fa-flag': faFlag,
     'fas fa-ranking-stars': faRankingStar,
+    'fas fa-reel': faReel,
+    'fas fa-box': faBox,
+    'fas fa-webhook': faWebhook,
+    'fas fa-pool-people': faPollPeople,
+    'fa-sharp-duotone fa-solid fa-user-secret': faUserSecret,
     'fas fa-star': faStar,
     'fas fa-smile': faFaceSmile,
     'fas fa-thumbtack': faThumbtack,
+    'fab fa-discord': faDiscord,
+    'fa-solid fa-hashtag': faHashtag,
+    'fa-solid fa-code-branch': faCodeBranch,
     'far fa-comment-dots': faCommentsQuestion,
+    'fa-sold fa-plus': faPlus,
     'fa-solid fa-file-circle-check': faFileCirclePlus
 };
 
 export default function ModuleIcon({icon, className, width = 23, hMe}) {
-    if (icon === 'top-gg') return <svg viewBox="120 120 580 580" className={`${className} ${hMe ? 'h-5' : 'h-10'}`}
-                                       width={width - 4}>
-        <path fill="white"
-              d="M655.711 247H330.71v325h66.403a96.097 96.097 0 0096.097-96.098V409.5h66.403a96.102 96.102 0 0096.098-96.098V247zM144 247h162.5v162.5H193.657a49.49 49.49 0 01-49.492-49.492L144 247z"></path>
-    </svg>;
     return <FontAwesomeIcon icon={icons[icon] || faFolder} width={width} className={className}/>;
 }

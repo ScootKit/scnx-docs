@@ -26,7 +26,7 @@ auf Discord nicht helfen.
 
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
 
-Kontaktiere [billing@scootkit.net](mailto:billing@scootkit.net), um dies zu prüfen.
+Kontaktiere [billing@scootkit.com](mailto:billing@scootkit.com), um dies zu prüfen.
 
 ### Wie lege ich meine Rechnungsadresse fest? {#billing-details}
 
