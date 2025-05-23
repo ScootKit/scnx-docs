@@ -21,16 +21,49 @@ Easy to use levelling system with a lot of customization!
 
 ## Setup {#setup}
 
-*Explain how to set up levels - make sure to mention all the steps needed*
+* After [enabling the module](https://scnx.app/glink?page=bot/modules?query=levels), users will start receiving XP based
+  on your [configuration](#configuration) for sending messages and spending time in voice channels.
+* The bot can only grant XP for messages it has access to, so please ensure that it has the following permissions on
+  every channel: View Channel, Read message history. If you want to send level up messages into a channel, it'll also
+  need the Send Messages and Embed Links permissions. For granting role rewards, the bot will need to have the Manage
+  roles permission. The highest role of the bot will also need to be higher than the role the bot needs to assign.
+* If you are transferring from another, you can [manage user XP and levels manually](#manage-levels) and manually
+  transfer XP and levels from your old system.
+* There are plenty of other features included that can be used to encourage activity on your server, such
+  as [Multiplication channels and roles](#multiplicators) and [live leaderboards](#live-leaderboard), which require
+  additional setup, but you don't need to configure them to use the module.
+* You can also customize messages and adjust other options in you [configuration](#configuration).
 
 ## Usage {#usage}
 
-*Explain how admins and users can use levels*
+* After [setting up the modules](#setup), users will start receiving XP for sending messages and for spending time in
+  voice channels.
+* Once a user reaches a threshold based on your [customizable leveling formula](#level-curves), they will level up to
+  the next level. You
+  can [configure](#configuration) rewards, like roles, for reaching specific levels.
+* Users can check their and other user's current XP and see how much XP is required to level up using
+  [`/profile`](#commands). A full leaderboard with the XP of all users is available with [`/leaderboard`](#commands) or
+  an [always accurate version of it can be sent into a channel](#live-leaderboard).
+* To manually adjust the XP and level of any user on your server, use the [`/manage-levels`](#commands) commands
+  after [enabling cheats in your configuration](#configuration).
 
 ### Level simulator {#level-simulator}
+
+The amount of XP a user needs to reach a specific level is dependent on [your level curve](#level-curves) and
+your [leveling configuration](#configuration). To make it easier to select the right level curve (or
+even [design your own](#custom-level-curve)), we have included a Level-Simulator below. Simply enter the values
+from [your configuration](#configuration) to see how much XP is needed to reach a specific message and how many messages
+an average user needs to do so.
+
 <LevelSimulator />
 
 ### Level curves {#level-curves}
+
+A leveling curve is used to calculate the amount of XP needed to reach a specific level on your server. You can think of
+it as a formula that is used to calculate this XP amount. Your choice of a level curve greatly affects, in addition to your [leveling configuration](#configuration), how hard it is for
+users to level up on your server.
+
+We include three different leveling curves in the bot, but you can also [provide your own](#custom-level-curve).
 
 ### Custom level curve {#custom-level-curve}
 
@@ -43,6 +76,14 @@ Easy to use levelling system with a lot of customization!
 ### Level messages {#level-up-messages}
 
 ### Manage user XP and levels on your server {#manage-levels}
+
+## Commands {#commands}
+
+<SlashCommandExplanation />
+
+| Command             | Description                |                                                                                                                                                               
+|---------------------|----------------------------|
+| *Command-Name here* | *Command description here* |
 
 ## Configuration {#configuration}
 
