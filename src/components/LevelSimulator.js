@@ -12,7 +12,7 @@ const builtInCurves = {
 };
 
 export default function LevelSimulator() {
-    const [formulaType, setFormulaType] = useState('LINEAR');
+    const [formulaType, setFormulaType] = useState('EXPONENTIAL');
     const [level, setLevel] = useState(15);
     const [customFormula, setCustomFormula] = useState('');
     const [minXP, setMinXP] = useState(25);
