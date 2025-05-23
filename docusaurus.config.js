@@ -4,6 +4,8 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 const fs = require('fs');
+const remarkMath = require('remark-math');
+const rehypeKatex = require('rehype-katex');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -23,6 +25,12 @@ const config = {
         defer: true,
         'data-domain': 'docs.scnx.xyz'
     }],
+    stylesheets: [
+        {
+            href: '/katex/katex.min.css',
+            type: 'text/css'
+        }
+    ],
     presets: [
         [
             'classic',
@@ -36,7 +44,8 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     editLocalizedFiles: true,
-                    remarkPlugins: [],
+                    remarkPlugins: [remarkMath],
+                    rehypePlugins: [rehypeKatex],
                     editUrl:
                         'https://github.com/ScootKit/scnx-docs/tree/main/'
                 },
