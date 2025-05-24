@@ -11,7 +11,7 @@ Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt w
 
 ## Funktionen {#features}
 
-* Verfolge die Beitritte neuer Nutzer, wer sie eingeladen hat und entferne bei Bedarf die Einladung mit nur einem Klick auf den Button unter der Nachricht. 
+* Verfolge die Beitritte neuer Nutzer, wer sie eingeladen hat und entferne bei Bedarf die Einladung mit nur einem Klick auf den Knopf unter der Nachricht. 
 * Verfolge die Einladungs-Aktivitäten eines Nutzers, einschließlich:
   * wer den Nutzer eingeladen hat.
   * wen der Nutzer eingeladen hat.
