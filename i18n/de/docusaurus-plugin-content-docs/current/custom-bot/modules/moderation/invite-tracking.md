@@ -50,7 +50,7 @@ Nutze diese Konfiguration, um einen Log-Kanal festzulegen - [öffne die Seite in
 
 | Feld        | Beschreibung                                                                                                                                                                                                                                                                                                                            |
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Log-Kanal   | Lege hier deinen Log-Kanal fest. Jedes Mal, wenn ein neuer Nutzer deinem Server beitritt, wird der Bot eine Nachricht in den Kanal senden. Unter der Nachricht befindet sich zudem ein Knofp, mit welchem du die Einladung entfernen kannst (kann von jedem Nutzer ausgeführt werden, der die Berechtigung "Einladungen verwalten" besitzt). |
+| Log-Kanal   | Lege hier deinen Log-Kanal fest. Jedes Mal, wenn ein neuer Nutzer deinem Server beitritt, wird der Bot eine Nachricht in den Kanal senden. Unter der Nachricht befindet sich zudem ein Knopf, mit welchem du die Einladung entfernen kannst (kann von jedem Nutzer ausgeführt werden, der die Berechtigung "Einladungen verwalten" besitzt). |
 
 ## Fehlerbehebung {#troubleshooting}
 
