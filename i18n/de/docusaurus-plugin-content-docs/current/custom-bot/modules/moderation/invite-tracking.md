@@ -76,4 +76,4 @@ Wenn neue Nutzer deinem Server beitreten und das Modul aktiviert ist, werden fol
 Wenn ein Nutzer deinen Server verlässt, wird der Einladungs-Eintrag nicht gelöscht, sondern nur als "Inaktiv" markiert.
 
 Um einen Missbrauch der Daten zu verhindern, können die gespeicherten Daten nicht fallspezifisch gelöscht werden.
-Stattdessen kanst du die [Modul-Datenbank bereinigen](/de/docs/custom-bot/additional-features#reset-module-database), um alle gespeicherten Daten über Einladungen zu löschen.
+Stattdessen kannst du die [Modul-Datenbank bereinigen](/de/docs/custom-bot/additional-features#reset-module-database), um alle gespeicherten Daten über Einladungen zu löschen.
