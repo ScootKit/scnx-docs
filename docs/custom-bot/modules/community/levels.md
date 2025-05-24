@@ -102,12 +102,15 @@ an average user needs to do so. [XP for Voice Channels](#voice-xp) won't be take
 
 ### XP for Voice Channels {#voice-xp}
 
-Every minute a user spends in a voice channel with other members, they will recive a [configurable](#configuration)
+Every minute a user spends in a voice channel with other members, they will receive a [configurable](#configuration)
 amount of XP.
 No XP will be given if they are alone in their channel or are muted or deafened. Numbers will be rounded and XP will be
 given every 15
 minutes or when the user leaves the channel. This incentivizes your members to become active and engaged in voice
 channels and prevents abuse of the system.
+
+By default, level up messages will be sent into the text channel of the voice channel the user is connected to, but you
+can provide a separate channel in your [configuration](#configuration), if you want.
 
 ### Level curves {#level-curves}
 
@@ -143,36 +146,150 @@ While choosing a level curve might seem difficult,
 it's usually the best option to use our **Easy Linear** curve as it has been carefully calibrated to fit most servers.
 If you then notice that it is too easy, switch to the **Exponentiation** curve. If it is to hard for your users, you
 should consider switching to the **Easy Linear** curve. You can also always keep your current curve and adjust
-the [XP amounts](#configuration) instead.
+the [XP amounts](#configuration) instead. Try playing around with different configurations and level curves in
+our [level simulator](#level-simulator).
 
 Here, you can see the level curves in comparison:
 
 ![Level curves plotted using Geogebra. In red, you can see the Exponentiation Curve. In green, you can find the Easy Linear Curve. The default Linear Curve is plotted in blue.](@site/docs/assets/custom-bot/modules/levels/level-curves.png)
 
 > **Level curve comparison**: In red, you can see the Exponentiation Curve. In green, you can find the Easy Linear
-> Curve. The default Linear Curve is plotted in blue.
+> Curve. The default Linear Curve is plotted in blue. You can also open
+> this [in Geogebra](https://www.geogebra.org/calculator/bwgc6dvp) where you can play around more and
+> render [your own level curve](#custom-level-curve) for comparison.
 
 ### Custom level curve {#custom-level-curve}
 
 You can enter a custom level curve in your [configuration](#configuration).
 
-Use the $x$ variable (and no other variables). The result of the formula should be the required XP to reach level x (your variable).
+The level formula is a mathematical representation of your level curve. The result of the formula will return the number
+of XP needed for a specific level $x$. For example, to calculate level $15$ with our default linear
+curve ($f(x) = 750 * x$), you would enter $15$ instead of $x$ into this level formula. This would result
+in $f(15) = 750 * 15 = 11,250$, meaning that $11,250$ XP is required to reach level $15$.
 
-Examples: `x*750+((x-1)*500)` (our default level curve), `350 * (x-1)^2` (our exponentiation curve).
+To design your own level formula, you'll need to enter your own mathematical formula. This formula should only use
+the $x$ variable (and no other variables) which shall mean the level to be calculated. The result of the formula should
+be the required XP to reach
+this level x (your variable).
+
+Examples of valid custom level curves: `x*750+((x-1)*500)` (our default level curve), `350 * (x-1)^2` (our
+exponentiation curve).
 
 ### Level rewards {#level-rewards}
 
+When a user reaches a specific level, you might want to give them a role to reward their activity. This is particularly
+useful to reward active users with new permissions on your server, change the color of their username or to show their
+level in their profile.
+
+To use this feature, first create the roles you want to give when users reach a specific level. After
+this, [adjust your configuration](#configuration) with these roles as described below.
+
+In the first field of the "Level rewards" configuration option, enter the level at which the user should receive the
+role. In the second field, select the role that should be granted to the user:
+
+![Screenshot of the SCNX Dashboard level rewards configuration](@site/docs/assets/custom-bot/modules/levels/level-rewards-en.png)
+
+By default, level roles "stack" which means that a user can have multiple level roles. To disable this
+behavior and enforce that a user can only have on a level role at a time, enable the "name" configuration option in
+your [configuration](#configuration).
+
 ### Multiplicator channels and roles {#multiplicators}
 
+By default, every user and channel has a multiplication factor of 1. To reward users with specific roles (such as server
+boosters), you can increase their role multiplicator. You could also increase the channel multiplicator of a channel
+that you'd like to increase activity in.
+
+The amount of XP given for each message is calculated by the following formula (where `XPAmount` is selected randomly
+based on your [configuration values](#configuration)):\
+`XP = XPAmount * ChannelMultiplicator * RoleMultiplicator`, rounded to the nearest integer.\
+This means that messages without any multiplicators will receive only the `XPAmount` xp, as both the
+`ChannelMultiplicator` and `RoleMultiplicator` are 1.
+
+To configure role multiplicators, open your [configuration](#configuration) and add an element to the "XP Multiplication
+Roles" field. There, select the role you want to assign a multiplicator in the first field to and enter the
+multiplicator factor in the second field. If a user has any of the configured roles, their `RoleMuliplicator` factor
+will increase.
+If a user has more than one of the roles configured in this field, the factors
+of every role will be multiplied together. Because of this, we to avoid setups were users have multiple multiplication
+roles.
+
+The role multiplicators of any given user can be viewed using the [`/profile`](#commands) command.
+
+In addition to the role multiplier, you can also configure a channel multiplier. To do this, open
+your [configuration](#configuration) and add
+an element to the "XP Multiplication Channels" field.
+There, select the channel you want to assign a multiplicator in the first field to and enter the
+multiplicator factor in the second field. If a user sends a message in a channel with a configured multiplication
+factor, the `ChannelMultiplicator` factor will be set to the configured factor.
+
+> **Example 1** : A user has one role that has been configured with factor $5$. No channel multipliers apply. Their XP
+> value for this message is 100,
+> but because of the factor five role, $500$ XP ($= 100 * 5 * 1$) will be given.\
+> **Example 2**: Another has three roles, each configured with the factors $5$, $2$ and $3$ respectively. No channel
+> multipliers apply. Their XP value for their message is also 500,
+> but because of the total factor of ($5 * 2 * 3 = 30$), $3,000$ XP ($= 100 * 30 * 1$) will be given.\
+> **Example 3**: A third user has one role that has been configured with the factor $1.5$. A channel multiplier of $1.9$
+> applies. Their XP value for this message is 100,
+> but because of the role factor $1.5$ and the channel factor $1.9$, $285$ ($= 100 * 1.5 * 1.9$) XP will be given.
+
+You can enter any floating point decimal that you want, but as you can see from these examples, using values between $1$
+and $2$ yield the best results as these do not drastically increase the XP amount compared to numbers above $2$. Setups
+like this also work nicely if you have users with multiple multiplication roles.
+
+To discourage specific roles or channels from chatting (such as a spam channel), consider entering a value below $1$ as
+a multiplier, which will decrease the amount of XP given. For example, if a channel hsa a multiplicator factor of $0.5$
+users will only receive half as much XP there as in other channels. You can also [configure](#configuration) channels or
+categories that should be excluded from leveling completely.
+
 ### Manage user XP and levels on your server {#manage-levels}
+
+:::info before you can do this
+These commands are only available on your server if you enable the "Cheats"
+option [in your configuration](#configuration). We recommend keeping this option disabled, as this creates a fairer
+leveling system without admin interference.
+:::
+
+* Administrators on your server can reset the XP of a given user or the whole server using the [
+  `/manage-levels reset-xp`](#commands) command.
+* Administrators on your server can manually add, remove or set the level of any user using the [
+  `/manage-levels edit-level`](#commands) command.
+* Administrators on your servers can manually add, remove or set the XP of any user using the [`/manage-levels edit-xp`(
+  #commands) command.
+
+We suggest keeping interference with the level system to a minimum. If users notice discrepancies in XP values of
+administrators, they might accuse your server of being rigged and move to servers were they trust the leveling system.
+Because of this, we recommend [configuring](#configuration) your level system in a way, in which staff-only channels are
+excluded from leveling and keeping the cheats option disabled, to prevent Administrators from tampering with your level
+system (and by extension, the trust of your community).
 
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command             | Description                |                                                                                                                                                               
-|---------------------|----------------------------|
-| *Command-Name here* | *Command description here* |
+### User commands {#commands-user}
+
+These commands can be used by users on your server.
+
+| Command                            | Description                                                                                                                                                                    |                                                                                                                                                               
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/profile `                        | Display your profile, including how much XP and levels you have and your role multipliers (if any).                                                                            |
+| `/profile [user:<User>]`           | Display the profile of a user, including their XP and levels the user and their role multipliers (if any).                                                                     |
+| `/leaderboard [sort-by:<Boolean>]` | Display the leaderboard of the server, sorted by into groups by either XP or levels, based on either [your configuration](#configuration) or the `sort-by` parameter provided. |
+
+### Administrator commands {#commands-administrator}
+
+These commands can only be used by administrators on your server if the "Cheats" [configuration option](#configuration) is enabled.
+
+| Command                                                       | Description                                                                    |
+|---------------------------------------------------------------|--------------------------------------------------------------------------------|
+| `/manage-levels reset-xp [confirm:<Boolean>]`                 | Resets the XP on the whole server, if the `confirm` parameter is being passed. |
+| `/manage-levels reset-xp user:<User> [confirm:<Boolean>]`     | Resets the XP of a user, if the `confirm` parameter is being passed.           |
+| `/manage-levels edit-level add user:<User> value:<Value> `    | Adds a number of levels (`value`) to the levels of a user.                     |
+| `/manage-levels edit-level remove user:<User> value:<Value> ` | Removes a number of levels (`value`) from the levels of a user.                |
+| `/manage-levels edit-level set user:<User> value:<Value> `    | Sets the number of levels (`value`) for of a user.                             |
+| `/manage-levels edit-xp add user:<User> value:<Value>`        | Adds a number of XP (`value`) to the XP of a user.                             |
+| `/manage-levels edit-xp remove user:<User> value:<Value>`     | Remove a number of XP (`value`) from the XP of a user.                         |
+| `/manage-levels edit-xp set user:<User> value:<Value>`        | Sets the number of XP (`value`) a user has.                                    |
 
 ## Configuration {#configuration}
 
