@@ -6,7 +6,7 @@
 
 :::warning Informationen zu Richtlinien
 Die Verwendung dieses Moduls, um Nutzer für das Einladen anderer Nutzer zu belohnen, verstößt gegen die [Discord Entwickler-Richtlinien](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos). 
-Verstöße werden dazu führen, dass dein Server und Account von SCNX gebannt werden. Missbrauch kannst du an [abuse@scnx.xyz](mailto:abuse@scnx.xyz) melden.
+Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt werden. Missbrauch kannst du an [abuse@scnx.xyz](mailto:abuse@scnx.xyz) melden.
 :::
 
 ## Funktionen {#features}
