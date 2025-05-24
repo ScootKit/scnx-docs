@@ -59,7 +59,7 @@ Wenn Fehler bei dem Modul auftreten, stelle sicher, dass:
 * der Bot auf deinem Server die Berechtigung "Einladungen verwalten" besitzt.
 * du deinen Bot nach Aktivierung des Moduls und/oder der Berechtigung "Einladungen verwalten" neugestartet hast.
 * der Bot die Berechtigungen "Nachrichten senden" und "Links einbetten" im [konfigurierten](#configuration) Log-Kanal besitzt.
-* du keine Informationen über einen Nutzer mit nicht verfolgter Einladung anforderst - der Bot ist nur in der Lage Daten von Nutzer zu speichern, nachdem das Modul aktiviert wurde.
+* du keine Informationen über einen Nutzer mit nicht verfolgter Einladung anforderst - der Bot ist nur in der Lage Daten eines Nutzers zu speichern, nachdem das Modul aktiviert wurde.
 
 ## Gespeicherte Daten {#data-usage}
 
