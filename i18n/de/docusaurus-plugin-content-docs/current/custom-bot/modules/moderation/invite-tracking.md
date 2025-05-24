@@ -42,7 +42,7 @@ Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt w
 
 | Befehl                       | Beschreibung                                                                                                                                                                                                                                                                                                                    |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/trace-invites user:<User>` | Dieser Befehl zeigt dir die Einladungs-Aktivitäten eines Nutzers. Du erhältst Informationen wie: wer den Nutzer eingeladen hat, wen der Nutzer eingeladen hat und wie viele Einladungen der Nutzer erstellt hat. Außerdem steht dir ein Knopf zur Verfügung, welcher dir erlaubt, alle Einladungen eines Nutzers zu entfernen. |
+| `/trace-invites user:<Nutzer>` | Dieser Befehl zeigt dir die Einladungsaktivitäten eines Nutzers. Du erhältst Informationen wie: wer den Nutzer eingeladen hat, wen der Nutzer eingeladen hat und wie viele Einladungen der Nutzer erstellt hat. Außerdem steht dir ein Knopf zur Verfügung, welcher dir erlaubt, alle Einladungen eines Nutzers zu entfernen. |
 
 ## Konfiguration {#configuration}
 
