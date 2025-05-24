@@ -31,7 +31,7 @@ Verstöße werden dazu führen, dass dein Server und Account von SCNX gebannt we
 ## Verwendung {#usage}
 
 * Wenn [konfiguriert](#configuration) wird der Bot im Log-Kanal feststellen, wer den Nutzer eingeladen hat.
-* Der Bot wird automatisch Einladungs-Daten über jeden beigetretenen Nutzern speichern.
+* Der Bot wird automatisch Einladungsdaten über jeden beigetretenen Nutzern speichern.
 * Um dir die Einladungs-Aktivitäten (von welchem Nutzer eingeladen, welche Nutzer eingeladen, wie viele Einladungen erstellt, ...) anzusehen, führe den Befehl [`/trace-invites`](#commands) aus.
 * Um alle Einladungen eines Nutzers zu entfernen, führe den Befehl [`/trace-invites`](#commands) aus und klicke auf den Button "Alle Einladungen dieses Nutzers entfernen" unter der Nachricht.
 * Wenn dieses Modul aktiviert ist, werden andere Module (wie [Info-Befehle](/de/docs/custom-bot/modules/moderation/info-commands) und [Moderation & Sicherheit](/de/docs/custom-bot/modules/moderation)) automatisch Daten über erfasste Einladungen nutzen, um die Funktionalität zu verbessern.
