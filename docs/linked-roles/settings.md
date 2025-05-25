@@ -10,7 +10,8 @@ At SCNX, we're always about offering as many configuration options as possible. 
 
 ## Authorization page {#authorization-page}
 
-The authorization page is the page that users need to open when [claiming their role](/docs/linked-roles/claim-roles) before being
+The authorization page is the page that users need to open when [claiming their role](/docs/linked-roles/claim-roles)
+before being
 redirected to Discord. The page features a short explainer, your server name and image.
 
 You can configure the following attributes of your authorization page:
@@ -23,6 +24,13 @@ You can configure the following attributes of your authorization page:
   short message about the features of the SCNX platform. Servers with
   a [paid plan that has the off-brand functionality](/docs/scnx/guilds/plans)
   will have this feature disabled by default. Servers without such a plan won't be able to remove the message.
+
+The authorization page will be automatically translated into the local language of the user who is
+accessing the page based on their browser settings. The following languages are available:
+
+* Officially supported languages: English, German.
+* Maschine translated languages: Bengali, Croatian, Czech, Dutch, French, Hungarian, Italian, Japanese, Protugese,
+  Russian, Spanish, Turkish.
 
 To adjust these fields and see a live preview of themes and changes,
 open [the Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration) of your dashboard and

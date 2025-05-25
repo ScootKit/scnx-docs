@@ -9,7 +9,7 @@ Frequently asked questions about how servers work on SCNX.
 ## Why do I need to be the owner to add a server to SCNX? {#owner}
 
 Only the owner can sign up a new Discord-Server to SCNX. The reason for this is legal and based on
-our [Terms of Service](https://sc-net.work/scnx-tos) - we might change this in the future. For now, you can simply ask
+our [Terms of Service](https://scootk.it/scnx-tos) - we might change this in the future. For now, you can simply ask
 the owner to [set up SCNX](/docs/setup) on their server and ask them to give
 you [trusted admin permissions](/docs/scnx/guilds/trusted-admins).
 
@@ -67,7 +67,7 @@ To request a complete data transfer, please [contact our team](https://scnx.app/
 ## How can I remove my server from SCNX? {#deletion}
 
 We're sorry that you want to leave SCNX - if you are only experiencing an issue with SCNX, we
-are [happy to help](https://scnx.app/help) on our [Discord](https://sc-net.work/dc).
+are [happy to help](https://scnx.app/help) on our [Discord](https://scootk.it/dc).
 
 :::danger
 Deleting a server on SCNX is irreversible. You need to be the owner to delete a server from SCNX. If you have an active

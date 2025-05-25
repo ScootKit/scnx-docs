@@ -81,7 +81,7 @@ Nach der Bestätigung beginnt der SCNX-Bot mit dem Löschen aller existierenden 
 ### Wiederherstellung auf anderen Servern {#restore-other-server}
 
 :::tip
-Der Server, auf dem du das Backup wiederherstellen möchtest, muss nicht zu SCNX hinzugefügt sein, aber der [SCNX-Bot muss eingeladen werden](https://sc-net.work/invite-scnx).
+Der Server, auf dem du das Backup wiederherstellen möchtest, muss nicht zu SCNX hinzugefügt sein, aber der [SCNX-Bot muss eingeladen werden](https://scootk.it/invite-scnx).
 :::
 
 Der Wiederherstellungsprozess ist größtenteils identisch zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self) - selbst der verwendete Befehl bleibt gleich. Du musst allerdings die Server-Sperre auf deinem Server deaktivieren.

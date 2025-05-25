@@ -13,7 +13,7 @@ Server-Eigentümer können ihren Admins mit Hilfe der Funktion "Trusted Admins" 
 :::caution
 Erteile Trusted-Admin-Rechte nur an Nutzer, welchen du voll und ganz vertraust - diese können dann in deinem Namen mit SCNX interagieren.
 Bitte lies dir [den Absatz über diese Funktion](https://faq.scnx.app/scnx-nutzungsbedingungen/#trusted-admins) in
-unseren [Nutzungsbedingungen](https://sc-net.work/scnx-tos) durch.
+unseren [Nutzungsbedingungen](https://scootk.it/scnx-tos) durch.
 :::
 :::info
 Um einen neuen Nutzer als Trusted Admin hinzuzufügen, musst du sicherstellen, dass der Nutzer sich mindestens einmal bei SCNX eingeloggt hat - du kannst ihn diesen Link zum Einloggen senden: [https://scnx.app/de/auth/login](https://scnx.app/de/auth/login).
