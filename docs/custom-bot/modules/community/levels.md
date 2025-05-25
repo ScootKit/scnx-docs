@@ -53,7 +53,7 @@ Instead of having your users run [`/leederboard`](#commands) every time they wan
 you can enable a Live Leaderboard. This is a channel with exactly one message in it, which will be updated to the
 current leaderboard every five minutes. This means that users won't have to run any commands or visit a webpage to see
 the top 15 users in their server. They can also click on "Show my level" to view their own level, instead of executing
-the [`/profile`](#commands) command.
+the [`/profile`](#commands) command. The response will only be visible to the user themselves.
 
 To enable the live leaderboard, set the "Live Leaderboard Channel" in your [configuration](#configuration) to any empty
 channel on your server on which the bot has the Send Message, View Message History and View Channel permissions. For the
@@ -83,7 +83,8 @@ random messages are available for any given required type, the bot will fall bac
 configuration file.
 
 Additionally, you might want to adjust the level up message for a specific level. This is possible in
-the [Selected messages configuration file](#configuration-special-levelup-messages). If any user reaches a level included
+the [Selected messages configuration file](#configuration-special-levelup-messages). If any user reaches a level
+included
 in this configuration file, the message configured in this file will be used, regardless of the level up type. This is
 particularly useful if you have levels that you want to have special level up messages. It can also come handy if have a
 level reward that is
@@ -253,8 +254,8 @@ leveling system without admin interference.
   `/manage-levels reset-xp`](#commands) command.
 * Administrators on your server can manually add, remove or set the level of any user using the [
   `/manage-levels edit-level`](#commands) command.
-* Administrators on your servers can manually add, remove or set the XP of any user using the [`/manage-levels edit-xp`(
-  #commands) command.
+* Administrators on your servers can manually add, remove or set the XP of any user using
+  the [`/manage-levels edit-xp`](#commands) command.
 
 We suggest keeping interference with the level system to a minimum. If users notice discrepancies in XP values of
 administrators, they might accuse your server of being rigged and move to servers were they trust the leveling system.
@@ -278,7 +279,8 @@ These commands can be used by users on your server.
 
 ### Administrator commands {#commands-administrator}
 
-These commands can only be used by administrators on your server if the "Cheats" [configuration option](#configuration) is enabled.
+These commands can only be used by administrators on your server if the "Cheats" [configuration option](#configuration)
+is enabled.
 
 | Command                                                       | Description                                                                    |
 |---------------------------------------------------------------|--------------------------------------------------------------------------------|
@@ -293,11 +295,22 @@ These commands can only be used by administrators on your server if the "Cheats"
 
 ## Configuration {#configuration}
 
+As all modules on SCNX, our leveling modules allows you to fully customize its behavior. To allow easier configuration,
+we have split up the configuration into multiple files:
+
+* [Main Module Configuration](#configuration-config), where you can configure XP amounts, level curves, level rewards,
+  and much more.
+* [Message Configuration](#configuration-strings), where you can adjust messages and module appearance.
+* [Random  level up messages](#configuration-random-levelup-messages), where you can add messages that will be randomly
+  chosen from when the user levels ab.
+* [Selected level up messages](#configuration-special-levelup-messages), where you can overwrite the level up message
+  for specific levels.
+
 ### Module Configuration {#configuration-config}
 
 In this configuration file, you can configure how much XP users should be receiving when sending messages and how your
 level system should behave. You
-can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?query=level&file=levels|configs/config).
+can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/config).
 
 | Field                                                         | Description                                                                                                                                                                                                                                                                                                 |                                                                                                                                                 
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -325,39 +338,77 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 
 ### Message configuration {#configuration-strings}
 
-Explain what users can configure in this file and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to
-the SCNX Dashboard to open this file.
-Please make sure that you replace the heading id with the correct file-name.
+In this configuration file, you can configure the message of this module and adjust other module appearance settings.
+You
+can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/strings).
 
-| Field        | Description                                                 |                                                                                                                                                 
-|--------------|-------------------------------------------------------------|
-| *Field-Name* | Describe what this field does - be as detailed as possible. |
+| Field                          | Description                                                                                                                                                                                                                                                              |                                                                                                                                                 
+|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| User not found                 | This messages gets send if someone tries checking a profile of a user when that user has never sent a message and doesn't have a profile yet.                                                                                                                            |
+| Embed                          | This configuration option adjust how the [`/profile`](#commands) command should look like. You are able to change the embed field values, the embed color and more.                                                                                                      |
+| Leaderboard Embed              | This configuration option adjust how the [`/leaderboard`](#commands) command should look like. You are able to adjust embed field values, the embed color and more.                                                                                                      |
+| Level-Up message               | This will be the [level up message](#level-up-messages) when a user levels up to a level without a level role reward. Please note that this setting won't be used if you enable the "Random messages" in the [configuration](#configuration-config).                     |
+| Level-Up message with reward   | This will be the [level up message](#level-up-messages) when a user levels up to a level with a level role reward that the user receives. Please note that this setting won't be used if you enable the "Random messages" in the [configuration](#configuration-config). |
+| Live leaderboard embed         | This configuration option adjusts how the [live leaderboard embed](#live-leaderboard) should appear to users. You can adjust embed values, the embed color and more.                                                                                                     |
+| Live leaderboard button answer | Below the [live leaderboard](#live-leaderboard) a button will be added that allows users to check their own level and XP. This configuration option allows you to adjust the response of the bot when the button gets used.                                              |
 
 ### Random level up messages configuration {#configuration-random-levelup-messages}
 
-Explain what users can configure in this file and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to
-the SCNX Dashboard to open this file.
-Please make sure that you replace the heading id with the correct file-name.
+In this configuration file, you can add [level-up messages](#level-up-messages) that one will be selected randomly from
+if you have enabled the "Random message" configuration in your [configuration](#configuration-config). Every
+configuration option represents a message that can be selected randomly. You
+can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field        | Description                                                 |                                                                                                                                                 
-|--------------|-------------------------------------------------------------|
-| *Field-Name* | Describe what this field does - be as detailed as possible. |
+| Field   | Description                                                                                                                                                                                                                                                                                                     |                                                                                                                                                 
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Type    | This will configure when this message may be selected randomly. If set to `normal` it can be used for level ups without role rewards associated with the level. If set to `with-reward`, the message will only be used when a level has a role reward (this will also allow the use of the `%role%` parameter). |
+| Message | This message will be used if this configuration object has been selected randomly.                                                                                                                                                                                                                              |
 
 ### Selected level up messages configuration {#configuration-special-levelup-messages}
 
-Explain what users can configure in this file and include a [GLink](https://scnx.app/user/tools?page=glink-generator) to
-the SCNX Dashboard to open this file.
-Please make sure that you replace the heading id with the correct file-name.
+In this configuration file, you can overwrite the [level-up messages](#level-up-messages) for specific levels. You
+can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field        | Description                                                 |                                                                                                                                                 
-|--------------|-------------------------------------------------------------|
-| *Field-Name* | Describe what this field does - be as detailed as possible. |
+| Field   | Description                                                       |                                                                                                                                                 
+|---------|-------------------------------------------------------------------|
+| Level   | Level that the message should get overwritten for.                |
+| Message | This message will be sent when the configured level gets reached. |
 
 ## Troubleshooting {#troubleshooting}
 
-Think of possible issues users might run into (or search our public support channel for inspiration) and explain how to
-avoid / fix them.
-You can lay out this section as you want - feel free to "peak" in other documentation files for inspiration.
+<details>
+<summary>My users are leveling up to slowly / to fast.</summary>
+
+How many XP users are receiving depends on [configuration](#configuration), and at which points they level up
+can be adjusted with a [level curve](#level-curves). Please adjust these options to meet your needs. After changing a
+level curve, users might level up faster / slower initially - to fix this,
+consider [resetting your leveling system](#manage-levels).
+</details>
+
+<details>
+<summary>Level up messages are not being sent.</summary>
+
+To send level up messages, the bot requires the "Send messages" permission in the channel the level up message should be
+sent into. For most cases, the bot requires this permission to every channel XP will be granted in (unless
+you [configure](#configuration) a separate level up channel). If you are using [level up rewards](#level-rewards), the
+bot also requires the "Manage role" permissions and the highest role of the bot should be above the role the bot should
+assign as a reward.
+</details>
+
+<details>
+<summary>My users do not receive XP.</summary>
+
+To give users XP for being in a voice channel and for sending messages, make sure that the bot has the "View channel",
+"Read message history" and "Connect to voice channel" permission on every channel XP should be given for. Otherwise, no
+XP cna be given as the bot can't see the message / voice channel.
+</details>
+
+<details>
+<summary>My live leaderboard is not being sent correctly.</summary>
+
+The [live leaderboard](#live-leaderboard) can only be sent if the bot has the "View channel", "View message history"
+and "Send messages" permission on the configured leaderboard channel. The channel also has to be empty of the live leaderboard embed to be sent and kept up to date.
+</details>
 
 ## Stored data {#data-usage}
 
