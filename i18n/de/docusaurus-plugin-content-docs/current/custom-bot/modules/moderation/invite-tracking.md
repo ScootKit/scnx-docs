@@ -5,7 +5,7 @@
 <ModuleOverview moduleName="invite-tracking" />
 
 :::warning Informationen zu Richtlinien
-Die Verwendung dieses Moduls, um Nutzer für das Einladen anderer Nutzer zu belohnen, verstößt gegen die [Discord Entwickler-Richtlinien](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos). 
+Die Verwendung dieses Moduls, um Nutzer für das Einladen anderer Nutzer zu belohnen, verstößt gegen die [Discord Entwickler-Richtlinie](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos). 
 Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt werden. Missbrauch kannst du an [abuse@scnx.xyz](mailto:abuse@scnx.xyz) melden.
 :::
 
@@ -18,15 +18,14 @@ Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt w
   * welche Einladungen der Nutzer erstellt hat.
 * Entferne alle erstellten Einladungen eines Nutzers.
 * Unterscheidet zwischen aktiven Einladungen und Einladungen, bei denen der eingeladene Benutzer den Server bereits verlassen hat.
-* Arbeitet mit den [Info-Befehle](/de/docs/custom-bot/modules/moderation/info-commands) und [Moderation & Sicherheit](/de/docs/custom-bot/modules/moderation) Modulen zusammen.
+* Arbeitet mit dem [Info-Befehle-](/de/docs/custom-bot/modules/moderation/info-commands) und [Moderation & Sicherheits-](/de/docs/custom-bot/modules/moderation)Modul zusammen.
 
 ## Einrichtung {#setup}
 
 * Stelle sicher, dass der Bot auf deinem Server die Berechtigung "Einladungen verwalten" besitzt.
 * Aktiviere das Modul, um Einladungen zu verfolgen - möglicherweise musst du deinen Bot anschließend einmal neustarten.
 * Lege die [Berechtigungen](/de/docs/custom-bot/slash-commands) für den [`/trace-invites`](#commands)-Befehl fest, um diesen vor unberechtigtem Zugriff zu schützen.
-* Um neue Beitritte zu verfolgen, lege einen Log-Kanal in deiner [Konfiguration](#configuration) fest - stelle sicher, dass der Bot in diesem Kanal die Berechtigung "Nachrichten senden" besitzt.
-  Beachte, dass jeder Nutzer, welcher auf deinem Server die Berechtigung "Einladungen verwalten" besitzt, in der Lage ist, Einladungen mit einem Klick auf den Button unter der Log-Nachricht zu entfernen.
+* Um neue Beitritte zu verfolgen, lege einen Log-Kanal in deiner [Konfiguration](#configuration) fest - stelle sicher, dass der Bot in diesem Kanal die Berechtigung "Nachrichten senden" besitzt. Beachte, dass jeder Nutzer, welcher auf deinem Server die Berechtigung "Einladungen verwalten" besitzt, in der Lage ist, Einladungen mit einem Klick auf den Button unter der Log-Nachricht zu entfernen.
 
 ## Verwendung {#usage}
 
@@ -76,4 +75,4 @@ Wenn neue Nutzer deinem Server beitreten und das Modul aktiviert ist, werden fol
 Wenn ein Nutzer deinen Server verlässt, wird der Einladungs-Eintrag nicht gelöscht, sondern nur als "Inaktiv" markiert.
 
 Um einen Missbrauch der Daten zu verhindern, können die gespeicherten Daten nicht fallspezifisch gelöscht werden.
-Stattdessen kannst du die [Modul-Datenbank bereinigen](/de/docs/custom-bot/additional-features#reset-module-database), um alle gespeicherten Daten über Einladungen zu löschen.
+Stattdessen kannst du die [Modul-Datenbank löschen](/de/docs/custom-bot/additional-features#reset-module-database), um alle gespeicherten Daten über Einladungen zu löschen.
