@@ -636,5 +636,74 @@
   },
   "youtubeHidden.description": {
     "message": "Durch das Klicken unten, stimmst du der {link} von YouTube zu."
+  },
+  "levelSimpulator.header": {
+    "message": "Level-Simulator"
+  },
+  "levelSimpulator.levelCurve": {
+    "message": "Deine Level-Kurve"
+  },
+  "levelSimpulator.EXPONENTIAL": {
+    "message": "Einfacherer Linearfunktion"
+  },
+  "levelSimpulator.LINEAR": {
+    "message": "Standardmässige Linearfunktion"
+  },
+  "levelSimpulator.EXPONENTIATION": {
+    "message": "Potenzfunktion (leichter start, ab Level 14 härter)"
+  },
+  "levelSimpulator.CUSTOM": {
+    "message": "Eigene Formel (gefährlich!)"
+  },
+  "levelSimpulator.customLevelCurve": {
+    "message": "Deine eigene Levelkurve"
+  },
+  "levelSimpulator.minXP": {
+    "message": "Für Nachrichten mindestens gegebenes XP"
+  },
+  "levelSimpulator.maxXP": {
+    "message": "Für Nachrichten maximal gegebenes XP"
+  },
+  "levelSimpulator.level": {
+    "message": "Zu berechnendes Level"
+  },
+  "levelSimpulator.result": {
+    "message": "Ergebnis"
+  },
+  "levelSimpulator.parsedFormula": {
+    "message": "Verarbeitete Levelfunktion"
+  },
+  "levelSimpulator.variableInfo": {
+    "message": "wobei die Variabel {v} das zu berechnende Level ist"
+  },
+  "levelSimpulator.xpNeededHeader": {
+    "message": "Für Level {level} notwendiges XP"
+  },
+  "levelSimpulator.numberOfMessagesNeeded": {
+    "message": "Für Level {level} notwendige Nachrichten"
+  },
+  "levelSimpulator.minMessagesNeededHeader": {
+    "message": "Minimum"
+  },
+  "levelSimpulator.avgMessagesNeededHeader": {
+    "message": "Durchschnitt"
+  },
+  "levelSimpulator.tooManyVariables": {
+    "message": "Es gibt zu viele Variablen in deiner eigenen Levelkurve."
+  },
+  "levelSimpulator.firstVariableNotX": {
+    "message": "Die erste Variable deiner Levelkurve ist nicht x."
+  },
+  "levelSimpulator.unknownError": {
+    "message": "Fehler beim Verarbeiten deiner eigenen Levelkurve."
+  },
+  "levelSimpulator.negativeNumbers": {
+    "message": "Negative Zahlen sind in der Rechnung enthalten."
+  },
+  "levelSimpulator.maxXPSmallerThenMinXP": {
+    "message": "Die mindestens vergebene XP sind höher als die maximal vergebenen XP."
+  },
+  "levelSimpulator.maxMessagesNeededHeader": {
+    "message": "Maximum"
   }
 }
