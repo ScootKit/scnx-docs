@@ -134,11 +134,6 @@ const config = {
                     },
                     {to: 'blog', label: 'News', position: 'right'},
                     {
-                        href: 'https://scnx.app',
-                        label: 'SCNX Dashboard',
-                        position: 'right'
-                    },
-                    {
                         type: 'localeDropdown',
                         position: 'right'
                     }

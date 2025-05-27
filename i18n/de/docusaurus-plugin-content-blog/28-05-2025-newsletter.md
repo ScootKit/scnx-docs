@@ -1,8 +1,9 @@
 ---
-title: "Gib deinem Server-Leveling einen Schub: Ankündigung von XP-Multiplikatoren, Level-Simulator & benutzerdefinierten Formeln!"
+title: "Ankündigung von XP-Multiplikatoren, Level-Simulator & benutzerdefinierten Formeln!"
 description: Gib deinem SCNX Levelsystem einen Schub! Entdecke neue XP-Multiplikatoren, einen neuen Level-Simulator & benutzerdefinierte Level-Formeln, um das Discord-Server-Leveling vollständig anzupassen und das Nutzer-Engagement zu steigern.
 slug: 2025-custom-level-curves
 date: 2025-05-28T10:00
+unlisted: true
 authors:
   - scderox
 tags:

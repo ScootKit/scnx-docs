@@ -1,8 +1,9 @@
 ---
-title: "Supercharge Your Server's Leveling: Announcing XP Multipliers, Level Simulator & Custom Formulas!"
+title: "Announcing XP Multipliers, Level Simulator & Custom Formulas!"
 description: Supercharge your SCNX Level System! Discover new XP Multipliers, a new Level Simulator & Custom Level Formulas to fully customize Discord server leveling and boost user engagement
 slug: 2025-custom-level-curves
 date: 2025-05-28T10:00
+unlisted: true
 authors:
   - scderox
 tags:
