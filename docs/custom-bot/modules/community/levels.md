@@ -224,14 +224,14 @@ multiplicator factor in the second field. If a user sends a message in a channel
 factor, the `ChannelMultiplicator` factor will be set to the configured factor.
 
 > **Example 1** : A user has one role that has been configured with factor $5$. No channel multipliers apply. Their XP
-> value for this message is 100,
-> but because of the factor five role, $500$ XP ($= 100 * 5 * 1$) will be given.\
+> value for this message is 50,
+> but because of the factor five role, $250$ XP ($= 50 * 5 * 1$) will be given.\
 > **Example 2**: Another has three roles, each configured with the factors $5$, $2$ and $3$ respectively. No channel
-> multipliers apply. Their XP value for their message is also 500,
-> but because of the total factor of ($5 * 2 * 3 = 30$), $3,000$ XP ($= 100 * 30 * 1$) will be given.\
+> multipliers apply. Their XP value for their message is also 50,
+> but because of the total factor of ($5 * 2 * 3 = 30$), $1,500$ XP ($= 50 * 30 * 1$) will be given.\
 > **Example 3**: A third user has one role that has been configured with the factor $1.5$. A channel multiplier of $1.9$
-> applies. Their XP value for this message is 100,
-> but because of the role factor $1.5$ and the channel factor $1.9$, $285$ ($= 100 * 1.5 * 1.9$) XP will be given.
+> applies. Their XP value for this message is 50,
+> but because of the role factor $1.5$ and the channel factor $1.9$, $143$ ($50 * 1.5 * 1.9 = 142,5$, rounded to $143$) XP will be given.
 
 You can enter any floating point decimal that you want, but as you can see from these examples, using values between $1$
 and $2$ yield the best results as these do not drastically increase the XP amount compared to numbers above $2$. Setups
