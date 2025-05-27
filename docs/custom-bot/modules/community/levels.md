@@ -16,7 +16,7 @@ Easy to use levelling system with a lot of customization!
   messages, so your chat isn't to repetitive!
 * Add [multiplicator channels and roles](#multiplicators).
 * Show the current [leaderboard](#live-leaderboard) live in a Discord channel.
-* Start your level system with Level 0 or configure a maximum level.
+* Start your level system with Level 0 and configure a maximum level.
 * [Manage the XP and level of users](#manage-levels) on your server.
 
 ## Setup {#setup}
@@ -36,7 +36,7 @@ Easy to use levelling system with a lot of customization!
 
 ## Usage {#usage}
 
-* After [setting up the modules](#setup), users will start receiving XP for sending messages and for spending time in
+* After [setting up the module](#setup), users will start receiving XP for sending messages and for spending time in
   voice channels.
 * Once a user reaches a threshold based on your [customizable leveling formula](#level-curves), they will level up to
   the next level. You
@@ -211,7 +211,7 @@ Roles" field. There, select the role you want to assign a multiplicator in the f
 multiplicator factor in the second field. If a user has any of the configured roles, their `RoleMuliplicator` factor
 will increase.
 If a user has more than one of the roles configured in this field, the factors
-of every role will be multiplied together. Because of this, we to avoid setups were users have multiple multiplication
+of every role will be multiplied together. Because of this, we recommend to avoid setups were users have multiple multiplication
 roles.
 
 The role multiplicators of any given user can be viewed using the [`/profile`](#commands) command.
@@ -400,7 +400,7 @@ assign as a reward.
 
 To give users XP for being in a voice channel and for sending messages, make sure that the bot has the "View channel",
 "Read message history" and "Connect to voice channel" permission on every channel XP should be given for. Otherwise, no
-XP cna be given as the bot can't see the message / voice channel.
+XP can be given as the bot can't see the message / voice channel.
 </details>
 
 <details>
