@@ -12,7 +12,7 @@ Easy to use levelling system with a lot of customization!
 * Grant XP based on the amount of time a user [spends in a voice channel](#voice-xp).
 * Select one of [three leveling curves](#level-curves) or [enter your own](#custom-level-curve).
 * Add roles as [level rewards](#level-rewards).
-* Configure [custom level up messages](#level-up-messages) - you add custom messages for specific levels or use random
+* Configure [custom level up messages](#level-up-messages) - you can add custom messages for specific levels or use random
   messages, so your chat isn't to repetitive!
 * Add [multiplicator channels and roles](#multiplicators).
 * Show the current [leaderboard](#live-leaderboard) live in a Discord channel.
