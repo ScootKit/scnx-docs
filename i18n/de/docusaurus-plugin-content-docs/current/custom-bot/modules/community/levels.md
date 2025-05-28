@@ -39,7 +39,7 @@ Anstatt deine Nutzer jedes Mal [`/leaderboard`](#commands) ausführen zu lassen,
 
 Um die Live-Rangliste zu aktivieren, setze den "Live-Ranglisten-Kanal" in deiner [Konfiguration](#configuration) auf einen beliebigen leeren Kanal auf deinem Server, auf dem der Bot die Berechtigungen "Nachrichten senden", "Nachrichtenverlauf anzeigen" und "Kanal anzeigen" hat. Für die besten Ergebnisse richte deinen Kanal so ein, dass Nutzer keine Nachrichten in diesen Kanal senden können. Sobald konfiguriert, [lade deine Konfiguration neu](/docs/scnx/guilds/bots/#basics) und der Bot sendet eine Nachricht in den Kanal, die fortan alle 5 Minuten bearbeitet wird.
 
-![Screenshot einer Live-Rangliste vom ScootKit Server](@site/docs/assets/custom-bot/modules/levels/live-leaderboard-en.png)
+![Screenshot einer Live-Rangliste vom ScootKit Server](@site/docs/assets/custom-bot/modules/levels/live-leaderboard-de.png)
 
 ### Levelaufstiegsnachrichten {#level-up-messages}
 
@@ -61,7 +61,7 @@ Die Menge an XP, die ein Nutzer benötigt, um ein bestimmtes Level zu erreichen,
 
 Für jede Minute, die ein Nutzer mit anderen Mitgliedern in einem Sprachkanal verbringt, erhält er eine [konfigurierbare](#configuration) Menge an XP.
 Es werden keine XP vergeben, wenn er allein in seinem Kanal ist oder stummgeschaltet oder taubgeschaltet ist. Zahlen werden gerundet und XP werden alle 15
-Minuten oder beim Verlassen des Kanals vergeben. Dies motiviert deine Mitglieder, in Sprachkanälen aktiv und engagiert zu werden, und beugt Missbrauch des Systems vor.
+Minuten oder beim Verlassen des Kanals vergeben. Dies motiviert deine Mitglieder, in Sprachkanälen aktiv und engagiert zu sein, und beugt Missbrauch des Systems vor.
 
 Standardmäßig werden Levelaufstiegsnachrichten in den Textkanal des Sprachkanals gesendet, mit dem der Nutzer verbunden ist. Du kannst jedoch bei Bedarf einen separaten Kanal in deiner [Konfiguration](#configuration) angeben.
 
@@ -75,10 +75,10 @@ Die folgenden Levelformeln sind verfügbar:
 
 * **Einfache Lineare** Kurve (standardmäßig ausgewählt): Dies ist für die meisten Server die beste Option. Diese Levelkurve wurde sorgfältig ausgewählt, um den Bedürfnissen der meisten Server gerecht zu werden. Sie ist so konzipiert, dass sie einen einfachen Einstieg in das Level-System ermöglicht und es dennoch schwierig macht, höhere Level zu erreichen.\
   Die verwendete Formel lautet $f(x) = 750x + ((x-1) * 500)$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x)$
-  (was bedeutet, dass die Levelkurve linear skaliert).
+  (was bedeutet, dass die Levelkurve linear wächst).
 * **Standard Lineare** Kurve: Dies ist eine vereinfachte Version der Einfachen Linearen Kurve und war der alte Standardwert, wird aber nicht mehr standardmäßig verwendet. Sie ermöglicht ein leichteres Leveln und kann für kleinere Server verwendet werden.\
   Die Formel lautet $f(x) = 750x$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x)$
-  (was bedeutet, dass die Levelkurve linear skaliert).
+  (was bedeutet, dass die Levelkurve linear wächst).
 * **Exponentielle** Kurve: Diese Levelkurve ermöglicht Nutzern einen sehr einfachen Start, wird aber nach Level 14 sehr schwierig und praktisch unmöglich.\
   Die Formel lautet $f(x) = 350 * (x-1)^2$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x^2)$ (was bedeutet, dass die Funktion quadratisch skaliert).
 * **Eigene Formel**: Du kannst eine beliebige mathematische Formel eingeben, um eine vollständige Anpassbarkeit zu ermöglichen. Weitere Informationen findest du im Abschnitt [eigene Levelkurve](#custom-level-curve).
@@ -129,7 +129,7 @@ Um diese Funktion zu nutzen, erstelle zuerst die Rollen, die du vergeben möchte
 Gib im ersten Feld der Konfigurationsoption "Levelbelohnungen" das Level ein, bei dem der Nutzer die
 Rolle erhalten soll. Wähle im zweiten Feld die Rolle aus, die dem Nutzer gewährt werden soll:
 
-![Screenshot der SCNX Dashboard Levelbelohnungskonfiguration](@site/docs/assets/custom-bot/modules/levels/level-rewards-en.png)
+![Screenshot der SCNX Dashboard Levelbelohnungskonfiguration](@site/docs/assets/custom-bot/modules/levels/level-rewards-de.png)
 
 Standardmäßig "stapeln" sich Levelrollen, was bedeutet, dass ein Nutzer mehrere Levelrollen haben kann. Um dieses
 Verhalten zu deaktivieren und zu erzwingen, dass ein Nutzer jeweils nur eine Levelrolle haben kann, aktiviere die Konfigurationsoption "name" in
@@ -141,15 +141,15 @@ Standardmäßig hat jeder Nutzer und jeder Kanal einen Multiplikationsfaktor von
 
 Die Menge der für jede Nachricht vergebenen XP wird nach folgender Formel berechnet (wobei `XPAmount` zufällig
 basierend auf deinen [Konfigurationswerten](#configuration) ausgewählt wird):\
-`XP = XPAmount * ChannelMultiplikator * RollenMultiplikator`, gerundet auf die nächste ganze Zahl.\
+`XP = XPAmount * Kanalmultiplikator * RollenMultiplikator`, gerundet auf die nächste ganze Zahl.\
 Das bedeutet, dass Nachrichten ohne Multiplikatoren nur die `XPAmount` XP erhalten, da sowohl der
-`ChannelMultiplikator` als auch der `RollenMultiplikator` 1 sind.
+`Kanalmultiplikator` als auch der `RollenMultiplikator` 1 sind.
 
 Um Rollenmultiplikatoren zu konfigurieren, öffne deine [Konfiguration](#configuration) und füge ein Element zum Feld "XP-Multiplikationsrollen"
 hinzu. Wähle dort im ersten Feld die Rolle aus, der du einen Multiplikator zuweisen möchtest, und gib im
 zweiten Feld den Multiplikatorfaktor ein. Wenn ein Nutzer eine der konfigurierten Rollen hat, erhöht sich sein `RollenMultiplikator`-Faktor.
 Wenn ein Nutzer mehr als eine der in diesem Feld konfigurierten Rollen hat, werden die Faktoren
-jeder Rolle miteinander multipliziert. Aus diesem Grund empfehlen wir, Setups zu vermeiden, bei denen Nutzer mehrere Multiplikationsrollen haben.
+jeder Rolle miteinander multipliziert. Aus diesem Grund empfehlen wir, Situationen zu vermeiden, bei denen Nutzer mehrere Multiplikationsrollen haben.
 
 Die Rollenmultiplikatoren eines bestimmten Nutzers können mit dem Befehl [`/profile`](#commands) eingesehen werden.
 
@@ -158,7 +158,7 @@ dazu deine [Konfiguration](#configuration) und füge
 ein Element zum Feld "XP-Multiplikationskanäle" hinzu.
 Wähle dort im ersten Feld den Kanal aus, dem du einen Multiplikator zuweisen möchtest, und gib im
 zweiten Feld den Multiplikatorfaktor ein. Wenn ein Nutzer eine Nachricht in einem Kanal mit einem konfigurierten Multiplikationsfaktor
-sendet, wird der `ChannelMultiplikator`-Faktor auf den konfigurierten Faktor gesetzt.
+sendet, wird der `Kanalmultiplikator`-Faktor auf den konfigurierten Faktor gesetzt.
 
 > **Beispiel 1**: Ein Nutzer hat eine Rolle, die mit dem Faktor $5$ konfiguriert wurde. Es gelten keine Kanalmultiplikatoren. Sein XP-Wert
 > für diese Nachricht beträgt 50,
@@ -170,9 +170,8 @@ sendet, wird der `ChannelMultiplikator`-Faktor auf den konfigurierten Faktor ges
 > gilt. Sein XP-Wert für diese Nachricht beträgt 50,
 > aber aufgrund des Rollenfaktors $1,5$ und des Kanalfaktors $1,9$ werden $143$ ($50 * 1,5 * 1,9 = 142,5$, gerundet auf $143$) XP vergeben.
 
-Du kannst jede gewünschte Fließkommazahl eingeben, aber wie du an diesen Beispielen sehen kannst, erzielen Werte zwischen $1$
-und $2$ die besten Ergebnisse, da diese die XP-Menge im Vergleich zu Zahlen über $2$ nicht drastisch erhöhen. Setups
-wie dieses funktionieren auch gut, wenn du Nutzer mit mehreren Multiplikationsrollen hast.
+Du kannst jede gewünschte Kommazahl eingeben, aber wie du an diesen Beispielen sehen kannst, erzielen Werte zwischen $1$
+und $2$ die besten Ergebnisse, da diese die XP-Menge im Vergleich zu Zahlen über $2$ nicht drastisch erhöhen. Eine solche Konfiguration funktioniert auch dann gut, wenn du Nutzern mit mehren Multiplikationsrollen hast.
 
 Um bestimmte Rollen oder Kanäle vom Chatten abzuhalten (z. B. einen Spam-Kanal), erwäge die Eingabe eines Wertes unter $1$ als
 Multiplikator, wodurch die Menge der vergebenen XP verringert wird. Wenn ein Kanal beispielsweise einen Multiplikatorfaktor von $0,5$
@@ -250,7 +249,7 @@ kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=
 |---------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Mindestens vergebene XP für Nachrichten                       | Diese Menge an XP wird mindestens für jede gesendete Nachricht vergeben.                                                                                                                                                                                                                                          |
 | Höchstens vergebene XP für Nachrichten                        | Diese Menge an XP wird höchstens für jede gesendete Nachricht vergeben.                                                                                                                                                                                                                                           |
-| XP pro Sprachkanal-Minute                                     | Wie viele XP Nutzer pro Minute erhalten, wenn sie sich mit anderen Mitgliedern in einem Sprachkanal befinden. Unterstützt Fließkommawerte. Weitere Informationen im Abschnitt [XP für Sprachkanäle](#voice-xp).                                                                                                   |
+| XP pro Sprachkanal-Minute                                     | Wie viele XP Nutzer pro Minute erhalten, wenn sie sich mit anderen Mitgliedern in einem Sprachkanal befinden. Unterstützt Kommazahlen. Weitere Informationen im Abschnitt [XP für Sprachkanäle](#voice-xp).                                                                                                   |
 | Abklingzeit                                                   | In Millisekunden, wie viel Abklingzeit zwischen jeder XP-Vergabe an Nutzer für das Senden von Nachrichten liegt. Dies ist nützlich, um zu vermeiden, dass Nutzer für Spam belohnt werden.                                                                                                                         |
 | Art der Levelkurve                                            | Die Levelkurve, die für dein Level-System verwendet werden soll. Weitere Informationen im Abschnitt [Levelkurven](#level-curves).                                                                                                                                                                                |
 | eigene Levelformel (falls aktiviert)              | Deine eigene Levelformel. Weitere Informationen im Abschnitt [eigene Levelkurve](#custom-level-curve).                                                                                                                                                                                    |
