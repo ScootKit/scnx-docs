@@ -278,3 +278,81 @@ Du kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?pa
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nutzer nicht gefunden  | Diese Nachricht wird gesendet, wenn jemand versucht, das Profil eines Nutzers zu überprüfen, der noch nie eine Nachricht gesendet hat und daher noch kein Profil besitzt.                                                                                                |
 | Embed                  | Diese Konfigurationsoption passt an, wie der Befehl [`/profile`](#commands) aussehen soll. Du kannst die Feldwerte der Einbettung, die Farbe der Einbettung und mehr ändern.                                                                                             |
+| Ranglisten-Embed  | Diese Konfigurationsoption passt an, wie der Befehl [`/leaderboard`](#commands) aussehen soll. Du kannst die Feldwerte der Einbettung, die Farbe der Einbettung und mehr ändern.                                                                                                      |
+| Levelaufstiegsnachricht        | Dies ist die [Levelaufstiegsnachricht](#level-up-messages), wenn ein Benutzer zu einem Level ohne Level-Rollenbelohnung aufsteigt. Bitte beachte, dass diese Einstellung nicht verwendet wird, wenn du "Zufällige Nachrichten" in der [Modulkonfiguration](#configuration-config) aktiviert hast.                    |
+| Levelaufstiegsnachricht mit Belohnung | Dies ist die [Levelaufstiegsnachricht](#level-up-messages), wenn ein Benutzer zu einem Level mit einer Level-Rollenbelohnung aufsteigt, die der Benutzer erhält. Bitte beachte, dass diese Einstellung nicht verwendet wird, wenn du "Zufällige Nachrichten" in der [Modulkonfiguration](#configuration-config) aktivierst. |
+| Live-Ranglisten-Embed | Diese Konfigurationsoption passt an, wie die [Live-Ranglisten-Einbettung](#live-leaderboard) für Benutzer erscheinen soll. Du kannst Einbettungswerte, die Farbe der Einbettung und mehr ändern.                                                                                                     |
+| Antwort des Live-Ranglisten- | Unter der [Live-Rangliste](#live-leaderboard) wird ein Knopf hinzugefügt, mit dem Benutzer ihr eigenes Level und ihre XP überprüfen können. Mit dieser Konfigurationsoption kannst du die Antwort des Bots anpassen, wenn der Knopf verwendet wird.                                              |
+
+### Konfiguration für zufällige Levelaufstiegsnachrichten {#configuration-random-levelup-messages}
+
+In dieser Konfigurationsdatei kannst du [Levelaufstiegsnachrichten](#level-up-messages) hinzufügen, von denen eine zufällig ausgewählt wird,
+wenn du die Konfiguration "Zufällige Nachrichten" in deiner [Modulkonfiguration](#configuration-config) aktiviert hast. Jede
+Konfigurationsoption stellt eine Nachricht dar, die zufällig ausgewählt werden kann. Du
+kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
+
+| Feld    | Beschreibung                                                                                                                                                                                                                                                                                                      |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Typ     | Hiermit wird konfiguriert, wann diese Nachricht zufällig ausgewählt werden kann. Wenn auf `normal` gesetzt, kann sie für Levelaufstiege ohne Rollenbelohnungen verwendet werden, die mit dem Level verbunden sind. Wenn auf `with-reward` gesetzt, wird die Nachricht nur verwendet, wenn ein Level eine Rollenbelohnung hat (dies erlaubt auch die Verwendung des `%role%`-Parameters). |
+| Nachricht | Diese Nachricht wird verwendet, wenn dieses Konfigurationsobjekt zufällig ausgewählt wurde.                                                                                                                                                                                                                             |
+
+### Konfiguration für ausgewählte Levelaufstiegsnachrichten {#configuration-special-levelup-messages}
+
+In dieser Konfigurationsdatei kannst du die [Levelaufstiegsnachrichten](#level-up-messages) für bestimmte Level überschreiben. Du
+kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
+
+| Feld    | Beschreibung                                                        |
+|---------|---------------------------------------------------------------------|
+| Level   | Level, für das die Nachricht überschrieben werden soll.             |
+| Nachricht | Diese Nachricht wird gesendet, wenn das konfigurierte Level erreicht wird. |
+
+## Fehlerbehebung {#troubleshooting}
+
+<details>
+<summary>Meine Benutzer steigen zu langsam / zu schnell auf.</summary>
+
+Wie viele XP Benutzer erhalten, hängt von der [Konfiguration](#configuration) ab, und an welchen Punkten sie aufsteigen,
+kann mit einer [Levelkurve](#level-curves) angepasst werden. Bitte passe diese Optionen an deine Bedürfnisse an. Nach dem Ändern einer
+Levelkurve steigen Benutzer anfangs möglicherweise schneller / langsamer auf – um dies zu beheben,
+erwäge, [dein Stufensystem zurückzusetzen](#manage-levels).
+</details>
+
+<details>
+<summary>Levelaufstiegsnachrichten werden nicht gesendet.</summary>
+
+Um Levelaufstiegsnachrichten zu senden, benötigt der Bot die Berechtigung "Nachrichten senden" in dem Kanal, in den die Levelaufstiegsnachricht gesendet werden soll.
+In den meisten Fällen benötigt der Bot diese Berechtigung für jeden Kanal, in dem XP gewährt werden (es sei denn,
+du [konfigurierst](#configuration) einen separaten Levelaufstiegskanal). Wenn du [Levelbelohnungen](#level-rewards) verwendest,
+benötigt der Bot auch die Berechtigung "Rollen verwalten" und die höchste Rolle des Bots sollte über der Rolle liegen, die der Bot
+als Belohnung zuweisen soll.
+</details>
+
+<details>
+<summary>Meine Benutzer erhalten keine XP.</summary>
+
+Um Benutzern XP für die Anwesenheit in einem Sprachkanal und für das Senden von Nachrichten zu geben, stelle sicher, dass der Bot die Berechtigungen "Kanal anzeigen",
+"Nachrichtenverlauf lesen" und "Mit Sprachkanal verbinden" auf jedem Kanal hat, für den XP vergeben werden sollen. Andernfalls können keine
+XP vergeben werden, da der Bot die Nachricht / den Sprachkanal nicht sehen kann.
+</details>
+
+<details>
+<summary>Meine Live-Rangliste wird nicht korrekt gesendet.</summary>
+
+Die [Live-Rangliste](#live-leaderboard) kann nur gesendet werden, wenn der Bot die Berechtigungen "Kanal anzeigen", "Nachrichtenverlauf anzeigen"
+und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Der Kanal muss außerdem leer sein, damit die Live-Ranglisten-Einbettung gesendet und aktuell gehalten werden kann.
+</details>
+
+## Gespeicherte Daten {#data-usage}
+
+Die folgenden Daten werden über jeden Benutzer gespeichert, der mindestens eine berechtigte Nachricht auf deinem Server gesendet hat:
+
+* Die eindeutige Discord-Benutzer-ID des Mitglieds, das die Nachricht gesendet hat.
+* Die Anzahl der XP, die der Benutzer hat.
+* Die Anzahl der berechtigten Nachrichten, die der Benutzer gesendet hat.
+* Das aktuelle Level des Benutzers.
+* Metadaten zum Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung).
+
+Du kannst die Daten eines Benutzers mit dem Befehl [`/manage-levels reset-xp`](#manage-levels) und dem `user`-Parameter
+löschen. Um alle Daten aller Benutzer zu löschen, verwende den Befehl ohne den `user`-Parameter.
+Alternativ kannst du, um alle von diesem Modul gespeicherten Daten zu entfernen,
+auch [die Moduldatenbank bereinigen](/docs/custom-bot/additional-features#reset-module-database).
