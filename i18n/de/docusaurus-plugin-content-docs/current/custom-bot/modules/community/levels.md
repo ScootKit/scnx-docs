@@ -282,7 +282,7 @@ Du kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?pa
 | Levelaufstiegsnachricht        | Dies ist die [Levelaufstiegsnachricht](#level-up-messages), wenn ein Benutzer zu einem Level ohne Level-Rollenbelohnung aufsteigt. Bitte beachte, dass diese Einstellung nicht verwendet wird, wenn du "Zufällige Nachrichten" in der [Modulkonfiguration](#configuration-config) aktiviert hast.                    |
 | Levelaufstiegsnachricht mit Belohnung | Dies ist die [Levelaufstiegsnachricht](#level-up-messages), wenn ein Benutzer zu einem Level mit einer Level-Rollenbelohnung aufsteigt, die der Benutzer erhält. Bitte beachte, dass diese Einstellung nicht verwendet wird, wenn du "Zufällige Nachrichten" in der [Modulkonfiguration](#configuration-config) aktivierst. |
 | Live-Ranglisten-Embed | Diese Konfigurationsoption passt an, wie die [Live-Ranglisten-Einbettung](#live-leaderboard) für Benutzer erscheinen soll. Du kannst Einbettungswerte, die Farbe der Einbettung und mehr ändern.                                                                                                     |
-| Antwort des Live-Ranglisten- | Unter der [Live-Rangliste](#live-leaderboard) wird ein Knopf hinzugefügt, mit dem Benutzer ihr eigenes Level und ihre XP überprüfen können. Mit dieser Konfigurationsoption kannst du die Antwort des Bots anpassen, wenn der Knopf verwendet wird.                                              |
+| Antwort des Live-Ranglisten-Knopfes | Unter der [Live-Rangliste](#live-leaderboard) wird ein Knopf hinzugefügt, mit dem Benutzer ihr eigenes Level und ihre XP überprüfen können. Mit dieser Konfigurationsoption kannst du die Antwort des Bots anpassen, wenn der Knopf verwendet wird.                                              |
 
 ### Konfiguration für zufällige Levelaufstiegsnachrichten {#configuration-random-levelup-messages}
 
@@ -314,7 +314,7 @@ kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=
 Wie viele XP Benutzer erhalten, hängt von der [Konfiguration](#configuration) ab, und an welchen Punkten sie aufsteigen,
 kann mit einer [Levelkurve](#level-curves) angepasst werden. Bitte passe diese Optionen an deine Bedürfnisse an. Nach dem Ändern einer
 Levelkurve steigen Benutzer anfangs möglicherweise schneller / langsamer auf – um dies zu beheben,
-erwäge, [dein Stufensystem zurückzusetzen](#manage-levels).
+erwäge, [dein Levelsystem zurückzusetzen](#manage-levels).
 </details>
 
 <details>
