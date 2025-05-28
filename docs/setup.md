@@ -26,8 +26,8 @@ Next, you'll see the [server overview page](https://scnx.app/user/guilds). Here 
 to. Select the server you want to set up SCNX on.
 
 :::tip Can't find your server?
-Please make sure you are the **owner of a server** in order to add it to SCNX. If not, ask the owner to set up SCNX and
-give you [Trusted Admin Permissions](/docs/scnx/guilds/trusted-admins). If you've recently created a server and it is not
+Please make sure you are the **owner of a server** or **have the administrator permission** to add it to SCNX. If not, ask the owner or an administrator to set up SCNX and
+give you [Trusted Admin Permissions](/docs/scnx/guilds/trusted-admins). If you've recently created a server, and it is not
 visible in the dashboard, refresh the server list using the "Refresh data" button on the bottom of the page.
 :::
 ![](@site/docs/assets/setup/setup-2.png)

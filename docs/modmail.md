@@ -12,11 +12,11 @@ Before you can create your own Modmail on SCNX, please make sure that
 
 * you have [added your Server to SCNX](/docs/setup).
 * your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
-  or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a free trial, if
+  or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
+  free trial, if
   available for you.
-* you are the owner of the server you want to enable this feature
-  on ([why?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
-  feature for you and grant you access as a [Trusted Admin](/docs/scnx/guilds/trusted-admins).
+* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an
+  administrator of the server you want to enable this feature.
 * you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
@@ -41,7 +41,8 @@ policies also apply to your use of the Discord API as part of SCNX) and create y
 
 Next, open the "Bot"-Settings in the navigation bar on the left-hand side.
 There, you can configure the avatar and username - you don't need to,
-as you can also [do this directly on SCNX](/docs/scnx/guilds/bots#change-profile) and get prompted to do so when your bot
+as you can also [do this directly on SCNX](/docs/scnx/guilds/bots#change-profile) and get prompted to do so when your
+bot
 got created.
 
 The final step in the Developer Dashboard is to generate a token and copy it. To do so, open the "Bot" page of your
@@ -86,7 +87,8 @@ SCNX will now set up hosting for your Modmail
 and automatically configures the Discord Bot for you.
 ![](@site/docs/assets/setup/modmail-4.png)
 
-Once SCNX has set up your Modmail, you'll need to invite the Modmail bot to your server. To do this, you only need to click on
+Once SCNX has set up your Modmail, you'll need to invite the Modmail bot to your server. To do this, you only need to
+click on
 the "Add the bot to your Discord"-Button. This will open Discord's OAuth2 Grant Screen
 (that's how nerds call the screen below 🤓). SCNX already selected your server for you. Simply click "Continue" and
 "Authorize" to finish the process. If you want, you can remove the "Administrator" permission, but this will make it
@@ -97,7 +99,8 @@ which feature needs what permissions and handle permission-related error correct
 ![](@site/docs/assets/setup/modmail-5.png)
 
 Once this is done, your Modmail is fully ready to use SCNX. Return to the setup flow to edit the bot
-profile with the "Edit profile" button ([you can also do this later](/docs/scnx/guilds/bots#change-profile)), configure your
+profile with the "Edit profile" button ([you can also do this later](/docs/scnx/guilds/bots#change-profile)), configure
+your
 new Modmail or explore all features your Modmail.
 
 ![](@site/docs/assets/setup/modmail-6.png)
@@ -110,8 +113,10 @@ visit [scnx.app/help](https://scnx.app/help).
 
 ## 3. Celebrate your new Modmail 🎉 {#done}
 
-If you did everything right, your Modmail should now be online on Discord. Pat yourself on the back. You did a great job and
-are now ready to explore the universe of a highly advanced and fully customizable Modmail for your community - not just a Modmail,
+If you did everything right, your Modmail should now be online on Discord. Pat yourself on the back. You did a great job
+and
+are now ready to explore the universe of a highly advanced and fully customizable Modmail for your community - not just
+a Modmail,
 it's *your* Modmail[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Here are a few things you can do now:

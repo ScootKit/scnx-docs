@@ -12,9 +12,8 @@ PROFESSIONAL: "24/7 gehosted, solange dein Abonnement aktiv ist."}} />
 Bevor du deinen Eigenen Bot auf SCNX erstellen kannst, stelle sicher, dass
 
 * du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
-* du der Besitzer des Servers bist, auf dem du diese Funktion aktivieren
-  willst ([warum?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - wenn du nicht der Besitzer bist, bitte diesen, die
-  Funktion für dich zu aktivieren und dich als [Trusted Admin](/docs/scnx/guilds/trusted-admins) hinzuzufügen.
+* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
+  oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
 * du einige Minuten Zeit hast (nach unseren Schätzungen dauert die Einrichtung am Computer etwa zwei Minuten, am Handy
   könnte
   es etwas länger dauern), um dieser Anleitung zur folgen - stoppe nicht mittendrin; dein Fortschritt wird nicht
@@ -101,13 +100,15 @@ Berechtigungen einzelner Funktionen anzuzeigen und Fehler, die mit Berechtigunge
 Sobald du deinen Bot zu deinem Server hinzugefügt hast, ist dein Bot bereit, SCNX zu verwenden. Kehre zu der Einrichtung
 zurück und editierte das Profil
 deines Bots mit dem "Bot-Profil bearbeiten"
-Knopf ([das kannst du auch später machen](/docs/scnx/guilds/bots#change-profile)), Module aktivieren oder alle Funktionen
+Knopf ([das kannst du auch später machen](/docs/scnx/guilds/bots#change-profile)), Module aktivieren oder alle
+Funktionen
 deines Bots entdecken.
 
 ![](@site/docs/assets/setup/custom-bot-7.png)
 
 :::tip Es läuft nicht alles wie geplant?
-Wir haben einen [Leitfaden zur Fehlerbehebung für Eigene Bots](/docs/custom-bot/troubleshooting) für dich. Wenn das nicht
+Wir haben einen [Leitfaden zur Fehlerbehebung für Eigene Bots](/docs/custom-bot/troubleshooting) für dich. Wenn das
+nicht
 geholfen hat,
 wir sind immer da, um zu helfen, besuche
 einfach [scnx.app/de/help](https://scnx.app/de/help).

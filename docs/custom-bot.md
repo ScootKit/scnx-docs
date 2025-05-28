@@ -12,9 +12,7 @@ PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 Before you can create your Custom-Bot on SCNX, please make sure that
 
 * you have [added your Server to SCNX](/docs/setup).
-* you are the owner of the server you want to enable this feature
-  on ([why?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
-  feature for you and grant you access as a [Trusted Admin](/docs/scnx/guilds/trusted-admins).
+* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
 * you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.

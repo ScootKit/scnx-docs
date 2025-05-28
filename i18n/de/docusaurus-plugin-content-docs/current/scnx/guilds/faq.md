@@ -8,12 +8,9 @@ Häufig gestellte Fragen, wie Server auf SCNX funktionieren.
 
 ## Wieso muss ich der Eigentümer sein, um einen Server zu SCNX hinzuzufügen? {#owner}
 
-Nur der Eigentümer kann einen neuen Discord-Server zu SCNX hinzufügen. Der Grund dafür hat mit Rechtlichem zu tun und
-basiert auf
-unseren [Nutzungsbedingungen](https://scootk.it/scnx-tos) - wir werden das eventuell in Zukunft ändern. Momentan
-kannst du einfach den
-Eigentümer fragen, ob er auf seinem Server [SCNX einrichtet](/docs/setup) und dir
-[Trusted-Admin-Rechte](/docs/scnx/guilds/trusted-admins) geben kann.
+Du musst nicht mehr der Eigentümer sein! Jeder mit Administratorrechten auf einem Server kann SCNX einrichten.
+Server-Eigentümer können weiterhin Server beanspruchen und Administratoren den Zugriff entziehen.
+Erfahre mehr über [von Administratoren verwaltete Server](/docs/scnx/guilds/trusted-admins/#administrator).
 
 ---
 
@@ -31,7 +28,8 @@ SCNX ist dafür gedacht, oft mehrere, normale Bots durch Einen zu ersetzen - dei
 ## Kann ich den SCNX-Manager-Bot entfernen? {#scnx-manager-bot}
 
 Ja. Du kannst den Bot einfach von deinem Server kicken. Server ohne den SCNX-Bot können dessen Funktionen,
-wie [Backups](/docs/scnx/guilds/backups) or [Statistiken](/docs/scnx/guilds/analytics) nicht verwenden. Alle Hosting-Funktionen, auch alle Funktionen
+wie [Backups](/docs/scnx/guilds/backups) or [Statistiken](/docs/scnx/guilds/analytics) nicht verwenden. Alle
+Hosting-Funktionen, auch alle Funktionen
 deiner Bots, sind davon nicht betroffen.
 
 ---
@@ -58,7 +56,8 @@ wenn du Hilfe benötigst.
 Du kannst eine Anfrage für die Übertragung aller Daten stellen, wenn beide Server momentan auf SCNX aktiv sind
 (bitte füge den neuen Server hinzu, bevor du eine Anfrage stellst) und du der Eigentümer dieser beiden Server bist.
 
-Da dieser Prozess manuelle Arbeit unsererseits erfordert, berechnen wird dir 4,99 € (inklusive MwSt) für eine Übertragung berechnet.
+Da dieser Prozess manuelle Arbeit unsererseits erfordert, berechnen wird dir 4,99 € (inklusive MwSt) für eine
+Übertragung berechnet.
 
 :::warning
 ALLE Daten werden komplett zum neuem Server übertragen. Das wird bereits existierende Einstellungen auf dem neuen Server

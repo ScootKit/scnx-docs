@@ -22,11 +22,11 @@ den "Mit Discord anmelden" Knopf. Wenn du dich fragst, warum wir Zugriff auf bes
 
 ## 2. Füge deinen Server zu SCNX hinzu {#step-2}
 
-Als nächstes siehst du die [Serverübersicht](https://scnx.app/de/user/guilds). Hier siehst du alle Server, auf die du Zugriff hast.
+Als Nächstes siehst du die [Serverübersicht](https://scnx.app/de/user/guilds). Hier siehst du alle Server, auf die du Zugriff hast.
 Wähle den Server, auf welchem du SCNX einrichten möchtest.
 
 :::tip Du kannst deinen Server nicht finden?
-Bitte stelle sicher, dass du der **Eigentümer eines Servers** bist, um ihn zu SCNX hinzuzufügen. Wenn nicht, bitte den Eigentümer SCNX einzurichten
+Bitte stelle sicher, dass du der **Eigentümer eines Servers** bist oder du **Administrator-Rechte** auf dem Server hast, um ihn zu SCNX hinzuzufügen. Wenn nicht, bitte den Eigentümer oder einen Administrator SCNX einzurichten
 und dir ["Trusted Admin"-Rechte](/docs/scnx/guilds/trusted-admins) zu geben. Wenn du einen Server erst vor kurzem erstellt hast und er dir nicht angezeigt wird,
 aktualisiere die Serverliste mit dem "Daten neuladen" Knopf unten auf der Seite.
 :::
