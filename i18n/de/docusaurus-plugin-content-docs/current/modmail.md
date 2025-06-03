@@ -44,7 +44,7 @@ Wenn dies fertig ist, **kopiere bitte den Token von deinem Bot**. Du wirst ihn g
 ![](@site/docs/assets/setup/custom-Bot-3.png)
 
 :::danger
-Setze deinen Token **nur** im Dashboard ein. Sende **niemals** deinen Token zu einem anderen Nutzer, Trusted-admin oder einem unserer Team-Mitglieder.
+Füge deinen Token **nur** im Dashboard ein. Sende **niemals** deinen Token an einen anderen Nutzer, Trusted-Admin oder an einen unserer Team-Mitglieder.
 Dein Token ist wie ein Passwort - Nutzer können mit deinem Bot alles machen, wenn sie den Token haben. Falls du deinen Token doch aus Versehen weitergegeben hast, setze **sofort**
 den Token im Developer Portal zurück.
 :::
@@ -65,8 +65,8 @@ falls der Token gültig ist.
 
 Nun kannst du ein paar Standardeinstellungen vornehmen. Als Erstes musst du eine Kategorie auswählen, in welcher dein Modmail-Bot später Tickets erstellen soll
 (du kannst dieses später ändern).
-Die Rechte des Discord-Kanals werden mit der Kategorie synchronisiert. Wenn du damit fertig bist, musst du einen Log-Channel auswählen. Logs von geschlossenen Tickets werden
-in diesen Channel zusammen mit wichtigen Informationen gesendet.
+Die Rechte des Discord-Kanals werden mit der Kategorie synchronisiert. Wenn du damit fertig bist, musst du einen Log-Kanal auswählen. Logs von geschlossenen Tickets werden
+in diesen Kanal zusammen mit wichtigen Informationen gesendet.
 Wenn du diese beiden Sachen eingestellt hast, klicke auf "Modmail-Bot erstellen".
 
 ![](@site/docs/assets/setup/modmail-3.png)
@@ -75,14 +75,14 @@ SCNX wird nun die Verwaltung für deinen Modmail-Bot einstellen
 und deinen Discord Bot automatisch einstellen.
 ![](@site/docs/assets/setup/modmail-4.png)
 
-Nachdem SCNX deinen Modmail-Bot eingestellt hat, musst du deinen Modmail-Bot auf deinen Server einladen. Um dies zu machen, musst du nur auf
-den "Füge den Bot zu deinem Discord Server hinzu"-Button. Dies wird ein Fenster öffnen. SCNX hat bereits deinen Server ausgewählt. Klicke einfach auf "Weiter" und
+Nachdem SCNX deinen Modmail-Bot eingestellt hat, musst du deinen Modmail-Bot auf deinen Server einladen. Um dies zu tun, musst du nur auf
+den "Füge den Bot zu deinem Discord Server hinzu"-Knopf. Dies wird ein Fenster öffnen. SCNX hat bereits deinen Server ausgewählt. Klicke einfach auf "Weiter" und
 "Autorisieren" um den Prozess fertigzustellen. Wenn du möchtest, kannst du die "Administrator" Berechtigung entfernen, aber dies wird es schwieriger machen,
 den Bot normal zu nutzen, da SCNX noch nicht zeigen kann, welche Funktion welche Berechtigung benötigt und Fehler, die auf fehlende Berechtigungen zurückzuführen sind, zu erkennen.
 
 ![](@site/docs/assets/setup/modmail-5.png)
 
-Wenn dies erledigt ist, ist dein Modmail-Bot vollkommen nutzbar auf SCNX. Kehre zu dem Setup-Ablauf zurück, um das Profil mit dem "Profil bearbeiten"-Button zu bearbeiten.
+Wenn dies erledigt ist, ist dein Modmail-Bot vollkomend auf SCNX einsatzbereit. Kehre zu der Einrichtung zurück, um das Profil mit dem "Profil bearbeiten"-Button zu bearbeiten.
  ([du kannst dies auch später machen](./scnx/guilds/Bots#change-profile)), stelle deinen neuen Modmail-Bot ein oder erkunde alle Funktionen deines Modmail-Bots.
 
 ![](@site/docs/assets/setup/modmail-6.png)
@@ -100,7 +100,7 @@ es ist DEIN Modmail-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Hier sind ein paar Dinge, die du jetzt tun könntest:
 
-* Teste deinen Modmail-Bot: Sende ihm eine PN und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
-* [stelle deinen Modmail-Bot ein](./modmail/configuration) und aktiviere mehr Modmail Funktionen.
+* Teste deinen Modmail-Bot: Sende ihm eine Privatnachricht und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
+* [stelle deinen Modmail-Bot ein](./modmail/configuration) und aktiviere mehr Modmail-Funktionen.
 * Verbessere dein Support System, indem du [fortschrittliche Modmail Funktionen](./modmail/advanced-features) erkundest.
-* und sehr viel mehr. Öffne die [Modmail Documentation](./modmail/intro) um dir jede Option anzuschauen. 
+* und sehr viel mehr. Öffne die [Modmail-Documentation](./modmail/intro), um dir jede Option anzuschauen. 
