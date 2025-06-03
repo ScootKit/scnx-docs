@@ -44,9 +44,7 @@ Before you can enable Linked Roles on your server, please ensure that
   or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
   free trial, if
   available for you.
-* you are the owner of the server you want to enable this feature
-  on ([why?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - if you are not the owner, please ask them to enable this
-  feature for you and grant you access as a [Trusted Admin](/docs/scnx/guilds/trusted-admins).
+* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
 * you (or one of your trusted admins) have Early Access (purchasable with
   a [ScootKit Membership Level 2 or higher](https://membership.scootkit.com)) during the beta trial. After the beta
   trial ends (likely in Q2 2025), this requirement will be removed.

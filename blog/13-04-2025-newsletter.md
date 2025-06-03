@@ -2,6 +2,7 @@
 title: Time to prepare for easter on your Discord Server!
 description: Easter is in one week - time to start a cool event on your Discord server. Find tipps and guides inside.
 slug: easter-2025-newsletter
+date: 2025-04-13T10:00
 authors:
   - scderox
   - hörnchen

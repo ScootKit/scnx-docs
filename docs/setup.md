@@ -10,7 +10,7 @@ SCNX is **desinged for communities**. You can __**not create a public bot**__ on
 ## 1. Log in to SCNX {#step-1}
 
 :::info
-To use SCNX, you agree to our [SCNX Terms of Service](https://sc-net.work/scnx-tos) and other legal documents. Please
+To use SCNX, you agree to our [SCNX Terms of Service](https://scootk.it/scnx-tos) and other legal documents. Please
 make sure to read them before continuing :wink:
 :::
 
@@ -26,16 +26,16 @@ Next, you'll see the [server overview page](https://scnx.app/user/guilds). Here 
 to. Select the server you want to set up SCNX on.
 
 :::tip Can't find your server?
-Please make sure you are the **owner of a server** in order to add it to SCNX. If not, ask the owner to set up SCNX and
-give you [Trusted Admin Permissions](/docs/scnx/guilds/trusted-admins). If you've recently created a server and it is not
+Please make sure you are the **owner of a server** or **have the administrator permission** to add it to SCNX. If not, ask the owner or an administrator to set up SCNX and
+give you [Trusted Admin Permissions](/docs/scnx/guilds/trusted-admins). If you've recently created a server, and it is not
 visible in the dashboard, refresh the server list using the "Refresh data" button on the bottom of the page.
 :::
 ![](@site/docs/assets/setup/setup-2.png)
 
 ## 3. Accept our Terms of Service & Privacy Policy {#step-3}
 
-To finish setup, you'll need to to agree to our [SCNX Terms of Service](https://sc-net.work/scnx-tos)
-and [SCNX Privacy Note](https://sc-net.work/scnx-privacy). These documents contain important information about how you
+To finish setup, you'll need to agree to our [SCNX Terms of Service](https://scootk.it/scnx-tos)
+and [SCNX Privacy Note](https://scootk.it/scnx-privacy). These documents contain important information about how you
 can use SCNX and how we will process data (tl;dr: We only process data to provide the service).
 
 ![](@site/docs/assets/setup/setup-4.png)
@@ -44,6 +44,6 @@ can use SCNX and how we will process data (tl;dr: We only process data to provid
 
 Your server has been successfully added to SCNX :tada:
 You can now start by [creating your own bot](/docs/custom-bot) or [modmail-bot](/docs/modmail) or explore all features on your own -
-our [documentation](/) & [staff](https://scnx.app/help) on our [Discord](https://sc-net.work/dc) is always here to help.
+our [documentation](/) & [staff](https://scnx.app/help) on our [Discord](https://scootk.it/dc) is always here to help.
 
 ![](@site/docs/assets/setup/setup-5.png)

@@ -49,7 +49,7 @@ export default function ModuleOverview({moduleName}) {
                 }} className="flex">
                     {moduleData.orgData ? <a className="module-name"
                                              href={`https://scnx.app/marketplace/organizations/${moduleData.orgData.slug}`}>
-                        {moduleData.orgData.iconUrl && <img src={moduleData.orgData.iconUrl} style={{
+                        {moduleData.orgData.iconUrl && <img src={moduleData.orgData.iconUrl} className="ignore-image" style={{
                             borderRadius: '9999px',
                             height: '25px',
                             width: '25px'
@@ -122,11 +122,6 @@ export default function ModuleOverview({moduleName}) {
                     <Translate id="modules.enable">Enable module on SCNX</Translate>
                     <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
                 </Link>
-                {moduleData.orgData && <Link
-                    href={`https://scnx.app/${i18n.currentLocale}/marketplace/organizations/${moduleData.orgData.slug}`}
-                    className="button button--secondary">
-                    <FontAwesomeIcon icon={faHeart} style={{marginRight: '0.25rem'}}/> <Translate id="module.donate">Donate
-                    to developer</Translate></Link>}
             </div>
         </div>
     </div>;

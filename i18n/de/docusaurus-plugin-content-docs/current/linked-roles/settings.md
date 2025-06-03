@@ -6,9 +6,9 @@ description: Entdecke Konfigurationsmöglichkeiten für deine Verknüpften Rolle
 # Verknüpfte Rollen Konfiguration
 
 Bei SCNX legen wir immer Wert darauf, so viele Konfigurationsmöglichkeiten wie möglich anzubieten. Natürlich kannst du die
-[Autorisierungsseite](#autorisierungsseite) und andere Konfigurationen für Verknüpfte Rollen anpassen.
+[Autorisierungsseite](#authorization-page) und andere Konfigurationen für Verknüpfte Rollen anpassen.
 
-## Autorisierungsseite {#autorisierungsseite}
+## Autorisierungsseite {#authorization-page}
 
 Die Autorisierungsseite ist die Seite, die Nutzer öffnen müssen, wenn sie [ihre Rolle beanspruchen](/docs/linked-roles/claim-roles), bevor sie
 zu Discord weitergeleitet werden. Die Seite enthält eine kurze Erklärung, deinen Servernamen und dein Serverbild.

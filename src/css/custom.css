@@ -143,6 +143,12 @@ a.card:hover {
     box-shadow: 0 10px 15px -3px #0000001a,  0 4px 6px -4px #0000001a;
 }
 
+.ignore-image {
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
 .DocSearch-Logo a {
     display: none !important;
 }
@@ -159,4 +165,28 @@ a.card:hover {
     left: 0;
     border-radius: 20px;
     overflow: hidden;
+}
+
+select {
+    padding: 3px;
+    cursor: pointer;
+    width: 15rem;
+    border-radius: 5px;
+    background-color: #2e3c59;
+}
+
+input[type=number] {
+    padding: 5px;
+    border-radius: 5px;
+    width: 4rem;
+    border: rgb(133, 133, 133) 1px solid;
+    background-color: #2e3c59;
+}
+
+input[type=text] {
+    padding: 5px;
+    border-radius: 5px;
+    width: 12rem;
+    border: rgb(133, 133, 133) 1px solid;
+    background-color: #2e3c59;
 }

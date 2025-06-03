@@ -2,6 +2,7 @@
 title: Zeit, ein Osterevent für deinen Discord vorzubereiten!
 description: Ostern ist in einer Woche - es ist höchste Zeit, ein Osterevent zu planen. Hier gibt es Tipps und Tricks.
 slug: easter-2025-newsletter
+date: 2025-04-13T10:00
 authors: 
   - scderox
   - hörnchen

@@ -5,7 +5,8 @@
   "packageManager": "npm@10.8.2",
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start -p 2912",
+    "start": "docusaurus start -p 2912 --no-open",
+    "start-de": "docusaurus start -p 2912 --no-open --locale de",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -17,11 +18,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.25.0",
-    "@docusaurus/core": "3.7.0",
-    "@docusaurus/plugin-pwa": "3.7.0",
-    "@docusaurus/plugin-sitemap": "3.7.0",
-    "@docusaurus/preset-classic": "3.7.0",
-    "@docusaurus/theme-common": "3.7.0",
+    "@docusaurus/core": "3.8.0",
+    "@docusaurus/plugin-content-docs": "^3.8.0",
+    "@docusaurus/plugin-pwa": "3.8.0",
+    "@docusaurus/plugin-sitemap": "3.8.0",
+    "@docusaurus/preset-classic": "3.8.0",
+    "@docusaurus/theme-common": "3.8.0",
     "@fortawesome/fontawesome-svg-core": "6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/pro-duotone-svg-icons": "^6.5.2",
@@ -32,14 +34,17 @@
     "clsx": "2.1.1",
     "docusaurus-mdx-checker": "3.0.0",
     "docusaurus-theme-search-typesense": "0.24.0",
+    "fparser": "^3.1.0",
     "markdown-table-formatter": "1.6.1",
     "prism-react-renderer": "2.3.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-player": "^2.16.0"
+    "react-player": "^2.16.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.7.0"
+    "@docusaurus/module-type-aliases": "3.8.0"
   },
   "browserslist": {
     "production": [

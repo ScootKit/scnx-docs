@@ -347,7 +347,7 @@ Leveling-Stats, or Ticket-Data).
 :::
 
 We're sorry that you want to leave SCNX - if you are only experiencing an issue with SCNX, we
-are [happy to help](https://scnx.app/help) on our [Discord](https://sc-net.work/dc).
+are [happy to help](https://scnx.app/help) on our [Discord](https://scootk.it/dc).
 
 To permanently delete your bot, please follow these instructions:
 

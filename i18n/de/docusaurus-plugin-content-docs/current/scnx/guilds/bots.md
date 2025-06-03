@@ -297,7 +297,7 @@ Wenn du deinen Bot löschst, wird dies nicht nur für immer die Bot Konfiguratio
 
 :::
 
-Es tut uns leid, dass du SCNX verlassen willst - wenn du Probleme mit SCNX hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://sc-net.work/dc).
+Es tut uns leid, dass du SCNX verlassen willst - wenn du Probleme mit SCNX hast, [helfen wir dir gerne](https://scnx.app/de/help) auf unserem [Discord](https://scootk.it/dc).
 
 Um deinen Bot (für immer) zu löschen, folge dieser Anleitung:
 

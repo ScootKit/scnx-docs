@@ -43,7 +43,7 @@ Bevor du Verknüpfte Rollen auf deinem Server aktivieren kannst, stelle bitte si
   oder [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan hat, oder erwäge die Nutzung einer
   kostenlosen Testversion, falls
   für dich verfügbar.
-* du der Besitzer des Servers bist, auf dem du diese Funktion aktivieren möchtest
+* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
   ([warum?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - wenn du nicht der Besitzer bist, bitte ihn, diese Funktion für dich zu aktivieren und dir Zugriff als [Trusted Admin](/docs/scnx/guilds/trusted-admins) zu geben.
 * du (oder einer deiner Trusted Admins) Early Access hast (erhältlich mit
   einer [ScootKit Mitgliedschaft Level 2 oder höher](https://membership.scootkit.com)) während der Beta-Phase. Nach Ende der Beta-
