@@ -20,11 +20,7 @@ const config = {
         locales: ['en', 'de']
     },
     trailingSlash: true,
-    scripts: [{
-        src: 'https://analytics.scootkit.net/js/script.js',
-        defer: true,
-        'data-domain': 'docs.scnx.xyz'
-    }],
+    scripts: [],
     stylesheets: [
         {
             href: '/katex/katex.min.css',
