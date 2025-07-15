@@ -64,7 +64,7 @@ The following permissions can be given via Trusted-Admin-Permissions:
 
 Additionally, every Trusted-Admin has a **baseline of permissions**:
 
-* View every setting (and change some) in the [server settings](https://scnx.app/guild/489786377261678592/settings) tab
+* View every setting (and change some) in the [server settings](https://scnx.app/glink?page=settings) tab
 * View Metadata about your server (like name, icon, owner, …)
 * View purchase data about your server (this includes transaction history, but never personal data of subscriptions)
 * Upgrade or set-up subscriptions for your server
@@ -104,7 +104,7 @@ meaning that they will be able to set up SCNX products, but also can remove the 
 our [permissions section](#permissions).
 
 If you are the server owner, you can change this setting at any time in
-your [server settings](https://scnx.app/guild/489786377261678592/settings). When changing to "All administrators", all
+your [server settings](https://scnx.app/glink?page=settings). When changing to "All administrators", all
 members on your server with the Administrator permission will receive the [Co-Owner permission](#permissions) on your
 server. If changing to "Owner only", all members who have received access due to their Administrator permission will
 immediately lose access to the dashboard. Any Trusted Admins configured by the Administrators or by you will still be

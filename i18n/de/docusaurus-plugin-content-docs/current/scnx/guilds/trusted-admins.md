@@ -113,7 +113,7 @@ Administratorberechtigung auf Discord haben, als Co-Owner behandelt. Das bedeute
 aber auch den Server von SCNX entfernen können. Erfahre mehr in unserem [Berechtigungsabschnitt](#permissions).
 
 Wenn du der Server-Eigentümer bist, kannst du diese Einstellung jederzeit in
-deinen [Servereinstellungen](https://scnx.app/guild/489786377261678592/settings) ändern. Bei einer Änderung zu „Alle
+deinen [Servereinstellungen](https://scnx.app/glink?page=settings) ändern. Bei einer Änderung zu „Alle
 Administratoren“ erhalten alle Mitglieder auf deinem Server mit der Administratorberechtigung
 die [Co-Owner-Berechtigung](#permissions) auf deinem Server. Bei einer Änderung zu „Nur Eigentümer“ verlieren alle
 Mitglieder, die aufgrund ihrer Administratorberechtigung Zugriff erhalten haben, sofort den Zugriff auf das Dashboard.
