@@ -16,16 +16,7 @@ If you want to learn more about Linked Roles, you can do so in our [About Linked
 
 :::
 
-:::warning This feature is Early Access
-Linked roles are Early Access. This means that in addition to a paid plan,
-a [membership](https://membership.scootkit.com) with Early Access is also required. Early Access helps us invest money &
-time in developing new features and products. We plan to make this feature available to everyone with Unlimited /
-Professional plan without memberships in late Q2 2025.
-:::
-
-<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{
-UNLIMITED: "Additional Early Access subscription required during Beta trial. Beta will end in Q2 2025.",
-PROFESSIONAL: "Additional Early Access subscription required during Beta trial. Beta will end in Q2 2025."}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} />
 
 ## Video (German) {#video}
 
@@ -45,9 +36,6 @@ Before you can enable Linked Roles on your server, please ensure that
   free trial, if
   available for you.
 * you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
-* you (or one of your trusted admins) have Early Access (purchasable with
-  a [ScootKit Membership Level 2 or higher](https://membership.scootkit.com)) during the beta trial. After the beta
-  trial ends (likely in Q2 2025), this requirement will be removed.
 * you've got 5-10 minutes of time (our estimate is that this takes around six minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.

@@ -24,7 +24,6 @@ Issues when using Linked Roles:
 * ["No roles were assigned to you" when claiming Linked Roles](#roles-missing).
 * ["Seems like the configuration by the server owner is wrong." when claiming Linked Roles](#generic-api-error).
 * ["The SCNX-Plan of this server expired" when claiming Linked Roles](#plan-expired).
-* ["This feature requires Early Access, which this server does not have anymore" when claiming Linked Roles](#early-access-required).
 
 If your issue isn't listed here, [click here](#other).
 
@@ -106,16 +105,6 @@ To use Linked Roles, a plan that includes Linked Roles is required.
 
 **Solution**: Upgrade your plan to a paid plan that includes Linked Roles. Learn more
 about [plans and its features in our documentation](/docs/scnx/guilds/plans).
-
-### "This feature requires Early Access, which this server does not have anymore" when claiming Linked Roles {#early-access-required}
-
-To use Linked Roles, Early Access is required. Early Access helps us invest money &
-time in developing new features and products. We plan to make this feature available to everyone with Unlimited /
-Professional plan without memberships in late Q2 2025.
-
-**Solution**: The server needs at least one owner or [trusted admin](/docs/scnx/guilds/trusted-admins) with Early Access.
-Early access can be purchased with a [ScootKit Membership](https://membership.scootkit.com). You can also consider
-waiting a few months for the feature to be made available for everyone.
 
 ## Other issues {#other}
 

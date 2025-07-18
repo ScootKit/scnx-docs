@@ -5,10 +5,6 @@ description: Verknüpfte Rollen ermöglichen es dir, die Rolle eines Nutzers dir
 
 # Über verknüpfte Rollen
 
-:::warning Diese Funktion befindet sich in Early Access
-Verknüpfte Rollen befinden sich in Early Access. Das bedeutet, dass du neben einem kostenpflichtigen Plan auch eine [Mitgliedschaft](https://membership.scootkit.com) mit Early Access benötigst. Early Access hilft uns dabei, Zeit und Geld in die Entwicklung neuer Funktionen und Produkte zu investieren. Wir planen, diese Funktion im Laufe von Q2 2025 für alle Nutzer mit Unlimited-/Professional-Plan ohne Mitgliedschaft bereitzustellen.
-:::
-
 Verknüpfte Rollen ermöglichen es dir, die Rolle eines Nutzers neben seinem Namen auf deinem Discord-Server anzuzeigen. Dafür muss sich der Nutzer mit deinem Discord-Bot autorisieren und seine Rolle manuell beanspruchen. Die Anzeige der Rolle neben dem Benutzernamen sorgt für ein professionelleres Erscheinungsbild deines Discord-Servers und verbessert die Nutzererfahrung – deine Mitglieder erkennen auf einen Blick, ob sie mit einem Teammitglied, Moderator oder Administrator sprechen.
 
 So könnten verknüpfte Rollen auf deinem Server aussehen:

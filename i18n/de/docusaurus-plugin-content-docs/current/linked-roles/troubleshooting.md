@@ -23,7 +23,6 @@ Probleme bei der Verwendung von Verknüpften Rollen:
 * ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
 * ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
 * ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
-* ["Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Abholen von Verknüpften Rollen](#early-access-required).
 
 Wenn dein Problem hier nicht aufgeführt ist, [klicke hier](#other).
 
@@ -91,12 +90,6 @@ Für die Nutzung von Verknüpften Rollen ist ein Plan erforderlich, der diese Fu
 
 **Lösung**: Upgrade auf einen kostenpflichtigen Plan, der Verknüpfte Rollen unterstützt. Erfahre mehr
 über [Pläne und deren Funktionen in unserer Dokumentation](/docs/scnx/guilds/plans/).
-
-### "Diese Funktion benötigt Early Access, etwas, was der Server nicht mehr hat" beim Abholen von Verknüpften Rollen {#early-access-required}
-
-Für die Nutzung von Verknüpften Rollen ist Early Access erforderlich. Early Access ermöglicht es uns, Zeit und Geld in die Entwicklung neuer Funktionen zu investieren. Wir planen, diese Funktion ab Ende Q2 2025 für alle mit dem Unlimited- oder Professional-Plan ohne Mitgliedschaft freizugeben.
-
-**Lösung**: Der Server benötigt mindestens einen Besitzer oder [Trusted Admin](/docs/scnx/guilds/trusted-admins/) mit Early Access. Early Access kann mit einer [ScootKit-Mitgliedschaft](https://membership.scootkit.com) erworben werden. Alternativ kannst du ein paar Monate warten, bis die Funktion für alle verfügbar ist.
 
 ## Andere Probleme {#other}
 

@@ -5,13 +5,6 @@ description: Linked Roles allow you to easily display the role of a user next to
 
 # About Linked Roles
 
-:::warning This feature is Early Access
-Linked roles are Early Access. This means that in addition to a paid plan,
-a [membership](https://membership.scootkit.com) with Early Access is also required. Early Access helps us invest money &
-time in developing new features and products. We plan to make this feature available to everyone with Unlimited /
-Professional plan without memberships in late Q2 2025.
-:::
-
 Linked Roles allow you to display the role of a user next to their name on your Discord server. To do this, the user
 needs to authorize with your Discord Bot and claim their role manually. Displaying the role next to the username makes
 your Discord appear professionally and increases the user experience on your Discord server; your users can see at a

@@ -14,18 +14,7 @@ Unsicher, was Verknüpfte Rollen sind? Verknüpfte Rollen ermöglichen es dir, d
 
 Wenn du mehr über Verknüpfte Rollen erfahren möchtest, kannst du dies in unserem Abschnitt [Über Verknüpfte Rollen](/docs/linked-roles/intro) tun.
 
-:::
-
-:::warning Dieses Feature ist Early Access
-Verknüpfte Rollen sind in Early Access. Das bedeutet, dass zusätzlich zu einem bezahlten Plan auch
-eine [Mitgliedschaft](https://membership.scootkit.com) mit Early Access erforderlich ist. Early Access hilft uns, Geld &
-Zeit in die Entwicklung neuer Features und Produkte zu investieren. Wir planen, dieses Feature für alle mit Unlimited /
-Professional Plan ohne Mitgliedschaften Ende Q2 2025 verfügbar zu machen.
-:::
-
-<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{
-UNLIMITED: "Zusätzliches Early Access Abonnement während der Beta-Phase erforderlich. Beta endet in Q2 2025.",
-PROFESSIONAL: "Zusätzliches Early Access Abonnement während der Beta-Phase erforderlich. Beta endet in Q2 2025."}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} />
 
 ## Video (Deutsch) {#video}
 
@@ -45,9 +34,6 @@ Bevor du Verknüpfte Rollen auf deinem Server aktivieren kannst, stelle bitte si
   für dich verfügbar.
 * du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
   ([warum?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - wenn du nicht der Besitzer bist, bitte ihn, diese Funktion für dich zu aktivieren und dir Zugriff als [Trusted Admin](/docs/scnx/guilds/trusted-admins) zu geben.
-* du (oder einer deiner Trusted Admins) Early Access hast (erhältlich mit
-  einer [ScootKit Mitgliedschaft Level 2 oder höher](https://membership.scootkit.com)) während der Beta-Phase. Nach Ende der Beta-
-  Phase (voraussichtlich Q2 2025) wird diese Anforderung entfernt.
 * du 5-10 Minuten Zeit hast (unsere Schätzung ist, dass dies etwa sechs Minuten am Computer dauert, auf dem Handy
   kann es
   etwas länger dauern), um diese Anleitung abzuschließen - höre nicht mittendrin auf; dein Fortschritt wird nicht gespeichert.
