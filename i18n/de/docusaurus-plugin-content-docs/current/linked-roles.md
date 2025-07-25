@@ -44,18 +44,9 @@ Um mit der Einrichtung zu beginnen, öffne bitte die [Verknüpfte Rollen-Seite](
 deines Servers im SCNX Dashboard. Klicke dort auf "Einrichtung starten", um loszulegen. Dir wird möglicherweise ein Video oder ein Link zu
 dieser Anleitung angezeigt, aber du kannst dort auch auf "Weiter" klicken, da du ja schon hier bist :wink:
 
-## 2. Anmeldedaten auswählen {#step-2}
+## 2. Anmeldedaten eingeben {#step-2}
 
-Als Nächstes wirst du von SCNX aufgefordert, auszuwählen, welche Discord-Anmeldedaten du für Verknüpfte Rollen verwenden möchtest. Wenn du andere
-SCNX-Produkte wie [Modmail](/docs/modmail/intro) oder den [eigenen Bot](/docs/custom-bot/custom-commands) verwendest, kannst du sie
-aus dieser Liste auswählen und [zu Schritt 3 springen](#step-3). Wenn du kein anderes Produkt verwendest, befolge bitte
-[diese Anweisungen](#step-2-app).
-
-![SCNX fordert den Benutzer auf, die Quelle der Anmeldedaten auszuwählen](@site/docs/assets/linked-roles/setup/select-credentials.png)
-
-### Eine Discord-Bot-Anwendung erstellen {#step-2-app}
-
-Wenn du nicht die Anmeldedaten eines anderen Produkts verwendest, musst du eine neue App in deinem Discord Developer
+Du musst eine neue App in deinem Discord Developer
 Dashboard erstellen.
 
 Besuche dazu das [Discord Developer Portal](https://discord.com/developers/applications). Erstelle dort eine neue

@@ -46,18 +46,9 @@ To get started with the setup, please open the [Linked Roles page](https://scnx.
 your server in the SCNX dashboard. There, click on "Start setup" to get started. You might be shown a video or a link to
 this guide, but you can also click "Continue" there, since you are already here :wink:
 
-## 2. Select credentials {#step-2}
+## 2. Enter credentials {#step-2}
 
-Next, SCNX will prompt you to select which Discord credentials you want to use for Linked Roles. If you are using other
-SCNX products, like [Modmail](/docs/modmail/intro) or the [Custom Bot](/docs/custom-bot/custom-commands), you can select them
-from this list and [skip to step 3](#step-3). If you are not using any other product, please
-follow [these instructions](#step-2-app).
-
-![SCNX prompting user to select credential source](@site/docs/assets/linked-roles/setup/select-credentials.png)
-
-### Creating a Discord bot application {#step-2-app}
-
-If you are not using the credentials of another product, you'll need to create a new app in your Discord Developer
+You'll need to create a new app in your Discord Developer
 Dashboard.
 
 To do so, visit the [Discord Developer Portal](https://discord.com/developers/applications). There, create a new
