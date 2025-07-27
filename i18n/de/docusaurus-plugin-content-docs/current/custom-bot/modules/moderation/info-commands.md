@@ -1,61 +1,56 @@
 # Info-Befehle
 
-Fügt Befehle mit Informationen über bestimmte Bereiche deines Server hinzu
+Fügt Befehle mit Informationen über bestimmte Bereiche deines Servers hinzu
 
 <ModuleOverview moduleName="info-commands" />
 
 ## Funktionen {#features}
 
-* Fügt [verschiedene Befehle](#commands) hinzu, wodurch du Informationen über deinen Server, Kanäle, Nutzer und Rollen erhalten kannst.
-* 
-* All channel types, including stage channels and threads are supported by the [`/info channel`](#commands) command.
-* Member statistics, guild features and more are supported by [`/info server`](#commands) command.
-* [`/info role`](#commands) can show members that have a role, permissions and role information.
-* Use the [`/info user`](#commands) command to view information about users, including support for
-  the [Birthday Module](/docs/custom-bot/modules/community/birthday), [Level System](/docs/custom-bot/modules/community/levels), [Invite Tracking Module](/docs/custom-bot/modules/moderation/invite-tracking)
-  and more.
+* Fügt [verschiedene Befehle](#commands) hinzu, mit denen du Informationen über deinen Server, Kanäle, Nutzer und Rollen erhalten kannst.
+* Alle Kanaltypen, einschließlich Bühnenkanäle und Threads, werden vom Befehl [`/info channel`](#commands) unterstützt.
+* Mitgliederstatistiken, Serverfunktionen und mehr werden vom Befehl [`/info server`](#commands) unterstützt.
+* [`/info role`](#commands) kann Mitglieder, die eine bestimmte Rolle haben, sowie Berechtigungen und Rolleninformationen anzeigen.
+* Mit dem Befehl [`/info user`](#commands) kannst du Informationen über Nutzer anzeigen, einschließlich Unterstützung für das [Geburtstags-Modul](/docs/custom-bot/modules/community/birthday), das [Level-System](/docs/custom-bot/modules/community/levels), das [Invite-Tracking-Modul](/docs/custom-bot/modules/moderation/invite-tracking) und mehr.
 
-## Setup {#setup}
+## Einrichtung {#setup}
 
-After enabling the module, the [slash commands](#commands) can be used on your server. You can customize the command
-answers in the [configuration](#configuration), but no additional setup is required.
+Nachdem das Modul aktiviert wurde, können die [Slash-Befehle](#commands) auf deinem Server verwendet werden. Du kannst die Antworten der Befehle in der [Konfiguration](#configuration) anpassen, aber eine zusätzliche Einrichtung ist nicht erforderlich.
 
-## Usage {#usage}
+## Verwendung {#usage}
 
-Users and administrators can use any of the [slash-commands](#commands) to view information. Here's a short overview:
+Nutzer und Administratoren können alle [Slash-Befehle](#commands) verwenden, um Informationen anzuzeigen. Hier eine kurze Übersicht:
 
-* Use [`/info user`](#commands) to view information about a member of the server.
-* Use [`/info role`](#commands) to view information about a role on the server.
-* Use the [`/info channel`](#commands) to view information about a channel or thread on the server.
-* Use [`/info server`](#commands) to view information about the server.
+* Nutze [`/info user`](#commands), um Informationen über ein Mitglied des Servers anzuzeigen.
+* Nutze [`/info role`](#commands), um Informationen über eine Rolle auf dem Server anzuzeigen.
+* Nutze [`/info channel`](#commands), um Informationen über einen Kanal oder Thread auf dem Server anzuzeigen.
+* Nutze [`/info server`](#commands), um Informationen über den Server anzuzeigen.
 
-## Commands {#commands}
+## Befehle {#commands}
 
 <SlashCommandExplanation />
 
-| Command                             | Description                                                                                                                                               |                                                                                                                                                               
-|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/info server`                      | Shows information about the server.                                                                                                                       |
-| `/info channel [channel:<Channel>]` | Shows information about a channel. If no value has been set in the "channel" parameter field, the current channel will be used.                           |
-| `/info role role:<Role>`            | Shows information about the role selected in the "role" parameter field.                                                                                  |
-| `/info user [user:<User>]`          | Shows information about a user on the server. If no value has been set in the "user" parameter field, information about the executing user will be shown. |
+| Befehl                               | Beschreibung                                                                                                                                                   |
+|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `/info server`                        | Zeigt Informationen über den Server an.                                                                                                                        |
+| `/info channel [channel:<Channel>]`   | Zeigt Informationen über einen Kanal an. Wenn kein Wert im Parameterfeld "channel" gesetzt wurde, wird der aktuelle Kanal verwendet.                           |
+| `/info role role:<Role>`              | Zeigt Informationen über die im Parameterfeld "role" ausgewählte Rolle an.                                                                                     |
+| `/info user [user:<User>]`            | Zeigt Informationen über einen Nutzer auf dem Server an. Wenn kein Wert im Feld "user" gesetzt wurde, werden Informationen über den ausführenden Nutzer angezeigt. |
 
-## Configuration {#configuration}
+## Konfiguration {#configuration}
 
-This module allows basic configuration of some visible field names in
-its [configuration file](https://scnx.app/glink?page=bot/configuration?file=info-commands|strings).
+In diesem Modul können einige sichtbare Feldnamen in
+der [Konfiguration](https://scnx.app/glink?page=bot/configuration?file=info-commands|strings) angepasst werden.
 
-| Field             | Description                                                                                                  |                                                                                                                                                
-|-------------------|--------------------------------------------------------------------------------------------------------------|
-| serverinfo        | This field allows the customization of names used in the output of the [`/info server`](#commands) command.  |
-| userinfo          | This field allows the customization of names used in the output of the [`/info user`](#commands) command.    |
-| channelInfo       | This field allows the customization of names used in the output of the [`/info channel`](#commands) command. |
-| roleInfo          | This field allows the customization of names used in the output of the [`/info role`](#commands) command.    |
-| user_not_found    | This error message will be shown if a user has been selected that has not been found.                        |
-| channel_not_found | This error message will be shown if a user selected a channel that has not been found.                       |
-| role_not_found    | This error message will be shown if a user selected a role that has not been found.                          |
+| Feld              | Beschreibung                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------|
+| serverinfo        | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info server`](#commands) verwendet werden.   |
+| userinfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info user`](#commands) verwendet werden.     |
+| channelInfo       | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info channel`](#commands) verwendet werden.  |
+| roleInfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info role`](#commands) verwendet werden.     |
+| user_not_found    | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Nutzer nicht gefunden wurde.                                 |
+| channel_not_found | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Kanal nicht gefunden wurde.                                 |
+| role_not_found    | Diese Fehlermeldung wird angezeigt, wenn eine ausgewählte Rolle nicht gefunden wurde.                                 |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
-If an error is being shown when running a command, please make sure all fields of
-your [configuration file](#configuration) has been set.
+Falls beim Ausführen eines Befehls ein Fehler angezeigt wird, stelle bitte sicher, dass alle Felder in deiner [Konfiguration](#configuration) gesetzt wurden.
