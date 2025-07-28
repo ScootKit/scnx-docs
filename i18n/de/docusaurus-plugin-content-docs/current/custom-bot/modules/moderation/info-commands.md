@@ -7,10 +7,10 @@ Fügt Befehle mit Informationen über bestimmte Bereiche deines Servers hinzu
 ## Funktionen {#features}
 
 * Fügt [verschiedene Befehle](#commands) hinzu, mit denen du Informationen über deinen Server, Kanäle, Nutzer und Rollen erhalten kannst.
-* Alle Kanaltypen, einschließlich Bühnenkanäle und Threads, werden vom Befehl [`/info channel`](#commands) unterstützt.
+* Alle Kanaltypen, einschließlich Etappenkanäle (Stages) und Threads, werden vom Befehl [`/info channel`](#commands) unterstützt.
 * Mitgliederstatistiken, Serverfunktionen und mehr werden vom Befehl [`/info server`](#commands) unterstützt.
 * [`/info role`](#commands) kann Mitglieder, die eine bestimmte Rolle haben, sowie Berechtigungen und Rolleninformationen anzeigen.
-* Mit dem Befehl [`/info user`](#commands) kannst du Informationen über Nutzer anzeigen, einschließlich Unterstützung für das [Geburtstags-Modul](/docs/custom-bot/modules/community/birthday), das [Level-System](/docs/custom-bot/modules/community/levels), das [Invite-Tracking-Modul](/docs/custom-bot/modules/moderation/invite-tracking) und mehr.
+* Mit dem Befehl [`/info user`](#commands) kannst du dir Informationen über Nutzer anzeigen lassen, einschließlich Unterstützung für das [Geburtstags-Modul](/docs/custom-bot/modules/community/birthday), das [Level-System](/docs/custom-bot/modules/community/levels), das [Invite-Tracking-Modul](/docs/custom-bot/modules/moderation/invite-tracking) und mehr.
 
 ## Einrichtung {#setup}
 
@@ -32,14 +32,14 @@ Nutzer und Administratoren können alle [Slash-Befehle](#commands) verwenden, um
 | Befehl                               | Beschreibung                                                                                                                                                   |
 |---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/info server`                        | Zeigt Informationen über den Server an.                                                                                                                        |
-| `/info channel [channel:<Channel>]`   | Zeigt Informationen über einen Kanal an. Wenn kein Wert im Parameterfeld "channel" gesetzt wurde, wird der aktuelle Kanal verwendet.                           |
-| `/info role role:<Role>`              | Zeigt Informationen über die im Parameterfeld "role" ausgewählte Rolle an.                                                                                     |
-| `/info user [user:<User>]`            | Zeigt Informationen über einen Nutzer auf dem Server an. Wenn kein Wert im Feld "user" gesetzt wurde, werden Informationen über den ausführenden Nutzer angezeigt. |
+| `/info channel [channel:<Kanal>]`   | Zeigt Informationen über einen Kanal an. Wenn kein Wert im Parameterfeld "channel" gesetzt wurde, wird der aktuelle Kanal verwendet.                           |
+| `/info role role:<Rolle>`              | Zeigt Informationen über die im Parameterfeld "role" ausgewählte Rolle an.                                                                                     |
+| `/info user [user:<Nutzer>]`            | Zeigt Informationen über einen Nutzer auf dem Server an. Wenn kein Wert im Feld "user" gesetzt wurde, werden Informationen über den ausführenden Nutzer angezeigt. |
 
 ## Konfiguration {#configuration}
 
 In diesem Modul können einige sichtbare Feldnamen in
-der [Konfiguration](https://scnx.app/glink?page=bot/configuration?file=info-commands|strings) angepasst werden.
+der [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=info-commands|strings) angepasst werden.
 
 | Feld              | Beschreibung                                                                                                 |
 |-------------------|-------------------------------------------------------------------------------------------------------------|
