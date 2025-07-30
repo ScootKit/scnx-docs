@@ -14,6 +14,8 @@ Unsicher, was Verknüpfte Rollen sind? Verknüpfte Rollen ermöglichen es dir, d
 
 Wenn du mehr über Verknüpfte Rollen erfahren möchtest, kannst du dies in unserem Abschnitt [Über Verknüpfte Rollen](/docs/linked-roles/intro) tun.
 
+:::
+
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} />
 
 ## Video (Deutsch) {#video}
