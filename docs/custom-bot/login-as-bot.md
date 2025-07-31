@@ -10,7 +10,17 @@ To access this interface, simply visit https://scnx.app/glink?page=bot/login.
 
 ---
 ## Send A meesage as your Bot
-Click on the `Send Message` button, and you will be greeted with the Message Editor feature from SCNX. You can type your message normally, use an embed, or both if you prefer. Additionally, you can attach up to 5 images per message, add up to 5 self-role buttons, up to 25 self-role elements, up to 5 custom command buttons, up to 25 custom command elements, and up to 5 link buttons.
+Click on the `Send Message` button, and you will be greeted with the Message Editor feature from SCNX.
+
+Within the Message Editor, you can:
+- Type your message as plain text  
+- Use rich **embeds** for structured and visually appealing layouts  
+- **Attach up to 5 images** per message  
+- Add up to **5 self-role buttons**, each supporting up to **25 self-role options**  
+- Include up to **5 custom command buttons**, each with up to **25 custom command actions**  
+- Add up to **5 link buttons** to redirect users to external websites or resources
+
+![](@site/docs/assets/custom-bot/additional-features/login-as-bot-2.png)
 
 :::note
 If you want to use `Custom Command Button` and `Custom Command Element` you have to Work with [Custom Commands](https://scnx.app/glink?page=bot/custom-commands)
@@ -18,31 +28,50 @@ If you want to use `Custom Command Button` and `Custom Command Element` you have
 
 After configuring your message, click the `Send Message` button. After a short moment, congratulations! you’ve just sent a message with your bot!
 
----
-## Start a poll (not out yet)
-:::info
-This feature isn't available yet. This section does not spcify when it will be released or what it will look like.
-:::
-In the future, you’ll be able to start a poll without activating the [Polls Module](https://docs.scnx.xyz/docs/custom-bot/modules/community/polls/). Simply click the `Start a Poll` button to create a poll for your community.
-However, this feature isn’t available yet, so you’ll need to wait until the developers release it. For now, please continue using the Polls Module.
 
 ---
-## Start a Giveaway (not out yet)
+## Edit a Message
+
+You can also edit Messages as a bot. Simply click on the **"Edit Message"** button located underneath the message sent by the bot. After clicking the **"Edit Message"** button, you will be greeted with the **Message Editor** feature from **SCNX**.  
+Here, you can write your message in plain text, use an embed for better formatting, or even combine both — depending on your needs.
+
+Within the Message Editor, you can:
+- Type your message as plain text  
+- Use rich **embeds** for structured and visually appealing layouts  
+- **Attach up to 5 images** per message  
+- Add up to **5 self-role buttons**, each supporting up to **25 self-role options**  
+- Include up to **5 custom command buttons**, each with up to **25 custom command actions**  
+- Add up to **5 link buttons** to redirect users to external websites or resources
+
+This can help if you forgot something or a Typo if you want to correct.
+
 :::info
-This feature is also not avaiable yet.
+You can **only edit messages sent by the bot**. Messages from other users **cannot** be edited through the Message Editor.
 :::
-Just like with the poll feature, you'll be able to create giveaways in the future without activating the [Giveaways Module](https://docs.scnx.xyz/docs/custom-bot/modules/community/giveaways/). Simply click the `Start a Giveaway` button to create a giveaway for your community — configure it, and you're ready to go!
-However, this feature isn’t available yet, so you’ll need to wait until the developers release it. For now, please continue using the Giveaways Module
 
 ---
 ## Best way to use "Log-In as Bot"
-Here is a text on where you can use Log-In as Bot:
+Here is a list on where you can use Log-In as Bot:
 
-tasks such as creating announcements for your community, setting up self-role systems that allow users to assign roles to themselves with the click of a button, and posting your server rules in a clean and organized way using embeds or plain text. Additionally, it integrates seamlessly with custom commands, allowing you to trigger specific bot actions directly from the messages you send. Whether you're managing a large community.
+- **Create announcements** for your community  
+- **Set up self-role systems** that allow users to assign roles to themselves with the click of a button  
+- **Post your server rules** in a clean and organized format using embeds or plain text  
+- **Seamlessly integrate with custom commands** to trigger specific bot actions
+- Perfect for managing **large communities**
 
 ---
 ## Troubleshooting
 
-**Your Bot needs the VIEW_CHANNEL and SEND_MESSAGES permissions on #XXXXX to use Login-As-A-Bot**
+**Your Bot needs the VIEW_CHANNEL and SEND_MESSAGES permissions on #Channel to use Login-As-A-Bot**
 
 This error means that you didn’t grant Administrator permissions to your bot. However, it must have at least the `VIEW_CHANNEL` and `SEND_MESSAGES` permissions so it can see the channel and send messages to it.
+
+**When using the Self-Role Buttons, the bot doesn't assign any roles.**
+
+This issue usually occurs when the bot doesn't have the permission to do that. Please make sure your custom bot has the `MANAGE_ROLES` permission.
+
+**In scnx.app its stuck in the "Hang in there, we are fetching you messages..." loading screen**
+
+If you're experiencing issues, you can try **restarting the website** or **switching channels** and then try again.
+
+![](@site/docs/assets/custom-bot/additional-features/login-as-bot-3.png)
