@@ -50,12 +50,12 @@ Easy to use levelling system with a lot of customization!
 ### Live leaderboard {#live-leaderboard}
 
 Instead of having your users run [`/leederboard`](#commands) every time they want to see the users with the most levels,
-you can enable a Live Leaderboard. This is a channel with exactly one message in it, which will be updated to the
+you can enable a Live Leaderboard. This is a channel with a message in it, which will be updated to the
 current leaderboard every five minutes. This means that users won't have to run any commands or visit a webpage to see
-the top 15 users in their server. They can also click on "Show my level" to view their own level, instead of executing
+the best users in their server. They can also click on "Show my level" to view their own level, instead of executing
 the [`/profile`](#commands) command. The response will only be visible to the user themselves.
 
-To enable the live leaderboard, set the "Live Leaderboard Channel" in your [configuration](#configuration) to any empty
+To enable the live leaderboard, set the "Live Leaderboard Channel" in your [configuration](#configuration) to a
 channel on your server on which the bot has the Send Message, View Message History and View Channel permissions. For the
 best results, set up your channel in a way in which users won't be able to send messages into this channel. Once
 configured, [reload your configuration](/docs/scnx/guilds/bots/#basics) and the bot will send a message into the channel
@@ -404,10 +404,10 @@ XP can be given as the bot can't see the message / voice channel.
 </details>
 
 <details>
-<summary>My live leaderboard is not being sent correctly.</summary>
+<summary>My live leaderboard is not being sent or update correctly.</summary>
 
-The [live leaderboard](#live-leaderboard) can only be sent if the bot has the "View channel", "View message history"
-and "Send messages" permission on the configured leaderboard channel. The channel also has to be empty of the live leaderboard embed to be sent and kept up to date.
+The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions ‘View channel’, "
+View message history‘ and ’Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value ‘Maximum number of users in the live leaderboard channel’ to a lower value in the [configuration](#configuration).
 </details>
 
 ## Stored data {#data-usage}
