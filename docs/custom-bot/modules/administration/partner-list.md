@@ -67,7 +67,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 ## Troubleshooting {#troubleshooting}
 
 <details>
-    <summary>The Partner-List is not appearing in the configured channel</summary>
+    <summary>The Partner-List is not appearing in the configured channel or not updating correctly.</summary>
     <ul>
         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
         <li>Make sure non of your category fields are empty.</li>
