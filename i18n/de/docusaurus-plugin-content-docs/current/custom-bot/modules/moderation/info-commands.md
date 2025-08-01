@@ -43,13 +43,14 @@ der [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=info-c
 
 | Feld              | Beschreibung                                                                                                 |
 |-------------------|-------------------------------------------------------------------------------------------------------------|
-| serverinfo        | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info server`](#commands) verwendet werden.   |
-| userinfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info user`](#commands) verwendet werden.     |
-| channelInfo       | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info channel`](#commands) verwendet werden.  |
-| roleInfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info role`](#commands) verwendet werden.     |
-| user_not_found    | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Nutzer nicht gefunden wurde.                                 |
-| channel_not_found | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Kanal nicht gefunden wurde.                                 |
-| role_not_found    | Diese Fehlermeldung wird angezeigt, wenn eine ausgewählte Rolle nicht gefunden wurde.                                 |
+| Serverinfo        | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info server`](#commands) verwendet werden.   |
+| Userinfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info user`](#commands) verwendet werden.     |
+| Channelinfo       | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info channel`](#commands) verwendet werden.  |
+| Roleinfo          | Hier können die Namen angepasst werden, die in der Ausgabe des Befehls [`/info role`](#commands) verwendet werden.     |
+| Nutzer nicht gefunden    | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Nutzer nicht gefunden wurde.                                 |
+| Kanal nicht gefunden | Diese Fehlermeldung wird angezeigt, wenn ein ausgewählter Kanal nicht gefunden wurde.                                 |
+| Rolle nicht gefunden    | Diese Fehlermeldung wird angezeigt, wenn eine ausgewählte Rolle nicht gefunden wurde.                                 |
+| Avatar-Nachricht | Diese Nachricht wird gesendet, wenn der Avatar eines Nutzers angefragt wird. |
 
 ## Fehlerbehebung {#troubleshooting}
 
