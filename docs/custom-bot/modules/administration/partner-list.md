@@ -21,7 +21,7 @@ Here's an example of a partner-list (you can customize appearance):
 
 * Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
 * Then, configure the partner-list:
-    1. Create a channel in which the bot should send the partner-list. This channel needs to be empty, and the bot has
+    1. Create a channel in which the bot should send the partner-list. The bot has
        to have the "View channel", "View message history" and "Send message" permissions on it.
     2. Open the [Module configuration](https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig)
        and [configure the module](#configuration).
@@ -52,12 +52,12 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 
 | Field                              | Description                                                                                                                                                                                           |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Channel                            | This is the channel in which the Partner-List will be sent. If the bot had already sent a message in the past, the latest message will get edited to the Partner-List. We recommend an empty channel. |
+| Channel                            | This is the channel in which the Partner-List will be sent. If the bot had already sent a message in the past, the latest message will get edited to the Partner-List. |
 | Partner-List-Embed                 | This is the configuration of the partner-list.                                                                                                                                                        |
 | Partner-List-Embed: title          | Title of the Partner-List-Embed.                                                                                                                                                                      |
 | Partner-List-Embed: description    | Description of the Partner-List-Embed.                                                                                                                                                                |
 | Partner-List-Embed: partner-string | This is the format of a partner displayed in the Partner-List-Embed. You can find availible parameters in the [Dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig).  |
-| Partner-List-Embed: color          | This will be the color of the Partner-List-Embed. Must be a [HEX-Color or supported color value](/docs/custom-bot/additional-features#embed-colors).                                                  |
+| Partner-List-Embed: color          | This will be the color of the Partner-List-Embed.                                                  |
 | Categories                         | These are the categories that partners can be assigned to. Each category needs to be unique. Only these categories can be selected via commands.                                                      |
 | Category-Roles                     | These are the roles that will get assigned to new partners and removed from deleted partners.<br />First field: Category-Name (case-sensitive)<br/>Second field: ID of the role                       |
 | Send Partner-Notifications         | If enabled, partners will be sent a message when they get added or removed.                                                                                                                           |
@@ -69,10 +69,9 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 <details>
     <summary>The Partner-List is not appearing in the configured channel</summary>
     <ul>
-        <li>Make sure the desired channel is empty.</li>
         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
         <li>Make sure non of your category fields are empty.</li>
-        <li>Make sure you supplied a <a href="/docs/custom-bot/additional-features#embed-colors">correct color value</a> in your configuration.</li>
+        <li>Make sure that the message is no longer than 1024 characters.</li>
         <li>Restart your bot.</li>
     </ul>
 </details>
@@ -80,8 +79,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 <details>
     <summary>Can I restart the ID counter?</summary>
 
-    No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a>, if this is annoying you.
-</details>
+    No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a> or replace it with the <code>%nr%</code> parameter, which automatically updtaes the numbers.
 
 ## Stored data {#data-usage}
 
