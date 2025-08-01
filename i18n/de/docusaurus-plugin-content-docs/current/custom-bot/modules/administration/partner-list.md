@@ -21,11 +21,10 @@ Hier ist ein Beispiel einer Partner-Liste (Du kannst das Erscheinungsbild anpass
 
 * Bitte [richte die Berechtigungen für Slash-Befehle](/docs/custom-bot/slash-commands) ein, um deren unbefugte Nutzung zu verhindern.
 * Konfiguriere anschließend die Partner-Liste:
-    1. Erstelle einen Kanal, in den der Bot die Partner-Liste senden soll. Dieser Kanal muss leer sein, und der Bot muss über die Berechtigungen „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachrichten senden“ verfügen.
+    1. Erstelle einen Kanal, in den der Bot die Partner-Liste senden soll. Der Bot muss über die Berechtigungen „Kanal anzeigen“, „Nachrichtenverlauf anzeigen“ und „Nachrichten senden“ verfügen.
     2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig)
        und [konfiguriere das Modul](#configuration).
     3. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
-    4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen – der Bot sendet automatisch eine Partner-Liste.
 
 ## Verwendung {#usage}
 
@@ -57,21 +56,21 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 | Partner-Liste-Embed: Titel          | Titel des Partner-Listen-Embeds.                                                                                                                                                                                                 |
 | Partner-Liste-Embed: Beschreibung   | Beschreibung des Partner-Listen-Embeds.                                                                                                                                                                                          |
 | Partner-Liste-Embed: Partner-String | Dies ist das Format eines Partners, der in dem Partner-Listen-Embed angezeigt wird. Verfügbare Parameter findest du im [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig).                 |
-| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds. Es muss eine [HEX-Farbe oder ein unterstützter Farbwert](/docs/custom-bot/additional-features#embed-colors) sein.                                                                           |
+| Partner-Liste-Embed: Farbe          | Dies ist die Farbe der Partner-Listen-Embeds.                                                                      |
 | Kategorien                          | Dies sind die Kategorien, denen Partner zugeordnet werden können. Jede Kategorie muss anders sein. Nur diese Kategorien können über Befehle ausgewählt werden.                                                                   |
 | Kategorie-Rollen                    | Dies sind die Rollen, die neuen Partnern zugewiesen und von gelöschten Partnern entfernt werden.<br />Erstes Feld: Kategoriename (Groß-/Kleinschreibung beachten)<br/>Zweites Feld: ID der Rolle                                 |
 | Partner-Benachrichtigung senden     | Wenn diese Option aktiviert ist, wird den Partnern eine Nachricht gesendet, wenn sie hinzugefügt oder entfernt werden.                                                                                                           |
 | Partner-Willkommens-PN              | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser hinzugefügt wird.                                                                       |
 | Partner-Entfernung-PN               | <i>Nur sichtbar, wenn „Partner-Benachrichtigung senden“ aktiviert ist.</i><br/>Diese Nachricht wird an den Partner gesendet, wenn dieser entfernt wird.                                                                          |
+
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-    <summary>Die Partner-Liste wird nicht im konfigurierten Kanal angezeigt</summary>
+    <summary>Die Partner-Liste wird nicht im konfigurierten Kanal angezeigt oder korrekt aktualisiert.</summary>
     <ul>
-        <li>Stelle sicher, dass der gewünschte Kanal leer ist.</li>
         <li>Stelle sicher, dass der Bot über die Berechtigungen „Kanal anzeigen“, „Nachrichten senden“ und „Nachrichtenverlauf anzeigen“ für den Kanal verfügt.</li>
         <li>Stelle sicher, dass keiner deiner Kategoriefelder leer ist.</li>
-        <li>Stelle sicher, dass du in der Konfiguration einen <a href="/de/docs/custom-bot/additional-features#embed-colors">richtigen Farbwert</a> angegeben hast.</li>
+        <li>Stelle sicher, dass die Nachricht nicht länger als 1024 Zeichen lang ist.</li>
         <li>Starte deinen Bot neu.</li>
     </ul>
 </details>
@@ -79,7 +78,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
 <details>
     <summary>Kann ich den ID-Counter neu starten?</summary>
 
-    Nein. Die ID ist eine eindeutige Identifikationsnummer und kann nicht zurückgesetzt werden. Dies ist eine technische Einschränkung – du kannst den Parameter <code>%id%</code> aus deinem „partner-string“ unter „Partner-Liste-Embed“ in deiner <a href="https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig">Modulkonfiguration</a> entfernen, falls dich das stört.
+    Nein. Die ID ist eine eindeutige Identifikationsnummer und kann nicht zurückgesetzt werden. Dies ist eine technische Einschränkung – du kannst den Parameter <code>%id%</code> aus deinem „partner-string“ unter „Partner-Liste-Embed“ in deiner <a href="https://scnx.app/de/glink?page=bot/configuration?file=partner-list%7Cconfig">Modulkonfiguration</a> entfernen oder das Parameter <code>%nr%</code> verwenden, wodurch die Nummern autoamtisch aktualisert werden.
 </details>
 
 ## Gespeicherte Daten {#data-usage}
