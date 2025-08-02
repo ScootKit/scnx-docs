@@ -406,8 +406,8 @@ XP can be given as the bot can't see the message / voice channel.
 <details>
 <summary>My live leaderboard is not being sent or update correctly.</summary>
 
-The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions ‘View channel’, "
-View message history‘ and ’Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value ‘Maximum number of users in the live leaderboard channel’ to a lower value in the [configuration](#configuration).
+The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions "View channel",
+"View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value ‘Maximum number of users in the live leaderboard channel’ to a lower value in the [configuration](#configuration).
 </details>
 
 ## Stored data {#data-usage}
