@@ -70,7 +70,6 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=partner
     <ul>
         <li>Stelle sicher, dass der Bot über die Berechtigungen „Kanal anzeigen“, „Nachrichten senden“ und „Nachrichtenverlauf anzeigen“ für den Kanal verfügt.</li>
         <li>Stelle sicher, dass keiner deiner Kategoriefelder leer ist.</li>
-        <li>Stelle sicher, dass die Nachricht nicht länger als 1024 Zeichen lang ist.</li>
         <li>Starte deinen Bot neu.</li>
     </ul>
 </details>
