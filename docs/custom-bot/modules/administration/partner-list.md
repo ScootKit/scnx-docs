@@ -71,7 +71,6 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
     <ul>
         <li>Make sure bot has "View channel", "Send messages" and "View message history" permissions on the channel.</li>
         <li>Make sure non of your category fields are empty.</li>
-        <li>Make sure that the message is no longer than 1024 characters.</li>
         <li>Restart your bot.</li>
     </ul>
 </details>
