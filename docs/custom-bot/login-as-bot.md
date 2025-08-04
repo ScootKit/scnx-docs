@@ -5,6 +5,9 @@ With bot login, you can send messages using your custom bot, with or without emb
 Here is a Example how Log-In as Bot looks like:
 ![](@site/docs/assets/custom-bot/additional-features/login-as-bot-1.png)
 
+and on Discord:
+![](@site/docs/assets/custom-bot/additional-features/login-as-bot-4.png)
+
 In this picture, you can see the channels of your server on the left side. In the center, you can see the messages within the selected channel. At the bottom, there are three buttons: `Send Message`, `Start a Poll`, and `Start a Giveaway`.
 To access this interface, simply visit https://scnx.app/glink?page=bot/login.
 
