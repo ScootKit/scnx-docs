@@ -1,127 +1,127 @@
-# Quiz Module
+# Quiz-Modul
 
-Create quiz for your users and let them compete against each other.
+Erstelle Quizze für deine Nutzer und lasse sie gegeneinander antreten.
 
 <ModuleOverview moduleName="quiz" />
 
-## Features {#features}
-Easily create quizzes on your server, let your members compete on a leaderboard and automatically let them answer the specified amount of questions per day.
+## Funktionen {#features}
+Erstelle einfach Quizze auf deinem Server, lasse deine Mitglieder auf einer Bestenliste konkurrieren und beantworte automatisch eine festgelegte Anzahl von Fragen pro Tag.
 
-## Setup {#setup}
+## Einrichtung {#setup}
 
-First step is to simply enable the module in [your SCNX dashboard](https://scnx.app/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) and [configure the module](#configuration).
+Aktiviere das Modul [in deinem SCNX-Dashboard](https://scnx.app/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) und [konfiguriere](#configuration) es.
 
-## Usage {#usage}
+## Verwendung {#usage}
 
-To start a public quiz, use the `/quiz create` or `/quiz create-bool` commands as described below in the commands section.
-Note that you need to have the role from "Role needed to create quizzes" configured in the [main configuration](#config-main) to use this command.
+Um ein öffentliches Quiz zu starten, verwende die Befehle `/quiz create` oder `/quiz create-bool`, wie unten im Befehlsbereich beschrieben.
+Beachte, dass du die in der [Hauptkonfiguration](#config-main) festgelegte Rolle besitzen musst, um diese Befehle nutzen zu können.
 
-If there are quizzes created in the [quiz list](#config-quiz), every user can start a private quiz using the `/quiz play` command.
+Wenn Quizze in der [Quiz-Liste](#config-quiz) erstellt wurden, kann jeder Nutzer ein privates Quiz mit dem Befehl `/quiz play` starten.
 
-## Commands {#commands}
+## Befehle {#commands}
 
 <SlashCommandExplanation />
 
-| Command                                                                                                            | Description                                                                                                                                                                                                                                                                                                              |
-|--------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/quiz create <Description> <Channel> <Quiz duration> <Option 1> <Option 2> [<Can change vote?> <Options 3 to 9>]` | Creates a public quiz with the given description/question in the given channel. The bot then asks you to select one or more correct answers, which the users have to choose from. This command can only be used with the "Role needed to create quizzes" configured in the [main configuration](#config-main).           |
-| `/quiz create-bool <Description> <Channel> [<Can change vote?> <Quiz duration>]`                                   | Creates a public quiz with the given description/question in the given channel. Users can only answer with the in the settings configured values, by default they are simply "Yes" or "No". This command can only be used with the "Role needed to create quizzes" configured in the [main configuration](#config-main). |
-| `/quiz play`                                                                                                       | Play a private quiz configured in the CustomBot configuration.                                                                                                                                                                                                                                                           |
-| `/quiz leaderboard`                                                                                                | Shows the leaderboard which displays the total and daily points of the top users.                                                                                                                                                                                                                                        |
+| Befehl                                                                                                              | Beschreibung                                                                            |
+|---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| `/quiz create <Beschreibung> <Kanal> <Quiz-Dauer> <Option 1> <Option 2> [<Kann Stimme geändert werden?> <Option 3 bis 9>]` | Erstellt ein öffentliches Quiz mit der angegebenen Beschreibung/Frage im ausgewählten Kanal. |
+| `/quiz create-bool <Beschreibung> <Kanal> [<Kann Stimme geändert werden?> <Quiz-Dauer>]`                            | Erstellt ein öffentliches Ja/Nein-Quiz mit der angegebenen Beschreibung/Frage im Kanal.      |
+| `/quiz play`                                                                                                        | Spiele ein privates Quiz, das in der CustomBot-Konfiguration eingerichtet ist.                |
+| `/quiz leaderboard`                                                                                                 | Zeigt die Bestenliste mit den Gesamt- und Tagespunkten der besten Nutzer an.                 |
 
-## Configuration {#configuration}
+## Konfiguration {#configuration}
 
-### Main config {#config-main}
+### Hauptkonfiguration {#config-main}
 
-In this configuration file, you can do most of the quiz configurations.
-Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=quiz%7Cconfig).
+In diesem Teil kannst du die wichtigsten Einstellungen für das Quiz einrichten.
+Du findest die Seite in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=quiz%7Cconfig).
 
-| Field                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|-------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Emojis                        | Which emojis are used by the bot for the buttons. You can configure the emojis both for normal and boolean-only quiz.                                                                                                                                                                                                                                                                                                                               |
-| Daily quiz limit              | How many quiz users can play using `/quiz play` per day. Defaults to five.                                                                                                                                                                                                                                                                                                                                                                          |
-| Quiz leaderboard channel      | If set, the bot automatically updates the quiz leaderboard in the channel. The channel should only be used for the leaderboard.                                                                                                                                                                                                                                                                                                                     |
-| Role needed to create quizzes | A role which is able to create quiz using the command. Note that this permissions does not change who is able to create quiz for `/quiz play`, as those need to be configured in [the CustomBot configuration](#config-quiz). This could be for example an "Event manager" role.                                                                                                                                                                    |
-| Mode for quiz selection       | How the next `/quiz play` quiz for a user is choosen: If set to "Random", every time the user uses the command, they'll receive any quiz from the quiz pool created in the bot configuration. Note that this may cause repeated questions more often. The other option is "Continuous", which tells your bot to just count up in the list of quiz and always choose the next one available, until the end is reached and the bot starts over again. |
-| Live preview of results       | Whether the answers of the users on public quiz are shown live instead of only after the quiz ended.                                                                                                                                                                                                                                                                                                                                                |
+| Feld                           | Beschreibung                                                                                                   |
+|---------------------------------|----------------------------------------------------------------------------------------------------------------|
+| Emojis                         | Welche Emojis der Bot für die Buttons verwendet. Du kannst Emojis sowohl für normale als auch für Ja/Nein-Quiz konfigurieren. |
+| Tägliches Quiz-Limit           | Wie viele Quizze ein Nutzer pro Tag mit `/quiz play` spielen kann. Standardwert ist fünf.                      |
+| Quiz-Leaderboard-Kanal        | Wird dieser gesetzt, aktualisiert der Bot automatisch die Bestenliste im Kanal. Der Kanal sollte nur dafür verwendet werden. |
+| Rolle zum Erstellen von Quiz   | Rolle, die Quizze mit dem Befehl erstellen darf. Diese Einstellung beeinflusst nicht, wer `/quiz play` nutzen kann. |
+| Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Zufällig“ bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
+| Live-Vorschau der Ergebnisse   | Zeigt die Antworten der Nutzer bei öffentlichen Quizzen live an, statt erst nach Ende des Quiz.                 |
 
-### Strings {#config-strings}
+### Nachrichten {#config-strings}
 
-The [strings](https://scnx.app/glink?page=bot/configuration?file=quiz%7Cstrings) configuration allows you to customize the output messages of the module.
+Mit der [Nachrichten-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=quiz%7Cstrings) kannst du die Nachrichten des Moduls individuell anpassen.
 
-| Field               | Description                                                                                                                                                                              |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| title               | The title of the quiz shown in the embed title.                                                                                                                                          |
-| color               | The default embed color of active quiz messages, refer to [supported colors](https://docs.scnx.xyz/docs/custom-bot/additional-features#embed-colors) for a list of all supported values. |
-| options             | A text introducing the possible quiz options.                                                                                                                                            |
-| liveView            | Displayed before the live view section of the quiz message, if enabled.                                                                                                                  |
-| expiresOn           | The name of the extra field displayed if a quiz has an end date set.                                                                                                                     |
-| thisQuizExpiresOn   | The extra text displayed in the extra fields value if a quiz has an end date set. The `%date%` displays a Discord timestamp with the end date in the current users locale.               |
-| endedQuizTitle      | The title of a quiz message embed if the quiz ended.                                                                                                                                     |
-| endedQuizColor      | The color of a quiz message embed if the quiz ended.                                                                                                                                     |
-| leaderboardTitle    | The title of the leaderboard displayed in the embed title.                                                                                                                               |
-| leaderboardSubtitle | The subtitle of the leaderboard displayed in the embed description.                                                                                                                      |
-| leaderboardColor    | The color of the leaderboard embed.                                                                                                                                                      |
-| leaderboardButton   | The text displayed on the leaderboard button.                                                                                                                                            |
+| Feld                 | Beschreibung                                                                                       |
+|----------------------|----------------------------------------------------------------------------------------------------|
+| title                | Der Titel des Quiz, der im Embed-Titel angezeigt wird.                                             |
+| color                | Die Standardfarbe des Quiz-Embeds. |
+| options              | Text mit einer Einführung zu den möglichen Quiz-Optionen.                                          |
+| liveView             | Wird vor dem Live-Ansichts-Bereich des Quiz angezeigt, falls aktiviert.                            |
+| expiresOn            | Name des Zusatzfelds, falls das Quiz ein Enddatum hat.                                             |
+| thisQuizExpiresOn    | Zusätzlicher Text im Zusatzfeld, falls ein Enddatum gesetzt ist. `%date%` zeigt ein Discord-Timestamp im lokalen Format des Nutzers. |
+| endedQuizTitle       | Titel des Quiz-Embeds, wenn das Quiz beendet ist.                                                  |
+| endedQuizColor       | Farbe des Embeds, wenn das Quiz beendet ist.                                                       |
+| leaderboardTitle     | Titel der Bestenliste im Embed-Titel.                                                              |
+| leaderboardSubtitle  | Untertitel der Bestenliste im Embed-Beschreibung.                                                  |
+| leaderboardColor     | Farbe des Bestenlisten-Embeds.                                                                     |
+| leaderboardButton    | Text des Buttons auf der Bestenliste.                                                              |
 
-### Available quiz {#config-quiz}
+### Quiz bearbeiten {#config-quiz}
 
-In the [quiz list](https://scnx.app/glink?page=bot/configuration?file=quiz%7CquizList) quiz questions are managed. You can add, edit and remove quiz questions here.
+Unter [Quiz berbeiten](https://scnx.app/de/glink?page=bot/configuration?file=quiz%7CquizList) werden die Quizfragen verwaltet. Hier kannst du Fragen hinzufügen, bearbeiten und löschen.
 
-Every quiz question has the following fields:
+Jede Quizfrage hat folgende Felder:
 
-| Field                 | Description                                                                                                                                                                |
-|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Question or statement | The title of the quiz, which should be a question like "What's your favorite game?".                                                                                       |
-| Time limit            | After which time the answer of a user is deemed invalid if they've taken longer than this time to answer. Defaults to one minute.                                          |
-| Correct answers       | A list of all correct answers. The correct options are shuffled together with the wrong answers. In the above example, this could be an element with the text "Minecraft". |
-| Wrong answers         | The opposite of the correct answers - if users answer this, they lose. For example, this could contain "Fortnite".                                                         |
+| Feld                  | Beschreibung                                                                                             |
+|-----------------------|----------------------------------------------------------------------------------------------------------|
+| Frage oder Behauptung   | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?“.                             |
+| Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                  |
+| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft“.|
+| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite“.           |
 
-## Troubleshooting {#troubleshooting}
+## Fehlerbehebung {#troubleshooting}
 
 <details>
-    <summary>Quiz messages not being sent</summary>
-    <li>Make sure your configuration is valid:</li>
+    <summary>Quiz-Nachrichten werden nicht gesendet</summary>
+    <li>Überprüfe deine Konfiguration:</li>
 	<ul>
-		<li>Make sure the quiz has at least one correct and one wrong answer.</li>
-		<li>Make sure the quiz has a title.</li>
+		<li>Das Quiz muss mindestens eine richtige und eine falsche Antwort haben.</li>
+		<li>Das Quiz muss einen Titel besitzen.</li>
 		<li>
-			Make sure the <a href="#config-strings">strings configuration</a> is valid, this especially applies to the field values which may not be left empty.
-			Also, make sure the used embed color is valid, you can find a full list of all accepted colors on the <a href="https://docs.scnx.xyz/docs/custom-bot/additional-features#embed-colors">"Additional Custom-Bot features" page</a>.
+			Stelle sicher, dass die <a href="#config-strings">Nachrichten-Konfiguration</a> gültig ist, insbesondere dürfen Felder nicht leer sein.
+			Achte auch darauf, dass die verwendete Embed-Farbe gültig ist. Eine Liste der akzeptierten Farben findest du auf der Seite <a href="https://docs.scnx.xyz/de/docs/custom-bot/additional-features#embed-colors">„Zusätzliche CustomBot-Funktionen“</a>.
 		</li>
 	</ul>
 </details>
 <details>
-    <summary>Leaderboard message not being sent</summary>
-    <li>Make sure the channel you selected is empty without any messages so the bot can display the leaderboard.</li>
+    <summary>Leaderboard-Nachricht wird nicht gesendet</summary>
+    <li>Stelle sicher, dass der ausgewählte Kanal leer ist und keine Nachrichten enthält, damit der Bot die Bestenliste anzeigen kann.</li>
 </details>
 <details>
-    <summary>Wrong emoji configuration</summary>
-    <li>Try looking at the color of the button with your choice - if it's green, you won! Otherwise, you might have to read the Rock paper scissor rules again...</li>
+    <summary>Falsche Emoji-Konfiguration</summary>
+    <li>Überprüfe die Farbe des Buttons deiner Auswahl – ist er grün, hast du gewonnen! Andernfalls solltest du vielleicht die Regeln von Schere, Stein, Papier erneut lesen...</li>
 </details>
 
-## Stored data {#data-usage}
+## Gespeicherte Daten {#data-usage}
 
-The following data is being stored about every quiz created using the bot:
+Folgende Daten werden zu jedem mit dem Bot erstellten Quiz gespeichert:
 
-* The ID of the quiz message
-* The description/question of the quiz
-* List of options
-* List of votes
-* Date of last possible answer, if any
-* The channel ID of the channel the giveaway was started in
-* Whether users can change their vote or not
-* Whether the quiz was started publicly in a channel (similar to a poll) or privately using the `/quiz play` command
-* Which kind of quiz it is (for yes/no questions)
-* Metadata about the entry (date when created and last updated)
+* Die ID der Quiz-Nachricht
+* Die Beschreibung/Frage des Quiz
+* Liste der Optionen
+* Liste der abgegebenen Stimmen
+* Datum der letzten möglichen Antwort, falls vorhanden
+* Die Channel-ID des Kanals, in dem das Gewinnspiel gestartet wurde
+* Ob Nutzer ihre Stimmen ändern dürfen
+* Ob das Quiz öffentlich im Kanal (wie eine Umfrage) oder privat per `/quiz play` gestartet wurde
+* Die Quiz-Art (z.B. Ja/Nein-Fragen)
+* Metadaten zum Eintrag (Erstellungs- und Änderungsdatum)
 
-The bot also stores the following data about every user that has participated in a quiz:
-* The user ID of the user
-* The amount of experience points (correct answers) they have in total
-* The amount of experience points they have today
-* The amount of quiz they've answered today
-* If random quiz sorting is disabled, the ID of the next quiz they will be shown
-* Metadata about the entry (date when created and last updated)
+Der Bot speichert zudem folgende Daten zu jedem Nutzer, der an einem Quiz teilgenommen hat:
+* Die Nutzer-ID
+* Die Gesamtanzahl Erfahrungspunkte (richtige Antworten)
+* Die Anzahl Erfahrungspunkte des aktuellen Tages
+* Die Anzahl beantworteter Quizze am aktuellen Tag
+* Falls die zufällige Quiz-Auswahl deaktiviert ist, die ID des nächsten Quiz
+* Metadaten zum Eintrag (Erstellungs- und Änderungsdatum)
 
-Once a day, the amount of quiz users done on the day before are removed from the database.
-To remove all quiz related data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
+Einmal täglich werden die Quizdaten des Vortags aus der Datenbank entfernt.
+Um alle Quiz-bezogenen Daten zu löschen, [lösche die Modul-Datenbank](/de/docs/custom-bot/additional-features#reset-module-database).
