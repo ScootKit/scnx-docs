@@ -32,7 +32,7 @@ Lese und akzeptiere die [Discord Developer Terms of Service](https://discord.com
 und die [Discord Developer Policy](https://discord.com/developers/docs/policies-and-agreements/developer-policy) (diese Richtlinien gelten auch für deine Nutzung
 der Discord API als Teil von SCNX) und erstelle den Bot, indem du auf "Erstellen" klickst.
 
-![](@site/docs/assets/setup/custom-Bot-1.png)
+![](@site/docs/assets/setup/custom-bot-1.png)
 
 Als Nächstes öffnest du die "Bot"-Einstellungen in der Navigation-Bar auf der linken Seite.
 Dort kannst du den Avatar und den Benutzernamen einstellen – das musst du nicht, denn das [geht auch direkt bei SCNX](./scnx/guilds/Bots#change-profile); bei Erstellung deines Bots werden wir dich auch dazu auffordern, dies zu tun.
@@ -41,7 +41,7 @@ und klicke auf "Token zurücksetzen" und bestätige deine Anfrage in dem Fenster
 
 Wenn dies fertig ist, **kopiere bitte den Token von deinem Bot**. Du wirst ihn gleich benötigen.
 
-![](@site/docs/assets/setup/custom-Bot-3.png)
+![](@site/docs/assets/setup/custom-bot-3.png)
 
 :::danger
 Füge deinen Token **nur** im Dashboard ein. Sende **niemals** deinen Token an einen anderen Nutzer, Trusted-Admin oder an einen unserer Team-Mitglieder.
