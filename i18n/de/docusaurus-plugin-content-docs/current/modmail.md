@@ -2,33 +2,33 @@
 
 Richte den weltweit fortgeschrittensten Modmail-Bot ein und das in nur ein paar Minuten!
 
-<IncludedInPlan data={{PRO: true, ACTIVE_GUILD: true, STARTER: false}} additionalDetails={{
-ACTIVE_GUILD: "24/7 verfügbar, solange dein Plan aktiv ist.",
-PRO: "24/7 verfügbar, solange dein Plan aktiv ist."}} />
+<IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{
+UNLIMITED: "24/7 verfügbar, solange dein Plan aktiv ist.",
+PROFESSIONAL: "24/7 verfügbar, solange dein Plan aktiv ist."}} />
 
 ## 0. Bevor du loslegst {#step-0}
 
 Bevor du deinen eigenen Modmail-Bot auf SCNX erstellen kannst, stelle sicher, dass
 
 * du [deinen Server zu SCNX hinzugefügt hast](./setup).
-* dein Server einen bezahlten [Aktiven Server Plan](./scnx/guilds/plans) (<PlanPrice plan="ACTIVE_GUILD" type="MONTHLY"/>)
-  oder den [PRO](./scnx/guilds/plans) (<PlanPrice plan="PRO" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
+* dein Server einen bezahlten [Unlimited Plan](./scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+  oder den [PROFESSIONAL](./scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
   für dich verfügbar ist.
-* du der Inhaber des Servers bist, in dem du diese Funktion aktivieren willst ([warum?](./scnx/guilds/trusted-admins#troubleshooting)) - falls du nicht der Inhaber des Servers bist, frage bitte den Inhaber,
-  diese Funktion zu aktivieren und dir Zugriff als [Trusted Admin](./scnx/guilds/trusted-admins) zu geben.
+* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
+  oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
 * du ein paar Minuten Zeit hast (es sollte ca. 2 Minuten dauern) um diese Anleitung zu beenden - hör nicht in der Mitte auf; dein Fortschritt wird nicht gespeichert.
 
 ## 1. Erstelle deine Discord-Anwendung & -Bot 🤖 {#step-1}
 
 :::caution
-Verwende **keinen** bereits existierenden Bot. Du benötigst eine neue Anwendung für deinen Modmail-Bot auf SCNX. SCNX unterstützt es nicht, 
+Verwende **keinen** bereits existierenden Bot. Du benötigst eine neue Anwendung für deinen Modmail-Bot auf SCNX. SCNX unterstützt es nicht,
 mehrere Bots (wie den Discord-Bot und den Modmail-Bot oder auch Tokens von Bots aus anderen Unternehmen, wie txadmin) mit demselben Token / mit der gleichen Anwendung zu verwenden -
 Bitte erstelle für jeden Bot eine neue Anwendung.
 :::
 
-Als Erstes öffnest du das [Discord Developer Portal](https://discord.com/developers/applications). Dort kannst du eine neue Anwendung erstellen, indem du auf 
+Als Erstes öffnest du das [Discord Developer Portal](https://discord.com/developers/applications). Dort kannst du eine neue Anwendung erstellen, indem du auf
 "Neue Anwendung" oben rechts in deinem Developer-Portal klickst. Nun wird sich ein Fenster öffnen. Gib den Namen, wie der Bot später heißen soll an (du kannst ihn aber jederzeit später ändern),
- Lese und akzeptiere die [Discord Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/terms-of-service)
+Lese und akzeptiere die [Discord Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/terms-of-service)
 und die [Discord Developer Policy](https://discord.com/developers/docs/policies-and-agreements/developer-policy) (diese Richtlinien gelten auch für deine Nutzung
 der Discord API als Teil von SCNX) und erstelle den Bot, indem du auf "Erstellen" klickst.
 
@@ -82,8 +82,8 @@ den Bot normal zu nutzen, da SCNX noch nicht zeigen kann, welche Funktion welche
 
 ![](@site/docs/assets/setup/modmail-5.png)
 
-Wenn dies erledigt ist, ist dein Modmail-Bot vollkomend auf SCNX einsatzbereit. Kehre zu der Einrichtung zurück, um das Profil mit dem "Profil bearbeiten"-Button zu bearbeiten.
- ([du kannst dies auch später machen](./scnx/guilds/Bots#change-profile)), stelle deinen neuen Modmail-Bot ein oder erkunde alle Funktionen deines Modmail-Bots.
+Wenn dies erledigt ist, ist dein Modmail-Bot vollkommen auf SCNX einsatzbereit. Kehre zu der Einrichtung zurück, um das Profil mit dem "Profil bearbeiten"-Button zu bearbeiten.
+([du kannst dies auch später machen](./scnx/guilds/Bots#change-profile)), stelle deinen neuen Modmail-Bot ein oder erkunde alle Funktionen deines Modmail-Bots.
 
 ![](@site/docs/assets/setup/modmail-6.png)
 
