@@ -9,7 +9,7 @@ Erstelle einfach Quizze auf deinem Server, lasse deine Mitglieder auf einer Best
 
 ## Einrichtung {#setup}
 
-Aktiviere das Modul [in deinem SCNX-Dashboard](https://scnx.app/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) und [konfiguriere](#configuration) es.
+Aktiviere das Modul [in deinem SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) und [konfiguriere](#configuration) es.
 
 ## Verwendung {#usage}
 
@@ -39,10 +39,10 @@ Du findest die Seite in deinem [Dashboard](https://scnx.app/de/glink?page=bot/co
 | Feld                           | Beschreibung                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Emojis                         | Welche Emojis der Bot für die Buttons verwendet. Du kannst Emojis sowohl für normale als auch für Ja/Nein-Quiz konfigurieren. |
-| Tägliches Quiz-Limit           | Wie viele Quizze ein Nutzer pro Tag mit `/quiz play` spielen kann. Standardwert ist fünf.                      |
+| Tägliches Quizlimit           | Wie viele Quizze ein Nutzer pro Tag mit `/quiz play` spielen kann. Standardwert ist fünf.                      |
 | Quiz-Leaderboard-Kanal        | Wird dieser gesetzt, aktualisiert der Bot automatisch die Bestenliste im Kanal. Der Kanal sollte nur dafür verwendet werden. |
 | Rolle zum Erstellen von Quiz   | Rolle, die Quizze mit dem Befehl erstellen darf. Diese Einstellung beeinflusst nicht, wer `/quiz play` nutzen kann. |
-| Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Zufällig“ bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
+| Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Random“ bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
 | Live-Vorschau der Ergebnisse   | Zeigt die Antworten der Nutzer bei öffentlichen Quizzen live an, statt erst nach Ende des Quiz.                 |
 
 ### Nachrichten {#config-strings}
@@ -62,7 +62,7 @@ Mit der [Nachrichten-Konfiguration](https://scnx.app/de/glink?page=bot/configura
 | leaderboardTitle     | Titel der Bestenliste im Embed-Titel.                                                              |
 | leaderboardSubtitle  | Untertitel der Bestenliste im Embed-Beschreibung.                                                  |
 | leaderboardColor     | Farbe des Bestenlisten-Embeds.                                                                     |
-| leaderboardButton    | Text des Buttons auf der Bestenliste.                                                              |
+| leaderboardButton    | Text des Knopfes auf der Bestenliste.                                                              |
 
 ### Quiz bearbeiten {#config-quiz}
 
