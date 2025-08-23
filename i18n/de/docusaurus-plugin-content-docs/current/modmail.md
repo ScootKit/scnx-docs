@@ -10,9 +10,9 @@ PROFESSIONAL: "24/7 verfügbar, solange dein Plan aktiv ist."}} />
 
 Bevor du deinen eigenen Modmail-Bot auf SCNX erstellen kannst, stelle sicher, dass
 
-* du [deinen Server zu SCNX hinzugefügt hast](./setup).
-* dein Server einen bezahlten [Unlimited Plan](./scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
-  oder den [PROFESSIONAL](./scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
+* du [deinen Server zu SCNX hinzugefügt hast](/docs/setup).
+* dein Server einen bezahlten [Unlimited Plan](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+  oder den [PROFESSIONAL](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
   für dich verfügbar ist.
 * du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
   oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
@@ -35,7 +35,7 @@ der Discord API als Teil von SCNX) und erstelle den Bot, indem du auf "Erstellen
 ![](@site/docs/assets/setup/custom-bot-1.png)
 
 Als Nächstes öffnest du die "Bot"-Einstellungen in der Navigation-Bar auf der linken Seite.
-Dort kannst du den Avatar und den Benutzernamen einstellen – das musst du nicht, denn das [geht auch direkt bei SCNX](./scnx/guilds/Bots#change-profile); bei Erstellung deines Bots werden wir dich auch dazu auffordern, dies zu tun.
+Dort kannst du den Avatar und den Benutzernamen einstellen – das musst du nicht, denn das [geht auch direkt bei SCNX](/docs/scnx/guilds/bots#change-profile); bei Erstellung deines Bots werden wir dich auch dazu auffordern, dies zu tun.
 Der letzte Schritt im Discord Developer Portal ist einen Token zu generieren und diesen zu kopieren. Um dies zu tun, öffne die "Bot" Seite in der Navigation-Bar auf der linken Seite
 und klicke auf "Token zurücksetzen" und bestätige deine Anfrage in dem Fenster, das sich gerade geöffnet hat. Es kann sein, dass du nach dem 2FA-Code für deinen Discord-Account gefragt wirst.
 
@@ -83,12 +83,12 @@ den Bot normal zu nutzen, da SCNX noch nicht zeigen kann, welche Funktion welche
 ![](@site/docs/assets/setup/modmail-5.png)
 
 Wenn dies erledigt ist, ist dein Modmail-Bot vollkommen auf SCNX einsatzbereit. Kehre zu der Einrichtung zurück, um das Profil mit dem "Profil bearbeiten"-Button zu bearbeiten.
-([du kannst dies auch später machen](./scnx/guilds/Bots#change-profile)), stelle deinen neuen Modmail-Bot ein oder erkunde alle Funktionen deines Modmail-Bots.
+([du kannst dies auch später machen](/docs/scnx/guilds/bots#change-profile)), stelle deinen neuen Modmail-Bot ein oder erkunde alle Funktionen deines Modmail-Bots.
 
 ![](@site/docs/assets/setup/modmail-6.png)
 
 :::tip Werden Fehler angezeigt?
-Wir haben eine [Anleitung zur Fehlerbehebung für Modmail-Bots](./modmail/troubleshooting) für dich erstellt. Wenn diese Anleitung zur Fehlerbehebung nichts bringt,
+Wir haben eine [Anleitung zur Fehlerbehebung für Modmail-Bots](/docs/modmail/troubleshooting) für dich erstellt. Wenn diese Anleitung zur Fehlerbehebung nichts bringt,
 helfen wir dir jederzeit hier: [scnx.app/help](https://scnx.app/help).
 :::
 
@@ -101,6 +101,6 @@ es ist DEIN Modmail-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 Hier sind ein paar Dinge, die du jetzt tun könntest:
 
 * Teste deinen Modmail-Bot: Sende ihm eine Privatnachricht und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
-* [stelle deinen Modmail-Bot ein](./modmail/configuration) und aktiviere mehr Modmail-Funktionen.
-* Verbessere dein Support System, indem du [fortgeschritte Modmail-Funktionen](./modmail/advanced-features) erkundest.
-* und sehr viel mehr. Öffne die [Modmail-Documentation](./modmail/intro), um dir jede Option anzuschauen. 
+* [stelle deinen Modmail-Bot ein](/docs/modmail/configuration) und aktiviere mehr Modmail-Funktionen.
+* Verbessere dein Support System, indem du [fortgeschritte Modmail-Funktionen](/docs/modmail/advanced-features) erkundest.
+* und sehr viel mehr. Öffne die [Modmail-Documentation](/docs/modmail/intro), um dir jede Option anzuschauen. 
