@@ -12,7 +12,7 @@ Bevor du deinen eigenen Modmail-Bot auf SCNX erstellen kannst, stelle sicher, da
 
 * du [deinen Server zu SCNX hinzugefügt hast](/docs/setup).
 * dein Server einen bezahlten [Unlimited Plan](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
-  oder den [PROFESSIONAL](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
+  oder den [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
   für dich verfügbar ist.
 * du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
   oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
