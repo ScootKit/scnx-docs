@@ -53,6 +53,7 @@ its [configuration file](https://scnx.app/glink?page=bot/configuration?file=info
 | user_not_found    | This error message will be shown if a user has been selected that has not been found.                        |
 | channel_not_found | This error message will be shown if a user selected a channel that has not been found.                       |
 | role_not_found    | This error message will be shown if a user selected a role that has not been found.                          |
+| avatarMsg         | This message is sent when a user's avatar is requested.
 
 ## Troubleshooting {#troubleshooting}
 
