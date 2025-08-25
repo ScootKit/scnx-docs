@@ -54,14 +54,14 @@ Einfach zu bedienendes Level-System mit vielen Anpassungsmöglichkeiten!
 ### Live-Rangliste {#live-leaderboard}
 
 Anstatt deine Nutzer jedes Mal [`/leaderboard`](#commands) ausführen zu lassen, wenn sie die Nutzer mit den meisten
-Leveln sehen wollen, kannst du eine Live-Rangliste aktivieren. Dies ist ein Kanal mit genau einer Nachricht darin, die
+Leveln sehen wollen, kannst du eine Live-Rangliste aktivieren. Dies ist eine Nachricht, welche
 alle fünf Minuten auf die aktuelle Rangliste aktualisiert wird. Das bedeutet, dass Nutzer keine Befehle ausführen oder
-eine Webseite besuchen müssen, um die Top-15-Nutzer auf deinem Server zu sehen. Sie können auch auf "Mein Level
+eine Webseite besuchen müssen, um die besten Nutzer auf deinem Server zu sehen. Sie können auch auf "Mein Level
 anzeigen" klicken, um ihr eigenes Level anzuzeigen, anstatt den Befehl [`/profile`](#commands) auszuführen. Die Antwort
 ist nur für den Nutzer selbst sichtbar.
 
 Um die Live-Rangliste zu aktivieren, setze den "Live-Ranglisten-Kanal" in deiner [Konfiguration](#configuration) auf
-einen beliebigen leeren Kanal auf deinem Server, auf dem der Bot die Berechtigungen "Nachrichten senden", "
+einen beliebigen Kanal auf deinem Server, auf dem der Bot die Berechtigungen "Nachrichten senden", "
 Nachrichtenverlauf anzeigen" und "Kanal anzeigen" hat. Für die besten Ergebnisse richte deinen Kanal so ein, dass Nutzer
 keine Nachrichten in diesen Kanal senden können. Sobald
 konfiguriert, [lade deine Konfiguration neu](/docs/scnx/guilds/bots/#basics) und der Bot sendet eine Nachricht in den
@@ -449,12 +449,11 @@ XP vergeben werden, da der Bot die Nachricht / den Sprachkanal nicht sehen kann.
 </details>
 
 <details>
-<summary>Meine Live-Rangliste wird nicht korrekt gesendet.</summary>
+<summary>Meine Live-Rangliste wird nicht korrekt gesendet oder aktualisert.</summary>
 
 Die [Live-Rangliste](#live-leaderboard) kann nur gesendet werden, wenn der Bot die Berechtigungen "Kanal anzeigen", "
 Nachrichtenverlauf anzeigen"
-und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Der Kanal muss außerdem leer sein, damit die
-Live-Ranglisten-Einbettung gesendet und aktuell gehalten werden kann.
+und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Stelle außerdem sicher, dass die Nachricht nicht mehr als 1024 Zeichen lang ist - setze ansonsten den Wert "Maximale Anzahl von Nutzern im Live Ranglistenkanal" in der [Konfiguration](#configuration) auf einen niedrigeren Wert.
 </details>
 
 ## Gespeicherte Daten {#data-usage}
