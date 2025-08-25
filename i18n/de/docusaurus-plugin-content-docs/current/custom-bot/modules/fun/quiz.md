@@ -26,7 +26,7 @@ Wenn Quizze in der [Quiz-Liste](#config-quiz) erstellt wurden, kann jeder Nutzer
 |---------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | `/quiz create <Beschreibung> <Kanal> <Quiz-Dauer> <Option 1> <Option 2> [<Kann Stimme geändert werden?> <Option 3 bis 9>]` | Erstellt ein öffentliches Quiz mit der angegebenen Beschreibung/Frage im ausgewählten Kanal. |
 | `/quiz create-bool <Beschreibung> <Kanal> [<Kann Stimme geändert werden?> <Quiz-Dauer>]`                            | Erstellt ein öffentliches Ja/Nein-Quiz mit der angegebenen Beschreibung/Frage im Kanal.      |
-| `/quiz play`                                                                                                        | Spiele ein privates Quiz, das in der CustomBot-Konfiguration eingerichtet ist.                |
+| `/quiz play`                                                                                                        | Spiele ein privates Quiz, das in der Konfiguration des eigenen Bots eingerichtet ist.                |
 | `/quiz leaderboard`                                                                                                 | Zeigt die Bestenliste mit den Gesamt- und Tagespunkten der besten Nutzer an.                 |
 
 ## Konfiguration {#configuration}
@@ -38,10 +38,10 @@ Du findest die Seite in deinem [Dashboard](https://scnx.app/de/glink?page=bot/co
 
 | Feld                           | Beschreibung                                                                                                   |
 |---------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Emojis                         | Welche Emojis der Bot für die Buttons verwendet. Du kannst Emojis sowohl für normale als auch für Ja/Nein-Quiz konfigurieren. |
+| Emojis                         | Welche Emojis der Bot für die Knöpfe verwendet. Du kannst Emojis sowohl für normale als auch für Ja/Nein-Quizze konfigurieren. |
 | Tägliches Quizlimit           | Wie viele Quizze ein Nutzer pro Tag mit `/quiz play` spielen kann. Standardwert ist fünf.                      |
 | Quiz-Leaderboard-Kanal        | Wird dieser gesetzt, aktualisiert der Bot automatisch die Bestenliste im Kanal. Der Kanal sollte nur dafür verwendet werden. |
-| Rolle zum Erstellen von Quiz   | Rolle, die Quizze mit dem Befehl erstellen darf. Diese Einstellung beeinflusst nicht, wer `/quiz play` nutzen kann. |
+| Rolle zum Erstellen von Quiz   | Rolle, die Quizze mit Befehlen erstellen darf. Diese Einstellung beeinflusst nicht, wer `/quiz play` nutzen kann. |
 | Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Random“ bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
 | Live-Vorschau der Ergebnisse   | Zeigt die Antworten der Nutzer bei öffentlichen Quizzen live an, statt erst nach Ende des Quiz.                 |
 
@@ -60,7 +60,7 @@ Mit der [Nachrichten-Konfiguration](https://scnx.app/de/glink?page=bot/configura
 | endedQuizTitle       | Titel des Quiz-Embeds, wenn das Quiz beendet ist.                                                  |
 | endedQuizColor       | Farbe des Embeds, wenn das Quiz beendet ist.                                                       |
 | leaderboardTitle     | Titel der Bestenliste im Embed-Titel.                                                              |
-| leaderboardSubtitle  | Untertitel der Bestenliste im Embed-Beschreibung.                                                  |
+| leaderboardSubtitle  | Untertitel der Bestenliste in der Embed-Beschreibung.                                                  |
 | leaderboardColor     | Farbe des Bestenlisten-Embeds.                                                                     |
 | leaderboardButton    | Text des Knopfes auf der Bestenliste.                                                              |
 
@@ -87,7 +87,6 @@ Jede Quizfrage hat folgende Felder:
 		<li>Das Quiz muss einen Titel besitzen.</li>
 		<li>
 			Stelle sicher, dass die <a href="#config-strings">Nachrichten-Konfiguration</a> gültig ist, insbesondere dürfen Felder nicht leer sein.
-			Achte auch darauf, dass die verwendete Embed-Farbe gültig ist. Eine Liste der akzeptierten Farben findest du auf der Seite <a href="https://docs.scnx.xyz/de/docs/custom-bot/additional-features#embed-colors">„Zusätzliche CustomBot-Funktionen“</a>.
 		</li>
 	</ul>
 </details>
@@ -109,10 +108,10 @@ Folgende Daten werden zu jedem mit dem Bot erstellten Quiz gespeichert:
 * Liste der Optionen
 * Liste der abgegebenen Stimmen
 * Datum der letzten möglichen Antwort, falls vorhanden
-* Die Channel-ID des Kanals, in dem das Gewinnspiel gestartet wurde
+* Die Kanal-ID des Kanals, in dem das Gewinnspiel gestartet wurde
 * Ob Nutzer ihre Stimmen ändern dürfen
 * Ob das Quiz öffentlich im Kanal (wie eine Umfrage) oder privat per `/quiz play` gestartet wurde
-* Die Quiz-Art (z.B. Ja/Nein-Fragen)
+* Die Quiz-Art (z.B. Ja/Nein-Quiz)
 * Metadaten zum Eintrag (Erstellungs- und Änderungsdatum)
 
 Der Bot speichert zudem folgende Daten zu jedem Nutzer, der an einem Quiz teilgenommen hat:
