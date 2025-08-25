@@ -52,7 +52,7 @@ The [strings](https://scnx.app/glink?page=bot/configuration?file=quiz%7Cstrings)
 | Field               | Description                                                                                                                                                                              |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | title               | The title of the quiz shown in the embed title.                                                                                                                                          |
-| color               | The default embed color of active quiz messages, refer to [supported colors](https://docs.scnx.xyz/docs/custom-bot/additional-features#embed-colors) for a list of all supported values. |
+| color               | The default embed color of active quiz messages. |
 | options             | A text introducing the possible quiz options.                                                                                                                                            |
 | liveView            | Displayed before the live view section of the quiz message, if enabled.                                                                                                                  |
 | expiresOn           | The name of the extra field displayed if a quiz has an end date set.                                                                                                                     |
