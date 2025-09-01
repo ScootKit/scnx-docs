@@ -24,7 +24,7 @@ Lass Nutzer Nachrichten in einen Starboard-Kanal hervorheben, indem sie darauf r
 
 ## Konfiguration {#configuration}
 
-In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzungsmöglichkeiten für Nutzer in Discord festlegen. Öffne sie in deinem [Dashboard](https://scnx.app/glink?page=bot/configuration?file=starboard%7Cconfig).
+In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzungsmöglichkeiten für Nutzer in Discord festlegen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=starboard%7Cconfig).
 
 | Feld                    | Beschreibung                                                                                                                                                                 |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -65,4 +65,4 @@ Der Bot speichert außerdem folgende Daten zu jedem Nutzer, der auf eine Nachric
 * Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
 Einmal täglich werden alle Starboard-Nutzer-Daten, die älter als eine Stunde sind, aus der Datenbank entfernt.
-Du kannst eine Starboard-Nachricht aus der Datenbank entfernen, indem du alle Reaktionen darauf löschst. Um sämtliche Starboard-Daten zu entfernen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).
+Du kannst eine Starboard-Nachricht aus der Datenbank entfernen, indem du alle Reaktionen darauf löschst. Um sämtliche Starboard-Daten zu entfernen, [lösche die Modul-Datenbank](/de/docs/custom-bot/additional-features#reset-module-database).
