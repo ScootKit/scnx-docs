@@ -17,7 +17,7 @@ const config = {
     onBrokenMarkdownLinks: 'warn',
     i18n: {
         defaultLocale: 'en',
-        locales: ['en', 'de']
+        locales: ['en', 'de', 'it']
     },
     trailingSlash: true,
     scripts: [],
