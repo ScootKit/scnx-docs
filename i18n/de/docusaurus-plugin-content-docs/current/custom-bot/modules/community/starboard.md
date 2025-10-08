@@ -55,7 +55,7 @@ In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzun
 
 Folgende Daten werden zu jeder vom Bot gesendeten Starboard-Nachricht gespeichert:
 
-* Die Nachrichten-ID der "gestarnten" Nachricht
+* Die Nachrichten-ID der "gesternten" Nachricht
 * Die Nachrichten-ID der Nachricht im Starboard-Kanal
 * Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
