@@ -34,7 +34,7 @@ In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzun
 | Ausgenommene Kanäle  | In diesen Kanälen können Nutzer keine Nachrichten starren. Die Reaktion wird nicht entfernt, aber der Bot ignoriert sie einfach.                                             |
 | Ausgenommene Rollen  | Mitglieder dieser Rollen können keine Nachrichten starren. Die Reaktion bleibt, aber der Bot ignoriert sie.                                                                 |
 | Mindestanzahl Sterne    | Die Mindestanzahl an Sternen, die eine Nachricht braucht, um in den Starboard-Kanal gesendet zu werden. Mehrfachreaktionen zählen wie eine normale Reaktion.                 |
-| Sterne pro Nutzer pro Stunde| Legt fest, wie oft ein Nutzer pro Stunde auf Nachrichten reagieren kann. Es gilt ein "dynamisches Fenster", d.h. wenn das Limit auf 10 steht und ein Nutzer um 12:00 fünfmal und um 12:30 noch fünfmal reagiert, ist das Limit erreicht.|
+| Sterne pro Nutzer pro Stunde | Legt fest, wie oft ein Nutzer pro Stunde auf Nachrichten reagieren kann. Es gilt ein "dynamisches Fenster", d.h. wenn das Limit auf 10 steht und ein Nutzer um 12:00 fünfmal und um 12:30 noch fünfmal reagiert, ist das Limit erreicht.|
 | Self-Star        | Legt fest, ob Nutzer ihre eigenen Nachrichten starren können. Wenn sie auf ihre eigene Nachricht reagieren, wird die Reaktion entfernt, um Verwirrung zu vermeiden.          |
 
 ## Fehlerbehebung {#troubleshooting}
