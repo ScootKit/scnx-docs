@@ -79,6 +79,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
     <summary>Can I restart the ID counter?</summary>
 
     No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a> or replace it with the <code>%nr%</code> parameter, which automatically updates the numbers.
+</details>
 
 ## Stored data {#data-usage}
 
