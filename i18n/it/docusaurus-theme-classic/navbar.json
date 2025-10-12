@@ -1,0 +1,34 @@
+{
+  "title": {
+    "message": "Docs",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "SCNX Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Getting started": {
+    "message": "Getting started",
+    "description": "Navbar item with label Getting started"
+  },
+  "item.label.SCNX": {
+    "message": "SCNX",
+    "description": "Navbar item with label SCNX"
+  },
+  "item.label.CustomBot": {
+    "message": "CustomBot",
+    "description": "Navbar item with label CustomBot"
+  },
+  "item.label.Modmail": {
+    "message": "Modmail",
+    "description": "Navbar item with label Modmail"
+  },
+  "item.label.Linked Roles": {
+    "message": "Linked Roles",
+    "description": "Navbar item with label Linked Roles"
+  },
+  "item.label.News": {
+    "message": "News",
+    "description": "Navbar item with label News"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "link.title.Docs": {
+    "message": "Docs",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Get started 🚀": {
+    "message": "Get started 🚀",
+    "description": "The label of footer link with label=Get started 🚀 linking to /docs/intro"
+  },
+  "link.item.label.SCNX": {
+    "message": "SCNX",
+    "description": "The label of footer link with label=SCNX linking to /docs/scnx/intro"
+  },
+  "link.item.label.Custom Bot": {
+    "message": "Custom Bot",
+    "description": "The label of footer link with label=Custom Bot linking to /docs/custom-bot/intro"
+  },
+  "link.item.label.Modmail": {
+    "message": "Modmail",
+    "description": "The label of footer link with label=Modmail linking to /docs/modmail/intro"
+  },
+  "link.item.label.Linked Roles": {
+    "message": "Linked Roles",
+    "description": "The label of footer link with label=Linked Roles linking to /docs/linked-roles/intro"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://scootk.it/dc"
+  },
+  "link.item.label.Twitter / X": {
+    "message": "Twitter / X",
+    "description": "The label of footer link with label=Twitter / X linking to https://scootk.it/twitter"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "The label of footer link with label=Instagram linking to https://scootk.it/insta"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://scootk.it/gh"
+  },
+  "link.item.label.Facebook": {
+    "message": "Facebook",
+    "description": "The label of footer link with label=Facebook linking to https://sccootk.it/facebook"
+  },
+  "link.item.label.YouTube": {
+    "message": "YouTube",
+    "description": "The label of footer link with label=YouTube linking to https://scootk.it/yt"
+  },
+  "link.item.label.Need help with SCNX?": {
+    "message": "Need help with SCNX?",
+    "description": "The label of footer link with label=Need help with SCNX? linking to https://scnx.app/help"
+  },
+  "link.item.label.Open SCNX Dashboard": {
+    "message": "Open SCNX Dashboard",
+    "description": "The label of footer link with label=Open SCNX Dashboard linking to https://scnx.app/"
+  },
+  "link.item.label.View SCNX Product Page": {
+    "message": "View SCNX Product Page",
+    "description": "The label of footer link with label=View SCNX Product Page linking to https://scnx.xyz"
+  },
+  "link.item.label.Help us improve these docs": {
+    "message": "Help us improve these docs",
+    "description": "The label of footer link with label=Help us improve these docs linking to https://github.com/ScootKit/scnx-docs"
+  },
+  "copyright": {
+    "message": "Copyright © 2025 <a href=\"https://scootkit.net\">ScootKit</a> - Built with Docusaurus 🦖<br/><div style=\"font-size: 14px; margin-top: 7px\"><a href=\"https://scootkit.net/imprint\">Impressum</a> &bullet; <a href=\"https://scootkit.net/privacy\">Privacy Policy</a> &bullet; <a href=\"https://scootk.it/scnx-tos\">SCNX Terms of Service</a> &bullet; <a href=\"https://scootk.it/scnx-spa\">Bot Hosting Service Provider Agreement</a><br/>\"ScootKit\" is a trademark, registered in Germany. Not affiliated with Discord Inc.</div>",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "ScootKit Logo",
+    "description": "The alt text of footer logo"
+  }
+}

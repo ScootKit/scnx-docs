@@ -726,5 +726,9 @@
   },
   "newsletterCTA.subscribe": {
     "message": "Newsletter abonnieren"
+  },
+  "theme.IconExternalLink.ariaLabel": {
+    "message": "(wird in einem neuen Tab geöffnet)",
+    "description": "The ARIA label for the external link icon"
   }
 }
