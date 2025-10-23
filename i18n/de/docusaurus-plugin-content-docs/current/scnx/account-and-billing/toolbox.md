@@ -9,19 +9,6 @@ einfacher zu machen.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
-## Discord-Nutzer-Nachschlagen {#user-lookup}
-
-Schlage jeden Discord-Nutzer oder -Bot nur mit seiner Discord-ID nach! Füge die ID einfach oben ein, um das Banner, das
-Profilbild, die Abzeichen und mehr des Nutzers zu sehen. Um eine Nutzer-ID zu kopieren, aktiviere zunächst
-den [Discord-Entwicklermodus](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), rechtsklicke auf den Nutzer
-und klicke auf "Nutzer-ID kopieren".
-
-Füge als Nächstes diese ID in das [Nutzer-Nachschlagen-Werkzeug](https://scnx.app/de/user/tools?page=user-lookup) ein.
-Klicke dann auf "Nutzer nachschlagen", um deine Anfrage durchzuführen. Du kannst danach die Daten des Nutzers sehen und (falls
-vorhanden) das Banner- oder Profilbild des Nutzers herunterladen. Hier ist ein Beispiel, wie das aussehen wird:
-
-![](@site/docs/assets/scnx/user/toolbox/result.png)
-
 ## Zeitstempel-Ersteller {#timestamp-generator}
 
 Nutze den Zeitstempel-Generator, um Daten und Zeitpunkte in Nachrichten auf Discord einzufügen. Der Zeitpunkt wird immer

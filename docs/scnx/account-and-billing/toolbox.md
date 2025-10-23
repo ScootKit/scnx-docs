@@ -8,19 +8,6 @@ The SCNX Toolbox is a set of tools designed to make your life as a professional 
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
-## Discord-User-Lookup {#user-lookup}
-
-Lookup any Discord-User or Bot by their Discord-ID! Simply enter it above and see their banner, profile picture, badges
-and more. To copy a User-ID, first
-enable [discord developer mode](https://faq.scnx.app/discord-entwicklermodus-aktivieren/), then right-click on the user
-and click on "Copy User ID".
-
-Next, enter the ID in the [User-Lookup tool](https://scnx.app/user/tools?page=user-lookup). Click on "Fetch user" to
-finish your request. You'll be shown details about the user and can download their banner and profile picture (if
-applicable). Here's how the result will look like:
-
-![](@site/docs/assets/scnx/user/toolbox/result.png)
-
 ## Timestamp-Generator {#timestamp-generator}
 
 Use the Timestamp-Generator to insert and times in messages on Discord. The time will be displayed in the local timezone
