@@ -71,6 +71,15 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            zoom: {
+                selector: '.testa  img',
+                background: {
+                    dark: 'var(--ifm-navbar-background-color)'
+                },
+                config: {
+                    // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+                }
+            },
             typesense: {
                 typesenseCollectionName: 'scnx-docs',
 
@@ -275,6 +284,7 @@ const config = {
             };
         },
         'docusaurus-theme-search-typesense',
+        'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',
             {

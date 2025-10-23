@@ -143,6 +143,13 @@ a.card:hover {
     box-shadow: 0 10px 15px -3px #0000001a,  0 4px 6px -4px #0000001a;
 }
 
+#__blog-post-container img {
+    padding: 4px;
+    border-radius: 15px;
+    background-color: #0d1524;
+    box-shadow: 0 10px 15px -3px #0000001a,  0 4px 6px -4px #0000001a;
+}
+
 .ignore-image {
     padding: 0 !important;
     box-shadow: none !important;
