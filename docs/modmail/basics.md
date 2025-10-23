@@ -1,5 +1,7 @@
 # Modmail starter guide (Modmail 101)
 
+<OutdatedWarning type="MODMAIL_V2"/>
+
 In this document, we've collected everything that is helpful to understand how to use modmail on any server.
 
 :::info

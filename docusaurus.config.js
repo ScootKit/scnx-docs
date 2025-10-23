@@ -22,7 +22,7 @@ const config = {
     trailingSlash: true,
     scripts: [],
     stylesheets: [
-        {
+            {
             href: '/katex/katex.min.css',
             type: 'text/css'
         }
@@ -118,9 +118,9 @@ const config = {
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'modmailSidebar',
+                        sidebarId: 'supportBotSidebar',
                         position: 'left',
-                        label: 'Modmail'
+                        label: 'Support Bot'
                     },
                     {
                         type: 'docSidebar',
