@@ -27,5 +27,5 @@ unlisted: false
 ## Get Marketplace organization {#marketplace-org}
 
 * Endpoint: GET `https://scnx.app/api/marketplace/organizations/:id`
-* Returns SCNX Marketplace organization data for a marketplace organization. To fetch assets, use `https://scnx.app/api/marketpalce/organizations/:id/dynamic-images` or `https://scnx.app/api/marketpalce/organizations/:id/modules`.
+* Returns SCNX Marketplace organization data for a marketplace organization. To fetch assets, use `https://scnx.app/api/marketplace/organizations/:id/dynamic-images` or `https://scnx.app/api/marketplace/organizations/:id/modules`.
 * No authorization needed, but supports `Authorization: SCNX-Application` header.
