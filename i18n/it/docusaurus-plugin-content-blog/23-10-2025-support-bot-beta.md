@@ -1,6 +1,6 @@
 ---
-title: "Support Bot V3 è ora in beta!"
-description: "Il nostro nuovo Support Bot, precedentemente Modmail, aggiunge il supporto per un sistema di ticket, riepiloghi AI, log migliori e molto altro. E la notizia migliore: puoi provarlo tu stesso nella versione beta."
+title: "Bot Supporto V3 è ora in beta!"
+description: "Il nostro nuovo Bot Supporto, precedentemente Modmail, aggiunge il supporto per un sistema di ticket, riassunti AI, log migliori e molto altro. E la notizia migliore: puoi provarlo tu stesso nella versione beta."
 slug: 2025-support-bot-beta
 date: 2025-10-24T10:00
 unlisted: true
@@ -15,24 +15,24 @@ tags:
 ---
 
 :::warning
-Avviso: Questo post è stato tradotto automaticamente dall'IA. Potrebbero essere presenti imprecisioni o errori. Si prega di fare riferimento alla versione originale in inglese per la massima accuratezza.
+Avviso: Questo post è stato tradotto automaticamente dall'AI. Potrebbero essere presenti imprecisioni o errori. Si prega di fare riferimento alla versione originale in Inglese per la massima accuratezza.
 :::
 
-# Modmail è ora Support-Bot: annuncio della Beta V3 e di un nuovo sistema di ticket
+# Modmail è ora Bot Supporto: annuncio della Beta V3 e di un nuovo sistema di ticket
 
-Siamo entusiasti di annunciare il più grande aggiornamento nella storia del nostro prodotto e, con esso, un nome nuovo di zecca. Modmail sta diventando ufficialmente **Support-Bot!**
+Siamo entusiasti di annunciare il più grande aggiornamento nella storia del nostro prodotto e, con esso, un nome nuovo di zecca. Modmail sta diventando ufficialmente **Bot Supporto!**
 
-Questo è più di un semplice rebranding. Per molto tempo, Modmail è stato un potente strumento per il supporto basato su DM. Ma con la crescita della nostra piattaforma, l'abbiamo ricostruito da zero per essere una soluzione di supporto completa. Il nome "Modmail" semplicemente non era più sufficiente.
+Questo è più di un semplice rebranding. Per molto tempo, Modmail è stato un potente strumento per il supporto basato sui DM. Ma con la crescita della nostra piattaforma, l'abbiamo ricostruito da zero per essere una soluzione di supporto completa. Il nome "Modmail" semplicemente non era più sufficiente.
 
 Oggi lanciamo la **Beta V3**, che è ora disponibile per tutti. Questo aggiornamento introduce la nostra singola funzionalità più richiesta: un **sistema di ticket** completo che vive direttamente all'interno del tuo server.
 
 <!-- truncate --> 
 
-## "Modmail" + "Ticket" = Support-Bot {#rebrand}
+## "Modmail" + "Ticket" = Bot Supporto {#rebrand}
 
-Con la V3, Support-Bot ora ti offre due potenti modi per gestire il supporto, che puoi utilizzare separatamente o contemporaneamente:
+Con la V3, Bot Supporto ora ti offre due potenti modi per gestire il supporto, che puoi utilizzare separatamente o contemporaneamente:
 
-1. **Sistema Modmail (Classico):** Il sistema basato su DM che già conosci. Gli utenti inviano un DM al bot e il tuo team lo gestisce in un thread privato.
+1. **Sistema Modmail (Classico):** Il sistema basato sui DM che già conosci. Gli utenti inviano un DM al bot e il tuo team lo gestisce in un thread privato.
 2. **Sistema di Ticket (Novità!):** Un sistema basato su canali, molto richiesto. Gli utenti aprono un ticket tramite un messaggio dedicato e un canale privato viene creato per loro *all'interno* del tuo server.
 
 Questo aggiornamento è incentrato sul darti la flessibilità di costruire l'esperienza di supporto perfetta per la tua community.
@@ -43,15 +43,15 @@ Questo aggiornamento è incentrato sul darti la flessibilità di costruire l'esp
 
 Questa è la star dello spettacolo. Il nuovo sistema di ticket è costruito per flessibilità, potenza e flussi di lavoro di supporto professionali. Sposta il supporto dai DM ai canali privati direttamente sul tuo server.
 
-### 🏷️ Argomenti di ticket avanzati {#ticket-system-advanced-topics}
+### 🏷️ Topic dei Ticket avanzati {#ticket-system-advanced-topics}
 
-Gli argomenti dei ticket sono ora completamente integrati nel nuovo sistema. Puoi impostare argomenti diversi per ciascun pannello di ticket, aiutandoti a categorizzare e instradare le richieste dal momento in cui vengono create. Ancora meglio, puoi abilitare pulsanti nel canale per consentire al tuo team di modificare l'argomento di un ticket *dopo* che è stato aperto, assicurando che tutto rimanga organizzato.
+I topic dei ticket sono ora completamente integrati nel nuovo sistema. Puoi impostare topic diversi per ciascun pannello di ticket, aiutandoti a categorizzare e instradare le richieste dal momento in cui vengono create. Ancora meglio, puoi abilitare i pulsanti nel canale per consentire al tuo team di modificare il topic di un ticket *dopo* che è stato aperto, assicurando che tutto rimanga organizzato.
 
 ![Screenshot che mostra un embed di selezione ticket, come spostare un ticket e la configurazione degli argomenti del ticket](@site/blog/assets/support-bot-beta/en/2.png)
 
-### 🙋 Sistema di "Claim" (presa in carico) del team {#ticket-system-claiming}
+### 🙋 Sistema d'Assegnazione del Team {#ticket-system-claiming}
 
-Consenti al tuo staff di gestire in modo efficiente le richieste in arrivo. I nuovi ticket possono essere annunciati in un canale di notifica dedicato. I membri del team possono quindi "prendere in carico" (claim) e assegnarsi ai ticket, promuovendo la responsabilità e riducendo i tempi di risposta.
+Consenti al tuo staff di gestire in modo efficiente le richieste in arrivo. I nuovi ticket possono essere annunciati in un canale di notifica dedicato. I membri del team possono quindi assegnarsi ai ticket, promuovendo la responsabilità e riducendo i tempi di risposta.
 
 ![Uno screenshot che mostra i messaggi di stato della presa in carico e come prendere in carico un ticket](@site/blog/assets/support-bot-beta/en/claiming.png)
 
