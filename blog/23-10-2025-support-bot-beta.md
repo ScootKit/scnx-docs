@@ -25,6 +25,8 @@ didn't cover it anymore.
 Today, we're launching the **V3 Beta**, which is now available to everyone. This update introduces our single
 most-requested feature: a comprehensive **Ticket System** that lives right inside your server.
 
+<!-- truncate -->
+
 ## "Modmail" + "Tickets" = Support-Bot {#rebrand}
 
 With V3, Support-Bot now gives you two powerful ways to handle support, which you can use separately or at the same

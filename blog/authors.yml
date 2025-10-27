@@ -12,6 +12,15 @@ scderox:
     threads: scderox
     twitch: scderox
     youtube: scderox
+salvo:
+  name: 𝕊𝕒𝕝𝕧𝕠
+  page: true
+  image_url: https://scnx-cdn.scootkit.net/1746981406205-ywgbJUwHosgZ0lAV00R7RCDeu8JmIeBA6dff6FisR2JI0qPC.png
+  title: salvo1a - SCNX Helper
+  socials:
+    github: salvo1a
+    instagram: _salvo.12.pallone_
+    youtube: https://www.youtube.com/channel/UCaIl9caB4fF5RvhfIwXQfvQ
 hörnchen:
   name: Hörnchen
   page: true
