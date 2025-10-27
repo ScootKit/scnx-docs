@@ -110,7 +110,7 @@ the team's solution in seconds.
 
 Say goodbye to boring `.txt` files! We've built a beautiful new web-based log viewer. Logs are now displayed in a clean,
 chat-like interface that's easy to read, search, and share. You can also see
-a [live example in action](https://logs.modmail.net/logs/session/019a12ca-ac91-7c40-954c-57898ba08842#98d33363b9261313a1c624da4f318f0e135a1994929f30f6de0fdbab935b490f).
+a [live example in action](https://logs.modmail.net/logs/session/019a1d38-a88e-7462-97a3-1a5ceca7fabe#c34b0c34cf26a5c569da6089fe9aa40513ec7882436849e060cd523f6647030f).
 
 ![Screenshot showing a ticket on our web-based ticket log viewer](@site/blog/assets/support-bot-beta/en/modmail-net.png)
 
