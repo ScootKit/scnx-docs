@@ -63,7 +63,7 @@ La flessibilità è la chiave. Un singolo utente può ora aprire più ticket con
 
 ### ⏰ Promemoria e chiusure automatiche per inattività {#ticket-system-ticket-closing}
 
-Mantieni la tua coda pulita ed efficiente. Configura il bot per sollecitare gentilmente gli utenti nei ticket inattivi. Se un ticket rimane inattivo per troppo tempo, puoi fare in modo che Support-Bot lo chiuda automaticamente, assicurando che solo le conversazioni attive occupino il tempo del tuo team.
+Mantieni la tua coda pulita ed efficiente. Configura il bot per sollecitare gentilmente gli utenti nei ticket inattivi. Se un ticket rimane inattivo per troppo tempo, puoi fare in modo che il Bot Supporto lo chiuda automaticamente, assicurando che solo le conversazioni attive occupino il tempo del tuo team.
 
 ![Uno screenshot che mostra la configurazione della chiusura dei ticket](@site/blog/assets/support-bot-beta/en/autoclose.png)
 
@@ -75,7 +75,7 @@ Raccogliere feedback è essenziale. Il sistema di valutazione a 5 stelle è ora 
 
 ### ✨ Messaggi di apertura ticket illimitati e intelligenti {#ticket-system-opening-messages}
 
-Crea quanti pannelli "Apri un ticket" desideri, posizionandoli in canali diversi con argomenti e autorizzazioni unici. Il sistema è intelligente: se hai meno di cinque argomenti di ticket per un pannello, li visualizzerà automaticamente come pulsanti semplici e puliti invece di un menu a tendina, rendendo l'interazione ancora più rapida.
+Crea quanti pannelli "Apri un ticket" desideri, posizionandoli in canali diversi con topic e autorizzazioni unici. Il sistema è intelligente: se hai meno di cinque topic dei ticket per un pannello, li visualizzerà automaticamente come pulsanti semplici e puliti invece di un menù a tendina, rendendo l'interazione ancora più rapida.
 
 ![Uno screenshot che mostra diverse configurazioni dei messaggi di apertura in Discord](@site/blog/assets/support-bot-beta/en/open-message.png)
 
