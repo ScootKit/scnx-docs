@@ -14,10 +14,6 @@ tags:
  - Modmail
 ---
 
-:::warning
-Avviso: Questo post è stato tradotto automaticamente dall'AI. Potrebbero essere presenti imprecisioni o errori. Si prega di fare riferimento alla versione originale in Inglese per la massima accuratezza.
-:::
-
 # Modmail è ora Bot Supporto: annuncio della Beta V3 e di un nuovo sistema di ticket
 
 Siamo entusiasti di annunciare il più grande aggiornamento nella storia del nostro prodotto e, con esso, un nome nuovo di zecca. Modmail sta diventando ufficialmente **Bot Supporto!**
