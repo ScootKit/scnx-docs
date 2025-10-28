@@ -2,8 +2,7 @@
 title: "Support Bot V3 is now in beta!"
 description: "Our new Support Bot, previously Modmail, adds support for a ticket system, AI summaries, better logs and much more. And the best news: You can try it yourself in the beta version."
 slug: 2025-support-bot-beta
-date: 2025-10-24T10:00
-unlisted: true
+date: 2025-10-28T10:00
 authors:
   - scderox
 tags:

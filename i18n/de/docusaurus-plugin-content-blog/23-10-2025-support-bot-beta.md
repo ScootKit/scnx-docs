@@ -2,8 +2,7 @@
 title: "Support Bot V3 ist jetzt in der Beta!"
 description: "Unser neuer Support Bot, ehemals Modmail, fügt Unterstützung für ein Ticket-System, KI-Zusammenfassungen, bessere Logs und vieles mehr hinzu. Und die beste Nachricht: Du kannst ihn selbst in der Beta-Version ausprobieren."
 slug: 2025-support-bot-beta
-date: 2025-10-24T10:00
-unlisted: true
+date: 2025-10-28T10:00
 authors:
   - scderox
 tags:
