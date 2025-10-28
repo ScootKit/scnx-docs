@@ -147,10 +147,10 @@
     "message": "Enable module on SCNX"
   },
   "interval.monthly": {
-    "message": "/ month"
+    "message": "/ mese"
   },
   "interval.yearly": {
-    "message": "/ year"
+    "message": "/ anno"
   },
   "interval.lifetime": {
     "message": "once"
