@@ -83,9 +83,9 @@ Crea quanti pannelli "Apri un ticket" desideri, posizionandoli in canali diversi
 
 Non abbiamo solo aggiunto un nuovo sistema; abbiamo potenziato l'intera piattaforma. Queste nuove funzionalità sono disponibili sia per il sistema Modmail che per quello dei ticket.
 
-### ✨ Riepiloghi dei ticket basati su IA {#combined-ai-summaries}
+### ✨ Riassunti dei ticket basati sull'AI {#combined-ai-summaries}
 
-Questa è una svolta. Invece di leggere un log di 200 messaggi, la nostra nuova **funzione di riepilogo AI (opzionale)** genererà un breve riepilogo dell'intera conversazione alla chiusura di un ticket. Puoi comprendere il problema dell'utente e la soluzione del team in pochi secondi.
+Questa è una svolta. Invece di leggere un log di 200 messaggi, la nostra nuova **funzione di riepilogo AI (opzionale)** genererà un breve riassunto dell'intera conversazione alla chiusura di un ticket. Puoi comprendere il problema dell'utente e la soluzione del team in pochi secondi.
 
 ![Screenshot di un riepilogo AI di un ticket](@site/blog/assets/support-bot-beta/en/ai-summary.png)
 
@@ -97,11 +97,11 @@ Dì addio ai noiosi file .txt! Abbiamo creato un nuovo e bellissimo visualizzato
 
 ### ✨ Nomi dei canali dinamici {#combined-dynamic-names}
 
-Ora puoi configurare gli argomenti dei ticket per sovrascrivere automaticamente il formato del nome del canale. Ciò significa che puoi identificare immediatamente lo scopo di un ticket solo dal suo nome!
+Ora puoi configurare i topic dei ticket per sovrascrivere automaticamente il formato del nome del canale. Ciò significa che puoi identificare immediatamente lo scopo di un ticket solo dal suo nome!
 
 Per esempio:
 
-* `❗-ticket-123` per un Bug Report
+* `❗-ticket-123` per una Segnalazione di Bug
 * `⭐-ticket-219` per una Partnership
 
 ### Altri potenti strumenti per la V3: {#combined-more-v3}
@@ -109,31 +109,31 @@ Per esempio:
 * **Statistiche combinate:** La dashboard ora presenta una panoramica combinata, che mostra le statistiche di Modmail e dei ticket, fianco a fianco.
 * **Cronologia ticket:** Un nuovo comando `/ticket-history` ti consente di visualizzare facilmente i ticket di supporto passati di un utente.
 * **Rinominare i ticket:** I membri del team possono ora rinominare i ticket per una migliore organizzazione.
-* **ID ticket personalizzati:** Modifica il formato dei tuoi ID ticket, aggiungendo prefissi o utilizzando ID casuali invece di numeri sequenziali.
+* **ID dei ticket personalizzati:** Modifica il formato degli ID dei ticket, aggiungendo prefissi o utilizzando ID casuali invece di numeri sequenziali.
 * **Importazione festività:** Importa facilmente le tue festività locali per gestire la disponibilità del tuo team.
 
 ## Aggiornamenti al sistema Modmail classico {#modmail}
 
-Non abbiamo dimenticato le nostre radici Modmail! Anche il classico sistema DM ha ricevuto alcune fantastiche nuove funzionalità:
+Non abbiamo dimenticato le nostre radici della Modmail! Anche il classico sistema dei DM ha ricevuto alcune fantastiche nuove funzionalità:
 
-* **Messaggi informativi avanzati:** Ora puoi impostare *più* messaggi informativi e configurarli per essere visualizzati solo per specifici argomenti di ticket. Se un argomento ha una sola opzione, il menu a tendina diventa automaticamente un semplice pulsante. (Nota: se avevi un messaggio informativo V2, dovrai configurarlo di nuovo nel nuovo sistema più potente).
-* **Statistiche argomenti:** La scheda delle statistiche ora mostra gli argomenti dei ticket più utilizzati, aiutandoti a capire di cosa hanno più bisogno i tuoi utenti.
+* **Messaggi informativi avanzati:** Ora puoi impostare *più* messaggi informativi e configurarli per essere visualizzati solo per specifici topic dei ticket. Se un topic ha una sola opzione, il menù a tendina diventa automaticamente un semplice bottone. (Nota: se avevi un messaggio informativo V2, dovrai configurarlo di nuovo nel nuovo sistema più potente).
+* **Statistiche dei topic:** La scheda delle statistiche ora mostra i topic dei ticket più utilizzati, aiutandoti a capire di cosa hanno più bisogno i tuoi utenti.
 * **Messaggi di valutazione personalizzabili:** I messaggi di valutazione del team alla fine di un ticket sono stati migliorati e ora possono essere completamente personalizzati.
 
-## Ottieni Support-Bot oggi {#get-today}
+## Ottieni Bot Supporto oggi {#get-today}
 
 :::warning
-Si prega di notare che Support Bot V3 è una versione Beta e può essere instabile. Una volta effettuato il passaggio, non è possibile tornare indietro. Si prega di utilizzare a proprio rischio e di farci sapere il vostro feedback o eventuali problemi nel nostro [supporto clienti](https://scnx.app/help).
+Si prega di notare che il Bot Supporto V3 è una versione Beta e può essere instabile. Una volta effettuato il passaggio, non è possibile tornare indietro. Si prega di utilizzare a proprio rischio e di farci sapere il vostro feedback o eventuali problemi nella nostra [assistenza clienti](https://scnx.app/help).
 :::
 
-Questo enorme aggiornamento è disponibile subito nella versione Beta. Si prega di notare che Support-Bot è incluso in tutti i nostri piani a pagamento, con il [piano Unlimited](/docs/scnx/guilds/plans) a partire da soli <PlanPrice plan="UNLIMITED" type="MONTHLY" /> (o <PlanPrice plan="UNLIMITED" type="YEARLY" />), ma i prezzi potrebbero differire al di fuori dell'Unione Europea in base alla tua regione.
+Questo enorme aggiornamento è disponibile subito nella versione Beta. Si prega di notare che il Bot Supporto è incluso in tutti i nostri piani a pagamento, con il [piano Unlimited](/docs/scnx/guilds/plans) a partire da soli <PlanPrice plan="UNLIMITED" type="MONTHLY" /> (o <PlanPrice plan="UNLIMITED" type="YEARLY" />), ma i prezzi potrebbero differire al di fuori dell'Unione Europea in base alla tua regione.
 
-Per passare al nuovo Support-Bot V3, segui queste istruzioni:
+Per passare al nuovo Bot Supporto V3, segui queste istruzioni:
 
 1.  Apri la nostra [dashboard Modmail](https://scnx.app/glink?page=support-system/manage).
-2.  Fai clic su "Change" (Cambia) accanto al branch visualizzato.
-3.  Seleziona il branch Beta.
-4.  Fai clic su "Confirm" (Conferma) per confermare il passaggio e per prendere atto che non è possibile tornare alla vecchia versione.
-5.  La migrazione inizierà ora. Potrebbero essere necessari alcuni minuti, si prega di essere pazienti. Se riscontri problemi, attendi qualche minuto e ricarica la pagina. Se ciò non dovesse aiutare, [contatta il nostro supporto clienti](https://scnx.app/help).
+2.  Fai clic su "Cambia" accanto al ramo visualizzato.
+3.  Seleziona il ramo Beta.
+4.  Fai clic su "Conferma" per confermare il passaggio e si prega di prendere atto che non è possibile tornare alla vecchia versione.
+5.  La migrazione inizierà. Potrebbero essere necessari alcuni minuti, si prega di essere pazienti. Se riscontri problemi, attendi qualche minuto e ricarica la pagina. Se ciò non dovesse aiutare, [contatta la nostra assistenza clienti](https://scnx.app/help).
 
 ![Screenshot che mostra come passare alla versione beta](@site/blog/assets/support-bot-beta/en/switch-beta.png)
