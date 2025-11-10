@@ -1,1 +1,1 @@
-# Support Bot Features
+# Feature Comparison
