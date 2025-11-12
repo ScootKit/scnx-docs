@@ -12,6 +12,6 @@
 
 <center><h1>Coming soon ✨</h1></center>
 
-## Bot-Branding {bot-branding}
+## Bot-Branding {#bot-branding}
 
 <center><h1>Coming soon ✨</h1></center>

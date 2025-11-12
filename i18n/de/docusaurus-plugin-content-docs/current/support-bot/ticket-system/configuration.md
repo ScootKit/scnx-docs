@@ -74,4 +74,4 @@ Um diese Funktion in deinem Ticket-System zu aktivieren, besuche den Abschnitt [
 
 ## Erweiterte Nachrichten-Konfiguration {#advanced-message-configuration}
 
-## Statistik-Kanäle {statistics-channels}
+## Statistik-Kanäle {#statistics-channels}
