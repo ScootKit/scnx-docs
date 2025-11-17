@@ -109,7 +109,7 @@ Falls ein Team-Mitglied in seinem Ticket inaktiv sein sollte, kannst du ihn mith
 * Sperre den Kanal, damit Mitglieder während der ausstehenden Zuweisung in einer Pausierung nicht in den Kanal schreiben können.
 * Sobald ein Ticket pausiert ist, wird das [Automatische Ticket-Schließen](#auto-close-tickets) für dieses Ticket deaktiviert.
 
-<h3>Bilder Coming soon ✨<h3>
+<h3>Bilder Coming soon ✨</h3>
 
 ### Einrichtung {#ticket-hold-setup}
 
