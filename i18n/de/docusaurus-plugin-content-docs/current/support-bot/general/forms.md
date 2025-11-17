@@ -1,3 +1,9 @@
+---
+sidebar_position: 4
+title: Formulare
+description: Erstelle und verwalte Formulare, welche du entweder manuell oder automatisiert an Nutzer versenden kannst!
+---
+
 # Formulare
 
 ## Konfiguration {#configuration}
