@@ -34,7 +34,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ``/ticket open``  | *Nur verfügbar, wenn "Nutzern erlauben, Tickets per Befehl zu öffnen" aktiviert ist.*<br/> Öffnet ein neues Ticket (mit einem bestimmten Thema) auf deinem Discord-Server. |
 | ``/ticket close`` | Erlaubt Teammitgliedern und Nutzern (wenn [konfiguriert](#ticket-closing-configuration)) das Ticket im jeweiligen Kanal zu schließen.                                      |
-| ``/ticket form``  | Versendet ein bestimmtes [Formular](/de/docs/support-bot/forms) im Ticket.                                                                                                 |
+| ``/ticket form``  | Versendet ein bestimmtes [Formular](/de/docs/support-bot/general/forms) im Ticket.                                                                                                 |
 
 ### Konfiguration {#main-configuration-configuration}
 
@@ -111,7 +111,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?       | Wenn aktiviert, wird anstatt der sofortigen Schließung eines Tickets durch ein Teammitglied eine Schließungs-Anfrage an den Nutzer gesendet, welche dieser bestätigen muss, um das Ticket endgültig zu schließen.                                                                                                                                         |
 | Nachricht bei Ticketschließungsanfrage durch Teammitglied                   | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>Diese Nachricht sendet dein Bot bei einer Schließungs-Anfrage in das jeweilige Ticket.                                                                                                                                                   |
 | Zeitüberschreitung bei der Schließungsanfrage                               | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>In diesem Zeitraum muss der Nutzer auf die Schließungs-Anfrage antworten, bevor sein Ticket automatisch geschlossen wird. Wie du Zeitangaben in SCNX einstellst, erfährst du [hier](/de/docs/custom-bot/additional-features/#durations). |
-| Teammitgliedern erlauben, Tickets auch ohne Bestätigung zu schließen?       | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>Wenn aktiviert, können Teammitglieder trotz Schließungs-Anfrage das Ticket mit dem Befehl [``/ticket close [force:<Boolean>]``](#ticket-closing-commands) schließen.                                                                       |
+| Teammitgliedern erlauben, Tickets auch ohne Bestätigung zu schließen?       | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>Wenn aktiviert, können Teammitglieder trotz Schließungs-Anfrage das Ticket mit dem Befehl [``/ticket close [force:<Boolean>]``](#ticket-closing-commands) schließen.                                                                     |
 
 ## Zusätzliche Ticketmitglieder {#additional-ticket-members}
 
