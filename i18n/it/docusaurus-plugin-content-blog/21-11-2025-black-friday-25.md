@@ -54,10 +54,14 @@ Ricarica una volta e non pensarci più. Genera più immagini, chatta con l'AI e 
 
 [**👉 Acquista ora ai Saldi del Black Friday**](https://scnx.app/it/black-friday)
 
-### 3. Abbonamenti ScootKit
+### 3. Membership ScootKit
+
+:::warning Attenzione
+Le membership ScootKit **non** sono al momento disponibili in Italiano, pertanto tutti i benefici delle membership saranno disponibili in Inglese per te.
+:::
 
 :::info Importante
-Gli abbonamenti **non** sbloccano le funzionalità del server SCNX. Per le funzionalità del server (come hosting senza pubblicità o Bot Supporto), si prega di acquistare un Piano Server SCNX.
+Le membership **non** sbloccano le funzionalità del server SCNX. Per le funzionalità del server (come hosting senza pubblicità o Bot Supporto), si prega di acquistare un Piano Server SCNX.
 :::
 
 Supporta lo sviluppo di SCNX e ottieni vantaggi come l'accesso ai Dietro le Quinte.
