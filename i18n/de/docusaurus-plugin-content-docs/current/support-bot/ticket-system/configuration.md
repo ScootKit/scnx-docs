@@ -102,7 +102,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 
 |                                    Feld                                     |                                                                                                                                                                       Beschreibung                                                                                                                                                                        |
 | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ticketschließungsknopf in der Ticket-Nachricht anzeigen?                    | Wenn aktiviert, wird ein Knopf zur Ticket-Nachricht hinzugefügt, mit welchem Team-Mitglieder (oder Nutzer, falls aktiviert) das Ticket schließen können - anderenfalls müssen sie den Befehl ``/ticket close`` verwenden.                                                                                                                                 |
+| Ticketschließungsknopf in der Ticket-Nachricht anzeigen?                    | Wenn aktiviert, wird ein Knopf zur Ticket-Nachricht hinzugefügt, mit welchem Team-Mitglieder (oder Nutzer, falls aktiviert) das Ticket schließen können - anderenfalls müssen sie den Befehl [``/ticket close``](#befehle-ticket-closing-commands) verwenden.                                                                                             |
 | Inhalt des Ticketschließungsknopfs                                          | *Nur verfügbar, wenn "Ticketschließungsknopf in der Ticket-Nachricht anzeigen?" aktiviert ist.*<br/>Hier kannst du den Text anpassen, welcher im Knopf angezeigt wird.                                                                                                                                                                                    |
 | Erlauben, dass Nutzer ihre eigenen Tickets schließen?                       | Wenn aktiviert, können neben Team-Mitgliedern auch Nutzer ihre Tickets schließen.                                                                                                                                                                                                                                                                         |
 | Bestätigung per Privatnachricht schicken, wenn ein Ticket geschlossen wird? | Wenn aktiviert, wird der Bot nach Schließen des Tickets eine Privatnachricht an den Nutzer senden.                                                                                                                                                                                                                                                        |
@@ -220,6 +220,8 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * [Konfiguriere](#ticket-hold-configuration) verfügbare Optionen.
 
 ### Befehle {#ticket-hold-commands}
+
+<SlashCommandExplanation />
 
 |      Befehl      |                                Beschreibung                                |
 | ---------------- | -------------------------------------------------------------------------- |
