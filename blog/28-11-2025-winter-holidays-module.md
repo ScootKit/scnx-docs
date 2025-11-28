@@ -1,5 +1,5 @@
 ---
-title: "Get your Discord server into the Christmas spirit with our new module for your own advent calendar!"
+title: "Celebrate Christmas with a Discord Advent Calendar from SCNX"
 description: "Use our new module completely free of charge to offer an advent calendar on your Discord server!"
 slug: 2025-winter-holidays
 date: 2025-11-28T10:00
@@ -35,10 +35,12 @@ The module allows you to send 24 doors in a channel of your choice. From Decembe
 SCNX is a service where you can create a completely customizable Discord bot for your server without any programming. You can follow [these easy instructions](/docs/setup) to get started right away.
 :::
 
-* **Configure the module:** You define some basic settings and determine what awaits users behind the doors. The module is very easy to understand - should you still have problems, our [excellent customer support](https://scnx.app/help) is happy to help.
+* **Configure the module:** You define some basic settings and determine what awaits users behind the doors. The module is very easy to understand - should you still have problems, our [excellent customer support](/blog/28-11-2025-winter-holidays-module.md/help) is happy to help.
 * **Your community opens the respective door every day:** Users can interactively open today's door in your advent calendar channel every day. Only then do they receive the message customized by you and possibly more, such as a role.
 * **The interactive advent calendar updates automatically:** Your advent calendar updates automatically every hour - including the current date and other exciting info, e.g. how many users are participating in the advent calendar.
 
+![Screenshot showing the advent calendar message in Discord](@site/blog/assets/winter-holidays-module/image.png)
+![Screenshot showing the configuration options of the module "Winter Holidays" on scnx.app](@site/blog/assets/winter-holidays-module/image2.png)
 
 ## ❓ Why is a virtual advent calendar a good idea for my community?
 
@@ -47,8 +49,8 @@ With a virtual advent calendar, you make your server stand out from the crowd wh
 ## 💡 Tips for an even better event
 Further tips and tricks, which also go into more detail on the concrete implementation on your server, can be found in our scnx.tips article.
 
-## ✉️ Questions or Problems?
+## ✉️ Questions or Problems? {#help}
 
-You can find more information about the module in the [scnx.tips article](https://scnx.tips/hunt-the-code/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/help) or directly on [our Discord](https://scootk.it/dc-en).
+You can find more information about the module in the [scnx.tips article](https://scnx.tips/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/help) or directly on [our Discord](https://scootk.it/dc-en).
 
 Make this December an unforgettable experience for your Discord community with an exciting virtual advent calendar powered by SCNX!
