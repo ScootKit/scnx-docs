@@ -38,7 +38,7 @@ Das Modul ermöglicht es dir, in einem Kanal deiner Wahl 24 Türchen zu senden. 
 SCNX ist ein Dienst, bei dem du einen komplett anpassbaren Discord-Bot für deinen Server erstellen kannst, ganz ohne Programmieren. Du kannst [dieser einfachen Anleitung](/docs/setup) folgen, um direkt loszulegen.
 :::
 
-* **Konfiguriere das Modul:** Du legst einige grundlegende Einstellungen fest und bestimmst, was Nutzer hinter den Türchen erwartet. Das Modul ist sehr einfach zu verstehen - solltest du trotzdem Probleme haben, hilft dir unser [exzellenter Kundensupport](/blog/28-11-2025-winter-holidays-module.md/help) gerne weiter.
+* **Konfiguriere das Modul:** Du legst einige grundlegende Einstellungen fest und bestimmst, was Nutzer hinter den Türchen erwartet. Das Modul ist sehr einfach zu verstehen - solltest du trotzdem Probleme haben, hilft dir unser [exzellenter Kundensupport](https://scnx.app/de/help) gerne weiter.
 * **Deine Community öffnet jeden Tag das jeweilige Türchen:** Nutzer können jeden Tag in deinem Adventskalender-Kanal interaktiv das heutige Türchen öffnen. Daraufhin erhalten auch nur sie die von dir angepasste Nachricht und eventuell weiteres, wie z.B. eine Rolle.
 * **Der interaktive Adventskalender aktualisiert sich automatisch:** Jede Stunde aktualisiert sich dein Adventskalender automatisch - inklusive aktuellem Datum und weiteren spannenden Infos, z.B. wie viele Nutzer am Adventskalender teilnehmen
 
