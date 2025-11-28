@@ -1,5 +1,5 @@
 ---
-title: "Bringe deinen Discord-Server in Weihnachtsstimmung mit unserem neuen Modul "Winter Holidays"!"
+title: "Bringe deinen Discord-Server in Weihnachtsstimmung mit unserem neuen Modul für deinen eigenen Adventskalender!"
 description: "Nutze unser neues Modul komplett kostenfrei, um einen Adventskalender auf deinem Discord-Server anbieten zu können!"
 slug: 2025-winter-holidays
 date: 2025-11-28T10:00
@@ -14,9 +14,9 @@ tags:
 
 # 🧑‍🎄 Dezember steht vor der Tür: Nutze unser neues Modul, um deinen Discord-Server mit einem Adventskalender abzuheben
 
-Hey there,
+Hallo,
 
-the holidays are just around the corner! Christmas is coming up, so it's time to prepare an event for your Discord – and it's super easy with SCNX!
+die Feiertage stehen vor der Tür! Weihnachten naht, also ist es an der Zeit, ein Event für deinen Discord vorzubereiten – und mit SCNX geht das ganz einfach!
 
 <!-- truncate -->
 
@@ -34,8 +34,8 @@ Das Modul ermöglicht es dir, in einem Kanal deiner Wahl 24 Türchen zu senden. 
 
 ## 🛠️ Wie es funktioniert
 
-:::tip Not with SCNX yet?
-SCNX is a service where you can create a completely customizable Discord bot for your server without any programming. You can follow [these easy instructions](/docs/setup) to get started right away.
+:::tip Noch nicht bei SCNX?
+SCNX ist ein Dienst, bei dem du einen komplett anpassbaren Discord-Bot für deinen Server erstellen kannst, ganz ohne Programmieren. Du kannst [dieser einfachen Anleitung](/docs/setup) folgen, um direkt loszulegen.
 :::
 
 * **Konfiguriere das Modul:** Du legst einige grundlegende Einstellungen fest und bestimmst, was Nutzer hinter den Türchen erwartet. Das Modul ist sehr einfach zu verstehen - solltest du trotzdem Probleme haben, hilft dir unser [exzellenter Kundensupport](https://scnx.app/help) gerne weiter.
@@ -54,4 +54,4 @@ Weitere Tipps und Tricks, die auch noch mehr auf die konkrete Umsetzung auf dein
 
 You can find more information about the module in the [scnx.tips article](https://scnx.tips/hunt-the-code/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/help) or directly on [our Discord](https://scootk.it/dc-en).
 
-Make Easter an unforgettable experience for your Discord community with an exciting virtual egg code hunt powered by SCNX\!
+Mache diesen Dezember mit einem spannenden virtuellen Adventskalender von SCNX zu einem unvergesslichen Erlebnis für deine Discord-Community!
