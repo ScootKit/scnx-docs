@@ -1,5 +1,5 @@
 ---
-title: "Get your Discord server into the Christmas spirit with our new module 'Winter Holidays'!"
+title: "Get your Discord server into the Christmas spirit with our new module for your own advent calendar!"
 description: "Use our new module completely free of charge to offer an advent calendar on your Discord server!"
 slug: 2025-winter-holidays
 date: 2025-11-28T10:00
@@ -51,4 +51,4 @@ Further tips and tricks, which also go into more detail on the concrete implemen
 
 You can find more information about the module in the [scnx.tips article](https://scnx.tips/hunt-the-code/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/help) or directly on [our Discord](https://scootk.it/dc-en).
 
-Make Easter an unforgettable experience for your Discord community with an exciting virtual egg code hunt powered by SCNX!
+Make this December an unforgettable experience for your Discord community with an exciting virtual advent calendar powered by SCNX!
