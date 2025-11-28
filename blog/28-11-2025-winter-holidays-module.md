@@ -17,6 +17,8 @@ Hey there,
 
 the holidays are just around the corner! Christmas is coming up, so it's time to prepare an event for your Discord – and it's super easy with SCNX!
 
+<!-- truncate -->
+
 ## 📅 December starts soon
 
 December starts soon - and with it, many people will open a door every day until Christmas again. This increases the anticipation for Christmas and sweetens the day for many people.
