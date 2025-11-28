@@ -4,8 +4,6 @@ title: Konfiguration
 description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 ---
 
-<center><h1>Wird überarbeitet ✨</h1></center>
-
 # Konfiguration
 
 ## Hauptkonfiguration {#main-configuration}
