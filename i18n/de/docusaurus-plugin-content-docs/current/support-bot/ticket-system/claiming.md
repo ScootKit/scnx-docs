@@ -28,7 +28,7 @@ description: Konfiguriere das Ticket-Claiming, um deine Tickets bestmöglich zu 
 |                               Feld                                |                                                       Beschreibung                                                       |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Ticket-Claiming aktivieren?                                       | Aktiviert oder deaktiviert die Funktion für dein Ticket-System.                                                          |
-| Ticket Zuweisungsbenachrichtigung                                 | In diesen Kanal wird dein Bot Zuweisungsbenachrichtigungen senden, sobald neue Tickets erstellt werden.                  |
+| Ticket-Zuweisungsbenachrichtigung                                 | In diesen Kanal wird dein Bot Zuweisungsbenachrichtigungen senden, sobald neue Tickets erstellt werden.                  |
 | Ticket-Kanal sperren, bevor ein Ticket zugewiesen wird?           | Wenn aktiviert, können Teammitglieder aufgrund der Kanal-Sperrung nicht vor Zuweisen des Tickets in den Kanal schreiben. |
 | Tickets, die einem Teammitglied nicht zugewiesen sind, ausblenden | Wenn aktiviert, werden Teammitgliedern nur Tickets angezeigt, denen sie zugewiesen sind.                                 |
 
