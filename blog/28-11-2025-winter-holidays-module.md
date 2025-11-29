@@ -37,7 +37,7 @@ The module allows you to send 24 doors in a channel of your choice. From Decembe
 SCNX is a service where you can create a completely customizable Discord bot for your server without any programming. You can follow [these easy instructions](/docs/setup) to get started right away.
 :::
 
-* **Configure the module:** You define some basic settings and determine what awaits users behind the doors. The module is very easy to understand - should you still have problems, our [excellent customer support](/blog/28-11-2025-winter-holidays-module.md/help) is happy to help.
+* **Configure the module:** You define some basic settings and determine what awaits users behind the doors. The module is very easy to understand - should you still have problems, our [excellent customer support](https://scnx.app/help) is happy to help.
 * **Your community opens the respective door every day:** Users can interactively open today's door in your advent calendar channel every day. Only then do they receive the message customized by you and possibly more, such as a role.
 * **The interactive advent calendar updates automatically:** Your advent calendar updates automatically every hour - including the current date and other exciting info, e.g. how many users are participating in the advent calendar.
 
