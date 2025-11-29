@@ -50,10 +50,10 @@ SCNX ist ein Dienst, bei dem du einen komplett anpassbaren Discord-Bot für dein
 Mit einem virtuellem Adventskalender hebst du deinen Server von der Masse ab, während du deiner Community ein spannendes Event bietest. Während diesem Event kommen Nutzer jeden Tag zu deinem Server zurück, weshalb du mit höherer Aktivität rechnen kannst. Es ist außerdem sowohl für deine Community als auch für dich extrem einfach zu nutzen und zu erstellen, obwohl du fast alles anpassen kannst.
 
 ## 💡Tipps für einen noch besseres Event
-Weitere Tipps und Tricks, die auch noch mehr auf die konkrete Umsetzung auf deinem Server eingehen, gibt es in unserem scnx.tips-Artikel.
+Weitere Tipps und Tricks, die auch noch mehr auf die konkrete Umsetzung auf deinem Server eingehen, gibt es in unserem [scnx.tips-Artikel](https://scnx.tips/winter-holidays-2025/).
 
 ## ✉️ Questions or Problems? {#help}
 
-You can find more information about the module in the [scnx.tips article](https://scnx.tips/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/de/help) or directly on [our Discord](https://scootk.it/dc-de).
+You can find more information about the module in the [scnx.tips article](https://scnx.tips/winter-holidays-2025/), otherwise we are always happy to help on [scnx.app/help](https://scnx.app/de/help) or directly on [our Discord](https://scootk.it/dc-de).
 
 Mache diesen Dezember mit einem spannenden virtuellen Adventskalender von SCNX zu einem unvergesslichen Erlebnis für deine Discord-Community!
