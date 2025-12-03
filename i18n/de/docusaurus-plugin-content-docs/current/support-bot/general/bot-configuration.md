@@ -11,7 +11,7 @@ description: Passe die grundlegenden Funktionen deines Bots an!
 ### Funktionen {#features}
 
 * Aktiviere die Blockierungsliste, um Nutzer von deinem Support-Bot auszuschließen.
-* Nutze Slash-Befehle für die blockierungsliste in Discord, um Nutzer ohne viel Aufwand hinzufügen oder entfernen zu können.
+* Nutze Slash-Befehle für die Blockierungsliste in Discord, um Nutzer ohne viel Aufwand hinzufügen oder entfernen zu können.
 * Passe die Zeitzone deines Bots an, damit dieser korrekt funktioniert.
 
 <h4>Bilder Coming Soon ✨</h4>
