@@ -10,7 +10,7 @@ description: Erstelle und verwalte Formulare, welche du entweder manuell oder au
 
 * Richte Formulare ein, um Informationen von Nutzern abzufragen.
 * Passe Fragen und Erscheinungsbild des Dialogs selbst an.
-* Sende ein Formular per Befehl in ein Ticket.
+* Sende ein Formular ohne viel Aufwand per Befehl in ein Ticket.
 
 <h4>Bilder Coming Soon ✨</h4>
 
@@ -37,7 +37,7 @@ description: Erstelle und verwalte Formulare, welche du entweder manuell oder au
 
 |        Feld         |                                                                 Beschreibung                                                                 |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Dialog-Öffnen-Knopf | Dieser Text wird im Knopf zum Öffnen des Formulars angezeigt, der an die Nachricht vom ``[/ticket form](#commands)``-Befehl angehangen wird. |
+| Dialog-Öffnen-Knopf | Dieser Text wird im Knopf zum Öffnen des Formulars angezeigt, der an die Nachricht vom [``/ticket form``](#commands)-Befehl angehangen wird. |
 
 ### Formulare verwalten {#manage-forms}
 

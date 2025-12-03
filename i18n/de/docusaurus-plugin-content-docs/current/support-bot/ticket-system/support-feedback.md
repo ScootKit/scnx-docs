@@ -19,7 +19,7 @@ description: Verwalte deine Support-Bewertungen, um die Support-Erfahrung für d
 
 * Besuche die Seite [Support-Bewertungen](https://scnx.app/glink?page=support-system/ticket-system/support-feedback) in deinem Dashboard.
 * [Konfiguriere](#main-configuration) verfügbare Optionen.
-* Erstelle eine neue Feedback-Frage, indem du in der [Konfiguration](#main-configuration) auf den Knopf "Formular bearbeiten" und anschließend auf "Feld hinzufügen" klickst.
+* Erstelle eine neue Feedback-Frage, indem du in der [Konfiguration](#main-configuration) auf den Knopf "Fragen bearbeiten" und anschließend auf "Feld hinzufügen" klickst.
 * [Konfiguriere](#manage-feedback-questions) verfügbare Optionen für die entsprechende Feedback-Frage.
 
 ## Konfiguration {#configuration}

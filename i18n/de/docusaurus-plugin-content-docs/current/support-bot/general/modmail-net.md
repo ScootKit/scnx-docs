@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: modmail.net-Funktionen
+title: modmail.net Funktionen
 description: Konfiguriere Optionen für modmail.net, einem ScootKit-Produkt für die Darstellung von Transkripten und mehr!
 ---
 
