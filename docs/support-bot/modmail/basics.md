@@ -1,6 +1,14 @@
+---
+sidebar_position: 2
+title: Starter Guide
+description: Please adjust this description. Should be less than 100 characters.
+---
+
 # Modmail starter guide (Modmail 101)
 
-<OutdatedWarning type="MODMAIL_V2"/>
+:::warning
+Page has not been updated for Support Bot V3 and might not be complete.
+:::
 
 In this document, we've collected everything that is helpful to understand how to use modmail on any server.
 

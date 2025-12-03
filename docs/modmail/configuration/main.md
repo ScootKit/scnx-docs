@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+<OutdatedWarning type="MODMAIL_V2"/>
+
 # Main configuration
 
 Configure the basic look and behavior of your modmail. 

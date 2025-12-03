@@ -6,6 +6,7 @@ import PlanPrice from '../components/PlanPrice';
 import ModuleOverview from '../components/ModuleOverview';
 import SlashCommandExplanation from '../components/SlashCommandExplanation';
 import Video from '../components/Video';
+import OutdatedWarning from '../components/OutdatedWartning';
 
 export default {
     ...MDXComponents,
@@ -13,6 +14,7 @@ export default {
     Video,
     TabItem,
     ModuleOverview,
+    OutdatedWarning,
     Tabs,
     SlashCommandExplanation,
     PlanPrice

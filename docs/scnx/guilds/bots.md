@@ -5,8 +5,8 @@ sidebar_position: 1
 # Bots on SCNX
 
 This documents contains guides applicable for both the [Custom Bot](/docs/custom-bot/intro) and
-the [Modmail Bot](/docs/modmail/intro) - if you want to set up these bots, follow
-the [Get started with Custom Bot](/docs/custom-bot) or the [Get started with Modmail-Bot](/docs/modmail) guides.
+the [Support-Bot](/docs/support-bot/intro) - if you want to set up these bots, follow
+the [Get started with Custom Bot](/docs/custom-bot) or the [Get started with Support-Bot](/docs/support-bot) guides.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -14,12 +14,12 @@ The steps to troubleshoot are different between the two bots. Please continue in
 guides:
 
 * [Custom Bot](/docs/custom-bot/troubleshooting)
-* Modmail-Bot
+* Support Bot
 
 ## The Basics {#basics}
 
 Each bot on SCNX is its own process running on a real, physical server. You can manage the process in your
-Bot-Status-Panel of your [Modmail-](https://scnx.app/glink?page=modmail/manage)
+Bot-Status-Panel of your [Support-Bot-](https://scnx.app/glink?page=support-system/manage)
 or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 
 Here's an example of a Custom-Bot-Status-Panel:
@@ -45,7 +45,7 @@ about:
   problems and offer your solutions - or if they are bugs in the bot themselves - to fix them. You might get asked
   to [share them](#sharing-logs).
 * Language: This is the (human) language your bot will use for any default-configuration-values and messages that can't
-  be configured. Modmail might, in some cases, use the language of the user that is executing a command instead of this
+  be configured. Your Support-Bot might, in some cases, use the language of the user that is executing a command instead of this
   value. You can always [change the language](#bot-language) of your bot.
 * Server: This is the physical server - also called Bot-Host - your bot is being hosted on. You
   can [change the Bot-Host](#bot-host) if you want.
@@ -53,7 +53,7 @@ about:
   this on "v3" (Stable version), but can change it to the "beta"-Branch (Public beta; might be unstable).
 * Version (only visible for Custom-Bots): This is a unique number identifying a published code-version. Depending on
   your version, your bot might not be able to use certain new features or take advanced of newly published releases. If
-  your version is not up-to-date, you'll find a warning indicating this. Your Modmail is always up-to-date. Learn more
+  your version is not up-to-date, you'll find a warning indicating this. Your Support-Bot is always up-to-date. Learn more
   about [Updates & Versions](#bot-updates).
 * RAM / CPU Values: These are right below the "Online"-Status. You can safely ignore them, they are only there as a
   gimmick and show the RAM / CPU Usage of your Bot. These are irrelevant as SCNX is automatically optimizing your bot if
@@ -72,15 +72,15 @@ about:
             <li>You won't be able to use certain features if your bot is not on the latest version until you upgrade to a newer version.</li>
         </ul>
     </TabItem>
-    <TabItem value="modmailBot" label="Modmail-Bot">
+    <TabItem value="supportBot" label="Support-Bot">
         <ul>
-          <li>We publish regular updates for Modmail, sometimes even multiple versions a day. All updates are free of charge.</li>
-          <li>Your Modmail is always running the newest version available for it.</li>
-          <li>When there's a new version available, your Modmail will automatically restart to apply it.</li>
+          <li>We publish regular updates for Support-Bot, sometimes even multiple versions a day. All updates are free of charge.</li>
+          <li>Your Support-Bot is always running the newest version available for it.</li>
+          <li>When there's a new version available, your Support-Bot will automatically restart to apply it.</li>
           <li>We'll announce big updates on our <a href="https://scootk.it/dc">Discord-Server</a> and post a link to the changelog there.</li>
-          <li>Some small updates and bug-fixes won't be announced - your Modmail simply applies them without any commotion.</li>
-          <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=modmail/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog page</a>.</li>
-          <li>When updating, your Modmail might be offline for a short period of time while applying database changes. This takes less than a minute and startup will continue as usual afterward.</li>
+          <li>Some small updates and bug-fixes won't be announced - your Support-Bot simply applies them without any commotion.</li>
+          <li>You can find all changelogs in your <a href="https://scnx.app/glink?page=support-system/manage">Bot-Dashboard</a> and on our <a href="https://scnx.app/changelogs?type=MODMAIL">Changelog page</a>.</li>
+          <li>When updating, your Support-Bot might be offline for a short period of time while applying database changes. This takes less than a minute and startup will continue as usual afterward.</li>
         </ul>
     </TabItem>
 </Tabs>
@@ -111,7 +111,7 @@ about:
           <li>Confirm your change by clicking "Confirm".</li>
         </ol>
     </TabItem>
-    <TabItem value="modmailBot" label="Modmail-Bot">There's no public Beta version available for Modmail at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed testing series and ensure that each release is fully stable when released to Modmail.</TabItem>
+    <TabItem value="supportBot" label="Support-Bot">There's no public Beta version available for Support-Bot at this time. Selected users might receive access to a private beta, but generally speaking, all new features all available for everyone. Compared to Custom-Bot, we do a way more detailed testing series and ensure that each release is fully stable when released to Support-Bot.</TabItem>
 </Tabs>
 
 ### Change Bot-Host {#bot-host}
@@ -119,7 +119,7 @@ about:
 The Bot-Host is the physical server your bot is running on. We offer several Bot-Hosts running in different regions of
 the world. Here's how to switch a Bot-Host:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-system/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Next, click "Change" next to "Server" in the "Status"-Section.
 3. Select the Bot-Host you want to switch to.
@@ -155,7 +155,7 @@ even move your bots around if you do not have a paid plan to distribute resource
 ### Change Bot-Language {#bot-language}
 
 The (human) language your bot will be used for any default-configuration-values and messages that can't
-be configured. Modmail might, in some cases, use the language of the user that is executing a command instead of this
+be configured. Your Support-Bot might, in some cases, use the language of the user that is executing a command instead of this
 value.
 
 :::info
@@ -165,7 +165,7 @@ either reset these files or translate fields yourself.
 
 To change the language of your bot, please
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-system/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Next, click "Change" next to "Server" in the "Status"-Section.
 3. Select the new language you want to switch to.
@@ -199,9 +199,9 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
             <li>Save the changes & restart your bot to apply these changes.</li>
         </ol>
     </TabItem>
-     <TabItem value="modmailBot" label="Modmail-Bot">
+     <TabItem value="supportBot" label="Support-Bot">
         <ol>
-            <li>Open the <a href="https://scnx.app/glink?page=modmail/configuration?show=branding">Bot Branding</a> section of your Modmail's configuration.</li>
+            <li>Open the <a href="https://scnx.app/glink?page=support-system/bot-configuration?show=branding">Bot Branding</a> section of your Support-Bot's bot configuration.</li>
             <li>Change the "Default Embed-Footer" and "Default Embed-Footer-Image" value to your liking. You can simply upload an image if you like or remove it if not needed.</li>
             <li>Save the changes & reload the configuration your bot to apply these changes.</li>
         </ol>
@@ -221,7 +221,7 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
 
 You can change the Profile-Picture and username of your bot without ever leaving SCNX:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage?showEditProfile=true)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-bot/manage?showEditProfile=true)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage?showEditProfile=true) Dashboard.
 2. Next, click on the username of your bot in the Bot-Status-Panel (if you used the links above you can skip this steps,
    the modal will open automatically).
@@ -258,7 +258,7 @@ server, please follow the [transfer SCNX data guide](/docs/scnx/guilds/faq#trans
 server, please first [add your server to SCNX](/docs/setup) and then [set up the Custom-Bot](/docs/custom-bot).
 :::
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-bot/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Next, click on "Advanced options" in the bot status card.
 3. Click on "View Invite-URL" and click on "Copy Invite-URL to clipboard".
@@ -284,7 +284,7 @@ issue, and we get these reported automatically. Only share them if you are exper
 
 Here's how you can share the logs of your bot:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-system/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Next, click on "More options" in the Bot-Status-Panel.
 3. Click on "Share your bot's logs" and then press the button "Share logs". Your Bot-Host will now upload the logs of
@@ -317,7 +317,7 @@ You can change the token of your Bot easily without needing to delete your Bot f
 1. Open the [Discord Developer Panel](https://discord.com/developers/applications) and obtain a new token: First select
    your application, go to
    the "Bot"-Site and then click on "Regenerate token", and copy the result.
-2. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+2. Open the [Support-Bot-](https://scnx.app/glink?page=support-bot/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 3. Click on "More options" in the "Status"-Panel of your bot.
 4. Click on "Change Bot-Token".
@@ -351,7 +351,7 @@ are [happy to help](https://scnx.app/help) on our [Discord](https://scootk.it/dc
 
 To permanently delete your bot, please follow these instructions:
 
-1. Open the [Modmail-](https://scnx.app/glink?page=modmail/manage)
+1. Open the [Support-Bot-](https://scnx.app/glink?page=support-system/manage)
    or [CustomBot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Next, click on "More options" in the Bot-Status-Panel.
 3. Select "Delete a bot".

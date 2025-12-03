@@ -730,5 +730,14 @@
   "theme.IconExternalLink.ariaLabel": {
     "message": "(wird in einem neuen Tab geöffnet)",
     "description": "The ARIA label for the external link icon"
+  },
+  "outdatedWarning": {
+    "message": "Diese Dokumentation ist veraltet"
+  },
+  "outdatedWarningModmailV2": {
+    "message": "Modmail V2 ist nicht mehr erreichbar und rude von dem neuen Support Bot V3 ersetzt, welcher auch alle Modmail Funktionen beinhaltet."
+  },
+  "learnMore": {
+    "message": "Mehr erfahren"
   }
 }
