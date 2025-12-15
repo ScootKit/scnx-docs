@@ -21,7 +21,7 @@ Aber jetzt überlassen wir dir das Lesen und wünschen dir viel Erfolg!
 
 ## Tickets erstellen {#create-tickets}
 
-Mitglieder können Tickets entweder über Ticketöffnungsnachrichten oder mit dem Befehl ``/ticket open`` erstellen.
+Mitglieder können Tickets entweder über Ticketöffnungsnachrichten oder mit dem Befehl [``/ticket open``](#use-commands) erstellen.
 Falls Ticket-Themen eingerichtet sind, müssen diese sowohl in der Ticketöffnungsnachricht als auch bei der Ausführung des Befehls gewählt werden.
 
 Sobald ein Ticket eröffnet wurde, erstellt dein Bot einen neuen Kanal in der festgelegten Kategorie, welche gegebenenfalls von Ticket-Thema zu Ticket-Thema varrieren kann.
@@ -75,8 +75,8 @@ Sollte ein Befehl im Ticket-Kanal nicht angezeigt werden, besitzt du entweder ke
 
 Mithilfe der Blockierungsliste kannst du Nutzer vom gesamten Support-Bot sperren lassen. Diese Sperre gilt daher sowohl für das Ticket- als auch für das Modmail-System (falls verwendet).
 
-Wenn du einen Nutzer sperren möchtest, verwende den Befehl [``/blocklist add``](#commands) und wähle den enstprechenden Nutzer - optional kannst du den Grund und die Dauer der Sperre angeben.
-Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende den Befehl [``/blocklist remove``](#commands).
+Wenn du einen Nutzer sperren möchtest, verwende den Befehl [``/blocklist add``](#use-commands) und wähle den enstprechenden Nutzer - optional kannst du den Grund und die Dauer der Sperre angeben.
+Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende den Befehl [``/blocklist remove``](#use-commands).
 
 <h4>Bilder Coming Soon ✨</h4>
 
@@ -84,7 +84,7 @@ Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende d
 
 Damit du Informationen nicht immer manuell abfragen musst, kannst du Nutzer einfach ein konfiguriertes Formular ausfüllen lassen, wodurch du notwendige Daten schnell und sicher erhältst.
 
-Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/ticket form``] und wähle das entsprechende Formular aus der Liste.
+Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/ticket form``](#use-commands) und wähle das entsprechende Formular aus der Liste.
 Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht eine Fehler in der Konfiguration. 
 Frage in diesem Fall beim Verantwortlichen deines Servers nach, damit dieser gegebenenfalls unseren Support kontaktieren kann.
 
@@ -92,15 +92,15 @@ Frage in diesem Fall beim Verantwortlichen deines Servers nach, damit dieser geg
 
 ### Tickets pausieren {#hold-tickets}
 
-Wenn ein Ticket weitergeleitet werden soll oder auf eine Antwort von einer anderen Position wartet, kannst du das Ticket mit dem Befehl [``/ticket hold``](#commands) pausieren, 
+Wenn ein Ticket weitergeleitet werden soll oder auf eine Antwort von einer anderen Position wartet, kannst du das Ticket mit dem Befehl [``/ticket hold``](#use-commands) pausieren, 
 um das Automatische Schließen des Tickets zu deaktivieren und den Kanal sperren zu lassen, wodurch bis zur Deaktivierung der Pausierung keine Nachrichten mehr versendet werden können.
-Zum Deaktivieren verwende ebenfalls den Befehl [``/ticket hold``](#commands).
+Zum Deaktivieren verwende ebenfalls den Befehl [``/ticket hold``](#use-commands).
 
 <h4>Bilder Coming Soon ✨</h4>
 
 ### Ticket-Namen umbenennen {#rename-tickets}
 
-Falls du den Namen eines Tickets umbenennen willst, kannst du den Befehl [``/ticket rename``] ausführen und im anschließenden Dialog den neuen Namen des Tickets festlegen.
+Falls du den Namen eines Tickets umbenennen willst, kannst du den Befehl [``/ticket rename``](#use-commands) ausführen und im anschließenden Dialog den neuen Namen des Tickets festlegen.
 Bei einer Verschiebung in ein anderes Ticket-Thema wird der Name automatisch geändert, falls konfiguriert.
 
 :::caution Wichtig:
@@ -111,23 +111,23 @@ Nachdem ein Ticket einmal umbenannt wurde, kann der Bot den Ticket-Namen bei ein
 
 ### Ticket-Thema ändern {#change-ticket-topic}
 
-Wenn ein Nutzer das falsche Thema für sein Ticket ausgewählt hat, kannst du es mit dem Befehl [``/ticket transfer``] einfach in das richtige Thema verschieben.
+Wenn ein Nutzer das falsche Thema für sein Ticket ausgewählt hat, kannst du es mit dem Befehl [``/ticket transfer``](#use-commands) einfach in das richtige Thema verschieben.
 Der Name wird dabei automatisch aktualisiert und das Ticket erneut zur Zuweisung freigegeben.
 
 <h4>Bilder Coming Soon ✨</h4>
 
 ### Nutzer hinzufügen und entfernen {#add-and-remove-users}
 
-Um bestimmte Anliegen, die mehrere Personen betreffen, besser lösen zu können, kannst du die entsprechenden Nutzer mit dem Befehl [``/ticket users add``] zum Ticket hinzufügen, 
+Um bestimmte Anliegen, die mehrere Personen betreffen, besser lösen zu können, kannst du die entsprechenden Nutzer mit dem Befehl [``/ticket users add``](#use-commands) zum Ticket hinzufügen, 
 wodurch diese (zusätzlich zum Teammitglied und Ersteller des Tickets) Zugriff auf den Ticket-Kanal erhalten.
-Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove``].
+Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove``](#use-commands).
 
 <h4>Bilder Coming Soon ✨</h4>
 
 ## Tickets schließen {#close-tickets}
 
-Nachdem das Anliegen eines Nutzers gelöst ist, kannst du das Ticket entweder mit dem Befehl [``/ticket close``](#commands) oder dem Knopf unter der Ticket-Nachricht sofort schließen oder 
-das Schließen mit [``/ticket schedule-close``](#commands) nach einem bestimmten Zeitraum planen (das Automatische Schließen wird in diesem Fall deaktiviert).
+Nachdem das Anliegen eines Nutzers gelöst ist, kannst du das Ticket entweder mit dem Befehl [``/ticket close``](#use-commands) oder dem Knopf unter der Ticket-Nachricht sofort schließen oder 
+das Schließen mit [``/ticket schedule-close``](#use-commands) nach einem bestimmten Zeitraum planen (das Automatische Schließen wird in diesem Fall deaktiviert).
 
 <h4>Bilder Coming Soon ✨</h4>
 
