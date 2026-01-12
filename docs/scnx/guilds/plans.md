@@ -238,7 +238,7 @@ To check if you are eligible, open the <a href="https://scnx.app/glink?page=pric
 <tr>
     <td>European Union</td>
     <td>Euro</td>
-    <td>Credit Card, PayPal, SEPA-Bank-Transfer, Klarna, paysafecard, <a href="/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, EPS, iDEAL, Przelewy24, Bancontact, Revolut Pay, WeChat Pay, Alipay, Apple Pay, Google Pay</td>
+    <td>Credit Card, PayPal, SEPA-Bank-Transfer, Klarna, paysafecard, <a href="/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, EPS, Trustly, paysafecard, iDEAL, Przelewy24, Trustly, paysafecard, Bancontact, Revolut Pay, WeChat Pay, Amazon Pay, Apple Pay, Google Pay</td>
     <td>Credit Card, PayPal, Apple Pay, Google Pay, Revolut Pay, <a href="/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Direct-Debit</a>, <a href="/docs/scnx/account-and-billing/faq#reoccurring-transfer">Reoccurring Bank-Transfer</a></td>
 </tr>
 <tr>

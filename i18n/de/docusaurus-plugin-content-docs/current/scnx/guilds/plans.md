@@ -251,7 +251,7 @@ Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne di
 <tr>
     <td>Europäische Union</td>
     <td>Euro</td>
-    <td>Kreditkarte, PayPal, SEPA-Banküberweisung, Klarna, paysafecard, <a href="/de/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, EPS, iDEAL, Przelewy24, Bancontact, Revolut Pay, WeChat Pay, Alipay, Apple Pay, Google Pay</td>
+    <td>Kreditkarte, PayPal, SEPA-Banküberweisung, Klarna, paysafecard, <a href="/de/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, EPS, Trustly, paysafecard, iDEAL, Przelewy24, Bancontact, Trustly, paysafecard, Revolut Pay, WeChat Pay, Amazon Pay, Apple Pay, Google Pay</td>
     <td>Credit Card, PayPal, Apple Pay, Google Pay, Revolut Pay, <a href="/de/docs/scnx/account-and-billing/faq#direct-debit">SEPA-Lastschriftverfahren</a>, <a href="/docs/scnx/account-and-billing/faq#reoccurring-transfer">Dauerauftrag</a></td>
 </tr>
 <tr>

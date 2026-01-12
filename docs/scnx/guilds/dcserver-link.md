@@ -57,8 +57,8 @@ for your users.
 Please make sure you whitelist the your CustomBot from security systems such as WickBot, as these bots might
 interfere with the generation of dcserver.link URLs.
 
-At this time, SCNX will choose a channel at random to create an invite in. We're still working on making this process
-more customizable.
+You can select which channel the invite should be generated in [your dashboard](https://scnx.app/glink?page=settings).
+If none is set, SCNX will choose a channel at random to create an invite in. 
 
 ## URL disputes {#disputes}
 

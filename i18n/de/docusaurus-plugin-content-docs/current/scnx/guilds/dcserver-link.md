@@ -20,7 +20,7 @@ Dein eigener Bot wird automatisch Einladungen für Nutzer erstellen, die mit dei
 beitreten wollen - so musst du dir keine Sorgen über abgelaufene Einladungen machen.
 
 Um deine momentane dcserver.link-URL zu sehen, kopieren oder zu [ändern](#change-url), öffne
-die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX und scrolle bis zum 
+die [Einstellungen-Seite](https://scnx.app/de/glink?page=settings) deines Servers auf SCNX und scrolle bis zum
 "dcserver.link-URL"-Abschnitt.
 
 ## Einrichtung {#setup}
@@ -62,9 +62,9 @@ Stunde erstellen kann, um Endnutzern eine angenehme Erfahrung zu gewährleisten.
 Bitte stelle sicher, dass du deinen eigenen Bot von Sicherheitssystemen, wie WickBot, ausschließest, um zu
 vermeiden, dass diese Bots mit der Erstellung von dcserver.link interferieren.
 
-Aktuell wählt dein eigener Bot den Kanal zur Erstellung der Einladung zufällig. Wir arbeiten daran, diesen Prozess anpassbar
-zu
-machen.
+Du kannst in deinem [SCNX-Dashboard](https://scnx.app/de/glink?page=settings) den Kanal auswählen, in welchem dein
+eigener Bot die Einladung erstellen soll. Wenn kein Kanal eingestellt wurde, wählt SCNX einen Kanal zur Erstellung der
+Einladung zufällig.
 
 ## URL-Konflikte {#disputes}
 
