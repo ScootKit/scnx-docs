@@ -1,6 +1,6 @@
 ---
-id: custom-bot-slash-commands
 title: Berechtigungen & Slash Commands
+description: Anleitung zur Konfiguration von Berechtigungen für Slash Commands deines eigenen Bots.
 ---
 
 # Berechtigungen & Slash Commands
