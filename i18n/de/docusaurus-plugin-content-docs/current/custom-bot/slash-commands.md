@@ -25,13 +25,13 @@ Um die Berechtigungen für Slash Befehle zu verwalten:
 ### Rechte verwalten
 
 Nach dem Öffnen des Bot-Menüs wird eine Übersicht der verfügbaren
-Slash Commands angezeigt.
+Slash Befehle angezeigt.
 
 ![Rechte-Übersicht, zeigt die Liste der Befehle und deren aktuelle Berechtigungen](@site/docs/assets/custom-bot/slash-commands/de/integrations.png)
 
 ### Einstellungen für einzelne Befehle
 
-Wähle einen beliebigen Slash Command aus.
+Wähle einen beliebigen Slash Befehl aus.
 Es öffnet sich ein Menü zur Konfiguration der Berechtigungen.
 
 ![Command-Einstellungen, zeigt das Berechtigungskonfigurationsmenü zur Einstellung von Kanälen, Rollen und Benutzern](@site/docs/assets/custom-bot/slash-commands/de/ausführen.png)
@@ -49,9 +49,9 @@ dieses Befehls ohne weitere Einschränkungen ausführen.
 Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
 :::
 
-### Standardberechtigungen von Commands
+### Standardberechtigungen von Befehlen
 
-Einige Slash Commands erfordern standardmäßig bestimmte Discord-Serverberechtigungen.
+Einige Slash Befehle erfordern standardmäßig bestimmte Discord-Serverberechtigungen.
 
 Wenn ein Command erforderliche Berechtigungen besitzt (z. B. **Mitglieder moderieren**),
 können ihn zunächst nur Nutzer ausführen, die über diese Serverrechte verfügen.
@@ -62,22 +62,21 @@ Discord zeigt in diesem Fall einen Hinweis wie:
 Diese Standardberechtigungen gelten so lange, bis sie im Command-Berechtigungsmenü
 explizit überschrieben werden, indem Rollen oder einzelne Nutzer hinzugefügt werden.
 
-So stellt Discord sicher, dass sensible Commands nur von autorisierten Mitgliedern
+So stellt Discord sicher, dass sensible Befehle nur von autorisierten Mitgliedern
 verwendet werden, sofern der Zugriff nicht bewusst erweitert wird.
 
 
 ## Synchronisation von Befehlen
 
 Discord bietet die Möglichkeit, Berechtigungseinstellungen für mehrere
-Commands gemeinsam zu verwalten.
+Befehle gemeinsam zu verwalten.
 
-* Synchronisierte Commands übernehmen identische Einstellungen
-* Einzelne Commands können manuell von der Synchronisation ausgeschlossen werden
-* Nicht synchronisierbare Commands können weiterhin individuell konfiguriert werden
-
+* Synchronisierte Befehle übernehmen identische Einstellungen
+* Einzelne Befehle können manuell von der Synchronisation ausgeschlossen werden
+* Nicht synchronisierbare Befehle können weiterhin individuell konfiguriert werden
 ## Änderungen für den Eigenen Bot
 
-Bisher mussten bei jeder Rechte-Änderung im Dashboard alle Commands neu zu Discord übertragen werden. Das fällt nun logischerweise weg. Gleichzeitig können wir allerdings auch nicht die Rechte für die Nutzung der Befehle selber einstellen, weswegen wir alle Optionen zur Einstellung von Rechten entfernen werden.
+Bisher mussten bei jeder Rechte-Änderung im Dashboard alle Befehle neu zu Discord übertragen werden. Das fällt nun logischerweise weg. Gleichzeitig können wir allerdings auch nicht die Rechte für die Nutzung der Befehle selber einstellen, weswegen wir alle Optionen zur Einstellung von Rechten entfernen werden.
 
 ## Fragen oder Probleme?
 
