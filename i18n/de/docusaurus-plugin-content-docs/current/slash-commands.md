@@ -1,12 +1,7 @@
----
-title: Berechtigungen & Slash Commands
-description: Anleitung zur Konfiguration von Berechtigungen für Slash Commands deines eigenen Bots.
----
-
-# Berechtigungen & Slash Commands
+# Berechtigungen & Slash Befehle
 
 
-Discord stellt ein zentrales System zur Verwaltung von Slash Commands bereit.
+Discord stellt ein zentrales System zur Verwaltung von Slash Befehlen bereit.
 Dieses System ermöglicht Serveradministratoren eine detaillierte Steuerung von
 Berechtigungen für Bots und deren Befehle.
 
@@ -16,30 +11,30 @@ Diese Anleitung beschreibt die notwendigen Schritte zur Konfiguration.
 
 ## Eigene Bot-Rechte konfigurieren
 
-## Command-Rechte-Menü öffnen
+### Befehl-Rechte-Menü öffnen
 
-Um die Berechtigungen für Slash Commands zu verwalten:
+Um die Berechtigungen für Slash Befehle zu verwalten:
 
 1. Öffne die **Servereinstellungen**
 2. Navigiere zu **Integrationen → Bots & Apps**
 3. Wähle den gewünschten Bot aus
 4. Klicke auf **Verwalten** (Manage)
 
-![Command-Rechte-Menü](@site/docs/assets/custom-bot/slash-commands/de/integrations-1.png)
+![Command-Rechte-Menü, auf wie man den Berechtigungsbereich erreicht](@site/docs/assets/custom-bot/slash-commands/de/integrations-1.png)
 
-## Rechte verwalten
+### Rechte verwalten
 
 Nach dem Öffnen des Bot-Menüs wird eine Übersicht der verfügbaren
 Slash Commands angezeigt.
 
-![Rechte-Übersicht](@site/docs/assets/custom-bot/slash-commands/de/integrations.png)
+![Rechte-Übersicht, zeigt die Liste der Befehle und deren aktuelle Berechtigungen](@site/docs/assets/custom-bot/slash-commands/de/integrations.png)
 
-## Einstellungen für einzelne Befehle
+### Einstellungen für einzelne Befehle
 
 Wähle einen beliebigen Slash Command aus.
 Es öffnet sich ein Menü zur Konfiguration der Berechtigungen.
 
-![Command-Einstellungen](@site/docs/assets/custom-bot/slash-commands/de/ausführen.png)
+![Command-Einstellungen, zeigt das Berechtigungskonfigurationsmenü zur Einstellung von Kanälen, Rollen und Benutzern](@site/docs/assets/custom-bot/slash-commands/de/ausführen.png)
 
 Für jeden Command kann festgelegt werden:
 * welche **Rollen** ihn ausführen dürfen
@@ -48,9 +43,9 @@ Für jeden Command kann festgelegt werden:
 
 :::warning Wichtiger Hinweis  
 Bei den meisten Befehlen überprüft der Bot die Berechtigungen nicht zusätzlich  
-(Ausnahme: `/moderate`).  
+(abgesehen von einigen Ausnahmen, z.B. `/moderate`).  
 Jeder Nutzer, der hier Ausführungsrechte erhält, kann **alle Unterbefehle**
-dieses Commands ohne weitere Einschränkungen ausführen.  
+dieses Befehls ohne weitere Einschränkungen ausführen.  
 Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
 :::
 

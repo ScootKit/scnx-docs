@@ -1,8 +1,3 @@
----
-title: Permissions & Slash-Commands
-description: Guide to configuring permissions for slash commands of your custom bot.
----
-
 # Permissions & Slash Commands
 
 Discord provides a centralized system for managing Slash Commands.  
@@ -13,7 +8,7 @@ This guide explains how to configure these permissions for your bot.
 
 ## Configuring Custom Bot Permissions
 
-## Open the Command Permissions Menu
+### Open the Command Permissions Menu
 
 To manage permissions for Slash Commands:
 
@@ -22,19 +17,19 @@ To manage permissions for Slash Commands:
 3. Select the desired bot  
 4. Click **Manage**
 
-![Command Permissions Menu](@site/docs/assets/custom-bot/slash-commands/en/integrations-1.png)
+![Command Permissions Menu, on how to access the permissions section](@site/docs/assets/custom-bot/slash-commands/en/integrations-1.png)
 
-## Manage Permissions
+### Manage Permissions
 
 After opening the bot menu, an overview of the available Slash Commands is displayed.
 
-![Permissions Overview](@site/docs/assets/custom-bot/slash-commands/en/integrations.png)
+![Permissions Overview, showing the list of commands and their current permissions](@site/docs/assets/custom-bot/slash-commands/en/integrations.png)
 
-## Configure Individual Commands
+### Configure Individual Commands
 
 Select any Slash Command to open the permissions configuration menu.
 
-![Command Settings](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
+![Command Settings, showing the permissions configuration menu on how to configure channels, roles, and users](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
 
 For each command, you can specify:  
 * Which **roles** are allowed to execute it  
@@ -43,7 +38,7 @@ For each command, you can specify:
 
 :::warning Important Note
 For most commands, the bot does **not** perform additional permission checks  
-(exception: `/moderate`).  
+(with some exceptions, e.g. `/moderate`).  
 Any user granted execution rights here can use **all subcommands** of this command without further restrictions.  
 Permissions should therefore be assigned carefully.
 :::
