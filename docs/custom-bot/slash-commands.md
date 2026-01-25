@@ -37,23 +37,24 @@ Select any Slash Command to open the permissions configuration menu.
 ![Command Settings](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
 
 For each command, you can specify:  
-- Which **roles** are allowed to execute it  
-- Which **users** have access  
-- In which **channels** the command can be used  
+* Which **roles** are allowed to execute it  
+* Which **users** have access  
+* In which **channels** the command can be used  
 
-> ⚠️ **Important Note**  
-> For most commands, the bot does **not** perform additional permission checks  
-> (exception: `/moderate`).  
-> Any user granted execution rights here can use **all subcommands** of this command without further restrictions.  
-> Permissions should therefore be assigned carefully.
+:::warning Important Note
+For most commands, the bot does **not** perform additional permission checks  
+(exception: `/moderate`).  
+Any user granted execution rights here can use **all subcommands** of this command without further restrictions.  
+Permissions should therefore be assigned carefully.
+:::
 
 ## Command Synchronization
 
 Discord allows managing permissions for multiple commands at once:
 
-- Synchronized commands inherit identical settings  
-- Individual commands can be excluded from synchronization manually  
-- Commands that cannot be synchronized can still be configured individually
+* Synchronized commands inherit identical settings  
+* Individual commands can be excluded from synchronization manually  
+* Commands that cannot be synchronized can still be configured individually
 
 ## Using the Custom Bot
 
@@ -62,6 +63,6 @@ All available options for assigning permissions can be set within the interface 
 
 ## Questions or Support
 
-If you need assistance, you can open a support ticket in the #support channel on [Discord](http://scootk.it/dc-de). We are happy to help.
+If you need assistance, you can open a support ticket in the #support channel on [Discord](https://scootk.it/dc-en). We are happy to help.
 
 More information from Discord: https://discord.com/blog/slash-commands-permissions-discord-apps-bots

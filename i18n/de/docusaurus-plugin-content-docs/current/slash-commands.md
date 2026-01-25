@@ -42,25 +42,26 @@ Es öffnet sich ein Menü zur Konfiguration der Berechtigungen.
 ![Command-Einstellungen](@site/docs/assets/custom-bot/slash-commands/de/ausführen.png)
 
 Für jeden Command kann festgelegt werden:
-- welche **Rollen** ihn ausführen dürfen
-- welche **Benutzer** Zugriff haben
-- in welchen **Kanälen** der Command ausgeführt werden darf
+* welche **Rollen** ihn ausführen dürfen
+* welche **Benutzer** Zugriff haben
+* in welchen **Kanälen** der Command ausgeführt werden darf
 
-> ⚠️ Wichtiger Hinweis  
-> Bei den meisten Befehlen überprüft der Bot die Berechtigungen nicht zusätzlich  
-> (Ausnahme: `/moderate`).  
-> Jeder Nutzer, der hier Ausführungsrechte erhält, kann **alle Unterbefehle**
-> dieses Commands ohne weitere Einschränkungen ausführen.  
-> Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
+:::warning Wichtiger Hinweis  
+Bei den meisten Befehlen überprüft der Bot die Berechtigungen nicht zusätzlich  
+(Ausnahme: `/moderate`).  
+Jeder Nutzer, der hier Ausführungsrechte erhält, kann **alle Unterbefehle**
+dieses Commands ohne weitere Einschränkungen ausführen.  
+Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
+:::
 
 ## Synchronisation von Befehlen
 
 Discord bietet die Möglichkeit, Berechtigungseinstellungen für mehrere
 Commands gemeinsam zu verwalten.
 
-- Synchronisierte Commands übernehmen identische Einstellungen
-- Einzelne Commands können manuell von der Synchronisation ausgeschlossen werden
-- Nicht synchronisierbare Commands können weiterhin individuell konfiguriert werden
+* Synchronisierte Commands übernehmen identische Einstellungen
+* Einzelne Commands können manuell von der Synchronisation ausgeschlossen werden
+* Nicht synchronisierbare Commands können weiterhin individuell konfiguriert werden
 
 ## Änderungen für den Eigenen Bot
 
@@ -68,6 +69,6 @@ Bisher mussten bei jeder Rechte-Änderung im Dashboard alle Commands neu zu Disc
 
 ## Fragen oder Probleme?
 
-Ihr könnt jederzeit über [Discord](http://scootk.it/dc-de) im #support Kanal ein Support-Ticket öffnen und um Hilfe bitten. Wir helfen gerne weiter.
+Ihr könnt jederzeit über [Discord](https://scootk.it/dc-de) im #support Kanal ein Support-Ticket öffnen und um Hilfe bitten. Wir helfen gerne weiter.
 
 Mehr Informationen von Discord: https://discord.com/blog/slash-commands-permissions-discord-apps-bots
