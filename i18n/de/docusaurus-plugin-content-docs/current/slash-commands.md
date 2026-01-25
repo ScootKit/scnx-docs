@@ -1,6 +1,10 @@
-# Permissions & Slash-Commands
-
 ---
+id: custom-bot-slash-commands
+title: Berechtigungen & Slash Commands
+---
+
+# Berechtigungen & Slash Commands
+
 
 Discord stellt ein zentrales System zur Verwaltung von Slash Commands bereit.
 Dieses System ermöglicht Serveradministratoren eine detaillierte Steuerung von
@@ -10,7 +14,7 @@ Aufgrund der zugrunde liegenden Berechtigungslogik ist es erforderlich,
 festzulegen, welche Aktionen Bots und Nutzer ausführen dürfen.
 Diese Anleitung beschreibt die notwendigen Schritte zur Konfiguration.
 
-# Eigener Bot-Rechte konfigurieren
+## Eigene Bot-Rechte konfigurieren
 
 ## Command-Rechte-Menü öffnen
 
@@ -58,9 +62,9 @@ Commands gemeinsam zu verwalten.
 - Einzelne Commands können manuell von der Synchronisation ausgeschlossen werden
 - Nicht synchronisierbare Commands können weiterhin individuell konfiguriert werden
 
-# Änderungen für den Eigenen Bot
+## Änderungen für den Eigenen Bot
 
-Bisher mussten bei jeder Rechte-Änderung im Dashboard alle Commands neu zu Discord übertragen werden, das fällt nun logischerweise weg. Gleichzeitig können wir allerdings auch nicht die Rechte für die Nutzung der Befehle selber einstellen, weswegen wir alle Optionen zur Einstellung von Rechten entfernen werden.
+Bisher mussten bei jeder Rechte-Änderung im Dashboard alle Commands neu zu Discord übertragen werden. Das fällt nun logischerweise weg. Gleichzeitig können wir allerdings auch nicht die Rechte für die Nutzung der Befehle selber einstellen, weswegen wir alle Optionen zur Einstellung von Rechten entfernen werden.
 
 ## Fragen oder Probleme?
 

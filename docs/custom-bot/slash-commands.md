@@ -1,6 +1,9 @@
-# Permissions & Slash Commands
-
 ---
+id: custom-bot-slash-commands
+title: Permissions & Slash-Commands
+---
+
+# Permissions & Slash Commands
 
 Discord provides a centralized system for managing Slash Commands.  
 This system allows server administrators to control permissions for bots and their commands in detail.
@@ -8,7 +11,7 @@ This system allows server administrators to control permissions for bots and the
 Because of the underlying permission logic, it is necessary to define which actions bots and users are allowed to perform.  
 This guide explains how to configure these permissions for your bot.
 
-# Configuring Custom Bot Permissions
+## Configuring Custom Bot Permissions
 
 ## Open the Command Permissions Menu
 
@@ -19,19 +22,19 @@ To manage permissions for Slash Commands:
 3. Select the desired bot  
 4. Click **Manage**
 
-![Command Permissions Menu](@site/docs/assets/custom-bot/slash-commands/de/integrations-1.png)
+![Command Permissions Menu](@site/docs/assets/custom-bot/slash-commands/en/integrations-1.png)
 
 ## Manage Permissions
 
 After opening the bot menu, an overview of the available Slash Commands is displayed.
 
-![Permissions Overview](@site/docs/assets/custom-bot/slash-commands/de/integrations.png)
+![Permissions Overview](@site/docs/assets/custom-bot/slash-commands/en/integrations.png)
 
 ## Configure Individual Commands
 
 Select any Slash Command to open the permissions configuration menu.
 
-![Command Settings](@site/docs/assets/custom-bot/slash-commands/de/ausführen.png)
+![Command Settings](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
 
 For each command, you can specify:  
 - Which **roles** are allowed to execute it  
@@ -52,7 +55,7 @@ Discord allows managing permissions for multiple commands at once:
 - Individual commands can be excluded from synchronization manually  
 - Commands that cannot be synchronized can still be configured individually
 
-# Using the Custom Bot
+## Using the Custom Bot
 
 Permissions for Slash Commands can be configured directly through the bot menu, without needing to re-upload commands to Discord.  
 All available options for assigning permissions can be set within the interface described above.
