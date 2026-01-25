@@ -49,6 +49,23 @@ dieses Befehls ohne weitere Einschränkungen ausführen.
 Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
 :::
 
+### Standardberechtigungen von Commands
+
+Einige Slash Commands erfordern standardmäßig bestimmte Discord-Serverberechtigungen.
+
+Wenn ein Command erforderliche Berechtigungen besitzt (z. B. **Mitglieder moderieren**),
+können ihn zunächst nur Nutzer ausführen, die über diese Serverrechte verfügen.
+
+Discord zeigt in diesem Fall einen Hinweis wie:
+> „Mitglieder benötigen Serverberechtigungen, um diesen Command zu verwenden.“
+
+Diese Standardberechtigungen gelten so lange, bis sie im Command-Berechtigungsmenü
+explizit überschrieben werden, indem Rollen oder einzelne Nutzer hinzugefügt werden.
+
+So stellt Discord sicher, dass sensible Commands nur von autorisierten Mitgliedern
+verwendet werden, sofern der Zugriff nicht bewusst erweitert wird.
+
+
 ## Synchronisation von Befehlen
 
 Discord bietet die Möglichkeit, Berechtigungseinstellungen für mehrere

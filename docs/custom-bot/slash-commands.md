@@ -34,7 +34,7 @@ Select any Slash Command to open the permissions configuration menu.
 For each command, you can specify:  
 * Which **roles** are allowed to execute it  
 * Which **users** have access  
-* In which **channels** the command can be used  
+* In which **channels** the command can be used
 
 :::warning Important Note
 For most commands, the bot does **not** perform additional permission checks  
@@ -42,6 +42,19 @@ For most commands, the bot does **not** perform additional permission checks
 Any user granted execution rights here can use **all subcommands** of this command without further restrictions.  
 Permissions should therefore be assigned carefully.
 :::
+
+### Default Command Permissions
+
+Some Slash Commands require specific Discord server permissions by default.
+
+If a command has required permissions (for example **Moderate Members**), only members with these server permissions can use the command initially.
+
+Discord will display a notice such as:
+* "Members need server permissions to use this command."
+
+These default permissions apply until they are explicitly overridden by assigning roles or users in the command permissions menu.
+
+This ensures that sensitive commands remain restricted unless access is intentionally granted.
 
 ## Command Synchronization
 
