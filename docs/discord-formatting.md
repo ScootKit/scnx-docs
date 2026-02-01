@@ -10,7 +10,7 @@ Basic styles for messages: *(Spoiler text and small text are not shown here beca
 | **Italic** | `*Text*` or `_Text_` | *Text* |
 | **Bold** | `**Text**` | **Text** |
 | **Bold Italic** | `***Text***` | ***Text*** |
-| **Underline** | `__Text__` | T͟e͟x͟t͟ |
+| **Underline** | `__Text__` | T͟e͟x͟t͟ | 
 | **Strikethrough** | `~~Text~~` | ~~Text~~ |
 
 ![A screenshot showing spoiler, small text and all the styles at the top](@site/docs/assets/discord-formatting/en/types.png)
@@ -18,10 +18,13 @@ Basic styles for messages: *(Spoiler text and small text are not shown here beca
 ## 2. Headings & Structure
 Important: There must be a space after the `#` characters.
 
-# # Heading 1 (Large)
-## ## Heading 2 (Medium)
-### ### Heading 3 (Small)
+```
+# Heading 1 (Large)
+## Heading 2 (Medium)
+### Heading 3 (Small)
+```
 
+![A screenshot showing examples of headings](@site/docs/assets/discord-formatting/en/headings.png)
 
 ## 3. Lists & Quotes
 Structure your text using lists or quotes.
