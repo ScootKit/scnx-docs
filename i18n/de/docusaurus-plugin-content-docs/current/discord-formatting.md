@@ -1,4 +1,4 @@
-# Discord-Formatierung
+# Discord Formatierung
 
 Ein Überblick über alle Formatierungsoptionen, die in Discord verfügbar sind.
 
