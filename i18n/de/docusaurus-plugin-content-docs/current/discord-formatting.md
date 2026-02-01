@@ -1,6 +1,6 @@
 # Discord Formatierung
 
-Ein Überblick über alle Formatierungsoptionen, die in Discord verfügbar sind.
+Discord bietet außerdem verschiedene Formatierungsoptionen, um deine Nachrichten übersichtlicher und ansprechender zu gestalten. Mit diesen Funktionen kannst du Texte strukturieren, wichtige Informationen hervorheben und die Lesbarkeit insgesamt verbessern. Hier ist eine Übersicht der am häufigsten verwendeten Formatierungsstile und wie du sie effektiv einsetzen kannst.
 
 ## 1. Textformatierung
 Grundlegende Formatierungen für Nachrichten: *(Spoiler-Text und kleiner Text werden hier nicht angezeigt, weil sie in Tabellen nicht richtig funktionieren. Mehr Details im Screenshot.)*
@@ -10,7 +10,7 @@ Grundlegende Formatierungen für Nachrichten: *(Spoiler-Text und kleiner Text we
 | **Kursiv** | `*Text*` oder `_Text_` | *Text* |
 | **Fett** | `**Text**` | **Text** |
 | **Fett & kursiv** | `***Text***` | ***Text*** |
-| **Unterstrichen** | `__Text__` | T͟e͟x͟t͟ | 
+| **Unterstrichen** | `__Text__` | T͟e͟x͟t | 
 | **Durchgestrichen** | `~~Text~~` | ~~Text~~ |
 
 ![Ein Screenshot, der Spoiler, kleinen Text und alle Stile oben zeigt](@site/docs/assets/discord-formatting/de/types.png)
@@ -22,6 +22,7 @@ Wichtig: Nach den `#`-Zeichen muss ein Leerzeichen stehen.
 # Überschrift 1 (Groß)
 ## Überschrift 2 (Mittel)
 ### Überschrift 3 (Klein)
+-# Kleiner Text
 ```
 
 ![Ein Screenshot mit Beispielen für Überschriften](@site/docs/assets/discord-formatting/de/headings.png)
@@ -36,7 +37,8 @@ Strukturiere deinen Text mit Listen oder Zitaten.
 	- `1. Erster Punkt`
     - `2. Zweiter Punkt`
 * **Zitate:**  
-	- `> Einzeiliges Zitat`  
+	- `> Einzeiliges Zitat`
+	- `>>> Mehrzeiliges Zitat`  
 
 ![Ein Screenshot mit Beispielen für Aufzählungen, nummerierte Listen und Zitate](@site/docs/assets/discord-formatting/de/types1.png)
 
@@ -46,10 +48,12 @@ Strukturiere deinen Text mit Listen oder Zitaten.
 * **Inline-Code:** `` `Befehl` ``
 * **Codeblock:**  
 	```
-	```js (Ein Beispiel mit JavaScript)
+	```js
     console.log("Mehrzeiliger Code oder Text")
 	```‎
 	```
+
+Im Codeblock ist das nur ein Beispiel mit JavaScript. Es funktioniert auch mit anderen Programmiersprachen. Ersetze einfach `js` durch die gewünschte Sprache (z. B. `py`, `html`, etc.)
 
 ![Ein Screenshot mit Beispielen für maskierte Links, Inline-Code und Codeblöcke](@site/docs/assets/discord-formatting/de/types2.png)
 

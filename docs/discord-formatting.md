@@ -1,16 +1,16 @@
 # Discord Formatting
 
-An overview of all formatting options available in Discord.
+Discord also offers various formatting options to enhance your messages. These tools allow you to structure text, highlight important information, and improve overall readability. Here's an overview of the most commonly used formatting styles and how you can use them effectively in your messages.
 
 ## 1. Text Formatting
-Basic styles for messages: *(Spoiler text and small text are not shown here because they don’t work properly inside tables. More details in the screenshot.)*
+Basic styles for messages:
 
 | Style | Syntax | Result |
 | :--- | :--- | :--- |
 | **Italic** | `*Text*` or `_Text_` | *Text* |
 | **Bold** | `**Text**` | **Text** |
 | **Bold Italic** | `***Text***` | ***Text*** |
-| **Underline** | `__Text__` | T͟e͟x͟t͟ | 
+| **Underline** | `__Text__` | T͟e͟x͟t | 
 | **Strikethrough** | `~~Text~~` | ~~Text~~ |
 
 ![A screenshot showing spoiler, small text and all the styles at the top](@site/docs/assets/discord-formatting/en/types.png)
@@ -22,6 +22,7 @@ Important: There must be a space after the `#` characters.
 # Heading 1 (Large)
 ## Heading 2 (Medium)
 ### Heading 3 (Small)
+-# Small Text
 ```
 
 ![A screenshot showing examples of headings](@site/docs/assets/discord-formatting/en/headings.png)
@@ -37,6 +38,7 @@ Structure your text using lists or quotes.
   - `2. Second item`
 * **Quotes:**  
   - `> Single-line quote`
+  - `>>> Multi-line quote`
 
 ![A screenshot showing examples of bullet lists, numbered lists, and quotes](@site/docs/assets/discord-formatting/en/types1.png)
 
@@ -46,10 +48,12 @@ Structure your text using lists or quotes.
 * **Inline code:** `` `command` ``
 * **Code block:**  
   ```
-  ```js (An example with JavaScript)
+  ```js
   console.log("Code block")
   ```‎
   ```
+
+In the code block, this is just an example using JavaScript. It also works with other programming languages. Simply replace `js` with the desired language (e.g. `py`, `html`, etc.).  
 
 ![A screenshot showing examples of masked links, inline code, and code blocks](@site/docs/assets/discord-formatting/en/types2.png)
 
