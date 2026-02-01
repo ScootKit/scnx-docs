@@ -10,7 +10,7 @@ Grundlegende Formatierungen für Nachrichten: *(Spoiler-Text und kleiner Text we
 | **Kursiv** | `*Text*` oder `_Text_` | *Text* |
 | **Fett** | `**Text**` | **Text** |
 | **Fett & kursiv** | `***Text***` | ***Text*** |
-| **Unterstrichen** | `__Text__` | __Text__ |
+| **Unterstrichen** | `__Text__` | T͟e͟x͟t͟ |
 | **Durchgestrichen** | `~~Text~~` | ~~Text~~ |
 
 ![Ein Screenshot, der Spoiler, kleinen Text und alle Stile oben zeigt](@site/docs/assets/discord-formatting/de/types.png)

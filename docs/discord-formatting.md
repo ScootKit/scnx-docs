@@ -10,7 +10,7 @@ Basic styles for messages: *(Spoiler text and small text are not shown here beca
 | **Italic** | `*Text*` or `_Text_` | *Text* |
 | **Bold** | `**Text**` | **Text** |
 | **Bold Italic** | `***Text***` | ***Text*** |
-| **Underline** | `__Text__` | __Text__ |
+| **Underline** | `__Text__` | T͟e͟x͟t͟ |
 | **Strikethrough** | `~~Text~~` | ~~Text~~ |
 
 ![A screenshot showing spoiler, small text and all the styles at the top](@site/docs/assets/discord-formatting/en/types.png)
