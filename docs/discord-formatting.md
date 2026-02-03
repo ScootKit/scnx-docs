@@ -2,9 +2,9 @@
 
 Discord also offers various formatting options to enhance your messages. These tools allow you to structure text, highlight important information, and improve overall readability. Here's an overview of the most commonly used formatting styles and how you can use them effectively in your messages.
 
-## 1. Text Formatting
+## Text Formatting
 
-These Formattings are Styles for Messages that you can use in Discord. Basic styles for messages:
+These formatting options represent different styles for messages that you can use in Discord to improve readability and structure. Discord message formatting allows you to emphasize important information, highlight key points, and organize text more effectively. By using these basic message styles, you can make your messages easier to understand, more visually appealing, and more engaging for other users. The following section provides an overview of the most commonly used formatting styles available in Discord.
 
 | Style | Syntax | Result |
 | :--- | :--- | :--- |
@@ -17,8 +17,10 @@ These Formattings are Styles for Messages that you can use in Discord. Basic sty
 
 ![A screenshot showing spoiler, small text and all the styles at the top](@site/docs/assets/discord-formatting/en/types.png)
 
-## 2. Headings & Structure
-With these, you can change the size of the text, making it easier to structure your messages. Important: There must be a space after the `#` or `-#` characters.
+## Headings & Structure
+With these formatting options, you can change the size of the text, making it easier to structure and organize your messages. Adjusting text size helps highlight important information, improve readability, and create clear visual hierarchies within your messages.
+
+Important: There must be a space after the `#` or `-#` characters for the formatting to work correctly.
 
 ```
 # Heading 1 (Large)
@@ -29,8 +31,8 @@ With these, you can change the size of the text, making it easier to structure y
 
 ![A screenshot showing examples of headings](@site/docs/assets/discord-formatting/en/headings.png)
 
-## 3. Lists & Quotes
-with these you can structure your text using lists or quotes. there are many ways to list & quote texts:
+## Lists & Quotes
+With these formatting options, you can structure your text using lists or quotes, making your messages clearer and easier to read. Lists help organize information into concise points, while quotes are useful for highlighting references, replies, or important statements. There are many different ways to create lists and quote text, allowing you to format your messages in a clear and well-structured manner.
 
 * **Bullet lists:**  
   - `- Item 1`  
@@ -48,8 +50,8 @@ with these you can structure your text using lists or quotes. there are many way
 ![A screenshot showing examples of bullet lists, numbered lists, and quotes](@site/docs/assets/discord-formatting/en/types1.png)
 
 
-## 4. Links & Code
-With these, you can change the action & look of the message:
+## Links & Code
+With these formatting options, you can change the behavior and appearance of a message. They allow you to control how a message looks and how it is perceived, helping you emphasize actions, highlight important content, and improve overall readability.
 
 * **Masked links:** `[Google](https://www.google.com)`
 * **Inline code:** `` `command` ``
@@ -64,7 +66,7 @@ When using code blocks, it is possible to specify the programming language used 
 
 ![A screenshot showing examples of masked links, inline code, and code blocks](@site/docs/assets/discord-formatting/en/types2.png)
 
-## 5. Timestamps
+## Timestamps
 Dynamic timestamps in Discord allow you to display times and dates that automatically adapt to the user’s time zone, making messages more informative and context-aware. These timestamps are especially useful for events, deadlines, reminders, or any message where the timing needs to be clear for users across different regions. By using dynamic timestamps, you can improve clarity and engagement in your Discord server.
 
 Timestamps use **UNIX time**, which is a system that counts the number of seconds that have elapsed since **January 1, 1970 at 00:00:00 UTC** (also known as the Unix epoch). UNIX time is widely used in programming, databases, APIs, and server logs because it provides a simple, consistent, and timezone-independent way to represent points in time.
