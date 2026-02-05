@@ -17,7 +17,7 @@ Once Developer Mode is active, you can right-click almost anything in Discord to
 * **Channels:** Right-click a channel name and select **Copy Channel ID**.
 * **Roles:** Go to Server Settings > Roles, right-click the role name, and select **Copy Role ID**.
 * **Messages:** Right-click a message and select **Copy Message ID**.
-* **Servers:** Right-click the servers icon and select **Copy Server ID**.
+* **Servers:** Right-click the server's icon and select **Copy Server ID**.
 
 ## 3. Mentioning Elements via ID
 Sometimes you need to mention an element in a bot response or a message. Use the following syntax:
