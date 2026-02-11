@@ -4,7 +4,6 @@ title: Ticket Claiming
 description: Configure ticket claiming to keep your tickets organized.
 ---
 
-<<<<<<< Updated upstream
 # Ticket Claiming
 
 ## Features {#features}
@@ -41,6 +40,3 @@ description: Configure ticket claiming to keep your tickets organized.
 | Show claim button in the ticket | If enabled, a claim button is added to the ticket message so team members can claim the ticket directly. Otherwise, they must use the button under the [assignment notification](#main-configuration). |
 | Assignment message | Your bot will send this message in the ticket channel after a successful claim. |
 | Team member ticket notification message | Your bot will send this message to the [configured](#main-configuration) channel as soon as a new ticket is created. |
-=======
-# Ticket Claiming im Ticket-System
->>>>>>> Stashed changes
