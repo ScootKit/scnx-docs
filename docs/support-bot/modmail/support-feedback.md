@@ -18,9 +18,9 @@ description: Manage support feedback to further improve your members’ support 
 ## Setup {#setup}
 
 * Visit the [Support Feedback](https://scnx.app/glink?page=support-system/modmail/support-feedback) page in your dashboard.
-* [Configure](#main-configuration) the available options.
-* Create a new feedback question by clicking “Edit questions” in the [main configuration](#main-configuration) and then clicking “Add field”.
-* [Configure](#manage-feedback-questions) the available options for the respective feedback question.
+* <a href="#main-configuration">Configure</a> the available options.
+* Create a new feedback question by clicking “Edit questions” in the <a href="#main-configuration">main configuration</a> and then clicking “Add field”.
+* <a href="#manage-feedback-questions">Configure</a> the available options for the respective feedback question.
 
 ## Configuration {#configuration}
 
@@ -31,7 +31,7 @@ description: Manage support feedback to further improve your members’ support 
 | Enable support feedback | Enables or disables the feature for your Modmail system. |
 | Feedback message | This message will be sent to the user after their Modmail thread is closed. |
 | Submitted message | This message is edited from the feedback message after the user has submitted their rating. |
-| Edit feedback questions | These questions are shown in the rating dialog. More information on configuring feedback questions can be found [here](#manage-feedback-questions). |
+| Edit feedback questions | These questions are shown in the rating dialog. More information on configuring feedback questions can be found <a href="#manage-feedback-questions">here</a>. |
 | Anonymize feedback | If enabled, your bot will not link ratings to user IDs. |
 | Send answers to a channel | If enabled, ratings are sent to a channel. Otherwise, you can find ratings from the last 30 days in your [dashboard](https://scnx.app/glink?page=support-system/modmail/support-feedback). |
 | Channel to send answers to | *Only available if “Send answers to a channel” is enabled.*<br/>Your bot will send submitted ratings to this channel. |

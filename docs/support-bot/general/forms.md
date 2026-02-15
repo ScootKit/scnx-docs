@@ -17,15 +17,15 @@ description: Create and manage forms you can send to users manually or automatic
 ## Setup {#setup}
 
 * Visit the [Forms](https://scnx.app/glink?page=support-system/forms) page in your dashboard.
-* [Configure](#main-configuration) the available options.
+* <a href="#main-configuration">Configure</a> the available options.
 * Create a new form by clicking the “Create new form” button.
-* [Configure](#manage-forms) the available options for the respective form.
-* Create a new form question by clicking “Edit form” in the [main configuration](#main-configuration) and then clicking “Add field”.
-* [Configure](#manage-forms-questions) the available options for the respective form question.
+* <a href="#manage-forms">Configure</a> the available options for the respective form.
+* Create a new form question by clicking “Edit form” in the <a href="#main-configuration">main configuration</a> and then clicking “Add field”.
+* <a href="#manage-forms-questions">Configure</a> the available options for the respective form question.
 
 ## Commands {#commands}
 
-<SlashCommandExplanation />
+<SlashCommandExplanation></SlashCommandExplanation>
 
 | Command | Description |
 | --- | --- |
@@ -37,14 +37,14 @@ description: Create and manage forms you can send to users manually or automatic
 
 | Field | Description |
 | --- | --- |
-| Dialog open button | This text is shown on the button that opens the form dialog, which is attached to the message sent by the [`/ticket form`](#commands) command. |
+| Dialog open button | This text is shown on the button that opens the form dialog, which is attached to the message sent by the <a href="#commands"><code>/ticket form</code></a> command. |
 
 ### Manage forms {#manage-forms}
 
 | Field | Description |
 | --- | --- |
 | Form name | This text is shown as the title of your form. |
-| Dialog | These questions are shown in the form. More information on configuring form questions can be found [here](#manage-forms-questions). |
+| Dialog | These questions are shown in the form. More information on configuring form questions can be found <a href="#manage-forms-questions">here</a>. |
 
 ### Manage form questions {#manage-forms-questions}
 

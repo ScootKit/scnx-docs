@@ -17,7 +17,7 @@ description: Create and manage opening hours, including holidays.
 ## Setup {#setup}
 
 * Visit the [Opening hours](https://scnx.app/glink?page=support-system/bot-configuration?show=opening-hours) section in your dashboard.
-* [Configure](#configuration) the available options.
+* <a href="#configuration">Configure</a> the available options.
 
 ## Configuration {#configuration}
 

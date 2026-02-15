@@ -21,7 +21,7 @@ Now it’s over to you — enjoy reading and good luck!
 
 ## Create tickets {#create-tickets}
 
-Members can create tickets either via ticket opening messages or with the command [`/ticket open`](#use-commands).
+Members can create tickets either via ticket opening messages or with the command <a href="#use-commands"><code>/ticket open</code></a>.
 If ticket topics are set up, they must be selected both in the ticket opening message and when running the command.
 
 As soon as a ticket is opened, your bot creates a new channel in the configured category, which may vary depending on the ticket topic.
@@ -37,7 +37,7 @@ If your server does not use ticket claiming, you can skip directly to the next s
 To keep tickets organized across team members, you first need to assign a ticket to yourself (also called “claiming”).
 
 To do this, open the configured channel in Discord and click the “Claim ticket” button under the message. After the ticket is assigned to you, the message is deleted automatically.
-Alternatively, you can open the newly created ticket channel directly and click the button under the assignment message (the message in the notification channel will also be deleted).
+Alternatively, you can also open the newly created ticket channel directly and click the button under the assignment message (the message in the notification channel will also be deleted).
 If you don’t see any new ticket channels, this option has been disabled in your ticket system.
 
 <h4>Images coming soon ✨</h4>
@@ -50,7 +50,7 @@ Since tickets usually contain more than just regular messages, we’ll show you 
 
 <h4>Images coming soon ✨</h4>
 
-## Use commands {#use-commands}
+<h2 id="use-commands">Use commands</h2>
 
 The ticket system includes a set of commands that allow different actions depending on your configuration.
 If a command is not available in the ticket channel, you either don’t have permission for it or the feature hasn’t been configured.
@@ -75,8 +75,8 @@ If a command is not available in the ticket channel, you either don’t have per
 
 Using the blocklist, you can block users from the entire Support-Bot. This block applies to both the ticket and modmail system (if used).
 
-To block a user, use [`/blocklist add`](#use-commands) and select the user. Optionally, you can provide a reason and the duration of the block.
-If you want to remove a user from the blocklist, use [`/blocklist remove`](#use-commands).
+To block a user, use <a href="#use-commands"><code>/blocklist add</code></a> and select the relevant user — optionally, you can provide a reason and the duration of the block.
+If you want to remove a user from the blocklist, use <a href="#use-commands"><code>/blocklist remove</code></a>.
 
 <h4>Images coming soon ✨</h4>
 
@@ -84,7 +84,7 @@ If you want to remove a user from the blocklist, use [`/blocklist remove`](#use-
 
 So you don’t have to collect information manually every time, you can have users fill out a configured form, allowing you to get the required data quickly and securely.
 
-To send a form into a ticket channel, use [`/ticket form`](#use-commands) and select the relevant form from the list.
+To send a form into a ticket channel, use <a href="#use-commands"><code>/ticket form</code></a> and select the relevant form from the list.
 If no forms appear in the list or a specific form is missing, it’s either not configured yet or there is an error in the configuration.
 In that case, ask the person responsible for your server so they can contact our support if needed.
 
@@ -92,15 +92,15 @@ In that case, ask the person responsible for your server so they can contact our
 
 ### Pause tickets {#hold-tickets}
 
-If a ticket needs to be forwarded or is waiting for a response from another party, you can pause it with [`/ticket hold`](#use-commands).
+If a ticket needs to be forwarded or is waiting for a response from another party, you can pause it with <a href="#use-commands"><code>/ticket hold</code></a>.
 This disables automatic ticket closing and locks the channel, so no messages can be sent until pausing is disabled.
-To disable pausing, use [`/ticket hold`](#use-commands) again.
+To disable pausing, use <a href="#use-commands"><code>/ticket hold</code></a> again.
 
 <h4>Images coming soon ✨</h4>
 
 ### Rename tickets {#rename-tickets}
 
-If you want to rename a ticket, run [`/ticket rename`](#use-commands) and set the new ticket name in the dialog.
+If you want to rename a ticket, run <a href="#use-commands"><code>/ticket rename</code></a> and set the new ticket name in the dialog.
 When transferring to another ticket topic, the name may be changed automatically (if configured).
 
 :::caution Important:
@@ -111,23 +111,23 @@ Once a ticket has been renamed, the bot can no longer automatically change the t
 
 ### Change ticket topic {#change-ticket-topic}
 
-If a user selected the wrong topic for their ticket, you can move it to the correct topic using [`/ticket transfer`](#use-commands).
+If a user selected the wrong topic for their ticket, you can move it to the correct topic using <a href="#use-commands"><code>/ticket transfer</code></a>.
 The name will be updated automatically and the ticket will be released for claiming again.
 
 <h4>Images coming soon ✨</h4>
 
 ### Add and remove users {#add-and-remove-users}
 
-To handle certain requests more easily when multiple people are involved, you can add the relevant users to the ticket using [`/ticket users add`](#use-commands).
+To handle certain requests more easily when multiple people are involved, you can add the relevant users to the ticket using <a href="#use-commands"><code>/ticket users add</code></a>.
 This gives them access to the ticket channel (in addition to the team member and the ticket creator).
-To remove users, use [`/ticket users remove`](#use-commands).
+To remove users, use <a href="#use-commands"><code>/ticket users remove</code></a>.
 
 <h4>Images coming soon ✨</h4>
 
 ## Close tickets {#close-tickets}
 
-After a user’s request has been resolved, you can close the ticket immediately using [`/ticket close`](#use-commands) or the button under the ticket message.
-You can also schedule the ticket to be closed after a certain time using [`/ticket schedule-close`](#use-commands) (automatic closing will be disabled in this case).
+After a user’s request has been resolved, you can close the ticket immediately using <a href="#use-commands"><code>/ticket close</code></a> or the button under the ticket message.
+You can also schedule the ticket to be closed after a certain time using <a href="#use-commands"><code>/ticket schedule-close</code></a> (automatic closing will be disabled in this case).
 
 <h4>Images coming soon ✨</h4>
 

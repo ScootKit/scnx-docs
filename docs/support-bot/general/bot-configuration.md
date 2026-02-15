@@ -8,7 +8,7 @@ description: Customize the core features of your support bot.
 
 ## Main configuration {#main-configuration}
 
-### Features {#features}
+### Features {#main-configuration-features}
 
 * Enable the blocklist to exclude users from your Support-Bot.
 * Use blocklist slash commands in Discord to add or remove users with minimal effort.
@@ -16,12 +16,12 @@ description: Customize the core features of your support bot.
 
 <h4>Images coming soon ✨</h4>
 
-### Setup {#setup}
+### Setup {#main-configuration-setup}
 
 * Visit the [Main configuration](https://scnx.app/glink?page=support-system/bot-configuration?show=main) section in your dashboard.
-* [Configure](#configuration) the available options.
+* <a href="#main-configuration-configuration">Configure</a> the available options.
 
-### Configuration {#configuration}
+### Configuration {#main-configuration-configuration}
 
 | Field | Description |
 | --- | --- |
@@ -30,7 +30,7 @@ description: Customize the core features of your support bot.
 
 ## Bot configuration {#bot-configuration}
 
-### Features {#features}
+### Features {#bot-configuration-features}
 
 * Customize your bot’s status on Discord.
 * Define your status text.
@@ -38,12 +38,12 @@ description: Customize the core features of your support bot.
 
 <h4>Images coming soon ✨</h4>
 
-### Setup {#setup}
+### Setup {#bot-configuration-setup}
 
 * Visit the [Bot configuration](https://scnx.app/glink?page=support-system/bot-configuration?show=bot-config) section in your dashboard.
-* [Configure](#configuration) the available options.
+* <a href="#bot-configuration-configuration">Configure</a> the available options.
 
-### Configuration {#configuration}
+### Configuration {#bot-configuration-configuration}
 
 | Field | Description |
 | --- | --- |
@@ -52,7 +52,7 @@ description: Customize the core features of your support bot.
 
 ## Bot branding {#bot-branding}
 
-### Features {#features}
+### Features {#bot-branding-features}
 
 * Customize your bot’s branding to match your server.
 * Set the default footer used in embeds.
@@ -60,12 +60,12 @@ description: Customize the core features of your support bot.
 
 <h4>Images coming soon ✨</h4>
 
-### Setup {#setup}
+### Setup {#bot-branding-setup}
 
 * Visit the [Bot branding](https://scnx.app/glink?page=support-system/bot-configuration?show=branding) section in your dashboard.
-* [Configure](#configuration) the available options.
+* <a href="#bot-branding-configuration">Configure</a> the available options.
 
-### Configuration {#configuration}
+### Configuration {#bot-branding-configuration}
 
 | Field | Description |
 | --- | --- |
@@ -74,8 +74,8 @@ description: Customize the core features of your support bot.
 
 ## Opening hours {#opening-hours}
 
-You can find our documentation page for opening hours [here](/docs/support-bot/general/opening-hours).
+You can find our documentation page for opening hours [here](./opening-hours.md).
 
 ## modmail.net features {#modmail-net-features}
 
-You can find our documentation page for modmail.net features [here](/docs/support-bot/general/modmail-net).
+You can find our documentation page for modmail.net features [here](./modmail-net.md).

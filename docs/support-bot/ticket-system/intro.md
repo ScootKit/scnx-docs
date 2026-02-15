@@ -7,7 +7,7 @@ description: Everything you need to know about the SCNX Support-Bot ticket syste
 # About the Ticket System
 
 :::info Looking for a starter guide?
-For a quick and easy introduction to the ticket system for you and your team members, we recommend our [Starter Guide (Ticket System 101)](/docs/support-bot/ticket-system/basics).
+For a quick and easy introduction to the ticket system for you and your team members, we recommend our [Starter Guide (Ticket System 101)](./basics.md).
 :::
 
 ## How does the ticket system work?
