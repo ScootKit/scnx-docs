@@ -1,9 +1,9 @@
 # Discord IDs & Mentions
 
-To configure advanced features in SCNX, you sometimes need specific Discord IDs. This guide will show you how to find them and how to mention entities using their ID.
+To configure advanced features on SCNX, you sometimes need specific Discord IDs. This guide will show you how to find them and how to mention entities using their ID.
 
 ## 1. Enable Discord Developer Mode
-Before you can copy IDs, you must enable Developer Mode in your Discord client.
+Before you can copy IDs, you need to enable the Developer Mode in your Discord client.
 1. Open your **User Settings** (the gear icon next to your name).
 2. Go to **Advanced** (under the "App Settings" category).
 3. Toggle **Developer Mode** to **On**.
@@ -23,7 +23,7 @@ Once Developer Mode is active, you can right-click almost anything in Discord to
 Sometimes you need to mention an element in a bot response or a message. Use the following syntax:
 
 :::info Mention-Helper in SCNX
-In the SCNX Message-Editor, you often don't necessarily have to type the syntax manually. You can simply click the **"@" button** above the text field to easily select and insert channels or roles.
+In the SCNX Message-Editor, you often don't have to type the syntax manually. You can simply click the **"@" button** above the text field to easily select and insert channel or role mentions.
 
 ![SCNX Message Editor Mention Button](@site/docs/assets/discord-ids/en/scnx-mention-helper.png)
 :::
