@@ -33,27 +33,28 @@ Every entity on Discord â€” whether it's a user, a server, or a single message â
 1. Go to **Server Settings** > **Roles**.
 2. Right-click the specific role name.
 3. Select **Copy Role ID**.
+* **On Mobile:** Go to Server Settings > Roles, tap the role, and tap the "Copy ID" icon in the top right.
 
 ![Screenshot of the role settings page with the right-click menu active](@site/docs/assets/discord-ids/en/copy-role-id.png)
 
 ### Copy Message IDs
 1. Hover over the message and click the **three dots** (More) on the right side.
 2. Select **Copy Message ID** at the very bottom of the menu.
-* **On Mobile:** Long-press the message, scroll to the bottom of the pop-up menu, and tap **Copy Message ID**.
+* **On Mobile:** Long-press the message, scroll to the bottom of the menu, and tap "Copy Message ID".
 
 ![Screenshot showing the context menu on a message with Copy Message ID highlighted](@site/docs/assets/discord-ids/en/copy-message-id.png)
 
 ### Copy Server IDs (Guild IDs)
-1. Right-click the **Server Name** at the top of your channel list or right-click the **Server Icon** in your server sidebar.
+1. Right-click the **Server Name** at the top of your channel list or right-click the **Server Icon**.
 2. Select **Copy Server ID** at the bottom of the list.
-* **On Mobile:** Tap the server name at the top of the channel list to open the server menu, scroll to the very bottom, and select **Copy Server ID**.
+* **On Mobile:** Tap the three dots next to the Server Name at the top of the channel list, scroll down, and tap "Copy Server ID".
 
 ![Screenshot showing how to right-click a server icon to copy the Server ID](@site/docs/assets/discord-ids/en/copy-server-id.png)
 
 ---
 
 ## 3. Mentioning Elements via ID
-Sometimes you need to mention a user, role, or channel within a bot response (like a custom embed or a welcome message) where a standard "@" mention won't not work. Using the raw ID syntax ensures the mention resolves correctly once the bot sends the message.
+Sometimes you need to mention a user, role, or channel within a bot response (like a custom embed or a welcome message) where a standard "@" mention might not work. Using the raw ID syntax ensures the mention resolves correctly once the bot sends the message.
 
 :::info Mention-Helper in SCNX
 In the SCNX Message-Editor, you often don't have to type the syntax manually. You can simply click the **"@" button** above the text field to easily select and insert channel or role mentions.
@@ -71,13 +72,35 @@ If you are writing raw text or configuring advanced fields, use the following sy
 | **Roles** | `<@&ROLEID>` | `<@&1113115210048360489>` | @Moderator |
 
 ### Mentioning Timestamps
-If you want to include dynamic time displays (e.g., "5 minutes ago" or showing a specific date that adapts to the viewer's timezone), Discord uses a special Unix-Timestamp format.
+If you want to include dynamic time displays, Discord uses a special Unix-Timestamp format.
 
 To create a timestamp, you wrap a Unix-Time (seconds since 1970) in a specific code. For example: `<t:1700000000:R>`.
 
 * **Dynamic:** It automatically adjusts to the local time of every user.
-* **Versatile:** Can show relative time ("in 2 hours"), full dates, or just the time.
+* **Versatile:** Can show relative time ("5 minutes ago"), full dates, or just the time.
 
 ![A screenshot showing examples of different timestamp formats](@site/docs/assets/discord-formatting/en/types3.png)
 
 You can find a detailed guide and a generator for these [here](@site/docs/discord-formatting.md#timestamps).
+
+---
+
+## Troubleshooting {#troubleshooting}
+
+<details>
+  <summary>The "Copy ID" option is missing</summary>
+  <ul>
+    <li>Ensure that <b>Developer Mode</b> is toggled to "On" in your Discord settings (User Settings > Advanced).</li>
+    <li>If you just enabled it, try restarting your Discord client (press <code>Ctrl + R</code> on Desktop).</li>
+    <li>On Mobile, ensure you are using the latest version of the Discord app.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>The mention appears as raw text instead of a name</summary>
+  <ul>
+    <li>Double-check that the ID you copied is correct and belongs to the right entity type.</li>
+    <li>Make sure you have included the required symbols like <code>&lt;</code>, <code>@</code>, <code>#</code>, <code>&amp;</code>, and <code>&gt;</code>.</li>
+    <li>If the ID belongs to a user or role that is not in the server where the message is sent, Discord may show the raw ID.</li>
+  </ul>
+</details>
