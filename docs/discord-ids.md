@@ -18,6 +18,7 @@ Every entity on Discord — whether it's a user, a server, or a single message �
 ### Copy User and Bot IDs
 1. Right-click on the user's name or avatar.
 2. Select **Copy User ID** at the bottom of the menu.
+3. The ID is now in your clipboard - you can now paste it into SCNX or elsewhere 🚀
 * **On Mobile:** Long-press the user's profile, tap the three dots (`...`) in the top right, and select "Copy User ID".
 
 ![Screenshot showing how to right-click a user and select Copy User ID](@site/docs/assets/discord-ids/en/copy-user-id.png)
@@ -25,6 +26,7 @@ Every entity on Discord — whether it's a user, a server, or a single message �
 ### Copy Channel IDs
 1. Right-click a channel name in your sidebar.
 2. Select **Copy Channel ID**.
+3. The ID is now in your clipboard - you can now paste it into SCNX or elsewhere 🚀
 * **On Mobile:** Long-press the channel name, scroll down, and tap "Copy Channel ID".
 
 ![Screenshot showing the context menu on a channel with Copy Channel ID highlighted](@site/docs/assets/discord-ids/en/copy-channel-id.png)
@@ -33,6 +35,7 @@ Every entity on Discord — whether it's a user, a server, or a single message �
 1. Go to **Server Settings** > **Roles**.
 2. Right-click the specific role name.
 3. Select **Copy Role ID**.
+4. The ID is now in your clipboard - you can now paste it into SCNX or elsewhere 🚀
 * **On Mobile:** Go to Server Settings > Roles, tap the role, and tap the "Copy ID" icon in the top right.
 
 ![Screenshot of the role settings page with the right-click menu active](@site/docs/assets/discord-ids/en/copy-role-id.png)
@@ -40,6 +43,7 @@ Every entity on Discord — whether it's a user, a server, or a single message �
 ### Copy Message IDs
 1. Hover over the message and click the **three dots** (More) on the right side.
 2. Select **Copy Message ID** at the very bottom of the menu.
+3. The ID is now in your clipboard - you can now paste it into SCNX or elsewhere 🚀
 * **On Mobile:** Long-press the message, scroll to the bottom of the menu, and tap "Copy Message ID".
 
 ![Screenshot showing the context menu on a message with Copy Message ID highlighted](@site/docs/assets/discord-ids/en/copy-message-id.png)
@@ -47,6 +51,7 @@ Every entity on Discord — whether it's a user, a server, or a single message �
 ### Copy Server IDs (Guild IDs)
 1. Right-click the **Server Name** at the top of your channel list or right-click the **Server Icon**.
 2. Select **Copy Server ID** at the bottom of the list.
+3. The ID is now in your clipboard - you can now paste it into SCNX or elsewhere 🚀
 * **On Mobile:** Tap the three dots next to the Server Name at the top of the channel list, scroll down, and tap "Copy Server ID".
 
 ![Screenshot showing how to right-click a server icon to copy the Server ID](@site/docs/assets/discord-ids/en/copy-server-id.png)
