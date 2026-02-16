@@ -24,7 +24,7 @@ Aber jetzt überlassen wir dir das Lesen und wünschen dir viel Erfolg!
 Mitglieder können Tickets entweder über Ticketöffnungsnachrichten oder mit dem Befehl [``/ticket open``](#use-commands) erstellen.
 Falls Ticket-Themen eingerichtet sind, müssen diese sowohl in der Ticketöffnungsnachricht als auch bei der Ausführung des Befehls gewählt werden.
 
-Sobald ein Ticket eröffnet wurde, erstellt dein Bot einen neuen Kanal in der festgelegten Kategorie, welche gegebenenfalls von Ticket-Thema zu Ticket-Thema varrieren kann.
+Sobald ein Ticket erstellt wurde, erstellt dein Bot einen neuen Kanal in der festgelegten Kategorie, welche gegebenenfalls von Ticket-Thema zu Ticket-Thema varrieren kann.
 
 <h4>Bilder Coming Soon ✨</h4>
 
