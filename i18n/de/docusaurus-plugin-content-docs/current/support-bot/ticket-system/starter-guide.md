@@ -85,7 +85,7 @@ Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende d
 Damit du Informationen nicht immer manuell abfragen musst, kannst du Nutzer einfach ein konfiguriertes Formular ausfüllen lassen, wodurch du notwendige Daten schnell und sicher erhältst.
 
 Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/ticket form``](#use-commands) und wähle das entsprechende Formular aus der Liste.
-Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht eine Fehler in der Konfiguration. 
+Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht ein Fehler in der Konfiguration. 
 Frage in diesem Fall beim Verantwortlichen deines Servers nach, damit dieser gegebenenfalls unseren Support kontaktieren kann.
 
 <h4>Bilder Coming Soon ✨</h4>
@@ -153,5 +153,5 @@ Juhu, du hast es geschafft 🎉
 
 Du bist am Ende des Guides angelangt und hast nun hoffentlich einen guten Überblick über die Funktionsweise und Nutzung des Ticket-Systems vom SCNX Support-Bot.
 
-Falls trotzdem noch Fragen bestehen sollten oder etwas unklar ist, frage gerne den Verantwortlichen deines Servers oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de), 
+Falls trotzdem noch Fragen bestehen sollten oder etwas unklar ist, frage gerne beim Verantwortlichen deines Servers nach oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de), 
 wir helfen dir gerne weiter!

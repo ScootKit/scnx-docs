@@ -1,3 +1,9 @@
+---
+sidebar_position: 3
+title: Feature-Vergleich
+description: Vergleiche die Features vom Modmail- und Ticket-System und verschaffe dir einen besseren Überblick, welches der Systeme für deinen Server besser geeignet ist.
+---
+
 # Feature-Vergleich
 
 ## Erstellung von Tickets
