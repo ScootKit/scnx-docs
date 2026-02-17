@@ -17,19 +17,19 @@ description: Create and manage forms you can send to users manually or automatic
 ## Setup {#setup}
 
 * Visit the [Forms](https://scnx.app/glink?page=support-system/forms) page in your dashboard.
-* <a href="#main-configuration">Configure</a> the available options.
+* [Configure](#main-configuration) the available options.
 * Create a new form by clicking the “Create new form” button.
-* <a href="#manage-forms">Configure</a> the available options for the respective form.
-* Create a new form question by clicking “Edit form” in the <a href="#main-configuration">main configuration</a> and then clicking “Add field”.
-* <a href="#manage-forms-questions">Configure</a> the available options for the respective form question.
+* [Configure](#manage-forms) the available options for the respective form.
+* Create a new form question by clicking “Edit form” in the [configuration](#main-configuration) and then clicking “Add field”.
+* [Configure](#manage-forms-questions) the available options for the respective form question.
 
 ## Commands {#commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
-| `/ticket form form:<FormName>` | Sends a form into the corresponding ticket. |
+| ``/ticket form form:<FormName>`` | Sends a form into the corresponding ticket. |
 
 ## Configuration {#configuration}
 
@@ -37,14 +37,14 @@ description: Create and manage forms you can send to users manually or automatic
 
 | Field | Description |
 | --- | --- |
-| Dialog open button | This text is shown on the button that opens the form dialog, which is attached to the message sent by the <a href="#commands"><code>/ticket form</code></a> command. |
+| Dialog open button | This text is shown on the button that opens the form dialog, which is attached to the message sent by the [``/ticket form``](#commands) command. |
 
 ### Manage forms {#manage-forms}
 
 | Field | Description |
 | --- | --- |
 | Form name | This text is shown as the title of your form. |
-| Dialog | These questions are shown in the form. More information on configuring form questions can be found <a href="#manage-forms-questions">here</a>. |
+| Dialog | These questions are shown in the form. More information on configuring form questions can be found [here](#manage-forms-questions). |
 
 ### Manage form questions {#manage-forms-questions}
 

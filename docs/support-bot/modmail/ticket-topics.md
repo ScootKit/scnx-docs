@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Ticket Topics
-description: Create and manage Modmail ticket topics to keep conversations organized.
+description: Create and manage ticket topics to keep your tickets organized and unlock additional advantages.
 ---
 
 # Ticket Topics
@@ -9,9 +9,9 @@ description: Create and manage Modmail ticket topics to keep conversations organ
 ## Features {#features}
 
 * Create different ticket topics to better categorize different kinds of requests.
-* Transfer a ticket to a different category if the user selected the wrong one.
-* Override global settings such as ticket roles, the category for new tickets, the ticket message, and much more per ticket topic.
-* Change the channel name format to quickly recognize ticket topics at a glance (for example, by using different emojis).
+* Transfer a ticket to another category if a user selected the wrong one.
+* Override globally configured settings such as ticket roles, category for new tickets, ticket message, and much more for each individual ticket topic.
+* Change the channel name format to recognize ticket topics at a glance (for example, by using different emojis).
 * Decide whether users must submit a configured [form](../general/forms.md) before creating a ticket for a specific topic.
 
 <h4>Images coming soon ✨</h4>
@@ -21,7 +21,7 @@ description: Create and manage Modmail ticket topics to keep conversations organ
 *If you want to override (certain) settings:*
 
 * *Create a category for new tickets on your Discord server.*
-* *Create the required roles for team members on your Discord server that should get access to tickets.*
+* *Create the required roles for team members on your Discord server that should have access to tickets.*
 * *Create a private text channel on your Discord server that you want to use as the log channel.*
 
 <br/>
@@ -33,11 +33,11 @@ description: Create and manage Modmail ticket topics to keep conversations organ
 
 ## Commands {#commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
-| `/ticket transfer` | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>Moves the current ticket to the selected topic. |
+| ``/ticket transfer`` | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>Moves the current ticket to the selected topic. |
 
 ## Configuration {#configuration}
 
@@ -45,7 +45,7 @@ description: Create and manage Modmail ticket topics to keep conversations organ
 
 | Field | Description |
 | --- | --- |
-| Enable ticket topics | Enables or disables the feature for your Modmail system. |
+| Enable ticket topics | Enables or disables the feature for your modmail system. |
 | Team members can transfer tickets to another topic | If enabled, team members can transfer a ticket to a different ticket topic. |
 | Users must confirm their topic selection | If enabled, a confirmation message is sent after selecting a topic. |
 | Confirmation message | *Only available if “Users must confirm their topic selection” is enabled.*<br/>This message is sent as the confirmation message. |

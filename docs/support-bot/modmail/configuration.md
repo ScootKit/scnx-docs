@@ -26,7 +26,7 @@ description: Configure core features for your modmail system.
 
 ### Commands {#main-configuration-commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
@@ -49,9 +49,10 @@ description: Configure core features for your modmail system.
 | Enable maintenance mode? | If enabled, no ticket actions can be performed (such as creating/editing/closing tickets). Messages can still be sent in already opened tickets. |
 | Allow users to open tickets via command? | If enabled, your users can create tickets not only via buttons and dropdown menus, but also with the <a href="#main-configuration-commands"><code>/ticket open</code></a> command. |
 | Allow staff to open tickets on behalf of a user? | If enabled, team members can create a ticket with a user using the <a href="#main-configuration-commands"><code>/ticket admin-open</code></a> command. Restrictions like multiple open tickets or opening hours are bypassed. |
-| Team member roles | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><br/>**Note:** You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><br/>**Note:** You can set different ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Allow team members to rename tickets? | If enabled, team members can rename tickets with the <a href="#main-configuration-commands"><code>/ticket rename</code></a> command.<br/><br/>**Note:** After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in [ticket topics](./ticket-topics.md)). |
+| Team member roles | <br/><small><details><summary><strong>Note</strong></summary><blockquote>*You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*<br/>*This is another note with medium-length text.*</blockquote></details></small>These roles get access to tickets by default and are mentioned when a new ticket is created. |
+| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><small><details><summary><strong>Note</strong></summary><blockquote>*You can set different ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| AI summary of ticket transcripts | If enabled, after a ticket is closed your bot will automatically send an AI-generated summary of the ticket to the configured log channel.<br/>Please note that this uses your server’s [AI credits](https://faq.scnx.app/ki-auf-scnx/) and shares certain data with “modmail.net” (a SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy). |
+| Allow team members to rename tickets? | If enabled, team members can rename tickets with the <a href="#main-configuration-commands"><code>/ticket rename</code></a> command.<br/><dl><dt>Note</dt><dd>After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in <a href="./ticket-topics.md">ticket topics</a>).</dd></dl> |
 | Show rename button under ticket message? | *Only available if “Allow team members to rename tickets?” is enabled.*<br/>If enabled, a button is added under the ticket message so team members can rename the ticket faster. Otherwise they must use the <a href="#main-configuration-commands"><code>/ticket rename</code></a> command. |
 | Rename button text | *Only available if “Allow team members to rename tickets?” and “Show rename button under ticket message?” are enabled.*<br/>This text is shown on the button under the ticket message. |
 | Ticket rename message | *Only available if “Allow team members to rename tickets?” is enabled.*<br/>This message is sent into the ticket channel when a ticket is renamed. |
@@ -98,7 +99,7 @@ description: Configure core features for your modmail system.
 
 ### Commands {#ticket-closing-commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
@@ -142,7 +143,7 @@ description: Configure core features for your modmail system.
 
 ### Commands {#additional-ticket-members-commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
@@ -232,7 +233,7 @@ description: Configure core features for your modmail system.
 
 ### Commands {#ticket-hold-commands}
 
-<SlashCommandExplanation></SlashCommandExplanation>
+<SlashCommandExplanation />
 
 | Command | Description |
 | --- | --- |
@@ -269,6 +270,7 @@ description: Configure core features for your modmail system.
 | Ticket channel name format | This format is used by your bot to create names for new ticket channels. You can set different formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
 | Error message: user already has an open ticket | *Only sent if <a href="#main-configuration-configuration">configured</a>.*<br/>This message is sent when a user tries to open another ticket while they already have an active one. |
 | Error: ticket not found | This message is sent when a team member tries to [claim](./claiming.md) a ticket that has already been closed or deleted. |
+| Error: command used outside of ticket channels | This message is sent when a team member runs ticket commands outside a ticket channel. |
 | Ticket-by-command confirmation message | This message is sent when a user tries to open a new ticket via `/ticket open` (<a href="#main-configuration-configuration">if configured</a>). |
 | Error: insufficient permissions to add users to a ticket | This message is sent when a user without the required permissions tries to add/remove a user to/from a ticket (<a href="#additional-ticket-members-configuration">if configured</a>). |
 | Error: user has already been added to the ticket | This message is sent when trying to add a user who already has access to the ticket. |

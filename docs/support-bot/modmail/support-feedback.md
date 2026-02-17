@@ -28,15 +28,15 @@ description: Manage support feedback to further improve your members’ support 
 
 | Field | Description |
 | --- | --- |
-| Enable support feedback | Enables or disables the feature for your Modmail system. |
-| Feedback message | This message will be sent to the user after their Modmail thread is closed. |
+| Enable support feedback | Enables or disables the feature for your modmail system. |
+| Feedback message | This message will be sent to the user after their modmail thread is closed. |
 | Submitted message | This message is edited from the feedback message after the user has submitted their rating. |
-| Edit feedback questions | These questions are shown in the rating dialog. More information on configuring feedback questions can be found <a href="#manage-feedback-questions">here</a>. |
+| Edit feedback questions | These questions are shown in the rating dialog.<br/><small><details><summary>Note</summary><blockquote>*More information on configuring feedback questions can be found [here](#manage-feedback-questions).*</blockquote></details></small> |
 | Anonymize feedback | If enabled, your bot will not link ratings to user IDs. |
 | Send answers to a channel | If enabled, ratings are sent to a channel. Otherwise, you can find ratings from the last 30 days in your [dashboard](https://scnx.app/glink?page=support-system/modmail/support-feedback). |
-| Channel to send answers to | *Only available if “Send answers to a channel” is enabled.*<br/>Your bot will send submitted ratings to this channel. |
-| Customize notification message? | *Only available if “Send answers to a channel” is enabled.*<br/>If enabled, you can customize the notification message for new ratings. |
-| Feedback notification message | *Only available if “Send answers to a channel” and “Customize notification message?” are enabled.*<br/>This message will be sent when a new rating is submitted. |
+| Channel to send answers to | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>Your bot will send submitted ratings to this channel. |
+| Customize notification message? | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>If enabled, you can customize the notification message for new ratings. |
+| Feedback notification message | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” and “Customize notification message?” are enabled.*</blockquote></details></small>This message will be sent when a new rating is submitted. |
 
 ### Manage feedback questions {#manage-feedback-questions}
 
@@ -48,3 +48,4 @@ description: Manage support feedback to further improve your members’ support 
 | Is this field required? | If enabled, the user must fill out this field. |
 | Minimum input length | The minimum number of characters the user must enter to submit the dialog. |
 | Maximum input length | The maximum number of characters the user is allowed to enter to submit the dialog. |
+
