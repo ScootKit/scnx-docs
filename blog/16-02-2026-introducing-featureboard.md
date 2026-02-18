@@ -19,6 +19,7 @@ But as our community has grown, keeping track of all those brilliant ideas has b
 
 **Today, we are proud to launch Featureboard — a community-driven feedback platform that uses AI to provide you with a better experience and give us a clearer overview of new features.**
 
+<!-- truncate -->
 ## Why we built Featureboard
 
 For a long time, user feedback was a bit of a "black box." You would submit an idea, and maybe you'd hear back, or maybe it would end up on a long internal to-do list. We wanted to change that.
@@ -31,17 +32,17 @@ Featureboard was built to solve three main problems:
 
 ### More Efficiency, More Features
 
-While Featureboard creates a much better experience for you, it is also a game-changer for our team. It allows us to keep track of suggestions effortlessly and get a clear view of what is most important to our community. Because of the new AI features, maintenance is very ease — tasks like moderation are **completely automated**. This means we spend less time sorting tickets and more time building the features you want.
+While Featureboard creates a much better experience for you, it is also a game-changer for our team. It allows us to keep track of suggestions effortlessly and get a clear view of what is most important to our community. Because of the new AI features, maintenance is very easy — tasks like moderation are **completely automated**. This means we spend less time sorting tickets and more time building the features you want.
 
 ## How it Works: Ride the Wave
 
 Using Featureboard is simple, but powerful. It puts the control in your hands.
 
 **1. Share Your Idea**
-Got a vision for SCNX? Submit a suggestion. It could be a new feature, an improvement, or even a completely new product direction. You can write your suggestion in multiple languages: FeatureBoard translates it automatically, and our AI-powered system even helps categorize it for us.
+Got a vision for SCNX? [Submit a suggestion](https://featureboard.net/submit). It could be a new feature, an improvement, or even a completely new product direction. You can write your suggestion in multiple languages: FeatureBoard translates it automatically, and our AI-powered system even helps categorize it for us.
 
 **2. Processing**
-This is where the magic happens. Browse the feed to see what others are suggesting. If you see an idea you love, give it an upvote. Featureboard calculates metrics like the **Popularity Score** and the **Implementation Likelihood** live, keeping the community updated in real-time.
+This is where the magic happens. [Browse the feed](https://featureboard.net/browse) to see what others are suggesting. If you see an idea you love, give it an upvote. Featureboard calculates metrics like the **Popularity Score** and the **Implementation Likelihood** live, keeping the community updated in real-time.
 
 **3. We Build It**
 We look at the top-voted suggestions to decide what to work on next. No guessing games.
@@ -50,11 +51,11 @@ We look at the top-voted suggestions to decide what to work on next. No guessing
 
 ## Full Visibility with the Public Roadmap
 
-One of our favorite parts of Featureboard is the **Open Roadmap**.
+One of our favorite parts of Featureboard is the [**Open Roadmap**](https://featureboard.net/roadmap).
 
 Instead of wondering if a feature is coming "soon," you can check the roadmap to see the real-time status. You can see what's **In Progress**, what's **Planned** for the near future, and what's currently in the **Backlog** for the community to vote on.
 
-This level of transparency means no surprises. You drive the decisions, and you can watch as your feedback turns into real code.
+This level of transparency means no surprises. You drive the decisions, and you can watch as your feedback turns into real features on SCNX.
 
 ## Supporting Development & Priority Suggestions
 
