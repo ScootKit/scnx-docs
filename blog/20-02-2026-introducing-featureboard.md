@@ -62,7 +62,7 @@ This level of transparency means no surprises. You drive the decisions, and you 
 
 ### Memberships
 
-Featureboard is free for everyone to browse and submit. However, building and maintaining high-quality software takes resources. To help us continue offering fair prices and cool features, a [ScootKit Membership Level 3](https://membership.scootkit.com/de) gives you **Prioritized Suggestions** for faster review, priority placement, and doubles your daily upvote limit from 5 to 10. You also get priority support on our Discord.
+Featureboard is free for everyone to browse and submit. However, building and maintaining high-quality software takes resources. To help us continue offering fair prices and cool features, a [ScootKit Membership Level 3](https://membership.scootkit.com/) gives you **Prioritized Suggestions** for faster review, priority placement, and doubles your daily upvote limit from 5 to 10. You also get priority support on our Discord.
 
 ### Sponsor a Feature: Fast-Track Your Vision
 
