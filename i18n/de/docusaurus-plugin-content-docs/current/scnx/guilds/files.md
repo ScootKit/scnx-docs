@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Bilderspeicher
+description: Optimiere deine SCNX-Serververwaltung mit dem Guild Image Storage, einer zentralisierten Bildbibliothek für dein Team. Lade Bilder einfach hoch, organisiere sie oder generiere sie per KI, um sie nahtlos für deine Custom- und Support-Bot-Konfigurationen zu nutzen.
 ---
 
 # Server-Bilderspeicher {#guild-image-storage}
@@ -24,7 +25,9 @@ Wann immer du ein Bild für deinen Custom Bot oder Support Bot benötigst – wi
 ## Migration vom persönlichen Speicher {#migrating-from-personal-storage}
 
 :::info Käufe für persönlichen Speicher
-Jeder zusätzliche Speicherplatz, den du zuvor für deinen persönlichen Bereich gekauft hast, verbleibt auf deinem persönlichen Konto. **Persönlicher Speicher kann nicht auf das Server-Bilderspeicher-Kontingent eines Servers übertragen werden.** Bitte beachte außerdem, dass du keine neuen Speicher-Upgrades mehr für deinen persönlichen Bereich kaufen kannst.
+Jeder zusätzliche Speicherplatz, den du zuvor für deinen persönlichen Bereich gekauft hast, verbleibt auf deinem persönlichen Konto. 
+**Persönlicher Speicher kann nicht auf das Server-Bilderspeicher-Kontingent eines Servers übertragen werden.** Du kannst ihn wie gewohnt weiterverwenden.
+Bitte beachte außerdem, dass du keine neuen Speicher-Upgrades mehr für deinen persönlichen Bereich kaufen kannst.
 :::
 
 Wenn du SCNX schon eine Weile nutzt, bist du wahrscheinlich mit dem persönlichen Bilder-Upload-Bereich unter [scnx.app/user/file](https://scnx.app/user/file) vertraut.

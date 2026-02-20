@@ -1,6 +1,7 @@
 ---
 sidebar_position: 6
 title: Image Storage
+description: Optimize your SCNX server management with Guild Image Storage, a centralized library for your team's bot assets. Easily upload, organize, or AI-generate images to seamlessly power your Custom and Support Bot configurations.
 ---
 
 # Guild Image Storage {#guild-image-storage}
@@ -32,9 +33,10 @@ attachment—you can pull it directly from your shared server library.
 ## Migrating from Personal Storage {#migrating-from-personal-storage}
 
 :::info Personal Storage Purchases
-Any extra storage space you previously purchased for your personal space will remain on your personal account. *
-*Personal storage cannot be transferred to a server's Guild Image Storage quota.** Additionally, please note that you
-can no longer purchase new storage upgrades for your personal space.
+Any extra storage space you previously purchased for your personal space will remain on your personal account.
+**Personal storage cannot be transferred to a server's Guild Image Storage quota.** You can continue to use your
+purchased personal storage as usual.
+Additionally, please note that you can no longer purchase new storage upgrades for your personal space.
 :::
 
 If you have been using SCNX for a while, you are likely familiar with the personal image upload space located
@@ -130,7 +132,6 @@ server's SCNX plan. If a bot tries to upload an image, it will also fail, result
 
 ![Screenshot of the Guild Image Storage gallery showing uploaded images and the storage progress bar](@site/docs/assets/scnx/guilds/files/guild-images.png)
 
-
 ## Organizing and Finding Your Assets {#organizing-and-finding-your-assets}
 
 As your library grows, finding the right image quickly is crucial. SCNX gives you several tools to keep things tidy.
@@ -152,10 +153,10 @@ need, and hit **Clear filters** to reset your view.
 
 | Tool              | What it does                                                                                          |
 |-------------------|-------------------------------------------------------------------------------------------------------|
-| **Search Bar** | Searches for matching text in the display name or the original filename.                              |
+| **Search Bar**    | Searches for matching text in the display name or the original filename.                              |
 | **Filter by Tag** | Displays only the images that have a specific tag applied.                                            |
-| **Starred Only** | Hides everything except your favorited (starred) images.                                              |
-| **Type Tabs** | Filters images by how they were created: *All, Uploaded, AI Generated, Custom Bot,* or *Support Bot*. |
+| **Starred Only**  | Hides everything except your favorited (starred) images.                                              |
+| **Type Tabs**     | Filters images by how they were created: *All, Uploaded, AI Generated, Custom Bot,* or *Support Bot*. |
 
 *Note: To keep loading times fast, the library displays 25 images per page. Use the Previous / Next buttons at the
 bottom to navigate.*
@@ -166,13 +167,13 @@ Every image card features a quick-action menu to help you manage your files.
 
 | Action            | What it does                                                       |
 |-------------------|--------------------------------------------------------------------|
-| **Copy URL** | Copies the direct CDN link to your clipboard.                      |
-| **Preview** | Opens a full-sized preview of the image.                           |
-| **Download** | Downloads the original image file directly to your current device. |
-| **Rename** | Changes the image's display name.                                  |
-| **Edit Tags** | Allows you to add or remove organizational tags.                   |
+| **Copy URL**      | Copies the direct CDN link to your clipboard.                      |
+| **Preview**       | Opens a full-sized preview of the image.                           |
+| **Download**      | Downloads the original image file directly to your current device. |
+| **Rename**        | Changes the image's display name.                                  |
+| **Edit Tags**     | Allows you to add or remove organizational tags.                   |
 | **Star / Unstar** | Pins or unpins the image to the top of the library.                |
-| **Delete** | Permanently removes the image.                                     |
+| **Delete**        | Permanently removes the image.                                     |
 
 ### Deleting Images {#deleting-images}
 
