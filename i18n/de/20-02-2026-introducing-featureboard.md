@@ -2,7 +2,7 @@
 slug: introducing-featureboard
 title: "Wir stellen vor: Featureboard – Der neue Weg, die Zukunft von SCNX zu gestalten"
 description: "Wir stellen ein neues, KI-gestütztes Produkt vor, um Vorschläge für alle klarer und produktiver zu machen."
-date: 2026-02-16T10:00
+date: 2026-02-20T21:00
 authors:
   - fridolin
 tags:
