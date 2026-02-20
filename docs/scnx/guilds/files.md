@@ -85,6 +85,12 @@ rejected.
 
 ### 2. Generating Images with AI {#ai-generation}
 
+:::info Not a fan of AI Image Generation?
+Server owners and administrators can disable this feature easily in
+their [server settings](https://scnx.app/glink?page=settings). When disabled, the feature won't be visible in the
+dashboard. Modules that have AI Image Generation features will continue to work and need to be disabled manually if desired.
+:::
+
 Need an image but don't have a file ready? You can generate one from scratch using a text prompt right from the Images
 page.
 
