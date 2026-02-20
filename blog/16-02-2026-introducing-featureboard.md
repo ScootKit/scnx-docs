@@ -33,6 +33,7 @@ Featureboard was built to solve three main problems:
 ### More Efficiency, More Features
 
 While Featureboard creates a much better experience for you, it is also a game-changer for our team. It allows us to keep track of suggestions effortlessly and get a clear view of what is most important to our community. Because of the new AI features, maintenance is very easy — tasks like moderation are **completely automated**. This means we spend less time sorting tickets and more time building the features you want.
+![Screenshot with a list of all the AI Features of Featureboard](@site/blog/assets/featureboard-introduction/en/ai.png)
 
 ## How it Works: Ride the Wave
 
@@ -43,11 +44,10 @@ Got a vision for SCNX? [Submit a suggestion](https://featureboard.net/submit). I
 
 **2. Processing**
 This is where the magic happens. [Browse the feed](https://featureboard.net/browse) to see what others are suggesting. If you see an idea you love, give it an upvote. Featureboard calculates metrics like the **Popularity Score** and the **Implementation Likelihood** live, keeping the community updated in real-time.
+![Screenshot showing the "Browse"-Tab of Featureboard](@site/blog/assets/featureboard-introduction/en/browse.png)
 
 **3. We Build It**
-We look at the top-voted suggestions to decide what to work on next. No guessing games.
-
-![Screenshot: The "Roadmap" view showing In Progress, Planned, and Backlog columns]
+We use top-voted suggestions to guide our roadmap. While a high upvote count doesn't automatically guarantee implementation — we still have to consider technical feasibility and our overall product vision — it is the absolute best way to show our team what you want to see next.
 
 ## Full Visibility with the Public Roadmap
 
@@ -56,6 +56,7 @@ One of our favorite parts of Featureboard is the [**Open Roadmap**](https://feat
 Instead of wondering if a feature is coming "soon," you can check the roadmap to see the real-time status. You can see what's **In Progress**, what's **Planned** for the near future, and what's currently in the **Backlog** for the community to vote on.
 
 This level of transparency means no surprises. You drive the decisions, and you can watch as your feedback turns into real features on SCNX.
+![Screenshot showing the Roadmap of Featureboard](@site/blog/assets/featureboard-introduction/en/roadmap.png)
 
 ## Supporting Development & Priority Suggestions
 
