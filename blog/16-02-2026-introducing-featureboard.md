@@ -2,7 +2,7 @@
 slug: introducing-featureboard
 title: "Introducing Featureboard: The New Way to Shape the Future of SCNX"
 description: "We're introducing a new AI-powered product to make suggestions more clear and productive for everyone."
-date: 2026-02-16T10:00
+date: 2026-02-20T21:00
 authors:
   - fridolin
 tags:
