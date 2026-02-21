@@ -1,6 +1,6 @@
 # V4 Message Schema Reference {#v4-message-schema-reference}
 
-The V4 message schema uses Discord's Components V2 system to build rich, structured messages with text, images, buttons, dropdowns, and visual containers. This is the newer and more flexible alternative to the [V3 schema](/docs/scnx-api/reference/message-schema-v3).
+The V4 message schema uses Discord's Components V2 system to build rich, structured messages with text, images, buttons, dropdowns, and visual containers. This is the newer and more flexible alternative to the [V3 schema](/docs/scnx-api/reference/message-schema-v3/).
 
 ---
 
