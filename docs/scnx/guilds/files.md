@@ -40,14 +40,14 @@ Additionally, please note that you can no longer purchase new storage upgrades f
 :::
 
 If you have been using SCNX for a while, you are likely familiar with the personal image upload space located
-at [scnx.app/user/file](https://scnx.app/user/file).
+at [scnx.app/user/file](https://scnx.app/user/files).
 
 Guild Image Storage is a completely separate, shared space. To move your existing images from your personal space to the
 shared server library, **you will need to manually re-upload them**.
 
-1. Download the images you want to share from your [personal space](https://scnx.app/user/file).
+1. Download the images you want to share from your [personal space](https://scnx.app/user/files).
 2. Navigate to your server's **Images** page.
-3. Upload the files into the [new shared library](https://live.local/glink?page=images).
+3. Upload the files into the [new shared library](https://scnx.app/glink?page=images).
 
 ## Adding Images to Your Library {#adding-images-to-your-library}
 
