@@ -1,0 +1,11 @@
+{
+  "position": 1,
+  "label": "Marketplace APIs",
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "Marketplace APIs",
+    "description": "Discover how to share, retrieve and modify Shared Content on SCNX.."
+  }
+}
