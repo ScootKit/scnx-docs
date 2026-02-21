@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+Disallow: /docs/scnx-api
+Disallow: /de/scnx-api
+Disallow: /it/scnx-api
+Sitemap: https://docs.scnx.xyz/sitemap.xml
