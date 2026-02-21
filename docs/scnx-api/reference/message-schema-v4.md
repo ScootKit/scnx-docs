@@ -392,7 +392,7 @@ Each option triggers a custom command. **Guild-specific** — not recommended fo
 
 ## Shared Content Notes {#shared-content-notes}
 
-When creating shared content through the [Shared Marketplace Content API](/docs/shared-marketplace-content-api), keep in mind that your message will be imported by users on **different servers**. Components that reference guild-specific IDs will not work:
+When creating shared content through the [Shared Marketplace Content API](/docs/scnx-api/marketplace/shared-content/), keep in mind that your message will be imported by users on **different servers**. Components that reference guild-specific IDs will not work:
 
 | Component | Works in shared content? |
 |-----------|--------------------------|
