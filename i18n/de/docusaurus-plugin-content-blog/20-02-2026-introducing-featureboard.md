@@ -45,7 +45,7 @@ Hast du eine Vision für SCNX? [Reiche einen Vorschlag ein](https://featureboard
 Hier passiert die wahre Magie. [Durchstöbere den Feed](https://featureboard.net/browse), um zu sehen, was andere vorschlagen. Wenn du eine Idee siehst, die dir gefällt, gib ihr einen Upvote. Featureboard berechnet Live-Metriken wie den **Beliebtheitsscore** und die **Umsetzungswahrscheinlichkeit**, um die Community in Echtzeit auf dem Laufenden zu halten.
 ![Screenshot, der den "Browse"-Tab von Featureboard zeigt](@site/blog/assets/featureboard-introduction/de/browse.png)
 
-**3. Wir bauen es**
+**3. Wir bauen es**\
 Wir nutzen die am höchsten bewerteten Vorschläge, um unsere Roadmap zu ordnen. Auch wenn eine hohe Anzahl an Upvotes nicht automatisch eine Umsetzung garantiert – wir müssen weiterhin die technische Machbarkeit und unsere allgemeine Produktvision im Auge behalten –, ist es der absolut beste Weg, um unserem Team zu zeigen, was du als Nächstes sehen möchtest.
 
 ## Volle Sichtbarkeit mit der öffentlichen Roadmap
