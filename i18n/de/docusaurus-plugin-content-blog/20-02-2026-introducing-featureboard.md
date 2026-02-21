@@ -19,6 +19,8 @@ Aber da unsere Community gewachsen ist, wurde es zu einer echten Herausforderung
 
 **Heute sind wir stolz darauf, Featureboard vorzustellen – eine von der Community getriebene Feedback-Plattform, die KI nutzt, um dir ein besseres Erlebnis zu bieten und uns einen klareren Überblick über neue Funktionen zu geben.**
 
+<!-- truncate -->
+
 ## Warum wir Featureboard gebaut haben
 
 Lange Zeit war das Nutzer-Feedback eine Art "Blackbox". Du hast eine Idee eingereicht und vielleicht eine Antwort erhalten, oder sie landete einfach auf einer langen internen To-Do-Liste. Das wollten wir ändern.
