@@ -176,10 +176,9 @@ const sidebars = {
                     ]
                 },
                 {
-                    type: 'link',
+                    type: 'doc',
                     label: 'Artificial intelligence',
-                    description: 'Use Artificial intelligence on your server to create a more interactive experience for your users..',
-                    href: 'https://faq.scnx.app/ai-on-scnx/'
+                    id: 'custom-bot/modules/ai'
                 },
                 {
                     type: 'category',
