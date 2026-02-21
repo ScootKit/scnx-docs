@@ -69,8 +69,8 @@ All endpoints are strictly scoped to your organization. Your API token can only 
 
 The `data` field in all endpoints accepts SCNX message JSON in either v3 or v4 schema format. Every message object must include a `_schema` field indicating the version.
 
-- [v3 Message Schema Reference](/docs/scnx-api/reference/message-schema-v3)
-- [v4 Message Schema Reference](/docs/scnx-api/reference/message-schema-v4)
+- [v3 Message Schema Reference](/docs/scnx-api/reference/message-schema-v3/)
+- [v4 Message Schema Reference](/docs/scnx-api/reference/message-schema-v4/)
 
 ---
 

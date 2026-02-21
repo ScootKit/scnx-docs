@@ -399,7 +399,7 @@ const sidebars = {
                 type: 'generated-index',
                 title: 'SCNX APIs',
                 description: 'Discover how to modify content on SCNX. It\'s not possible to interact with Custom Bot APIs directly due to Discord API restrictions.',
-                slug: '/docs/scnx-apis'
+                slug: '/docs/scnx-api'
             },
             items: [
                 {
