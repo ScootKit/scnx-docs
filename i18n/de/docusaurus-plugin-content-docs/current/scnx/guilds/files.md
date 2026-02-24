@@ -44,14 +44,14 @@ Bitte beachte außerdem, dass du keine neuen Speicher-Upgrades mehr für deinen 
 :::
 
 Wenn du SCNX schon eine Weile nutzt, bist du wahrscheinlich mit dem persönlichen Bilder-Upload-Bereich
-unter [scnx.app/user/file](https://scnx.app/user/file) vertraut.
+unter [scnx.app/user/file](https://scnx.app/de/user/files) vertraut.
 
 Server-Bilderspeicher ist ein völlig separater, gemeinsamer Bereich. Um deine bestehenden Bilder aus deinem persönlichen
 Bereich in die gemeinsame Serverbibliothek zu verschieben, **musst du sie manuell neu hochladen**.
 
-1. Lade die Bilder, die du teilen möchtest, aus deinem [persönlichen Bereich](https://scnx.app/user/file) herunter.
+1. Lade die Bilder, die du teilen möchtest, aus deinem [persönlichen Bereich](https://scnx.app/de/user/files) herunter.
 2. Navigiere zur **Bilder**-Seite deines Servers.
-3. Lade die Dateien in die [neue gemeinsame Bibliothek](https://live.local/glink?page=images) hoch.
+3. Lade die Dateien in die [neue gemeinsame Bibliothek](https://scnx.app/de/glink?page=images) hoch.
 
 ## Bilder zu deiner Bibliothek hinzufügen {#adding-images-to-your-library}
 

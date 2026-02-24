@@ -45,6 +45,21 @@ const sidebars = {
         },
         {
             type: 'category',
+            label: 'Discord',
+            collapsed: false,
+            items: [
+                {
+                    type: 'doc',
+                    id: 'discord-formatting'
+                },
+                {
+                    type: 'doc',
+                    id: 'discord-ids'
+                }
+            ]
+        },
+        {
+            type: 'category',
             label: 'Detailed documentation',
             items: [
                 {
@@ -69,16 +84,6 @@ const sidebars = {
                 }
             ]
         },
-        {
-            type: 'category',
-            label: 'Discord',
-            items: [
-                {
-                    type: 'doc',
-                    id: 'discord-formatting'
-                }
-            ]
-        }
     ],
     linkedRolesSidebar: [
         {
