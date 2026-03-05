@@ -140,9 +140,6 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cc
 | Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.    |
 | Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                          |
 | Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts. |
-| Immediately give roles         | If enabled, join roles are assigned immediately when a user joins. If disabled, roles are assigned after the user completes Discord's onboarding (rules acceptance).                  |
-| Send DM on join                | If enabled, the bot sends a direct message to new users when they join the server.                                                                                                   |
-| Join DM Message                | *Only visible if "Send DM on join" is enabled.*<br/>The message sent via DM to new users when they join your server.                                                                 |
 | Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                        |
 
 ### Random messages {#configuration-random-messages}

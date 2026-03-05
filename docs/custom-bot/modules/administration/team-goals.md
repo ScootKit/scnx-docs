@@ -60,7 +60,6 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
 | Channel to send messages in              | *Only visible if "Send messages in channels instead of DMs" is enabled.*<br/>Every [evaluation](#module-terms), the goal message will get sent into this channel instead via DMs.                           |
 | Users can see each others statistics     | If enabled, users will be able to add the `[user:<User>]` to their command and will be able to see each others statistics.                                                                                  |
 | Ignored channels                         | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                        |
-| Message goal overwrites                  | Optionally overwrite the weekly message goal for specific roles. First field: Role ID. Second field: Custom goal for that role. Users with this role will have this goal instead of the default weekly goal. |
 
 ## Troubleshooting {#troubleshooting}
 

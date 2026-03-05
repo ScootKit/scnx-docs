@@ -6,18 +6,16 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 
 ## Features {#features}
 
-* Move channels and roles via commands.
-* Set the category of a channel via commands.
-* Import an emoji from another server into your server.
-* Assign temporary roles to users that are automatically added or removed after a specified duration.
+* Move channels and roles via commands
+* Set the category of a channel via commands
+* Import an emoji from another server into your server
 
 ## Setup {#setup}
 
-1. Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
-2. Make sure your bot has the following permissions on your server:
-   * To import emojis from another server (`/stealemote`): "Create expressions"
-   * To update any channels (all `/admin` commands): "Manage channels"
-   * To assign or remove roles (`/roles` commands): "Manage roles" (the bot's role must be above the target roles)
+* Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+* Make sure your bot has the following permissions on your server:
+  * To import emojis from another server (`/stealemote`): "Create expressions"
+  * To update any channels (all `/admin` commands): "Manage channels"
 
 ## Usage {#usage}
 
@@ -38,9 +36,6 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 | `/admin moverole role:<Role> new-position:<Number>`          | Moves the specified role to the specified API-Position.                  |
 | `/admin setcategory channel:<Channel> category:<Category> `  | Updates the category of the specified channel to the specified category. |
 | `/stealemote emote:<Emoji>`                                  | Copies an emote from another server to your server.                      |
-| `/roles give user:<User> role:<Role> [duration:<Duration>]`  | Assigns a role to a user. Optionally specify a duration after which the role will be removed automatically. |
-| `/roles remove user:<User> role:<Role> [duration:<Duration>]` | Removes a role from a user. Optionally specify a duration after which the role will be re-added automatically. |
-| `/roles status user:<User>`                                  | Shows all pending temporary role changes for a user.                     |
 
 ## Troubleshooting {#troubleshooting}
 

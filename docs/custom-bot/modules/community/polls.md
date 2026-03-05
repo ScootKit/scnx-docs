@@ -17,9 +17,9 @@ Here's an example of a poll that has ended:
 
 ## Setup {#setup}
 
-1. To get started with pools, make sure that the bot has the following permissions on every channel you want to create
-   polls in: Read messages, Send messages, Embed Links.
-2. Make sure that you have [set up permissions](/docs/custom-bot/slash-commands) for [`/poll`](#commands) correctly.
+* To get started with pools, make sure that the bot has the following permissions on every channel you want to create
+  polls in: Read messages, Send messages, Embed Links.
+* Make sure that you have [set up permissions](/docs/custom-bot/slash-commands) for [`/poll`](#commands) correctly.
 
 ## Usage {#usage}
 

@@ -14,21 +14,21 @@ This module allows you to delete messages from a channel after a specified timeo
 
 ## Setup {#setup}
 
-1. Make sure that your bot has "Manage messages", "View channel", "View message history" permissions on the channel you
-   want to enable this feature on.
-2. To set up automatic deletion of messages, open
-   the [Text channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels) configuration file and
-   1. Click on "Add new Config-Element".
-   2. Select the channel this configuration element should apply to.
-   3. Configure the element as described [here](#config-channels).
-   4. Reload your bot to apply changes.
-3. To set up automatic deletion of messages in Voice channels after every user has left the channel, open
-   the [Voice channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) configuration
-   file and
-   1. Click on "Add new Config-Element".
-   2. Select the channel this configuration element should apply to.
-   3. Configure the element as described [here](#config-voice-channels).
-   4. Reload your bot to apply changes.
+* Make sure that your bot has "Manage messages", "View channel", "View message history" permissions on the channel you
+  want to enable this feature on.
+* To set up automatic deletion of messages, open
+  the [Text channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels) configuration file and
+  1. Click on "Add new Config-Element".
+  2. Select the channel this configuration element should apply to.
+  3. Configure the element as described [here](#config-channels).
+  4. Reload your bot to apply changes.
+* To set up automatic deletion of messages in Voice channels after every user has left the channel, open
+  the [Voice channels](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels) configuration
+  file and
+  1. Click on "Add new Config-Element".
+  2. Select the channel this configuration element should apply to.
+  3. Configure the element as described [here](#config-voice-channels).
+  4. Reload your bot to apply changes.
 
 ## Usage {#usage}
 

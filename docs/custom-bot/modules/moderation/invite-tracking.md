@@ -24,12 +24,12 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 
 ## Setup {#setup}
 
-1. Make sure your bot has "Manage invites" permissions on your server.
-2. Enable the module to start tracking invites - you might need to restart your bot to initiate the required hook.
-3. Please [set up permissions](/docs/custom-bot/slash-commands) for [`/trace-invites`](#commands) to avoid unauthorized usage.
-4. To log new joins and their invitees, [configure](#configuration) a log-channel - make sure the bot has the "Send
-   messages" permissions on the channel. Please note that users with the "Manage invites" permission on your server will
-   be able to revoke invites by clicking on the "Remove this invite" button below the log entry message.
+* Make sure your bot has "Manage invites" permissions on your server.
+* Enable the module to start tracking invites - you might need to restart your bot to initiate the required hook.
+* Please [set up permissions](/docs/custom-bot/slash-commands) for [`/trace-invites`](#commands) to avoid unauthorized usage.
+* To log new joins and their invitees, [configure](#configuration) a log-channel - make sure the bot has the "Send
+  messages" permissions on the channel. Please note that users with the "Manage invites" permission on your server will
+  be able to revoke invites by clicking on the "Remove this invite" button below the log entry message.
 
 ## Usage {#usage}
 

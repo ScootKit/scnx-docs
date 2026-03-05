@@ -21,18 +21,18 @@ Easy to use levelling system with a lot of customization!
 
 ## Setup {#setup}
 
-1. After [enabling the module](https://scnx.app/glink?page=bot/modules?query=levels), users will start receiving XP based
-   on your [configuration](#configuration) for sending messages and spending time in voice channels.
-2. The bot can only grant XP for messages it has access to, so please ensure that it has the following permissions on
-   every channel: View Channel, Read message history. If you want to send level up messages into a channel, it'll also
-   need the Send Messages and Embed Links permissions. For granting role rewards, the bot will need to have the Manage
-   roles permission. The highest role of the bot will also need to be higher than the role the bot needs to assign.
-3. If you are transferring from another, you can [manage user XP and levels manually](#manage-levels) and manually
-   transfer XP and levels from your old system.
-4. There are plenty of other features included that can be used to encourage activity on your server, such
-   as [Multiplication channels and roles](#multiplicators) and [live leaderboards](#live-leaderboard), which require
-   additional setup, but you don't need to configure them to use the module.
-5. You can also customize messages and adjust other options in you [configuration](#configuration).
+* After [enabling the module](https://scnx.app/glink?page=bot/modules?query=levels), users will start receiving XP based
+  on your [configuration](#configuration) for sending messages and spending time in voice channels.
+* The bot can only grant XP for messages it has access to, so please ensure that it has the following permissions on
+  every channel: View Channel, Read message history. If you want to send level up messages into a channel, it'll also
+  need the Send Messages and Embed Links permissions. For granting role rewards, the bot will need to have the Manage
+  roles permission. The highest role of the bot will also need to be higher than the role the bot needs to assign.
+* If you are transferring from another, you can [manage user XP and levels manually](#manage-levels) and manually
+  transfer XP and levels from your old system.
+* There are plenty of other features included that can be used to encourage activity on your server, such
+  as [Multiplication channels and roles](#multiplicators) and [live leaderboards](#live-leaderboard), which require
+  additional setup, but you don't need to configure them to use the module.
+* You can also customize messages and adjust other options in you [configuration](#configuration).
 
 ## Usage {#usage}
 
@@ -334,9 +334,6 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 | Maximum amount of users displayed in live leaderboard channel | This is the maximum amount of users displayed in the Live Leaderboard channel. /leaderboard will still show the full leaderboard.<br/>*Values equal or below 25 can be entered.*                                                                                                                            |
 | Start with Level 0?                                           | By default, users start with Level 1. If you enable this option, all users will start with level zero. This is only a cosmetic setting and as such can be applied retroactively. [Level formulas](#level-curves) will still use the levelling system starting at one, but this won't be displayed to users. |
 | Use usernames instead of mentions in the live leaderboard?    | If enabled, the bot will use the tag of users in the Leaderboard-Channel-Embed instead of their mention.                                                                                                                                                                                                    |
-| Blacklisted roles                                             | Roles that are excluded from leveling. Users with any of these roles won't receive XP for sending messages.                                                                                                                                                                                                 |
-| Enable maximum level?                                         | If enabled, users will stop leveling up after reaching the configured maximum level.                                                                                                                                                                                                                        |
-| Maximum level                                                 | *Only visible if "Enable maximum level?" is enabled.*<br/>The highest level a user can reach. Users will stop gaining levels (but may still gain XP) after reaching this level.                                                                                                                             |
 | Cheats                                                        | To manage [levels and XP manually](#manage-levels), enable this option. This makes your level system unfair, if abused by admins.                                                                                                                                                                           |
 
 ### Message configuration {#configuration-strings}

@@ -11,7 +11,6 @@ more!
 * Customize the Activity-Type (Playing, Watching, …) or remove it.
 * Customize the online status of your bot (Do not disturb, Online, Away, …).
 * Change the status automatically when a new user joins to welcome them.
-* Change the status at runtime using a slash command.
 * Add a custom link to a streaming status.
 * Add a wide variety of parameters to your status.
 
@@ -70,15 +69,6 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=betterstatus
 | Change status on user join? | If enabled, the bot will change its status to a specified value everytime a new user joins your Discord.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | User-Join-Status            | *Only visible if "Change status on user join?" is enabled*<br/>This will be the value the bot changes its status to every time a user joins. You can find all available parameters in your dashboard.                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Streaming-Link              | *Only works if "Activity Type" is set to "STREAMING"*<br/>If your link is supported by Discord (only `twitch.tv` and `youtube.com` URLs are supported), users will be able to click a button displayed in your bot's profile to watch the stream. The linked streamer does not need to be online for the button to appear.                                                                                                                                                                                                                                                                             |
-| Enable /status command?     | If enabled, administrators can use the [`/status`](#commands) command to change the bot's status at runtime.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-
-## Commands {#commands}
-
-<SlashCommandExplanation />
-
-| Command | Description |
-|---------|-------------|
-| `/status text:<Text> activity-type:<Type> bot-status:<Status> [streaming-link:<URL>]` | Change the bot's status at runtime. Requires the "Enable /status command?" configuration option to be enabled. The `activity-type` can be PLAYING, WATCHING, STREAMING, COMPETING, LISTENING, or CUSTOM. The `bot-status` can be online, dnd, or idle. |
 
 ## Troubleshooting {#troubleshooting}
 
