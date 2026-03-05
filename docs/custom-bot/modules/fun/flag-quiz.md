@@ -47,8 +47,8 @@ In this configuration file, you can configure the flag quiz. Open it in your [da
 | Maximum amount of hints per user per hour | Maximum number of first-letter reveals a user can request per hour. |
 | Maximum amount of skips per user per hour | Maximum number of times a user can skip a flag per hour. |
 | Delete wrong guesses? (recommended) | If enabled, wrong guesses are deleted after 5 seconds to keep the channel clean. |
-| Minimum difficultly | The minimum difficulty of flags shown (1 = easiest, 5 = hardest). |
-| Maximum difficultly | The maximum difficulty of flags shown (1 = easiest, 5 = hardest). |
+| Minimum difficulty | The minimum difficulty of flags shown (1 = easiest, 5 = hardest). |
+| Maximum difficulty | The maximum difficulty of flags shown (1 = easiest, 5 = hardest). |
 | Enable Leaderboard | If enabled, a leaderboard button appears and users earn points for correct guesses. |
 | Immunity roles | Roles that are exempt from skip and first-letter rate limits. |
 

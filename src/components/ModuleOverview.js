@@ -30,19 +30,28 @@ function fetchModuleStatus() {
     moduleStatusPromise = fetch('https://scnx.app/api/module-status')
         .then(res => res.ok ? res.json() : null)
         .then(data => {
-            moduleStatusCache = data;
+            if (data) {
+                moduleStatusCache = data;
+            } else {
+                moduleStatusPromise = null;
+            }
             return data;
         })
-        .catch(() => null);
+        .catch(() => {
+            moduleStatusPromise = null;
+            return null;
+        });
     return moduleStatusPromise;
 }
 
 function useModuleStatus(moduleName) {
     const [status, setStatus] = useState(null);
     useEffect(() => {
+        let cancelled = false;
         fetchModuleStatus().then(data => {
-            if (data && data[moduleName]) setStatus(data[moduleName]);
+            if (!cancelled && data && data[moduleName]) setStatus(data[moduleName]);
         });
+        return () => { cancelled = true; };
     }, [moduleName]);
     return status;
 }

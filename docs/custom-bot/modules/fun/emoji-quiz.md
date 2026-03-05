@@ -47,7 +47,7 @@ In this configuration file, you can configure the emoji quiz. Open it in your [d
 |-------|-------------|
 | Use custom Game-Questions? | If enabled, your custom questions are used instead of the built-in database. This disables some features like question-duplication protection. |
 | Game-Channel | The text channel where the quiz takes place. The channel must be empty. |
-| Maximum amount of hints per user per hour | Maximum number of first-letter reveals a user can request per hour. |
+| Maximum amount of first-letter reveals per user per hour | Maximum number of first-letter reveals a user can request per hour. |
 | Maximum amount of hints per user per hour | Maximum number of hint requests a user can make per hour. |
 | Maximum amount of skips per user per hour | Maximum number of times a user can skip a question per hour. |
 | Delete wrong guesses? (recommended) | If enabled, wrong guesses are deleted after 5 seconds to keep the channel clean. |

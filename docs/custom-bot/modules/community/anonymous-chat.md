@@ -55,7 +55,7 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Anonymous message | Customize the appearance of anonymous messages (only used when webhooks are disabled). Supports parameters for display name, avatar, and message content. |
 | Successfully sent message | The confirmation message shown to the user after their anonymous message has been sent. |
 | Blocked message | The message shown to blocked users when they attempt to send an anonymous message. |
-| Allow users to reset their identity? | If enabled, users can reset their anonymous display name and avatar when sending a message. Note that moderators cannot block users on their old identity after a reset. |
+| Allow users to reset their identity? | If enabled, users can reset their anonymous display name and avatar when sending a message. Moderators can still block users using any of their past anonymous display names, even after a reset. |
 | Allow users to create anonymous messages by sending a message in the channel? (unsecure!) | If enabled, users can type directly in the anonymous channel to create anonymous messages. Not recommended for truly anonymous chats, as message loggers can capture the original author. |
 
 ## Troubleshooting {#troubleshooting}

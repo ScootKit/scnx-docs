@@ -42,7 +42,7 @@ In this configuration file, you can customize the messages and images used by th
 | Field | Description |
 |-------|-------------|
 | IKEA Message | Message sent when someone uses `/random ikea-name`. |
-| Random numer message | Message sent when someone uses `/random number`. |
+| Random number message | Message sent when someone uses `/random number`. |
 | Dice Roll message | Message sent when someone uses `/random dice`. |
 | Coin toss message | Message sent when someone uses `/random coinflip`. |
 | Hug message | Message sent when someone uses `/hug`. |
