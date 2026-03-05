@@ -310,6 +310,10 @@ const sidebars = {
                     id: 'custom-bot/additional-features'
                 },
                 {
+                    type: 'doc',
+                    id: 'custom-bot/global-parameters'
+                },
+                {
                     type: 'link',
                     href: 'https://feedback.scnx.xyz',
                     label: 'Suggest new features'
