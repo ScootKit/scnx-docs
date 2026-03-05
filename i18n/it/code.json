@@ -699,5 +699,23 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etichette",
     "description": "The title of the tag list page"
+  },
+  "module.status.down": {
+    "message": "Questo modulo non è attualmente disponibile"
+  },
+  "module.status.limited": {
+    "message": "Questo modulo sta attualmente riscontrando problemi"
+  },
+  "module.status.info": {
+    "message": "Avviso sullo stato del modulo"
+  },
+  "module.status.up": {
+    "message": "Questo modulo funziona correttamente"
+  },
+  "module.status.noDetails": {
+    "message": "C'è un problema noto che interessa questo modulo. Riprova più tardi."
+  },
+  "module.status.upDetails": {
+    "message": "Questo modulo funziona attualmente senza problemi noti."
   }
 }

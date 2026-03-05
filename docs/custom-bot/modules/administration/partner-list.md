@@ -19,8 +19,8 @@ Here's an example of a partner-list (you can customize appearance):
 
 ## Setup {#setup}
 
-* Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
-* Then, configure the partner-list:
+1. Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+2. Then, configure the partner-list:
     1. Create a channel in which the bot should send the partner-list. The bot has
        to have the "View channel", "View message history" and "Send message" permissions on it.
     2. Open the [Module configuration](https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig)

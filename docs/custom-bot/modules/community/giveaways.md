@@ -15,10 +15,10 @@ Easily create a giveaway in your server.
 
 ## Setup {#setup}
 
-* Please [set up permissions](/docs/custom-bot/slash-commands) for the `/gmanage` commands to avoid unauthorized usage of them.
-* Make sure that the bot has the `View channels`, `Manage messages`, `Embed links` & `Send messages` permissions on
-  every channel that giveaways will be created in.
-* Giveaways can't be started in Announcement channels.
+1. Please [set up permissions](/docs/custom-bot/slash-commands) for the `/gmanage` commands to avoid unauthorized usage of them.
+2. Make sure that the bot has the `View channels`, `Manage messages`, `Embed links` & `Send messages` permissions on
+   every channel that giveaways will be created in.
+3. Giveaways can't be started in Announcement channels.
 
 ## Usage {#usage}
 

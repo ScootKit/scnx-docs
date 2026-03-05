@@ -12,11 +12,11 @@ Let users highlight messages into a starboard channel by reacting.
 
 ## Setup {#setup}
 
-* First, create a channel on your server that will be used as the starboard channel.
-  Make sure the bot has the permissions `View Channel`, `Send Messages`,
-  `Read Message History` and `Embed Links` in the channel.
-* Next, start [configuring](#configuration) the module. This includes selecting the
-  channel you just created as the starboard channel.
+1. First, create a channel on your server that will be used as the starboard channel.
+   Make sure the bot has the permissions `View Channel`, `Send Messages`,
+   `Read Message History` and `Embed Links` in the channel.
+2. Next, start [configuring](#configuration) the module. This includes selecting the
+   channel you just created as the starboard channel.
 
 ## Usage {#usage}
 
