@@ -213,7 +213,7 @@ If your issue is related to a specific module, check its troubleshooting section
 * [Duel](/docs/custom-bot/modules/fun/duel#troubleshooting) - Duel game
 * [Emoji-Quiz](/docs/custom-bot/modules/fun/emoji-quiz#troubleshooting) - Emoji guessing game
 * [Flag-Quiz](/docs/custom-bot/modules/fun/flag-quiz#troubleshooting) - Flag guessing game
-* [Fun Commands](/docs/custom-bot/modules/fun/fun#troubleshooting) - Social interaction commands
+* [Fun Commands](/docs/custom-bot/modules/fun#troubleshooting) - Social interaction commands
 * [Guess the Number](/docs/custom-bot/modules/fun/guess-the-number#troubleshooting) - Number guessing game
 * [Holidays](/docs/custom-bot/modules/fun/holidays#troubleshooting) - Holiday features
 * [Quiz](/docs/custom-bot/modules/fun/quiz#troubleshooting) - Quiz system
@@ -236,7 +236,7 @@ If your issue is related to a specific module, check its troubleshooting section
 * [Anti-Ghostping](/docs/custom-bot/modules/moderation/anti-ghostping#troubleshooting) - Ghost-ping detection
 * [Info-Commands](/docs/custom-bot/modules/moderation/info-commands#troubleshooting) - Information commands
 * [Invite-Tracking](/docs/custom-bot/modules/moderation/invite-tracking#troubleshooting) - Invite tracking
-* [Moderation](/docs/custom-bot/modules/moderation/moderation#troubleshooting) - Full moderation system
+* [Moderation](/docs/custom-bot/modules/moderation#troubleshooting) - Full moderation system
 * [Ping-Protection](/docs/custom-bot/modules/moderation/ping-protection#troubleshooting) - Ping protection
 
 ### Support modules
