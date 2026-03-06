@@ -27,7 +27,7 @@ Easy to use levelling system with a lot of customization!
    every channel: View Channel, Read message history. If you want to send level up messages into a channel, it'll also
    need the Send Messages and Embed Links permissions. For granting role rewards, the bot will need to have the Manage
    roles permission. The highest role of the bot will also need to be higher than the role the bot needs to assign.
-3. If you are transferring from another, you can [manage user XP and levels manually](#manage-levels) and manually
+3. If you are transferring from another system, you can [manage user XP and levels manually](#manage-levels) and manually
    transfer XP and levels from your old system.
 4. There are plenty of other features included that can be used to encourage activity on your server, such
    as [Multiplication channels and roles](#multiplicators) and [live leaderboards](#live-leaderboard), which require

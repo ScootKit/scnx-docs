@@ -68,7 +68,7 @@ In this configuration file, you can set up the advent calendar. Open it in your 
 | Calendar message | The main message displayed above the calendar buttons. |
 | "Already opened" Message | Message shown when a user tries to re-open a door they already opened. |
 | Reward roles for claiming all days (optional) | Roles given to users who open all 24 doors. |
-| Allow users to see the calender message of the current day multiple times? | If enabled, users can view the day's message again after opening it. |
+| Allow users to see the calendar message of the current day multiple times? | If enabled, users can view the day's message again after opening it. |
 | Randomize buttons hourly? | If enabled, the button order is shuffled every hour. All buttons become clickable, but only the current day's door can be successfully opened. |
 | Wrong day message | Message shown when a user tries to open a door that is not today's. |
 | Day 1-24 Claiming Message | The message displayed when a user opens the corresponding day's door. Each day has its own configurable message. |

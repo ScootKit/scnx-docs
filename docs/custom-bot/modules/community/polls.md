@@ -6,7 +6,7 @@ Simple module to create fresh polls on your server!
 
 ## Features {#features}
 
-* Create anonym and public polls with up to nine options per pool.
+* Create anonym and public polls with up to nine options per poll.
 * Users can vote by selecting their option via a dropdown menu.
 * Automatically end polls after a certain amount of time.
 * Easy to understand result display with bars - updated live.
@@ -17,7 +17,7 @@ Here's an example of a poll that has ended:
 
 ## Setup {#setup}
 
-1. To get started with pools, make sure that the bot has the following permissions on every channel you want to create
+1. To get started with polls, make sure that the bot has the following permissions on every channel you want to create
    polls in: Read messages, Send messages, Embed Links.
 2. Make sure that you have [set up permissions](/docs/custom-bot/slash-commands) for [`/poll`](#commands) correctly.
 

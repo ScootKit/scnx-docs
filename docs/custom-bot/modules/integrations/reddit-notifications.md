@@ -30,7 +30,7 @@ This configuration file allows you to set up subreddits to monitor for new threa
 | Field | Description |
 |-------|-------------|
 | Channel | The Discord channel in which the notification should be sent. |
-| Subbredit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`). |
+| Subreddit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`). |
 | Message | The message sent to the configured channel when a new thread gets posted. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ## Troubleshooting {#troubleshooting}
