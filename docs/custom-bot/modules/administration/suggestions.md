@@ -52,7 +52,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=suggestions%
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Suggestion-Channel                          | Channel in which new suggestions get posted and (if "Create suggestions from messages in channel" is enabled) suggestions will be created from.                                                                       |
 | Create suggestions from messages in channel | If enabled, messages sent by users in the Suggestion-Channel will be converted to a suggestion automatically.                                                                                                         |
-| Reactions                                   | The bot will add these reactions below suggestions. You could these reactions as voting (e.g. with `👍` and `👎`). Please enter either the Unicode-Version (for built-in-emojis) or the Emoji-ID (for custom emojis). |
+| Reactions                                   | The bot will add these reactions below suggestions. You could use these reactions as voting (e.g. with `👍` and `👎`). Please enter either the Unicode-Version (for built-in-emojis) or the Emoji-ID (for custom emojis). |
 | User-Comments in threads                    | If enabled, the bot will create a new thread under each suggestion to allow users to comment. Commenting via commands has been removed.                                                                               |
 | Thread-Name                                 | *Only visible if "User-Comments in threads" is enabled*<br/>This will be the name of the thread created below suggestions.                                                                                            |
 | "Successfully submitted"-Message            | This is the message shown to users after they have submitted their suggestion using the [`/suggestion`](#commands) command.                                                                                           |
@@ -95,7 +95,7 @@ Please check the following:
 The following data is being stored about every suggestion created via [commands](#commands) or by sending a message in
 the [configured](#configuration) channel (if enabled):
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * The content of the suggestion (`suggestion` parameter of the [`/suggestion`](#commands) command or the content of the
   message sent)
 * The ID of the message sent by the bot in the configured channel

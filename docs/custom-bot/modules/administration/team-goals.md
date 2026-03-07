@@ -16,7 +16,7 @@ Set weekly messages-goals for your staff-members.
 
 1. Select (or create) a role. The activity of users with this role will get evaluated.
 2. [Configure the module](#configuration).
-3. Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+3. Please [set up permissions](/docs/custom-bot/slash-commands) for slash commands to avoid unauthorized usage.
 4. Assign the role to members whose activity should get evaluated every week.
 
 ## Usage {#usage}
@@ -116,7 +116,7 @@ message ("User Entry"):
 The following is stored at every [evaluation](#module-terms) about every user that has one of
 the [configured Staff-Roles](#configuration) ("Goal History Entry"):
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * Their unique Discord User-ID
 * The amount of messages they sent in the [evaluation period](#module-terms)
 * The [configured goal](#configuration) in the current [evaluation period](#module-terms)

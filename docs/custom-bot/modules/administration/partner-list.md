@@ -19,7 +19,7 @@ Here's an example of a partner-list (you can customize appearance):
 
 ## Setup {#setup}
 
-1. Please [set up permissions](/docs/custom-bot/slash-commands) for Slash-Commands to avoid unauthorized usage of them.
+1. Please [set up permissions](/docs/custom-bot/slash-commands) for slash commands to avoid unauthorized usage.
 2. Then, configure the partner-list:
     1. Create a channel in which the bot should send the partner-list. The bot has
        to have the "View channel", "View message history" and "Send message" permissions on it.
@@ -78,14 +78,14 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=partner-list
 <details>
     <summary>Can I restart the ID counter?</summary>
 
-    No. The ID is an unique identification number and can not be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a> or replace it with the <code>%nr%</code> parameter, which automatically updates the numbers.
+    No. The ID is a unique identification number and cannot be reset. This is a technical limitation - you can remove the <code>%id%</code> parameter from your "partner-string" under "Partner-List-Embed" in your <a href="https://scnx.app/glink?page=bot/configuration?file=partner-list%7Cconfig">module configuration</a> or replace it with the <code>%nr%</code> parameter, which automatically updates the numbers.
 </details>
 
 ## Stored data {#data-usage}
 
 The following data is being stored about every partner created via [commands](#commands):
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * The Invite-Link specified for this partner
 * The User-ID of the staff-member creating the partner entry
 * The specified name of the partner

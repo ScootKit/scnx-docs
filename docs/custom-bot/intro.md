@@ -1,6 +1,6 @@
 # The SCNX Custom Discord Bot
 
-The fully customizable Discord general-purpose Bot - hosted for free on SCNX. Dive deep into thousands of configuration
+The fully customizable Discord general-purpose bot - hosted for free on SCNX. Dive deep into thousands of configuration
 options and create a unique experience on your server.
 
 ## Overview {#overview}

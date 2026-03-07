@@ -124,7 +124,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=giveaways%7C
 
 For every giveaway the following data will be saved:
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * The ID of the giveaway message
 * The ID of the channel the giveaway has been started in, based on the [`channel`](#commands) command parameter
 * The exact time the giveaway will end / has ended, based on the [`duration`](#commands) command parameter

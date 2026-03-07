@@ -192,9 +192,9 @@ to our friendly staff at [scnx.app/help](https://scnx.app/help).
 
 ## Stored data {#data-usage}
 
-The following data will get stored for every configured welcome messsage every time when a new member joins:
+The following data will get stored for every configured welcome message every time a new member joins:
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * The unique Discord User-ID of the member who just joined and triggered the welcome message
 * The unique Discord Message-ID of the welcome message that got sent by the bot
 * The unique Discord Channel-ID of the channel the welcome message got sent in by the bot

@@ -33,7 +33,7 @@ Users can
 
 * vote on polls by using the select menu below the poll.
 * view what they voted for using the "What have I voted?" button below the poll.
-* remove they vote first using the "What have I voted?" button, then clicking on "Remove my vote" below the response.
+* remove their vote first using the "What have I voted?" button, then clicking on "Remove my vote" below the response.
 * view (live) results in the poll embed.
 * view which user voted for which option using the "View current voters" button below the poll (if the poll was set to
   public).
@@ -73,7 +73,7 @@ If you are experiencing issues with the poll module please make sure that
 
 * you haven't started a poll in an announcement channel (as messages can't be updated as frequently in such channels).
 * your [message configuration](#configuration-strings) doesn't include any empty fields and that
-  are [color values are valid](/docs/custom-bot/additional-features#embed-colors).
+  your [color values are valid](/docs/custom-bot/additional-features#embed-colors).
 * your [configuration](#configuration-config) only includes valid emoji values (unicode for built-in emojis and full
   emoji IDs for custom emojis).
 * the bot has the following permissions on the channel you want to start a poll in: Read messages, Send messages, Embed

@@ -36,8 +36,8 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 * If [configured](#configuration), the bot will log who invited the new user when they join in the log channel.
 * The bot will automatically store invite data about every user that joins your server.
 * To get invite activity (who invited the user, who the user invited, invites created, …) of a user, run
-  the [`/trace-invites`](#commands) Slash-Command.
-* To revoke all invites of a user, run the [`/trace-invites`](#commands) Slash-Command and click on "Remove all invites
+  the [`/trace-invites`](#commands) slash command.
+* To revoke all invites of a user, run the [`/trace-invites`](#commands) slash command and click on "Remove all invites
   by this user" button below the message.
 * If this module is enabled, other modules (such as [Moderation & Security](/docs/custom-bot/modules/moderation)
   and [Info Commands](/docs/custom-bot/modules/moderation/info-commands)) will use data about tracked invites to improve functionality - this is done
@@ -49,7 +49,7 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 
 | Command                      | Description                                                                                                                                                                                                                                               |
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/trace-invites user:<User>` | This commands shows the invite activity of a user. Information includes who invited the user, who the user invited and what invites the user created. Additionally, a button to revoke all invites created by this user will be added below the response. |
+| `/trace-invites user:<User>` | This command shows the invite activity of a user. Information includes who invited the user, who the user invited, and what invites the user created. Additionally, a button to revoke all invites created by this user will be added below the response. |
 
 ## Configuration {#configuration}
 
@@ -74,7 +74,7 @@ If you are experiencing issues with this module, make sure that
 
 When a user joins your server and the module is enabled, the following data will be stored:
 
-* An unique integer identifying the database entry.
+* A unique integer identifying the database entry.
 * The ID of the user who joined.
 * Whether the user has left the server in the meanwhile.
 * The code of the invite used.

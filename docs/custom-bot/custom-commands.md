@@ -22,7 +22,7 @@ Custom Commands let you build your own bot interactions using a visual flow edit
 
 1. Open the [Custom Commands page](https://scnx.app/glink?page=bot/custom-commands) on your SCNX Dashboard.
 2. Make sure your bot is online and running.
-3. Click **"Create new Custom-Command"** (or **"New custom command flow"** for the V3 flow editor) to get started.
+3. Click **"Create new Custom Command"** (or **"New custom command flow"** for the V3 flow editor) to get started.
 
 ## Triggers {#triggers}
 
@@ -32,7 +32,7 @@ Each custom command needs a trigger that determines when it runs. The following 
 
 The command runs when a user executes a slash command (e.g. `/mycommand`).
 
-* **Slash-Command name** — The name shown in Discord. Must be lowercase, no special characters (except `-`).
+* **Slash Command name** — The name shown in Discord. Must be lowercase, no special characters (except `-`).
 * **Description** — Shown below the command name in Discord's command menu.
 * **Options** — Add up to 25 parameters that users can fill in when running the command. Supported types: Text, Integer,
   Number, True/False, User, Channel, Role, and Attachment.
@@ -49,14 +49,14 @@ not in the SCNX Dashboard. See the [Slash Commands & Permissions guide](/docs/cu
 may take up to 24 hours for new commands to appear in Discord. The command must be enabled first.
 :::
 
-### Button or Select-Menu Click {#trigger-button}
+### Button or Select Menu Click {#trigger-button}
 
 The command runs when a user clicks a button or selects an option from a select menu attached to a message.
 
 To send a message with a button or select menu:
 
 1. Use the [Bot Log-In](/docs/custom-bot/login-as-bot) feature to send a message.
-2. In the message editor, add a **Custom-Command Button** or **Custom-Command Select-Menu Element** and link it to this
+2. In the message editor, add a **Custom Command Button** or **Custom Command Select Menu Element** and link it to this
    custom command.
 3. You can also attach buttons to messages sent by other custom commands or module configurations.
 
@@ -74,7 +74,7 @@ The command runs when a user sends a message that matches a configured pattern. 
 
 Additional options:
 
-* **Ignore casing** — Match regardless of upper/lowercase.
+* **Ignore casing** — Match regardless of uppercase/lowercase.
 * **Limit to channels** — Only trigger in specific channels or channel categories.
 
 ### Modal {#trigger-modal}
@@ -253,9 +253,9 @@ time. Disabled commands are saved and can be enabled later if you upgrade or dis
 </details>
 
 <details>
-  <summary>My button / select-menu command doesn't work</summary>
+  <summary>My button / select menu command doesn't work</summary>
   <ul>
-    <li>Make sure you attached the button or select-menu element to a message using the message editor and linked it to
+    <li>Make sure you attached the button or select menu element to a message using the message editor and linked it to
       the correct custom command.</li>
     <li>Verify the custom command is <b>enabled</b>.</li>
     <li>Check that the bot has the necessary permissions in the channel.</li>

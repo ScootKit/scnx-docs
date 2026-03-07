@@ -56,7 +56,7 @@ You can edit messages that were previously sent by your bot (including messages 
 
 You can attach interactive components to messages sent via Bot Log-In:
 
-* **Custom-Command Buttons** — Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
+* **Custom Command Buttons** — Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
   clicked. Configure these in the message editor's component section and link them to a Custom Command with a button
   trigger.
 * **Link Buttons** — Buttons that open a URL when clicked.
@@ -65,7 +65,7 @@ You can attach interactive components to messages sent via Bot Log-In:
 * **Select Menus** — Dropdown menus that let users select from a list of options. Can be linked to Custom Commands.
 
 :::info
-To use Custom-Command Buttons, you need to first [create a Custom Command](/docs/custom-bot/custom-commands) with a
+To use Custom Command Buttons, you need to first [create a Custom Command](/docs/custom-bot/custom-commands) with a
 **Button** trigger. You can then reference it when adding a button in the message editor.
 :::
 
