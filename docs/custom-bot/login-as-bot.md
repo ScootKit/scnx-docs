@@ -29,6 +29,10 @@ If your bot is offline or has core issues, you won't be able to use Bot Log-In. 
 
 ## Sending a message {#send-message}
 
+:::tip
+Use the preview in the message editor to see how your message will look before sending it.
+:::
+
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).
 2. Select the channel you want to send the message to from the channel list on the left.
 3. Compose your message using the message editor. You can:
@@ -38,9 +42,7 @@ If your bot is offline or has core issues, you won't be able to use Bot Log-In. 
     * Add message components (see [Adding components](#components)).
 4. Click **"Send message"** to send.
 
-:::tip
-Use the preview in the message editor to see how your message will look before sending it.
-:::
+
 
 ## Editing a message {#edit-message}
 
