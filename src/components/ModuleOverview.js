@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {usePluginData} from '@docusaurus/useGlobalData';
 import ModuleIcon from './ModuleIcon';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import Admonition from '@theme/Admonition';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faArrowCircleRight,
@@ -15,8 +16,80 @@ import {
     faInfoCircle,
     faServer,
     faTerminal,
+    faTriangleExclamation,
+    faCircleXmark,
     faZap
 } from '@fortawesome/pro-solid-svg-icons';
+
+let moduleStatusCache = null;
+let moduleStatusPromise = null;
+
+function fetchModuleStatus() {
+    if (moduleStatusCache) return Promise.resolve(moduleStatusCache);
+    if (moduleStatusPromise) return moduleStatusPromise;
+    moduleStatusPromise = fetch('https://scnx.app/api/module-status')
+        .then(res => res.ok ? res.json() : null)
+        .then(data => {
+            if (data) {
+                moduleStatusCache = data;
+            } else {
+                moduleStatusPromise = null;
+            }
+            return data;
+        })
+        .catch(() => {
+            moduleStatusPromise = null;
+            return null;
+        });
+    return moduleStatusPromise;
+}
+
+function useModuleStatus(moduleName) {
+    const [status, setStatus] = useState(null);
+    useEffect(() => {
+        let cancelled = false;
+        fetchModuleStatus().then(data => {
+            if (!cancelled && data && data[moduleName]) setStatus(data[moduleName]);
+        });
+        return () => { cancelled = true; };
+    }, [moduleName]);
+    return status;
+}
+
+function ModuleStatusBanner({moduleName, locale}) {
+    const status = useModuleStatus(moduleName);
+    if (!status) return null;
+
+    if (status.status === 'UP' && !status.details) {
+        return <Admonition type="tip" icon={<FontAwesomeIcon icon={faCheckCircle}/>}
+                           title={<Translate id="module.status.up">This module is working fine</Translate>}>
+            <Translate id="module.status.upDetails">This module is currently operating without any known issues.</Translate>
+        </Admonition>;
+    }
+
+    const detailText = status.details?.[locale] || status.details?.en;
+    const admonitionType = status.status === 'DOWN' ? 'danger' : status.status === 'LIMITED' ? 'warning' : status.status === 'UP' ? 'tip' : 'info';
+    const icon = status.status === 'DOWN'
+        ? <FontAwesomeIcon icon={faCircleXmark}/>
+        : status.status === 'UP'
+            ? <FontAwesomeIcon icon={faCheckCircle}/>
+            : <FontAwesomeIcon icon={faTriangleExclamation}/>;
+    const titleId = status.status === 'DOWN' ? 'module.status.down' : status.status === 'LIMITED' ? 'module.status.limited' : status.status === 'UP' ? 'module.status.up' : 'module.status.info';
+    const titleDefault = status.status === 'DOWN'
+        ? 'This module is currently unavailable'
+        : status.status === 'LIMITED'
+            ? 'This module is currently experiencing issues'
+            : status.status === 'UP'
+                ? 'This module is working fine'
+                : 'Module status notice';
+
+    return <Admonition type={admonitionType} icon={icon}
+                       title={<Translate id={titleId}>{titleDefault}</Translate>}>
+        {detailText || (status.status === 'UP'
+            ? <Translate id="module.status.upDetails">This module is currently operating without any known issues.</Translate>
+            : <Translate id="module.status.noDetails">There is a known issue affecting this module. Please check back later.</Translate>)}
+    </Admonition>;
+}
 
 export default function ModuleOverview({moduleName}) {
     const modules = usePluginData('scnx-custom-bot-modules');
@@ -25,7 +98,7 @@ export default function ModuleOverview({moduleName}) {
     if (!moduleData) return <i className="data-warning">Can not display module overview: Module "{moduleName}" not
         found.</i>;
 
-    return <div className="card margin-bottom--md">
+    return <><div className="card margin-bottom--md">
         <div className="flex card-h padding--md" style={{alignItems: 'center'}}>
             <div style={{
                 fontSize: 40,
@@ -124,5 +197,7 @@ export default function ModuleOverview({moduleName}) {
                 </Link>
             </div>
         </div>
-    </div>;
+    </div>
+    <ModuleStatusBanner moduleName={moduleName} locale={i18n.currentLocale}/>
+    </>;
 }

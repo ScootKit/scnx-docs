@@ -4,8 +4,10 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 const fs = require('fs');
-const remarkMath = require('remark-math');
-const rehypeKatex = require('rehype-katex');
+const remarkMathModule = require('remark-math');
+const rehypeKatexModule = require('rehype-katex');
+const remarkMath = remarkMathModule.default || remarkMathModule;
+const rehypeKatex = rehypeKatexModule.default || rehypeKatexModule;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {

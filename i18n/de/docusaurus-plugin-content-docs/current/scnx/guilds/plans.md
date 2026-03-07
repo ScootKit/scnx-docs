@@ -24,7 +24,7 @@ benötigen ein separates Abonnement.
 | Reduzierter Preis für zusätzliche Server[¹](#additional-servers)                                   | *n/a*                                                                                | <PlanPrice plan="UNLIMITED" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                       | <PlanPrice plan="PROFESSIONAL" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                             |
 | Vollständiger Zugriff auf das SCNX Dashboard                                                       | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
 | [dcserver.link](/docs/scnx/guilds/dcserver-link)                                                   | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Eigener Discord-Bot](/docs/custom-bot/intro), 24/7 gehostet                                       | Enthalten, muss aber alle zwei Wochen durch das Schauen einer Werbung [verlängert](#starter-plan) werden | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Eigener Discord-Bot](/docs/custom-bot/intro), 24/7 gehostet                                       | Enthalten, muss aber jede Woche durch das Schauen einer Werbung [verlängert](#starter-plan) werden | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
 | [Eigener Modmail-Bot](/docs/modmail/intro), 24/7 gehostet                                          | *Nicht verfügbar*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                | 
 | [Verknüpfte Rollen](/docs/linked-roles/intro)                                                      | *Nicht verfügbar*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
 | Entferne alle Erwähnungen von SCNX aus deinen Bots (z.B. Embed-Fußzeile)                           | *Nicht verfügbar*                                                                      | *Nicht verfügbar*                                                                                                                               | Enthalten                                                                                                                                                |
@@ -186,19 +186,19 @@ unten nach, wie du mit dem Fehler umgehen kannst.
 Server ohne bezahlten Plan, müssen regelmäßig sogenannte "Checkin-Video-Werbungen" anschauen, da ansonsten ihr
 eigener Bot angehalten wird, nachdem ihr kostenfreier Plan abgelaufen ist, bis sie diesen durch Anschauen einer weiteren
 Werbung wieder verlängern. Diese Werbungen sind nur 15-60 Sekunden lang und der Werbetreibende der angeschauten Werbung
-übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 14 Tage stattfinden.
-Du kannst diese Zeit aber auch auf bis zu 28 Tage erhöhen, indem du gleich zwei Checkin-Werbungen hintereinander
+übernimmt die Hosting-Kosten deines Bots. Diese "Check-In"s müssen alle 7 Tage stattfinden.
+Du kannst diese Zeit aber auch auf bis zu 14 Tage erhöhen, indem du gleich zwei Checkin-Werbungen hintereinander
 anschaust. Du kannst diese Checkin-Werbungen auf der
 [Zahlungsseite](https://scnx.app/de/glink?page=pricing) deines Servers anschauen.
 
 Bitte beachte, dass es keine Drittanbieterwerbung in deinem eigenen oder Modmail-Bot gibt (und geben wird). Die Bots an
-sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle 14 Tage angeschaut werden, damit der Bot
+sich sind frei von Werbung, lediglich im Dashboard muss eine Werbung alle 7 Tage angeschaut werden, damit der Bot
 online
 bleibt.
 
-Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 28 Tagen an Hosting-Zeit entspricht. Du kannst nicht mehr
+Du kannst bis zu zwei Werbungen gleichzeitig anschauen, was 14 Tagen an Hosting-Zeit entspricht. Du kannst nicht mehr
 als
-28 Tage Host-Zeit gleichzeitig haben. Du kannst auch deine [Trusted Admins](/docs/scnx/guilds/trusted-admins) bitten, Werbung für deinen
+14 Tage Host-Zeit gleichzeitig haben. Du kannst auch deine [Trusted Admins](/docs/scnx/guilds/trusted-admins) bitten, Werbung für deinen
 Server anzuschauen.
 
 Solltest du mal vergessen, deine Hosting-Zeit zu verlängern, werden deine Bots heruntergefahren und du wirst sie nicht

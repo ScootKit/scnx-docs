@@ -730,5 +730,23 @@
   "theme.IconExternalLink.ariaLabel": {
     "message": "(wird in einem neuen Tab geöffnet)",
     "description": "The ARIA label for the external link icon"
+  },
+  "module.status.down": {
+    "message": "Dieses Modul ist derzeit nicht verfügbar"
+  },
+  "module.status.limited": {
+    "message": "Bei diesem Modul treten derzeit Probleme auf"
+  },
+  "module.status.info": {
+    "message": "Modulstatus-Hinweis"
+  },
+  "module.status.up": {
+    "message": "Dieses Modul funktioniert einwandfrei"
+  },
+  "module.status.noDetails": {
+    "message": "Es gibt ein bekanntes Problem mit diesem Modul. Bitte versuche es später erneut."
+  },
+  "module.status.upDetails": {
+    "message": "Dieses Modul funktioniert derzeit ohne bekannte Probleme."
   }
 }

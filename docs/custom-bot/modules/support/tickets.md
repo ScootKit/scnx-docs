@@ -75,7 +75,7 @@ If you are experiencing issues with this module please make sure that
 
 The following data will be stored about every ticket created by clicking on a button:
 
-* An unique integer identifying the database entry.
+* A unique integer identifying the database entry.
 * Whether the ticket has been closed.
 * The ID of the user who created the ticket.
 * The ID of the ticket channel.
@@ -88,7 +88,7 @@ The following data will be stored about every ticket created by clicking on a bu
 The following data will be stored about every ticket creation message (these are the messages that allow users to open
 tickets):
 
-* An unique integer identifying the database entry.
+* A unique integer identifying the database entry.
 * The ID of the message.
 * The ID of the channel the message was sent in.
 * The category of the ticket.

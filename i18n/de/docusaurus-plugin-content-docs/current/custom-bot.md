@@ -3,7 +3,7 @@
 Erstellt deinen ganz eigenen Discord-Bot auf SCNX. Die Einrichtung dauert nur wenige Minuten.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
-STARTER: "24/7 gehosted, muss alle zwei Wochen durch das Anschauen von Werbung verlängert werden.",
+STARTER: "24/7 gehosted, muss jede Woche durch das Anschauen von Werbung verlängert werden.",
 UNLIMITED: "24/7 gehosted, solange dein Abonnement aktiv ist.",
 PROFESSIONAL: "24/7 gehosted, solange dein Abonnement aktiv ist."}} />
 
