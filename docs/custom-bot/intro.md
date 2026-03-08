@@ -48,8 +48,8 @@ managed entirely through the [SCNX Dashboard](https://scnx.app).
   [RSS feeds](/docs/custom-bot/modules/integrations/rss-notifications),
   [Threads](/docs/custom-bot/modules/integrations/threads-notifications), and
   [TikTok](/docs/custom-bot/modules/integrations/tiktok-notifications).
-* **[AI Features](/docs/custom-bot/modules/ai)** — AI-powered chat channel with custom personalities, AI image
-  generation, and Akinator.
+* **[AI Features](/docs/custom-bot/modules/ai)** — AI-powered chat channel with custom personalities, and AI image
+  generation.
 * **Games & Fun** — [Connect Four](/docs/custom-bot/modules/fun/connect-four),
   [UNO](/docs/custom-bot/modules/fun/uno), [Tic-Tac-Toe](/docs/custom-bot/modules/fun/tic-tak-toe),
   [Rock Paper Scissors](/docs/custom-bot/modules/fun/rock-paper-scissors),
