@@ -4,7 +4,7 @@ Create your own commands, button interactions, modals, and message-based automat
 without writing any code.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
-    STARTER: "Up to 2 simultaneously enabled custom commands.",
+    STARTER: "Up to 10 simultaneously enabled custom commands.",
     UNLIMITED: "Unlimited custom commands.",
     PROFESSIONAL: "Unlimited custom commands."}} />
 
@@ -182,11 +182,6 @@ Users without any of the configured roles will see the missing role message inst
 Each custom command can be individually enabled or disabled. A disabled command won't respond to any triggers. To enable
 a command, it must have a valid trigger configured and all required fields filled in.
 
-### Categories {#categories}
-
-Organize your custom commands into categories for easier management. Create categories when creating a new command or
-from the command list.
-
 ### Sharing {#sharing}
 
 You can share a custom command with others by creating a unique sharing link:
@@ -222,8 +217,7 @@ The number of simultaneously enabled custom commands depends on your SCNX plan:
 
 | Plan | Enabled custom commands |
 |---|---|
-| Starter | Up to 2 |
-| Active Guild | Up to 42 |
+| Starter | Up to 10 |
 | Professional / Unlimited | Unlimited |
 
 You can always create more commands than your limit allows, but only the allowed number can be **enabled** at the same
