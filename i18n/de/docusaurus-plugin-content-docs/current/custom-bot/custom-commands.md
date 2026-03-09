@@ -3,7 +3,7 @@
 Erstelle deine Eigenen Befehle, Knopf-Interaktionen, Dialog und nachrichtenbasierten Automatisierungen – alles über das SCNX-Dashboard, ganz ohne Programmieren.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
-    STARTER: "Maximal 2 aktive Eigene Befehle gleichzeitig.",
+    STARTER: "Maximal 10 aktive Eigene Befehle gleichzeitig.",
     UNLIMITED: "Unbegrenzte Eigene Befehle.",
     PROFESSIONAL: "Unbegrenzte Eigene Befehle."}} />
 
