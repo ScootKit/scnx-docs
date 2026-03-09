@@ -22,7 +22,7 @@ Custom Commands let you build your own bot interactions using a visual flow edit
 
 1. Open the [Custom Commands page](https://scnx.app/glink?page=bot/custom-commands) on your SCNX Dashboard.
 2. Make sure your bot is online and running.
-3. Click **"Create new Custom Command"** (or **"New custom command flow"** for the V3 flow editor) to get started.
+3. Click **"Create new Custom Command"** to get started.
 
 ## Triggers {#triggers}
 
