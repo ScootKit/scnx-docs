@@ -50,7 +50,7 @@ Der Befehl wird ausgeführt, wenn ein Nutzer auf eine Schaltfläche (Button) kli
 
 Um eine Nachricht mit einem Button oder einem Auswahlmenü zu senden:
 
-1. Nutze das [Als Bot anmelden](/de/docs/custom-bot/login-as-bot/) Feature, um eine Nachicht zu senden.
+1. Nutze das [Als Bot anmelden](/de/docs/custom-bot/login-as-bot/) Feature, um eine Nachricht zu senden.
 2. Erstelle im Nachrichten-Editor einen **Eigenen Befehl Knopf** oder ein **Eigene Befehl Element** und verbinde dieses direkt mit deinem Eigenen Befehl.
 3. Du kannst Knöpfe auch an Nachrichten anhängen, die von anderen Eigenen Befehlen oder Modul-Konfigurationen gesendet werden.
 
@@ -98,7 +98,7 @@ Aktionen sind die einzelnen Arbeitsschritte, die dein Bot ausführt. Die folgend
 
 | Aktion | Beschreibung |
 |---|---|
-| **Auf Nachricht oder Interaktion antworten** | Antworte auf die auslösende Nachricht oder Interaktion. Unterstützt private Antworten (nur für den auführenden Nutzer sichtbar) bei Slash-Befehlen und Knopf-Klicks. |
+| **Auf Nachricht oder Interaktion antworten** | Antworte auf die auslösende Nachricht oder Interaktion. Unterstützt private Antworten (nur für den ausführenden Nutzer sichtbar) bei Slash-Befehlen und Knopf-Klicks. |
 | **Nachricht in Kanal senden** | Sende eine Nachricht in einem beliebigen Kanal auf dem Server. Die Nachricht kann optional angepinnt werden. |
 | **Interaktions-Nachricht editieren** | Bearbeite die Nachricht, an der die Schaltfläche (Knopf) angehängt ist (nur für Knopf-Trigger). |
 | **PN an Nutzer senden** | Sende eine Private Nachricht (PN) an den ausführenden oder einen erwähnten Nutzer. Wird lautlos übersprungen, falls der Nutzer PNs deaktiviert hat. |
@@ -128,8 +128,8 @@ Diese Parameter sind immer verfügbar:
 | `%userNickname%` | Server-Nickname des ausführenden Nutzers |
 | `%userAvatarURL%` | Avatar-URL des ausführenden Nutzers |
 | `%userCreatedAt%` | Zeitstempel der Accounterstellung des ausführenden Nutzers |
-| `%channelID%` |ID des Kanals, in dem der Befehl ausgeführt wurde. |
-| `%content%` | Der Textinhalt der Trigger-Nachricht (funktioniert nur bei Nachricht-Triggern |
+| `%channelID%` | ID des Kanals, in dem der Befehl ausgeführt wurde. |
+| `%content%` | Der Textinhalt der Trigger-Nachricht (funktioniert nur bei Nachricht-Triggern) |
 
 ### Optionen-Parameter für Slash-Befehle {#option-parameters}
 
@@ -146,7 +146,7 @@ Wenn du einen Slash-Befehl-Trigger mit Optionen verwendest, werden je nach Optio
 
 ### Dialog-Antworten-Parameter {#modal-parameters}
 
-Bei Verwendung eines Dialog-Triggers sind die Antworten des Nutzers als `%answer1%`, `%answer-2%` usw. verfügbar, entsprechend der Reihenfolge der Eingabefelder im Dialog.
+Bei Verwendung eines Dialog-Triggers sind die Antworten des Nutzers als `%answer1%`, `%answer2%` usw. verfügbar, entsprechend der Reihenfolge der Eingabefelder im Dialog.
 
 ### Globale Parameter {#global-parameters}
 
@@ -213,7 +213,7 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
 <details>
   <summary>Mein Slash-Befehl wird in Discord nicht angezeigt</summary>
   <ul>
-    <li>Stelle sicher, dass der Eigene Befehl <b>aktiviert</b>ist.</li>
+    <li>Stelle sicher, dass der Eigene Befehl <b>aktiviert</b> ist.</li>
     <li>Es kann bis zu 24 Stunden dauern, bis neue Slash-Befehle in Discord angezeigt werden.</li>
     <li>Überprüfe, ob der Name des Slash-Befehls gültig ist (Kleinschreibung, keine Sonderzeichen außer <code>-</code>).</li>
     <li>Überprüfe, ob du das Limit von 100 Slash-Befehle pro Server überschritten hast.</li>
