@@ -89,6 +89,7 @@ const config = {
                 indexName: 'SCNX Docs',
                 askAi: {
                     assistantId: 'qyJzt6nnQOL9',
+                    indexName: 'markdownt',
                     sidePanel: true,
                 },
                 contextualSearch: true,
