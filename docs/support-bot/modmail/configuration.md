@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Configuration
-description: Configure core features for your modmail system.
+description: Configure your Discord Modmail system — ticket categories, closing options, close reasons, archiving, reminders, hold, and advanced messaging.
 ---
 
 # Configuration
@@ -40,22 +40,28 @@ description: Configure core features for your modmail system.
 | Field | Description |
 | --- | --- |
 | Enable modmail feature? | Enables or disables the modmail system for your Discord server. |
-| Category for new tickets | New tickets are created in this category by default. You can set different categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Default ticket access permissions | Users with these permissions or roles will be able to see tickets and will be pinged when a new ticket is created. |
-| Roles with default access permissions | *Only available if “Selected roles” is selected for “Default ticket access permissions”.*<br/>These roles get access to tickets by default and are mentioned when a new ticket is created. You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Log channel | Your bot will automatically send all support-relevant messages to this channel by default. You can set different log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Ticket welcome message | This message is sent by default when a user opens a new ticket. You can set different messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Ticket close message | This message is sent by default when a ticket is closed. You can set different messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Enable maintenance mode? | If enabled, no ticket actions can be performed (such as creating/editing/closing tickets). Messages can still be sent in already opened tickets. |
-| Allow users to open tickets via command? | If enabled, your users can create tickets not only via buttons and dropdown menus, but also with the <a href="#main-configuration-commands"><code>/ticket open</code></a> command. |
-| Allow staff to open tickets on behalf of a user? | If enabled, team members can create a ticket with a user using the <a href="#main-configuration-commands"><code>/ticket admin-open</code></a> command. Restrictions like multiple open tickets or opening hours are bypassed. |
-| Team member roles | <br/><small><details><summary><strong>Note</strong></summary><blockquote>*You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*<br/>*This is another note with medium-length text.*</blockquote></details></small>These roles get access to tickets by default and are mentioned when a new ticket is created. |
-| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><small><details><summary><strong>Note</strong></summary><blockquote>*You can set different ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| AI summary of ticket transcripts | If enabled, after a ticket is closed your bot will automatically send an AI-generated summary of the ticket to the configured log channel.<br/>Please note that this uses your server’s [AI credits](https://faq.scnx.app/ki-auf-scnx/) and shares certain data with “modmail.net” (a SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy). |
-| Allow team members to rename tickets? | If enabled, team members can rename tickets with the <a href="#main-configuration-commands"><code>/ticket rename</code></a> command.<br/><dl><dt>Note</dt><dd>After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in <a href="./ticket-topics.md">ticket topics</a>).</dd></dl> |
-| Show rename button under ticket message? | *Only available if “Allow team members to rename tickets?” is enabled.*<br/>If enabled, a button is added under the ticket message so team members can rename the ticket faster. Otherwise they must use the <a href="#main-configuration-commands"><code>/ticket rename</code></a> command. |
-| Rename button text | *Only available if “Allow team members to rename tickets?” and “Show rename button under ticket message?” are enabled.*<br/>This text is shown on the button under the ticket message. |
-| Ticket rename message | *Only available if “Allow team members to rename tickets?” is enabled.*<br/>This message is sent into the ticket channel when a ticket is renamed. |
+| Category for new tickets | New tickets are created in this category by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Default ticket access permissions | Users with these permissions or roles will be able to see tickets and will be pinged when a new ticket is created. Choose between syncing with the category permissions, selecting custom roles, or restricting access to admins only. |
+| Roles with default access permissions | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Selected roles” is selected for “Default ticket access permissions”.*</blockquote></details><details><summary>Note</summary><blockquote>*You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Log channel | Your bot will automatically send all support-relevant messages to this channel by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Ticket welcome message | This message is sent by default when a user opens a new ticket.<br/><small><details><summary>Note</summary><blockquote>*You can set different messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Ticket close message | This message is sent by default when a ticket is closed. |
+| New thread ping | Choose who gets pinged when a new ticket is created. Options: “None”, “@here”, “@everyone”, or specific roles. |
+| Roles to ping | These roles are mentioned when a new ticket is created.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Specific roles” is selected for “New thread ping”.*</blockquote></details></small> |
+| Allow staff to edit each other’s messages? | If enabled, team members can edit or delete messages sent by other team members in ticket channels. |
+| Enable maintenance mode? | If enabled, no ticket actions can be performed (such as creating/editing/closing tickets).<br/><small><details><summary>Note</summary><blockquote>*Messages can still be sent in already opened tickets.*</blockquote></details></small> |
+| Maintenance mode message | This message is sent when a user tries to open a ticket during maintenance mode.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Enable maintenance mode?” is enabled.*</blockquote></details></small> |
+| Allow non-member messages? | If enabled, users who are not members of your server can still open tickets by messaging the bot. |
+| Allow users to open tickets via command? | If enabled, your users can create tickets not only via buttons and dropdown menus, but also with the [``/ticket open``](#main-configuration-commands) command. |
+| Allow staff to open tickets on behalf of a user? | If enabled, team members can create a ticket with a user using the [``/ticket admin-open``](#main-configuration-commands) command.<br/><small><details><summary>Note</summary><blockquote>*Restrictions like multiple open tickets or opening hours are bypassed.*</blockquote></details></small> |
+| Staff-opened welcome message | This message is sent when a team member opens a ticket on behalf of a user. Use a different welcome message to inform the user that a team member initiated the conversation.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow staff to open tickets on behalf of a user?" is enabled.*</blockquote></details></small> |
+| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time. |
+| AI summary of ticket transcripts | If enabled, after a ticket is closed your bot will automatically send an AI-generated summary of the ticket to the configured log channel.<br/><small><details><summary>Note</summary><blockquote>*This uses your server’s [AI credits](https://faq.scnx.app/ki-auf-scnx/) and shares certain data with “modmail.net” (a SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
+| Allow team members to rename tickets? | If enabled, team members can rename tickets with the [``/modmail rename``](#main-configuration-commands) command.<br/><small><details><summary>Note</summary><blockquote>*After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in [ticket topics](./ticket-topics.md)).*</blockquote></details></small> |
+| Show rename button under ticket message? | If enabled, a button is added under the ticket message so team members can rename the ticket faster.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow team members to rename tickets?” is enabled.*</blockquote></details></small> |
+| Rename button text | This text is shown on the button under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Show rename button under ticket message?” is enabled.*</blockquote></details></small> |
+| Ticket rename message | This message is sent into the ticket channel when a ticket is renamed.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow team members to rename tickets?” is enabled.*</blockquote></details></small> |
+| Add /modmail prefix? | If enabled, Modmail commands use the ``/modmail`` prefix (e.g. ``/modmail close``) instead of the ``/ticket`` prefix for easier distinction. |
 
 ## Ticket opening messages {#ticket-open-messages}
 
@@ -89,6 +95,11 @@ description: Configure core features for your modmail system.
 * Add a close button to the ticket message so tickets can be closed with one click.
 * Allow tickets to be closed by the ticket creator (instead of only by team members).
 * Enable close requests to prevent team members from closing tickets immediately.
+* Require or allow close reasons to document why a ticket was closed. Define custom close reasons for consistency.
+* Enable silent ticket closing to close tickets without notifying the user.
+* Choose between deleting the ticket channel or archiving it to a separate category after closing.
+* Allow users to reopen archived tickets or let team members delete them manually.
+* Attach the ticket transcript to the log channel message for easy reference.
 
 <h4>Images coming soon ✨</h4>
 
@@ -103,8 +114,8 @@ description: Configure core features for your modmail system.
 
 | Command | Description |
 | --- | --- |
-| `/ticket close [force:<Boolean>]` | *Only available if “Allow staff to close tickets without confirmation?” is <a href="#ticket-closing-configuration">enabled</a>.*<br/>Allows team members to close tickets despite an open close request by setting the `force` option to `True`. |
-| `/ticket close-schedule` | *Only available if “Can team members manually schedule when tickets should be closed?” is <a href="#ticket-closing-configuration">enabled</a>.*<br/>Allows team members to schedule closing tickets instead of closing them immediately. |
+| `/ticket close [close-reason:<Text>] [silent:<Boolean>] [force:<Boolean>]` | Closes the current ticket. Optionally specify a close reason (if [enabled](#ticket-closing-configuration)), close silently without notifying the user (if [enabled](#ticket-closing-configuration)), or force-close despite an open close request (if [enabled](#ticket-closing-configuration)). |
+| `/ticket close-schedule` | Allows team members to schedule closing tickets instead of closing them immediately.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Can team members manually schedule when tickets should be closed?” is [enabled](#ticket-closing-configuration).*</blockquote></details></small> |
 
 ### Configuration {#ticket-closing-configuration}
 
@@ -122,8 +133,19 @@ description: Configure core features for your modmail system.
 | Message for ticket close request by a team member | *Only available if “Require user confirmation before the ticket is closed?” is enabled.*<br/>This message is sent when a team member creates a close request in the ticket. |
 | Timeout for the close request | *Only available if “Require user confirmation before the ticket is closed?” is enabled.*<br/>Within this period, the user must respond to the close request before the ticket is closed automatically. Learn how to set durations in SCNX <a href="../../custom-bot/additional-features.md#durations">here</a>. |
 | Allow team members to close tickets without confirmation? | *Only available if “Require user confirmation before the ticket is closed?” is enabled.*<br/>If enabled, team members can close a ticket despite an open close request using the <a href="#ticket-closing-commands"><code>/ticket close [force:&lt;Boolean&gt;]</code></a> command. |
-| Can team members manually schedule when tickets should be closed? | If enabled, team members can schedule closing tickets with the <a href="#ticket-closing-commands"><code>/ticket close-schedule</code></a> command. |
-| Scheduled close message | *Only available if “Can team members manually schedule when tickets should be closed?” is enabled.*<br/>This message is sent into the ticket channel as soon as a team member runs the command. |
+| Can team members manually schedule when tickets should be closed? | If enabled, team members can schedule closing tickets with the <a href=”#ticket-closing-commands”><code>/ticket close-schedule</code></a> command. |
+| Scheduled close message | This message is sent into the ticket channel as soon as a team member runs the command.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Can team members manually schedule when tickets should be closed?” is enabled.*</blockquote></details></small> |
+| Attach log/transcript to the log channel message? | If enabled, the ticket transcript is attached to the message posted in the log channel when a ticket is closed. |
+| Allow close reasons? | If enabled, team members can specify a reason when closing a ticket using the <a href=”#ticket-closing-commands”><code>/ticket close</code></a> command. Close reasons are included in the log channel message. |
+| Force close reason? | If enabled, team members are required to provide a close reason when closing a ticket — the reason field becomes mandatory.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow close reasons?” is enabled.*</blockquote></details></small> |
+| Custom close reasons? | If enabled, you can define a list of predefined close reasons that team members can choose from via autocomplete. Team members can still type custom reasons if needed.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow close reasons?” is enabled.*</blockquote></details></small> |
+| Default close reasons | A list of predefined close reasons that team members can choose from when closing a ticket. These appear as autocomplete suggestions in the close command.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Custom close reasons?” is enabled.*</blockquote></details></small> |
+| Allow silent ticket close? | If enabled, team members can close a ticket silently using the <a href=”#ticket-closing-commands”><code>/ticket close</code></a> command — the user will not receive a DM or close notification. |
+| Delete ticket after close? | If enabled, the ticket channel is immediately deleted after the ticket is closed. If disabled, the channel is kept and can optionally be archived. |
+| Archive category | Closed ticket channels are moved to this category. Use this to keep closed tickets accessible for review.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Delete ticket after close?” is disabled.*</blockquote></details></small> |
+| Archived message | This message is sent into the ticket channel after it is archived.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Delete ticket after close?” is disabled.*</blockquote></details></small> |
+| Allow users to reopen closed tickets? | If enabled, users can reopen their closed (archived) tickets by clicking a button on the archived ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Delete ticket after close?” is disabled.*</blockquote></details></small> |
+| Allow team members to delete closed tickets? | If enabled, team members can manually delete archived ticket channels by clicking a button on the archived ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Delete ticket after close?” is disabled.*</blockquote></details></small> |
 
 ## Additional ticket members {#additional-ticket-members}
 
@@ -214,6 +236,7 @@ description: Configure core features for your modmail system.
 | Mention again if a ticket hasn’t received a team member response yet | If enabled, your bot sends a reminder message about tickets that haven’t been handled yet. |
 | Period before reminding about an unassigned ticket | *Only available if “Mention again if a ticket hasn’t received a team member response yet” is enabled.*<br/>Set how long tickets must remain unhandled before a reminder is sent. Learn the SCNX duration format [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations). |
 | Unassigned ticket reminder message | *Only available if “Mention again if a ticket hasn’t received a team member response yet” is enabled.*<br/>Customize the reminder message that is sent for unhandled tickets. |
+| Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](../general/opening-hours.md) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](../general/opening-hours.md) are enabled.*</blockquote></details></small> |
 
 ## Ticket hold {#ticket-hold}
 
@@ -267,13 +290,24 @@ description: Configure core features for your modmail system.
 
 | Field | Description |
 | --- | --- |
-| Ticket channel name format | This format is used by your bot to create names for new ticket channels. You can set different formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md). |
-| Error message: user already has an open ticket | *Only sent if <a href="#main-configuration-configuration">configured</a>.*<br/>This message is sent when a user tries to open another ticket while they already have an active one. |
+| Relay user typing to team? | If enabled, typing indicators from the user are relayed to the ticket channel. |
+| Display past tickets button? | If enabled, a button to view the user's past tickets is shown in the ticket channel. |
+| Relay staff typing to user? | If enabled, typing indicators from team members are relayed to the user's DMs. |
+| Message received reaction | This reaction is added to the user's message when it is received in the ticket channel. |
+| Staff-to-user message | This message format is used when a team member sends a message to the user. |
+| Anonymous staff-to-user message | This message format is used when a team member sends an anonymous message to the user. |
+| Anonymous staff in channel | This message format is shown in the ticket channel when a team member sends an anonymous message. |
+| Staff in channel | This message format is shown in the ticket channel when a team member sends a message. |
+| User to team | This message format is shown in the ticket channel when a user sends a message. |
+| Edited user to team | This message format is shown in the ticket channel when a user edits a message. |
+| Deleted user to team | This message format is shown in the ticket channel when a user deletes a message. |
+| Ticket channel name format | This format is used by your bot to create names for new ticket channels.<br/><small><details><summary>Note</summary><blockquote>*You can set different formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Error message: user already has an open ticket | This message is sent when a user tries to open another ticket while they already have an active one.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow only one ticket per user (global)" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
 | Error: ticket not found | This message is sent when a team member tries to [claim](./claiming.md) a ticket that has already been closed or deleted. |
 | Error: command used outside of ticket channels | This message is sent when a team member runs ticket commands outside a ticket channel. |
-| Ticket-by-command confirmation message | This message is sent when a user tries to open a new ticket via `/ticket open` (<a href="#main-configuration-configuration">if configured</a>). |
-| Error: insufficient permissions to add users to a ticket | This message is sent when a user without the required permissions tries to add/remove a user to/from a ticket (<a href="#additional-ticket-members-configuration">if configured</a>). |
-| Error: user has already been added to the ticket | This message is sent when trying to add a user who already has access to the ticket. |
+| Ticket-by-command confirmation message | This message is sent when a user opens a new ticket via ``/ticket open``.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow users to open tickets via command?" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
+| Error: insufficient permissions to add users to a ticket | This message is sent when a user without the required permissions tries to add/remove a user to/from a ticket.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow additional ticket members?" is [enabled](#additional-ticket-members-configuration).*</blockquote></details></small> |
+| Error: user has already been added to the ticket | This message is sent when trying to add a user who already has access to the ticket.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow additional ticket members?" is [enabled](#additional-ticket-members-configuration).*</blockquote></details></small> |
 | Ticket ID generator | This ID is used by your bot for the ticket channel name. |
 
 ## Statistics channels {#statistics-channels}

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter-Guide
-description: Eine Anleitung für das Ticket-System, gemacht für dich und dein Team für einen optimalen Einstieg!
+description: Kompletter Starter-Guide für dein Discord-Ticket-System — lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
 ---
 
 # Starter-Guide (Ticket-System 101)

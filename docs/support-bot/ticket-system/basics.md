@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter Guide
-description: Step-by-step guide for the ticket system, made for you and your team for the best possible start!
+description: Complete starter guide for your Discord ticket system — learn how to create, claim, respond to, and close tickets with your team.
 ---
 
 # Starter Guide (Ticket System 101)

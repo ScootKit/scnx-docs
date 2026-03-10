@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support Feedback
-description: Manage support feedback to further improve your members’ support experience.
+description: Collect star ratings and custom feedback from users after Modmail tickets are closed — with optional anonymization.
 ---
 
 # Support Feedback

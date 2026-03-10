@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Forms
-description: Create and manage forms you can send to users manually or automatically.
+description: Create custom forms and modal dialogs for your Discord support tickets — collect structured information from users before or during a ticket.
 ---
 
 # Forms
@@ -11,6 +11,8 @@ description: Create and manage forms you can send to users manually or automatic
 * Set up forms to collect information from users.
 * Customize the questions and the dialog appearance.
 * Send a form into a ticket via a command with minimal effort.
+* Optionally require form submission before users can continue in Modmail or the Ticket System.
+* Lock ticket channels until the form has been submitted (Ticket System only).
 
 <h4>Images coming soon ✨</h4>
 
@@ -18,9 +20,9 @@ description: Create and manage forms you can send to users manually or automatic
 
 * Visit the [Forms](https://scnx.app/glink?page=support-system/forms) page in your dashboard.
 * [Configure](#main-configuration) the available options.
-* Create a new form by clicking the “Create new form” button.
+* Create a new form by clicking the "Create new form" button.
 * [Configure](#manage-forms) the available options for the respective form.
-* Create a new form question by clicking “Edit form” in the [configuration](#main-configuration) and then clicking “Add field”.
+* Create a new form question by clicking "Edit form" in the [configuration](#main-configuration) and then clicking "Add field".
 * [Configure](#manage-forms-questions) the available options for the respective form question.
 
 ## Commands {#commands}
@@ -38,12 +40,17 @@ description: Create and manage forms you can send to users manually or automatic
 | Field | Description |
 | --- | --- |
 | Dialog open button | This text is shown on the button that opens the form dialog, which is attached to the message sent by the [``/ticket form``](#commands) command. |
+| Open dialog message (Modmail) | This message is sent when a user is asked to fill out a form in a Modmail ticket.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if Modmail is enabled.*</blockquote></details></small> |
+| Require form submission (Modmail) | If enabled, users cannot continue in Modmail until the form has been submitted.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if Modmail is enabled.*</blockquote></details></small> |
+| Ticket form message (Ticket System) | This message is sent in the ticket channel when a form is requested.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if the Ticket System is enabled.*</blockquote></details></small> |
+| Lock channel until form is submitted (Ticket System) | If enabled, the user cannot send messages in the ticket channel until the form has been submitted.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if the Ticket System is enabled.*</blockquote></details></small> |
+| Allow additional ticket members to submit forms | If enabled, additional ticket members (not just the ticket owner) can submit forms in the ticket.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if the Ticket System is enabled and "Allow additional ticket members" is enabled in the [Ticket System configuration](/docs/support-bot/ticket-system/configuration#additional-ticket-members).*</blockquote></details></small> |
 
 ### Manage forms {#manage-forms}
 
 | Field | Description |
 | --- | --- |
-| Form name | This text is shown as the title of your form. |
+| Form name | This text is shown as the title of your form and in the form selection menu. |
 | Dialog | These questions are shown in the form. More information on configuring form questions can be found [here](#manage-forms-questions). |
 
 ### Manage form questions {#manage-forms-questions}

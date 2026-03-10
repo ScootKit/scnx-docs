@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Ticket Topics
-description: Create and manage ticket topics to keep your tickets organized and unlock additional advantages.
+description: Categorize Modmail tickets with topics, route them to specific teams, require forms, and customize messages per topic.
 ---
 
 # Ticket Topics
@@ -70,6 +70,7 @@ description: Create and manage ticket topics to keep your tickets organized and 
 | Ping roles again when transferring | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>If enabled, the configured roles are mentioned again when transferring the ticket to another topic. |
 | Require form submission before opening | If enabled, the user must first fill out a [form](../general/forms.md) before they can create a ticket for this topic. |
 | Form that must be completed | *Only available if “Require form submission before opening” is enabled.*<br/>This form must be completed before opening the ticket. |
+| Staff-opened welcome message | This message is sent when a team member opens a ticket on behalf of a user with this topic. Use a different message to inform the user that a team member initiated the conversation.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow staff to open tickets on behalf of a user?" is [enabled](./configuration.md#main-configuration-configuration).*</blockquote></details></small> |
 | Override log channel | This channel is used as the log channel for this topic. By default, your [configured log channel](./configuration.md#main-configuration-configuration) is used. |
 | Override ticket channel name? | If enabled, you can define a custom ticket channel name for this topic. |
 | Ticket channel name format | This text is used for the channel name of tickets with this topic. By default, your [configured ticket channel name format](./configuration.md#main-configuration-configuration) is used. |

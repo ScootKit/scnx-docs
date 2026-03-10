@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support-Bewertungen
-description: Verwalte deine Support-Bewertungen, um die Support-Erfahrung für deine Mitglieder noch weiter zu verbessern!
+description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem Schließen von Support-Tickets — mit optionaler Anonymisierung.
 ---
 
 # Support-Bewertungen

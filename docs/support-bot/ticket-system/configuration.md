@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Configuration
-description: Configure all core features for your ticket system!
+description: Configure your Discord ticket system — categories, closing options, auto-close, reminders, hold, additional members, and advanced messaging.
 ---
 
 # Configuration
@@ -212,6 +212,7 @@ description: Configure all core features for your ticket system!
 | Mention again if a ticket hasn’t been handled yet | If enabled, a reminder message is sent for unanswered tickets. |
 | Period before reminding about an unassigned ticket | A ticket must be unanswered for this period before a reminder is sent.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
 | Unassigned ticket reminder message | This message is sent as a reminder message for unanswered tickets.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details></small> |
+| Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](../general/opening-hours.md) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](../general/opening-hours.md) are enabled.*</blockquote></details></small> |
 
 ## Ticket hold {#ticket-hold}
 

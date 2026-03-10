@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Konfiguration
-description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
+description: Konfiguriere dein Discord-Ticket-System — Kategorien, Schließoptionen, automatisches Schließen, Erinnerungen, Pausierung, zusätzliche Mitglieder und erweiterte Nachrichten.
 ---
 
 # Konfiguration
@@ -212,6 +212,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat | Wenn aktiviert, wird eine Erinnerungsnachricht für unbearbeitete Tickets in den Erinnerungskanal gesendet.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Zeitraum vor Erinnerung aufgrund eines unzugewiesenen Tickets                           | Für diesen Zeitraum muss ein Ticket unbearbeitet sein, bevor eine Erinnerung gesendet wird.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*</blockquote></details><details><summary>Hinweis</summary><blockquote>*In welchem Format du Zeitangaben in SCNX einstellst, erfährst du [hier](https://docs.scnx.xyz/de/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
 | Unzugewiesene Ticketerinnerungsnachricht                                                | Diese Nachricht wird als Erinnerungsnachricht für unbearbeitete Tickets gesendet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                                                                                    |
+| Erinnerungen innerhalb der Öffnungszeiten senden?                                       | Wenn aktiviert, werden Erinnerungen auf den Beginn der konfigurierten [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) verschoben.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) aktiviert sind.*</blockquote></details></small> |
 
 ## Ticket-Pausierung {#ticket-hold}
 
