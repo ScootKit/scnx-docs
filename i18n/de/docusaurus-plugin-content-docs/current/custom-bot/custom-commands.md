@@ -78,7 +78,6 @@ Der Befehl wird ausgeführt, wenn ein Nutzer einen Dialog (Formular/Modal) absen
 * Konfiguriere den Titel des Dialogs und die Eingabefelder (Textfelder im Kurzformat oder als Absatz).
 * Die Antworten der Nutzer stehen in den Aktionen des Befehls als Parameter zur Verfügung (z. B. `%answer1%`, `%answer2%`) und so weiter.
 
-
 ### Keine (Manuelle Ausführung) {#trigger-none}
 
 Der Befehl kann ausschließlich von einem anderen Eigenen Befehl über die Aktion **„Befehl ausführen“** ausgeführt werden. Das ist besonders praktisch, um wiederverwendbare Abläufe zu erstellen.
@@ -252,9 +251,9 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
   <summary>„Dialog anzeigen“ Aktion funktioniert nicht</summary>
   <ul>
     <li>Dialoge können nur über interaktionsbasierte Trigger (Slash-Befehle, Knöpfe) angezeigt werden. Sie können nicht über Nachrichten-Trigger ausgelöst werden.</li>
-    <li>Pro Interaktion kann nur ein Dialog angezeigt werden — wenn eine andere Aktion bereits einen Dialog aufgerufen hat, werden Nachfolgende übersprungen.</li>
-    <li>Ein Dialog kann nicht als Antwort auf das Absenden eines anderen Dialog angezeigt werden (Einschränkung von Discord).</li>
-    <li>Stelle sicher, dass du einen separaten Eigenen Befehl mit einem <b>Dialog-Trigger</b> erstellt und diesen in der Aktion „Dialog anzeigen“ ausgewählt hast</li>
+    <li>Pro Interaktion kann nur ein Dialog angezeigt werden — wenn eine andere Aktion bereits einen Dialog aufgerufen hat, werden nachfolgende übersprungen.</li>
+    <li>Ein Dialog kann nicht als Antwort auf das Absenden eines anderen Dialogs angezeigt werden (Einschränkung von Discord).</li>
+    <li>Stelle sicher, dass du einen separaten Eigenen Befehl mit einem <b>Dialog-Trigger</b> erstellt und diesen in der Aktion „Dialog anzeigen“ ausgewählt hast.</li>
   </ul>
 </details>
 
