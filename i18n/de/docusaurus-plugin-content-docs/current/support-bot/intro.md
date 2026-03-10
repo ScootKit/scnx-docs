@@ -12,13 +12,13 @@ Egal ob du eine kleine Community oder einen großen Server mit tausenden Mitglie
 
 ## Zwei Systeme, ein Bot {#two-systems}
 
-| | [Modmail](./modmail/intro.md) | [Ticket-System](./ticket-system/intro.md) |
+| | [Modmail](/de/docs/support-bot/modmail/intro) | [Ticket-System](/de/docs/support-bot/ticket-system/intro) |
 |---|---|---|
 | **So funktioniert's** | Nutzer erstellen Tickets, indem sie deinem Bot eine DM senden. Nachrichten werden zwischen den DMs des Nutzers und einem privaten Team-Kanal weitergeleitet. | Nutzer erstellen Tickets über Knöpfe, Dropdown-Menüs oder Befehle auf deinem Server. Für jedes Ticket wird ein privater Kanal erstellt. |
 | **Ideal für** | Server, die eine private, DM-basierte Support-Erfahrung wollen. Nutzer müssen nicht in einem öffentlichen Kanal interagieren. | Server, die einen kanalbasierten Support-Ablauf wollen, bei dem alles direkt auf dem Server passiert. |
 | **Einzigartige Features** | Anonyme Nachrichten, Snippets (Schnellantworten), Tipp-Weiterleitung, Bearbeiten/Löschen von Nachrichten | Ticket-Limits pro Thema, benötigte Rollen pro Thema, Knopffarben pro Thema |
 
-Beide Systeme teilen sich [allgemeine Funktionen](./general/bot-configuration.md) wie Öffnungszeiten, Formulare, Statistiken, Ticketauslastung, geschätzte Wartezeiten und mehr. Nicht sicher, welches System das richtige ist? Schau dir den [Feature-Vergleich](./feature-comparison.md) an.
+Beide Systeme teilen sich [allgemeine Funktionen](/de/docs/support-bot/general/bot-configuration) wie Öffnungszeiten, Formulare, Statistiken, Ticketauslastung, geschätzte Wartezeiten und mehr. Nicht sicher, welches System das richtige ist? Schau dir den [Feature-Vergleich](/de/docs/support-bot/feature-comparison) an.
 
 ## Funktionen auf einen Blick {#key-features}
 
@@ -40,11 +40,11 @@ Beide Systeme teilen sich [allgemeine Funktionen](./general/bot-configuration.md
 ## Erste Schritte {#getting-started}
 
 1. Richte deinen Support-Bot im [SCNX-Dashboard](https://scnx.app/glink?page=support-system/manage) ein.
-2. Konfiguriere allgemeine Einstellungen in der [Bot-Konfiguration](./general/bot-configuration.md).
-3. Aktiviere [Modmail](./modmail/configuration.md) und/oder das [Ticket-System](./ticket-system/configuration.md).
-4. Richte [Ticket-Themen](./modmail/ticket-topics.md), [Formulare](./general/forms.md) und [Öffnungszeiten](./general/opening-hours.md) ein.
-5. Teile den [Modmail Starter-Guide](./modmail/basics.md) oder das [Ticket-System 101](./ticket-system/basics.md) mit deinem Team.
+2. Konfiguriere allgemeine Einstellungen in der [Bot-Konfiguration](/de/docs/support-bot/general/bot-configuration).
+3. Aktiviere [Modmail](/de/docs/support-bot/modmail/configuration) und/oder das [Ticket-System](/de/docs/support-bot/ticket-system/configuration).
+4. Richte [Ticket-Themen](/de/docs/support-bot/modmail/ticket-topics), [Formulare](/de/docs/support-bot/general/forms) und [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) ein.
+5. Teile den [Modmail Starter-Guide](/de/docs/support-bot/modmail/basics) oder das [Ticket-System 101](/de/docs/support-bot/ticket-system/basics) mit deinem Team.
 
 ## Brauchst du Hilfe? {#need-help}
 
-Wenn du auf Probleme stößt, schau dir unsere [Fehlerbehebung](./troubleshooting.md) an oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de).
+Wenn du auf Probleme stößt, schau dir unsere [Fehlerbehebung](/de/docs/support-bot/troubleshooting) an oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de).

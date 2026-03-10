@@ -7,7 +7,7 @@ description: A powerful channel-based Discord ticket system with claiming, auto-
 # About the Ticket System
 
 :::info Looking for a starter guide?
-For a quick and easy introduction to the ticket system for you and your team members, we recommend our [Starter Guide (Ticket System 101)](./basics.md).
+For a quick and easy introduction to the ticket system for you and your team members, we recommend our [Starter Guide (Ticket System 101)](/docs/support-bot/ticket-system/basics).
 :::
 
 ## How does the ticket system work?
@@ -29,7 +29,7 @@ The Ticket System creates a private channel on your Discord server for each supp
 
 ## Getting started {#getting-started}
 
-1. Enable the Ticket System in the [configuration](./configuration.md#main-configuration).
+1. Enable the Ticket System in the [configuration](/docs/support-bot/ticket-system/configuration#main-configuration).
 2. Set up your ticket category, log channel, and team member roles.
-3. Create [ticket topics](./ticket-topics.md) and set up [ticket opening messages](./configuration.md#ticket-open-messages).
-4. Share the [Starter Guide](./basics.md) with your team so they know how to use the Ticket System.
+3. Create [ticket topics](/docs/support-bot/ticket-system/ticket-topics) and set up [ticket opening messages](/docs/support-bot/ticket-system/configuration#ticket-open-messages).
+4. Share the [Starter Guide](/docs/support-bot/ticket-system/basics) with your team so they know how to use the Ticket System.

@@ -29,11 +29,11 @@ description: Solutions for common issues with the SCNX Support Bot.
 
 ### Users cannot open tickets via DM {#dm-tickets-not-working}
 
-* Verify that Modmail is [enabled](./modmail/configuration.md#main-configuration-configuration) in your dashboard.
+* Verify that Modmail is [enabled](/docs/support-bot/modmail/configuration#main-configuration-configuration) in your dashboard.
 * Check that maintenance mode is not enabled.
-* Ensure the user is not on the [blocklist](./modmail/basics.md#blacklist).
+* Ensure the user is not on the [blocklist](/docs/support-bot/modmail/basics#blocklist).
 * Make sure the user shares a server with the bot and has DMs enabled.
-* If [opening hours](./general/opening-hours.md) are configured and "completely disable message processing outside opening hours" is enabled, tickets cannot be created outside your opening hours.
+* If [opening hours](/docs/support-bot/general/opening-hours) are configured and "completely disable message processing outside opening hours" is enabled, tickets cannot be created outside your opening hours.
 
 ### Ticket channels are not being created {#no-ticket-channels}
 
@@ -50,22 +50,22 @@ description: Solutions for common issues with the SCNX Support Bot.
 
 ### Users cannot open tickets {#tickets-not-opening}
 
-* Verify that the Ticket System is [enabled](./ticket-system/configuration.md#main-configuration-configuration) in your dashboard.
+* Verify that the Ticket System is [enabled](/docs/support-bot/ticket-system/configuration#main-configuration-configuration) in your dashboard.
 * Check that maintenance mode is not enabled.
 * Ensure the user is not on the blocklist.
 * If "Allow only one ticket per user" is enabled, the user may already have an open ticket.
 * If ticket topics with required roles are configured, verify the user has the necessary roles.
-* If [opening hours](./general/opening-hours.md) are configured, check whether the support bot is currently closed.
+* If [opening hours](/docs/support-bot/general/opening-hours) are configured, check whether the support bot is currently closed.
 
 ### Ticket opening messages are not appearing {#opening-messages-not-appearing}
 
-* Make sure you have configured at least one [ticket opening message](./ticket-system/configuration.md#ticket-open-messages) in your dashboard.
+* Make sure you have configured at least one [ticket opening message](/docs/support-bot/ticket-system/configuration#ticket-open-messages) in your dashboard.
 * Verify that the bot has permission to send messages in the configured channel.
 * Reload the bot after making configuration changes.
 
 ### Claiming is not working {#claiming-not-working}
 
-* Verify that ticket claiming is [enabled](./ticket-system/claiming.md#main-configuration) in your dashboard.
+* Verify that ticket claiming is [enabled](/docs/support-bot/ticket-system/claiming#main-configuration) in your dashboard.
 * Make sure the claim button is enabled if you want staff to claim via button.
 * Check that the notification channel exists and the bot has permission to send messages in it.
 

@@ -29,7 +29,7 @@ description: Track your Discord support performance with detailed analytics, res
 
 <SlashCommandExplanation />
 
-The following commands are available if enabled in the [Staff Commands configuration](./bot-configuration.md#staff-commands):
+The following commands are available if enabled in the [Staff Commands configuration](/docs/support-bot/general/bot-configuration#staff-commands):
 
 | Command | Description |
 | --- | --- |
@@ -47,7 +47,7 @@ The following commands are available if enabled in the [Staff Commands configura
 | Average messages per ticket | The average number of messages exchanged per ticket before it is closed. |
 | Average close time | The average time from ticket creation to closing. Helps you understand how quickly issues are resolved. |
 | Average initial response time | The average time until the first team member responds to a new ticket. A key metric for user satisfaction. |
-| Average rating | The average star rating from user feedback submissions (if [support feedback](../modmail/support-feedback.md) is enabled). |
+| Average rating | The average star rating from user feedback submissions (if [support feedback](/docs/support-bot/modmail/support-feedback) is enabled). |
 | Total ratings | The total number of feedback submissions received. |
 
 ### Charts & breakdowns

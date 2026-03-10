@@ -32,7 +32,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | --- | --- |
 | `/ticket admin-open` | *Only available if “Allow staff to open tickets on behalf of a user?” is <a href="#main-configuration-configuration">enabled</a>.*<br/>Allows team members to create new tickets with specific users. |
 | `/ticket close` | Allows team members (and users, if <a href="#ticket-closing-configuration">configured</a>) to close the ticket in the current channel. |
-| `/ticket form` | Sends a specific [form](../general/forms.md) in the ticket. |
+| `/ticket form` | Sends a specific [form](/docs/support-bot/general/forms) in the ticket. |
 | `/ticket open` | *Only available if “Allow users to open tickets via command?” is <a href="#main-configuration-configuration">enabled</a>.*<br/>Opens a new ticket (with a specific topic) on your Discord server. |
 
 ### Configuration {#main-configuration-configuration}
@@ -40,11 +40,11 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | Field | Description |
 | --- | --- |
 | Enable modmail feature? | Enables or disables the modmail system for your Discord server. |
-| Category for new tickets | New tickets are created in this category by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Category for new tickets | New tickets are created in this category by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
 | Default ticket access permissions | Users with these permissions or roles will be able to see tickets and will be pinged when a new ticket is created. Choose between syncing with the category permissions, selecting custom roles, or restricting access to admins only. |
-| Roles with default access permissions | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Selected roles” is selected for “Default ticket access permissions”.*</blockquote></details><details><summary>Note</summary><blockquote>*You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Log channel | Your bot will automatically send all support-relevant messages to this channel by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Ticket welcome message | This message is sent by default when a user opens a new ticket.<br/><small><details><summary>Note</summary><blockquote>*You can set different messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Roles with default access permissions | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Selected roles” is selected for “Default ticket access permissions”.*</blockquote></details><details><summary>Note</summary><blockquote>*You can set different roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
+| Log channel | Your bot will automatically send all support-relevant messages to this channel by default.<br/><small><details><summary>Note</summary><blockquote>*You can set different log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
+| Ticket welcome message | This message is sent by default when a user opens a new ticket.<br/><small><details><summary>Note</summary><blockquote>*You can set different messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
 | Ticket close message | This message is sent by default when a ticket is closed. |
 | New thread ping | Choose who gets pinged when a new ticket is created. Options: “None”, “@here”, “@everyone”, or specific roles. |
 | Roles to ping | These roles are mentioned when a new ticket is created.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Specific roles” is selected for “New thread ping”.*</blockquote></details></small> |
@@ -57,7 +57,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | Staff-opened welcome message | This message is sent when a team member opens a ticket on behalf of a user. Use a different welcome message to inform the user that a team member initiated the conversation.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow staff to open tickets on behalf of a user?" is enabled.*</blockquote></details></small> |
 | Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time. |
 | AI summary of ticket transcripts | If enabled, after a ticket is closed your bot will automatically send an AI-generated summary of the ticket to the configured log channel.<br/><small><details><summary>Note</summary><blockquote>*This uses your server’s [AI credits](https://faq.scnx.app/ki-auf-scnx/) and shares certain data with “modmail.net” (a SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
-| Allow team members to rename tickets? | If enabled, team members can rename tickets with the [``/modmail rename``](#main-configuration-commands) command.<br/><small><details><summary>Note</summary><blockquote>*After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in [ticket topics](./ticket-topics.md)).*</blockquote></details></small> |
+| Allow team members to rename tickets? | If enabled, team members can rename tickets with the ``/ticket rename`` or ``/modmail rename`` command (depending on your prefix setting).<br/><small><details><summary>Note</summary><blockquote>*After a manual rename, the bot can no longer automatically change the ticket name when transferring it (if enabled in [ticket topics](/docs/support-bot/modmail/ticket-topics)).*</blockquote></details></small> |
 | Show rename button under ticket message? | If enabled, a button is added under the ticket message so team members can rename the ticket faster.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow team members to rename tickets?” is enabled.*</blockquote></details></small> |
 | Rename button text | This text is shown on the button under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Show rename button under ticket message?” is enabled.*</blockquote></details></small> |
 | Ticket rename message | This message is sent into the ticket channel when a ticket is renamed.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Allow team members to rename tickets?” is enabled.*</blockquote></details></small> |
@@ -68,7 +68,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 ### Features {#ticket-open-messages-features}
 
 * Let your users create new tickets easily via buttons or dropdown menus.
-* Send multiple ticket opening messages with different [ticket topics](./ticket-topics.md) into different channels to spread ticket creation across multiple channels.
+* Send multiple ticket opening messages with different [ticket topics](/docs/support-bot/modmail/ticket-topics) into different channels to spread ticket creation across multiple channels.
 * Choose between buttons or dropdown menus for each message to provide the best user experience.
 
 <h4>Images coming soon ✨</h4>
@@ -85,7 +85,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | --- | --- |
 | Channel to send the message to | Your configured message is sent to this channel. |
 | Message | Your bot sends this message into the selected channel. |
-| Show only specific ticket topics? | If enabled, your bot will only use selected [ticket topics](./ticket-topics.md). If you want to use buttons, you can select at most one topic here. |
+| Show only specific ticket topics? | If enabled, your bot will only use selected [ticket topics](/docs/support-bot/modmail/ticket-topics). If you want to use buttons, you can select at most one topic here. |
 | Use buttons? | If enabled, your bot will use buttons instead of the default dropdown menu. |
 
 ## Ticket closing {#ticket-closing}
@@ -236,7 +236,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | Mention again if a ticket hasn’t received a team member response yet | If enabled, your bot sends a reminder message about tickets that haven’t been handled yet. |
 | Period before reminding about an unassigned ticket | *Only available if “Mention again if a ticket hasn’t received a team member response yet” is enabled.*<br/>Set how long tickets must remain unhandled before a reminder is sent. Learn the SCNX duration format [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations). |
 | Unassigned ticket reminder message | *Only available if “Mention again if a ticket hasn’t received a team member response yet” is enabled.*<br/>Customize the reminder message that is sent for unhandled tickets. |
-| Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](../general/opening-hours.md) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](../general/opening-hours.md) are enabled.*</blockquote></details></small> |
+| Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](/docs/support-bot/general/opening-hours) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](/docs/support-bot/general/opening-hours) are enabled.*</blockquote></details></small> |
 
 ## Ticket hold {#ticket-hold}
 
@@ -301,9 +301,9 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | User to team | This message format is shown in the ticket channel when a user sends a message. |
 | Edited user to team | This message format is shown in the ticket channel when a user edits a message. |
 | Deleted user to team | This message format is shown in the ticket channel when a user deletes a message. |
-| Ticket channel name format | This format is used by your bot to create names for new ticket channels.<br/><small><details><summary>Note</summary><blockquote>*You can set different formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Ticket channel name format | This format is used by your bot to create names for new ticket channels.<br/><small><details><summary>Note</summary><blockquote>*You can set different formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
 | Error message: user already has an open ticket | This message is sent when a user tries to open another ticket while they already have an active one.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow only one ticket per user (global)" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
-| Error: ticket not found | This message is sent when a team member tries to [claim](./claiming.md) a ticket that has already been closed or deleted. |
+| Error: ticket not found | This message is sent when a team member tries to [claim](/docs/support-bot/modmail/claiming) a ticket that has already been closed or deleted. |
 | Error: command used outside of ticket channels | This message is sent when a team member runs ticket commands outside a ticket channel. |
 | Ticket-by-command confirmation message | This message is sent when a user opens a new ticket via ``/ticket open``.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow users to open tickets via command?" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
 | Error: insufficient permissions to add users to a ticket | This message is sent when a user without the required permissions tries to add/remove a user to/from a ticket.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow additional ticket members?" is [enabled](#additional-ticket-members-configuration).*</blockquote></details></small> |
@@ -331,5 +331,5 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | Field | Description |
 | --- | --- |
 | Channel | This voice channel is used for the statistics item. |
-| Include only tickets with specific ticket topics | If enabled, only selected [ticket topics](./ticket-topics.md) are included in the statistics. |
+| Include only tickets with specific ticket topics | If enabled, only selected [ticket topics](/docs/support-bot/modmail/ticket-topics) are included in the statistics. |
 | Channel name | This text is used as the channel name. |

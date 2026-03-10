@@ -7,7 +7,7 @@ description: Everything you need to know about the SCNX Support-Bot Modmail syst
 # About Modmail
 
 :::info Looking for a starter guide?
-For a quick and easy introduction to Modmail for you and your team members, we recommend our [Starter Guide (Modmail 101)](./basics.md).
+For a quick and easy introduction to Modmail for you and your team members, we recommend our [Starter Guide (Modmail 101)](/docs/support-bot/modmail/basics).
 :::
 
 ## How does Modmail work?
@@ -32,6 +32,6 @@ Of course, you'll also find every feature explained in detail on the respective 
 
 ## Getting started {#getting-started}
 
-1. Enable Modmail in the [configuration](./configuration.md#main-configuration).
+1. Enable Modmail in the [configuration](/docs/support-bot/modmail/configuration#main-configuration).
 2. Set up your ticket category, log channel, and team roles.
-3. Share the [Starter Guide](./basics.md) with your team so they know how to use Modmail.
+3. Share the [Starter Guide](/docs/support-bot/modmail/basics) with your team so they know how to use Modmail.

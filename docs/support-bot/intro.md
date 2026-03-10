@@ -12,13 +12,13 @@ Whether you're running a small community or a large server with thousands of mem
 
 ## Two systems, one bot {#two-systems}
 
-| | [Modmail](./modmail/intro.md) | [Ticket System](./ticket-system/intro.md) |
+| | [Modmail](/docs/support-bot/modmail/intro) | [Ticket System](/docs/support-bot/ticket-system/intro) |
 |---|---|---|
 | **How it works** | Users open tickets by DMing your bot. Messages are relayed between the user's DMs and a private staff channel. | Users open tickets via buttons, dropdown menus, or commands on your server. A private channel is created for each ticket. |
 | **Best for** | Servers that want a private, DM-based support experience. Users don't need to interact in a public channel. | Servers that want a channel-based support flow where everything happens directly on the server. |
 | **Unique features** | Anonymous messages, snippets (quick replies), typing relay, message editing/deletion | Per-topic ticket limits, per-topic required roles, button colors per topic |
 
-Both systems share [general features](./general/bot-configuration.md) like opening hours, forms, analytics, ticket utilization, estimated wait times, and more. Not sure which is right for you? Check the [Feature Comparison](./feature-comparison.md).
+Both systems share [general features](/docs/support-bot/general/bot-configuration) like opening hours, forms, analytics, ticket utilization, estimated wait times, and more. Not sure which is right for you? Check the [Feature Comparison](/docs/support-bot/feature-comparison).
 
 ## Key features at a glance {#key-features}
 
@@ -40,11 +40,11 @@ Both systems share [general features](./general/bot-configuration.md) like openi
 ## Getting started {#getting-started}
 
 1. Set up your Support Bot on the [SCNX dashboard](https://scnx.app/glink?page=support-system/manage).
-2. Configure shared settings in the [Bot Configuration](./general/bot-configuration.md).
-3. Enable [Modmail](./modmail/configuration.md) and/or the [Ticket System](./ticket-system/configuration.md).
-4. Set up [ticket topics](./modmail/ticket-topics.md), [forms](./general/forms.md), and [opening hours](./general/opening-hours.md).
-5. Share the [Modmail Starter Guide](./modmail/basics.md) or [Ticket System 101](./ticket-system/basics.md) with your team.
+2. Configure shared settings in the [Bot Configuration](/docs/support-bot/general/bot-configuration).
+3. Enable [Modmail](/docs/support-bot/modmail/configuration) and/or the [Ticket System](/docs/support-bot/ticket-system/configuration).
+4. Set up [ticket topics](/docs/support-bot/modmail/ticket-topics), [forms](/docs/support-bot/general/forms), and [opening hours](/docs/support-bot/general/opening-hours).
+5. Share the [Modmail Starter Guide](/docs/support-bot/modmail/basics) or [Ticket System 101](/docs/support-bot/ticket-system/basics) with your team.
 
 ## Need help? {#need-help}
 
-If you run into any issues, check out our [Troubleshooting](./troubleshooting.md) page or create a ticket on our [Discord server](https://scootk.it/dc-de).
+If you run into any issues, check out our [Troubleshooting](/docs/support-bot/troubleshooting) page or create a ticket on our [Discord server](https://scootk.it/dc-de).

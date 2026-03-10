@@ -29,7 +29,7 @@ description: Verfolge die Leistung deines Discord-Supports mit detaillierten Sta
 
 <SlashCommandExplanation />
 
-Die folgenden Befehle sind verfügbar, wenn sie in der [Team-Befehle Konfiguration](./bot-configuration.md#staff-commands) aktiviert sind:
+Die folgenden Befehle sind verfügbar, wenn sie in der [Team-Befehle Konfiguration](/de/docs/support-bot/general/bot-configuration#staff-commands) aktiviert sind:
 
 | Befehl | Beschreibung |
 | --- | --- |
@@ -47,7 +47,7 @@ Die folgenden Befehle sind verfügbar, wenn sie in der [Team-Befehle Konfigurati
 | Durchschnittliche Nachrichten pro Ticket | Die durchschnittliche Anzahl der ausgetauschten Nachrichten pro Ticket vor dem Schließen. |
 | Durchschnittliche Schließungszeit | Die durchschnittliche Zeit von der Ticket-Erstellung bis zum Schließen. Hilft dir zu verstehen, wie schnell Probleme gelöst werden. |
 | Durchschnittliche erste Antwortzeit | Die durchschnittliche Zeit, bis ein Teammitglied zum ersten Mal auf ein neues Ticket antwortet. Eine wichtige Kennzahl für die Nutzerzufriedenheit. |
-| Durchschnittliche Bewertung | Die durchschnittliche Sternebewertung aus Nutzer-Feedback-Einsendungen (wenn [Support-Feedback](../modmail/support-feedback.md) aktiviert ist). |
+| Durchschnittliche Bewertung | Die durchschnittliche Sternebewertung aus Nutzer-Feedback-Einsendungen (wenn [Support-Feedback](/de/docs/support-bot/modmail/support-feedback) aktiviert ist). |
 | Bewertungen gesamt | Die Gesamtanzahl der eingegangenen Feedback-Einsendungen. |
 
 ### Diagramme & Aufschlüsselungen

@@ -103,7 +103,7 @@ If you want to remove a user from the blocklist, use the command [``/blocklist r
 Sometimes, similar or repetitive messages need to be sent to users. To avoid typing out the same message over and over,
 snippets can be used. Snippets are text modules that staff members can create and use in tickets. Each snippet has its
 own unique Snippet-Key that can be set when creating a snippet. Optionally, you can also attach
-a [form](../general/forms.md) to a snippet to avoid sending a snippet and a form separately.
+a [form](/docs/support-bot/general/forms) to a snippet to avoid sending a snippet and a form separately.
 Snippets can also include buttons that allow users to close the ticket directly.
 
 <SlashCommandExplanation />

@@ -7,7 +7,7 @@ description: Ein leistungsstarkes kanalbasiertes Discord-Ticket-System mit Claim
 # Über das Ticket-System
 
 :::info Auf der Suche nach einem Starter-Guide?
-Für einen schnellen und unkomplizierten Einstieg in das Ticket-System für dich und deine Teammitglieder empfehlen wir dir unseren [Starter-Guide (Ticket-System 101)](./basics.md).
+Für einen schnellen und unkomplizierten Einstieg in das Ticket-System für dich und deine Teammitglieder empfehlen wir dir unseren [Starter-Guide (Ticket-System 101)](/de/docs/support-bot/ticket-system/basics).
 :::
 
 ## Wie funktioniert das Ticket-System?
@@ -29,7 +29,7 @@ Das Ticket-System erstellt für jede Support-Anfrage einen privaten Kanal auf de
 
 ## Erste Schritte {#getting-started}
 
-1. Aktiviere das Ticket-System in der [Konfiguration](./configuration.md#main-configuration).
+1. Aktiviere das Ticket-System in der [Konfiguration](/de/docs/support-bot/ticket-system/configuration#main-configuration).
 2. Richte deine Ticket-Kategorie, den Log-Kanal und die Teammitglieder-Rollen ein.
-3. Erstelle [Ticket-Themen](./ticket-topics.md) und richte [Ticket-Öffnungsnachrichten](./configuration.md#ticket-open-messages) ein.
-4. Teile den [Starter-Guide](./basics.md) mit deinem Team, damit sie wissen, wie das Ticket-System funktioniert.
+3. Erstelle [Ticket-Themen](/de/docs/support-bot/ticket-system/ticket-topics) und richte [Ticket-Öffnungsnachrichten](/de/docs/support-bot/ticket-system/configuration#ticket-open-messages) ein.
+4. Teile den [Starter-Guide](/de/docs/support-bot/ticket-system/basics) mit deinem Team, damit sie wissen, wie das Ticket-System funktioniert.

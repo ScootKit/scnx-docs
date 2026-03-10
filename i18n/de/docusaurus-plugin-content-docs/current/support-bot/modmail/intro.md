@@ -7,7 +7,7 @@ description: Alles über das DM-basierte Discord-Modmail-System — anonyme Nach
 # Modmail Überblick
 
 :::info Auf der Suche nach einem Starter-Guide?
-Für einen schnellen und unkomplizierten Einstieg in Modmail für dich und deine Teammitglieder empfehlen wir dir unseren [Starter-Guide (Modmail 101)](./basics.md).
+Für einen schnellen und unkomplizierten Einstieg in Modmail für dich und deine Teammitglieder empfehlen wir dir unseren [Starter-Guide (Modmail 101)](/de/docs/support-bot/modmail/basics).
 :::
 
 ## Wie funktioniert Modmail?
@@ -32,6 +32,6 @@ Des weiteren findest du alle Funktionen natürlich noch einmal ausführlich in d
 
 ## Erste Schritte {#getting-started}
 
-1. Aktiviere Modmail in der [Konfiguration](./configuration.md#main-configuration).
+1. Aktiviere Modmail in der [Konfiguration](/de/docs/support-bot/modmail/configuration#main-configuration).
 2. Richte deine Ticket-Kategorie, deinen Log-Kanal und deine Team-Rollen ein.
-3. Teile den [Starter-Guide](./basics.md) mit deinem Team, damit alle wissen, wie Modmail funktioniert.
+3. Teile den [Starter-Guide](/de/docs/support-bot/modmail/basics) mit deinem Team, damit alle wissen, wie Modmail funktioniert.

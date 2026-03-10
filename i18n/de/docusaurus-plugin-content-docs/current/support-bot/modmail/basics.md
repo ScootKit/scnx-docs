@@ -102,7 +102,7 @@ Wenn du einen Nutzer von der Blockierungsliste entfernen möchtest, verwende den
 
 Manchmal müssen ähnliche oder sich wiederholende Nachrichten an Nutzer gesendet werden. Um nicht immer wieder dieselbe Nachricht eintippen zu müssen,
 können Snippets verwendet werden. Snippets sind Textbausteine, die Teammitglieder erstellen und in Tickets verwenden können. Jedes Snippet hat einen
-eigenen einzigartigen Snippet-Key, der bei der Erstellung festgelegt wird. Optional kann ein [Formular](../general/forms.md) an ein Snippet angehängt werden,
+eigenen einzigartigen Snippet-Key, der bei der Erstellung festgelegt wird. Optional kann ein [Formular](/de/docs/support-bot/general/forms) an ein Snippet angehängt werden,
 um ein Snippet und ein Formular nicht separat senden zu müssen. Snippets können auch Knöpfe enthalten, die dem Nutzer erlauben, das Ticket direkt zu schließen.
 
 <SlashCommandExplanation />

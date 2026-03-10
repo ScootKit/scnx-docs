@@ -29,11 +29,11 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 
 ### Nutzer können keine Tickets per DM öffnen {#dm-tickets-not-working}
 
-* Überprüfe, ob Modmail in deinem Dashboard [aktiviert](./modmail/configuration.md#main-configuration-configuration) ist.
+* Überprüfe, ob Modmail in deinem Dashboard [aktiviert](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) ist.
 * Stelle sicher, dass der Wartungsmodus nicht aktiviert ist.
-* Überprüfe, ob der Nutzer nicht auf der [Blockierungsliste](./modmail/basics.md#blacklist) steht.
+* Überprüfe, ob der Nutzer nicht auf der [Blockierungsliste](/de/docs/support-bot/modmail/basics#blocklist) steht.
 * Stelle sicher, dass der Nutzer einen gemeinsamen Server mit dem Bot hat und DMs aktiviert sind.
-* Wenn [Öffnungszeiten](./general/opening-hours.md) konfiguriert und "Nachrichten-Verarbeitung außerhalb Öffnungszeiten komplett deaktivieren" aktiviert ist, können außerhalb der Öffnungszeiten keine Tickets erstellt werden.
+* Wenn [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) konfiguriert und "Nachrichten-Verarbeitung außerhalb Öffnungszeiten komplett deaktivieren" aktiviert ist, können außerhalb der Öffnungszeiten keine Tickets erstellt werden.
 
 ### Ticket-Kanäle werden nicht erstellt {#no-ticket-channels}
 
@@ -50,22 +50,22 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 
 ### Nutzer können keine Tickets öffnen {#tickets-not-opening}
 
-* Überprüfe, ob das Ticket-System in deinem Dashboard [aktiviert](./ticket-system/configuration.md#main-configuration-configuration) ist.
+* Überprüfe, ob das Ticket-System in deinem Dashboard [aktiviert](/de/docs/support-bot/ticket-system/configuration#main-configuration-configuration) ist.
 * Stelle sicher, dass der Wartungsmodus nicht aktiviert ist.
 * Überprüfe, ob der Nutzer nicht auf der Blockierungsliste steht.
 * Wenn "Nur ein Ticket pro Nutzer erlauben" aktiviert ist, hat der Nutzer möglicherweise bereits ein offenes Ticket.
 * Wenn Ticket-Themen mit benötigten Rollen konfiguriert sind, überprüfe, ob der Nutzer die erforderlichen Rollen hat.
-* Wenn [Öffnungszeiten](./general/opening-hours.md) konfiguriert sind, überprüfe, ob der Support-Bot gerade geschlossen ist.
+* Wenn [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) konfiguriert sind, überprüfe, ob der Support-Bot gerade geschlossen ist.
 
 ### Ticket-Eröffnungsnachrichten erscheinen nicht {#opening-messages-not-appearing}
 
-* Stelle sicher, dass du mindestens eine [Ticket-Eröffnungsnachricht](./ticket-system/configuration.md#ticket-open-messages) in deinem Dashboard konfiguriert hast.
+* Stelle sicher, dass du mindestens eine [Ticket-Eröffnungsnachricht](/de/docs/support-bot/ticket-system/configuration#ticket-open-messages) in deinem Dashboard konfiguriert hast.
 * Überprüfe, ob der Bot die Berechtigung hat, im konfigurierten Kanal Nachrichten zu senden.
 * Lade den Bot nach Konfigurationsänderungen neu.
 
 ### Ticket-Claiming funktioniert nicht {#claiming-not-working}
 
-* Überprüfe, ob Ticket-Claiming in deinem Dashboard [aktiviert](./ticket-system/claiming.md#main-configuration) ist.
+* Überprüfe, ob Ticket-Claiming in deinem Dashboard [aktiviert](/de/docs/support-bot/ticket-system/claiming#main-configuration) ist.
 * Stelle sicher, dass der Claim-Knopf aktiviert ist, wenn Teammitglieder per Knopf claimen sollen.
 * Überprüfe, ob der Benachrichtigungskanal existiert und der Bot die Berechtigung hat, dort Nachrichten zu senden.
 
