@@ -32,7 +32,7 @@ aktualisiere die Serverliste mit dem "Daten neuladen" Knopf unten auf der Seite.
 :::
 ![](@site/docs/assets/setup/setup-2.png)
 
-## 4. Akzeptiere unsere Nutzungsbedingungen & Datenschutzerklärung {#step-3}
+## 3. Akzeptiere unsere Nutzungsbedingungen & Datenschutzerklärung {#step-3}
 
 Um die Einrichtung abzuschließen, musst du unseren [SCNX-Nutzungsbedingungen](https://scootk.it/scnx-tos)
 und den [SCNX-Datenschutzrichtlinien](https://scootk.it/scnx-privacy) zustimmen. Diese Dokumente enthalten Informationen, wie und wofür du SCNX nutzen kannst
@@ -40,11 +40,11 @@ und wie wir deine Daten verarbeiten (tl;dr: Wir verarbeiten nur die Daten, die b
 
 ![](@site/docs/assets/setup/setup-4.png)
 
-## 5. Du bist fertig {#step-4}
+## 4. Du bist fertig {#step-4}
 
 Dein Server wurde erfolgreich zu SCNX hinzugefügt :tada:
 
 Du kannst jetzt damit anfangen [deinen eigenen Bot](/docs/custom-bot) oder [einen Modmail-Bot](/docs/modmail) zu erstellen oder einfach alle Funktionen auszuprobieren, die dich interessieren -
-Unsere [Dokumentation](/) und unsere [Teammitglieder](https://scnx.app/help) auf dem [Discord-Server](https://scootk.it/dc) werden dir bei allem weiterhelfen.
+Unsere [Dokumentation](/) und unsere [Teammitglieder](https://scnx.app/help) auf dem [Discord-Server](https://scootk.it/dc-de) werden dir bei allem weiterhelfen.
 
 ![](@site/docs/assets/setup/setup-5.png)
