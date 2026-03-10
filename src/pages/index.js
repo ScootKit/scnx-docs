@@ -38,8 +38,8 @@ function HomepageHeader() {
                         </Link>
                         <Link
                             className="button button--secondary button--lg"
-                            to="/docs/modmail/intro">
-                            🎧 <Translate id="main.mm">Modmail Documentation</Translate>
+                            to="/docs/support-bot/intro">
+                            🎧 <Translate id="main.sb">Support Bot Documentation</Translate>
                         </Link>
                         <Link
                             className="button button--secondary button--lg"
