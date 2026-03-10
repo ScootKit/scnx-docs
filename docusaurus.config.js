@@ -16,7 +16,8 @@ const config = {
     url: 'https://docs.scnx.xyz',
     baseUrl: '/',
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
+    onDuplicateRoutes: 'throw',
+    onBrokenAnchors: 'throw',
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'de', 'it']
@@ -24,7 +25,7 @@ const config = {
     trailingSlash: true,
     scripts: [],
     stylesheets: [
-        {
+            {
             href: '/katex/katex.min.css',
             type: 'text/css'
         }
@@ -129,9 +130,9 @@ const config = {
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'modmailSidebar',
+                        sidebarId: 'supportBotSidebar',
                         position: 'left',
-                        label: 'Modmail'
+                        label: 'Support Bot'
                     },
                     {
                         type: 'docSidebar',
