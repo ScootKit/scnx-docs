@@ -16,7 +16,8 @@ const config = {
     url: 'https://docs.scnx.xyz',
     baseUrl: '/',
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
+    onDuplicateRoutes: 'throw',
+    onBrokenAnchors: 'throw',
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'de', 'it']

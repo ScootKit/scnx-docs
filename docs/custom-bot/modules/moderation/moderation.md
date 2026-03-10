@@ -13,8 +13,8 @@ Advanced security and moderation system with tons of features for keeping your s
 * [User reporting](#report) system that allows members to report other users with proof.
 * [Moderator notes](#notes) system to track information about users.
 * View all moderation [actions history](#actions) for any user.
-* [Revoke warnings](#revoke-warn) to remove previous warns.
-* [Auto-moderation](#automod) for invite links, scam links, and blacklisted words.
+* [Revoke warnings](#commands) to remove previous warns.
+* [Auto-moderation](#configuration-config) for invite links, scam links, and blacklisted words.
 * Automated punishments based on warning count (e.g., auto-ban after X warns).
 * [Anti-Spam](#anti-spam) system detecting message spam, duplicate messages, excessive pings, and mass pings.
 * [Anti-Join-Raid](#anti-join-raid) system detecting mass joins.
@@ -49,7 +49,7 @@ Moderators use the `/moderate` command with various subcommands to perform actio
 
 #### Warn {#warn}
 
-Warns a user. The warning is recorded and can trigger automatic actions if [automod thresholds](#automod) are configured. Requires moderator level 1 or higher.
+Warns a user. The warning is recorded and can trigger automatic actions if [automod thresholds](#configuration-config) are configured. Requires moderator level 1 or higher.
 
 #### Mute {#mute}
 
