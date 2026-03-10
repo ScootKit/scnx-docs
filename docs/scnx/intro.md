@@ -37,8 +37,6 @@ detailed [frequently asked questions](/docs/scnx/guilds/faq) section about serve
   the [toolbox documentation](/docs/scnx/account-and-billing/toolbox).
 * SCNX Ads: Advertise your server or product on SCNX. You can open
   the [Ads on SCNX documentation](/docs/scnx/account-and-billing/ads).
-* SCNX Referrals: Earn a commission for purchased plans on SCNX. You can open
-  the [Referrals documentation](/docs/scnx/account-and-billing/referrals).
 * SCNX File Storage: Host images and more for your Discord servers and embed them directly on SCNX.
 * SC Network Memberships (outdated): *More information will be made available shortly*.
 
@@ -51,8 +49,7 @@ questions you might have.
 [ScootKit](https://scootkit.net) is a German-based company running SCNX and other service-as-a-service products.
 :::
 
-* [ScootKit Merch Store](https://scnx.app/user/merch): Purchase physical SCNX Merch.
-* [Feature Board](https://features.sc-network.net): Suggest new features for SCNX Products.
+* [Feature Board](https://featureboard.net/): Suggest new features for SCNX Products.
 * SCNX Marketplace: A system for third-parties to integrate new and existing products into SCNX.
 * [SCNX Documentation](/): This documentation aimed to explain as many features of SCNX in detail as possible.
 * [SCNX FAQ](https://faq.scnx.app): Legacy articles about a few topics on SCNX (mostly used for legal stuff). Previously
@@ -67,7 +64,5 @@ questions you might have.
 * [SCNX Helper Program](https://scnx.app/user/helper-application): A program to allow involved community members with
   technical knowledge about SCNX to
   receive recognition and perks based as an "SCNX Helper" on our [Discord server](https://scootk.it/dc).
-* [ScootKit Moderator](https://scnx.app/user/moderator-application): Program designed to allow community members to
-  moderate, organize events and more on our [Discord server](https://scootk.it/dc).
 * ScootKit RSS Hub: System designed to handle traffic and notifications for CustomBot Notification-Modules.
 * and more… :wink:
