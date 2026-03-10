@@ -13,7 +13,7 @@ Mit Eigenen Befehlen kannst du deine eigenen Bot-Interaktionen über einen visue
 
 * Einem **Auslöser (Trigger)** — der Auslöser, der den Befehl startet (ein Slash-Befehl, ein Knopf-Klick, eine Nachricht, das Absenden eines Dialogs oder die manuelle Ausführung durch einen anderen Befehl).
 * Einem oder mehreren **Aktions-Blöcken** — Gruppen von Aktionen, die ausgeführt werden, sobald der Trigger ausgelöst wird.
-* **Aktionen** — die einzelnen Aktionener Bot ausführt (antworten, eine Nachricht senden, Rollen verwalten, einen Dialog anzeigen und mehr).
+* **Aktionen** — die einzelnen Aktionen, die der Bot ausführt (antworten, eine Nachricht senden, Rollen verwalten, einen Dialog anzeigen und mehr).
 * Optionale **Befehl-Rechte** — lege fest, welche Rollen ein Nutzer haben muss, um diesen Befehl auslösen zu können.
 
 ## Einrichtung {#setup}
@@ -35,12 +35,12 @@ Der Befehl wird ausgeführt, sobald ein Nutzer einen Befehl verwendet, zum Beisp
 * **Slash-Command-Option hinzufügen** — Füge bis zu 25 Parameter hinzu, die Nutzer beim Ausführen des Befehls ausfüllen können. Unterstützte Typen: Text Eingabe, Ganze Zahl, Richtig / Falsch, Benutzer, Kanal, Rolle, Nummer und Anhang.
 * Für Text-Optionen kannst du optional `die Werte begrenzen`, indem du eine vordefinierte Liste von bis zu 25 Auswahlmöglichkeiten erstellst.
 
-:::Warnung
+:::warning
 Beachte das Discord-Limit: Insgesamt sind nur 100 Slash-Commands pro Server möglich. Dies umfasst sowohl deine Eigenen Befehle als auch die Befehle aktivierter Module.
 Falls diese Grenze überschritten wird, kann die Funktionalität deines Bots beeinträchtigt werden.
 :::
 
-:::Information
+:::info
 Berechtigungen für Slash-Befehle werden in deinen Discord-Servereinstellungen verwaltet (Servereinstellungen → Integrationen → Bots und Apps) und nicht im SCNX-Dashboard. Siehe dir dazu gerne unsere [Berechtigungen & Slash Befehle Dokumentation](/de/docs/custom-bot/slash-commands/) für weitere Informationen an. Es kann bis zu 24 Stunden dauern, bis neue Befehle in Discord angezeigt werden. Stelle sicher, dass der Befehl zuvor aktiviert wurde.
 :::
 
@@ -69,14 +69,14 @@ Der Befehl wird ausgeführt, wenn ein Nutzer eine Nachricht sendet, die einem ko
 Weitere Einstellungen:
 
 * **Groß- und Kleinschreibung ignorieren?** — Wenn aktiviert, wird der Bot Groß- und Kleinschreibung bei Erkennung ignorieren.
-* **Nachrichten nur in bestimmten Kanälen erkennen** — Wenn aktiviert, werden Nachichten nur in bestimmten Kanälen erkannt.
+* **Nachrichten nur in bestimmten Kanälen erkennen** — Wenn aktiviert, werden Nachrichten nur in bestimmten Kanälen erkannt.
 
 ### Dialog {#trigger-modal}
 
 Der Befehl wird ausgeführt, wenn ein Nutzer einen Dialog (Formular/Modal) absendet. Dialoge werden über die Aktion „Dialog anzeigen“ in einem anderen Eigenen Befehl aufgerufen.
 
 * Konfiguriere den Titel des Dialogs und die Eingabefelder (Textfelder im Kurzformat oder als Absatz).
-* Die Antworten der Nutzer stehen in den Aktionen des Befehls als Parameter zur Verfügung, (z. B. `%answer1%`, `%answer2%`) und so weiter.
+* Die Antworten der Nutzer stehen in den Aktionen des Befehls als Parameter zur Verfügung (z. B. `%answer1%`, `%answer2%`) und so weiter.
 
 
 ### Keine (Manuelle Ausführung) {#trigger-none}
@@ -108,7 +108,7 @@ Aktionen sind die einzelnen Arbeitsschritte, die dein Bot ausführt. Die folgend
 | **Reaktion auf die ausführende Nachricht** | Reagiere mit Emojis auf die Nachricht, die den Befehl ausgelöst hat. |
 | **Dialog anzeigen** | Zeige dem Nutzer einen Dialog (Modal) an. Der Dialog muss als separater Eigener Befehl mit einem Dialog-Trigger konfiguriert sein. Pro Interaktion kann nur ein einziger Dialog angezeigt werden. |
 
-:::Information
+:::info
 Manche Aktionen sind nur für bestimmte Trigger-Typen verfügbar. Beispielsweise funktioniert „Dialog anzeigen“ nur bei interaktionsbasierten Triggern (Slash-Befehlen, Knöpfen). Nicht unterstützte Aktionen werden lautlos übersprungen.
 :::
 
@@ -148,9 +148,9 @@ Wenn du einen Slash-Befehl-Trigger mit Optionen verwendest, werden je nach Optio
 
 Bei Verwendung eines Dialog-Triggers sind die Antworten des Nutzers als `%answer1%`, `%answer-2%` usw. verfügbar, entsprechend der Reihenfolge der Eingabefelder im Dialog.
 
-### Global Parameters {#global-parameters}
+### Globale Parameter {#global-parameters}
 
-[Global Parameters](/de/docs/custom-bot/global-parameters/) (wie `%botName%`, `%guildName%`, timestamps) stehen dir darüber hinaus in jedem beliebigen Textfeld deiner Eigenen Befehle zur Verfügung.
+[Globale Parameter](/de/docs/custom-bot/global-parameters/) (wie `%botName%`, `%guildName%`, timestamps) stehen dir darüber hinaus in jedem beliebigen Textfeld deiner Eigenen Befehle zur Verfügung.
 
 ## Befehl-Rechte {#permissions}
 
@@ -173,13 +173,13 @@ Jeder Eigene Befehl kann individuell aktiviert oder deaktiviert werden. Ein deak
 
 Du kannst einen Custom Command mit anderen teilen, indem du einen einzigartigen Teilen-Link erstellst:
 
-1. Öffne den Custom Command, den du teilen möchtest..
-2. Klicke auf **„Teilen-Link erstellen“** .
+1. Öffne den Custom Command, den du teilen möchtest.
+2. Klicke auf **„Teilen-Link erstellen“**.
 3. Kopiere die generierte URL.
 
 Dieser Link speichert den aktuellen Stand deines Befehls. Wenn du den Befehl später bearbeitest, wird die geteilte Version nicht automatisch aktualisiert.
 
-:::Vorsicht
+:::caution
 Geteilte Eigene Befehle können Aktionen enthalten, die schädlich sein könnten. Importiere Befehle nur aus Quellen, denen du vertraust.
 :::
 
@@ -189,9 +189,9 @@ Um einen geteilten Eigenen Befehl zu importieren:
 
 1. Öffne den Teilen-Link.
 2. Wähle den Server aus, in den der Befehl importiert werden soll.
-3. Überprüfe den Befehl und bestätige den Import..
+3. Überprüfe den Befehl und bestätige den Import.
 4. **Wichtig:** Denk daran, Rollenverweise und Kanalverknüpfungen im importierten Befehl manuell anzupassen, damit sie auf deinem Server korrekt funktionieren.
-5. Vergiss nicht, deine Änderungen zu speichern..
+5. Vergiss nicht, deine Änderungen zu speichern.
 
 ### Eigene Befehle löschen {#deleting}
 
@@ -233,7 +233,7 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
 <details>
   <summary>Mein Knopf / Select-Menü-Druck-Befehl funktioniert nicht</summary>
   <ul>
-    <li>Stelle sicher, dass du das Knopf- oder Select-Menü-Druck-Element mithilfe des Nachrichten-Editors an eine Nachricht angehängt und mit dem richtigen Eigenen Befehl verknüpft hast..</li>
+    <li>Stelle sicher, dass du das Knopf- oder Select-Menü-Druck-Element mithilfe des Nachrichten-Editors an eine Nachricht angehängt und mit dem richtigen Eigenen Befehl verknüpft hast.</li>
      <li>Stelle sicher, dass der Eigene Befehl <b>aktiviert</b>ist.</li>
     <li>Überprüfe, ob der Bot über die erforderlichen Berechtigungen im Kanal verfügt.</li>
   </ul>
@@ -243,8 +243,8 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
   <summary>Parameter werden als Rohtext angezeigt (z. B. %userID%)</summary>
   <ul>
     <li> Stelle sicher, dass du die korrekte Parameter-Syntax mit <code>%</code>, auf beiden Seiten, verwendest.</li>
-    <li>Überprüfe, ob der Parameter für deinen Trigger-Typ verfügbar ist (z.B., <code>%content%</code> funktioniert nur bei Nachrichten-Triggern.</li>
-    <li>Überprüfe den Parameternamen auf Tippfehler..</li>
+    <li>Überprüfe, ob der Parameter für deinen Trigger-Typ verfügbar ist (z.B., <code>%content%</code>) funktioniert nur bei Nachrichten-Triggern.</li>
+    <li>Überprüfe den Parameternamen auf Tippfehler.</li>
   </ul>
 </details>
 
