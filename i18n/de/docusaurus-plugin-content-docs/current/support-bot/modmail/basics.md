@@ -26,7 +26,7 @@ Wenn Ticket-Themen eingerichtet sind, müssen Nutzer ein Thema auswählen, bevor
 Sobald ein Ticket erstellt wurde, erstellt dein Bot einen neuen Kanal in der konfigurierten Kategorie.
 Nachrichten, die der Nutzer per DM sendet, erscheinen automatisch im Ticket-Kanal, und Nachrichten von Teammitgliedern im Ticket-Kanal werden per DM an den Nutzer weitergeleitet.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Tickets claimen {#claim-tickets}
 
@@ -39,7 +39,7 @@ Um Tickets besser über Teammitglieder hinweg zu organisieren, musst du ein Tick
 Um ein Ticket zu claimen, verwende den Befehl ``/modmail claim`` oder den Claim-Knopf (falls aktiviert). Nachdem das Ticket dir zugewiesen wurde, werden andere Teammitglieder benachrichtigt.
 Wenn du deine Zuweisung entfernen möchtest, verwende ``/modmail remove-claim``. Um ein bestimmtes Teammitglied zuzuweisen, verwende ``/modmail assign``.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Nachrichten senden {#send-messages}
 
@@ -47,7 +47,7 @@ Sobald du Zugriff auf den Ticket-Kanal hast, kannst du dem Nutzer Nachrichten se
 
 Um interne Nachrichten zu senden, die **nicht** an den Nutzer weitergeleitet werden, stelle deiner Nachricht ein `!` voran (zum Beispiel `!Das ist eine interne Notiz`).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Anonyme Nachrichten {#anonymous-messages}
 
@@ -57,7 +57,7 @@ Obwohl die Identität von Teammitgliedern dem Nutzer bei anonymen Nachrichten ni
 
 [Snippets](#snippets) können auch anonym gesendet werden, indem `!!!<SnippetKey>` oder der Befehl ``/as`` verwendet wird.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 <a id="use-commands"></a>
 
@@ -96,7 +96,7 @@ Mit der Blockierungsliste kannst du Nutzer vom gesamten Support-Bot sperren. Die
 Wenn du einen Nutzer blockieren möchtest, verwende den Befehl [``/blocklist add``](#use-commands) und wähle den entsprechenden Nutzer aus — optional kannst du den Grund und die Dauer der Sperre angeben.
 Wenn du einen Nutzer von der Blockierungsliste entfernen möchtest, verwende den Befehl [``/blocklist remove``](#use-commands).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Snippets {#snippets}
 
@@ -121,7 +121,7 @@ Um Snippets zu verwalten, stehen Teammitgliedern folgende Befehle zur Verfügung
 * `/modmail snippets preview key:<SnippetKey>` — Zeigt eine Vorschau des Snippet-Inhalts und seiner Details.
 * `/modmail snippets list [page:<Number>]` — Listet alle verfügbaren Snippets mit ihren Nutzungszahlen auf.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Formulare senden {#send-forms}
 
@@ -130,7 +130,7 @@ Damit du nicht immer manuell Informationen abfragen musst, kannst du Nutzer einf
 Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/modmail form``](#use-commands) und wähle das entsprechende Formular aus der Liste.
 Wenn kein Formular in der Liste angezeigt wird oder ein bestimmtes Formular fehlt, wurde es entweder noch nicht konfiguriert oder es liegt ein Fehler in der Konfiguration vor.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Tickets pausieren {#hold-tickets}
 
@@ -138,7 +138,7 @@ Wenn ein Ticket weitergeleitet werden muss oder auf eine Antwort einer anderen P
 sodass das automatische Ticket-Schließen deaktiviert wird und der Kanal gesperrt ist, was bedeutet, dass keine Nachrichten gesendet werden können, bis die Pausierung aufgehoben wird.
 Um die Pausierung aufzuheben, verwende den Befehl [``/ticket hold``](#use-commands) erneut.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Tickets umbenennen {#rename-tickets}
 
@@ -149,14 +149,14 @@ Beim Verschieben in ein anderes Ticket-Thema wird der Name automatisch geändert
 Sobald ein Ticket umbenannt wurde, kann der Bot den Ticket-Namen beim Verschieben in ein anderes Ticket-Thema nicht mehr automatisch ändern!
 :::
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Ticket-Thema ändern {#change-ticket-topic}
 
 Wenn ein Nutzer das falsche Thema für sein Ticket ausgewählt hat, kannst du es mit dem Befehl [``/modmail transfer``](#use-commands) in das richtige Thema verschieben.
 Der Name wird automatisch aktualisiert und das Ticket wird erneut zum Claimen freigegeben.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Nutzer hinzufügen und entfernen {#add-and-remove-users}
 
@@ -164,28 +164,28 @@ Um bestimmte Anfragen, die mehrere Personen betreffen, einfacher zu bearbeiten, 
 wodurch sie Zugriff auf den Ticket-Kanal erhalten (zusätzlich zum Teammitglied und dem Ticket-Ersteller).
 Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove``](#use-commands).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Nachrichten bearbeiten und löschen {#edit-delete-messages}
 
 Um eine zuvor gesendete Nachricht zu bearbeiten, verwende den Befehl [``/modmail edit``](#use-commands) und gib die Team-Nachrichten-ID an.
 Um eine Nachricht zu löschen, verwende [``/modmail delete``](#use-commands). Wenn konfiguriert, können Teammitglieder auch Nachrichten anderer Teammitglieder bearbeiten oder löschen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Tickets schließen {#close-tickets}
 
 Nachdem die Anfrage eines Nutzers gelöst wurde, kannst du das Ticket entweder mit dem Befehl [``/modmail close``](#use-commands) oder dem Knopf unter der Ticket-Nachricht schließen.
 Du kannst das Schließen auch mit [``/ticket close-schedule``](#use-commands) nach einer bestimmten Zeitspanne planen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Support-Feedback {#support-feedback}
 
 Wenn Support-Feedback im Modmail-System deines Servers aktiviert ist, erhalten Nutzer nach dem Schließen des Tickets automatisch eine DM, in der sie Feedback für das Ticket hinterlassen können.
 Dieses Feedback ist optional und wird, falls abgegeben, an den konfigurierten Kanal gesendet, wo du es einsehen kannst.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Ticket-Logs {#ticket-logs}
 
@@ -194,7 +194,7 @@ Wenn dein Server KI-Zusammenfassungen aktiviert hat, siehst du auch eine kurze Z
 Über den Knopf unter der Nachricht gelangst du entweder zu einer modmail.net-Webseite (falls aktiviert), auf der die Logs in einem formatierten Web-Layout angezeigt werden, oder zu einer Textdatei,
 die du herunterladen kannst.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Fertig {#done}
 

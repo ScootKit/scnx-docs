@@ -14,7 +14,7 @@ description: Kategorisiere Discord-Support-Tickets mit Themen, setze Limits pro 
 * Ändere das Format des Kanalnamens, um beispielsweise mit unterschiedlichen Emojis die Ticket-Themen auf den ersten Blick zu erkennen.
 * Lege fest, ob Nutzer vor der Erstellung des jeweiligen Ticket-Themas ein konfiguriertes [Formular](/de/docs/support-bot/general/forms) ausfüllen müssen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

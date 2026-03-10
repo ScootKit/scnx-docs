@@ -15,7 +15,7 @@ description: Berechne und zeige geschätzte Wartezeiten für deine Discord-Suppo
 * Überschreibe die Einstellungen pro Ticket-Thema für detailliertere Kontrolle.
 * Sieh dir live geschätzte Wartezeiten pro System und pro Thema direkt in deinem Dashboard an.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

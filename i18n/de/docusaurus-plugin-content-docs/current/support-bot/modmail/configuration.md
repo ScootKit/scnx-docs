@@ -15,7 +15,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Aktiviere KI-Zusammenfassungen, um nach Schließung eines Tickets eine automatisch generierte Zusammenfassung zu erhalten.
 * Konfiguriere weitere Optionen, um die volle Kontrolle über dein modmail zu erhalten.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#main-configuration-setup}
 
@@ -71,7 +71,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Sende mehrere Ticketöffnungsnachrichten mit verschiedenen [Ticket-Themen](/de/docs/support-bot/modmail/ticket-topics) in unterschiedliche Kanäle, um die Erstellung auf mehrere Kanäle zu verteilen.
 * Entscheide dich bei jeder Nachricht zwischen Knöpfen oder Dropdown-Menüs für eine optimale Nutzer-Erfahrung.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-open-messages-setup}
 
@@ -101,7 +101,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Erlaube Nutzern, archivierte Tickets erneut zu öffnen, oder lass Teammitglieder sie manuell löschen.
 * Hänge das Ticket-Transkript an die Log-Kanal-Nachricht an für einfache Referenz.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-closing-setup}
 
@@ -156,7 +156,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Benachrichtige den Nutzer mit einer Nachricht über das Hinzufügen und Entfernen von Nutzern.
 * Füge einen Knopf zur Ticket-Nachricht hinzu, um Mitglieder per Klick hinzufügen zu können.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#additional-ticket-members-setup}
 
@@ -192,7 +192,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Sende eine Warnung vor der automatischen Schließung, um den Nutzer an sein Ticket zu erinnern.
 * Markiere Tickets automatisch als gelöst, wenn der Nutzer den Server verlässt.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#auto-close-tickets-setup}
 
@@ -217,7 +217,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Sende eine automatische Erinnerung, wenn ein Teammitglied in seinem Ticket inaktiv ist.
 * Erwähne noch nicht bearbeitete Tickets in deinem Erinnerungskanal, um auf nicht-beantwortete Tickets aufmerksam zu machen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-reminders-setup}
 
@@ -247,7 +247,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Sperre den Kanal, damit Mitglieder während der ausstehenden Zuweisung in einer Pausierung nicht in den Kanal schreiben können.
 * Sobald ein Ticket pausiert ist, wird das [Automatische Ticket-Schließen](#auto-close-tickets) für dieses Ticket deaktiviert.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-hold-setup}
 
@@ -279,7 +279,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Konfiguriere verschiedene Nachrichten, um alles perfekt auf deinen Server abzustimmen.
 * Ändere den Typ deiner Ticket-ID-Generierung, um eine andere Variante für die Ticket-ID im Kanalnamen auszuwählen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#advanced-message-configuration-setup}
 
@@ -317,7 +317,7 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 * Stelle verschiedene Statistiken in unterschiedlichen Kanälen dar und gebe so Auskunft über dein modmail.
 * Füge deine Wunsch-Statistiken hinzu und passe den Kanal-Namen entsprechend an.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#statistics-channels-setup}
 

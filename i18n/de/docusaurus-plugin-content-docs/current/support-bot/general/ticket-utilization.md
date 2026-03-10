@@ -13,7 +13,7 @@ description: Überwache die Kapazität deiner Discord-Support-Tickets mit einem 
 * Konfiguriere globale Limits für offene Tickets für jedes System (Modmail und Ticket-System).
 * Überschreibe Auslastungs-Einstellungen pro Ticket-Thema für eine genauere Kontrolle.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

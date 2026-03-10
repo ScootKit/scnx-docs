@@ -16,7 +16,7 @@ description: Betrachte Discord-Support-Ticket-Transkripte in einer modernen Web-
 * Lade optional Nachrichten-Anhänge (Bilder, Dateien) auf modmail.net für langfristige Speicherung hoch.
 * Greife auf Transkripte von sowohl Modmail als auch dem Ticket-System zu.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

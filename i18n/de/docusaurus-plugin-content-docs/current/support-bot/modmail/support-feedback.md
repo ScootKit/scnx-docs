@@ -13,7 +13,7 @@ description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem 
 * Erstelle deine eigenen Fragen und passe die Nachrichten an.
 * Anonymisiere Feedback, um Nutzern eine privatere Feedback-Möglichkeit zu bieten.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

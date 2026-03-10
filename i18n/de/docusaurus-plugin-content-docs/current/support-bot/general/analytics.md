@@ -18,7 +18,7 @@ description: Verfolge die Leistung deines Discord-Supports mit detaillierten Sta
 * Filtere Statistiken nach System (Modmail, Ticket-System oder kombiniert) über Tabs.
 * Nutze den `/analytics` Slash-Befehl, um serverweite oder persönliche Statistiken direkt in Discord anzuzeigen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

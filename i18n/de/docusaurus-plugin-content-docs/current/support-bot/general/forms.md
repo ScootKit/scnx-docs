@@ -14,7 +14,7 @@ description: Erstelle eigene Formulare und Modal-Dialoge für deine Discord-Supp
 * Erfordere optional das Ausfüllen eines Formulars, bevor Nutzer in Modmail oder dem Ticket-System fortfahren können.
 * Sperre Ticket-Kanäle, bis das Formular abgesendet wurde (nur Ticket-System).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

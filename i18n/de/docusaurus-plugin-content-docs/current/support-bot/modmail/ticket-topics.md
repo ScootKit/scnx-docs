@@ -14,7 +14,7 @@ description: Kategorisiere Modmail-Tickets mit Themen, leite sie an bestimmte Te
 * Ändere das Format des Kanalnamens, um beispielsweise mit unterschiedlichen Emojis die Ticket-Themen auf den ersten Blick zu erkennen.
 * Lege fest, ob Nutzer vor der Erstellung des jeweiligen Ticket-Themas ein konfiguriertes [Formular](/de/docs/support-bot/general/forms) ausfüllen müssen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 
@@ -74,6 +74,3 @@ description: Kategorisiere Modmail-Tickets mit Themen, leite sie an bestimmte Te
 | Log-Channel überschreiben                                          | Dieser Kanal wird als Log-Kanal für dieses Ticket-Thema genutzt. Standardmäßig wird dein [voreingestellter Log-Kanal](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) verwendet.                                          |
 | Ticket-Kanalname überschreiben?                                    | Wenn aktiviert, kannst du einen eigenen Ticket-Kanalnamen für dieses Ticket-Thema festlegen.                                                                                                                                                           |
 | Ticket-Kanalname-Format                                            | Dieser Text wird für den Kanalnamen von Tickets mit diesem Thema genutzt. Standardmäßig wird dein [voreingestellter Ticket-Kanalname](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) verwendet.                          |
-
-
-

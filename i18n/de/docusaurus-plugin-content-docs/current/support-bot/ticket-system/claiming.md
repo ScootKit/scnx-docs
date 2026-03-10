@@ -13,7 +13,7 @@ description: Weise Discord-Support-Tickets Teammitgliedern zu, sende Claim-Benac
 * Sperre den Kanal vor dem Claimen eines Tickets.
 * Sende Zuweisungsbenachrichtigungen in einen Kanal, um Teammitglieder über neue Tickets zu informieren.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

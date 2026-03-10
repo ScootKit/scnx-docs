@@ -14,7 +14,7 @@ description: Weise Modmail-Tickets Teammitgliedern zu, automatische Zuweisung be
 * Sperre den Kanal bevor ein Ticket geclaimed wurde, sodass nur das zugewiesene Teammitglied antworten kann.
 * Konfiguriere, ob nicht zugewiesene Teammitglieder geclaimte Tickets einsehen oder darin schreiben können.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

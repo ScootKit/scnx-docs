@@ -14,7 +14,7 @@ description: Konfiguriere Blockierungsliste, Status, Branding und Team-Befehle f
 * Nutze Slash-Befehle für die Blockierungsliste in Discord, um Nutzer mit optionalem Grund und optionaler Dauer hinzuzufügen oder zu entfernen.
 * Passe die Zeitzone deines Bots an für korrekte Öffnungszeiten, Zeitstempel und Statistiken.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#main-configuration-setup}
 
@@ -47,7 +47,7 @@ description: Konfiguriere Blockierungsliste, Status, Branding und Team-Befehle f
 * Lege einen eigenen Status-Text fest, der im Profil deines Bots angezeigt wird.
 * Wähle zwischen Aktivitätstypen wie „Spielt", „Streamt", „Hört zu", „Schaut", „Tritt an" oder „Benutzerdefiniert".
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#bot-configuration-setup}
 
@@ -68,7 +68,7 @@ description: Konfiguriere Blockierungsliste, Status, Branding und Team-Befehle f
 * Passe die Standard-Embed-Fußzeile und das Bild an, die in allen Bot-Nachrichten verwendet werden.
 * Stimme das Branding deines Bots auf die Identität deines Servers ab für ein professionelles Erscheinungsbild.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#bot-branding-setup}
 
@@ -90,7 +90,7 @@ description: Konfiguriere Blockierungsliste, Status, Branding und Team-Befehle f
 * Aktiviere den `/summary`-Befehl für KI-gestützte Ticket-Zusammenfassungen mit den KI-Credits deines Servers.
 * Passe die Nachrichten an, die von den Statistik- und Zusammenfassungs-Befehlen angezeigt werden.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#staff-commands-setup}
 
