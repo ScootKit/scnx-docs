@@ -83,25 +83,15 @@ const config = {
                     // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
                 }
             },
-            typesense: {
-                typesenseCollectionName: 'scnx-docs',
-
-                typesenseServerConfig: {
-                    nodes: [
-                        {
-                            host: 'search.scootkit.net',
-                            port: 443,
-                            protocol: 'https'
-                        }
-                    ],
-                    apiKey: 'E4IKHSM7gzZw50lbIzbpuSKhbUN5o7uq'
+            docsearch: {
+                appId: '4YHHYAEEVJ',
+                apiKey: 'e03c1e3fae42df88d77ae9c335b2adfe',
+                indexName: 'SCNX Docs',
+                askAi: {
+                    assistantId: 'qyJzt6nnQOL9',
+                    sidePanel: true,
                 },
-
-                // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-                typesenseSearchParameters: {},
-
-                // Optional
-                contextualSearch: true
+                contextualSearch: true,
             },
             navbar: {
                 title: 'Docs',
@@ -286,7 +276,7 @@ const config = {
                 }
             };
         },
-        'docusaurus-theme-search-typesense',
+        '@docsearch/docusaurus-adapter',
         'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',
