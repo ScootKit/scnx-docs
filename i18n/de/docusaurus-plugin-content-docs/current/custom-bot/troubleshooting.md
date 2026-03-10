@@ -1,6 +1,6 @@
 # Fehlerbehebung
 
-Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Custom-Bot zu lösen. Falls dein Problem ein bestimmtes Modul betrifft, schau bitte in den [Modulspezifische Fehlerbehebung](#module-troubleshooting) Bereich weiter unten.
+Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Custom-Bot zu lösen. Falls dein Problem ein bestimmtes Modul betrifft, schau bitte im Bereich [Modulspezifische Fehlerbehebung](#module-troubleshooting) weiter unten.
 
 ## Allgemeine Probleme {#general}
 
@@ -35,7 +35,7 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Custom-Bot zu löse
 <details>
   <summary>Slash-Commands werden in der Befehlsauswahl nicht angezeigt</summary>
   <ul>
-    <li>Stelle sicher, dass das Modul, welches den Befehl bereitstellt, in deinem <a href="https://scnx.app/de/glink?page=bot/modules">Dashboard</a></li> aktiviert ist.
+    <li>Stelle sicher, dass das Modul, welches den Befehl bereitstellt, in deinem <a href="https://scnx.app/de/glink?page=bot/modules">Dashboard</a> aktiviert ist.</li>
     <li>Lade nach dem Aktivieren eines Moduls die Konfiguration deines Bots neu oder starte den Bot neu.</li>
     <li>Discord kann bis zu einer Stunde benötigen, um Slash-Commands überall zu synchronisieren. Versuche, deinen Discord-Client neu zu starten.</li>
     <li>Stelle sicher, dass der Bot über die <code>applications.commands</code> Berechtigungen verfügt. Du kannst dies überprüfen, indem du den Bot über dein Dashboard erneut einlädst.</li>
@@ -88,7 +88,7 @@ Dem Bot fehlt die Berechtigung, Rollen zu vergeben oder zu entziehen. Zur Proble
 <details>
   <summary>Missing Permissions to manage channels</summary>
 
- Der Bot kann die Kanaleinstellungen nicht ändern (z. B. für Kanalstatistiken, temporäre Kanäle oder zum Sperren). Gewähre dem Bot die Berechtigung <code>Kanäle verwaltens</code> auf deinem Server oder in den spezifischen Kanälen.
+ Der Bot kann die Kanaleinstellungen nicht ändern (z. B. für Kanalstatistiken, temporäre Kanäle oder zum Sperren). Gewähre dem Bot die Berechtigung <code>Kanäle verwalten</code> auf deinem Server oder in den spezifischen Kanälen.
 </details>
 
 <details>
@@ -121,7 +121,7 @@ Der Bot kann den Nicknamen des Server-Eigentümers nicht ändern. Dies ist eine 
 <details>
   <summary>Änderungen an der Konfiguration werden nicht übernommen</summary>
   <ul>
-    <li>Nachdem du die Einstellungen im Dashboard geändert hast, musst du die Konfiguration über das <a href="https://scnx.app/de/glink?page=bot/manage">"„Bot-Status“-Panel</a> neuladen.</li>
+    <li>Nachdem du die Einstellungen im Dashboard geändert hast, musst du die Konfiguration über das <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status“-Panel</a> neuladen.</li>
     <li>Einige Änderungen (wie das Aktivieren neuer Module) erfordern möglicherweise einen vollständigen Neustart des Bots.</li>
     <li>Überprüfe den Fehler-Log auf konfigurationsbezogene Fehler.</li>
   </ul>
@@ -144,7 +144,7 @@ Hier findest du häufige Fehler, die du im Fehler-Log deines Bots finden kannst,
 | Fehler | Bedeutung | Lösung |
 |-------|---------|----------|
 | `Missing Access` | Der Bot hat keinen Zugriff auf den Kanal. | Gewähre dem Bot im betroffenen Kanal die Berechtigung „Kanal anzeigen“. |
-| `Missing Permissions` | Dem Bot fehlt eine erforderliche Berechtigung, für eine Handlun.g | Überprüfe, welche Berechtigung fehlt, und teile sie dem Bot zu. |
+| `Missing Permissions` | Dem Bot fehlt eine erforderliche Berechtigung, für eine Handlung | Überprüfe, welche Berechtigung fehlt, und teile sie dem Bot zu. |
 | `Unknown Channel` | Der in den Einstellungen hinterlegte Kanal wurde gelöscht. | Passe deine Einstellungen an und wähle einen existierenden Kanal aus. |
 | `Unknown Role` | Die in den Einstellungen hinterlegte Rolle wurde gelöscht. | Passe deine Einstellungen an und wähle eine existierende Rolle aus. |
 | `Unknown Message` | Die in der Konfiguration verknüpfte Nachricht ist nicht mehr vorhanden. | Konfiguriere das Modul neu oder lass den Bot die Nachricht neu erstellen. |
@@ -170,7 +170,7 @@ Sollte der Fehler im Zusammenhang mit einem speziellen Modul stehen, schaue in d
 
 * [Admin-Tools](/de/docs/custom-bot/modules/administration/admin-tools/#troubleshooting) - Verschieben von Kanälen/Rollen, Importieren von Emojis, temporäre Rollen
 * [Automatisches Löschen](/de/docs/custom-bot/modules/administration/auto-delete/#troubleshooting) - Automatisches Löschen von Nachrichten
-* [Kanal-Satistiken](/de/docs/custom-bot/modules/administration/channel-stats/#troubleshooting) - Statistik-Kanäle
+* [Kanal-Statistiken](/de/docs/custom-bot/modules/administration/channel-stats/#troubleshooting) - Statistik-Kanäle
 * [Fortgeschrittenes Logging](/de/docs/custom-bot/modules/administration/logging/#troubleshooting) - Protokollierung von Serveränderungen
 * [Partner-Liste](/de/docs/custom-bot/modules/administration/partner-list/#troubleshooting) - Partner-Liste
 * [Status-Rollen](/de/docs/custom-bot/modules/administration/status-roles/#troubleshooting) - Rollen basierend auf dem Discord-Status
@@ -202,7 +202,7 @@ Sollte der Fehler im Zusammenhang mit einem speziellen Modul stehen, schaue in d
 * [Starboard](/de/docs/custom-bot/modules/community/starboard/#troubleshooting) - Nachrichten Starboard
 * [Sticky-Nachrichten](/de/docs/custom-bot/modules/community/sticky-messages/#troubleshooting) - Sticky-Nachrichten
 * [Temporäre Channel](/de/docs/custom-bot/modules/community/temp-channels/#troubleshooting) - Temporäre Voice-Channel
-* 
+ 
 ### Spiele & Spaß-Module
 
 * [Automatisches Reagieren](/de/docs/custom-bot/modules/fun/auto-react/#troubleshooting) - Automatisches Reagieren
@@ -220,8 +220,8 @@ Sollte der Fehler im Zusammenhang mit einem speziellen Modul stehen, schaue in d
 
 ### Integrationen-Module
 
-* [Minecraft Server Status](/de/docs/custom-bot/modules/integrations/minecraft-status/#troubleshooting) - Minecraft Server status
-* [Reddit-Benachrichtigungen](/de/docs/custom-bot/modules/integrations/reddit-notifications/#troubleshooting) - Reddit-Benachrichtugungen
+* [Minecraft Server Status](/de/docs/custom-bot/modules/integrations/minecraft-status/#troubleshooting) - Minecraft Server Status
+* [Reddit-Benachrichtigungen](/de/docs/custom-bot/modules/integrations/reddit-notifications/#troubleshooting) - Reddit-Benachrichtigungen
 * [RSS-Benachrichtigungen](/de/docs/custom-bot/modules/integrations/rss-notifications/#troubleshooting) - Benachrichtigungen bei RSS-Beiträgen
 * [Threads-Benachrichtigungen](/de/docs/custom-bot/modules/integrations/threads-notifications/#troubleshooting) - Benachrichtigungen bei Thread-Beiträgen
 * [TikTok-Benachrichtigungen](/de/docs/custom-bot/modules/integrations/tiktok-notifications/#troubleshooting) - TikTok-Video-Benachrichtigungen
