@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Configuration
-description: Configure all core features for your ticket system!
+description: Configure your Discord ticket system — categories, closing options, auto-close, reminders, hold, additional members, and advanced messaging.
 ---
 
 # Configuration
@@ -15,7 +15,7 @@ description: Configure all core features for your ticket system!
 * Enable AI summaries to receive an automatically generated summary after a ticket is closed.
 * Configure additional options to get full control over your ticket system.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#main-configuration-setup}
 
@@ -32,7 +32,7 @@ description: Configure all core features for your ticket system!
 | --- | --- |
 | ``/ticket admin-open`` | Allows team members to create new tickets with specific users.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow team members to open tickets on behalf of a user?" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
 | ``/ticket close`` | Allows team members and users to close tickets.<br/><small><details><summary>Note</summary><blockquote>*Users can only close tickets if "Allow users to close their own tickets?" is [enabled](#ticket-closing-configuration).*</blockquote></details></small> |
-| ``/ticket form`` | Sends a specific [form](../general/forms.md) into a ticket channel. |
+| ``/ticket form`` | Sends a specific [form](/docs/support-bot/general/forms) into a ticket channel. |
 | ``/ticket open`` | Opens a new ticket (with a specific ticket topic).<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow users to open tickets via command?" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
 
 ### Configuration {#main-configuration-configuration}
@@ -44,13 +44,13 @@ description: Configure all core features for your ticket system!
 | Maintenance mode message | This message is shown when ticket actions are performed during maintenance mode.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Enable maintenance mode?" is enabled.*</blockquote></details></small> |
 | Allow users to open tickets via command? | If enabled, users can create a new ticket using the command [``/ticket open``](#main-configuration-commands). |
 | Allow team members to open tickets on behalf of a user? | If enabled, team members can create a ticket with a user using the command [``/ticket admin-open``](#main-configuration-commands).<br/><small><details><summary>Note</summary><blockquote>*Restrictions like multiple open tickets or opening hours are ignored.*</blockquote></details></small> |
-| Category for new tickets | New tickets are created in this category by default.<br/><small><details><summary>Note</summary><blockquote>*You can configure other categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Team member roles | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><small><details><summary>Note</summary><blockquote>*You can configure other roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Log channel | All support-relevant messages are sent to this channel.<br/><small><details><summary>Note</summary><blockquote>*You can configure other log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Ticket message | This message is sent into the ticket channel when a new ticket is created.<br/><small><details><summary>Note</summary><blockquote>*You can configure other messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
-| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><small><details><summary>Note</summary><blockquote>*You can configure other ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Category for new tickets | New tickets are created in this category by default.<br/><small><details><summary>Note</summary><blockquote>*You can configure other categories for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
+| Team member roles | These roles get access to tickets by default and are mentioned when a new ticket is created.<br/><small><details><summary>Note</summary><blockquote>*You can configure other roles for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
+| Log channel | All support-relevant messages are sent to this channel.<br/><small><details><summary>Note</summary><blockquote>*You can configure other log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
+| Ticket message | This message is sent into the ticket channel when a new ticket is created.<br/><small><details><summary>Note</summary><blockquote>*You can configure other messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
+| Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><small><details><summary>Note</summary><blockquote>*You can configure other ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
 | AI summary of ticket transcripts | If enabled, an AI-generated summary of the ticket transcript is generated after a ticket is closed.<br/><small><details><summary>Note</summary><blockquote>*This feature uses your server’s [AI credit](https://faq.scnx.app/ki-auf-scnx/) and certain data is shared with "modmail.net" (an SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
-| Allow team members to rename tickets? | If enabled, team members can rename tickets using the command [``/ticket rename``](#main-configuration-commands).<br/><small><details><summary>Note</summary><blockquote>*After manually changing the ticket name, it will no longer be changed automatically when transferring the ticket to another topic ([if enabled](./ticket-topics.md)).*</blockquote></details></small> |
+| Allow team members to rename tickets? | If enabled, team members can rename tickets using the ``/ticket rename`` command.<br/><small><details><summary>Note</summary><blockquote>*After manually changing the ticket name, it will no longer be changed automatically when transferring the ticket to another topic ([if enabled](/docs/support-bot/ticket-system/ticket-topics)).*</blockquote></details></small> |
 | Show rename button under the ticket message? | If enabled, a button to edit the ticket name is added under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow team members to rename tickets?" is enabled.*</blockquote></details></small> |
 | Rename button text | This text is shown on the rename button.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Show rename button under the ticket message?" is enabled.*</blockquote></details></small> |
 | Ticket rename message | This message is sent into the ticket channel when a ticket is renamed.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow team members to rename tickets?" is enabled.*</blockquote></details></small> |
@@ -60,10 +60,10 @@ description: Configure all core features for your ticket system!
 ### Features {#ticket-open-messages-features}
 
 * Let your users create new tickets easily via buttons or dropdown menus.
-* Send multiple ticket opening messages with different [ticket topics](./ticket-topics.md) into different channels to spread ticket creation across multiple channels.
+* Send multiple ticket opening messages with different [ticket topics](/docs/support-bot/ticket-system/ticket-topics) into different channels to spread ticket creation across multiple channels.
 * Choose between buttons or dropdown menus for each message to provide the best user experience.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-open-messages-setup}
 
@@ -77,7 +77,7 @@ description: Configure all core features for your ticket system!
 | --- | --- |
 | Channel to send the message to | The ticket opening message is sent to this channel. |
 | Message | This message is sent to the configured channel. |
-| Show only specific ticket topics? | If enabled, only specific [ticket topics](./ticket-topics.md) are shown.<br/><small><details><summary>Note</summary><blockquote>*If you want to use buttons, you can select at most one ticket topic here.*</blockquote></details></small> |
+| Show only specific ticket topics? | If enabled, only specific [ticket topics](/docs/support-bot/ticket-system/ticket-topics) are shown.<br/><small><details><summary>Note</summary><blockquote>*If you want to use buttons, you can select at most one ticket topic here.*</blockquote></details></small> |
 | Use buttons? | If enabled, buttons are used instead of a dropdown menu. |
 
 ## Ticket closing {#ticket-closing}
@@ -88,7 +88,7 @@ description: Configure all core features for your ticket system!
 * Allow tickets to be closed by the creator (instead of only by team members).
 * Enable close requests to prevent team members from closing tickets immediately.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-closing-setup}
 
@@ -118,7 +118,7 @@ description: Configure all core features for your ticket system!
 | Attach transcript to the ticket close DM? | If enabled, a transcript is attached to the ticket close DM.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Send a DM confirmation when a ticket is closed?" is enabled.*</blockquote></details></small> |
 | Require user confirmation before the ticket is closed? | If enabled, a close request is sent to the user before a team member can close the ticket. |
 | Message for ticket close request by a team member | This message is sent into the ticket channel when a team member creates a close request.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Require user confirmation before the ticket is closed?" is enabled.*</blockquote></details></small> |
-| Timeout for the close request | Within this period, the user must respond to the close request before the ticket is closed automatically.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Require user confirmation before the ticket is closed?" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](../../custom-bot/additional-features.md#durations).*</blockquote></details></small> |
+| Timeout for the close request | Within this period, the user must respond to the close request before the ticket is closed automatically.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Require user confirmation before the ticket is closed?" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](/docs/custom-bot/additional-features#durations).*</blockquote></details></small> |
 | Allow team members to close tickets without confirmation? | If enabled, team members can bypass the close request using the command [``/ticket close [force]``](#ticket-closing-commands).<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Require user confirmation before the ticket is closed?" is enabled.*</blockquote></details></small> |
 | Can team members manually schedule when tickets should be closed? | If enabled, team members can schedule closing tickets using the command [``/ticket close-schedule``](#ticket-closing-commands). |
 | Scheduled close message | This message is sent into the ticket channel when a ticket close is scheduled.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Can team members manually schedule when tickets should be closed?" is enabled.*</blockquote></details></small> |
@@ -132,7 +132,7 @@ description: Configure all core features for your ticket system!
 * Notify the user with a message about adding and removing users.
 * Add a button to the ticket message to add members with one click.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#additional-ticket-members-setup}
 
@@ -168,7 +168,7 @@ description: Configure all core features for your ticket system!
 * Send a warning before automatic closing to remind the user about their ticket.
 * Automatically mark tickets as resolved when the user leaves the server.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#auto-close-tickets-setup}
 
@@ -193,7 +193,7 @@ description: Configure all core features for your ticket system!
 * Send an automatic reminder when a team member is inactive in their ticket.
 * Mention tickets that haven’t been handled yet in your reminder channel to draw attention to unanswered tickets.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-reminders-setup}
 
@@ -212,6 +212,7 @@ description: Configure all core features for your ticket system!
 | Mention again if a ticket hasn’t been handled yet | If enabled, a reminder message is sent for unanswered tickets. |
 | Period before reminding about an unassigned ticket | A ticket must be unanswered for this period before a reminder is sent.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
 | Unassigned ticket reminder message | This message is sent as a reminder message for unanswered tickets.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details></small> |
+| Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](/docs/support-bot/general/opening-hours) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](/docs/support-bot/general/opening-hours) are enabled.*</blockquote></details></small> |
 
 ## Ticket hold {#ticket-hold}
 
@@ -222,7 +223,7 @@ description: Configure all core features for your ticket system!
 * Lock the channel so members can’t write in the channel while the ticket is on hold.
 * As soon as a ticket is on hold, [Auto close tickets](#auto-close-tickets) is disabled for that ticket.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-hold-setup}
 
@@ -254,7 +255,7 @@ description: Configure all core features for your ticket system!
 * Configure various messages to perfectly match your server.
 * Change the ticket ID generation type to use a different variant for the ticket ID in the channel name.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#advanced-message-configuration-setup}
 
@@ -265,7 +266,7 @@ description: Configure all core features for your ticket system!
 
 | Field | Description |
 | --- | --- |
-| Ticket channel name format | This format is used for ticket channel names.<br/><small><details><summary>Note</summary><blockquote>*You can configure other formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](./ticket-topics.md).*</blockquote></details></small> |
+| Ticket channel name format | This format is used for ticket channel names.<br/><small><details><summary>Note</summary><blockquote>*You can configure other formats for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
 | Error message: user already has an open ticket | This message is shown when a user tries to create another ticket while they already have one open.<br/><small><details><summary>Requirement</summary><blockquote>*Only shown if "Allow only one ticket per user (global)" is [enabled](#main-configuration-configuration).*</blockquote></details></small> |
 | Error: ticket not found | This message is shown when trying to claim a ticket that has already been closed or deleted. |
 | Error: command used outside ticket channels | This message is shown when ticket commands are used outside ticket channels. |
@@ -281,7 +282,7 @@ description: Configure all core features for your ticket system!
 * Display different statistics in different channels and provide information about your ticket system.
 * Add the statistics you want and adjust the channel name accordingly.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#statistics-channels-setup}
 
@@ -295,5 +296,5 @@ description: Configure all core features for your ticket system!
 | Field | Description |
 | --- | --- |
 | Channel | This voice channel is used for the statistics item. |
-| Include only tickets with specific ticket topics | If enabled, only selected [ticket topics](./ticket-topics.md) are included in the statistics. |
+| Include only tickets with specific ticket topics | If enabled, only selected [ticket topics](/docs/support-bot/ticket-system/ticket-topics) are included in the statistics. |
 | Channel name | This text is used as the channel name. |

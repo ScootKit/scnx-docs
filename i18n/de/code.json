@@ -38,6 +38,9 @@
   "main.mm": {
     "message": "Modmail Dokumentation"
   },
+  "main.sb": {
+    "message": "Support Bot Dokumentation"
+  },
   "features.one.header": {
     "message": "Lege einfach los und erweitere dein Wissen"
   },
@@ -45,7 +48,7 @@
     "message": "Mit SCNX anzufangen kann manchmal einschüchternd wirken, aber mit dieser Dokumentation kannst du klein anfangen und dann später alle Vorteile von SCNX genießen."
   },
   "features.two.header": {
-    "message": "Entdecke neue Funktion & Lass dich inspieren"
+    "message": "Entdecke neue Funktionen & lass dich inspirieren"
   },
   "features.two.description": {
     "message": "Da manche Funktionen und Möglichkeiten in SCNX etwas versteckt sind, hat sich diese Dokumentation das Ziel gesetzt, alle Funktionen und Möglichkeiten zu dokumentieren - Zeit dich inspirieren zu lassen und was großartiges zu bauen ✨"

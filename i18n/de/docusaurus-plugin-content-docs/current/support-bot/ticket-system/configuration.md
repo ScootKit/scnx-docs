@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Konfiguration
-description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
+description: Konfiguriere dein Discord-Ticket-System — Kategorien, Schließoptionen, automatisches Schließen, Erinnerungen, Pausierung, zusätzliche Mitglieder und erweiterte Nachrichten.
 ---
 
 # Konfiguration
@@ -15,7 +15,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Aktiviere KI-Zusammenfassungen, um nach Schließung eines Tickets eine automatisch generierte Zusammenfassung zu erhalten.
 * Konfiguriere weitere Optionen, um die volle Kontrolle über dein Ticket-System zu erhalten.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#main-configuration-setup}
 
@@ -50,7 +50,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | Ticket-Nachricht                                                    | Diese Nachricht wird bei Erstellung eines neuen Tickets in den Ticket-Kanal gesendet.<br/><small><details><summary>Hinweis</summary><blockquote>*Andere Nachrichten für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) konfigurieren, mehr Infos [hier](/de/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small>                     |
 | Insgesamt nur ein Ticket pro Nutzer erlauben                        | Wenn aktiviert, kann ein Nutzer maximal ein Ticket gleichzeitig geöffnet haben.<br/><small><details><summary>Hinweis</summary><blockquote>*Andere Ticket-Limits für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) konfigurieren, mehr Infos dazu [hier](/de/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small>                    |
 | KI-Zusammenfassung von Ticket-Transkripten                          | Wenn aktiviert, wird nach Ticketschließung eine Zusammenfassung des Ticket-Transkripts generiert.<br/><small><details><summary>Hinweis</summary><blockquote>*Für diese Funktion wird das [KI-Guthaben](https://faq.scnx.app/ki-auf-scnx/) deines Servers genutzt und bestimmte Daten mit "modmail.net" (einem SCNX-Produkt) geteilt werden. Unsere Datenschutzerklärung findest du [hier](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
-| Teammitgliedern erlauben, Tickets umzubenennen?                     | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket rename``](#main-configuration-commands) Tickets umbenennen.<br/><small><details><summary>Hinweis</summary><blockquote>*Nach manueller Bearbeitung des Ticket-Namens wird der Ticket-Name bei Verschiebung des Tickets nicht mehr automatisch geändert ([falls aktiviert](/de/docs/support-bot/ticket-system/ticket-topics)).*</blockquote></details></small>                               |
+| Teammitgliedern erlauben, Tickets umzubenennen?                     | Wenn aktiviert, können Teammitglieder mit dem Befehl ``/ticket rename`` Tickets umbenennen.<br/><small><details><summary>Hinweis</summary><blockquote>*Nach manueller Bearbeitung des Ticket-Namens wird der Ticket-Name bei Verschiebung des Tickets nicht mehr automatisch geändert ([falls aktiviert](/de/docs/support-bot/ticket-system/ticket-topics)).*</blockquote></details></small>                               |
 | Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?               | Wenn aktiviert, wird ein Knopf zum Bearbeiten des Ticket-Namens zur Ticket-Nachricht hinzugefügt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                    |
 | Inhalt des Umbenennungsknopfs                                       | Dieser Text wird im Knopf zum Bearbeiten des Ticket-Namens angezeigt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?" aktiviert ist.*</blockquote></details></small>                                                                                                                                   |
 | Ticket-Umbennenungsnachricht                                        | Diese Nachricht wird bei Umbenennung eines Ticket-Namens in den Ticket-Kanal gesendet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                               |
@@ -63,7 +63,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Sende mehrere Ticketöffnungsnachrichten mit verschiedenen [Ticket-Themen](/de/docs/support-bot/ticket-system/ticket-topics) in unterschiedliche Kanäle, um die Erstellung auf mehrere Kanäle zu verteilen.
 * Entscheide dich bei jeder Nachricht zwischen Knöpfen oder Dropdown-Menüs für eine optimale Nutzer-Erfahrung.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-open-messages-setup}
 
@@ -88,7 +88,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Erlaube das Schließen von Tickets durch den Ersteller (anstatt ausschließlich durch Teammitglieder).
 * Aktiviere Schließungs-Anfragen, um das sofortige Schließen des Tickets durch Teammitglieder zu vermeiden.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-closing-setup}
 
@@ -118,7 +118,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | Transkript an die Ticket-Schließungs-Privatnachricht anhängen?                | Wenn aktiviert, wird ein Transkript des Tickets an die Privatnachricht angehängt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestätigung per Privatnachricht schicken, wenn ein Ticket geschlossen wird?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                                                                               |
 | Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?         | Wenn aktiviert, wird vor Schließung eines Tickets durch ein Teammitglied eine Schließungs-Anfrage an den Nutzer gestellt.                                                                                                                                                                                                                                                                                                                                                                                                          |
 | Nachricht bei Ticketschließungsanfrage durch Teammitglied                     | Diese Nachricht wird bei einer Schließungs-Anfrage durch ein Teammitglied in den Ticket-Kanal gesendet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                                                                |
-| Zeitüberschreitung bei der Schließungsanfrage                                 | Während dieses Zeitraums muss der Nutzer auf die Schließungs-Anfrage antworten, bevor sein Ticket automatisch geschlossen wird.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*</blockquote></details><details><summary>Hinweis</summary><blockquote>*Wie du Zeitangaben in SCNX einstellst, erfährst du [hier](/de/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
+| Zeitüberschreitung bei der Schließungsanfrage                                 | Während dieses Zeitraums muss der Nutzer auf die Schließungs-Anfrage antworten, bevor sein Ticket automatisch geschlossen wird.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*</blockquote></details><details><summary>Hinweis</summary><blockquote>*Wie du Zeitangaben in SCNX einstellst, erfährst du [hier](/de/docs/custom-bot/additional-features#durations).*</blockquote></details></small> |
 | Teammitgliedern erlauben, Tickets auch ohne Bestätigung zu schließen?         | Wenn aktiviert, können Teammitglieder die Schließungs-Anfrage mit dem Befehl [``/ticket close [force]``](#ticket-closing-commands) umgehen.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                            |
 | Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen? | Wenn aktiviert, können Teammitglieder das Schließen von Tickets mit dem Befehl [``/ticket close-schedule``](#ticket-closing-commands) planen.                                                                                                                                                                                                                                                                                                                                                                                      |
 | Geplante Schließungs-Nachricht                                                | Diese Nachricht wird bei geplanter Schließung eines Tickets in den Ticket-Kanal gesendet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen?" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                                                                      |
@@ -132,7 +132,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Benachrichtige den Nutzer mit einer Nachricht über das Hinzufügen und Entfernen von Nutzern.
 * Füge einen Knopf zur Ticket-Nachricht hinzu, um Mitglieder per Klick hinzufügen zu können.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#additional-ticket-members-setup}
 
@@ -168,7 +168,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Sende eine Warnung vor der automatischen Schließung, um den Nutzer an sein Ticket zu erinnern.
 * Markiere Tickets automatisch als gelöst, wenn der Nutzer den Server verlässt.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#auto-close-tickets-setup}
 
@@ -193,7 +193,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Sende eine automatische Erinnerung, wenn ein Teammitglied in seinem Ticket inaktiv ist.
 * Erwähne noch nicht bearbeitete Tickets in deinem Erinnerungskanal, um auf nicht-beantwortete Tickets aufmerksam zu machen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-reminders-setup}
 
@@ -212,6 +212,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 | Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat | Wenn aktiviert, wird eine Erinnerungsnachricht für unbearbeitete Tickets in den Erinnerungskanal gesendet.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | Zeitraum vor Erinnerung aufgrund eines unzugewiesenen Tickets                           | Für diesen Zeitraum muss ein Ticket unbearbeitet sein, bevor eine Erinnerung gesendet wird.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*</blockquote></details><details><summary>Hinweis</summary><blockquote>*In welchem Format du Zeitangaben in SCNX einstellst, erfährst du [hier](https://docs.scnx.xyz/de/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
 | Unzugewiesene Ticketerinnerungsnachricht                                                | Diese Nachricht wird als Erinnerungsnachricht für unbearbeitete Tickets gesendet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*</blockquote></details></small>                                                                                                                                                                                                                                    |
+| Erinnerungen innerhalb der Öffnungszeiten senden?                                       | Wenn aktiviert, werden Erinnerungen auf den Beginn der konfigurierten [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) verschoben.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) aktiviert sind.*</blockquote></details></small> |
 
 ## Ticket-Pausierung {#ticket-hold}
 
@@ -222,7 +223,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Sperre den Kanal, damit Mitglieder während der ausstehenden Zuweisung in einer Pausierung nicht in den Kanal schreiben können.
 * Sobald ein Ticket pausiert ist, wird das [Automatische Ticket-Schließen](#auto-close-tickets) für dieses Ticket deaktiviert.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-hold-setup}
 
@@ -254,7 +255,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Konfiguriere verschiedene Nachrichten, um alles perfekt auf deinen Server abzustimmen.
 * Ändere den Typ deiner Ticket-ID-Generierung, um eine andere Variante für die Ticket-ID im Kanalnamen auszuwählen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#advanced-message-configuration-setup}
 
@@ -281,7 +282,7 @@ description: Stelle alle grundlegenden Funktionen für dein Ticket-System ein!
 * Stelle verschiedene Statistiken in unterschiedlichen Kanälen dar und gebe so Auskunft über dein Ticket-System.
 * Füge deine Wunsch-Statistiken hinzu und passe den Kanal-Namen entsprechend an.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#statistics-channels-setup}
 

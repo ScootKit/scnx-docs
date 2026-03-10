@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Ticket-Claiming
-description: Konfiguriere das Ticket-Claiming, um deine Tickets bestmöglich zu organisieren!
+description: Weise Discord-Support-Tickets Teammitgliedern zu, sende Claim-Benachrichtigungen, verstecke nicht zugewiesene Tickets und benenne Kanäle beim Claim um.
 ---
 
 # Ticket-Claiming
@@ -13,7 +13,7 @@ description: Konfiguriere das Ticket-Claiming, um deine Tickets bestmöglich zu 
 * Sperre den Kanal vor dem Claimen eines Tickets.
 * Sende Zuweisungsbenachrichtigungen in einen Kanal, um Teammitglieder über neue Tickets zu informieren.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 
@@ -42,5 +42,6 @@ description: Konfiguriere das Ticket-Claiming, um deine Tickets bestmöglich zu 
 | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Zuweisung Ausstehend Nachricht                  | Diese Nachricht wird bei ausstehender Zuweisung in den Ticket-Kanal gesendet.                                        |
 | Zuweisungsknopf im Ticket anzeigen              | Wenn aktiviert, wird ein Knopf zum Zuweisen zur Ticket-Nachricht hinzugefügt.                                        |
+| Zuweisungsknopf-Text | Dieser Text wird auf dem Zuweisungsknopf unter der Ticket-Nachricht angezeigt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Zuweisungsknopf im Ticket anzeigen" aktiviert ist.*</blockquote></details></small> |
 | Zuweisungsnachricht                             | Diese Nachricht wird bei erfolgreicher Zuweisung in den Ticket-Kanal gesendet.                                       |
 | Teammitglieder Ticketbenachrichtigungsnachricht | Diese Nachricht wird bei Erstellung eines neuen Tickets in den [konfigurierten](#main-configuration) Kanal gesendet. |

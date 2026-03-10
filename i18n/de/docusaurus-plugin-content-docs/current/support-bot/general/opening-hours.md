@@ -12,7 +12,7 @@ description: Erstelle und verwalte Öffnungszeiten nach deinen Wünschen, auch F
 * Lege deine eigenen Öffnungszeiten für jeden Tag fest, auch mehrere Abschnitte an einem Wochentag sind möglich.
 * Schließe die Ticket-Bearbeitung automatisch an Feiertagen für dein eingestelltes (Bundes)Land oder füge deine eigenen Feiertage hinzu.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 

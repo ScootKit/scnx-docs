@@ -1,123 +1,204 @@
 ---
 sidebar_position: 2
 title: Starter Guide
-description: Please adjust this description. Should be less than 100 characters.
+description: Complete starter guide for your Discord Modmail system — learn how to create, claim, respond to, and close tickets with your team.
 ---
 
-# Modmail starter guide (Modmail 101)
+# Starter Guide (Modmail 101)
 
-:::warning
-Page has not been updated for Support Bot V3 and might not be complete.
+:::tip Feel free to share me!
+Feel free to forward this guide to your team members so they can find their way around Modmail faster and discover the full feature set!
 :::
 
-In this document, we've collected everything that is helpful to understand how to use modmail on any server.
+Welcome to the Starter Guide for the Modmail system of the SCNX Support-Bot!
 
-:::info
-You can also send this document to your support team so they understand how the Modmail-Bot works.
+We know Modmail can feel overwhelming at first, and you might not fully understand every feature yet — that's completely normal.
+That's exactly why this page is written from a team member's perspective, so you'll quickly find your way around Modmail and use all features without problems.
+In general, every server can enable different features for their Modmail system, so some features may not be available in your server's setup.
+
+But now we'll leave the reading to you and wish you the best of luck!
+
+## Create tickets {#create-tickets}
+
+Users can create tickets either by sending a direct message to the bot or via a ticket opening message (button/dropdown) on your server.
+If ticket topics are set up, users must select a topic before opening a ticket.
+
+As soon as a ticket is created, your bot creates a new channel in the configured category.
+Messages sent by the user via DM will automatically appear in the ticket channel, and messages sent by team members in the ticket channel will be relayed to the user via DM.
+
+
+
+## Claim tickets {#claim-tickets}
+
+:::note Note:
+If your server does not use ticket claiming, you can skip directly to the next step.
 :::
 
-## Creating and processing tickets {#basics}
+To keep tickets better organized across team members, you first need to assign a ticket to yourself (also called "claiming").
 
-Users can create tickets by either sending a direct message to the Modmail-Bot or using a button below
-an [information message](/docs/modmail/configuration/modmail-info). When a user opens a ticket, they
-can [select a Ticket Topic](/docs/modmail/advanced-features/ticket-topics) if enabled. Once done, a ticket channel will be created
-in which staff members can send messages. Messages sent into this channel will be transmitted to the user via a direct
-message, where the user can reply. Any messages sent via DM to the bot will automatically show up in the ticket channel.
+To claim a ticket, use the ``/modmail claim`` command or the claim button (if enabled). After the ticket is assigned to you, other team members will be notified.
+If you want to remove your assignment, use ``/modmail remove-claim``. To assign a specific team member, use ``/modmail assign``.
 
-Staff members can coordinate with each other or make notes that are not sent to users by prefixing their message with
-`!`. By default, anyone who has access to the ticket channel will be treated as a staff member, so make sure to
-configure the correct permissions for the ticket category. Sometimes, you might not want the name of the staff member to
-be shown to your user. For this, you can send [anonymous messages](#anonymous-messages).
 
-In big servers, tickets might need to be assigned to specific staff members. For this,
-the [Claiming](/docs/modmail/advanced-features/ticket-claiming) feature can be used.
 
-Once a ticket has been resolved, the staff members (and the user if [configured](/docs/modmail/configuration/ticket-close)) can
-close the ticket using the `/close` slash-command.
+## Send messages {#send-messages}
 
-When a ticket gets closed, a transcript called "Log" will be generated. The transcript will be sent into
-a [Log channel](/docs/modmail/configuration/bot-configuration) and can also be sent to the user,
-if [configured](/docs/modmail/configuration/ticket-close).
+As soon as you have access to the ticket channel, you can send messages to the user by simply typing in the channel. Your message will be relayed to the user via DM.
 
-Sometimes similar information needs to be collected from users to process their requests. For
-this [Forms](/docs/modmail/advanced-features/forms) can be created that allow users to enter required information using a native
-form. To send a form to a user, use the `/form` command.
+To send internal messages that are **not** relayed to the user, prefix your message with `!` (for example, `!This is an internal note`).
 
-When closing a ticket, the user will receive a notification that [can be configured](/docs/modmail/configuration/bot-configuration).
-You can also collect feedback from users using the [Feedback](/docs/modmail/advanced-features/support-feedback) feature.
 
-Staff members can monitor support activity and optimize support processes using
-the [Analytics](/docs/modmail/advanced-features/analytics) feature.
+
+## Anonymous messages {#anonymous-messages}
+
+Sometimes, staff members prefer not to share their name with the user. To send an anonymous message (credited to your highest role instead of your name), prefix your message with `!ar ` (for example, `!ar Your request has been processed.`).
+
+While the identity of staff members won't be displayed to users when using anonymous messages, their identity will still be visible in the log and the ticket channel.
+
+[Snippets](#snippets) can also be sent anonymously by using `!!!<SnippetKey>` or the ``/as`` command.
+
+
+
+<a id="use-commands"></a>
+
+## Use commands {#use-commands}
+
+Modmail includes a set of commands that allow different actions depending on your configuration.
+If a command is not shown in the ticket channel, you either don't have permission for that command or the feature hasn't been configured.
+
+| Command | Description |
+| --- | --- |
+| ``/blocklist add`` | Adds a user to the blocklist. |
+| ``/blocklist list`` | Shows all currently blocked users. |
+| ``/blocklist remove`` | Removes a user from the blocklist. |
+| ``/blocklist status`` | Shows the block status of the selected user. |
+| ``/modmail new-thread`` | Opens a new ticket with the selected user. |
+| ``/modmail claim`` | Claims the current ticket. |
+| ``/modmail remove-claim`` | Removes your assignment from the current ticket. |
+| ``/modmail assign`` | Assigns a specific team member to the current ticket. |
+| ``/modmail close`` | Closes the current ticket. |
+| ``/modmail transfer`` | Moves a ticket to another topic. |
+| ``/modmail rename`` | Renames the current ticket channel. |
+| ``/modmail form`` | Sends a form into the current ticket. |
+| ``/modmail s`` | Sends a snippet into the current ticket. |
+| ``/modmail as`` | Sends a snippet anonymously into the current ticket. |
+| ``/modmail edit`` | Edits a previously sent message by team message ID. |
+| ``/modmail delete`` | Deletes a previously sent message by team message ID. |
+| ``/ticket hold`` | Enables/disables pausing for the ticket. |
+| ``/ticket close-schedule`` | Schedules closing a ticket. |
+| ``/ticket users add`` | Adds a new user to the ticket. |
+| ``/ticket users remove`` | Removes a previously added user from the ticket. |
+
+### Blocklist {#blocklist}
+
+Using the blocklist, you can have users blocked from the entire Support-Bot. This block applies to both the Modmail and Ticket System (if used).
+
+If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user — optionally, you can provide the reason and the duration of the block.
+If you want to remove a user from the blocklist, use the command [``/blocklist remove``](#use-commands).
+
+
 
 ## Snippets {#snippets}
 
 Sometimes, similar or repetitive messages need to be sent to users. To avoid typing out the same message over and over,
-snippets can be used. Snippets are text-modules that staff members can create and use in tickets. Each snippet has their
+snippets can be used. Snippets are text modules that staff members can create and use in tickets. Each snippet has its
 own unique Snippet-Key that can be set when creating a snippet. Optionally, you can also attach
-a [form](/docs/modmail/advanced-features/forms) to a snippet to avoid typing multiple commands to send a snippet and a form at the
-same time. Snippets can also include buttons that allow users to close the ticket directly.
+a [form](/docs/support-bot/general/forms) to a snippet to avoid sending a snippet and a form separately.
+Snippets can also include buttons that allow users to close the ticket directly.
 
 <SlashCommandExplanation />
 
-To use snippets staff members can
+To use snippets, staff members can:
 
-* use the `/s snippet:<SnippetKey>` to send a snippet directly into a ticket. This is the easiest way as an
-  auto-complete menu will help staff members to select the correct snippet.
-* write `!!<SnippetKey>` (replace `<SnippetKey>` with the key of the snippet) to directly send the content of a snippet
-  into a ticket.
-* include `{{<SnippetKey}}` (replace `<SnippetKey>` with the key of the snippet) into any message that you send to a
-  user. The `{{<SnippetKey}}` will be replaced by the snippet content while leaving the rest of the message unchanged.
+* use ``/modmail s snippet:<SnippetKey>`` to send a snippet directly into a ticket. An auto-complete menu will help you select the correct snippet.
+* write `!!<SnippetKey>` (replace `<SnippetKey>` with the key of the snippet) to directly send the content of a snippet into a ticket.
+* include `{{<SnippetKey>}}` (replace `<SnippetKey>` with the key of the snippet) into any message. The placeholder will be replaced by the snippet content while leaving the rest of the message unchanged.
 
 To manage snippets, the following commands are available to staff members:
 
-* Create a new snippet with `/snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Enter a new,
-  unused snippet key as the `key` parameter. If you want to give users the option to directly close tickets using
-  buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
-  a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
-  will appear in which you can enter your snippet content.
-* To edit an existing snippet, use `/snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Select an
-  existing snippet as the `key` parameter. If you want to give users the option to directly close tickets using
-  buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
-  a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
-  will appear in which you can edit your snippet key and content.
-* To delete a snippet, use the `/snippet delete key:<SnippetKey>` slash command. Select an existing snippet as the `key`
-  parameter and submit the command to delete the snippet. Once submitted, the snippet will be deleted permanently. This
-  cannot be undone.
-* To preview the content of a snippet, use the `/snippet preview key:<SnippetKey>` slash command. Select an existing
-  snippet as the `key` parameter. Once you submit the command, the content of the snippet and some additional details
-  will be displayed.
-* To list all available snippets, use the `/snippets list [page:<Number>]` slash command. This command will display all
-  snippets on your server and will also include the usage count of each snippet. If you have a lot of snippets, please
-  set the `page` parameter to switch between pages.
+* `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Create a new snippet. Enter a new, unused snippet key as the `key` parameter. Optionally enable `close-buttons` to add a close button below the snippet message or set `form` to attach a form. A dialog will appear to enter the snippet content.
+* `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Edit an existing snippet. Select an existing snippet key and update its settings or content.
+* `/modmail snippets delete key:<SnippetKey>` — Delete a snippet permanently. This cannot be undone.
+* `/modmail snippets preview key:<SnippetKey>` — Preview a snippet's content and details.
+* `/modmail snippets list [page:<Number>]` — List all available snippets with their usage counts.
 
-## Anonymous messages {#anonymous-messages}
 
-Sometimes, staff members are not comfortable sharing their name with staff members. To fit your need, you can always
-adjust
-your [message configuration](/docs/modmail/configuration/advanced-messaging), to hide the identity of staff members. Still, you
-might want a setup were staff members appear with their name in most cases, but in certain tickets you want them to send
-messages that are credited to their highest role (e.g. send a message that will be displayed to users as "Moderator:
-Your message here").
 
-While the identity of staff members won't be displayed to users when using anonymous messages, their identity will still
-be visible in the log and the ticket channel.
+### Send forms {#send-forms}
 
-* Anonymous messages can be sent by sending `!ar <Message>`. Any content behind the `!ar ` prefix will be treated as the
-  message content.
-* [Snippets](#snippets) can be sent as anonymous by either writing `!!!<SnippetKey>` or using the `/as` slash command.
+So you don't always have to collect information manually, you can simply have users fill out a configured form, which lets you receive necessary data quickly and securely.
 
-## Blocklisting users {#blacklist}
+To send a form into a ticket channel, use the command [``/modmail form``](#use-commands) and select the relevant form from the list.
+If no form is in the list or a specific form isn't shown, it has either not been configured yet or there is an error in the configuration.
 
-Sometimes users abuse support services. To avoid these users spamming your Modmail-system, consider using the blocklist
-feature. Once the feature [is enabled](/docs/modmail/configuration/bot-configuration), staff members can use the following commands
-to manage the blocklist:
 
-<SlashCommandExplanation />
 
-* `/blacklist list`: List all users that are on the blocklist.
-* `/blacklist add user:<User> reason:<Text> [duration:<Duration>]`: Add a user to the blocklist. By default, blocklist
-  entries are permanent unless a duration is being configured in the duration parameter (e.g. `2d4h` will result in a
-  block of 2 days and 4 hours).
-* `/blacklist remove user:<User>`: Removes a user from the blocklist.
-* `/blacklist status user:<User>`: Check if a user has been blocklisted. The reason and duration of the block will also
-  be displayed.
+### Pause tickets {#hold-tickets}
+
+If a ticket needs to be forwarded or is waiting for a response from another party, you can pause the ticket using the command [``/ticket hold``](#use-commands)
+so automatic ticket closing is disabled and the channel is locked, which means no messages can be sent until pausing is disabled.
+To disable pausing, use the command [``/ticket hold``](#use-commands) again.
+
+
+
+### Rename tickets {#rename-tickets}
+
+If you want to rename a ticket, run the command [``/modmail rename``](#use-commands) and set the new ticket name in the dialog.
+When moving to another ticket topic, the name is changed automatically if configured.
+
+:::caution Important:
+Once a ticket has been renamed, the bot can no longer automatically change the ticket name when moving it to another ticket topic!
+:::
+
+
+
+### Change ticket topic {#change-ticket-topic}
+
+If a user selected the wrong topic for their ticket, you can move it to the correct topic using the command [``/modmail transfer``](#use-commands).
+The name is updated automatically and the ticket is released for claiming again.
+
+
+
+### Add and remove users {#add-and-remove-users}
+
+To handle certain requests that involve multiple people more easily, you can add the relevant users to the ticket using the command [``/ticket users add``](#use-commands),
+which gives them access to the ticket channel (in addition to the team member and the ticket creator).
+If you want to remove users, use the command [``/ticket users remove``](#use-commands).
+
+
+
+### Edit and delete messages {#edit-delete-messages}
+
+To edit a previously sent message, use the command [``/modmail edit``](#use-commands) and provide the team message ID.
+To delete a message, use [``/modmail delete``](#use-commands). If configured, staff members can also edit or delete each other's messages.
+
+
+
+## Close tickets {#close-tickets}
+
+After a user's request has been resolved, you can close the ticket either with the command [``/modmail close``](#use-commands) or the button under the ticket message.
+You can also schedule closing with [``/ticket close-schedule``](#use-commands) after a certain period of time.
+
+
+
+## Support feedback {#support-feedback}
+
+If support feedback is enabled in your server's Modmail system, users automatically receive a DM after the ticket is closed where they can leave feedback for that ticket.
+This feedback is optional and, if submitted, is sent to the configured channel where you can view the feedback.
+
+
+
+## Ticket logs {#ticket-logs}
+
+All messages of a ticket are logged and shown in a ticket log after the ticket is closed.
+If your server has AI summaries enabled, you'll also see a short summary of the ticket content in the log channel message.
+Using the button under the message, you'll either be taken to a modmail.net website (if enabled) where the logs are shown in a formatted web layout, or to a text file
+that you can download.
+
+
+
+## Done {#done}
+
+You've reached the end of the guide and hopefully now have a good overview of how the Modmail system of the SCNX Support-Bot works and how to use it.
+
+If you still have questions or something is unclear, feel free to ask the person responsible for your server or create a ticket on our [Discord server](https://scootk.it/dc-de) — we'll be happy to help!

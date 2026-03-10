@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Konfiguration
-description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
+description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Schließoptionen, Schließgründe, Archivierung, Erinnerungen, Pausierung und erweiterte Nachrichten.
 ---
 
 # Konfiguration
@@ -15,7 +15,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Aktiviere KI-Zusammenfassungen, um nach Schließung eines Tickets eine automatisch generierte Zusammenfassung zu erhalten.
 * Konfiguriere weitere Optionen, um die volle Kontrolle über dein modmail zu erhalten.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#main-configuration-setup}
 
@@ -45,17 +45,23 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 | Rollen mit standardmäßigen Zugriffsrechten                       | *Nur verfügbar, wenn "Ausgewählte Rollen" bei "Standardmäßige Ticket-Zugriffsrechte" ausgewählt ist.*<br/>Diese Rollen erhalten standardmäßig Zugriff auf Tickets und werden bei der Erstellung eines neuen Tickets erwähnt. Andere Rollen für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).       |
 | Log-Kanal                                                        | In diesen Kanal wird dein Bot standardmäßig automatisch alle support-relevanten Nachrichten senden. Andere Log-Kanäle für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).                                                                                                                            |
 | Ticket-Willkommens-Nachricht                                     | Diese Nachricht wird dein Bot standardmäßig senden, wenn ein Nutzer ein neues Ticket erstellt. Andere Nachrichten für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).                                                                                                                                |
-| Ticket-Schließungs-Nachricht                                     | Diese Nachricht wird dein Bot standardmäßig senden, wenn ein Ticket geschlossen wird. Andere Nachrichten für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).                                                                                                                                         |
-| Wartungsmodus aktivieren?                                        | Wenn aktiviert, können keine Ticket-Aktionen ausgeführt werden (wie das Erstellen / Bearbeiten / Schließen von Tickets). In bereits geöffneten Tickets können weiterhin Nachrichten versendet werden.                                                                                                                                                                                                                                                                                                   |
+| Ticket-Schließungs-Nachricht                                     | Diese Nachricht wird dein Bot standardmäßig senden, wenn ein Ticket geschlossen wird. |
+| Neues-Ticket-Ping                                                | Wähle aus, wer gepingt werden soll, wenn ein neues Ticket erstellt wird. Optionen: "Niemand", "@here", "@everyone" oder bestimmte Rollen. |
+| Zu pingende Rollen                                               | Diese Rollen werden erwähnt, wenn ein neues Ticket erstellt wird.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Bestimmte Rollen" bei "Neues-Ticket-Ping" ausgewählt ist.*</blockquote></details></small> |
+| Teammitgliedern erlauben, Nachrichten anderer zu bearbeiten?      | Wenn aktiviert, können Teammitglieder Nachrichten anderer Teammitglieder in Ticket-Kanälen bearbeiten oder löschen. |
+| Wartungsmodus aktivieren?                                        | Wenn aktiviert, können keine Ticket-Aktionen ausgeführt werden (wie das Erstellen / Bearbeiten / Schließen von Tickets).<br/><small><details><summary>Hinweis</summary><blockquote>*In bereits geöffneten Tickets können weiterhin Nachrichten versendet werden.*</blockquote></details></small> |
+| Wartungsmodus-Nachricht                                          | Diese Nachricht wird gesendet, wenn ein Nutzer versucht, während des Wartungsmodus ein Ticket zu öffnen.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Wartungsmodus aktivieren?" aktiviert ist.*</blockquote></details></small> |
+| Nachrichten von Nicht-Mitgliedern erlauben?                      | Wenn aktiviert, können Nutzer, die nicht Mitglied deines Servers sind, trotzdem Tickets eröffnen, indem sie dem Bot eine Nachricht senden. |
 | Nutzern erlauben, Tickets per Befehl zu öffnen?                  | Wenn aktiviert, können deine Nutzer neben Buttons und Dropdown-Menüs auch mit dem Befehl [``/ticket open``](#main-configuration-commands) ein Ticket erstellen.                                                                                                                                                                                                                                                                                                                                         |
-| Mitarbeitern erlauben, Tickets im Namen eines Nutzers zu öffnen? | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket admin-open``](#main-configuration-commands) ein Ticket mit einem Nutzer erstellen. Einschränkungen wie mehrere offene Tickets oder Öffnungszeiten werden umgangen.                                                                                                                                                                                                                                                                      |
-| Teammitglieder-Rollen                                            | <details><summary>**Hinweis**</summary>*Andere Rollen für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).*<br/>*Das ist ein weiterer Hinweis mit einem mittellangen Text.*</details><br/>Diese Rollen erhalten standardmäßig Zugriff auf Tickets und werden bei der Erstellung eines neuen Tickets erwähnt. |
-| Insgesamt nur ein Ticket pro Nutzer erlauben                     | Wenn aktiviert, kann ein Nutzer maximal ein Ticket gleichzeitig geöffnet haben.<br/><details><summary>**Hinweis**</summary>*Andere Ticket-Limits für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu findest du [hier](/de/docs/support-bot/modmail/ticket-topics).*</details>                                                                                          |
-| KI-Zusammenfassung von Ticket-Transkripten                       | Wenn aktiviert, wird dein Bot nach Schließung des Tickets automatisch eine KI-generierte Zusammenfassung des Ticktes in den festgelegten Log-Kanal senden.<br/>Bitte beachte, dass hierfür das [KI-Guthaben](https://faq.scnx.app/ki-auf-scnx/) deines Servers genutzt und bestimmte Daten mit "modmail.net" (einem SCNX-Produkt) geteilt werden. Unsere Datenschutzerklärung findest du [hier](https://scootk.it/scnx-privacy).                                                                        |
-| Teammitgliedern erlauben, Tickets umzubenennen?                  | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket rename``](#main-configuration-commands) Tickets umbenennen.<br/><dl><dt>Hinweis</dt><dd>Beachte, dass nach manueller Bearbeitung der Bot den Namen des Tickets bei Verschiebung nicht mehr ändern wird ([falls aktiviert](/de/docs/support-bot/modmail/ticket-topics)).</dd></dl>                                                                                                                                                       |
-| Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?            | *Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*<br/>Wenn aktiviert, wird ein Knopf unter der Ticket-Nachricht hinzugefügt, sodass Teammitglieder den Ticketnamen schneller bearbeiten können - anderenfalls müssen sie den Befehl [``/ticket rename``](#main-configuration-commands) verwenden.                                                                                                                                                                   |
-| Inhalt des Umbenennungsknopfs                                    | *Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" und "Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?" aktiviert sind.*<br/>Dieser Text wird im Knopf unter der Ticket-Nachricht angezeigt.                                                                                                                                                                                                                                                                                 |
-| Ticket-Umbennenungsnachricht                                     | *Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*<br/>Diese Nachricht wird dein Bot in den Ticket-Kanal senden, wenn ein Ticket umbenannt wurde.                                                                                                                                                                                                                                                                                                                   |
+| Mitarbeitern erlauben, Tickets im Namen eines Nutzers zu öffnen? | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket admin-open``](#main-configuration-commands) ein Ticket mit einem Nutzer erstellen.<br/><small><details><summary>Hinweis</summary><blockquote>*Einschränkungen wie mehrere offene Tickets oder Öffnungszeiten werden umgangen.*</blockquote></details></small> |
+| Willkommensnachricht bei Team-eröffnetem Ticket | Diese Nachricht wird gesendet, wenn ein Teammitglied ein Ticket im Namen eines Nutzers öffnet. Verwende eine andere Willkommensnachricht, um den Nutzer darüber zu informieren, dass ein Teammitglied die Konversation gestartet hat.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Mitarbeitern erlauben, Tickets im Namen eines Nutzers zu öffnen?" aktiviert ist.*</blockquote></details></small> |
+| Insgesamt nur ein Ticket pro Nutzer erlauben                     | Wenn aktiviert, kann ein Nutzer maximal ein Ticket gleichzeitig geöffnet haben. |
+| KI-Zusammenfassung von Ticket-Transkripten                       | Wenn aktiviert, wird dein Bot nach Schließung des Tickets automatisch eine KI-generierte Zusammenfassung des Tickets in den festgelegten Log-Kanal senden.<br/><small><details><summary>Hinweis</summary><blockquote>*Hierfür wird das [KI-Guthaben](https://faq.scnx.app/ki-auf-scnx/) deines Servers genutzt und bestimmte Daten mit "modmail.net" (einem SCNX-Produkt) geteilt. Unsere Datenschutzerklärung findest du [hier](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
+| Teammitgliedern erlauben, Tickets umzubenennen?                  | Wenn aktiviert, können Teammitglieder mit dem Befehl ``/ticket rename`` oder ``/modmail rename`` (je nach Prefix-Einstellung) Tickets umbenennen.<br/><small><details><summary>Hinweis</summary><blockquote>*Beachte, dass nach manueller Bearbeitung der Bot den Namen des Tickets bei Verschiebung nicht mehr ändern wird ([falls aktiviert](/de/docs/support-bot/modmail/ticket-topics)).*</blockquote></details></small> |
+| Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?            | Wenn aktiviert, wird ein Knopf unter der Ticket-Nachricht hinzugefügt, sodass Teammitglieder den Ticketnamen schneller bearbeiten können.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*</blockquote></details></small> |
+| Inhalt des Umbenennungsknopfs                                    | Dieser Text wird im Knopf unter der Ticket-Nachricht angezeigt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Knopf zum Umbenennen unter Ticket-Nachricht anzeigen?" aktiviert ist.*</blockquote></details></small> |
+| Ticket-Umbenennungsnachricht                                     | Diese Nachricht wird dein Bot in den Ticket-Kanal senden, wenn ein Ticket umbenannt wurde.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets umzubenennen?" aktiviert ist.*</blockquote></details></small> |
+| /modmail-Prefix hinzufügen?                                      | Wenn aktiviert, verwenden Modmail-Befehle den ``/modmail``-Prefix (z.B. ``/modmail close``) anstatt des ``/ticket``-Prefix zur einfacheren Unterscheidung. |
 
 ## Ticketöffnungsnachricht {#ticket-open-messages}
 
@@ -65,7 +71,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Sende mehrere Ticketöffnungsnachrichten mit verschiedenen [Ticket-Themen](/de/docs/support-bot/modmail/ticket-topics) in unterschiedliche Kanäle, um die Erstellung auf mehrere Kanäle zu verteilen.
 * Entscheide dich bei jeder Nachricht zwischen Knöpfen oder Dropdown-Menüs für eine optimale Nutzer-Erfahrung.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-open-messages-setup}
 
@@ -89,8 +95,13 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Füge einen Schließen‑Knopf zur Ticket‑Nachricht hinzu, damit Tickets per Klick geschlossen werden können.
 * Erlaube das Schließen von Tickets durch den Ersteller (anstatt ausschließlich durch Teammitglieder).
 * Aktiviere Schließungs-Anfragen, um das sofortige Schließen des Tickets durch Teammitglieder zu vermeiden.
+* Verlange oder erlaube Schließgründe, um zu dokumentieren, warum ein Ticket geschlossen wurde. Definiere eigene Schließgründe für einheitliche Dokumentation.
+* Aktiviere leises Ticket-Schließen, um Tickets ohne Benachrichtigung an den Nutzer zu schließen.
+* Wähle zwischen dem Löschen des Ticket-Kanals oder dem Archivieren in einer separaten Kategorie nach dem Schließen.
+* Erlaube Nutzern, archivierte Tickets erneut zu öffnen, oder lass Teammitglieder sie manuell löschen.
+* Hänge das Ticket-Transkript an die Log-Kanal-Nachricht an für einfache Referenz.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-closing-setup}
 
@@ -101,10 +112,10 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 
 <SlashCommandExplanation />
 
-|               Befehl                |                                                                                                                                         Beschreibung                                                                                                                                         |
-| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ``/ticket close [force:<Boolean>]`` | *Nur verfügbar, wenn "Teammitgliedern erlauben, Tickets auch ohne Bestätigung zu schließen?" [aktiviert](#ticket-closing-configuration) ist.*<br/>Erlaubt es Teammitgliedern, Tickets trotz geöffneter Schließungs-Anfrage zu schließen, indem sie die ``force``-Option auf ``True`` setzen. |
-| ``/ticket close-schedule``          | *Nur verfügbar, wenn "Können Mitarbeiter manuell planen, wann Tickets geschlossen werden sollen?" [aktiviert](#ticket-closing-configuration) ist.*<br/>Ermöglicht es Teammitgliedern, das Schließen von Tickets zu planen, anstatt sie sofort zu schließen.                                  |
+| Befehl | Beschreibung |
+| --- | --- |
+| ``/ticket close [close-reason:<Text>] [silent:<Boolean>] [force:<Boolean>]`` | Schließt das aktuelle Ticket. Optional kannst du einen Schließgrund angeben (wenn [aktiviert](#ticket-closing-configuration)), leise ohne Benachrichtigung schließen (wenn [aktiviert](#ticket-closing-configuration)) oder trotz Schließungs-Anfrage erzwingen (wenn [aktiviert](#ticket-closing-configuration)). |
+| ``/ticket close-schedule`` | Ermöglicht es Teammitgliedern, das Schließen von Tickets zu planen, anstatt sie sofort zu schließen.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen?" [aktiviert](#ticket-closing-configuration) ist.*</blockquote></details></small> |
 
 ### Konfiguration {#ticket-closing-configuration}
 
@@ -120,10 +131,21 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 | Transkript an die Ticket-Schließungs-Privatnachricht anhängen?                | *Nur verfügbar, wenn "Bestätigung per Privatnachricht schicken, wenn ein Ticket geschlossen wird?" aktiviert ist.*<br/>Wenn aktiviert, wird der Bot ein Transkript des Tickets an die Privatnachricht anhängen.                                                                                                                                           |
 | Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?         | Wenn aktiviert, wird anstatt der sofortigen Schließung eines Tickets durch ein Teammitglied eine Schließungs-Anfrage an den Nutzer gesendet, welche dieser bestätigen muss, um das Ticket endgültig zu schließen.                                                                                                                                         |
 | Nachricht bei Ticketschließungsanfrage durch Teammitglied                     | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>Diese Nachricht sendet dein Bot bei einer Schließungs-Anfrage in das jeweilige Ticket.                                                                                                                                                   |
-| Zeitüberschreitung bei der Schließungsanfrage                                 | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>In diesem Zeitraum muss der Nutzer auf die Schließungs-Anfrage antworten, bevor sein Ticket automatisch geschlossen wird. Wie du Zeitangaben in SCNX einstellst, erfährst du [hier](/de/docs/custom-bot/additional-features/#durations). |
+| Zeitüberschreitung bei der Schließungsanfrage                                 | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>In diesem Zeitraum muss der Nutzer auf die Schließungs-Anfrage antworten, bevor sein Ticket automatisch geschlossen wird. Wie du Zeitangaben in SCNX einstellst, erfährst du [hier](/de/docs/custom-bot/additional-features#durations). |
 | Teammitgliedern erlauben, Tickets auch ohne Bestätigung zu schließen?         | *Nur verfügbar, wenn "Bestätigung des Nutzers verlangen, bevor das Ticket geschlossen wird?" aktiviert ist.*<br/>Wenn aktiviert, können Teammitglieder trotz Schließungs-Anfrage das Ticket mit dem Befehl [``/ticket close [force:<Boolean>]``](#ticket-closing-commands) schließen.                                                                     |
-| Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen? | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket close-schedule``](#ticket-closing-commands) die Schließung von Tickets planen.                                                                                                                                                                                                            |
-| Geplante Schließungs-Nachricht                                                | *Nur verfügbar, wenn "Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen?" aktiviert ist.*<br/>Diese Nachricht wird dein Bot in den Ticket-Kanal senden, sobald ein Teammitglied den Befehl ausgeführt hat.                                                                                                                     |
+| Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen? | Wenn aktiviert, können Teammitglieder mit dem Befehl [``/ticket close-schedule``](#ticket-closing-commands) die Schließung von Tickets planen. |
+| Geplante Schließungs-Nachricht | Diese Nachricht wird dein Bot in den Ticket-Kanal senden, sobald ein Teammitglied den Befehl ausgeführt hat.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen?" aktiviert ist.*</blockquote></details></small> |
+| Log/Transkript an die Log-Kanal-Nachricht anhängen? | Wenn aktiviert, wird das Ticket-Transkript an die Nachricht im Log-Kanal angehängt, wenn ein Ticket geschlossen wird. |
+| Schließgründe erlauben? | Wenn aktiviert, können Teammitglieder beim Schließen eines Tickets mit dem Befehl [``/ticket close``](#ticket-closing-commands) einen Grund angeben. Schließgründe werden in der Log-Kanal-Nachricht angezeigt. |
+| Schließgrund erzwingen? | Wenn aktiviert, müssen Teammitglieder beim Schließen eines Tickets einen Grund angeben — das Feld wird zur Pflicht.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Schließgründe erlauben?" aktiviert ist.*</blockquote></details></small> |
+| Eigene Schließgründe? | Wenn aktiviert, kannst du eine Liste vordefinierter Schließgründe festlegen, die Teammitglieder per Autovervollständigung auswählen können. Teammitglieder können bei Bedarf trotzdem eigene Gründe eingeben.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Schließgründe erlauben?" aktiviert ist.*</blockquote></details></small> |
+| Standard-Schließgründe | Eine Liste vordefinierter Schließgründe, die Teammitglieder beim Schließen eines Tickets auswählen können. Diese erscheinen als Autovervollständigungs-Vorschläge im Schließen-Befehl.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Eigene Schließgründe?" aktiviert ist.*</blockquote></details></small> |
+| Leises Ticket-Schließen erlauben? | Wenn aktiviert, können Teammitglieder ein Ticket mit dem Befehl [``/ticket close``](#ticket-closing-commands) leise schließen — der Nutzer erhält keine DM oder Schließ-Benachrichtigung. |
+| Ticket nach Schließen löschen? | Wenn aktiviert, wird der Ticket-Kanal sofort nach dem Schließen gelöscht. Wenn deaktiviert, bleibt der Kanal erhalten und kann optional archiviert werden. |
+| Archivierungs-Kategorie | Geschlossene Ticket-Kanäle werden in diese Kategorie verschoben. Verwende dies, um geschlossene Tickets zur Überprüfung zugänglich zu halten.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |
+| Archivierte Nachricht | Diese Nachricht wird in den Ticket-Kanal gesendet, nachdem er archiviert wurde.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |
+| Nutzern erlauben, geschlossene Tickets erneut zu öffnen? | Wenn aktiviert, können Nutzer ihre geschlossenen (archivierten) Tickets erneut öffnen, indem sie auf einen Knopf in der archivierten Ticket-Nachricht klicken.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |
+| Teammitgliedern erlauben, geschlossene Tickets zu löschen? | Wenn aktiviert, können Teammitglieder archivierte Ticket-Kanäle manuell löschen, indem sie auf einen Knopf in der archivierten Ticket-Nachricht klicken.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |
 
 ## Zusätzliche Ticketmitglieder {#additional-ticket-members}
 
@@ -134,7 +156,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Benachrichtige den Nutzer mit einer Nachricht über das Hinzufügen und Entfernen von Nutzern.
 * Füge einen Knopf zur Ticket-Nachricht hinzu, um Mitglieder per Klick hinzufügen zu können.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#additional-ticket-members-setup}
 
@@ -170,7 +192,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Sende eine Warnung vor der automatischen Schließung, um den Nutzer an sein Ticket zu erinnern.
 * Markiere Tickets automatisch als gelöst, wenn der Nutzer den Server verlässt.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#auto-close-tickets-setup}
 
@@ -195,7 +217,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Sende eine automatische Erinnerung, wenn ein Teammitglied in seinem Ticket inaktiv ist.
 * Erwähne noch nicht bearbeitete Tickets in deinem Erinnerungskanal, um auf nicht-beantwortete Tickets aufmerksam zu machen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-reminders-setup}
 
@@ -214,6 +236,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 | Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat | Wenn aktiviert, wird dein Bot eine Erinnerungsnachricht über noch nicht bearbeitete Tickets senden.                                                                                                                                                                                                                                                                                                         |
 | Zeitraum vor Erinnerung aufgrund eines unzugewiesenen Tickets                           | *Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*<br/>Hier kannst du die Zeit einstellen, in welcher Tickets unbearbeitet sein müssen, bevor eine Erinnerung versendet wird. In welchem Format du Zeitangaben in SCNX einstellst, erfährst du [hier](https://docs.scnx.xyz/de/docs/custom-bot/additional-features/#durations). |
 | Unzugewiesene Ticketerinnerungsnachricht                                                | *Nur verfügbar, wenn "Erneut erwähnen, wenn ein Ticket noch keine Antwort von einem Teammitglied erhalten hat" aktiviert ist.*<br/>Hier kannst du die Nachricht anpassen, welche als Erinnerung für noch nicht bearbeitete Tickets versendet werden soll.                                                                                                                                                   |
+| Erinnerungen innerhalb der Öffnungszeiten senden?                                       | Wenn aktiviert, werden Erinnerungen auf den Beginn der konfigurierten [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) verschoben.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) aktiviert sind.*</blockquote></details></small> |
 
 ## Ticket-Pausierung {#ticket-hold}
 
@@ -224,7 +247,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Sperre den Kanal, damit Mitglieder während der ausstehenden Zuweisung in einer Pausierung nicht in den Kanal schreiben können.
 * Sobald ein Ticket pausiert ist, wird das [Automatische Ticket-Schließen](#auto-close-tickets) für dieses Ticket deaktiviert.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#ticket-hold-setup}
 
@@ -256,7 +279,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Konfiguriere verschiedene Nachrichten, um alles perfekt auf deinen Server abzustimmen.
 * Ändere den Typ deiner Ticket-ID-Generierung, um eine andere Variante für die Ticket-ID im Kanalnamen auszuwählen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#advanced-message-configuration-setup}
 
@@ -267,14 +290,25 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 
 |                                 Feld                                  |                                                                                                                                                                             Beschreibung                                                                                                                                                                             |
 | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ticket-Kanalname-Format                                               | In diesem Format wird dein Bot den Namen von neuen Ticket-Kanälen erstellen. Du kannst andere Formatierungen für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu [hier](/de/docs/support-bot/modmail/ticket-topics). |
-| Fehlermeldung: Nutzer hat bereits ein Ticket offen                    | *Nur gesendet, wenn [konfiguriert](#main-configuration-configuration).*<br/>Diese Nachricht wird dein Bot senden, wenn ein Nutzer versucht, ein weiteres Ticket zu öffnen, obwohl er noch ein aktives Ticket offen hat.                                                                                                                                              |
-| Fehler: Ticket nicht gefunden                                         | Diese Nachricht wird dein Bot senden, wenn ein Teammitglied versucht, ein Ticket zu [claimen](/de/docs/support-bot/modmail/claiming), welches aber bereits geschlossen oder gelöscht wurde.                                                                                                                                                                    |
-| Fehler: Befehl außerhalb von Ticketkanälen verwendet                  | Diese Nachricht wird dein Bot senden, wenn ein Teammitglied Ticket-Befehle außerhalb eines Ticket-Kanals ausführt.                                                                                                                                                                                                                                                   |
-| Ticket per Befehl Bestätigungsnachricht                               | Diese Nachricht wird dein Bot senden, wenn ein Nutzer versucht, ein neues Ticket mit ``/ticket open`` zu öffnen ([wenn konfiguriert](#main-configuration-configuration)).                                                                                                                                                                                            |
-| Fehler: Nicht genügend Rechte, um Nutzer zu einem Ticket hinzuzufügen | Diese Nachricht wird dein Bot senden, wenn ein Nutzer mit fehlenden Berechtigungen versucht, einen neuen Nutzer zum Ticket hinzuzufügen/entfernen ([wenn konfiguriert](#additional-ticket-members-configuration)).                                                                                                                                                   |
-| Fehler: Benutzer wurde bereits zum Ticket hinzugefügt                 | Diese Nachricht wird gesendet, wenn versucht wird, einen neuen Nutzer zum Ticket hinzuzufügen, welcher aber bereits Zugriff auf das Ticket besitzt.                                                                                                                                                                                                                  |
-| Ticket-ID-Generator                                                   | Diese ID wird dein Bot für den Ticket-Kanal-Namen verwenden.                                                                                                                                                                                                                                                                                                         |
+| Nutzer-Tipp-Weiterleitung an Team? | Wenn aktiviert, werden Tipp-Indikatoren des Nutzers in den Ticket-Kanal weitergeleitet. |
+| Vergangene-Tickets-Knopf anzeigen? | Wenn aktiviert, wird ein Knopf zum Anzeigen der vergangenen Tickets des Nutzers im Ticket-Kanal angezeigt. |
+| Team-Tipp-Weiterleitung an Nutzer? | Wenn aktiviert, werden Tipp-Indikatoren von Teammitgliedern an die DMs des Nutzers weitergeleitet. |
+| Nachricht-erhalten-Reaktion | Diese Reaktion wird zur Nachricht des Nutzers hinzugefügt, wenn sie im Ticket-Kanal empfangen wird. |
+| Team-an-Nutzer-Nachricht | Dieses Nachrichtenformat wird verwendet, wenn ein Teammitglied eine Nachricht an den Nutzer sendet. |
+| Anonyme Team-an-Nutzer-Nachricht | Dieses Nachrichtenformat wird verwendet, wenn ein Teammitglied eine anonyme Nachricht an den Nutzer sendet. |
+| Anonymes Team im Kanal | Dieses Nachrichtenformat wird im Ticket-Kanal angezeigt, wenn ein Teammitglied eine anonyme Nachricht sendet. |
+| Team im Kanal | Dieses Nachrichtenformat wird im Ticket-Kanal angezeigt, wenn ein Teammitglied eine Nachricht sendet. |
+| Nutzer an Team | Dieses Nachrichtenformat wird im Ticket-Kanal angezeigt, wenn ein Nutzer eine Nachricht sendet. |
+| Bearbeitete Nutzer-an-Team-Nachricht | Dieses Nachrichtenformat wird im Ticket-Kanal angezeigt, wenn ein Nutzer eine Nachricht bearbeitet. |
+| Gelöschte Nutzer-an-Team-Nachricht | Dieses Nachrichtenformat wird im Ticket-Kanal angezeigt, wenn ein Nutzer eine Nachricht löscht. |
+| Ticket-Kanalname-Format | In diesem Format wird dein Bot den Namen von neuen Ticket-Kanälen erstellen.<br/><small><details><summary>Hinweis</summary><blockquote>*Andere Formatierungen für verschiedene Ticket-Themen kannst du auf der Seite [Ticket-Themen](https://scnx.app/glink?page=support-system/modmail/ticket-topics) in deinem Dashboard festlegen, mehr Infos dazu [hier](/de/docs/support-bot/modmail/ticket-topics).*</blockquote></details></small> |
+| Fehlermeldung: Nutzer hat bereits ein Ticket offen | Diese Nachricht wird gesendet, wenn ein Nutzer versucht, ein weiteres Ticket zu öffnen, obwohl er noch ein aktives Ticket offen hat.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur gesendet, wenn "Insgesamt nur ein Ticket pro Nutzer erlauben" [aktiviert](#main-configuration-configuration) ist.*</blockquote></details></small> |
+| Fehler: Ticket nicht gefunden | Diese Nachricht wird gesendet, wenn ein Teammitglied versucht, ein Ticket zu [claimen](/de/docs/support-bot/modmail/claiming), welches aber bereits geschlossen oder gelöscht wurde. |
+| Fehler: Befehl außerhalb von Ticketkanälen verwendet | Diese Nachricht wird gesendet, wenn ein Teammitglied Ticket-Befehle außerhalb eines Ticket-Kanals ausführt. |
+| Ticket per Befehl Bestätigungsnachricht | Diese Nachricht wird gesendet, wenn ein Nutzer ein neues Ticket mit ``/ticket open`` öffnet.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur gesendet, wenn "Nutzern erlauben, Tickets per Befehl zu öffnen?" [aktiviert](#main-configuration-configuration) ist.*</blockquote></details></small> |
+| Fehler: Nicht genügend Rechte, um Nutzer zu einem Ticket hinzuzufügen | Diese Nachricht wird gesendet, wenn ein Nutzer mit fehlenden Berechtigungen versucht, einen Nutzer zum Ticket hinzuzufügen/entfernen.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur gesendet, wenn "Zusätzliche Ticketmitglieder erlauben?" [aktiviert](#additional-ticket-members-configuration) ist.*</blockquote></details></small> |
+| Fehler: Benutzer wurde bereits zum Ticket hinzugefügt | Diese Nachricht wird gesendet, wenn versucht wird, einen Nutzer hinzuzufügen, welcher bereits Zugriff auf das Ticket besitzt.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur gesendet, wenn "Zusätzliche Ticketmitglieder erlauben?" [aktiviert](#additional-ticket-members-configuration) ist.*</blockquote></details></small> |
+| Ticket-ID-Generator | Diese ID wird dein Bot für den Ticket-Kanal-Namen verwenden. |
 
 ## Statistik-Kanäle {#statistics-channels}
 
@@ -283,7 +317,7 @@ description: Stelle alle grundlegenden Funktionen für dein Modmail-System ein!
 * Stelle verschiedene Statistiken in unterschiedlichen Kanälen dar und gebe so Auskunft über dein modmail.
 * Füge deine Wunsch-Statistiken hinzu und passe den Kanal-Namen entsprechend an.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Einrichtung {#statistics-channels-setup}
 

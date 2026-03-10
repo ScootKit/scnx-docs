@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support Feedback
-description: Manage support feedback to further improve your members’ support experience.
+description: Collect star ratings and custom feedback from users after Modmail tickets are closed — with optional anonymization.
 ---
 
 # Support Feedback
@@ -13,7 +13,7 @@ description: Manage support feedback to further improve your members’ support 
 * Create your own questions and customize the messages.
 * Anonymize feedback to offer a more private feedback option.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
@@ -48,4 +48,3 @@ description: Manage support feedback to further improve your members’ support 
 | Is this field required? | If enabled, the user must fill out this field. |
 | Minimum input length | The minimum number of characters the user must enter to submit the dialog. |
 | Maximum input length | The maximum number of characters the user is allowed to enter to submit the dialog. |
-

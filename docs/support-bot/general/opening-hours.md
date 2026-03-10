@@ -12,7 +12,7 @@ description: Create and manage opening hours the way you like — holidays can a
 * Set your own opening hours for each day — multiple time ranges per weekday are also possible.
 * Automatically pause ticket handling on public holidays for your configured country/region, or add your own holidays.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

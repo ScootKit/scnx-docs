@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter-Guide
-description: Eine Anleitung für das Ticket-System, gemacht für dich und dein Team für einen optimalen Einstieg!
+description: Kompletter Starter-Guide für dein Discord-Ticket-System — lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
 ---
 
 # Starter-Guide (Ticket-System 101)
@@ -26,7 +26,7 @@ Falls Ticket-Themen eingerichtet sind, müssen diese sowohl in der Ticketöffnun
 
 Sobald ein Ticket erstellt wurde, erstellt dein Bot einen neuen Kanal in der festgelegten Kategorie, welche gegebenenfalls von Ticket-Thema zu Ticket-Thema varrieren kann.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Tickets zuweisen {#claim-tickets}
 
@@ -40,7 +40,7 @@ Dafür besuchst du den festgelegten Kanal in Discord und klickst unter der Nachr
 Alternativ kannst du auch direkt den Kanal des neuen Tickets besuchen und auf den Knopf unter der Zuweisungsnachricht klicken (die Nachricht im Benachrichtigungskanal wird ebenfalls gelöscht). 
 Falls du keine neuen Ticket-Kanäle siehst, wurde diese Option in deinem Ticket-System deaktiviert.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Nachrichten senden {#send-messages}
 
@@ -48,7 +48,7 @@ Sobald du Zugriff auf den Ticket-Kanal hast, kannst du abhängig von deinen Bere
 
 Da Tickets meist nicht nur aus normalen Nachrichten bestehen, zeigen wir dir unten noch weitere Funktionen, welche du in Ticket-Kanälen nutzen kannst.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Befehle verwenden {#use-commands}
 
@@ -78,7 +78,7 @@ Mithilfe der Blockierungsliste kannst du Nutzer vom gesamten Support-Bot sperren
 Wenn du einen Nutzer sperren möchtest, verwende den Befehl [``/blocklist add``](#use-commands) und wähle den enstprechenden Nutzer - optional kannst du den Grund und die Dauer der Sperre angeben.
 Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende den Befehl [``/blocklist remove``](#use-commands).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Formulare versenden {#send-forms}
 
@@ -88,7 +88,7 @@ Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/ticket 
 Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht ein Fehler in der Konfiguration. 
 Frage in diesem Fall beim Verantwortlichen deines Servers nach, damit dieser gegebenenfalls unseren Support kontaktieren kann.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Tickets pausieren {#hold-tickets}
 
@@ -96,7 +96,7 @@ Wenn ein Ticket weitergeleitet werden soll oder auf eine Antwort von einer ander
 um das Automatische Schließen des Tickets zu deaktivieren und den Kanal sperren zu lassen, wodurch bis zur Deaktivierung der Pausierung keine Nachrichten mehr versendet werden können.
 Zum Deaktivieren verwende ebenfalls den Befehl [``/ticket hold``](#use-commands).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Ticket-Namen umbenennen {#rename-tickets}
 
@@ -107,14 +107,14 @@ Bei einer Verschiebung in ein anderes Ticket-Thema wird der Name automatisch ge�
 Nachdem ein Ticket einmal umbenannt wurde, kann der Bot den Ticket-Namen bei einer Verschiebung in ein anderes Ticket-Thema nicht mehr automatisch ändern!
 :::
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Ticket-Thema ändern {#change-ticket-topic}
 
 Wenn ein Nutzer das falsche Thema für sein Ticket ausgewählt hat, kannst du es mit dem Befehl [``/ticket transfer``](#use-commands) einfach in das richtige Thema verschieben.
 Der Name wird dabei automatisch aktualisiert und das Ticket erneut zur Zuweisung freigegeben.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ### Nutzer hinzufügen und entfernen {#add-and-remove-users}
 
@@ -122,21 +122,21 @@ Um bestimmte Anliegen, die mehrere Personen betreffen, besser lösen zu können,
 wodurch diese (zusätzlich zum Teammitglied und Ersteller des Tickets) Zugriff auf den Ticket-Kanal erhalten.
 Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove``](#use-commands).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Tickets schließen {#close-tickets}
 
 Nachdem das Anliegen eines Nutzers gelöst ist, kannst du das Ticket entweder mit dem Befehl [``/ticket close``](#use-commands) oder dem Knopf unter der Ticket-Nachricht sofort schließen oder 
 das Schließen mit [``/ticket schedule-close``](#use-commands) nach einem bestimmten Zeitraum planen (das Automatische Schließen wird in diesem Fall deaktiviert).
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Support-Bewertungen {#support-feedback}
 
 Wenn Support-Bewertungen im Ticket-System deines Servers aktiviert sind, erhalten Nutzer nach Schließen des Tickets automatisch eine DM, wo sie eine Bewertung zum entsprechenden Ticket abgeben können.
 Diese Bewertung ist freiwillig und wird bei Beantwortung in den festgelegten Kanal gesendet, wo du dir deine Bewertung anschauen kannst.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Ticket-Logs {#ticket-logs}
 
@@ -145,7 +145,7 @@ Wenn dein Server KI-Zusammenfassungen aktiviert hat, siehst du in der Nachricht 
 Mit dem Knopf unter der Nachricht gelangst du entweder (falls aktiviert) auf eine Website von modmail.net (wo dir die Logs in einem schönen Web-Layout dargestellt werden) oder zu einer Textdatei, 
 welche du dir herunterladen kannst.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Fertig 🎉 {#done}
 

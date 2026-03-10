@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Ticket-Themen
-description: Erstelle und verwalte Ticket-Themen, um deine Tickets sauber voneinander zu trennen und weitere Vorteile zu aktivieren!
+description: Kategorisiere Modmail-Tickets mit Themen, leite sie an bestimmte Teams weiter, verlange Formulare und passe Nachrichten pro Thema an.
 ---
 
 # Ticket-Themen
@@ -14,7 +14,7 @@ description: Erstelle und verwalte Ticket-Themen, um deine Tickets sauber vonein
 * Ändere das Format des Kanalnamens, um beispielsweise mit unterschiedlichen Emojis die Ticket-Themen auf den ersten Blick zu erkennen.
 * Lege fest, ob Nutzer vor der Erstellung des jeweiligen Ticket-Themas ein konfiguriertes [Formular](/de/docs/support-bot/general/forms) ausfüllen müssen.
 
-<h4>Bilder Coming Soon ✨</h4>
+
 
 ## Einrichtung {#setup}
 
@@ -70,9 +70,7 @@ description: Erstelle und verwalte Ticket-Themen, um deine Tickets sauber vonein
 | Pinge Rollen beim Übertragen                                       | *Nur verfügbar, wenn "Teammitglieder können Tickets auf ein anderes Thema übertragen" [aktiviert](#main-configuration) ist.*<br/>Wenn aktiviert, werden die eingestellten Rollen bei der Verschiebung des Tickets in ein anderes Thema erneut erwähnt. |
 | Absendung von Formular vor Öffnen verlangen                        | Wenn aktiviert, muss der Nutzer zunächst ein [Formular](/de/docs/support-bot/general/forms) ausfüllen, bevor er ein Ticket dieses Themas erstellen kann.                                                                                               |
 | Formular, das ausgefüllt werden muss                               | *Nur verfügbar, wenn "Absendung von Formular vor Öffnen verlangen" aktiviert ist.*<br/>Dieses Formular muss der Nutzer vor Öffnen des Tickets ausfüllen.                                                                                               |
+| Willkommensnachricht bei Team-eröffnetem Ticket | Diese Nachricht wird gesendet, wenn ein Teammitglied ein Ticket im Namen eines Nutzers mit diesem Thema öffnet. Verwende eine andere Nachricht, um den Nutzer darüber zu informieren, dass ein Teammitglied die Konversation gestartet hat.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Mitarbeitern erlauben, Tickets im Namen eines Nutzers zu öffnen?" [aktiviert](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) ist.*</blockquote></details></small> |
 | Log-Channel überschreiben                                          | Dieser Kanal wird als Log-Kanal für dieses Ticket-Thema genutzt. Standardmäßig wird dein [voreingestellter Log-Kanal](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) verwendet.                                          |
 | Ticket-Kanalname überschreiben?                                    | Wenn aktiviert, kannst du einen eigenen Ticket-Kanalnamen für dieses Ticket-Thema festlegen.                                                                                                                                                           |
 | Ticket-Kanalname-Format                                            | Dieser Text wird für den Kanalnamen von Tickets mit diesem Thema genutzt. Standardmäßig wird dein [voreingestellter Ticket-Kanalname](/de/docs/support-bot/modmail/configuration#main-configuration-configuration) verwendet.                          |
-
-
-

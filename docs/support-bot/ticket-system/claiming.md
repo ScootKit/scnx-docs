@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Ticket Claiming
-description: Configure ticket claiming to keep your tickets organized as efficiently as possible!
+description: Assign Discord support tickets to team members, send claim notifications, hide unclaimed tickets, and rename channels on claim.
 ---
 
 # Ticket Claiming
@@ -13,7 +13,7 @@ description: Configure ticket claiming to keep your tickets organized as efficie
 * Lock the channel before a ticket is claimed.
 * Send assignment notifications to a channel to inform team members about new tickets.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
@@ -42,5 +42,6 @@ description: Configure ticket claiming to keep your tickets organized as efficie
 | --- | --- |
 | Pending assignment message | This message is sent to the ticket channel while the assignment is pending. |
 | Show claim button in the ticket | If enabled, a button to assign is added to the ticket message. |
+| Claim button text | This text is shown on the claim button under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Show claim button in the ticket" is enabled.*</blockquote></details></small> |
 | Assignment message | This message is sent to the ticket channel after a successful assignment. |
 | Team member ticket notification message | This message is sent to the [configured](#main-configuration) channel when a new ticket is created. |

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Ticket Topics
-description: Create and manage ticket topics to keep your tickets organized and unlock additional advantages.
+description: Categorize Discord support tickets with topics, set per-topic limits, require forms, customize buttons, and route tickets to specific teams.
 ---
 
 # Ticket Topics
@@ -14,7 +14,7 @@ description: Create and manage ticket topics to keep your tickets organized and 
 * Change the channel name format to recognize ticket topics at a glance (for example, by using different emojis).
 * Decide whether users must submit a configured [form](/docs/support-bot/general/forms) before creating a ticket for a specific topic.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
@@ -76,5 +76,7 @@ description: Create and manage ticket topics to keep your tickets organized and 
 | Transfer message | This message is sent to the ticket channel when a ticket with this ticket topic is transferred.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Send transfer message” is enabled.*</blockquote></details></small>                                                                        |
 | Override team member roles | These roles get access to tickets with this ticket topic and are mentioned when the ticket is created.<br/><small><details><summary>Note</summary><blockquote>*By default, your [configured roles](/docs/support-bot/ticket-system/configuration#main-configuration-configuration) are used.*</blockquote></details></small> |
 | Override log channel | This channel is used as the log channel for this ticket topic.<br/><small><details><summary>Note</summary><blockquote>*By default, your [configured log channel](/docs/support-bot/ticket-system/configuration#main-configuration-configuration) is used.*</blockquote></details></small>                                    |
+| Show transfer button in ticket message? | If enabled, a button to transfer the ticket to this topic is shown in the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Team members can transfer tickets to another topic” is [enabled](#main-configuration).*</blockquote></details></small> |
+| Transfer button text | This text is shown on the transfer button for this topic.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Show transfer button in ticket message?” is enabled.*</blockquote></details></small> |
 | Override ticket channel name format? | If enabled, you can set a custom name format for the ticket channel for this ticket topic.                                                                                                                                                                                                                                   |
 | Ticket channel name format | This text is used as the name for the ticket channel for tickets of this ticket topic.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if “Override ticket channel name format?” is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*By default, your [configured name for ticket channels](/docs/support-bot/ticket-system/configuration#main-configuration-configuration) is used.*</blockquote></details></small> |
