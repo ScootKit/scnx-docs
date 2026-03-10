@@ -15,7 +15,7 @@ description: Automatically calculate and display estimated wait times for your D
 * Override estimated wait time settings per ticket topic for more granular control.
 * View live estimated wait times per system and per topic directly in your dashboard.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

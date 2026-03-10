@@ -14,7 +14,7 @@ description: Categorize Discord support tickets with topics, set per-topic limit
 * Change the channel name format to recognize ticket topics at a glance (for example, by using different emojis).
 * Decide whether users must submit a configured [form](/docs/support-bot/general/forms) before creating a ticket for a specific topic.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

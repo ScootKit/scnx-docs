@@ -13,7 +13,7 @@ description: Assign Discord support tickets to team members, send claim notifica
 * Lock the channel before a ticket is claimed.
 * Send assignment notifications to a channel to inform team members about new tickets.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

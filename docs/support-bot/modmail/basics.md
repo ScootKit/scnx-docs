@@ -26,7 +26,7 @@ If ticket topics are set up, users must select a topic before opening a ticket.
 As soon as a ticket is created, your bot creates a new channel in the configured category.
 Messages sent by the user via DM will automatically appear in the ticket channel, and messages sent by team members in the ticket channel will be relayed to the user via DM.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Claim tickets {#claim-tickets}
 
@@ -39,7 +39,7 @@ To keep tickets better organized across team members, you first need to assign a
 To claim a ticket, use the ``/modmail claim`` command or the claim button (if enabled). After the ticket is assigned to you, other team members will be notified.
 If you want to remove your assignment, use ``/modmail remove-claim``. To assign a specific team member, use ``/modmail assign``.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Send messages {#send-messages}
 
@@ -47,7 +47,7 @@ As soon as you have access to the ticket channel, you can send messages to the u
 
 To send internal messages that are **not** relayed to the user, prefix your message with `!` (for example, `!This is an internal note`).
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Anonymous messages {#anonymous-messages}
 
@@ -57,7 +57,7 @@ While the identity of staff members won't be displayed to users when using anony
 
 [Snippets](#snippets) can also be sent anonymously by using `!!!<SnippetKey>` or the ``/as`` command.
 
-<h4>Images coming soon ✨</h4>
+
 
 <a id="use-commands"></a>
 
@@ -96,7 +96,7 @@ Using the blocklist, you can have users blocked from the entire Support-Bot. Thi
 If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user — optionally, you can provide the reason and the duration of the block.
 If you want to remove a user from the blocklist, use the command [``/blocklist remove``](#use-commands).
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Snippets {#snippets}
 
@@ -122,7 +122,7 @@ To manage snippets, the following commands are available to staff members:
 * `/modmail snippets preview key:<SnippetKey>` — Preview a snippet's content and details.
 * `/modmail snippets list [page:<Number>]` — List all available snippets with their usage counts.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Send forms {#send-forms}
 
@@ -131,7 +131,7 @@ So you don't always have to collect information manually, you can simply have us
 To send a form into a ticket channel, use the command [``/modmail form``](#use-commands) and select the relevant form from the list.
 If no form is in the list or a specific form isn't shown, it has either not been configured yet or there is an error in the configuration.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Pause tickets {#hold-tickets}
 
@@ -139,7 +139,7 @@ If a ticket needs to be forwarded or is waiting for a response from another part
 so automatic ticket closing is disabled and the channel is locked, which means no messages can be sent until pausing is disabled.
 To disable pausing, use the command [``/ticket hold``](#use-commands) again.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Rename tickets {#rename-tickets}
 
@@ -150,14 +150,14 @@ When moving to another ticket topic, the name is changed automatically if config
 Once a ticket has been renamed, the bot can no longer automatically change the ticket name when moving it to another ticket topic!
 :::
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Change ticket topic {#change-ticket-topic}
 
 If a user selected the wrong topic for their ticket, you can move it to the correct topic using the command [``/modmail transfer``](#use-commands).
 The name is updated automatically and the ticket is released for claiming again.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Add and remove users {#add-and-remove-users}
 
@@ -165,28 +165,28 @@ To handle certain requests that involve multiple people more easily, you can add
 which gives them access to the ticket channel (in addition to the team member and the ticket creator).
 If you want to remove users, use the command [``/ticket users remove``](#use-commands).
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Edit and delete messages {#edit-delete-messages}
 
 To edit a previously sent message, use the command [``/modmail edit``](#use-commands) and provide the team message ID.
 To delete a message, use [``/modmail delete``](#use-commands). If configured, staff members can also edit or delete each other's messages.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Close tickets {#close-tickets}
 
 After a user's request has been resolved, you can close the ticket either with the command [``/modmail close``](#use-commands) or the button under the ticket message.
 You can also schedule closing with [``/ticket close-schedule``](#use-commands) after a certain period of time.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Support feedback {#support-feedback}
 
 If support feedback is enabled in your server's Modmail system, users automatically receive a DM after the ticket is closed where they can leave feedback for that ticket.
 This feedback is optional and, if submitted, is sent to the configured channel where you can view the feedback.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Ticket logs {#ticket-logs}
 
@@ -195,7 +195,7 @@ If your server has AI summaries enabled, you'll also see a short summary of the 
 Using the button under the message, you'll either be taken to a modmail.net website (if enabled) where the logs are shown in a formatted web layout, or to a text file
 that you can download.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Done {#done}
 

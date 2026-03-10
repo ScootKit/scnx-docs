@@ -15,7 +15,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Enable AI summaries to receive an automatically generated summary after a ticket is closed.
 * Configure additional options to get full control over your ticket system.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#main-configuration-setup}
 
@@ -63,7 +63,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Send multiple ticket opening messages with different [ticket topics](/docs/support-bot/ticket-system/ticket-topics) into different channels to spread ticket creation across multiple channels.
 * Choose between buttons or dropdown menus for each message to provide the best user experience.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-open-messages-setup}
 
@@ -88,7 +88,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Allow tickets to be closed by the creator (instead of only by team members).
 * Enable close requests to prevent team members from closing tickets immediately.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-closing-setup}
 
@@ -132,7 +132,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Notify the user with a message about adding and removing users.
 * Add a button to the ticket message to add members with one click.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#additional-ticket-members-setup}
 
@@ -168,7 +168,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Send a warning before automatic closing to remind the user about their ticket.
 * Automatically mark tickets as resolved when the user leaves the server.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#auto-close-tickets-setup}
 
@@ -193,7 +193,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Send an automatic reminder when a team member is inactive in their ticket.
 * Mention tickets that haven’t been handled yet in your reminder channel to draw attention to unanswered tickets.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-reminders-setup}
 
@@ -223,7 +223,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Lock the channel so members can’t write in the channel while the ticket is on hold.
 * As soon as a ticket is on hold, [Auto close tickets](#auto-close-tickets) is disabled for that ticket.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-hold-setup}
 
@@ -255,7 +255,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Configure various messages to perfectly match your server.
 * Change the ticket ID generation type to use a different variant for the ticket ID in the channel name.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#advanced-message-configuration-setup}
 
@@ -282,7 +282,7 @@ description: Configure your Discord ticket system — categories, closing option
 * Display different statistics in different channels and provide information about your ticket system.
 * Add the statistics you want and adjust the channel name accordingly.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#statistics-channels-setup}
 

@@ -26,7 +26,7 @@ If ticket topics are set up, they must be selected both in the ticket opening me
 
 As soon as a ticket is created, your bot creates a new channel in the configured category, which may vary from ticket topic to ticket topic.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Claim tickets {#claim-tickets}
 
@@ -40,7 +40,7 @@ To do this, open the configured channel in Discord and click the "Claim ticket" 
 Alternatively, you can also open the channel of the new ticket directly and click the button under the assignment message (the message in the notification channel will also be deleted).
 If you don’t see any new ticket channels, this option has been disabled in your ticket system.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Send messages {#send-messages}
 
@@ -48,7 +48,7 @@ As soon as you have access to the ticket channel, you can send messages, emojis,
 
 Since tickets usually aren’t just regular messages, we’ll show you more features below that you can use in ticket channels.
 
-<h4>Images coming soon ✨</h4>
+
 
 <a id="use-commands"></a>
 
@@ -80,7 +80,7 @@ Using the blocklist, you can have users blocked from the entire Support-Bot. Thi
 If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user — optionally, you can provide the reason and the duration of the block.
 If you want to remove a user from the blocklist, use the command [``/blocklist remove``](#use-commands).
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Send forms {#send-forms}
 
@@ -90,7 +90,7 @@ To send a form into a ticket channel, use the command [``/ticket form``](#use-co
 If no form is in the list or a specific form isn’t shown, it has either not been configured yet or there is an error in the configuration.
 In that case, ask the person responsible for your server so they can contact our support if needed.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Pause tickets {#hold-tickets}
 
@@ -98,7 +98,7 @@ If a ticket needs to be forwarded or is waiting for a response from another part
 so automatic ticket closing is disabled and the channel is locked, which means no messages can be sent until pausing is disabled.
 To disable pausing, use the command [``/ticket hold``](#use-commands) again.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Rename tickets {#rename-tickets}
 
@@ -109,14 +109,14 @@ When moving to another ticket topic, the name is changed automatically if config
 Once a ticket has been renamed, the bot can no longer automatically change the ticket name when moving it to another ticket topic!
 :::
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Change ticket topic {#change-ticket-topic}
 
 If a user selected the wrong topic for their ticket, you can move it to the correct topic using the command [``/ticket transfer``](#use-commands).
 The name is updated automatically and the ticket is released for claiming again.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Add and remove users {#add-and-remove-users}
 
@@ -124,21 +124,21 @@ To handle certain requests that involve multiple people more easily, you can add
 which gives them access to the ticket channel (in addition to the team member and the ticket creator).
 If you want to remove users, use the command [``/ticket users remove``](#use-commands).
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Close tickets {#close-tickets}
 
 After a user’s request has been resolved, you can close the ticket either with the command [``/ticket close``](#use-commands) or the button under the ticket message right away, or
 schedule closing with [``/ticket schedule-close``](#use-commands) after a certain period of time (automatic closing is disabled in that case).
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Support feedback {#support-feedback}
 
 If support feedback is enabled in your server’s ticket system, users automatically receive a DM after the ticket is closed where they can leave feedback for that ticket.
 This feedback is optional and, if submitted, is sent to the configured channel where you can view the feedback.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Ticket logs {#ticket-logs}
 
@@ -147,7 +147,7 @@ If your server has AI summaries enabled, you’ll also see a short summary of th
 Using the button under the message, you’ll either be taken to a modmail.net website (if enabled) (where the logs are shown in a nice web layout) or to a text file
 that you can download.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Done 🎉 {#done}
 

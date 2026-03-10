@@ -14,7 +14,7 @@ description: Categorize Modmail tickets with topics, route them to specific team
 * Change the channel name format to recognize ticket topics at a glance (for example, by using different emojis).
 * Decide whether users must submit a configured [form](/docs/support-bot/general/forms) before creating a ticket for a specific topic.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
@@ -74,4 +74,3 @@ description: Categorize Modmail tickets with topics, route them to specific team
 | Override log channel | This channel is used as the log channel for this topic. By default, your [configured log channel](/docs/support-bot/modmail/configuration#main-configuration-configuration) is used. |
 | Override ticket channel name? | If enabled, you can define a custom ticket channel name for this topic. |
 | Ticket channel name format | This text is used for the channel name of tickets with this topic. By default, your [configured ticket channel name format](/docs/support-bot/modmail/configuration#main-configuration-configuration) is used. |
-

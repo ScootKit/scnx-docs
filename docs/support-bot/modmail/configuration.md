@@ -15,7 +15,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Enable AI summaries to receive an automatically generated summary after a ticket is closed.
 * Configure additional options to get full control over your modmail.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#main-configuration-setup}
 
@@ -71,7 +71,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Send multiple ticket opening messages with different [ticket topics](/docs/support-bot/modmail/ticket-topics) into different channels to spread ticket creation across multiple channels.
 * Choose between buttons or dropdown menus for each message to provide the best user experience.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-open-messages-setup}
 
@@ -101,7 +101,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Allow users to reopen archived tickets or let team members delete them manually.
 * Attach the ticket transcript to the log channel message for easy reference.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-closing-setup}
 
@@ -156,7 +156,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Notify the user with a message when users are added or removed.
 * Add a button to the ticket message so members can be added with one click.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#additional-ticket-members-setup}
 
@@ -192,7 +192,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Send a warning before automatic closing to remind the user about their ticket.
 * Automatically mark tickets as resolved when the user leaves the server.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#auto-close-tickets-setup}
 
@@ -217,7 +217,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Send an automatic reminder if a team member is inactive in their ticket.
 * Mention unhandled tickets in your reminder channel to draw attention to tickets without a response.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-reminders-setup}
 
@@ -247,7 +247,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Lock the channel so members cannot write while the ticket is on hold.
 * As soon as a ticket is on hold, <a href="#auto-close-tickets">Auto close tickets</a> is disabled for that ticket.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#ticket-hold-setup}
 
@@ -279,7 +279,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Configure various messages to perfectly match your server.
 * Change the ticket ID generation type to use a different variant for the ticket ID in the channel name.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#advanced-message-configuration-setup}
 
@@ -317,7 +317,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 * Display different statistics in different channels to provide information about your modmail.
 * Add the statistics you want and adjust the channel name accordingly.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#statistics-channels-setup}
 

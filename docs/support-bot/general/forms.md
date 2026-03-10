@@ -14,7 +14,7 @@ description: Create custom forms and modal dialogs for your Discord support tick
 * Optionally require form submission before users can continue in Modmail or the Ticket System.
 * Lock ticket channels until the form has been submitted (Ticket System only).
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

@@ -16,7 +16,7 @@ description: View Discord support ticket transcripts in a clean web interface wi
 * Optionally upload message attachments (images, files) to modmail.net for long-term storage.
 * Access transcripts from both Modmail and the Ticket System.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

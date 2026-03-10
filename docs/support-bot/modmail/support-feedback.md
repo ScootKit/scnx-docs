@@ -13,7 +13,7 @@ description: Collect star ratings and custom feedback from users after Modmail t
 * Create your own questions and customize the messages.
 * Anonymize feedback to offer a more private feedback option.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
@@ -48,4 +48,3 @@ description: Collect star ratings and custom feedback from users after Modmail t
 | Is this field required? | If enabled, the user must fill out this field. |
 | Minimum input length | The minimum number of characters the user must enter to submit the dialog. |
 | Maximum input length | The maximum number of characters the user is allowed to enter to submit the dialog. |
-

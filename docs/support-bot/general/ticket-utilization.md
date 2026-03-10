@@ -13,7 +13,7 @@ description: Monitor Discord support ticket capacity with a two-level warning sy
 * Configure global open ticket limits for each system (Modmail and Ticket System).
 * Override utilization settings per ticket topic for more granular control.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

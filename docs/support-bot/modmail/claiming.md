@@ -14,7 +14,7 @@ description: Assign Modmail tickets to team members, auto-assign on first respon
 * Lock the channel before a ticket is claimed so only the assigned team member can respond.
 * Configure whether non-assigned team members can view or write in claimed tickets.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

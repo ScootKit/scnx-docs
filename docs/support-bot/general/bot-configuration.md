@@ -14,7 +14,7 @@ description: Configure blocklist, status, branding, and staff commands for your 
 * Use blocklist slash commands in Discord to add or remove users with optional reasons and durations.
 * Adjust your bot's time zone for accurate opening hours, timestamps, and analytics.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#main-configuration-setup}
 
@@ -47,7 +47,7 @@ description: Configure blocklist, status, branding, and staff commands for your 
 * Define a custom status text that is displayed on your bot's profile.
 * Choose between activity types like "Playing", "Streaming", "Listening", "Watching", "Competing", or "Custom".
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#bot-configuration-setup}
 
@@ -68,7 +68,7 @@ description: Configure blocklist, status, branding, and staff commands for your 
 * Customize the default embed footer and image used across all bot messages.
 * Match your bot's branding to your server's identity for a professional look.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#bot-branding-setup}
 
@@ -90,7 +90,7 @@ description: Configure blocklist, status, branding, and staff commands for your 
 * Enable the `/summary` command for AI-powered ticket summaries using your server's AI credits.
 * Customize the messages displayed by the analytics and summary commands.
 
-<h4>Images coming soon ✨</h4>
+
 
 ### Setup {#staff-commands-setup}
 

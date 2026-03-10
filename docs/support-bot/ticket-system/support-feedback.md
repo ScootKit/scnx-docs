@@ -13,7 +13,7 @@ description: Collect star ratings and custom feedback from users after support t
 * Create your own questions and customize the messages.
 * Anonymize feedback to offer a more private feedback option.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 

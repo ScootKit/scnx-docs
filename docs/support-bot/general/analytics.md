@@ -18,7 +18,7 @@ description: Track your Discord support performance with detailed analytics, res
 * Filter analytics by system (Modmail, Ticket System, or combined) using tabs.
 * Use the `/analytics` slash command to view server-wide or personal analytics directly in Discord.
 
-<h4>Images coming soon ✨</h4>
+
 
 ## Setup {#setup}
 
