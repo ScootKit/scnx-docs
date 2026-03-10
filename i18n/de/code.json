@@ -38,6 +38,9 @@
   "main.mm": {
     "message": "Modmail Dokumentation"
   },
+  "main.sb": {
+    "message": "Support Bot Dokumentation"
+  },
   "features.one.header": {
     "message": "Lege einfach los und erweitere dein Wissen"
   },
