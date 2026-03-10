@@ -27,7 +27,7 @@ rund um die Uhr kostenlos gehostet und vollständig verwaltet über das [SCNX Da
 
 ## Funktionen im Überblick {#capabilities}
 
-* **[Moderations-Module](https://docs.scnx.xyz/de/docs/custom-bot/modules/moderation/) & Sicherheit** — Ein komplettes Moderations-Toolkit mit manuellen Befehlen, Auto-Moderation (Spam, Scam-Links, Wort-Blacklist, Anti-Raid), Verwarnungs-Eskalation, [Fortgeschrittenes Logging](/de/docs/custom-bot/modules/administration/logging/) und vielem mehr.
+* **[Moderations-Module](/de/docs/custom-bot/modules/moderation/) & Sicherheit** — Ein komplettes Moderations-Toolkit mit manuellen Befehlen, Auto-Moderation (Spam, Scam-Links, Wort-Blacklist, Anti-Raid), Verwarnungs-Eskalation, [Fortgeschrittenes Logging](/de/docs/custom-bot/modules/administration/logging/) und vielem mehr.
 * **[Leveling & XP](/de/docs/custom-bot/modules/community/levels/)** — Belohne aktive Mitglieder mit Erfahrungspunkten (XP) für Textnachrichten und Voice-Chats. Konfiguriere Rollen-Belohnungen, XP-Multiplikatoren, Ranglisten und individuelle Level-Kurven.
 * **[Economy](/de/docs/custom-bot/modules/community/economy-system/)** — Ein komplettes virtuelles Wirtschaftssystem mit Arbeit, Verbrechen, Überfällen, Bankwesen, täglichen Boni, Nachrichten-Drops und einem eigenen Server-Shop.
 * **[Ticket-System](/de/docs/custom-bot/modules/support/tickets/) & Support** — Ein Ticket-System mit mehreren Kategorien, Transkripten, [Forum Support](/de/docs/custom-bot/modules/support/forum-support/) und [Bewerbungen](/de/docs/custom-bot/modules/support/applications/) mit mehreren Abfragefeldern.
@@ -81,7 +81,7 @@ rund um die Uhr kostenlos gehostet und vollständig verwaltet über das [SCNX Da
 * [Eigene Befehle](/de/docs/custom-bot/custom-commands/) — Erstelle eigene Befehle und Automatisierungen
 * [Versende Nachrichten / Embeds, Self-Rollen & mehr](/de/docs/custom-bot/login-as-bot/) — Sende Nachrichten, Embeds und Self-Role-Zuweisungen als dein Bot.
 * [Berechtigungen & Slash Befehle](/de/docs/custom-bot/slash-commands/) — Befehlszugriff verwalten
-* [Eigener-Bot-Module](https://docs.scnx.xyz/de/docs/custom-bot/modules/) — Detaillierte Dokumentationen für jedes Modul
+* [Eigener-Bot-Module](/de/docs/custom-bot/modules/) — Detaillierte Dokumentationen für jedes Modul
 * [Bots auf SCNX](/de/docs/scnx/guilds/bots/) — Allgemeine Bot-Verwaltung (Profil, Status, Neustart)
 * [Erweiterte Custom-Bot Funktionen](/de/docs/custom-bot/additional-features/) — Farbwerte, Zeitdauern und weitere Referenz-Infos
 * [Globale Parameter](/de/docs/custom-bot/global-parameters/) — In jeder Nachrichten-Konfiguration verfügbare Parameter
