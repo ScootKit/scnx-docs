@@ -63,7 +63,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 <details>
   <summary>Streaks werden nicht erfasst</summary>
   <ul>
-    <li>Stelle sicher, dass der „Mitarbeiter-verwaltete Streaks“-Modus deaktiviert ist, wenn du das automatische Tracking nutzen möchtest.</li></li>
+    <li>Stelle sicher, dass der „Mitarbeiter-verwaltete Streaks“-Modus deaktiviert ist, wenn du das automatische Tracking nutzen möchtest.</li>
     <li>Überprüfe, ob der Nutzer in einem ignorierten Kanal postet oder eine ignorierte Rolle besitzt.</li>
     <li>Streak-Updates werden einmal pro Zeitraum geprüft – ein Nutzer muss nur eine Nachricht pro Zeitraum senden.</li>
   </ul>
