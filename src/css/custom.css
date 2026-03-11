@@ -156,10 +156,6 @@ a.card:hover {
     background: none !important;
 }
 
-.DocSearch-Logo a {
-    display: none !important;
-}
-
 .player-wrapper {
     position: relative;
     padding-top: 360px;
