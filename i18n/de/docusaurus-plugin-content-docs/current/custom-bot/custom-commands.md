@@ -1,6 +1,6 @@
 # Eigene Befehle
 
-Erstelle deine Eigenen Befehle, Knopf-Interaktionen, Dialog und nachrichtenbasierten Automatisierungen – alles über das SCNX-Dashboard, ganz ohne Programmieren.
+Erstelle deine Eigenen Befehle, Knopf-Interaktionen, Dialoge und nachrichtenbasierte Automatisierungen – alles über das SCNX-Dashboard, ganz ohne Programmieren.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
     STARTER: "Maximal 10 aktive Eigene Befehle gleichzeitig.",
@@ -233,7 +233,7 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
   <summary>Mein Knopf / Select-Menü-Druck-Befehl funktioniert nicht</summary>
   <ul>
     <li>Stelle sicher, dass du das Knopf- oder Select-Menü-Druck-Element mithilfe des Nachrichten-Editors an eine Nachricht angehängt und mit dem richtigen Eigenen Befehl verknüpft hast.</li>
-     <li>Stelle sicher, dass der Eigene Befehl <b>aktiviert</b>ist.</li>
+     <li>Stelle sicher, dass der Eigene Befehl <b>aktiviert</b> ist.</li>
     <li>Überprüfe, ob der Bot über die erforderlichen Berechtigungen im Kanal verfügt.</li>
   </ul>
 </details>
