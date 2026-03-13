@@ -97,4 +97,4 @@ Die folgenden Daten werden über jeden Nutzer mit einem aktiven oder vergangenen
 * Der Zeitstempel der letzten Wiederherstellung
 * Metadaten über den Eintrag (Erstellungsdatum und Zeitpunkt der letzten Aktualisierung)
 
-Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](de/docs/custom-bot/additional-features/#reset-module-database).
+Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database).
