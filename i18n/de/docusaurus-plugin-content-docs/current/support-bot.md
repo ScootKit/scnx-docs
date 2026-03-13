@@ -12,7 +12,7 @@ Bevor du loslegst, stelle sicher, dass
 
 * du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
 * dein Server ein aktives kostenpflichtiges SCNX-Abonnement (Unlimited oder Professional) hat. Der Support-Bot ist nicht im kostenlosen Starter-Plan verfügbar.
-* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
+* du der Besitzer, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator des Servers bist, auf dem du diese Funktion aktivieren möchtest.
 * du einige Minuten Zeit hast. Nach unserer Schätzung dauert die Einrichtung am Computer etwa zwei bis drei Minuten — am Handy könnte es etwas länger dauern. Stoppe nicht mittendrin; dein Fortschritt wird nicht gespeichert.
 
 ## 1. Erstelle deine Discord-Applikation & deinen Bot {#step-1}
@@ -21,7 +21,7 @@ Bevor du loslegst, stelle sicher, dass
 Verwende **keine** vorhandene Applikation. Du brauchst eine neue für deinen Support-Bot. SCNX unterstützt das gleichzeitige Verwenden von Support-Bot, Eigenem Bot oder einem weiteren Drittanbieter-Bot mit demselben Token / Applikation nicht — bitte erstelle eine neue für jeden Bot.
 :::
 
-Als Erstes, besuche das [Discord-Developer-Portal](https://discord.com/developers/applications). Dort kannst du eine neue Applikation erstellen, indem du auf "New Application" auf der oberen rechten Seite klickst. Gib den Namen der Applikation ein (kannst du später ändern), lies & stimme den [Discord-Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/terms-of-service) und der [Discord-Entwickler-Vereinbarung](https://discord.com/developers/docs/policies-and-agreements/developer-policy) zu und bestätige mit "Create".
+Als Erstes besuche das [Discord-Developer-Portal](https://discord.com/developers/applications). Dort kannst du eine neue Applikation erstellen, indem du auf "New Application" auf der oberen rechten Seite klickst. Gib den Namen der Applikation ein (den kannst du später ändern), lies und stimme den [Discord-Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/terms-of-service) und der [Discord-Entwickler-Vereinbarung](https://discord.com/developers/docs/policies-and-agreements/developer-policy) zu und bestätige mit "Create".
 
 ![Erstellen einer neuen Applikation im Discord-Developer-Portal](@site/docs/assets/setup/custom-bot-1.png)
 
@@ -30,7 +30,7 @@ Als Erstes, besuche das [Discord-Developer-Portal](https://discord.com/developer
 ![Kopieren des Bot-Tokens im Discord-Developer-Portal](@site/docs/assets/setup/custom-bot-3.png)
 
 :::danger
-Füge deinen Token **nur** im SCNX-Dashboard ein. Sende **niemals** einen Token zu einem anderen Nutzer, Trusted Admins oder einem unserer Teammitglieder. Geh mit Tokens wie mit einem Passwort um — Nutzer mit Zugriff auf deinen Token können deinen Bot verwenden, um schädliche Aktionen auszuführen.
+Füge deinen Token **nur** im SCNX-Dashboard ein. Sende **niemals** einen Token an einen anderen Nutzer, Trusted Admins oder eines unserer Teammitglieder. Geh mit Tokens wie mit einem Passwort um — Nutzer mit Zugriff auf deinen Token können deinen Bot verwenden, um schädliche Aktionen auszuführen.
 :::
 
 ## 2. Bot auf SCNX einrichten {#step-2}
@@ -82,7 +82,7 @@ In diesem Schritt konfigurierst du die grundlegenden Modmail-Einstellungen. Du k
 
 ### Info-Nachricht (optional) {#modmail-info-message}
 
-Du kannst optional eine Info-Nachricht in einem Kanal deiner Wahl posten, um Nutzer darüber zu informieren, dass sie dem Bot eine DM für Support schreiben können. Aktiviere diese Option, wenn der Bot automatisch eine Nachricht wie diese posten soll:
+Du kannst optional eine Info-Nachricht in einem Kanal deiner Wahl posten, um Nutzer darüber zu informieren, dass sie dem Bot eine DM für Support senden können. Aktiviere diese Option, wenn der Bot automatisch eine Nachricht wie diese posten soll:
 
 > **Brauchst du Hilfe?**
 > Sende eine Direktnachricht an diesen Bot, um ein Support-Ticket zu öffnen. Unser Team wird sich so schnell wie möglich bei dir melden.
@@ -108,9 +108,9 @@ In diesem Schritt richtest du das kanalbasierte Ticket-System ein. Du kannst die
 
 ### Ticket-Öffnen-Nachricht (erforderlich) {#ticket-open-message}
 
-Das Ticket-System benötigt eine Nachricht mit einem Button, über den Nutzer Tickets öffnen können. Du musst konfigurieren:
+Das Ticket-System benötigt eine Nachricht mit einem Button, über den Nutzer Tickets öffnen können. Du musst Folgendes konfigurieren:
 
-* **Kanal** — der Kanal, in dem der "Ticket öffnen"-Button gepostet wird. Dies ist typischerweise ein Support- oder Hilfe-Kanal, der für alle Mitglieder sichtbar ist.
+* **Kanal** — der Kanal, in dem der "Ticket öffnen"-Button gepostet wird. Das ist üblicherweise ein Support- oder Hilfe-Kanal, der für alle Mitglieder sichtbar ist.
 * **Button-Beschriftung** — der Text auf dem Button (Standard: "Ticket öffnen").
 * **Nachrichteninhalt** — passe die Embed-Nachricht an, die über dem Button angezeigt wird. Die Standardnachricht ist:
 
@@ -146,7 +146,7 @@ Funktionen, die bereits konfiguriert sind, zeigen ein **"Bereits konfiguriert"**
 
 Sobald du die Einrichtung abgeschlossen hast, siehst du einen Bestätigungsbildschirm, der alles zeigt, was konfiguriert wurde. Klicke auf **Zum Dashboard**, um deine [Support-Bot-Verwaltungsseite](https://scnx.app/de/glink?page=support-system/manage) zu öffnen.
 
-Hier sind einige Dinge, die du als Nächstes tun kannst:
+Hier einige Dinge, die du als Nächstes tun kannst:
 
 * Teile den [Modmail-Leitfaden](/docs/support-bot/modmail/basics) oder das [Ticket-System 101](/docs/support-bot/ticket-system/basics) mit deinem Team.
 * Richte [Ticket-Themen](https://scnx.app/de/glink?page=support-system/modmail/ticket-topics) ein, um eingehende Tickets zu organisieren.
@@ -156,5 +156,5 @@ Hier sind einige Dinge, die du als Nächstes tun kannst:
 * Entdecke alle Optionen in der [Support-Bot-Dokumentation](/docs/support-bot/intro).
 
 :::tip Es läuft nicht alles wie geplant?
-Wir haben einen [Leitfaden zur Fehlerbehebung](/docs/support-bot/troubleshooting) für dich. Wenn das nicht geholfen hat, wir sind immer da, um zu helfen — besuche einfach [scnx.app/de/help](https://scnx.app/de/help).
+Wir haben einen [Leitfaden zur Fehlerbehebung](/docs/support-bot/troubleshooting) für dich. Wenn das nicht geholfen hat, sind wir immer da, um zu helfen — besuche einfach [scnx.app/de/help](https://scnx.app/de/help).
 :::
