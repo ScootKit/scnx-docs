@@ -49,6 +49,11 @@ not in the SCNX Dashboard. See the [Slash Commands & Permissions guide](/docs/cu
 may take up to 24 hours for new commands to appear in Discord. The command must be enabled first.
 :::
 
+:::tip
+Custom slash commands automatically appear as their own **"Custom Commands"** group in the `/help` command, making them
+easier for your server members to discover.
+:::
+
 ### Button or Select Menu Click {#trigger-button}
 
 The command runs when a user clicks a button or selects an option from a select menu attached to a message.

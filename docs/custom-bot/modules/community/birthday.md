@@ -12,6 +12,7 @@ Let users set their birthday and congratulate them when they have a birthday.
 * Optionally assign a birthday role to users on their birthday (removed automatically the next day).
 * If a user provides their birth year, the congratulation message can include their age.
 * Birthday data is automatically removed when a member leaves the server.
+* Optional admin birthday management: admins can set, remove, lock, and unlock user birthdays.
 
 ## Setup {#setup}
 
@@ -27,6 +28,19 @@ Users can interact with the birthday module using the following commands:
 * Use `/birthday status` to view their currently registered birthday.
 * Use `/birthday delete` to remove their birthday from the calendar.
 
+### Admin birthday management {#admin-management}
+
+If enabled in the [configuration](#configuration), admins can use the `/manage-birthday` command to manage user birthdays:
+
+* **Set** a user's birthday.
+* **Remove** a user's birthday.
+* **Lock** a birthday — prevents the user from editing or deleting it themselves.
+* **Unlock** a previously locked birthday.
+
+Locked birthdays show a lock indicator when users view their own birthday status.
+
+### Automatic birthday checks
+
 Every day at midnight, the bot checks for birthdays and:
 1. Sends a congratulation message for each user whose birthday is today.
 2. Assigns the configured birthday role (if set) and removes it from users whose birthday has passed.
@@ -41,6 +55,10 @@ Every day at midnight, the bot checks for birthdays and:
 | `/birthday set day:<Integer> month:<Integer> [year:<Integer>]` | Register your birthday. Day and month are required. The year is optional but allows the bot to display your age. Users under 13 cannot register a birth year (Discord ToS compliance). |
 | `/birthday status` | View your currently registered birthday and age (if birth year was provided). |
 | `/birthday delete` | Remove your birthday from the calendar. |
+| `/manage-birthday set user:<User> day:<Integer> month:<Integer> [year:<Integer>]` | Set a user's birthday. Requires admin birthday management to be enabled. |
+| `/manage-birthday remove user:<User>` | Remove a user's birthday. Requires admin birthday management to be enabled. |
+| `/manage-birthday lock user:<User>` | Lock a user's birthday, preventing them from editing or deleting it. Requires admin birthday management to be enabled. |
+| `/manage-birthday unlock user:<User>` | Unlock a previously locked birthday. Requires admin birthday management to be enabled. |
 
 ## Configuration {#configuration}
 
@@ -57,6 +75,7 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | "Successfully changed"-Message | The message shown when a user successfully registers or updates their birthday. |
 | Birthday-Embed | Customize the appearance (title, description, color, thumbnail, image) of the birthday embed. |
 | Use User's Tags instead of their Mention | If enabled, user tags will be displayed in the birthday embed instead of mentions. Recommended for large servers. |
+| Enable admin birthday management? | If enabled, the `/manage-birthday` command becomes available for server admins to set, remove, lock, and unlock user birthdays. |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -84,6 +103,7 @@ The following data is being stored about every registered birthday:
 * The Discord User ID of the member
 * The birthday day and month
 * The birth year (if provided by the user)
+* Whether the birthday is locked (if admin management is enabled)
 * Metadata about the entry (date when created and last updated)
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

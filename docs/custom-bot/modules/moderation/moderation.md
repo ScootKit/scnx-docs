@@ -9,7 +9,8 @@ Advanced security and moderation system with tons of features for keeping your s
 * Comprehensive moderation commands: [warn](#warn), [mute](#mute), [kick](#kick), [ban](#ban), [quarantine](#quarantine), [channel-mute](#channel-mute), and [clear](#clear).
 * Support for temporary bans, mutes, and quarantines with automatic expiration.
 * [Channel lock and unlock](#lock-unlock) commands to restrict messaging in a channel.
-* [Server-wide lockdown](#lockdown) system that locks all channels at once, with automatic triggers.
+* [Server-wide lockdown](#lockdown) system that locks all channels at once, with automatic triggers. Optionally send lockdown messages to specific channels only.
+* Smarter invite detection: Discord invite links are resolved before taking action, and invites to your own server are automatically allowed.
 * [User reporting](#report) system that allows members to report other users with proof.
 * [Moderator notes](#notes) system to track information about users.
 * View all moderation [actions history](#actions) for any user.
@@ -85,6 +86,8 @@ The lockdown system allows you to lock all channels in the server at once. This 
 
 When a lockdown is activated, the bot saves the current permission state of all channels, then revokes send-message permissions for the @everyone role. When the lockdown is lifted, the original permissions are restored. An optional auto-lift timer can automatically end the lockdown after a specified number of minutes.
 
+You can optionally configure specific channels where lockdown and lift messages are sent instead of sending them in every affected channel. Permissions are still changed in all channels regardless of this setting.
+
 ### Reporting {#report}
 
 Any user can report another user using the `/report` command. The report includes the reason, an optional proof attachment, and an encrypted snapshot of the current messages in the channel. Reports are sent to the configured report channel (or the log channel if no report channel is set). Configured roles are pinged when a report is received.
@@ -151,6 +154,7 @@ In this configuration file, you set up the core moderation settings. Open it in 
 | Level of Scam-Link-Detection | "confirmed" only filters verified scam domains; "suspicious" may include non-harmful domains. |
 | Whitelisted channels for invite-ban | Channels or categories where invite blocking is disabled. |
 | Whitelisted roles for invite-ban | Roles that are allowed to bypass invite blocking. |
+| Allowed invite guild IDs | Server IDs whose invite links are allowed and will not trigger moderation. Invites to your own server are always allowed automatically. |
 | Blacklisted words | Words that are blocked in messages. |
 | Action on blacklisted Word | Action taken when a user posts a blacklisted word. |
 | Automod | Define automatic actions (mute, kick, ban, quarantine) based on warning count. Format: key = number of warns, value = action (optionally with duration, e.g., "ban:7d"). |
@@ -250,7 +254,8 @@ In this configuration file, you set up the server-wide lockdown system. Open it 
 |-------|-------------|
 | Enable lockdown system? | Enables the `/moderate lockdown` command and automatic lockdown triggers. |
 | Lockdown log channel | Channel for detailed lockdown log entries. Falls back to the moderation log channel if not set. |
-| Send message in affected channels? | If enabled, a message is sent in every affected channel when lockdown is activated or lifted. |
+| Send message in affected channels? | If enabled, a message is sent in affected channels when lockdown is activated or lifted. |
+| Channels for lockdown messages | Specific text channels where lockdown and lift messages are sent. Leave empty to send messages in all affected channels. Permissions are still changed in all channels regardless of this setting. |
 | Lockdown activation message | Message sent in affected channels when lockdown is activated. Supports `%reason%` and `%user%`. |
 | Lockdown lifted message | Message sent in affected channels when lockdown is lifted. Supports `%user%`. |
 | Auto-lift lockdown after (minutes, 0 = manual only) | Automatically lift the lockdown after the specified number of minutes. Set to 0 for manual-only. |

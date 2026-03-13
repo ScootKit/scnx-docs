@@ -13,6 +13,8 @@ Reward users for being active every day, week, or month with an activity score t
 * Staff-managed mode allows moderators to manually add and reset streaks instead of automatic tracking.
 * Users can restore a lost streak once per loss (if enabled).
 * Longest streak is tracked separately and never resets.
+* Leaderboard showing the top 20 active streaks on your server.
+* Users can opt out of displaying their streak in their nickname.
 
 ## Setup {#setup}
 
@@ -38,8 +40,11 @@ Reward users for being active every day, week, or month with an activity score t
 |---------|-------------|
 | `/streak view [user:<User>]` | View your own or another user's current and longest streak. |
 | `/streak add user:<User>` | Manually add a streak point to a user. Only available in staff-managed mode. Requires a configured staff role. |
-| `/streak reset user:<User>` | Reset a user's streak to zero. Only available in staff-managed mode. Requires a configured staff role. |
+| `/streak remove user:<User>` | Subtract one from a user's streak count. Useful for correcting mistakes without fully resetting. Only available in staff-managed mode. Requires a configured staff role. |
+| `/streak reset user:<User>` | Fully reset a user's streak, clearing both the current streak and any saved backup, and removing all streak-related roles. Only available in staff-managed mode. Requires a configured staff role. |
 | `/streak restore [user:<User>]` | Restore a previously lost streak. Only available if streak restoration is enabled. Can only be used once per streak loss. |
+| `/streak leaderboard` | Show the top 20 active streaks on the server. Available in both staff-managed and automatic modes. |
+| `/streak hide` | Toggle whether your streak is displayed in your nickname. Only available when nickname display is enabled and the "Allow users to hide streak from nickname?" option is turned on. |
 
 ## Configuration {#configuration}
 
@@ -51,6 +56,7 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Staff Managed | If enabled, streaks are managed manually by staff instead of being tracked automatically from messages. |
 | Staff Roles | Roles that are allowed to manage streaks using the add and reset commands. Only applies when staff-managed mode is enabled. |
 | Show streak in nickname | If enabled, the bot appends the user's current streak count to their nickname. |
+| Allow users to hide streak from nickname? | If enabled, users can use `/streak hide` to toggle whether their streak is shown in their nickname. Only available when "Show streak in nickname" is enabled. |
 | Streak Roles | Role rewards for reaching specific streak milestones. The key is the streak count and the value is the role to assign. |
 | Streak View Message | Customize the embed displayed when viewing a streak. |
 | Ignored Channels | Channels where messages do not count toward streaks. |
