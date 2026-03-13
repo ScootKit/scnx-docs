@@ -49,7 +49,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 |-------|-------------|
 | Streak-Zeitraum | Wie oft Nutzer aktiv sein müssen, um ihren Streak aufrechtzuerhalten: täglich, wöchentlich oder monatlich. |
 | Mitarbeiter-verwaltete Streaks? | Falls aktiviert, werden Streaks manuell vom Team verwaltet, anstatt automatisch über Nachrichten erfasst zu werden. |
-| Mitarbeiter-Rollen (für mitarbeiter-verwalteten Modus) | Rollen, die berechtigt sind, Streaks über die Befehle „add“ und „reset“ zu verwalten. Dies gilt nur, wenn der „Von Mitarbeiter-verwaltete Streaks?“-Modus aktiviert ist. |
+| Mitarbeiter-Rollen (für mitarbeiter-verwalteten Modus) | Rollen, die berechtigt sind, Streaks über die Befehle „add“ und „reset“ zu verwalten. Dies gilt nur, wenn der „Mitarbeiter-verwaltete Streaks?“-Modus aktiviert ist. |
 | Streak im Nicknamen anzeigen? | Falls aktiviert, hängt der Bot die aktuelle Streak-Anzahl des Nutzers an dessen Nicknamen an. |
 | Streak-Belohnungsrollen | Rollenbelohnungen für das Erreichen bestimmter Streak-Meilensteine. Die „Ganze Zahl“ ist die Streak-Anzahl und „Rolle wählen“ ist die zuzuweisende Rolle. |
 | Streak-Anzeigungs-Nachricht | Passe das Embed an, das beim Aufrufen eines Streaks angezeigt wird. |
@@ -97,4 +97,4 @@ Die folgenden Daten werden über jeden Nutzer mit einem aktiven oder vergangenen
 * Der Zeitstempel der letzten Wiederherstellung
 * Metadaten über den Eintrag (Erstellungsdatum und Zeitpunkt der letzten Aktualisierung)
 
-Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/docs/custom-bot/additional-features/#reset-module-database).
+Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](de/docs/custom-bot/additional-features/#reset-module-database).
