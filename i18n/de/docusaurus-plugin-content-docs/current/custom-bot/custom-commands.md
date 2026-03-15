@@ -44,6 +44,10 @@ Falls diese Grenze überschritten wird, kann die Funktionalität deines Bots bee
 Berechtigungen für Slash-Befehle werden in deinen Discord-Servereinstellungen verwaltet (Servereinstellungen → Integrationen → Bots und Apps) und nicht im SCNX-Dashboard. Siehe dir dazu gerne unsere [Berechtigungen & Slash Befehle Dokumentation](/de/docs/custom-bot/slash-commands/) für weitere Informationen an. Es kann bis zu 24 Stunden dauern, bis neue Befehle in Discord angezeigt werden. Stelle sicher, dass der Befehl zuvor aktiviert wurde.
 :::
 
+:::tip
+Benutzerdefinierte Slash-Befehle werden automatisch als eigene Gruppe „Eigene Befehle“ im `/help`-Befehl angezeigt, sodass sie für deine Servermitglieder leichter zu finden sind.
+:::
+
 ### Knopf oder Select-Menü-Druck {#trigger-button}
 
 Der Befehl wird ausgeführt, wenn ein Nutzer auf eine Schaltfläche (Button) klickt oder eine Option aus einem Auswahlmenü (Select Menu) einer Nachricht auswählt.
