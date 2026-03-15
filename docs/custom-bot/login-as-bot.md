@@ -27,6 +27,16 @@ If your bot is offline or has core issues, you won't be able to use Bot Log-In. 
 [troubleshooting guide](/docs/custom-bot/troubleshooting) if your bot isn't starting.
 :::
 
+:::warning
+To use Bot Log-In, you must be a **member of the Discord server** and have the required **Discord permissions** on each
+channel you want to interact with. Users who are not members of the server will not be able to use this feature.
+Server owners and members with the **Administrator** permission have access to all channels automatically. For other
+members, the following channel permissions are required:
+
+* **Sending or editing a message**: `View Channel` and `Send Messages`
+* **Viewing messages in a channel**: `View Channel`, `Read Message History`, and `Send Messages`
+:::
+
 ## Sending a message {#send-message}
 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).

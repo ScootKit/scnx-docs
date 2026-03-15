@@ -12,6 +12,7 @@ Select a number and let your users guess.
 * Optional higher/lower hint reactions on wrong guesses.
 * Configurable start and end messages.
 * Channel locking after a game ends (in non-game-channel mode) to prevent further messages.
+* Optional leaderboard tracking player statistics (guesses and wins) with a top 20 ranking.
 
 ## Setup {#setup}
 
@@ -59,6 +60,7 @@ In this configuration file, you can configure the game behavior and messages. Op
 | Start-Message | Message sent at the beginning of a new game round. |
 | End-Message | Message sent when a game round ends and a winner is found. |
 | React with Lower / Higher reactions | If enabled, the bot reacts with up/down arrows on wrong guesses to indicate whether the correct number is higher or lower. If disabled, wrong guesses receive a cross reaction. |
+| Enable leaderboard? | If enabled, every guess and every win is tracked per user. A **Leaderboard** button appears on new game start messages, and players can view the top 20 players ranked by wins. |
 
 ### Gamechannel Mode {#config-channel}
 
@@ -104,5 +106,11 @@ The following data is being stored about every game session:
 * The total number of guesses
 * Whether the game has ended
 * Metadata about the entry (date when created and last updated)
+
+When the leaderboard is enabled, the following additional data is stored per user:
+
+* The Discord User ID
+* Total number of guesses
+* Total number of wins
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
