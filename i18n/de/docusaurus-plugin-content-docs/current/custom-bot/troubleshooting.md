@@ -20,7 +20,7 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
 ### Der Bot reagiert nicht auf Befehle {#not-responding}
 
 <details>
-  <summary>Der Bot reagiert auf keine Slash-Commands</summary>
+  <summary>Der Bot reagiert auf keine Slash-Befehle</summary>
   <ul>
     <li>Vergewissere dich, dass der Bot-Status auf „Online“ steht. (siehe <a href="#bot-offline">Der Bot wird auf Discord nicht als online angezeigt</a>).</li>
     <li>Stelle sicher, dass der Bot mit den korrekten Berechtigungen auf deinen Server eingeladen wurde. Lade den Bot erneut über dein <a href="https://scnx.app/de/glink?page=bot/manage">Dashboard</a> ein, falls benötigt.</li>
@@ -37,7 +37,7 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
   <ul>
     <li>Stelle sicher, dass das Modul, welches den Befehl bereitstellt, in deinem <a href="https://scnx.app/de/glink?page=bot/modules">Dashboard</a> aktiviert ist.</li>
     <li>Lade nach dem Aktivieren eines Moduls die Konfiguration deines Bots neu oder starte den Bot neu.</li>
-    <li>Discord kann bis zu einer Stunde benötigen, um Slash-Commands überall zu synchronisieren. Versuche, deinen Discord-Client neu zu starten.</li>
+    <li>Discord kann bis zu einer Stunde benötigen, um Slash-Befehle überall zu synchronisieren. Versuche, deinen Discord-Client neu zu starten.</li>
     <li>Stelle sicher, dass der Bot über die <code>applications.commands</code> Berechtigungen verfügt. Du kannst dies überprüfen, indem du den Bot über dein Dashboard erneut einlädst.</li>
     <li>Prüfe in deinen Discord-Servereinstellungen, ob der Befehl auf bestimmte Rollen oder Kanäle beschränkt ist (Servereinstellungen > Integrations > Dein Bot).</li>
   </ul>
@@ -47,7 +47,7 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
 
 ### Missing Access / Missing Permissions {#missing-access}
 
-Viele Probleme mit dem Custom-Bot werden durch fehlende Berechtigungen verursacht. Wenn der Bot nicht wie erwartet funktioniert, zeigt der Fehler-Log in deinem Dashboard oft Fehler wie „Missing Access“ oder „Missing Permissions“ an.
+Viele Probleme mit dem Eigenen-Bot werden durch fehlende Berechtigungen verursacht. Wenn der Bot nicht wie erwartet funktioniert, zeigt der Fehler-Log in deinem Dashboard oft Fehler wie „Missing Access“ oder „Missing Permissions“ an.
 
 Hier findest du die häufigsten Probleme mit Berechtigungen und deren Lösungen:
 
