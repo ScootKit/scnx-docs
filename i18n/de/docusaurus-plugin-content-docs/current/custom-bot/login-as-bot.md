@@ -22,13 +22,13 @@ Als Bot anmelden ermöglicht es dir, die Nachrichten deines Bots direkt über da
 3. Dein Bot benötigt die Berechtigungen **Kanal anzeigen** und **Nachrichten senden** in jedem Kanal, in den du Nachrichten verschicken möchtest.
 
 :::caution
-Falls dein Bot offline ist oder kritische Probleme aufweist, kannst du Als Bot anmelden nicht nutzen. Sieh dir die [Fehlerbehebungs-Dokumentation](/de/docs/custom-bot/troubleshooting/)  an, falls dein Bot nicht startet.
+Falls dein Bot offline ist oder kritische Probleme aufweist, kannst du Als Bot anmelden nicht nutzen. Sieh dir die [Fehlerbehebungs-Dokumentation](/de/docs/custom-bot/troubleshooting/) an, falls dein Bot nicht startet.
 :::
 
 ## Versenden einer Nachricht {#send-message}
 
-1. Öffne die Seite [Als Bot anmelden](https://scnx.app/de/glink?page=bot/login) auf deinem SCNX-Dashboard.
-2. Wähle den Kanal, in den du die Nachricht senden möchtest, aus der Kanalliste auf der linken Seite aus.
+1. Öffne die Seite [Als Bot anmelden](https://scnx.app/de/glink?page=bot/login) in deinem SCNX-Dashboard.
+2. Wähle den Kanalaus der Kanalliste auf der linken Seite aus, in den du die Nachricht senden möchtest.
 3. Verfasse deine Nachricht mit dem Nachrichten-Editor. Folgende Optionen stehen dir zur Verfügung:
     * Schreibe reinen Text in das Nachrichtenfeld.
     * Füge ein oder mehrere Embeds mit benutzerdefiniertem Titel, Beschreibung, Farbe, Feldern, Bildern, Fußzeile und mehr hinzu.
