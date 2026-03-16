@@ -1,4 +1,4 @@
-# Status-Roles
+# Status-Rollen
 
 Ein einfaches Modul, um Nutzer mit Rollen zu belohnen, die bestimmte Wörter in ihrem benutzerdefinierten Discord-Status haben.
 
@@ -40,6 +40,6 @@ Dies ist die Konfigurationsdatei für das Modul. Öffne sie in deinem [Dashboard
 
 ## Fehlerbehebung {#troubleshooting}
 
-* **Rollen werden nicht zugewiesen**:Stelle sicher, dass der Bot über die Berechtigung „Rollen verwalten“ verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob die Wörter in der Konfiguration mit denen übereinstimmen, die Nutzer in ihrem benutzerdefinierten Status haben.
+* **Rollen werden nicht zugewiesen**: Stelle sicher, dass der Bot über die Berechtigung „Rollen verwalten“ verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob die Wörter in der Konfiguration mit denen übereinstimmen, die Nutzer in ihrem benutzerdefinierten Status haben.
 * **Rollen werden entfernt, wenn Nutzer offline gehen**: Aktiviere die Option „Rollen von Offline-Nutzern nicht entfernen“ in der Konfiguration. Wenn Nutzer offline gehen, entfernt Discord deren Statusinformationen, was den Bot zu der Annahme führt, dass die Bedingungen nicht mehr erfüllt sind.
 * **Das Modul scheint keine Statusänderungen zu erkennen**: Stelle sicher, dass der „Presence Intent“ für deinen Bot aktiviert ist. Auf SCNX ist dieser standardmäßig aktiviert.
