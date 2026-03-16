@@ -1,5 +1,7 @@
 # Setup your Modmail-Bot
 
+<OutdatedWarning type="MODMAIL_V2"/>
+
 Set up the world's most advanced Modmail-Bot in just a few minutes.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: false}} additionalDetails={{

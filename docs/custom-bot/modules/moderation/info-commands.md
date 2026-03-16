@@ -21,7 +21,7 @@ answers in the [configuration](#configuration), but no additional setup is requi
 
 ## Usage {#usage}
 
-Users and administrators can use any of the [slash-commands](#commands) to view information. Here's a short overview:
+Users and administrators can use any of the [slash commands](#commands) to view information. Here's a short overview:
 
 * Use [`/info user`](#commands) to view information about a member of the server.
 * Use [`/info role`](#commands) to view information about a role on the server.

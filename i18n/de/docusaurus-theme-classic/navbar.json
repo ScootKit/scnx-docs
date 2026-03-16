@@ -34,5 +34,9 @@
   "item.label.News": {
     "message": "Neuigkeiten",
     "description": "Navbar item with label News"
+  },
+  "item.label.Support Bot": {
+    "message": "Support Bot",
+    "description": "Navbar item with label Support Bot"
   }
 }

@@ -1,3 +1,6 @@
+---
+sidebar_position: 1
+---
 # Shared Marketplace Content API {#shared-marketplace-content-api}
 
 Create, manage, and share message templates and configuration presets with other SCNX users through your marketplace organization.

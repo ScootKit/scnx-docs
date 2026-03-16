@@ -4,8 +4,10 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 const fs = require('fs');
-const remarkMath = require('remark-math');
-const rehypeKatex = require('rehype-katex');
+const remarkMathModule = require('remark-math');
+const rehypeKatexModule = require('rehype-katex');
+const remarkMath = remarkMathModule.default || remarkMathModule;
+const rehypeKatex = rehypeKatexModule.default || rehypeKatexModule;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -14,7 +16,8 @@ const config = {
     url: 'https://docs.scnx.xyz',
     baseUrl: '/',
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
+    onDuplicateRoutes: 'throw',
+    onBrokenAnchors: 'throw',
     i18n: {
         defaultLocale: 'en',
         locales: ['en', 'de', 'it']
@@ -22,7 +25,7 @@ const config = {
     trailingSlash: true,
     scripts: [],
     stylesheets: [
-        {
+            {
             href: '/katex/katex.min.css',
             type: 'text/css'
         }
@@ -33,7 +36,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 sitemap: {
-                    changefreq: 'daily' // Change back to weekly once initial docs phase is over
+                    changefreq: 'weekly'
                 },
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
@@ -80,25 +83,16 @@ const config = {
                     // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
                 }
             },
-            typesense: {
-                typesenseCollectionName: 'scnx-docs',
-
-                typesenseServerConfig: {
-                    nodes: [
-                        {
-                            host: 'search.scootkit.net',
-                            port: 443,
-                            protocol: 'https'
-                        }
-                    ],
-                    apiKey: 'E4IKHSM7gzZw50lbIzbpuSKhbUN5o7uq'
+            docsearch: {
+                appId: '4YHHYAEEVJ',
+                apiKey: 'e03c1e3fae42df88d77ae9c335b2adfe',
+                indexName: 'SCNX Docs',
+                askAi: {
+                    assistantId: 'qyJzt6nnQOL9',
+                    indexName: 'markdownt',
+                    sidePanel: true,
                 },
-
-                // Optional: Typesense search parameters: https://typesense.org/docs/0.24.0/api/search.html#search-parameters
-                typesenseSearchParameters: {},
-
-                // Optional
-                contextualSearch: true
+                contextualSearch: true,
             },
             navbar: {
                 title: 'Docs',
@@ -127,9 +121,9 @@ const config = {
                     },
                     {
                         type: 'docSidebar',
-                        sidebarId: 'modmailSidebar',
+                        sidebarId: 'supportBotSidebar',
                         position: 'left',
-                        label: 'Modmail'
+                        label: 'Support Bot'
                     },
                     {
                         type: 'docSidebar',
@@ -283,7 +277,7 @@ const config = {
                 }
             };
         },
-        'docusaurus-theme-search-typesense',
+        '@docsearch/docusaurus-adapter',
         'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',

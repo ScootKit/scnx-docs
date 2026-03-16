@@ -15,10 +15,10 @@ Easily create a giveaway in your server.
 
 ## Setup {#setup}
 
-* Please [set up permissions](/docs/custom-bot/slash-commands) for the `/gmanage` commands to avoid unauthorized usage of them.
-* Make sure that the bot has the `View channels`, `Manage messages`, `Embed links` & `Send messages` permissions on
-  every channel that giveaways will be created in.
-* Giveaways can't be started in Announcement channels.
+1. Please [set up permissions](/docs/custom-bot/slash-commands) for the `/gmanage` commands to avoid unauthorized usage of them.
+2. Make sure that the bot has the `View channels`, `Manage messages`, `Embed links` & `Send messages` permissions on
+   every channel that giveaways will be created in.
+3. Giveaways can't be started in Announcement channels.
 
 ## Usage {#usage}
 
@@ -124,7 +124,7 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=giveaways%7C
 
 For every giveaway the following data will be saved:
 
-* An unique integer identifying the database entry
+* A unique integer identifying the database entry
 * The ID of the giveaway message
 * The ID of the channel the giveaway has been started in, based on the [`channel`](#commands) command parameter
 * The exact time the giveaway will end / has ended, based on the [`duration`](#commands) command parameter

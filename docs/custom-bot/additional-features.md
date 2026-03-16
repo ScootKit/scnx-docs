@@ -3,7 +3,7 @@
 ## Supported color values {#embed-colors}
 
 :::tip
-This is only relevant if you are editing the color of an embed not supporting our Message-Editor. In the message editor,
+This is only relevant if you are editing the color of an embed not supporting our [Message Editor](/docs/scnx/guilds/message-editor). In the message editor,
 you can either enter a HEX color or use the built-in Color-Picker to select the desired color.
 :::
 
@@ -12,7 +12,7 @@ You can use one of these options:
 * [HEX-Color-Value](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet), please also include the "#" before the
   HEX value itself. These can be obtained via
   * a [Color-Picker](https://www.w3schools.com/colors/colors_picker.asp)
-  * a [color pallet generator](https://coolors.co/)
+  * a [color palette generator](https://coolors.co/)
   * the [Flat UI](https://materialui.co/flatuicolors/) color collection
   * the [Material UI](https://materialui.co/colors) color collection
 * One of the following color values (uppercase):
@@ -21,11 +21,11 @@ You can use one of these options:
 ## Reset module configuration {#reset-configuration}
 
 :::warning
-Resetting the configuration of a module to its default values, will permanently delete all customizations and changes
+Resetting the configuration of a module to its default values will permanently delete all customizations and changes
 you made to the module configuration.
 :::
 
-You can reset the configuration of a module to its default value if you want to start from scratch.
+You can reset the configuration of a module to its default values if you want to start from scratch.
 
 To reset your Module-Configuration, follow these instructions:
 
@@ -40,12 +40,12 @@ To reset your Module-Configuration, follow these instructions:
 ## Purge Module-Database {#reset-module-database}
 
 :::warning
-Purging the module database can not be undone and the data will be gone forever.
+Purging the module database cannot be undone, and the data will be gone forever.
 :::
 
 Purging the database of a module will automatically delete all data stored by the module.
 
-Please note that this will not drop the database, instead only remove database entries - this means that things like IDs
+Please note that this will not drop the database but will only remove database entries - this means that things like IDs
 might not reset.
 
 To reset your Module-Database, follow these instructions:
@@ -60,7 +60,7 @@ To reset your Module-Database, follow these instructions:
 
 ## Enter durations {#durations}
 
-To enter durations in the CustomBot, enter a text using these units:
+To enter durations in the Custom-Bot, enter text using these units:
 
 * seconds (as `s` or `sec`)
 * minutes (as `m` or `min`)
