@@ -1,6 +1,6 @@
 # Fehlerbehebung
 
-Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Custom-Bot zu lösen. Falls dein Problem ein bestimmtes Modul betrifft, schau bitte im Bereich [Modulspezifische Fehlerbehebung](#module-troubleshooting) weiter unten.
+Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lösen. Falls dein Problem ein bestimmtes Modul betrifft, schau bitte im Bereich [Modulspezifische Fehlerbehebung](#module-troubleshooting) weiter unten.
 
 ## Allgemeine Probleme {#general}
 
