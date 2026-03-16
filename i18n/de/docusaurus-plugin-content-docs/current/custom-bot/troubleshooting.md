@@ -30,10 +30,10 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Custom-Bot zu löse
   </ul>
 </details>
 
-### Slash-Commands werden nicht angezeigt {#missing-commands}
+### Slash-Befehle werden nicht angezeigt {#missing-commands}
 
 <details>
-  <summary>Slash-Commands werden in der Befehlsauswahl nicht angezeigt</summary>
+  <summary>Slash-Befehle werden in der Befehlsauswahl nicht angezeigt</summary>
   <ul>
     <li>Stelle sicher, dass das Modul, welches den Befehl bereitstellt, in deinem <a href="https://scnx.app/de/glink?page=bot/modules">Dashboard</a> aktiviert ist.</li>
     <li>Lade nach dem Aktivieren eines Moduls die Konfiguration deines Bots neu oder starte den Bot neu.</li>
@@ -133,7 +133,7 @@ Der Bot kann den Nicknamen des Server-Eigentümers nicht ändern. Dies ist eine 
     <li>Stelle sicher, dass alle Pflichtfelder ausgefüllt sind.</li>
     <li>Stelle sicher, dass alle verwendeten IDs für Kanäle und Rollen korrekt sind und die entsprechenden Kanäle oder Rollen nicht gelöscht wurden.</li>
     <li>Achte bei Embed-Konfigurationen darauf, dass du einen gültigen Hex-Farbcode verwendest (z. B. #7289DA). Siehe: <a href="/de/docs/custom-bot/additional-features/#embed-colors">Unterstützte Farbwerte</a>.</li>
-    <li>Überprüfe den Fehler Log in deinem Dashboard auf spezifische Fehlermeldungen bezüglich ungültiger Konfigurationen.</li>
+    <li>Überprüfe den Fehler-Log in deinem Dashboard auf spezifische Fehlermeldungen bezüglich ungültiger Konfigurationen.</li>
   </ul>
 </details>
 
