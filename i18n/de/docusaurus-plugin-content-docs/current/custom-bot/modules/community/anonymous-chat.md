@@ -29,7 +29,7 @@ Moderatoren können den anonymen Chat über `/moderate-anonymous-channel` verwal
 
 * **Einen Nutzer sperren**: Verwende `disable` zusammen mit dem anonymen Anzeigenamen des Nutzers. Dies funktioniert auch mit früheren Anzeigenamen, falls der Nutzer seine Identität zurückgesetzt hat.
 * **Einen Nutzer entsperren**: Verwende `enable` zusammen mit dem aktuellen anonymen Anzeigenamen des Nutzers.
-* **Eine Nachricht löschen**: Verwende d`elete-message`, um eine anonyme Nachricht zu entfernen. Die Autovervollständigung hilft dir dabei, die Nachricht zu finden.
+* **Eine Nachricht löschen**: Verwende `delete-message`, um eine anonyme Nachricht zu entfernen. Die Autovervollständigung hilft dir dabei, die Nachricht zu finden.
 
 Falls das Senden von Nachrichten in den Chat aktiviert ist, können Nutzer auch direkt in den anonymen Chat-Kanal schreiben – ihre Nachricht wird gelöscht und anonym neu gepostet. Beachte, dass Bots zur Nachrichtenprotokollierung (Logging-Bots) die ursprüngliche Nachricht dennoch erfassen könnten. Daher wird diese Methode für wirklich anonyme Chats nicht empfohlen.
 
