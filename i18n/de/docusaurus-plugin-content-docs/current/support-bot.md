@@ -10,9 +10,9 @@ PROFESSIONAL: "24/7 gehostet, solange dein Abonnement aktiv ist."}} />
 
 Bevor du loslegst, stelle sicher, dass
 
-* du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
+* du [deinen Server zu SCNX hinzugefügt](/de/docs/setup) hast.
 * dein Server ein aktives kostenpflichtiges SCNX-Abonnement (Unlimited oder Professional) hat. Der Support-Bot ist nicht im kostenlosen Starter-Plan verfügbar.
-* du der Besitzer, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator des Servers bist, auf dem du diese Funktion aktivieren möchtest.
+* du der Besitzer, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/de/docs/scnx/guilds/trusted-admins) oder ein Administrator des Servers bist, auf dem du diese Funktion aktivieren möchtest.
 * du einige Minuten Zeit hast. Nach unserer Schätzung dauert die Einrichtung am Computer etwa zwei bis drei Minuten — am Handy könnte es etwas länger dauern. Stoppe nicht mittendrin; dein Fortschritt wird nicht gespeichert.
 
 ## 1. Erstelle deine Discord-Applikation & deinen Bot {#step-1}
@@ -66,7 +66,7 @@ Wähle einen oder beide Modi aus und klicke auf **Weiter**.
 ![Der Modus-Auswahlbildschirm mit Karten für Modmail und Ticket-System, jeweils mit Beschreibung und Ablaufdiagramm](@site/docs/assets/setup/support-bot-2.png)
 
 :::info
-Du kannst beide Systeme aktivieren — sie funktionieren hervorragend zusammen. Nicht sicher, welches du wählen sollst? Schau dir den [Feature-Vergleich](/docs/support-bot/feature-comparison) an.
+Du kannst beide Systeme aktivieren — sie funktionieren hervorragend zusammen. Nicht sicher, welches du wählen sollst? Schau dir den [Feature-Vergleich](/de/docs/support-bot/feature-comparison) an.
 :::
 
 ## 5. Modmail konfigurieren {#step-5}
@@ -148,13 +148,13 @@ Sobald du die Einrichtung abgeschlossen hast, siehst du einen Bestätigungsbilds
 
 Hier sind einige Dinge, die du als Nächstes tun kannst:
 
-* Teile den [Modmail-Leitfaden](/docs/support-bot/modmail/basics) oder das [Ticket-System 101](/docs/support-bot/ticket-system/basics) mit deinem Team.
+* Teile den [Modmail-Leitfaden](/de/docs/support-bot/modmail/basics) oder das [Ticket-System 101](/de/docs/support-bot/ticket-system/basics) mit deinem Team.
 * Richte [Ticket-Themen](https://scnx.app/de/glink?page=support-system/modmail/ticket-topics) ein, um eingehende Tickets zu organisieren.
 * Aktiviere [Formulare](https://scnx.app/de/glink?page=support-system/forms), um strukturierte Informationen von Nutzern zu sammeln.
 * Konfiguriere [Öffnungszeiten](https://scnx.app/de/glink?page=support-system/bot-configuration?show=opening-hours), damit Nutzer wissen, wann dein Team verfügbar ist.
 * Schau dir das [Analytics-Dashboard](https://scnx.app/de/glink?page=support-system/analytics) an, um die Leistung deines Teams zu verfolgen.
-* Entdecke alle Optionen in der [Support-Bot-Dokumentation](/docs/support-bot/intro).
+* Entdecke alle Optionen in der [Support-Bot-Dokumentation](/de/docs/support-bot/intro).
 
 :::tip Es läuft nicht alles wie geplant?
-Wir haben einen [Leitfaden zur Fehlerbehebung](/docs/support-bot/troubleshooting) für dich. Wenn das nicht geholfen hat, sind wir immer da, um zu helfen — besuche einfach [scnx.app/de/help](https://scnx.app/de/help).
+Wir haben einen [Leitfaden zur Fehlerbehebung](/de/docs/support-bot/troubleshooting) für dich. Wenn das nicht geholfen hat, sind wir immer da, um zu helfen — besuche einfach [scnx.app/de/help](https://scnx.app/de/help).
 :::
