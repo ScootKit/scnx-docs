@@ -129,12 +129,12 @@ Der nächste Bildschirm fragt: **"Möchtest du noch mehr herausholen?"**. Hier k
 
 |       Funktion       |                                    Beschreibung                                    |                                                                Mehr erfahren                                                                |
 | -------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Ticket-Themen**    | Kategorisiere Tickets nach Thema für bessere Organisation und Weiterleitung.       | [Modmail-Themen](/docs/support-bot/modmail/ticket-topics) · [Ticket-System-Themen](/docs/support-bot/ticket-system/ticket-topics)           |
-| **Claiming**         | Erlaube Teammitgliedern, Tickets zu beanspruchen, um doppelte Arbeit zu vermeiden. | [Modmail-Claiming](/docs/support-bot/modmail/claiming) · [Ticket-System-Claiming](/docs/support-bot/ticket-system/claiming)                 |
-| **Support-Feedback** | Sammle Sternebewertungen und Feedback nach dem Schließen von Tickets.              | [Modmail-Feedback](/docs/support-bot/modmail/support-feedback) · [Ticket-System-Feedback](/docs/support-bot/ticket-system/support-feedback) |
-| **Formulare**        | Sammle strukturierte Informationen von Nutzern beim Öffnen eines Tickets.          | [Formulare](/docs/support-bot/general/forms)                                                                                                |
-| **Öffnungszeiten**   | Lege fest, wann dein Support-Team verfügbar ist, einschließlich Feiertagen.        | [Öffnungszeiten](/docs/support-bot/general/opening-hours)                                                                                   |
-| **Bot-Branding**     | Passe den Footer-Text und das Erscheinungsbild deines Bots an.                     | [Bot-Konfiguration](/docs/support-bot/general/bot-configuration)                                                                            |
+| **Ticket-Themen**    | Kategorisiere Tickets nach Thema für bessere Organisation und Weiterleitung.       | [Modmail-Themen](/de/docs/support-bot/modmail/ticket-topics) · [Ticket-System-Themen](/de/docs/support-bot/ticket-system/ticket-topics)     |
+| **Claiming**         | Erlaube Teammitgliedern, Tickets zu beanspruchen, um doppelte Arbeit zu vermeiden. | [Modmail-Claiming](/de/docs/support-bot/modmail/claiming) · [Ticket-System-Claiming](/de/docs/support-bot/ticket-system/claiming)           |
+| **Support-Feedback** | Sammle Sternebewertungen und Feedback nach dem Schließen von Tickets.              | [Modmail-Feedback](/de/docs/support-bot/modmail/support-feedback) · [Ticket-System-Feedback](/de/docs/support-bot/ticket-system/support-feedback) |
+| **Formulare**        | Sammle strukturierte Informationen von Nutzern beim Öffnen eines Tickets.          | [Formulare](/de/docs/support-bot/general/forms)                                                                                             |
+| **Öffnungszeiten**   | Lege fest, wann dein Support-Team verfügbar ist, einschließlich Feiertagen.        | [Öffnungszeiten](/de/docs/support-bot/general/opening-hours)                                                                               |
+| **Bot-Branding**     | Passe den Footer-Text und das Erscheinungsbild deines Bots an.                     | [Bot-Konfiguration](/de/docs/support-bot/general/bot-configuration)                                                                        |
 
 Klicke bei einer Funktion auf **Einrichten**, um sie zu konfigurieren, oder klicke auf **Weiter**, um die Einrichtung abzuschließen.
 
