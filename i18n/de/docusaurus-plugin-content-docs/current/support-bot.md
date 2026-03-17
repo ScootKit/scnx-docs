@@ -3,8 +3,8 @@
 Richte den SCNX Support-Bot ein, um ein professionelles Support-Erlebnis auf deinem Discord-Server anzubieten. Die Einrichtung dauert nur wenige Minuten.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true}} additionalDetails={{
-UNLIMITED: "24/7 gehosted, solange dein Abonnement aktiv ist.",
-PROFESSIONAL: "24/7 gehosted, solange dein Abonnement aktiv ist."}} />
+UNLIMITED: "24/7 gehostet, solange dein Abonnement aktiv ist.",
+PROFESSIONAL: "24/7 gehostet, solange dein Abonnement aktiv ist."}} />
 
 ## 0. Vorbereitungs-Checkliste {#step-0}
 
@@ -18,10 +18,10 @@ Bevor du loslegst, stelle sicher, dass
 ## 1. Erstelle deine Discord-Applikation & deinen Bot {#step-1}
 
 :::caution
-Verwende **keine** vorhandene Applikation. Du brauchst eine neue für deinen Support-Bot. SCNX unterstützt das gleichzeitige Verwenden von Support-Bot, Eigenem Bot oder einem weiteren Drittanbieter-Bot mit demselben Token / Applikation nicht — bitte erstelle eine neue für jeden Bot.
+Verwende **keine** vorhandene Applikation. Du brauchst eine neue für deinen Support-Bot. SCNX unterstützt es nicht, den Support-Bot, den Eigenen Bot oder einen weiteren Drittanbieter-Bot mit demselben Token bzw. derselben Applikation gleichzeitig zu verwenden — bitte erstelle für jeden Bot eine neue.
 :::
 
-Als Erstes besuche das [Discord-Developer-Portal](https://discord.com/developers/applications). Dort kannst du eine neue Applikation erstellen, indem du auf "New Application" auf der oberen rechten Seite klickst. Gib den Namen der Applikation ein (den kannst du später ändern), lies und stimme den [Discord-Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/terms-of-service) und der [Discord-Entwickler-Vereinbarung](https://discord.com/developers/docs/policies-and-agreements/developer-policy) zu und bestätige mit "Create".
+Als Erstes besuche das [Discord-Developer-Portal](https://discord.com/developers/applications). Dort kannst du eine neue Applikation erstellen, indem du oben rechts auf "New Application" klickst. Gib den Namen der Applikation ein (den kannst du später ändern), lies und stimme den [Discord-Entwickler-Nutzungsbedingungen](https://discord.com/developers/docs/policies-and-agreements/terms-of-service) und der [Discord-Entwicklerrichtlinie](https://discord.com/developers/docs/policies-and-agreements/developer-policy) zu und bestätige mit "Create".
 
 ![Erstellen einer neuen Applikation im Discord-Developer-Portal](@site/docs/assets/setup/custom-bot-1.png)
 
@@ -55,11 +55,11 @@ Falls du Probleme beim Einladen des Bots hast, stelle sicher, dass du die "Serve
 
 Du wirst gefragt: **"Wie möchtest du deine Community unterstützen?"**. Du kannst zwischen zwei Systemen wählen — oder beide aktivieren:
 
-| | Modmail | Ticket-System |
-|---|---|---|
+|                       |                                                              Modmail                                                               |                                                             Ticket-System                                                             |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | **So funktioniert's** | Nutzer senden eine DM an deinen Bot. Nachrichten werden zwischen den DMs des Nutzers und einem privaten Team-Kanal weitergeleitet. | Nutzer klicken auf einen Button in einem Kanal, um ein Ticket zu öffnen. Ein neuer privater Kanal wird für die Konversation erstellt. |
-| **Am besten für** | Persönliche, private Support-Gespräche | Strukturierter Support mit mehreren Kategorien |
-| **Ablauf** | Nutzer schreibt DM → Team-Kanal erstellt → Nachrichten weitergeleitet → Team schließt → Log gespeichert | Nutzer klickt Button → Kanal erstellt → Direkte Konversation → Ticket geschlossen → Log gespeichert |
+| **Am besten für**     | Persönliche, private Support-Gespräche                                                                                             | Strukturierter Support mit mehreren Kategorien                                                                                        |
+| **Ablauf**            | Nutzer schreibt DM → Team-Kanal erstellt → Nachrichten weitergeleitet → Team schließt → Log gespeichert                            | Nutzer klickt Button → Kanal erstellt → Direkte Konversation → Ticket geschlossen → Log gespeichert                                   |
 
 Wähle einen oder beide Modi aus und klicke auf **Weiter**.
 
@@ -127,14 +127,14 @@ Du musst mindestens einen Kanal für die Ticket-Öffnen-Nachricht konfigurieren,
 
 Der nächste Bildschirm fragt: **"Möchtest du noch mehr herausholen?"**. Hier kannst du optional erweiterte Funktionen einrichten, um dein Support-Erlebnis zu verbessern. Du kannst diese jetzt konfigurieren oder später jederzeit über das Dashboard nachholen.
 
-| Funktion | Beschreibung | Mehr erfahren |
-|---|---|---|
-| **Ticket-Themen** | Kategorisiere Tickets nach Thema für bessere Organisation und Weiterleitung. | [Modmail-Themen](/docs/support-bot/modmail/ticket-topics) · [Ticket-System-Themen](/docs/support-bot/ticket-system/ticket-topics) |
-| **Claiming** | Erlaube Teammitgliedern, Tickets zu beanspruchen, um doppelte Arbeit zu vermeiden. | [Modmail-Claiming](/docs/support-bot/modmail/claiming) · [Ticket-System-Claiming](/docs/support-bot/ticket-system/claiming) |
-| **Support-Feedback** | Sammle Sternebewertungen und Feedback nach dem Schließen von Tickets. | [Modmail-Feedback](/docs/support-bot/modmail/support-feedback) · [Ticket-System-Feedback](/docs/support-bot/ticket-system/support-feedback) |
-| **Formulare** | Sammle strukturierte Informationen von Nutzern beim Öffnen eines Tickets. | [Formulare](/docs/support-bot/general/forms) |
-| **Öffnungszeiten** | Lege fest, wann dein Support-Team verfügbar ist, einschließlich Feiertagen. | [Öffnungszeiten](/docs/support-bot/general/opening-hours) |
-| **Bot-Branding** | Passe den Footer-Text und das Erscheinungsbild deines Bots an. | [Bot-Konfiguration](/docs/support-bot/general/bot-configuration) |
+|       Funktion       |                                    Beschreibung                                    |                                                                Mehr erfahren                                                                |
+| -------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ticket-Themen**    | Kategorisiere Tickets nach Thema für bessere Organisation und Weiterleitung.       | [Modmail-Themen](/docs/support-bot/modmail/ticket-topics) · [Ticket-System-Themen](/docs/support-bot/ticket-system/ticket-topics)           |
+| **Claiming**         | Erlaube Teammitgliedern, Tickets zu beanspruchen, um doppelte Arbeit zu vermeiden. | [Modmail-Claiming](/docs/support-bot/modmail/claiming) · [Ticket-System-Claiming](/docs/support-bot/ticket-system/claiming)                 |
+| **Support-Feedback** | Sammle Sternebewertungen und Feedback nach dem Schließen von Tickets.              | [Modmail-Feedback](/docs/support-bot/modmail/support-feedback) · [Ticket-System-Feedback](/docs/support-bot/ticket-system/support-feedback) |
+| **Formulare**        | Sammle strukturierte Informationen von Nutzern beim Öffnen eines Tickets.          | [Formulare](/docs/support-bot/general/forms)                                                                                                |
+| **Öffnungszeiten**   | Lege fest, wann dein Support-Team verfügbar ist, einschließlich Feiertagen.        | [Öffnungszeiten](/docs/support-bot/general/opening-hours)                                                                                   |
+| **Bot-Branding**     | Passe den Footer-Text und das Erscheinungsbild deines Bots an.                     | [Bot-Konfiguration](/docs/support-bot/general/bot-configuration)                                                                            |
 
 Klicke bei einer Funktion auf **Einrichten**, um sie zu konfigurieren, oder klicke auf **Weiter**, um die Einrichtung abzuschließen.
 
@@ -146,7 +146,7 @@ Funktionen, die bereits konfiguriert sind, zeigen ein **"Bereits konfiguriert"**
 
 Sobald du die Einrichtung abgeschlossen hast, siehst du einen Bestätigungsbildschirm, der alles zeigt, was konfiguriert wurde. Klicke auf **Zum Dashboard**, um deine [Support-Bot-Verwaltungsseite](https://scnx.app/de/glink?page=support-system/manage) zu öffnen.
 
-Hier einige Dinge, die du als Nächstes tun kannst:
+Hier sind einige Dinge, die du als Nächstes tun kannst:
 
 * Teile den [Modmail-Leitfaden](/docs/support-bot/modmail/basics) oder das [Ticket-System 101](/docs/support-bot/ticket-system/basics) mit deinem Team.
 * Richte [Ticket-Themen](https://scnx.app/de/glink?page=support-system/modmail/ticket-topics) ein, um eingehende Tickets zu organisieren.

@@ -18,14 +18,14 @@ Before you get started, make sure that
 ## 1. Create your Discord Application & Bot {#step-1}
 
 :::caution
-Do **not reuse** an existing application. You'll need a new application for your Support Bot. SCNX does not support running the Support Bot and Custom-Bot or another third-party bot with the same token / application — please create a new one for each bot.
+Do **not reuse** an existing application. You'll need a new application for your Support Bot. SCNX does not support running the Support Bot and the Custom-Bot (or any other third-party bot) with the same token/application — please create a new one for each bot.
 :::
 
 First, visit the [Discord Developer Portal](https://discord.com/developers/applications). There, create a new application by clicking on "New Application" on the upper-right side. Enter the name of the application (you can change this later), read & accept the [Discord Developer Terms of Service](https://discord.com/developers/docs/policies-and-agreements/terms-of-service) and the [Discord Developer Policy](https://discord.com/developers/docs/policies-and-agreements/developer-policy) and confirm with "Create".
 
 ![Creating a new application in the Discord Developer Portal](@site/docs/assets/setup/custom-bot-1.png)
 
-Next, open the "Bot" settings in the navigation bar on the left-hand side. Then click on "Reset token" and confirm your request in the modal. You might get asked to enter a 2FA code for your Discord account. Once done, **copy the token of your bot** — you'll need it in the next step.
+Next, open the "Bot" settings in the navigation bar on the left-hand side. Then click "Reset token" and confirm your request in the modal. You may be asked to enter a 2FA code for your Discord account. Once done, **copy the token of your bot** — you'll need it in the next step.
 
 ![Copying the bot token from the Discord Developer Portal](@site/docs/assets/setup/custom-bot-3.png)
 
@@ -55,11 +55,11 @@ If you run into issues inviting the bot, make sure you have the "Manage Server" 
 
 You'll be asked: **"How would you like to support your community?"**. You can choose between two systems — or enable both:
 
-| | Modmail | Ticket System |
-|---|---|---|
+|                  |                                                Modmail                                                |                                               Ticket System                                                |
+| ---------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | **How it works** | Users send a DM to your bot. Messages are relayed between the user's DMs and a private staff channel. | Users click a button in a channel to open a ticket. A new private channel is created for the conversation. |
-| **Best for** | Personal, private support conversations | Structured support with multiple categories |
-| **Flow** | User DMs Bot → Staff Channel Created → Messages Relayed → Staff Closes → Log Saved | User Clicks Button → Channel Created → Direct Conversation → Ticket Closed → Log Saved |
+| **Best for**     | Personal, private support conversations                                                               | Structured support with multiple categories                                                                |
+| **Flow**         | User DMs Bot → Staff Channel Created → Messages Relayed → Staff Closes → Log Saved                    | User Clicks Button → Channel Created → Direct Conversation → Ticket Closed → Log Saved                     |
 
 Select one or both modes, then click **Continue**.
 
@@ -127,14 +127,14 @@ You must configure at least one open message channel for the ticket system to wo
 
 The next screen asks: **"Want to take it further?"**. Here you can optionally set up advanced features to enhance your support experience. You can configure any of these now or come back to them later from the dashboard.
 
-| Feature | Description | Learn more |
-|---|---|---|
-| **Ticket Topics** | Categorize tickets by topic for better organization and routing. | [Modmail Topics](/docs/support-bot/modmail/ticket-topics) · [Ticket System Topics](/docs/support-bot/ticket-system/ticket-topics) |
-| **Claiming** | Let team members claim tickets to prevent duplicate work. | [Modmail Claiming](/docs/support-bot/modmail/claiming) · [Ticket System Claiming](/docs/support-bot/ticket-system/claiming) |
-| **Support Feedback** | Collect star ratings and feedback after tickets are closed. | [Modmail Feedback](/docs/support-bot/modmail/support-feedback) · [Ticket System Feedback](/docs/support-bot/ticket-system/support-feedback) |
-| **Forms** | Collect structured information from users when they open a ticket. | [Forms](/docs/support-bot/general/forms) |
-| **Opening Hours** | Set when your support team is available, including holidays. | [Opening Hours](/docs/support-bot/general/opening-hours) |
-| **Bot Branding** | Customize your bot's footer text and appearance. | [Bot Configuration](/docs/support-bot/general/bot-configuration) |
+|       Feature        |                            Description                             |                                                                 Learn more                                                                  |
+| -------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ticket Topics**    | Categorize tickets by topic for better organization and routing.   | [Modmail Topics](/docs/support-bot/modmail/ticket-topics) · [Ticket System Topics](/docs/support-bot/ticket-system/ticket-topics)           |
+| **Claiming**         | Let team members claim tickets to prevent duplicate work.          | [Modmail Claiming](/docs/support-bot/modmail/claiming) · [Ticket System Claiming](/docs/support-bot/ticket-system/claiming)                 |
+| **Support Feedback** | Collect star ratings and feedback after tickets are closed.        | [Modmail Feedback](/docs/support-bot/modmail/support-feedback) · [Ticket System Feedback](/docs/support-bot/ticket-system/support-feedback) |
+| **Forms**            | Collect structured information from users when they open a ticket. | [Forms](/docs/support-bot/general/forms)                                                                                                    |
+| **Opening Hours**    | Set when your support team is available, including holidays.       | [Opening Hours](/docs/support-bot/general/opening-hours)                                                                                    |
+| **Bot Branding**     | Customize your bot's footer text and appearance.                   | [Bot Configuration](/docs/support-bot/general/bot-configuration)                                                                            |
 
 Click **Set up** on any feature to configure it, or click **Continue** to skip and finish the setup.
 
