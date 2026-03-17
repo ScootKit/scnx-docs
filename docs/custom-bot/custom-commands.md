@@ -61,7 +61,7 @@ The command runs when a user clicks a button or selects an option from a select 
 To send a message with a button or select menu:
 
 1. Use the [Bot Log-In](/docs/custom-bot/login-as-bot) feature to send a message.
-2. In the message editor, add a **Custom Command Button** or **Custom Command Select Menu Element** and link it to this
+2. In the [message editor](/docs/scnx/guilds/message-editor), add a **Custom Command Button** or **Custom Command Select Menu Element** and link it to this
    custom command.
 3. You can also attach buttons to messages sent by other custom commands or module configurations.
 
@@ -254,7 +254,7 @@ time. Disabled commands are saved and can be enabled later if you upgrade or dis
 <details>
   <summary>My button / select menu command doesn't work</summary>
   <ul>
-    <li>Make sure you attached the button or select menu element to a message using the message editor and linked it to
+    <li>Make sure you attached the button or select menu element to a message using the <a href="/docs/scnx/guilds/message-editor">message editor</a> and linked it to
       the correct custom command.</li>
     <li>Verify the custom command is <b>enabled</b>.</li>
     <li>Check that the bot has the necessary permissions in the channel.</li>
