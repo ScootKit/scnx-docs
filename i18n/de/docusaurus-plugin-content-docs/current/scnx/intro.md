@@ -41,8 +41,6 @@ Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen]
   Du kannst die [Werkzeuge-Dokumentation](/docs/scnx/account-and-billing/toolbox) öffnen.
 * SCNX Werbung: Bewerbe deinen Server oder dein Produkt auf SCNX. Du kannst
   die [Werbung-auf-SCNX-Dokumentation](/docs/scnx/account-and-billing/ads) öffnen.
-* SCNX Empfehlungen: Verdiene für jeden Plan, den ein Server, der mit deinem Link hinzugefügt wurde, einen Plan kauft,
-  eine Kommission. Du kannst die [Empfehlungen-Dokumentation](/docs/scnx/account-and-billing/referrals) öffnen.
 * SCNX Dateien-Speicher: Hoste Bilder und mehr für deine Discord Server und füge sie direkt in SCNX ein.
 * SC Network Mitgliedschaften (outdated): *Mehr Informationen werden bald verfügbar sein*.
 
@@ -56,8 +54,7 @@ damit du immer Antworten auf deine Fragen bekommst.
 anbietet.
 :::
 
-* [ScootKit Merch Store](https://scnx.app/de/user/merch): Kaufe dir SCNX-Merch.
-* [Featureboard](https://features.sc-network.net): Hier kannst du neue Funktionen für SCNX vorschlagen und über andere
+* [Featureboard](https://featureboard.net/): Hier kannst du neue Funktionen für SCNX vorschlagen und über andere
   Vorschläge abstimmen.
 * SCNX Marketplace: Ein System für Dritte, um ihre neuen und bereits vorhandenen Produkte in SCNX zu integrieren.
 * [SCNX-Dokumentation](/): Diese Dokumentation - gebaut, um so viele Funktionen von SCNX so ausführlich wie möglich zu
@@ -74,8 +71,6 @@ anbietet.
 * [SCNX Helper Program](https://scnx.app/de/user/helper-application): Ein Programm, dass es uns erlaubt, involvierte
   Mitglieder unserer Community mit Hintergrundwissen über SCNX auszuzeichnen und Vorteile als "SCNX Helfer" auf
   unserem [Discord-Server](https://scootk.it/dc) zu geben.
-* [ScootKit Moderator](https://scnx.app/de/user/moderator-application): Ein Programm, dass unseren Community-Mitgliedern
-  erlaubt, auf unserem [Discord-Server](https://scootk.it/dc) zu moderieren, Veranstaltungen zu organisieren und mehr.
 * ScootKit RSS-Hub: Ein System, dass Datenverkehr und Benachrichtigungen für Benachrichtigungs-Module auf SCNX
   sicherstellt
 * und mehr… :wink:
