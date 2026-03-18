@@ -27,11 +27,21 @@ If your bot is offline or has core issues, you won't be able to use Bot Log-In. 
 [troubleshooting guide](/docs/custom-bot/troubleshooting) if your bot isn't starting.
 :::
 
+:::warning
+To use Bot Log-In, you must be a **member of the Discord server** and have the required **Discord permissions** on each
+channel you want to interact with. Users who are not members of the server will not be able to use this feature.
+Server owners and members with the **Administrator** permission have access to all channels automatically. For other
+members, the following channel permissions are required:
+
+* **Sending or editing a message**: `View Channel` and `Send Messages`
+* **Viewing messages in a channel**: `View Channel`, `Read Message History`, and `Send Messages`
+:::
+
 ## Sending a message {#send-message}
 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).
 2. Select the channel you want to send the message to from the channel list on the left.
-3. Compose your message using the message editor. You can:
+3. Compose your message using the [message editor](/docs/scnx/guilds/message-editor). You can:
     * Write plain text in the message field.
     * Add one or more embeds with custom title, description, color, fields, images, footer, and more.
     * Attach files.
@@ -39,7 +49,7 @@ If your bot is offline or has core issues, you won't be able to use Bot Log-In. 
 4. Click **"Send message"** to send.
 
 :::tip
-Use the preview in the message editor to see how your message will look before sending it.
+Use the [preview in the message editor](/docs/scnx/guilds/message-editor#preview) to see how your message will look before sending it.
 :::
 
 ## Editing a message {#edit-message}
@@ -49,12 +59,13 @@ You can edit messages that were previously sent by your bot (including messages 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).
 2. Select the channel containing the message you want to edit.
 3. Find the message in the channel view and click **"Edit"**.
-4. Modify the message content, embeds, or components using the message editor.
+4. Modify the message content, embeds, or components using the [message editor](/docs/scnx/guilds/message-editor).
 5. Click **"Edit message"** to apply your changes.
 
 ## Adding components {#components}
 
-You can attach interactive components to messages sent via Bot Log-In:
+You can attach interactive components to messages sent via Bot Log-In. For a detailed overview of all
+available components, see the [Message Editor documentation](/docs/scnx/guilds/message-editor).
 
 * **Custom Command Buttons** — Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
   clicked. Configure these in the message editor's component section and link them to a Custom Command with a button

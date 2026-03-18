@@ -36,7 +36,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 sitemap: {
-                    changefreq: 'daily' // Change back to weekly once initial docs phase is over
+                    changefreq: 'weekly'
                 },
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),

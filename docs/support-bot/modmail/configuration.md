@@ -84,7 +84,7 @@ description: Configure your Discord Modmail system — ticket categories, closin
 | Field | Description |
 | --- | --- |
 | Channel to send the message to | Your configured message is sent to this channel. |
-| Message | Your bot sends this message into the selected channel. |
+| Message | Your bot sends this message into the selected channel. Use the [message editor](/docs/scnx/guilds/message-editor) to compose your message. |
 | Show only specific ticket topics? | If enabled, your bot will only use selected [ticket topics](/docs/support-bot/modmail/ticket-topics). If you want to use buttons, you can select at most one topic here. |
 | Use buttons? | If enabled, your bot will use buttons instead of the default dropdown menu. |
 

@@ -76,7 +76,7 @@ description: Configure your Discord ticket system — categories, closing option
 | Field | Description |
 | --- | --- |
 | Channel to send the message to | The ticket opening message is sent to this channel. |
-| Message | This message is sent to the configured channel. |
+| Message | This message is sent to the configured channel. Use the [message editor](/docs/scnx/guilds/message-editor) to compose your message. |
 | Show only specific ticket topics? | If enabled, only specific [ticket topics](/docs/support-bot/ticket-system/ticket-topics) are shown.<br/><small><details><summary>Note</summary><blockquote>*If you want to use buttons, you can select at most one ticket topic here.*</blockquote></details></small> |
 | Use buttons? | If enabled, buttons are used instead of a dropdown menu. |
 

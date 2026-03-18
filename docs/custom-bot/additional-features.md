@@ -3,7 +3,7 @@
 ## Supported color values {#embed-colors}
 
 :::tip
-This is only relevant if you are editing the color of an embed not supporting our Message-Editor. In the message editor,
+This is only relevant if you are editing the color of an embed not supporting our [Message Editor](/docs/scnx/guilds/message-editor). In the message editor,
 you can either enter a HEX color or use the built-in Color-Picker to select the desired color.
 :::
 
