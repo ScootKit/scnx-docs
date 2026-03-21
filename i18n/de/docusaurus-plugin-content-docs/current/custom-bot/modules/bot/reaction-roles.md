@@ -1,4 +1,4 @@
-# Reaction Roles
+# Reaktionsrollen
 
 Lass Nutzer sich Rollen auf die gute alte Art selbst zuweisen – ganz einfach durch das Hinzufügen und Entfernen einer Reaktion.
 
