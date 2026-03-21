@@ -92,7 +92,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Minimales Verbrechens Geld | Der minimale Währungsbetrag, der bei einem erfolgreichen Verbrechen verdient werden kann. |
 | Verbrechens Cooldown | Die Abklingzeit (in Minuten) zwischen den einzelnen Anwendungen des Crime-Befehls. |
 | Maximale Raub Beute | Der maximale Währungsbetrag, der bei einem einzigen Raub gestohlen werden kann. |
-| Raub Pozent | Der Prozentsatz des Guthabens eines Nutzers, der bei einem Raub gestohlen werden kann. |
+| Raub Prozent | Der Prozentsatz des Guthabens eines Nutzers, der bei einem Raub gestohlen werden kann. |
 | Raub Cooldown | Die Abklingzeit (in Minuten) zwischen den einzelnen Anwendungen des Rob-Befehls. |
 | Leaderboard-Kanal | Der Kanal, in dem die automatisch aktualisierte Rangliste (Leaderboard Embed) angezeigt wird. Leer lassen, um diese Funktion zu deaktivieren. |
 | Shop Kanal | Der Kanal, in dem das Shop-Embed angezeigt wird. Leer lassen, um diese Funktion zu deaktivieren. |

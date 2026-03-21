@@ -48,7 +48,7 @@ Nutzer nehmen an der Code-Jagd teil:
 
 ## Konfiguration {#configuration}
 
-In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/glink?page=bot/configuration?file=hunt-the-code%7Cstrings).
+In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=hunt-the-code%7Cstrings).
 
 | Feld | Beschreibung |
 |-------|-------------|
@@ -63,7 +63,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 <details>
   <summary>Nutzer können keine Codes einlösen</summary>
   <ul>
-    <li>Stelle sicher, dass der Code erfolgreich mit <code>/hunt-the-code-admin create-code</code> erstellt wurde..</li>
+    <li>Stelle sicher, dass der Code erfolgreich mit <code>/hunt-the-code-admin create-code</code> erstellt wurde.</li>
     <li>Codes unterscheiden nicht zwischen Groß- und Kleinschreibung, daher spielt die Kapitalisierung keine Rolle.</li>
     <li>Überprüfe, ob der Nutzer den Code bereits eingelöst hat, indem du ihn sein Profil kontrollieren lässt.</li>
   </ul>

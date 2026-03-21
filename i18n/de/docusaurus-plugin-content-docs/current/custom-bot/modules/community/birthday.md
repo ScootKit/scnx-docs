@@ -55,7 +55,7 @@ Jeden Tag um Mitternacht prüft der Bot auf anstehende Geburtstage und:
 | `/birthday set day:<Integer> month:<Integer> [year:<Integer>]` | Registriere deinen Geburtstag. Tag und Monat sind erforderlich. Das Jahr ist optional, ermöglicht dem Bot jedoch, dein Alter anzuzeigen. Nutzer unter 13 Jahren können kein Geburtsjahr registrieren (Konformität mit den Discord-AGB). |
 | `/birthday status` | Sieh dir deinen aktuell registrierten Geburtstag und dein Alter an (falls ein Geburtsjahr angegeben wurde). |
 | `/birthday delete` | Entferne deinen Geburtstag aus dem Kalender. |
-| `/manage-birthday set user:<User> day:<Integer> month:<Integer> [year:<Integer>]` | Lege den Geburtstag eines Nutzers fest. Erfordert, dass die Admin-Geburstagsverwaltung aktiviert ist. |
+| `/manage-birthday set user:<User> day:<Integer> month:<Integer> [year:<Integer>]` | Lege den Geburtstag eines Nutzers fest. Erfordert, dass die Admin-Geburtstagsverwaltung aktiviert ist. |
 | `/manage-birthday remove user:<User>` | Entferne den Geburtstag eines Nutzers. Erfordert, dass die Admin-Geburtstagsverwaltung aktiviert ist. |
 | `/manage-birthday lock user:<User>` | Sperre den Geburtstag eines Nutzers, um zu verhindern, dass dieser ihn bearbeitet oder löscht. Erfordert, dass die Admin-Geburtstagsverwaltung aktiviert ist. |
 | `/manage-birthday unlock user:<User>` | Entsperre einen zuvor gesperrten Geburtstag. Erfordert, dass die Admin-Geburtstagsverwaltung aktiviert ist. |
@@ -66,7 +66,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 
 | Feld | Beschreibung |
 |-------|-------------|
-| Geburstags-Kanal | Kanal, in den das Geburtstags-Embed und die Geburtstags-Nachrichten (sofern nicht überschrieben) gesendet werden. |
+| Geburtstags-Kanal | Kanal, in den das Geburtstags-Embed und die Geburtstags-Nachrichten (sofern nicht überschrieben) gesendet werden. |
 | (optional) Benachrichtigung-Kanal | Optionaler separater Kanal für Geburtstags-Nachrichten. Falls leer, wird der normale Geburtstags-Kanal verwendet. Im Gegensatz zum Geburtstags-Kanal werden alte Nachrichten aus diesem Kanal nicht automatisch gelöscht. |
 | Birthday-Embed aktiviert | Falls aktiviert, wird ein automatisch aktualisiertes Embed mit allen Geburtstagen (sortiert nach Monat) in den Geburtstags-Kanal gesendet. |
 | Geburtstags-Nachricht | Falls aktiviert, wird ein automatisch aktualisiertes Embed mit allen Geburtstagen (sortiert nach Monat) in den Geburtstags-Kanal gesendet. |
@@ -82,7 +82,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 <details>
   <summary>Das Geburtstags-Embed wird nicht angezeigt.</summary>
   <ul>
-    <li>Stelle sicher, dass der konfigurierte Geburtstags-Kanal existiert und der Bot über die Berechtigungen <code>Kanal anzeigen</code>, <code>Nachrichten senden</code>, und <code>Links</code> einbetten.</li>
+    <li>Stelle sicher, dass der konfigurierte Geburtstags-Kanal existiert und der Bot über die Berechtigungen <code>Kanal anzeigen</code>, <code>Nachrichten senden</code> und <code>Links einbetten</code> verfügt.</li>
     <li>Stelle sicher, dass „Birthday-Embed aktiviert“ in der Konfiguration eingeschaltet ist.</li>
   </ul>
 </details>
@@ -92,7 +92,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
   <ul>
     <li>Stelle sicher, dass in der Modul-Konfiguration eine Geburtstags-Rolle konfiguriert ist.</li>
     <li>Stelle sicher, dass die Rolle des Bots in der Rollenhierarchie des Servers oberhalb der Geburtstags-Rolle platziert ist.</li>
-    <li>Überprüfe, ob der Bot über die Berechtigung <code>Rollen verwalten</code> permission verfügt.</li>
+    <li>Überprüfe, ob der Bot über die Berechtigung <code>Rollen verwalten</code> verfügt.</li>
   </ul>
 </details>
 
@@ -103,7 +103,7 @@ Folgende Daten werden zu jedem registrierten Geburtstag gespeichert:
 * Die Discord-Nutzer-ID des Mitglieds
 * Tag und Monat des Geburtstags
 * Das Geburtsjahr (falls vom Nutzer angegeben)
-* Ob der Geburtstag gesperrt ist (falls die Administrator-Geburtstagsverwaltungerwaltung aktiviert ist)
+* Ob der Geburtstag gesperrt ist (falls die Administrator-Geburtstagsverwaltung aktiviert ist)
 * Metadaten zum Eintrag (Erstellungsdatum und Zeitpunkt der letzten Aktualisierung)
 
 Um alle von diesem Modul gespeicherten Daten zu entfernen, [lösche die Modul-Datenbank](/de/docs/custom-bot/additional-features/#reset-module-database).
