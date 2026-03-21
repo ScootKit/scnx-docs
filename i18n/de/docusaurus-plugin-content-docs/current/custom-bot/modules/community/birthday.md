@@ -9,7 +9,7 @@ Ermögliche es Nutzern, ihren Geburtstag festzulegen, und sich gegenseitig zu gr
 * Nutzer können ihren Geburtstag (Tag, Monat und optional das Jahr) über einen Slash-Befehl registrieren.
 * Ein automatisch aktualisiertes Geburtstags-Embed zeigt alle registrierten Geburtstage nach Monaten sortiert an.
 * Der Bot sendet jeden Tag um Mitternacht automatisch Geburtstags-Nachrichten zum Geburtstag.
-* Weise Nutzern an ihrem Geburtstag optional eine Geburtsstags-Rolle zu (wird am nächsten Tag automatisch wieder entfernt).
+* Weise Nutzern an ihrem Geburtstag optional eine Geburtstags-Rolle zu (wird am nächsten Tag automatisch wieder entfernt).
 * Gibt ein Nutzer sein Geburtsjahr an, kann die Geburtstags-Nachricht auch sein Alter enthalten.
 * Geburtstagsdaten werden automatisch entfernt, wenn ein Mitglied den Server verlässt.
 * Optionale Geburtstagsverwaltung für Admins: Administratoren können Geburtstage von Nutzern festlegen, entfernen, sperren und entsperren.
@@ -17,7 +17,7 @@ Ermögliche es Nutzern, ihren Geburtstag festzulegen, und sich gegenseitig zu gr
 ## Einrichtung {#setup}
 
 1. Erstelle einen Kanal, in dem das Geburtstags-Embed und die Geburstags-Nachrichten gesendet werden, und konfiguriere diesen in der [Modul-Konfiguration](#configuration).
-2. Stelle sicher, dass der Bot im Geburtsstags-Kanal über die Berechtigungen `Kanal anzeigen`, `Nachrichten senden`, `Links einbetten` und `Nachrichten verwalten` verfügt.
+2. Stelle sicher, dass der Bot im Geburtstags-Kanal über die Berechtigungen `Kanal anzeigen`, `Nachrichten senden`, `Links einbetten` und `Nachrichten verwalten` verfügt.
 3. Falls du die Geburtstags-Rollenfunktion nutzen möchtest, erstelle eine entsprechende Rolle und konfiguriere diese in der [Modul-Konfiguration](#configuration). Stelle sicher, dass die Rolle des Bots in der Rollenhierarchie oberhalb der Geburtstags-Rolle platziert ist.
 
 ## Nutzung {#usage}
@@ -39,7 +39,7 @@ Falls in der [Konfiguration](#configuration) aktiviert, können Administratoren 
 
 Gesperrte Geburtstage werden mit einem Schloss-Symbol angezeigt, wenn Nutzer ihren eigenen Geburtstags-Status abrufen.
 
-### Automatische Geburtsstagsprüfung
+### Automatische Geburtstagsprüfung
 
 Jeden Tag um Mitternacht prüft der Bot auf anstehende Geburtstage und:
 1. Sendet eine Geburtstags-Nachricht für jeden Nutzer, der heute Geburtstag hat.
