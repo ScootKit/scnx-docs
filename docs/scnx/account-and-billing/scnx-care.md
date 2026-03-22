@@ -29,13 +29,14 @@ The specific options available to you depend on your current plan and the nature
 
 Depending on the severity of the issue, you may be offered one of the following options:
 
-| Accommodation | Description |
-|---|---|
-| **Plan Extension** | Additional days added to your current plan at no charge |
-| **Account Balance Credit** | A credit applied to your SCNX balance for future purchases |
-| **Free Plan Trial** | Try a higher-tier plan (Unlimited or Professional) for free |
-| **AI Coins** | Free AI coins for your server's AI features |
-| **Membership** | A complimentary Level 2 or Level 3 membership |
+| Accommodation | Description | Availability |
+|---|---|---|
+| **Plan Extension** | Additional days added to your current plan at no charge | Servers with a plan expiration date (no active subscription) |
+| **Delay Next Billing** | Delays your next subscription payment by a number of days | Servers with an active auto-charge subscription (Stripe or Paddle) |
+| **Account Balance Credit** | A credit applied to your SCNX balance for future purchases | EU customers only |
+| **Free Plan Trial** | Try a higher-tier plan (Unlimited or Professional) for free | Servers on the Starter plan only |
+| **AI Coins** | Free AI coins for your server's AI features | All servers |
+| **Membership** | A complimentary Level 2 or Level 3 membership | All users |
 
 ## How Do I Redeem My Voucher?
 
