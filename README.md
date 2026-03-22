@@ -97,4 +97,4 @@ Contributions are welcome! Please:
 
 ---
 
-&copy; ScootKit, 2025 — All rights reserved. This project is proprietary software. See above for contribution guidelines.
+&copy; ScootKit UG (haftungsbeschränkt), 2026 — All rights reserved. This project is proprietary software. See above for contribution guidelines.
