@@ -769,7 +769,7 @@
   "home.product.scnx": { "message": "Serververwaltung, Pläne, Backups, Analytik und Kontoeinstellungen." },
   "home.product.cb": { "message": "Erstelle deinen eigenen Discord-Bot mit Moderation, Spaß, Community und Utility-Modulen." },
   "home.product.sb": { "message": "Professionelle Ticketbearbeitung mit Modmail- und Ticketsystem-Funktionen." },
-  "home.product.lr": { "message": "Verbinde externe Dienste mit Discord-Rollen für Verifikation und Zugriffskontrolle." },
+  "home.product.lr": { "message": "Zeige die Rollen von Nutzern direkt neben dem Nutzernamen in Discord Chats an." },
   "home.p.scnx.plans": { "message": "Pläne" },
   "home.p.scnx.security": { "message": "Sicherheit" },
   "home.p.scnx.backups": { "message": "Backups" },

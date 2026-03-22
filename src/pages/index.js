@@ -49,7 +49,7 @@ const products = [
     },
     {
         title: 'Linked Roles',
-        description: <Translate id="home.product.lr">Connect external services to Discord roles for verification and access control.</Translate>,
+        description: <Translate id="home.product.lr">Display a user's roles next to their username in your Discord chats.</Translate>,
         link: '/docs/linked-roles/intro',
         faIcon: faLink,
         links: [
@@ -252,7 +252,7 @@ function PopularModules() {
                             <span className={styles.moduleName}>{m.humanReadableName[i18n.currentLocale] || m.humanReadableName.en}</span>
                             <span className={styles.moduleDesc}>{m.description[i18n.currentLocale] || m.description.en}</span>
                             <span className={styles.moduleUsage}>
-                                {new Intl.NumberFormat(i18n.currentLocale, {notation: 'compact', compactDisplay: 'short'}).format(m.approximateEnableBotCount)} <Translate id="home.modules.servers">servers</Translate>
+                                {new Intl.NumberFormat(i18n.currentLocale, {notation: 'compact', compactDisplay: 'short', maximumFractionDigits: 0}).format(m.approximateEnableBotCount)}+ <Translate id="home.modules.servers">servers</Translate>
                             </span>
                         </div>
                         <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className={styles.moduleArrow}>
