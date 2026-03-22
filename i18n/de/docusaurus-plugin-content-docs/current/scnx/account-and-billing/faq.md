@@ -165,7 +165,7 @@ SCNX verwendet die **E-Mail-Adresse deines Discord-Kontos**, um dir wichtige Mit
 - **Rechnungen und Zahlungsbestätigungen**
 - **Server-Deaktivierungshinweise**
 - **2FA-Zurücksetzungsbestätigungen**
-- **SCNX Cares Kulanzgutscheine**
+- **SCNX Care Kulanzgutscheine**
 - **Löschbestätigungen**
 - **Rechtliche Hinweise** (Änderungen der Nutzungsbedingungen, Richtlinienaktualisierungen)
 

@@ -191,7 +191,7 @@ SCNX uses the **email address from your Discord account** to send you important 
 - **Invoices and payment confirmations**
 - **Server deactivation notices**
 - **2FA reset confirmations**
-- **SCNX Cares accommodation vouchers**
+- **SCNX Care accommodation vouchers**
 - **Deletion confirmations**
 - **Legal notices** (Terms of Service changes, policy updates)
 

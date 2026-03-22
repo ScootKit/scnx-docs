@@ -1,13 +1,13 @@
 ---
 unlisted: true
-title: SCNX Cares
+title: SCNX Care
 ---
 
-# SCNX Cares
+# SCNX Care
 
-At ScootKit, we believe that when something goes wrong, it's our responsibility to make it right. **SCNX Cares** is our customer accommodation program designed to acknowledge service disruptions, resolve issues transparently, and ensure you feel valued as a member of our community.
+At ScootKit, we believe that when something goes wrong, it's our responsibility to make it right. **SCNX Care** is our customer accommodation program designed to acknowledge service disruptions, resolve issues transparently, and ensure you feel valued as a member of our community.
 
-## What is SCNX Cares?
+## What is SCNX Care?
 
 When you experience a service issue on SCNX - whether it's unexpected downtime, a software bug, a billing discrepancy, or a delayed support response - our team may issue you a **Care Voucher**. This voucher allows you to select a complimentary accommodation as our way of apologizing for the inconvenience.
 
@@ -83,4 +83,4 @@ Please contact our support team at [scnx.app/help](https://scnx.app/help) and re
 
 ---
 
-*SCNX Cares is a voluntary goodwill program by ScootKit. Accommodations are issued at the discretion of our support team and are subject to our [Terms of Service](https://sc-net.work/tos).*
+*SCNX Care is a voluntary goodwill program by ScootKit. Accommodations are issued at the discretion of our support team and are subject to our [Terms of Service](https://sc-net.work/tos).*
