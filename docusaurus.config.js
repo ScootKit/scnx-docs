@@ -23,6 +23,7 @@ const config = {
         locales: ['en', 'de', 'it']
     },
     trailingSlash: true,
+    clientModules: [require.resolve('./src/fontawesome.js')],
     scripts: [],
     stylesheets: [
             {
