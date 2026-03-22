@@ -14,7 +14,7 @@ The steps to troubleshoot are different between the two bots. Please continue in
 guides:
 
 * [Custom Bot](/docs/custom-bot/troubleshooting)
-* Support Bot
+* [Support Bot](/docs/support-bot/troubleshooting)
 
 ## The Basics {#basics}
 

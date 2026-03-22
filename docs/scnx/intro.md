@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # About SCNX
 
-Welcome to [SCNX](https://scnx.xyz). SCNX is a system designed for communites to create their own Discord-Bots.
+Welcome to [SCNX](https://scnx.xyz). SCNX is a system designed for communities to create their own Discord-Bots.
 
 ## Features for Servers {#servers}
 
@@ -16,16 +16,18 @@ be able to use their own set of features:
 * [Custom Discord Bot](https://scnx.xyz/bot) (short: "Custom Bot"): A fully configurable general-purpose Discord-Bot for
   one community, hosted completely free on SCNX. You can [get started with Custom-Bot](/docs/custom-bot)
   or [open the full Custom-Bot Documentation](/docs/custom-bot/intro).
-* [Discord Modmail Bot](https://modmail.net) (short: "Modmail Bot"): A fully configurable Discord-Support system based
-  on the Modmail-principle built to handel tickets professionally, starting
+* [Custom Support Bot](/docs/support-bot/intro): A fully configurable Discord support system with modmail and ticket features, built to handle support professionally, starting
   at <PlanPrice plan="UNLIMITED" type="MONTHLY" />. You
-  can [get started with Modmail](/docs/modmail) or [open the full Modmail Documentation](/docs/modmail/intro).
+  can [get started with Support Bot](/docs/support-bot) or [open the full Support Bot Documentation](/docs/support-bot/intro).
 * [SCNX Backups](https://scnx.xyz/backups): A system to back up messages, channels, roles and more of your server. You
   can [open the Backups documentation](/docs/scnx/guilds/backups).
 * dcserver.link: Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`). You
   can [open dcserver.link documentation](/docs/scnx/guilds/dcserver-link).
 * Trusted-Admins: Using Trusted Admins, server owners can give access to SCNX to administrators on their
   server. [Open the Trusted-Admin documentation](/docs/scnx/guilds/trusted-admins) to learn more.
+* [Enhanced Security](/docs/scnx/guilds/enhanced-security): Require two-factor authentication for all configuration changes on your server.
+* [Guild Image Storage](/docs/scnx/guilds/files): Upload, organize, and reuse images across your bot configurations.
+* [Server Analytics](/docs/scnx/guilds/analytics): View detailed analytics and insights about your server's SCNX usage.
 
 To learn more about prices, subscriptions and plans on SCNX, visit
 the [Subscriptions & Plans documentation](/docs/scnx/guilds/plans). Additionally, we've added a
@@ -38,12 +40,12 @@ detailed [frequently asked questions](/docs/scnx/guilds/faq) section about serve
 * SCNX Ads: Advertise your server or product on SCNX. You can open
   the [Ads on SCNX documentation](/docs/scnx/account-and-billing/ads).
 * SCNX File Storage: Host images and more for your Discord servers and embed them directly on SCNX.
-* SC Network Memberships (outdated): *More information will be made available shortly*.
+* [Account Security](/docs/scnx/account-and-billing/account-security): Protect your SCNX account with two-factor authentication, recovery codes, and email self-recovery management.
 
 We've also added a [FAQ about user accounts & billing](/docs/scnx/account-and-billing/faq) so you can easily find answers to any
 questions you might have.
 
-## Other (behind-the-scenes) parts of SCNX {#behinde-the-scenes}
+## Other (behind-the-scenes) parts of SCNX {#behind-the-scenes}
 
 :::note
 [ScootKit](https://scootkit.net) is a German-based company running SCNX and other service-as-a-service products.

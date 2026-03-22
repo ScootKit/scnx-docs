@@ -100,7 +100,7 @@ Um einen Zeitstempel zu erstellen, umschließt du eine Unix-Zeit (Sekunden seit 
 
 ![Ein Screenshot, der Beispiele für verschiedene Zeitstempelformate zeigt](@site/docs/assets/discord-formatting/en/types3.png)
 
-Eine detaillierte Anleitung und einen Generator dafür findest du [hier](@site/docs/discord-formatting.md#timestamps).
+Eine detaillierte Anleitung und einen Generator dafür findest du [hier](/docs/discord-formatting#timestamps).
 
 ---
 

@@ -11,11 +11,6 @@ gesamten Team, Bilder einfach hochzuladen, zu organisieren und in all deinen Bot
 Verabschiede dich von dem Aufwand, Dateien in deinen persönlichen Speicher hochzuladen und sie manuell mit deinem Team
 teilen zu müssen!
 
-:::warning Beta-Funktion
-Server-Bilderspeicher ist derzeit für ausgewählte Server als Early-Access-Experiment verfügbar. Bitte beachte, dass sich
-diese Funktion in der Beta-Phase befindet und daher **Änderungen, Einschränkungen oder sogar einer Entfernung
-unterliegen kann**, während wir sie weiter testen und verbessern.
-:::
 
 Wenn diese Funktion für deinen Server aktiviert ist, findest du **Bilder** in der Navigationsleiste deines Servers.
 

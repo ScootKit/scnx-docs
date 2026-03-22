@@ -10,13 +10,7 @@ Guild Image Storage is your server’s shared, centralized image library on SCNX
 upload, organize, and reuse images across all your bot configurations. Say goodbye to the hassle of uploading files to
 your personal space and having to manually share them with your team!
 
-:::warning Beta Feature
-Guild Image Storage is currently available to selected servers as an early-access experiment. Please note that because
-this feature is in beta, **it is subject to changes, restrictions, or even removal** as we continue to test and improve
-it.
-:::
-
-If this feature is enabled for your server, you will find **Images** in your server's navigation sidebar.
+You'll find **Images** in your server's navigation sidebar.
 
 ## Why Use Guild Image Storage? {#why-use-guild-image-storage}
 

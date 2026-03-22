@@ -19,10 +19,9 @@ du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
   Discord-Bot für
   eine Community, kostenfrei gehostet auf SCNX. Du kannst [mit einem eigenen Bot loslegen](/docs/custom-bot)
   oder [die gesamte Eigene-Bot-Dokumentation](/docs/custom-bot/intro) öffnen.
-* [Discord-Modmail-Bot](https://modmail.net) (kurz: "Modmail Bot"): Ein komplett anpassbares Discord-Support-System mit
-  dem Modmail-Prinzip, gebaut, um Support-Tickets professionell zu bearbeiten - gehostet ab
+* [Eigener-Support-Bot](/docs/support-bot/intro): Ein komplett anpassbares Discord-Support-System mit Modmail- und Ticket-Funktionen, gebaut, um Support professionell zu bearbeiten - gehostet ab
   nur <PlanPrice plan="UNLIMITED" type="MONTHLY" />. Du kannst
-  entweder [mit Modmail loslegen](/docs/modmail) or [die gesamte Modmail-Dokumentation](/docs/modmail/intro) öffnen.
+  entweder [mit dem Support-Bot loslegen](/docs/support-bot) oder [die gesamte Support-Bot-Dokumentation](/docs/support-bot/intro) öffnen.
 * [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
   Ernstfall zu speichern. Du kannst die
   [Backup-Dokumentation](/docs/scnx/guilds/backups) öffnen.
@@ -31,6 +30,9 @@ du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
   die [dcserver.link-Dokumentation](/docs/scnx/guilds/dcserver-link) öffnen.
 * Trusted-Admins: Mit Trusted-Admins können Serverbesitzer ihren Administratoren anpassbaren Zugriff auf SCNX geben.
   Öffne die [Trusted-Admin-Dokumentation](/docs/scnx/guilds/trusted-admins), um mehr zu erfahren.
+* [Erweiterte Sicherheit](/docs/scnx/guilds/enhanced-security): Erfordert Zwei-Faktor-Authentifizierung für alle Konfigurationsänderungen auf deinem Server.
+* [Server-Bilderspeicher](/docs/scnx/guilds/files): Lade Bilder hoch, organisiere sie und verwende sie in deinen Bot-Konfigurationen wieder.
+* [Server-Analytik](/docs/scnx/guilds/analytics): Detaillierte Analytik und Einblicke über die SCNX-Nutzung deines Servers.
 
 Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](/docs/scnx/guilds/plans).
 Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen](/docs/scnx/guilds/faq) über Server auf SCNX.
@@ -42,12 +44,12 @@ Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen]
 * SCNX Werbung: Bewerbe deinen Server oder dein Produkt auf SCNX. Du kannst
   die [Werbung-auf-SCNX-Dokumentation](/docs/scnx/account-and-billing/ads) öffnen.
 * SCNX Dateien-Speicher: Hoste Bilder und mehr für deine Discord Server und füge sie direkt in SCNX ein.
-* SC Network Mitgliedschaften (outdated): *Mehr Informationen werden bald verfügbar sein*.
+* [Kontosicherheit](/docs/scnx/account-and-billing/account-security): Schütze dein SCNX-Konto mit Zwei-Faktor-Authentifizierung, Wiederherstellungscodes und E-Mail-Selbstwiederherstellung.
 
 Wir haben auch eine Ansammlung von [häufig gestellten Fragen über Nutzer & Abrechnung](/docs/scnx/account-and-billing/faq),
 damit du immer Antworten auf deine Fragen bekommst.
 
-## Andere (Hintergrund-)Teile von SCNX {#behinde-the-scenes}
+## Andere (Hintergrund-)Teile von SCNX {#behind-the-scenes}
 
 :::note
 [ScootKit](https://scootkit.net) ist die (deutsche) Firma, die SCNX - neben anderen Software-As-A-Service-Produkten -

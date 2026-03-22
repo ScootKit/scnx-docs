@@ -117,6 +117,16 @@ result in getting your account restricted in addition to potential legal procedu
 from sellers that are not [authorized](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) is also
 considered a violation.
 
+## Enterprise Plan {#enterprise}
+
+The Enterprise plan is designed for larger organizations and communities with advanced needs. It includes everything in the Professional plan, plus:
+
+- Dedicated support and account management
+- [Enhanced Security](/docs/scnx/guilds/enhanced-security) (always available, not subject to rolling release)
+- Custom enterprise configuration options
+
+Enterprise plans are custom-priced. [Contact our team](https://scnx.app/help) to learn more and discuss your requirements.
+
 ## Lifetime-Plans {#lifetime}
 
 Lifetime plans
@@ -132,11 +142,11 @@ Lifetime plans
 
 ### Purchase a Lifetime-Plan {#lifetime-purchase}
 
-To purchase a Lifetime-Plan open your [Liftime-Plan Panel](https://scnx.app/user/lifetime-plans) and select the plan you
+To purchase a Lifetime-Plan open your [Lifetime-Plan Panel](https://scnx.app/user/lifetime-plans) and select the plan you
 want to purchase. Next, finish the purchase using your favorite payment method - you'll be able to select the server you
 want to use the plan on later.
 
-Once you have finished your purchase, return to the [Liftime-Plan Panel](https://scnx.app/user/lifetime-plans) and
+Once you have finished your purchase, return to the [Lifetime-Plan Panel](https://scnx.app/user/lifetime-plans) and
 follow the [instructions to apply a Lifetime-Plan](#lifetime-apply).
 
 You can own as many Lifetime-Plans as you want - each of which you can transfer between servers, if you want to.
@@ -152,7 +162,7 @@ After purchasing a Lifetime-Plan needs to be applied to a server. This means tha
 plan of your lifetime-plan and will have this plan until you remove the lifetime-plan from this server. The same process
 can be used to transfer a Lifetime-Plan from one server to another.
 
-To apply or transfer a Lifetime-Plan, visit the [Liftime-Plan Panel](https://scnx.app/user/lifetime-plans) in your
+To apply or transfer a Lifetime-Plan, visit the [Lifetime-Plan Panel](https://scnx.app/user/lifetime-plans) in your
 dashboard. There, click on "Manage Lifetime-Plan" next to the Lifetime-Plan you want to manage. A modal will appear
 containing details about your Lifetime-Plan. Click on "Transfer Lifetime-Plan to another server" and select the server
 you want to transfer the plan to. SCNX will run a few checks to make sure the server you want to transfer the plan to is

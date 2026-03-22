@@ -1,122 +1,227 @@
 ---
 sidebar_position: 5
+toc_max_heading_level: 3
 ---
 
 # Frequently asked questions
 
-Frequently asked questions about user-features & billing on SCNX.
+Frequently asked questions about user features & billing on SCNX.
 
-## Billing related {#billing}
+**Quick navigation:**
+- **Payment Methods:** [Accepted methods](#accepted-payments) | [Google Pay / Apple Pay](#google-apple-pay) | [SEPA Direct Debit](#direct-debit) | [Standing bank order](#reoccurring-transfer) | [Wire transfer](#wire-transfer) | [Paysafecard](#paysafecard)
+- **Billing:** [Manage subscription](#manage-subscription) | [Billing address](#billing-details) | [VAT exempt](#vat) | [Refunds](#refund) | [Card declined](#no-reason-decline)
+- **Account:** [Set up 2FA](#2fa) | [Lost 2FA access](#lost-2fa) | [Delete account](#account-deletion)
+- **Email:** [What email is used](#email) | [Change email](#change-email) | [Not receiving emails](#no-emails)
+- **Other:** [Discord scopes](#discord-access) | [Get help](#help)
 
-:::warning
-These answers apply to customers inside the European Union. Outside the European Union, we partner with other companies,
-who will be the Merchant of Record for your purchase.
-Please [contact them](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) if you have any questions
-regarding your purchase.
+## Payment Methods
 
+### What payment methods are accepted? {#accepted-payments}
+
+SCNX accepts a wide range of payment methods via Stripe, Paddle, and other providers. Availability depends on your region and the type of purchase:
+
+**Cards & Wallets:**
+
+| Method | Availability |
+|--------|-------------|
+| Credit / Debit Card (Visa, Mastercard, Amex) | Worldwide |
+| Google Pay | Via "Card" option (see [below](#google-apple-pay)) |
+| Apple Pay | Via "Card" option (see [below](#google-apple-pay)) |
+| PayPal | Worldwide |
+| Amazon Pay | Selected regions |
+| Klarna | Selected EU countries |
+| Revolut Pay | Selected regions |
+
+**Bank-based methods:**
+
+| Method | Availability |
+|--------|-------------|
+| SEPA Bank Transfer (wire) | EU |
+| SEPA Direct Debit | EU ([by request](#direct-debit)) |
+| Standing Bank Order (reoccurring transfer) | EU ([setup guide](#reoccurring-transfer)) |
+| Sofort | Germany, Austria, Belgium, Netherlands |
+| iDEAL | Netherlands |
+| Bancontact | Belgium |
+| EPS | Austria |
+| Giropay | Germany |
+| Przelewy24 | Poland |
+| Online Banking (Trustly) | Selected EU countries |
+| Multibanco | Portugal |
+
+**Regional & other methods:**
+
+| Method | Availability |
+|--------|-------------|
+| Paysafecard | Selected regions ([see below](#paysafecard)) |
+| Twint | Switzerland |
+| MobilePay | Denmark, Finland |
+| Satispay | Italy |
+| BANCOMAT Pay | Italy |
+| WeChat Pay | China |
+| Alipay | China |
+
+:::info
+The exact methods available to you will be shown during checkout. Some methods are only available for one-time purchases, not subscriptions.
 :::
 
-### How do I manage my subscription? {#manage-subscription}
+### How do I use Google Pay or Apple Pay? {#google-apple-pay}
 
-To manage your subscription, visit your [payment page](https://scnx.app/user/payments) on your dashboard. There, you'll
-be able to review and cancel any running subscriptions.
+Google Pay and Apple Pay are available when selecting **Card** as the payment method during checkout. Make sure that:
+- Third-party cookies are allowed in your browser
+- Your wallet (Google Pay / Apple Pay) is configured correctly
 
-If you subscribed on Discord, you'll need to manage your subscription in your Discord account settings. We can't help
-with billing issues, if you subscribed on Discord.
+If your wallet is set up correctly, the option will appear automatically in the card payment form. Even if you use PayPal through Google Pay, select "Card" as the payment method.
 
-### I am VAT exempt {#vat}
+### Can I pay with Paysafecard? {#paysafecard}
 
-Please contact our [billing@scootkit.com](mailto:billing@scootkit.com) to verify your account.
+Yes! Paysafecard is available for one-time purchases. Select "Paysafecard" during checkout and you'll be redirected to complete the payment.
 
-### How do I set my billing address? {#billing-details}
+### Request access to SEPA Direct Debit {#direct-debit}
 
-To set your billing address, please visit the [payment page](https://scnx.app/user/payments) on your dashboard. There,
-you'll find the invoice data section. You can enter your invoice details there. Your details wil only be used for new
-invoices.
-Please note: Depending on your entries, we might ask you to verify the details (as required by law in certain
-scenarios). If we find that you have abuse this (e.g. entered invalid addresses), we may disable this feature for your
-account (or take other actions, if necessary).
+SEPA Direct Debit isn't available by default due to the high-risk nature of the payment method.
 
-### Request access to SEPA Direct Debit payments {#direct-debit}
+You can request access if you meet the following requirements:
 
-By default, SEPA Direct payments aren't available for customers due to the high-risk nature of the payment method.
+* Positive payment history with your first payment going back at least two months
+* At least 20,00 EUR spent in total at SCNX
+* Only payments made directly to the ScootKit UG (haftungsbeschraenkt) are eligible
 
-You can request access to pay with SEPA Direct Debit if you meet the following requirements:
+Check your [payment history](https://scnx.app/user/payments) and contact [billing@scootkit.com](mailto:billing@scootkit.com) to request access.
 
-* You have a positive payment history with your first payment going back at least two months.
-* You have spent at least 20,00 € in total at SCNX.
-* Only payments made directly to the ScootKit UG (haftungsbeschränkt) are eligible.
+### How do I pay with a standing bank order? {#reoccurring-transfer}
 
-You can check your [payment history in your SCNX Dashboard](https://scnx.app/user/payments).
-
-To request access to SEPA Direct Debit payments on SCNX, please contact us via E-Mail at [billing@scootkit.com](mailto:billing@scootkit.com) where
-we'll guide you through the process of getting access to SEPA Direct Debits. You might be asked to provide documents
-proofing that you own the bank accounts.
-
-Regardless of your verification, we work with our partners to reduce the risk of disputes, leading to some payments
-being denied based on an automated risk assessments and payments made from your bank account at other businesses.
-
-### How do I pay on SCNX with a standing bank order (/ reoccurring bank transfer)? {#reoccurring-transfer}
-
-1. First, enable the subscription on SCNX. To do so, open
-   the [pricing page](https://scnx.app/glink?page=pricing?showUpgradeModal=true) of your server and open the upgrade
-   window. Next, select your payment interval and plan. When asked for a payment method, please select "Reoccurring
-   Bank-Transfer". You'll be shown unique payment instructions and [a unique IBAN](#wire-transfer).
-2. Next, set up the reoccurring wire transfer at your bank:
+1. Open the [pricing page](https://scnx.app/glink?page=pricing?showUpgradeModal=true) of your server, select your plan and payment interval, and choose "Reoccurring Bank-Transfer". You'll be shown payment instructions with [a unique IBAN](#wire-transfer).
+2. Set up the reoccurring wire transfer at your bank:
     * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
     * [Deutsche Bank](https://www.deutsche-bank.de/pk/shared/trxm/help-de/konten/konten-dauerauftraege.html)
     * [Volksbanken / Raiffeisenbanken](https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/online-banking/dauerauftrag-einrichten-oder-aendern.html)
     * [Commerzbank](https://service.commerzbank.de/wie-richte-ich-einen-dauerauftrag-ein)
     * [ING](https://www.ing.de/hilfe/banking/)
-    * [Hypovereinsbank](https://www.hypovereinsbank.de/hvb/kontaktwege/dauerauftrag)
-    * [BUNQ](https://together.bunq.com/d/84-schedule-a-payment)
     * [N26](https://support.n26.com/de-de/zahlungen-ueberweisungen-und-abhebungen/lastschriften-und-dauerauftrage/wie-erstelle-und-verwalte-ich-dauerauftrage)
     * [Revolut](https://help.revolut.com/de-LU/help/receiving-payments/sending-money-to-an-external-bank-account/how-to-schedule-recurring-payments/business/)
-    * Your bank is not listed? Just google the name of your bank combined with "reoccurring wire transfer" (or "
-      Dauerauftrag" in German) to find guides. If you are still having trouble, please reach out to your bank.
-3. Make sure all details match the details shown in your dashboard and confirm your reoccurring wire transfer with your
-   bank.
-4. Enjoy your SCNX Subscription 🚀
+    * Your bank not listed? Google your bank's name combined with "Dauerauftrag" (or "standing order" in English).
+3. Make sure all details match your dashboard and confirm.
 
-### How does SCNX know that I wired a bill? {#wire-transfer}
+### How does SCNX know that I paid via wire transfer? {#wire-transfer}
 
-When paying with wire transfer, you'll be assigned a custom IBAN on a virtual bank account. Every payment that arrives
-at that account will be credited towards your bills - the transaction reference is not required (but recommended for
-one-time purchases), as we can easily assign a payment to your account based on the IBAN the money was received on.
+You'll be assigned a custom IBAN on a virtual bank account. Every payment arriving at that account is credited towards your bills - the transaction reference is not required (but recommended for one-time purchases), as we identify payments by the receiving IBAN.
 
-Wired too much money on accident? Don't worry: Your money will be automatically used for future payments.
+Wired too much money? Don't worry - your balance will be automatically used for future payments.
 
-### My card was declined, but all my data is valid {#no-reason-decline}
+## Billing & Invoices
 
-Here are a few possible reasons why this is happening:
+:::warning
+These answers apply to customers inside the European Union. Outside the EU, we partner with other companies who will be the Merchant of Record. Please [contact them](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/) if you have questions.
+:::
 
-* Your card was issued in Russia / by a Russian bank
-* Your card was issued in a nation affected by international sanctions / by a bank in such nation
+### How do I manage my subscription? {#manage-subscription}
+
+Visit your [payment page](https://scnx.app/user/payments) to review and cancel running subscriptions.
+
+If you subscribed on Discord, manage your subscription in your Discord account settings.
+
+### How do I set my billing address? {#billing-details}
+
+Visit the [payment page](https://scnx.app/user/payments) and find the invoice data section. Your details will only be used for new invoices. We may ask you to verify details as required by law.
+
+### I am VAT exempt {#vat}
+
+Contact [billing@scootkit.com](mailto:billing@scootkit.com) to verify your account.
+
+### How do I get a refund? {#refund}
+
+[Contact our team](https://scnx.app/help) to request a refund. Refunds are handled on a case-by-case basis per our [Terms of Service](https://scootk.it/scnx-tos).
+
+### My card was declined {#no-reason-decline}
+
+Possible reasons:
+
+* Your card was issued in a sanctioned nation
 * Your card has been involved in fraud previously
-* The data your entered is invalid
-* Our payment provider deemed your transaction as high-risk and has denied it
+* The data you entered is invalid
+* Our payment provider deemed your transaction as high-risk
 * Your card has been reported as stolen
-* You card could not be verified using 3DS
+* Your card could not be verified using 3DS
 
-Please [contact our staff](https://scnx.app/help) if you think none of these reasons apply.
+[Contact our staff](https://scnx.app/help) if you think none of these apply.
 
-## Other questions
+## Account & Security
+
+### How do I set up two-factor authentication (2FA)? {#2fa}
+
+Visit [scnx.app/user/security](https://scnx.app/user/security) to set up an authenticator app or hardware security key. We recommend also generating recovery codes as a backup.
+
+See the [Account Security documentation](/docs/scnx/account-and-billing/account-security) for a step-by-step guide.
+
+### I lost access to my 2FA device {#lost-2fa}
+
+You have three recovery options:
+1. **Recovery codes** - use one of your 8 backup codes
+2. **Email-based reset** - initiate a reset from the security page (7-day waiting period)
+3. **Contact support** - [reach out to the SCNX team](https://scnx.app/help)
+
+See [Account Security - Losing Access](/docs/scnx/account-and-billing/account-security#losing-access) for details.
+
+### How do I delete my SCNX account? {#account-deletion}
+
+[Contact our team](https://scnx.app/help) to request deletion of your SCNX account and all associated data. As we are based in the European Union, we comply with the [GDPR](https://gdpr-info.eu/) and will process your request promptly.
+
+## Privacy & Discord Access
 
 ### Required scopes for Discord {#discord-access}
 
-To use SCNX, you'll need to authorize certain access to your Discord account. Our access is strictly limited, but we
-understand that you might be worried about sharing personal data with a third party. Here's an explanation about why we
-require which scope.
+To use SCNX, you'll need to authorize certain access to your Discord account. Our access is strictly limited.
 
 :::tip
-We're registered in the European Union - we comply with laws like
-the [General Data Processing Regulation](https://gdpr-info.eu/) (one of the most strict data protection laws). You can
-always request deletion of stored data, and we respect your privacy because we believe privacy is a human right. You can
-find our privacy policy [here](https://scootkit.net/privacy).
+We're registered in the European Union and comply with the [GDPR](https://gdpr-info.eu/). You can always request deletion of stored data. Find our privacy policy [here](https://scootkit.net/privacy).
 :::
 
-| Scope                                    | Explanation                                                                                                                                                                          |
-|------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Access your username, avatar, and banner | We require this information to identify you and to run the dashboard - we'll (for example) show your profile-picture in the dashboard.                                               |                                                                                                                                                         |
-| Access to E-Mail-Address                 | This is required to send you invoices & legal information (like policy changes). We are not a certain big bot with a blue profile picture and will never send you marketing E-Mails. |
-| Know what servers you're in              | In the dashboard we display all servers you have access to. For this to work, we need to know what servers you are currently in.                                                     |
+| Scope                                    | Explanation                                                                                                |
+|------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Access your username, avatar, and banner | Required to identify you and run the dashboard (e.g. show your profile picture).                           |
+| Access to E-Mail-Address                 | Required to send invoices & legal information (like policy changes). We will never send marketing emails.   |
+| Know what servers you're in              | Required to display all servers you have access to in the dashboard.                                        |
+
+## Email & Notifications
+
+### What email does SCNX use to contact me? {#email}
+
+SCNX uses the **email address from your Discord account** to send you important communications, including:
+
+- **Invoices and payment confirmations**
+- **Server deactivation notices**
+- **2FA reset confirmations**
+- **SCNX Cares accommodation vouchers**
+- **Deletion confirmations**
+- **Legal notices** (Terms of Service changes, policy updates)
+
+We will never send marketing emails.
+
+### How do I change my email on SCNX? {#change-email}
+
+Since SCNX uses your Discord email, you need to change it in Discord first, then log back into SCNX:
+
+1. Open your **Discord account settings** and [update your email address](https://support.discord.com/hc/en-us/articles/4423385681175-How-to-Change-your-Discord-Account-s-Email)
+2. **Log out of SCNX** at [scnx.app](https://scnx.app)
+3. **Log back in** - SCNX will automatically pick up your new Discord email
+
+:::warning
+Make sure you always have access to the email linked to your Discord account. This email is used for invoices, security notifications, and account recovery.
+:::
+
+### I'm not receiving emails from SCNX {#no-emails}
+
+Check the following:
+- Look in your **spam/junk folder** for emails from `@scnx.xyz` and `@scootkit.com`
+- Make sure your Discord email is correct and accessible
+- Add the following addresses to your contacts or safe senders list: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scootkit.com`, `legal@scootkit.com`, `compliance@scnx.xyz`
+
+If you're still not receiving emails, [contact our support team](https://scnx.app/help).
+
+## Getting Help
+
+### Where can I get help? {#help}
+
+* Visit our [help center](https://scnx.app/help) to contact the support team
+* Join our [Discord server](https://scootk.it/dc) for community support
+* Browse this [documentation](/) for guides and tutorials
