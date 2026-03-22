@@ -76,7 +76,7 @@ export default function Footer() {
                             <span className={styles.brandName}>SCNX Docs</span>
                         </Link>
                         <p className={styles.brandTagline}>
-                            <Translate id="footer.tagline">Build, configure, and manage your Discord bots — for free.</Translate>
+                            <Translate id="footer.tagline">Build, configure, and manage your Discord bots - for free.</Translate>
                         </p>
                         <div className={styles.socialRow}>
                             {socialLinks.map((s, i) => (

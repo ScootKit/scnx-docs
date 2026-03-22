@@ -214,19 +214,16 @@ function WhySCNX() {
     );
 }
 
-const moduleDocPaths = {
-    'admin-tools': 'administration', 'welcomer': 'administration', 'status-roles': 'administration',
-    'suggestions': 'administration', 'team-goals': 'administration', 'channel-stats': 'administration',
-    'logging': 'administration', 'auto-delete': 'administration', 'partner-list': 'administration',
-    'team-list': 'administration', 'betterstatus': 'bot', 'reaction-roles': 'bot',
-    'giveaways': 'community', 'temp-channels': 'community', 'sticky-messages': 'community',
-    'anonymous-chat': 'community', 'economy-system': 'community', 'leveling': 'community',
-    'fun': 'fun', 'flag-quiz': 'fun', 'emoji-quiz': 'fun', 'quiz': 'fun', 'counter': 'fun',
-    'connect-four': 'fun', 'auto-react': 'fun', 'uno': 'fun', 'guess-the-number': 'fun',
-    'moderation': 'moderation', 'invite-tracking': 'moderation', 'anti-ghostping': 'moderation',
-    'tickets': 'support', 'applications': 'support',
-    'afk-system': 'tools', 'birthday': 'tools', 'automessages': 'tools',
-};
+function getModuleDocPath(mod) {
+    return mod.tags && mod.tags[0] ? mod.tags[0] : null;
+}
+
+function getModuleUrl(mod) {
+    const category = getModuleDocPath(mod);
+    if (!category) return null;
+    const slug = category === mod.name ? category : `${category}/${mod.name}`;
+    return `/docs/custom-bot/modules/${slug}`;
+}
 
 function PopularModules() {
     const modules = usePluginData('scnx-custom-bot-modules');
@@ -235,7 +232,7 @@ function PopularModules() {
     const topModules = useMemo(() => {
         if (!modules || !Array.isArray(modules)) return [];
         return [...modules]
-            .filter(m => m.approximateEnableBotCount && moduleDocPaths[m.name])
+            .filter(m => m.approximateEnableBotCount && getModuleUrl(m))
             .sort((a, b) => b.approximateEnableBotCount - a.approximateEnableBotCount)
             .slice(0, 8);
     }, [modules]);
@@ -247,7 +244,7 @@ function PopularModules() {
             <h2 className={styles.sectionTitle}><Translate id="home.modules.title">Most Popular Bot Modules</Translate></h2>
             <div className={styles.modulesGrid}>
                 {topModules.map((m, i) => (
-                    <Link to={`/docs/custom-bot/modules/${moduleDocPaths[m.name]}/${m.name}`} key={i} className={styles.moduleCard}>
+                    <Link to={getModuleUrl(m)} key={i} className={styles.moduleCard}>
                         <div className={styles.moduleIconWrap}>
                             <ModuleIcon icon={m['fa-icon']} width={20}/>
                         </div>
