@@ -147,7 +147,7 @@ In this module, issues can often appear when permissions are set incorrectly, hi
     <ul>
         <li>Make sure your bot has the 'Time out members' and 'Kick, Approve and Reject Members' permissions to mute and kick members.</li>
         <li>Make sure the user the bot is trying to punish does not have administrator permissions.</li>
-    <ul>
+    </ul>
 </details>
 
 ## Stored data {#data-usage}
