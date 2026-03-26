@@ -112,7 +112,7 @@ In this module, issues can often appear when permissions are set incorrectly, hi
     <summary>The warning message is not being sent after a protected member/role is pinged.</summary>
     <ul>
         <li>Make sure your bot has the 'View channel', 'Send messages', 'View message history' and 'Embed links' permissions so the bot can send (embed) messages in the channel</li>
-        <li>Make sure the pinged role or member is actually protected in the <a href="#configuration-general">general configuration</a>.
+        <li>Make sure the pinged role or member is actually protected in the <a href="#configuration-general">general configuration</a></li>.
     </ul>
 </details>>
 
