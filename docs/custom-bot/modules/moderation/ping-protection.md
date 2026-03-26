@@ -154,22 +154,15 @@ In this module, issues can often appear when permissions are set incorrectly, hi
 
 The following data is being stored by this module:
 
-**For every recorded ping:**
-* The user ID of the person who pinged
-* The message URL (or "Blocked by AutoMod" if blocked)
-* The target user or role ID
-* Whether the target is a role or user
-* Metadata about the entry (date when created and last updated)
-
-**For every moderation action:**
-* The user ID of the punished user
-* The action type (mute or kick) and duration
-* The reason for the action
-* Metadata about the entry (date when created and last updated)
-
-**For users who leave the server:**
-* The user ID
-* The date they left
-* Metadata about the entry (date when created and last updated)
+| Data | Reason for storage | When this is stored/used |
+|------|--------------------|--------------------------|
+| User ID | This is stored from both the pinger, the protected user(s) and the pinged user. This is stored so the bot knows who pinged who, and who are protected from pings. | When someone pings a protected user, when a moderation action needs to be done, when the user history is viewed and when the user leaves the server. |
+| Message URL | This is stored so the bot knows the link to the message where a ping occurred. | When someone pings a protected user/role and when viewed in history. If the message was blocked by AutoMod, it shows "Blocked by AutoMod". |
+| Role ID | This is stored so the bot knows if someone has a protected or whitelisted role. | When configured and set and when a user/role is being pinged to check it |
+| Time and date for a ping | This is stored so the bot knows when a message containing a ping towards a protected user or role was sent - this is showcased in the user history | When a protected ping occurs and when viewed in history. |
+| Moderation action type | This is stored so the bot knows which action types exist, and are used in [moderation actions](#configuration-moderation). | When set up, when a moderation action should be done and when history is viewed. |
+| Moderation reason and duration | This is stored so the bot knows why and how long a moderation action was done - this is showcased in the user history.  | When set up, when a moderation action should be done and when history is viewed. |
+| Time and date for the moderation action | This is stored so the bot knows when the moderation action was done - this is showcased in the user history. | When a moderation action should be done and when history is viewed. |
+| Time and date of the user leaving | This is stored so the bot knows when a user left the server - this is showcased in the logs and uses the configuration to know when to autoamtically delete the user logs depending on the [leaver retention](#configuration-storage) in the configuration.|
 
 Data is automatically deleted based on the configured retention periods. You can also delete all data for a specific user through the [`/ping-protection user panel`](#commands) command. To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
