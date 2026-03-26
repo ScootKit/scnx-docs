@@ -1,16 +1,17 @@
 # Teammitglieder-Ziele
 
-Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
+Setze wöchentliche Nachrichtenziele und Sprachaktivitätsziele für deine Teammitglieder.
 
 <ModuleOverview moduleName="team-goals" />
 
 ## Funktionen {#features}
 
 * Setze ein Nachrichtenziel für deine Teammitglieder.
-* Der Bot überprüft jede Woche, ob die Teammitglieder das gesetze Nachrichtenziel erreicht haben.
+* Optional: Setze ein Sprachaktivitätsziel, um die in Sprachkanälen verbrachte Zeit zu verfolgen.
+* Der Bot überprüft jede Woche, ob die Teammitglieder ihre Ziele erreicht haben.
 * Mit [Befehlen](#commands) kannst du deinen aktuellen Fortschritt und deinen Zielverlauf in der Vergangenheit überprüfen.
 * Sende Nutzern ihr Ergebnis jede Woche per PN oder in einen konfigurierten Kanal.
-* Lasse Kanäle optional von den Zielen ignorieren.
+* Lasse Kanäle optional von Nachrichten- oder Sprachzielen ignorieren.
 
 ## Einrichtung {#setup}
 
@@ -22,7 +23,8 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 ## Nutzung {#usage}
 
 * Die Anforderungen werden alle 7 Tage nach Aktivierung des Moduls automatisch [ausgewertet](#module-terms).
-* Du kannst immer den Fortschritt von dir oder einem anderen Nutzer mit [`/team-goals progress`](#commands) und den früheren Zielverlauf mit [`/team-goals history`](#commands) einsehen.
+* Du kannst immer den Nachrichtenfortschritt von dir oder einem anderen Nutzer mit [`/team-goals progress`](#commands) und den früheren Zielverlauf mit [`/team-goals history`](#commands) einsehen.
+* Wenn das Sprachziel aktiviert ist, kannst du den Sprachaktivitätsfortschritt mit [`/team-goals voice-progress`](#commands) einsehen.
 
 ## Befehle {#commands}
 
@@ -30,7 +32,8 @@ Setze wöchentliche Nachrichtenziele für deine Teammitglieder.
 
 | Befehl                                 | Beschreibung                                                                                                                                                                                                                        |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/team-goals progress [user:<Nutzer>]` | Zeigt den Fortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, …) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
+| `/team-goals progress [user:<Nutzer>]` | Zeigt den Nachrichtenfortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, …) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
+| `/team-goals voice-progress [user:<Nutzer>]` | Zeigt den Sprachaktivitätsfortschritt (Minuten in Sprachkanälen, Ziel, verbleibende Zeit) für das Sprachziel des aktuellen [Bewertungszeitraums](#module-terms) an. Nur verfügbar, wenn das Sprachziel aktiviert ist. |
 | `/team-goals history [user:<Nutzer>]`  | Zeigt den früheren Zielverlauf (Anzahl der Nachrichten, Ziel erreicht oder nicht, Prozentsatz der erreichten Ziele) der letzten 10 Wochen des angegebenen Benutzers an (wenn leer, wird dein Verlauf angezeigt).                        |
 
 ## Definition von modulspezifischen Begriffen {#module-terms}
@@ -54,6 +57,13 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 | Nachrichten in Kanal statt per PN schicken               | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                                                  |
 | Kanal, in welchen die Nachrichten gesendet werden sollen | *Nur sichtbar, wenn "Nachrichten in Kanal statt per PN schicken" aktiviert ist.*<br/>Die [Auswertung](#module-terms) wird in diesen Kanal statt per PN gesendet.                                                                              |
 | Ignorierte Kanäle                                        | Nachrichten von Nutzern mit mindestens einer der Teammitglieder-Rollen werden in diesen Kanälen nicht zu ihrem Ziel hinzugerechnet.                                                                                                           |
+| Nachrichtenziel-Überschreibungen                         | Optional kannst du das wöchentliche Nachrichtenziel für bestimmte Rollen überschreiben. Erstes Feld: Rollen-ID. Zweites Feld: Benutzerdefiniertes Ziel für diese Rolle.                                                                       |
+| Sprachziel aktivieren                                    | Wenn aktiviert, werden Teammitglieder auch anhand ihrer Sprachkanal-Aktivität ausgewertet. Sprachminuten werden erfasst, wenn ein Nutzer mit einer Team-Rolle in einem Sprachkanal verbunden ist.                                              |
+| Wöchentliches Sprachziel (Minuten)                       | *Nur sichtbar, wenn "Sprachziel aktivieren" aktiviert ist.*<br/>Die Anzahl der Minuten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) in Sprachkanälen verbringen müssen, um das Sprachziel zu erreichen. Standard: 60.      |
+| Ignorierte Sprachkanäle                                  | *Nur sichtbar, wenn "Sprachziel aktivieren" aktiviert ist.*<br/>In diesen Sprachkanälen verbrachte Zeit wird nicht zum Sprachziel gezählt.                                                                                                    |
+| Sprachziel erreicht-Nachricht                            | *Nur sichtbar, wenn "Sprachziel aktivieren" aktiviert ist.*<br/>Die Nachricht, die jede Auswertung an Teammitglieder gesendet wird, die ihr Sprachziel erreicht haben. Leer lassen, um keine separate Sprachziel-Nachricht zu senden. Unterstützt `%voiceMinutes%`, `%voiceGoal%` und alle Nachrichtenziel-Parameter. |
+| Sprachziel fehlgeschlagen-Nachricht                      | *Nur sichtbar, wenn "Sprachziel aktivieren" aktiviert ist.*<br/>Die Nachricht, die jede Auswertung an Teammitglieder gesendet wird, die ihr Sprachziel nicht erreicht haben. Leer lassen, um keine separate Sprachziel-Nachricht zu senden. Unterstützt `%voiceMinutes%`, `%voiceGoal%` und alle Nachrichtenziel-Parameter. |
+| Sprachziel-Überschreibungen                              | *Nur sichtbar, wenn "Sprachziel aktivieren" aktiviert ist.*<br/>Optional kannst du das wöchentliche Sprachziel für bestimmte Rollen überschreiben. Erstes Feld: Rollen-ID. Zweites Feld: Benutzerdefiniertes Sprachziel in Minuten.            |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -103,6 +113,7 @@ Nachricht gesendet haben ("Nutzer-Eintrag"):
 
 * Die eindeutige Discord-Nutzer-ID
 * Die Anzahl der Nachrichten, die in dem [aktuellen Bewertungszeitraum](#module-terms) gesendet wurden
+* Die Anzahl der Sprachminuten im aktuellen [Bewertungszeitraum](#module-terms) (wenn das Sprachziel aktiviert ist)
 * Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
 Das folgende wird bei jeder [Auswertung](#module-terms) für jeden Nutzer gespeichert, der eine der
@@ -111,7 +122,9 @@ Das folgende wird bei jeder [Auswertung](#module-terms) für jeden Nutzer gespei
 * Eine eindeutige Nummer zur Identifizierung des Datenbankeintrags
 * Die eindeutige Discord-Nutzer-ID
 * Die Anzahl der Nachrichten, die der Nutzer im [Bewertungszeitraum](#module-terms) gesendet hat
-* Das [konfigurierte Ziel](#configuration) des aktuellen [Bewertungszeitraums](#module-terms)
+* Das [konfigurierte Nachrichtenziel](#configuration) des aktuellen [Bewertungszeitraums](#module-terms)
+* Die Anzahl der Sprachminuten im [Bewertungszeitraum](#module-terms) (wenn das Sprachziel aktiviert ist)
+* Das [konfigurierte Sprachziel](#configuration) des aktuellen [Bewertungszeitraums](#module-terms) (wenn das Sprachziel aktiviert ist)
 * Metadaten zum Eintrag (Datum der Erstellung und der letzten Aktualisierung)
 
 Es gibt keine Möglichkeit, den Nutzer-Eintrag oder den Zielverlauf-Eintrag aus der Datenbank zu entfernen.

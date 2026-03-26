@@ -7,7 +7,7 @@ Let users set their birthday and congratulate them when they have a birthday.
 ## Features {#features}
 
 * Users can register their birthday (day, month, and optionally year) using a slash command.
-* An auto-updating birthday embed displays all registered birthdays organized by month.
+* An auto-updating birthday embed displays all registered birthdays organized by month, with a "Set Birthday" button for easy registration.
 * The bot automatically sends birthday congratulation messages every day at midnight.
 * Optionally assign a birthday role to users on their birthday (removed automatically the next day).
 * If a user provides their birth year, the congratulation message can include their age.
@@ -24,7 +24,7 @@ Let users set their birthday and congratulate them when they have a birthday.
 
 Users can interact with the birthday module using the following commands:
 
-* Use `/birthday set` to register their birthday. The year is optional -- if provided, the bot will display their age on their birthday.
+* Use `/birthday set` to register their birthday, or click the "Set Birthday" button on the birthday embed. The year is optional -- if provided, the bot will display their age on their birthday.
 * Use `/birthday status` to view their currently registered birthday.
 * Use `/birthday delete` to remove their birthday from the calendar.
 
@@ -74,6 +74,7 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Birthday-Role | A role that is assigned to users on their birthday and removed the next day. Leave empty to disable. |
 | "Successfully changed"-Message | The message shown when a user successfully registers or updates their birthday. |
 | Birthday-Embed | Customize the appearance (title, description, color, thumbnail, image) of the birthday embed. |
+| Set Birthday Button Label | The label for the "Set Birthday" button on the birthday embed. Clear this field to hide the button entirely. |
 | Use User's Tags instead of their Mention | If enabled, user tags will be displayed in the birthday embed instead of mentions. Recommended for large servers. |
 | Enable admin birthday management? | If enabled, the `/manage-birthday` command becomes available for server admins to set, remove, lock, and unlock user birthdays. |
 

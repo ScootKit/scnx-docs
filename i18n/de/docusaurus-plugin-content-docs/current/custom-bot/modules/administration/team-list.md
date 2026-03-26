@@ -16,7 +16,7 @@ Hier ist ein Beispiel (du kannst das Aussehen anpassen):
 
 ## Einrichtung {#setup}
 
-1. Erstelle einen Kanal, in welchem der Bot die Teamliste senden soll. Dieser Kanal muss leer sein, und der Bot muss die Berechtigung "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" haben.
+1. Erstelle einen Kanal, in welchem der Bot die Teamliste senden soll. Der Bot muss die Berechtigung "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" haben.
 2. Öffne die [Modulkonfiguration](https://scnx.app/de/glink?page=bot/configuration?file=team-list%7Cconfig) und [konfiguriere das Modul](#configuration).
 3. Lade die Konfiguration deines Bot neu, um die Änderungen anzuwenden - der Bot wird automatisch eine Teamliste senden.
 
@@ -33,7 +33,7 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 
 | Feld                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kanal                                      | Dies ist der Kanal, in den die Teamliste gesendet wird. Wenn der Bot bereits zuvor eine Nachricht gesendet hat, wird die vorhandene Nachricht zur Teamliste bearbeitet. Wir empfehlen einen leeren Kanal.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Kanal                                      | Dies ist der Kanal, in den die Teamliste gesendet wird. Der Bot verfolgt seine eigene Nachricht und bearbeitet sie bei Updates. Du kannst bedenkenlos andere Nachrichten im Kanal haben.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | Gelistete Rollen                           | Mitglieder mit diesen Rollen werden in der Teamliste angezeigt. Bitte beachte, dass ein Mitglied mehrfach im Embed unter jeder deren Rollen angezeigt werden kann.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Beschreibung von Rollen                    | Optional kannst du eine Beschreibung einer Rolle hinzufügen. Diese wird unter dem Rollennamen und über den Mitgliedern der Rolle angezeigt.<br/>Erstes Feld: ID einer Rolle<br/>Zweites Feld: Beschreibung, die unter der Rolle angezeigt werden soll.                                                                                                                                                                                                                                                                                                                                                                                            |
 | Embed                                      | Dies sind Einstellungen, die das Aussehen deines Embeds auf Discord beeinflussen.<br/>`title`: Dies ist der Titel des Embeds, welcher als erstes im Embed angezeigt wird.<br/>`description` (optional): Dies ist der Text, der unter dem Titel im Embed angezeigt wird.<br/>`color`: Dies ist die Farbe des Embeds (verwende eine [HEX-Farbe oder einen unterstützten Farbwert](/docs/custom-bot/additional-features#embed-colors))<br/>`thumbnail-url` / `img-url` (optional): URLs zum Anzeigen von Bildern im Embed. Du kannst den [Dateien-Speicher](https://scnx.app/de/user/files) zum Hochladen von einem Bild verwenden und die Bild-URL kopieren. |
@@ -45,7 +45,6 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 <details>
 	<summary>Die Teamliste wird im ausgewählten Kanal nicht angezeigt</summary>
 	<ul>
-		<li>Stelle sicher, dass der ausgewählte Kanal leer ist.</li>
 		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" in dem Kanal hat.</li>
 		<li>Stelle sicher, dass das Rollen-Feld keine inzwischen gelöschten Rollen enthält und versuche, die Konfiguration erneut zu speichern.</li>
 		<li>Stelle sicher, dass du <a href="/de/docs/custom-bot/additional-features#embed-colors">richtige Farbwerte</a> in deiner Konfiguration verwendest.</li>
@@ -67,7 +66,6 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 <details>
 	<summary>Ein Mitglied fehlt in der Teamliste / Die Teamliste ist nicht aktuell</summary>
 	<ul>
-		<li>Stelle sicher, dass der ausgewählte Kanal leer ist.</li>
 		<li>Stelle sicher, dass der Bot die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Nachrichtenverlauf anzeigen" in dem Kanal hat.</li>
 		<li>Stelle sicher, dass du mindestens 15 Minuten lang gewartet hast, da dies das Intervall ist, in dem sich das Embed aktualisiert.</li>
 		<li>Stelle sicher, dass du dem Nutzer genau die ausgewählte Rolle zugewiesen hast. Beachte, dass Rollen mit demselben Namen immer noch eine unterschiedliche ID haben, was bedeutet, dass diese nicht zusammen gruppiert werden können und separat konfiguriert werden müssen.</li>
@@ -75,3 +73,14 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 		<li>Stelle sicher, dass du <a href="/de/docs/custom-bot/additional-features#embed-colors">richtige Farbwerte</a> in deiner Konfiguration verwendest.</li>
 	</ul>
 </details>
+
+## Gespeicherte Daten {#data-usage}
+
+Folgende Daten werden für jedes konfigurierte Teamlisten-Embed gespeichert:
+
+* Die Discord-Kanal-ID des Kanals, der das Embed enthält
+* Die Discord-Nachrichten-ID der Embed-Nachricht
+* Der Index des Konfigurationselements
+* Metadaten über den Eintrag (Erstellungs- und Aktualisierungsdatum)
+
+Um alle gespeicherten Daten zu entfernen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).
