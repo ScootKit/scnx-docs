@@ -113,8 +113,10 @@ In this module, issues can often appear when permissions are set incorrectly, hi
     <ul>
         <li>Make sure your bot has the 'View channel', 'Send messages', 'View message history' and 'Embed links' permissions so the bot can send (embed) messages in the channel</li>
         <li>Make sure the pinged role or member is actually protected in the <a href="#configuration-general">general configuration</a></li>.
+        <li>Make sure the user is not whitelisted, or has a whitelisted role.</li>
+        <li>Make sure the user did not ping in a whitelisted channel.</li>
     </ul>
-</details>>
+</details>
 
 ## Stored data {#data-usage}
 
