@@ -7,7 +7,7 @@ Ermögliche es Nutzern, ihren Geburtstag festzulegen, und sich gegenseitig zu gr
 ## Funktionen {#features}
 
 * Nutzer können ihren Geburtstag (Tag, Monat und optional das Jahr) über einen Slash-Befehl registrieren.
-* Ein automatisch aktualisiertes Geburtstags-Embed zeigt alle registrierten Geburtstage nach Monaten sortiert an.
+* Ein automatisch aktualisiertes Geburtstags-Embed zeigt alle registrierten Geburtstage nach Monaten sortiert an, mit einem "Geburtstag festlegen"-Button für einfache Registrierung.
 * Der Bot sendet jeden Tag um Mitternacht automatisch Geburtstags-Nachrichten zum Geburtstag.
 * Weise Nutzern an ihrem Geburtstag optional eine Geburtstags-Rolle zu (wird am nächsten Tag automatisch wieder entfernt).
 * Gibt ein Nutzer sein Geburtsjahr an, kann die Geburtstags-Nachricht auch sein Alter enthalten.
@@ -24,7 +24,7 @@ Ermögliche es Nutzern, ihren Geburtstag festzulegen, und sich gegenseitig zu gr
 
 Nutzer können über die folgenden Befehle mit dem Geburtstags-Kalender-Modul interagieren:
 
-* Nutze `/birthday set`, um deinen Geburtstag zu registrieren. Das Jahr ist optional – falls es angegeben wird, zeigt der Bot an deinem Geburtstag dein Alter an.
+* Nutze `/birthday set` oder klicke auf den "Geburtstag festlegen"-Button im Geburtstags-Embed, um deinen Geburtstag zu registrieren. Das Jahr ist optional – falls es angegeben wird, zeigt der Bot an deinem Geburtstag dein Alter an.
 * Nutze `/birthday status`, um deinen aktuell registrierten Geburtstag einzusehen.
 * Nutze `/birthday delete`, um deinen Geburtstag aus dem Kalender zu entfernen.
 
@@ -74,6 +74,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 | Geburtstags-Rolle | Eine Rolle, die Nutzern an ihrem Geburtstag zugewiesen und am nächsten Tag wieder entfernt wird. Leer lassen, um diese Funktion zu deaktivieren. |
 | "Erfolgreich geändert"-Nachricht | Die Nachricht, die angezeigt wird, wenn ein Nutzer seinen Geburtstag erfolgreich registriert oder aktualisiert. |
 | Geburtstags-Nachricht | Passe das Erscheinungsbild (title, description, color, thumbnail, image) des Geburtsstags-Embeds an. |
+| Geburtstag-festlegen-Button-Label | Die Beschriftung des "Geburtstag festlegen"-Buttons im Geburtstags-Embed. Leere dieses Feld, um den Button vollständig auszublenden. |
 | Nutze den Tag der Nutzer, anstatt eine Erwähnung | Falls aktiviert, werden im Geburtstags-Embed Nutzer-Tags anstelle von Erwähnungen angezeigt. Empfohlen für große Server. |
 | Admin-Geburtstagsverwaltung aktivieren? | Falls aktiviert, steht Server-Administratoren der Befehl `/manage-birthday` zur Verfügung, um Geburtstage von Nutzern festzulegen, zu entfernen, zu sperren oder zu entsperren. |
 
