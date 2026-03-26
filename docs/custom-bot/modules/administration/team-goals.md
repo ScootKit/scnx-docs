@@ -1,16 +1,17 @@
 # Staff-Goals
 
-Set weekly messages-goals for your staff-members.
+Set weekly messages-goals and voice-activity-goals for your staff-members.
 
 <ModuleOverview moduleName="team-goals" />
 
 ## Features {#features}
 
 * Set a message goal for your staff members.
-* Every week, the bot will check if the staff members sent enough messages to meet the goal.
+* Optionally, set a voice activity goal to track time spent in voice channels.
+* Every week, the bot will check if the staff members met their goals.
 * Check your current progress and your past achievements using [commands](#commands).
 * Send results every week via DMs to the users or to a configured channel.
-* Optionally, ignore channels from goals.
+* Optionally, ignore channels from message goals or voice channels from voice goals.
 
 ## Setup {#setup}
 
@@ -22,9 +23,9 @@ Set weekly messages-goals for your staff-members.
 ## Usage {#usage}
 
 * The requirements get [evaluated](#module-terms) every 7 days after module activation automatically.
-* You can always check the progress of you or another user with [`/team-goals progress`](#commands) and see their
-  goal-history
-  with [`/team-goals history`](#commands).
+* You can always check the message progress of you or another user with [`/team-goals progress`](#commands) and see their
+  goal-history with [`/team-goals history`](#commands).
+* If the voice goal is enabled, you can check voice activity progress with [`/team-goals voice-progress`](#commands).
 
 ## Commands {#commands}
 
@@ -32,7 +33,8 @@ Set weekly messages-goals for your staff-members.
 
 | Command                              | Description                                                                                                                                                                              |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/team-goals progress [user:<User>]` | Shows the progress (amount of messages left to reach the goal, time left, …) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). |
+| `/team-goals progress [user:<User>]` | Shows the message progress (amount of messages left to reach the goal, time left, …) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). |
+| `/team-goals voice-progress [user:<User>]` | Shows the voice activity progress (minutes spent in voice channels, goal, time left) towards the voice goal of the current [evaluation period](#module-terms). Only available if the voice goal is enabled. |
 | `/team-goals history [user:<User>]`  | Shows the goal-history (amount of messages, goal reached or not, percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).        |
 
 ## Definition of module-specific terms {#module-terms}
@@ -61,6 +63,12 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
 | Users can see each others statistics     | If enabled, users will be able to add the `[user:<User>]` to their command and will be able to see each others statistics.                                                                                  |
 | Ignored channels                         | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                        |
 | Message goal overwrites                  | Optionally overwrite the weekly message goal for specific roles. First field: Role ID. Second field: Custom goal for that role. Users with this role will have this goal instead of the default weekly goal. |
+| Enable Voice Goal                        | If enabled, staff members will also be evaluated on their voice channel activity. Voice minutes are tracked whenever a user with a Staff-Role is connected to a voice channel.                               |
+| Weekly Voice Goal (minutes)              | *Only visible if "Enable Voice Goal" is enabled.*<br/>The number of minutes staff members need to spend in voice channels each [evaluation period](#module-terms) to reach the voice goal. Default: 60.     |
+| Ignored Voice Channels                   | *Only visible if "Enable Voice Goal" is enabled.*<br/>Time spent in these voice channels won't be counted towards the voice goal.                                                                           |
+| Voice Goal Achieved Message               | *Only visible if "Enable Voice Goal" is enabled.*<br/>The message sent each evaluation to staff members who reached their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters. |
+| Voice Goal Failed Message                | *Only visible if "Enable Voice Goal" is enabled.*<br/>The message sent each evaluation to staff members who did not reach their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters. |
+| Voice goal overwrites                    | *Only visible if "Enable Voice Goal" is enabled.*<br/>Optionally overwrite the weekly voice goal for specific roles. First field: Role ID. Second field: Custom voice goal in minutes for that role.         |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -111,6 +119,7 @@ message ("User Entry"):
 
 * Their unique Discord User-ID
 * The amount of messages they sent in the [current evaluation period](#module-terms)
+* The amount of voice minutes in the current [evaluation period](#module-terms) (if voice goal is enabled)
 * Metadata about the entry (date when created and last updated)
 
 The following is stored at every [evaluation](#module-terms) about every user that has one of
@@ -119,7 +128,9 @@ the [configured Staff-Roles](#configuration) ("Goal History Entry"):
 * A unique integer identifying the database entry
 * Their unique Discord User-ID
 * The amount of messages they sent in the [evaluation period](#module-terms)
-* The [configured goal](#configuration) in the current [evaluation period](#module-terms)
+* The [configured message goal](#configuration) in the current [evaluation period](#module-terms)
+* The amount of voice minutes in the [evaluation period](#module-terms) (if voice goal is enabled)
+* The [configured voice goal](#configuration) in the current [evaluation period](#module-terms) (if voice goal is enabled)
 * Metadata about the entry (date when created and last updated)
 
 There is no way to remove the user entry or the goal history entry from the database. Messages sent by users without
