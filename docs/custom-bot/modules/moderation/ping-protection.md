@@ -111,11 +111,43 @@ In this module, issues can often appear when permissions are set incorrectly, hi
 <details>
     <summary>The warning message is not being sent after a protected member/role is pinged.</summary>
     <ul>
-        <li>Make sure your bot has the 'View channel', 'Send messages', 'View message history' and 'Embed links' permissions so the bot can send (embed) messages in the channel</li>
-        <li>Make sure the pinged role or member is actually protected in the <a href="#configuration-general">general configuration</a></li>.
+        <li>Make sure your bot has the 'View channel', 'Send messages', 'View message history' and 'Embed links' permissions so the bot can send (embed) messages in the channel.</li>
+        <li>Make sure the pinged role or member is actually protected in the <a href="#configuration-general">general configuration</a>.</li>
         <li>Make sure the user is not whitelisted, or has a whitelisted role.</li>
         <li>Make sure the user did not ping in a whitelisted channel.</li>
     </ul>
+</details>
+
+<details>
+    <summary>AutoMod is not blocking the messages.</summary>
+    <ul>
+        <li>Make sure your bot has the 'Manage server' permissions so it can make an AutoMod rule.</li>
+        <li>Make sure that AutoMod is actually enabled in the <a href="#configuration-general">general configuration</a>.</li>
+        <li>Make sure that the custom block message is not longer than 150 characters.</li>
+        <li>The bot might be facing a ratelimit from Discord, consider waiting a few minutes and then restarting the bot.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>The user is not being punished.</summary>
+    <ul>
+        <li>Make sure your <a href="#configuration-moderation">moderation actions</a> are correctly set up.</li>
+        <li>Make sure that the user met the pings treshold in the set timeframe. Older logs might be deleted because they are too old according to your data retention, or the user might have older pings outside your custom timeframe for the set punishment.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>I am getting this error when punishing: I cannot punish itskevinnn because their role is higher than or equal to my highest role.</summary>
+    
+    This happens because the highest role of the user who pinged is higher than (or the same as) the highest role of the bot. To fix this, put your bot's highest role higher than the highest role of most users. It is recommended to put your bot's highest role a position near the top.
+</details>
+
+<details>
+    <summary>I am getting this error when punishing: Missing Permissions.</summary>
+    <ul>
+        <li>Make sure your bot has the 'Time out members' and 'Kick, Approve and Reject Members' permissions to mute and kick members.</li>
+        <li>Make sure the user the bot is trying to punish does not have administrator permissions.</li>
+    <ul>
 </details>
 
 ## Stored data {#data-usage}
