@@ -10,6 +10,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 * Set the category of a channel via commands.
 * Import an emoji from another server into your server.
 * Assign temporary roles to users that are automatically added or removed after a specified duration.
+* Configure "always-temporary" roles that are automatically removed after a set duration whenever assigned to a user, regardless of how they were assigned.
 
 ## Setup {#setup}
 
@@ -41,6 +42,21 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 | `/roles give user:<User> role:<Role> [duration:<Duration>]`  | Assigns a role to a user. Optionally specify a duration after which the role will be removed automatically. |
 | `/roles remove user:<User> role:<Role> [duration:<Duration>]` | Removes a role from a user. Optionally specify a duration after which the role will be re-added automatically. |
 | `/roles status user:<User>`                                  | Shows all pending temporary role changes for a user.                     |
+
+## Configuration {#configuration}
+
+### Always-Temporary Roles {#always-temporary-roles}
+
+This configuration allows you to define roles that should always be temporary. Whenever a user receives one of these roles — whether assigned manually, by a command, or by another bot — it will automatically be removed after the configured duration.
+
+Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=admin-tools%7Calways-temporary-roles).
+
+| Field    | Description                                                                                                                                                                        |
+|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Role     | The role that should always be temporary. When a user receives this role, it will be automatically removed after the configured duration.                                           |
+| Duration | How long the role should last before being automatically removed. Use the [duration format](/docs/custom-bot/additional-features#durations) (e.g., `24h`, `7d`, `30m`). Minimum: 20 seconds. |
+
+If a user receives the same always-temporary role again before it expires, the previous timer is replaced with a new one.
 
 ## Troubleshooting {#troubleshooting}
 
