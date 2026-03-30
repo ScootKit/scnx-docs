@@ -54,7 +54,7 @@ Die folgenden Parameter können in deinem Live-Nachrichteninhalt verwendet werde
 |-----------|-------------|
 | `%guildName%` | Servername |
 | `%guildIcon%` | Server-Icon-URL |
-| `%guildBanner%` | Server-Banner-Level |
+| `%guildBanner%` | Server-Banner-URL |
 | `%verificationLevel%` | Server-Verifikations-Level |
 | `%vanityURL%` | Vanity-Invite-URL (falls verfügbar) |
 | `%daysSinceCreation%` | Tage seit der Server-Erstellung |
@@ -75,7 +75,7 @@ Die folgenden Parameter können in deinem Live-Nachrichteninhalt verwendet werde
 | `%emojiCount%` | Gesamtzahl der Emojis |
 | `%stickerCount%` | Gesamtzahl der Sticker |
 
-**Boos-Statistiken:**
+**Boost-Statistiken:**
 
 | Parameter | Beschreibung |
 |-----------|-------------|
@@ -93,7 +93,7 @@ Die folgenden Parameter können in deinem Live-Nachrichteninhalt verwendet werde
 | `%activeGiveaways%` | Gewinnspiele | Anzahl der aktiven Gewinnspiele |
 | `%totalGiveaways%` | Gewinnspiele | Gesamtzahl der Gewinnspiele |
 | `%totalModActions%` | Moderation & Sicherheit | Gesamtzahl der Moderationsmaßnahmen |
-| `%totalWarns%` | Moderation & Sicheheit | Gesamtzahl der Warnungen |
+| `%totalWarns%` | Moderation & Sicherheit | Gesamtzahl der Warnungen |
 | `%totalMutes%` | Moderation & Sicherheit | Gesamtzahl der Mutes |
 | `%totalBans%` | Moderation & Sicherheit | Gesamtzahl der Banns |
 | `%totalKicks%` | Moderation & Sicherheit | Gesamtzahl der Kicks |
@@ -101,20 +101,20 @@ Die folgenden Parameter können in deinem Live-Nachrichteninhalt verwendet werde
 | `%highestLevel%` | Level-System | Höchstes erreichtes Level |
 | `%highestXP%` | Level-System | Höchste erreichte XP |
 | `%totalEconomy%` | Wirtschaftssystem | Gesamtumlauf der Währung |
-| `%totalBalance%` | Wirtschaftssystem | Total wallet currency |
+| `%totalBalance%` | Wirtschaftssystem | Gesamte Wallet-Währung |
 | `%totalBank%` | Wirtschaftssystem | Gesamte Bank-Währung |
 | `%economyUsers%` | Wirtschaftssystem | Gesamtzahl der Nutzer mit Kontostand |
 | `%activeTempChannels%` | Temporäre Channel | Aktive temporäre Channel |
-| `%activePolls%` | Umfragen | Anzahl der aktiven Gewinnspiele |
+| `%activePolls%` | Umfragen | Anzahl der aktiven Umfragen |
 | `%totalPolls%` | Umfragen | Gesamtzahl der Umfragen |
 | `%totalInvites%` | Einladungsverfolgung | Gesamtzahl der verfolgten Einladungen |
 | `%afkUsers%` | AFK-System | Anzahl der Nutzer im AFK-Status |
-| `%birthdayUsers%` | Geburstags-Kalender | Nutzer mit registrierten Geburtstagen |
+| `%birthdayUsers%` | Geburtstags-Kalender | Nutzer mit registrierten Geburtstagen |
 | `%starboardMessages%` | Starboard | Nachrichten auf dem Starboard |
 | `%totalPartners%` | Partner-Liste | Gesamtzahl der Partner |
 | `%totalApplications%` | Bewerbungen | Gesamtzahl der Bewerbungen |
 | `%pendingApplications%` | Bewerbungen | Offene Bewerbungen |
-| `%twitchLiveCount%` | Twitch-Benachrichtigungen | Gesamtzahl der Live-Streamer |
+| `%twitchLiveCount%` | Twitch-Benachrichtigungen | Aktuell live streamende Streamer |
 | `%counterValue%` | Zähl-Spiel | Aktueller Zählerstand |
 | `%totalStreakUsers%` | Aktivitäts-Streaks | Nutzer mit Aktivitäts-Streaks |
 | `%longestStreak%` | Aktivitäts-Streaks | Längste Aktivitäts-Streak |
