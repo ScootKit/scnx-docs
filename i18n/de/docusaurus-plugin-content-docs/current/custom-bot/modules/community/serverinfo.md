@@ -46,7 +46,7 @@ Jeder Eintrag stellt ein Feld im Embed mit den folgenden Optionen dar:
 | Feld | Beschreibung |
 |-------|-------------|
 | Feldname | Der Name/Titel des Embed-Feldes. |
-| Feldinhalt | Der Inhalt des Feldes. Du kannst die folgenden Variablen verwenden: `%memberCount%` (Mitglieder insgesamt), `%botCount%` (Bots), `%userCount%` (Nutzer ohne Bots), `%onlineMemberCount%` (Online-Mitglieder), `%daysSinceCreation%` (Tage seit Server-Erstellung), `%guildCreationTimestamp%` (Erstellungsdatum), `%guildBoosts%` (Anzahl der Boosts), `%boostLevel%` (Aktuelles Boost-Level), `%boosterCount%` (Anzahl der Booster), `%channelCount%` (Kanäle), `%roleCount%` (Rollen), `%emojiCount%` (Emojis), `%newline%` (Zeilenumbruch), `%userWithRoleCount-<ID>%` (Mitglieder mit einer bestimmten Rolle), `%onlineUserWithRoleCount-<ID>% (Online-Mitglieder mit einer bestimmten Rolle). |
+| Feldinhalt | Der Inhalt des Feldes. Du kannst die folgenden Variablen verwenden: `%memberCount%` (Mitglieder insgesamt), `%botCount%` (Bots), `%userCount%` (Nutzer ohne Bots), `%onlineMemberCount%` (Online-Mitglieder), `%daysSinceCreation%` (Tage seit Server-Erstellung), `%guildCreationTimestamp%` (Erstellungsdatum), `%guildBoosts%` (Anzahl der Boosts), `%boostLevel%` (Aktuelles Boost-Level), `%boosterCount%` (Anzahl der Booster), `%channelCount%` (Kanäle), `%roleCount%` (Rollen), `%emojiCount%` (Emojis), `%newline%` (Zeilenumbruch), `%userWithRoleCount-<ID>%` (Mitglieder mit einer bestimmten Rolle), `%onlineUserWithRoleCount-<ID>%` (Online-Mitglieder mit einer bestimmten Rolle). |
 | In-Zeilen-Feld? | Falls aktiviert, wird das Feld inline neben anderen Inline-Feldern angezeigt. |
 
 ## Fehlerbehebung {#troubleshooting}
