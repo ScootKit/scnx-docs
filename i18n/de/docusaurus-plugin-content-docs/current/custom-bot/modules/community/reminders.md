@@ -35,7 +35,7 @@ Wenn die Erinnerung ausgelöst wird, sendet der Bot die konfigurierte Benachrich
 
 | Befehl | Beschreibung |
 |---------|-------------|
-| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter in akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d“). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
+| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d“). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
 
 ## Konfiguration {#configuration}
 
@@ -50,7 +50,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 <details>
   <summary>Erinnerungen werden nicht zugestellt</summary>
   <ul>
-    <li>MStelle sicher, dass der Bot in dem Kanal, in dem die Erinnerung eingestellt wurde, über die Berechtigungen <code>Kanal anzeigen</code> und <code>Nachrichten senden</code> verfügt.</li>
+    <li>Stelle sicher, dass der Bot in dem Kanal, in dem die Erinnerung eingestellt wurde, über die Berechtigungen <code>Kanal anzeigen</code> und <code>Nachrichten senden</code> verfügt.</li>
     <li>Falls die Erinnerung als Direktnachricht eingestellt wurde, stelle sicher, dass der Benutzer Direktnachrichten von Servermitgliedern aktiviert hat.</li>
     <li>Die Erinnerungsdauer muss mindestens 1 Minute in der Zukunft liegen.</li>
   </ul>
