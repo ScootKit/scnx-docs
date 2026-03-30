@@ -25,8 +25,6 @@ Dieses Modul funktioniert automatisch – es gibt keine Befehle. Wenn sich die R
 
 Das Modul wertet Rollen von der höchsten bis zur niedrigsten Position in der Rollenhierarchie aus. Die erste gefundene übereinstimmende Rollenkonfiguration wird angewendet. Wenn ein Mitglied keine übereinstimmenden Rollen hat, bleibt sein Nickname unverändert (wobei vorhandene Präfixe/Suffixe von zuvor passenden Rollen entfernt werden).
 
-Gemini hat gesagt
-
 Beim Start scannt der Bot alle vorhandenen Mitglieder und wendet die korrekten Präfixe und Suffixe an.
 
 ## Konfiguration {#configuration}
@@ -78,4 +76,4 @@ Folgende Daten werden über jedes Mitglied gespeichert:
 * Der Basis-Nickname des Mitglieds (ohne angewandtes Präfix oder Suffix)
 * Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 
-Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/modules/community/hunt-the-code/).
+Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database)
