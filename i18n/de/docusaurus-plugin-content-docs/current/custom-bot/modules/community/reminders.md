@@ -21,7 +21,7 @@ Gibt Nutzern die Möglichkeit, sich selbst Erinnerungen zu setzen – entweder �
 
 Benutzer können eine Erinnerung über `/remind-me` einstellen:
 
-* Gib mithilfe des Parameters `in an, wann du erinnert werden möchtest. Verwende dabei ein [unterstütztes Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d12h“).
+* Gib mithilfe des Parameters `in` an, wann du erinnert werden möchtest. Verwende dabei ein [unterstütztes Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d12h“).
 * Gib die Erinnerungsnachricht im Parameter `what` an.
 * Setze optional `dm` auf `true`, um die Erinnerung per Direktnachricht anstatt im aktuellen Kanal zu erhalten.
 
@@ -35,7 +35,7 @@ Wenn die Erinnerung ausgelöst wird, sendet der Bot die konfigurierte Benachrich
 
 | Befehl | Beschreibung |
 |---------|-------------|
-| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d“). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
+| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in` akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d“). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
 
 ## Konfiguration {#configuration}
 
