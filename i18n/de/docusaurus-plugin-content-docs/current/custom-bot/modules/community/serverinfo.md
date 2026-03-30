@@ -22,7 +22,7 @@ Zeige ein automatisch aktualisierendes Embed mit Serverstatistiken und Informati
 
 Dieses Modul arbeitet automatisch – es gibt keine Befehle. Der Bot sendet ein Embed in den konfigurierten Kanal und aktualisiert es alle 5 Minuten mit den neuesten Serverstatistiken.
 
-Falls die Embed-Nachricht gelöscht wird, erstellt der Bot beim nächsten Aktualisierungszyklus automatisch eine Neue.
+Falls die Embed-Nachricht gelöscht wird, erstellt der Bot beim nächsten Aktualisierungszyklus automatisch eine neue.
 
 ## Konfiguration {#configuration}
 
@@ -56,7 +56,7 @@ Jeder Eintrag stellt ein Feld im Embed mit den folgenden Optionen dar:
   <ul>
     <li>Stelle sicher, dass der konfigurierte Kanal existiert und ein Textkanal ist.</li>
     <li>Stelle sicher, dass der Bot in dem Kanal über die Berechtigungen <code>Kanal anzeigen</code>, <code>Nachrichten senden</code>, <code>Links einbetten</code>, und <code>Nachrichtenverlauf anzeigen</code> verfügt.</li>
-    <li>The embed updates every 5 minutes, so changes may take a moment to appear.</li>
+    <li>Das Embed wird alle 5 Minuten aktualisiert, daher kann es einen Moment dauern, bis Änderungen sichtbar werden.</li>
   </ul>
 </details>
 

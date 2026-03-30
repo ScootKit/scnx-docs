@@ -1,4 +1,4 @@
-# Temporäre Channel
+# Temporäre Kanäle
 
 Ermögliche es Benutzern, schnell Sprachkanäle zu erstellen, indem sie einem Sprachkanal beitreten.
 
@@ -84,8 +84,6 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 
 Wenn die Archivierung aktiviert ist, werden temporäre Kanäle nicht gelöscht, sobald alle Mitglieder sie verlassen. Stattdessen werden sie in eine konfigurierte Archiv-Kategorie verschoben und alle Berechtigungen werden entzogen. Wenn der ursprüngliche Ersteller dem Erstellungskanal erneut beitritt, wird sein archivierter Kanal wiederhergestellt (wobei der vorherige öffentliche/private Modus und die Liste der zugelassenen Benutzer erhalten bleiben), anstatt einen neuen Kanal zu erstellen.
 
-Gemini hat gesagt
-
 Archivierte Kanäle werden nach Ablauf der konfigurierten Dauer (Standard: 7 Tage) automatisch gelöscht. Dies wird durch eine stündliche Bereinigung durchgeführt.
 
 Um die Archivierung einzurichten:
@@ -99,7 +97,7 @@ Um die Archivierung einzurichten:
   <summary>Temporäre Kanäle werden nicht erstellt</summary>
   <ul>
     <li>Stelle sicher, dass der Erstellungs-Sprachkanal und die Kategorie korrekt konfiguriert sind.</li>
-    <li>Stelle sicher, dass der Bot in der Kategorie über die Berechtigungen <code>Kanäle verwalten</code>, <code>Mitglieder verschieben</code>, <code>Kanal anzeigenl</code>, und <code>Verbinden</code> verfügt.</li>
+    <li>Stelle sicher, dass der Bot in der Kategorie über die Berechtigungen <code>Kanäle verwalten</code>, <code>Mitglieder verschieben</code>, <code>Kanal anzeigen</code>, und <code>Verbinden</code> verfügt.</li>
     <li>Prüfe, ob der Benutzer bereits einen aktiven temporären Kanal hat – in diesem Fall wird er stattdessen in seinen bestehenden Kanal verschoben.</li>
   </ul>
 </details>
