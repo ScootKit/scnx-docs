@@ -23,9 +23,10 @@ logged into SCNX, you can continue with this guide.
 
 To add a new Trusted-Admin, visit your [server settings page](https://scnx.app/glink?page=settings) in your SCNX
 Dashboard and scroll to the "Trusted-Admins" section. Next, click on "Add Trusted-Admin" to show the
-Trusted-Admin-Modal. Here you can enter the Discord-ID of the Trusted-Admin you want to add and
-configure [their permissions](#permissions) (please review the [permissions](#permissions) section first!). Once done,
-save the changes to grant access.
+Trusted-Admin-Modal. Here you can enter the Discord username or User-ID of the Trusted-Admin you want to add — the user
+will be looked up automatically and a preview will be shown once found. You can also
+configure [their permissions](#permissions) (please review the [permissions](#permissions) section first!) and optionally
+set an [access expiration](#expiration) duration. Once done, save the changes to grant access.
 
 ![](@site/docs/assets/scnx/guilds/trusted-admins/add.png)
 
@@ -34,8 +35,22 @@ save the changes to grant access.
 To change the permissions of a Trusted-Admin, simply open
 the [server settings page](https://scnx.app/glink?page=settings) in your SCNX
 Dashboard and scroll to the "Trusted-Admins" section and click on your Trusted-Admin. The Trusted-Admin-Modal will show
-up - here you can change [their permissions](#permissions). To save changes, please click on "Save changes". To remove
-the access of a Trusted-Admin, click on "Remove Access" in the Trusted-Admin-Modal.
+up - here you can change [their permissions](#permissions) and [access expiration](#expiration). To save changes, please
+click on "Save changes". To remove the access of a Trusted-Admin, click on "Remove Access" in the Trusted-Admin-Modal.
+
+## Access expiration {#expiration}
+
+You can set an expiration duration for a Trusted-Admin's access. When the access expires, the Trusted-Admin will
+automatically lose access to your server on SCNX. The following durations are available:
+
+* **1 Hour** — useful for short troubleshooting sessions
+* **1 Day** — for temporary access during a specific task
+* **1 Week** — for short-term project collaborations
+* **1 Month** — for longer-term access
+* **Never** — access does not expire (default)
+
+You can change the expiration at any time by editing the Trusted-Admin. The current expiration date is shown in the
+Trusted-Admin-Modal.
 
 ## Permissions {#permissions}
 
@@ -116,24 +131,18 @@ reflected on your server.
 ## Troubleshooting {#troubleshooting}
 
 <details>
-<summary>When entering my User-ID, SCNX shows me a "Could not fetch user error"</summary>
+<summary>The user I want to add is not found</summary>
 
-The Discord-ID of the user you are trying to add is invalid. User-IDs consist of only numbers and are not the same as
-tags, discriminators, or usernames. To obtain a Discord-ID, follow this
+When entering a Discord username or User-ID, the modal will automatically look up the user. If the user is not found,
+this means they have not logged into SCNX yet. To fix this:
+<ol>
+    <li>Ask the user to visit <a href="https://scnx.app/auth/login">scnx.app</a> and log in with Discord</li>
+    <li>Make sure the username or User-ID is correct</li>
+    <li>Try again after they have created their account</li>
+</ol>
+You can enter either a Discord username (e.g. <code>username</code>) or a User-ID (e.g. <code>123456789012345678</code>).
+To obtain a Discord-ID, follow this
 <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">Discord Guide</a>.
-</details>
-
-<details>
-<summary>When I try to add a Trusted-Admin, SCNX shows me a "This user never logged into SCNX…" error </summary>
-
-This means that this user never logged in into SCNX before.
-<ul>
-    <li>Send them
-this link to log-in: <a href="https://scnx.app/auth/login">https://scnx.app/auth/login</a>. Once they have confirmed that they have
-logged into SCNX, please try again.</li>
-<li>Let them verify that they are logged in into the correct account and let them log-out and try again.</li>
-</ul>
-Ultimately, you can not force another use to log into SCNX. There is no way to add a user to SCNX without their prior login.
 </details>
 
 <details>

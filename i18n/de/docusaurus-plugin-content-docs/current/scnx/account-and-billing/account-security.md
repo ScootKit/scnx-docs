@@ -130,8 +130,9 @@ Manche Aktionen auf SCNX erfordern, dass du deine Identität auch während einer
 
 Wenn du eine sensible Aktion durchführst (z. B. Sicherheitseinstellungen ändern oder einen Server mit aktivierter [Enhanced Security](/docs/scnx/guilds/enhanced-security/) öffnen), wirst du aufgefordert, dich mit deiner 2FA-Methode zu verifizieren.
 
-- **Authenticator-App / Recovery Code:** Sudo Mode dauert **10 Minuten**
-- **Sicherheitsschlüssel:** Sudo Mode dauert **30 Minuten**
+- **Authenticator-App:** Sudo Mode dauert **40 Minuten**
+- **Sicherheitsschlüssel:** Sudo Mode dauert **60 Minuten**
+- **Recovery Code:** Sudo Mode dauert **10 Minuten**
 
 Nach dem Ablauf wirst du für die nächste sensible Aktion erneut zur Verifizierung aufgefordert.
 

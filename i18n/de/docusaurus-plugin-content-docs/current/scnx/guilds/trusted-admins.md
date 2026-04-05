@@ -27,9 +27,10 @@ Wenn der Nutzer bestätigt hat, dass er sich bei SCNX einloggt hat, kannst du mi
 Um einen Trusted Admin hinzuzufügen, besuche deine [Server Einstellungen Seite](https://scnx.app/de/glink?page=settings)
 in deinem SCNX Dashboard und scrolle zur "Trusted-Admins" Sektion.
 Als nächstes klickst du auf "Trusted-Admin hinzufügen", um dir den
-Trusted-Admin-Dialog anzeigen zu lassen. Hier kannst du die Discord-Nutzer-ID des gewünschten Trusted-Admins eingeben
-und [seine Berechtigungen](#permissions) konfigurieren (Bitte lies zuerst den
-Abschnitt [Berechtigungen](#permissions)!). Wenn du fertig bist,
+Trusted-Admin-Dialog anzeigen zu lassen. Hier kannst du den Discord-Benutzernamen oder die Nutzer-ID des gewünschten
+Trusted-Admins eingeben — der Nutzer wird automatisch gesucht und eine Vorschau wird angezeigt, sobald er gefunden wurde.
+Du kannst außerdem [seine Berechtigungen](#permissions) konfigurieren (Bitte lies zuerst den
+Abschnitt [Berechtigungen](#permissions)!) und optional eine [Ablaufzeit](#expiration) festlegen. Wenn du fertig bist,
 speichere die Änderungen, um den Zugriff zu gewähren.
 
 ![](@site/docs/assets/scnx/guilds/trusted-admins/add.png)
@@ -39,9 +40,23 @@ speichere die Änderungen, um den Zugriff zu gewähren.
 Um die Berechtigungen eines Trusted Admins zu ändern, öffne
 die [Servereinstellungen](https://scnx.app/de/glink?page=settings) in deinem SCNX Dashboard,
 scrolle zur "Trusted-Admins"-Sektion und klicke auf den Trusted Admin, von dem du die Berechtigungen ändern möchtest.
-Der Trusted-Admin-Dialog wird angezeigt - hier kannst du [seine Berechtigungen](#permissions) ändern. Um die Änderungen
-zu speichern, klicke auf "Änderungen speichern".
+Der Trusted-Admin-Dialog wird angezeigt - hier kannst du [seine Berechtigungen](#permissions) und
+die [Ablaufzeit](#expiration) ändern. Um die Änderungen zu speichern, klicke auf "Änderungen speichern".
 Um einen Trusted Admin zu entfernen, klicke auf "Zugang entfernen" im Trusted-Admin-Dialog.
+
+## Ablauf des Zugriffs {#expiration}
+
+Du kannst eine Ablaufzeit für den Zugriff eines Trusted-Admins festlegen. Wenn der Zugriff abläuft, verliert der
+Trusted-Admin automatisch den Zugriff auf deinen Server auf SCNX. Die folgenden Zeiträume sind verfügbar:
+
+* **1 Stunde** — nützlich für kurze Fehlerbehebungen
+* **1 Tag** — für temporären Zugriff bei einer bestimmten Aufgabe
+* **1 Woche** — für kurzfristige Projektzusammenarbeit
+* **1 Monat** — für längerfristigen Zugriff
+* **Nie** — Zugriff läuft nicht ab (Standard)
+
+Du kannst die Ablaufzeit jederzeit ändern, indem du den Trusted-Admin bearbeitest. Das aktuelle Ablaufdatum wird im
+Trusted-Admin-Dialog angezeigt.
 
 ## Berechtigungen {#permissions}
 
@@ -126,24 +141,18 @@ Berechtigungsänderungen auf deinem Server widergespiegelt werden.
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-<summary>Wenn ich meine Nutzer-ID eingebe, zeigt SCNX mir einen "Fehler beim Abrufen des Nutzers" an</summary>
+<summary>Der Nutzer, den ich hinzufügen möchte, wurde nicht gefunden</summary>
 
-Die Discord Nutzer-ID des Nutzers, den du probierst hinzuzufügen, ist wahrscheinlich ungültig. Nutzer-IDs bestehen nur
-aus Nummern und sind nicht das gleiche wie Tags, oder Nutzernamen. Um eine Discord Nutzer-ID zu erhalten, befolge diesen
-<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">offiziellen Discord-Support-Artikel, um eine ID zu erhalten</a>.
-</details>
-
-<details>
-<summary>Wenn ich probiere einen Trusted Admin hinzuzufügen, steht da "Dieser Nutzer hat sich noch nie bei SCNX angemeldet…"</summary>
-
-Das bedeutet das der Nutzer sich noch nie bei SCNX angemeldet hat.
-<ul>
-    <li>Sende ihm
-diesen Link zum Log-In: <a href="https://scnx.app/de/auth/login">https://scnx.app/de/auth/login</a>. Sobald er bestätigt hat, dass er sich
-bei SCNX angemeldet hat, versuche es bitte erneut.</li>
-<li>Überprüfe bitte beim gewünschten Trusted Admin, das er/sie mit dem richtigen Account eingeloggt ist und lass ihn sich ab und anmelden.</li>
-</ul>
-Letztendlich kannst du keinen anderen Benutzer dazu zwingen, sich bei SCNX anzumelden. Es gibt keine Möglichkeit, einen Benutzer zu SCNX hinzuzufügen, ohne dass er sich vorher angemeldet hat.
+Wenn du einen Discord-Benutzernamen oder eine Nutzer-ID eingibst, wird der Nutzer automatisch gesucht. Wenn der Nutzer
+nicht gefunden wird, bedeutet das, dass er sich noch nicht bei SCNX angemeldet hat. Um das zu beheben:
+<ol>
+    <li>Bitte den Nutzer, <a href="https://scnx.app/de/auth/login">scnx.app</a> zu besuchen und sich mit Discord anzumelden</li>
+    <li>Stelle sicher, dass der Benutzername oder die Nutzer-ID korrekt ist</li>
+    <li>Versuche es erneut, nachdem der Account erstellt wurde</li>
+</ol>
+Du kannst entweder einen Discord-Benutzernamen (z. B. <code>benutzername</code>) oder eine Nutzer-ID
+(z. B. <code>123456789012345678</code>) eingeben. Um eine Discord-ID zu erhalten, befolge diesen
+<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-">offiziellen Discord-Support-Artikel</a>.
 </details>
 
 <details>

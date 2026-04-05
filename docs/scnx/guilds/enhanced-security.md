@@ -24,14 +24,14 @@ Here's why:
 
 **What it protects:**
 - If an attacker steals a session cookie that does NOT have an active sudo mode session, they cannot make configuration changes. They would need the victim's 2FA device to activate sudo mode.
-- Sudo mode expires after 10 minutes (TOTP) or 30 minutes (security keys), so even if an attacker steals a cookie during an active sudo session, the window of opportunity is limited.
+- Sudo mode expires after 40 minutes (TOTP) or 60 minutes (security keys), so even if an attacker steals a cookie during an active sudo session, the window of opportunity is limited.
 
 **What it does NOT protect:**
-- If the attacker steals the cookie while sudo mode is already active (within the 10/30 minute window), they can make changes until it expires.
+- If the attacker steals the cookie while sudo mode is already active (within the 40/60 minute window), they can make changes until it expires.
 - Session cookies themselves are not bound to the 2FA verification - they are standard HTTP session cookies.
 
 **For maximum protection against session hijacking, we recommend:**
-- Using hardware security keys (shorter active sessions are less risky, and the 30-minute window is still relatively short)
+- Using hardware security keys (shorter active sessions are less risky, and the 60-minute window is still relatively short)
 - Logging out of SCNX when not actively managing your server
 - Keeping your browser and operating system up to date
 - Not installing untrusted browser extensions
@@ -92,7 +92,7 @@ If you're a trusted admin on a server with Enhanced Security enabled:
 
 1. You'll see a shield icon on the server sidebar indicating Enhanced Security is active
 2. When you open the server on the SCNX dashboard, you'll immediately be prompted to verify your identity and enter sudo mode
-3. Sudo mode lasts for **10 minutes** (authenticator app) or **30 minutes** (security key)
+3. Sudo mode lasts for **40 minutes** (authenticator app) or **60 minutes** (security key)
 4. After expiration, you'll be prompted to re-verify before you can continue making changes
 
 ### If You Don't Have 2FA Set Up

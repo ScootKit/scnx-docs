@@ -24,14 +24,14 @@ Der Grund:
 
 **Was geschützt wird:**
 - Wenn ein Angreifer ein Session-Cookie stiehlt, das KEINE aktive Sudo-Mode-Session hat, kann er keine Konfigurationsänderungen vornehmen. Er bräuchte das 2FA-Gerät des Opfers, um den Sudo Mode zu aktivieren.
-- Der Sudo Mode läuft nach 10 Minuten (TOTP) bzw. 30 Minuten (Sicherheitsschlüssel) ab, sodass das Zeitfenster auch bei einem aktiven Sudo Mode begrenzt ist.
+- Der Sudo Mode läuft nach 40 Minuten (TOTP) bzw. 60 Minuten (Sicherheitsschlüssel) ab, sodass das Zeitfenster auch bei einem aktiven Sudo Mode begrenzt ist.
 
 **Was NICHT geschützt wird:**
-- Wenn der Angreifer das Cookie stiehlt, während der Sudo Mode bereits aktiv ist (innerhalb des 10/30-Minuten-Fensters), kann er Änderungen vornehmen, bis er abläuft.
+- Wenn der Angreifer das Cookie stiehlt, während der Sudo Mode bereits aktiv ist (innerhalb des 40/60-Minuten-Fensters), kann er Änderungen vornehmen, bis er abläuft.
 - Session-Cookies selbst sind nicht an die 2FA-Verifizierung gebunden – sie sind Standard-HTTP-Session-Cookies.
 
 **Für maximalen Schutz gegen Session-Hijacking empfehlen wir:**
-- Hardware-Sicherheitsschlüssel zu verwenden (kürzere aktive Sessions sind weniger riskant, und das 30-Minuten-Fenster ist noch relativ kurz)
+- Hardware-Sicherheitsschlüssel zu verwenden (kürzere aktive Sessions sind weniger riskant, und das 60-Minuten-Fenster ist noch relativ kurz)
 - Dich aus SCNX auszuloggen, wenn du deinen Server gerade nicht aktiv verwaltest
 - Browser und Betriebssystem aktuell zu halten
 - Keine nicht vertrauenswürdigen Browser-Erweiterungen zu installieren
@@ -92,7 +92,7 @@ Wenn du ein Trusted Admin auf einem Server mit aktivierter Enhanced Security bis
 
 1. Du siehst ein Schild-Symbol in der Server-Seitenleiste, das anzeigt, dass Enhanced Security aktiv ist
 2. Wenn du den Server im SCNX-Dashboard öffnest, wirst du sofort aufgefordert, deine Identität zu verifizieren und den Sudo Mode zu aktivieren
-3. Der Sudo Mode dauert **10 Minuten** (Authenticator-App) oder **30 Minuten** (Sicherheitsschlüssel)
+3. Der Sudo Mode dauert **40 Minuten** (Authenticator-App) oder **60 Minuten** (Sicherheitsschlüssel)
 4. Nach dem Ablauf wirst du aufgefordert, dich erneut zu verifizieren, bevor du weitere Änderungen vornehmen kannst
 
 ### Wenn du keine 2FA eingerichtet hast

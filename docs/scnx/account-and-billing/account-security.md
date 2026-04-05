@@ -130,8 +130,9 @@ Some actions on SCNX require you to verify your identity even during an active s
 
 When you perform a sensitive action (like modifying security settings, or accessing a server with [Enhanced Security](/docs/scnx/guilds/enhanced-security/) enabled), you'll be prompted to verify with your 2FA method.
 
-- **Authenticator app / recovery code:** Sudo mode lasts **10 minutes**
-- **Security key:** Sudo mode lasts **30 minutes**
+- **Authenticator app:** Sudo mode lasts **40 minutes**
+- **Security key:** Sudo mode lasts **60 minutes**
+- **Recovery code:** Sudo mode lasts **10 minutes**
 
 After it expires, you'll be prompted to verify again for the next sensitive action.
 
