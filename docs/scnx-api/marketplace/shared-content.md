@@ -500,6 +500,116 @@ curl -X DELETE https://scnx.app/api/marketplace-api/shared-content/a1b2c3d4-e5f6
 
 ---
 
+### List Config Files for a Module {#list-config-files}
+
+```
+GET /marketplace-api/shared-content/config-fields/:module
+```
+
+Returns the list of available config files for a given module. Use this to discover which config files exist before fetching their fields.
+
+#### Path Parameters {#list-config-files-params}
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `module` | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
+
+#### Query Parameters {#list-config-files-query}
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `lang` | `string` | No | Language code for localized field names (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
+
+#### Example {#list-config-files-example}
+
+```bash
+curl https://scnx.app/api/marketplace-api/shared-content/config-fields/auto-messager \
+  -H "Authorization: your-api-token"
+```
+
+**Response:** `200 OK`
+
+```json
+{
+  "module": "auto-messager",
+  "configFiles": ["hourly", "daily", "cronjob"]
+}
+```
+
+---
+
+### Get Config Fields for a File {#get-config-fields}
+
+```
+GET /marketplace-api/shared-content/config-fields/:module/:file
+```
+
+Returns all message-type fields in a specific module config file. Use this to discover which field names to use when creating [configuration templates](#configuration-templates). Default values are excluded from the response.
+
+#### Path Parameters {#get-config-fields-params}
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `module` | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
+| `file` | `string` | The config file name (e.g., `"config"`, `"hourly"`) |
+
+#### Query Parameters {#get-config-fields-query}
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `lang` | `string` | No | Language code for localized field names and parameter descriptions (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
+
+#### Response Fields {#get-config-fields-response}
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `module` | `string` | The module name |
+| `filename` | `string` | The config file name |
+| `fields` | `array` | Array of message-type field definitions |
+| `fields[].name` | `string` | The field name — use this as the key in your [configuration template](#configuration-templates) `data` object |
+| `fields[].humanName` | `string` | Localized display name for the field |
+| `fields[].params` | `array` | Available placeholder parameters for this field |
+| `fields[].params[].name` | `string` | Parameter name (use as `%name%` in message content) |
+| `fields[].params[].description` | `string` | Localized description of what the parameter resolves to |
+| `configFiles` | `array` | List of all config file names available in this module |
+
+#### Example {#get-config-fields-example}
+
+```bash
+curl https://scnx.app/api/marketplace-api/shared-content/config-fields/auto-messager/hourly?lang=en \
+  -H "Authorization: your-api-token"
+```
+
+**Response:** `200 OK`
+
+```json
+{
+  "module": "auto-messager",
+  "filename": "hourly",
+  "fields": [
+    {
+      "name": "message",
+      "humanName": "Message",
+      "params": []
+    }
+  ],
+  "configFiles": ["hourly", "daily", "cronjob"]
+}
+```
+
+#### Error: File Not Found {#config-fields-not-found}
+
+If the specified config file does not exist in the module, the API returns `404` with the list of valid config files:
+
+```json
+{
+  "error": "Config file \"invalid\" not found in module \"auto-messager\"",
+  "configFiles": ["hourly", "daily", "cronjob"]
+}
+```
+
+---
+
 ## Error Responses {#error-responses}
 
 | Status | Description |
