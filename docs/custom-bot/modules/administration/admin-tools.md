@@ -11,6 +11,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 * Import an emoji from another server into your server.
 * Assign temporary roles to users that are automatically added or removed after a specified duration.
 * Configure "always-temporary" roles that are automatically removed after a set duration whenever assigned to a user, regardless of how they were assigned.
+* Configure "role bans" — roles that automatically ban users from the server when assigned. Users with "Manage Roles" permission are exempt.
 
 ## Setup {#setup}
 
@@ -19,6 +20,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
    * To import emojis from another server (`/stealemote`): "Create expressions"
    * To update any channels (all `/admin` commands): "Manage channels"
    * To assign or remove roles (`/roles` commands): "Manage roles" (the bot's role must be above the target roles)
+   * To ban users via role bans: "Ban Members"
 
 ## Usage {#usage}
 
@@ -58,7 +60,29 @@ Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=a
 
 If a user receives the same always-temporary role again before it expires, the previous timer is replaced with a new one.
 
+### Role Bans {#role-bans}
+
+This configuration allows you to define roles that automatically ban users when assigned. Whenever a user receives one of these roles — whether assigned manually, by a command, or by another bot — they will be immediately banned from the server. Users with the "Manage Roles" permission are exempt and will not be banned.
+
+Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=admin-tools%7Crole-bans).
+
+| Field               | Description                                                                                                              |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------|
+| Role                | When a user receives this role, they will be immediately banned from the server. Users with "Manage Roles" are exempt.   |
+| Ban Reason          | The reason shown in the audit log when a user is banned for receiving this role. Default: "Received a banned role".       |
+| Delete Message Days | Number of days of messages to delete when banning the user (0-7). Default: 0.                                            |
+
 ## Troubleshooting {#troubleshooting}
+
+<details>
+  <summary>Role ban is not working / user is not being banned</summary>
+  <ul>
+    <li>Make sure your bot has the "Ban Members" permission on your server.</li>
+    <li>Make sure the bot's role is above the user's highest role in the role hierarchy.</li>
+    <li>Users with the "Manage Roles" permission are exempt from role bans — this is by design.</li>
+    <li>Make sure the role is correctly configured in the <a href="#role-bans">Role Bans</a> configuration.</li>
+  </ul>
+</details>
 
 <details>
   <summary>Importing an emoji fails</summary>

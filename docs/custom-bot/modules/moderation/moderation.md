@@ -230,21 +230,42 @@ This feature automatically quarantines moderators who exceed configured limits f
 
 In this configuration file, you set up the verification system for new members. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=moderation%7Cconfigs/verification).
 
+#### Verification types
+
+| Type | Description |
+|------|-------------|
+| Captcha (default) | Users click a "Verify Me" button in the verification channel. An ephemeral message with a captcha image is shown. They click "Enter Solution" to open a dialog where they type the answer. |
+| Simple | Users click "Verify Me" and a dialog opens directly with a simple challenge (math problem or word to type back). Less secure but faster. |
+| Manual | Users click "Verify Me" and their request is submitted for staff review. A moderator approves or denies them in the verification log channel. |
+| Captcha (DM, legacy) | The original DM-based captcha flow. The bot sends a captcha image via DM and the user replies there. A fallback channel is used if the user has DMs disabled. |
+
+#### Configuration
+
 | Field | Description |
 |-------|-------------|
 | Enabled? | Enable or disable the verification system. |
 | Role for users with pending verification | Role assigned to users before they complete verification. |
 | Role for users that passed verification | Role assigned to users after successful verification. |
 | Verification-Log | Channel where verification actions are logged. |
-| Type of verification | How users verify: "captcha" (automated image captcha) or "manual" (staff reviews the user). |
-| Difficulty of captcha | Difficulty level of the captcha: easy, medium, or hard. Only applies if type is "captcha". |
-| Action on failure of verification | Action taken when a user fails verification (kick, quarantine, ban, or mute). |
-| Restart Verification-Channel | Optional channel where users can restart their verification process (e.g., if they had DMs disabled). |
-| Captcha-Message | Message sent to users who need to complete a captcha. |
+| Type of verification | How users verify: "captcha" (in-channel image captcha), "simple" (math/word challenge), "manual" (staff review), or "captcha-dm" (legacy DM-based). |
+| Difficulty of captcha | Difficulty level of the captcha image: easy, medium, or hard. Only applies to captcha types. |
+| Action on failure of verification | Action taken when a user exhausts all verification attempts: kick, quarantine, ban, or mute (timeout). |
+| Verification Channel | Channel where the "Verify Me" button is displayed. For the legacy DM type, serves as a fallback for users with DMs disabled. |
+| Maximum verification attempts | How many attempts a user gets before the failure action is applied. Only applies to captcha and simple types. Default: 3. |
+| Cooldown between retries | How long a user must wait between verification attempts (e.g., 5m, 10m). Default: 5m. |
+| Punishment duration | Duration for mute or quarantine punishment (e.g., 1h, 1d). Only applies when action on fail is mute or quarantine. Default: 1h. |
+| Simple challenge type | Type of challenge for simple verification: "math" (e.g., "What is 15 + 8?") or "word" (e.g., "Type the word: BRIDGE"). |
+| Captcha-Message | Message shown with the captcha image. |
 | Manual-Verification-Message | Message sent to users awaiting manual verification. |
-| Captcha failed-Message | Message sent when a user fails the captcha. |
-| Captcha completed-Message | Message sent when a user successfully completes verification. |
-| Verification-Channel-Info-Message | Introduction message displayed in the verification restart channel. |
+| Captcha failed-Message | Message shown when a user fails verification. |
+| Captcha completed-Message | Message shown when a user successfully completes verification. |
+| Verification-Channel-Info-Message | Introduction message displayed in the verification channel. |
+
+#### Retry system
+
+When using the captcha or simple verification types, users get multiple attempts to verify. After each failed attempt, they must wait for the configured cooldown before trying again. Once all attempts are exhausted, the configured failure action (kick, ban, mute, or quarantine) is applied.
+
+The retry counter persists across bot restarts. If a user leaves and rejoins the server, their previous attempt count is preserved.
 
 ### Lockdown {#configuration-lockdown}
 
