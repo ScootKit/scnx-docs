@@ -8,16 +8,22 @@ import Admonition from '@theme/Admonition';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faArrowCircleRight,
+    faArrowUpRightFromSquare,
+    faBug,
     faCheckCircle,
+    faChevronDown,
     faDatabase,
     faFile,
     faFileCircleXmark,
     faHeart,
     faInfoCircle,
     faServer,
+    faSparkles,
+    faStar,
     faTerminal,
     faTriangleExclamation,
     faCircleXmark,
+    faWrench,
     faZap
 } from '@fortawesome/pro-solid-svg-icons';
 
@@ -89,6 +95,138 @@ function ModuleStatusBanner({moduleName, locale}) {
             ? <Translate id="module.status.upDetails">This module is currently operating without any known issues.</Translate>
             : <Translate id="module.status.noDetails">There is a known issue affecting this module. Please check back later.</Translate>)}
     </Admonition>;
+}
+
+const RELEVANCE_CONFIG = {
+    MAJOR: {icon: faStar, color: '#FBBF24', label: 'Major'},
+    NEW_MODULE: {icon: faStar, color: '#34D399', label: 'New'},
+    NEW_MODULE_EARLY_ACCESS: {icon: faStar, color: '#A78BFA', label: 'Early Access'},
+    EARLY_ACCESS_LEFT: {icon: faCheckCircle, color: '#34D399', label: 'Stable'},
+    IMPROVEMENT: {icon: faSparkles, color: '#60A5FA', label: 'Improvement'},
+    QUALITY_OF_LIFE: {icon: faWrench, color: '#93C5FD', label: 'QoL'},
+    BUG_FIXES: {icon: faBug, color: '#F87171', label: 'Bug Fix'},
+    MINOR: {icon: faInfoCircle, color: '#9CA3AF', label: 'Minor'},
+    NOTE: {icon: faInfoCircle, color: '#D1D5DB', label: 'Note'},
+};
+
+function SimpleMarkdown({text}) {
+    const parts = [];
+    const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*`([^`]+)`\*\*|\*\*([^*]+)\*\*|__([^_]+)__|`([^`]+)`|\*([^*]+)\*|_([^_]+)_|~~([^~]+)~~/g;
+    let lastIndex = 0;
+    let match;
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
+        if (match[1]) parts.push(<a key={match.index} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>);
+        else if (match[3]) parts.push(<strong key={match.index}><code>{match[3]}</code></strong>);
+        else if (match[4]) parts.push(<strong key={match.index}>{match[4]}</strong>);
+        else if (match[5]) parts.push(<strong key={match.index}>{match[5]}</strong>);
+        else if (match[6]) parts.push(<code key={match.index}>{match[6]}</code>);
+        else if (match[7]) parts.push(<em key={match.index}>{match[7]}</em>);
+        else if (match[8]) parts.push(<em key={match.index}>{match[8]}</em>);
+        else if (match[9]) parts.push(<del key={match.index}>{match[9]}</del>);
+        lastIndex = regex.lastIndex;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return <>{parts}</>;
+}
+
+function formatChangeText(raw) {
+    return raw.replace(/^\*\s*/, '').split('\n').map(l => l.replace(/^\*\s*/, '').trim()).filter(Boolean);
+}
+
+function ModuleChangelogs({moduleName, locale}) {
+    const allModuleChangelogs = usePluginData('scnx-module-changelogs');
+    const data = allModuleChangelogs?.[moduleName];
+    if (!data || !data.items || data.items.length === 0) return null;
+
+    const versions = [];
+    for (const version of data.items) {
+        const changes = [];
+        for (const moduleItem of (version.items || [])) {
+            if (moduleItem.moduleName !== moduleName) continue;
+            for (const change of (moduleItem.items || [])) {
+                const lines = formatChangeText(change[locale] || change.en || '');
+                for (const line of lines) {
+                    changes.push({id: change.id + line, relevance: change.relevance, text: line});
+                }
+            }
+        }
+        if (changes.length > 0) {
+            versions.push({
+                versionName: version.versionName,
+                date: version.createdAt,
+                slug: version.slug,
+                changes,
+            });
+        }
+    }
+    if (versions.length === 0) return null;
+
+    const latestDate = new Date(versions[0].date);
+    const isRecent = (Date.now() - latestDate.getTime()) < 30 * 24 * 60 * 60 * 1000;
+    const changelogUrl = `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs?module=${moduleName}`;
+
+    return <details className={`module-changelogs ${isRecent ? 'module-changelogs--recent' : ''}`}>
+        <summary className="module-changelogs-summary">
+            <FontAwesomeIcon icon={faChevronDown} width={12} className="module-changelogs-chevron"
+                             style={{marginRight: '0.5rem', transition: 'transform 0.2s'}}/>
+            <Translate id="module.changelogs.title">Recent changes</Translate>
+            {isRecent && <span className="module-changelogs-badge">
+                <Translate id="module.changelogs.new">Updated recently</Translate>
+            </span>}
+        </summary>
+        <div className="module-changelogs-content">
+            {versions.slice(0, 3).map(version => {
+                const versionDate = new Date(version.date);
+                const versionUrl = version.slug
+                    ? `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs/${version.slug}`
+                    : null;
+                return <div key={version.versionName} className="module-changelog-version">
+                    <div className="module-changelog-version-header">
+                        <span className="module-changelog-version-name">
+                            {versionUrl
+                                ? <a href={versionUrl} target="_blank" rel="noopener noreferrer">{version.versionName} <FontAwesomeIcon icon={faArrowUpRightFromSquare} width={10}/></a>
+                                : version.versionName}
+                        </span>
+                        <span className="module-changelog-version-date">
+                            {versionDate.toLocaleDateString(locale, {year: 'numeric', month: 'short', day: 'numeric'})}
+                        </span>
+                    </div>
+                    <div className="module-changelog-entries">
+                        {Object.entries(version.changes.reduce((groups, change) => {
+                            const key = change.relevance || 'IMPROVEMENT';
+                            if (!groups[key]) groups[key] = [];
+                            groups[key].push(change);
+                            return groups;
+                        }, {})).map(([relevance, changes]) => {
+                            const config = RELEVANCE_CONFIG[relevance] || RELEVANCE_CONFIG.IMPROVEMENT;
+                            return <div key={relevance} className="module-changelog-group">
+                                <span className="module-changelog-relevance-tag" style={{
+                                    color: config.color,
+                                    borderColor: config.color + '40',
+                                    backgroundColor: config.color + '15'
+                                }}>
+                                    <FontAwesomeIcon icon={config.icon} width={10} style={{marginRight: '0.3rem'}}/>
+                                    {config.label}
+                                </span>
+                                <ul className="module-changelog-group-list">
+                                    {changes.map(change => <li key={change.id}>
+                                        <SimpleMarkdown text={change.text}/>
+                                    </li>)}
+                                </ul>
+                            </div>;
+                        })}
+                    </div>
+                </div>;
+            })}
+            <div className="module-changelog-footer">
+                <Link href={changelogUrl} className="module-changelog-view-all">
+                    <Translate id="module.changelogs.viewAll">View all changes</Translate>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} width={11} style={{marginLeft: '0.4rem'}}/>
+                </Link>
+            </div>
+        </div>
+    </details>;
 }
 
 export default function ModuleOverview({moduleName}) {
@@ -195,14 +333,10 @@ export default function ModuleOverview({moduleName}) {
                     <Translate id="modules.enable">Enable module on SCNX</Translate>
                     <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
                 </Link>
-                <Link href={`https://scnx.app/${i18n.currentLocale === 'en' ? '' : i18n.currentLocale + '/'}changelogs?module=${moduleData.name}`}
-                      className="button button--secondary flex items-center">
-                    <Translate id="modules.changelogs">View changelogs</Translate>
-                    <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
-                </Link>
             </div>
         </div>
     </div>
+    <ModuleChangelogs moduleName={moduleName} locale={i18n.currentLocale}/>
     <ModuleStatusBanner moduleName={moduleName} locale={i18n.currentLocale}/>
     </>;
 }

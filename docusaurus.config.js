@@ -274,6 +274,29 @@ const config = {
                 }
             };
         },
+        function () {
+            return {
+                name: 'scnx-module-changelogs',
+                async loadContent() {
+                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    const modules = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    const changelogs = {};
+                    for (const mod of modules) {
+                        try {
+                            const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            if (res.ok) {
+                                const data = await res.json();
+                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = data;
+                            }
+                        } catch (e) { /* skip module */ }
+                    }
+                    return changelogs;
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
         '@docsearch/docusaurus-adapter',
         'docusaurus-plugin-image-zoom',
         [
