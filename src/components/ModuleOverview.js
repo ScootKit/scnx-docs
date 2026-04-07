@@ -109,29 +109,11 @@ const RELEVANCE_CONFIG = {
     NOTE: {icon: faInfoCircle, color: '#D1D5DB', label: 'Note'},
 };
 
-function SimpleMarkdown({text}) {
-    const parts = [];
-    const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*`([^`]+)`\*\*|\*\*([^*]+)\*\*|__([^_]+)__|`([^`]+)`|\*([^*]+)\*|_([^_]+)_|~~([^~]+)~~/g;
-    let lastIndex = 0;
-    let match;
-    while ((match = regex.exec(text)) !== null) {
-        if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index));
-        if (match[1]) parts.push(<a key={match.index} href={match[2]} target="_blank" rel="noopener noreferrer">{match[1]}</a>);
-        else if (match[3]) parts.push(<strong key={match.index}><code>{match[3]}</code></strong>);
-        else if (match[4]) parts.push(<strong key={match.index}>{match[4]}</strong>);
-        else if (match[5]) parts.push(<strong key={match.index}>{match[5]}</strong>);
-        else if (match[6]) parts.push(<code key={match.index}>{match[6]}</code>);
-        else if (match[7]) parts.push(<em key={match.index}>{match[7]}</em>);
-        else if (match[8]) parts.push(<em key={match.index}>{match[8]}</em>);
-        else if (match[9]) parts.push(<del key={match.index}>{match[9]}</del>);
-        lastIndex = regex.lastIndex;
-    }
-    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
-    return <>{parts}</>;
-}
-
-function formatChangeText(raw) {
-    return raw.replace(/^\*\s*/, '').split('\n').map(l => l.replace(/^\*\s*/, '').trim()).filter(Boolean);
+function formatChangeHtml(raw) {
+    if (!raw) return [];
+    return raw.split(/\n|<\/li>/).map(l =>
+        l.replace(/<\/?[uo]l>/g, '').replace(/<\/?li>/g, '').replace(/<\/?p>/g, '').trim()
+    ).filter(Boolean);
 }
 
 function ModuleChangelogs({moduleName, locale}) {
@@ -145,9 +127,10 @@ function ModuleChangelogs({moduleName, locale}) {
         for (const moduleItem of (version.items || [])) {
             if (moduleItem.moduleName !== moduleName) continue;
             for (const change of (moduleItem.items || [])) {
-                const lines = formatChangeText(change[locale] || change.en || '');
+                const html = change[locale + 'Html'] || change.enHtml || '';
+                const lines = formatChangeHtml(html);
                 for (const line of lines) {
-                    changes.push({id: change.id + line, relevance: change.relevance, text: line});
+                    changes.push({id: change.id + line, relevance: change.relevance, html: line});
                 }
             }
         }
@@ -210,9 +193,8 @@ function ModuleChangelogs({moduleName, locale}) {
                                     {config.label}
                                 </span>
                                 <ul className="module-changelog-group-list">
-                                    {changes.map(change => <li key={change.id}>
-                                        <SimpleMarkdown text={change.text}/>
-                                    </li>)}
+                                    {changes.map(change => <li key={change.id}
+                                        dangerouslySetInnerHTML={{__html: change.html}}/>)}
                                 </ul>
                             </div>;
                         })}

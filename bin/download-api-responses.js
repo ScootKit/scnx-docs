@@ -1,4 +1,18 @@
 const {writeFileSync} = require('fs');
+const {micromark} = require('micromark');
+
+function renderChangelogMarkdown(data) {
+    for (const item of (data.items || [])) {
+        for (const moduleItem of (item.items || [])) {
+            for (const change of (moduleItem.items || [])) {
+                for (const lang of ['en', 'de', 'it', 'nl']) {
+                    if (change[lang]) change[lang + 'Html'] = micromark(change[lang]);
+                }
+            }
+        }
+    }
+    return data;
+}
 
 (async () => {
     console.log('Loading environment…');
@@ -24,7 +38,7 @@ const {writeFileSync} = require('fs');
             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
             if (res.ok) {
                 const data = await res.json();
-                if (data && data.items && data.items.length > 0) changelogs[mod.name] = data;
+                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data);
             }
         } catch (e) { /* skip module */ }
     }
