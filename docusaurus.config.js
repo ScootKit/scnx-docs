@@ -275,8 +275,7 @@ const config = {
             };
         },
         function () {
-            const {micromark} = require('micromark');
-            function renderChangelogMarkdown(data) {
+            function renderChangelogMarkdown(data, micromark) {
                 for (const item of (data.items || [])) {
                     for (const moduleItem of (item.items || [])) {
                         for (const change of (moduleItem.items || [])) {
@@ -292,6 +291,7 @@ const config = {
                 name: 'scnx-module-changelogs',
                 async loadContent() {
                     if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    const {micromark} = await import('micromark');
                     const modules = await (await fetch('https://scnx.app/api/scn/modules')).json();
                     const changelogs = {};
                     for (const mod of modules) {
@@ -299,7 +299,7 @@ const config = {
                             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
                             if (res.ok) {
                                 const data = await res.json();
-                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data);
+                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
                             }
                         } catch (e) { /* skip module */ }
                     }
