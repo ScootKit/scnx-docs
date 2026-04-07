@@ -1,7 +1,6 @@
 const {writeFileSync} = require('fs');
-const {micromark} = require('micromark');
 
-function renderChangelogMarkdown(data) {
+function renderChangelogMarkdown(data, micromark) {
     for (const item of (data.items || [])) {
         for (const moduleItem of (item.items || [])) {
             for (const change of (moduleItem.items || [])) {
@@ -32,6 +31,7 @@ function renderChangelogMarkdown(data) {
         }
     }
     console.log('Done, loading module changelogs…');
+    const {micromark} = await import('micromark');
     const changelogs = {};
     for (const mod of moduleData) {
         try {
