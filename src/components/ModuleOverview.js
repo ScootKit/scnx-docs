@@ -155,7 +155,7 @@ export default function ModuleOverview({moduleName}) {
                     <FontAwesomeIcon width={14} icon={faZap} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.usesAICredits">This module uses your server's AI Credits.</Translate>
                 </div>}
-                {moduleData.commandsCount && <div className="module-card-info-item">
+                {moduleData.commandsCount > 0 && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faTerminal}
                                      style={{marginRight: '0.25rem'}}/> {moduleData.commandsCount === 1 ? <Translate
                     id="module.oneCommands">This module creates one top-level Slash-Command on your
@@ -193,6 +193,11 @@ export default function ModuleOverview({moduleName}) {
                 <Link href={`https://scnx.app/${i18n.currentLocale}/glink?page=bot/modules?query=${moduleData.name}`}
                       className="button button--primary flex items-center">
                     <Translate id="modules.enable">Enable module on SCNX</Translate>
+                    <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
+                </Link>
+                <Link href={`https://scnx.app/${i18n.currentLocale === 'en' ? '' : i18n.currentLocale + '/'}changelogs?module=${moduleData.name}`}
+                      className="button button--secondary flex items-center">
+                    <Translate id="modules.changelogs">View changelogs</Translate>
                     <FontAwesomeIcon icon={faArrowCircleRight} style={{marginLeft: '7px'}}/>
                 </Link>
             </div>
