@@ -76,6 +76,7 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Birthday-Embed | Customize the appearance (title, description, color, thumbnail, image) of the birthday embed. |
 | Set Birthday Button Label | The label for the "Set Birthday" button on the birthday embed. Clear this field to hide the button entirely. |
 | Use User's Tags instead of their Mention | If enabled, user tags will be displayed in the birthday embed instead of mentions. Recommended for large servers. |
+| Disable year input | If enabled, users cannot enter a birth year. Existing years will not be displayed and age will not be shown in birthday messages or the embed. |
 | Enable admin birthday management? | If enabled, the `/manage-birthday` command becomes available for server admins to set, remove, lock, and unlock user birthdays. |
 
 ## Troubleshooting {#troubleshooting}
