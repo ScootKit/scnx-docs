@@ -21,7 +21,7 @@ Advanced security and moderation system with tons of features for keeping your s
 * [Anti-Join-Raid](#anti-join-raid) system detecting mass joins.
 * [Join Gate](#join-gate) to block suspicious accounts based on account age and profile picture.
 * [Anti-Grief](#anti-grief) system to quarantine moderators who abuse their permissions.
-* [Verification](#verification) system requiring new members to complete a captcha or manual review.
+* [Verification](#verification) system requiring new members to complete an image captcha, a word or math challenge, a one-click button, or a manual moderator review.
 * Automatic warn expiration after a configurable period.
 * Customizable messages for every moderation action.
 * Four moderator permission levels to control who can perform which actions.
@@ -234,10 +234,12 @@ In this configuration file, you set up the verification system for new members. 
 
 | Type | Description |
 |------|-------------|
-| Captcha (default) | Users click a "Verify Me" button in the verification channel. An ephemeral message with a captcha image is shown. They click "Enter Solution" to open a dialog where they type the answer. |
-| Simple | Users click "Verify Me" and a dialog opens directly with a simple challenge (math problem or word to type back). Less secure but faster. |
+| Image Captcha (default) | Users click a "Verify Me" button in the verification channel. An ephemeral message with a distorted captcha image is shown. They click "Enter Solution" to open a dialog where they type the answer. |
+| Image Captcha (DM, legacy) | The original DM-based captcha flow. The bot sends a captcha image via DM and the user replies there. The verification channel doubles as a fallback for users with DMs disabled. |
+| Word | Users click "Verify Me" and a dialog opens with a word they must retype. Difficulty controls word length and obscurity. |
+| Math | Users click "Verify Me" and a dialog opens with an arithmetic problem to solve. Difficulty controls operand size and the operators used. |
 | Manual | Users click "Verify Me" and their request is submitted for staff review. A moderator approves or denies them in the verification log channel. |
-| Captcha (DM, legacy) | The original DM-based captcha flow. The bot sends a captcha image via DM and the user replies there. A fallback channel is used if the user has DMs disabled. |
+| Button | Users click "Verify Me" and are instantly verified. No challenge, no retries, no cooldowns — useful when you only want a one-click opt-in. |
 
 #### Configuration
 
@@ -247,14 +249,13 @@ In this configuration file, you set up the verification system for new members. 
 | Role for users with pending verification | Role assigned to users before they complete verification. |
 | Role for users that passed verification | Role assigned to users after successful verification. |
 | Verification-Log | Channel where verification actions are logged. |
-| Type of verification | How users verify: "captcha" (in-channel image captcha), "simple" (math/word challenge), "manual" (staff review), or "captcha-dm" (legacy DM-based). |
-| Difficulty of captcha | Difficulty level of the captcha image: easy, medium, or hard. Only applies to captcha types. |
+| Type of verification | How new members verify. One of **Image Captcha** (in-channel image), **Image Captcha (DM)** (legacy, sent via DM), **Word** (retype a shown word), **Math** (solve an arithmetic problem), **Manual** (a moderator approves each member), or **Button** (one click, no challenge). |
+| Challenge difficulty | Difficulty of the verification challenge: easy, medium, or hard. Applies to Image Captcha, Image Captcha (DM), Word, and Math. Ignored for Manual and Button. |
 | Action on failure of verification | Action taken when a user exhausts all verification attempts: kick, quarantine, ban, or mute (timeout). |
 | Verification Channel | Channel where the "Verify Me" button is displayed. For the legacy DM type, serves as a fallback for users with DMs disabled. |
-| Maximum verification attempts | How many attempts a user gets before the failure action is applied. Only applies to captcha and simple types. Default: 3. |
+| Maximum verification attempts | How many attempts a user gets before the failure action is applied. Applies to Image Captcha, Image Captcha (DM), Word, and Math. Default: 3. |
 | Cooldown between retries | How long a user must wait between verification attempts (e.g., 5m, 10m). Default: 5m. |
 | Punishment duration | Duration for mute or quarantine punishment (e.g., 1h, 1d). Only applies when action on fail is mute or quarantine. Default: 1h. |
-| Simple challenge type | Type of challenge for simple verification: "math" (e.g., "What is 15 + 8?") or "word" (e.g., "Type the word: BRIDGE"). |
 | Captcha-Message | Message shown with the captcha image. |
 | Manual-Verification-Message | Message sent to users awaiting manual verification. |
 | Captcha failed-Message | Message shown when a user fails verification. |
@@ -263,7 +264,9 @@ In this configuration file, you set up the verification system for new members. 
 
 #### Retry system
 
-When using the captcha or simple verification types, users get multiple attempts to verify. After each failed attempt, they must wait for the configured cooldown before trying again. Once all attempts are exhausted, the configured failure action (kick, ban, mute, or quarantine) is applied.
+When using Image Captcha, Image Captcha (DM), Word, or Math verification, users get multiple attempts to verify. After each failed attempt, they must wait for the configured cooldown before trying again. Once all attempts are exhausted, the configured failure action (kick, ban, mute, or quarantine) is applied.
+
+Manual verification has no retry counter (moderators re-review the request instead), and Button verification has nothing to fail.
 
 The retry counter persists across bot restarts. If a user leaves and rejoins the server, their previous attempt count is preserved.
 
