@@ -251,7 +251,7 @@ const config = {
                 async loadContent() {
                     if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').modules;
                     const scnxOrgAuthorData = {};
-                    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    let moduleData = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     for (const botModule of moduleData) {
                         if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;
                         const res = await fetch('https://scnx.app/api/marketplace/organizations/' + botModule.author.scnxOrgID);
@@ -292,7 +292,7 @@ const config = {
                 async loadContent() {
                     if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
                     const {micromark} = await import('micromark');
-                    const modules = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     const changelogs = {};
                     for (const mod of modules) {
                         try {

@@ -18,7 +18,7 @@ function renderChangelogMarkdown(data, micromark) {
     const environment = await (await fetch('https://scnx.app/api/environment')).json();
     console.log('Done, loading module data…');
     const scnxOrgAuthorData = {};
-    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+    let moduleData = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
     console.log('Done, loading marketplace organizations…');
     for (const botModule of moduleData) {
         if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;

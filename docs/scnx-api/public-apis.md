@@ -15,7 +15,7 @@ unlisted: false
 
 ## Custom Bot Modules
 
-* Endpoint: GET `https://scnx.app/api/scn/modules`
+* Endpoint: GET `https://scnx.app/api/scn/modules` (or `https://scnx.app/api/scn/beta-modules` for modules in the beta version)
 * Returns SCNX Dashboard environment data for the default branch (usually the current stable branch), including
   approximateEnableBotCount based on latest stats calls.
 * You may not save values of the `approximateEnableBotCount` key in objects to create historical graphs, analyze usage
