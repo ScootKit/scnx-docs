@@ -74,8 +74,6 @@ jobs:
             git commit -m "chore: autofix docs formatting"
             git push origin "$BRANCH" --force
             PR_URL=$(gh pr create --title "chore: autofix docs formatting" --body "Automated formatting fixes: em dashes, smart quotes, ellipsis characters, non-breaking spaces, trailing whitespace, and markdown table alignment." --base main --head "$BRANCH")
-            PR_NUMBER=$(echo "$PR_URL" | grep -o '[0-9]*$')
-            gh api "repos/{owner}/{repo}/issues/${PR_NUMBER}/lock" --method PUT -f lock_reason="resolved"
             gh pr merge "$PR_URL" --auto --squash
             echo "Created new PR: $PR_URL"
           fi
