@@ -271,7 +271,7 @@ system (and by extension, the trust of your community).
 
 These commands can be used by users on your server.
 
-| Command                            | Description                                                                                                                                                                    |                                                                                                                                                               
+| Command                            | Description                                                                                                                                                                    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/profile `                        | Display your profile, including how much XP and levels you have and your role multipliers (if any).                                                                            |
 | `/profile [user:<User>]`           | Display the profile of a user, including their XP and levels the user and their role multipliers (if any).                                                                     |
@@ -312,7 +312,7 @@ In this configuration file, you can configure how much XP users should be receiv
 level system should behave. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/config).
 
-| Field                                                         | Description                                                                                                                                                                                                                                                                                                 |                                                                                                                                                 
+| Field                                                         | Description                                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | XP given at least for messages                                | This amount of XP will be given at least for each message sent.                                                                                                                                                                                                                                             |
 | XP given at most for messages                                 | This amount of XP will be given at most for each message sent.                                                                                                                                                                                                                                              |
@@ -345,7 +345,7 @@ In this configuration file, you can configure the message of this module and adj
 You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/strings).
 
-| Field                          | Description                                                                                                                                                                                                                                                              |                                                                                                                                                 
+| Field                          | Description                                                                                                                                                                                                                                                              |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | User not found                 | This message gets sent if someone tries to check the profile of a user who has never sent a message and doesn't have a profile yet.                                                                                                                                     |
 | Embed                          | This configuration option adjusts how the [`/profile`](#commands) command should look. You can change the embed field values, the embed color, and more.                                                                                                                |
@@ -362,7 +362,7 @@ if you have enabled the "Random message" configuration in your [configuration](#
 configuration option represents a message that can be selected randomly. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field   | Description                                                                                                                                                                                                                                                                                                     |                                                                                                                                                 
+| Field   | Description                                                                                                                                                                                                                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Type    | This will configure when this message may be selected randomly. If set to `normal` it can be used for level ups without role rewards associated with the level. If set to `with-reward`, the message will only be used when a level has a role reward (this will also allow the use of the `%role%` parameter). |
 | Message | This message will be used if this configuration object has been selected randomly.                                                                                                                                                                                                                              |
@@ -372,7 +372,7 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 In this configuration file, you can overwrite the [level-up messages](#level-up-messages) for specific levels. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field   | Description                                                       |                                                                                                                                                 
+| Field   | Description                                                       |
 |---------|-------------------------------------------------------------------|
 | Level   | Level that the message should get overwritten for.                |
 | Message | This message will be sent when the configured level gets reached. |
@@ -410,7 +410,7 @@ XP can be given as the bot can't see the message / voice channel.
 <summary>My live leaderboard is not being sent or update correctly.</summary>
 
 The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions "View channel",
-"View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value ‘Maximum number of users in the live leaderboard channel’ to a lower value in the [configuration](#configuration).
+"View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value 'Maximum number of users in the live leaderboard channel' to a lower value in the [configuration](#configuration).
 </details>
 
 ## Stored data {#data-usage}

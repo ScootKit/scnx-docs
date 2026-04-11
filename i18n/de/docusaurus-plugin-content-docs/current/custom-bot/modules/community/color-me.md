@@ -17,7 +17,7 @@ Einfaches Modul, um Nutzer, die deinen Server geboostet haben, mit einer benutze
 
 1. Stelle sicher, dass der Bot über die Berechtigung `Rollen verwalten` verfügt.
 2. Stelle sicher, dass die Rolle des Bots in der Rollenhierarchie über der Position steht, an der benutzerdefinierte Rollen erstellt werden sollen.
-3. Konfiguriere eine „Rollen-Position“ in der [Modul-Konfiguration](#configuration-config), um zu steuern, wo benutzerdefinierte Rollen in der Rollenhierarchie erscheinen.
+3. Konfiguriere eine „Rollen-Position" in der [Modul-Konfiguration](#configuration-config), um zu steuern, wo benutzerdefinierte Rollen in der Rollenhierarchie erscheinen.
 4. Richte die [Berechtigungen für Slash-Befehle](/de/docs/custom-bot/slash-commands/) für `/color-me` ein, um zu steuern, wer den Befehl nutzen darf (z. B. Beschränkung auf reine Booster).
 
 ## Nutzung {#usage}
@@ -27,7 +27,7 @@ Nutzer können ihre benutzerdefinierte Rolle mit dem Befehl `/color-me` verwalte
 * Nutze `/color-me manage`, um deine benutzerdefinierte Rolle zu erstellen oder zu aktualisieren. Gib einen Namen und optional einen Hex-Farbcode sowie ein Icon-Bild an.
 * Nutze `/color-me remove`, um deine benutzerdefinierte Rolle zu löschen.
 
-Wenn ein Nutzer bereits eine benutzerdefinierte Rolle hat, wird diese durch die Verwendung von `manage` aktualisiert. Falls die Rolle gelöscht wurde (z. B. durch das Beenden des Boosts), wird sie mit denselben Einstellungen wiederhergestellt, sobald der Nutzer erneut boostet (sofern „Rollen wiederherstellen“ aktiviert ist).
+Wenn ein Nutzer bereits eine benutzerdefinierte Rolle hat, wird diese durch die Verwendung von `manage` aktualisiert. Falls die Rolle gelöscht wurde (z. B. durch das Beenden des Boosts), wird sie mit denselben Einstellungen wiederhergestellt, sobald der Nutzer erneut boostet (sofern „Rollen wiederherstellen" aktiviert ist).
 Es kann eine Abklingzeit konfiguriert werden, um die Häufigkeit zu begrenzen, mit der Nutzer ihre Rolle bearbeiten können.
 
 ## Befehle {#commands}
@@ -76,7 +76,7 @@ In dieser Konfigurationsdatei kannst du die Nachrichten anpassen, die von diesem
   <summary>Benutzerdefinierte Rollen werden nicht erstellt</summary>
   <ul>
     <li>Stelle sicher, dass der Bot über die Berechtigung <code>Rollen verwalten</code> verfügt.</li>
-    <li>Stelle sicher, dass die Rolle des Bots in der Rollenhierarchie oberhalb der konfigurierten „Rollenposition“ platziert ist.</li>
+    <li>Stelle sicher, dass die Rolle des Bots in der Rollenhierarchie oberhalb der konfigurierten „Rollenposition" platziert ist.</li>
     <li>Überprüfe, ob dein Server das maximale Rollenlimit von Discord (250 Rollen) erreicht hat.</li>
   </ul>
 </details>

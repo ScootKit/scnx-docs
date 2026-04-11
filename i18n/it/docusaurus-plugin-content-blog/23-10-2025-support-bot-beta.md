@@ -21,7 +21,7 @@ Questo è più di un semplice rebranding. Per molto tempo, Modmail è stato un p
 
 Oggi lanciamo la **Beta V3**, che è ora disponibile per tutti. Questo aggiornamento introduce la nostra singola funzionalità più richiesta: un **sistema di ticket** completo che vive direttamente all'interno del tuo server.
 
-<!-- truncate --> 
+<!-- truncate -->
 
 ## "Modmail" + "Ticket" = Bot Supporto {#rebrand}
 

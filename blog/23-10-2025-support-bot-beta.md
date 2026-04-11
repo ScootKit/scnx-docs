@@ -14,11 +14,11 @@ tags:
 
 # Modmail is now Support-Bot: Announcing the V3 Beta and a New Ticket System
 
-We’re excited to announce the biggest update in our product's history, and with it, a brand new name. Modmail is
+We're excited to announce the biggest update in our product's history, and with it, a brand new name. Modmail is
 officially becoming **Support-Bot!**
 
 This is more than just a rebrand. For a long time, Modmail has been a powerful tool for DM-based support. But as our
-platform has grown, we’ve rebuilt it from the ground up to be a complete support solution. The name "Modmail" simply
+platform has grown, we've rebuilt it from the ground up to be a complete support solution. The name "Modmail" simply
 didn't cover it anymore.
 
 Today, we're launching the **V3 Beta**, which is now available to everyone. This update introduces our single

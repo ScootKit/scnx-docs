@@ -42,7 +42,7 @@ Du findest die Seite in deinem [Dashboard](https://scnx.app/de/glink?page=bot/co
 | Tägliches Quizlimit           | Wie viele Quizze ein Nutzer pro Tag mit `/quiz play` spielen kann. Standardwert ist fünf.                      |
 | Quiz-Leaderboard-Kanal        | Wird dieser gesetzt, aktualisiert der Bot automatisch die Bestenliste im Kanal. Der Kanal sollte nur dafür verwendet werden. |
 | Rolle zum Erstellen von Quiz   | Rolle, die Quizze mit Befehlen erstellen darf. Diese Einstellung beeinflusst nicht, wer `/quiz play` nutzen kann. |
-| Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Random“ bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
+| Modus zur Quiz-Auswahl         | Wie das nächste `/quiz play` Quiz für einen Nutzer ausgewählt wird: Bei „Random" bekommt der Nutzer bei jedem Befehl ein zufälliges Quiz. |
 | Live-Vorschau der Ergebnisse   | Zeigt die Antworten der Nutzer bei öffentlichen Quizzen live an, statt erst nach Ende des Quiz.                 |
 
 ### Nachrichten {#config-strings}
@@ -72,10 +72,10 @@ Jede Quizfrage hat folgende Felder:
 
 | Feld                  | Beschreibung                                                                                             |
 |-----------------------|----------------------------------------------------------------------------------------------------------|
-| Frage oder Behauptung   | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?“.                             |
+| Frage oder Behauptung   | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?".                             |
 | Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                  |
-| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft“.|
-| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite“.           |
+| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft".|
+| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite".           |
 
 ## Fehlerbehebung {#troubleshooting}
 

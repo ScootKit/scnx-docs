@@ -34,7 +34,7 @@ If enabled in the [configuration](#configuration), admins can use the `/manage-b
 
 * **Set** a user's birthday.
 * **Remove** a user's birthday.
-* **Lock** a birthday — prevents the user from editing or deleting it themselves.
+* **Lock** a birthday  - prevents the user from editing or deleting it themselves.
 * **Unlock** a previously locked birthday.
 
 Locked birthdays show a lock indicator when users view their own birthday status.

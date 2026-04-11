@@ -5,13 +5,13 @@
 <ModuleOverview moduleName="invite-tracking" />
 
 :::warning Informationen zu Richtlinien
-Die Verwendung dieses Moduls, um Nutzer für das Einladen anderer Nutzer zu belohnen, verstößt gegen die [Discord Entwickler-Richtlinie](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos). 
+Die Verwendung dieses Moduls, um Nutzer für das Einladen anderer Nutzer zu belohnen, verstößt gegen die [Discord Entwickler-Richtlinie](https://discord.com/developers/docs/policies-and-agreements/developer-policy) und unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos).
 Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt werden. Missbrauch kannst du an [abuse@scnx.xyz](mailto:abuse@scnx.xyz) melden.
 :::
 
 ## Funktionen {#features}
 
-* Verfolge die Beitritte neuer Nutzer, wer sie eingeladen hat und entferne bei Bedarf die Einladung mit nur einem Klick auf den Knopf unter der Nachricht. 
+* Verfolge die Beitritte neuer Nutzer, wer sie eingeladen hat und entferne bei Bedarf die Einladung mit nur einem Klick auf den Knopf unter der Nachricht.
 * Verfolge die Einladungs-Aktivitäten eines Nutzers, einschließlich:
   * wer den Nutzer eingeladen hat.
   * wen der Nutzer eingeladen hat.

@@ -8,7 +8,7 @@ description: Verfolge die Leistung deines Discord-Supports mit detaillierten Sta
 
 ## Funktionen {#features}
 
-* Sieh dir die wichtigsten Kennzahlen deiner Support-Tickets auf einen Blick an — direkt in deinem SCNX-Dashboard.
+* Sieh dir die wichtigsten Kennzahlen deiner Support-Tickets auf einen Blick an  - direkt in deinem SCNX-Dashboard.
 * Verfolge die Anzahl offener Tickets, Gesamtanzahl der Tickets und durchschnittliche Nachrichten pro Ticket.
 * Überwache die durchschnittliche Schließungszeit und die durchschnittliche erste Antwortzeit, um die Effizienz deines Teams zu messen.
 * Sieh dir die am häufigsten verwendeten Schließgründe und Ticket-Themen in Kreisdiagrammen an.

@@ -19,7 +19,7 @@ Of course, you'll also find every feature explained in detail on the respective 
 
 ## Key features {#key-features}
 
-* **DM-based tickets**: Users create tickets simply by messaging the bot — no need for buttons or commands.
+* **DM-based tickets**: Users create tickets simply by messaging the bot  - no need for buttons or commands.
 * **Message relay**: Messages are relayed between the user's DMs and a staff channel, keeping conversations private.
 * **Anonymous messaging**: Staff can send messages without revealing their identity to the user.
 * **Snippets**: Create reusable text templates for quick and consistent responses.

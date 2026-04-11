@@ -18,7 +18,7 @@ Your own CustomBot will automatically create invites for members wanting to join
 to worry about expiring invites.
 
 To view, copy or [change](#change-url) your current dcserver.link-URL, open
-the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the 
+the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the
 "dcserver.link-URL" section.
 
 ## Setup {#setup}
@@ -58,7 +58,7 @@ Please make sure you whitelist the your CustomBot from security systems such as 
 interfere with the generation of dcserver.link URLs.
 
 You can select which channel the invite should be generated in [your dashboard](https://scnx.app/glink?page=settings).
-If none is set, SCNX will choose a channel at random to create an invite in. 
+If none is set, SCNX will choose a channel at random to create an invite in.
 
 ## URL disputes {#disputes}
 

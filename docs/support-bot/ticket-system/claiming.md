@@ -9,7 +9,7 @@ description: Assign Discord support tickets to team members, send claim notifica
 ## Features {#features}
 
 * Enable claiming of tickets to prevent tickets from being worked on twice.
-* Hide tickets that aren’t assigned to a team member.
+* Hide tickets that aren't assigned to a team member.
 * Lock the channel before a ticket is claimed.
 * Send assignment notifications to a channel to inform team members about new tickets.
 
@@ -30,7 +30,7 @@ description: Assign Discord support tickets to team members, send claim notifica
 | Enable ticket claiming? | Enables or disables the feature for the ticket system. |
 | Ticket assignment notification | The assignment notification is sent to this channel when a new ticket is created. |
 | Lock ticket channel before a ticket is assigned? | If enabled, the ticket channel is locked before a ticket is assigned. |
-| Hide tickets that aren’t assigned to a team member | If enabled, team members will only see tickets that are assigned to them. |
+| Hide tickets that aren't assigned to a team member | If enabled, team members will only see tickets that are assigned to them. |
 | Allow team members to remove assigned team members or assign other team members? | If enabled, team members can assign other team members to the ticket or remove the assignment using the command ``/ticket assign``. |
 | Rename tickets when they are claimed? | If enabled, the ticket channel name is renamed after a successful assignment. |
 | Ticket name to use after claiming | This text is used as the name for the ticket channel.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Rename tickets when they are claimed?" is enabled.*</blockquote></details></small> |

@@ -23,7 +23,7 @@ logged into SCNX, you can continue with this guide.
 
 To add a new Trusted-Admin, visit your [server settings page](https://scnx.app/glink?page=settings) in your SCNX
 Dashboard and scroll to the "Trusted-Admins" section. Next, click on "Add Trusted-Admin" to show the
-Trusted-Admin-Modal. Here you can enter the Discord username or User-ID of the Trusted-Admin you want to add — the user
+Trusted-Admin-Modal. Here you can enter the Discord username or User-ID of the Trusted-Admin you want to add  - the user
 will be looked up automatically and a preview will be shown once found. You can also
 configure [their permissions](#permissions) (please review the [permissions](#permissions) section first!) and optionally
 set an [access expiration](#expiration) duration. Once done, save the changes to grant access.
@@ -43,11 +43,11 @@ click on "Save changes". To remove the access of a Trusted-Admin, click on "Remo
 You can set an expiration duration for a Trusted-Admin's access. When the access expires, the Trusted-Admin will
 automatically lose access to your server on SCNX. The following durations are available:
 
-* **1 Hour** — useful for short troubleshooting sessions
-* **1 Day** — for temporary access during a specific task
-* **1 Week** — for short-term project collaborations
-* **1 Month** — for longer-term access
-* **Never** — access does not expire (default)
+* **1 Hour**  - useful for short troubleshooting sessions
+* **1 Day**  - for temporary access during a specific task
+* **1 Week**  - for short-term project collaborations
+* **1 Month**  - for longer-term access
+* **Never**  - access does not expire (default)
 
 You can change the expiration at any time by editing the Trusted-Admin. The current expiration date is shown in the
 Trusted-Admin-Modal.
@@ -80,14 +80,14 @@ The following permissions can be given via Trusted-Admin-Permissions:
 Additionally, every Trusted-Admin has a **baseline of permissions**:
 
 * View every setting (and change some) in the [server settings](https://scnx.app/glink?page=settings) tab
-* View Metadata about your server (like name, icon, owner, …)
+* View Metadata about your server (like name, icon, owner, ...)
 * View purchase data about your server (this includes transaction history, but never personal data of subscriptions)
 * Upgrade or set-up subscriptions for your server
 * Top-Up AI-Credits on your server
 
 Trusted Admins (without the Co-Owner permission) **never can**:
 
-* enable new products (like Custom-Bot, Modmail-Bot, Analytics, …) on your server
+* enable new products (like Custom-Bot, Modmail-Bot, Analytics, ...) on your server
 * change the token of any bot created on SCNX
 * add, change permissions or remove Trusted-Admins from your server - only the server owner and co-owners can do that
 * delete products from your server or remove the server from SCNX
@@ -96,7 +96,7 @@ Trusted Admins (without the Co-Owner permission) **never can**:
 
 **Co-Owners can**:
 
-* enable new products (like Custom-Bot, Modmail-Bot, Analytics, …) on your server
+* enable new products (like Custom-Bot, Modmail-Bot, Analytics, ...) on your server
 * change the token of any bot created on SCNX
 * add, change permissions or remove Trusted-Admins from your server
 * delete products from your server or remove the server from SCNX
@@ -154,7 +154,7 @@ Trusted-Admins</a>.
 </details>
 
 <details>
-<summary>My Trusted-Admin can not set up a Custom-Bot, Modmail-Bot, …</summary>
+<summary>My Trusted-Admin can not set up a Custom-Bot, Modmail-Bot, ...</summary>
 
 Trusted Admins can not run sensitive actions like enabling or deleting products, unless you grant them the
 "Co-Owner" [permission](#permissions). To do so, give them the "Administrator" permission. Once done, you will be able

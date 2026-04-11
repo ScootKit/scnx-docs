@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter-Guide
-description: Kompletter Starter-Guide für dein Discord-Modmail-System — lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
+description: Kompletter Starter-Guide für dein Discord-Modmail-System  - lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
 ---
 
 # Modmail Starter-Guide (Modmail 101)
@@ -12,7 +12,7 @@ Leite diesen Guide gerne an deine Teammitglieder weiter, damit sie sich schnelle
 
 Willkommen zum Starter-Guide für das Modmail-System vom SCNX Support-Bot!
 
-Wir wissen, dass Modmail am Anfang überwältigend sein kann und du vielleicht noch nicht jede Funktion komplett verstehst — das ist völlig normal.
+Wir wissen, dass Modmail am Anfang überwältigend sein kann und du vielleicht noch nicht jede Funktion komplett verstehst  - das ist völlig normal.
 Genau deshalb ist diese Seite aus der Perspektive eines Teammitglieds geschrieben, damit du dich schnell im Modmail-System zurechtfindest und alle Funktionen problemlos nutzen kannst.
 Generell kann jeder Server unterschiedliche Funktionen für sein Modmail-System aktivieren, daher sind manche Funktionen möglicherweise nicht in deinem Server verfügbar.
 
@@ -93,7 +93,7 @@ Wenn ein Befehl nicht im Ticket-Kanal angezeigt wird, hast du entweder keine Ber
 
 Mit der Blockierungsliste kannst du Nutzer vom gesamten Support-Bot sperren. Diese Sperrung gilt sowohl für das Modmail- als auch das Ticket-System (falls genutzt).
 
-Wenn du einen Nutzer blockieren möchtest, verwende den Befehl [``/blocklist add``](#use-commands) und wähle den entsprechenden Nutzer aus — optional kannst du den Grund und die Dauer der Sperre angeben.
+Wenn du einen Nutzer blockieren möchtest, verwende den Befehl [``/blocklist add``](#use-commands) und wähle den entsprechenden Nutzer aus  - optional kannst du den Grund und die Dauer der Sperre angeben.
 Wenn du einen Nutzer von der Blockierungsliste entfernen möchtest, verwende den Befehl [``/blocklist remove``](#use-commands).
 
 
@@ -115,11 +115,11 @@ Um Snippets zu verwenden, können Teammitglieder:
 
 Um Snippets zu verwalten, stehen Teammitgliedern folgende Befehle zur Verfügung:
 
-* `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Erstellt ein neues Snippet. Gib einen neuen, unbenutzten Snippet-Key als `key` Parameter ein. Optional kannst du `close-buttons` aktivieren, um einen Schließen-Knopf unter der Snippet-Nachricht hinzuzufügen, oder `form` setzen, um ein Formular anzuhängen. Ein Dialog erscheint zur Eingabe des Snippet-Inhalts.
-* `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Bearbeitet ein bestehendes Snippet. Wähle einen existierenden Snippet-Key und aktualisiere seine Einstellungen oder seinen Inhalt.
-* `/modmail snippets delete key:<SnippetKey>` — Löscht ein Snippet dauerhaft. Dies kann nicht rückgängig gemacht werden.
-* `/modmail snippets preview key:<SnippetKey>` — Zeigt eine Vorschau des Snippet-Inhalts und seiner Details.
-* `/modmail snippets list [page:<Number>]` — Listet alle verfügbaren Snippets mit ihren Nutzungszahlen auf.
+* `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`  - Erstellt ein neues Snippet. Gib einen neuen, unbenutzten Snippet-Key als `key` Parameter ein. Optional kannst du `close-buttons` aktivieren, um einen Schließen-Knopf unter der Snippet-Nachricht hinzuzufügen, oder `form` setzen, um ein Formular anzuhängen. Ein Dialog erscheint zur Eingabe des Snippet-Inhalts.
+* `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`  - Bearbeitet ein bestehendes Snippet. Wähle einen existierenden Snippet-Key und aktualisiere seine Einstellungen oder seinen Inhalt.
+* `/modmail snippets delete key:<SnippetKey>`  - Löscht ein Snippet dauerhaft. Dies kann nicht rückgängig gemacht werden.
+* `/modmail snippets preview key:<SnippetKey>`  - Zeigt eine Vorschau des Snippet-Inhalts und seiner Details.
+* `/modmail snippets list [page:<Number>]`  - Listet alle verfügbaren Snippets mit ihren Nutzungszahlen auf.
 
 
 
@@ -200,4 +200,4 @@ die du herunterladen kannst.
 
 Du hast das Ende des Guides erreicht und hast hoffentlich jetzt einen guten Überblick darüber, wie das Modmail-System vom SCNX Support-Bot funktioniert und wie du es nutzen kannst.
 
-Wenn du noch Fragen hast oder etwas unklar ist, frage gerne die verantwortliche Person auf deinem Server oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de) — wir helfen dir gerne weiter!
+Wenn du noch Fragen hast oder etwas unklar ist, frage gerne die verantwortliche Person auf deinem Server oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de)  - wir helfen dir gerne weiter!

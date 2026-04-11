@@ -11,7 +11,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 * Import an emoji from another server into your server.
 * Assign temporary roles to users that are automatically added or removed after a specified duration.
 * Configure "always-temporary" roles that are automatically removed after a set duration whenever assigned to a user, regardless of how they were assigned.
-* Configure "role bans" — roles that automatically ban users from the server when assigned. Users with "Manage Roles" permission are exempt.
+* Configure "role bans"  - roles that automatically ban users from the server when assigned. Users with "Manage Roles" permission are exempt.
 
 ## Setup {#setup}
 
@@ -49,7 +49,7 @@ Simple tools for admins - move channels and roles via commands or copy an emoji 
 
 ### Always-Temporary Roles {#always-temporary-roles}
 
-This configuration allows you to define roles that should always be temporary. Whenever a user receives one of these roles — whether assigned manually, by a command, or by another bot — it will automatically be removed after the configured duration.
+This configuration allows you to define roles that should always be temporary. Whenever a user receives one of these roles  - whether assigned manually, by a command, or by another bot  - it will automatically be removed after the configured duration.
 
 Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=admin-tools%7Calways-temporary-roles).
 
@@ -62,7 +62,7 @@ If a user receives the same always-temporary role again before it expires, the p
 
 ### Role Bans {#role-bans}
 
-This configuration allows you to define roles that automatically ban users when assigned. Whenever a user receives one of these roles — whether assigned manually, by a command, or by another bot — they will be immediately banned from the server. Users with the "Manage Roles" permission are exempt and will not be banned.
+This configuration allows you to define roles that automatically ban users when assigned. Whenever a user receives one of these roles  - whether assigned manually, by a command, or by another bot  - they will be immediately banned from the server. Users with the "Manage Roles" permission are exempt and will not be banned.
 
 Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=admin-tools%7Crole-bans).
 
@@ -79,7 +79,7 @@ Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=a
   <ul>
     <li>Make sure your bot has the "Ban Members" permission on your server.</li>
     <li>Make sure the bot's role is above the user's highest role in the role hierarchy.</li>
-    <li>Users with the "Manage Roles" permission are exempt from role bans — this is by design.</li>
+    <li>Users with the "Manage Roles" permission are exempt from role bans  - this is by design.</li>
     <li>Make sure the role is correctly configured in the <a href="#role-bans">Role Bans</a> configuration.</li>
   </ul>
 </details>

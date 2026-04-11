@@ -89,7 +89,7 @@ The following data is being stored about every poll created via [commands](#comm
 * The value of every voting option (`option{n}` values in the command)
 * If enabled: Exact time at which the poll will expire (controlled by the `duration` option in the command) and whether
   the poll has ended
-* View Metadata about your server (like name, icon, owner, …)
+* View Metadata about your server (like name, icon, owner, ...)
 
 Additionally, the following data will be stored about every user when they vote for an option:
 

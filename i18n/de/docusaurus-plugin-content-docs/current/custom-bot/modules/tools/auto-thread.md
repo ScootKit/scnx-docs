@@ -16,12 +16,12 @@ Lasse automatisch Threads unter jeder Nachricht erstellen, die in einen ausgewä
 
 ## Nutzung {#usage}
 
-Nach dem [Einrichten](#setup) des Moduls wird der Bot automatisch unter jeder Nachricht, welche in einen konfigurierten Kanal gesendet wurde, 
+Nach dem [Einrichten](#setup) des Moduls wird der Bot automatisch unter jeder Nachricht, welche in einen konfigurierten Kanal gesendet wurde,
 einen Thread erstellen - es sind keine weiteren Aktionen erforderlich.
 
 ## Konfiguration {#configuration}
 
-In dieser Konfigurationsdatei kannst du konfigurieren, in welchen Kanälen der Bot automatisch Threads erstellen soll. 
+In dieser Konfigurationsdatei kannst du konfigurieren, in welchen Kanälen der Bot automatisch Threads erstellen soll.
 Öffne [diese Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-thread|config).
 
 | Feld               | Beschreibung                                                                                                                                                                                                           |

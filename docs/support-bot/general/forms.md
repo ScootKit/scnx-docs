@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Forms
-description: Create custom forms and modal dialogs for your Discord support tickets — collect structured information from users before or during a ticket.
+description: Create custom forms and modal dialogs for your Discord support tickets  - collect structured information from users before or during a ticket.
 ---
 
 # Forms

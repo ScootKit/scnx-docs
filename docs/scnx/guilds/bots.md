@@ -129,7 +129,7 @@ the world. Here's how to switch a Bot-Host:
   <summary>What is the difference between a Bot-Host labeled "Premium" and other Bot-Hosts?</summary>
   <ul>
     <li>Most of these Bot-Hosts are located in North America and have a faster connection to Discord's infrastructure.</li>
-    <li>Premium Hosting infrastructure (higher reliability, higher bandwidth, …).</li>
+    <li>Premium Hosting infrastructure (higher reliability, higher bandwidth, ...).</li>
     <li>Each Bot is allocated more resources.</li>
     <li>Premium Bot-Hosts are configured to take twice as many backups and store them offsite than other Bot-Hosts.</li>
   </ul>

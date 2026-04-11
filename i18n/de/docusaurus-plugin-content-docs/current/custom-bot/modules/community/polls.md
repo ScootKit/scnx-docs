@@ -31,11 +31,11 @@ Administratoren können Umfragen mit folgenden Befehlen verwalten:
 Benutzer können:
 
 * Mit dem Dropdown-Menü unter Umfragen abstimmen.
-* Sehen, für was sie gestimmt haben, indem sie den Knopf „Für was habe ich abgestimmt?“ unter der Abstimmung nutzen.
-* Ihre Stimme entfernen, wenn sie zuerst „Für was habe ich abgestimmt?“ auswählen und danach auf „Meine Stimme entfernen“ unter der Antwort klicken.
+* Sehen, für was sie gestimmt haben, indem sie den Knopf „Für was habe ich abgestimmt?" unter der Abstimmung nutzen.
+* Ihre Stimme entfernen, wenn sie zuerst „Für was habe ich abgestimmt?" auswählen und danach auf „Meine Stimme entfernen" unter der Antwort klicken.
 * Liveergebnisse im Umfragen-Embed sehen.
 * Sich anschauen, wer für welche Option gestimmt hat, indem sie auf den Knopf „Aktuelle
-  Stimmen anzeigen“ unter dem Abstimmungs-Embed klicken (falls die Umfrage auf öffentlich gestellt ist).
+  Stimmen anzeigen" unter dem Abstimmungs-Embed klicken (falls die Umfrage auf öffentlich gestellt ist).
 
 ## Befehle {#commands}
 
@@ -43,14 +43,14 @@ Benutzer können:
 
 | Befehl                                                                                                                                                 | Beschreibung                                                                                                 |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/polls create description:<Text> channel:<TextKanal> option1:<Text> option2:<Text> [option{n}:<Text>] [duration:<ZeitDauer>] [public:<Boolean>]`      | Erstelle im gewünschten Kanal eine neue Umfrage. Gib die Umfragefrage als `description` Wert ein und füge mögliche Optionen mit dem Element `option{n}` hinzu. Optional kannst Du eine Umfrage mit der Option `public` öffentlich machen (das bedeutet, dass jeder sehen kann, wofür Benutzer gestimmt haben). Wenn diese Option aktiviert ist, wird unterhalb der Umfrage die Schaltfläche „Aktuelle Stimmen anzeigen“ hinzugefügt. Um eine Umfrage automatisch zu beenden, gibst du eine `duration` in einem [unterstützten Zeitdauerwert](/docs/custom-bot/additional-features#durations) an. |
+| `/polls create description:<Text> channel:<TextKanal> option1:<Text> option2:<Text> [option{n}:<Text>] [duration:<ZeitDauer>] [public:<Boolean>]`      | Erstelle im gewünschten Kanal eine neue Umfrage. Gib die Umfragefrage als `description` Wert ein und füge mögliche Optionen mit dem Element `option{n}` hinzu. Optional kannst Du eine Umfrage mit der Option `public` öffentlich machen (das bedeutet, dass jeder sehen kann, wofür Benutzer gestimmt haben). Wenn diese Option aktiviert ist, wird unterhalb der Umfrage die Schaltfläche „Aktuelle Stimmen anzeigen" hinzugefügt. Um eine Umfrage automatisch zu beenden, gibst du eine `duration` in einem [unterstützten Zeitdauerwert](/docs/custom-bot/additional-features#durations) an. |
 | `/polls end msg-id:<UmfragenNachrichtID>`                                                                                                              | Beendet sofort eine bereits bestehende Umfrage, die noch nicht beendet wurde. Die Option `msg-id` unterstützt die automatische Vervollständigung, sodass du problemlos nach der Umfragebeschreibung der Umfrage suchen kannst, die du beenden möchtest.                                                                                                                                                                                                                                                                            |
 
 ## Konfiguration {#configuration}
 
 ### Konfiguration {#configuration-config}
 
-In dieser Datei kannst du die Emojis neben den Abstimmungsoptionen anpassen. Öffnen sie es in 
+In dieser Datei kannst du die Emojis neben den Abstimmungsoptionen anpassen. Öffnen sie es in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=poll&file=polls|configs/config).
 
 | Feld   | Beschreibung                                                                                                                                                                                                                                           |
@@ -64,7 +64,7 @@ In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt w
 
 | Feld  | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Embed | Mit dieser Konfigurationsoption kannst Du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="/de/docs/custom-bot/additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>options</code>: Die Überschrift des Optionsfelds im Embed.</li><li><code>liveView</code>: Die Überschrift der (Live-)Ergebnisanzeige im Embed.</li><li><code>expiresOn</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollTitle</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds, wenn die Umfrage beendet ist. Muss ein <a href="/de/docs/custom-bot/additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Überschrift des Öffentlichkeitsabschnitts des Embeds.</li></ul> 
+| Embed | Mit dieser Konfigurationsoption kannst Du anpassen, wie das Umfrage-Embed in Discord angezeigt wird. Die folgenden Werte können angepasst werden: <ul><li><code>title</code>: Der Name des Embeds.</li><li><code>color</code>: Die Farbe des Embeds, muss ein <a href="/de/docs/custom-bot/additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>options</code>: Die Überschrift des Optionsfelds im Embed.</li><li><code>liveView</code>: Die Überschrift der (Live-)Ergebnisanzeige im Embed.</li><li><code>expiresOn</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollTitle</code>: Die Überschrift des Embeds, wenn die Umfrage beendet wurde.</li><li><code>endedPollColor</code>: Die Farbe des Embeds, wenn die Umfrage beendet ist. Muss ein <a href="/de/docs/custom-bot/additional-features#embed-colors">unterstützter Farbwert</a> sein.</li><li><code>visibility</code>: Die Überschrift des Öffentlichkeitsabschnitts des Embeds.</li></ul>
                                                                                                                                       |
 
 ## Fehlerbehebung {#troubleshooting}
@@ -72,7 +72,7 @@ In dieser Datei kannst du anpassen, wie das Umfrage-Embed in Discord angezeigt w
 Wenn du Probleme mit dem Umfragemodul hast, stelle bitte sicher, dass
 
 * du keine Umfrage in einem Ankündigungskanal gestartet hast (da Nachrichten in solchen Kanälen nicht so häufig aktualisiert werden können).
-* deine [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält und das [Farbwerte gültig sind](/docs/custom-bot/additional-features#embed-colors).    
+* deine [Nachrichtenkonfiguration](#configuration-strings) keine leeren Felder enthält und das [Farbwerte gültig sind](/docs/custom-bot/additional-features#embed-colors).
 * deine [Konfiguration](#configuration-config) nur gültige Emoji-Werte (Unicode für integrierte Emojis und Emoji-IDs für benutzerdefinierte Emojis) enthält.
 * der Bot über die folgenden Berechtigungen in dem Kanal, in dem du eine Umfrage starten möchtest, verfügt: Nachrichten lesen, Nachrichten senden, Links einbetten.
 

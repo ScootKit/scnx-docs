@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Konfiguration
-description: Konfiguriere dein Discord-Ticket-System — Kategorien, Schließoptionen, automatisches Schließen, Erinnerungen, Pausierung, zusätzliche Mitglieder und erweiterte Nachrichten.
+description: Konfiguriere dein Discord-Ticket-System  - Kategorien, Schließoptionen, automatisches Schließen, Erinnerungen, Pausierung, zusätzliche Mitglieder und erweiterte Nachrichten.
 ---
 
 # Konfiguration

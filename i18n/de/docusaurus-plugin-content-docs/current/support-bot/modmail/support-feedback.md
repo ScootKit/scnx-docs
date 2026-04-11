@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support-Bewertungen
-description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem Schließen von Modmail-Tickets — mit optionaler Anonymisierung.
+description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem Schließen von Modmail-Tickets  - mit optionaler Anonymisierung.
 ---
 
 # Support-Bewertungen

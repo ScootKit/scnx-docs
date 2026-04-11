@@ -104,7 +104,7 @@ Es gibt einen großen Unterschied zwischen deinem **Bot-Token** und dem **Client
 eingibst, um spätere Probleme zu vermeiden. Für diesen Schritt benötigst du das **Client Secret**, nicht den Bot Token.
 :::
 
-Nachdem du die Redirect-URL eingegeben und gespeichert hast, bleibe bitte auf der "Oauth2"-Seite. Generiere unter "Client Information" 
+Nachdem du die Redirect-URL eingegeben und gespeichert hast, bleibe bitte auf der "Oauth2"-Seite. Generiere unter "Client Information"
 das Client Secret, indem du unter dem Feld "Client Secret" auf "Reset Secret" klickst. Discord bittet dich möglicherweise, dein
 Konto durch Eingabe eines 2FA-Codes zu verifizieren. Sobald dies erledigt ist, kannst du das Client Secret kopieren. Gib den kopierten Wert in dein
 SCNX Dashboard ein und klicke auf "Verknüpfte Rollen erstellen", um die Einrichtung abzuschließen.

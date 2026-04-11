@@ -8,7 +8,7 @@ description: Automatically calculate and display estimated wait times for your D
 
 ## Features {#features}
 
-* Automatically calculate estimated wait times based on historical ticket data — no manual input needed.
+* Automatically calculate estimated wait times based on historical ticket data  - no manual input needed.
 * Show users how long they can expect to wait when opening a ticket, improving transparency and trust.
 * Configure the lookback period, minimum sample size, and maximum display hours for accurate predictions.
 * Enable or disable estimated wait time messages per system (Modmail and Ticket System) independently.

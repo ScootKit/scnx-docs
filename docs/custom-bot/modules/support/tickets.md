@@ -99,5 +99,5 @@ running [PrivateBin](https://github.com/PrivateBin/PrivateBin). This means that 
 transcripts. Ticket transcripts will be decrypted by your browser when accessing the URL. This ensures the privacy of
 your users. Ticket transcripts will be deleted after one year.
 
-There is no way to remove a ticket from the database.  
+There is no way to remove a ticket from the database.
 To remove all data stored about tickets, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

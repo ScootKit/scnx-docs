@@ -6,7 +6,7 @@ description: Vergleiche die Modmail- und Ticket-System-Features des SCNX Discord
 
 # Feature-Vergleich
 
-Nutze diesen Vergleich, um zu entscheiden, welches System das richtige für deinen Server ist — oder nutze einfach beide gleichzeitig. Beide Systeme können gleichzeitig aktiviert sein und teilen sich denselben Bot, die Blockierungsliste, Formulare, Öffnungszeiten und Statistiken.
+Nutze diesen Vergleich, um zu entscheiden, welches System das richtige für deinen Server ist  - oder nutze einfach beide gleichzeitig. Beide Systeme können gleichzeitig aktiviert sein und teilen sich denselben Bot, die Blockierungsliste, Formulare, Öffnungszeiten und Statistiken.
 
 ## Ticket-Erstellung
 

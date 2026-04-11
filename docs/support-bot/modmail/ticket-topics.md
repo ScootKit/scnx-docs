@@ -28,7 +28,7 @@ description: Categorize Modmail tickets with topics, route them to specific team
 
 * Visit the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard.
 * <a href="#main-configuration">Configure</a> the available options.
-* Create a new ticket topic by clicking the “Add ticket topic” button.
+* Create a new ticket topic by clicking the "Add ticket topic" button.
 * <a href="#manage-ticket-topics">Configure</a> the available options for the respective ticket topic.
 
 ## Commands {#commands}
@@ -37,7 +37,7 @@ description: Categorize Modmail tickets with topics, route them to specific team
 
 | Command | Description |
 | --- | --- |
-| ``/ticket transfer`` | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>Moves the current ticket to the selected topic. |
+| ``/ticket transfer`` | *Only available if "Team members can transfer tickets to another topic" is <a href="#main-configuration">enabled</a>.*<br/>Moves the current ticket to the selected topic. |
 
 ## Configuration {#configuration}
 
@@ -48,7 +48,7 @@ description: Categorize Modmail tickets with topics, route them to specific team
 | Enable ticket topics | Enables or disables the feature for your modmail system. |
 | Team members can transfer tickets to another topic | If enabled, team members can transfer a ticket to a different ticket topic. |
 | Users must confirm their topic selection | If enabled, a confirmation message is sent after selecting a topic. |
-| Confirmation message | *Only available if “Users must confirm their topic selection” is enabled.*<br/>This message is sent as the confirmation message. |
+| Confirmation message | *Only available if "Users must confirm their topic selection" is enabled.*<br/>This message is sent as the confirmation message. |
 
 ### Manage ticket topics {#manage-ticket-topics}
 
@@ -65,11 +65,11 @@ description: Categorize Modmail tickets with topics, route them to specific team
 | Message sent to the user when opening a ticket | This message is sent to the user when a ticket is created with this topic. |
 | Override channel access | These roles get access to tickets for this topic. By default, your [configured roles](/docs/support-bot/modmail/configuration#main-configuration-configuration) are used. |
 | Override ping roles | These roles are mentioned when a ticket is created with this topic. By default, your [configured roles](/docs/support-bot/modmail/configuration#main-configuration-configuration) are used. |
-| Send transfer message | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>This message is sent when a team member transfers a user’s ticket to another topic. |
-| Transfer message | *Only available if “Team members can transfer tickets to another topic” and “Send transfer message” are enabled.*<br/>This message is sent into the ticket channel when a ticket is moved to another topic. |
-| Ping roles again when transferring | *Only available if “Team members can transfer tickets to another topic” is <a href="#main-configuration">enabled</a>.*<br/>If enabled, the configured roles are mentioned again when transferring the ticket to another topic. |
+| Send transfer message | *Only available if "Team members can transfer tickets to another topic" is <a href="#main-configuration">enabled</a>.*<br/>This message is sent when a team member transfers a user's ticket to another topic. |
+| Transfer message | *Only available if "Team members can transfer tickets to another topic" and "Send transfer message" are enabled.*<br/>This message is sent into the ticket channel when a ticket is moved to another topic. |
+| Ping roles again when transferring | *Only available if "Team members can transfer tickets to another topic" is <a href="#main-configuration">enabled</a>.*<br/>If enabled, the configured roles are mentioned again when transferring the ticket to another topic. |
 | Require form submission before opening | If enabled, the user must first fill out a [form](/docs/support-bot/general/forms) before they can create a ticket for this topic. |
-| Form that must be completed | *Only available if “Require form submission before opening” is enabled.*<br/>This form must be completed before opening the ticket. |
+| Form that must be completed | *Only available if "Require form submission before opening" is enabled.*<br/>This form must be completed before opening the ticket. |
 | Staff-opened welcome message | This message is sent when a team member opens a ticket on behalf of a user with this topic. Use a different message to inform the user that a team member initiated the conversation.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow staff to open tickets on behalf of a user?" is [enabled](/docs/support-bot/modmail/configuration#main-configuration-configuration).*</blockquote></details></small> |
 | Override log channel | This channel is used as the log channel for this topic. By default, your [configured log channel](/docs/support-bot/modmail/configuration#main-configuration-configuration) is used. |
 | Override ticket channel name? | If enabled, you can define a custom ticket channel name for this topic. |

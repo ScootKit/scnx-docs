@@ -6,12 +6,12 @@ description: View Discord support ticket transcripts in a clean web interface wi
 
 # modmail.net Features
 
-[modmail.net](https://modmail.net) is a web platform developed by ScootKit (the team behind SCNX) that provides a clean, formatted interface for viewing ticket transcripts. Instead of downloading plain text files, your team and users can view ticket logs in a modern web layout — complete with message formatting, timestamps, and user avatars.
+[modmail.net](https://modmail.net) is a web platform developed by ScootKit (the team behind SCNX) that provides a clean, formatted interface for viewing ticket transcripts. Instead of downloading plain text files, your team and users can view ticket logs in a modern web layout  - complete with message formatting, timestamps, and user avatars.
 
 ## Features {#features}
 
 * View ticket transcripts in a formatted web interface with proper message styling, timestamps, and avatars.
-* Share ticket transcripts via a simple link — no file downloads required.
+* Share ticket transcripts via a simple link  - no file downloads required.
 * Automatically upload ticket logs to modmail.net after a ticket is closed.
 * Optionally upload message attachments (images, files) to modmail.net for long-term storage.
 * Access transcripts from both Modmail and the Ticket System.

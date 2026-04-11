@@ -8,7 +8,7 @@ description: Track your Discord support performance with detailed analytics, res
 
 ## Features {#features}
 
-* View key metrics about your support tickets in one place — directly in your SCNX dashboard.
+* View key metrics about your support tickets in one place  - directly in your SCNX dashboard.
 * Track the number of open tickets, total tickets, and average messages per ticket.
 * Monitor average close time and average initial response time to measure your team's efficiency.
 * See the most used close reasons and ticket topics visualized in pie charts.

@@ -14,17 +14,17 @@ Ein einfaches Modul, um Nutzer mit Rollen zu belohnen, die bestimmte Wörter in 
 ## Einrichtung {#setup}
 
 1. [Aktiviere das Modul](https://scnx.app/de/glink?page=bot/modules?query=status-roles) auf deinem Server.
-2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=status-roles%7Cconfig) und füge die Wörter, die Nutzer in ihrem Status haben sollten, in das Feld „Wörter“ ein.
-3. Füge die Rollen, die entsprechenden Nutzern zugewiesen werden sollen, im Feld „Rollen“ hinzu.
+2. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=status-roles%7Cconfig) und füge die Wörter, die Nutzer in ihrem Status haben sollten, in das Feld „Wörter" ein.
+3. Füge die Rollen, die entsprechenden Nutzern zugewiesen werden sollen, im Feld „Rollen" hinzu.
 4. Stelle sicher, dass der Bot über die Berechtigung **Rollen verwalten** verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest.
 5. Der Bot benötigt außerdem den **Presence Intent**, um Statusänderungen zu erkennen. Dieser ist bei SCNX standardmäßig aktiviert.
-6. Wenn dein Server mehr als 500 Mitglieder hat, wird empfohlen, die Option „Rollen von offline Nutzern nicht entfernen“ zu aktivieren, um einen fehlerhaften Rollenentzug zu verhindern.
+6. Wenn dein Server mehr als 500 Mitglieder hat, wird empfohlen, die Option „Rollen von offline Nutzern nicht entfernen" zu aktivieren, um einen fehlerhaften Rollenentzug zu verhindern.
 
 ## Nutzung {#usage}
 
 * Einmal konfiguriert, arbeitet das Modul automatisch. Wenn ein Nutzer seinen benutzerdefinierten Discord-Status aktualisiert, prüft der Bot, ob eines der konfigurierten Wörter darin vorkommt.
 * Wenn eine Übereinstimmung gefunden wird, werden dem Nutzer die konfigurierten Rollen zugewiesen.
-* Wenn der Nutzer seinen Status ändert und die Wörter nicht mehr vorhanden sind, werden die Rollen entfernt (es sei denn, der Nutzer ist offline und die Option „Rollen von offline Nutzern nicht entfernen“ ist aktiviert).
+* Wenn der Nutzer seinen Status ändert und die Wörter nicht mehr vorhanden sind, werden die Rollen entfernt (es sei denn, der Nutzer ist offline und die Option „Rollen von offline Nutzern nicht entfernen" ist aktiviert).
 * Bei der Wortübereinstimmung wird nicht zwischen Groß- und Kleinschreibung unterschieden.
 
 ## Konfiguration {#configuration}
@@ -40,6 +40,6 @@ Dies ist die Konfigurationsdatei für das Modul. Öffne sie in deinem [Dashboard
 
 ## Fehlerbehebung {#troubleshooting}
 
-* **Rollen werden nicht zugewiesen**: Stelle sicher, dass der Bot über die Berechtigung „Rollen verwalten“ verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob die Wörter in der Konfiguration mit denen übereinstimmen, die Nutzer in ihrem benutzerdefinierten Status haben.
-* **Rollen werden entfernt, wenn Nutzer offline gehen**: Aktiviere die Option „Rollen von Offline-Nutzern nicht entfernen“ in der Konfiguration. Wenn Nutzer offline gehen, entfernt Discord deren Statusinformationen, was den Bot zu der Annahme führt, dass die Bedingungen nicht mehr erfüllt sind.
-* **Das Modul scheint keine Statusänderungen zu erkennen**: Stelle sicher, dass der „Presence Intent“ für deinen Bot aktiviert ist. Auf SCNX ist dieser standardmäßig aktiviert.
+* **Rollen werden nicht zugewiesen**: Stelle sicher, dass der Bot über die Berechtigung „Rollen verwalten" verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob die Wörter in der Konfiguration mit denen übereinstimmen, die Nutzer in ihrem benutzerdefinierten Status haben.
+* **Rollen werden entfernt, wenn Nutzer offline gehen**: Aktiviere die Option „Rollen von Offline-Nutzern nicht entfernen" in der Konfiguration. Wenn Nutzer offline gehen, entfernt Discord deren Statusinformationen, was den Bot zu der Annahme führt, dass die Bedingungen nicht mehr erfüllt sind.
+* **Das Modul scheint keine Statusänderungen zu erkennen**: Stelle sicher, dass der „Presence Intent" für deinen Bot aktiviert ist. Auf SCNX ist dieser standardmäßig aktiviert.

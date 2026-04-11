@@ -17,7 +17,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 
 1. Erstelle für die Vorschläge einen Kanal (oder wähle einen aus). Der Bot benötigt folgende Rechte auf diesen: "Kanal
    anzeigen" ("View channel"), "Nachrichten senden ("Send messages") und "Nachrichtenverlauf sehen" ("View message history")
-2. Stelle sicher, dass [Berechtigungen](/docs/custom-bot/slash-commands) für `/manage-suggestions` richtig konfiguriert sind, um zu verhindern, 
+2. Stelle sicher, dass [Berechtigungen](/docs/custom-bot/slash-commands) für `/manage-suggestions` richtig konfiguriert sind, um zu verhindern,
    dass Nutzer Vorschläge als Admin verwalten können.
 3. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=suggestions%7Cconfig).
 4. [Konfiguriere](#configuration) das Modul.
@@ -28,7 +28,7 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 * Nutzer können einen neuen Vorschlag mit `/suggestion` einreichen. Neue Vorschläge werden in den konfigurierten Kanal gesendet.
 * Wenn aktiviert, werden Nachrichten, die in den Vorschläge-Kanal gesendet werden, automatisch zu Vorschlägen konvertiert.
 * Andere Nutzer können mit den konfigurierten Reaktionen abstimmen und mit Threads zu den Vorschlägen kommentieren.
-* Admins können Vorschläge mit `/manage-suggestions` annehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Darüber 
+* Admins können Vorschläge mit `/manage-suggestions` annehmen oder ablehnen und optional auch einen Kommentar zu ihrer Entscheidung angeben. Darüber
   wird der Vorschlag-Ersteller, wenn konfiguriert, über PNs informiert.
 
 ## Befehle {#commands}
@@ -51,7 +51,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=suggest
 |-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Vorschlagskanal                               | Kanal, in welchen neue Vorschläge gesendet und (wenn "Vorschläge von Nachrichten im Kanal erstellen" aktiviert ist) erstellt werden.                                                                                                                            |
 | Vorschläge von Nachrichten im Kanal erstellen | Wenn aktiviert, werden Nachrichten, die von Nutzern in den Vorschläge-Kanal gesendet werden, automatisch zu Vorschlägen konvertiert.                                                                                                                            |
-| Reaktionen                                    | Der Bot wird diese Reaktionen unter Vorschläge hinzufügen. Du kannst diese Reaktionen als Abstimmung verwenden (z. B. mit „👍“ und „👎“). Bitte gib entweder die Unicode-Version (für integrierte Emojis) oder die Emoji-ID (für benutzerdefinierte Emojis) an. |
+| Reaktionen                                    | Der Bot wird diese Reaktionen unter Vorschläge hinzufügen. Du kannst diese Reaktionen als Abstimmung verwenden (z. B. mit „👍" und „👎"). Bitte gib entweder die Unicode-Version (für integrierte Emojis) oder die Emoji-ID (für benutzerdefinierte Emojis) an. |
 | Nutzerkommentare in Threads                   | Wenn aktiviert, wird der Bot unter jedem Vorschlag einen neuen Thread erstellen, damit Nutzer kommentieren können. Kommentieren über Befehle wurde entfernt.                                                                                                    |
 | Thread-Name                                   | *Nur sichtbar, wenn "Nutzerkommentare in Threads" aktiviert ist*<br/>Das ist der Name der Threads, die unter Vorschlägen erstellt werden.                                                                                                                       |
 | "Erfolgreich eingereicht"-Nachricht           | Dies ist die Nachricht, welche Nutzer sehen, nachdem sie ihren Vorschlag über den Befehl [`/suggestion`](#commands) eingereicht haben.                                                                                                                          |
@@ -91,7 +91,7 @@ Bitte überprüfe Folgendes:
 
 ## Gespeicherte Daten {#data-usage}
 
-Die folgenden Daten werden über jeden Vorschlag, der über [Befehle](#commands) oder durch Senden einer Nachricht in 
+Die folgenden Daten werden über jeden Vorschlag, der über [Befehle](#commands) oder durch Senden einer Nachricht in
 den [konfigurierten](#configuration) Kanal (wenn aktiviert) gespeichert:
 
 * Eine eindeutige Zahl, die den Datenbankeintrag identifiziert
@@ -108,5 +108,5 @@ den [konfigurierten](#configuration) Kanal (wenn aktiviert) gespeichert:
     * ID des Nutzers, der den Kommentar hinzugefügt hat
 * Metadaten zum Eintrag (Datum der Erstellung und letzte Aktualisierung)
 
-Es gibt keinen Weg, einen Vorschlag aus der Datenbank zu entfernen (du kannst natürlich die Vorschlags-Nachricht löschen). Um 
+Es gibt keinen Weg, einen Vorschlag aus der Datenbank zu entfernen (du kannst natürlich die Vorschlags-Nachricht löschen). Um
 alle Vorschläge zu entfernen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).

@@ -8,7 +8,7 @@ description: Use global placeholders to display live ticket metrics like utiliza
 
 ## Features {#features}
 
-* Use live ticket metrics as placeholders in any customizable message — ticket opening messages, welcome messages, statistics channel names, and more.
+* Use live ticket metrics as placeholders in any customizable message  - ticket opening messages, welcome messages, statistics channel names, and more.
 * Display global utilization, estimated wait times, and queue status across your entire support system.
 * Show per-topic metrics to give users specific information about the topic they selected.
 * Placeholders update automatically based on real-time ticket data.
@@ -54,11 +54,11 @@ If a placeholder's required feature is not enabled or no data is available, the 
 
 Global placeholders can be used in any customizable message field, including:
 
-* **[Ticket opening messages](/docs/support-bot/modmail/configuration#ticket-open-messages)** — show users the current queue status before they open a ticket.
-* **[Welcome messages](/docs/support-bot/modmail/configuration#main-configuration)** — inform users about expected wait times when their ticket is created.
-* **[Statistics channel names](/docs/support-bot/modmail/configuration#statistics-channels)** — display live metrics in voice channel names (updated every 15 minutes).
-* **[Utilization messages](/docs/support-bot/general/ticket-utilization#advanced-message-configuration)** — enrich utilization warnings with specific numbers.
-* **[Estimated wait time messages](/docs/support-bot/general/estimated-wait-time#message-configuration)** — combine global and topic-specific wait times.
+* **[Ticket opening messages](/docs/support-bot/modmail/configuration#ticket-open-messages)**  - show users the current queue status before they open a ticket.
+* **[Welcome messages](/docs/support-bot/modmail/configuration#main-configuration)**  - inform users about expected wait times when their ticket is created.
+* **[Statistics channel names](/docs/support-bot/modmail/configuration#statistics-channels)**  - display live metrics in voice channel names (updated every 15 minutes).
+* **[Utilization messages](/docs/support-bot/general/ticket-utilization#advanced-message-configuration)**  - enrich utilization warnings with specific numbers.
+* **[Estimated wait time messages](/docs/support-bot/general/estimated-wait-time#message-configuration)**  - combine global and topic-specific wait times.
 
 :::tip
 When a message template receives both global placeholders and its own built-in placeholders (like `%topic%` or `%userID%`), the built-in placeholders take priority if there is a name collision.

@@ -17,7 +17,7 @@ tags:
 Finally, a sale! We almost never do sales events, so this is your rare chance to save big on SCNX. Whether you are
 looking to upgrade your server hosting, stock up on AI coins, or support the development team, now is the time.
 
-But that’s not all - all of our paid plans include our biggest update in our product's history: **Support Bot V3**.
+But that's not all - all of our paid plans include our biggest update in our product's history: **Support Bot V3**.
 
 <!-- truncate -->
 
@@ -30,7 +30,7 @@ grab:
 
 ### 1. SCNX Server Plans (Non-Auto-Renewing)
 
-Unlock 24/7 hosting, remove ads, and access powerful features like Custom Commands and Linked Roles. 
+Unlock 24/7 hosting, remove ads, and access powerful features like Custom Commands and Linked Roles.
 
 These plans do **not** auto-renew; they simply expire after the purchased period, so there is no need to worry about canceling.
 
@@ -76,7 +76,7 @@ Support the development of SCNX and get perks like Behind-The-Scenes access.
 
 ## 🤖 Also included in all plans: The new Support Bot V3 (Beta)
 
-Included with all paid SCNX server plans is the new Support Bot V3. We have rebuilt our system from the ground up. 
+Included with all paid SCNX server plans is the new Support Bot V3. We have rebuilt our system from the ground up.
 **"Modmail" is officially becoming "Support-Bot"**.
 
 This update combines the best of both worlds, offering you two ways to handle support:
@@ -100,7 +100,7 @@ Learn more about Support Bot V3 (and learn how to try it) in our [blog post](/bl
 
 ## 💳 Ready to Upgrade?
 
-Don't miss out—the sale ends on December 3rd!
+Don't miss out -the sale ends on December 3rd!
 
 **New Payment Method:** You can now pay using **Paysafecard**! This makes it easier than ever to grab a plan without
 needing a credit card or bank account.

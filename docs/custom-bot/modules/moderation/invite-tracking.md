@@ -35,7 +35,7 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 
 * If [configured](#configuration), the bot will log who invited the new user when they join in the log channel.
 * The bot will automatically store invite data about every user that joins your server.
-* To get invite activity (who invited the user, who the user invited, invites created, …) of a user, run
+* To get invite activity (who invited the user, who the user invited, invites created, ...) of a user, run
   the [`/trace-invites`](#commands) slash command.
 * To revoke all invites of a user, run the [`/trace-invites`](#commands) slash command and click on "Remove all invites
   by this user" button below the message.

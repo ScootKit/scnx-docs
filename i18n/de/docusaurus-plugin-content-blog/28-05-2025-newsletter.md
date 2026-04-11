@@ -8,7 +8,7 @@ authors:
 tags:
   - Newsletter
   - SCNX
-  - Levelsystem 
+  - Levelsystem
 ---
 
 Hallo zusammen,
@@ -37,10 +37,10 @@ Standardmäßig hat jeder Nutzer und jeder Kanal einen Multiplikationsfaktor von
 
 Beispielszenarien:
 
-* **VIP-Boost**: Ein Nutzer mit einer speziellen „VIP“-Rolle, für die ein XP-Multiplikator konfiguriert ist, sendet eine Nachricht. Aufgrund
+* **VIP-Boost**: Ein Nutzer mit einer speziellen „VIP"-Rolle, für die ein XP-Multiplikator konfiguriert ist, sendet eine Nachricht. Aufgrund
   seiner Rolle erhält er für diese Nachricht zusätzliche XP im Vergleich zu einem Nutzer ohne die VIP-Rolle.
 * **Hervorgehobener Kanal & Booster**: Ein Nutzer, der ein Server-Booster ist (was mit einem eigenen rollenbasierten XP-Multiplikator einhergeht),
-  postet in einem Kanal, den ihr als „hervorgehobenen“ Kanal festgelegt habt (der einen kanalbasierten XP-Multiplikator hat). Da sowohl seine
+  postet in einem Kanal, den ihr als „hervorgehobenen" Kanal festgelegt habt (der einen kanalbasierten XP-Multiplikator hat). Da sowohl seine
   Rolle als auch der Kanal einen XP-Schub bieten, verdient er eine noch größere Menge an XP für seine Nachricht an diesem spezifischen Ort.
 * **Mehrere Rollen**: Wenn ein Nutzer mehrere verschiedene Rollen innehat und jede dieser Rollen ihren eigenen XP-Multiplikator hat,
   kombinieren sich all diese Multiplikatoren effektiv. Dies führt zu einem deutlich größeren Gesamt-XP-Boost für jede Nachricht, die er sendet,
@@ -68,13 +68,13 @@ Formel ist die Gesamtmenge an XP, die benötigt wird, um dieses Level x zu errei
 
 Beispiele für gültige benutzerdefinierte Levelkurven:
 
-* Unsere „Easy Linear“-Kurve: `750x+((x−1)`
-* Unsere „Exponentiation“-Kurve: `350^2(x-1)`
+* Unsere „Easy Linear"-Kurve: `750x+((x−1)`
+* Unsere „Exponentiation"-Kurve: `350^2(x-1)`
 * Eine einfache benutzerdefinierte Kurve: `1000*1.5*x`
 
 **Konfiguration**:
-Wählt in der „Modulkonfiguration“ unter „Art der Levelkurve“ die Option „Benutzerdefinierte Formel“. Gebt dann euer mathematisches
-Meisterwerk in das Feld „Benutzerdefinierte Level-Formel (falls aktiviert)“ ein.
+Wählt in der „Modulkonfiguration" unter „Art der Levelkurve" die Option „Benutzerdefinierte Formel". Gebt dann euer mathematisches
+Meisterwerk in das Feld „Benutzerdefinierte Level-Formel (falls aktiviert)" ein.
 
 Erfahrt mehr über unsere [integrierten Levelkurven](/docs/custom-bot/modules/community/levels/#level-curves) und
 über [benutzerdefinierte Levelkurven](/docs/custom-bot/modules/community/levels/#custom-level-curve) für weitere Informationen und
@@ -106,7 +106,7 @@ Der Level-Simulator ist mehr als nur ein Rechner; er ist ein unverzichtbares Wer
   eure Formel einen sanften Fortschritt erzeugt, ob sie zu schnell zu schwierig wird oder ob sie vielleicht zu einfach ist. Optimiert
   eure Formel, simuliert erneut und iteriert, bis es sich genau richtig anfühlt.
 * **Die richtige Standardkurve wählen**: Selbst wenn ihr keine benutzerdefinierte Formel verwendet, hilft euch der Simulator zu verstehen, wie
-  sich unsere Kurven „Easy Linear“, „Default Linear“ oder „Exponentiation“ mit euren spezifischen XP-pro-Nachricht-Einstellungen verhalten werden.
+  sich unsere Kurven „Easy Linear", „Default Linear" oder „Exponentiation" mit euren spezifischen XP-pro-Nachricht-Einstellungen verhalten werden.
   Den Grind ausbalancieren: Vermeidet es, euer Levelsystem zu einer frustrierenden Plackerei zu machen oder so schnell, dass Level bedeutungslos erscheinen. Der
   Simulator hilft euch, diesen idealen Mittelweg zu finden.
 * **Fundierte Entscheidungen**: Nehmt Änderungen an euren XP-Einstellungen oder eurer Levelkurve mit Zuversicht vor, da ihr zuvor eine Prognose

@@ -8,8 +8,8 @@ description: Berechne und zeige geschätzte Wartezeiten für deine Discord-Suppo
 
 ## Funktionen {#features}
 
-* Berechne geschätzte Wartezeiten automatisch basierend auf historischen Ticket-Daten — ohne manuellen Aufwand.
-* Zeige Nutzern beim Öffnen eines Tickets an, wie lange sie voraussichtlich warten müssen — für mehr Transparenz und Vertrauen.
+* Berechne geschätzte Wartezeiten automatisch basierend auf historischen Ticket-Daten  - ohne manuellen Aufwand.
+* Zeige Nutzern beim Öffnen eines Tickets an, wie lange sie voraussichtlich warten müssen  - für mehr Transparenz und Vertrauen.
 * Konfiguriere den Rückblickzeitraum, die Mindestanzahl an Tickets und die maximale Anzeige in Stunden für genaue Vorhersagen.
 * Aktiviere oder deaktiviere geschätzte Wartezeit-Nachrichten pro System (Modmail und Ticket-System) unabhängig voneinander.
 * Überschreibe die Einstellungen pro Ticket-Thema für detailliertere Kontrolle.

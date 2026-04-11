@@ -15,7 +15,7 @@ Bevor du IDs kopieren kannst, musst du den Entwicklermodus in deinem Discord-Cli
 
 ## 2. IDs kopieren
 
-Jedes Objekt auf Discord — egal ob es sich um einen Nutzer, einen Server oder eine einzelne Nachricht handelt — hat eine eindeutige ID. Sobald der Entwicklermodus aktiv ist, kannst du fast alles rechtsklicken, um sie abzurufen. IDs werden von Bots verwendet, um Objekte zu identifizieren, da IDs sich nicht ändern – selbst wenn der Name des Objekts geändert wurde.
+Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder eine einzelne Nachricht handelt  - hat eine eindeutige ID. Sobald der Entwicklermodus aktiv ist, kannst du fast alles rechtsklicken, um sie abzurufen. IDs werden von Bots verwendet, um Objekte zu identifizieren, da IDs sich nicht ändern – selbst wenn der Name des Objekts geändert wurde.
 
 ### Nutzer- und Bot-IDs kopieren
 

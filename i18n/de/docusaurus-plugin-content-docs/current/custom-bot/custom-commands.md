@@ -11,16 +11,16 @@ Erstelle deine Eigenen Befehle, Knopf-Interaktionen, Dialoge und nachrichtenbasi
 
 Mit Eigenen Befehlen kannst du deine eigenen Bot-Interaktionen über einen visuellen Prozess-Editor erstellen. Jeder benutzerdefinierte Befehl besteht aus:
 
-* Einem **Auslöser (Trigger)** — der Auslöser, der den Befehl startet (ein Slash-Befehl, ein Knopf-Klick, eine Nachricht, das Absenden eines Dialogs oder die manuelle Ausführung durch einen anderen Befehl).
-* Einem oder mehreren **Aktions-Blöcken** — Gruppen von Aktionen, die ausgeführt werden, sobald der Trigger ausgelöst wird.
-* **Aktionen** — die einzelnen Aktionen, die der Bot ausführt (antworten, eine Nachricht senden, Rollen verwalten, einen Dialog anzeigen und mehr).
-* Optionale **Befehl-Rechte** — lege fest, welche Rollen ein Nutzer haben muss, um diesen Befehl auslösen zu können.
+* Einem **Auslöser (Trigger)**  - der Auslöser, der den Befehl startet (ein Slash-Befehl, ein Knopf-Klick, eine Nachricht, das Absenden eines Dialogs oder die manuelle Ausführung durch einen anderen Befehl).
+* Einem oder mehreren **Aktions-Blöcken**  - Gruppen von Aktionen, die ausgeführt werden, sobald der Trigger ausgelöst wird.
+* **Aktionen**  - die einzelnen Aktionen, die der Bot ausführt (antworten, eine Nachricht senden, Rollen verwalten, einen Dialog anzeigen und mehr).
+* Optionale **Befehl-Rechte**  - lege fest, welche Rollen ein Nutzer haben muss, um diesen Befehl auslösen zu können.
 
 ## Einrichtung {#setup}
 
 1. Öffne die [Eigene Befehle Seite](https://scnx.app/de/glink?page=bot/custom-commands) auf deinem SCNX-Dashboard.
 2. Stelle sicher, dass dein Bot online ist und läuft.
-3. Klicke auf „Neuen Eigenen Befehl erstellen“, um zu beginnen.
+3. Klicke auf „Neuen Eigenen Befehl erstellen", um zu beginnen.
 
 ## Trigger {#triggers}
 
@@ -30,9 +30,9 @@ Jeder benutzerdefinierte Befehl benötigt einen Trigger (Auslöser), der festleg
 
 Der Befehl wird ausgeführt, sobald ein Nutzer einen Befehl verwendet, zum Beispiel `/mycommand`.
 
-* **Slash-Befehl** — Der Name, der in Discord angezeigt wird. Muss in Kleinschreibung verfasst sein und darf keine Sonderzeichen enthalten (außer `-`).
-* **Beschreibung des Slash-Befehls** — Wird unter dem Befehlsnamen im Discord-Befehlsmenü angezeigt.
-* **Slash-Command-Option hinzufügen** — Füge bis zu 25 Parameter hinzu, die Nutzer beim Ausführen des Befehls ausfüllen können. Unterstützte Typen: Text Eingabe, Ganze Zahl, Richtig / Falsch, Benutzer, Kanal, Rolle, Nummer und Anhang.
+* **Slash-Befehl**  - Der Name, der in Discord angezeigt wird. Muss in Kleinschreibung verfasst sein und darf keine Sonderzeichen enthalten (außer `-`).
+* **Beschreibung des Slash-Befehls**  - Wird unter dem Befehlsnamen im Discord-Befehlsmenü angezeigt.
+* **Slash-Command-Option hinzufügen**  - Füge bis zu 25 Parameter hinzu, die Nutzer beim Ausführen des Befehls ausfüllen können. Unterstützte Typen: Text Eingabe, Ganze Zahl, Richtig / Falsch, Benutzer, Kanal, Rolle, Nummer und Anhang.
 * Für Text-Optionen kannst du optional `die Werte begrenzen`, indem du eine vordefinierte Liste von bis zu 25 Auswahlmöglichkeiten erstellst.
 
 :::warning
@@ -45,7 +45,7 @@ Berechtigungen für Slash-Befehle werden in deinen Discord-Servereinstellungen v
 :::
 
 :::tip
-Benutzerdefinierte Slash-Befehle werden automatisch als eigene Gruppe „Eigene Befehle“ im `/help`-Befehl angezeigt, sodass sie für deine Servermitglieder leichter zu finden sind.
+Benutzerdefinierte Slash-Befehle werden automatisch als eigene Gruppe „Eigene Befehle" im `/help`-Befehl angezeigt, sodass sie für deine Servermitglieder leichter zu finden sind.
 :::
 
 ### Knopf oder Select-Menü-Druck {#trigger-button}
@@ -72,26 +72,26 @@ Der Befehl wird ausgeführt, wenn ein Nutzer eine Nachricht sendet, die einem ko
 
 Weitere Einstellungen:
 
-* **Groß- und Kleinschreibung ignorieren?** — Wenn aktiviert, wird der Bot Groß- und Kleinschreibung bei Erkennung ignorieren.
-* **Nachrichten nur in bestimmten Kanälen erkennen** — Wenn aktiviert, werden Nachrichten nur in bestimmten Kanälen erkannt.
+* **Groß- und Kleinschreibung ignorieren?**  - Wenn aktiviert, wird der Bot Groß- und Kleinschreibung bei Erkennung ignorieren.
+* **Nachrichten nur in bestimmten Kanälen erkennen**  - Wenn aktiviert, werden Nachrichten nur in bestimmten Kanälen erkannt.
 
 ### Dialog {#trigger-modal}
 
-Der Befehl wird ausgeführt, wenn ein Nutzer einen Dialog (Formular/Modal) absendet. Dialoge werden über die Aktion „Dialog anzeigen“ in einem anderen Eigenen Befehl aufgerufen.
+Der Befehl wird ausgeführt, wenn ein Nutzer einen Dialog (Formular/Modal) absendet. Dialoge werden über die Aktion „Dialog anzeigen" in einem anderen Eigenen Befehl aufgerufen.
 
 * Konfiguriere den Titel des Dialogs und die Eingabefelder (Textfelder im Kurzformat oder als Absatz).
 * Die Antworten der Nutzer stehen in den Aktionen des Befehls als Parameter zur Verfügung (z. B. `%answer1%`, `%answer2%`) und so weiter.
 
 ### Keine (Manuelle Ausführung) {#trigger-none}
 
-Der Befehl kann ausschließlich von einem anderen Eigenen Befehl über die Aktion **„Befehl ausführen“** ausgeführt werden. Das ist besonders praktisch, um wiederverwendbare Abläufe zu erstellen.
+Der Befehl kann ausschließlich von einem anderen Eigenen Befehl über die Aktion **„Befehl ausführen"** ausgeführt werden. Das ist besonders praktisch, um wiederverwendbare Abläufe zu erstellen.
 
 ## Aktion-Block {#action-blocks}
 
 Aktionen sind in **Aktions-Blöcke** organisiert. Wenn ein Befehl ausgelöst wird, führt er die Aktions-Blöcke in einem von zwei Modi aus:
 
-* **Alle** — Führt alle Aktionsblöcke nacheinander aus.
-* **Einen (zufälligen)** — Führe einen zufällig ausgewählten Aktion-Block aus. Nützlich für Zufallsantworten.
+* **Alle**  - Führt alle Aktionsblöcke nacheinander aus.
+* **Einen (zufälligen)**  - Führe einen zufällig ausgewählten Aktion-Block aus. Nützlich für Zufallsantworten.
 
 Jeder Aktion-Block enthält eine oder mehrere Aktionen. Du kannst einem einzelnen Befehl mehrere Aktions-Blöcke hinzufügen.
 
@@ -112,7 +112,7 @@ Aktionen sind die einzelnen Arbeitsschritte, die dein Bot ausführt. Die folgend
 | **Dialog anzeigen** | Zeige dem Nutzer einen Dialog (Modal) an. Der Dialog muss als separater Eigener Befehl mit einem Dialog-Trigger konfiguriert sein. Pro Interaktion kann nur ein einziger Dialog angezeigt werden. |
 
 :::info
-Manche Aktionen sind nur für bestimmte Trigger-Typen verfügbar. Beispielsweise funktioniert „Dialog anzeigen“ nur bei interaktionsbasierten Triggern (Slash-Befehlen, Knöpfen). Nicht unterstützte Aktionen werden lautlos übersprungen.
+Manche Aktionen sind nur für bestimmte Trigger-Typen verfügbar. Beispielsweise funktioniert „Dialog anzeigen" nur bei interaktionsbasierten Triggern (Slash-Befehlen, Knöpfen). Nicht unterstützte Aktionen werden lautlos übersprungen.
 :::
 
 ## Parameter {#parameters}
@@ -138,14 +138,14 @@ Diese Parameter sind immer verfügbar:
 
 Wenn du einen Slash-Befehl-Trigger mit Optionen verwendest, werden je nach Optionstyp zusätzliche Parameter verfügbar:
 
-* **User-Optionen** — `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
+* **User-Optionen**  - `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
   `%userAvatarURL-optionname%`
-* **Rollen-Optionen** — `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
+* **Rollen-Optionen**  - `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
   `%rolePosition-optionname%`
-* **Channel-Optionen** — `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
+* **Channel-Optionen**  - `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
   `%channelParentName-optionname%`, `%channelParentID-optionname%`
-* **Attachment-Optionen** — `%attachmentURL-optionname%`
-* **Text, Nummer, Ganze Zahl oder Richtig / Falsch Optionen** — `%value-optionname%`
+* **Attachment-Optionen**  - `%attachmentURL-optionname%`
+* **Text, Nummer, Ganze Zahl oder Richtig / Falsch Optionen**  - `%value-optionname%`
 
 ### Dialog-Antworten-Parameter {#modal-parameters}
 
@@ -159,12 +159,12 @@ Bei Verwendung eines Dialog-Triggers sind die Antworten des Nutzers als `%answer
 
 Du kannst einschränken, wer einen Eigenen Befehl verwenden darf, indem du **Rollen verlangen** aktivierst:
 
-1. Öffne deinen Eigenen Befehl und suche den Abschnitt **„Befehl-Rechte“**.
+1. Öffne deinen Eigenen Befehl und suche den Abschnitt **„Befehl-Rechte"**.
 2. Aktiviere **"Rollen verlangen"**.
 3. Füge die Rollen hinzu, die berechtigt sein sollen, den Befehl zu verwenden.
-4. Passe optional die **„Fehlende Rolle Nachricht“** an – dies ist die Nachricht, die angezeigt wird, wenn ein Nutzer ohne die erforderlichen Rollen versucht, den Befehl zu verwenden.
+4. Passe optional die **„Fehlende Rolle Nachricht"** an – dies ist die Nachricht, die angezeigt wird, wenn ein Nutzer ohne die erforderlichen Rollen versucht, den Befehl zu verwenden.
 
-Besitzt ein Anwender keine der erforderlichen Rollen, wird die Ausführung des Befehls blockiert und stattdessen die „Fehlende Rolle Nachricht“ angezeigt.
+Besitzt ein Anwender keine der erforderlichen Rollen, wird die Ausführung des Befehls blockiert und stattdessen die „Fehlende Rolle Nachricht" angezeigt.
 
 ## Eigene Befehle verwalten {#managing}
 
@@ -177,7 +177,7 @@ Jeder Eigene Befehl kann individuell aktiviert oder deaktiviert werden. Ein deak
 Du kannst einen Custom Command mit anderen teilen, indem du einen einzigartigen Teilen-Link erstellst:
 
 1. Öffne den Custom Command, den du teilen möchtest.
-2. Klicke auf **„Teilen-Link erstellen“**.
+2. Klicke auf **„Teilen-Link erstellen"**.
 3. Kopiere die generierte URL.
 
 Dieser Link speichert den aktuellen Stand deines Befehls. Wenn du den Befehl später bearbeitest, wird die geteilte Version nicht automatisch aktualisiert.
@@ -252,12 +252,12 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
 </details>
 
 <details>
-  <summary>„Dialog anzeigen“ Aktion funktioniert nicht</summary>
+  <summary>„Dialog anzeigen" Aktion funktioniert nicht</summary>
   <ul>
     <li>Dialoge können nur über interaktionsbasierte Trigger (Slash-Befehle, Knöpfe) angezeigt werden. Sie können nicht über Nachrichten-Trigger ausgelöst werden.</li>
-    <li>Pro Interaktion kann nur ein Dialog angezeigt werden — wenn eine andere Aktion bereits einen Dialog aufgerufen hat, werden nachfolgende übersprungen.</li>
+    <li>Pro Interaktion kann nur ein Dialog angezeigt werden  - wenn eine andere Aktion bereits einen Dialog aufgerufen hat, werden nachfolgende übersprungen.</li>
     <li>Ein Dialog kann nicht als Antwort auf das Absenden eines anderen Dialogs angezeigt werden (Einschränkung von Discord).</li>
-    <li>Stelle sicher, dass du einen separaten Eigenen Befehl mit einem <b>Dialog-Trigger</b> erstellt und diesen in der Aktion „Dialog anzeigen“ ausgewählt hast.</li>
+    <li>Stelle sicher, dass du einen separaten Eigenen Befehl mit einem <b>Dialog-Trigger</b> erstellt und diesen in der Aktion „Dialog anzeigen" ausgewählt hast.</li>
   </ul>
 </details>
 
@@ -266,6 +266,6 @@ Du kannst jederzeit mehr Befehle erstellen, als dein Limit erlaubt, aber es kann
   <ul>
     <li>Die höchste Rolle des Bots muss <b>über</b> den Rollen stehen, die er hinzuzufügen, entfernen oder umzuschalten soll.</li>
     <li>Stelle sicher, dass der Bot über die <b>Rollen verwalten</b> Berechtigung verfügt.</li>
-    <li>Überprüfe, ob der User-Parameter korrekt gesetzt ist — wenn kein Benutzer angegeben wird, wird die Aktion stillschweigend übersprungen.</li>
+    <li>Überprüfe, ob der User-Parameter korrekt gesetzt ist  - wenn kein Benutzer angegeben wird, wird die Aktion stillschweigend übersprungen.</li>
   </ul>
 </details>

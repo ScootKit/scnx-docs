@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
 title: Formulare
-description: Erstelle eigene Formulare und Modal-Dialoge für deine Discord-Support-Tickets — sammle strukturierte Informationen von Nutzern vor oder während eines Tickets.
+description: Erstelle eigene Formulare und Modal-Dialoge für deine Discord-Support-Tickets  - sammle strukturierte Informationen von Nutzern vor oder während eines Tickets.
 ---
 
 # Formulare

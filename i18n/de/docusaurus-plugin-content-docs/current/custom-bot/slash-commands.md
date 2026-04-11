@@ -41,11 +41,11 @@ Für jeden Command kann festgelegt werden:
 * welche **Benutzer** Zugriff haben
 * in welchen **Kanälen** der Command ausgeführt werden darf
 
-:::warning Wichtiger Hinweis  
-Bei den meisten Befehlen überprüft der Bot die Berechtigungen nicht zusätzlich  
-(abgesehen von einigen Ausnahmen, z.B. `/moderate`).  
+:::warning Wichtiger Hinweis
+Bei den meisten Befehlen überprüft der Bot die Berechtigungen nicht zusätzlich
+(abgesehen von einigen Ausnahmen, z.B. `/moderate`).
 Jeder Nutzer, der hier Ausführungsrechte erhält, kann **alle Unterbefehle**
-dieses Befehls ohne weitere Einschränkungen ausführen.  
+dieses Befehls ohne weitere Einschränkungen ausführen.
 Die Vergabe von Rechten sollte daher sorgfältig erfolgen.
 :::
 
@@ -57,7 +57,7 @@ Wenn ein Command erforderliche Berechtigungen besitzt (z. B. **Mitglieder moderi
 können ihn zunächst nur Nutzer ausführen, die über diese Serverrechte verfügen.
 
 Discord zeigt in diesem Fall einen Hinweis wie:
-> „Mitglieder benötigen Serverberechtigungen, um diesen Command zu verwenden.“
+> „Mitglieder benötigen Serverberechtigungen, um diesen Command zu verwenden."
 
 Diese Standardberechtigungen gelten so lange, bis sie im Command-Berechtigungsmenü
 explizit überschrieben werden, indem Rollen oder einzelne Nutzer hinzugefügt werden.

@@ -88,7 +88,7 @@ An embed is only created if at least one of `title`, `description`, `author.name
 
 V2 messages support `%placeholder%` template variables that are substituted at runtime. The available placeholders depend on the context where the message is used.
 
-Placeholders work in **all string properties** — `message`, `title`, `description`, `author.name`, field names, field values, footer, image URLs, etc.
+Placeholders work in **all string properties**  - `message`, `title`, `description`, `author.name`, field names, field values, footer, image URLs, etc.
 
 Some placeholders are marked as image-compatible and are intended for use in image-accepting properties (`image`, `thumbnail`, `author.img`, `footerImgUrl`).
 
@@ -137,7 +137,7 @@ When a v2 message is auto-converted to v3, the property names change. V2 uses a 
 | `footer` | `embeds[].footer.text` | Was a string, now an object |
 | `footerImgUrl` | `embeds[].footer.iconURL` | Renamed, moved into footer object |
 | `embedTimestamp` | `embeds[].footer.hideTime` | V3 uses a boolean toggle instead of a custom timestamp |
-| _(no equivalent)_ | `embeds[].footer.disabled` | New in v3 — hides the entire footer |
+| _(no equivalent)_ | `embeds[].footer.disabled` | New in v3  - hides the entire footer |
 | _(no equivalent)_ | `attachmentURLs` | New in v3 |
 | _(no equivalent)_ | `linkButtons` | New in v3 |
 

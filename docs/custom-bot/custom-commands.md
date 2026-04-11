@@ -1,6 +1,6 @@
 # Custom Commands
 
-Create your own commands, button interactions, modals, and message-based automations — all from the SCNX Dashboard,
+Create your own commands, button interactions, modals, and message-based automations  - all from the SCNX Dashboard,
 without writing any code.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
@@ -12,11 +12,11 @@ without writing any code.
 
 Custom Commands let you build your own bot interactions using a visual flow editor. Each custom command consists of:
 
-* A **trigger** — what causes the command to run (a slash command, button click, message, modal submission, or manual
+* A **trigger**  - what causes the command to run (a slash command, button click, message, modal submission, or manual
   execution from another command).
-* One or more **action blocks** — groups of actions that execute when the trigger fires.
-* **Actions** — the individual things the bot does (reply, send a message, manage roles, show a modal, and more).
-* Optional **permissions** — restrict who can use the command by requiring specific roles.
+* One or more **action blocks**  - groups of actions that execute when the trigger fires.
+* **Actions**  - the individual things the bot does (reply, send a message, manage roles, show a modal, and more).
+* Optional **permissions**  - restrict who can use the command by requiring specific roles.
 
 ## Setup {#setup}
 
@@ -32,9 +32,9 @@ Each custom command needs a trigger that determines when it runs. The following 
 
 The command runs when a user executes a slash command (e.g. `/mycommand`).
 
-* **Slash Command name** — The name shown in Discord. Must be lowercase, no special characters (except `-`).
-* **Description** — Shown below the command name in Discord's command menu.
-* **Options** — Add up to 25 parameters that users can fill in when running the command. Supported types: Text, Integer,
+* **Slash Command name**  - The name shown in Discord. Must be lowercase, no special characters (except `-`).
+* **Description**  - Shown below the command name in Discord's command menu.
+* **Options**  - Add up to 25 parameters that users can fill in when running the command. Supported types: Text, Integer,
   Number, True/False, User, Channel, Role, and Attachment.
 * For text options, you can optionally **limit values** to a predefined list of up to 25 choices.
 
@@ -79,8 +79,8 @@ The command runs when a user sends a message that matches a configured pattern. 
 
 Additional options:
 
-* **Ignore casing** — Match regardless of uppercase/lowercase.
-* **Limit to channels** — Only trigger in specific channels or channel categories.
+* **Ignore casing**  - Match regardless of uppercase/lowercase.
+* **Limit to channels**  - Only trigger in specific channels or channel categories.
 
 ### Modal {#trigger-modal}
 
@@ -99,8 +99,8 @@ reusable logic.
 
 Actions are organized into **action blocks**. When a command triggers, it executes action blocks in one of two modes:
 
-* **All** — Execute all action blocks sequentially.
-* **One (randomly)** — Execute one randomly selected action block. Useful for random responses.
+* **All**  - Execute all action blocks sequentially.
+* **One (randomly)**  - Execute one randomly selected action block. Useful for random responses.
 
 Each action block contains one or more actions. You can add multiple action blocks to a single command.
 
@@ -149,14 +149,14 @@ These parameters are always available:
 
 When using a slash command trigger with options, additional parameters become available depending on the option type:
 
-* **User options** — `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
+* **User options**  - `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
   `%userAvatarURL-optionname%`
-* **Role options** — `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
+* **Role options**  - `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
   `%rolePosition-optionname%`
-* **Channel options** — `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
+* **Channel options**  - `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
   `%channelParentName-optionname%`, `%channelParentID-optionname%`
-* **Attachment options** — `%attachmentURL-optionname%`
-* **Text, Number, Integer, Boolean options** — `%value-optionname%`
+* **Attachment options**  - `%attachmentURL-optionname%`
+* **Text, Number, Integer, Boolean options**  - `%value-optionname%`
 
 ### Modal answer parameters {#modal-parameters}
 
@@ -175,7 +175,7 @@ You can restrict who can use a custom command by enabling **role requirements**:
 1. Open your custom command and find the **"Command permissions"** section.
 2. Enable **"Require roles"**.
 3. Add the roles that should be allowed to use the command.
-4. Optionally customize the **"Missing role message"** — the message shown when a user without the required roles tries
+4. Optionally customize the **"Missing role message"**  - the message shown when a user without the required roles tries
    to use the command.
 
 Users without any of the configured roles will see the missing role message instead of the command executing.
@@ -195,7 +195,7 @@ You can share a custom command with others by creating a unique sharing link:
 2. Click **"Create sharing link"**.
 3. Copy the generated URL.
 
-The link contains a snapshot of the command at the time of sharing — future changes won't be synced.
+The link contains a snapshot of the command at the time of sharing  - future changes won't be synced.
 
 :::caution
 Shared custom commands may contain actions that could be harmful. Only import commands from sources you trust.
@@ -276,7 +276,7 @@ time. Disabled commands are saved and can be enabled later if you upgrade or dis
   <ul>
     <li>Modals can only be shown from interaction-based triggers (slash commands, buttons). They can't be shown from
       message triggers.</li>
-    <li>Only one modal can be shown per interaction — if another action already showed a modal, subsequent ones will be
+    <li>Only one modal can be shown per interaction  - if another action already showed a modal, subsequent ones will be
       skipped.</li>
     <li>A modal can't be shown from another modal submission (Discord limitation).</li>
     <li>Make sure you created a separate custom command with a <b>Modal trigger</b> and selected it in the "Show modal"
@@ -289,6 +289,6 @@ time. Disabled commands are saved and can be enabled later if you upgrade or dis
   <ul>
     <li>The bot's highest role must be <b>above</b> the roles it's trying to add, remove, or toggle.</li>
     <li>Make sure the bot has the <b>Manage Roles</b> permission.</li>
-    <li>Verify the user parameter is set correctly — if no user is specified, the action is silently skipped.</li>
+    <li>Verify the user parameter is set correctly  - if no user is specified, the action is silently skipped.</li>
   </ul>
 </details>

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support Feedback
-description: Collect star ratings and custom feedback from users after support tickets are closed — with optional anonymization.
+description: Collect star ratings and custom feedback from users after support tickets are closed  - with optional anonymization.
 ---
 
 # Support Feedback
@@ -19,7 +19,7 @@ description: Collect star ratings and custom feedback from users after support t
 
 * Visit the [Support Feedback](https://scnx.app/glink?page=support-system/ticket-system/support-feedback) page in your dashboard.
 * <a href="#main-configuration">Configure</a> the available options.
-* Create a new feedback question by clicking “Edit questions” in the <a href="#main-configuration">main configuration</a> and then clicking “Add field”.
+* Create a new feedback question by clicking "Edit questions" in the <a href="#main-configuration">main configuration</a> and then clicking "Add field".
 * <a href="#manage-feedback-questions">Configure</a> the available options for the respective feedback question.
 
 ## Configuration {#configuration}
@@ -34,9 +34,9 @@ description: Collect star ratings and custom feedback from users after support t
 | Edit feedback questions                            | These questions are shown in the rating dialog.<br/><small><details><summary>Note</summary><blockquote>*How to edit feedback questions can be found [here](#manage-feedback-questions).* </blockquote></details></small>                                                     |
 | Anonymize feedback                                 | If enabled, your bot will not link ratings to user IDs.                                                                                                                                                                                                                     |
 | Send answers to a channel                          | If enabled, ratings are sent to a channel.                                                                                                                                                                                                                                  |
-| Channel to send answers to                         | Submitted ratings will be sent to this channel.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>                                                                   |
-| Customize notification message?                    | If enabled, you can customize the notification message for new ratings.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>                                          |
-| Feedback notification message                      | This message will be sent when a new rating is submitted.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Customize notification message?” is enabled.*</blockquote></details></small>                                                   |
+| Channel to send answers to                         | Submitted ratings will be sent to this channel.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Send answers to a channel" is enabled.*</blockquote></details></small>                                                                   |
+| Customize notification message?                    | If enabled, you can customize the notification message for new ratings.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Send answers to a channel" is enabled.*</blockquote></details></small>                                          |
+| Feedback notification message                      | This message will be sent when a new rating is submitted.<br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Customize notification message?" is enabled.*</blockquote></details></small>                                                   |
 
 ### Manage feedback questions {#manage-feedback-questions}
 

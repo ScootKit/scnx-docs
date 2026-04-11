@@ -53,5 +53,5 @@ Jeder Eintrag in der Liste stellt eine Sticky-Nachricht mit den folgenden Felder
 <details>
   <summary>Die Sticky-Nachricht wird nicht aktualisiert, wenn Bots Nachrichten senden</summary>
 
-  Standardmäßig reagiert der Bot nicht auf Nachrichten von anderen Bots. Aktiviere die Option „Antworten auf Bots“ in der Sticky-Nachrichten-Konfiguration für den entsprechenden Kanal.
+  Standardmäßig reagiert der Bot nicht auf Nachrichten von anderen Bots. Aktiviere die Option „Antworten auf Bots" in der Sticky-Nachrichten-Konfiguration für den entsprechenden Kanal.
 </details>

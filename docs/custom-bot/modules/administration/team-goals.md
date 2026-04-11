@@ -33,7 +33,7 @@ Set weekly messages-goals and voice-activity-goals for your staff-members.
 
 | Command                              | Description                                                                                                                                                                              |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/team-goals progress [user:<User>]` | Shows the message progress (amount of messages left to reach the goal, time left, …) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). |
+| `/team-goals progress [user:<User>]` | Shows the message progress (amount of messages left to reach the goal, time left, ...) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). |
 | `/team-goals voice-progress [user:<User>]` | Shows the voice activity progress (minutes spent in voice channels, goal, time left) towards the voice goal of the current [evaluation period](#module-terms). Only available if the voice goal is enabled. |
 | `/team-goals history [user:<User>]`  | Shows the goal-history (amount of messages, goal reached or not, percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).        |
 
@@ -85,8 +85,8 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=t
 <details>
   <summary>How can I change the time when users get evaluated?</summary>
 
-  There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need 
-another evaluation time, you could disable the module, <a href="/docs/custom-bot/additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want 
+  There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need
+another evaluation time, you could disable the module, <a href="/docs/custom-bot/additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want
   evaluations to happen and enable the module then.
 </details>
 
@@ -107,7 +107,7 @@ another evaluation time, you could disable the module, <a href="/docs/custom-bot
 
   Such usage would violate our <a href="https://scootk.it/scnx-tos">Terms of Service</a> as you are using our software to spam your users. You may only use this module
   to evaluate activity of your staff members and only with their consent.
-  If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of 
+  If you are using the DM feature of this module, SCNX might automatically add a "Report abuse" button below your message if you are messaging an unusually high amount of
   members of your server. You can learn more about this behavior on <a href="https://scootk.it/report-mass-dm">scootk.it/report-mass-dm</a> (this is also the URL linked in the button).
   Most of our users never fit this category, and you usually do not need to worry about this if you are using this module as intended.
 </details>
@@ -136,4 +136,4 @@ the [configured Staff-Roles](#configuration) ("Goal History Entry"):
 There is no way to remove the user entry or the goal history entry from the database. Messages sent by users without
 any [configured Staff-Roles](#configuration) will never be counted and will not create a User entry.
 
-To remove all data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database). 
+To remove all data, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

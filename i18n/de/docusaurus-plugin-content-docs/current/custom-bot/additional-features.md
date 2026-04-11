@@ -28,8 +28,8 @@ Du kannst die Konfiguration eines Moduls auf die Standardwerte zurücksetzen, we
 So setzt du deine Modul-Konfiguration zurück:
 
 1. Öffne die [Konfigurations-Seite](https://scnx.app/de/glink?page=bot/configuration) deines Bots.
-2. Suche das entsprechende Modul und klicke auf „Erweiterte Optionen“.
-3. Klicke auf „Modul-Konfiguration löschen“.
+2. Suche das entsprechende Modul und klicke auf „Erweiterte Optionen".
+3. Klicke auf „Modul-Konfiguration löschen".
 4. Bestätige die Aktion.
 5. Starte deinen Bot neu, um die Änderungen zu übernehmen.
 
@@ -49,8 +49,8 @@ nicht zurückgesetzt werden.
 So löschst du die Modul-Datenbank:
 
 1. Öffne die [Konfigurations-Seite](https://scnx.app/de/glink?page=bot/configuration) deines Bots.
-2. Suche das entsprechende Modul und klicke auf „Erweiterte Optionen“.
-3. Klicke auf „Modul-Datenbank löschen“.
+2. Suche das entsprechende Modul und klicke auf „Erweiterte Optionen".
+3. Klicke auf „Modul-Datenbank löschen".
 4. Bestätige die Aktion.
 5. Starte deinen Bot neu, um die Änderungen zu übernehmen.
 

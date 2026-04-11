@@ -17,7 +17,7 @@ Die Schritte, um Fehler zu beheben, sind bei den beiden Bots unterschiedlich. Bi
 
 ## Die Grundlagen {#basics}
 
-Jeder Bot auf SCNX ist ein eigener Prozess, der auf einem echten Server ausgeführt wird. Du kannst den Status im 
+Jeder Bot auf SCNX ist ein eigener Prozess, der auf einem echten Server ausgeführt wird. Du kannst den Status im
 Bot-Status-Panel von deinem [Modmail-](https://scnx.app/glink?page=modmail/manage)
 oder [Eigenen-Bot-](https://scnx.app/glink?page=bot/manage) Dashboard einsehen.
 
@@ -216,7 +216,7 @@ So kannst du das Profil-Bild und den Nutzernamen deines Bots ändern, ohne SCNX 
 
 :::info Bevor du weiterliest
 
-Dafür muss dein Bot online sein. Wenn dein Bot nicht auf SCNX online ist, öffne bitte den Abschnitt „Der Bot ist nicht auf meinem Server“ im unserem [Leitfaden zur Fehlerbehebung](#troubleshooting).
+Dafür muss dein Bot online sein. Wenn dein Bot nicht auf SCNX online ist, öffne bitte den Abschnitt „Der Bot ist nicht auf meinem Server" im unserem [Leitfaden zur Fehlerbehebung](#troubleshooting).
 
 :::
 
@@ -226,7 +226,7 @@ Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, f
 
 1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
    oder das [eigene Bot-](https://scnx.app/glink?page=bot/manage) Dashboard.
-2. Klicke anschließend in der Bot-Statuskarte auf „Erweiterte Optionen“.
+2. Klicke anschließend in der Bot-Statuskarte auf „Erweiterte Optionen".
 3. Klicke auf "Invite-URL anzeigen" und klicke dann auf "Invite-URL kopieren".
 4. Klicke auf "Abbrechen".
 
@@ -235,7 +235,7 @@ Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, f
 Bevor wir loslegen, eine kurze Erklärung darüber, was Logs überhaupt sind und warum du sie teilen solltest. Jeder Bot hat seinen eigenen Prozess auf SCNX, der auf einem echten, physischen Server verwaltet wird. Während dein Bot läuft, produziert dieser Prozess solche Log-Datein. In diesen Datein dokumentiert dein Bot, alles, was was er macht und schreibt den Grund für Fehlern auf. Unser Team benötigt diese Logs. um eventuelle Probleme zu diagnostizieren und dir eine Lösung anzubieten - oder um, wenn es Fehler direkt am Bot, ist - diese zu beheben.
 
 :::info
-Bot Logs zu Teilen, ist eine „Einmalige Erfassung“ davon - geteilte Logs werden nicht aktualisiert, wenn dein Bot etwas Neues dokumentiert. Die geteilten Logs werden nach 7 Tagen,  nachdem du sie geteilt hast, gelöscht. Logs beinhalten meinst keine privaten Informationen, aber bitte schaue trotzdem darüber, bevor du sie veröffentlichst.
+Bot Logs zu Teilen, ist eine „Einmalige Erfassung" davon - geteilte Logs werden nicht aktualisiert, wenn dein Bot etwas Neues dokumentiert. Die geteilten Logs werden nach 7 Tagen,  nachdem du sie geteilt hast, gelöscht. Logs beinhalten meinst keine privaten Informationen, aber bitte schaue trotzdem darüber, bevor du sie veröffentlichst.
 :::
 
 :::caution
@@ -305,7 +305,7 @@ Um deinen Bot (für immer) zu löschen, folge dieser Anleitung:
    oder das [eigene Bot-](https://scnx.app/de/glink?page=bot/manage) Dashboard.
 2. Als Nächstes, klicke auf "Mehr Optionen" in dem Bot-Status-Panel.
 3. Wähle "Bot löschen" aus.
-4. Du wirst aufgefordert, einen Grund für die Löschung anzugeben (du musst ihn nicht näher erläutern). Als Nächstes starte deine Anfrage mit dem „Bot-Löschanfrage initiieren“-Knopf.
+4. Du wirst aufgefordert, einen Grund für die Löschung anzugeben (du musst ihn nicht näher erläutern). Als Nächstes starte deine Anfrage mit dem „Bot-Löschanfrage initiieren"-Knopf.
 5. Du wirst eine PN erhalten, um deine Löschanfrage zu bestätigen. Nutze den Knopf unterhalb der Nachricht, um die Datenlöschung durchzuführen.
 6. Nach der Bestätigung löscht unser System deinen Bot von SCNX. Dies kann 1–5 Minuten dauern.
 7. Du wirst eine Bestätigung erhalten, sobald wir deinen Bot aus SCNX gelöscht haben.
