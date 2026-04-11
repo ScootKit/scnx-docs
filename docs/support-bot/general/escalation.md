@@ -1,7 +1,7 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 title: Escalation
-description: Escalate Modmail tickets to higher support levels or request assistance from other team members without transferring the ticket.
+description: Escalate tickets to higher support levels or request assistance from other team members — available in both Modmail and the Ticket System.
 ---
 
 # Escalation
@@ -12,12 +12,13 @@ description: Escalate Modmail tickets to higher support levels or request assist
 * Request assistance from other team members by pinging a configured role — without transferring the ticket.
 * Optionally include a reason when escalating or requesting assistance for better context.
 * Both commands are per-topic: each ticket topic can define its own escalation target and assistance role independently.
+* Works in both Modmail and the Ticket System.
 
 
 
 ## Setup {#setup}
 
-* Visit the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard.
+* Visit the ticket topics page for your system in your dashboard ([Modmail ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) or [Ticket System ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics)).
 * Enable the escalation or assistance feature for each topic where you want it available.
 * For escalation: set the target topic that tickets should be escalated to.
 * For assistance: set the role that should be pinged when assistance is requested.
@@ -35,7 +36,7 @@ description: Escalate Modmail tickets to higher support levels or request assist
 
 ### Per-topic settings {#per-topic-settings}
 
-These fields are configured per ticket topic on the [Ticket topics](https://scnx.app/glink?page=support-system/modmail/ticket-topics) page in your dashboard.
+These fields are configured per ticket topic in your dashboard — available for both [Modmail ticket topics](/docs/support-bot/modmail/ticket-topics) and [Ticket System ticket topics](/docs/support-bot/ticket-system/ticket-topics).
 
 | Field | Description |
 | --- | --- |
@@ -49,8 +50,8 @@ These fields are configured per ticket topic on the [Ticket topics](https://scnx
 When a team member runs ``/ticket escalate``:
 
 1. A system message is posted in the ticket channel (e.g. "**@StaffMember** escalated this ticket — reason").
-2. The ticket is transferred to the configured target topic — just like a regular [topic transfer](/docs/support-bot/modmail/ticket-topics), including permission changes, category moves, and optional role pings.
-3. If [ticket claiming](/docs/support-bot/modmail/claiming) is enabled with "Remove assigned team member on transfer", the current assignment is cleared so the new team can claim the ticket.
+2. The ticket is transferred to the configured target topic — just like a regular topic transfer, including permission changes, category moves, and optional role pings.
+3. If ticket claiming is enabled with "Remove assigned team member on transfer", the current assignment is cleared so the new team can claim the ticket.
 
 ### Assistance {#how-assistance-works}
 
