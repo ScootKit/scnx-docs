@@ -52,6 +52,7 @@ description: Create custom forms and modal dialogs for your Discord support tick
 | --- | --- |
 | Form name | This text is shown as the title of your form and in the form selection menu. |
 | Dialog | These questions are shown in the form. More information on configuring form questions can be found [here](#manage-forms-questions). |
+| Custom submission message | If set, this message is shown to the user after they submit the form. If not set, a default confirmation message is used.<br/><small><details><summary>Available placeholders</summary><blockquote>`%formName%` (form name), `%field1%` / `%field2%` / ... (field values), `%field1_name%` / `%field2_name%` / ... (field labels), `%userID%`, `%tag%`, `%username%`, `%avatarUrl%`, `%mention%` (ticket author).</blockquote></details></small> |
 
 ### Manage form questions {#manage-forms-questions}
 
