@@ -1,6 +1,6 @@
 # SCNX Documentation
 
-The official documentation for [SCNX](https://scnx.xyz)  - view it live at [docs.scnx.xyz](https://docs.scnx.xyz).
+The official documentation for [SCNX](https://scnx.xyz) - view it live at [docs.scnx.xyz](https://docs.scnx.xyz).
 
 > **This project is not open source.** The source code is shared publicly to allow community contributions (typo fixes, translation improvements, new documentation pages), but all rights are reserved by ScootKit. You may not copy, redistribute, or use this code to build or host your own version of the documentation. Due to proprietary dependencies (FontAwesome Pro, internal API integrations), the project cannot be built on external machines without a license.
 
@@ -67,10 +67,10 @@ yarn fix-tables
 
 Execute scripts from the `bin/` directory:
 
-- `node download-api-responses.js`  - Cache SCNX API data to `api-responses.json` (required for other scripts and offline builds)
-- `node generate-progress.js [orgID]`  - View module translation progress (optionally filter by org)
-- `node generate-docs-file.js <moduleName>`  - Generate a docs template for a Custom Bot module
-- `node generate-missing-files.js`  - Generate placeholder files for undocumented modules
+- `node download-api-responses.js` - Cache SCNX API data to `api-responses.json` (required for other scripts and offline builds)
+- `node generate-progress.js [orgID]` - View module translation progress (optionally filter by org)
+- `node generate-docs-file.js <moduleName>` - Generate a docs template for a Custom Bot module
+- `node generate-missing-files.js` - Generate placeholder files for undocumented modules
 
 ## Contributing
 
@@ -95,6 +95,37 @@ Contributions are welcome! Please:
 - Use `<IncludedInPlan>` component to show plan availability
 - Use `<PlanPrice>` component for dynamic pricing display
 
+### Markdown Formatting Rules
+
+A CI linter runs on every PR and an autofix runs on merge to main. The following rules are enforced:
+
+| Rule                                    | Correct              | Incorrect                             |
+| --------------------------------------- | -------------------- | ------------------------------------- |
+| Use ` -` instead of em dashes           | `tickets - overview` | `tickets — overview`                  |
+| Use straight quotes                     | `"text"`             | `\u201Ctext\u201D`                    |
+| Use `...` instead of ellipsis character | `and more...`        | `and more\u2026`                      |
+| Use regular spaces                      | `some text`          | `some\u00A0text` (non-breaking space) |
+| No trailing whitespace                  | `end of line`        | `end of line   `                      |
+
+These rules are automatically fixed on merge to main via the `docs-autofix` workflow.
+
+### Prettier
+
+Prettier runs on merge to main to auto-format markdown files. Configuration is in `.prettierrc`. It will:
+
+- Align and normalize markdown table columns
+- Normalize bullet points to `- ` (use either `*` or `-` when writing, prettier will standardize it)
+- Normalize emphasis to `_text_` and bold to `**text**`
+- Fix inconsistent spacing and indentation
+
+You can run prettier locally before committing:
+
+```bash
+NPM_CONFIG_USERCONFIG=/dev/null npx prettier --write 'docs/**/*.md'
+```
+
+The `NPM_CONFIG_USERCONFIG=/dev/null` is needed to skip the FontAwesome registry in `.npmrc`.
+
 ---
 
-&copy; ScootKit UG (haftungsbeschränkt), 2026  - All rights reserved. This project is proprietary software. See above for contribution guidelines.
+&copy; ScootKit UG (haftungsbeschränkt), 2026 - All rights reserved. This project is proprietary software. See above for contribution guidelines.
