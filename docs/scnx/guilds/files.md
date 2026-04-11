@@ -17,11 +17,11 @@ You'll find **Images** in your server's navigation sidebar.
 Whenever you need an image for your Custom Bot or Support Bot -such as a welcome banner, embed thumbnail, or automated
 attachment -you can pull it directly from your shared server library.
 
-* **Team Collaboration:** Any **trusted admin** on your server can view, edit, and delete images from the shared
+- **Team Collaboration:** Any **trusted admin** on your server can view, edit, and delete images from the shared
   library, ensuring your team can easily maintain the server's branding and assets together.
-* **Instant Application:** Select images directly from a built-in picker while editing your bots, with the ability to
+- **Instant Application:** Select images directly from a built-in picker while editing your bots, with the ability to
   seamlessly switch between your shared server library and your personal files.
-* **Upload Once, Use Everywhere:** Upload an image to the server once, and anyone on your team can use it across any bot
+- **Upload Once, Use Everywhere:** Upload an image to the server once, and anyone on your team can use it across any bot
   configuration.
 
 ## Migrating from Personal Storage {#migrating-from-personal-storage}
@@ -63,8 +63,8 @@ storage:
 3. You can upload multiple files at once. Each file will process individually, and a pop-up will confirm if the upload
    was successful or if an error occurred.
 
-*Note: If you upload an identical file that already exists in the library, SCNX will automatically return the existing
-image to prevent unnecessary duplicates.*
+_Note: If you upload an identical file that already exists in the library, SCNX will automatically return the existing
+image to prevent unnecessary duplicates._
 
 #### File Requirements {#file-requirements}
 
@@ -72,7 +72,7 @@ To ensure smooth performance, each individual file must be **25 MB or smaller**.
 rejected.
 
 | Format | Allowed Extensions |
-|--------|--------------------|
+| ------ | ------------------ |
 | JPEG   | `.jpg`, `.jpeg`    |
 | PNG    | `.png`             |
 | GIF    | `.gif`             |
@@ -97,10 +97,10 @@ page.
 
 **Important Details for AI Generation:**
 
-* **Cost:** 15 AI Coins per image. If your balance is below 15 coins, generation will be blocked until you purchase more
+- **Cost:** 15 AI Coins per image. If your balance is below 15 coins, generation will be blocked until you purchase more
   from the SCNX dashboard.
-* **Dimensions:** All generated images are a crisp 1024 × 1024 pixels.
-* **Content Policy:** Prompts violating our safety guidelines will be rejected. You will *not* be charged AI Coins for
+- **Dimensions:** All generated images are a crisp 1024 × 1024 pixels.
+- **Content Policy:** Prompts violating our safety guidelines will be rejected. You will _not_ be charged AI Coins for
   rejected prompts.
 
 ## Understanding Storage Limits {#understanding-storage-limits}
@@ -121,7 +121,7 @@ do not wish to use the guild storage.
 :::
 
 | SCNX Plan    | Total Storage |
-|--------------|---------------|
+| ------------ | ------------- |
 | Starter      | ~50 MB        |
 | Unlimited    | ~500 MB       |
 | Professional | ~1 GB         |
@@ -138,12 +138,12 @@ As your library grows, finding the right image quickly is crucial. SCNX gives yo
 
 ### Organization Tools {#organization-tools}
 
-* **Tags:** Group your images by campaign, season, or bot module. You can add up to **10 tags** per image (max 30
+- **Tags:** Group your images by campaign, season, or bot module. You can add up to **10 tags** per image (max 30
   characters each). Use the **Edit Tags** button on an image card to manage them. Clicking a tag instantly filters your
   entire library.
-* **Display Names:** Give your images recognizable names! By default, the system uses the original filename, but you can
+- **Display Names:** Give your images recognizable names! By default, the system uses the original filename, but you can
   change it to something clear (up to 100 characters) using the **Rename** button.
-* **Starring (Favorites):** Click the **★ icon** on any image to star it. Starred images are pinned to the top of your
+- **Starring (Favorites):** Click the **★ icon** on any image to star it. Starred images are pinned to the top of your
   library for instant access.
 
 ### Searching and Filtering {#searching-and-filtering}
@@ -152,21 +152,21 @@ Use the filter bar above the image grid to narrow down your view. You can combin
 need, and hit **Clear filters** to reset your view.
 
 | Tool              | What it does                                                                                          |
-|-------------------|-------------------------------------------------------------------------------------------------------|
+| ----------------- | ----------------------------------------------------------------------------------------------------- |
 | **Search Bar**    | Searches for matching text in the display name or the original filename.                              |
 | **Filter by Tag** | Displays only the images that have a specific tag applied.                                            |
 | **Starred Only**  | Hides everything except your favorited (starred) images.                                              |
-| **Type Tabs**     | Filters images by how they were created: *All, Uploaded, AI Generated, Custom Bot,* or *Support Bot*. |
+| **Type Tabs**     | Filters images by how they were created: _All, Uploaded, AI Generated, Custom Bot,_ or _Support Bot_. |
 
-*Note: To keep loading times fast, the library displays 25 images per page. Use the Previous / Next buttons at the
-bottom to navigate.*
+_Note: To keep loading times fast, the library displays 25 images per page. Use the Previous / Next buttons at the
+bottom to navigate._
 
 ## Managing and Deleting Images {#managing-and-deleting-images}
 
 Every image card features a quick-action menu to help you manage your files.
 
 | Action            | What it does                                                       |
-|-------------------|--------------------------------------------------------------------|
+| ----------------- | ------------------------------------------------------------------ |
 | **Copy URL**      | Copies the direct CDN link to your clipboard.                      |
 | **Preview**       | Opens a full-sized preview of the image.                           |
 | **Download**      | Downloads the original image file directly to your current device. |
@@ -193,9 +193,9 @@ on Discord might load longer, unless you delete messages with the image manually
 
 You can free up storage space by deleting images you no longer need.
 
-* **Single Delete:** Click **Delete** on any individual image card.
-* **Bulk Delete:** Click the checkbox on multiple image cards (a blue ring will appear). A bar will pop up at the top
-  showing your selection count. Click **Delete selected**. *(Maximum 50 images at a time).*
+- **Single Delete:** Click **Delete** on any individual image card.
+- **Bulk Delete:** Click the checkbox on multiple image cards (a blue ring will appear). A bar will pop up at the top
+  showing your selection count. Click **Delete selected**. _(Maximum 50 images at a time)._
 
 ## How to Use Your Images in Bot Configurations {#how-to-use-your-images-in-bot-configurations}
 

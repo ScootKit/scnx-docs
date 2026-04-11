@@ -19,7 +19,6 @@ unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um m
 Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einladen](https://scootk.it/invite-scnx).
 :::
 
-
 ## Statistiken aktivieren {#enable}
 
 Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) deines Servers auf SCNX und klicke auf
@@ -30,36 +29,35 @@ Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx
 ## Verwendung im Dashboard {#dashboard}
 
 Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend auf einem Zeitraum sehen, den du oben in deinem Dashboard auswählen kannst:
-* Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitraum gesendet wurden.
-* Zehn am meisten genutzte Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten in welchem Kanal gesendet wurden.
-* Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus](#user-opt-out) nicht aktiviert haben).
-* Nutzerverlauf (immer letzte 30 Tage): Hier wird die Anzahl der Bots, Benutzer und aktive Mitglieder an jedem Tag des Zeitraums angezeigt.
-* Aktivste Stunden: Diese Grafik zeigt, wie viele Nachrichten durchschnittlich zu welcher Zeit auf deinem Server gesendet wurden.
-* Auf einen Blick: In diesem Abschnitt erhältst du einen schnellen Überblick über deinen Server. Folgende Daten werden angezeigt:
-* Anzahl der im Zeitraum gesendeten Nachrichten
-* Anzahl der im Zeitraum verwendeten Befehle
-* Durchschnittliche Nachrichten pro Tag
-* Anzahl der aktiven Mitglieder auf deinen Server (ausgenommen Benutzer, die den [Datenschutzmodus] aktiviert haben (#user-opt-out))
-* Anzahl der Benutzer auf deinem Server
-* Anzahl der Bots auf deinem Server
 
-*Bitte beachte, dass einige dieser Teile je nach Zeitraum möglicherweise nicht verfügbar sind.*
+- Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitraum gesendet wurden.
+- Zehn am meisten genutzte Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten in welchem Kanal gesendet wurden.
+- Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus](#user-opt-out) nicht aktiviert haben).
+- Nutzerverlauf (immer letzte 30 Tage): Hier wird die Anzahl der Bots, Benutzer und aktive Mitglieder an jedem Tag des Zeitraums angezeigt.
+- Aktivste Stunden: Diese Grafik zeigt, wie viele Nachrichten durchschnittlich zu welcher Zeit auf deinem Server gesendet wurden.
+- Auf einen Blick: In diesem Abschnitt erhältst du einen schnellen Überblick über deinen Server. Folgende Daten werden angezeigt:
+- Anzahl der im Zeitraum gesendeten Nachrichten
+- Anzahl der im Zeitraum verwendeten Befehle
+- Durchschnittliche Nachrichten pro Tag
+- Anzahl der aktiven Mitglieder auf deinen Server (ausgenommen Benutzer, die den [Datenschutzmodus] aktiviert haben (#user-opt-out))
+- Anzahl der Benutzer auf deinem Server
+- Anzahl der Bots auf deinem Server
+
+_Bitte beachte, dass einige dieser Teile je nach Zeitraum möglicherweise nicht verfügbar sind._
 
 ![](@site/docs/assets/scnx/guilds/analytics/dashboard.png)
-
 
 ## Analysen als Slash-Commands verwenden {#slash-commands}
 
 Jeder Benutzer auf deinem Server kann die Slash-Befehle des verifizierten SCNX-Bots verwenden (du kannst dies unter
 Discord-Server-Einstellungen unter „Integrationen" konfigurieren). Folgende Befehle stehen zur Verfügung:
 
-* `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
-letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung", in der du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen findest.
-* `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die zehn aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick", indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
-Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden.
+- `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
+  letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung", in der du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen findest.
+- `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die zehn aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick", indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
+  Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden.
 
 ![](@site/docs/assets/scnx/guilds/analytics/commands.png)
-
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -111,10 +109,8 @@ gesendet hast oder du befürchtest, dass personenbezogene Daten über dich oder 
 Verwende dafür den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
 wird sich auf folgendes auswirken:
 
-
-* Alle zukünftig von dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit deiner Discord-Benutzer-ID verknüpft) – dies
-bedeutet, dass wir nicht wissen, dass *du* eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
-* Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
-
+- Alle zukünftig von dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit deiner Discord-Benutzer-ID verknüpft) – dies
+  bedeutet, dass wir nicht wissen, dass _du_ eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
+- Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
 
 Den Datenschutzmodus deaktivierst du mit `/privacy disable`. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden können. Das heißt, nur neue Nachrichten werden wieder in Befehlen und im Dashboard angezeigt.

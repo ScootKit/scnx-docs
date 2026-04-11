@@ -57,9 +57,9 @@ need to authenticate again, you can simply claim the role in Discord.
 If you are running into any issues when you are trying to claim a role, please check
 our [troubleshooting guide](/docs/linked-roles/troubleshooting), in particular, the following issues might occur:
 
-* [Error message: "Invalid OAuth2 redirect_url"](/docs/linked-roles/troubleshooting#oauth2-redirect-url).
-* [Error message: "No roles were assigned to you"](/docs/linked-roles/troubleshooting#roles-missing)
-* [Error message: "Seems like the configuration by the server owner is wrong."](/docs/linked-roles/troubleshooting#generic-api-error).
+- [Error message: "Invalid OAuth2 redirect_url"](/docs/linked-roles/troubleshooting#oauth2-redirect-url).
+- [Error message: "No roles were assigned to you"](/docs/linked-roles/troubleshooting#roles-missing)
+- [Error message: "Seems like the configuration by the server owner is wrong."](/docs/linked-roles/troubleshooting#generic-api-error).
 
 If you run into other issues or have questions, check or [troubleshooting guide](/docs/linked-roles/troubleshooting) or contact us
 on [scnx.app/help](https://scnx.app/help) - we're always happy to help!

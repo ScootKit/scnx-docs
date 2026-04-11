@@ -10,27 +10,33 @@ Enhanced Security ist eine optionale Funktion, die deiner SCNX-Serverkonfigurati
 ## Wovor schützt Enhanced Security?
 
 ### Kompromittierte Trusted-Admin-Konten
+
 Wenn das Discord-Konto eines Trusted Admins kompromittiert wird (z. B. durch Phishing, Credential Stuffing oder Token-Diebstahl), erhält der Angreifer Zugriff auf dessen SCNX-Session. Ohne Enhanced Security könnte der Angreifer sofort deine Bot-Konfiguration ändern, Support-Bot-Einstellungen anpassen, Integrationen deaktivieren oder anderen Schaden anrichten.
 
 Mit aktivierter Enhanced Security bräuchte der Angreifer zusätzlich Zugriff auf die 2FA-Methode des Admins (Authenticator-App, Hardware-Sicherheitsschlüssel oder Recovery Codes), um Konfigurationsänderungen vorzunehmen – selbst wenn er eine gültige Session hat.
 
 ### Unautorisierte Änderungen durch geteilte Konten
+
 In manchen Organisationen haben mehrere Personen Zugriff auf dasselbe Discord-Konto oder teilen Anmeldedaten. Enhanced Security stellt sicher, dass jede Konfigurationsänderung eine explizite Identitätsverifizierung erfordert, was Nachvollziehbarkeit schafft und unautorisierte Änderungen verhindert.
 
 ### Session-Cookie-Hijacking
+
 **Wichtiger Vorbehalt:** Enhanced Security bietet **teilweisen, aber keinen vollständigen** Schutz gegen Session-Cookie-Hijacking (auch bekannt als Session-Diebstahl oder Cookie-Diebstahl durch Malware/XSS).
 
 Der Grund:
 
 **Was geschützt wird:**
+
 - Wenn ein Angreifer ein Session-Cookie stiehlt, das KEINE aktive Sudo-Mode-Session hat, kann er keine Konfigurationsänderungen vornehmen. Er bräuchte das 2FA-Gerät des Opfers, um den Sudo Mode zu aktivieren.
 - Der Sudo Mode läuft nach 40 Minuten (TOTP) bzw. 60 Minuten (Sicherheitsschlüssel) ab, sodass das Zeitfenster auch bei einem aktiven Sudo Mode begrenzt ist.
 
 **Was NICHT geschützt wird:**
+
 - Wenn der Angreifer das Cookie stiehlt, während der Sudo Mode bereits aktiv ist (innerhalb des 40/60-Minuten-Fensters), kann er Änderungen vornehmen, bis er abläuft.
 - Session-Cookies selbst sind nicht an die 2FA-Verifizierung gebunden – sie sind Standard-HTTP-Session-Cookies.
 
 **Für maximalen Schutz gegen Session-Hijacking empfehlen wir:**
+
 - Hardware-Sicherheitsschlüssel zu verwenden (kürzere aktive Sessions sind weniger riskant, und das 60-Minuten-Fenster ist noch relativ kurz)
 - Dich aus SCNX auszuloggen, wenn du deinen Server gerade nicht aktiv verwaltest
 - Browser und Betriebssystem aktuell zu halten
@@ -83,6 +89,7 @@ Wenn Enhanced Security aktiviert ist, erfordern die folgenden Aktionen eine Iden
 - Trusted Admins und Berechtigungen verwalten
 
 Die folgenden Aktionen erfordern **keinen** Sudo Mode (auch nicht mit Enhanced Security):
+
 - Dashboard und Analytics anzeigen
 - Bot-Logs anzeigen
 
@@ -131,4 +138,4 @@ Ja. Wenn Enhanced Security aktiviert ist, muss jeder – einschließlich des Ser
 
 ---
 
-*Enhanced Security ist eine Funktion der SCNX-Plattform von ScootKit. Bei Fragen oder zur Beantragung des Zugriffs besuche [scnx.app/help](https://scnx.app/help).*
+_Enhanced Security ist eine Funktion der SCNX-Plattform von ScootKit. Bei Fragen oder zur Beantragung des Zugriffs besuche [scnx.app/help](https://scnx.app/help)._

@@ -47,9 +47,9 @@ Wenn du auch andere Rollen beanspruchen möchtest, kannst du dies einfach tun, i
 Wenn du Probleme beim Beanspruchen einer Rolle hast, überprüfe bitte
 unsere [Anleitung zur Fehlerbehebung](/docs/linked-roles/troubleshooting). Insbesondere die folgenden Probleme könnten auftreten:
 
-* [Fehlermeldung: „Ungültige OAuth2 redirect_url"](/docs/linked-roles/troubleshooting#oauth2-redirect-url).
-* [Fehlermeldung: „Dir wurden keine Rollen zugewiesen"](/docs/linked-roles/troubleshooting#roles-missing)
-* [Fehlermeldung: „Sieht so aus, als wäre die Konfiguration durch den Serverbesitzer falsch."](/docs/linked-roles/troubleshooting#generic-api-error).
+- [Fehlermeldung: „Ungültige OAuth2 redirect_url"](/docs/linked-roles/troubleshooting#oauth2-redirect-url).
+- [Fehlermeldung: „Dir wurden keine Rollen zugewiesen"](/docs/linked-roles/troubleshooting#roles-missing)
+- [Fehlermeldung: „Sieht so aus, als wäre die Konfiguration durch den Serverbesitzer falsch."](/docs/linked-roles/troubleshooting#generic-api-error).
 
 Wenn du auf andere Probleme stößt oder Fragen hast, lies unsere [Anleitung zur Fehlerbehebung](/docs/linked-roles/troubleshooting) oder kontaktiere uns
 unter [scnx.app/help](https://scnx.app/help) – wir helfen dir gerne weiter!

@@ -29,14 +29,14 @@ unserem [Tutorial-Video auf YouTube](https://www.youtube.com/watch?v=HR3yvTVpkOI
 
 Bevor du Verknüpfte Rollen auf deinem Server aktivieren kannst, stelle bitte sicher, dass
 
-* du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
-* dein Server den bezahlten [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+- du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
+- dein Server den bezahlten [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
   oder [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan hat, oder erwäge die Nutzung einer
   kostenlosen Testversion, falls
   für dich verfügbar.
-* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
+- du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins) oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
   ([warum?](/docs/scnx/guilds/trusted-admins#troubleshooting)) - wenn du nicht der Besitzer bist, bitte ihn, diese Funktion für dich zu aktivieren und dir Zugriff als [Trusted Admin](/docs/scnx/guilds/trusted-admins) zu geben.
-* du 5-10 Minuten Zeit hast (unsere Schätzung ist, dass dies etwa sechs Minuten am Computer dauert, auf dem Handy
+- du 5-10 Minuten Zeit hast (unsere Schätzung ist, dass dies etwa sechs Minuten am Computer dauert, auf dem Handy
   kann es
   etwas länger dauern), um diese Anleitung abzuschließen - höre nicht mittendrin auf; dein Fortschritt wird nicht gespeichert.
 
