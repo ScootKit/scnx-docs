@@ -17,9 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install prettier
-        run: npm install --no-package-lock --ignore-scripts --userconfig /dev/null prettier
-
       - name: Fix em dashes
         run: |
           find docs/ i18n/ blog/ src/pages/ -type f \( -name '*.md' -o -name '*.mdx' -o -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' -o -name '*.json' \) \
@@ -47,8 +44,10 @@ jobs:
 
       - name: Format markdown tables
         run: |
-          npx prettier --write 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' 'blog/**/*.md' \
+          npx --yes prettier --write 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' 'blog/**/*.md' \
             --parser markdown --prose-wrap preserve --tab-width 2 2>/dev/null || true
+        env:
+          NPM_CONFIG_USERCONFIG: /dev/null
 
       - name: Commit fixes
         run: |
