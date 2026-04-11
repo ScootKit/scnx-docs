@@ -16,8 +16,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install prettier
+      - name: Install prettier
+        run: npm install --no-package-lock --ignore-scripts prettier
 
       - name: Fix em dashes
         run: |
