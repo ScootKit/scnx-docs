@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 ---
+
 # Shared Marketplace Content API {#shared-marketplace-content-api}
 
 Create, manage, and share message templates and configuration presets with other SCNX users through your marketplace organization.
@@ -23,7 +24,7 @@ Before you can use the Shared Content API, you need to complete a few setup step
 1. Open your organization's page on the SCNX dashboard
 2. Navigate to **Integrations** in the sidebar
 3. Click **Create Application** and give it a name (e.g., "My Content Bot")
-4. Your application starts in `UNRELEASED` status  - you'll need to publish it before the API token works
+4. Your application starts in `UNRELEASED` status - you'll need to publish it before the API token works
 
 ### Step 2: Enable the Shared Content Feature {#step-2-enable-the-shared-content-feature}
 
@@ -35,14 +36,14 @@ Before you can use the Shared Content API, you need to complete a few setup step
 
 1. Navigate to the **Shared Content** page in your organization's sidebar
 2. You'll be prompted to agree to the Shared Marketplace Content Terms of Service
-3. Accept the terms  - this is a one-time action and applies to the whole organization
+3. Accept the terms - this is a one-time action and applies to the whole organization
 
 ### Step 4: Publish your Application {#step-4-publish-your-application}
 
 1. Go back to your application in **Integrations**
 2. Enable **Sudo Mode** (required for sensitive operations)
 3. Change the application visibility from `UNRELEASED` to `PRIVATE` (or `PUBLIC` if you want it listed)
-4. Copy your **API Token** from the application's token section  - this is your authentication credential
+4. Copy your **API Token** from the application's token section - this is your authentication credential
 
 You're now ready to use the API.
 
@@ -72,7 +73,7 @@ When rate-limited, the API returns `429 Too Many Requests`. Standard `RateLimit-
 
 ### Scoping {#scoping}
 
-All endpoints are strictly scoped to your organization. Your API token can only access, modify, and delete shared content that belongs to your organization  - never content from other organizations.
+All endpoints are strictly scoped to your organization. Your API token can only access, modify, and delete shared content that belongs to your organization - never content from other organizations.
 
 ---
 
@@ -80,8 +81,8 @@ All endpoints are strictly scoped to your organization. Your API token can only 
 
 The `data` field in content creation and update endpoints accepts SCNX message JSON. Every message object must include a `_schema` field indicating the schema version:
 
-- `"v3"`  - [v3 Message Schema Reference](/docs/scnx-api/reference/message-schema-v3)
-- `"v4"`  - [v4 Message Schema Reference](/docs/scnx-api/reference/message-schema-v4)
+- `"v3"` - [v3 Message Schema Reference](/docs/scnx-api/reference/message-schema-v3)
+- `"v4"` - [v4 Message Schema Reference](/docs/scnx-api/reference/message-schema-v4)
 
 ### Example: v3 message {#example-v3-message}
 
@@ -198,36 +199,36 @@ Rate limit: 20 requests per 10 minutes.
 
 #### Request Body {#create-request-body}
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `displayName` | `string` | Yes | Display name shown to users when previewing and importing the content |
-| `description` | `string` | No | Short description of the content. Set to `null` or omit to leave empty. |
-| `type` | `string` | Yes | `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"` |
-| `visibility` | `string` | No | `"PUBLIC"` or `"PRIVATE"`. Public content is visible on your organization's page. Private content is only accessible via its direct share link. Defaults to `"PRIVATE"`. |
-| `data` | `object` | Yes | The message data. See [Message Data Format](#message-data-format) and [Content Types](#content-types) for the expected structure. |
-| `moduleName` | `string` | Template only | Target module name (e.g., `"welcome"`). Required for `CONFIGURATION_TEMPLATE`. |
-| `configFile` | `string` | Template only | Target config file (e.g., `"config"`). Required for `CONFIGURATION_TEMPLATE`. |
-| `fieldName` | `string` | Template only | Target message field in the config. Required for single-field templates. Omit for [multi-field templates](#multi-field-template). |
+| Field         | Type     | Required      | Description                                                                                                                                                              |
+| ------------- | -------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `displayName` | `string` | Yes           | Display name shown to users when previewing and importing the content                                                                                                    |
+| `description` | `string` | No            | Short description of the content. Set to `null` or omit to leave empty.                                                                                                  |
+| `type`        | `string` | Yes           | `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"`                                                                                                                                |
+| `visibility`  | `string` | No            | `"PUBLIC"` or `"PRIVATE"`. Public content is visible on your organization's page. Private content is only accessible via its direct share link. Defaults to `"PRIVATE"`. |
+| `data`        | `object` | Yes           | The message data. See [Message Data Format](#message-data-format) and [Content Types](#content-types) for the expected structure.                                        |
+| `moduleName`  | `string` | Template only | Target module name (e.g., `"welcome"`). Required for `CONFIGURATION_TEMPLATE`.                                                                                           |
+| `configFile`  | `string` | Template only | Target config file (e.g., `"config"`). Required for `CONFIGURATION_TEMPLATE`.                                                                                            |
+| `fieldName`   | `string` | Template only | Target message field in the config. Required for single-field templates. Omit for [multi-field templates](#multi-field-template).                                        |
 
 #### Response Fields {#create-response-fields}
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | `string` | Unique content ID (UUID). Use this for update and delete operations. |
-| `privateKey` | `string` | Unique key used in share URLs |
-| `type` | `string` | `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"` |
-| `visibility` | `string` | `"PUBLIC"` or `"PRIVATE"` |
-| `displayName` | `string` | Display name |
-| `description` | `string \| null` | Description, or `null` if not set |
-| `data` | `object` | The message data as submitted |
-| `moduleName` | `string \| null` | Module name (templates only) |
-| `configFile` | `string \| null` | Config file (templates only) |
-| `fieldName` | `string \| null` | Field name (single-field templates only) |
-| `organizationID` | `number` | Your organization's ID |
-| `usageCount` | `number` | Number of times this content has been imported. Starts at `0`. |
-| `createdAt` | `string` | ISO 8601 timestamp |
-| `updatedAt` | `string` | ISO 8601 timestamp |
-| `shareURL` | `string` | Ready-to-share import link |
+| Field            | Type             | Description                                                          |
+| ---------------- | ---------------- | -------------------------------------------------------------------- |
+| `id`             | `string`         | Unique content ID (UUID). Use this for update and delete operations. |
+| `privateKey`     | `string`         | Unique key used in share URLs                                        |
+| `type`           | `string`         | `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"`                            |
+| `visibility`     | `string`         | `"PUBLIC"` or `"PRIVATE"`                                            |
+| `displayName`    | `string`         | Display name                                                         |
+| `description`    | `string \| null` | Description, or `null` if not set                                    |
+| `data`           | `object`         | The message data as submitted                                        |
+| `moduleName`     | `string \| null` | Module name (templates only)                                         |
+| `configFile`     | `string \| null` | Config file (templates only)                                         |
+| `fieldName`      | `string \| null` | Field name (single-field templates only)                             |
+| `organizationID` | `number`         | Your organization's ID                                               |
+| `usageCount`     | `number`         | Number of times this content has been imported. Starts at `0`.       |
+| `createdAt`      | `string`         | ISO 8601 timestamp                                                   |
+| `updatedAt`      | `string`         | ISO 8601 timestamp                                                   |
+| `shareURL`       | `string`         | Ready-to-share import link                                           |
 
 #### Example: Create a Shared Message {#example-create-message}
 
@@ -319,7 +320,7 @@ curl -X POST https://scnx.app/api/marketplace-api/shared-content \
   }'
 ```
 
-**Response:** `200 OK`  - Same structure as above, with template fields populated and `shareURL` pointing to `/import/config-template?key=...&source=marketplace`.
+**Response:** `200 OK` - Same structure as above, with template fields populated and `shareURL` pointing to `/import/config-template?key=...&source=marketplace`.
 
 #### Example: Create a Multi-Field Configuration Template {#example-create-multi-field-template}
 
@@ -363,7 +364,7 @@ curl -X POST https://scnx.app/api/marketplace-api/shared-content \
   }'
 ```
 
-**Response:** `200 OK`  - The `fieldName` will be `null` since this is a multi-field template. The import page will display each message field separately.
+**Response:** `200 OK` - The `fieldName` will be `null` since this is a multi-field template. The import page will display each message field separately.
 
 ---
 
@@ -382,7 +383,7 @@ curl https://scnx.app/api/marketplace-api/shared-content \
   -H "Authorization: your-api-token"
 ```
 
-**Response:** `200 OK`  - Array of content items. Each item has the same fields as the [create response](#create-response-fields).
+**Response:** `200 OK` - Array of content items. Each item has the same fields as the [create response](#create-response-fields).
 
 ```json
 [
@@ -393,7 +394,7 @@ curl https://scnx.app/api/marketplace-api/shared-content \
     "visibility": "PUBLIC",
     "displayName": "Welcome Message",
     "description": "A clean welcome embed for new members",
-    "data": { "..." : "..." },
+    "data": { "...": "..." },
     "moduleName": null,
     "configFile": null,
     "fieldName": null,
@@ -434,16 +435,16 @@ curl https://scnx.app/api/marketplace-api/shared-content \
 PATCH /marketplace-api/shared-content/:itemID
 ```
 
-Update any combination of fields on an existing content item. Only include the fields you want to change  - omitted fields remain unchanged.
+Update any combination of fields on an existing content item. Only include the fields you want to change - omitted fields remain unchanged.
 
 #### Request Body {#update-request-body}
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `displayName` | `string` | New display name |
-| `description` | `string \| null` | New description  - set to `null` to clear |
-| `data` | `object` | New message data in [v3](/docs/scnx-api/reference/message-schema-v3) or [v4](/docs/scnx-api/reference/message-schema-v4) format |
-| `visibility` | `string` | `"PUBLIC"` or `"PRIVATE"` |
+| Field         | Type             | Description                                                                                                                     |
+| ------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `displayName` | `string`         | New display name                                                                                                                |
+| `description` | `string \| null` | New description - set to `null` to clear                                                                                        |
+| `data`        | `object`         | New message data in [v3](/docs/scnx-api/reference/message-schema-v3) or [v4](/docs/scnx-api/reference/message-schema-v4) format |
+| `visibility`  | `string`         | `"PUBLIC"` or `"PRIVATE"`                                                                                                       |
 
 :::note
 You cannot change the `type`, `moduleName`, `configFile`, or `fieldName` of an existing item. If you need to change these, delete the item and create a new one.
@@ -471,7 +472,7 @@ curl -X PATCH https://scnx.app/api/marketplace-api/shared-content/a1b2c3d4-e5f6-
   }'
 ```
 
-**Response:** `200 OK`  - The full updated item with all fields, including the updated `updatedAt` timestamp.
+**Response:** `200 OK` - The full updated item with all fields, including the updated `updatedAt` timestamp.
 
 ---
 
@@ -510,15 +511,15 @@ Returns the list of available config files for a given module. Use this to disco
 
 #### Path Parameters {#list-config-files-params}
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `module` | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| `module`  | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
 
 #### Query Parameters {#list-config-files-query}
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `lang` | `string` | No | Language code for localized field names (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
+| Parameter | Type     | Required | Description                                                                                     |
+| --------- | -------- | -------- | ----------------------------------------------------------------------------------------------- |
+| `lang`    | `string` | No       | Language code for localized field names (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
 
 #### Example {#list-config-files-example}
 
@@ -548,30 +549,30 @@ Returns all message-type fields in a specific module config file. Use this to di
 
 #### Path Parameters {#get-config-fields-params}
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `module` | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
-| `file` | `string` | The config file name (e.g., `"config"`, `"hourly"`) |
+| Parameter | Type     | Description                                            |
+| --------- | -------- | ------------------------------------------------------ |
+| `module`  | `string` | The module name (e.g., `"welcome"`, `"auto-messager"`) |
+| `file`    | `string` | The config file name (e.g., `"config"`, `"hourly"`)    |
 
 #### Query Parameters {#get-config-fields-query}
 
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `lang` | `string` | No | Language code for localized field names and parameter descriptions (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
+| Parameter | Type     | Required | Description                                                                                                                |
+| --------- | -------- | -------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `lang`    | `string` | No       | Language code for localized field names and parameter descriptions (e.g., `"en"`, `"de"`). Defaults to English if omitted. |
 
 #### Response Fields {#get-config-fields-response}
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `module` | `string` | The module name |
-| `filename` | `string` | The config file name |
-| `fields` | `array` | Array of message-type field definitions |
-| `fields[].name` | `string` | The field name  - use this as the key in your [configuration template](#configuration-templates) `data` object |
-| `fields[].humanName` | `string` | Localized display name for the field |
-| `fields[].params` | `array` | Available placeholder parameters for this field |
-| `fields[].params[].name` | `string` | Parameter name (use as `%name%` in message content) |
-| `fields[].params[].description` | `string` | Localized description of what the parameter resolves to |
-| `configFiles` | `array` | List of all config file names available in this module |
+| Field                           | Type     | Description                                                                                                   |
+| ------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| `module`                        | `string` | The module name                                                                                               |
+| `filename`                      | `string` | The config file name                                                                                          |
+| `fields`                        | `array`  | Array of message-type field definitions                                                                       |
+| `fields[].name`                 | `string` | The field name - use this as the key in your [configuration template](#configuration-templates) `data` object |
+| `fields[].humanName`            | `string` | Localized display name for the field                                                                          |
+| `fields[].params`               | `array`  | Available placeholder parameters for this field                                                               |
+| `fields[].params[].name`        | `string` | Parameter name (use as `%name%` in message content)                                                           |
+| `fields[].params[].description` | `string` | Localized description of what the parameter resolves to                                                       |
+| `configFiles`                   | `array`  | List of all config file names available in this module                                                        |
 
 #### Example {#get-config-fields-example}
 
@@ -612,26 +613,26 @@ If the specified config file does not exist in the module, the API returns `404`
 
 ## Error Responses {#error-responses}
 
-| Status | Description |
-|--------|-------------|
-| `400` | Missing or invalid fields in the request body. Also returned when the application is still in `UNRELEASED` status or the `SHARED_CONTENT` feature is not enabled. |
-| `401` | No `Authorization` header provided, or the token does not match any application. |
-| `403` | Organization has not agreed to the Shared Marketplace Content Terms of Service. |
-| `404` | Content item does not exist or does not belong to your organization. |
-| `429` | Rate limit exceeded. Check the `Retry-After` header for when you can retry. |
+| Status | Description                                                                                                                                                       |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `400`  | Missing or invalid fields in the request body. Also returned when the application is still in `UNRELEASED` status or the `SHARED_CONTENT` feature is not enabled. |
+| `401`  | No `Authorization` header provided, or the token does not match any application.                                                                                  |
+| `403`  | Organization has not agreed to the Shared Marketplace Content Terms of Service.                                                                                   |
+| `404`  | Content item does not exist or does not belong to your organization.                                                                                              |
+| `429`  | Rate limit exceeded. Check the `Retry-After` header for when you can retry.                                                                                       |
 
 ### Common Issues {#common-issues}
 
-**`"Release app to use endpoint."`**  - Your application is still in `UNRELEASED` status. Change the visibility to `PRIVATE` or `PUBLIC` in the Integrations panel (requires Sudo Mode).
+**`"Release app to use endpoint."`** - Your application is still in `UNRELEASED` status. Change the visibility to `PRIVATE` or `PUBLIC` in the Integrations panel (requires Sudo Mode).
 
-**`"Shared Content feature not enabled."`**  - Open your application in the Integrations panel, enable the `SHARED_CONTENT` feature, and save.
+**`"Shared Content feature not enabled."`** - Open your application in the Integrations panel, enable the `SHARED_CONTENT` feature, and save.
 
-**`"Organization has not agreed to Shared Marketplace Content ToS."`**  - Navigate to the Shared Content page in your organization's sidebar and accept the Terms of Service.
+**`"Organization has not agreed to Shared Marketplace Content ToS."`** - Navigate to the Shared Content page in your organization's sidebar and accept the Terms of Service.
 
-**`"Missing required fields"`**  - The `displayName`, `data`, and `type` fields are required for creating content.
+**`"Missing required fields"`** - The `displayName`, `data`, and `type` fields are required for creating content.
 
-**`"Missing template fields: moduleName and configFile are required"`**  - When creating a `CONFIGURATION_TEMPLATE`, you must provide `moduleName` and `configFile`.
+**`"Missing template fields: moduleName and configFile are required"`** - When creating a `CONFIGURATION_TEMPLATE`, you must provide `moduleName` and `configFile`.
 
-**`"Missing template fields: fieldName is required for single-field templates"`**  - Your `data` object contains a `_schema` field, meaning it's a single message. Provide `fieldName` to specify which config field this message targets  - or restructure `data` as a [multi-field template](#multi-field-template).
+**`"Missing template fields: fieldName is required for single-field templates"`** - Your `data` object contains a `_schema` field, meaning it's a single message. Provide `fieldName` to specify which config field this message targets - or restructure `data` as a [multi-field template](#multi-field-template).
 
-**`"Invalid type"`**  - The `type` field must be exactly `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"`.
+**`"Invalid type"`** - The `type` field must be exactly `"MESSAGE"` or `"CONFIGURATION_TEMPLATE"`.

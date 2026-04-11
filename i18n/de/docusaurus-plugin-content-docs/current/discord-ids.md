@@ -15,7 +15,7 @@ Bevor du IDs kopieren kannst, musst du den Entwicklermodus in deinem Discord-Cli
 
 ## 2. IDs kopieren
 
-Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder eine einzelne Nachricht handelt  - hat eine eindeutige ID. Sobald der Entwicklermodus aktiv ist, kannst du fast alles rechtsklicken, um sie abzurufen. IDs werden von Bots verwendet, um Objekte zu identifizieren, da IDs sich nicht ändern – selbst wenn der Name des Objekts geändert wurde.
+Jedes Objekt auf Discord - egal ob es sich um einen Nutzer, einen Server oder eine einzelne Nachricht handelt - hat eine eindeutige ID. Sobald der Entwicklermodus aktiv ist, kannst du fast alles rechtsklicken, um sie abzurufen. IDs werden von Bots verwendet, um Objekte zu identifizieren, da IDs sich nicht ändern – selbst wenn der Name des Objekts geändert wurde.
 
 ### Nutzer- und Bot-IDs kopieren
 
@@ -23,7 +23,7 @@ Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder e
 2. Wähle **Nutzer-ID kopieren** ganz unten im Menü.
 3. Die ID befindet sich nun in deiner Zwischenablage - du kannst sie jetzt in SCNX oder an anderer Stelle einfügen 🚀
 
-* **Auf dem Handy:** Drücke lange auf das Profil des Nutzers, tippe auf die drei Punkte (`...`) oben rechts und wähle "Nutzer-ID kopieren".
+- **Auf dem Handy:** Drücke lange auf das Profil des Nutzers, tippe auf die drei Punkte (`...`) oben rechts und wähle "Nutzer-ID kopieren".
 
 ![Screenshot, der zeigt, wie man einen Nutzer rechtsklickt und Nutzer-ID kopieren auswählt](@site/docs/assets/discord-ids/en/copy-user-id.png)
 
@@ -33,7 +33,7 @@ Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder e
 2. Wähle **Kanal-ID kopieren**.
 3. Die ID befindet sich nun in deiner Zwischenablage - du kannst sie jetzt in SCNX oder an anderer Stelle einfügen 🚀
 
-* **Auf dem Handy:** Drücke lange auf den Kanalnamen, scrolle nach unten und tippe auf "Kanal-ID kopieren".
+- **Auf dem Handy:** Drücke lange auf den Kanalnamen, scrolle nach unten und tippe auf "Kanal-ID kopieren".
 
 ![Screenshot, der das Kontextmenü eines Kanals mit hervorgehobenem Kanal-ID kopieren zeigt](@site/docs/assets/discord-ids/en/copy-channel-id.png)
 
@@ -44,7 +44,7 @@ Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder e
 3. Wähle **Rollen-ID kopieren**.
 4. Die ID befindet sich nun in deiner Zwischenablage - du kannst sie jetzt in SCNX oder an anderer Stelle einfügen 🚀
 
-* **Auf dem Handy:** Gehe zu Servereinstellungen > Rollen, tippe auf die Rolle und tippe auf das "ID kopieren"-Symbol oben rechts.
+- **Auf dem Handy:** Gehe zu Servereinstellungen > Rollen, tippe auf die Rolle und tippe auf das "ID kopieren"-Symbol oben rechts.
 
 ![Screenshot der Rolleneinstellungen mit aktivem Rechtsklick-Menü](@site/docs/assets/discord-ids/en/copy-role-id.png)
 
@@ -54,7 +54,7 @@ Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder e
 2. Wähle **Nachrichten-ID kopieren** ganz unten im Menü.
 3. Die ID befindet sich nun in deiner Zwischenablage - du kannst sie jetzt in SCNX oder an anderer Stelle einfügen 🚀
 
-* **Auf dem Handy:** Drücke lange auf die Nachricht, scrolle zum Ende des Menüs und tippe auf "Nachrichten-ID kopieren".
+- **Auf dem Handy:** Drücke lange auf die Nachricht, scrolle zum Ende des Menüs und tippe auf "Nachrichten-ID kopieren".
 
 ![Screenshot, der das Kontextmenü einer Nachricht mit hervorgehobenem Nachrichten-ID kopieren zeigt](@site/docs/assets/discord-ids/en/copy-message-id.png)
 
@@ -64,7 +64,7 @@ Jedes Objekt auf Discord  - egal ob es sich um einen Nutzer, einen Server oder e
 2. Wähle **Server-ID kopieren** am Ende des Menüs.
 3. Die ID befindet sich nun in deiner Zwischenablage - du kannst sie jetzt in SCNX oder an anderer Stelle einfügen 🚀
 
-* **Auf dem Handy:** Tippe auf die drei Punkte neben dem Servernamen oben in der Kanalliste, scrolle nach unten und tippe auf "Server-ID kopieren".
+- **Auf dem Handy:** Tippe auf die drei Punkte neben dem Servernamen oben in der Kanalliste, scrolle nach unten und tippe auf "Server-ID kopieren".
 
 ![Screenshot, der zeigt, wie man auf ein Server-Icon rechtsklickt, um die Server-ID zu kopieren](@site/docs/assets/discord-ids/en/copy-server-id.png)
 
@@ -84,19 +84,19 @@ Im SCNX Nachrichten-Editor musst du die ID oft nicht manuell eingeben. Du kannst
 
 Wenn du Rohtext schreibst oder fortgeschrittene Felder konfigurierst, verwende die folgende Syntax:
 
-| Objekt | Syntax | Beispiel | Vorschau |
-| :--- | :--- | :--- | :--- |
-| **Nutzer und Bots** | `<@NUTZERID>` | `<@787026352191701033>` | @SCNX |
-| **Kanäle** | `<#KANALID>` | `<#1113165263295230002>` | #news |
-| **Rollen** | `<@&ROLLENID>` | `<@&1113115210048360489>` | @Moderator |
+| Objekt              | Syntax         | Beispiel                  | Vorschau   |
+| :------------------ | :------------- | :------------------------ | :--------- |
+| **Nutzer und Bots** | `<@NUTZERID>`  | `<@787026352191701033>`   | @SCNX      |
+| **Kanäle**          | `<#KANALID>`   | `<#1113165263295230002>`  | #news      |
+| **Rollen**          | `<@&ROLLENID>` | `<@&1113115210048360489>` | @Moderator |
 
 ### Zeitstempel erwähnen
 
 Wenn du dynamische Zeitanzeigen einfügen möchtest, verwendet Discord ein spezielles Unix-Timestamp-Format.
 Um einen Zeitstempel zu erstellen, umschließt du eine Unix-Zeit (Sekunden seit 1970) mit einem spezifischen Code. Zum Beispiel: `<t:1700000000:R>`.
 
-* **Dynamisch:** Er passt sich automatisch an die lokale Zeit jedes Nutzers an.
-* **Vielseitig:** Kann relative Zeit ("vor 5 Minuten"), vollständige Daten oder nur die Uhrzeit anzeigen.
+- **Dynamisch:** Er passt sich automatisch an die lokale Zeit jedes Nutzers an.
+- **Vielseitig:** Kann relative Zeit ("vor 5 Minuten"), vollständige Daten oder nur die Uhrzeit anzeigen.
 
 ![Ein Screenshot, der Beispiele für verschiedene Zeitstempelformate zeigt](@site/docs/assets/discord-formatting/en/types3.png)
 

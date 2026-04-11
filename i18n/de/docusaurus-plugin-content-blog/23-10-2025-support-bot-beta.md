@@ -6,10 +6,10 @@ date: 2025-10-28T10:00
 authors:
   - scderox
 tags:
- - Newsletter
- - SCNX
- - Support Bot
- - Modmail
+  - Newsletter
+  - SCNX
+  - Support Bot
+  - Modmail
 ---
 
 # Modmail ist jetzt Support-Bot: Ankündigung der V3 Beta und eines neuen Ticket-Systems
@@ -27,7 +27,7 @@ Heute starten wir die **V3 Beta**, die ab sofort für jeden verfügbar ist. Dies
 Mit V3 bietet dir der Support-Bot nun zwei leistungsstarke Möglichkeiten, Support zu handhaben, die du getrennt oder gleichzeitig nutzen kannst:
 
 1. **Modmail-System (Klassisch):** Das PN-basierte System, das du kennst. Benutzer senden eine DM an den Bot, und dein Team verwaltet sie in einem privaten Thread.
-2. **Ticket-System (Neu!):** Ein häufig nachgefragtes, Kanal-basiertes System. Benutzer öffnen ein Ticket über eine spezielle Nachricht, und ein privater Kanal wird für sie *innerhalb* deines Servers erstellt.
+2. **Ticket-System (Neu!):** Ein häufig nachgefragtes, Kanal-basiertes System. Benutzer öffnen ein Ticket über eine spezielle Nachricht, und ein privater Kanal wird für sie _innerhalb_ deines Servers erstellt.
 
 Bei diesem Update geht es darum, dir die Flexibilität zu geben, das perfekte Support-Erlebnis für deine Community zu schaffen.
 
@@ -39,7 +39,7 @@ Das ist der Star der Show. Das neue Ticket-System ist auf Flexibilität, Leistun
 
 ### 🏷️ Erweiterte Ticket-Themen {#ticket-system-advanced-topics}
 
-Ticket-Themen sind jetzt vollständig in das neue System integriert. Du kannst verschiedene Themen für jedes Ticket-Panel festlegen, was dir hilft, Anfragen von dem Moment an zu kategorisieren und weiterzuleiten, in dem sie erstellt werden. Noch besser: Du kannst In-Channel-Buttons aktivieren, die es deinem Team ermöglichen, das Thema eines Tickets *nach* der Eröffnung zu ändern, um sicherzustellen, dass alles organisiert bleibt.
+Ticket-Themen sind jetzt vollständig in das neue System integriert. Du kannst verschiedene Themen für jedes Ticket-Panel festlegen, was dir hilft, Anfragen von dem Moment an zu kategorisieren und weiterzuleiten, in dem sie erstellt werden. Noch besser: Du kannst In-Channel-Buttons aktivieren, die es deinem Team ermöglichen, das Thema eines Tickets _nach_ der Eröffnung zu ändern, um sicherzustellen, dass alles organisiert bleibt.
 
 ![Screenshot, der eine Ticket-Auswahl-Einbettung, das Verschieben eines Tickets und die Konfiguration der Ticket-Themen zeigt](@site/blog/assets/support-bot-beta/de/2.png)
 
@@ -51,7 +51,7 @@ Ermögliche deinen Teammitgliedern, eingehende Anfragen effizient zu verwalten. 
 
 ### 👥 Multi-User-Tickets & Mehrere Tickets pro Benutzer {#ticket-system-multiple-users}
 
-Flexibilität ist der Schlüssel. Ein einzelner Benutzer kann jetzt mehrere Tickets gleichzeitig öffnen. Zusätzlich kannst du (optional) erlauben, dass Benutzer *andere* Servermitglieder zu ihrem Ticket hinzufügen, was es perfekt für Gruppensupport-Szenarien oder gemeinsame Problemlösungen macht.
+Flexibilität ist der Schlüssel. Ein einzelner Benutzer kann jetzt mehrere Tickets gleichzeitig öffnen. Zusätzlich kannst du (optional) erlauben, dass Benutzer _andere_ Servermitglieder zu ihrem Ticket hinzufügen, was es perfekt für Gruppensupport-Szenarien oder gemeinsame Problemlösungen macht.
 
 ![Ein Screenshot, der zeigt, wie man einen anderen Benutzer zu einem Ticket hinzufügt](@site/blog/assets/support-bot-beta/de/multi-users.png)
 
@@ -75,7 +75,7 @@ Erstelle so viele "Ticket eröffnen"-Panels, wie du brauchst, und platziere sie 
 
 ## Bahnbrechende Features für BEIDE Systeme {#combined}
 
-Wir haben nicht nur ein neues System hinzugefügt; wir haben die gesamte Plattform aufgerüstet. Diese neuen Funktionen sind für *beide* Systeme verfügbar, Modmail und Tickets.
+Wir haben nicht nur ein neues System hinzugefügt; wir haben die gesamte Plattform aufgerüstet. Diese neuen Funktionen sind für _beide_ Systeme verfügbar, Modmail und Tickets.
 
 ### ✨ KI-gestützte Ticket-Zusammenfassungen {#combined-ai-summaries}
 
@@ -95,24 +95,24 @@ Du kannst jetzt Ticket-Themen so konfigurieren, dass sie das Kanalnamenformat au
 
 Zum Beispiel:
 
-* `❗-ticket-123` für einen Bug-Report
-* `⭐-ticket-219` für eine Partnerschaft
+- `❗-ticket-123` für einen Bug-Report
+- `⭐-ticket-219` für eine Partnerschaft
 
 ### Weitere leistungsstarke Tools für V3: {#combined-more-v3}
 
-* **Kombinierte Statistiken:** Das Dashboard verfügt jetzt über eine kombinierte Übersicht, die Statistiken für Modmail und Tickets nebeneinander anzeigt.
-* **Ticket-Verlauf:** Ein neuer `/ticket-history`-Befehl ermöglicht es dir, den bisherigen Support-Verlauf eines Benutzers einfach einzusehen.
-* **Ticket-Umbenennung:** Teammitglieder können Tickets jetzt zur besseren Organisation umbenennen.
-* **Benutzerdefinierte Ticket-IDs:** Ändere das Format deiner Ticket-IDs, füge Präfixe hinzu oder verwende zufällige IDs anstelle von sequenziellen Nummern.
-* **Feiertagsimport:** Importiere einfach deine lokalen Feiertage, um die Verfügbarkeit deines Teams zu verwalten.
+- **Kombinierte Statistiken:** Das Dashboard verfügt jetzt über eine kombinierte Übersicht, die Statistiken für Modmail und Tickets nebeneinander anzeigt.
+- **Ticket-Verlauf:** Ein neuer `/ticket-history`-Befehl ermöglicht es dir, den bisherigen Support-Verlauf eines Benutzers einfach einzusehen.
+- **Ticket-Umbenennung:** Teammitglieder können Tickets jetzt zur besseren Organisation umbenennen.
+- **Benutzerdefinierte Ticket-IDs:** Ändere das Format deiner Ticket-IDs, füge Präfixe hinzu oder verwende zufällige IDs anstelle von sequenziellen Nummern.
+- **Feiertagsimport:** Importiere einfach deine lokalen Feiertage, um die Verfügbarkeit deines Teams zu verwalten.
 
 ## Upgrades für das klassische Modmail-System {#modmail}
 
 Wir haben unsere Modmail-Wurzeln nicht vergessen! Das klassische PN-System hat ebenfalls fantastische neue Funktionen erhalten:
 
-* **Erweiterte Info-Nachrichten:** Du kannst jetzt *mehrere* Info-Nachrichten einrichten und sie so konfigurieren, dass sie nur für bestimmte Ticket-Themen angezeigt werden. Wenn ein Thema nur eine Option hat, wird das Dropdown automatisch zu einem einfachen Button. (Hinweis: Wenn du eine V2-Info-Nachricht hattest, musst du sie im neuen, leistungsfähigeren System erneut einrichten).
-* **Themen-Statistiken:** Der Statistik-Tab zeigt jetzt deine am häufigsten verwendeten Ticket-Themen an und hilft dir zu verstehen, was deine Benutzer am meisten benötigen.
-* **Anpassbare Bewertungsnachrichten:** Die Team-Bewertungsnachrichten am Ende eines Tickets wurden verbessert und können nun vollständig angepasst werden.
+- **Erweiterte Info-Nachrichten:** Du kannst jetzt _mehrere_ Info-Nachrichten einrichten und sie so konfigurieren, dass sie nur für bestimmte Ticket-Themen angezeigt werden. Wenn ein Thema nur eine Option hat, wird das Dropdown automatisch zu einem einfachen Button. (Hinweis: Wenn du eine V2-Info-Nachricht hattest, musst du sie im neuen, leistungsfähigeren System erneut einrichten).
+- **Themen-Statistiken:** Der Statistik-Tab zeigt jetzt deine am häufigsten verwendeten Ticket-Themen an und hilft dir zu verstehen, was deine Benutzer am meisten benötigen.
+- **Anpassbare Bewertungsnachrichten:** Die Team-Bewertungsnachrichten am Ende eines Tickets wurden verbessert und können nun vollständig angepasst werden.
 
 ## Hol dir den Support-Bot noch heute {#get-today}
 

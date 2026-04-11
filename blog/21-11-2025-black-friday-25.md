@@ -9,7 +9,6 @@ tags:
   - Newsletter
   - SCNX
   - Offers
-
 ---
 
 # 🚀 Black Friday is Here: Huge Savings & The All-New Support Bot V3
@@ -34,14 +33,14 @@ Unlock 24/7 hosting, remove ads, and access powerful features like Custom Comman
 
 These plans do **not** auto-renew; they simply expire after the purchased period, so there is no need to worry about canceling.
 
-* **Unlimited (1 Year):** 17% Discount.
-* **Professional (6 Months):** 17% Discount.
-* **Professional (1 Year):** 17% Discount.
+- **Unlimited (1 Year):** 17% Discount.
+- **Professional (6 Months):** 17% Discount.
+- **Professional (1 Year):** 17% Discount.
 
 Lifetime Plans are also on sale! They can be transferred between servers and support the development of SCNX.
 
-* **Unlimited (Lifetime):** 15% Discount.
-* **Professional (Lifetime):** 11% Discount.
+- **Unlimited (Lifetime):** 15% Discount.
+- **Professional (Lifetime):** 11% Discount.
 
 [**👉 Shop the Black Friday Sale Now**](https://scnx.app/black-friday)
 
@@ -50,9 +49,9 @@ Lifetime Plans are also on sale! They can be transferred between servers and sup
 Top up once and never worry about it again. Generate more images, chat with AI, and use the new AI ticket transcript
 features for less.
 
-* **5,000 Coins:** 11% Discount.
-* **10,000 Coins:** 19% Discount.
-* **50,000 Coins (Best Value):** 28% Discount.
+- **5,000 Coins:** 11% Discount.
+- **10,000 Coins:** 19% Discount.
+- **50,000 Coins (Best Value):** 28% Discount.
 
 [**👉 Shop the Black Friday Sale Now**](https://scnx.app/black-friday)
 
@@ -65,10 +64,10 @@ purchase an SCNX Server Plan.
 
 Support the development of SCNX and get perks like Behind-The-Scenes access.
 
-* **Level 2 (1 Year):** 23% Discount.
-* **Level 3 (6 Months):** 13% Discount.
-* **Level 3 (1 Year):** 34% Discount.
-* **Level 4 (1 Year):** 23% Discount.
+- **Level 2 (1 Year):** 23% Discount.
+- **Level 3 (6 Months):** 13% Discount.
+- **Level 3 (1 Year):** 34% Discount.
+- **Level 4 (1 Year):** 23% Discount.
 
 [**👉 Shop the Black Friday Sale Now**](https://scnx.app/black-friday)
 
@@ -86,12 +85,12 @@ This update combines the best of both worlds, offering you two ways to handle su
 
 ### Key V3 Features:
 
-* **Ticket System:** Users open tickets via dedicated messages, creating private channels on your server.
-* **AI-Powered Summaries:** Opt-in to generate concise summaries of entire conversations when a ticket is closed, saving
+- **Ticket System:** Users open tickets via dedicated messages, creating private channels on your server.
+- **AI-Powered Summaries:** Opt-in to generate concise summaries of entire conversations when a ticket is closed, saving
   you from reading long logs.
-* **Web-Based Log Viewer:** Say goodbye to plain text files. Logs are now displayed in a beautiful, chat-like web
+- **Web-Based Log Viewer:** Say goodbye to plain text files. Logs are now displayed in a beautiful, chat-like web
   interface.
-* **Advanced Workflow:** Features include Team Claiming, Multi-User Tickets, Ticket Ratings, and Automatic Inactivity
+- **Advanced Workflow:** Features include Team Claiming, Multi-User Tickets, Ticket Ratings, and Automatic Inactivity
   Closures.
 
 Learn more about Support Bot V3 (and learn how to try it) in our [blog post](/blog/2025-support-bot-beta/).

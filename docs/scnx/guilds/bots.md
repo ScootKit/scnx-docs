@@ -13,8 +13,8 @@ the [Get started with Custom Bot](/docs/custom-bot) or the [Get started with Sup
 The steps to troubleshoot are different between the two bots. Please continue in the two different troubleshooting
 guides:
 
-* [Custom Bot](/docs/custom-bot/troubleshooting)
-* [Support Bot](/docs/support-bot/troubleshooting)
+- [Custom Bot](/docs/custom-bot/troubleshooting)
+- [Support Bot](/docs/support-bot/troubleshooting)
 
 ## The Basics {#basics}
 
@@ -29,33 +29,33 @@ Here's an example of a Custom-Bot-Status-Panel:
 As you can see, there are quite a few things you can do here. Here are the main ones you are going to need to know
 about:
 
-* The tag and profile picture of your bot (only visible if your bot is online). To change the profile of your bot,
+- The tag and profile picture of your bot (only visible if your bot is online). To change the profile of your bot,
   simply click on this or follow [this guide](#change-profile).
-* "Reload configuration": When you reload your configuration, your bot will automatically apply all changes you have
+- "Reload configuration": When you reload your configuration, your bot will automatically apply all changes you have
   made to your configuration files (including Module-Changes) without any downtime. Generally speaking, you should use
   this rather than restarting your bot.
-* "Restart bot": This restarts the process of your bot. This might take multiple minutes and involve a high downtime, in
+- "Restart bot": This restarts the process of your bot. This might take multiple minutes and involve a high downtime, in
   which your bot is unreachable. You should only restart your bot if you get asked to do this, are experiencing weird
   issues or want to [apply an update](#bot-updates).
-* "Stop bot": This shuts down the process of your bot. It won't be reachable on Discord. It might take up to five
+- "Stop bot": This shuts down the process of your bot. It won't be reachable on Discord. It might take up to five
   minutes for your bot to be displayed as offline in Discord.
-* "Log" / "Error log": In these Logs-Files your bot
+- "Log" / "Error log": In these Logs-Files your bot
   documents what it's doing and writes down the reason for failures or issues. Our staff (and technical experts) need
   these logs to diagnose
   problems and offer your solutions - or if they are bugs in the bot themselves - to fix them. You might get asked
   to [share them](#sharing-logs).
-* Language: This is the (human) language your bot will use for any default-configuration-values and messages that can't
+- Language: This is the (human) language your bot will use for any default-configuration-values and messages that can't
   be configured. Your Support-Bot might, in some cases, use the language of the user that is executing a command instead of this
   value. You can always [change the language](#bot-language) of your bot.
-* Server: This is the physical server - also called Bot-Host - your bot is being hosted on. You
+- Server: This is the physical server - also called Bot-Host - your bot is being hosted on. You
   can [change the Bot-Host](#bot-host) if you want.
-* Branch (only available for Custom-Bots): The branch is a completely different code base for your bot. You should leave
+- Branch (only available for Custom-Bots): The branch is a completely different code base for your bot. You should leave
   this on "v3" (Stable version), but can change it to the "beta"-Branch (Public beta; might be unstable).
-* Version (only visible for Custom-Bots): This is a unique number identifying a published code-version. Depending on
+- Version (only visible for Custom-Bots): This is a unique number identifying a published code-version. Depending on
   your version, your bot might not be able to use certain new features or take advanced of newly published releases. If
   your version is not up-to-date, you'll find a warning indicating this. Your Support-Bot is always up-to-date. Learn more
   about [Updates & Versions](#bot-updates).
-* RAM / CPU Values: These are right below the "Online"-Status. You can safely ignore them, they are only there as a
+- RAM / CPU Values: These are right below the "Online"-Status. You can safely ignore them, they are only there as a
   gimmick and show the RAM / CPU Usage of your Bot. These are irrelevant as SCNX is automatically optimizing your bot if
   it is eatin[g](https://www.linuxatemyram.com/) more RAM than it should.
 
@@ -141,6 +141,7 @@ the world. Here's how to switch a Bot-Host:
 Ultimately, it doesn't matter (except for the Premium-Servers). Each Bot-Host is designed to host bots, just like yours.
 We have high-quality standards for each of the hosts and can guarantee the same experience on each of them. We might
 even move your bots around if you do not have a paid plan to distribute resources.
+
 </details>
 
 <details>
@@ -189,7 +190,7 @@ To change the language of your bot, please
 You can always edit the footer of every editable message on SCNX, but you can also overwrite the default value used by
 every message that is missing a configuration field or where you did not set a different footer manually.
 
-To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please follow these instructions:
+To remove the "Powered by scnx.xyz ⚡" from _every_ embed of your bot, please follow these instructions:
 
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Custom Bot">
@@ -212,9 +213,9 @@ To remove the "Powered by scnx.xyz ⚡" from *every* embed of your bot, please f
 
 :::info Before you continue
 
-* For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please visit
+- For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please visit
   the [troubleshooting guide](#troubleshooting).
-* If you are not the owner of the server, you'll need "Manage
+- If you are not the owner of the server, you'll need "Manage
   Bot" [Trusted-Admin permissions](/docs/scnx/guilds/trusted-admins#permissions) on the product you want to edit.
 
 :::
@@ -247,7 +248,7 @@ You can change the Profile-Picture and username of your bot without ever leaving
 
 :::info Before you continue
 
-* For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please open the "The Bot is
+- For this to work, your bot needs to be online on SCNX. If your bot is not online in SCNX, please open the "The Bot is
   not on my sever" section in the right [troubleshooting guide](#troubleshooting).
 
 :::
@@ -304,11 +305,11 @@ harmful actions.
 
 :::caution
 
-* You need to be the owner of the server to change the Bot-Token.
-* Changing your bot's token will **not solve any issues** you are experiencing. Please use
+- You need to be the owner of the server to change the Bot-Token.
+- Changing your bot's token will **not solve any issues** you are experiencing. Please use
   the [troubleshooting guide](#troubleshooting) to diagnose and fix them like the Pro you are :wink:
-* If you want to change the username or profile picture of your bot, follow [this guide](#change-profile).
-* Changing your Bot's token might create new issues or complications. Please avoid changing your token if possible.
+- If you want to change the username or profile picture of your bot, follow [this guide](#change-profile).
+- Changing your Bot's token might create new issues or complications. Please avoid changing your token if possible.
 
 :::
 
@@ -339,10 +340,10 @@ Leveling-Stats, or Ticket-Data).
 
 :::caution
 
-* You need to be the owner of the server to delete a bot.
-* Deleting your bot will, most likely, **not solve any issues** you are experiencing. Please use
+- You need to be the owner of the server to delete a bot.
+- Deleting your bot will, most likely, **not solve any issues** you are experiencing. Please use
   the [troubleshooting guide](#troubleshooting) to diagnose and fix them like the Pro you are :wink:
-* If you want to change the username or profile picture of your bot, follow [this guide](#change-profile).
+- If you want to change the username or profile picture of your bot, follow [this guide](#change-profile).
 
 :::
 

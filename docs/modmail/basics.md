@@ -53,32 +53,32 @@ same time. Snippets can also include buttons that allow users to close the ticke
 
 To use snippets staff members can
 
-* use the `/s snippet:<SnippetKey>` to send a snippet directly into a ticket. This is the easiest way as an
+- use the `/s snippet:<SnippetKey>` to send a snippet directly into a ticket. This is the easiest way as an
   auto-complete menu will help staff members to select the correct snippet.
-* write `!!<SnippetKey>` (replace `<SnippetKey>` with the key of the snippet) to directly send the content of a snippet
+- write `!!<SnippetKey>` (replace `<SnippetKey>` with the key of the snippet) to directly send the content of a snippet
   into a ticket.
-* include `{{<SnippetKey}}` (replace `<SnippetKey>` with the key of the snippet) into any message that you send to a
+- include `{{<SnippetKey}}` (replace `<SnippetKey>` with the key of the snippet) into any message that you send to a
   user. The `{{<SnippetKey}}` will be replaced by the snippet content while leaving the rest of the message unchanged.
 
 To manage snippets, the following commands are available to staff members:
 
-* Create a new snippet with `/snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Enter a new,
+- Create a new snippet with `/snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Enter a new,
   unused snippet key as the `key` parameter. If you want to give users the option to directly close tickets using
   buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
   a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
   will appear in which you can enter your snippet content.
-* To edit an existing snippet, use `/snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Select an
+- To edit an existing snippet, use `/snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`. Select an
   existing snippet as the `key` parameter. If you want to give users the option to directly close tickets using
   buttons that will be added below the snippet message, enable the `close-buttons` parameter. If you also want to send
   a [form](/docs/modmail/advanced-features/forms) with the snippet, set the `form` parameter. Once you submit the command, a dialog
   will appear in which you can edit your snippet key and content.
-* To delete a snippet, use the `/snippet delete key:<SnippetKey>` slash command. Select an existing snippet as the `key`
+- To delete a snippet, use the `/snippet delete key:<SnippetKey>` slash command. Select an existing snippet as the `key`
   parameter and submit the command to delete the snippet. Once submitted, the snippet will be deleted permanently. This
   cannot be undone.
-* To preview the content of a snippet, use the `/snippet preview key:<SnippetKey>` slash command. Select an existing
+- To preview the content of a snippet, use the `/snippet preview key:<SnippetKey>` slash command. Select an existing
   snippet as the `key` parameter. Once you submit the command, the content of the snippet and some additional details
   will be displayed.
-* To list all available snippets, use the `/snippets list [page:<Number>]` slash command. This command will display all
+- To list all available snippets, use the `/snippets list [page:<Number>]` slash command. This command will display all
   snippets on your server and will also include the usage count of each snippet. If you have a lot of snippets, please
   set the `page` parameter to switch between pages.
 
@@ -94,9 +94,9 @@ Your message here").
 While the identity of staff members won't be displayed to users when using anonymous messages, their identity will still
 be visible in the log and the ticket channel.
 
-* Anonymous messages can be sent by sending `!ar <Message>`. Any content behind the `!ar ` prefix will be treated as the
+- Anonymous messages can be sent by sending `!ar <Message>`. Any content behind the `!ar ` prefix will be treated as the
   message content.
-* [Snippets](#snippets) can be sent as anonymous by either writing `!!!<SnippetKey>` or using the `/as` slash command.
+- [Snippets](#snippets) can be sent as anonymous by either writing `!!!<SnippetKey>` or using the `/as` slash command.
 
 ## Blocklisting users {#blacklist}
 
@@ -106,10 +106,10 @@ to manage the blocklist:
 
 <SlashCommandExplanation />
 
-* `/blacklist list`: List all users that are on the blocklist.
-* `/blacklist add user:<User> reason:<Text> [duration:<Duration>]`: Add a user to the blocklist. By default, blocklist
+- `/blacklist list`: List all users that are on the blocklist.
+- `/blacklist add user:<User> reason:<Text> [duration:<Duration>]`: Add a user to the blocklist. By default, blocklist
   entries are permanent unless a duration is being configured in the duration parameter (e.g. `2d4h` will result in a
   block of 2 days and 4 hours).
-* `/blacklist remove user:<User>`: Removes a user from the blocklist.
-* `/blacklist status user:<User>`: Check if a user has been blocklisted. The reason and duration of the block will also
+- `/blacklist remove user:<User>`: Removes a user from the blocklist.
+- `/blacklist status user:<User>`: Check if a user has been blocklisted. The reason and duration of the block will also
   be displayed.

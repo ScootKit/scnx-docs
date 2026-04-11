@@ -16,6 +16,7 @@ Du kannst eine oder beide der folgenden 2FA-Methoden für dein Konto einrichten:
 ### Authenticator-App (TOTP)
 
 Verwende eine Authenticator-App, um zeitbasierte Einmalcodes zu generieren. Beliebte Optionen sind:
+
 - [Ente Auth](https://ente.io/auth/) (Open-Source, plattformübergreifend, mit verschlüsseltem Cloud-Backup)
 - [Authy](https://authy.com/) (plattformübergreifend mit Cloud-Synchronisierung)
 - [Google Authenticator](https://support.google.com/accounts/answer/1066447)
