@@ -6,9 +6,9 @@ Let users highlight messages into a starboard channel by reacting.
 
 ## Features {#features}
 
-* Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
-* Limit the amount of stars a user can give per hour to make sure the messages are actually special.
-* Exclude roles and channels to keep unwanted messages out of the starboard.
+- Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
+- Limit the amount of stars a user can give per hour to make sure the messages are actually special.
+- Exclude roles and channels to keep unwanted messages out of the starboard.
 
 ## Setup {#setup}
 
@@ -20,9 +20,9 @@ Let users highlight messages into a starboard channel by reacting.
 
 ## Usage {#usage}
 
-* Once [set up](#setup), users are able to react on messages using the configured starboard
+- Once [set up](#setup), users are able to react on messages using the configured starboard
   emoji.
-* As long as they haven't used up their quota of stars per hour, the message will either be
+- As long as they haven't used up their quota of stars per hour, the message will either be
   sent to the starboard channel or the amount of stars will be increased by one.
 
 ## Configuration {#configuration}
@@ -31,7 +31,7 @@ In this configuration file, you can [set up](#setup) the starboard channel, mess
 Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=starboard%7Cconfig).
 
 | Field                   | Description                                                                                                                                                                                                                                                                    |
-|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Starboard channel       | This configures the channel into which messages starred by users are sent.                                                                                                                                                                                                     |
 | Emoji                   | Users can "star" a message by reacting on it with this emoji.                                                                                                                                                                                                                  |
 | Message                 | This is the message sent in the starboard channel if users react to a message using the configured emoji. There available parameters are visible in your dashboard.                                                                                                            |
@@ -59,14 +59,15 @@ Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configurati
 
 The following data is being stored about every starboard message sent by the bot:
 
-* The message ID of the starred message
-* The message ID of the message in the starboard channel
-* Metadata about the entry (date when created and last updated)
+- The message ID of the starred message
+- The message ID of the message in the starboard channel
+- Metadata about the entry (date when created and last updated)
 
 The bot also stores the following data about every user that has reacted to a message:
-* The user ID of the user
-* The message ID of the message they starred
-* Metadata about the entry (date when created and last updated)
+
+- The user ID of the user
+- The message ID of the message they starred
+- Metadata about the entry (date when created and last updated)
 
 Once a day, all starboard user data older than one hour is removed from the database.
 You can remove a starboard message from the database by removing all reactions from it. To

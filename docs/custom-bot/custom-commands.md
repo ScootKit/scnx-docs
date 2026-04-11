@@ -1,6 +1,6 @@
 # Custom Commands
 
-Create your own commands, button interactions, modals, and message-based automations  - all from the SCNX Dashboard,
+Create your own commands, button interactions, modals, and message-based automations - all from the SCNX Dashboard,
 without writing any code.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} additionalDetails={{
@@ -12,11 +12,11 @@ without writing any code.
 
 Custom Commands let you build your own bot interactions using a visual flow editor. Each custom command consists of:
 
-* A **trigger**  - what causes the command to run (a slash command, button click, message, modal submission, or manual
+- A **trigger** - what causes the command to run (a slash command, button click, message, modal submission, or manual
   execution from another command).
-* One or more **action blocks**  - groups of actions that execute when the trigger fires.
-* **Actions**  - the individual things the bot does (reply, send a message, manage roles, show a modal, and more).
-* Optional **permissions**  - restrict who can use the command by requiring specific roles.
+- One or more **action blocks** - groups of actions that execute when the trigger fires.
+- **Actions** - the individual things the bot does (reply, send a message, manage roles, show a modal, and more).
+- Optional **permissions** - restrict who can use the command by requiring specific roles.
 
 ## Setup {#setup}
 
@@ -32,11 +32,11 @@ Each custom command needs a trigger that determines when it runs. The following 
 
 The command runs when a user executes a slash command (e.g. `/mycommand`).
 
-* **Slash Command name**  - The name shown in Discord. Must be lowercase, no special characters (except `-`).
-* **Description**  - Shown below the command name in Discord's command menu.
-* **Options**  - Add up to 25 parameters that users can fill in when running the command. Supported types: Text, Integer,
+- **Slash Command name** - The name shown in Discord. Must be lowercase, no special characters (except `-`).
+- **Description** - Shown below the command name in Discord's command menu.
+- **Options** - Add up to 25 parameters that users can fill in when running the command. Supported types: Text, Integer,
   Number, True/False, User, Channel, Role, and Attachment.
-* For text options, you can optionally **limit values** to a predefined list of up to 25 choices.
+- For text options, you can optionally **limit values** to a predefined list of up to 25 choices.
 
 :::warning
 Discord allows a maximum of 100 server slash commands. Custom commands and module commands both count toward this limit.
@@ -69,26 +69,26 @@ To send a message with a button or select menu:
 
 The command runs when a user sends a message that matches a configured pattern. Match types:
 
-| Match type | Description |
-|---|---|
-| **Starts with** | Message starts with the configured text |
-| **Contains** | Message contains the configured text anywhere |
-| **Ends with** | Message ends with the configured text |
-| **Equals** | Message exactly matches the configured text |
+| Match type        | Description                                       |
+| ----------------- | ------------------------------------------------- |
+| **Starts with**   | Message starts with the configured text           |
+| **Contains**      | Message contains the configured text anywhere     |
+| **Ends with**     | Message ends with the configured text             |
+| **Equals**        | Message exactly matches the configured text       |
 | **Every message** | Triggers on every message sent (use with caution) |
 
 Additional options:
 
-* **Ignore casing**  - Match regardless of uppercase/lowercase.
-* **Limit to channels**  - Only trigger in specific channels or channel categories.
+- **Ignore casing** - Match regardless of uppercase/lowercase.
+- **Limit to channels** - Only trigger in specific channels or channel categories.
 
 ### Modal {#trigger-modal}
 
 The command runs when a user submits a modal (form/dialog). Modals are shown using the **"Show modal"** action in
 another custom command.
 
-* Configure the modal's title and input fields (text inputs with short or paragraph style).
-* User answers are available as parameters (`%answer1%`, `%answer2%`, etc.) in the command's actions.
+- Configure the modal's title and input fields (text inputs with short or paragraph style).
+- User answers are available as parameters (`%answer1%`, `%answer2%`, etc.) in the command's actions.
 
 ### None (manual execution) {#trigger-none}
 
@@ -99,8 +99,8 @@ reusable logic.
 
 Actions are organized into **action blocks**. When a command triggers, it executes action blocks in one of two modes:
 
-* **All**  - Execute all action blocks sequentially.
-* **One (randomly)**  - Execute one randomly selected action block. Useful for random responses.
+- **All** - Execute all action blocks sequentially.
+- **One (randomly)** - Execute one randomly selected action block. Useful for random responses.
 
 Each action block contains one or more actions. You can add multiple action blocks to a single command.
 
@@ -108,17 +108,17 @@ Each action block contains one or more actions. You can add multiple action bloc
 
 Actions are the individual operations your bot performs. The following actions are available:
 
-| Action | Description |
-|---|---|
-| **Reply to message or interaction** | Reply to the triggering message or interaction. Supports ephemeral replies (only visible to the user) for slash commands and button clicks. |
-| **Send message in channel** | Send a message in any channel on the server. Optionally pin the message. |
-| **Edit the interaction message** | Edit the message a button is attached to (button triggers only). |
-| **Send DM to user** | Send a direct message to the executing user or a mentioned user. Skipped silently if the user has DMs disabled. |
-| **Delete matched message** | Delete the message that triggered the command (message triggers only). |
-| **Change nickname** | Change the nickname of a user. Leave blank to reset. |
-| **Manage roles** | Add, remove, or toggle roles on a user. |
-| **React to matched message** | Add emoji reactions to the triggering message. |
-| **Show a modal** | Display a modal to the user. The modal must be configured as a separate custom command with a Modal trigger. Only one modal can be shown per interaction. |
+| Action                              | Description                                                                                                                                               |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Reply to message or interaction** | Reply to the triggering message or interaction. Supports ephemeral replies (only visible to the user) for slash commands and button clicks.               |
+| **Send message in channel**         | Send a message in any channel on the server. Optionally pin the message.                                                                                  |
+| **Edit the interaction message**    | Edit the message a button is attached to (button triggers only).                                                                                          |
+| **Send DM to user**                 | Send a direct message to the executing user or a mentioned user. Skipped silently if the user has DMs disabled.                                           |
+| **Delete matched message**          | Delete the message that triggered the command (message triggers only).                                                                                    |
+| **Change nickname**                 | Change the nickname of a user. Leave blank to reset.                                                                                                      |
+| **Manage roles**                    | Add, remove, or toggle roles on a user.                                                                                                                   |
+| **React to matched message**        | Add emoji reactions to the triggering message.                                                                                                            |
+| **Show a modal**                    | Display a modal to the user. The modal must be configured as a separate custom command with a Modal trigger. Only one modal can be shown per interaction. |
 
 :::info
 Some actions are only available for certain trigger types. For example, "Show a modal" only works with interaction-based
@@ -134,29 +134,29 @@ parameters in any text field within your actions.
 
 These parameters are always available:
 
-| Parameter | Description |
-|---|---|
-| `%userID%` | ID of the user who triggered the command |
-| `%userTag%` | Tag of the executing user |
-| `%userUsername%` | Username of the executing user |
-| `%userNickname%` | Server nickname of the executing user |
-| `%userAvatarURL%` | Avatar URL of the executing user |
+| Parameter         | Description                                             |
+| ----------------- | ------------------------------------------------------- |
+| `%userID%`        | ID of the user who triggered the command                |
+| `%userTag%`       | Tag of the executing user                               |
+| `%userUsername%`  | Username of the executing user                          |
+| `%userNickname%`  | Server nickname of the executing user                   |
+| `%userAvatarURL%` | Avatar URL of the executing user                        |
 | `%userCreatedAt%` | Timestamp when the executing user's account was created |
-| `%channelID%` | ID of the channel the command was executed in |
-| `%content%` | Content of the matched message (message triggers only) |
+| `%channelID%`     | ID of the channel the command was executed in           |
+| `%content%`       | Content of the matched message (message triggers only)  |
 
 ### Slash command option parameters {#option-parameters}
 
 When using a slash command trigger with options, additional parameters become available depending on the option type:
 
-* **User options**  - `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
+- **User options** - `%userID-optionname%`, `%userTag-optionname%`, `%userName-optionname%`,
   `%userAvatarURL-optionname%`
-* **Role options**  - `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
+- **Role options** - `%roleName-optionname%`, `%roleColor-optionname%`, `%roleID-optionname%`,
   `%rolePosition-optionname%`
-* **Channel options**  - `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
+- **Channel options** - `%channelName-optionname%`, `%channelID-optionname%`, `%channelType-optionname%`,
   `%channelParentName-optionname%`, `%channelParentID-optionname%`
-* **Attachment options**  - `%attachmentURL-optionname%`
-* **Text, Number, Integer, Boolean options**  - `%value-optionname%`
+- **Attachment options** - `%attachmentURL-optionname%`
+- **Text, Number, Integer, Boolean options** - `%value-optionname%`
 
 ### Modal answer parameters {#modal-parameters}
 
@@ -175,7 +175,7 @@ You can restrict who can use a custom command by enabling **role requirements**:
 1. Open your custom command and find the **"Command permissions"** section.
 2. Enable **"Require roles"**.
 3. Add the roles that should be allowed to use the command.
-4. Optionally customize the **"Missing role message"**  - the message shown when a user without the required roles tries
+4. Optionally customize the **"Missing role message"** - the message shown when a user without the required roles tries
    to use the command.
 
 Users without any of the configured roles will see the missing role message instead of the command executing.
@@ -195,7 +195,7 @@ You can share a custom command with others by creating a unique sharing link:
 2. Click **"Create sharing link"**.
 3. Copy the generated URL.
 
-The link contains a snapshot of the command at the time of sharing  - future changes won't be synced.
+The link contains a snapshot of the command at the time of sharing - future changes won't be synced.
 
 :::caution
 Shared custom commands may contain actions that could be harmful. Only import commands from sources you trust.
@@ -220,10 +220,10 @@ undone.
 
 The number of simultaneously enabled custom commands depends on your SCNX plan:
 
-| Plan | Enabled custom commands |
-|---|---|
-| Starter | Up to 10 |
-| Professional / Unlimited | Unlimited |
+| Plan                     | Enabled custom commands |
+| ------------------------ | ----------------------- |
+| Starter                  | Up to 10                |
+| Professional / Unlimited | Unlimited               |
 
 You can always create more commands than your limit allows, but only the allowed number can be **enabled** at the same
 time. Disabled commands are saved and can be enabled later if you upgrade or disable other commands.

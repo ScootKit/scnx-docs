@@ -21,7 +21,7 @@ make up the message).
 }
 ```
 
-That's a complete V4 message  - a single line of text with bold formatting. Everything you build is composed from the
+That's a complete V4 message - a single line of text with bold formatting. Everything you build is composed from the
 component types listed below.
 
 ---
@@ -31,7 +31,7 @@ component types listed below.
 These are the components available in the message editor:
 
 | Type | Name                            | What it does                                            |
-|------|---------------------------------|---------------------------------------------------------|
+| ---- | ------------------------------- | ------------------------------------------------------- |
 | 10   | [Text Display](#text-display)   | A block of formatted text                               |
 | 14   | [Separator](#separator)         | Spacing or a divider line between components            |
 | 12   | [Media Gallery](#media-gallery) | A grid of 1–10 images                                   |
@@ -88,7 +88,7 @@ A block of text. Supports full Discord markdown: bold, italic, headings, links, 
 ```
 
 | Field     | Type   | Required | Description                               |
-|-----------|--------|----------|-------------------------------------------|
+| --------- | ------ | -------- | ----------------------------------------- |
 | `content` | string | Yes      | The text to display. Max 4000 characters. |
 
 **Formatting tips:**
@@ -113,7 +113,7 @@ Adds vertical spacing between components, optionally with a visible divider line
 ```
 
 | Field     | Type    | Required | Description                                                              |
-|-----------|---------|----------|--------------------------------------------------------------------------|
+| --------- | ------- | -------- | ------------------------------------------------------------------------ |
 | `divider` | boolean | No       | `true` shows a visible line, `false` adds spacing only. Default: `true`. |
 | `spacing` | integer | No       | `1` = small spacing, `2` = large spacing. Default: `1`.                  |
 
@@ -143,7 +143,7 @@ Displays 1–10 images in a responsive grid layout.
 ```
 
 | Field                 | Type   | Required | Description                    |
-|-----------------------|--------|----------|--------------------------------|
+| --------------------- | ------ | -------- | ------------------------------ |
 | `items`               | array  | Yes      | 1–10 gallery items.            |
 | `items[].media.url`   | string | Yes      | Image URL.                     |
 | `items[].description` | string | No       | Alt text. Max 1024 characters. |
@@ -179,7 +179,7 @@ layouts or call-to-action blocks.
 ```
 
 | Field        | Type   | Required | Description                                            |
-|--------------|--------|----------|--------------------------------------------------------|
+| ------------ | ------ | -------- | ------------------------------------------------------ |
 | `components` | array  | Yes      | 1–3 Text Display components.                           |
 | `accessory`  | object | Yes      | A single [Thumbnail](#thumbnail) or [Button](#button). |
 
@@ -200,7 +200,7 @@ A small image that can only be used as an accessory inside a [Section](#section)
 ```
 
 | Field         | Type   | Required | Description                    |
-|---------------|--------|----------|--------------------------------|
+| ------------- | ------ | -------- | ------------------------------ |
 | `media.url`   | string | Yes      | Image URL.                     |
 | `description` | string | No       | Alt text. Max 1024 characters. |
 
@@ -208,7 +208,7 @@ A small image that can only be used as an accessory inside a [Section](#section)
 
 ### Container {#container}
 
-A card with a colored left border that visually groups components together  - similar to an embed in the V3 schema. Use
+A card with a colored left border that visually groups components together - similar to an embed in the V3 schema. Use
 containers to create distinct visual sections in your message.
 
 ```json
@@ -237,7 +237,7 @@ containers to create distinct visual sections in your message.
 ```
 
 | Field          | Type    | Required | Description                                                                            |
-|----------------|---------|----------|----------------------------------------------------------------------------------------|
+| -------------- | ------- | -------- | -------------------------------------------------------------------------------------- |
 | `components`   | array   | Yes      | Child components (Text Display, Separator, Media Gallery, Action Row, Section).        |
 | `accent_color` | integer | No       | Left border color as an RGB integer (`0` to `16777215`). Default: `5793266` (blurple). |
 
@@ -249,7 +249,7 @@ colors: blurple = `5793266`, green = `5763719`, red = `15548997`, yellow = `1670
 ### Action Row {#action-row}
 
 A horizontal row that holds interactive elements. An action row contains **either** up to 5 buttons **or** exactly 1
-string select  - never both.
+string select - never both.
 
 ```json
 {
@@ -278,14 +278,14 @@ string select  - never both.
 ```
 
 | Field        | Type  | Required | Description                                                               |
-|--------------|-------|----------|---------------------------------------------------------------------------|
+| ------------ | ----- | -------- | ------------------------------------------------------------------------- |
 | `components` | array | Yes      | Up to 5 [Buttons](#button), or exactly 1 [String Select](#string-select). |
 
 ---
 
 ### Button {#button}
 
-A clickable button. The button's behavior is defined by the `scnx_action` field  - this tells SCNX what should happen
+A clickable button. The button's behavior is defined by the `scnx_action` field - this tells SCNX what should happen
 when someone clicks it.
 
 #### Link Button {#link-button}
@@ -323,7 +323,7 @@ A non-interactive button that appears greyed out. Useful for labels or placehold
 
 #### Self-Role Button {#self-role-button}
 
-Assigns, removes, or toggles a Discord role when clicked. **Guild-specific**  - not recommended for shared content (
+Assigns, removes, or toggles a Discord role when clicked. **Guild-specific** - not recommended for shared content (
 see [Shared Content Notes](#shared-content-notes)).
 
 ```json
@@ -341,14 +341,14 @@ see [Shared Content Notes](#shared-content-notes)).
 ```
 
 | `scnx_action` field | Type   | Description                                              |
-|---------------------|--------|----------------------------------------------------------|
+| ------------------- | ------ | -------------------------------------------------------- |
 | `type`              | string | `"roleButton"`                                           |
 | `id`                | string | Discord role ID.                                         |
 | `action`            | string | `"add"`, `"remove"`, or `"toggle"`. Default: `"toggle"`. |
 
 #### Custom Command Button {#custom-command-button}
 
-Triggers a custom command when clicked. **Guild-specific**  - not recommended for shared content.
+Triggers a custom command when clicked. **Guild-specific** - not recommended for shared content.
 
 ```json
 {
@@ -363,14 +363,14 @@ Triggers a custom command when clicked. **Guild-specific**  - not recommended fo
 ```
 
 | `scnx_action` field | Type   | Description                           |
-|---------------------|--------|---------------------------------------|
+| ------------------- | ------ | ------------------------------------- |
 | `type`              | string | `"customCommandButton"`               |
 | `id`                | string | The custom command's button click ID. |
 
 #### Button Fields {#button-fields}
 
 | Field         | Type    | Required           | Description                                                                                                    |
-|---------------|---------|--------------------|----------------------------------------------------------------------------------------------------------------|
+| ------------- | ------- | ------------------ | -------------------------------------------------------------------------------------------------------------- |
 | `style`       | integer | Yes                | `1` = Primary (blurple), `2` = Secondary (grey), `3` = Success (green), `4` = Danger (red), `5` = Link (grey). |
 | `label`       | string  | One of label/emoji | Button text. Max 80 characters.                                                                                |
 | `emoji`       | string  | One of label/emoji | Unicode emoji character or custom emoji in `<:name:id>` format.                                                |
@@ -386,7 +386,7 @@ A dropdown menu. Like buttons, behavior is controlled by `scnx_action`.
 
 #### Self-Role Dropdown {#self-role-dropdown}
 
-Each option assigns a Discord role. **Guild-specific**  - not recommended for shared content.
+Each option assigns a Discord role. **Guild-specific** - not recommended for shared content.
 
 ```json
 {
@@ -422,7 +422,7 @@ can select at once.
 
 #### Custom Command Dropdown {#custom-command-dropdown}
 
-Each option triggers a custom command. **Guild-specific**  - not recommended for shared content.
+Each option triggers a custom command. **Guild-specific** - not recommended for shared content.
 
 ```json
 {
@@ -450,7 +450,7 @@ Each option triggers a custom command. **Guild-specific**  - not recommended for
 #### String Select Fields {#string-select-fields}
 
 | Field         | Type    | Required | Description                                                                         |
-|---------------|---------|----------|-------------------------------------------------------------------------------------|
+| ------------- | ------- | -------- | ----------------------------------------------------------------------------------- |
 | `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                            |
 | `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                         |
 | `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`. |
@@ -460,7 +460,7 @@ Each option triggers a custom command. **Guild-specific**  - not recommended for
 #### Option Fields {#option-fields}
 
 | Field         | Type   | Required | Description                                                                                        |
-|---------------|--------|----------|----------------------------------------------------------------------------------------------------|
+| ------------- | ------ | -------- | -------------------------------------------------------------------------------------------------- |
 | `label`       | string | Yes      | Display text. Max 100 characters.                                                                  |
 | `value`       | string | Yes      | Role ID or command button click ID (depending on action type). Max 100 characters. Must be unique. |
 | `description` | string | No       | Shown below the label. Max 100 characters.                                                         |
@@ -475,14 +475,14 @@ mind that your message will be imported by users on **different servers**. Compo
 will not work:
 
 | Component                                                  | Works in shared content?             |
-|------------------------------------------------------------|--------------------------------------|
+| ---------------------------------------------------------- | ------------------------------------ |
 | Text Display, Separator, Media Gallery, Section, Container | Yes                                  |
 | Link Button                                                | Yes                                  |
 | Disabled Button                                            | Yes                                  |
-| Self-Role Button                                           | No  - role IDs are server-specific    |
-| Custom Command Button                                      | No  - command IDs are server-specific |
-| Self-Role Dropdown                                         | No  - role IDs are server-specific    |
-| Custom Command Dropdown                                    | No  - command IDs are server-specific |
+| Self-Role Button                                           | No - role IDs are server-specific    |
+| Custom Command Button                                      | No - command IDs are server-specific |
+| Self-Role Dropdown                                         | No - role IDs are server-specific    |
+| Custom Command Dropdown                                    | No - command IDs are server-specific |
 
 Stick to **text, images, containers, and link buttons** for content you plan to share.
 
@@ -666,7 +666,7 @@ Multiple containers to create visually distinct sections.
 ## Limits Reference {#limits}
 
 | Constraint                     | Limit                    |
-|--------------------------------|--------------------------|
+| ------------------------------ | ------------------------ |
 | Total components per message   | 40 (counted recursively) |
 | Text Display content           | 4000 characters          |
 | Button label                   | 80 characters            |

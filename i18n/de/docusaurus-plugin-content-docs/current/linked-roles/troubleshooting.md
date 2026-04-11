@@ -13,16 +13,16 @@ Bitte wähle das Problem aus, das bei dir auftritt.
 
 Probleme während der Einrichtung:
 
-* [Ich kann die Link-Anforderung nicht zu einer Discord-Rolle hinzufügen](#link-requirement).
+- [Ich kann die Link-Anforderung nicht zu einer Discord-Rolle hinzufügen](#link-requirement).
 
 Probleme bei der Verwendung von Verknüpften Rollen:
 
-* [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
-* [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
-* ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
-* ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
-* ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
-* ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
+- [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
+- [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
+- ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
+- ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
+- ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
+- ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
 
 Wenn dein Problem hier nicht aufgeführt ist, [klicke hier](#other).
 

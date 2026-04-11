@@ -6,11 +6,11 @@ Add a countdown to Christmas and create an advent calendar on your Discord to ce
 
 ## Features {#features}
 
-* Christmas/New Year countdown displayed as a voice channel or category name, updated hourly.
-* Interactive advent calendar with 24 doors that users can open during December.
-* Customizable messages for each calendar day.
-* Optional role rewards for opening individual days or all 24 days.
-* Optional button randomization for a more engaging advent calendar experience.
+- Christmas/New Year countdown displayed as a voice channel or category name, updated hourly.
+- Interactive advent calendar with 24 doors that users can open during December.
+- Customizable messages for each calendar day.
+- Optional role rewards for opening individual days or all 24 days.
+- Optional button randomization for a more engaging advent calendar experience.
 
 ## Setup {#setup}
 
@@ -39,11 +39,11 @@ Once enabled, the bot automatically updates the configured channel name hourly t
 
 The bot posts an interactive message in the configured channel with 24 buttons (one for each day). During December:
 
-* Users can click the button for the current day to "open" the door and receive a customized message.
-* Buttons for other days are disabled (unless button randomization is enabled).
-* If role rewards are configured for a day, users automatically receive those roles when they open the door.
-* Users who open all 24 doors can receive additional reward roles.
-* Each user can only open each day once (unless re-opening is enabled).
+- Users can click the button for the current day to "open" the door and receive a customized message.
+- Buttons for other days are disabled (unless button randomization is enabled).
+- If role rewards are configured for a day, users automatically receive those roles when they open the door.
+- Users who open all 24 doors can receive additional reward roles.
+- Each user can only open each day once (unless re-opening is enabled).
 
 ## Configuration {#configuration}
 
@@ -51,28 +51,28 @@ The bot posts an interactive message in the configured channel with 24 buttons (
 
 In this configuration file, you can set up the Christmas countdown. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/countdown).
 
-| Field | Description |
-|-------|-------------|
-| Enabled? | Enable or disable the countdown feature. |
-| Countdown-Channel | A voice channel or category whose name will be updated to show the countdown. |
-| Countdown until | Select the target date: December 24 (Christmas Eve), December 25 (Christmas Day), or January 1 (New Year). |
+| Field             | Description                                                                                                |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| Enabled?          | Enable or disable the countdown feature.                                                                   |
+| Countdown-Channel | A voice channel or category whose name will be updated to show the countdown.                              |
+| Countdown until   | Select the target date: December 24 (Christmas Eve), December 25 (Christmas Day), or January 1 (New Year). |
 
 ### Advent Calendar {#config-calendar}
 
 In this configuration file, you can set up the advent calendar. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/advent-calendar).
 
-| Field | Description |
-|-------|-------------|
-| Enabled? | Enable or disable the advent calendar feature. |
-| Calendar Channel | An empty text channel where the advent calendar message will be posted. |
-| Calendar message | The main message displayed above the calendar buttons. |
-| "Already opened" Message | Message shown when a user tries to re-open a door they already opened. |
-| Reward roles for claiming all days (optional) | Roles given to users who open all 24 doors. |
-| Allow users to see the calendar message of the current day multiple times? | If enabled, users can view the day's message again after opening it. |
-| Randomize buttons hourly? | If enabled, the button order is shuffled every hour. All buttons become clickable, but only the current day's door can be successfully opened. |
-| Wrong day message | Message shown when a user tries to open a door that is not today's. |
-| Day 1-24 Claiming Message | The message displayed when a user opens the corresponding day's door. Each day has its own configurable message. |
-| Day 1-24 Reward Roles (optional) | Roles given to users when they open the corresponding day's door. |
+| Field                                                                      | Description                                                                                                                                    |
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enabled?                                                                   | Enable or disable the advent calendar feature.                                                                                                 |
+| Calendar Channel                                                           | An empty text channel where the advent calendar message will be posted.                                                                        |
+| Calendar message                                                           | The main message displayed above the calendar buttons.                                                                                         |
+| "Already opened" Message                                                   | Message shown when a user tries to re-open a door they already opened.                                                                         |
+| Reward roles for claiming all days (optional)                              | Roles given to users who open all 24 doors.                                                                                                    |
+| Allow users to see the calendar message of the current day multiple times? | If enabled, users can view the day's message again after opening it.                                                                           |
+| Randomize buttons hourly?                                                  | If enabled, the button order is shuffled every hour. All buttons become clickable, but only the current day's door can be successfully opened. |
+| Wrong day message                                                          | Message shown when a user tries to open a door that is not today's.                                                                            |
+| Day 1-24 Claiming Message                                                  | The message displayed when a user opens the corresponding day's door. Each day has its own configurable message.                               |
+| Day 1-24 Reward Roles (optional)                                           | Roles given to users when they open the corresponding day's door.                                                                              |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -103,9 +103,9 @@ In this configuration file, you can set up the advent calendar. Open it in your 
 
 The following data is being stored about every advent calendar door opening:
 
-* The user ID of the user who opened the door
-* The day number that was opened
-* The year of the opening
-* Metadata about the entry (date when created and last updated)
+- The user ID of the user who opened the door
+- The day number that was opened
+- The year of the opening
+- Metadata about the entry (date when created and last updated)
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

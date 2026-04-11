@@ -36,20 +36,20 @@ Das ist nützlich für andere Bots, die Original-Nachrichten durch Webhook-Nachr
 
 Du kannst einige Optionen (unter anderem die Erkennungs-Nachricht) in der [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?query=anti&file=anti-ghostping|config) dieses Moduls einstellen:
 
-| Option                   | Beschreibung                                                                                                                                                                                                                |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Botnachrichten abwarten  | Wenn aktiviert, wartet dein Bot nach der Erkennung eines Ghost-Pings etwa zwei Sekunden. Falls in diesem Zeitraum eine Nachricht von einem anderen Bot oder Webhook gesendet wird, wird keine Erkennungsnachricht gesendet. |
-| Ignorierte Kanäle        | In den angegebenen Kanälen und Kategorien werden keine Ghost-Pings erkannt.                                                                                                                                                 |
-| Ghostping-Nachricht      | Diese Nachricht wird dein Bot bei Erkennung eines Ghost-Pings im entsprechenden Kanal senden.                                                                                                                               |
+| Option                  | Beschreibung                                                                                                                                                                                                                |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Botnachrichten abwarten | Wenn aktiviert, wartet dein Bot nach der Erkennung eines Ghost-Pings etwa zwei Sekunden. Falls in diesem Zeitraum eine Nachricht von einem anderen Bot oder Webhook gesendet wird, wird keine Erkennungsnachricht gesendet. |
+| Ignorierte Kanäle       | In den angegebenen Kanälen und Kategorien werden keine Ghost-Pings erkannt.                                                                                                                                                 |
+| Ghostping-Nachricht     | Diese Nachricht wird dein Bot bei Erkennung eines Ghost-Pings im entsprechenden Kanal senden.                                                                                                                               |
 
 ## Fehlerbehebung {#troubleshooting}
 
-* Stelle sicher, dass dein Bot die Berechtigungen „Nachrichten lesen", „Nachrichten senden" und „Nachrichten verwalten" in den Kanälen besitzt, in denen Ghost-Pings erkannt werden sollen.
-* Überprüfe, ob die gelöschte Nachricht die Voraussetzungen für einen Ghost-Ping erfüllt:
-   * Die Nachricht muss einen Ping zu einem anderen Server-Mitglied enthalten. Beachte, dass nicht alle Erwähnungen (@username) Pings sind (z. B. stille Nachrichten).
-   * Die Nachricht wurde innerhalb von einer Minute nach dem Senden gelöscht.
-   * Die Nachricht wurde nicht in einem [ignorierten Kanal](#configuration) gesendet.
-* Beachte, dass auch Nachrichten, die von Team-Mitgliedern gelöscht wurden, als Ghost-Pings erkannt werden können, da der Bot nicht erkennen kann, wer die Nachricht gelöscht hat.
+- Stelle sicher, dass dein Bot die Berechtigungen „Nachrichten lesen", „Nachrichten senden" und „Nachrichten verwalten" in den Kanälen besitzt, in denen Ghost-Pings erkannt werden sollen.
+- Überprüfe, ob die gelöschte Nachricht die Voraussetzungen für einen Ghost-Ping erfüllt:
+  - Die Nachricht muss einen Ping zu einem anderen Server-Mitglied enthalten. Beachte, dass nicht alle Erwähnungen (@username) Pings sind (z. B. stille Nachrichten).
+  - Die Nachricht wurde innerhalb von einer Minute nach dem Senden gelöscht.
+  - Die Nachricht wurde nicht in einem [ignorierten Kanal](#configuration) gesendet.
+- Beachte, dass auch Nachrichten, die von Team-Mitgliedern gelöscht wurden, als Ghost-Pings erkannt werden können, da der Bot nicht erkennen kann, wer die Nachricht gelöscht hat.
 
 :::info Auf der Suche nach etwas anderem?
 Wenn du den Inhalt aller Nachrichten loggen möchtest, kannst du das Modul [Fortgeschrittenes Logging](/de/docs/custom-bot/modules/administration/logging) verwenden.
