@@ -8,6 +8,7 @@ on:
       - 'i18n/**'
       - 'blog/**'
       - 'src/pages/**'
+      - '.github/workflows/docs-autofix.yml'
 
 jobs:
   autofix:
