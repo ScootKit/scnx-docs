@@ -74,7 +74,7 @@ jobs:
             git commit -m "chore: autofix docs formatting"
             git push origin "$BRANCH" --force
             PR_URL=$(gh pr create --title "chore: autofix docs formatting" --body "Automated formatting fixes: em dashes, smart quotes, ellipsis characters, non-breaking spaces, trailing whitespace, and markdown table alignment." --base main --head "$BRANCH")
-            gh pr merge "$PR_URL" --auto --squash
+            gh pr merge "$PR_URL" --auto --squash --delete-branch
             echo "Created new PR: $PR_URL"
           fi
         env:
