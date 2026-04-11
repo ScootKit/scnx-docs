@@ -6,11 +6,11 @@ Let users assign roles to themselves the good old way - by adding and removing a
 
 ## Features {#features}
 
-* Allow users to self-assign roles by reacting to a message with a specific emoji.
-* Automatically remove roles when a user removes their reaction.
-* Support for multiple role assignments per message using different emojis.
-* Support for assigning multiple roles with a single reaction (comma-separated role IDs).
-* Works with both default and custom emojis.
+- Allow users to self-assign roles by reacting to a message with a specific emoji.
+- Automatically remove roles when a user removes their reaction.
+- Support for multiple role assignments per message using different emojis.
+- Support for assigning multiple roles with a single reaction (comma-separated role IDs).
+- Works with both default and custom emojis.
 
 ## Setup {#setup}
 
@@ -25,22 +25,22 @@ Let users assign roles to themselves the good old way - by adding and removing a
 
 ## Usage {#usage}
 
-* Users simply react to the configured message with the specified emoji to receive the associated role(s).
-* When a user removes their reaction, the associated role(s) are automatically removed.
-* The bot will add its own reaction to the message after the first user reacts, serving as a visual indicator.
+- Users simply react to the configured message with the specified emoji to receive the associated role(s).
+- When a user removes their reaction, the associated role(s) are automatically removed.
+- The bot will add its own reaction to the message after the first user reacts, serving as a visual indicator.
 
 ## Configuration {#configuration}
 
 This is the configuration file for the module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=reaction-roles%7Cmessages).
 
-| Field | Description |
-|-------|-------------|
-| Message-ID | The ID of the message that this reaction role configuration should apply to. |
-| Reactions | Key-value pairs mapping emojis to role IDs. The key is the emoji value and the value is the role ID(s), separated with commas if assigning multiple roles per reaction. |
+| Field      | Description                                                                                                                                                             |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Message-ID | The ID of the message that this reaction role configuration should apply to.                                                                                            |
+| Reactions  | Key-value pairs mapping emojis to role IDs. The key is the emoji value and the value is the role ID(s), separated with commas if assigning multiple roles per reaction. |
 
 ## Troubleshooting {#troubleshooting}
 
-* **The bot does not respond to reactions**: Make sure the bot has "View Channel" and "Read Message History" permissions in the channel. Also verify that the message ID in the configuration matches the message you are reacting to.
-* **Roles are not being assigned**: Ensure the bot has the "Manage Roles" permission and that the bot's highest role is positioned above the roles it needs to assign. Double-check that the role IDs in the configuration are correct.
-* **Custom emojis are not working**: Make sure the emoji identifier in the configuration exactly matches the emoji format Discord uses internally. For custom emojis, this is typically the emoji name and ID in the format `name:id`.
-* **Consider using Button Roles instead**: For a better user experience, consider using Button-Roles and Self-Role-Elements available in the Login-As-Bot feature on SCNX, which provide a more modern interface.
+- **The bot does not respond to reactions**: Make sure the bot has "View Channel" and "Read Message History" permissions in the channel. Also verify that the message ID in the configuration matches the message you are reacting to.
+- **Roles are not being assigned**: Ensure the bot has the "Manage Roles" permission and that the bot's highest role is positioned above the roles it needs to assign. Double-check that the role IDs in the configuration are correct.
+- **Custom emojis are not working**: Make sure the emoji identifier in the configuration exactly matches the emoji format Discord uses internally. For custom emojis, this is typically the emoji name and ID in the format `name:id`.
+- **Consider using Button Roles instead**: For a better user experience, consider using Button-Roles and Self-Role-Elements available in the Login-As-Bot feature on SCNX, which provide a more modern interface.

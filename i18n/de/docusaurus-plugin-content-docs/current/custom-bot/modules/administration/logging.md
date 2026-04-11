@@ -8,18 +8,18 @@ Lass deinen Bot alle Änderungen an deinem Sever und deinen Kanälen protokollie
 
 Mit dem fortgeschrittenen Logging-Modul kannst du folgendes ganz einfach tun:
 
-* Protokolliere Kanalaktualisierungen (wie Kanalbearbeitungen, Kanalberechtigungsänderungen und mehr) in jedem gewünschten Kanal.
-* Protokolliere Rollenaktualisierungen (wie Rollenänderungen, Berechtigungsänderungen und mehr) in jedem gewünschten Kanal.
-* Protokolliere Mitgliederaktualisierungen (wie Nicknamen- oder Rollenänderungen und mehr) in jedem gewünschten Kanal.
-* Protokolliere Nachrichtenaktualisierungen (wie Nachrichtenänderungen oder -löschungen) in jedem gewünschten Kanal.
-* Protokolliere Serveränderungen (z. B. Änderungen an Servereinstellungen und mehr) in jedem gewünschten Kanal.
-* Protokolliere Sprachkanalaktualisierungen (z. B. Mitglieder, die dem Kanal beitreten oder ihn verlassen) in jedem gewünschten Kanal.
-* Protokolliere Emoji-Änderungen (wie das Hochladen, Bearbeiten oder Löschen von Emojis und Stickern) in jedem gewünschten Kanal.
+- Protokolliere Kanalaktualisierungen (wie Kanalbearbeitungen, Kanalberechtigungsänderungen und mehr) in jedem gewünschten Kanal.
+- Protokolliere Rollenaktualisierungen (wie Rollenänderungen, Berechtigungsänderungen und mehr) in jedem gewünschten Kanal.
+- Protokolliere Mitgliederaktualisierungen (wie Nicknamen- oder Rollenänderungen und mehr) in jedem gewünschten Kanal.
+- Protokolliere Nachrichtenaktualisierungen (wie Nachrichtenänderungen oder -löschungen) in jedem gewünschten Kanal.
+- Protokolliere Serveränderungen (z. B. Änderungen an Servereinstellungen und mehr) in jedem gewünschten Kanal.
+- Protokolliere Sprachkanalaktualisierungen (z. B. Mitglieder, die dem Kanal beitreten oder ihn verlassen) in jedem gewünschten Kanal.
+- Protokolliere Emoji-Änderungen (wie das Hochladen, Bearbeiten oder Löschen von Emojis und Stickern) in jedem gewünschten Kanal.
 
 ## Einrichtung {#setup}
 
-1. Erstelle einen Kanal, in dem der Bot Änderungen protokollieren soll. Stelle sicher, dass der Bot über die Berechtigungen „Nachrichten senden" und „Kanal anzeigen"      verfügt.
-2. Stelle sicher, dass dein Bot über die erforderlichen Berechtigungen auf deinem Server verfügt („Audit-Log einsehen"). Wenn du Nachrichtenaktualisierungen               protokollieren möchten, benötigt der Bot die Berechtigungen „Kanal anzeigen" und „Nachrichtenverlauf anzeigen" auf jedem Kanal, welchem der Bot Änderungen              dokumentieren soll.
+1. Erstelle einen Kanal, in dem der Bot Änderungen protokollieren soll. Stelle sicher, dass der Bot über die Berechtigungen „Nachrichten senden" und „Kanal anzeigen" verfügt.
+2. Stelle sicher, dass dein Bot über die erforderlichen Berechtigungen auf deinem Server verfügt („Audit-Log einsehen"). Wenn du Nachrichtenaktualisierungen protokollieren möchten, benötigt der Bot die Berechtigungen „Kanal anzeigen" und „Nachrichtenverlauf anzeigen" auf jedem Kanal, welchem der Bot Änderungen dokumentieren soll.
 3. Öffne die [Fortgeschrittene Logging-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=logging%7Cconfig)
    und [konfiguriere das Modul](#configuration).
 4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen.
@@ -41,7 +41,7 @@ Mit dieser Konfigurationsdatei kannst du festlegen, welche Änderungen an deinem
 Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=logging%7Cconfig).
 
 | Feld                                                      | Beschreibung                                                                                                                                                                                                                                                    |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kanal-Änderungen                                          | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Kanälen (z. B. Kanalbearbeitungen, Berechtigungsänderungen und mehr).                                                                                                                      |
 | Kanal für das Dokumentieren von Kanal-Änderungen          | <i>Nur sichtbar, wenn „Kanal-Änderungen" aktiviert ist.</i><br/>Änderungen an Kanälen werden in diesem Kanal protokolliert.                                                                                                                                     |
 | Rollen-Änderungen                                         | Wenn diese Option aktiviert ist, protokolliert der Bot Änderungen an Rollen (wie Rollenänderungen, Berechtigungsänderungen und mehr).                                                                                                                           |
@@ -62,10 +62,10 @@ Mit dieser Konfigurationsdatei kannst du festlegen, welche Änderungen an deinem
 
 Wenn Änderungen nicht protokolliert werden, stelle bitte folgendes sicher:
 
-* Der Bot hat die Berechtigung, diese Änderungen zu sehen. Dies bedeutet normalerweise, dass der Bot die Berechtigungen „Audit-Log einsehen" benötigt, bei
-* Nachrichtenaktualisierungen sind jedoch auch „Kanal anzeigen" und „Nachrichtenverlauf anzeigen" erforderlich.
-* Der Bot verfügt über die erforderlichen Berechtigungen, um die Änderungen im konfigurierten Log-Kanal zu protokollieren: „Nachrichten senden"
+- Der Bot hat die Berechtigung, diese Änderungen zu sehen. Dies bedeutet normalerweise, dass der Bot die Berechtigungen „Audit-Log einsehen" benötigt, bei
+- Nachrichtenaktualisierungen sind jedoch auch „Kanal anzeigen" und „Nachrichtenverlauf anzeigen" erforderlich.
+- Der Bot verfügt über die erforderlichen Berechtigungen, um die Änderungen im konfigurierten Log-Kanal zu protokollieren: „Nachrichten senden"
   und „Kanal ansehen".
-* Der Bot kann keine Änderungen an gesendeten Nachrichten protokollieren, während er offline ist.
-* Die Änderung wird nicht von einem Bot durchgeführt oder „Bots ignorieren" ist aktiviert.
-* Die [Konfiguration](#configuration) für diese bestimmte Änderung ist aktiviert und der richtige Kanal ist ausgewählt.
+- Der Bot kann keine Änderungen an gesendeten Nachrichten protokollieren, während er offline ist.
+- Die Änderung wird nicht von einem Bot durchgeführt oder „Bots ignorieren" ist aktiviert.
+- Die [Konfiguration](#configuration) für diese bestimmte Änderung ist aktiviert und der richtige Kanal ist ausgewählt.

@@ -16,7 +16,7 @@ tags:
 In any active Discord server, clarity is key. How can members instantly recognize staff in a busy chat? SCNX is thrilled
 to introduce [**Linked Roles**](/docs/linked-roles/intro/), a powerful feature that displays a user's most important
 role -like "Admin" or "Moderator"
- -as an official tag right next to their username in every message. This is more than a cosmetic update; it's a
+-as an official tag right next to their username in every message. This is more than a cosmetic update; it's a
 fundamental upgrade that brings immediate authority, trust, and professionalism to your community's conversations.
 
 <!-- truncate -->
@@ -25,11 +25,11 @@ fundamental upgrade that brings immediate authority, trust, and professionalism 
 
 Linked Roles transform a simple permission set into a dynamic tool for community management.
 
-* **Instant Authority and Trust:** A visible tag like "Moderator" immediately gives weight to a user's message, making
+- **Instant Authority and Trust:** A visible tag like "Moderator" immediately gives weight to a user's message, making
   moderation and official announcements more effective without members needing to check a profile.
-* **A Polished, Organized Look:** Clearly identified staff and key members make a server feel more curated and
+- **A Polished, Organized Look:** Clearly identified staff and key members make a server feel more curated and
   professional, helping to attract and retain users who value structure.
-* **Enhanced Member Recognition:** Use Linked Roles to publicly reward valuable members with tags like "VIP"
+- **Enhanced Member Recognition:** Use Linked Roles to publicly reward valuable members with tags like "VIP"
   or "Contributor", creating a powerful incentive for others to engage more deeply with the community.
 
 ## The SCNX Advantage: Powerfully Simple {#scnx-features}
@@ -37,16 +37,16 @@ Linked Roles transform a simple permission set into a dynamic tool for community
 SCNX has engineered Linked Roles to be flexible and user-friendly, removing the technical barriers typically associated
 with this feature.
 
-* **No-Code Setup:** While setting up linked roles can be complex through Discord's developer tools, SCNX provides an
+- **No-Code Setup:** While setting up linked roles can be complex through Discord's developer tools, SCNX provides an
   intuitive dashboard that guides you through the process in minutes, no coding required.
-* **Deep Customization:** [Tailor the user authorization page](/docs/linked-roles/settings/#authorization-page) with
+- **Deep Customization:** [Tailor the user authorization page](/docs/linked-roles/settings/#authorization-page) with
   over 30 themes and custom branding to match your
   server's aesthetic. The page also supports multiple languages automatically. For a fully integrated feel, the
   [Professional Plan](/docs/scnx/guilds/plans/) allows for the removal of SCNX branding.
-* **Flexible Management:** Easily [assign or remove roles from the SCNX dashboard](/docs/linked-roles/user-management/). A
+- **Flexible Management:** Easily [assign or remove roles from the SCNX dashboard](/docs/linked-roles/user-management/). A
   unique ["Public Role"](/docs/linked-roles/role-management/#public-roles) option allows
   any server member to claim a specific role, streamlining onboarding for roles like "Verified Member".
-* **Dedicated Support:** Get expert help with any questions on the [official SCNX Discord server](https://scnx.app),
+- **Dedicated Support:** Get expert help with any questions on the [official SCNX Discord server](https://scnx.app),
   with support available
   in English and German.
 
@@ -56,11 +56,11 @@ The SCNX dashboard makes the setup process straightforward.
 
 ### Prerequisites {#requirements}
 
-* Your server must be on a paid SCNX plan ([Unlimited](/docs/scnx/guilds/plans/)
+- Your server must be on a paid SCNX plan ([Unlimited](/docs/scnx/guilds/plans/)
   or [Professional](/docs/scnx/guilds/plans/)) or have an active free trial.
-* You are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an
+- You are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an
   administrator of the server you want to enable this feature.
-* Set aside 5-10 minutes to complete the process.
+- Set aside 5-10 minutes to complete the process.
 
 ### Setup Overview {#setup}
 

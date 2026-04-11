@@ -33,7 +33,7 @@ Mit dieser Konfigurationsdatei kannst du festlegen, welche Kanäle Statistik-Kan
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannels).
 
 | Feld                     | Beschreibung                                                                                                                                                          |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kanal                    | Das ist der Kanal, welcher als Statistik-Kanal genutzt wird. Sein Name wird automatisch zum Wert von "Kanalname" aktualisiert.                                        |
 | Kanalname                | Das ist der Name, zu dem der Kanal automatisch aktualisiert wird. <br/><i>Bitte überprüfe verfügbare Parameter in deinem Dashboard.</i>                               |
 | Aktualisierungsintervall | Das ist das Intervall in Minuten, in welchem dein Bot den Name des Kanals aktualisiert. Aufgrund technischen Limititationen Discords muss dies höher als sieben sein. |
@@ -44,6 +44,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=channel
 <summary>Ich versuche den Namen des Kanals zu ändern, doch der Bot ändert ihn zurück</summary>
 
     Wenn du den Namen des Kanals verändern willst, musst du das Feld "Kanalname" in der <a href="https://scnx.app/de/glink?page=bot/configuration?file=channel-stats%7Cchannel">Modul-Konfiguration</a> des Kanals aktualisieren.
+
 </details>
 
 <details>

@@ -9,7 +9,6 @@ tags:
   - Newsletter
   - SCNX
   - Angebote
-
 ---
 
 # 🚀 Black Friday ist da: Riesige Ersparnisse & Der brandneue Support Bot V3
@@ -32,14 +31,14 @@ Schalte 24/7-Hosting frei, entferne Werbung und erhalte Zugriff auf leistungssta
 
 Diese Pläne verlängern sich **nicht** automatisch; sie laufen nach dem gekauften Zeitraum einfach aus, du musst dich also nicht um eine Kündigung kümmern.
 
-* **Unlimited (1 Jahr):** 17% Rabatt.
-* **Professional (6 Monate):** 17% Rabatt.
-* **Professional (1 Jahr):** 17% Rabatt.
+- **Unlimited (1 Jahr):** 17% Rabatt.
+- **Professional (6 Monate):** 17% Rabatt.
+- **Professional (1 Jahr):** 17% Rabatt.
 
 Auch Lifetime-Pläne sind im Angebot! Sie können zwischen Servern übertragen werden und unterstützen die Entwicklung von SCNX.
 
-* **Unlimited (Lifetime):** 15% Rabatt.
-* **Professional (Lifetime):** 11% Rabatt.
+- **Unlimited (Lifetime):** 15% Rabatt.
+- **Professional (Lifetime):** 11% Rabatt.
 
 [**👉 Jetzt im Black-Friday-Sale shoppen**](https://scnx.app/de/black-friday)
 
@@ -47,9 +46,9 @@ Auch Lifetime-Pläne sind im Angebot! Sie können zwischen Servern übertragen w
 
 Einmal aufladen und nie wieder Sorgen machen. Generiere mehr Bilder, chatte mit der KI und nutze die neuen KI-Ticket-Transkript-Funktionen für weniger Geld.
 
-* **5.000 Coins:** 11% Rabatt.
-* **10.000 Coins:** 19% Rabatt.
-* **50.000 Coins (Bester Preis):** 28% Rabatt.
+- **5.000 Coins:** 11% Rabatt.
+- **10.000 Coins:** 19% Rabatt.
+- **50.000 Coins (Bester Preis):** 28% Rabatt.
 
 [**👉 Jetzt im Black-Friday-Sale shoppen**](https://scnx.app/de/black-friday)
 
@@ -61,10 +60,10 @@ Mitgliedschaften schalten **keine** SCNX-Server-Features frei. Für Server-Funkt
 
 Unterstütze die Entwicklung von SCNX und erhalte Vorteile wie "Behind-The-Scenes"-Zugriff.
 
-* **Level 2 (1 Jahr):** 23% Rabatt.
-* **Level 3 (6 Monate):** 13% Rabatt.
-* **Level 3 (1 Jahr):** 34% Rabatt.
-* **Level 4 (1 Jahr):** 23% Rabatt.
+- **Level 2 (1 Jahr):** 23% Rabatt.
+- **Level 3 (6 Monate):** 13% Rabatt.
+- **Level 3 (1 Jahr):** 34% Rabatt.
+- **Level 4 (1 Jahr):** 23% Rabatt.
 
 [**👉 Jetzt im Black-Friday-Sale shoppen**](https://scnx.app/de/black-friday)
 
@@ -82,10 +81,10 @@ Dieses Update vereint das Beste aus beiden Welten und bietet dir zwei Möglichke
 
 ### Die wichtigsten V3-Features:
 
-* **Ticket-System:** Nutzer öffnen Tickets über dedizierte Nachrichten und erstellen so private Kanäle auf deinem Server.
-* **KI-gestützte Zusammenfassungen:** Aktiviere diese Option, um beim Schließen eines Tickets prägnante Zusammenfassungen ganzer Konversationen zu erhalten – so musst du keine langen Logs mehr lesen.
-* **Web-basierter Log-Viewer:** Verabschiede dich von reinen Textdateien. Logs werden jetzt in einer schönen, chat-ähnlichen Weboberfläche angezeigt.
-* **Erweiterter Workflow:** Zu den Funktionen gehören Team-Claiming, Multi-User-Tickets, Ticket-Bewertungen und automatische Schließung bei Inaktivität.
+- **Ticket-System:** Nutzer öffnen Tickets über dedizierte Nachrichten und erstellen so private Kanäle auf deinem Server.
+- **KI-gestützte Zusammenfassungen:** Aktiviere diese Option, um beim Schließen eines Tickets prägnante Zusammenfassungen ganzer Konversationen zu erhalten – so musst du keine langen Logs mehr lesen.
+- **Web-basierter Log-Viewer:** Verabschiede dich von reinen Textdateien. Logs werden jetzt in einer schönen, chat-ähnlichen Weboberfläche angezeigt.
+- **Erweiterter Workflow:** Zu den Funktionen gehören Team-Claiming, Multi-User-Tickets, Ticket-Bewertungen und automatische Schließung bei Inaktivität.
 
 Erfahre mehr über Support Bot V3 (und wie du ihn testen kannst) in unserem [Blogbeitrag](/blog/2025-support-bot-beta/).
 

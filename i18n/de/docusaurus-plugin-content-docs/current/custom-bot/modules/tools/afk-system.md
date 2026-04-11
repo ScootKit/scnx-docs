@@ -6,12 +6,12 @@ Erlaube Nutzern einen AFK-Status zu setzen, der anderen Nutzern automatisch mitg
 
 ## Funktionen {#features}
 
-* Nutzer können mit [`/afk start`](#commands) eine AFK-Sitzung starten und dabei einen (optionalen) Grund dafür angeben.
-* Wenn ein Nutzer ein Mitglied, das aktuell AFK ist, erwähnt, wird der Bot dem Nutzer mitteilen, dass der erwähnte Nutzer nicht verfügbar ist.
-* AFK-Sitzungen werden automatisch beendet, wenn der AFK Nutzer eine Nachricht in einen beliebigen Kanal auf deinem Server sendet (sofern sie dies nicht zu Beginn der AFK-Sitzung deaktiviert haben).
-* AFK-Sitzungen können manuell mit [`/afk end`](#commands) beendet werden.
-* Während einer AFK-Sitzung fügt der Bot zum Namen des Nutzers ein `[AFK]` als Präfix hinzu.
-* AFK-Informationsnachrichten [können angepasst werden](#configuration).
+- Nutzer können mit [`/afk start`](#commands) eine AFK-Sitzung starten und dabei einen (optionalen) Grund dafür angeben.
+- Wenn ein Nutzer ein Mitglied, das aktuell AFK ist, erwähnt, wird der Bot dem Nutzer mitteilen, dass der erwähnte Nutzer nicht verfügbar ist.
+- AFK-Sitzungen werden automatisch beendet, wenn der AFK Nutzer eine Nachricht in einen beliebigen Kanal auf deinem Server sendet (sofern sie dies nicht zu Beginn der AFK-Sitzung deaktiviert haben).
+- AFK-Sitzungen können manuell mit [`/afk end`](#commands) beendet werden.
+- Während einer AFK-Sitzung fügt der Bot zum Namen des Nutzers ein `[AFK]` als Präfix hinzu.
+- AFK-Informationsnachrichten [können angepasst werden](#configuration).
 
 ## Einrichtung {#setup}
 
@@ -34,39 +34,39 @@ Mit dem Ende der AFK-Sitzung wird der Bot den Nickname des Nutzers auf seinen vo
 
 <SlashCommandExplanation />
 
-| Befehl                                                     | Beschreibung                                                                                                                                                                                                                                              |
-|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Befehl                                                                  | Beschreibung                                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/afk start [reason:<Grund für die Abwensenheit>] [auto-end:<Boolean>]` | Dieser Befehl startet eine neue AFK-Sitzung. Optional können Nutzer im `reason`-Parameter einen Grund dafür angeben. Sie können mit dem `auto-end`-Parameter auch das automatische Beenden der AFK-Sitzung deaktivieren. `auto-end` ist standardmäßig aktiviert. |
-| `/afk end`                                                  | Beendet eine laufende AFK-Sitzung. Ist keine AFK-Sitzung aktiv, wird ein Fehler angezeigt.                                                                                                                                                              |
+| `/afk end`                                                              | Beendet eine laufende AFK-Sitzung. Ist keine AFK-Sitzung aktiv, wird ein Fehler angezeigt.                                                                                                                                                                       |
 
 ## Konfiguration {#configuration}
 
 Bearbeite Informations- und Befehlantwortnachrichten in der
 [Modulkonfigurationsdatei](https://scnx.app/de/glink?page=bot/configuration?query=afk&file=afk-system|config).
 
-| Feld                            | Beschreibung                                                                                                                                                                               |
-|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AFK-Sitzung erfolgreich beendet   | Diese Nachricht wird einem Nutzer angezeigt, wenn er seine AFK-Sitzung mit [`/afk end`](#commands) beendet.                                                                                      |
-| AFK-Sitzung erfolgreich gestartet | Diese Nachricht wird einem Nutzer angezeigt, wenn er seine AFK-Sitzung mit [`/afk start`](#commands) startet.                                                                                  |
-| Nutzer ist mit Begründung AFK          | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung eine Begründung angegeben hat.                                  |
-| Nutzer ist ohne Begründung AFK       | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung keine Begründung angegeben hat.                              |
-| AFK-Sitzung automatisch beendet  | Diese Nachricht wird gesendet, wenn ein Nutzer, der aktuell AFK ist und das automatische Ende der AFK-Sitzung nicht deaktiviert hat, eine Nachricht auf deinem Server schreibt. Dies beendet die AFK-Sitzung. |
+| Feld                              | Beschreibung                                                                                                                                                                                                  |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AFK-Sitzung erfolgreich beendet   | Diese Nachricht wird einem Nutzer angezeigt, wenn er seine AFK-Sitzung mit [`/afk end`](#commands) beendet.                                                                                                   |
+| AFK-Sitzung erfolgreich gestartet | Diese Nachricht wird einem Nutzer angezeigt, wenn er seine AFK-Sitzung mit [`/afk start`](#commands) startet.                                                                                                 |
+| Nutzer ist mit Begründung AFK     | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung eine Begründung angegeben hat.                                                                 |
+| Nutzer ist ohne Begründung AFK    | Diese Nachricht wird gesendet, wenn ein Nutzer erwähnt wird, der aktuell AFK ist und zu Beginn der AFK-Sitzung keine Begründung angegeben hat.                                                                |
+| AFK-Sitzung automatisch beendet   | Diese Nachricht wird gesendet, wenn ein Nutzer, der aktuell AFK ist und das automatische Ende der AFK-Sitzung nicht deaktiviert hat, eine Nachricht auf deinem Server schreibt. Dies beendet die AFK-Sitzung. |
 
 ## Fehlerbehebung {#troubleshooting}
 
-* Wenn der Bot deinen Nickname nicht ändert, stelle sicher, dass du nicht der Eigentümer des Servers bist. Der Bot kann den Nickname des Eigentümers nicht bearbeiten, selbst wenn er eine höhere Rolle als der Eigentümer hat. Dies ist eine Beschränkung durch Discord.
-* Wenn der Bot die AFK-Nachricht nicht sendet, stelle sicher, dass der Nutzer eine AFK-Sitzung gestartet hat und diese noch nicht beendet wurde.
-* Wenn der Bot eine AFK-Sitzung nicht automatisch beendet, stelle sicher, dass `auto-end` nicht zu Beginn der AFK-Sitzung deaktiviert wurde.
+- Wenn der Bot deinen Nickname nicht ändert, stelle sicher, dass du nicht der Eigentümer des Servers bist. Der Bot kann den Nickname des Eigentümers nicht bearbeiten, selbst wenn er eine höhere Rolle als der Eigentümer hat. Dies ist eine Beschränkung durch Discord.
+- Wenn der Bot die AFK-Nachricht nicht sendet, stelle sicher, dass der Nutzer eine AFK-Sitzung gestartet hat und diese noch nicht beendet wurde.
+- Wenn der Bot eine AFK-Sitzung nicht automatisch beendet, stelle sicher, dass `auto-end` nicht zu Beginn der AFK-Sitzung deaktiviert wurde.
 
 ## Gespeicherte Daten {#data-usage}
 
 Über alle Nutzer mit laufender AFK-Sitzung werden die folgenden Daten gespeichert:
 
-* Ihre eindeutige Discord Nutzer-Indentifikationsnummer.
-* Der Grund ihrer Abwensenheit, wenn dieser mit dem `reason` Parameter im [`/afk start`](#commands) Befehl festgelegt wurde.
-* Der aktuelle Nickname des Nutzers zu Beginn der AFK-Sitzung.
-* Ob die AFK-Sitzung automatisch beendet werden soll, durch den `auto-end` Parameter im [`/afk start`](#commands) festgelegt.
-* Metadata über den Eintrag (Zeitpunkt der Erstellung und der letzten Aktualisierung)
+- Ihre eindeutige Discord Nutzer-Indentifikationsnummer.
+- Der Grund ihrer Abwensenheit, wenn dieser mit dem `reason` Parameter im [`/afk start`](#commands) Befehl festgelegt wurde.
+- Der aktuelle Nickname des Nutzers zu Beginn der AFK-Sitzung.
+- Ob die AFK-Sitzung automatisch beendet werden soll, durch den `auto-end` Parameter im [`/afk start`](#commands) festgelegt.
+- Metadata über den Eintrag (Zeitpunkt der Erstellung und der letzten Aktualisierung)
 
 Mit dem Ende der AFK-Sitzung werden alle Daten gelöscht. Nutzer können ihre Sitzung mit dem Befehl [`/afk end`](#commands) beenden. Außerdem enden aktive Sitzungen automatisch,
 wenn der Nutzer eine Nachricht auf deinem Server schreibt (sofern dies nicht beim Beginn der AFK-Sitzung deaktiviert wurde).

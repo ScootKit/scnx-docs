@@ -6,9 +6,9 @@ Veröffentliche Nachrichten in Ankündigungskanälen
 
 ## Funktionen {#features}
 
-* Veröffentliche automatisch Nachrichten, die in Ankündigungskanäle geschickt werden.
-* Whiteliste oder Blackliste Kanäle vom Amtomatischen Veröffentlichen.
-* Ignoriere Nachrichten, die von Bots gesendet wurden (optional).
+- Veröffentliche automatisch Nachrichten, die in Ankündigungskanäle geschickt werden.
+- Whiteliste oder Blackliste Kanäle vom Amtomatischen Veröffentlichen.
+- Ignoriere Nachrichten, die von Bots gesendet wurden (optional).
 
 ## Einrichtung {#setup}
 
@@ -30,23 +30,23 @@ kannst du das auf deinen Anwendungsfall anpassen.
 Öffne [diese Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-publisher|config).
 
 | Feld                               | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Nachrichten-Veröffentlichung-Modus | Dies legt fest, in welchen Ankündigungskanälen das Modul neue Nachrichten veröffentlicht. Die folgenden Optionen stehen zur Auswahl: <ul><li><code>all</code>: Das ist die Standardvariante. Nachrichten aus allen Ankündigungskanälen werden automatisch veröffentlicht.</li><li><code>whitelist</code>: Wenn diese Option gesetzt ist, werden nur Nachrichten aus Kanälen, die in das Feld "whitelist" hinzugefügt wurden, automatisch veröffentlicht.</li><li><code>blacklist</code>: Wenn diese Option gesetzt ist, werden nur Nachrichten aus Kanälen veröffentlicht, die nicht in das Feld "blacklist" hinzugefügt wurden.</li></ul> |
-| Blacklist                          | *Dies funktioniert nur, wenn "Nachrichten-Veröffentlichung-Modus" auf "blacklist" gesetzt ist.*<br/>Nachrichten aus Kanälen, die in diesem Feld aufgelistet sind, werden nicht veröffentlicht.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| Whitelist                          | *Dies funktioniert nur, wenn "Nachrichten-Veröffentlichung-Modus" auf "whitelist" gesetzt ist.*<br/>Nachrichten aus Kanälen, die in diesem Feld aufgelistet sind, werden automatisch veröffentlicht.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Blacklist                          | _Dies funktioniert nur, wenn "Nachrichten-Veröffentlichung-Modus" auf "blacklist" gesetzt ist._<br/>Nachrichten aus Kanälen, die in diesem Feld aufgelistet sind, werden nicht veröffentlicht.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| Whitelist                          | _Dies funktioniert nur, wenn "Nachrichten-Veröffentlichung-Modus" auf "whitelist" gesetzt ist._<br/>Nachrichten aus Kanälen, die in diesem Feld aufgelistet sind, werden automatisch veröffentlicht.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Bots ignorieren?                   | Wenn aktiviert, werden Nachrichten von Bots nicht automatisch veröffentlicht.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## Fehlerbehebung {#troubleshooting}
 
 Wenn du denkst, dass der Bot Nachrichten nicht automatisch veröffentlicht, stelle bitte sicher dass
 
-* der aktuelle Kanal in das "Whitelist"-Feld hinzugefügt ist (wenn "Nachrichten-Veröffentlichung-Modus" in deiner [Konfiguration](#configuration) auf `whitelist`
+- der aktuelle Kanal in das "Whitelist"-Feld hinzugefügt ist (wenn "Nachrichten-Veröffentlichung-Modus" in deiner [Konfiguration](#configuration) auf `whitelist`
   gesetzt ist).
-* der aktuelle Kanal NICHT in das "Blacklist"-Feld hinzugefügt ist (wenn "Nachrichten-Veröffentlichung-Modus" in deiner [Konfiguration](#configuration) auf `blacklist`
+- der aktuelle Kanal NICHT in das "Blacklist"-Feld hinzugefügt ist (wenn "Nachrichten-Veröffentlichung-Modus" in deiner [Konfiguration](#configuration) auf `blacklist`
   gesetzt ist).
-* der Bot die Berechtigungen "Nachrichten verwalten" ("Manage messages") und "Nachrichten senden" ("Send message") auf dem aktuellen Kanal hat.
-* die Nachricht, die du veröffentlichen möchtest, nicht von einem Bot gesendet wurde (außer du hast "Bots ignorieren?"
+- der Bot die Berechtigungen "Nachrichten verwalten" ("Manage messages") und "Nachrichten senden" ("Send message") auf dem aktuellen Kanal hat.
+- die Nachricht, die du veröffentlichen möchtest, nicht von einem Bot gesendet wurde (außer du hast "Bots ignorieren?"
   in deiner [Konfiguration](#configuration) deaktiviert).
-* die Nachricht in einen Ankündignungskanal gesendet wurde und nicht bereits veröffentlicht wurde.
-* die Anzahl der in den Ankündigungskanal gesendeten Nachrichten relativ gering ist (Discord erlaubt nur eine limitierte Anzahl an
+- die Nachricht in einen Ankündignungskanal gesendet wurde und nicht bereits veröffentlicht wurde.
+- die Anzahl der in den Ankündigungskanal gesendeten Nachrichten relativ gering ist (Discord erlaubt nur eine limitierte Anzahl an
   Nachrichten, die veröffentlicht werden können).
