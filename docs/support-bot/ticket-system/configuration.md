@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Configuration
-description: Configure your Discord ticket system — categories, closing options, auto-close, reminders, hold, additional members, and advanced messaging.
+description: Configure your Discord ticket system  - categories, closing options, auto-close, reminders, hold, additional members, and advanced messaging.
 ---
 
 # Configuration
@@ -49,7 +49,7 @@ description: Configure your Discord ticket system — categories, closing option
 | Log channel | All support-relevant messages are sent to this channel.<br/><small><details><summary>Note</summary><blockquote>*You can configure other log channels for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
 | Ticket message | This message is sent into the ticket channel when a new ticket is created.<br/><small><details><summary>Note</summary><blockquote>*You can configure other messages for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
 | Allow only one ticket per user (global) | If enabled, a user can have at most one ticket open at a time.<br/><small><details><summary>Note</summary><blockquote>*You can configure other ticket limits for different ticket topics on the [Ticket topics](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) page in your dashboard. More info [here](/docs/support-bot/ticket-system/ticket-topics).*</blockquote></details></small> |
-| AI summary of ticket transcripts | If enabled, an AI-generated summary of the ticket transcript is generated after a ticket is closed.<br/><small><details><summary>Note</summary><blockquote>*This feature uses your server’s [AI credit](https://faq.scnx.app/ki-auf-scnx/) and certain data is shared with "modmail.net" (an SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
+| AI summary of ticket transcripts | If enabled, an AI-generated summary of the ticket transcript is generated after a ticket is closed.<br/><small><details><summary>Note</summary><blockquote>*This feature uses your server's [AI credit](https://faq.scnx.app/ki-auf-scnx/) and certain data is shared with "modmail.net" (an SCNX product). You can find our privacy policy [here](https://scootk.it/scnx-privacy).*</blockquote></details></small> |
 | Allow team members to rename tickets? | If enabled, team members can rename tickets using the ``/ticket rename`` command.<br/><small><details><summary>Note</summary><blockquote>*After manually changing the ticket name, it will no longer be changed automatically when transferring the ticket to another topic ([if enabled](/docs/support-bot/ticket-system/ticket-topics)).*</blockquote></details></small> |
 | Show rename button under the ticket message? | If enabled, a button to edit the ticket name is added under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Allow team members to rename tickets?" is enabled.*</blockquote></details></small> |
 | Rename button text | This text is shown on the rename button.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Show rename button under the ticket message?" is enabled.*</blockquote></details></small> |
@@ -153,8 +153,8 @@ description: Configure your Discord ticket system — categories, closing option
 | Field | Description |
 | --- | --- |
 | Allow additional ticket members? | Enables or disables the feature for the ticket system. |
-| Show “add additional users” button in the ticket message | If enabled, a button to add ticket members is added to the ticket message. |
-| Add-user button text | This text is shown on the button under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Show “add additional users” button in the ticket message" is enabled.*</blockquote></details></small> |
+| Show "add additional users" button in the ticket message | If enabled, a button to add ticket members is added to the ticket message. |
+| Add-user button text | This text is shown on the button under the ticket message.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Show "add additional users" button in the ticket message" is enabled.*</blockquote></details></small> |
 | Can the ticket owner add additional users? | If enabled, users can add additional members to their tickets. |
 | Message for selecting additional users | This message is shown when selecting a user to add. |
 | Message when a user is removed | This message is sent into the ticket channel when a user is removed. |
@@ -191,7 +191,7 @@ description: Configure your Discord ticket system — categories, closing option
 ### Features {#ticket-reminders-features}
 
 * Send an automatic reminder when a team member is inactive in their ticket.
-* Mention tickets that haven’t been handled yet in your reminder channel to draw attention to unanswered tickets.
+* Mention tickets that haven't been handled yet in your reminder channel to draw attention to unanswered tickets.
 
 
 
@@ -209,9 +209,9 @@ description: Configure your Discord ticket system — categories, closing option
 | Remind the last (or assigned) team member? | If enabled, a reminder message for the responsible team member is sent to the reminder channel. |
 | Last team member reminder period | The team member must be inactive for this period to receive a reminder.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Remind the last (or assigned) team member?" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
 | Reminder message for the last team member | This message is sent as a reminder message for inactive team members.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Remind the last (or assigned) team member?" is enabled.*</blockquote></details></small> |
-| Mention again if a ticket hasn’t been handled yet | If enabled, a reminder message is sent for unanswered tickets. |
-| Period before reminding about an unassigned ticket | A ticket must be unanswered for this period before a reminder is sent.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
-| Unassigned ticket reminder message | This message is sent as a reminder message for unanswered tickets.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn’t received a team member response yet" is enabled.*</blockquote></details></small> |
+| Mention again if a ticket hasn't been handled yet | If enabled, a reminder message is sent for unanswered tickets. |
+| Period before reminding about an unassigned ticket | A ticket must be unanswered for this period before a reminder is sent.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn't received a team member response yet" is enabled.*</blockquote></details><details><summary>Note</summary><blockquote>*Learn how to set durations in SCNX [here](https://docs.scnx.xyz/docs/custom-bot/additional-features/#durations).*</blockquote></details></small> |
+| Unassigned ticket reminder message | This message is sent as a reminder message for unanswered tickets.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if "Mention again if a ticket hasn't received a team member response yet" is enabled.*</blockquote></details></small> |
 | Push reminders inside opening hours? | If enabled, reminders are delayed until your configured [opening hours](/docs/support-bot/general/opening-hours) start.<br/><small><details><summary>Requirement</summary><blockquote>*Only available if [opening hours](/docs/support-bot/general/opening-hours) are enabled.*</blockquote></details></small> |
 
 ## Ticket hold {#ticket-hold}
@@ -220,7 +220,7 @@ description: Configure your Discord ticket system — categories, closing option
 
 * Put a ticket into hold mode to forward it to other team members or groups.
 * Inform the user with a message about enabling/disabling hold in their ticket.
-* Lock the channel so members can’t write in the channel while the ticket is on hold.
+* Lock the channel so members can't write in the channel while the ticket is on hold.
 * As soon as a ticket is on hold, [Auto close tickets](#auto-close-tickets) is disabled for that ticket.
 
 

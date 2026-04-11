@@ -8,7 +8,7 @@ description: Track your Discord support performance with detailed analytics, res
 
 ## Features {#features}
 
-* View key metrics about your support tickets in one place — directly in your SCNX dashboard.
+* View key metrics about your support tickets in one place  - directly in your SCNX dashboard.
 * Track the number of open tickets, total tickets, and average messages per ticket.
 * Monitor average close time and average initial response time to measure your team's efficiency.
 * See the most used close reasons and ticket topics visualized in pie charts.
@@ -65,3 +65,9 @@ The following commands are available if enabled in the [Staff Commands configura
 | Messages sent | The total number of messages sent by each team member across all tickets. |
 | Average response time | The average time each team member takes to respond to tickets. |
 | Tickets responded | The total number of unique tickets each team member has participated in. |
+| Average rating | The average feedback rating (1-5) for tickets assigned to this team member. Only shown if [support feedback](/docs/support-bot/modmail/support-feedback) is enabled and the team member has received ratings. |
+| Rating count | The number of feedback ratings linked to this team member. |
+
+:::info Hold time and analytics
+Time that a ticket spends on hold is automatically excluded from all response time and resolution time calculations. This means your analytics accurately reflect actual staff performance without being inflated by intentional hold periods.
+:::

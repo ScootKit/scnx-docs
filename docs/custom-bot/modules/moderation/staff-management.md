@@ -6,13 +6,13 @@ A powerful, highly customizable staff management system to track activity, moder
 
 ## Features {#features}
 
-* **Shift management** — On-duty/off-duty tracking with clock-in/clock-out, break management, configurable duty types, duty time leaderboard, and shift quotas.
-* **Leave of Absence & Reduced Activity** — Staff can request LoA or reduced activity status with an approval workflow, optional role assignment, and configurable maximum durations.
-* **Infractions & Suspensions** — Issue warnings, strikes, demotions, terminations, or mark staff as under investigation. Temporary suspensions automatically remove staff roles and assign a suspension role.
-* **Promotions** — Promote staff members with optional automatic role assignment and customizable announcements.
-* **Staff Profiles & Reviews** — Individual staff profiles with a 1-5 star rating system, review history, and reputation tracking.
-* **Activity Checks** — Periodic staff activity verification with response tracking and configurable check windows.
-* **Role-based access control** — Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
+* **Shift management**  - On-duty/off-duty tracking with clock-in/clock-out, break management, configurable duty types, duty time leaderboard, and shift quotas.
+* **Leave of Absence & Reduced Activity**  - Staff can request LoA or reduced activity status with an approval workflow, optional role assignment, and configurable maximum durations.
+* **Infractions & Suspensions**  - Issue warnings, strikes, demotions, terminations, or mark staff as under investigation. Temporary suspensions automatically remove staff roles and assign a suspension role.
+* **Promotions**  - Promote staff members with optional automatic role assignment and customizable announcements.
+* **Staff Profiles & Reviews**  - Individual staff profiles with a 1-5 star rating system, review history, and reputation tracking.
+* **Activity Checks**  - Periodic staff activity verification with response tracking and configurable check windows.
+* **Role-based access control**  - Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
 
 ## Setup {#setup}
 
@@ -20,13 +20,13 @@ A powerful, highly customizable staff management system to track activity, moder
 2. Open the [General Configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) and set the **Staff Roles**, **Supervisor Roles**, and **Management Roles** to control who can access which features.
 3. Set up a **Log Channel** where staff management events will be logged.
 4. Configure the individual feature settings as needed:
-   * [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) — Duty types, quotas, and leaderboard settings.
-   * [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) — LoA and reduced activity settings.
-   * [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) — Infraction types, suspension settings, and DM notifications.
-   * [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) — Promotion announcements and role assignment.
-   * [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) — Rating system settings.
-   * [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) — Staff profile customization.
-   * [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) — Activity verification settings.
+   * [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts)  - Duty types, quotas, and leaderboard settings.
+   * [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus)  - LoA and reduced activity settings.
+   * [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions)  - Infraction types, suspension settings, and DM notifications.
+   * [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions)  - Promotion announcements and role assignment.
+   * [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews)  - Rating system settings.
+   * [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles)  - Staff profile customization.
+   * [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks)  - Activity verification settings.
 
 ## Usage {#usage}
 
@@ -110,7 +110,7 @@ This module has 8 configuration files. Open them in your [dashboard](https://scn
   <summary>Staff members cannot use commands</summary>
   <ul>
     <li>Make sure their role is listed in the <strong>Staff Roles</strong> in the <a href="#configuration">General Configuration</a>.</li>
-    <li>Some commands require <strong>Supervisor Roles</strong> or <strong>Management Roles</strong> — check the command descriptions above.</li>
+    <li>Some commands require <strong>Supervisor Roles</strong> or <strong>Management Roles</strong>  - check the command descriptions above.</li>
   </ul>
 </details>
 
@@ -126,7 +126,7 @@ This module has 8 configuration files. Open them in your [dashboard](https://scn
   <summary>LoA requests are not being processed</summary>
   <ul>
     <li>LoA requests need to be approved by a user with a <strong>Supervisor Role</strong> or higher.</li>
-    <li>Check the Status configuration for maximum duration limits — requests exceeding the limit may be automatically rejected.</li>
+    <li>Check the Status configuration for maximum duration limits  - requests exceeding the limit may be automatically rejected.</li>
   </ul>
 </details>
 

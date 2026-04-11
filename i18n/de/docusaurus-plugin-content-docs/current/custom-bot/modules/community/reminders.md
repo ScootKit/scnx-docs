@@ -10,7 +10,7 @@ Gibt Nutzern die Möglichkeit, sich selbst Erinnerungen zu setzen – entweder �
 * Erinnerungen können entweder in dem Kanal, in dem der Befehl verwendet wurde, oder per Direktnachricht zugestellt werden.
 * Schlummer-Buttons ermöglichen es Benutzern, eine Erinnerung um 10 Minuten, 30 Minuten, 1 Stunde oder 1 Tag zu verschieben.
 * Erinnerungen bleiben über Bot-Neustarts hinweg bestehen – anstehende Erinnerungen werden beim Start automatisch neu geplant.
-* Unterstützt flexible Zeitangaben (z. B. „2h30m“, „1d“, „45m“).
+* Unterstützt flexible Zeitangaben (z. B. „2h30m", „1d", „45m").
 
 ## Einrichtung {#setup}
 
@@ -21,7 +21,7 @@ Gibt Nutzern die Möglichkeit, sich selbst Erinnerungen zu setzen – entweder �
 
 Benutzer können eine Erinnerung über `/remind-me` einstellen:
 
-* Gib mithilfe des Parameters `in` an, wann du erinnert werden möchtest. Verwende dabei ein [unterstütztes Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d12h“).
+* Gib mithilfe des Parameters `in` an, wann du erinnert werden möchtest. Verwende dabei ein [unterstütztes Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h", „30m", „1d12h").
 * Gib die Erinnerungsnachricht im Parameter `what` an.
 * Setze optional `dm` auf `true`, um die Erinnerung per Direktnachricht anstatt im aktuellen Kanal zu erhalten.
 
@@ -35,7 +35,7 @@ Wenn die Erinnerung ausgelöst wird, sendet der Bot die konfigurierte Benachrich
 
 | Befehl | Beschreibung |
 |---------|-------------|
-| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in` akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h“, „30m“, „1d“). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
+| `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in` akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h", „30m", „1d"). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
 
 ## Konfiguration {#configuration}
 
@@ -63,7 +63,7 @@ Folgende Daten werden zu jeder Erinnerung gespeichert:
 * Ein automatisch hochzählender, eindeutiger Bezeichner
 * Die Discord-Benutzer-ID des Benutzers, der die Erinnerung erstellt hat.
 * Der Erinnerungstext
-* Die Kanal-ID, an die die Erinnerung gesendet werden soll (oder „DM“ für Direktnachrichten)
+* Die Kanal-ID, an die die Erinnerung gesendet werden soll (oder „DM" für Direktnachrichten)
 * Der geplante Termin und die Uhrzeit für die Erinnerung
 * Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 

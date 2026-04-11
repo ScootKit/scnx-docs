@@ -91,7 +91,7 @@ default" personality. You are using this feature at your own risk.
 
 ### Custom System Prompt & Strict Moderation
 
-If set, this text replaces the Personality setting as the AI's system prompt. Maximum 1000 characters — longer text is
+If set, this text replaces the Personality setting as the AI's system prompt. Maximum 1000 characters  - longer text is
 truncated automatically. A safety clause is always appended and cannot be removed. You are fully responsible for the
 AI's behaviour when using a custom prompt.
 

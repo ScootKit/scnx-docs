@@ -67,4 +67,4 @@ questions you might have.
   technical knowledge about SCNX to
   receive recognition and perks based as an "SCNX Helper" on our [Discord server](https://scootk.it/dc).
 * ScootKit RSS Hub: System designed to handle traffic and notifications for CustomBot Notification-Modules.
-* and more… :wink:
+* and more... :wink:

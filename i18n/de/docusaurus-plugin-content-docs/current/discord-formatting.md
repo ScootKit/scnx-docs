@@ -10,7 +10,7 @@ Diese Formatierungsoptionen stellen verschiedene Stile für Nachrichten dar, die
 | **Kursiv** | `*Text*` oder `_Text_` | *Text* |
 | **Fett** | `**Text**` | **Text** |
 | **Fett & kursiv** | `***Text***` | ***Text*** |
-| **Unterstrichen** | `__Text__` | T͟e͟x͟t | 
+| **Unterstrichen** | `__Text__` | T͟e͟x͟t |
 | **Durchgestrichen** | `~~Text~~` | ~~Text~~ |
 | **Spoiler** | Siehe Screenshot | Siehe Screenshot |
 
@@ -33,13 +33,13 @@ Wichtig: Nach den Zeichen `#` oder `-#` muss immer ein Leerzeichen folgen, damit
 ## Listen & Zitate
 Mit diesen Formatierungsoptionen kannst du deinen Text mithilfe von Listen oder Zitaten strukturieren, wodurch Nachrichten übersichtlicher und leichter verständlich werden. Listen eignen sich ideal, um Informationen klar zu gliedern, während Zitate verwendet werden können, um Aussagen hervorzuheben, auf andere Nachrichten zu reagieren oder Inhalte zu referenzieren. Es gibt viele verschiedene Möglichkeiten, Texte als Liste oder Zitat darzustellen, sodass du deine Nachrichten flexibel und strukturiert formatieren kannst.
 
-* **Aufzählungen:**  
-	- `- Punkt 1`  
+* **Aufzählungen:**
+	- `- Punkt 1`
 	* `* Punkt 2`
-* **Nummerierte Listen:**  
+* **Nummerierte Listen:**
 	- `1. Erster Punkt`
     - `2. Zweiter Punkt`
-* **Zitate:**  
+* **Zitate:**
 	- `> Einzeiliges Zitat`
 	- ```
 	  >>> Mehrzeiliges Zitat
@@ -54,7 +54,7 @@ Mit diesen Formatierungsoptionen kannst du das Verhalten und das Erscheinungsbil
 
 * **Maskierte Links:** `[Google](https://www.google.com)`
 * **Inline-Code:** `` `Befehl` ``
-* **Codeblock:**  
+* **Codeblock:**
 	```
 	```js
     console.log("Mehrzeiliger Code oder Text")
@@ -71,9 +71,9 @@ Dynamische Timestamps in Discord ermöglichen es, Zeiten und Daten anzuzeigen, d
 Timestamps verwenden die **UNIX-Zeit**, ein System, das die Anzahl der Sekunden seit dem **1. Januar 1970 um 00:00:00 UTC** (bekannt als Unix-Epoche) zählt. UNIX-Zeit wird häufig in der Programmierung, in Datenbanken, APIs und Server-Logs verwendet, da sie eine einfache, konsistente und zeitzonenunabhängige Möglichkeit bietet, Zeitpunkte darzustellen.
 
 ### Beispiele für Discord-Timestamp-Formate:
-* `<t:1737835851:t>` → Zeit (kurzes Format)  
-* `<t:1737835851:D>` → Datum (langes Format)  
-* `<t:1737835851:R>` → Relative Zeit (z. B. „vor 5 Minuten“)
+* `<t:1737835851:t>` → Zeit (kurzes Format)
+* `<t:1737835851:D>` → Datum (langes Format)
+* `<t:1737835851:R>` → Relative Zeit (z. B. „vor 5 Minuten")
 
 Du kannst Timestamps genau nach deinen Wünschen erstellen und anpassen mit dem [Discord Timestamp Generator](https://scnx.app/user/tools?page=timestamp-generator).
 

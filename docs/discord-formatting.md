@@ -11,7 +11,7 @@ These formatting options represent different styles for messages that you can us
 | **Italic** | `*Text*` or `_Text_` | *Text* |
 | **Bold** | `**Text**` | **Text** |
 | **Bold Italic** | `***Text***` | ***Text*** |
-| **Underline** | `__Text__` | T͟e͟x͟t | 
+| **Underline** | `__Text__` | T͟e͟x͟t |
 | **Strikethrough** | `~~Text~~` | ~~Text~~ |
 | **Spoiler** | See screenshot | See screenshot |
 
@@ -34,13 +34,13 @@ Important: There must be a space after the `#` or `-#` characters for the format
 ## Lists & Quotes
 With these formatting options, you can structure your text using lists or quotes, making your messages clearer and easier to read. Lists help organize information into concise points, while quotes are useful for highlighting references, replies, or important statements. There are many different ways to create lists and quote text, allowing you to format your messages in a clear and well-structured manner.
 
-* **Bullet lists:**  
-  - `- Item 1`  
+* **Bullet lists:**
+  - `- Item 1`
   * `* Item 2`
-* **Numbered lists:**  
+* **Numbered lists:**
   - `1. First item`
   - `2. Second item`
-* **Quotes:**  
+* **Quotes:**
   - `> Single-line quote`
   - ```
     >>> Multi-line quote
@@ -55,7 +55,7 @@ With these formatting options, you can change the behavior and appearance of a m
 
 * **Masked links:** `[Google](https://www.google.com)`
 * **Inline code:** `` `command` ``
-* **Code block:**  
+* **Code block:**
   ```
   ```js
   console.log("Code block")
@@ -67,14 +67,14 @@ When using code blocks, it is possible to specify the programming language used 
 ![A screenshot showing examples of masked links, inline code, and code blocks](@site/docs/assets/discord-formatting/en/types2.png)
 
 ## Timestamps
-Dynamic timestamps in Discord allow you to display times and dates that automatically adapt to the user’s time zone, making messages more informative and context-aware. These timestamps are especially useful for events, deadlines, reminders, or any message where the timing needs to be clear for users across different regions. By using dynamic timestamps, you can improve clarity and engagement in your Discord server.
+Dynamic timestamps in Discord allow you to display times and dates that automatically adapt to the user's time zone, making messages more informative and context-aware. These timestamps are especially useful for events, deadlines, reminders, or any message where the timing needs to be clear for users across different regions. By using dynamic timestamps, you can improve clarity and engagement in your Discord server.
 
 Timestamps use **UNIX time**, which is a system that counts the number of seconds that have elapsed since **January 1, 1970 at 00:00:00 UTC** (also known as the Unix epoch). UNIX time is widely used in programming, databases, APIs, and server logs because it provides a simple, consistent, and timezone-independent way to represent points in time.
 
 ### Examples of Discord Timestamp Formatting:
 * `<t:1737835851:t>` → Time (short format)
 * `<t:1737835851:D>` → Date (long format)
-* `<t:1737835851:R>` → Relative time (e.g., “5 minutes ago”)
+* `<t:1737835851:R>` → Relative time (e.g., "5 minutes ago")
 
 You can customize and generate timestamps exactly how you want using the [Discord Timestamp Generator](https://scnx.app/user/tools?page=timestamp-generator).
 

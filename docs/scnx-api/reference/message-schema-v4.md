@@ -21,7 +21,7 @@ make up the message).
 }
 ```
 
-That's a complete V4 message — a single line of text with bold formatting. Everything you build is composed from the
+That's a complete V4 message  - a single line of text with bold formatting. Everything you build is composed from the
 component types listed below.
 
 ---
@@ -54,7 +54,7 @@ Message (top level)
 ├── Separator
 ├── Media Gallery
 ├── Action Row
-│   ├── up to 5 Buttons  — OR —
+│   ├── up to 5 Buttons   - OR  -
 │   └── exactly 1 String Select
 ├── Section
 │   ├── 1–3 Text Displays
@@ -208,7 +208,7 @@ A small image that can only be used as an accessory inside a [Section](#section)
 
 ### Container {#container}
 
-A card with a colored left border that visually groups components together — similar to an embed in the V3 schema. Use
+A card with a colored left border that visually groups components together  - similar to an embed in the V3 schema. Use
 containers to create distinct visual sections in your message.
 
 ```json
@@ -249,7 +249,7 @@ colors: blurple = `5793266`, green = `5763719`, red = `15548997`, yellow = `1670
 ### Action Row {#action-row}
 
 A horizontal row that holds interactive elements. An action row contains **either** up to 5 buttons **or** exactly 1
-string select — never both.
+string select  - never both.
 
 ```json
 {
@@ -285,7 +285,7 @@ string select — never both.
 
 ### Button {#button}
 
-A clickable button. The button's behavior is defined by the `scnx_action` field — this tells SCNX what should happen
+A clickable button. The button's behavior is defined by the `scnx_action` field  - this tells SCNX what should happen
 when someone clicks it.
 
 #### Link Button {#link-button}
@@ -323,7 +323,7 @@ A non-interactive button that appears greyed out. Useful for labels or placehold
 
 #### Self-Role Button {#self-role-button}
 
-Assigns, removes, or toggles a Discord role when clicked. **Guild-specific** — not recommended for shared content (
+Assigns, removes, or toggles a Discord role when clicked. **Guild-specific**  - not recommended for shared content (
 see [Shared Content Notes](#shared-content-notes)).
 
 ```json
@@ -348,7 +348,7 @@ see [Shared Content Notes](#shared-content-notes)).
 
 #### Custom Command Button {#custom-command-button}
 
-Triggers a custom command when clicked. **Guild-specific** — not recommended for shared content.
+Triggers a custom command when clicked. **Guild-specific**  - not recommended for shared content.
 
 ```json
 {
@@ -386,7 +386,7 @@ A dropdown menu. Like buttons, behavior is controlled by `scnx_action`.
 
 #### Self-Role Dropdown {#self-role-dropdown}
 
-Each option assigns a Discord role. **Guild-specific** — not recommended for shared content.
+Each option assigns a Discord role. **Guild-specific**  - not recommended for shared content.
 
 ```json
 {
@@ -422,7 +422,7 @@ can select at once.
 
 #### Custom Command Dropdown {#custom-command-dropdown}
 
-Each option triggers a custom command. **Guild-specific** — not recommended for shared content.
+Each option triggers a custom command. **Guild-specific**  - not recommended for shared content.
 
 ```json
 {
@@ -479,10 +479,10 @@ will not work:
 | Text Display, Separator, Media Gallery, Section, Container | Yes                                  |
 | Link Button                                                | Yes                                  |
 | Disabled Button                                            | Yes                                  |
-| Self-Role Button                                           | No — role IDs are server-specific    |
-| Custom Command Button                                      | No — command IDs are server-specific |
-| Self-Role Dropdown                                         | No — role IDs are server-specific    |
-| Custom Command Dropdown                                    | No — command IDs are server-specific |
+| Self-Role Button                                           | No  - role IDs are server-specific    |
+| Custom Command Button                                      | No  - command IDs are server-specific |
+| Self-Role Dropdown                                         | No  - role IDs are server-specific    |
+| Custom Command Dropdown                                    | No  - command IDs are server-specific |
 
 Stick to **text, images, containers, and link buttons** for content you plan to share.
 

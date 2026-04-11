@@ -1,7 +1,7 @@
 # Global Parameters
 
 :::info
-These parameters are **not** displayed in the dashboard preview and may appear as red (invalid) parameters in the editor. This is expected — they are replaced at runtime when the bot sends the message, so the dashboard will show the raw placeholder (e.g. `%guildName%`) instead of the actual value.
+These parameters are **not** displayed in the dashboard preview and may appear as red (invalid) parameters in the editor. This is expected  - they are replaced at runtime when the bot sends the message, so the dashboard will show the raw placeholder (e.g. `%guildName%`) instead of the actual value.
 :::
 
 Global parameters can be used in any text field of any embed type or message configuration. They are automatically replaced before the message is sent.

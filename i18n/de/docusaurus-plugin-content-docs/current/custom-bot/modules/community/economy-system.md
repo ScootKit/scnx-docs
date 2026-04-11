@@ -30,7 +30,7 @@ Nutzer können über den Befehl `/economy` mit dem Wirtschaftssystem interagiere
 * **Währung verdienen**: Nutze `/economy work`, `/economy crime`, `/economy daily` oder `/economy weekly`, um Geld zu verdienen. Jeder Befehl verfügt über eine eigene, konfigurierbare Abklingzeit (Cooldown).
 * **Nutzer ausrauben**: Nutze `/economy rob`, um einen Prozentsatz des Guthabens eines anderen Nutzers zu stehlen (begrenzt auf ein konfigurierbares Maximum).
 * **Guthaben prüfen**: Nutze `/economy balance`, um dein eigenes Guthaben oder das eines anderen Nutzers einzusehen (Barbestand, Bank und Gesamtguthaben).
-* **Bankwesen**: Nutze `/economy deposit` und `/economy withdraw`, um Beträge zwischen deinem Barbestand und der Bank zu verschieben. Verwende „all“ als Betrag, um dein gesamtes Guthaben zu transferieren.
+* **Bankwesen**: Nutze `/economy deposit` und `/economy withdraw`, um Beträge zwischen deinem Barbestand und der Bank zu verschieben. Verwende „all" als Betrag, um dein gesamtes Guthaben zu transferieren.
 * **Message-Drops**: Schalte Benachrichtigungen für Message-Drops mit `/economy msg_drop_msg enable` oder `/economy msg_drop_msg disable` ein oder aus.
 
 Shop-Verwalter und Administratoren können den Shop verwalten:
@@ -54,8 +54,8 @@ Falls Cheats aktiviert sind, können Administratoren `/economy add`, `/economy r
 | `/economy daily` | Sammle deine tägliche Währungsbelohnung ein. Kann einmal alle 24 Stunden genutzt werden. |
 | `/economy weekly` | Sammle deine wöchentliche Währungsbelohnung ein. Kann einmal alle 7 Tage genutzt werden. |
 | `/economy balance [user:<User>]` | Sieh dir dein eigenes Guthaben oder das eines anderen Nutzers an (Barbestand, Bank und Gesamtguthaben). |
-| `/economy deposit amount:<Text>` | Zahle Währung von deinem Barbestand auf dein Bankkonto ein. Nutze „all“, um alles einzuzahlen. |
-| `/economy withdraw amount:<Text>` | Hebe Währung von deinem Bankkonto auf deinen Barbestand ab. Nutze „all“, um alles abzuheben. |
+| `/economy deposit amount:<Text>` | Zahle Währung von deinem Barbestand auf dein Bankkonto ein. Nutze „all", um alles einzuzahlen. |
+| `/economy withdraw amount:<Text>` | Hebe Währung von deinem Bankkonto auf deinen Barbestand ab. Nutze „all", um alles abzuheben. |
 | `/economy msg_drop_msg enable` | Aktiviere Benachrichtigungen über Nachrichten-Drops für dich selbst. |
 | `/economy msg_drop_msg disable` | Deaktiviere Benachrichtigungen über Nachrichten-Drops für dich selbst (du erhältst weiterhin Drops, nur ohne Benachrichtigungen). |
 | `/economy add user:<User> amount:<Integer>` | (Nur Administratoren) Füge dem Guthaben eines Nutzers Währung hinzu. Erfordert aktivierte Cheats. |
@@ -157,7 +157,7 @@ In dieser Konfigurationsdatei kannst du die Nachrichten anpassen, die von diesem
 <details>
   <summary>Admin-Befehle sind nicht verfügbar</summary>
 
- Admin-Befehle (add, remove, set, destroy) sind nur verfügbar, wenn „Cheats erlauben“ in der Modulkonfiguration aktiviert ist. Aktiviere diese Einstellung, wenn Administratoren die Kontostände der Benutzer verwalten sollen.
+ Admin-Befehle (add, remove, set, destroy) sind nur verfügbar, wenn „Cheats erlauben" in der Modulkonfiguration aktiviert ist. Aktiviere diese Einstellung, wenn Administratoren die Kontostände der Benutzer verwalten sollen.
 </details>
 
 ## Gespeicherte Daten {#data-usage}

@@ -53,7 +53,7 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 </details>
 
 <details>
-	<summary>Mitglieder / Inhalt wird abgeschnitten (ersetzt mit "…")</summary>
+	<summary>Mitglieder / Inhalt wird abgeschnitten (ersetzt mit "...")</summary>
 
 	Das ist eine Begrenzung von Discord für die maximale Länge von Embeds. Du kannst folgendes versuchen:
 	<ul>

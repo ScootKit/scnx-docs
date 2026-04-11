@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Support Feedback
-description: Collect star ratings and custom feedback from users after Modmail tickets are closed — with optional anonymization.
+description: Collect star ratings and custom feedback from users after Modmail tickets are closed  - with optional anonymization.
 ---
 
 # Support Feedback
@@ -19,7 +19,7 @@ description: Collect star ratings and custom feedback from users after Modmail t
 
 * Visit the [Support Feedback](https://scnx.app/glink?page=support-system/modmail/support-feedback) page in your dashboard.
 * <a href="#main-configuration">Configure</a> the available options.
-* Create a new feedback question by clicking “Edit questions” in the <a href="#main-configuration">main configuration</a> and then clicking “Add field”.
+* Create a new feedback question by clicking "Edit questions" in the <a href="#main-configuration">main configuration</a> and then clicking "Add field".
 * <a href="#manage-feedback-questions">Configure</a> the available options for the respective feedback question.
 
 ## Configuration {#configuration}
@@ -34,9 +34,9 @@ description: Collect star ratings and custom feedback from users after Modmail t
 | Edit feedback questions | These questions are shown in the rating dialog.<br/><small><details><summary>Note</summary><blockquote>*More information on configuring feedback questions can be found [here](#manage-feedback-questions).*</blockquote></details></small> |
 | Anonymize feedback | If enabled, your bot will not link ratings to user IDs. |
 | Send answers to a channel | If enabled, ratings are sent to a channel. Otherwise, you can find ratings from the last 30 days in your [dashboard](https://scnx.app/glink?page=support-system/modmail/support-feedback). |
-| Channel to send answers to | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>Your bot will send submitted ratings to this channel. |
-| Customize notification message? | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” is enabled.*</blockquote></details></small>If enabled, you can customize the notification message for new ratings. |
-| Feedback notification message | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if “Send answers to a channel” and “Customize notification message?” are enabled.*</blockquote></details></small>This message will be sent when a new rating is submitted. |
+| Channel to send answers to | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Send answers to a channel" is enabled.*</blockquote></details></small>Your bot will send submitted ratings to this channel. |
+| Customize notification message? | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Send answers to a channel" is enabled.*</blockquote></details></small>If enabled, you can customize the notification message for new ratings. |
+| Feedback notification message | <br/><small><details><summary>Prerequisite</summary><blockquote>*Only available if "Send answers to a channel" and "Customize notification message?" are enabled.*</blockquote></details></small>This message will be sent when a new rating is submitted. |
 
 ### Manage feedback questions {#manage-feedback-questions}
 

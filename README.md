@@ -1,6 +1,6 @@
 # SCNX Documentation
 
-The official documentation for [SCNX](https://scnx.xyz) — view it live at [docs.scnx.xyz](https://docs.scnx.xyz).
+The official documentation for [SCNX](https://scnx.xyz)  - view it live at [docs.scnx.xyz](https://docs.scnx.xyz).
 
 > **This project is not open source.** The source code is shared publicly to allow community contributions (typo fixes, translation improvements, new documentation pages), but all rights are reserved by ScootKit. You may not copy, redistribute, or use this code to build or host your own version of the documentation. Due to proprietary dependencies (FontAwesome Pro, internal API integrations), the project cannot be built on external machines without a license.
 
@@ -67,10 +67,10 @@ yarn fix-tables
 
 Execute scripts from the `bin/` directory:
 
-- `node download-api-responses.js` — Cache SCNX API data to `api-responses.json` (required for other scripts and offline builds)
-- `node generate-progress.js [orgID]` — View module translation progress (optionally filter by org)
-- `node generate-docs-file.js <moduleName>` — Generate a docs template for a Custom Bot module
-- `node generate-missing-files.js` — Generate placeholder files for undocumented modules
+- `node download-api-responses.js`  - Cache SCNX API data to `api-responses.json` (required for other scripts and offline builds)
+- `node generate-progress.js [orgID]`  - View module translation progress (optionally filter by org)
+- `node generate-docs-file.js <moduleName>`  - Generate a docs template for a Custom Bot module
+- `node generate-missing-files.js`  - Generate placeholder files for undocumented modules
 
 ## Contributing
 
@@ -97,4 +97,4 @@ Contributions are welcome! Please:
 
 ---
 
-&copy; ScootKit UG (haftungsbeschränkt), 2026 — All rights reserved. This project is proprietary software. See above for contribution guidelines.
+&copy; ScootKit UG (haftungsbeschränkt), 2026  - All rights reserved. This project is proprietary software. See above for contribution guidelines.

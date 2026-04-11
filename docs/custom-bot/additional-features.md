@@ -74,4 +74,4 @@ Here are a few examples:
 * Three weeks, two days and thirty minutes: `3w 2d 30m`
 * Seven days, nine hours: `7d 9h` or `1w 9h`
 
-You can combine these units as you like, but make sure to leave an empty space between units. 
+You can combine these units as you like, but make sure to leave an empty space between units.

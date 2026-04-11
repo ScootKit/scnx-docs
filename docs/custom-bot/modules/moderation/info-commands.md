@@ -32,7 +32,7 @@ Users and administrators can use any of the [slash commands](#commands) to view 
 
 <SlashCommandExplanation />
 
-| Command                             | Description                                                                                                                                               |                                                                                                                                                               
+| Command                             | Description                                                                                                                                               |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `/info server`                      | Shows information about the server.                                                                                                                       |
 | `/info channel [channel:<Channel>]` | Shows information about a channel. If no value has been set in the "channel" parameter field, the current channel will be used.                           |
@@ -44,7 +44,7 @@ Users and administrators can use any of the [slash commands](#commands) to view 
 This module allows basic configuration of some visible field names in
 its [configuration file](https://scnx.app/glink?page=bot/configuration?file=info-commands|strings).
 
-| Field             | Description                                                                                                  |                                                                                                                                                
+| Field             | Description                                                                                                  |
 |-------------------|--------------------------------------------------------------------------------------------------------------|
 | serverinfo        | This field allows the customization of names used in the output of the [`/info server`](#commands) command.  |
 | userinfo          | This field allows the customization of names used in the output of the [`/info user`](#commands) command.    |

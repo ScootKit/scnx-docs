@@ -13,7 +13,7 @@ Before you can copy IDs, you need to enable the Developer Mode in your Discord c
 ![A screenshot of the Discord user settings page "Advanced"](@site/docs/assets/discord-ids/en/activatedevelopermode.png)
 
 ## 2. Copying IDs
-Every entity on Discord — whether it's a user, a server, or a single message — has a unique ID. Once Developer Mode is active, you can right-click almost anything to retrieve it. IDs are used by bots to identify entities because IDs don't change—even if the name of the entity has changed.
+Every entity on Discord  - whether it's a user, a server, or a single message  - has a unique ID. Once Developer Mode is active, you can right-click almost anything to retrieve it. IDs are used by bots to identify entities because IDs don't change -even if the name of the entity has changed.
 
 ### Copy User and Bot IDs
 1. Right-click on the user's name or avatar.

@@ -98,7 +98,7 @@ Here, select your desired plan. After that, please select your payment terms. On
 at a discounted price.
 
 Your next steps will be different, depending on what Payment terms you've selected. Please follow the instructions in
-the dashboard and return to this page if you have any questions or concerns — we'll do our best to cover them in
+the dashboard and return to this page if you have any questions or concerns  - we'll do our best to cover them in
 our [Frequently asked questions](#faq) section.
 
 ## Add additional servers {#additional-servers}

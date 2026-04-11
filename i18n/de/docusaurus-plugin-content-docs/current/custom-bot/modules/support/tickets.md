@@ -11,7 +11,7 @@ Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 
 ## Funktionen {#features}
 
-* Nutzer können ein Ticket öffnen, indem sie einen Knopf unter einer einstellbaren Nachricht klicken. 
+* Nutzer können ein Ticket öffnen, indem sie einen Knopf unter einer einstellbaren Nachricht klicken.
 * Erstelle mehrere Ticket-Themen mit unabhängiger Konfiguration.
 * Lasse automatisch Ticket-Protokoll erstellen.
 
@@ -24,7 +24,7 @@ Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 
 ## Nutzung {#usage}
 
-* Nutzer können ein neues Ticket öffnen, indem sie auf einen Knopf unter der Ticket-Erstellungs-Nachricht klicken. 
+* Nutzer können ein neues Ticket öffnen, indem sie auf einen Knopf unter der Ticket-Erstellungs-Nachricht klicken.
 * Wenn ein Ticket erstellt wird, erstellt der Bot einen neuen Kanal in der eingestellten Kategorie mit den eingestellten Berechtigungen und Erwähnungen.
 * Teammitglieder und der Nutzer, der das Ticket erstellt hat, kann das Ticket mit dem Knopf "Ticket schließen" unter der ersten (und angepinnten) Nachricht des Kanals schließen.
 * Nachdem das Ticket geschlossen wurde, wird der Bot ein Protokoll mit allen gesendeten Nachrichten erstellen. Dies wird in den eingestellten Log-Kanal und an den Nutzer gesendet (falls aktiviert).
@@ -53,8 +53,8 @@ Es ist nicht möglich, mehrere Ticket-Kategorien in einer Ticket-Erstellungs-Nac
 
 Falls bei dir Fehler auftreten, stelle bitte sicher, dass
 
-* der Bot genügend Berechtigungen hat, um Kanäle zu erstellen, zu löschen und zu verwalten. 
-* deine [Kategorie-Konfiguration](#configuration) ist gültig und du hast keine leeren Kategorien hinzugefügt hast. 
+* der Bot genügend Berechtigungen hat, um Kanäle zu erstellen, zu löschen und zu verwalten.
+* deine [Kategorie-Konfiguration](#configuration) ist gültig und du hast keine leeren Kategorien hinzugefügt hast.
 * dein Server nicht die maximal 500 zugelassene Kanäle hat (Discord Limit).
 * der Ticket-Log-Kanal richtig eingestellt ist und der Bot hat die Berechtigung zum Senden von Nachrichten hat.
 * der Inhalt des Ticketerstellungs- und Ticketschließungs-Knopfes korrekt ist.

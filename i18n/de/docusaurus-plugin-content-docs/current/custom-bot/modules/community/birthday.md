@@ -34,7 +34,7 @@ Falls in der [Konfiguration](#configuration) aktiviert, können Administratoren 
 
 * **Festlegen** des Nutzer-Geburtstags
 * **Entferne** den Geburtstag eines Nutzers.
-* **Sperre** einen Geburtstag — verhindert, dass der Nutzer diesen selbst bearbeiten oder löschen kann.
+* **Sperre** einen Geburtstag  - verhindert, dass der Nutzer diesen selbst bearbeiten oder löschen kann.
 * **Entsperre** einen zuvor gesperrten Geburtstag.
 
 Gesperrte Geburtstage werden mit einem Schloss-Symbol angezeigt, wenn Nutzer ihren eigenen Geburtstags-Status abrufen.
@@ -84,7 +84,7 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
   <summary>Das Geburtstags-Embed wird nicht angezeigt.</summary>
   <ul>
     <li>Stelle sicher, dass der konfigurierte Geburtstags-Kanal existiert und der Bot über die Berechtigungen <code>Kanal anzeigen</code>, <code>Nachrichten senden</code> und <code>Links einbetten</code> verfügt.</li>
-    <li>Stelle sicher, dass „Birthday-Embed aktiviert“ in der Konfiguration eingeschaltet ist.</li>
+    <li>Stelle sicher, dass „Birthday-Embed aktiviert" in der Konfiguration eingeschaltet ist.</li>
   </ul>
 </details>
 

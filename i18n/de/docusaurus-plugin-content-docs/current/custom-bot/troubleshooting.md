@@ -9,10 +9,10 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
 <details>
   <summary>Der Bot wird auf Discord nicht als online angezeigt</summary>
   <ul>
-    <li>Öffne dein <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status“-Panel</a> und prüfe, ob der Bot läuft.</li>
-    <li>Sollte der Bot offline sein, klicke auf „Bot starten“, damit er wieder erreichbar ist.</li>
+    <li>Öffne dein <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status"-Panel</a> und prüfe, ob der Bot läuft.</li>
+    <li>Sollte der Bot offline sein, klicke auf „Bot starten", damit er wieder erreichbar ist.</li>
     <li>Wird dein Bot als online angezeigt, ist aber in Discord noch offline? Hab ein wenig Geduld – es kann bis zu 5 Minuten dauern, bis Discord den Status übernimmt.</li>
-    <li>Versuche, den Bot über das „Bot-Status“-Panel neu zu starten.</li>
+    <li>Versuche, den Bot über das „Bot-Status"-Panel neu zu starten.</li>
     <li>Prüfe den Fehler-Log in deinem Dashboard auf Fehler beim Starten des Bots.</li>
   </ul>
 </details>
@@ -22,11 +22,11 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
 <details>
   <summary>Der Bot reagiert auf keine Slash-Befehle</summary>
   <ul>
-    <li>Vergewissere dich, dass der Bot-Status auf „Online“ steht. (siehe <a href="#bot-offline">Der Bot wird auf Discord nicht als online angezeigt</a>).</li>
+    <li>Vergewissere dich, dass der Bot-Status auf „Online" steht. (siehe <a href="#bot-offline">Der Bot wird auf Discord nicht als online angezeigt</a>).</li>
     <li>Stelle sicher, dass der Bot mit den korrekten Berechtigungen auf deinen Server eingeladen wurde. Lade den Bot erneut über dein <a href="https://scnx.app/de/glink?page=bot/manage">Dashboard</a> ein, falls benötigt.</li>
     <li>Stelle sicher, dass der Bot über die <code>Kanäle ansehen</code> und <code>Nachrichten senden</code> Berechtigungen im entsprechenden Kanal verfügt.</li>
     <li>Prüfe in deinen Discord-Servereinstellungen, ob der Befehl auf bestimmte Rollen oder Kanäle beschränkt ist (Servereinstellungen > Integrations).</li>
-    <li>Versuche, die Konfiguration des Bots über das „Bot-Status“-Panel neu zu laden.</li>
+    <li>Versuche, die Konfiguration des Bots über das „Bot-Status"-Panel neu zu laden.</li>
   </ul>
 </details>
 
@@ -47,7 +47,7 @@ Diese Anleitung hilft dir, häufige Probleme mit deinem SCNX-Eigenem-Bot zu lös
 
 ### Missing Access / Missing Permissions {#missing-access}
 
-Viele Probleme mit dem Eigenen-Bot werden durch fehlende Berechtigungen verursacht. Wenn der Bot nicht wie erwartet funktioniert, zeigt der Fehler-Log in deinem Dashboard oft Fehler wie „Missing Access“ oder „Missing Permissions“ an.
+Viele Probleme mit dem Eigenen-Bot werden durch fehlende Berechtigungen verursacht. Wenn der Bot nicht wie erwartet funktioniert, zeigt der Fehler-Log in deinem Dashboard oft Fehler wie „Missing Access" oder „Missing Permissions" an.
 
 Hier findest du die häufigsten Probleme mit Berechtigungen und deren Lösungen:
 
@@ -57,7 +57,7 @@ Hier findest du die häufigsten Probleme mit Berechtigungen und deren Lösungen:
   Der Bot hat keinen Zugriff auf den Kanal, in dem er agieren soll. Um dies zu beheben:
   <ol>
     <li>Öffne die Kanaleinstellungen in Discord.</li>
-    <li>Klicke auf den Bereich „Berechtigungen“</li>
+    <li>Klicke auf den Bereich „Berechtigungen"</li>
     <li>Füge die Rolle des Bots (oder den Bot selbst) hinzu und gewähre die <code>Kanal anzeigen</code> Berechtigung.</li>
     <li>Wenn der Kanal einer Kategorie untergeordnet ist, vergewissere dich, dass der Bot auch auf die entsprechende Kategorie Zugriff hat.</li>
   </ol>
@@ -121,7 +121,7 @@ Der Bot kann den Nicknamen des Server-Eigentümers nicht ändern. Dies ist eine 
 <details>
   <summary>Änderungen an der Konfiguration werden nicht übernommen</summary>
   <ul>
-    <li>Nachdem du die Einstellungen im Dashboard geändert hast, musst du die Konfiguration über das <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status“-Panel</a> neuladen.</li>
+    <li>Nachdem du die Einstellungen im Dashboard geändert hast, musst du die Konfiguration über das <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status"-Panel</a> neuladen.</li>
     <li>Einige Änderungen (wie das Aktivieren neuer Module) erfordern möglicherweise einen vollständigen Neustart des Bots.</li>
     <li>Überprüfe den Fehler-Log auf konfigurationsbezogene Fehler.</li>
   </ul>
@@ -143,7 +143,7 @@ Hier findest du häufige Fehler, die du im Fehler-Log deines Bots finden kannst,
 
 | Fehler | Bedeutung | Lösung |
 |-------|---------|----------|
-| `Missing Access` | Der Bot hat keinen Zugriff auf den Kanal. | Gewähre dem Bot im betroffenen Kanal die Berechtigung „Kanal anzeigen“. |
+| `Missing Access` | Der Bot hat keinen Zugriff auf den Kanal. | Gewähre dem Bot im betroffenen Kanal die Berechtigung „Kanal anzeigen". |
 | `Missing Permissions` | Dem Bot fehlt eine erforderliche Berechtigung, für eine Handlung | Überprüfe, welche Berechtigung fehlt, und teile sie dem Bot zu. |
 | `Unknown Channel` | Der in den Einstellungen hinterlegte Kanal wurde gelöscht. | Passe deine Einstellungen an und wähle einen existierenden Kanal aus. |
 | `Unknown Role` | Die in den Einstellungen hinterlegte Rolle wurde gelöscht. | Passe deine Einstellungen an und wähle eine existierende Rolle aus. |
@@ -155,7 +155,7 @@ Hier findest du häufige Fehler, die du im Fehler-Log deines Bots finden kannst,
 
 ## Verwendung des Fehler-Logs {#error-log}
 
-Der Fehler-Log ist dein wichtigstes Werkzeug zur Diagnose von Problemen. Du findest es in deinem [„Bot-Status“-Panel](https://scnx.app/de/glink?page=bot/manage).
+Der Fehler-Log ist dein wichtigstes Werkzeug zur Diagnose von Problemen. Du findest es in deinem [„Bot-Status"-Panel](https://scnx.app/de/glink?page=bot/manage).
 
 1. Öffne dein [Dashboard](https://scnx.app/de/glink?page=bot/manage) und klicke dort auf den Fehler-Log.
 2. Suche nach aktuellen Fehlermeldungen, die dem Zeitraum deines Problems entsprechen.
@@ -202,7 +202,7 @@ Sollte der Fehler im Zusammenhang mit einem speziellen Modul stehen, schaue in d
 * [Starboard](/de/docs/custom-bot/modules/community/starboard/#troubleshooting) - Nachrichten Starboard
 * [Sticky-Nachrichten](/de/docs/custom-bot/modules/community/sticky-messages/#troubleshooting) - Sticky-Nachrichten
 * [Temporäre Channel](/de/docs/custom-bot/modules/community/temp-channels/#troubleshooting) - Temporäre Voice-Channel
- 
+
 ### Spiele & Spaß-Module
 
 * [Automatisches Reagieren](/de/docs/custom-bot/modules/fun/auto-react/#troubleshooting) - Automatisches Reagieren

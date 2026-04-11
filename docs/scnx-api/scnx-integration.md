@@ -19,8 +19,8 @@ Changing release-type won't remove existing servers integrating your app.
 | Type            | Description                                                                                                                                       | Public visibility                                                                                                                         | Pricing                                 |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------|
 | Private         | Intended for private or testing apps. You (and only you) can add this app to any servers you own                                                  | Not visible to anyone                                                                                                                     | Free                                    |
-| Custom-Solution | Intended for products developed for specific individuals. You can generate License-Keys with which users can add your integration to their server | Your app name, description and icon are featured on your organisation-site if you have enabled this feature in your organisation settings | Contact sales@scootkit.com for details. | 
-| Public          | Intended for Public apps with static guild-specific configuration. SCNX Integration may be an additional way to set up the bot.                   | Anyone can add your app. Your app may be featured in the app list                                                                         | Free                                    | 
+| Custom-Solution | Intended for products developed for specific individuals. You can generate License-Keys with which users can add your integration to their server | Your app name, description and icon are featured on your organisation-site if you have enabled this feature in your organisation settings | Contact sales@scootkit.com for details. |
+| Public          | Intended for Public apps with static guild-specific configuration. SCNX Integration may be an additional way to set up the bot.                   | Anyone can add your app. Your app may be featured in the app list                                                                         | Free                                    |
 
 ## Webhooks
 
@@ -107,7 +107,7 @@ CustomBot-API enabled, won't be able to access the endpoint.
 
 GET `https://scnx.app/api/marketplace-api/`.
 
-Returns the current API body: 
+Returns the current API body:
 
 ```json
 {
@@ -125,14 +125,14 @@ Returns the current API body:
 
 ### User Install URL
 
-Share the following URL to install URL: `` 
+Share the following URL to install URL: ``
 
 
 ## Types
 
 ### Config-Files
 
-| Key         | Value                                                                | 
+| Key         | Value                                                                |
 |-------------|----------------------------------------------------------------------|
 | name        | [Localized](#localized-field) name displayed in the dashboard        |
 | description | [Localized](#localized-field) description displayed in the dashboard |

@@ -8,7 +8,7 @@ Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, wel
 Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
 
 :::tip Datenschutz liegt uns am Herzen
-Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese 
+Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese
 unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.
 
 **tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und danach nur noch die Anzahl.
@@ -23,7 +23,7 @@ Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einlade
 ## Statistiken aktivieren {#enable}
 
 Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) deines Servers auf SCNX und klicke auf
-„Statistiken aktivieren“.
+„Statistiken aktivieren".
 
 ![](@site/docs/assets/scnx/guilds/analytics/setup.png)
 
@@ -51,11 +51,11 @@ Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du d
 ## Analysen als Slash-Commands verwenden {#slash-commands}
 
 Jeder Benutzer auf deinem Server kann die Slash-Befehle des verifizierten SCNX-Bots verwenden (du kannst dies unter
-Discord-Server-Einstellungen unter „Integrationen“ konfigurieren). Folgende Befehle stehen zur Verfügung:
+Discord-Server-Einstellungen unter „Integrationen" konfigurieren). Folgende Befehle stehen zur Verfügung:
 
 * `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
-letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung“, in der du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen findest.
-* `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die zehn aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick“, indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
+letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung", in der du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen findest.
+* `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die zehn aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick", indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
 Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden.
 
 ![](@site/docs/assets/scnx/guilds/analytics/commands.png)
@@ -85,13 +85,13 @@ Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können die
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
         <li>Aktualisiere dein Dashboard.</li>
-         <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage“ statt „Letzte 24 Stunden“).</li>
+         <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage" statt „Letzte 24 Stunden").</li>
         <li>Stelle sicher, dass im ausgewählten Zeitraum mehr als 100 Nachrichten gesendet wurden.</li>
         <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot auf den Kanal zugreifen kann und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.</li>
     </ul>
 </details>
 <details>
-    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen, musst du Statistiken seit mindestens 48 Stunden aktiviert haben.“</summary>
+    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen, musst du Statistiken seit mindestens 48 Stunden aktiviert haben."</summary>
     <ul>
         <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
         <li>Aktualisiere das Dashboard.</li>
@@ -107,7 +107,7 @@ Alle infos findest du in unserem [FAQ-Artikel](https://faq.scnx.app/de/data-coll
 :::
 
 Wenn du (oder ein Benutzer deines Servers) nicht möchte, dass der Serverbesitzer und die Administratoren sehen können, wie viele Nachrichten du
-gesendet hast oder du befürchtest, dass personenbezogene Daten über dich oder deine Nutzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus“ aktivieren.
+gesendet hast oder du befürchtest, dass personenbezogene Daten über dich oder deine Nutzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus" aktivieren.
 Verwende dafür den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
 wird sich auf folgendes auswirken:
 

@@ -1,0 +1,62 @@
+name: Docs Autofix
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'i18n/**'
+      - 'blog/**'
+      - 'src/pages/**'
+
+jobs:
+  autofix:
+    name: Autofix docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install prettier
+        run: npm install --no-package-lock --ignore-scripts prettier
+
+      - name: Fix em dashes
+        run: |
+          find docs/ i18n/ blog/ src/pages/ -type f \( -name '*.md' -o -name '*.mdx' -o -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' -o -name '*.json' \) \
+            -exec sed -i 's/—/ -/g' {} +
+
+      - name: Fix smart quotes
+        run: |
+          find docs/ i18n/ blog/ src/pages/ -type f \( -name '*.md' -o -name '*.mdx' -o -name '*.json' \) \
+            -exec sed -i "s/\xe2\x80\x9c/\"/g; s/\xe2\x80\x9d/\"/g; s/\xe2\x80\x98/'/g; s/\xe2\x80\x99/'/g" {} +
+
+      - name: Fix ellipsis characters
+        run: |
+          find docs/ i18n/ blog/ -type f \( -name '*.md' -o -name '*.mdx' \) \
+            -exec sed -i 's/\xe2\x80\xa6/.../g' {} +
+
+      - name: Fix non-breaking spaces
+        run: |
+          find docs/ i18n/ blog/ -type f \( -name '*.md' -o -name '*.mdx' \) \
+            -exec sed -i 's/\xc2\xa0/ /g' {} +
+
+      - name: Fix trailing whitespace
+        run: |
+          find docs/ i18n/ blog/ -type f \( -name '*.md' -o -name '*.mdx' \) \
+            -exec sed -i 's/[[:space:]]*$//' {} +
+
+      - name: Format markdown tables
+        run: |
+          npx prettier --write 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' 'blog/**/*.md' \
+            --parser markdown --prose-wrap preserve --tab-width 2 2>/dev/null || true
+
+      - name: Commit fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No fixes needed"
+          else
+            git commit -m "chore: autofix docs formatting"
+            git push
+          fi

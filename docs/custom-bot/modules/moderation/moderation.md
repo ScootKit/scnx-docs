@@ -239,7 +239,7 @@ In this configuration file, you set up the verification system for new members. 
 | Word | Users click "Verify Me" and a dialog opens with a word they must retype. Difficulty controls word length and obscurity. |
 | Math | Users click "Verify Me" and a dialog opens with an arithmetic problem to solve. Difficulty controls operand size and the operators used. |
 | Manual | Users click "Verify Me" and their request is submitted for staff review. A moderator approves or denies them in the verification log channel. |
-| Button | Users click "Verify Me" and are instantly verified. No challenge, no retries, no cooldowns — useful when you only want a one-click opt-in. |
+| Button | Users click "Verify Me" and are instantly verified. No challenge, no retries, no cooldowns  - useful when you only want a one-click opt-in. |
 
 #### Configuration
 

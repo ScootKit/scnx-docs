@@ -8,8 +8,8 @@ more!
 ## Features {#features}
 
 * Automatically change the status of your bot randomly every few seconds.
-* Customize the Activity-Type (Playing, Watching, …) or remove it.
-* Customize the online status of your bot (Do not disturb, Online, Away, …).
+* Customize the Activity-Type (Playing, Watching, ...) or remove it.
+* Customize the online status of your bot (Do not disturb, Online, Away, ...).
 * Change the status automatically when a new user joins to welcome them.
 * Change the status at runtime using a slash command.
 * Add a custom link to a streaming status.

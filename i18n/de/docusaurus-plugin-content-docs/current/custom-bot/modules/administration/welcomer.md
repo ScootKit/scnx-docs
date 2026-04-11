@@ -21,61 +21,61 @@ Einfaches Modul, um neuen Nutzern "Hi" zu sagen, ihnen Rollen zu geben und um si
 
 Willkommens-Nachrichten werden jedes mal gesendet, wenn ein neuer Nutzer deinem Server betritt. Du kannst einen Willkommens-Knopf hinzufügen, welcher es bestehenden Nutzern erlaubt, den neuen Nutzer willkommen zu heißen. Zusätzlich wird, falls [aktiviert](#configuration-config), die Nachricht gelöscht, wenn der Nutzer den Server innerhalb von 7 Tagen wieder verlässt.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot benötigt 
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer beitritt. Der Bot benötigt
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") in diesem Kanal.
-2. Füge den Kanal zur 
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "join" nutzt und 
+2. Füge den Kanal zur
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "join" nutzt und
    das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
-   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
+   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die
      [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
      Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
      "join".
-   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze die 
-     [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze die
+     [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die
      [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Boost / Unboost Nachrichten einrichten {#setup-boost-messages}
 
 Boost-Nachrichten werden gesendet, wenn ein Nutzer deinen Server *das erste mal* boostet und die Unboost-Nachricht wird gesendet, wenn ein Nutzer *alle seine Boosts* von deinem Server entfernt hat. Aufgrund [Einschränkungen in Discords API](https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560) werden diese Nachrichten nicht gesendet, wenn ein Nutzer die Anzahl seiner Boosts auf deinem Server erhöht oder verringert.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen Server boostet. Der Bot benötigt 
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot eine Nachricht schreiben soll, wenn ein Nutzer deinen Server boostet. Der Bot benötigt
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") in diesem Kanal.
 2. Füge den Kanal zur
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du 
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du
    den Kanal-Typ "boost" oder "unboost" benutzt
    und das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
    * Wenn du zufällige Nachrichten verwendest willst, aktiviere die "Zufällige Nachrichten?"-Option, öffne
-     die [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei 
+     die [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-Konfigurationsdatei
      und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
      "boost" oder "unboost".
-   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
-     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die 
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze
+     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), um die
      [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Verlassens-Nachrichten einrichten {#setup-leave-messages}
 
 Verlassens-Nachrichten werden jedes mal gesendet, wenn ein Nutzer deinen Server verlässt.
 
-1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer deinen Server verlässt. Der Bot benötigt 
+1. Erstelle oder wähle einen deiner Kanäle, in welchen der Bot deine Nachricht schicken soll, wenn ein Nutzer deinen Server verlässt. Der Bot benötigt
    die Rechte "Kanal anzeigen" ("View channel"), "Nachrichten senden" ("Send messages") und "Nachrichtenverlauf anzeigen" ("View message history") auf diesen Kanal.
-2. Füge den Kanal zur 
-   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "leave" nutzt und 
+2. Füge den Kanal zur
+   [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels) hinzu, indem du als Kanal-Typ "leave" nutzt und
    das Element [konfigurierst](#configuration-channels).
 3. Konfiguriere die Nachricht:
-   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die 
+   * Wenn du zufällige Nachrichten verwenden willst, aktiviere die Option "Zufällige Nachrichten?", öffne die
      [Zufällige Nachrichten](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)-
      Konfigurationsdatei und [konfiguriere](#configuration-random-messages) die zufälligen Nachrichten mit dem Nachrichten-Typ
      "leave".
-   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze 
-     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels), 
+   * Wenn du jedes mal die gleiche Nachricht senden willst, nutze
+     die [Kanal-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels),
      um die [Nachricht zu konfigurieren](#configuration-channels).
 
 ### Beitritts- und Boost-Rollen einrichten {#setup-join-roles}
 
 :::caution
-Momentan werden Beitritts-Rollen Rollen, die sich Nutzer selbst über 
+Momentan werden Beitritts-Rollen Rollen, die sich Nutzer selbst über
 Discords Einführung gegeben haben, überschrieben oder entfernt.
 Dieser Fehler ist bekannt und wird bearbeitet.
 :::
@@ -85,10 +85,10 @@ Dieser Fehler ist bekannt und wird bearbeitet.
 
 ## Nutzung {#usage}
 
-Nach dem [Einrichten](#setup) des Moduls werden Nachrichten automatisch jedes mal gesendet, wenn die jeweilige Aktion ausgelöst wird.      
+Nach dem [Einrichten](#setup) des Moduls werden Nachrichten automatisch jedes mal gesendet, wenn die jeweilige Aktion ausgelöst wird.
 
-Um Nutzern zu erlauben, einen Willkommens-Knopf zu benutzen, [aktiviere diese Funktion](#configuration-config) einfach in deiner Konfiguration. 
-Nach dem Einstellen wird unter neuen Nachrichten ein (konfigurierbarer) Knopf angezeigt. Wenn dieser Knopf von einem deiner Mitglieder gedrückt wird, 
+Um Nutzern zu erlauben, einen Willkommens-Knopf zu benutzen, [aktiviere diese Funktion](#configuration-config) einfach in deiner Konfiguration.
+Nach dem Einstellen wird unter neuen Nachrichten ein (konfigurierbarer) Knopf angezeigt. Wenn dieser Knopf von einem deiner Mitglieder gedrückt wird,
 wird er inaktiv (= kann nicht mehr gedrückt werden) und eine [konfigurierbare](#configuration-config)
 Nachricht wird in den konfigurierten Kanal gesendet.
 
@@ -146,7 +146,7 @@ Diese Konfigurationsdatei nutzt "Config-Elemente". Ein Config-Element repräsent
 
 ## Fehlerbehebung {#troubleshooting}
 
-Fehler in diesem Modul sind bekanntermaßen schwierig zu beheben, da es hochflexible und anpassbar ist und dies eine komplizierte Konfigurationsstruktur mit sich bringt. 
+Fehler in diesem Modul sind bekanntermaßen schwierig zu beheben, da es hochflexible und anpassbar ist und dies eine komplizierte Konfigurationsstruktur mit sich bringt.
 Wenn keiner der Schritte hierunter hilft (bitte probiere das zuerst!), kannst du jederzeit unsere
 freundlichen Teammitglieder über [scnx.app/de/help](https://scnx.app/de/help) kontaktieren.
 

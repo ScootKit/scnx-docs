@@ -1,14 +1,14 @@
 ---
 sidebar_position: 1
 title: Support-Bot
-description: Der fortschrittlichste Discord-Support-Bot mit Modmail, Ticket-System, Statistiken, KI-Zusammenfassungen und mehr — powered by SCNX.
+description: Der fortschrittlichste Discord-Support-Bot mit Modmail, Ticket-System, Statistiken, KI-Zusammenfassungen und mehr  - powered by SCNX.
 ---
 
 # Der fortschrittlichste Discord-Support-Bot der Welt
 
-Baue eine erstklassige Support-Erfahrung für deine Discord-Community auf. Der SCNX Support-Bot vereint ein leistungsstarkes **Modmail-System** und ein flexibles **Ticket-System** in einem Bot — damit hast du alles, was du brauchst, um Anfragen zu verwalten, Feedback zu sammeln und deinen Support-Workflow zu optimieren.
+Baue eine erstklassige Support-Erfahrung für deine Discord-Community auf. Der SCNX Support-Bot vereint ein leistungsstarkes **Modmail-System** und ein flexibles **Ticket-System** in einem Bot  - damit hast du alles, was du brauchst, um Anfragen zu verwalten, Feedback zu sammeln und deinen Support-Workflow zu optimieren.
 
-Egal ob du eine kleine Community oder einen großen Server mit tausenden Mitgliedern betreibst — der SCNX Support-Bot wächst mit dir. Konfiguriere Öffnungszeiten, richte automatisches Ticket-Schließen ein, aktiviere KI-gestützte Ticket-Zusammenfassungen und verfolge die Leistung deines Teams — alles über ein intuitives Dashboard.
+Egal ob du eine kleine Community oder einen großen Server mit tausenden Mitgliedern betreibst  - der SCNX Support-Bot wächst mit dir. Konfiguriere Öffnungszeiten, richte automatisches Ticket-Schließen ein, aktiviere KI-gestützte Ticket-Zusammenfassungen und verfolge die Leistung deines Teams  - alles über ein intuitives Dashboard.
 
 ## Zwei Systeme, ein Bot {#two-systems}
 
@@ -22,20 +22,20 @@ Beide Systeme teilen sich [allgemeine Funktionen](/de/docs/support-bot/general/b
 
 ## Funktionen auf einen Blick {#key-features}
 
-* **Ticket-Themen** — Kategorisiere Tickets und leite sie automatisch an das richtige Team weiter. Jedes Thema kann eigene Kategorien, Rollen, Nachrichten und sogar eigene Formulare haben.
-* **Ticket-Claiming** — Weise Tickets bestimmten Teammitgliedern zu, um doppelte Arbeit zu vermeiden. Automatische Zuweisung bei erster Antwort, Kanal sperren vor dem Claiming und mehr.
-* **Formulare** — Sammle strukturierte Informationen von Nutzern mit eigenen Formularen und Modal-Dialogen — vor oder während eines Tickets.
-* **Automatisches Schließen & Erinnerungen** — Schließe inaktive Tickets automatisch, sende Inaktivitäts-Warnungen und erinnere Teammitglieder an unbeantwortete Tickets.
-* **Öffnungszeiten & Feiertage** — Lege tägliche Öffnungszeiten fest, erkenne Feiertage automatisch und informiere Nutzer über längere Wartezeiten.
-* **Support-Feedback** — Sammle Sternebewertungen und eigene Feedback-Fragen von Nutzern nach dem Schließen ihres Tickets.
-* **Statistik-Dashboard** — Verfolge offene Tickets, durchschnittliche Antwortzeit, Schließungszeit, aktivste Teammitglieder, meist verwendete Themen und mehr.
-* **Geschätzte Wartezeit** — Berechne und zeige geschätzte Wartezeiten automatisch basierend auf historischen Ticket-Daten an.
-* **Ticketauslastung** — Überwache die Ticket-Kapazität mit einem zweistufigen Warnsystem und informiere Nutzer bei hoher Auslastung.
-* **KI-Ticket-Zusammenfassungen** — Erhalte eine KI-generierte Zusammenfassung für jedes geschlossene Ticket, direkt in deinem Log-Kanal.
-* **modmail.net Integration** — Betrachte Ticket-Transkripte in einer modernen Web-Oberfläche statt als Textdateien.
-* **Blockierungsliste** — Sperre Nutzer, die gegen Regeln verstoßen, mit optionaler Dauer und Begründung.
-* **Wartungsmodus** — Deaktiviere die Ticket-Erstellung vorübergehend, wenn dein Team nicht verfügbar ist.
-* **Eigenes Branding** — Lege deine eigene Embed-Fußzeile und ein eigenes Bild fest, passend zur Identität deines Servers.
+* **Ticket-Themen**  - Kategorisiere Tickets und leite sie automatisch an das richtige Team weiter. Jedes Thema kann eigene Kategorien, Rollen, Nachrichten und sogar eigene Formulare haben.
+* **Ticket-Claiming**  - Weise Tickets bestimmten Teammitgliedern zu, um doppelte Arbeit zu vermeiden. Automatische Zuweisung bei erster Antwort, Kanal sperren vor dem Claiming und mehr.
+* **Formulare**  - Sammle strukturierte Informationen von Nutzern mit eigenen Formularen und Modal-Dialogen  - vor oder während eines Tickets.
+* **Automatisches Schließen & Erinnerungen**  - Schließe inaktive Tickets automatisch, sende Inaktivitäts-Warnungen und erinnere Teammitglieder an unbeantwortete Tickets.
+* **Öffnungszeiten & Feiertage**  - Lege tägliche Öffnungszeiten fest, erkenne Feiertage automatisch und informiere Nutzer über längere Wartezeiten.
+* **Support-Feedback**  - Sammle Sternebewertungen und eigene Feedback-Fragen von Nutzern nach dem Schließen ihres Tickets.
+* **Statistik-Dashboard**  - Verfolge offene Tickets, durchschnittliche Antwortzeit, Schließungszeit, aktivste Teammitglieder, meist verwendete Themen und mehr.
+* **Geschätzte Wartezeit**  - Berechne und zeige geschätzte Wartezeiten automatisch basierend auf historischen Ticket-Daten an.
+* **Ticketauslastung**  - Überwache die Ticket-Kapazität mit einem zweistufigen Warnsystem und informiere Nutzer bei hoher Auslastung.
+* **KI-Ticket-Zusammenfassungen**  - Erhalte eine KI-generierte Zusammenfassung für jedes geschlossene Ticket, direkt in deinem Log-Kanal.
+* **modmail.net Integration**  - Betrachte Ticket-Transkripte in einer modernen Web-Oberfläche statt als Textdateien.
+* **Blockierungsliste**  - Sperre Nutzer, die gegen Regeln verstoßen, mit optionaler Dauer und Begründung.
+* **Wartungsmodus**  - Deaktiviere die Ticket-Erstellung vorübergehend, wenn dein Team nicht verfügbar ist.
+* **Eigenes Branding**  - Lege deine eigene Embed-Fußzeile und ein eigenes Bild fest, passend zur Identität deines Servers.
 
 ## Erste Schritte {#getting-started}
 

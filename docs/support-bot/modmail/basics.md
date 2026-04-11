@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter Guide
-description: Complete starter guide for your Discord Modmail system — learn how to create, claim, respond to, and close tickets with your team.
+description: Complete starter guide for your Discord Modmail system  - learn how to create, claim, respond to, and close tickets with your team.
 ---
 
 # Starter Guide (Modmail 101)
@@ -12,7 +12,7 @@ Feel free to forward this guide to your team members so they can find their way 
 
 Welcome to the Starter Guide for the Modmail system of the SCNX Support-Bot!
 
-We know Modmail can feel overwhelming at first, and you might not fully understand every feature yet — that's completely normal.
+We know Modmail can feel overwhelming at first, and you might not fully understand every feature yet  - that's completely normal.
 That's exactly why this page is written from a team member's perspective, so you'll quickly find your way around Modmail and use all features without problems.
 In general, every server can enable different features for their Modmail system, so some features may not be available in your server's setup.
 
@@ -93,7 +93,7 @@ If a command is not shown in the ticket channel, you either don't have permissio
 
 Using the blocklist, you can have users blocked from the entire Support-Bot. This block applies to both the Modmail and Ticket System (if used).
 
-If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user — optionally, you can provide the reason and the duration of the block.
+If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user  - optionally, you can provide the reason and the duration of the block.
 If you want to remove a user from the blocklist, use the command [``/blocklist remove``](#use-commands).
 
 
@@ -116,11 +116,11 @@ To use snippets, staff members can:
 
 To manage snippets, the following commands are available to staff members:
 
-* `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Create a new snippet. Enter a new, unused snippet key as the `key` parameter. Optionally enable `close-buttons` to add a close button below the snippet message or set `form` to attach a form. A dialog will appear to enter the snippet content.
-* `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` — Edit an existing snippet. Select an existing snippet key and update its settings or content.
-* `/modmail snippets delete key:<SnippetKey>` — Delete a snippet permanently. This cannot be undone.
-* `/modmail snippets preview key:<SnippetKey>` — Preview a snippet's content and details.
-* `/modmail snippets list [page:<Number>]` — List all available snippets with their usage counts.
+* `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`  - Create a new snippet. Enter a new, unused snippet key as the `key` parameter. Optionally enable `close-buttons` to add a close button below the snippet message or set `form` to attach a form. A dialog will appear to enter the snippet content.
+* `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]`  - Edit an existing snippet. Select an existing snippet key and update its settings or content.
+* `/modmail snippets delete key:<SnippetKey>`  - Delete a snippet permanently. This cannot be undone.
+* `/modmail snippets preview key:<SnippetKey>`  - Preview a snippet's content and details.
+* `/modmail snippets list [page:<Number>]`  - List all available snippets with their usage counts.
 
 
 
@@ -201,4 +201,4 @@ that you can download.
 
 You've reached the end of the guide and hopefully now have a good overview of how the Modmail system of the SCNX Support-Bot works and how to use it.
 
-If you still have questions or something is unclear, feel free to ask the person responsible for your server or create a ticket on our [Discord server](https://scootk.it/dc-de) — we'll be happy to help!
+If you still have questions or something is unclear, feel free to ask the person responsible for your server or create a ticket on our [Discord server](https://scootk.it/dc-de)  - we'll be happy to help!

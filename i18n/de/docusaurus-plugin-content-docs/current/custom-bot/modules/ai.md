@@ -91,7 +91,7 @@ default" (Standard) Persönlichkeit zu verwenden. Du nutzt diese Funktion auf ei
 
 ### Benutzerdefinierter System-Prompt & Strenge Moderation
 
-Wenn festgelegt, ersetzt dieser Text die Persönlichkeitseinstellung als System-Prompt der KI. Maximal 1000 Zeichen — längerer Text wird
+Wenn festgelegt, ersetzt dieser Text die Persönlichkeitseinstellung als System-Prompt der KI. Maximal 1000 Zeichen  - längerer Text wird
 automatisch abgeschnitten. Eine Sicherheitsklausel wird immer angehängt und kann nicht entfernt werden. Du bist voll verantwortlich für das
 Verhalten der KI, wenn du einen benutzerdefinierten Prompt verwendest.
 

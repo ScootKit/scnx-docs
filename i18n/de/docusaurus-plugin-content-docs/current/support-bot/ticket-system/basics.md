@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter-Guide
-description: Kompletter Starter-Guide für dein Discord-Ticket-System — lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
+description: Kompletter Starter-Guide für dein Discord-Ticket-System  - lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
 ---
 
 # Starter-Guide (Ticket-System 101)
@@ -37,7 +37,7 @@ Wenn dein Server kein Ticket-Claiming nutzt, kannst du direkt zum nächsten Schr
 Damit Tickets unter Teammitgliedern besser organisiert sind, musst du dir zunächst ein Ticket zuweisen (auch "claimen" genannt).
 
 Dafür besuchst du den festgelegten Kanal in Discord und klickst unter der Nachricht auf den Knopf "Ticket beanspruchen". Nachdem dir das Ticket zugewiesen wurde, wird die Nachricht automatisch gelöscht.
-Alternativ kannst du auch direkt den Kanal des neuen Tickets besuchen und auf den Knopf unter der Zuweisungsnachricht klicken (die Nachricht im Benachrichtigungskanal wird ebenfalls gelöscht). 
+Alternativ kannst du auch direkt den Kanal des neuen Tickets besuchen und auf den Knopf unter der Zuweisungsnachricht klicken (die Nachricht im Benachrichtigungskanal wird ebenfalls gelöscht).
 Falls du keine neuen Ticket-Kanäle siehst, wurde diese Option in deinem Ticket-System deaktiviert.
 
 
@@ -85,14 +85,14 @@ Solltest du einen Nutzter aus der Blockierungsliste entfernen wollen, verwende d
 Damit du Informationen nicht immer manuell abfragen musst, kannst du Nutzer einfach ein konfiguriertes Formular ausfüllen lassen, wodurch du notwendige Daten schnell und sicher erhältst.
 
 Um ein Formular in einen Ticket-Kanal zu senden, verwende den Befehl [``/ticket form``](#use-commands) und wähle das entsprechende Formular aus der Liste.
-Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht ein Fehler in der Konfiguration. 
+Sollte kein Formular in der Liste enthalten sein oder ein bestimmtes Formular nicht angezeigt werden, wurde es entweder noch nicht konfiguriert oder es besteht ein Fehler in der Konfiguration.
 Frage in diesem Fall beim Verantwortlichen deines Servers nach, damit dieser gegebenenfalls unseren Support kontaktieren kann.
 
 
 
 ### Tickets pausieren {#hold-tickets}
 
-Wenn ein Ticket weitergeleitet werden soll oder auf eine Antwort von einer anderen Position wartet, kannst du das Ticket mit dem Befehl [``/ticket hold``](#use-commands) pausieren, 
+Wenn ein Ticket weitergeleitet werden soll oder auf eine Antwort von einer anderen Position wartet, kannst du das Ticket mit dem Befehl [``/ticket hold``](#use-commands) pausieren,
 um das Automatische Schließen des Tickets zu deaktivieren und den Kanal sperren zu lassen, wodurch bis zur Deaktivierung der Pausierung keine Nachrichten mehr versendet werden können.
 Zum Deaktivieren verwende ebenfalls den Befehl [``/ticket hold``](#use-commands).
 
@@ -118,7 +118,7 @@ Der Name wird dabei automatisch aktualisiert und das Ticket erneut zur Zuweisung
 
 ### Nutzer hinzufügen und entfernen {#add-and-remove-users}
 
-Um bestimmte Anliegen, die mehrere Personen betreffen, besser lösen zu können, kannst du die entsprechenden Nutzer mit dem Befehl [``/ticket users add``](#use-commands) zum Ticket hinzufügen, 
+Um bestimmte Anliegen, die mehrere Personen betreffen, besser lösen zu können, kannst du die entsprechenden Nutzer mit dem Befehl [``/ticket users add``](#use-commands) zum Ticket hinzufügen,
 wodurch diese (zusätzlich zum Teammitglied und Ersteller des Tickets) Zugriff auf den Ticket-Kanal erhalten.
 Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove``](#use-commands).
 
@@ -126,7 +126,7 @@ Wenn du Nutzer entfernen möchtest, verwende den Befehl [``/ticket users remove`
 
 ## Tickets schließen {#close-tickets}
 
-Nachdem das Anliegen eines Nutzers gelöst ist, kannst du das Ticket entweder mit dem Befehl [``/ticket close``](#use-commands) oder dem Knopf unter der Ticket-Nachricht sofort schließen oder 
+Nachdem das Anliegen eines Nutzers gelöst ist, kannst du das Ticket entweder mit dem Befehl [``/ticket close``](#use-commands) oder dem Knopf unter der Ticket-Nachricht sofort schließen oder
 das Schließen mit [``/ticket schedule-close``](#use-commands) nach einem bestimmten Zeitraum planen (das Automatische Schließen wird in diesem Fall deaktiviert).
 
 
@@ -142,7 +142,7 @@ Diese Bewertung ist freiwillig und wird bei Beantwortung in den festgelegten Kan
 
 Alle Nachrichten eines Tickets werden protokolliert und nach Schließen des Tickets in einer Ticket-Log dargestellt.
 Wenn dein Server KI-Zusammenfassungen aktiviert hat, siehst du in der Nachricht im Kanal außerdem eine kurze Zusammenfassung des Ticket-Inhalts.
-Mit dem Knopf unter der Nachricht gelangst du entweder (falls aktiviert) auf eine Website von modmail.net (wo dir die Logs in einem schönen Web-Layout dargestellt werden) oder zu einer Textdatei, 
+Mit dem Knopf unter der Nachricht gelangst du entweder (falls aktiviert) auf eine Website von modmail.net (wo dir die Logs in einem schönen Web-Layout dargestellt werden) oder zu einer Textdatei,
 welche du dir herunterladen kannst.
 
 
@@ -153,5 +153,5 @@ Juhu, du hast es geschafft 🎉
 
 Du bist am Ende des Guides angelangt und hast nun hoffentlich einen guten Überblick über die Funktionsweise und Nutzung des Ticket-Systems vom SCNX Support-Bot.
 
-Falls trotzdem noch Fragen bestehen sollten oder etwas unklar ist, frage gerne beim Verantwortlichen deines Servers nach oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de), 
+Falls trotzdem noch Fragen bestehen sollten oder etwas unklar ist, frage gerne beim Verantwortlichen deines Servers nach oder erstelle ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de),
 wir helfen dir gerne weiter!

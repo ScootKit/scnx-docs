@@ -5,7 +5,7 @@ sidebar_position: 2
 # Message Editor
 
 The Message Editor is a visual tool on the SCNX Dashboard that lets you compose rich Discord messages with text,
-embeds, images, buttons, select menus, and more — without writing any code. It is used across multiple features,
+embeds, images, buttons, select menus, and more  - without writing any code. It is used across multiple features,
 including [Bot Log-In](/docs/custom-bot/login-as-bot), [Custom Commands](/docs/custom-bot/custom-commands), module
 configurations, and [Support Bot](/docs/support-bot/intro) message configurations.
 
@@ -13,16 +13,16 @@ configurations, and [Support Bot](/docs/support-bot/intro) message configuration
 
 The Message Editor is available in two versions:
 
-* **[V3 (Embed-based)](#v3)** — The classic editor using Discord's traditional embed system with plain text, up to
+* **[V3 (Embed-based)](#v3)**  - The classic editor using Discord's traditional embed system with plain text, up to
   10 embeds, and interactive components.
-* **[V4 (Components V2)](#v4)** — The new editor built on Discord's Components V2 system with drag-and-drop
+* **[V4 (Components V2)](#v4)**  - The new editor built on Discord's Components V2 system with drag-and-drop
   component reordering, containers, sections, media galleries, and more.
 
 Both editors include a [live preview](#preview), [parameter insertion](#parameters), [copy/paste](#copy-paste), and
 [message sharing](#share).
 
 :::info V4 Rollout
-V4 is currently in beta and rolling out gradually. The V3 editor will remain available indefinitely — you are never
+V4 is currently in beta and rolling out gradually. The V3 editor will remain available indefinitely  - you are never
 forced to switch to V4.
 
 | Phase | Date | Servers |
@@ -34,7 +34,7 @@ forced to switch to V4.
 | Phase 5 | April 28, 2026 | 50% of servers |
 | Full rollout | May 5, 2026 | 100% of servers |
 
-Servers are selected randomly in each phase — there is no way to check or predict which phase your server will be
+Servers are selected randomly in each phase  - there is no way to check or predict which phase your server will be
 included in.
 
 Don't want to wait? [ScootKit Members](https://membership.scootkit.com) (Level 2+) get instant access to the V4 editor.
@@ -74,13 +74,13 @@ Use the color picker or enter a HEX color code directly to set the embed accent 
 
 ### Interactive components {#v3-components}
 
-* **Link Buttons** — Open a URL when clicked (up to 5).
-* **Self-Role Buttons** — Add, remove, or toggle a role when clicked (up to 5). Customizable styles: Primary,
+* **Link Buttons**  - Open a URL when clicked (up to 5).
+* **Self-Role Buttons**  - Add, remove, or toggle a role when clicked (up to 5). Customizable styles: Primary,
   Secondary, Success, Danger.
-* **Custom Command Buttons** — Trigger a [Custom Command](/docs/custom-bot/custom-commands) with a **Button**
+* **Custom Command Buttons**  - Trigger a [Custom Command](/docs/custom-bot/custom-commands) with a **Button**
   trigger when clicked.
-* **Custom Command Dropdown** — A select menu that triggers a custom command when an option is selected.
-* **Self-Role Dropdown** — A select menu that lets users assign roles to themselves.
+* **Custom Command Dropdown**  - A select menu that triggers a custom command when an option is selected.
+* **Self-Role Dropdown**  - A select menu that lets users assign roles to themselves.
 
 ### Image attachments {#v3-attachments}
 
@@ -133,8 +133,8 @@ Secondary/Grey, Success/Green, Danger/Red, or Link).
 A select menu inside an Action Row with up to **25 options** (each with label, optional description, and emoji).
 Options can be reordered via drag-and-drop. Two action types are supported:
 
-* **Custom Command Dropdown** — Each option triggers a Custom Command when selected.
-* **Self-Role Dropdown** — Each option assigns a role. Supports configurable min/max selection counts.
+* **Custom Command Dropdown**  - Each option triggers a Custom Command when selected.
+* **Self-Role Dropdown**  - Each option assigns a role. Supports configurable min/max selection counts.
 
 ---
 
@@ -156,7 +156,7 @@ enabled for your server).
 | Self-Role Dropdown | Action Row with Role Select |
 
 :::warning
-This conversion is **one-way** — you cannot convert back to V3. The following features **cannot be migrated**:
+This conversion is **one-way**  - you cannot convert back to V3. The following features **cannot be migrated**:
 author icons, footer icons, and embed timestamps.
 :::
 
@@ -178,7 +178,7 @@ Use **"Copy message"** to copy the entire message. Paste it into any other messa
 
 ### Share message {#share}
 
-Create a unique sharing link using **"Share message"**. The link is a snapshot — future changes won't be synced.
+Create a unique sharing link using **"Share message"**. The link is a snapshot  - future changes won't be synced.
 
 :::caution
 Shared messages may contain harmful content. Only import messages from sources you trust.
@@ -201,12 +201,12 @@ The preview is an approximation. Actual appearance may differ depending on the p
 
   The editor validates your message before saving. Common issues:
   <ul>
-    <li>Empty text displays or embeds — add content or remove the empty component.</li>
-    <li>Buttons missing a label or emoji — every button needs at least one.</li>
-    <li>Self-role buttons without a role selected — pick a role or remove the button.</li>
-    <li>Custom command buttons without a command linked — select a custom command or remove the button.</li>
-    <li>Link buttons with an invalid or missing URL — add a valid URL starting with <code>https://</code>.</li>
-    <li>Too many components — V4 messages are limited to 40 total components.</li>
+    <li>Empty text displays or embeds  - add content or remove the empty component.</li>
+    <li>Buttons missing a label or emoji  - every button needs at least one.</li>
+    <li>Self-role buttons without a role selected  - pick a role or remove the button.</li>
+    <li>Custom command buttons without a command linked  - select a custom command or remove the button.</li>
+    <li>Link buttons with an invalid or missing URL  - add a valid URL starting with <code>https://</code>.</li>
+    <li>Too many components  - V4 messages are limited to 40 total components.</li>
   </ul>
 </details>
 

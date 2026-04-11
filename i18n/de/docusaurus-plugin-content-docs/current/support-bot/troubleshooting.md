@@ -71,4 +71,4 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 
 ## Brauchst du noch Hilfe? {#still-need-help}
 
-Wenn dein Problem hier nicht aufgelistet ist, erstelle gerne ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de) — wir helfen dir gerne weiter!
+Wenn dein Problem hier nicht aufgelistet ist, erstelle gerne ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de)  - wir helfen dir gerne weiter!

@@ -18,14 +18,14 @@ Veröffentliche Nachrichten in Ankündigungskanälen
 
 ## Nutzung {#usage}
 
-Nachrichten, welche in hierfür verfügbare Ankündigungskanäle gesendet werden (basierend auf deiner [Konfiguration](#configuration)), werden automatisch 
-für alle Server veröffentlicht, die diesem Kanal folgen. 
-Wenn das Modul eine Nachricht veröffentlicht, reagiert der Bot mit `✅`, um eine erfolgreiche Veröffentlichung anzuzeigen. Diese 
+Nachrichten, welche in hierfür verfügbare Ankündigungskanäle gesendet werden (basierend auf deiner [Konfiguration](#configuration)), werden automatisch
+für alle Server veröffentlicht, die diesem Kanal folgen.
+Wenn das Modul eine Nachricht veröffentlicht, reagiert der Bot mit `✅`, um eine erfolgreiche Veröffentlichung anzuzeigen. Diese
 Reaktion wird automatisch nach einigen Sekunden entfernt.
 
 ## Konfiguration {#configuration}
 
-Ohne Konfigurieren wird der Bot automatisch jede Nachricht veröffentlichen, die in einen Ankündigungskanal gesendet wird. Mit der Konfiguration 
+Ohne Konfigurieren wird der Bot automatisch jede Nachricht veröffentlichen, die in einen Ankündigungskanal gesendet wird. Mit der Konfiguration
 kannst du das auf deinen Anwendungsfall anpassen.
 Öffne [diese Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-publisher|config).
 
@@ -45,8 +45,8 @@ Wenn du denkst, dass der Bot Nachrichten nicht automatisch veröffentlicht, stel
 * der aktuelle Kanal NICHT in das "Blacklist"-Feld hinzugefügt ist (wenn "Nachrichten-Veröffentlichung-Modus" in deiner [Konfiguration](#configuration) auf `blacklist`
   gesetzt ist).
 * der Bot die Berechtigungen "Nachrichten verwalten" ("Manage messages") und "Nachrichten senden" ("Send message") auf dem aktuellen Kanal hat.
-* die Nachricht, die du veröffentlichen möchtest, nicht von einem Bot gesendet wurde (außer du hast "Bots ignorieren?" 
+* die Nachricht, die du veröffentlichen möchtest, nicht von einem Bot gesendet wurde (außer du hast "Bots ignorieren?"
   in deiner [Konfiguration](#configuration) deaktiviert).
 * die Nachricht in einen Ankündignungskanal gesendet wurde und nicht bereits veröffentlicht wurde.
-* die Anzahl der in den Ankündigungskanal gesendeten Nachrichten relativ gering ist (Discord erlaubt nur eine limitierte Anzahl an 
+* die Anzahl der in den Ankündigungskanal gesendeten Nachrichten relativ gering ist (Discord erlaubt nur eine limitierte Anzahl an
   Nachrichten, die veröffentlicht werden können).

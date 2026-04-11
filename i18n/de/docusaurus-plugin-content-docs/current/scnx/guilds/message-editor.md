@@ -5,7 +5,7 @@ sidebar_position: 2
 # Nachrichten-Editor
 
 Der Nachrichten-Editor ist ein visuelles Werkzeug im SCNX Dashboard, mit dem du Discord-Nachrichten mit Text, Embeds,
-Bildern, Buttons, Auswahlmenüs und mehr erstellen kannst — ganz ohne Code. Er wird in verschiedenen Funktionen
+Bildern, Buttons, Auswahlmenüs und mehr erstellen kannst  - ganz ohne Code. Er wird in verschiedenen Funktionen
 verwendet, darunter [Bot Log-In](/docs/custom-bot/login-as-bot), [Custom Commands](/docs/custom-bot/custom-commands),
 Modul-Konfigurationen und [Support Bot](/docs/support-bot/intro) Nachrichten-Konfigurationen.
 
@@ -13,9 +13,9 @@ Modul-Konfigurationen und [Support Bot](/docs/support-bot/intro) Nachrichten-Kon
 
 Der Nachrichten-Editor ist in zwei Versionen verfügbar:
 
-* **[V3 (Embed-basiert)](#v3)** — Der klassische Editor mit Discords traditionellem Embed-System mit Text, bis zu
+* **[V3 (Embed-basiert)](#v3)**  - Der klassische Editor mit Discords traditionellem Embed-System mit Text, bis zu
   10 Embeds und interaktiven Komponenten.
-* **[V4 (Components V2)](#v4)** — Der neue Editor basierend auf Discords Components V2-System mit
+* **[V4 (Components V2)](#v4)**  - Der neue Editor basierend auf Discords Components V2-System mit
   Drag-and-Drop-Komponentenanordnung, Containern, Sektionen, Medien-Galerien und mehr.
 
 Beide Editoren bieten eine [Live-Vorschau](#preview), [Parameter-Einfügung](#parameters),
@@ -23,7 +23,7 @@ Beide Editoren bieten eine [Live-Vorschau](#preview), [Parameter-Einfügung](#pa
 
 :::info V4-Rollout
 V4 befindet sich aktuell in der Beta-Phase und wird schrittweise ausgerollt. Der V3-Editor bleibt dauerhaft
-verfügbar — du wirst niemals gezwungen, auf V4 zu wechseln.
+verfügbar  - du wirst niemals gezwungen, auf V4 zu wechseln.
 
 | Phase | Datum | Server |
 |---|---|---|
@@ -34,7 +34,7 @@ verfügbar — du wirst niemals gezwungen, auf V4 zu wechseln.
 | Phase 5 | 28. April 2026 | 50% der Server |
 | Vollständiger Rollout | 5. Mai 2026 | 100% der Server |
 
-Server werden in jeder Phase zufällig ausgewählt — es gibt keine Möglichkeit zu prüfen oder vorherzusagen, in
+Server werden in jeder Phase zufällig ausgewählt  - es gibt keine Möglichkeit zu prüfen oder vorherzusagen, in
 welcher Phase dein Server hinzugefügt wird.
 
 Du möchtest nicht warten? [ScootKit-Mitglieder](https://membership.scootkit.com) (Level 2+) erhalten sofortigen Zugang zum V4-Editor.
@@ -75,13 +75,13 @@ Verwende den Farbwähler oder gib direkt einen HEX-Farbcode ein, um die Embed-Ak
 
 ### Interaktive Komponenten {#v3-components}
 
-* **Link-Buttons** — Öffnen eine URL beim Klicken (bis zu 5).
-* **Selbstrollen-Buttons** — Vergeben, entfernen oder wechseln eine Rolle beim Klicken (bis zu 5). Anpassbare
+* **Link-Buttons**  - Öffnen eine URL beim Klicken (bis zu 5).
+* **Selbstrollen-Buttons**  - Vergeben, entfernen oder wechseln eine Rolle beim Klicken (bis zu 5). Anpassbare
   Stile: Primary, Secondary, Success, Danger.
-* **Custom-Command-Buttons** — Lösen einen [Custom Command](/docs/custom-bot/custom-commands) mit einem
+* **Custom-Command-Buttons**  - Lösen einen [Custom Command](/docs/custom-bot/custom-commands) mit einem
   **Button**-Trigger beim Klicken aus.
-* **Custom-Command-Dropdown** — Ein Auswahlmenü, das beim Auswählen einer Option einen Custom Command auslöst.
-* **Selbstrollen-Dropdown** — Ein Auswahlmenü, mit dem Nutzer sich selbst Rollen zuweisen können.
+* **Custom-Command-Dropdown**  - Ein Auswahlmenü, das beim Auswählen einer Option einen Custom Command auslöst.
+* **Selbstrollen-Dropdown**  - Ein Auswahlmenü, mit dem Nutzer sich selbst Rollen zuweisen können.
 
 ### Bildanhänge {#v3-attachments}
 
@@ -134,8 +134,8 @@ Secondary/Grau, Success/Grün, Danger/Rot oder Link).
 Ein Auswahlmenü in einer Action Row mit bis zu **25 Optionen** (jeweils mit Label, optionaler Beschreibung und
 Emoji). Optionen können per Drag-and-Drop neu angeordnet werden. Zwei Aktionstypen werden unterstützt:
 
-* **Custom-Command-Dropdown** — Jede Option löst einen Custom Command beim Auswählen aus.
-* **Selbstrollen-Dropdown** — Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl.
+* **Custom-Command-Dropdown**  - Jede Option löst einen Custom Command beim Auswählen aus.
+* **Selbstrollen-Dropdown**  - Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl.
 
 ---
 
@@ -157,7 +157,7 @@ V3-Editor-Toolbar verwendest (wenn V4 für deinen Server aktiviert ist).
 | Selbstrollen-Dropdown | Action Row mit Rollen-Auswahl |
 
 :::warning
-Diese Konvertierung ist **einmalig** — du kannst nicht zurück zu V3 konvertieren. Folgende Funktionen **können nicht
+Diese Konvertierung ist **einmalig**  - du kannst nicht zurück zu V3 konvertieren. Folgende Funktionen **können nicht
 migriert** werden: Autor-Icons, Footer-Icons und Embed-Zeitstempel.
 :::
 
@@ -180,7 +180,7 @@ beliebiges anderes Nachrichten-Editor-Feld auf SCNX ein. Beim Einfügen wird der
 
 ### Nachricht teilen {#share}
 
-Erstelle einen einzigartigen Teilen-Link über **"Nachricht teilen"**. Der Link ist ein Snapshot — zukünftige
+Erstelle einen einzigartigen Teilen-Link über **"Nachricht teilen"**. Der Link ist ein Snapshot  - zukünftige
 Änderungen werden nicht synchronisiert.
 
 :::caution
@@ -205,12 +205,12 @@ abweichen.
 
   Der Editor validiert deine Nachricht vor dem Speichern. Häufige Probleme:
   <ul>
-    <li>Leere Text Displays oder Embeds — füge Inhalt hinzu oder entferne die leere Komponente.</li>
-    <li>Buttons ohne Label oder Emoji — jeder Button braucht mindestens eines davon.</li>
-    <li>Selbstrollen-Buttons ohne ausgewählte Rolle — wähle eine Rolle aus oder entferne den Button.</li>
-    <li>Custom-Command-Buttons ohne verknüpften Befehl — wähle einen Custom Command aus oder entferne den Button.</li>
-    <li>Link-Buttons mit ungültiger oder fehlender URL — gib eine gültige URL ein, die mit <code>https://</code> beginnt.</li>
-    <li>Zu viele Komponenten — V4-Nachrichten sind auf 40 Komponenten begrenzt.</li>
+    <li>Leere Text Displays oder Embeds  - füge Inhalt hinzu oder entferne die leere Komponente.</li>
+    <li>Buttons ohne Label oder Emoji  - jeder Button braucht mindestens eines davon.</li>
+    <li>Selbstrollen-Buttons ohne ausgewählte Rolle  - wähle eine Rolle aus oder entferne den Button.</li>
+    <li>Custom-Command-Buttons ohne verknüpften Befehl  - wähle einen Custom Command aus oder entferne den Button.</li>
+    <li>Link-Buttons mit ungültiger oder fehlender URL  - gib eine gültige URL ein, die mit <code>https://</code> beginnt.</li>
+    <li>Zu viele Komponenten  - V4-Nachrichten sind auf 40 Komponenten begrenzt.</li>
   </ul>
 </details>
 

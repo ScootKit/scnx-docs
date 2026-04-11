@@ -28,7 +28,7 @@ Um einen Trusted Admin hinzuzufügen, besuche deine [Server Einstellungen Seite]
 in deinem SCNX Dashboard und scrolle zur "Trusted-Admins" Sektion.
 Als nächstes klickst du auf "Trusted-Admin hinzufügen", um dir den
 Trusted-Admin-Dialog anzeigen zu lassen. Hier kannst du den Discord-Benutzernamen oder die Nutzer-ID des gewünschten
-Trusted-Admins eingeben — der Nutzer wird automatisch gesucht und eine Vorschau wird angezeigt, sobald er gefunden wurde.
+Trusted-Admins eingeben  - der Nutzer wird automatisch gesucht und eine Vorschau wird angezeigt, sobald er gefunden wurde.
 Du kannst außerdem [seine Berechtigungen](#permissions) konfigurieren (Bitte lies zuerst den
 Abschnitt [Berechtigungen](#permissions)!) und optional eine [Ablaufzeit](#expiration) festlegen. Wenn du fertig bist,
 speichere die Änderungen, um den Zugriff zu gewähren.
@@ -49,11 +49,11 @@ Um einen Trusted Admin zu entfernen, klicke auf "Zugang entfernen" im Trusted-Ad
 Du kannst eine Ablaufzeit für den Zugriff eines Trusted-Admins festlegen. Wenn der Zugriff abläuft, verliert der
 Trusted-Admin automatisch den Zugriff auf deinen Server auf SCNX. Die folgenden Zeiträume sind verfügbar:
 
-* **1 Stunde** — nützlich für kurze Fehlerbehebungen
-* **1 Tag** — für temporären Zugriff bei einer bestimmten Aufgabe
-* **1 Woche** — für kurzfristige Projektzusammenarbeit
-* **1 Monat** — für längerfristigen Zugriff
-* **Nie** — Zugriff läuft nicht ab (Standard)
+* **1 Stunde**  - nützlich für kurze Fehlerbehebungen
+* **1 Tag**  - für temporären Zugriff bei einer bestimmten Aufgabe
+* **1 Woche**  - für kurzfristige Projektzusammenarbeit
+* **1 Monat**  - für längerfristigen Zugriff
+* **Nie**  - Zugriff läuft nicht ab (Standard)
 
 Du kannst die Ablaufzeit jederzeit ändern, indem du den Trusted-Admin bearbeitest. Das aktuelle Ablaufdatum wird im
 Trusted-Admin-Dialog angezeigt.
@@ -86,7 +86,7 @@ Außerdem verfügt jeder Trusted-Admin über eine **Basis von Berechtigungen**:
 
 * Alle Einstellungen in dem [Servereinstellungen](https://scnx.app/de/glink?page=settings)-Tab anschauen und manche
   ändern
-* Metadata über deinen Server anschauen (z. B. Name, Icon, Eigentümer, …)
+* Metadata über deinen Server anschauen (z. B. Name, Icon, Eigentümer, ...)
 * Einsicht in die Kaufdaten deines Servers (dies umfasst den Transaktionsverlauf, aber niemals die persönlichen Daten
   von Abonnements)
 * Upgrade oder Einrichtung von Abonnements für deinen Server
@@ -94,17 +94,17 @@ Außerdem verfügt jeder Trusted-Admin über eine **Basis von Berechtigungen**:
 
 Trusted Admins (ohne Co-Owner-Berechtigung) **können niemals**:
 
-* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, …) auf deinem Server aktivieren.
+* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
 * den Token eines auf SCNX erstellten Bots ändern.
 * andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
   können dies.
 * Produkte vom Server entfernen oder den Server von SCNX entfernen.
-* Käufe (z. B. Pläne, KI-Guthaben, …) in deinem Namen durchführen oder deine Zahlungsmethoden verwenden.
+* Käufe (z. B. Pläne, KI-Guthaben, ...) in deinem Namen durchführen oder deine Zahlungsmethoden verwenden.
 * die Erlaubnis für unsere Teammitglieder erteilen, potenziell zerstörerische Aktionen durchzuführen.
 
 **Co-Owners können**:
 
-* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, …) auf deinem Server aktivieren.
+* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
 * den Token eines auf SCNX erstellten Bots ändern.
 * andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
   können dies.
@@ -129,8 +129,8 @@ aber auch den Server von SCNX entfernen können. Erfahre mehr in unserem [Berech
 
 Wenn du der Server-Eigentümer bist, kannst du diese Einstellung jederzeit in
 deinen [Servereinstellungen](https://scnx.app/glink?page=settings) ändern. Bei einer Änderung zu „Alle
-Administratoren“ erhalten alle Mitglieder auf deinem Server mit der Administratorberechtigung
-die [Co-Owner-Berechtigung](#permissions) auf deinem Server. Bei einer Änderung zu „Nur Eigentümer“ verlieren alle
+Administratoren" erhalten alle Mitglieder auf deinem Server mit der Administratorberechtigung
+die [Co-Owner-Berechtigung](#permissions) auf deinem Server. Bei einer Änderung zu „Nur Eigentümer" verlieren alle
 Mitglieder, die aufgrund ihrer Administratorberechtigung Zugriff erhalten haben, sofort den Zugriff auf das Dashboard.
 Alle Trusted Admins, die von den Administratoren oder von dir konfiguriert wurden, können weiterhin auf deinen Server
 zugreifen.
@@ -164,7 +164,7 @@ hast. Du kannst die Berechtigungen deines Trusted Admins einfach bearbeiten inde
 </details>
 
 <details>
-<summary>Mein Trusted-Admin kann keinen Eigenen Bot, Modmail-Bot, … einrichten.</summary>
+<summary>Mein Trusted-Admin kann keinen Eigenen Bot, Modmail-Bot, ... einrichten.</summary>
 
 Trusted Admins können keine sensiblen Aktionen, wie z. B. die Aktivierung und Deaktivierung von Produkten ausführen.
 Bitte lies den Abschnitt <a href="#permissions">Berechtigungen</a>, um mehr über diese Einschränkungen zu erfahren. Der

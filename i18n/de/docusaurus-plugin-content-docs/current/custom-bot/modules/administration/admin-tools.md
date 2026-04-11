@@ -47,7 +47,7 @@ Einfache Werkzeuge für Administratoren - verschiebe Kanäle und Rollen mit Befe
 
 ### Immer-temporäre Rollen {#always-temporary-roles}
 
-Diese Konfiguration ermöglicht es dir, Rollen zu definieren, die immer temporär sein sollen. Wenn ein Nutzer eine dieser Rollen erhält — egal ob manuell, per Befehl oder durch einen anderen Bot — wird sie nach der konfigurierten Dauer automatisch entfernt.
+Diese Konfiguration ermöglicht es dir, Rollen zu definieren, die immer temporär sein sollen. Wenn ein Nutzer eine dieser Rollen erhält  - egal ob manuell, per Befehl oder durch einen anderen Bot  - wird sie nach der konfigurierten Dauer automatisch entfernt.
 
 Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=admin-tools%7Calways-temporary-roles).
 

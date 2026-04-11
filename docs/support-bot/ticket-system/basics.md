@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Starter Guide
-description: Complete starter guide for your Discord ticket system — learn how to create, claim, respond to, and close tickets with your team.
+description: Complete starter guide for your Discord ticket system  - learn how to create, claim, respond to, and close tickets with your team.
 ---
 
 # Starter Guide (Ticket System 101)
@@ -12,12 +12,12 @@ Feel free to forward this guide to your team members so they can find their way 
 
 Welcome to the Starter Guide for the ticket system of the SCNX Support-Bot!
 
-We know the ticket system can feel overwhelming at first, and you might not fully understand every feature yet — that’s completely normal.
-That’s exactly why this page is written from a team member’s perspective, so you’ll quickly find your way around the ticket system and use all features without problems.
-In general, every server can enable different features for their ticket system, so some features may not be available in your server’s ticket system.
-At the end of each section, we’ve included screenshots to show the features in more detail.
+We know the ticket system can feel overwhelming at first, and you might not fully understand every feature yet  - that's completely normal.
+That's exactly why this page is written from a team member's perspective, so you'll quickly find your way around the ticket system and use all features without problems.
+In general, every server can enable different features for their ticket system, so some features may not be available in your server's ticket system.
+At the end of each section, we've included screenshots to show the features in more detail.
 
-But now we’ll leave the reading to you and wish you the best of luck!
+But now we'll leave the reading to you and wish you the best of luck!
 
 ## Create tickets {#create-tickets}
 
@@ -38,7 +38,7 @@ To keep tickets better organized across team members, you first need to assign a
 
 To do this, open the configured channel in Discord and click the "Claim ticket" button under the message. After the ticket is assigned to you, the message is deleted automatically.
 Alternatively, you can also open the channel of the new ticket directly and click the button under the assignment message (the message in the notification channel will also be deleted).
-If you don’t see any new ticket channels, this option has been disabled in your ticket system.
+If you don't see any new ticket channels, this option has been disabled in your ticket system.
 
 
 
@@ -46,7 +46,7 @@ If you don’t see any new ticket channels, this option has been disabled in you
 
 As soon as you have access to the ticket channel, you can send messages, emojis, stickers, GIFs, and more depending on your permissions.
 
-Since tickets usually aren’t just regular messages, we’ll show you more features below that you can use in ticket channels.
+Since tickets usually aren't just regular messages, we'll show you more features below that you can use in ticket channels.
 
 
 
@@ -55,7 +55,7 @@ Since tickets usually aren’t just regular messages, we’ll show you more feat
 ## Use commands {#use-commands}
 
 The ticket system includes a set of commands that allow different actions depending on your configuration.
-If a command is not shown in the ticket channel, you either don’t have permission for that command or the feature hasn’t been configured.
+If a command is not shown in the ticket channel, you either don't have permission for that command or the feature hasn't been configured.
 
 | Command | Description |
 | --- | --- |
@@ -77,17 +77,17 @@ If a command is not shown in the ticket channel, you either don’t have permiss
 
 Using the blocklist, you can have users blocked from the entire Support-Bot. This block applies to both the ticket and modmail system (if used).
 
-If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user — optionally, you can provide the reason and the duration of the block.
+If you want to block a user, use the command [``/blocklist add``](#use-commands) and select the relevant user  - optionally, you can provide the reason and the duration of the block.
 If you want to remove a user from the blocklist, use the command [``/blocklist remove``](#use-commands).
 
 
 
 ### Send forms {#send-forms}
 
-So you don’t always have to collect information manually, you can simply have users fill out a configured form, which lets you receive necessary data quickly and securely.
+So you don't always have to collect information manually, you can simply have users fill out a configured form, which lets you receive necessary data quickly and securely.
 
 To send a form into a ticket channel, use the command [``/ticket form``](#use-commands) and select the relevant form from the list.
-If no form is in the list or a specific form isn’t shown, it has either not been configured yet or there is an error in the configuration.
+If no form is in the list or a specific form isn't shown, it has either not been configured yet or there is an error in the configuration.
 In that case, ask the person responsible for your server so they can contact our support if needed.
 
 
@@ -128,14 +128,14 @@ If you want to remove users, use the command [``/ticket users remove``](#use-com
 
 ## Close tickets {#close-tickets}
 
-After a user’s request has been resolved, you can close the ticket either with the command [``/ticket close``](#use-commands) or the button under the ticket message right away, or
+After a user's request has been resolved, you can close the ticket either with the command [``/ticket close``](#use-commands) or the button under the ticket message right away, or
 schedule closing with [``/ticket schedule-close``](#use-commands) after a certain period of time (automatic closing is disabled in that case).
 
 
 
 ## Support feedback {#support-feedback}
 
-If support feedback is enabled in your server’s ticket system, users automatically receive a DM after the ticket is closed where they can leave feedback for that ticket.
+If support feedback is enabled in your server's ticket system, users automatically receive a DM after the ticket is closed where they can leave feedback for that ticket.
 This feedback is optional and, if submitted, is sent to the configured channel where you can view the feedback.
 
 
@@ -143,8 +143,8 @@ This feedback is optional and, if submitted, is sent to the configured channel w
 ## Ticket logs {#ticket-logs}
 
 All messages of a ticket are logged and shown in a ticket log after the ticket is closed.
-If your server has AI summaries enabled, you’ll also see a short summary of the ticket content in the message in the channel.
-Using the button under the message, you’ll either be taken to a modmail.net website (if enabled) (where the logs are shown in a nice web layout) or to a text file
+If your server has AI summaries enabled, you'll also see a short summary of the ticket content in the message in the channel.
+Using the button under the message, you'll either be taken to a modmail.net website (if enabled) (where the logs are shown in a nice web layout) or to a text file
 that you can download.
 
 
@@ -153,7 +153,7 @@ that you can download.
 
 Yay, you made it 🎉
 
-You’ve reached the end of the guide and hopefully now have a good overview of how the ticket system of the SCNX Support-Bot works and how to use it.
+You've reached the end of the guide and hopefully now have a good overview of how the ticket system of the SCNX Support-Bot works and how to use it.
 
 If you still have questions or something is unclear, feel free to ask the person responsible for your server or create a ticket on our [Discord server](https://scootk.it/dc-de),
-we’ll be happy to help!
+we'll be happy to help!

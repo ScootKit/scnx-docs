@@ -3,7 +3,7 @@ title: Zeit, ein Osterevent für deinen Discord vorzubereiten!
 description: Ostern ist in einer Woche - es ist höchste Zeit, ein Osterevent zu planen. Hier gibt es Tipps und Tricks.
 slug: easter-2025-newsletter
 date: 2025-04-13T10:00
-authors: 
+authors:
   - scderox
   - hörnchen
 tags:
@@ -72,7 +72,7 @@ Mehr Informationen findest du in dem [scnx.tips-Artikel](https://scnx.tips/hunt-
 ## Fragen oder Probleme?
 
 Mehr Informationen zu dem Modul findest du in dem [scnx.tips-Artikel](https://scnx.tips/hunt-the-code/), ansonsten helfen wir immer gerne auf [scnx.app/help](https://scnx.app/help) oder direkt auf [unserem Discord](https://scootk.it/dc-de).
- 
+
 
 Mache Ostern zu einem unvergesslichen Erlebnis für deine Discord-Community mit einer spannenden virtuellen
 Eier-Code-Suche powered by SCNX!

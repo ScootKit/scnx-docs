@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Konfiguration
-description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Schließoptionen, Schließgründe, Archivierung, Erinnerungen, Pausierung und erweiterte Nachrichten.
+description: Konfiguriere dein Discord-Modmail-System  - Ticket-Kategorien, Schließoptionen, Schließgründe, Archivierung, Erinnerungen, Pausierung und erweiterte Nachrichten.
 ---
 
 # Konfiguration
@@ -137,10 +137,10 @@ description: Konfiguriere dein Discord-Modmail-System — Ticket-Kategorien, Sch
 | Geplante Schließungs-Nachricht | Diese Nachricht wird dein Bot in den Ticket-Kanal senden, sobald ein Teammitglied den Befehl ausgeführt hat.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Können Teammitglieder manuell planen, wann Tickets geschlossen werden sollen?" aktiviert ist.*</blockquote></details></small> |
 | Log/Transkript an die Log-Kanal-Nachricht anhängen? | Wenn aktiviert, wird das Ticket-Transkript an die Nachricht im Log-Kanal angehängt, wenn ein Ticket geschlossen wird. |
 | Schließgründe erlauben? | Wenn aktiviert, können Teammitglieder beim Schließen eines Tickets mit dem Befehl [``/ticket close``](#ticket-closing-commands) einen Grund angeben. Schließgründe werden in der Log-Kanal-Nachricht angezeigt. |
-| Schließgrund erzwingen? | Wenn aktiviert, müssen Teammitglieder beim Schließen eines Tickets einen Grund angeben — das Feld wird zur Pflicht.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Schließgründe erlauben?" aktiviert ist.*</blockquote></details></small> |
+| Schließgrund erzwingen? | Wenn aktiviert, müssen Teammitglieder beim Schließen eines Tickets einen Grund angeben  - das Feld wird zur Pflicht.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Schließgründe erlauben?" aktiviert ist.*</blockquote></details></small> |
 | Eigene Schließgründe? | Wenn aktiviert, kannst du eine Liste vordefinierter Schließgründe festlegen, die Teammitglieder per Autovervollständigung auswählen können. Teammitglieder können bei Bedarf trotzdem eigene Gründe eingeben.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Schließgründe erlauben?" aktiviert ist.*</blockquote></details></small> |
 | Standard-Schließgründe | Eine Liste vordefinierter Schließgründe, die Teammitglieder beim Schließen eines Tickets auswählen können. Diese erscheinen als Autovervollständigungs-Vorschläge im Schließen-Befehl.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Eigene Schließgründe?" aktiviert ist.*</blockquote></details></small> |
-| Leises Ticket-Schließen erlauben? | Wenn aktiviert, können Teammitglieder ein Ticket mit dem Befehl [``/ticket close``](#ticket-closing-commands) leise schließen — der Nutzer erhält keine DM oder Schließ-Benachrichtigung. |
+| Leises Ticket-Schließen erlauben? | Wenn aktiviert, können Teammitglieder ein Ticket mit dem Befehl [``/ticket close``](#ticket-closing-commands) leise schließen  - der Nutzer erhält keine DM oder Schließ-Benachrichtigung. |
 | Ticket nach Schließen löschen? | Wenn aktiviert, wird der Ticket-Kanal sofort nach dem Schließen gelöscht. Wenn deaktiviert, bleibt der Kanal erhalten und kann optional archiviert werden. |
 | Archivierungs-Kategorie | Geschlossene Ticket-Kanäle werden in diese Kategorie verschoben. Verwende dies, um geschlossene Tickets zur Überprüfung zugänglich zu halten.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |
 | Archivierte Nachricht | Diese Nachricht wird in den Ticket-Kanal gesendet, nachdem er archiviert wurde.<br/><small><details><summary>Voraussetzung</summary><blockquote>*Nur verfügbar, wenn „Ticket nach Schließen löschen?" deaktiviert ist.*</blockquote></details></small> |

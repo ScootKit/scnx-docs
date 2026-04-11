@@ -103,4 +103,4 @@ Hier sind ein paar Dinge, die du jetzt tun könntest:
 * Teste deinen Modmail-Bot: Sende ihm eine Privatnachricht und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
 * [stelle deinen Modmail-Bot ein](/docs/modmail/configuration) und aktiviere mehr Modmail-Funktionen.
 * Verbessere dein Support System, indem du [fortgeschritte Modmail-Funktionen](/docs/modmail/advanced-features) erkundest.
-* und sehr viel mehr. Öffne die [Modmail-Documentation](/docs/modmail/intro), um dir jede Option anzuschauen. 
+* und sehr viel mehr. Öffne die [Modmail-Documentation](/docs/modmail/intro), um dir jede Option anzuschauen.

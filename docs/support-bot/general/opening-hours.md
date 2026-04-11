@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 title: Opening hours
-description: Create and manage opening hours the way you like — holidays can also be fetched automatically.
+description: Create and manage opening hours the way you like  - holidays can also be fetched automatically.
 ---
 
 # Opening hours
@@ -9,7 +9,7 @@ description: Create and manage opening hours the way you like — holidays can a
 ## Features {#features}
 
 * Enable opening hours to inform your members about longer waiting times outside your opening hours.
-* Set your own opening hours for each day — multiple time ranges per weekday are also possible.
+* Set your own opening hours for each day  - multiple time ranges per weekday are also possible.
 * Automatically pause ticket handling on public holidays for your configured country/region, or add your own holidays.
 
 
@@ -34,6 +34,6 @@ description: Create and manage opening hours the way you like — holidays can a
 | Opening hours on Saturday | These opening hours apply to Saturday. The time range must be provided in 24-hour format ``HH:MM-HH:MM`` (for example ``18:00-21:00``). |
 | Opening hours on Sunday | These opening hours apply to Sunday. The time range must be provided in 24-hour format ``HH:MM-HH:MM`` (for example ``18:00-21:00``). |
 | Fully close on holidays? | If enabled, tickets created on holidays are treated as closed (your bot sends the configured message to the user, but the ticket is not closed immediately). |
-| Country for holidays | *Only available if “Fully close on holidays?” is enabled.*<br/>This country is used for holiday detection. Data is provided by [OpenHolidays](https://www.openholidaysapi.org/en/). |
-| Local region/state | *Only available if “Fully close on holidays?” is enabled.*<br/>This region/state is used for holiday detection (if supported). Data is provided by [OpenHolidays](https://www.openholidaysapi.org/en/). |
+| Country for holidays | *Only available if "Fully close on holidays?" is enabled.*<br/>This country is used for holiday detection. Data is provided by [OpenHolidays](https://www.openholidaysapi.org/en/). |
+| Local region/state | *Only available if "Fully close on holidays?" is enabled.*<br/>This region/state is used for holiday detection (if supported). Data is provided by [OpenHolidays](https://www.openholidaysapi.org/en/). |
 | Custom holidays | These dates are treated as holidays (in addition to local holidays). The date must be provided in ``DD/MM`` format (for example ``03/12``). |

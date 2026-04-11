@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Über Modmail
-description: Alles über das DM-basierte Discord-Modmail-System — anonyme Nachrichten, Snippets, Claiming, Formulare, Feedback und mehr.
+description: Alles über das DM-basierte Discord-Modmail-System  - anonyme Nachrichten, Snippets, Claiming, Formulare, Feedback und mehr.
 ---
 
 # Modmail Überblick
@@ -19,7 +19,7 @@ Des weiteren findest du alle Funktionen natürlich noch einmal ausführlich in d
 
 ## Hauptfunktionen {#key-features}
 
-* **DM-basierte Tickets**: Nutzer erstellen Tickets einfach durch Nachricht an den Bot — keine Knöpfe oder Befehle nötig.
+* **DM-basierte Tickets**: Nutzer erstellen Tickets einfach durch Nachricht an den Bot  - keine Knöpfe oder Befehle nötig.
 * **Nachrichten-Weiterleitung**: Nachrichten werden zwischen den DMs des Nutzers und einem Team-Kanal weitergeleitet, sodass Konversationen privat bleiben.
 * **Anonyme Nachrichten**: Teammitglieder können Nachrichten senden, ohne ihre Identität gegenüber dem Nutzer preiszugeben.
 * **Snippets**: Erstelle wiederverwendbare Textvorlagen für schnelle und konsistente Antworten.

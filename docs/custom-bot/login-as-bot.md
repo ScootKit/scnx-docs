@@ -1,6 +1,6 @@
 # Bot Log-In
 
-Send messages, embeds, and forum posts as your bot — directly from the SCNX Dashboard. You can also use this feature to
+Send messages, embeds, and forum posts as your bot  - directly from the SCNX Dashboard. You can also use this feature to
 create self-role messages with buttons.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
@@ -19,7 +19,7 @@ Bot Log-In lets you control your bot's messages from the dashboard without needi
 ## Setup {#setup}
 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login) on your SCNX Dashboard.
-2. Make sure your bot is **online** — Bot Log-In requires your bot to be running without any core issues.
+2. Make sure your bot is **online**  - Bot Log-In requires your bot to be running without any core issues.
 3. Your bot needs the **View Channel** and **Send Messages** permissions in any channel you want to send messages to.
 
 :::caution
@@ -67,13 +67,13 @@ You can edit messages that were previously sent by your bot (including messages 
 You can attach interactive components to messages sent via Bot Log-In. For a detailed overview of all
 available components, see the [Message Editor documentation](/docs/scnx/guilds/message-editor).
 
-* **Custom Command Buttons** — Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
+* **Custom Command Buttons**  - Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
   clicked. Configure these in the message editor's component section and link them to a Custom Command with a button
   trigger.
-* **Link Buttons** — Buttons that open a URL when clicked.
-* **Role Buttons** — Buttons that add or remove a role when clicked, allowing members to self-assign roles. This is a
+* **Link Buttons**  - Buttons that open a URL when clicked.
+* **Role Buttons**  - Buttons that add or remove a role when clicked, allowing members to self-assign roles. This is a
   modern, cleaner alternative to reaction roles.
-* **Select Menus** — Dropdown menus that let users select from a list of options. Can be linked to Custom Commands.
+* **Select Menus**  - Dropdown menus that let users select from a list of options. Can be linked to Custom Commands.
 
 :::info
 To use Custom Command Buttons, you need to first [create a Custom Command](/docs/custom-bot/custom-commands) with a

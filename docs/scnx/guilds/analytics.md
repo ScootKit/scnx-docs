@@ -15,7 +15,7 @@ our [FAQ Article](https://faq.scnx.app/data-collection-with-analytics/) to learn
 that. [Users can opt out](#user-opt-out) and no message (or attachment) content will ever be saved.
 :::
 
-:::info 
+:::info
 To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to your server.
 :::
 

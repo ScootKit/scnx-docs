@@ -75,4 +75,4 @@ anbietet.
   unserem [Discord-Server](https://scootk.it/dc) zu geben.
 * ScootKit RSS-Hub: Ein System, dass Datenverkehr und Benachrichtigungen für Benachrichtigungs-Module auf SCNX
   sicherstellt
-* und mehr… :wink:
+* und mehr... :wink:

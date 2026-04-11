@@ -32,7 +32,7 @@ Setze wöchentliche Nachrichtenziele und Sprachaktivitätsziele für deine Teamm
 
 | Befehl                                 | Beschreibung                                                                                                                                                                                                                        |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `/team-goals progress [user:<Nutzer>]` | Zeigt den Nachrichtenfortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, …) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
+| `/team-goals progress [user:<Nutzer>]` | Zeigt den Nachrichtenfortschritt (Anzahl der Nachrichten, die zum Erreichen des Ziels gebraucht werden, verbleibende Zeit, ...) für das Ziel des aktuellen [Bewertungszeitraums](#module-terms) an (wenn leer, wird dein Fortschritt angezeigt). |
 | `/team-goals voice-progress [user:<Nutzer>]` | Zeigt den Sprachaktivitätsfortschritt (Minuten in Sprachkanälen, Ziel, verbleibende Zeit) für das Sprachziel des aktuellen [Bewertungszeitraums](#module-terms) an. Nur verfügbar, wenn das Sprachziel aktiviert ist. |
 | `/team-goals history [user:<Nutzer>]`  | Zeigt den früheren Zielverlauf (Anzahl der Nachrichten, Ziel erreicht oder nicht, Prozentsatz der erreichten Ziele) der letzten 10 Wochen des angegebenen Benutzers an (wenn leer, wird dein Verlauf angezeigt).                        |
 
@@ -48,10 +48,10 @@ Diese Konfigurationsdatei ermöglicht es dir, die Funktionsweise des Moduls und 
 Öffne sie in
 deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&file=team-goals%7Cconfig).
 
-| Feld                                                     | Beschreibung                                                                                                                                                                                                                                  | 
+| Feld                                                     | Beschreibung                                                                                                                                                                                                                                  |
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Team-Rollen                                              | Diese Rollen werden jede Woche hinsichtlich ihres Fortschritts zum Ziel [ausgewertet](#module-terms). Es werden nur die Nachrichten von Nutzern mit dieser Rolle gezählt.                                                                       |
-| Wöchentliche Nachrichten Ziele                           | Die Anzahl der Nachrichten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) senden müssen, um das Ziel zu erreichen.                                                                                                          | 
+| Wöchentliche Nachrichten Ziele                           | Die Anzahl der Nachrichten, die Teammitglieder in jedem [Bewertungszeitraum](#module-terms) senden müssen, um das Ziel zu erreichen.                                                                                                          |
 | Ziel erfüllt-Nachricht                                   | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel erreicht wurde.           |
 | Ziel fehlgeschlagen-Nachricht                            | Das ist die Nachricht, die jede [Auswertung](#module-terms) für jeden Nutzer, der ausgewertet wird (jeder mit einer konfigurierten Team-Rolle) per PN oder in den konfigurierten Kanal gesendet wird, wenn das Ziel **nicht** erreicht wurde. |
 | Nachrichten in Kanal statt per PN schicken               | Wenn aktiviert, werden Teammitglieder ihre [Auswertung](#module-terms) in einem Kanal statt per PN erhalten.                                                                                                                                  |
@@ -80,7 +80,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 <details>
   <summary>Wie kann ich die Zeit verändern, wann Nutzer ausgewertet werden?</summary>
 
-  Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren, 
+  Es gibt keinen einfachen Weg, das zu tun. Der Auswertungszeitpunkt basiert auf dem genauen Zeitpunkt, zu dem das Modul das erste mal aktiviert wurde (die Auswertung findet jede Woche an diesem Tag zu dieser Zeit statt). Wenn du <i>wirklich</i> einen anderen Auswertungszeitpunkt benötigst, kannst du das Modul deaktivieren,
   die <a href="/docs/custom-bot/additional-features#reset-module-database">Modul-Datenbank löschen</a> und warten, bis der genaue Zeitpunkt erreicht ist, zu der die Auswertung stattfinden soll, und dann das Modul wieder aktivieren.
 </details>
 
@@ -98,7 +98,7 @@ deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=goal&f
 
 <details>
   <summary>Kann ich das Modul nutzen, um die Aktivität meiner Nutzer auszuwerten? / SCNX fügt einen "Missbrauch melden"-Knopf an meine Nachrichten an</summary>
- 
+
 Eine solche Nutzung verstößt gegen unsere <a href="https://scootk.it/scnx-tos">Nutzungsbedingungen</a>, da du unsere Software nutzt, um deine Nutzer mit Spam zu belästigen. Du darfst das Modul nur
   zum Auswerten der Aktivität deiner Teammitglieder und nur mit deren Einverständnis nutzen.
   Wenn du die PN-Funktion von diesem Modul nutzt und eine ungewöhnlich hohe Anzahl an Mitgliedern auf deinem Server auswertest, wird SCNX eventuell automatisch einen "Missbrauch melden"-Knopf an deine Nachrichten anhängen.

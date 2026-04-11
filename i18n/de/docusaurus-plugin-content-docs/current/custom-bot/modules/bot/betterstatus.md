@@ -8,8 +8,8 @@ x Sekunden und mehr!
 ## Funktionen {#features}
 
 * Ändere den Status deines Bots zufällig alle paar Sekunden.
-* Passe den Aktivitätentyp an (Spielt, Schaut, …) oder entferne ihn.
-* Passe den Onlinestatus deines Bots an (Bitte nicht stören, Online, Abwesend, …).
+* Passe den Aktivitätentyp an (Spielt, Schaut, ...) oder entferne ihn.
+* Passe den Onlinestatus deines Bots an (Bitte nicht stören, Online, Abwesend, ...).
 * Ändere den Status automatisch, wenn ein Nutzer beitritt, um ihn zu begrüßen.
 * Füge einen eigenen Link zu einem Streamstatus hinzu.
 * Füge eine Vielzahl von Parametern zu deinem Status hinzu.

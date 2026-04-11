@@ -15,8 +15,8 @@ tags:
 
 In any active Discord server, clarity is key. How can members instantly recognize staff in a busy chat? SCNX is thrilled
 to introduce [**Linked Roles**](/docs/linked-roles/intro/), a powerful feature that displays a user's most important
-role—like "Admin" or "Moderator"
-—as an official tag right next to their username in every message. This is more than a cosmetic update; it's a
+role -like "Admin" or "Moderator"
+ -as an official tag right next to their username in every message. This is more than a cosmetic update; it's a
 fundamental upgrade that brings immediate authority, trust, and professionalism to your community's conversations.
 
 <!-- truncate -->

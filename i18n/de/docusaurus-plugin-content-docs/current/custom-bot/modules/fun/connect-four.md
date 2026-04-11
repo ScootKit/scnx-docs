@@ -5,7 +5,7 @@ Lasse deine Nutzer gegen andere Vier gewinnt spielen!
 <ModuleOverview moduleName="connect-four" />
 
 ## Funktionen {#features}
-Vier gewinnt ist ein sehr altes Spiel - erfahre mehr über es auf [Wikipedia](https://de.wikipedia.org/wiki/Vier_gewinnt). Das Spiel wird auf einem 7x6 Feld ausgetragen, auf dem zwei Spieler mit Hilfe von Marken 
+Vier gewinnt ist ein sehr altes Spiel - erfahre mehr über es auf [Wikipedia](https://de.wikipedia.org/wiki/Vier_gewinnt). Das Spiel wird auf einem 7x6 Feld ausgetragen, auf dem zwei Spieler mit Hilfe von Marken
 Züge spielen, indem sie die Marken auf die Felder fallen lassen. Der Spieler, der zuerst vier Marken in einer Reihe hat, gewinnt.
 
 ## Einrichtung {#setup}
