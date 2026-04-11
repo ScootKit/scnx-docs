@@ -21,22 +21,20 @@ When you experience a service issue on SCNX - whether it's unexpected downtime, 
 
 ## What Accommodations Are Available?
 
-
 :::info
 The specific options available to you depend on your current plan and the nature of the issue. You choose **one** accommodation per voucher.
 :::
 
-
 Depending on the severity of the issue, you may be offered one of the following options:
 
-| Accommodation | Description | Availability |
-|---|---|---|
-| **Plan Extension** | Additional days added to your current plan at no charge | Servers with a plan expiration date (no active subscription) |
-| **Delay Next Billing** | Delays your next subscription payment by a number of days | Servers with an active auto-charge subscription (Stripe or Paddle) |
-| **Account Balance Credit** | A credit applied to your SCNX balance for future purchases | EU customers only |
-| **Free Plan Trial** | Try a higher-tier plan (Unlimited or Professional) for free | Servers on the Starter plan only |
-| **AI Coins** | Free AI coins for your server's AI features | All servers |
-| **Membership** | A complimentary Level 2 or Level 3 membership | All users |
+| Accommodation              | Description                                                 | Availability                                                       |
+| -------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Plan Extension**         | Additional days added to your current plan at no charge     | Servers with a plan expiration date (no active subscription)       |
+| **Delay Next Billing**     | Delays your next subscription payment by a number of days   | Servers with an active auto-charge subscription (Stripe or Paddle) |
+| **Account Balance Credit** | A credit applied to your SCNX balance for future purchases  | EU customers only                                                  |
+| **Free Plan Trial**        | Try a higher-tier plan (Unlimited or Professional) for free | Servers on the Starter plan only                                   |
+| **AI Coins**               | Free AI coins for your server's AI features                 | All servers                                                        |
+| **Membership**             | A complimentary Level 2 or Level 3 membership               | All users                                                          |
 
 ## How Do I Redeem My Voucher?
 
@@ -84,4 +82,4 @@ Please contact our support team at [scnx.app/help](https://scnx.app/help) and re
 
 ---
 
-*SCNX Care is a voluntary goodwill program by ScootKit. Accommodations are issued at the discretion of our support team and are subject to our [Terms of Service](https://sc-net.work/tos).*
+_SCNX Care is a voluntary goodwill program by ScootKit. Accommodations are issued at the discretion of our support team and are subject to our [Terms of Service](https://sc-net.work/tos)._

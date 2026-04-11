@@ -6,12 +6,12 @@ Lasse eine festgelegte Nachricht immer am Ende eines Kanals erscheinen.
 
 ## Funktionen {#features}
 
-* Konfiguriere Nachrichten, die immer als die aktuellste Nachricht in einem Kanal angezeigt werden.
-* Wann immer eine neue Nachricht in den Kanal gesendet wird, löscht der Bot automatisch die alte Sticky-Nachricht und postet sie neu.
-* Unterstützung für mehrere Sticky-Nachrichten in verschiedenen Kanälen.
-* Integrierte Ratenbegrenzung zur Vermeidung von Spam bei schnellem Nachrichtenversand (5 Sekunden Cooldown).
-* Optionales Reagieren auf Nachrichten von anderen Bots im Kanal.
-* Sticky-Nachrichten unterstützen sowohl reinen Text als auch Embed-Formatierungen.
+- Konfiguriere Nachrichten, die immer als die aktuellste Nachricht in einem Kanal angezeigt werden.
+- Wann immer eine neue Nachricht in den Kanal gesendet wird, löscht der Bot automatisch die alte Sticky-Nachricht und postet sie neu.
+- Unterstützung für mehrere Sticky-Nachrichten in verschiedenen Kanälen.
+- Integrierte Ratenbegrenzung zur Vermeidung von Spam bei schnellem Nachrichtenversand (5 Sekunden Cooldown).
+- Optionales Reagieren auf Nachrichten von anderen Bots im Kanal.
+- Sticky-Nachrichten unterstützen sowohl reinen Text als auch Embed-Formatierungen.
 
 ## Einrichtung {#setup}
 
@@ -23,6 +23,7 @@ Lasse eine festgelegte Nachricht immer am Ende eines Kanals erscheinen.
 Dieses Modul arbeitet automatisch – es gibt keine Befehle. Einmal konfiguriert, hält der Bot die Sticky-Nachricht am Ende jedes konfigurierten Kanals aufrecht.
 
 Wenn eine neue Nachricht in einem Kanal mit einer Sticky-Nachricht gesendet wird:
+
 1. Der Bot löscht die vorherige Sticky-Nachricht.
 2. Der Bot postet die Sticky-Nachricht als die aktuellste Nachricht neu.
 
@@ -34,10 +35,10 @@ In dieser Konfigurationsdatei kannst du deine Sticky-Nachrichten verwalten. Öff
 
 Jeder Eintrag in der Liste stellt eine Sticky-Nachricht mit den folgenden Feldern dar:
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Kanal | Der Kanal, in dem die Sticky-Nachricht erscheinen soll. |
-| Nachricht | Der anzuzeigende Nachrichtentext. Unterstützt Embed-Formatierung. |
+| Feld               | Beschreibung                                                                                                                   |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Kanal              | Der Kanal, in dem die Sticky-Nachricht erscheinen soll.                                                                        |
+| Nachricht          | Der anzuzeigende Nachrichtentext. Unterstützt Embed-Formatierung.                                                              |
 | Antworten auf Bots | Falls aktiviert, wird die Sticky-Nachricht auch dann neu gepostet, wenn Nachrichten von anderen Bots im Kanal gesendet werden. |
 
 ## Fehlerbehebung {#troubleshooting}
@@ -53,5 +54,6 @@ Jeder Eintrag in der Liste stellt eine Sticky-Nachricht mit den folgenden Felder
 <details>
   <summary>Die Sticky-Nachricht wird nicht aktualisiert, wenn Bots Nachrichten senden</summary>
 
-  Standardmäßig reagiert der Bot nicht auf Nachrichten von anderen Bots. Aktiviere die Option „Antworten auf Bots" in der Sticky-Nachrichten-Konfiguration für den entsprechenden Kanal.
+Standardmäßig reagiert der Bot nicht auf Nachrichten von anderen Bots. Aktiviere die Option „Antworten auf Bots" in der Sticky-Nachrichten-Konfiguration für den entsprechenden Kanal.
+
 </details>

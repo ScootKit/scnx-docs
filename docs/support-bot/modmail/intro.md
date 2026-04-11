@@ -19,16 +19,16 @@ Of course, you'll also find every feature explained in detail on the respective 
 
 ## Key features {#key-features}
 
-* **DM-based tickets**: Users create tickets simply by messaging the bot  - no need for buttons or commands.
-* **Message relay**: Messages are relayed between the user's DMs and a staff channel, keeping conversations private.
-* **Anonymous messaging**: Staff can send messages without revealing their identity to the user.
-* **Snippets**: Create reusable text templates for quick and consistent responses.
-* **Ticket topics**: Categorize tickets to route them to the right team.
-* **Claiming**: Assign tickets to specific team members to avoid duplicate work.
-* **Forms**: Collect structured information from users using custom forms.
-* **Auto-close**: Automatically close inactive tickets to keep your ticket list tidy.
-* **Support feedback**: Collect ratings and feedback from users after tickets are closed.
-* **And much more**: Opening hours, ticket hold, additional members, statistics channels, and more.
+- **DM-based tickets**: Users create tickets simply by messaging the bot - no need for buttons or commands.
+- **Message relay**: Messages are relayed between the user's DMs and a staff channel, keeping conversations private.
+- **Anonymous messaging**: Staff can send messages without revealing their identity to the user.
+- **Snippets**: Create reusable text templates for quick and consistent responses.
+- **Ticket topics**: Categorize tickets to route them to the right team.
+- **Claiming**: Assign tickets to specific team members to avoid duplicate work.
+- **Forms**: Collect structured information from users using custom forms.
+- **Auto-close**: Automatically close inactive tickets to keep your ticket list tidy.
+- **Support feedback**: Collect ratings and feedback from users after tickets are closed.
+- **And much more**: Opening hours, ticket hold, additional members, statistics channels, and more.
 
 ## Getting started {#getting-started}
 

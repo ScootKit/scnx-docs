@@ -18,20 +18,20 @@ Pläne enthalten keine Premium-Backup- oder andere Funktionen, die vom SCNX-Bot 
 benötigen ein separates Abonnement.
 :::
 
-| Funktion                                                                                           | Starter-Plan                                                                         | Unlimited-Plan                                                                                                                                  | Professional-Plan                                                                                                                                        |
-|----------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Preis (für EU-Kunden)                                                                              | *Für immer kostenlos*                                                                | <PlanPrice plan="UNLIMITED" type="MONTHLY" />, <PlanPrice plan="UNLIMITED" type="YEARLY" /> oder <PlanPrice plan="UNLIMITED" type="LIFETIME" /> | <PlanPrice plan="PROFESSIONAL" type="MONTHLY" />, <PlanPrice plan="PROFESSIONAL" type="YEARLY" /> oder <PlanPrice plan="PROFESSIONAL" type="LIFETIME" /> |
-| Reduzierter Preis für zusätzliche Server[¹](#additional-servers)                                   | *n/a*                                                                                | <PlanPrice plan="UNLIMITED" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                       | <PlanPrice plan="PROFESSIONAL" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                             |
-| Vollständiger Zugriff auf das SCNX Dashboard                                                       | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [dcserver.link](/docs/scnx/guilds/dcserver-link)                                                   | Enthalten                                                                            | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Eigener Discord-Bot](/docs/custom-bot/intro), 24/7 gehostet                                       | Enthalten, muss aber jede Woche durch das Schauen einer Werbung [verlängert](#starter-plan) werden | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Eigener Modmail-Bot](/docs/modmail/intro), 24/7 gehostet                                          | *Nicht verfügbar*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| [Verknüpfte Rollen](/docs/linked-roles/intro)                                                      | *Nicht verfügbar*                                                                      | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
-| Entferne alle Erwähnungen von SCNX aus deinen Bots (z.B. Embed-Fußzeile)                           | *Nicht verfügbar*                                                                      | *Nicht verfügbar*                                                                                                                               | Enthalten                                                                                                                                                |
-| Kostenloses [KI-Guthaben](https://faq.scnx.app/ki-auf-scnx/), das am 25. jeden Monats vergeben wird | 20                                                                                   | 300                                                                                                                                             | 600                                                                                                                                                      |
-| [Kommerzielle Nutzung](/docs/scnx/guilds/faq#commercial-usage)                                     | Untersagt                                                                            | Untersagt                                                                                                                                       | Enthalten                                                                                                                                                |
-| Zugriff auf Premium-Hosting-Infrastruktur                                                          | *Nicht verfügbar*                                                                    | *Nicht verfügbar*                                                                                                                               | Erlaubt                                                                                                                                                  |
-| **Eigener Bot**: Eigene Befehle                                                                    | 10                                                                                   | *unbegrenzt*                                                                                                                                    | *unbegrenzt*                                                                                                                                             |
+| Funktion                                                                                            | Starter-Plan                                                                                       | Unlimited-Plan                                                                                                                                  | Professional-Plan                                                                                                                                        |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Preis (für EU-Kunden)                                                                               | _Für immer kostenlos_                                                                              | <PlanPrice plan="UNLIMITED" type="MONTHLY" />, <PlanPrice plan="UNLIMITED" type="YEARLY" /> oder <PlanPrice plan="UNLIMITED" type="LIFETIME" /> | <PlanPrice plan="PROFESSIONAL" type="MONTHLY" />, <PlanPrice plan="PROFESSIONAL" type="YEARLY" /> oder <PlanPrice plan="PROFESSIONAL" type="LIFETIME" /> |
+| Reduzierter Preis für zusätzliche Server[¹](#additional-servers)                                    | _n/a_                                                                                              | <PlanPrice plan="UNLIMITED" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                       | <PlanPrice plan="PROFESSIONAL" type="ADDITIONAL_SERVERS" /> / Monat / Server                                                                             |
+| Vollständiger Zugriff auf das SCNX Dashboard                                                        | Enthalten                                                                                          | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [dcserver.link](/docs/scnx/guilds/dcserver-link)                                                    | Enthalten                                                                                          | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Eigener Discord-Bot](/docs/custom-bot/intro), 24/7 gehostet                                        | Enthalten, muss aber jede Woche durch das Schauen einer Werbung [verlängert](#starter-plan) werden | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Eigener Modmail-Bot](/docs/modmail/intro), 24/7 gehostet                                           | _Nicht verfügbar_                                                                                  | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| [Verknüpfte Rollen](/docs/linked-roles/intro)                                                       | _Nicht verfügbar_                                                                                  | Enthalten                                                                                                                                       | Enthalten                                                                                                                                                |
+| Entferne alle Erwähnungen von SCNX aus deinen Bots (z.B. Embed-Fußzeile)                            | _Nicht verfügbar_                                                                                  | _Nicht verfügbar_                                                                                                                               | Enthalten                                                                                                                                                |
+| Kostenloses [KI-Guthaben](https://faq.scnx.app/ki-auf-scnx/), das am 25. jeden Monats vergeben wird | 20                                                                                                 | 300                                                                                                                                             | 600                                                                                                                                                      |
+| [Kommerzielle Nutzung](/docs/scnx/guilds/faq#commercial-usage)                                      | Untersagt                                                                                          | Untersagt                                                                                                                                       | Enthalten                                                                                                                                                |
+| Zugriff auf Premium-Hosting-Infrastruktur                                                           | _Nicht verfügbar_                                                                                  | _Nicht verfügbar_                                                                                                                               | Erlaubt                                                                                                                                                  |
+| **Eigener Bot**: Eigene Befehle                                                                     | 10                                                                                                 | _unbegrenzt_                                                                                                                                    | _unbegrenzt_                                                                                                                                             |
 
 <details>
     <summary>Zusätzliche Einschränkungen für Pläne im eigenen Bot</summary>
@@ -121,14 +121,14 @@ der [Liste der Weiterverkäufer](https://corp.scootkit.com/docs/scnx/policies/au
 
 Lebenslängliche Pläne...
 
-* sind nicht an Server, sondern an Nutzer, gebunden - sie können deshalb alle sieben Tage [übertragen](#lifetime-apply)
+- sind nicht an Server, sondern an Nutzer, gebunden - sie können deshalb alle sieben Tage [übertragen](#lifetime-apply)
   werden, müssen das aber nicht.
-* werden alle Funktionen des Planes enthalten, zu welchem sie gekauft wurden (
+- werden alle Funktionen des Planes enthalten, zu welchem sie gekauft wurden (
   vergleiche [SCNX-Nutzungsbedingungen](https://faq.scnx.app/scnx-nutzungsbedingungen/#pl%C3%A4ne)) - auch wenn wir die
   Namen oder Plan-Inhalte ändern sollten.
-* werden nur für eine bestimmte Zeit angeboten, damit wir wachsen können - danach werden sie entfernt.
-* stellen sicher, dass du nie erneut bezahlen musst, auch wenn wir die Preise erhöhen sollten.
-* erlauben es uns, diesen Dienst anzubieten :heart:
+- werden nur für eine bestimmte Zeit angeboten, damit wir wachsen können - danach werden sie entfernt.
+- stellen sicher, dass du nie erneut bezahlen musst, auch wenn wir die Preise erhöhen sollten.
+- erlauben es uns, diesen Dienst anzubieten :heart:
 
 ### Lebenslänglichen Plan kaufen {#lifetime-purchase}
 
@@ -217,6 +217,7 @@ an.
 
 Alle Infos findest du in unserer <a href="/de/docs/account-and-billing/faq#reoccurring-transfer">Anleitung zu diesem
 Thema</a>.
+
 </details>
 <details>
 <summary>Ich kann mein Abo nicht zum Professional-Server-Plan upgraden, mir wird angezeigt, dass mein Abo nicht aktiv wäre</summary>
@@ -230,6 +231,7 @@ Thema</a>.
 <summary>Ist eine kostenfreie Testphase verfügbar?</summary>
 
 Ja, du kannst eine kostenfreie Testphase im Dashboard starten, wenn dein Server folgende Bedingungen erfüllst:
+
 <ul>
     <li>Dein Server hat noch in keiner kostenfreien Testphase zuvor teilgenommen.</li>
     <li>Dein Server wurde noch nie geupgradet.</li>
@@ -268,6 +270,7 @@ Um zu schauen, ob eine kostenfreie Testphase für dich verfügbar ist, öffne di
 Wenn dein Plan oder Abo mehr als zwei Monate Laufzeit übrig hat, können wir das entweder an deinen
 Lebenslänglichen-Plan-Kauf anrechnen oder dir den anteilsmässigen Preis zurückerstatten.
 Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.
+
 </details>
 
 <details>
@@ -275,14 +278,15 @@ Bitte <a href="https://scnx.app/help">kontaktiere unser Team</a>.
 <summary>Ich möchte einen zusätzlichen Server von meinem Abo entfernen</summary>
 
 Das ist aktuell nicht möglich. Bitte kündige dein Abo und schließe ein neues ab. Wir arbeiten an einer besseren Lösung.
-</details>
 
+</details>
 
 <details>
 <summary>Kann ich die Laufzeit & den Plan meines Servers auf einen anderen Server übertragen?</summary>
 
 Unser Team kann die Laufzeit und damit verbunde Daten (wie den Plan und eventuelle Abos) auf einen anderen Server
 übertragen, wenn <b>eine</b> der folgenden Bedingungen erfüllt wird:
+
 <ul>
 <li>Dein Plan wird mit einem aktiven Abo bezahlt</li><li>Die restliche Laufzeit beträgt mehr als zwei Monate</li>
 </ul>
@@ -297,4 +301,5 @@ Wenn du planst, eine <a href="/de/docs/faq#transfer">Übertragung aller Daten de
 Daten deines Servers, inklusive Bot-Konfiguration), beantrage bitte keine Plan-Übertragung, denn das macht eine gesamte
 Datenübertragung unmöglich. Bitte beachte außerdem, dass im Falle einer Übertragung die Laufzeiten der beiden Server
 nicht addiert werden, sondern die Laufzeit des alten Servers die des neuen Servers überschreibt.
+
 </details>

@@ -5,15 +5,15 @@ sidebar_position: 1
 # Bots auf SCNX
 
 Diese Dokumente beinhalten anwendbare Hilfen für den [Eigenen Bot](/docs/custom-bot/intro) und den
- [Modmail Bot](/docs/modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
- [mit dem eigenen  Bot loslegen](/docs/custom-bot) oder den [mit dem Modmail-Bot loslegen](/docs/modmail) Artikel.
+[Modmail Bot](/docs/modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
+[mit dem eigenen Bot loslegen](/docs/custom-bot) oder den [mit dem Modmail-Bot loslegen](/docs/modmail) Artikel.
 
 ## Fehlerbehebung {#troubleshooting}
 
 Die Schritte, um Fehler zu beheben, sind bei den beiden Bots unterschiedlich. Bitte schaue dir den passenden Abschnitt an:
 
-* [Eigener Bot](/docs/custom-bot/troubleshooting)
-* Modmail-Bot
+- [Eigener Bot](/docs/custom-bot/troubleshooting)
+- Modmail-Bot
 
 ## Die Grundlagen {#basics}
 
@@ -27,20 +27,20 @@ Hier ist ein Beispiel von einem eigenen Bot-Status-Panel:
 
 Wie du sehen kannst, gibt es hier bereits einige Möglichkeiten. Hier sind die wichtigsten Informationen über das Panel:
 
-* Der Tag und das Profilbild deines Bots (nur sichtbar, wenn dein Bot online ist). Um das Profil deines Bots zu verändern,
- klicke auf dieses oder befolge [diesen Artikel](#change-profile).
-* "Konfiguration neuladen": Wenn du deine Konfiguration neulädst, wird dein Bot alle ausstehenden Änderungen an Konfigurationsdateien übernehmen (auch Modul-Änderungen)
+- Der Tag und das Profilbild deines Bots (nur sichtbar, wenn dein Bot online ist). Um das Profil deines Bots zu verändern,
+  klicke auf dieses oder befolge [diesen Artikel](#change-profile).
+- "Konfiguration neuladen": Wenn du deine Konfiguration neulädst, wird dein Bot alle ausstehenden Änderungen an Konfigurationsdateien übernehmen (auch Modul-Änderungen)
   ohne dass der Bot offline geht. Generell solltest du lieber die Konfiguration neuladen, als den Bot neuzustarten.
-* "Bot neustarten": Dies wird den Prozess deines Bots neustarten. Dies wird eventuell einige Minuten in Anspruch nehmen,
+- "Bot neustarten": Dies wird den Prozess deines Bots neustarten. Dies wird eventuell einige Minuten in Anspruch nehmen,
   zusätzlich wird der Bot für eine kurze Zeit offline sein, in welcher der Bot nicht erreichbar sein wird.
- Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, seltsame Fehler auftreten oder du ein [Update durchführen willst](#bot-updates).
-* "Bot anhalten": Dies wird den Prozess deines Bots beenden. Er wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
-* "Log" / "Fehler-Log": In diesen Log-Dateien wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und technische Experten) benötigen diese Logs, um eventuelle Probleme zu analysieren und dir eine Lösung vorzuschlagen - oder, falls es Fehler im Bot selbst sind, diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
-* Sprache: Das ist die (menschliche) Sprache die dein Bot für alle Standardkonfigurationswerte und Nachrichten, die nicht konfiguriert werden können, nutzt. Der Modmail kann in manchen Fällen die Sprache des ausführenden Nutzer benutzen, statt der hier eingestellten Sprache. Du kannst jederzeit [die Sprache deines Bots ändern](#bot-language).
-* Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host), wenn du möchtest.
-* Branch (nur beim eigenen Bot verfügbar): Der aktuelle Zweig (englisch "branch") ist eine Version deines eigenen Bots auf einer anderen Programmier-Basis. Du solltest es diesen bei "v3" (Stabile Version) belassen, aber wenn du willst, kannst du auch zu dem "Beta"-Branch wechseln (das ist die öffentliche Beta; kann aber instabil sein).
-* Version (nur bei eigenen Bots sichtbar): Dies ist die aktuelle Version des Codes deines Bots. Abhängig von deiner Version wird dein Bot eventuell neue Funktionen nicht nutzen können. Wenn deine Version nicht aktuell ist, wird eine Warnung angezeigt. Dein Modmail-Bot wird immer automatisch auf den neusten Stand aktualisiert. Erfahre mehr über [Updates & Versionen](#bot-updates).
-* RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen ignorieren, sie zeigen nur die RAM / CPU Nutzung deines Bots an. Diese sind irrelevant, da SCNX automatisch deinen Bot optimiert, falls dein Bot zu viel RAM friss[t](https://www.linuxatemyram.com/) als er tun sollte.
+  Du solltest deinen Bot nur neustarten, wenn du dazu aufgefordert wirst, seltsame Fehler auftreten oder du ein [Update durchführen willst](#bot-updates).
+- "Bot anhalten": Dies wird den Prozess deines Bots beenden. Er wird nicht auf Discord erreichbar sein. Es kann bis zu 5 Minuten dauern, bis der Bot in Discord als offline angezeigt wird.
+- "Log" / "Fehler-Log": In diesen Log-Dateien wird dein Bot dokumentieren, was er macht und wird die Gründe von Fehlern und Problemen aufschreiben. Unser Team (und technische Experten) benötigen diese Logs, um eventuelle Probleme zu analysieren und dir eine Lösung vorzuschlagen - oder, falls es Fehler im Bot selbst sind, diese zu reparieren. Eventuell wirst du gefragt, die [Logs zu teilen](#sharing-logs).
+- Sprache: Das ist die (menschliche) Sprache die dein Bot für alle Standardkonfigurationswerte und Nachrichten, die nicht konfiguriert werden können, nutzt. Der Modmail kann in manchen Fällen die Sprache des ausführenden Nutzer benutzen, statt der hier eingestellten Sprache. Du kannst jederzeit [die Sprache deines Bots ändern](#bot-language).
+- Server: Dies ist der physische Server - auch Bot-Host genannt - auf dem dein Bot betrieben wird. Du kannst den [Bot-Host wechseln](#bot-host), wenn du möchtest.
+- Branch (nur beim eigenen Bot verfügbar): Der aktuelle Zweig (englisch "branch") ist eine Version deines eigenen Bots auf einer anderen Programmier-Basis. Du solltest es diesen bei "v3" (Stabile Version) belassen, aber wenn du willst, kannst du auch zu dem "Beta"-Branch wechseln (das ist die öffentliche Beta; kann aber instabil sein).
+- Version (nur bei eigenen Bots sichtbar): Dies ist die aktuelle Version des Codes deines Bots. Abhängig von deiner Version wird dein Bot eventuell neue Funktionen nicht nutzen können. Wenn deine Version nicht aktuell ist, wird eine Warnung angezeigt. Dein Modmail-Bot wird immer automatisch auf den neusten Stand aktualisiert. Erfahre mehr über [Updates & Versionen](#bot-updates).
+- RAM / CPU: Dies wird direkt unter dem "Online"-Status angezeigt. Du kannst sie ohne Sorgen ignorieren, sie zeigen nur die RAM / CPU Nutzung deines Bots an. Diese sind irrelevant, da SCNX automatisch deinen Bot optimiert, falls dein Bot zu viel RAM friss[t](https://www.linuxatemyram.com/) als er tun sollte.
 
 ### Bot-Updates {#bot-updates}
 
@@ -100,6 +100,7 @@ Wie du sehen kannst, gibt es hier bereits einige Möglichkeiten. Hier sind die w
 ### Den Bot-Host wechseln {#bot-host}
 
 Der Bot-Host ist der physische Server, auf dem dein Bot läuft. Wir bieten viele rund um die Welt verteilte Bot-Hosts an. So kannst du den Bot-Host wechseln:
+
 1. Öffne das [Modmail-](https://scnx.app/de/glink?page=modmail/manage)
    oder das [eigene Bot-](https://scnx.app/glink?page=bot/manage) Dashboard.
 2. Klicke als Nächstes auf "Wechseln" in dem "Status" Bereich.
@@ -121,6 +122,7 @@ Der Bot-Host ist der physische Server, auf dem dein Bot läuft. Wir bieten viele
 
 Letzten Endes ist es egal (bis auf die Premium-Server). Jeder Bot-Host ist dafür da, Bots wie deinen, zu hosten.
 Wir haben hohe Standards bei den Bot-Hosts und können versichern, dass alle das gleiche Erlebnis bieten. Eventuell werden wir deinen Bot zwischen den Bot-Hosts verschieben, wenn du keinen bezahlten Plan hast, um Ressourcen zu sparen.
+
 </details>
 
 <details>
@@ -163,7 +165,7 @@ Um die Sprache deines Bots zu ändern,
 
 Du kannst die Fußzeile jeder Nachricht, die du auf SCNX bearbeiten kannst, anpassen. Um nicht immer manuell die Fußzeile zu ändern oder die Fußzeile von voreingestellte Nachricht, die du nicht Bearbeiten kannst, anzupassen, kannst du einen globalen Standard-Fußzeilenwert setzen.
 
-Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, folge bitte diesen Schritten:
+Um das "Powered by scnx.xyz ⚡" von _jedem_ Embed von deinem Bot zu entfernen, folge bitte diesen Schritten:
 
 <Tabs groupId="scnx-bot-type-k">
     <TabItem value="customBot" label="Eigener Bot">
@@ -186,9 +188,9 @@ Um das "Powered by scnx.xyz ⚡" von *jedem* Embed von deinem Bot zu entfernen, 
 
 :::info Bevor du weiterliest:
 
-* Damit dies funktioniert muss dein Bot auf SCNX online sein. Wenn dein Bot nicht auf SCNX online sein sollte, schaue bitte in die [Anleitung zur Fehlerbehebung](#troubleshooting).
-* Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](/docs/scnx/guilds/trusted-admins#permissions) "Bot verwalten" auf dem Produkt haben, dessen Einstellungen du ändern möchtest.
-:::
+- Damit dies funktioniert muss dein Bot auf SCNX online sein. Wenn dein Bot nicht auf SCNX online sein sollte, schaue bitte in die [Anleitung zur Fehlerbehebung](#troubleshooting).
+- Wenn du nicht der Inhaber von dem Server bist, musst du die [Trusted-Admin Berechtigung](/docs/scnx/guilds/trusted-admins#permissions) "Bot verwalten" auf dem Produkt haben, dessen Einstellungen du ändern möchtest.
+  :::
 
 So kannst du das Profil-Bild und den Nutzernamen deines Bots ändern, ohne SCNX zu verlassen:
 
@@ -221,7 +223,7 @@ Dafür muss dein Bot online sein. Wenn dein Bot nicht auf SCNX online ist, öffn
 :::
 
 :::caution
-Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, für den der Bot erstellt wurde. Wenn du deinen Server wechseln willst, befolge bitte die Anleitung zum [Übertragen von SCNX-Daten](/docs/scnx/guilds/faq#transfer) in unserem FAQ. Wenn du einen seperaten Bot für einen anderen Server erstellen möchtest,  [füge deinen Server zu  SCNX hinzu](/docs/setup) und [erstelle dann einen eigenen Bot](/docs/custom-bot).
+Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, für den der Bot erstellt wurde. Wenn du deinen Server wechseln willst, befolge bitte die Anleitung zum [Übertragen von SCNX-Daten](/docs/scnx/guilds/faq#transfer) in unserem FAQ. Wenn du einen seperaten Bot für einen anderen Server erstellen möchtest, [füge deinen Server zu SCNX hinzu](/docs/setup) und [erstelle dann einen eigenen Bot](/docs/custom-bot).
 :::
 
 1. Öffne das [Modmail-](https://scnx.app/glink?page=modmail/manage)
@@ -235,7 +237,7 @@ Dein Bot **wird nicht auf anderen Servern funktionieren**, als auf dem Server, f
 Bevor wir loslegen, eine kurze Erklärung darüber, was Logs überhaupt sind und warum du sie teilen solltest. Jeder Bot hat seinen eigenen Prozess auf SCNX, der auf einem echten, physischen Server verwaltet wird. Während dein Bot läuft, produziert dieser Prozess solche Log-Datein. In diesen Datein dokumentiert dein Bot, alles, was was er macht und schreibt den Grund für Fehlern auf. Unser Team benötigt diese Logs. um eventuelle Probleme zu diagnostizieren und dir eine Lösung anzubieten - oder um, wenn es Fehler direkt am Bot, ist - diese zu beheben.
 
 :::info
-Bot Logs zu Teilen, ist eine „Einmalige Erfassung" davon - geteilte Logs werden nicht aktualisiert, wenn dein Bot etwas Neues dokumentiert. Die geteilten Logs werden nach 7 Tagen,  nachdem du sie geteilt hast, gelöscht. Logs beinhalten meinst keine privaten Informationen, aber bitte schaue trotzdem darüber, bevor du sie veröffentlichst.
+Bot Logs zu Teilen, ist eine „Einmalige Erfassung" davon - geteilte Logs werden nicht aktualisiert, wenn dein Bot etwas Neues dokumentiert. Die geteilten Logs werden nach 7 Tagen, nachdem du sie geteilt hast, gelöscht. Logs beinhalten meinst keine privaten Informationen, aber bitte schaue trotzdem darüber, bevor du sie veröffentlichst.
 :::
 
 :::caution
@@ -260,10 +262,10 @@ Du kannst deinen Bot Token **nur** in deinem Bot Dashboard ändern. Sende **niem
 
 :::caution
 
-* Du musst der Besitzer des Servers sein, um den Bot-Token zu ändern.
-* Das Ändern deines Bot Tokens wird **keine Probleme lösen**. Bitte nutze die [Anleitung zur Fehlerbehebung](#troubleshooting), um Fehler zu erkennen und zu beheben.
-* Wenn du den Namen oder das Profilbild deines Bots ändern willst, folge [dieser Anleitung](#change-profile).
-* Das Wechseln des Bot-Tokens kann neue Fehler produzieren. Vermeide deswegen bitte das Wechseln des Tokens.
+- Du musst der Besitzer des Servers sein, um den Bot-Token zu ändern.
+- Das Ändern deines Bot Tokens wird **keine Probleme lösen**. Bitte nutze die [Anleitung zur Fehlerbehebung](#troubleshooting), um Fehler zu erkennen und zu beheben.
+- Wenn du den Namen oder das Profilbild deines Bots ändern willst, folge [dieser Anleitung](#change-profile).
+- Das Wechseln des Bot-Tokens kann neue Fehler produzieren. Vermeide deswegen bitte das Wechseln des Tokens.
 
 :::
 
@@ -291,9 +293,9 @@ Wenn du deinen Bot löschst, wird dies nicht nur für immer die Bot Konfiguratio
 
 :::caution
 
-* Du musst der Inhaber des Servers sein, um den Bot zu löschen.
-* Löschen des Bots wird höchstwahrscheinlich **keine Probleme lösen**. Bitte nutze die [Anleitung zur Fehlerbehebung](#troubleshooting), um Fehler zu diagnostizieren und zu beheben.
-* Wenn du den Nutzernamen oder das Profilbild deines Bots ändern willst, folge [dieser Anleitung](#change-profile).
+- Du musst der Inhaber des Servers sein, um den Bot zu löschen.
+- Löschen des Bots wird höchstwahrscheinlich **keine Probleme lösen**. Bitte nutze die [Anleitung zur Fehlerbehebung](#troubleshooting), um Fehler zu diagnostizieren und zu beheben.
+- Wenn du den Nutzernamen oder das Profilbild deines Bots ändern willst, folge [dieser Anleitung](#change-profile).
 
 :::
 

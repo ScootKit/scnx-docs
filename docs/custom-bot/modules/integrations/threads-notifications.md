@@ -6,9 +6,9 @@ Send a message to a channel when someone posts a new thread on Threads by Meta.
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when a Threads user publishes a new post.
-* Monitor multiple Threads accounts simultaneously, each with its own notification channel and message format.
-* Customize the notification message with details such as the username, post preview and URL.
+- Receive notifications in a Discord channel when a Threads user publishes a new post.
+- Monitor multiple Threads accounts simultaneously, each with its own notification channel and message format.
+- Customize the notification message with details such as the username, post preview and URL.
 
 ## Setup {#setup}
 
@@ -27,11 +27,11 @@ Only posts published within the last 24 hours will trigger notifications, so old
 
 This configuration file allows you to set up Threads accounts to monitor for new posts. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=threads-notifications%7Cusers).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| Threads-Username | The @handle of the Threads user you want to receive notifications from. |
-| Message | The message sent to the configured channel when the user publishes a new thread on Threads. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field            | Description                                                                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel          | The Discord channel in which the notification should be sent.                                                                                                                 |
+| Threads-Username | The @handle of the Threads user you want to receive notifications from.                                                                                                       |
+| Message          | The message sent to the configured channel when the user publishes a new thread on Threads. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -50,8 +50,8 @@ This configuration file allows you to set up Threads accounts to monitor for new
 
 The following data is being stored about every sent notification:
 
-* The Threads post URL
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+- The Threads post URL
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

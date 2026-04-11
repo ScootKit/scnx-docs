@@ -28,7 +28,7 @@ Um einen Trusted Admin hinzuzufügen, besuche deine [Server Einstellungen Seite]
 in deinem SCNX Dashboard und scrolle zur "Trusted-Admins" Sektion.
 Als nächstes klickst du auf "Trusted-Admin hinzufügen", um dir den
 Trusted-Admin-Dialog anzeigen zu lassen. Hier kannst du den Discord-Benutzernamen oder die Nutzer-ID des gewünschten
-Trusted-Admins eingeben  - der Nutzer wird automatisch gesucht und eine Vorschau wird angezeigt, sobald er gefunden wurde.
+Trusted-Admins eingeben - der Nutzer wird automatisch gesucht und eine Vorschau wird angezeigt, sobald er gefunden wurde.
 Du kannst außerdem [seine Berechtigungen](#permissions) konfigurieren (Bitte lies zuerst den
 Abschnitt [Berechtigungen](#permissions)!) und optional eine [Ablaufzeit](#expiration) festlegen. Wenn du fertig bist,
 speichere die Änderungen, um den Zugriff zu gewähren.
@@ -49,11 +49,11 @@ Um einen Trusted Admin zu entfernen, klicke auf "Zugang entfernen" im Trusted-Ad
 Du kannst eine Ablaufzeit für den Zugriff eines Trusted-Admins festlegen. Wenn der Zugriff abläuft, verliert der
 Trusted-Admin automatisch den Zugriff auf deinen Server auf SCNX. Die folgenden Zeiträume sind verfügbar:
 
-* **1 Stunde**  - nützlich für kurze Fehlerbehebungen
-* **1 Tag**  - für temporären Zugriff bei einer bestimmten Aufgabe
-* **1 Woche**  - für kurzfristige Projektzusammenarbeit
-* **1 Monat**  - für längerfristigen Zugriff
-* **Nie**  - Zugriff läuft nicht ab (Standard)
+- **1 Stunde** - nützlich für kurze Fehlerbehebungen
+- **1 Tag** - für temporären Zugriff bei einer bestimmten Aufgabe
+- **1 Woche** - für kurzfristige Projektzusammenarbeit
+- **1 Monat** - für längerfristigen Zugriff
+- **Nie** - Zugriff läuft nicht ab (Standard)
 
 Du kannst die Ablaufzeit jederzeit ändern, indem du den Trusted-Admin bearbeitest. Das aktuelle Ablaufdatum wird im
 Trusted-Admin-Dialog angezeigt.
@@ -63,7 +63,7 @@ Trusted-Admin-Dialog angezeigt.
 Die folgenden Berechtigungen können per Trusted Admin-Berechtigungen vergeben werden:
 
 | Berechtigung                                                                                       | Erklärung                                                                                                                                                                                                         |
-|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------- |
 | Administrator                                                                                      | Dieser Nutzer kann die meisten Aktionen auf deinem Server ausführen, außer Aktionen welche auf den Server-Eigentümer limitiert sind.                                                                              |
 | Co-Owner (**gefährlich!**, nur verfügbar, wenn die Administrator-Berechtigung auch vergeben wurde) | Dieser Nutzer kann jede Aktion auf deinem Server durchführen, wozu das Erstellen, aber auch Löschen von Bots auf SCNX gehört, der Nutzer kann den Server auch komplett von SCNX entfernen.                        |
 | **Eigener Bot**: Bot-Administrator                                                                 | Dieser Nutzer hat jegliche verfügbare Berechtigung auf den eigenen Bot des Servers.                                                                                                                               |
@@ -78,38 +78,38 @@ Die folgenden Berechtigungen können per Trusted Admin-Berechtigungen vergeben w
 | **Modmail-Bot**: Modmail-Statistiken anzeigen                                                      | Dieser Nutzer kann die Modmail-Statistiken einsehen.                                                                                                                                                              |
 | **Verknüpfte Rollen**: Verknüpfte Rollen Administrator                                             | Dieser Nutzer hat jede verfügbare Berechtigungen auf verknüpfte Rollen.                                                                                                                                           |
 | **Verknüpfte Rollen**: Verknüpfte Rollen von Nutzern verwalten                                     | Dieser Nutzer kann verknüpfte Rollen von jedem Nutzer auf deinem Server verwalten.                                                                                                                                |
-| **Verknüpfte Rollen** Verknüpfte Rollen Konfiguration und Rollen verwalten                         | Dieser Nutzer kann die Konfiguration von verknüpften Rollen verwalten und verknüpfte Rollen ändern.                                                                                                               | **Backups**: Verwalte Backups                                                                      | Dieser Nutzer kann Backups erstellen, exportieren, löschen und seine Einstellungen verändern.                                                                                                                     |
+| **Verknüpfte Rollen** Verknüpfte Rollen Konfiguration und Rollen verwalten                         | Dieser Nutzer kann die Konfiguration von verknüpften Rollen verwalten und verknüpfte Rollen ändern.                                                                                                               | **Backups**: Verwalte Backups | Dieser Nutzer kann Backups erstellen, exportieren, löschen und seine Einstellungen verändern. |
 | **Statistiken**: Anzeigen und Verwenden von Analysen                                               | Dieser Nutzer kann deine Server Statistiken anzeigen und verwenden.                                                                                                                                               |
 | **Integrationen**: Integrationen ansehen & bearbeiten                                              | Dieser Nutzer kann alle Funktionen jeglicher Integrationen anschauen und editieren, aber keine neuen Integrationen hinzufügen.                                                                                    |
 
 Außerdem verfügt jeder Trusted-Admin über eine **Basis von Berechtigungen**:
 
-* Alle Einstellungen in dem [Servereinstellungen](https://scnx.app/de/glink?page=settings)-Tab anschauen und manche
+- Alle Einstellungen in dem [Servereinstellungen](https://scnx.app/de/glink?page=settings)-Tab anschauen und manche
   ändern
-* Metadata über deinen Server anschauen (z. B. Name, Icon, Eigentümer, ...)
-* Einsicht in die Kaufdaten deines Servers (dies umfasst den Transaktionsverlauf, aber niemals die persönlichen Daten
+- Metadata über deinen Server anschauen (z. B. Name, Icon, Eigentümer, ...)
+- Einsicht in die Kaufdaten deines Servers (dies umfasst den Transaktionsverlauf, aber niemals die persönlichen Daten
   von Abonnements)
-* Upgrade oder Einrichtung von Abonnements für deinen Server
-* KI-Guthaben auf deinem Server aufladen
+- Upgrade oder Einrichtung von Abonnements für deinen Server
+- KI-Guthaben auf deinem Server aufladen
 
 Trusted Admins (ohne Co-Owner-Berechtigung) **können niemals**:
 
-* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
-* den Token eines auf SCNX erstellten Bots ändern.
-* andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
+- neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
+- den Token eines auf SCNX erstellten Bots ändern.
+- andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
   können dies.
-* Produkte vom Server entfernen oder den Server von SCNX entfernen.
-* Käufe (z. B. Pläne, KI-Guthaben, ...) in deinem Namen durchführen oder deine Zahlungsmethoden verwenden.
-* die Erlaubnis für unsere Teammitglieder erteilen, potenziell zerstörerische Aktionen durchzuführen.
+- Produkte vom Server entfernen oder den Server von SCNX entfernen.
+- Käufe (z. B. Pläne, KI-Guthaben, ...) in deinem Namen durchführen oder deine Zahlungsmethoden verwenden.
+- die Erlaubnis für unsere Teammitglieder erteilen, potenziell zerstörerische Aktionen durchzuführen.
 
 **Co-Owners können**:
 
-* neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
-* den Token eines auf SCNX erstellten Bots ändern.
-* andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
+- neue Produkte (z. B. Eigener Bot, Modmail-Bot, Statistiken, ...) auf deinem Server aktivieren.
+- den Token eines auf SCNX erstellten Bots ändern.
+- andere Trusted Admins deines Servers hinzufügen, ihre Berechtigungen ändern oder entfernen - Nur der Server-Eigentümer und Co-Owner
   können dies.
-* Produkte vom Server entfernen oder den Server von SCNX entfernen.
-* die Erlaubnis für unsere Teammitglieder erteilen, potenziell zerstörerische Aktionen durchzuführen.
+- Produkte vom Server entfernen oder den Server von SCNX entfernen.
+- die Erlaubnis für unsere Teammitglieder erteilen, potenziell zerstörerische Aktionen durchzuführen.
 
 Co-Owner können niemals Produkte in deinen Namen kaufen oder deine Zahlungsmethoden verwenden.
 
@@ -145,6 +145,7 @@ Berechtigungsänderungen auf deinem Server widergespiegelt werden.
 
 Wenn du einen Discord-Benutzernamen oder eine Nutzer-ID eingibst, wird der Nutzer automatisch gesucht. Wenn der Nutzer
 nicht gefunden wird, bedeutet das, dass er sich noch nicht bei SCNX angemeldet hat. Um das zu beheben:
+
 <ol>
     <li>Bitte den Nutzer, <a href="https://scnx.app/de/auth/login">scnx.app</a> zu besuchen und sich mit Discord anzumelden</li>
     <li>Stelle sicher, dass der Benutzername oder die Nutzer-ID korrekt ist</li>
@@ -161,6 +162,7 @@ Du kannst entweder einen Discord-Benutzernamen (z. B. <code>benutzername</code>)
 Bitte stelle sicher, das du dem Nutzer bzw. dem Trusted Admin die korrekten <a href="#permissions">Rechte</a> vergeben
 hast. Du kannst die Berechtigungen deines Trusted Admins einfach bearbeiten indem du in die <a href="#manage">Sektion
 über die Verwaltung von Trusted-Admins</a> gehst.
+
 </details>
 
 <details>
@@ -169,8 +171,8 @@ hast. Du kannst die Berechtigungen deines Trusted Admins einfach bearbeiten inde
 Trusted Admins können keine sensiblen Aktionen, wie z. B. die Aktivierung und Deaktivierung von Produkten ausführen.
 Bitte lies den Abschnitt <a href="#permissions">Berechtigungen</a>, um mehr über diese Einschränkungen zu erfahren. Der
 Trusted Admin kann die Produkte bearbeiten, nachdem der Server-Besitzer sie freigegeben/eingestellt hat.
-</details>
 
+</details>
 
 <details>
 <summary>Mein Trusted Admin findet meinen Server nicht in seiner Liste</summary>

@@ -13,13 +13,14 @@ tags:
 
 Hey everyone,
 
-We have some massive news to share today. If you've been part of the SCNX community for a while, you know that we thrive on your feedback. Whether it's a suggestion for a new module, a tweak to the leveling system, or a crazy idea  - your input builds this platform.
+We have some massive news to share today. If you've been part of the SCNX community for a while, you know that we thrive on your feedback. Whether it's a suggestion for a new module, a tweak to the leveling system, or a crazy idea - your input builds this platform.
 
 But as our community has grown, keeping track of all those brilliant ideas has become a challenge. We realized we needed a better system. We needed a way to make feedback transparent, organized, and truly democratic.
 
-**Today, we are proud to launch Featureboard  - a community-driven feedback platform that uses AI to provide you with a better experience and give us a clearer overview of new features.**
+**Today, we are proud to launch Featureboard - a community-driven feedback platform that uses AI to provide you with a better experience and give us a clearer overview of new features.**
 
 <!-- truncate -->
+
 ## Why we built Featureboard
 
 For a long time, user feedback was a bit of a "black box." You would submit an idea, and maybe you'd hear back, or maybe it would end up on a long internal to-do list. We wanted to change that.
@@ -32,7 +33,7 @@ Featureboard was built to solve three main problems:
 
 ### More Efficiency, More Features
 
-While Featureboard creates a much better experience for you, it is also a game-changer for our team. It allows us to keep track of suggestions effortlessly and get a clear view of what is most important to our community. Because of the new AI features, maintenance is very easy  - tasks like moderation are **completely automated**. This means we spend less time sorting tickets and more time building the features you want.
+While Featureboard creates a much better experience for you, it is also a game-changer for our team. It allows us to keep track of suggestions effortlessly and get a clear view of what is most important to our community. Because of the new AI features, maintenance is very easy - tasks like moderation are **completely automated**. This means we spend less time sorting tickets and more time building the features you want.
 ![Screenshot with a list of all the AI Features of Featureboard](@site/blog/assets/featureboard-introduction/en/ai.png)
 
 ## How it Works: Ride the Wave
@@ -47,7 +48,7 @@ This is where the magic happens. [Browse the feed](https://featureboard.net/brow
 ![Screenshot showing the "Browse"-Tab of Featureboard](@site/blog/assets/featureboard-introduction/en/browse.png)
 
 **3. We Build It**
-We use top-voted suggestions to guide our roadmap. While a high upvote count doesn't automatically guarantee implementation  - we still have to consider technical feasibility and our overall product vision  - it is the absolute best way to show our team what you want to see next.
+We use top-voted suggestions to guide our roadmap. While a high upvote count doesn't automatically guarantee implementation - we still have to consider technical feasibility and our overall product vision - it is the absolute best way to show our team what you want to see next.
 
 ## Full Visibility with the Public Roadmap
 
@@ -66,13 +67,13 @@ Featureboard is free for everyone to browse and submit. However, building and ma
 
 ### Sponsor a Feature: Fast-Track Your Vision
 
-Sometimes, you need a feature *now*, and you don't want to wait for it to climb the voting ranks.
+Sometimes, you need a feature _now_, and you don't want to wait for it to climb the voting ranks.
 
 We are introducing a new **"Sponsor a Feature"** option. This is for power users or businesses who want to guarantee that a specific feature gets built. When you sponsor a feature, you get:
 
-* **Guaranteed Implementation:** Your feature gets a dedicated development slot.
-* **Direct Access:** You'll be in direct communication with the dev team during the build.
-* **Branding:** Your name or logo will be displayed as the sponsor on the roadmap and release notes.
+- **Guaranteed Implementation:** Your feature gets a dedicated development slot.
+- **Direct Access:** You'll be in direct communication with the dev team during the build.
+- **Branding:** Your name or logo will be displayed as the sponsor on the roadmap and release notes.
 
 It's a win-win: you get the tool you need, and the whole community benefits from the new feature. [Learn more about Sponsoring](https://featureboard.net/sponsored).
 

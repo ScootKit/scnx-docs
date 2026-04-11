@@ -8,6 +8,7 @@ toc_max_heading_level: 3
 Frequently asked questions about how servers work on SCNX.
 
 **Quick navigation:**
+
 - **Setup:** [Owner requirement](#owner) | [Administrator access](#administrator) | [Server settings](#settings) | [Remove SCNX Bot](#scnx-manager-bot)
 - **Bots:** [Multiple bots](#multiple-bots) | [Bot not working](#bot-issues) | [Custom Bot vs Support Bot](#bot-comparison)
 - **Features:** [Enhanced Security](#enhanced-security) | [Trusted Admins](#trusted-admins) | [Backups](#backups) | [dcserver.link](#dcserver-link) | [Image Storage](#images) | [Analytics](#analytics)
@@ -43,6 +44,7 @@ SCNX is designed to replace multiple generic bots on a server with one fully cus
 ### My bot is not working / offline {#bot-issues}
 
 If your bot is offline or not responding, check the troubleshooting guide for your bot type:
+
 - [Custom Bot Troubleshooting](/docs/custom-bot/troubleshooting)
 - [Support Bot Troubleshooting](/docs/support-bot/troubleshooting)
 
@@ -87,18 +89,19 @@ SCNX provides analytics about your server's activity, including member statistic
 
 SCNX offers four plans:
 
-| Plan | Price | Key Features |
-|------|-------|-------------|
-| **Starter** | Free | Custom Bot (weekly extension required), dashboard, dcserver.link |
-| **Unlimited** | Starting at <PlanPrice plan="UNLIMITED" type="MONTHLY" /> | Custom Bot + Support Bot, no weekly extensions, Linked Roles |
+| Plan             | Price                                                        | Key Features                                                                  |
+| ---------------- | ------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| **Starter**      | Free                                                         | Custom Bot (weekly extension required), dashboard, dcserver.link              |
+| **Unlimited**    | Starting at <PlanPrice plan="UNLIMITED" type="MONTHLY" />    | Custom Bot + Support Bot, no weekly extensions, Linked Roles                  |
 | **Professional** | Starting at <PlanPrice plan="PROFESSIONAL" type="MONTHLY" /> | Everything in Unlimited + commercial usage, branding removal, premium hosting |
-| **Enterprise** | Custom pricing | Everything in Professional + dedicated support, custom configuration |
+| **Enterprise**   | Custom pricing                                               | Everything in Professional + dedicated support, custom configuration          |
 
 See the [Plans & Subscriptions documentation](/docs/scnx/guilds/plans) for a full comparison.
 
 ### What are the limits of the free Starter plan? {#starter-limits}
 
 On the Starter plan:
+
 - Your Custom Bot needs to be extended **every 7 days** by watching a short ad
 - No Support Bot access
 - No Linked Roles
@@ -147,12 +150,14 @@ To delete your server:
 You'll receive a confirmation email once the deletion is complete.
 
 :::warning Before deleting
-- **Paid plans are not refunded.** If you want a refund, request it per our [refund policy](https://scootk.it/scnx-refund-policy) *before* deleting.
+
+- **Paid plans are not refunded.** If you want a refund, request it per our [refund policy](https://scootk.it/scnx-refund-policy) _before_ deleting.
 - **Server-specific purchases** (like marketplace modules) will be lost permanently. Transfer them to another server first if needed.
 - You can only delete a server **once every 48 hours** to prevent abuse.
-:::
+  :::
 
 **If deletion fails**, you'll receive an error email. This can happen if:
+
 - An internal error occurred during the cleanup process (bot removal, data deletion)
 - The server was in an unexpected state (e.g. active subscription couldn't be canceled)
 

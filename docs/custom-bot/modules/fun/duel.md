@@ -6,10 +6,10 @@ Let users play the game "Duel" on your Discord.
 
 ## Features {#features}
 
-* Challenge another user to a turn-based duel game.
-* Simple mechanics with three actions: Shoot, Guard, and Reload.
-* Interactive button-based gameplay directly in Discord.
-* Invitation system with accept/deny options and automatic expiry.
+- Challenge another user to a turn-based duel game.
+- Simple mechanics with three actions: Shoot, Guard, and Reload.
+- Interactive button-based gameplay directly in Discord.
+- Invitation system with accept/deny options and automatic expiry.
 
 ## Setup {#setup}
 
@@ -22,9 +22,9 @@ Use the `/duel` command to challenge another user. The challenged user has 2 min
 
 Once the game starts, both players choose one of three actions each round by clicking buttons:
 
-* **Shoot** - Fire your gun at the opponent. Requires at least one bullet. If the opponent is not guarding, you win.
-* **Guard** - Defend against a shot. You cannot guard more than 5 times in a row; after that, your guard breaks.
-* **Reload** - Add a bullet to your gun. You can hold a maximum of 5 bullets. You are vulnerable while reloading.
+- **Shoot** - Fire your gun at the opponent. Requires at least one bullet. If the opponent is not guarding, you win.
+- **Guard** - Defend against a shot. You cannot guard more than 5 times in a row; after that, your guard breaks.
+- **Reload** - Add a bullet to your gun. You can hold a maximum of 5 bullets. You are vulnerable while reloading.
 
 Both players make their choices simultaneously. Once both have chosen, the round resolves and the next round begins. The game ends when a player successfully shoots an unguarded opponent.
 
@@ -32,8 +32,8 @@ Both players make their choices simultaneously. Once both have chosen, the round
 
 <SlashCommandExplanation />
 
-| Command | Description |
-|---------|-------------|
+| Command             | Description                       |
+| ------------------- | --------------------------------- |
 | `/duel user:<User>` | Challenge another user to a duel. |
 
 ## Troubleshooting {#troubleshooting}

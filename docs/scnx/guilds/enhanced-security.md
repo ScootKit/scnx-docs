@@ -10,27 +10,33 @@ Enhanced Security is an opt-in feature that adds an additional layer of protecti
 ## What Does Enhanced Security Protect Against?
 
 ### Compromised Trusted Admin Accounts
+
 If a trusted admin's Discord account is compromised (e.g. through phishing, credential stuffing, or token theft), the attacker gains access to their SCNX session. Without Enhanced Security, they could immediately modify your bot configuration, change modmail settings, disable integrations, or cause other damage.
 
 With Enhanced Security enabled, the attacker would additionally need access to the admin's 2FA method (authenticator app, hardware security key, or recovery codes) to make any configuration changes - even if they have a valid session.
 
 ### Unauthorized Changes by Shared Accounts
+
 In some organizations, multiple people may have access to the same Discord account or share login credentials. Enhanced Security ensures that each configuration change requires explicit identity verification, creating accountability and preventing unauthorized modifications.
 
 ### Session Cookie Hijacking
+
 **Important caveat:** Enhanced Security provides **partial but not complete** protection against session cookie hijacking (also known as session theft or cookie theft via malware/XSS).
 
 Here's why:
 
 **What it protects:**
+
 - If an attacker steals a session cookie that does NOT have an active sudo mode session, they cannot make configuration changes. They would need the victim's 2FA device to activate sudo mode.
 - Sudo mode expires after 40 minutes (TOTP) or 60 minutes (security keys), so even if an attacker steals a cookie during an active sudo session, the window of opportunity is limited.
 
 **What it does NOT protect:**
+
 - If the attacker steals the cookie while sudo mode is already active (within the 40/60 minute window), they can make changes until it expires.
 - Session cookies themselves are not bound to the 2FA verification - they are standard HTTP session cookies.
 
 **For maximum protection against session hijacking, we recommend:**
+
 - Using hardware security keys (shorter active sessions are less risky, and the 60-minute window is still relatively short)
 - Logging out of SCNX when not actively managing your server
 - Keeping your browser and operating system up to date
@@ -83,6 +89,7 @@ When Enhanced Security is enabled, the following actions require identity verifi
 - Managing trusted admins and permissions
 
 The following actions do **not** require sudo mode (even with Enhanced Security):
+
 - Viewing the dashboard and analytics
 - Viewing bot logs
 
@@ -131,4 +138,4 @@ Yes. When Enhanced Security is enabled, everyone - including the server owner - 
 
 ---
 
-*Enhanced Security is a feature of the SCNX platform by ScootKit. For questions or to request access, visit [scnx.app/help](https://scnx.app/help).*
+_Enhanced Security is a feature of the SCNX platform by ScootKit. For questions or to request access, visit [scnx.app/help](https://scnx.app/help)._

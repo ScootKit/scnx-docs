@@ -29,25 +29,25 @@ perhaps encourage more activity in a particular channel? With XP Multiplicators,
 
 By default, every user and channel has a multiplication factor of 1. This improved feature allows you to:
 
-* **Assign Role Multiplicators**: Grant users with certain roles an XP bonus for their messages. If a user has multiple
+- **Assign Role Multiplicators**: Grant users with certain roles an XP bonus for their messages. If a user has multiple
   roles
   with multipliers, these factors multiply together, offering significant boosts for your most dedicated members!
-* **Set Channel Multiplicators**: Designate channels where messages will earn more (or less!) XP. Want to fire up
+- **Set Channel Multiplicators**: Designate channels where messages will earn more (or less!) XP. Want to fire up
   conversation
   in your #general-chat? Give it a 1.5x multiplier! Need to gently discourage XP farming in a #bot-spam channel? A 0.5x
   multiplier will do the trick.
 
 Example Scenarios:
 
-* **VIP Boost**: A user with a special "VIP" role, which has an XP multiplier configured, sends a message. Because of
+- **VIP Boost**: A user with a special "VIP" role, which has an XP multiplier configured, sends a message. Because of
   their
   role, they receive extra XP for that message compared to a user without the VIP role.
-* **Featured Channel & Booster**: A user who is a Server Booster (which comes with its own role-based XP multiplier)
+- **Featured Channel & Booster**: A user who is a Server Booster (which comes with its own role-based XP multiplier)
   posts in
   a channel that you've designated as a "featured" channel (which has a channel-based XP multiplier). Because both their
   role and the channel provide an XP boost, they earn an even greater amount of XP for their message in that specific
   place.
-* **Multiple Roles**: If a user holds several different roles, and each of those roles has its own XP multiplier, all
+- **Multiple Roles**: If a user holds several different roles, and each of those roles has its own XP multiplier, all
   those
   multipliers effectively combine. This results in a significantly larger overall XP boost for any message they send,
   acknowledging their multiple contributions or statuses on the server.
@@ -74,9 +74,9 @@ formula will be the total XP needed to achieve that level x.
 
 Examples of valid custom level curves:
 
-* Our "Easy Linear" curve: `750x+((x−1)`
-* Our "Exponentiation" curve: `350^2(x-1)`
-* A simple custom curve: `1000*1.5*x`
+- Our "Easy Linear" curve: `750x+((x−1)`
+- Our "Exponentiation" curve: `350^2(x-1)`
+- A simple custom curve: `1000*1.5*x`
 
 **Configuration**:
 In the "Module Configuration" under "Type of level curve," select "Custom formula." Then, input your mathematical
@@ -100,31 +100,31 @@ Think of it as your personal test environment for all things XP and levels. By s
 module configuration (like the average XP given per message) and selecting a level curve – whether it's one of our
 defaults or your own custom creation – the simulator will instantly show you:
 
-* **XP Needed Per Level**: See exactly how much cumulative XP is required for a user to reach any specific level you input.
-* **Estimated Messages to Level Up**: Get a tangible idea of the effort involved by seeing an approximation of how many
-messages a user would need to send to achieve that level.
+- **XP Needed Per Level**: See exactly how much cumulative XP is required for a user to reach any specific level you input.
+- **Estimated Messages to Level Up**: Get a tangible idea of the effort involved by seeing an approximation of how many
+  messages a user would need to send to achieve that level.
 
 ### Why the Level Simulator is Your New Best Friend
 
 The Level Simulator is more than just a calculator; it's an indispensable tool for fine-tuning your server's engagement
 strategy:
 
-* **Perfecting Custom Formulas**: When designing your own level curve, the simulator is invaluable. You can instantly see if
-your formula creates a smooth progression, if it becomes too difficult too quickly, or if it's perhaps too easy. Tweak
-your formula, re-simulate, and iterate until it feels just right.
-* **Choosing the Right Standard Curve**: Even if you're not using a custom formula, the simulator helps you understand how
-our 'Easy Linear', 'Default Linear', or 'Exponentiation' curves will behave with your specific XP-per-message settings.
-Balancing the Grind: Avoid making your leveling system a frustrating slog or so rapid that levels feel meaningless. The
-simulator helps you find that sweet spot.
-* **Informed Decisions**: Make changes to your XP settings or level curve with confidence, knowing you've seen a projection of
-their impact beforehand.
-* **Save Time & Frustration**: Instead of waiting for days or weeks to see how your new setup is performing live and then
-having to readjust (and potentially reset progress), you can get a very good idea upfront.
+- **Perfecting Custom Formulas**: When designing your own level curve, the simulator is invaluable. You can instantly see if
+  your formula creates a smooth progression, if it becomes too difficult too quickly, or if it's perhaps too easy. Tweak
+  your formula, re-simulate, and iterate until it feels just right.
+- **Choosing the Right Standard Curve**: Even if you're not using a custom formula, the simulator helps you understand how
+  our 'Easy Linear', 'Default Linear', or 'Exponentiation' curves will behave with your specific XP-per-message settings.
+  Balancing the Grind: Avoid making your leveling system a frustrating slog or so rapid that levels feel meaningless. The
+  simulator helps you find that sweet spot.
+- **Informed Decisions**: Make changes to your XP settings or level curve with confidence, knowing you've seen a projection of
+  their impact beforehand.
+- **Save Time & Frustration**: Instead of waiting for days or weeks to see how your new setup is performing live and then
+  having to readjust (and potentially reset progress), you can get a very good idea upfront.
 
-* **How to Use It**:
-You'll find the Level Simulator within the [Levels module documentation page](/docs/custom-bot/modules/community/levels/#level-simulator). Simply input your intended configuration
-values where indicated, select or input your level curve, and see the results! It's an intuitive way to experiment
-without any real-world consequences on your server.
+- **How to Use It**:
+  You'll find the Level Simulator within the [Levels module documentation page](/docs/custom-bot/modules/community/levels/#level-simulator). Simply input your intended configuration
+  values where indicated, select or input your level curve, and see the results! It's an intuitive way to experiment
+  without any real-world consequences on your server.
 
 A Quick Note:
 Currently, the Level Simulator focuses on XP gained from messages. The XP awarded for time spent in voice channels is a
