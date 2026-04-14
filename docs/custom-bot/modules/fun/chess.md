@@ -10,8 +10,11 @@ Play chess against other server members or the AI, right in Discord!
 * Games run in dedicated Discord threads for clean, asynchronous gameplay. Threads are automatically archived when the game ends.
 * Three ways to make moves: type a move directly in the game thread, use algebraic notation via a popup modal (e.g. `e2e4`, `Nf3`, `O-O`), or use guided select menus to pick your piece and destination square.
 * Full castling support — use standard notation (`O-O`, `O-O-O`) or coordinate notation (`e1g1`). Castling moves are labeled in the select menus.
-* Visual board images generated for every move, with check and last-move highlighting.
+* **Pawn promotion picker** — when a pawn reaches the last rank, choose which piece to promote to (Queen, Rook, Bishop, or Knight) from a dropdown instead of always being forced to a queen.
+* **Material balance indicator** — the game embed shows who is ahead on material (e.g. *White +3*) after every move.
+* Visual board images generated for every move, with check and last-move highlighting. The board is automatically rendered from the perspective of whoever is about to move, so asynchronous games always show your own pieces at the bottom.
 * Draw offers, resignations, and move history built in. Draw offers are only available in PvP games, not against the AI.
+* Completed games include a **Moves** button on the final board embed to quickly review the full game history.
 * Configurable move timeout with automatic reminders and forfeit on inactivity.
 * Multiple concurrent games per player (no duplicate games between the same two players).
 * Games are automatically forfeited when a player leaves the server.
@@ -40,6 +43,8 @@ On your turn, you have three options:
 * **Type in thread** — Simply type your move as a message in the game thread (e.g. `e2e4`, `Nf3`, `O-O`). The message is automatically deleted and the move is processed.
 * **Move button** — Click "Move" to open a popup where you type your move in algebraic notation (e.g. `e2e4`, `e2-e4`, `Nf3`).
 * **Select menus** — The bot shows a piece select menu. Pick a piece, then pick the destination square from the next menu. Castling moves are labeled when available.
+
+When a pawn reaches the last rank, the bot replaces the board controls with a **promotion dropdown**. Pick the piece you want (Queen, Rook, Bishop, or Knight) and the move is finalized with your choice.
 
 After your move, the board image updates and the opponent is pinged.
 

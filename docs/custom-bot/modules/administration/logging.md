@@ -10,7 +10,7 @@ Using the Advanced Logging Module you can easily
 
 * Log channel updates (like channel edits, channel permission changes and more) in any channel you'd like.
 * Log role updates (like role edits, permission changes and more) in any channel you'd like.
-* Log Member-Updates (like nickname or role changes and more) in any channel you'd like.
+* Log Member-Updates (like nickname or role changes, member joins and leaves, and more) in any channel you'd like. Leave entries show how long the member was on the server and which roles they had when they left; kicks and bans are excluded to avoid double-logging.
 * Log Message-Updates (like message edits or deletions) in any channel you'd like.
 * Log Server-Changes (like changing Server-Settings and more) in any channel you'd like.
 * Log Voice-Channel-Updates (like members joining or leaving the channel) in any channel you'd like.

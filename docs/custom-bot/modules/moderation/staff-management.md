@@ -6,7 +6,8 @@ A powerful, highly customizable staff management system to track activity, moder
 
 ## Features {#features}
 
-* **Shift management**  - On-duty/off-duty tracking with clock-in/clock-out, break management, configurable duty types, duty time leaderboard, and shift quotas.
+* **Shift management**  - On-duty/off-duty tracking with clock-in/clock-out, multi-break support (with per-shift break count), configurable duty types, duty time leaderboard, and shift quotas.
+* **Shift change log**  - Optional audit log channel that records every shift event (start, break, resume, end, void) with elapsed time, break count, and the staff member involved.
 * **Leave of Absence & Reduced Activity**  - Staff can request LoA or reduced activity status with an approval workflow, optional role assignment, and configurable maximum durations.
 * **Infractions & Suspensions**  - Issue warnings, strikes, demotions, terminations, or mark staff as under investigation. Temporary suspensions automatically remove staff roles and assign a suspension role.
 * **Promotions**  - Promote staff members with optional automatic role assignment and customizable announcements.
@@ -32,7 +33,11 @@ A powerful, highly customizable staff management system to track activity, moder
 
 ### Shifts {#shifts}
 
-Staff members can clock in and out of shifts using the `/duty manage` command. While on duty, they can take breaks. Supervisors can view who is currently on duty with `/duty active` and see duty time statistics with `/duty leaderboard` and `/duty time`.
+Staff members can clock in and out of shifts using the `/duty manage` command. The panel updates its title depending on the current shift state (*On Duty*, *On Break*, *Shift Ended*), so staff always see what action is available next. While on duty, they can take multiple breaks  - the bot counts them and includes the break count in the end-of-shift DM report.
+
+If **Shift change logging** is enabled in the Shifts configuration, the bot posts an audit entry to the configured channel every time a shift is started, paused, resumed, ended, or voided.
+
+Supervisors can view who is currently on duty with `/duty active` and see duty time statistics with `/duty leaderboard` and `/duty time`.
 
 ### Leave of Absence & Reduced Activity {#status}
 
@@ -40,7 +45,9 @@ Staff members can request a Leave of Absence or Reduced Activity status using `/
 
 ### Infractions {#infractions}
 
-Supervisors can issue infractions to staff members using `/staff-management infraction issue`. Available infraction types include warnings, strikes, demotions, terminations, and under investigation. Staff can also be suspended with `/staff-management infraction suspend`, which temporarily removes their staff roles.
+Supervisors can issue infractions to staff members using `/staff-management infraction issue`. Available infraction types include warnings, strikes, demotions, terminations, and under investigation. Staff can also be suspended with `/staff-management infraction suspend`, which temporarily removes their staff roles. Supervisors are prevented from issuing infractions or suspensions to themselves.
+
+Infraction and suspension templates support a shared set of placeholders for customizing log messages and DMs: `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%type%`, `%reason%`, `%case-id%`, and `%end-date%` (plus `%duration%` for suspensions). Promotions and reviews use a parallel naming scheme (`%staff-mention%`, `%reviewer-mention%`, `%new-role-name%`, etc.)  - see the relevant configuration page for the full list.
 
 ### Promotions {#promotions}
 
