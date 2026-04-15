@@ -11,7 +11,6 @@ gesamten Team, Bilder einfach hochzuladen, zu organisieren und in all deinen Bot
 Verabschiede dich von dem Aufwand, Dateien in deinen persönlichen Speicher hochzuladen und sie manuell mit deinem Team
 teilen zu müssen!
 
-
 Wenn diese Funktion für deinen Server aktiviert ist, findest du **Bilder** in der Navigationsleiste deines Servers.
 
 ## Warum Server-Bilderspeicher nutzen? {#why-use-guild-image-storage}
@@ -20,12 +19,12 @@ Wann immer du ein Bild für deinen Custom Bot oder Support Bot benötigst – wi
 Embed-Thumbnail oder einen automatisierten Anhang –, kannst du es direkt aus deiner gemeinsamen Serverbibliothek
 abrufen.
 
-* **Team-Zusammenarbeit:** Jeder **vertrauenswürdige Admin** auf deinem Server kann Bilder aus der gemeinsamen
+- **Team-Zusammenarbeit:** Jeder **vertrauenswürdige Admin** auf deinem Server kann Bilder aus der gemeinsamen
   Bibliothek ansehen, bearbeiten und löschen, was sicherstellt, dass dein Team das Branding und die Assets des Servers
   problemlos gemeinsam pflegen kann.
-* **Sofortige Anwendung:** Wähle Bilder direkt über eine integrierte Auswahl aus, während du deine Bots bearbeitest, mit
+- **Sofortige Anwendung:** Wähle Bilder direkt über eine integrierte Auswahl aus, während du deine Bots bearbeitest, mit
   der Möglichkeit, nahtlos zwischen deiner gemeinsamen Serverbibliothek und deinen persönlichen Dateien zu wechseln.
-* **Einmal hochladen, überall nutzen:** Lade ein Bild einmal auf den Server hoch, und jeder in deinem Team kann es in
+- **Einmal hochladen, überall nutzen:** Lade ein Bild einmal auf den Server hoch, und jeder in deinem Team kann es in
   jeder Bot-Konfiguration verwenden.
 
 ## Migration vom persönlichen Speicher {#migrating-from-personal-storage}
@@ -70,8 +69,8 @@ deines Servers hochladen:
 3. Du kannst mehrere Dateien auf einmal hochladen. Jede Datei wird einzeln verarbeitet, und ein Pop-up bestätigt, ob der
    Upload erfolgreich war oder ein Fehler aufgetreten ist.
 
-*Hinweis: Wenn du eine identische Datei hochlädst, die bereits in der Bibliothek existiert, wird SCNX automatisch das
-bestehende Bild zurückgeben, um unnötige Duplikate zu vermeiden.*
+_Hinweis: Wenn du eine identische Datei hochlädst, die bereits in der Bibliothek existiert, wird SCNX automatisch das
+bestehende Bild zurückgeben, um unnötige Duplikate zu vermeiden._
 
 #### Dateianforderungen {#file-requirements}
 
@@ -79,7 +78,7 @@ Um eine reibungslose Leistung zu gewährleisten, muss jede einzelne Datei **25 M
 werden automatisch abgelehnt.
 
 | Format | Erlaubte Erweiterungen |
-|--------|------------------------|
+| ------ | ---------------------- |
 | JPEG   | `.jpg`, `.jpeg`        |
 | PNG    | `.png`                 |
 | GIF    | `.gif`                 |
@@ -105,11 +104,11 @@ Text-Prompt direkt auf der Bilder-Seite verwendest.
 
 **Wichtige Details zur KI-Generierung:**
 
-* **Kosten:** 15 KI-Guthaben pro Bild. Wenn dein Guthaben unter 15 KI-Guthaben liegt, wird die Generierung blockiert,
+- **Kosten:** 15 KI-Guthaben pro Bild. Wenn dein Guthaben unter 15 KI-Guthaben liegt, wird die Generierung blockiert,
   bis du mehr über das SCNX-Dashboard kaufst.
-* **Abmessungen:** Alle generierten Bilder haben gestochen scharfe 1024 × 1024 Pixel.
-* **Inhaltsrichtlinie:** Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Dir wird für
-  abgelehnte Prompts *kein* KI-Guthaben berechnet.
+- **Abmessungen:** Alle generierten Bilder haben gestochen scharfe 1024 × 1024 Pixel.
+- **Inhaltsrichtlinie:** Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Dir wird für
+  abgelehnte Prompts _kein_ KI-Guthaben berechnet.
 
 ## Speicherlimits verstehen {#understanding-storage-limits}
 
@@ -129,7 +128,7 @@ den betroffenen Modulen deaktivieren, wenn du den Server-Bilderspeicher nicht nu
 :::
 
 | SCNX-Plan    | Gesamtspeicher |
-|--------------|----------------|
+| ------------ | -------------- |
 | Starter      | ~50 MB         |
 | Unlimited    | ~500 MB        |
 | Professional | ~1 GB          |
@@ -148,13 +147,13 @@ Tools, um Ordnung zu halten.
 
 ### Organisationstools {#organization-tools}
 
-* **Tags:** Gruppiere deine Bilder nach Kampagne, Saison oder Bot-Modul. Du kannst bis zu **10 Tags** pro Bild
+- **Tags:** Gruppiere deine Bilder nach Kampagne, Saison oder Bot-Modul. Du kannst bis zu **10 Tags** pro Bild
   hinzufügen (jeweils max. 30 Zeichen). Verwende die Schaltfläche **Tags bearbeiten** auf einer Bildkarte, um sie zu
   verwalten. Ein Klick auf einen Tag filtert sofort deine gesamte Bibliothek.
-* **Anzeigenamen:** Gib deinen Bildern erkennbare Namen! Standardmäßig verwendet das System den ursprünglichen
+- **Anzeigenamen:** Gib deinen Bildern erkennbare Namen! Standardmäßig verwendet das System den ursprünglichen
   Dateinamen, aber du kannst ihn mithilfe der Schaltfläche **Umbenennen** in etwas Eindeutiges ändern (bis zu 100
   Zeichen).
-* **Markieren (Favoriten):** Klicke auf das **★-Symbol** bei einem beliebigen Bild, um es zu markieren. Markierte Bilder
+- **Markieren (Favoriten):** Klicke auf das **★-Symbol** bei einem beliebigen Bild, um es zu markieren. Markierte Bilder
   werden für den sofortigen Zugriff oben in deiner Bibliothek angeheftet.
 
 ### Suchen und Filtern {#searching-and-filtering}
@@ -163,21 +162,21 @@ Verwende die Filterleiste über dem Bildraster, um deine Ansicht einzugrenzen. D
 genau das zu finden, was du brauchst, und auf **Filter löschen** klicken, um deine Ansicht zurückzusetzen.
 
 | Tool                 | Was es tut                                                                                                        |
-|----------------------|-------------------------------------------------------------------------------------------------------------------|
+| -------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | **Suchleiste**       | Sucht nach passendem Text im Anzeigenamen oder im ursprünglichen Dateinamen.                                      |
 | **Nach Tag filtern** | Zeigt nur die Bilder an, auf die ein bestimmter Tag angewendet wurde.                                             |
 | **Nur markierte**    | Verbirgt alles außer deinen favorisierten (markierten) Bildern.                                                   |
-| **Typ-Tabs**         | Filtert Bilder danach, wie sie erstellt wurden: *Alle, Hochgeladen, KI-generiert, Custom Bot* oder *Support Bot*. |
+| **Typ-Tabs**         | Filtert Bilder danach, wie sie erstellt wurden: _Alle, Hochgeladen, KI-generiert, Custom Bot_ oder _Support Bot_. |
 
-*Hinweis: Um die Ladezeiten kurz zu halten, zeigt die Bibliothek 25 Bilder pro Seite an. Verwende die Schaltflächen
-Zurück / Weiter unten, um zu navigieren.*
+_Hinweis: Um die Ladezeiten kurz zu halten, zeigt die Bibliothek 25 Bilder pro Seite an. Verwende die Schaltflächen
+Zurück / Weiter unten, um zu navigieren._
 
 ## Bilder verwalten und löschen {#managing-and-deleting-images}
 
 Jede Bildkarte verfügt über ein Schnellaktionsmenü, das dir bei der Verwaltung deiner Dateien hilft.
 
 | Aktion                              | Was sie tut                                                            |
-|-------------------------------------|------------------------------------------------------------------------|
+| ----------------------------------- | ---------------------------------------------------------------------- |
 | **URL kopieren**                    | Kopiert den direkten CDN-Link in deine Zwischenablage.                 |
 | **Vorschau**                        | Öffnet eine Vorschau des Bildes in Originalgröße.                      |
 | **Herunterladen**                   | Lädt die originale Bilddatei direkt auf dein aktuelles Gerät herunter. |
@@ -205,10 +204,10 @@ Nachrichten mit dem Bild manuell.
 
 Du kannst Speicherplatz freigeben, indem du Bilder löschst, die du nicht mehr benötigst.
 
-* **Einzelnes Löschen:** Klicke bei einer beliebigen Bildkarte auf **Löschen**.
-* **Massenlöschen:** Klicke auf das Kontrollkästchen auf mehreren Bildkarten (ein blauer Ring erscheint). Oben wird eine
-  Leiste eingeblendet, die die Anzahl deiner Auswahl anzeigt. Klicke auf **Ausgewählte löschen**. *(Maximal 50 Bilder
-  auf einmal).*
+- **Einzelnes Löschen:** Klicke bei einer beliebigen Bildkarte auf **Löschen**.
+- **Massenlöschen:** Klicke auf das Kontrollkästchen auf mehreren Bildkarten (ein blauer Ring erscheint). Oben wird eine
+  Leiste eingeblendet, die die Anzahl deiner Auswahl anzeigt. Klicke auf **Ausgewählte löschen**. _(Maximal 50 Bilder
+  auf einmal)._
 
 ## Wie du deine Bilder in Bot-Konfigurationen verwendest {#how-to-use-your-images-in-bot-configurations}
 

@@ -16,11 +16,11 @@ redirected to Discord. The page features a short explainer, your server name and
 
 You can configure the following attributes of your authorization page:
 
-* The displayed server name and image on your authorization page.
-* Adjust the theme of your authorization page. You can choose one of over 30 different themes for the authorization
+- The displayed server name and image on your authorization page.
+- Adjust the theme of your authorization page. You can choose one of over 30 different themes for the authorization
   page - you can pick and browse using the live preview feature on
   your [Linked Roles configuration page](https://scnx.app/glink?page=linked-roles/configuration).
-* Disable or enable a short advertisement for SCNX on your authorization page. When enabled, the page will include a
+- Disable or enable a short advertisement for SCNX on your authorization page. When enabled, the page will include a
   short message about the features of the SCNX platform. Servers with
   a [paid plan that has the off-brand functionality](/docs/scnx/guilds/plans)
   will have this feature disabled by default. Servers without such a plan won't be able to remove the message.
@@ -28,8 +28,8 @@ You can configure the following attributes of your authorization page:
 The authorization page will be automatically translated into the local language of the user who is
 accessing the page based on their browser settings. The following languages are available:
 
-* Officially supported languages: English, German.
-* Maschine translated languages: Bengali, Croatian, Czech, Dutch, French, Hungarian, Italian, Japanese, Protugese,
+- Officially supported languages: English, German.
+- Maschine translated languages: Bengali, Croatian, Czech, Dutch, French, Hungarian, Italian, Japanese, Protugese,
   Russian, Spanish, Turkish.
 
 To adjust these fields and see a live preview of themes and changes,
@@ -56,7 +56,7 @@ delete your Linked Roles and role assignments, you'll need to redo the [setup st
 different bot after resetting, you'll need to remove the old bot from your server and instruct your members
 to [claim their roles](/docs/linked-roles/claim-roles) again.
 
-![Screenshot where the \"Reset authentification details\" is located](@site/docs/assets/linked-roles/reset.png)
+![Screenshot where the "Reset authentification details" is located](@site/docs/assets/linked-roles/reset.png)
 
 ### Disable Linked Roles {#disable-linked-roles}
 

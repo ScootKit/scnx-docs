@@ -8,47 +8,47 @@ Einfach zu bedienendes Level-System mit vielen Anpassungsmöglichkeiten!
 
 ## Funktionen {#features}
 
-* Verleihe eine zufällige Menge an XP an Nutzer für Nachrichten, die sie senden, mit konfigurierbaren Mengen und
+- Verleihe eine zufällige Menge an XP an Nutzer für Nachrichten, die sie senden, mit konfigurierbaren Mengen und
   Abklingzeit.
-* Verleihe XP basierend auf der Zeit, die ein Nutzer [in einem Sprachkanal verbringt](#voice-xp).
-* Wähle eine von [drei Levelkurven](#level-curves) oder [gib deine eigene ein](#custom-level-curve).
-* Füge Rollen als [Levelbelohnungen](#level-rewards) hinzu.
-* Konfiguriere [bestimmte Levelaufstiegsnachrichten](#level-up-messages) - du kannst bestimmte Nachrichten für bestimmte
+- Verleihe XP basierend auf der Zeit, die ein Nutzer [in einem Sprachkanal verbringt](#voice-xp).
+- Wähle eine von [drei Levelkurven](#level-curves) oder [gib deine eigene ein](#custom-level-curve).
+- Füge Rollen als [Levelbelohnungen](#level-rewards) hinzu.
+- Konfiguriere [bestimmte Levelaufstiegsnachrichten](#level-up-messages) - du kannst bestimmte Nachrichten für bestimmte
   Level hinzufügen oder zufällige Nachrichten verwenden, damit dein Chat sich nicht zu sehr wiederholt!
-* Füge [Multiplikator-Kanäle und -Rollen](#multiplicators) hinzu.
-* Zeige die aktuelle [Rangliste](#live-leaderboard) live in einem Discord-Kanal an.
-* Starte dein Level-System mit Level 0 und konfiguriere ein Maximallevel.
-* [Verwalte XP und Level von Nutzern](#manage-levels) auf deinem Server.
+- Füge [Multiplikator-Kanäle und -Rollen](#multiplicators) hinzu.
+- Zeige die aktuelle [Rangliste](#live-leaderboard) live in einem Discord-Kanal an.
+- Starte dein Level-System mit Level 0 und konfiguriere ein Maximallevel.
+- [Verwalte XP und Level von Nutzern](#manage-levels) auf deinem Server.
 
 ## Einrichtung {#setup}
 
-* Nachdem du [das Modul aktiviert hast](https://scnx.app/de/glink?page=bot/modules?query=levels), erhalten Nutzer XP
+- Nachdem du [das Modul aktiviert hast](https://scnx.app/de/glink?page=bot/modules?query=levels), erhalten Nutzer XP
   basierend auf deiner [Konfiguration](#configuration) für das Senden von Nachrichten und das Verbringen von Zeit in
   Sprachkanälen.
-* Der Bot kann nur XP für Nachrichten vergeben, auf die er Zugriff hat. Stelle daher sicher, dass er auf jedem Kanal die
+- Der Bot kann nur XP für Nachrichten vergeben, auf die er Zugriff hat. Stelle daher sicher, dass er auf jedem Kanal die
   folgenden Berechtigungen hat: Kanal anzeigen, Nachrichtenverlauf anzeigen. Wenn du Levelaufstiegsnachrichten in einen
   Kanal senden möchtest, benötigt er außerdem die Berechtigungen Nachrichten senden und Links einbetten. Für das
   Vergeben von Rollenbelohnungen benötigt der Bot die Berechtigung Rollen verwalten. Die höchste Rolle des Bots muss
   außerdem höher sein als die Rolle, die der Bot zuweisen soll.
-* Wenn du von einem anderen System wechselst, kannst du [Nutzer-XP und -Level manuell verwalten](#manage-levels) und XP
+- Wenn du von einem anderen System wechselst, kannst du [Nutzer-XP und -Level manuell verwalten](#manage-levels) und XP
   sowie Level manuell von deinem alten System übertragen.
-* Es sind viele weitere Funktionen enthalten, die verwendet werden können, um die Aktivität auf deinem Server zu
+- Es sind viele weitere Funktionen enthalten, die verwendet werden können, um die Aktivität auf deinem Server zu
   fördern, wie z.B. [Multiplikator-Kanäle und -Rollen](#multiplicators) und [Live-Ranglisten](#live-leaderboard), die
   zusätzliche Einrichtung erfordern, aber du musst sie nicht konfigurieren, um das Modul zu verwenden.
-* Du kannst auch Nachrichten anpassen und andere Optionen in deiner [Konfiguration](#configuration) einstellen.
+- Du kannst auch Nachrichten anpassen und andere Optionen in deiner [Konfiguration](#configuration) einstellen.
 
 ## Verwendung {#usage}
 
-* Nach dem [Einrichten des Moduls](#setup) erhalten Nutzer XP für das Senden von Nachrichten und für das Verbringen von
+- Nach dem [Einrichten des Moduls](#setup) erhalten Nutzer XP für das Senden von Nachrichten und für das Verbringen von
   Zeit in Sprachkanälen.
-* Sobald ein Nutzer einen Schwellenwert erreicht, der auf deiner [anpassbaren Levelkurve](#level-curves) basiert, steigt
+- Sobald ein Nutzer einen Schwellenwert erreicht, der auf deiner [anpassbaren Levelkurve](#level-curves) basiert, steigt
   er zum nächsten Level auf. Du kannst Belohnungen, wie Rollen, für das Erreichen bestimmter
   Level [konfigurieren](#configuration).
-* Nutzer können ihre eigenen und die aktuellen XP anderer Nutzer überprüfen und sehen, wie viel XP für einen
+- Nutzer können ihre eigenen und die aktuellen XP anderer Nutzer überprüfen und sehen, wie viel XP für einen
   Levelaufstieg erforderlich ist, indem sie [`/profile`](#commands) verwenden. Eine vollständige Rangliste mit den XP
   aller Nutzer ist mit [`/leaderboard`](#commands) verfügbar oder
   eine [stets aktuelle Version davon kann in einen Kanal gesendet werden](#live-leaderboard).
-* Um die XP und das Level eines Nutzers auf deinem Server manuell anzupassen, verwende die [`/manage-levels`](#commands)
+- Um die XP und das Level eines Nutzers auf deinem Server manuell anzupassen, verwende die [`/manage-levels`](#commands)
   Befehle, nachdem du [Cheats in deiner Konfiguration aktiviert hast](#configuration).
 
 ### Live-Rangliste {#live-leaderboard}
@@ -132,22 +132,22 @@ Wir liefern drei verschiedene Levelkurven im Bot mit, aber du kannst auch [deine
 
 Die folgenden Levelformeln sind verfügbar:
 
-* **Einfache Lineare** Kurve (standardmäßig ausgewählt): Dies ist für die meisten Server die beste Option. Diese
+- **Einfache Lineare** Kurve (standardmäßig ausgewählt): Dies ist für die meisten Server die beste Option. Diese
   Levelkurve wurde sorgfältig ausgewählt, um den Bedürfnissen der meisten Server gerecht zu werden. Sie ist so
   konzipiert, dass sie einen einfachen Einstieg in das Level-System ermöglicht und es dennoch schwierig macht, höhere
   Level zu erreichen.\
   Die verwendete Formel lautet $f(x) = 750x + ((x-1) * 500)$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x)$
   (was bedeutet, dass die Levelkurve linear wächst).
-* **Standard Lineare** Kurve: Dies ist eine vereinfachte Version der Einfachen Linearen Kurve und war der alte
+- **Standard Lineare** Kurve: Dies ist eine vereinfachte Version der Einfachen Linearen Kurve und war der alte
   Standardwert, wird aber nicht mehr standardmäßig verwendet. Sie ermöglicht ein leichteres Leveln und kann für kleinere
   Server verwendet werden.\
   Die Formel lautet $f(x) = 750x$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x)$
   (was bedeutet, dass die Levelkurve linear wächst).
-* **Exponentielle** Kurve: Diese Levelkurve ermöglicht Nutzern einen sehr einfachen Start, wird aber nach Level 14 sehr
+- **Exponentielle** Kurve: Diese Levelkurve ermöglicht Nutzern einen sehr einfachen Start, wird aber nach Level 14 sehr
   schwierig und praktisch unmöglich.\
   Die Formel lautet $f(x) = 350 * (x-1)^2$ (wobei $x$ das zu berechnende Level ist) mit $f(x) = O(x^2)$ (was bedeutet,
   dass die Funktion quadratisch skaliert).
-* **Eigene Formel**: Du kannst eine beliebige mathematische Formel eingeben, um eine vollständige Anpassbarkeit zu
+- **Eigene Formel**: Du kannst eine beliebige mathematische Formel eingeben, um eine vollständige Anpassbarkeit zu
   ermöglichen. Weitere Informationen findest du im Abschnitt [eigene Levelkurve](#custom-level-curve).
 
 Wenn du dich fragst, was die Formeln bedeuten oder deine eigene entwerfen möchtest, findest du weitere Details im
@@ -276,12 +276,12 @@ faireres
 Level-System ohne Admin-Einmischung schafft.
 :::
 
-* Administratoren auf deinem Server können die XP eines bestimmten Nutzers oder des gesamten Servers mit dem [
+- Administratoren auf deinem Server können die XP eines bestimmten Nutzers oder des gesamten Servers mit dem [
   `/manage-levels reset-xp`](#commands) Befehl zurücksetzen.
-* Administratoren auf deinem Server können das Level eines beliebigen Nutzers manuell hinzufügen, entfernen oder
+- Administratoren auf deinem Server können das Level eines beliebigen Nutzers manuell hinzufügen, entfernen oder
   festlegen, indem sie den [
   `/manage-levels edit-level`](#commands) Befehl verwenden.
-* Administratoren auf deinen Servern können die XP eines beliebigen Nutzers manuell hinzufügen, entfernen oder
+- Administratoren auf deinen Servern können die XP eines beliebigen Nutzers manuell hinzufügen, entfernen oder
   festlegen, indem sie
   den [`/manage-levels edit-xp`](#commands) Befehl verwenden.
 
@@ -303,7 +303,7 @@ Level-System
 Diese Befehle können von Nutzern auf deinem Server verwendet werden.
 
 | Befehl                             | Beschreibung                                                                                                                                                                                       |
-|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/profile `                        | Zeige dein Profil an, einschließlich deiner XP und Level sowie deiner Rollenmultiplikatoren (falls vorhanden).                                                                                     |
 | `/profile [user:<Nutzer>]`         | Zeige das Profil eines Nutzers an, einschließlich seiner XP und Level sowie seiner Rollenmultiplikatoren (falls vorhanden).                                                                        |
 | `/leaderboard [sort-by:<Boolean>]` | Zeige die Rangliste des Servers an, sortiert in Gruppen entweder nach XP oder Leveln, basierend auf entweder [deiner Konfiguration](#configuration) oder dem bereitgestellten `sort-by`-Parameter. |
@@ -315,7 +315,7 @@ Cheats"-[Konfigurationsoption](#configuration)
 aktiviert ist.
 
 | Befehl                                                         | Beschreibung                                                                              |
-|----------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | `/manage-levels reset-xp [confirm:<Boolean>]`                  | Setzt die XP auf dem gesamten Server zurück, wenn der `confirm`-Parameter übergeben wird. |
 | `/manage-levels reset-xp user:<Nutzer> [confirm:<Boolean>]`    | Setzt die XP eines Nutzers zurück, wenn der `confirm`-Parameter übergeben wird.           |
 | `/manage-levels edit-level add user:<Nutzer> value:<Wert> `    | Fügt eine Anzahl von Leveln (`Wert`) zu den Leveln eines Nutzers hinzu.                   |
@@ -331,13 +331,13 @@ Wie alle Module auf SCNX ermöglicht dir unser Levelmodul, sein Verhalten vollst
 Konfiguration zu ermöglichen,
 haben wir die Konfiguration in mehrere Dateien aufgeteilt:
 
-* [Hauptmodulkonfiguration](#configuration-config), wo du XP-Mengen, Levelkurven, Levelbelohnungen und vieles mehr
+- [Hauptmodulkonfiguration](#configuration-config), wo du XP-Mengen, Levelkurven, Levelbelohnungen und vieles mehr
   konfigurieren kannst.
-* [Nachrichtenkonfiguration](#configuration-strings), wo du Nachrichten und das Erscheinungsbild des Moduls anpassen
+- [Nachrichtenkonfiguration](#configuration-strings), wo du Nachrichten und das Erscheinungsbild des Moduls anpassen
   kannst.
-* [Zufällige Levelaufstiegsnachrichten](#configuration-random-levelup-messages), wo du Nachrichten hinzufügen kannst,
+- [Zufällige Levelaufstiegsnachrichten](#configuration-random-levelup-messages), wo du Nachrichten hinzufügen kannst,
   die zufällig ausgewählt werden, wenn der Nutzer aufsteigt.
-* [Ausgewählte Levelaufstiegsnachrichten](#configuration-special-levelup-messages), wo du die Levelaufstiegsnachricht
+- [Ausgewählte Levelaufstiegsnachrichten](#configuration-special-levelup-messages), wo du die Levelaufstiegsnachricht
   für bestimmte Level überschreiben kannst.
 
 ### Modulkonfiguration {#configuration-config}
@@ -348,7 +348,7 @@ Level-System verhalten soll. Du
 kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/config).
 
 | Feld                                                           | Beschreibung                                                                                                                                                                                                                                                                                                                                                           |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Mindestens vergebene XP für Nachrichten                        | Diese Menge an XP wird mindestens für jede gesendete Nachricht vergeben.                                                                                                                                                                                                                                                                                               |
 | Höchstens vergebene XP für Nachrichten                         | Diese Menge an XP wird höchstens für jede gesendete Nachricht vergeben.                                                                                                                                                                                                                                                                                                |
 | XP pro Sprachkanal-Minute                                      | Wie viele XP Nutzer pro Minute erhalten, wenn sie sich mit anderen Mitgliedern in einem Sprachkanal befinden. Unterstützt Kommazahlen. Weitere Informationen im Abschnitt [XP für Sprachkanäle](#voice-xp).                                                                                                                                                            |
@@ -366,7 +366,7 @@ kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=
 | Level bei Austritt zurücksetzen                                | Wenn aktiviert, werden alle Level und die XP eines Nutzers gelöscht, wenn er deinen Server verlässt.                                                                                                                                                                                                                                                                   |
 | Zufällige Nachrichten                                          | Wenn aktiviert, werden zufällige Levelnachrichten anstelle der standardmäßig konfigurierten Levelnachricht verwendet. Erfahre mehr im Abschnitt [Levelaufstiegsnachrichten](#level-up-messages).                                                                                                                                                                       |
 | Live-Rangliste                                                 | Wenn festgelegt, sendet der Bot eine [Live-Rangliste](#live-leaderboard) in diesen Kanal.                                                                                                                                                                                                                                                                              |
-| Maximale Anzahl der in der Live-Rangliste angezeigten Nutzer   | Dies ist die maximale Anzahl der Nutzer, die im Live-Ranglisten-Kanal angezeigt werden. /leaderboard zeigt weiterhin die vollständige Rangliste an.<br/>*Es können Werte kleiner oder gleich 25 eingegeben werden.*                                                                                                                                                    |
+| Maximale Anzahl der in der Live-Rangliste angezeigten Nutzer   | Dies ist die maximale Anzahl der Nutzer, die im Live-Ranglisten-Kanal angezeigt werden. /leaderboard zeigt weiterhin die vollständige Rangliste an.<br/>_Es können Werte kleiner oder gleich 25 eingegeben werden._                                                                                                                                                    |
 | Mit Level 0 starten?                                           | Standardmäßig starten Nutzer mit Level 1. Wenn du diese Option aktivierst, starten alle Nutzer mit Level Null. Dies ist nur eine kosmetische Einstellung und kann daher rückwirkend angewendet werden. [Levelformeln](#level-curves) verwenden weiterhin das Level-System ab Eins beginnend, dies wird den Nutzern jedoch nicht angezeigt.                             |
 | Nutzernamen statt Erwähnungen in der Live-Rangliste verwenden? | Wenn aktiviert, verwendet der Bot den Tag der Nutzer im Ranglisten-Kanal-Embed anstelle ihrer Erwähnung.                                                                                                                                                                                                                                                               |
 | Cheats                                                         | Um [Level und XP manuell zu verwalten](#manage-levels), aktiviere diese Option. Dies macht dein Level-System unfair, wenn es von Admins missbraucht wird.                                                                                                                                                                                                              |
@@ -379,7 +379,7 @@ Du
 kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/strings).
 
 | Feld                                  | Beschreibung                                                                                                                                                                                                                                                                                                                |
-|---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nutzer nicht gefunden                 | Diese Nachricht wird gesendet, wenn jemand versucht, das Profil eines Nutzers zu überprüfen, der noch nie eine Nachricht gesendet hat und daher noch kein Profil besitzt.                                                                                                                                                   |
 | Embed                                 | Diese Konfigurationsoption passt an, wie der Befehl [`/profile`](#commands) aussehen soll. Du kannst die Feldwerte der Einbettung, die Farbe der Einbettung und mehr ändern.                                                                                                                                                |
 | Ranglisten-Embed                      | Diese Konfigurationsoption passt an, wie der Befehl [`/leaderboard`](#commands) aussehen soll. Du kannst die Feldwerte der Einbettung, die Farbe der Einbettung und mehr ändern.                                                                                                                                            |
@@ -398,7 +398,7 @@ Konfigurationsoption stellt eine Nachricht dar, die zufällig ausgewählt werden
 kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
 | Feld      | Beschreibung                                                                                                                                                                                                                                                                                                                                                                             |
-|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Typ       | Hiermit wird konfiguriert, wann diese Nachricht zufällig ausgewählt werden kann. Wenn auf `normal` gesetzt, kann sie für Levelaufstiege ohne Rollenbelohnungen verwendet werden, die mit dem Level verbunden sind. Wenn auf `with-reward` gesetzt, wird die Nachricht nur verwendet, wenn ein Level eine Rollenbelohnung hat (dies erlaubt auch die Verwendung des `%role%`-Parameters). |
 | Nachricht | Diese Nachricht wird verwendet, wenn dieses Konfigurationsobjekt zufällig ausgewählt wurde.                                                                                                                                                                                                                                                                                              |
 
@@ -409,7 +409,7 @@ In dieser Konfigurationsdatei kannst du die [Levelaufstiegsnachrichten](#level-u
 kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
 | Feld      | Beschreibung                                                               |
-|-----------|----------------------------------------------------------------------------|
+| --------- | -------------------------------------------------------------------------- |
 | Level     | Level, für das die Nachricht überschrieben werden soll.                    |
 | Nachricht | Diese Nachricht wird gesendet, wenn das konfigurierte Level erreicht wird. |
 
@@ -423,6 +423,7 @@ kann mit einer [Levelkurve](#level-curves) angepasst werden. Bitte passe diese O
 dem Ändern einer
 Levelkurve steigen Benutzer anfangs möglicherweise schneller / langsamer auf – um dies zu beheben,
 erwäge, [dein Levelsystem zurückzusetzen](#manage-levels).
+
 </details>
 
 <details>
@@ -436,6 +437,7 @@ verwendest,
 benötigt der Bot auch die Berechtigung "Rollen verwalten" und die höchste Rolle des Bots sollte über der Rolle liegen,
 die der Bot
 als Belohnung zuweisen soll.
+
 </details>
 
 <details>
@@ -446,6 +448,7 @@ dass der Bot die Berechtigungen "Kanal anzeigen",
 "Nachrichtenverlauf lesen" und "Mit Sprachkanal verbinden" auf jedem Kanal hat, für den XP vergeben werden sollen.
 Andernfalls können keine
 XP vergeben werden, da der Bot die Nachricht / den Sprachkanal nicht sehen kann.
+
 </details>
 
 <details>
@@ -454,6 +457,7 @@ XP vergeben werden, da der Bot die Nachricht / den Sprachkanal nicht sehen kann.
 Die [Live-Rangliste](#live-leaderboard) kann nur gesendet werden, wenn der Bot die Berechtigungen "Kanal anzeigen", "
 Nachrichtenverlauf anzeigen"
 und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Stelle außerdem sicher, dass die Nachricht nicht mehr als 1024 Zeichen lang ist - setze ansonsten den Wert "Maximale Anzahl von Nutzern im Live Ranglistenkanal" in der [Konfiguration](#configuration) auf einen niedrigeren Wert.
+
 </details>
 
 ## Gespeicherte Daten {#data-usage}
@@ -461,11 +465,11 @@ und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Stelle außerdem
 Die folgenden Daten werden über jeden Benutzer gespeichert, der mindestens eine berechtigte Nachricht auf deinem Server
 gesendet hat:
 
-* Die eindeutige Discord-Benutzer-ID des Mitglieds, das die Nachricht gesendet hat.
-* Die Anzahl der XP, die der Benutzer hat.
-* Die Anzahl der berechtigten Nachrichten, die der Benutzer gesendet hat.
-* Das aktuelle Level des Benutzers.
-* Metadaten zum Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung).
+- Die eindeutige Discord-Benutzer-ID des Mitglieds, das die Nachricht gesendet hat.
+- Die Anzahl der XP, die der Benutzer hat.
+- Die Anzahl der berechtigten Nachrichten, die der Benutzer gesendet hat.
+- Das aktuelle Level des Benutzers.
+- Metadaten zum Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung).
 
 Du kannst die Daten eines Benutzers mit dem Befehl [`/manage-levels reset-xp`](#manage-levels) und dem `user`-Parameter
 löschen. Um alle Daten aller Benutzer zu löschen, verwende den Befehl ohne den `user`-Parameter.

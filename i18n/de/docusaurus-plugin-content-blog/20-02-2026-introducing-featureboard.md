@@ -67,13 +67,13 @@ Featureboard ist für alle kostenlos zum Durchstöbern und Einreichen von Vorsch
 
 ### Sponsere ein Feature: Beschleunige deine Vision
 
-Manchmal brauchst du eine Funktion *sofort* und möchtest nicht warten, bis sie in den Abstimmungsrängen nach oben klettert.
+Manchmal brauchst du eine Funktion _sofort_ und möchtest nicht warten, bis sie in den Abstimmungsrängen nach oben klettert.
 
 Dafür führen wir eine neue **"Sponsor a Feature"**-Option ein. Dies richtet sich an Power-User oder Unternehmen, die garantieren möchten, dass eine bestimmte Funktion entwickelt wird. Wenn du ein Feature sponserst, erhältst du:
 
-* **Garantierte Umsetzung:** Dein Feature erhält einen festen Entwicklungs-Slot.
-* **Direkter Zugang:** Du stehst während der Entwicklung in direktem Kontakt mit dem Entwicklerteam.
-* **Branding:** Dein Name oder Logo wird als Sponsor auf der Roadmap und in den Release Notes angezeigt.
+- **Garantierte Umsetzung:** Dein Feature erhält einen festen Entwicklungs-Slot.
+- **Direkter Zugang:** Du stehst während der Entwicklung in direktem Kontakt mit dem Entwicklerteam.
+- **Branding:** Dein Name oder Logo wird als Sponsor auf der Roadmap und in den Release Notes angezeigt.
 
 Es ist eine Win-Win-Situation: Du bekommst das Tool, das du brauchst, und die gesamte Community profitiert von der neuen Funktion. [Erfahre mehr über Sponsoring](https://featureboard.net/sponsored).
 

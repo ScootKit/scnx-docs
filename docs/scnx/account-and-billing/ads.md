@@ -46,15 +46,15 @@ Ads may be denied if they violate content guidelines (hate speech, misleading cl
 
 ## Ad States
 
-| State | Description |
-|-------|-------------|
-| **Active** | Running and being shown to users |
-| **Paused** | Manually paused by you, no charges |
-| **Out of Funds** | Monthly spending limit reached or balance exhausted |
-| **Review Pending** | Awaiting staff review (up to 12 hours) |
-| **Denied** | Rejected for content guideline violation |
-| **Invalid** | Content no longer valid (e.g. Discord server removed, bot permissions changed) |
-| **Archived** | Permanently removed |
+| State              | Description                                                                    |
+| ------------------ | ------------------------------------------------------------------------------ |
+| **Active**         | Running and being shown to users                                               |
+| **Paused**         | Manually paused by you, no charges                                             |
+| **Out of Funds**   | Monthly spending limit reached or balance exhausted                            |
+| **Review Pending** | Awaiting staff review (up to 12 hours)                                         |
+| **Denied**         | Rejected for content guideline violation                                       |
+| **Invalid**        | Content no longer valid (e.g. Discord server removed, bot permissions changed) |
+| **Archived**       | Permanently removed                                                            |
 
 ## Managing Your Ads
 
@@ -79,10 +79,10 @@ Ads are funded from your **ad balance** - a prepaid credit on your SCNX account.
 
 ### Pricing
 
-| Ad Type | Cost per Click | Cost per View |
-|---------|---------------|---------------|
-| Checkin Video | 0.02 EUR | 0.01 EUR |
-| Dashboard Ad | 0.01 EUR | 0.003 EUR (per 1,000 views) |
+| Ad Type       | Cost per Click | Cost per View               |
+| ------------- | -------------- | --------------------------- |
+| Checkin Video | 0.02 EUR       | 0.01 EUR                    |
+| Dashboard Ad  | 0.01 EUR       | 0.003 EUR (per 1,000 views) |
 
 ## Video Specifications
 

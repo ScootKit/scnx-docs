@@ -6,11 +6,11 @@ Zeige ein automatisch aktualisierendes Embed mit Serverstatistiken und Informati
 
 ## Funktionen {#features}
 
-* Zeigt ein automatisch aktualisierendes Embed mit anpassbaren Serverinformationen in einem festgelegten Kanal an.
-* Unterstützt eine Vielzahl dynamischer Variablen, darunter Mitgliederanzahl, Bot-Anzahl, Online-Status, Boost-Statistiken, Kanalanzahl, Rollenanzahl und mehr.
-* Konfigurierbare Embed-Felder mit Unterstützung für die Inline-Anzeige.
-* Zähle Mitglieder mit einer bestimmten Rolle oder Online-Mitglieder mit einer bestimmten Rolle.
-* Das Embed aktualisiert sich automatisch alle 5 Minuten.
+- Zeigt ein automatisch aktualisierendes Embed mit anpassbaren Serverinformationen in einem festgelegten Kanal an.
+- Unterstützt eine Vielzahl dynamischer Variablen, darunter Mitgliederanzahl, Bot-Anzahl, Online-Status, Boost-Statistiken, Kanalanzahl, Rollenanzahl und mehr.
+- Konfigurierbare Embed-Felder mit Unterstützung für die Inline-Anzeige.
+- Zähle Mitglieder mit einer bestimmten Rolle oder Online-Mitglieder mit einer bestimmten Rolle.
+- Das Embed aktualisiert sich automatisch alle 5 Minuten.
 
 ## Einrichtung {#setup}
 
@@ -32,10 +32,10 @@ Dieses Modul verfügt über mehrere Konfigurationsdateien. Bitte überprüfe die
 
 In dieser Konfigurationsdatei kannst du die Funktionalität dieses Moduls konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=serverinfo%7Cconfigs%2Fconfig).
 
-| Feld | Beschreibung |
-|-------|-------------|
+| Feld  | Beschreibung                                                    |
+| ----- | --------------------------------------------------------------- |
 | Kanal | Der Kanal, in dem das Server-Informations-Embed angezeigt wird. |
-| Embed | Passe den Titel, die Beschreibung und die Farbe des Embeds an. |
+| Embed | Passe den Titel, die Beschreibung und die Farbe des Embeds an.  |
 
 ### Embed-Felder-Konfiguration {#configuration-fields}
 
@@ -43,11 +43,11 @@ In dieser Konfigurationsdatei kannst du die im Server-Informations-Embed angezei
 
 Jeder Eintrag stellt ein Feld im Embed mit den folgenden Optionen dar:
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Feldname | Der Name/Titel des Embed-Feldes. |
-| Feldinhalt | Der Inhalt des Feldes. Du kannst die folgenden Variablen verwenden: `%memberCount%` (Mitglieder insgesamt), `%botCount%` (Bots), `%userCount%` (Nutzer ohne Bots), `%onlineMemberCount%` (Online-Mitglieder), `%daysSinceCreation%` (Tage seit Server-Erstellung), `%guildCreationTimestamp%` (Erstellungsdatum), `%guildBoosts%` (Anzahl der Boosts), `%boostLevel%` (Aktuelles Boost-Level), `%boosterCount%` (Anzahl der Booster), `%channelCount%` (Kanäle), `%roleCount%` (Rollen), `%emojiCount%` (Emojis), `%newline%` (Zeilenumbruch), `%userWithRoleCount-<ID>%` (Mitglieder mit einer bestimmten Rolle), `%onlineUserWithRoleCount-<ID>%` (Online-Mitglieder mit einer bestimmten Rolle). |
-| In-Zeilen-Feld? | Falls aktiviert, wird das Feld inline neben anderen Inline-Feldern angezeigt. |
+| Feld            | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Feldname        | Der Name/Titel des Embed-Feldes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Feldinhalt      | Der Inhalt des Feldes. Du kannst die folgenden Variablen verwenden: `%memberCount%` (Mitglieder insgesamt), `%botCount%` (Bots), `%userCount%` (Nutzer ohne Bots), `%onlineMemberCount%` (Online-Mitglieder), `%daysSinceCreation%` (Tage seit Server-Erstellung), `%guildCreationTimestamp%` (Erstellungsdatum), `%guildBoosts%` (Anzahl der Boosts), `%boostLevel%` (Aktuelles Boost-Level), `%boosterCount%` (Anzahl der Booster), `%channelCount%` (Kanäle), `%roleCount%` (Rollen), `%emojiCount%` (Emojis), `%newline%` (Zeilenumbruch), `%userWithRoleCount-<ID>%` (Mitglieder mit einer bestimmten Rolle), `%onlineUserWithRoleCount-<ID>%` (Online-Mitglieder mit einer bestimmten Rolle). |
+| In-Zeilen-Feld? | Falls aktiviert, wird das Feld inline neben anderen Inline-Feldern angezeigt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -63,5 +63,6 @@ Jeder Eintrag stellt ein Feld im Embed mit den folgenden Optionen dar:
 <details>
   <summary>Die rollenbasierten Mitgliederzahlen zeigen falsche Werte an</summary>
 
-  Stelle sicher, dass du die korrekte Rollen-ID in der Variable verwendest (z. B. <code>%userWithRoleCount-123456789%</code>). Beachte außerdem, dass die Anzahl der Online-Mitglieder von den Presence-Intents des Bots abhängt und bei sehr großen Servern möglicherweise nicht genau ist.
+Stelle sicher, dass du die korrekte Rollen-ID in der Variable verwendest (z. B. <code>%userWithRoleCount-123456789%</code>). Beachte außerdem, dass die Anzahl der Online-Mitglieder von den Presence-Intents des Bots abhängt und bei sehr großen Servern möglicherweise nicht genau ist.
+
 </details>

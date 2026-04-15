@@ -17,9 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install prettier
-        run: npm install --no-package-lock --ignore-scripts prettier
-
       - name: Fix em dashes
         run: |
           find docs/ i18n/ blog/ src/pages/ -type f \( -name '*.md' -o -name '*.mdx' -o -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' -o -name '*.json' \) \
@@ -47,17 +44,32 @@ jobs:
 
       - name: Format markdown tables
         run: |
-          npx prettier --write 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' 'blog/**/*.md' \
-            --parser markdown --prose-wrap preserve --tab-width 2 2>/dev/null || true
+          npx --yes prettier --write 'docs/**/*.md' 'docs/**/*.mdx' 'i18n/**/*.md' 'i18n/**/*.mdx' 'blog/**/*.md' 2>/dev/null || true
+        env:
+          NPM_CONFIG_USERCONFIG: /dev/null
 
-      - name: Commit fixes
+      - name: Create or update PR with fixes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
             echo "No fixes needed"
-          else
-            git commit -m "chore: autofix docs formatting"
-            git push
+            exit 0
           fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          BRANCH="autofix/docs-formatting"
+          git checkout -B "$BRANCH"
+          git commit -m "chore: autofix docs formatting"
+          git push origin "$BRANCH" --force
+
+          EXISTING_PR=$(gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number' 2>/dev/null || true)
+          if [ -n "$EXISTING_PR" ]; then
+            echo "Updated existing PR #$EXISTING_PR"
+          else
+            PR_URL=$(gh pr create --title "chore: autofix docs formatting" --body "Automated formatting fixes: em dashes, smart quotes, ellipsis characters, non-breaking spaces, trailing whitespace, and markdown table alignment." --base main --head "$BRANCH")
+            gh pr merge "$PR_URL" --auto --squash --delete-branch
+            echo "Created new PR: $PR_URL"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

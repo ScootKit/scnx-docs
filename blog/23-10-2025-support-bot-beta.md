@@ -34,7 +34,7 @@ time:
 1. **Modmail System (Classic):** The DM-based system you're familiar with. Users send a DM to the bot, and your team
    manages it in a private thread.
 2. **Ticket System (New!):** A highly-requested, channel-based system. Users open a ticket via a dedicated message, and
-   a private channel is created for them *inside* your server.
+   a private channel is created for them _inside_ your server.
 
 This update is all about giving you the flexibility to build the perfect support experience for your community.
 
@@ -49,7 +49,7 @@ It moves support out of DMs and into private channels right on your server.
 
 Ticket Topics are now fully integrated into the new system. You can set different topics for each ticket panel, helping
 you categorize and route requests from the moment they're created. Even better, you can enable in-channel buttons to
-allow your team to change a ticket's topic *after* it's been opened, ensuring everything stays organized.
+allow your team to change a ticket's topic _after_ it's been opened, ensuring everything stays organized.
 
 ![Screenshot showing a ticket selection embed, showing how to move a ticket and the ticket topics configuration](@site/blog/assets/support-bot-beta/en/2.png)
 
@@ -64,7 +64,7 @@ times.
 ### 👥 Multi-User Tickets & Multiple Tickets Per User {#ticket-system-multiple-users}
 
 Flexibility is key. A single user can now open multiple tickets simultaneously. Additionally, you can (optionally) allow
-users to add *other* server members to their ticket, making it perfect for group support scenarios or collaborative
+users to add _other_ server members to their ticket, making it perfect for group support scenarios or collaborative
 problem-solving.
 
 ![A screenshot showing how to add another user to a ticket](@site/blog/assets/support-bot-beta/en/multi-users.png)
@@ -94,7 +94,7 @@ them as clean, simple buttons instead of a dropdown menu, making interaction eve
 
 ## Game-Changing Features for BOTH Systems {#combined}
 
-We didn't just add a new system; we supercharged the entire platform. These new features are available for *both* the
+We didn't just add a new system; we supercharged the entire platform. These new features are available for _both_ the
 Modmail and Ticket systems.
 
 ### ✨ AI-Powered Ticket Summaries {#combined-ai-summaries}
@@ -120,29 +120,29 @@ identify a ticket's purpose just by its name!
 
 For example:
 
-* `❗-ticket-123` for a Bug Report
-* `⭐-ticket-219` for a Partnership
+- `❗-ticket-123` for a Bug Report
+- `⭐-ticket-219` for a Partnership
 
 ### More Powerful Tools for V3: {#combined-more-v3}
 
-* **Combined Statistics:** The dashboard now features a combined overview, showing stats for Modmail and Tickets,
+- **Combined Statistics:** The dashboard now features a combined overview, showing stats for Modmail and Tickets,
   side-by-side.
-* **Ticket History:** A new `/ticket-history` command allows you to easily view a user's past support tickets.
-* **Ticket Renaming:** Team members can now rename tickets for better organization.
-* **Custom Ticket IDs:** Change the format of your ticket IDs, adding prefixes or using random IDs instead of sequential
+- **Ticket History:** A new `/ticket-history` command allows you to easily view a user's past support tickets.
+- **Ticket Renaming:** Team members can now rename tickets for better organization.
+- **Custom Ticket IDs:** Change the format of your ticket IDs, adding prefixes or using random IDs instead of sequential
   numbers.
-* **Holiday Importing:** Easily import your local holidays to manage your team's availability.
+- **Holiday Importing:** Easily import your local holidays to manage your team's availability.
 
 ## Upgrades to the Classic Modmail System {#modmail}
 
 We haven't forgotten our Modmail roots! The classic DM system also got some fantastic new features:
 
-* **Advanced Info Messages:** You can now set up *multiple* info messages and configure them to only display for
+- **Advanced Info Messages:** You can now set up _multiple_ info messages and configure them to only display for
   specific ticket topics. If a topic has only one option, the dropdown automatically becomes a simple button. (Note: If
   you had a V2 info message, you will need to set it up again in the new, more powerful system).
-* **Topic Statistics:** The statistics tab now shows your most-used ticket topics, helping you understand what your
+- **Topic Statistics:** The statistics tab now shows your most-used ticket topics, helping you understand what your
   users need most.
-* **Customizable Rating Messages:** The team rating messages at the end of a ticket have been improved and can now be
+- **Customizable Rating Messages:** The team rating messages at the end of a ticket have been improved and can now be
   fully customized.
 
 ## Get Support-Bot Today {#get-today}

@@ -69,7 +69,7 @@ your Discord without any
 additional checks. While you can manually [remove users](/docs/linked-roles/user-management#delete-user) in the dashboard, they will be
 able to re-claim the role again since the role is public.
 
-![This screenshot shows where the \"Public role\" role can be found](@site/docs/assets/linked-roles/role-managment/public-role.png)
+![This screenshot shows where the "Public role" role can be found](@site/docs/assets/linked-roles/role-managment/public-role.png)
 
 ## Delete Linked Roles {#delete-role}
 

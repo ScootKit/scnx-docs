@@ -21,13 +21,13 @@ A powerful, highly customizable staff management system to track activity, moder
 2. Open the [General Configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) and set the **Staff Roles**, **Supervisor Roles**, and **Management Roles** to control who can access which features.
 3. Set up a **Log Channel** where staff management events will be logged.
 4. Configure the individual feature settings as needed:
-   * [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts)  - Duty types, quotas, and leaderboard settings.
-   * [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus)  - LoA and reduced activity settings.
-   * [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions)  - Infraction types, suspension settings, and DM notifications.
-   * [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions)  - Promotion announcements and role assignment.
-   * [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews)  - Rating system settings.
-   * [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles)  - Staff profile customization.
-   * [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks)  - Activity verification settings.
+   - [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) - Duty types, quotas, and leaderboard settings.
+   - [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) - LoA and reduced activity settings.
+   - [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) - Infraction types, suspension settings, and DM notifications.
+   - [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) - Promotion announcements and role assignment.
+   - [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) - Rating system settings.
+   - [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) - Staff profile customization.
+   - [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) - Activity verification settings.
 
 ## Usage {#usage}
 
@@ -65,51 +65,51 @@ Management can start periodic activity checks targeting specific roles with `/st
 
 <SlashCommandExplanation />
 
-| Command                                                          | Description                                                 |
-|------------------------------------------------------------------|-------------------------------------------------------------|
-| `/duty manage`                                                   | Clock in/out of a shift or take a break.                    |
-| `/duty active`                                                   | View currently on-duty staff members.                       |
-| `/duty leaderboard`                                              | View the duty time leaderboard.                             |
-| `/duty time`                                                     | View your own duty time statistics.                         |
-| `/duty admin`                                                    | Administrative duty management (supervisor+).               |
-| `/loa request`                                                   | Request a Leave of Absence.                                 |
-| `/loa view`                                                      | View your current LoA status.                               |
-| `/loa list`                                                      | List all active LoA requests.                               |
-| `/loa admin`                                                     | Approve, deny, or manage LoA requests (supervisor+).        |
-| `/reduced-activity request`                                      | Request Reduced Activity status.                            |
-| `/reduced-activity view`                                         | View your current Reduced Activity status.                  |
-| `/reduced-activity list`                                         | List all active Reduced Activity statuses.                  |
-| `/reduced-activity admin`                                        | Manage Reduced Activity requests (supervisor+).             |
-| `/staff-management panel`                                        | Open the staff management panel.                            |
-| `/staff-management infraction issue user:<User>`                 | Issue an infraction to a staff member.                      |
-| `/staff-management infraction suspend user:<User>`               | Suspend a staff member.                                     |
-| `/staff-management infraction history user:<User>`               | View a staff member's infraction history.                   |
-| `/staff-management infraction void`                              | Void an existing infraction.                                |
-| `/staff-management promotion promote user:<User>`                | Promote a staff member.                                     |
-| `/staff-management promotion history user:<User>`                | View a staff member's promotion history.                    |
-| `/staff-management activity-check start`                         | Start a new activity check.                                 |
-| `/staff-management activity-check view`                          | View an active or past activity check.                      |
-| `/staff-management activity-check end`                           | End an active activity check.                               |
-| `/staff-management profile view user:<User>`                     | View a staff member's profile.                              |
-| `/staff-management profile edit`                                 | Edit your own staff profile.                                |
-| `/staff-management profile wipe user:<User>`                     | Wipe a staff member's profile data (management only).       |
-| `/staff-management review submit user:<User>`                    | Submit a review for a staff member.                         |
-| `/staff-management review history user:<User>`                   | View a staff member's review history.                       |
+| Command                                            | Description                                           |
+| -------------------------------------------------- | ----------------------------------------------------- |
+| `/duty manage`                                     | Clock in/out of a shift or take a break.              |
+| `/duty active`                                     | View currently on-duty staff members.                 |
+| `/duty leaderboard`                                | View the duty time leaderboard.                       |
+| `/duty time`                                       | View your own duty time statistics.                   |
+| `/duty admin`                                      | Administrative duty management (supervisor+).         |
+| `/loa request`                                     | Request a Leave of Absence.                           |
+| `/loa view`                                        | View your current LoA status.                         |
+| `/loa list`                                        | List all active LoA requests.                         |
+| `/loa admin`                                       | Approve, deny, or manage LoA requests (supervisor+).  |
+| `/reduced-activity request`                        | Request Reduced Activity status.                      |
+| `/reduced-activity view`                           | View your current Reduced Activity status.            |
+| `/reduced-activity list`                           | List all active Reduced Activity statuses.            |
+| `/reduced-activity admin`                          | Manage Reduced Activity requests (supervisor+).       |
+| `/staff-management panel`                          | Open the staff management panel.                      |
+| `/staff-management infraction issue user:<User>`   | Issue an infraction to a staff member.                |
+| `/staff-management infraction suspend user:<User>` | Suspend a staff member.                               |
+| `/staff-management infraction history user:<User>` | View a staff member's infraction history.             |
+| `/staff-management infraction void`                | Void an existing infraction.                          |
+| `/staff-management promotion promote user:<User>`  | Promote a staff member.                               |
+| `/staff-management promotion history user:<User>`  | View a staff member's promotion history.              |
+| `/staff-management activity-check start`           | Start a new activity check.                           |
+| `/staff-management activity-check view`            | View an active or past activity check.                |
+| `/staff-management activity-check end`             | End an active activity check.                         |
+| `/staff-management profile view user:<User>`       | View a staff member's profile.                        |
+| `/staff-management profile edit`                   | Edit your own staff profile.                          |
+| `/staff-management profile wipe user:<User>`       | Wipe a staff member's profile data (management only). |
+| `/staff-management review submit user:<User>`      | Submit a review for a staff member.                   |
+| `/staff-management review history user:<User>`     | View a staff member's review history.                 |
 
 ## Configuration {#configuration}
 
 This module has 8 configuration files. Open them in your [dashboard](https://scnx.app/glink?page=bot/configuration?query=staff-management-system).
 
-| Configuration File  | Description                                                                 |
-|---------------------|-----------------------------------------------------------------------------|
-| General             | Staff/supervisor/management roles, log channel, and general settings.       |
-| Shifts              | Duty types, shift quotas, leaderboard settings, and break configuration.    |
-| Status              | LoA and reduced activity settings, approval workflow, and role assignments.  |
-| Infractions         | Infraction types, suspension settings, DM notifications, and expiration.    |
-| Promotions          | Promotion announcements, role assignment, and notification settings.        |
-| Reviews             | Rating system settings, self-rating prevention, and access restrictions.    |
-| Profiles            | Staff profile fields and customization options.                             |
-| Activity Checks     | Check windows, target roles, and response tracking settings.               |
+| Configuration File | Description                                                                 |
+| ------------------ | --------------------------------------------------------------------------- |
+| General            | Staff/supervisor/management roles, log channel, and general settings.       |
+| Shifts             | Duty types, shift quotas, leaderboard settings, and break configuration.    |
+| Status             | LoA and reduced activity settings, approval workflow, and role assignments. |
+| Infractions        | Infraction types, suspension settings, DM notifications, and expiration.    |
+| Promotions         | Promotion announcements, role assignment, and notification settings.        |
+| Reviews            | Rating system settings, self-rating prevention, and access restrictions.    |
+| Profiles           | Staff profile fields and customization options.                             |
+| Activity Checks    | Check windows, target roles, and response tracking settings.                |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -141,12 +141,12 @@ This module has 8 configuration files. Open them in your [dashboard](https://scn
 
 The following data is stored by this module:
 
-* **Staff profiles**: User ID, suspension status, and profile data for each tracked staff member.
-* **Shifts**: Clock-in/out timestamps, break records, and duty type for each shift.
-* **Infractions**: Infraction type, issuer, target, reason, and expiration date.
-* **Promotions**: Promotion records including old/new role, issuer, and timestamp.
-* **Reviews**: Reviewer ID, target ID, rating, and review text.
-* **LoA requests**: Requester, reason, duration, approval status, and approver.
-* **Activity checks**: Check records, target roles, and individual response tracking.
+- **Staff profiles**: User ID, suspension status, and profile data for each tracked staff member.
+- **Shifts**: Clock-in/out timestamps, break records, and duty type for each shift.
+- **Infractions**: Infraction type, issuer, target, reason, and expiration date.
+- **Promotions**: Promotion records including old/new role, issuer, and timestamp.
+- **Reviews**: Reviewer ID, target ID, rating, and review text.
+- **LoA requests**: Requester, reason, duration, approval status, and approver.
+- **Activity checks**: Check records, target roles, and individual response tracking.
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

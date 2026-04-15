@@ -32,9 +32,10 @@ Select any Slash Command to open the permissions configuration menu.
 ![Command Settings, showing the permissions configuration menu on how to configure channels, roles, and users](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
 
 For each command, you can specify:
-* Which **roles** are allowed to execute it
-* Which **users** have access
-* In which **channels** the command can be used
+
+- Which **roles** are allowed to execute it
+- Which **users** have access
+- In which **channels** the command can be used
 
 :::warning Important Note
 For most commands, the bot does **not** perform additional permission checks
@@ -50,7 +51,8 @@ Some Slash Commands require specific Discord server permissions by default.
 If a command has required permissions (for example **Moderate Members**), only members with these server permissions can use the command initially.
 
 Discord will display a notice such as:
-* "Members need server permissions to use this command."
+
+- "Members need server permissions to use this command."
 
 These default permissions apply until they are explicitly overridden by assigning roles or users in the command permissions menu.
 
@@ -60,9 +62,9 @@ This ensures that sensitive commands remain restricted unless access is intentio
 
 Discord allows managing permissions for multiple commands at once:
 
-* Synchronized commands inherit identical settings
-* Individual commands can be excluded from synchronization manually
-* Commands that cannot be synchronized can still be configured individually
+- Synchronized commands inherit identical settings
+- Individual commands can be excluded from synchronization manually
+- Commands that cannot be synchronized can still be configured individually
 
 ## Using the Custom Bot
 
