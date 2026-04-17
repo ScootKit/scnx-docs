@@ -34,8 +34,8 @@ Once set up, the module works automatically:
 
 ### Viewing ping history and actions {#viewing-history}
 
-* Users can use the `/ping-protection user history` command to view a **user's (or their own) ping history**. Each pinging event is logged (if enabled) with a timestamp, and a link to the message containing the ping.
-* Users can use the `/ping-protection user actions-history` command to view a **user's (or their own) moderation actions history**. Each moderation action is logged, and contains the punishment type, the duration (only if the action was a mute), a timestamp and the reason.
+- Users can use the `/ping-protection user history` command to view a **user's (or their own) ping history**. Each pinging event is logged (if enabled) with a timestamp, and a link to the message containing the ping.
+- Users can use the `/ping-protection user actions-history` command to view a **user's (or their own) moderation actions history**. Each moderation action is logged, and contains the punishment type, the duration (only if the action was a mute), a timestamp and the reason.
 
 ### Protected and whitelisted lists {#lists}
 
