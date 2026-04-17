@@ -137,7 +137,7 @@ In this module, issues can often appear when permissions are set incorrectly, hi
 </details>
 
 <details>
-    <summary>I am getting this error when punishing: I cannot punish itskevinnn because their role is higher than or equal to my highest role.</summary>
+    <summary>I am getting this error when punishing: I cannot punish (user) because their role is higher than or equal to my highest role.</summary>
     
     This happens because the highest role of the user who pinged is higher than (or the same as) the highest role of the bot. To fix this, put your bot's highest role higher than the highest role of most users. It is recommended to put your bot's highest role a position near the top.
 </details>
