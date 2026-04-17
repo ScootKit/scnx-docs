@@ -27,14 +27,14 @@ Die spezifischen Optionen, die dir zur Verfügung stehen, hängen von deinem akt
 
 Je nach Schwere des Problems kannst du eine der folgenden Optionen angeboten bekommen:
 
-| Entschädigung | Beschreibung | Verfügbarkeit |
-|---|---|---|
-| **Plan-Verlängerung** | Zusätzliche Tage werden deinem aktuellen Plan ohne Aufpreis hinzugefügt | Server mit Plan-Ablaufdatum (ohne aktives Abo) |
-| **Nächste Abbuchung verschieben** | Verschiebt deine nächste Abo-Zahlung um eine Anzahl Tage | Server mit aktivem Abo (Stripe oder Paddle) |
-| **Kontoguthaben** | Ein Guthaben wird deinem SCNX-Konto für zukünftige Käufe gutgeschrieben | Nur für EU-Kunden |
-| **Kostenlose Plan-Testphase** | Teste einen höherwertigen Plan (Unlimited oder Professional) kostenlos | Nur für Server im Starter-Plan |
-| **KI-Coins** | Kostenlose KI-Coins für die KI-Funktionen deines Servers | Alle Server |
-| **Mitgliedschaft** | Eine kostenlose Level-2- oder Level-3-Mitgliedschaft | Alle Nutzer |
+| Entschädigung                     | Beschreibung                                                            | Verfügbarkeit                                  |
+| --------------------------------- | ----------------------------------------------------------------------- | ---------------------------------------------- |
+| **Plan-Verlängerung**             | Zusätzliche Tage werden deinem aktuellen Plan ohne Aufpreis hinzugefügt | Server mit Plan-Ablaufdatum (ohne aktives Abo) |
+| **Nächste Abbuchung verschieben** | Verschiebt deine nächste Abo-Zahlung um eine Anzahl Tage                | Server mit aktivem Abo (Stripe oder Paddle)    |
+| **Kontoguthaben**                 | Ein Guthaben wird deinem SCNX-Konto für zukünftige Käufe gutgeschrieben | Nur für EU-Kunden                              |
+| **Kostenlose Plan-Testphase**     | Teste einen höherwertigen Plan (Unlimited oder Professional) kostenlos  | Nur für Server im Starter-Plan                 |
+| **KI-Coins**                      | Kostenlose KI-Coins für die KI-Funktionen deines Servers                | Alle Server                                    |
+| **Mitgliedschaft**                | Eine kostenlose Level-2- oder Level-3-Mitgliedschaft                    | Alle Nutzer                                    |
 
 ## Wie löse ich meinen Gutschein ein?
 
@@ -82,4 +82,4 @@ Bitte kontaktiere unser Support-Team unter [scnx.app/help](https://scnx.app/help
 
 ---
 
-*SCNX Care ist ein freiwilliges Kulanzprogramm von ScootKit. Entschädigungen werden nach Ermessen unseres Support-Teams gewährt und unterliegen unseren [Nutzungsbedingungen](https://sc-net.work/tos).*
+_SCNX Care ist ein freiwilliges Kulanzprogramm von ScootKit. Entschädigungen werden nach Ermessen unseres Support-Teams gewährt und unterliegen unseren [Nutzungsbedingungen](https://sc-net.work/tos)._

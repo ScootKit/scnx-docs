@@ -4,8 +4,8 @@ Getting started on SCNX requires a quick setup, but you'll be able to create you
 
 ## 0. What is SCNX (not) {#step-0}
 
-SCNX is **desinged for communities**. You can __**not create a public bot**__ on SCNX, instead you can create a bot for
-*your* server that you can completely customize.
+SCNX is **desinged for communities**. You can \***\*not create a public bot\*\*** on SCNX, instead you can create a bot for
+_your_ server that you can completely customize.
 
 ## 1. Log in to SCNX {#step-1}
 

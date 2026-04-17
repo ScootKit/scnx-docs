@@ -2,20 +2,20 @@
 
 :::info Privacy Notice
 
-* SCNX will provide OpenAI with your Guild-ID.
-* Other metadata about your guild (such as the name) and data (such as message content, author name) about messages sent
+- SCNX will provide OpenAI with your Guild-ID.
+- Other metadata about your guild (such as the name) and data (such as message content, author name) about messages sent
   in selected channels will be shared.
 
 :::
 
 :::warning Disclaimer
 
-* AI Models are known to occasionally generate incorrect information, produce harmful instructions or biased content,
+- AI Models are known to occasionally generate incorrect information, produce harmful instructions or biased content,
   and have limited knowledge of world events after 2021.
-* Only enable AI Content on your server if you are able to actively moderate both input and output of your bot.
-* We're not responsible for any damages resulting of your usage of AI features.
-* You are using these features on your own risk.
-* Make sure to inform your users about these dangers posed by AI generated content.
+- Only enable AI Content on your server if you are able to actively moderate both input and output of your bot.
+- We're not responsible for any damages resulting of your usage of AI features.
+- You are using these features on your own risk.
+- Make sure to inform your users about these dangers posed by AI generated content.
 
 :::
 
@@ -26,7 +26,7 @@ check the pricing for the modules below. Every server gets the following amount 
 based on their plan:
 
 | Plan                  | Amount of AI Coins awarded |
-|:----------------------|:---------------------------|
+| :-------------------- | :------------------------- |
 | Starter               | 25                         |
 | Active Guild (Legacy) | 100                        |
 | PRO (Legacy)          | 250                        |
@@ -50,13 +50,13 @@ Visit the [pricing site](https://scnx.app/glink?page=pricing) of your guild, loc
 Top-Up". You can use SCNX Credits to top-up the AI Coins. You can find a conversion table below:
 
 | AI Coins | Price (for EU customers) |
-|:---------|:-------------------------|
+| :------- | :----------------------- |
 | 2,000    | €3.99                    |
 | 5,000    | €8.99                    |
 | 10,000   | €15.99                   |
 | 50,000   | €69.69                   |
 
-*Please note that we might change these prices at any time.*
+_Please note that we might change these prices at any time._
 
 ---
 
@@ -75,23 +75,23 @@ default" personality. You are using this feature at your own risk.
 
 ### Configuration Options
 
-* **Personality:** Depending on this setting, the AI-Chat-Bot will behave differently.
-    * **default:** The default personality - designed to help users and answer requests. Recommanded and the best option
-      for most servers.
-    * **troll:** This personality will insult users and basically to everything to get a lauth out of them. TO NOT USE
-      THIS PERSONALITY WITHOUT ACTIVE MODERATORS MODERATING THE ANSWERS OF THE MODEL.
-    * **liar:** Conspiracy theorist and a notorious liar. We recommand active moderators monitoring answers.
-    * **rude starbucks employee:** This personality will role-play with your users as a starbucks rude employee.
-* **Response Length:** Controls how long the AI's responses will be.
-* **Trigger Mode:** Determines which messages trigger an AI response. 'All messages' replicates the default behaviour.
+- **Personality:** Depending on this setting, the AI-Chat-Bot will behave differently.
+  - **default:** The default personality - designed to help users and answer requests. Recommanded and the best option
+    for most servers.
+  - **troll:** This personality will insult users and basically to everything to get a lauth out of them. TO NOT USE
+    THIS PERSONALITY WITHOUT ACTIVE MODERATORS MODERATING THE ANSWERS OF THE MODEL.
+  - **liar:** Conspiracy theorist and a notorious liar. We recommand active moderators monitoring answers.
+  - **rude starbucks employee:** This personality will role-play with your users as a starbucks rude employee.
+- **Response Length:** Controls how long the AI's responses will be.
+- **Trigger Mode:** Determines which messages trigger an AI response. 'All messages' replicates the default behaviour.
   Other modes restrict responses to specific triggers.
-* **Trigger Keyword:** If set and trigger mode includes 'keyword', the AI will only respond when a message starts with
+- **Trigger Keyword:** If set and trigger mode includes 'keyword', the AI will only respond when a message starts with
   this word or phrase (e.g. 'Hey Bot').
-* **Resetting History:** After configuring, please type `=== RESET ===` in the ai channel to reset conversation history.
+- **Resetting History:** After configuring, please type `=== RESET ===` in the ai channel to reset conversation history.
 
 ### Custom System Prompt & Strict Moderation
 
-If set, this text replaces the Personality setting as the AI's system prompt. Maximum 1000 characters — longer text is
+If set, this text replaces the Personality setting as the AI's system prompt. Maximum 1000 characters - longer text is
 truncated automatically. A safety clause is always appended and cannot be removed. You are fully responsible for the
 AI's behaviour when using a custom prompt.
 
@@ -112,13 +112,13 @@ our [Terms of Service](https://scootk.it/scnx-tos).
 This module charges the AI-Coins of your server.
 
 | Action                                            | Price     |
-|:--------------------------------------------------|:----------|
+| :------------------------------------------------ | :-------- |
 | Message sent one of the selected AI-Chat-Channels | 1 AI Coin |
 
-*You won't be charged for messages where AI answer generation failed.*
+_You won't be charged for messages where AI answer generation failed._
 
 | Error                          | Cause                                                                         | What you can do                                                                                    |
-|:-------------------------------|:------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| :----------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
 | This server is out of AI Coins | Your server does not have enough AI Coins left to cover the requested actions | Try topping up AI Coins on the [pricing page](https://scnx.app/glink?page=pricing) of your server. |
 | Error generating response      | OpenAI returned an invalid status code                                        | Try again in a few minutes.                                                                        |
 
@@ -145,15 +145,15 @@ timeframe based on your configuration.
 This module charges the AI-Coins of your server.
 
 | Action                                          | Price       |
-|:------------------------------------------------|:------------|
+| :---------------------------------------------- | :---------- |
 | Generation of images with the size of 1792x1024 | 13 AI Coins |
 | Generation of images with the size of 1024x1792 | 13 AI Coins |
 | Generation of images with the size of 1024x1024 | 10 AI Coins |
 
-*You won't be charged for commands where AI image generation failed.*
+_You won't be charged for commands where AI image generation failed._
 
 | Error                          | Cause                                                                                                                              | What you can do                                                                                             |
-|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
+| :----------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
 | This server is out of AI Coins | Your server does not have enough AI Coins left to cover the requested actions                                                      | Try topping up AI Coins on the [pricing page](https://scnx.app/glink?page=pricing) of your server.          |
 | Error generating response      | OpenAI returned an invalid status code - reason for this can either be an actual error or a prompt violating OpenAI Usage Policies | Try again in a few minutes. Check your prompt for violations of OpenAI Usage Policies if that doesn't help. |
 

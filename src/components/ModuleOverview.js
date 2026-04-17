@@ -8,16 +8,22 @@ import Admonition from '@theme/Admonition';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
     faArrowCircleRight,
+    faArrowUpRightFromSquare,
+    faBug,
     faCheckCircle,
+    faChevronDown,
     faDatabase,
     faFile,
     faFileCircleXmark,
     faHeart,
     faInfoCircle,
     faServer,
+    faSparkles,
+    faStar,
     faTerminal,
     faTriangleExclamation,
     faCircleXmark,
+    faWrench,
     faZap
 } from '@fortawesome/pro-solid-svg-icons';
 
@@ -91,6 +97,120 @@ function ModuleStatusBanner({moduleName, locale}) {
     </Admonition>;
 }
 
+const RELEVANCE_CONFIG = {
+    MAJOR: {icon: faStar, color: '#FBBF24', label: 'Major'},
+    NEW_MODULE: {icon: faStar, color: '#34D399', label: 'New'},
+    NEW_MODULE_EARLY_ACCESS: {icon: faStar, color: '#A78BFA', label: 'Early Access'},
+    EARLY_ACCESS_LEFT: {icon: faCheckCircle, color: '#34D399', label: 'Stable'},
+    IMPROVEMENT: {icon: faSparkles, color: '#60A5FA', label: 'Improvement'},
+    QUALITY_OF_LIFE: {icon: faWrench, color: '#93C5FD', label: 'QoL'},
+    BUG_FIXES: {icon: faBug, color: '#F87171', label: 'Bug Fix'},
+    MINOR: {icon: faInfoCircle, color: '#9CA3AF', label: 'Minor'},
+    NOTE: {icon: faInfoCircle, color: '#D1D5DB', label: 'Note'},
+};
+
+function formatChangeHtml(raw) {
+    if (!raw) return [];
+    return raw.split(/\n|<\/li>/).map(l =>
+        l.replace(/<\/?[uo]l>/g, '').replace(/<\/?li>/g, '').replace(/<\/?p>/g, '').trim()
+    ).filter(Boolean);
+}
+
+function ModuleChangelogs({moduleName, locale}) {
+    const allModuleChangelogs = usePluginData('scnx-module-changelogs');
+    const data = allModuleChangelogs?.[moduleName];
+    if (!data || !data.items || data.items.length === 0) return null;
+
+    const versions = [];
+    for (const version of data.items) {
+        const changes = [];
+        for (const moduleItem of (version.items || [])) {
+            if (moduleItem.moduleName !== moduleName) continue;
+            for (const change of (moduleItem.items || [])) {
+                const html = change[locale + 'Html'] || change.enHtml || '';
+                const lines = formatChangeHtml(html);
+                for (const line of lines) {
+                    changes.push({id: change.id + line, relevance: change.relevance, html: line});
+                }
+            }
+        }
+        if (changes.length > 0) {
+            versions.push({
+                versionName: version.versionName,
+                date: version.createdAt,
+                slug: version.slug,
+                changes,
+            });
+        }
+    }
+    if (versions.length === 0) return null;
+
+    const latestDate = new Date(versions[0].date);
+    const isRecent = (Date.now() - latestDate.getTime()) < 30 * 24 * 60 * 60 * 1000;
+    const changelogUrl = `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs?module=${moduleName}`;
+
+    return <details className={`module-changelogs ${isRecent ? 'module-changelogs--recent' : ''}`}>
+        <summary className="module-changelogs-summary">
+            <FontAwesomeIcon icon={faChevronDown} width={12} className="module-changelogs-chevron"
+                             style={{marginRight: '0.5rem', transition: 'transform 0.2s'}}/>
+            <Translate id="module.changelogs.title">Recent changes</Translate>
+            {isRecent && <span className="module-changelogs-badge">
+                <Translate id="module.changelogs.new">Updated recently</Translate>
+            </span>}
+        </summary>
+        <div className="module-changelogs-content">
+            {versions.slice(0, 3).map(version => {
+                const versionDate = new Date(version.date);
+                const versionUrl = version.slug
+                    ? `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs/${version.slug}`
+                    : null;
+                return <div key={version.versionName} className="module-changelog-version">
+                    <div className="module-changelog-version-header">
+                        <span className="module-changelog-version-name">
+                            {versionUrl
+                                ? <a href={versionUrl} target="_blank" rel="noopener noreferrer">{version.versionName} <FontAwesomeIcon icon={faArrowUpRightFromSquare} width={10}/></a>
+                                : version.versionName}
+                        </span>
+                        <span className="module-changelog-version-date">
+                            {versionDate.toLocaleDateString(locale, {year: 'numeric', month: 'short', day: 'numeric'})}
+                        </span>
+                    </div>
+                    <div className="module-changelog-entries">
+                        {Object.entries(version.changes.reduce((groups, change) => {
+                            const key = change.relevance || 'IMPROVEMENT';
+                            if (!groups[key]) groups[key] = [];
+                            groups[key].push(change);
+                            return groups;
+                        }, {})).map(([relevance, changes]) => {
+                            const config = RELEVANCE_CONFIG[relevance] || RELEVANCE_CONFIG.IMPROVEMENT;
+                            return <div key={relevance} className="module-changelog-group">
+                                <span className="module-changelog-relevance-tag" style={{
+                                    color: config.color,
+                                    borderColor: config.color + '40',
+                                    backgroundColor: config.color + '15'
+                                }}>
+                                    <FontAwesomeIcon icon={config.icon} width={10} style={{marginRight: '0.3rem'}}/>
+                                    {config.label}
+                                </span>
+                                <ul className="module-changelog-group-list">
+                                    {changes.map(change => <li key={change.id}
+                                        dangerouslySetInnerHTML={{__html: change.html}}/>)}
+                                </ul>
+                            </div>;
+                        })}
+                    </div>
+                </div>;
+            })}
+            <div className="module-changelog-footer">
+                <Link href={changelogUrl} className="module-changelog-view-all">
+                    <Translate id="module.changelogs.viewAll">View all changes</Translate>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} width={11} style={{marginLeft: '0.4rem'}}/>
+                </Link>
+            </div>
+        </div>
+    </details>;
+}
+
 export default function ModuleOverview({moduleName}) {
     const modules = usePluginData('scnx-custom-bot-modules');
     const {i18n} = useDocusaurusContext();
@@ -155,7 +275,7 @@ export default function ModuleOverview({moduleName}) {
                     <FontAwesomeIcon width={14} icon={faZap} style={{marginRight: '0.25rem'}}/> <Translate
                     id="module.usesAICredits">This module uses your server's AI Credits.</Translate>
                 </div>}
-                {moduleData.commandsCount && <div className="module-card-info-item">
+                {moduleData.commandsCount > 0 && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faTerminal}
                                      style={{marginRight: '0.25rem'}}/> {moduleData.commandsCount === 1 ? <Translate
                     id="module.oneCommands">This module creates one top-level Slash-Command on your
@@ -198,6 +318,7 @@ export default function ModuleOverview({moduleName}) {
             </div>
         </div>
     </div>
+    <ModuleChangelogs moduleName={moduleName} locale={i18n.currentLocale}/>
     <ModuleStatusBanner moduleName={moduleName} locale={i18n.currentLocale}/>
     </>;
 }

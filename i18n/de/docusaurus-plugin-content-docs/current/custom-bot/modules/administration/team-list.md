@@ -6,9 +6,9 @@ Zeige alle deine Teammitglieder und erkläre Teamrollen in einem immer aktuellen
 
 ## Funktionen {#features}
 
-* Zeige Mitglieder ausgewählter Rollen in einem immer aktuellen Embed an.
-* Zeige optional deren aktuellen Online-Status an.
-* Füge Beschreibungen zu Rollen hinzu und überschreibe Rollennamen.
+- Zeige Mitglieder ausgewählter Rollen in einem immer aktuellen Embed an.
+- Zeige optional deren aktuellen Online-Status an.
+- Füge Beschreibungen zu Rollen hinzu und überschreibe Rollennamen.
 
 Hier ist ein Beispiel (du kannst das Aussehen anpassen):
 
@@ -31,14 +31,14 @@ Das Teamlisten-Embed wird automatisch alle 15 Minuten aktualisiert - von deiner 
 Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werden und wie das Embed aussehen soll.
 Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=team-list%7Cconfig).
 
-| Feld                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Kanal                                      | Dies ist der Kanal, in den die Teamliste gesendet wird. Der Bot verfolgt seine eigene Nachricht und bearbeitet sie bei Updates. Du kannst bedenkenlos andere Nachrichten im Kanal haben.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| Gelistete Rollen                           | Mitglieder mit diesen Rollen werden in der Teamliste angezeigt. Bitte beachte, dass ein Mitglied mehrfach im Embed unter jeder deren Rollen angezeigt werden kann.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Beschreibung von Rollen                    | Optional kannst du eine Beschreibung einer Rolle hinzufügen. Diese wird unter dem Rollennamen und über den Mitgliedern der Rolle angezeigt.<br/>Erstes Feld: ID einer Rolle<br/>Zweites Feld: Beschreibung, die unter der Rolle angezeigt werden soll.                                                                                                                                                                                                                                                                                                                                                                                            |
+| Feld                                       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kanal                                      | Dies ist der Kanal, in den die Teamliste gesendet wird. Der Bot verfolgt seine eigene Nachricht und bearbeitet sie bei Updates. Du kannst bedenkenlos andere Nachrichten im Kanal haben.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Gelistete Rollen                           | Mitglieder mit diesen Rollen werden in der Teamliste angezeigt. Bitte beachte, dass ein Mitglied mehrfach im Embed unter jeder deren Rollen angezeigt werden kann.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Beschreibung von Rollen                    | Optional kannst du eine Beschreibung einer Rolle hinzufügen. Diese wird unter dem Rollennamen und über den Mitgliedern der Rolle angezeigt.<br/>Erstes Feld: ID einer Rolle<br/>Zweites Feld: Beschreibung, die unter der Rolle angezeigt werden soll.                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Embed                                      | Dies sind Einstellungen, die das Aussehen deines Embeds auf Discord beeinflussen.<br/>`title`: Dies ist der Titel des Embeds, welcher als erstes im Embed angezeigt wird.<br/>`description` (optional): Dies ist der Text, der unter dem Titel im Embed angezeigt wird.<br/>`color`: Dies ist die Farbe des Embeds (verwende eine [HEX-Farbe oder einen unterstützten Farbwert](/docs/custom-bot/additional-features#embed-colors))<br/>`thumbnail-url` / `img-url` (optional): URLs zum Anzeigen von Bildern im Embed. Du kannst den [Dateien-Speicher](https://scnx.app/de/user/files) zum Hochladen von einem Bild verwenden und die Bild-URL kopieren. |
-| Name-Overwrites                            | Du kannst optional den Anzeigenamen einer Rolle überschreiben. Dieser Wert wird anstelle des Rollennamens im Embed angezeigt. Wenn du den Rollennamen anzeigen willst, füge keinen Wert hinzu.<br/>Erstes Feld: ID einer Rolle.<br/>Zweites Feld: Name, der anstelle des Rollennamens angezeigt wird.                                                                                                                                                                                                                                                                                                                                             |
-| Online-Status von Teammitgliedern anzeigen | Wenn aktiviert wird das Modul nicht nur die Mitglieder der ausgewählten Rolle auflisten, sondern auch den aktuellen Onlinestatus des Mitglieds anzeigen. Bitte stelle sicher, dass die angezeigten Mitglieder dieser Anzeige zustimmen. Nur der Status wird angezeigt (z. B. `Online`, `Bitte nicht stören`), Aktivitäten (wie `Spielt Cyberpunk 2077`) werden nicht angezeigt.                                                                                                                                                                                                                                                                   |
+| Name-Overwrites                            | Du kannst optional den Anzeigenamen einer Rolle überschreiben. Dieser Wert wird anstelle des Rollennamens im Embed angezeigt. Wenn du den Rollennamen anzeigen willst, füge keinen Wert hinzu.<br/>Erstes Feld: ID einer Rolle.<br/>Zweites Feld: Name, der anstelle des Rollennamens angezeigt wird.                                                                                                                                                                                                                                                                                                                                                      |
+| Online-Status von Teammitgliedern anzeigen | Wenn aktiviert wird das Modul nicht nur die Mitglieder der ausgewählten Rolle auflisten, sondern auch den aktuellen Onlinestatus des Mitglieds anzeigen. Bitte stelle sicher, dass die angezeigten Mitglieder dieser Anzeige zustimmen. Nur der Status wird angezeigt (z. B. `Online`, `Bitte nicht stören`), Aktivitäten (wie `Spielt Cyberpunk 2077`) werden nicht angezeigt.                                                                                                                                                                                                                                                                            |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -53,14 +53,15 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 </details>
 
 <details>
-	<summary>Mitglieder / Inhalt wird abgeschnitten (ersetzt mit "…")</summary>
+	<summary>Mitglieder / Inhalt wird abgeschnitten (ersetzt mit "...")</summary>
 
-	Das ist eine Begrenzung von Discord für die maximale Länge von Embeds. Du kannst folgendes versuchen:
-	<ul>
-		<li>Versuche, eine Rolle mit weniger Mitgliedern <a href="#configuration">zu konfigurieren</a>.</li>
-		<li>Versuche, "Online-Status von Teammitgliedern anzeigen" zu deaktivieren, um die Zeichennutzung zu reduzieren.</li>
-		<li>Versuche, die betroffene Rolle in kleinere Teile aufzuteilen.</li>
-	</ul>
+    Das ist eine Begrenzung von Discord für die maximale Länge von Embeds. Du kannst folgendes versuchen:
+    <ul>
+    	<li>Versuche, eine Rolle mit weniger Mitgliedern <a href="#configuration">zu konfigurieren</a>.</li>
+    	<li>Versuche, "Online-Status von Teammitgliedern anzeigen" zu deaktivieren, um die Zeichennutzung zu reduzieren.</li>
+    	<li>Versuche, die betroffene Rolle in kleinere Teile aufzuteilen.</li>
+    </ul>
+
 </details>
 
 <details>
@@ -78,9 +79,9 @@ Diese Konfigurationdatei erlaubt dir, einzustellen, welche Rollen angezeigt werd
 
 Folgende Daten werden für jedes konfigurierte Teamlisten-Embed gespeichert:
 
-* Die Discord-Kanal-ID des Kanals, der das Embed enthält
-* Die Discord-Nachrichten-ID der Embed-Nachricht
-* Der Index des Konfigurationselements
-* Metadaten über den Eintrag (Erstellungs- und Aktualisierungsdatum)
+- Die Discord-Kanal-ID des Kanals, der das Embed enthält
+- Die Discord-Nachrichten-ID der Embed-Nachricht
+- Der Index des Konfigurationselements
+- Metadaten über den Eintrag (Erstellungs- und Aktualisierungsdatum)
 
 Um alle gespeicherten Daten zu entfernen, [lösche die Modul-Datenbank](/docs/custom-bot/additional-features#reset-module-database).

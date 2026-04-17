@@ -11,10 +11,10 @@ PROFESSIONAL: "24/7 gehosted, solange dein Abonnement aktiv ist."}} />
 
 Bevor du deinen Eigenen Bot auf SCNX erstellen kannst, stelle sicher, dass
 
-* du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
-* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
+- du [deinen Server zu SCNX hinzugefügt](/docs/setup) hast.
+- du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
   oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
-* du einige Minuten Zeit hast (nach unseren Schätzungen dauert die Einrichtung am Computer etwa zwei Minuten, am Handy
+- du einige Minuten Zeit hast (nach unseren Schätzungen dauert die Einrichtung am Computer etwa zwei Minuten, am Handy
   könnte
   es etwas länger dauern), um dieser Anleitung zur folgen - stoppe nicht mittendrin; dein Fortschritt wird nicht
   gespeichert.
@@ -120,12 +120,12 @@ Wenn du alles richtig gemacht hast sollte dein Bot jetzt auf Discord online sein
 hast einen guten Job gemacht und
 bist jetzt bereit, das Universum eines sehr konfigurierbaren Discord-Bots für deine Community zu bereisen - nicht nur
 irgendein Discord-Bot,
-*dein* Discord-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
+_dein_ Discord-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Hier sind einige Sachen, die du jetzt tun kannst:
 
-* aktiviere einige der vielen Eigener-Bot-Module.
-* nutze den Bot-Login, um Nachrichten mit Self-Roles und mehr zu erstellen.
-* erstelle Custom-Commands, um lustige Dinge zu tun.
-* verändere das Verhalten deines Bots.
-* und vieles mehr, öffne die [Eigener-Bot-Dokumentation](/docs/custom-bot/intro), um alle Möglichkeiten zu sehen.
+- aktiviere einige der vielen Eigener-Bot-Module.
+- nutze den Bot-Login, um Nachrichten mit Self-Roles und mehr zu erstellen.
+- erstelle Custom-Commands, um lustige Dinge zu tun.
+- verändere das Verhalten deines Bots.
+- und vieles mehr, öffne die [Eigener-Bot-Dokumentation](/docs/custom-bot/intro), um alle Möglichkeiten zu sehen.

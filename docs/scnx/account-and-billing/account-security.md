@@ -16,6 +16,7 @@ You can set up one or both of the following 2FA methods on your account:
 ### Authenticator App (TOTP)
 
 Use an authenticator app to generate time-based one-time codes. Popular options include:
+
 - [Ente Auth](https://ente.io/auth/) (open-source, cross-platform, with encrypted cloud backup)
 - [Authy](https://authy.com/) (cross-platform with cloud sync)
 - [Google Authenticator](https://support.google.com/accounts/answer/1066447)
@@ -130,8 +131,9 @@ Some actions on SCNX require you to verify your identity even during an active s
 
 When you perform a sensitive action (like modifying security settings, or accessing a server with [Enhanced Security](/docs/scnx/guilds/enhanced-security/) enabled), you'll be prompted to verify with your 2FA method.
 
-- **Authenticator app / recovery code:** Sudo mode lasts **10 minutes**
-- **Security key:** Sudo mode lasts **30 minutes**
+- **Authenticator app:** Sudo mode lasts **40 minutes**
+- **Security key:** Sudo mode lasts **60 minutes**
+- **Recovery code:** Sudo mode lasts **10 minutes**
 
 After it expires, you'll be prompted to verify again for the next sensitive action.
 

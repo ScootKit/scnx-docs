@@ -156,7 +156,7 @@ function SearchHero() {
                 </div>
                 <div className={styles.heroAiHint}>
                     <span className={styles.aiSparkle}>&#x2728;</span>
-                    <Translate id="home.hero.ai">Powered by AI — ask any question about SCNX in the search bar</Translate>
+                    <Translate id="home.hero.ai">Powered by AI  - ask any question about SCNX in the search bar</Translate>
                 </div>
             </div>
         </div>
@@ -191,10 +191,10 @@ function ProductCard({title, description, link, icon, faIcon, links}) {
 
 function WhySCNX() {
     const features = [
-        {icon: faRocket, title: <Translate id="home.why.hosting">Free 24/7 Bot Hosting</Translate>, desc: <Translate id="home.why.hosting.d">Host your fully custom Discord bot for free — no server or VPS needed.</Translate>},
+        {icon: faRocket, title: <Translate id="home.why.hosting">Free 24/7 Bot Hosting</Translate>, desc: <Translate id="home.why.hosting.d">Host your fully custom Discord bot for free  - no server or VPS needed.</Translate>},
         {icon: faWandMagicSparkles, title: <Translate id="home.why.nocode">No Coding Required</Translate>, desc: <Translate id="home.why.nocode.d">Configure everything through a visual dashboard. Build powerful bots without writing a single line of code.</Translate>},
         {icon: faUsers, title: <Translate id="home.why.team">Team Collaboration</Translate>, desc: <Translate id="home.why.team.d">Give your admins granular access to the dashboard with Trusted Admins and role-based permissions.</Translate>},
-        {icon: faBolt, title: <Translate id="home.why.modules">50+ Ready-Made Modules</Translate>, desc: <Translate id="home.why.modules.d">Moderation, tickets, auto-roles, welcome messages, leveling, and much more — all configurable.</Translate>},
+        {icon: faBolt, title: <Translate id="home.why.modules">50+ Ready-Made Modules</Translate>, desc: <Translate id="home.why.modules.d">Moderation, tickets, auto-roles, welcome messages, leveling, and much more  - all configurable.</Translate>},
         {icon: faShieldCheck, title: <Translate id="home.why.security">Enterprise-Grade Security</Translate>, desc: <Translate id="home.why.security.d">Protect your server config with 2FA, sudo mode, and Enhanced Security for your whole team.</Translate>},
         {icon: faHeadset, title: <Translate id="home.why.support">Professional Support System</Translate>, desc: <Translate id="home.why.support.d">Built-in modmail and ticket system with forms, topics, and analytics for your community.</Translate>},
     ];
@@ -357,7 +357,7 @@ function GetStartedBanner() {
             <FontAwesomeIcon icon={faRocket} className={styles.getStartedIcon}/>
             <div className={styles.getStartedContent}>
                 <h2 className={styles.getStartedTitle}><Translate id="home.cta.title">Ready to get started?</Translate></h2>
-                <p className={styles.getStartedText}><Translate id="home.cta.text">Set up SCNX on your Discord server in just a few minutes — completely free.</Translate></p>
+                <p className={styles.getStartedText}><Translate id="home.cta.text">Set up SCNX on your Discord server in just a few minutes  - completely free.</Translate></p>
             </div>
             <Link to="/docs/setup" className={styles.getStartedButton}>
                 <Translate id="home.cta.button">Get Started</Translate> <FontAwesomeIcon icon={faArrowRight} style={{marginLeft: '0.4rem'}}/>
@@ -391,7 +391,7 @@ function HelpBanner() {
 
 export default function Home() {
     return (
-        <Layout description="SCNX Documentation — guides, tutorials, and references for building Discord bots and managing servers.">
+        <Layout description="SCNX Documentation  - guides, tutorials, and references for building Discord bots and managing servers.">
             <SearchHero/>
             <main className={styles.main}>
                 <div className={styles.container}>

@@ -16,6 +16,7 @@ Du kannst eine oder beide der folgenden 2FA-Methoden für dein Konto einrichten:
 ### Authenticator-App (TOTP)
 
 Verwende eine Authenticator-App, um zeitbasierte Einmalcodes zu generieren. Beliebte Optionen sind:
+
 - [Ente Auth](https://ente.io/auth/) (Open-Source, plattformübergreifend, mit verschlüsseltem Cloud-Backup)
 - [Authy](https://authy.com/) (plattformübergreifend mit Cloud-Synchronisierung)
 - [Google Authenticator](https://support.google.com/accounts/answer/1066447)
@@ -130,8 +131,9 @@ Manche Aktionen auf SCNX erfordern, dass du deine Identität auch während einer
 
 Wenn du eine sensible Aktion durchführst (z. B. Sicherheitseinstellungen ändern oder einen Server mit aktivierter [Enhanced Security](/docs/scnx/guilds/enhanced-security/) öffnen), wirst du aufgefordert, dich mit deiner 2FA-Methode zu verifizieren.
 
-- **Authenticator-App / Recovery Code:** Sudo Mode dauert **10 Minuten**
-- **Sicherheitsschlüssel:** Sudo Mode dauert **30 Minuten**
+- **Authenticator-App:** Sudo Mode dauert **40 Minuten**
+- **Sicherheitsschlüssel:** Sudo Mode dauert **60 Minuten**
+- **Recovery Code:** Sudo Mode dauert **10 Minuten**
 
 Nach dem Ablauf wirst du für die nächste sensible Aktion erneut zur Verifizierung aufgefordert.
 

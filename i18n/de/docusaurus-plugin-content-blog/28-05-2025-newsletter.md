@@ -8,7 +8,7 @@ authors:
 tags:
   - Newsletter
   - SCNX
-  - Levelsystem 
+  - Levelsystem
 ---
 
 Hallo zusammen,
@@ -29,20 +29,20 @@ vielleicht die Aktivität in einem bestimmten Kanal fördern? Mit XP-Multiplikat
 
 Standardmäßig hat jeder Nutzer und jeder Kanal einen Multiplikationsfaktor von 1. Diese verbesserte Funktion ermöglicht es euch:
 
-* **Rollen-Multiplikatoren zuzuweisen**: Gewährt Nutzern mit bestimmten Rollen einen XP-Bonus für ihre Nachrichten. Wenn ein Nutzer mehrere Rollen
+- **Rollen-Multiplikatoren zuzuweisen**: Gewährt Nutzern mit bestimmten Rollen einen XP-Bonus für ihre Nachrichten. Wenn ein Nutzer mehrere Rollen
   mit Multiplikatoren hat, werden diese Faktoren miteinander multipliziert, was erhebliche Boni für eure engagiertesten Mitglieder bietet!
-* **Channel-Multiplikatoren festzulegen**: Bestimmt Kanäle, in denen Nachrichten mehr (oder weniger!) XP einbringen. Wollt ihr
+- **Channel-Multiplikatoren festzulegen**: Bestimmt Kanäle, in denen Nachrichten mehr (oder weniger!) XP einbringen. Wollt ihr
   die Konversation in eurem #general-chat anheizen? Gebt ihm einen 1,5-fachen Multiplikator! Müsst ihr das XP-Farmen in einem #bot-spam-Kanal sanft
   unterbinden? Ein 0,5-facher Multiplikator wird hier helfen.
 
 Beispielszenarien:
 
-* **VIP-Boost**: Ein Nutzer mit einer speziellen „VIP“-Rolle, für die ein XP-Multiplikator konfiguriert ist, sendet eine Nachricht. Aufgrund
+- **VIP-Boost**: Ein Nutzer mit einer speziellen „VIP"-Rolle, für die ein XP-Multiplikator konfiguriert ist, sendet eine Nachricht. Aufgrund
   seiner Rolle erhält er für diese Nachricht zusätzliche XP im Vergleich zu einem Nutzer ohne die VIP-Rolle.
-* **Hervorgehobener Kanal & Booster**: Ein Nutzer, der ein Server-Booster ist (was mit einem eigenen rollenbasierten XP-Multiplikator einhergeht),
-  postet in einem Kanal, den ihr als „hervorgehobenen“ Kanal festgelegt habt (der einen kanalbasierten XP-Multiplikator hat). Da sowohl seine
+- **Hervorgehobener Kanal & Booster**: Ein Nutzer, der ein Server-Booster ist (was mit einem eigenen rollenbasierten XP-Multiplikator einhergeht),
+  postet in einem Kanal, den ihr als „hervorgehobenen" Kanal festgelegt habt (der einen kanalbasierten XP-Multiplikator hat). Da sowohl seine
   Rolle als auch der Kanal einen XP-Schub bieten, verdient er eine noch größere Menge an XP für seine Nachricht an diesem spezifischen Ort.
-* **Mehrere Rollen**: Wenn ein Nutzer mehrere verschiedene Rollen innehat und jede dieser Rollen ihren eigenen XP-Multiplikator hat,
+- **Mehrere Rollen**: Wenn ein Nutzer mehrere verschiedene Rollen innehat und jede dieser Rollen ihren eigenen XP-Multiplikator hat,
   kombinieren sich all diese Multiplikatoren effektiv. Dies führt zu einem deutlich größeren Gesamt-XP-Boost für jede Nachricht, die er sendet,
   und würdigt so seine vielfältigen Beiträge oder seinen Status auf dem Server.
 
@@ -68,13 +68,13 @@ Formel ist die Gesamtmenge an XP, die benötigt wird, um dieses Level x zu errei
 
 Beispiele für gültige benutzerdefinierte Levelkurven:
 
-* Unsere „Easy Linear“-Kurve: `750x+((x−1)`
-* Unsere „Exponentiation“-Kurve: `350^2(x-1)`
-* Eine einfache benutzerdefinierte Kurve: `1000*1.5*x`
+- Unsere „Easy Linear"-Kurve: `750x+((x−1)`
+- Unsere „Exponentiation"-Kurve: `350^2(x-1)`
+- Eine einfache benutzerdefinierte Kurve: `1000*1.5*x`
 
 **Konfiguration**:
-Wählt in der „Modulkonfiguration“ unter „Art der Levelkurve“ die Option „Benutzerdefinierte Formel“. Gebt dann euer mathematisches
-Meisterwerk in das Feld „Benutzerdefinierte Level-Formel (falls aktiviert)“ ein.
+Wählt in der „Modulkonfiguration" unter „Art der Levelkurve" die Option „Benutzerdefinierte Formel". Gebt dann euer mathematisches
+Meisterwerk in das Feld „Benutzerdefinierte Level-Formel (falls aktiviert)" ein.
 
 Erfahrt mehr über unsere [integrierten Levelkurven](/docs/custom-bot/modules/community/levels/#level-curves) und
 über [benutzerdefinierte Levelkurven](/docs/custom-bot/modules/community/levels/#custom-level-curve) für weitere Informationen und
@@ -94,27 +94,27 @@ Stellt ihn euch als eure persönliche Testumgebung für alles rund um XP und Lev
 Modulkonfiguration eingebt (wie die durchschnittlich pro Nachricht vergebenen XP) und eine Levelkurve auswählt – sei es eine unserer
 Standardkurven oder eure eigene benutzerdefinierte Kreation – zeigt euch der Simulator sofort:
 
-* **Benötigte XP pro Level**: Seht genau, wie viele kumulative XP erforderlich sind, damit ein Nutzer ein bestimmtes von euch eingegebenes Level erreicht.
-* **Geschätzte Nachrichten bis zum Levelaufstieg**: Erhaltet eine greifbare Vorstellung vom erforderlichen Aufwand, indem ihr eine ungefähre Anzahl seht, wie viele
+- **Benötigte XP pro Level**: Seht genau, wie viele kumulative XP erforderlich sind, damit ein Nutzer ein bestimmtes von euch eingegebenes Level erreicht.
+- **Geschätzte Nachrichten bis zum Levelaufstieg**: Erhaltet eine greifbare Vorstellung vom erforderlichen Aufwand, indem ihr eine ungefähre Anzahl seht, wie viele
   Nachrichten ein Nutzer senden müsste, um dieses Level zu erreichen.
 
 ### Warum der Level-Simulator dein neuer bester Freund ist
 
 Der Level-Simulator ist mehr als nur ein Rechner; er ist ein unverzichtbares Werkzeug zur Feinabstimmung der Engagement-Strategie eures Servers:
 
-* **Perfektionierung benutzerdefinierter Formeln**: Beim Entwerfen eurer eigenen Levelkurve ist der Simulator von unschätzbarem Wert. Ihr könnt sofort sehen, ob
+- **Perfektionierung benutzerdefinierter Formeln**: Beim Entwerfen eurer eigenen Levelkurve ist der Simulator von unschätzbarem Wert. Ihr könnt sofort sehen, ob
   eure Formel einen sanften Fortschritt erzeugt, ob sie zu schnell zu schwierig wird oder ob sie vielleicht zu einfach ist. Optimiert
   eure Formel, simuliert erneut und iteriert, bis es sich genau richtig anfühlt.
-* **Die richtige Standardkurve wählen**: Selbst wenn ihr keine benutzerdefinierte Formel verwendet, hilft euch der Simulator zu verstehen, wie
-  sich unsere Kurven „Easy Linear“, „Default Linear“ oder „Exponentiation“ mit euren spezifischen XP-pro-Nachricht-Einstellungen verhalten werden.
+- **Die richtige Standardkurve wählen**: Selbst wenn ihr keine benutzerdefinierte Formel verwendet, hilft euch der Simulator zu verstehen, wie
+  sich unsere Kurven „Easy Linear", „Default Linear" oder „Exponentiation" mit euren spezifischen XP-pro-Nachricht-Einstellungen verhalten werden.
   Den Grind ausbalancieren: Vermeidet es, euer Levelsystem zu einer frustrierenden Plackerei zu machen oder so schnell, dass Level bedeutungslos erscheinen. Der
   Simulator hilft euch, diesen idealen Mittelweg zu finden.
-* **Fundierte Entscheidungen**: Nehmt Änderungen an euren XP-Einstellungen oder eurer Levelkurve mit Zuversicht vor, da ihr zuvor eine Prognose
+- **Fundierte Entscheidungen**: Nehmt Änderungen an euren XP-Einstellungen oder eurer Levelkurve mit Zuversicht vor, da ihr zuvor eine Prognose
   ihrer Auswirkungen gesehen habt.
-* **Spart Zeit & Frustration**: Anstatt Tage oder Wochen zu warten, um zu sehen, wie euer neues Setup live funktioniert, und dann
+- **Spart Zeit & Frustration**: Anstatt Tage oder Wochen zu warten, um zu sehen, wie euer neues Setup live funktioniert, und dann
   nachjustieren (und möglicherweise den Fortschritt zurücksetzen) zu müssen, könnt ihr euch vorab ein sehr gutes Bild machen.
 
-* **So wird er verwendet**:
+- **So wird er verwendet**:
   Ihr findet den Level-Simulator auf der [Dokumentationsseite des Level-Moduls](/docs/custom-bot/modules/community/levels/#level-simulator). Gebt einfach eure gewünschten Konfigurationswerte
   an den entsprechenden Stellen ein, wählt oder gebt eure Levelkurve ein und seht euch die Ergebnisse an! Es ist eine intuitive Methode, um ohne
   reale Konsequenzen auf eurem Server zu experimentieren.

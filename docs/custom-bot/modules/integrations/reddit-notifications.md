@@ -6,9 +6,9 @@ Get notifications when new threads get created in your favorite subreddit.
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when new threads are posted in configured subreddits.
-* Customize the notification message with thread details such as title, author, URL and media.
-* Monitor multiple subreddits simultaneously, each with its own notification channel and message format.
+- Receive notifications in a Discord channel when new threads are posted in configured subreddits.
+- Customize the notification message with thread details such as title, author, URL and media.
+- Monitor multiple subreddits simultaneously, each with its own notification channel and message format.
 
 ## Setup {#setup}
 
@@ -27,11 +27,11 @@ Only threads published within the last ten hours will trigger notifications, so 
 
 This configuration file allows you to set up subreddits to monitor for new threads. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=reddit-notifications%7Csubreddits).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| Subreddit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`). |
-| Message | The message sent to the configured channel when a new thread gets posted. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field                          | Description                                                                                                                                                 |
+| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel                        | The Discord channel in which the notification should be sent.                                                                                               |
+| Subreddit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`).                                                                                                 |
+| Message                        | The message sent to the configured channel when a new thread gets posted. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -50,8 +50,8 @@ This configuration file allows you to set up subreddits to monitor for new threa
 
 The following data is being stored about every sent notification:
 
-* The Reddit thread ID
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+- The Reddit thread ID
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

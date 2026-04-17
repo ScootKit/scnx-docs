@@ -18,7 +18,7 @@ result and paste in discord. Your time will be displayed in Discord once you sen
 Here are all available formats:
 
 | Format                    | Example                            |
-|---------------------------|------------------------------------|
+| ------------------------- | ---------------------------------- |
 | Short time                | 9:52 PM                            |
 | Long time                 | 9:52:29 PM                         |
 | Short date                | 08/30/2023                         |
@@ -36,13 +36,13 @@ users to reach that level.
 
 ### Helpful tips & tricks for your Level-System
 
-* Every user starts at Level 1.
-* While you can not adjust the XP needed to get to a new level, you can change how much XP users are going to earn per
+- Every user starts at Level 1.
+- While you can not adjust the XP needed to get to a new level, you can change how much XP users are going to earn per
   messages, giving you essentially the power to control Level-Ups as well.
-* This calculation does not give you any information about how many messages it takes to get to this level.
-* The formular to calculate the required XP is the
+- This calculation does not give you any information about how many messages it takes to get to this level.
+- The formular to calculate the required XP is the
   following: `XPNeededToLevelUp = (LevelToCalculate - 1) * 750 + ((LevelToCalculate - 1) * 500) [XP]`
-* We suggest resetting XP of your server periodically, so new members can easier archive high rankings - give older,
+- We suggest resetting XP of your server periodically, so new members can easier archive high rankings - give older,
   active members some sort of compensation in return :heart:
 
 ## SCNX GLink-Generator {#glink-generator}

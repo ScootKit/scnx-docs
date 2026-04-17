@@ -6,11 +6,11 @@ Adds info-commands with information about specific parts of your server
 
 ## Features {#features}
 
-* Adds [multiple commands](#commands) to allow you to view all information about your server, channel, users and roles.
-* All channel types, including stage channels and threads are supported by the [`/info channel`](#commands) command.
-* Member statistics, guild features and more are supported by [`/info server`](#commands) command.
-* [`/info role`](#commands) can show members that have a role, permissions and role information.
-* Use the [`/info user`](#commands) command to view information about users, including support for
+- Adds [multiple commands](#commands) to allow you to view all information about your server, channel, users and roles.
+- All channel types, including stage channels and threads are supported by the [`/info channel`](#commands) command.
+- Member statistics, guild features and more are supported by [`/info server`](#commands) command.
+- [`/info role`](#commands) can show members that have a role, permissions and role information.
+- Use the [`/info user`](#commands) command to view information about users, including support for
   the [Birthday Module](/docs/custom-bot/modules/community/birthday), [Level System](/docs/custom-bot/modules/community/levels), [Invite Tracking Module](/docs/custom-bot/modules/moderation/invite-tracking)
   and more.
 
@@ -23,17 +23,17 @@ answers in the [configuration](#configuration), but no additional setup is requi
 
 Users and administrators can use any of the [slash commands](#commands) to view information. Here's a short overview:
 
-* Use [`/info user`](#commands) to view information about a member of the server.
-* Use [`/info role`](#commands) to view information about a role on the server.
-* Use the [`/info channel`](#commands) to view information about a channel or thread on the server.
-* Use [`/info server`](#commands) to view information about the server.
+- Use [`/info user`](#commands) to view information about a member of the server.
+- Use [`/info role`](#commands) to view information about a role on the server.
+- Use the [`/info channel`](#commands) to view information about a channel or thread on the server.
+- Use [`/info server`](#commands) to view information about the server.
 
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command                             | Description                                                                                                                                               |                                                                                                                                                               
-|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Command                             | Description                                                                                                                                               |
+| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/info server`                      | Shows information about the server.                                                                                                                       |
 | `/info channel [channel:<Channel>]` | Shows information about a channel. If no value has been set in the "channel" parameter field, the current channel will be used.                           |
 | `/info role role:<Role>`            | Shows information about the role selected in the "role" parameter field.                                                                                  |
@@ -44,8 +44,8 @@ Users and administrators can use any of the [slash commands](#commands) to view 
 This module allows basic configuration of some visible field names in
 its [configuration file](https://scnx.app/glink?page=bot/configuration?file=info-commands|strings).
 
-| Field             | Description                                                                                                  |                                                                                                                                                
-|-------------------|--------------------------------------------------------------------------------------------------------------|
+| Field             | Description                                                                                                  |
+| ----------------- | ------------------------------------------------------------------------------------------------------------ |
 | serverinfo        | This field allows the customization of names used in the output of the [`/info server`](#commands) command.  |
 | userinfo          | This field allows the customization of names used in the output of the [`/info user`](#commands) command.    |
 | channelInfo       | This field allows the customization of names used in the output of the [`/info channel`](#commands) command. |
@@ -53,7 +53,7 @@ its [configuration file](https://scnx.app/glink?page=bot/configuration?file=info
 | user_not_found    | This error message will be shown if a user has been selected that has not been found.                        |
 | channel_not_found | This error message will be shown if a user selected a channel that has not been found.                       |
 | role_not_found    | This error message will be shown if a user selected a role that has not been found.                          |
-| avatarMsg         | This message is sent when a user's avatar is requested.
+| avatarMsg         | This message is sent when a user's avatar is requested.                                                      |
 
 ## Troubleshooting {#troubleshooting}
 

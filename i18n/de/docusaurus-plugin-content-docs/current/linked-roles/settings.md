@@ -15,10 +15,10 @@ zu Discord weitergeleitet werden. Die Seite enthält eine kurze Erklärung, dein
 
 Du kannst die folgenden Attribute deiner Autorisierungsseite konfigurieren:
 
-* Der angezeigte Servername und das Bild auf deiner Autorisierungsseite.
-* Passe das Design deiner Autorisierungsseite an. Du kannst aus über 30 verschiedenen Designs für die Autorisierungsseite wählen - du kannst sie auf deiner
+- Der angezeigte Servername und das Bild auf deiner Autorisierungsseite.
+- Passe das Design deiner Autorisierungsseite an. Du kannst aus über 30 verschiedenen Designs für die Autorisierungsseite wählen - du kannst sie auf deiner
   [Konfigurationsseite für Verknüpfte Rollen](https://scnx.app/de/glink?page=linked-roles/configuration) in der Live-Vorschau auswählen und durchstöbern.
-* Aktiviere oder deaktiviere eine kurze Werbung für SCNX auf deiner Autorisierungsseite. Wenn sie aktiviert ist, enthält die Seite eine
+- Aktiviere oder deaktiviere eine kurze Werbung für SCNX auf deiner Autorisierungsseite. Wenn sie aktiviert ist, enthält die Seite eine
   kurze Nachricht über die Funktionen der SCNX-Plattform. Server mit
   einem [kostenpflichtigen Plan, der die Off-Brand-Funktionalität beinhaltet](/docs/scnx/guilds/plans),
   haben diese Funktion standardmäßig deaktiviert. Server ohne einen solchen Plan können die Nachricht nicht entfernen.

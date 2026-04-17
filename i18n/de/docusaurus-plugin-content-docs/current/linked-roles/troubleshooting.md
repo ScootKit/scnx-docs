@@ -13,16 +13,16 @@ Bitte wähle das Problem aus, das bei dir auftritt.
 
 Probleme während der Einrichtung:
 
-* [Ich kann die Link-Anforderung nicht zu einer Discord-Rolle hinzufügen](#link-requirement).
+- [Ich kann die Link-Anforderung nicht zu einer Discord-Rolle hinzufügen](#link-requirement).
 
 Probleme bei der Verwendung von Verknüpften Rollen:
 
-* [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
-* [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
-* ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
-* ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
-* ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
-* ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
+- [Die Verknüpfte Rolle wird im Chat nicht angezeigt](#display-missing).
+- [Nutzer erhalten die Verknüpfte Rolle nicht](#role-not-given).
+- ["Invalid OAuth2 redirect_url" beim Abholen von Verknüpften Rollen](#oauth2-redirect-url).
+- ["Es wurden dir noch keine Rollen zugewiesen" beim Abholen von Verknüpften Rollen](#roles-missing).
+- ["Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholenn von Verknüpften Rollen](#generic-api-error).
+- ["Der SCNX-Plan dieses Servers ist abgelaufen" beim Abholen von Verknüpften Rollen](#plan-expired).
 
 Wenn dein Problem hier nicht aufgeführt ist, [klicke hier](#other).
 
@@ -30,7 +30,7 @@ Wenn dein Problem hier nicht aufgeführt ist, [klicke hier](#other).
 
 ### Link-Anforderung kann nicht gespeichert werden {#link-requirement}
 
-Beim [Einrichten einer Verknüpften Rolle auf Discord](/docs/linked-roles/role-management#linked-role-on-discord) kann der Fehler „Ungültige Rolle“ auftreten, wenn du die Link-Anforderung zu einer Discord-Rolle hinzufügst.
+Beim [Einrichten einer Verknüpften Rolle auf Discord](/docs/linked-roles/role-management#linked-role-on-discord) kann der Fehler „Ungültige Rolle" auftreten, wenn du die Link-Anforderung zu einer Discord-Rolle hinzufügst.
 
 **Lösung**: Du kannst keine Link-Anforderungen zu Rollen hinzufügen, die bereits Mitglieder haben. Entferne die Rolle von allen Mitgliedern oder erstelle eine neue Rolle.
 
@@ -40,7 +40,7 @@ Beim [Einrichten einer Verknüpften Rolle auf Discord](/docs/linked-roles/role-m
 
 Bei der Verwendung von Verknüpften Rollen kann es vorkommen, dass die Rolle nicht neben dem Benutzernamen im Chat angezeigt wird.
 
-**Lösung**: Damit die Verknüpfte Rolle neben dem Benutzernamen angezeigt wird, musst du in jedem Kanal eine Berechtigungsüberschreibung mit der Berechtigung „Kanal ansehen“ für die Verknüpfte Rolle erstellen.
+**Lösung**: Damit die Verknüpfte Rolle neben dem Benutzernamen angezeigt wird, musst du in jedem Kanal eine Berechtigungsüberschreibung mit der Berechtigung „Kanal ansehen" für die Verknüpfte Rolle erstellen.
 [Mehr dazu findest du in unserem Leitfaden](/docs/linked-roles/role-management#display-in-chat).
 
 ### "Es scheint, als wäre die Konfiguration des Servers falsch" beim Abholen von Verknüpften Rollen {#generic-api-error}
@@ -51,7 +51,7 @@ Wenn ein Schritt während der Einrichtung übersprungen wurde oder ein falscher 
 
 Um dieses Problem zu beheben, musst du einige Schritte der [Einrichtung](/docs/linked-roles/) erneut durchführen. Folge diesen Schritten:
 
-1. Setze die Authentifizierungsdetails auf deiner [Verknüpfte Rollen-Konfigurationsseite](https://scnx.app/de/glink?page=linked-roles/configuration) zurück. Klicke dazu auf „Authentifizierungsdetails zurücksetzen“ oder folge [dieser Anleitung](/docs/linked-roles/settings/#reset-auth-details).
+1. Setze die Authentifizierungsdetails auf deiner [Verknüpfte Rollen-Konfigurationsseite](https://scnx.app/de/glink?page=linked-roles/configuration) zurück. Klicke dazu auf „Authentifizierungsdetails zurücksetzen" oder folge [dieser Anleitung](/docs/linked-roles/settings/#reset-auth-details).
 2. Danach wirst du in deinem Dashboard aufgefordert, alle Einrichtungsschritte erneut durchzuführen.
 3. Folge unserem [Einrichtungsleitfaden](/docs/linked-roles#step-2) ab Schritt 2. Achte genau auf alle Anweisungen, da Fehler zu diesem Problem führen können.
 4. Sobald du fertig bist, versuche erneut, die [Rolle einzufordern](/docs/linked-roles/claim-roles/).
@@ -69,10 +69,10 @@ Beim Einrichten von Verknüpften Rollen muss die Weiterleitungs-URL im Discord D
 
 **Lösung**:
 
-1. Öffne deine [Verknüpfte Rollen-Konfigurationsseite](https://scnx.app/de/glink?page=linked-roles/configuration) und kopiere die „Redirect URL“ aus der Karte „Autorisierungsdetails“. Sie sollte in etwa so aussehen:
+1. Öffne deine [Verknüpfte Rollen-Konfigurationsseite](https://scnx.app/de/glink?page=linked-roles/configuration) und kopiere die „Redirect URL" aus der Karte „Autorisierungsdetails". Sie sollte in etwa so aussehen:
    `https://linked-roles.scnx.app/api/b4e5e89a-1c92-11f0-b688-03c2706e348f/callback` (der mittlere Teil kann je nach Server variieren).
 2. Öffne das [Discord Developer Portal](https://discord.com/developers/applications) und wähle deinen Bot aus.
-3. Gehe zum Reiter „OAuth2“ deines Bots und klicke auf „Add Another“ im Abschnitt „Redirects“.
+3. Gehe zum Reiter „OAuth2" deines Bots und klicke auf „Add Another" im Abschnitt „Redirects".
 4. Füge die kopierte Redirect-URL ein und speichere die Änderungen.
 5. Versuche erneut, die [Rolle einzufordern](/docs/linked-roles/claim-roles).
 

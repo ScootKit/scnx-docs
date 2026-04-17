@@ -14,16 +14,16 @@ Please select the issue you are running into.
 
 Issues during setup:
 
-* [I can't add the Link requirement to a Discord role](#link-requirement).
+- [I can't add the Link requirement to a Discord role](#link-requirement).
 
 Issues when using Linked Roles:
 
-* [The Linked Role is not displayed in the chat](#display-missing).
-* [Users are not being given the Linked Role](#role-not-given).
-* ["Invalid OAuth2 redirect_url" when claiming Linked Roles](#oauth2-redirect-url).
-* ["No roles were assigned to you" when claiming Linked Roles](#roles-missing).
-* ["Seems like the configuration by the server owner is wrong." when claiming Linked Roles](#generic-api-error).
-* ["The SCNX-Plan of this server expired" when claiming Linked Roles](#plan-expired).
+- [The Linked Role is not displayed in the chat](#display-missing).
+- [Users are not being given the Linked Role](#role-not-given).
+- ["Invalid OAuth2 redirect_url" when claiming Linked Roles](#oauth2-redirect-url).
+- ["No roles were assigned to you" when claiming Linked Roles](#roles-missing).
+- ["Seems like the configuration by the server owner is wrong." when claiming Linked Roles](#generic-api-error).
+- ["The SCNX-Plan of this server expired" when claiming Linked Roles](#plan-expired).
 
 If your issue isn't listed here, [click here](#other).
 

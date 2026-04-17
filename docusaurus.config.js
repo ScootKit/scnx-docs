@@ -251,7 +251,7 @@ const config = {
                 async loadContent() {
                     if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').modules;
                     const scnxOrgAuthorData = {};
-                    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    let moduleData = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     for (const botModule of moduleData) {
                         if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;
                         const res = await fetch('https://scnx.app/api/marketplace/organizations/' + botModule.author.scnxOrgID);
@@ -268,6 +268,42 @@ const config = {
                         moduleDataWithOrgs.push({...botModule, orgData: scnxOrgAuthorData[botModule.author.scnxOrgID]});
                     }
                     return moduleDataWithOrgs;
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
+        function () {
+            function renderChangelogMarkdown(data, micromark) {
+                for (const item of (data.items || [])) {
+                    for (const moduleItem of (item.items || [])) {
+                        for (const change of (moduleItem.items || [])) {
+                            for (const lang of ['en', 'de', 'it', 'nl']) {
+                                if (change[lang]) change[lang + 'Html'] = micromark(change[lang]);
+                            }
+                        }
+                    }
+                }
+                return data;
+            }
+            return {
+                name: 'scnx-module-changelogs',
+                async loadContent() {
+                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    const {micromark} = await import('micromark');
+                    const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
+                    const changelogs = {};
+                    for (const mod of modules) {
+                        try {
+                            const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            if (res.ok) {
+                                const data = await res.json();
+                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                            }
+                        } catch (e) { /* skip module */ }
+                    }
+                    return changelogs;
                 },
                 async contentLoaded({content, actions}) {
                     actions.setGlobalData(content);

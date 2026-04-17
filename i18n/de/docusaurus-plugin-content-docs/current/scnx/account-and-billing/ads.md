@@ -46,15 +46,15 @@ Anzeigen können abgelehnt werden, wenn sie gegen die Inhaltsrichtlinien versto�
 
 ## Anzeigenstatus
 
-| Status | Beschreibung |
-|--------|--------------|
-| **Aktiv** | Läuft und wird Nutzern angezeigt |
-| **Pausiert** | Manuell von dir pausiert, keine Gebühren |
-| **Kein Guthaben** | Monatliches Ausgabenlimit erreicht oder Guthaben aufgebraucht |
-| **Überprüfung ausstehend** | Wartet auf Mitarbeiter-Überprüfung (bis zu 12 Stunden) |
-| **Abgelehnt** | Wegen Verstoß gegen Inhaltsrichtlinien abgelehnt |
-| **Ungültig** | Inhalt nicht mehr gültig (z. B. Discord-Server entfernt, Bot-Berechtigungen geändert) |
-| **Archiviert** | Dauerhaft entfernt |
+| Status                     | Beschreibung                                                                          |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| **Aktiv**                  | Läuft und wird Nutzern angezeigt                                                      |
+| **Pausiert**               | Manuell von dir pausiert, keine Gebühren                                              |
+| **Kein Guthaben**          | Monatliches Ausgabenlimit erreicht oder Guthaben aufgebraucht                         |
+| **Überprüfung ausstehend** | Wartet auf Mitarbeiter-Überprüfung (bis zu 12 Stunden)                                |
+| **Abgelehnt**              | Wegen Verstoß gegen Inhaltsrichtlinien abgelehnt                                      |
+| **Ungültig**               | Inhalt nicht mehr gültig (z. B. Discord-Server entfernt, Bot-Berechtigungen geändert) |
+| **Archiviert**             | Dauerhaft entfernt                                                                    |
 
 ## Anzeigen verwalten
 
@@ -79,10 +79,10 @@ Anzeigen werden aus deinem **Anzeigenguthaben** finanziert – einem Prepaid-Gut
 
 ### Preise
 
-| Anzeigentyp | Kosten pro Klick | Kosten pro Aufruf |
-|-------------|-----------------|-------------------|
-| Checkin-Video | 0,02 EUR | 0,01 EUR |
-| Dashboard-Anzeige | 0,01 EUR | 0,003 EUR (pro 1.000 Aufrufe) |
+| Anzeigentyp       | Kosten pro Klick | Kosten pro Aufruf             |
+| ----------------- | ---------------- | ----------------------------- |
+| Checkin-Video     | 0,02 EUR         | 0,01 EUR                      |
+| Dashboard-Anzeige | 0,01 EUR         | 0,003 EUR (pro 1.000 Aufrufe) |
 
 ## Videospezifikationen
 

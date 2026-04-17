@@ -6,9 +6,9 @@ Send a message to a channel when a TikTok user publishes a new TikTok.
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when a TikTok user publishes a new video.
-* Monitor multiple TikTok accounts simultaneously, each with its own notification channel and message format.
-* Customize the notification message with details such as the username, video title, hashtags and URL.
+- Receive notifications in a Discord channel when a TikTok user publishes a new video.
+- Monitor multiple TikTok accounts simultaneously, each with its own notification channel and message format.
+- Customize the notification message with details such as the username, video title, hashtags and URL.
 
 ## Setup {#setup}
 
@@ -27,11 +27,11 @@ Only TikToks published within the last 24 hours will trigger notifications, so o
 
 This configuration file allows you to set up TikTok accounts to monitor for new videos. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=tiktok-notifications%7Cusers).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| TikTok-Username | The @handle of the TikTok user you want to receive notifications from. |
-| Message | The message sent to the configured channel when the user publishes a new TikTok. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field           | Description                                                                                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Channel         | The Discord channel in which the notification should be sent.                                                                                                      |
+| TikTok-Username | The @handle of the TikTok user you want to receive notifications from.                                                                                             |
+| Message         | The message sent to the configured channel when the user publishes a new TikTok. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -51,8 +51,8 @@ This configuration file allows you to set up TikTok accounts to monitor for new 
 
 The following data is being stored about every sent notification:
 
-* The TikTok URL
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+- The TikTok URL
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
