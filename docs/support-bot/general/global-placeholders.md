@@ -1,24 +1,68 @@
 ---
 sidebar_position: 8
 title: Global Placeholders
-description: Use global placeholders to display live ticket metrics like utilization, wait times, and queue status in any customizable message or channel name.
+description: Use global placeholders to display bot identity, server info, timestamps, opening hours, and live ticket metrics in any customizable message or channel name.
 ---
 
 # Global Placeholders
 
 ## Features {#features}
 
-- Use live ticket metrics as placeholders in any customizable message - ticket opening messages, welcome messages, statistics channel names, and more.
-- Display global utilization, estimated wait times, and queue status across your entire support system.
+- Use bot identity, server info, and timestamps as placeholders in any customizable message - replaced automatically when the message is sent.
+- Use live ticket metrics (utilization, estimated wait time) in ticket opening messages, welcome messages, statistics channel names, and more.
 - Show per-topic metrics to give users specific information about the topic they selected.
-- Placeholders update automatically based on real-time ticket data.
+- Placeholders update automatically based on real-time data.
 
 ## Setup {#setup}
 
-- Enable [Ticket Utilization](/docs/support-bot/general/ticket-utilization) and/or [Estimated Wait Time](/docs/support-bot/general/estimated-wait-time) in your dashboard.
+- Bot, server, timestamp, and opening-hours placeholders are always available - no configuration required.
+- For ticket metric placeholders: enable [Ticket Utilization](/docs/support-bot/general/ticket-utilization) and/or [Estimated Wait Time](/docs/support-bot/general/estimated-wait-time) in your dashboard.
 - Use the placeholders below in any customizable message field (ticket opening messages, welcome messages, [statistics channel](/docs/support-bot/modmail/configuration#statistics-channels) names, etc.).
 
+:::info
+Not every placeholder is available in every context. Bot, server, timestamp, and opening-hours placeholders work in any customizable message. Ticket metric placeholders work in ticket opening messages, welcome messages, utilization/EWT messages, and statistics channels. Feature-specific placeholders (for example `%staffUser%` or `%estimatedWaitTime%`) are only available in the messages documented on their respective feature pages.
+:::
+
 ## Available placeholders {#available-placeholders}
+
+### Bot {#bot-placeholders}
+
+| Placeholder    | Description               |
+| -------------- | ------------------------- |
+| `%botName%`    | Display name of the bot.  |
+| `%botID%`      | User ID of the bot.       |
+| `%botAvatar%`  | Avatar URL of the bot.    |
+| `%botTag%`     | Full tag of the bot.      |
+| `%botMention%` | Mention string of the bot (e.g. `<@123…>`). |
+
+### Server {#server-placeholders}
+
+| Placeholder   | Description                 |
+| ------------- | --------------------------- |
+| `%guildName%` | Name of the server.         |
+| `%guildID%`   | ID of the server.           |
+| `%guildIcon%` | Icon URL of the server.     |
+
+### Timestamps {#timestamp-placeholders}
+
+Timestamp placeholders use [Discord's native timestamp formatting](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) and automatically adapt to each user's timezone and locale. They are evaluated at the moment the message is sent.
+
+| Placeholder       | Discord Style | Description                         |
+| ----------------- | ------------- | ----------------------------------- |
+| `%timestamp%`     | `f`           | Short date/time (same as `%shortDateTime%`). |
+| `%shortTime%`     | `t`           | Short time (e.g. 4:20 PM).          |
+| `%longTime%`      | `T`           | Long time (e.g. 4:20:30 PM).        |
+| `%shortDate%`     | `d`           | Short date (e.g. 04/05/2026).       |
+| `%longDate%`      | `D`           | Long date (e.g. April 5, 2026).     |
+| `%shortDateTime%` | `f`           | Short date/time.                    |
+| `%longDateTime%`  | `F`           | Long date/time.                     |
+| `%relativeTime%`  | `R`           | Relative time (e.g. "just now" or "2 minutes ago"). |
+
+### Opening hours {#opening-hours-placeholder}
+
+| Placeholder       | Description                                                                                                                                                                          |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `%openingHours%`  | A formatted representation of your configured [opening hours](/docs/support-bot/general/opening-hours). Empty if opening hours are not configured.                                   |
 
 ### Global metrics {#global-metrics}
 
@@ -50,7 +94,9 @@ If a placeholder's required feature is not enabled or no data is available, the 
 
 ## Where to use them {#where-to-use}
 
-Global placeholders can be used in any customizable message field, including:
+Bot, server, timestamp, and opening-hours placeholders can be used in **any** customizable message field (the examples below also apply to them).
+
+Ticket metric placeholders can be used in:
 
 - **[Ticket opening messages](/docs/support-bot/modmail/configuration#ticket-open-messages)** - show users the current queue status before they open a ticket.
 - **[Welcome messages](/docs/support-bot/modmail/configuration#main-configuration)** - inform users about expected wait times when their ticket is created.
@@ -59,5 +105,5 @@ Global placeholders can be used in any customizable message field, including:
 - **[Estimated wait time messages](/docs/support-bot/general/estimated-wait-time#message-configuration)** - combine global and topic-specific wait times.
 
 :::tip
-When a message template receives both global placeholders and its own built-in placeholders (like `%topic%` or `%userID%`), the built-in placeholders take priority if there is a name collision.
+When a message template receives both global placeholders and its own feature-specific placeholders (like `%topic%` or `%userID%`), the feature-specific placeholders take priority if there is a name collision.
 :::
