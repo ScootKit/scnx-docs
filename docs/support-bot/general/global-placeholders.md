@@ -27,42 +27,42 @@ Not every placeholder is available in every context. Bot, server, timestamp, and
 
 ### Bot {#bot-placeholders}
 
-| Placeholder    | Description               |
-| -------------- | ------------------------- |
-| `%botName%`    | Display name of the bot.  |
-| `%botID%`      | User ID of the bot.       |
-| `%botAvatar%`  | Avatar URL of the bot.    |
-| `%botTag%`     | Full tag of the bot.      |
-| `%botMention%` | Mention string of the bot (e.g. `<@123…>`). |
+| Placeholder    | Description                                   |
+| -------------- | --------------------------------------------- |
+| `%botName%`    | Display name of the bot.                      |
+| `%botID%`      | User ID of the bot.                           |
+| `%botAvatar%`  | Avatar URL of the bot.                        |
+| `%botTag%`     | Full tag of the bot.                          |
+| `%botMention%` | Mention string of the bot (e.g. `<@123...>`). |
 
 ### Server {#server-placeholders}
 
-| Placeholder   | Description                 |
-| ------------- | --------------------------- |
-| `%guildName%` | Name of the server.         |
-| `%guildID%`   | ID of the server.           |
-| `%guildIcon%` | Icon URL of the server.     |
+| Placeholder   | Description             |
+| ------------- | ----------------------- |
+| `%guildName%` | Name of the server.     |
+| `%guildID%`   | ID of the server.       |
+| `%guildIcon%` | Icon URL of the server. |
 
 ### Timestamps {#timestamp-placeholders}
 
 Timestamp placeholders use [Discord's native timestamp formatting](https://discord.com/developers/docs/reference#message-formatting-timestamp-styles) and automatically adapt to each user's timezone and locale. They are evaluated at the moment the message is sent.
 
-| Placeholder       | Discord Style | Description                         |
-| ----------------- | ------------- | ----------------------------------- |
-| `%timestamp%`     | `f`           | Short date/time (same as `%shortDateTime%`). |
-| `%shortTime%`     | `t`           | Short time (e.g. 4:20 PM).          |
-| `%longTime%`      | `T`           | Long time (e.g. 4:20:30 PM).        |
-| `%shortDate%`     | `d`           | Short date (e.g. 04/05/2026).       |
-| `%longDate%`      | `D`           | Long date (e.g. April 5, 2026).     |
-| `%shortDateTime%` | `f`           | Short date/time.                    |
-| `%longDateTime%`  | `F`           | Long date/time.                     |
+| Placeholder       | Discord Style | Description                                         |
+| ----------------- | ------------- | --------------------------------------------------- |
+| `%timestamp%`     | `f`           | Short date/time (same as `%shortDateTime%`).        |
+| `%shortTime%`     | `t`           | Short time (e.g. 4:20 PM).                          |
+| `%longTime%`      | `T`           | Long time (e.g. 4:20:30 PM).                        |
+| `%shortDate%`     | `d`           | Short date (e.g. 04/05/2026).                       |
+| `%longDate%`      | `D`           | Long date (e.g. April 5, 2026).                     |
+| `%shortDateTime%` | `f`           | Short date/time.                                    |
+| `%longDateTime%`  | `F`           | Long date/time.                                     |
 | `%relativeTime%`  | `R`           | Relative time (e.g. "just now" or "2 minutes ago"). |
 
 ### Opening hours {#opening-hours-placeholder}
 
-| Placeholder       | Description                                                                                                                                                                          |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `%openingHours%`  | A formatted representation of your configured [opening hours](/docs/support-bot/general/opening-hours). Empty if opening hours are not configured.                                   |
+| Placeholder      | Description                                                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `%openingHours%` | A formatted representation of your configured [opening hours](/docs/support-bot/general/opening-hours). Empty if opening hours are not configured. |
 
 ### Global metrics {#global-metrics}
 
