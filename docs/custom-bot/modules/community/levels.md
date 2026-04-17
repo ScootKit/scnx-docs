@@ -8,16 +8,16 @@ Easy to use levelling system with a lot of customization!
 
 ## Features {#features}
 
-* Grant a random amount of XP to users for messages they send with configurable amounts and cooldown.
-* Grant XP based on the amount of time a user [spends in a voice channel](#voice-xp).
-* Select one of [three leveling curves](#level-curves) or [enter your own](#custom-level-curve).
-* Add roles as [level rewards](#level-rewards).
-* Configure [custom level up messages](#level-up-messages) - you can add custom messages for specific levels or use random
+- Grant a random amount of XP to users for messages they send with configurable amounts and cooldown.
+- Grant XP based on the amount of time a user [spends in a voice channel](#voice-xp).
+- Select one of [three leveling curves](#level-curves) or [enter your own](#custom-level-curve).
+- Add roles as [level rewards](#level-rewards).
+- Configure [custom level up messages](#level-up-messages) - you can add custom messages for specific levels or use random
   messages, so your chat isn't to repetitive!
-* Add [multiplicator channels and roles](#multiplicators).
-* Show the current [leaderboard](#live-leaderboard) live in a Discord channel.
-* Start your level system with Level 0 and configure a maximum level.
-* [Manage the XP and level of users](#manage-levels) on your server.
+- Add [multiplicator channels and roles](#multiplicators).
+- Show the current [leaderboard](#live-leaderboard) live in a Discord channel.
+- Start your level system with Level 0 and configure a maximum level.
+- [Manage the XP and level of users](#manage-levels) on your server.
 
 ## Setup {#setup}
 
@@ -36,15 +36,15 @@ Easy to use levelling system with a lot of customization!
 
 ## Usage {#usage}
 
-* After [setting up the module](#setup), users will start receiving XP for sending messages and for spending time in
+- After [setting up the module](#setup), users will start receiving XP for sending messages and for spending time in
   voice channels.
-* Once a user reaches a threshold based on your [customizable leveling formula](#level-curves), they will level up to
+- Once a user reaches a threshold based on your [customizable leveling formula](#level-curves), they will level up to
   the next level. You
   can [configure](#configuration) rewards, like roles, for reaching specific levels.
-* Users can check their and other user's current XP and see how much XP is required to level up using
+- Users can check their and other user's current XP and see how much XP is required to level up using
   [`/profile`](#commands). A full leaderboard with the XP of all users is available with [`/leaderboard`](#commands) or
   an [always accurate version of it can be sent into a channel](#live-leaderboard).
-* To manually adjust the XP and level of any user on your server, use the [`/manage-levels`](#commands) commands
+- To manually adjust the XP and level of any user on your server, use the [`/manage-levels`](#commands) commands
   after [enabling cheats in your configuration](#configuration).
 
 ### Live leaderboard {#live-leaderboard}
@@ -124,20 +124,20 @@ We include three different leveling curves in the bot, but you can also [provide
 
 The following level formulas are available:
 
-* **Easy Linear** curve (selected by default): This will be the best option for most servers. This level curve has been
+- **Easy Linear** curve (selected by default): This will be the best option for most servers. This level curve has been
   carefully selected to fit most servers needs. It's designed to allow easy entry into the level system while still
   making it hard to level up to higher levels.\
   The formula used is $f(x) = 750x + ((x-1) * 500)$ (where $x$ is the level to be calculated) with a $f(x) = O(x)$
   (meaning that the level curve will scale linearly).
-* **Default Linear** curve: This is a simplified version of the Easy Linear cure and was the old default value, but
+- **Default Linear** curve: This is a simplified version of the Easy Linear cure and was the old default value, but
   won't be used by default. It allows easier leveling and can be used for smaller servers.\
   The formula is $f(x) = 750x$ (where $x$ is the level to be calculated) with a $f(x) = O(x)$
   (meaning that the level curve will scale linearly).
-* **Exponentiation** curve: This level curve allows users a very easy start but will get tough and basically impossible
+- **Exponentiation** curve: This level curve allows users a very easy start but will get tough and basically impossible
   after level 14.\
   The formula is $f(x) = 350 * (x-1)^2$ (where $x$ is the level to be calculated) with a $f(x) = O(x^2)$ (meaning that
   the function will scale quadratically).
-* **Custom formula**: You can enter any mathematical formula to be used for full customizable. You can find more
+- **Custom formula**: You can enter any mathematical formula to be used for full customizable. You can find more
   information in the [custom level curve](#custom-level-curve) section.
 
 If you are wondering what the formulas mean or want to design your own, we have more details in
@@ -250,11 +250,11 @@ option [in your configuration](#configuration). We recommend keeping this option
 leveling system without admin interference.
 :::
 
-* Administrators on your server can reset the XP of a given user or the whole server using the [
+- Administrators on your server can reset the XP of a given user or the whole server using the [
   `/manage-levels reset-xp`](#commands) command.
-* Administrators on your server can manually add, remove or set the level of any user using the [
+- Administrators on your server can manually add, remove or set the level of any user using the [
   `/manage-levels edit-level`](#commands) command.
-* Administrators on your servers can manually add, remove or set the XP of any user using
+- Administrators on your servers can manually add, remove or set the XP of any user using
   the [`/manage-levels edit-xp`](#commands) command.
 
 We suggest keeping interference with the level system to a minimum. If users notice discrepancies in XP values of
@@ -271,8 +271,8 @@ system (and by extension, the trust of your community).
 
 These commands can be used by users on your server.
 
-| Command                            | Description                                                                                                                                                                    |                                                                                                                                                               
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Command                            | Description                                                                                                                                                                    |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/profile `                        | Display your profile, including how much XP and levels you have and your role multipliers (if any).                                                                            |
 | `/profile [user:<User>]`           | Display the profile of a user, including their XP and levels the user and their role multipliers (if any).                                                                     |
 | `/leaderboard [sort-by:<Boolean>]` | Display the leaderboard of the server, sorted by into groups by either XP or levels, based on either [your configuration](#configuration) or the `sort-by` parameter provided. |
@@ -283,7 +283,7 @@ These commands can only be used by administrators on your server if the "Cheats"
 is enabled.
 
 | Command                                                       | Description                                                                    |
-|---------------------------------------------------------------|--------------------------------------------------------------------------------|
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `/manage-levels reset-xp [confirm:<Boolean>]`                 | Resets the XP on the whole server, if the `confirm` parameter is being passed. |
 | `/manage-levels reset-xp user:<User> [confirm:<Boolean>]`     | Resets the XP of a user, if the `confirm` parameter is being passed.           |
 | `/manage-levels edit-level add user:<User> value:<Value> `    | Adds a number of levels (`value`) to the levels of a user.                     |
@@ -298,12 +298,12 @@ is enabled.
 As all modules on SCNX, our leveling modules allows you to fully customize its behavior. To allow easier configuration,
 we have split up the configuration into multiple files:
 
-* [Main Module Configuration](#configuration-config), where you can configure XP amounts, level curves, level rewards,
+- [Main Module Configuration](#configuration-config), where you can configure XP amounts, level curves, level rewards,
   and much more.
-* [Message Configuration](#configuration-strings), where you can adjust messages and module appearance.
-* [Random  level up messages](#configuration-random-levelup-messages), where you can add messages that will be randomly
+- [Message Configuration](#configuration-strings), where you can adjust messages and module appearance.
+- [Random level up messages](#configuration-random-levelup-messages), where you can add messages that will be randomly
   chosen from when the user levels ab.
-* [Selected level up messages](#configuration-special-levelup-messages), where you can overwrite the level up message
+- [Selected level up messages](#configuration-special-levelup-messages), where you can overwrite the level up message
   for specific levels.
 
 ### Module Configuration {#configuration-config}
@@ -312,8 +312,8 @@ In this configuration file, you can configure how much XP users should be receiv
 level system should behave. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/config).
 
-| Field                                                         | Description                                                                                                                                                                                                                                                                                                 |                                                                                                                                                 
-|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Field                                                         | Description                                                                                                                                                                                                                                                                                                 |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | XP given at least for messages                                | This amount of XP will be given at least for each message sent.                                                                                                                                                                                                                                             |
 | XP given at most for messages                                 | This amount of XP will be given at most for each message sent.                                                                                                                                                                                                                                              |
 | XP given per voice minute                                     | How many XP will be given to users per minute when they are in a voice channel with other members. Supports floating point values. More information in the [Voice XP](#voice-xp) section.                                                                                                                   |
@@ -331,12 +331,12 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 | Rest Level on leave                                           | If enabled, all levels and the XP of a user will be deleted when they leave your server.                                                                                                                                                                                                                    |
 | Random messages                                               | If enabled, random level messages will be used instead of the default configured level message. Learn more in the [level message](#level-up-messages) section.                                                                                                                                              |
 | Live Leaderboard                                              | If set, the bot will send a [Live Leaderboard](#live-leaderboard) into this channel.                                                                                                                                                                                                                        |
-| Maximum amount of users displayed in live leaderboard channel | This is the maximum amount of users displayed in the Live Leaderboard channel. /leaderboard will still show the full leaderboard.<br/>*Values equal or below 25 can be entered.*                                                                                                                            |
+| Maximum amount of users displayed in live leaderboard channel | This is the maximum amount of users displayed in the Live Leaderboard channel. /leaderboard will still show the full leaderboard.<br/>_Values equal or below 25 can be entered._                                                                                                                            |
 | Start with Level 0?                                           | By default, users start with Level 1. If you enable this option, all users will start with level zero. This is only a cosmetic setting and as such can be applied retroactively. [Level formulas](#level-curves) will still use the levelling system starting at one, but this won't be displayed to users. |
 | Use usernames instead of mentions in the live leaderboard?    | If enabled, the bot will use the tag of users in the Leaderboard-Channel-Embed instead of their mention.                                                                                                                                                                                                    |
 | Blacklisted roles                                             | Roles that are excluded from leveling. Users with any of these roles won't receive XP for sending messages.                                                                                                                                                                                                 |
 | Enable maximum level?                                         | If enabled, users will stop leveling up after reaching the configured maximum level.                                                                                                                                                                                                                        |
-| Maximum level                                                 | *Only visible if "Enable maximum level?" is enabled.*<br/>The highest level a user can reach. Users will stop gaining levels (but may still gain XP) after reaching this level.                                                                                                                             |
+| Maximum level                                                 | _Only visible if "Enable maximum level?" is enabled._<br/>The highest level a user can reach. Users will stop gaining levels (but may still gain XP) after reaching this level.                                                                                                                             |
 | Cheats                                                        | To manage [levels and XP manually](#manage-levels), enable this option. This makes your level system unfair, if abused by admins.                                                                                                                                                                           |
 
 ### Message configuration {#configuration-strings}
@@ -345,11 +345,11 @@ In this configuration file, you can configure the message of this module and adj
 You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/strings).
 
-| Field                          | Description                                                                                                                                                                                                                                                              |                                                                                                                                                 
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| User not found                 | This message gets sent if someone tries to check the profile of a user who has never sent a message and doesn't have a profile yet.                                                                                                                                     |
-| Embed                          | This configuration option adjusts how the [`/profile`](#commands) command should look. You can change the embed field values, the embed color, and more.                                                                                                                |
-| Leaderboard Embed              | This configuration option adjusts how the [`/leaderboard`](#commands) command should look. You can adjust the embed field values, the embed color, and more.                                                                                                            |
+| Field                          | Description                                                                                                                                                                                                                                                              |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| User not found                 | This message gets sent if someone tries to check the profile of a user who has never sent a message and doesn't have a profile yet.                                                                                                                                      |
+| Embed                          | This configuration option adjusts how the [`/profile`](#commands) command should look. You can change the embed field values, the embed color, and more.                                                                                                                 |
+| Leaderboard Embed              | This configuration option adjusts how the [`/leaderboard`](#commands) command should look. You can adjust the embed field values, the embed color, and more.                                                                                                             |
 | Level-Up message               | This will be the [level up message](#level-up-messages) when a user levels up to a level without a level role reward. Please note that this setting won't be used if you enable the "Random messages" in the [configuration](#configuration-config).                     |
 | Level-Up message with reward   | This will be the [level up message](#level-up-messages) when a user levels up to a level with a level role reward that the user receives. Please note that this setting won't be used if you enable the "Random messages" in the [configuration](#configuration-config). |
 | Live leaderboard embed         | This configuration option adjusts how the [live leaderboard embed](#live-leaderboard) should appear to users. You can adjust embed values, the embed color and more.                                                                                                     |
@@ -362,8 +362,8 @@ if you have enabled the "Random message" configuration in your [configuration](#
 configuration option represents a message that can be selected randomly. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field   | Description                                                                                                                                                                                                                                                                                                     |                                                                                                                                                 
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Field   | Description                                                                                                                                                                                                                                                                                                     |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Type    | This will configure when this message may be selected randomly. If set to `normal` it can be used for level ups without role rewards associated with the level. If set to `with-reward`, the message will only be used when a level has a role reward (this will also allow the use of the `%role%` parameter). |
 | Message | This message will be used if this configuration object has been selected randomly.                                                                                                                                                                                                                              |
 
@@ -372,8 +372,8 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 In this configuration file, you can overwrite the [level-up messages](#level-up-messages) for specific levels. You
 can [open this file in your dashboard](https://scnx.app/glink?page=bot/configuration?file=levels|configs/random-levelup-messages).
 
-| Field   | Description                                                       |                                                                                                                                                 
-|---------|-------------------------------------------------------------------|
+| Field   | Description                                                       |
+| ------- | ----------------------------------------------------------------- |
 | Level   | Level that the message should get overwritten for.                |
 | Message | This message will be sent when the configured level gets reached. |
 
@@ -386,6 +386,7 @@ How many XP users are receiving depends on [configuration](#configuration), and 
 can be adjusted with a [level curve](#level-curves). Please adjust these options to meet your needs. After changing a
 level curve, users might level up faster / slower initially - to fix this,
 consider [resetting your leveling system](#manage-levels).
+
 </details>
 
 <details>
@@ -396,6 +397,7 @@ sent into. For most cases, the bot requires this permission to every channel XP 
 you [configure](#configuration) a separate level up channel). If you are using [level up rewards](#level-rewards), the
 bot also requires the "Manage role" permissions and the highest role of the bot should be above the role the bot should
 assign as a reward.
+
 </details>
 
 <details>
@@ -404,24 +406,26 @@ assign as a reward.
 To give users XP for being in a voice channel and for sending messages, make sure that the bot has the "View channel",
 "Read message history" and "Connect to voice channel" permission on every channel XP should be given for. Otherwise, no
 XP can be given as the bot can't see the message / voice channel.
+
 </details>
 
 <details>
 <summary>My live leaderboard is not being sent or update correctly.</summary>
 
 The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions "View channel",
-"View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value ‘Maximum number of users in the live leaderboard channel’ to a lower value in the [configuration](#configuration).
+"View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value 'Maximum number of users in the live leaderboard channel' to a lower value in the [configuration](#configuration).
+
 </details>
 
 ## Stored data {#data-usage}
 
 The following data is being stored about every user who sent at least one eligible message on your server:
 
-* The unique Discord User-ID of the member who sent the message.
-* The number of XP the user has.
-* The number of eligible messages the user has sent.
-* The current level of the user.
-* Metadata about the entry (date when created and last updated).
+- The unique Discord User-ID of the member who sent the message.
+- The number of XP the user has.
+- The number of eligible messages the user has sent.
+- The current level of the user.
+- Metadata about the entry (date when created and last updated).
 
 You can delete the data about a user by using the [`/manage-levels reset-xp`](#manage-levels) command with the `user`
 parameter. To delete all data about every user, use the command without the `user` parameter.

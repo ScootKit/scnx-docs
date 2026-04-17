@@ -2,16 +2,15 @@
 
 Einfaches Modul zum Bearbeiten von Benutzer-Nicknamen basierend auf Rollen.
 
-
 <ModuleOverview moduleName="nicknames" />
 
 ## Funktionen {#features}
 
-* Füge Mitgliedern automatisch Präfixe und/oder Suffixe zu ihren Nicknames hinzu, basierend auf ihren Rollen.
-* Unterstützt mehrere Rollen mit verschiedenen Präfixen und Suffixen – die hierarchisch höchste Rolle hat Priorität.
-* Nicknames werden automatisch aktualisiert, wenn sich die Rollen oder der Nickname eines Mitglieds ändern.
-* Alle vorhandenen Mitglieder werden beim Start des Bots umbenannt.
-* Optionale Erzwingung von Anzeigenamen anstelle von benutzerdefinierten Nicknames.
+- Füge Mitgliedern automatisch Präfixe und/oder Suffixe zu ihren Nicknames hinzu, basierend auf ihren Rollen.
+- Unterstützt mehrere Rollen mit verschiedenen Präfixen und Suffixen – die hierarchisch höchste Rolle hat Priorität.
+- Nicknames werden automatisch aktualisiert, wenn sich die Rollen oder der Nickname eines Mitglieds ändern.
+- Alle vorhandenen Mitglieder werden beim Start des Bots umbenannt.
+- Optionale Erzwingung von Anzeigenamen anstelle von benutzerdefinierten Nicknames.
 
 ## Einrichtung {#setup}
 
@@ -35,9 +34,9 @@ Dieses Modul verfügt über mehrere Konfigurationsdateien. Bitte überprüfe die
 
 In dieser Konfigurationsdatei kannst du die Funktionalität dieses Moduls konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=nicknames%7Cconfigs%2Fconfig).
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Anzeigenamen erzwingen | Falls aktiviert, verwendet der Bot den Anzeigenamen des Benutzers anstelle seines benutzerdefinierten Server-Nicknames als Basisnamen für das Anwenden von Präfixen und Suffixen.|
+| Feld                   | Beschreibung                                                                                                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Anzeigenamen erzwingen | Falls aktiviert, verwendet der Bot den Anzeigenamen des Benutzers anstelle seines benutzerdefinierten Server-Nicknames als Basisnamen für das Anwenden von Präfixen und Suffixen. |
 
 ### Rollen {#configuration-strings}
 
@@ -45,11 +44,11 @@ In dieser Konfigurationsdatei kannst du Präfix- und Suffixregeln für jede Roll
 
 Jeder Eintrag in dieser Liste stellt eine Rollenregel mit den folgenden Feldern dar:
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Rolle | Die Rolle, für die das Präfix und/oder Suffix angewendet werden soll. |
-| Prefix | Das Präfix, das vor den Nickname des Mitglieds gesetzt wird. |
-| Suffix | Das Suffix, das an den Nickname des Mitglieds angehängt wird. |
+| Feld   | Beschreibung                                                          |
+| ------ | --------------------------------------------------------------------- |
+| Rolle  | Die Rolle, für die das Präfix und/oder Suffix angewendet werden soll. |
+| Prefix | Das Präfix, das vor den Nickname des Mitglieds gesetzt wird.          |
+| Suffix | Das Suffix, das an den Nickname des Mitglieds angehängt wird.         |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -65,15 +64,16 @@ Jeder Eintrag in dieser Liste stellt eine Rollenregel mit den folgenden Feldern 
 <details>
   <summary>Der falsche Präfix/Suffix wird angewendet.</summary>
 
-  Das Modul verwendet die höchste Rolle in der Serverhierarchie, für die ein Präfix/Suffix konfiguriert wurde. Stelle sicher, dass deine Rollenregeln für die richtigen Rollen konfiguriert sind und die Rollenpositionen auf deinem Server deinen Erwartungen entsprechen.
+Das Modul verwendet die höchste Rolle in der Serverhierarchie, für die ein Präfix/Suffix konfiguriert wurde. Stelle sicher, dass deine Rollenregeln für die richtigen Rollen konfiguriert sind und die Rollenpositionen auf deinem Server deinen Erwartungen entsprechen.
+
 </details>
 
 ## Gespeicherte Daten {#data-usage}
 
 Folgende Daten werden über jedes Mitglied gespeichert:
 
-* Die Discord-Benutzer-ID
-* Der Basis-Nickname des Mitglieds (ohne angewandtes Präfix oder Suffix)
-* Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
+- Die Discord-Benutzer-ID
+- Der Basis-Nickname des Mitglieds (ohne angewandtes Präfix oder Suffix)
+- Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 
 Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database)

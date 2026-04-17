@@ -3,7 +3,7 @@ title: Zeit, ein Osterevent für deinen Discord vorzubereiten!
 description: Ostern ist in einer Woche - es ist höchste Zeit, ein Osterevent zu planen. Hier gibt es Tipps und Tricks.
 slug: easter-2025-newsletter
 date: 2025-04-13T10:00
-authors: 
+authors:
   - scderox
   - hörnchen
 tags:
@@ -44,35 +44,34 @@ SCNX ist ein Dienst, auf welchem du einen komplett anpassbaren Discord-Bot für 
 ganz einfach [diese Anleitung](/de/docs/setup) befolgen, um direkt loszulegen.
 :::
 
-* **Verstecke Codes:** Nutze die vielfältigen Vorschläge aus dem Artikel und platziere virtuelle "Ostereier" in Form von
+- **Verstecke Codes:** Nutze die vielfältigen Vorschläge aus dem Artikel und platziere virtuelle "Ostereier" in Form von
   Text-Codes oder sogar thematisch passenden Emojis an kreativen Orten auf deinem Server. Das können Kanalnamen,
   Beschreibungen, Benutzerbios, versteckte Nachrichten (mit ||), eigene Befehle oder sogar Emoji- und Rollennamen sein.
-* **Mitglieder suchen und einlösen:** Deine Community-Mitglieder nutzen einfache Befehle wie `/hunt-the-code profile` um
+- **Mitglieder suchen und einlösen:** Deine Community-Mitglieder nutzen einfache Befehle wie `/hunt-the-code profile` um
   ihren Fortschritt zu sehen und `/hunt-the-code redeem` um gefundene Codes einzulösen.
-* **Wettbewerb und Spaß:** Eine Live-Bestenliste (`/hunt-the-code leaderboard`) sorgt für einen spannenden Wettbewerb.
-* **Admin-Tools:** Admins behalten mit Befehlen wie `/hunt-the-code-admin end` (zum Beenden und Zurücksetzen) und
+- **Wettbewerb und Spaß:** Eine Live-Bestenliste (`/hunt-the-code leaderboard`) sorgt für einen spannenden Wettbewerb.
+- **Admin-Tools:** Admins behalten mit Befehlen wie `/hunt-the-code-admin end` (zum Beenden und Zurücksetzen) und
   `/hunt-the-code-admin report` (für eine detaillierte Übersicht der Funde) die Kontrolle.
 
 Mehr Informationen findest du in dem [scnx.tips-Artikel](https://scnx.tips/hunt-the-code/).
 
 ## Warum ist das eine gute Idee für dein Oster-Event?
 
-* **Community-Aktivierung:** Es fördert die Interaktion und das Engagement deiner Mitglieder.
-* **Spielerischer Spaß:** Die Jagd nach den Codes ist ein unterhaltsames Erlebnis für alle.
-* **Flexibilität:** Du kannst die Schwierigkeit und die Art der Codes an deine Community anpassen.
-* **Einfache Umsetzung:** Das SCNX-Modul macht die Organisation unkompliziert.
-* **Digitale Alternative:** Perfekt, um Osterfreude auch in der virtuellen Welt zu verbreiten.
+- **Community-Aktivierung:** Es fördert die Interaktion und das Engagement deiner Mitglieder.
+- **Spielerischer Spaß:** Die Jagd nach den Codes ist ein unterhaltsames Erlebnis für alle.
+- **Flexibilität:** Du kannst die Schwierigkeit und die Art der Codes an deine Community anpassen.
+- **Einfache Umsetzung:** Das SCNX-Modul macht die Organisation unkompliziert.
+- **Digitale Alternative:** Perfekt, um Osterfreude auch in der virtuellen Welt zu verbreiten.
 
 ## Tipps für ein gelungenes Event
 
-* Gib in der Ankündigung Hinweise, wo die Codes versteckt sein könnten.
-* Veröffentliche regelmäßig Zwischenstände der Bestenliste.
-* Überlege dir kleine digitale Preise oder spezielle Rollen für die erfolgreichsten Sammler.
+- Gib in der Ankündigung Hinweise, wo die Codes versteckt sein könnten.
+- Veröffentliche regelmäßig Zwischenstände der Bestenliste.
+- Überlege dir kleine digitale Preise oder spezielle Rollen für die erfolgreichsten Sammler.
 
 ## Fragen oder Probleme?
 
 Mehr Informationen zu dem Modul findest du in dem [scnx.tips-Artikel](https://scnx.tips/hunt-the-code/), ansonsten helfen wir immer gerne auf [scnx.app/help](https://scnx.app/help) oder direkt auf [unserem Discord](https://scootk.it/dc-de).
- 
 
 Mache Ostern zu einem unvergesslichen Erlebnis für deine Discord-Community mit einer spannenden virtuellen
 Eier-Code-Suche powered by SCNX!

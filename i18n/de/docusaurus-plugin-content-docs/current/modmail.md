@@ -10,13 +10,13 @@ PROFESSIONAL: "24/7 verfügbar, solange dein Plan aktiv ist."}} />
 
 Bevor du deinen eigenen Modmail-Bot auf SCNX erstellen kannst, stelle sicher, dass
 
-* du [deinen Server zu SCNX hinzugefügt hast](/docs/setup).
-* dein Server einen bezahlten [Unlimited Plan](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+- du [deinen Server zu SCNX hinzugefügt hast](/docs/setup).
+- dein Server einen bezahlten [Unlimited Plan](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
   oder den [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) Plan besitzt oder du die Testphase verwendest, sofern diese
   für dich verfügbar ist.
-* du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
+- du der Besitzer des Servers, ein [Trusted-Admin mit der Mitbesitzer-Berechtigung](/docs/scnx/guilds/trusted-admins)
   oder ein Administrator bist, auf dem du diese Funktion aktivieren möchtest.
-* du ein paar Minuten Zeit hast (es sollte ca. 2 Minuten dauern) um diese Anleitung zu beenden - hör nicht in der Mitte auf; dein Fortschritt wird nicht gespeichert.
+- du ein paar Minuten Zeit hast (es sollte ca. 2 Minuten dauern) um diese Anleitung zu beenden - hör nicht in der Mitte auf; dein Fortschritt wird nicht gespeichert.
 
 ## 1. Erstelle deine Discord-Anwendung & -Bot 🤖 {#step-1}
 
@@ -100,7 +100,7 @@ es ist DEIN Modmail-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Hier sind ein paar Dinge, die du jetzt tun könntest:
 
-* Teste deinen Modmail-Bot: Sende ihm eine Privatnachricht und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
-* [stelle deinen Modmail-Bot ein](/docs/modmail/configuration) und aktiviere mehr Modmail-Funktionen.
-* Verbessere dein Support System, indem du [fortgeschritte Modmail-Funktionen](/docs/modmail/advanced-features) erkundest.
-* und sehr viel mehr. Öffne die [Modmail-Documentation](/docs/modmail/intro), um dir jede Option anzuschauen. 
+- Teste deinen Modmail-Bot: Sende ihm eine Privatnachricht und beobachte, wie er ein Ticket öffnet, in dem dein Team mit dir schreiben kann.
+- [stelle deinen Modmail-Bot ein](/docs/modmail/configuration) und aktiviere mehr Modmail-Funktionen.
+- Verbessere dein Support System, indem du [fortgeschritte Modmail-Funktionen](/docs/modmail/advanced-features) erkundest.
+- und sehr viel mehr. Öffne die [Modmail-Documentation](/docs/modmail/intro), um dir jede Option anzuschauen.

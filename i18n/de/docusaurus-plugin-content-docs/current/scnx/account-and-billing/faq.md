@@ -8,6 +8,7 @@ toc_max_heading_level: 3
 Häufig gestellte Fragen zu Nutzerfunktionen und Abrechnung auf SCNX.
 
 **Schnellnavigation:**
+
 - **Zahlungsmethoden:** [Verfügbare Methoden](#payment-methods) | [Google Pay / Apple Pay](#google-apple-pay) | [Paysafecard](#paysafecard) | [SEPA-Lastschrift](#direct-debit) | [Dauerauftrag](#reoccurring-transfer) | [Banküberweisung](#wire-transfer)
 - **Abrechnung & Rechnungen:** [Abonnement verwalten](#manage-subscription) | [Rechnungsadresse](#billing-details) | [MwSt.-Befreiung](#vat) | [Karte abgelehnt](#no-reason-decline)
 - **Konto & Sicherheit:** [2FA einrichten](#setup-2fa) | [2FA verloren](#lost-2fa) | [Konto löschen](#account-deletion)
@@ -25,17 +26,17 @@ Die folgenden Antworten gelten nur für Kunden innerhalb der EU. Außerhalb der 
 
 Die verfügbaren Zahlungsmethoden hängen von deinem Standort und deiner Kaufhistorie ab. Hier eine Übersicht:
 
-| Zahlungsmethode | Verfügbarkeit | Hinweise |
-|----------------|---------------|----------|
-| Kredit-/Debitkarte (Visa, Mastercard, Amex) | Alle Nutzer | Standardmäßig verfügbar |
-| PayPal | Alle Nutzer | Standardmäßig verfügbar |
-| Google Pay | Alle Nutzer | Über Stripe, auf unterstützten Geräten |
-| Apple Pay | Alle Nutzer | Über Stripe, auf unterstützten Geräten |
-| Banküberweisung (SEPA) | Alle EU-Nutzer | Individuelle IBAN wird zugewiesen |
-| Wiederkehrende Banküberweisung (Dauerauftrag) | Alle EU-Nutzer | Manuelle Einrichtung bei deiner Bank |
-| SEPA-Lastschrift | Auf Anfrage | Voraussetzungen erforderlich (siehe unten) |
-| Paysafecard | Auf Anfrage | Kontaktiere den Support |
-| Discord-Abonnement | Über Discord | Nur über Discord verwaltbar |
+| Zahlungsmethode                               | Verfügbarkeit  | Hinweise                                   |
+| --------------------------------------------- | -------------- | ------------------------------------------ |
+| Kredit-/Debitkarte (Visa, Mastercard, Amex)   | Alle Nutzer    | Standardmäßig verfügbar                    |
+| PayPal                                        | Alle Nutzer    | Standardmäßig verfügbar                    |
+| Google Pay                                    | Alle Nutzer    | Über Stripe, auf unterstützten Geräten     |
+| Apple Pay                                     | Alle Nutzer    | Über Stripe, auf unterstützten Geräten     |
+| Banküberweisung (SEPA)                        | Alle EU-Nutzer | Individuelle IBAN wird zugewiesen          |
+| Wiederkehrende Banküberweisung (Dauerauftrag) | Alle EU-Nutzer | Manuelle Einrichtung bei deiner Bank       |
+| SEPA-Lastschrift                              | Auf Anfrage    | Voraussetzungen erforderlich (siehe unten) |
+| Paysafecard                                   | Auf Anfrage    | Kontaktiere den Support                    |
+| Discord-Abonnement                            | Über Discord   | Nur über Discord verwaltbar                |
 
 ### Unterstützt SCNX Google Pay oder Apple Pay? {#google-apple-pay}
 
@@ -51,9 +52,9 @@ Standardmäßig sind SEPA-Lastschriftzahlungen aufgrund des hohen Ausfallrisikos
 
 Du kannst Zugriff auf SEPA-Lastschriftzahlungen anfragen, wenn du folgende Bedingungen erfüllst:
 
-* Du hast einen positiven Zahlungsverlauf bei uns und deine erste Zahlung liegt mindestens zwei Monate zurück.
-* Du hast mindestens 20,00 € auf SCNX ausgegeben.
-* Nur Zahlungen, die direkt bei der ScootKit UG (haftungsbeschränkt) getätigt wurden, sind für diese Kriterien relevant.
+- Du hast einen positiven Zahlungsverlauf bei uns und deine erste Zahlung liegt mindestens zwei Monate zurück.
+- Du hast mindestens 20,00 € auf SCNX ausgegeben.
+- Nur Zahlungen, die direkt bei der ScootKit UG (haftungsbeschränkt) getätigt wurden, sind für diese Kriterien relevant.
 
 Du findest deinen [Zahlungsverlauf im SCNX-Dashboard](https://scnx.app/user/payments).
 
@@ -65,16 +66,16 @@ Unabhängig von dieser Verifizierung arbeiten wir mit unseren Partnern zusammen,
 
 1. Aktiviere zunächst das Abonnement auf SCNX. Öffne dazu die [Zahlungsseite](https://scnx.app/de/glink?page=pricing?showUpgradeModal=true) deines Servers und öffne das Upgrade-Fenster. Wähle dein Zahlungsintervall und deinen Plan aus. Wenn du nach einer Zahlungsmethode gefragt wirst, wähle bitte „Wiederkehrende Banküberweisung" aus. Dir werden nun einmalige Zahlungsdaten und [eine eindeutige IBAN](#wire-transfer) angezeigt.
 2. Richte als Nächstes die wiederkehrende Überweisung bei deiner Bank ein:
-    * [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
-    * [Deutsche Bank](https://www.deutsche-bank.de/pk/shared/trxm/help-de/konten/konten-dauerauftraege.html)
-    * [Volksbanken / Raiffeisenbanken](https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/online-banking/dauerauftrag-einrichten-oder-aendern.html)
-    * [Commerzbank](https://service.commerzbank.de/wie-richte-ich-einen-dauerauftrag-ein)
-    * [ING](https://www.ing.de/hilfe/banking/)
-    * [Hypovereinsbank](https://www.hypovereinsbank.de/hvb/kontaktwege/dauerauftrag)
-    * [BUNQ](https://together.bunq.com/d/84-schedule-a-zahlung)
-    * [N26](https://support.n26.com/de-de/zahlungen-ueberweisungen-und-abhebungen/lastschriften-und-dauerauftrage/wie-erstelle-und-verwalte-ich-dauerauftrage)
-    * [Revolut](https://help.revolut.com/de-LU/help/receiving-zahlungen/sending-money-to-an-external-bank-account/how-to-schedule-recurring-zahlungen/business/)
-    * Deine Bank ist nicht aufgeführt? Suche einfach den Namen deiner Bank zusammen mit „wiederkehrende Überweisung" oder „Dauerauftrag", um Anleitungen zu finden. Wende dich bei weiteren Problemen an deine Bank.
+   - [Sparkasse](https://www.sparkasse.de/pk/ratgeber/finanzglossar/dauerauftrag.html)
+   - [Deutsche Bank](https://www.deutsche-bank.de/pk/shared/trxm/help-de/konten/konten-dauerauftraege.html)
+   - [Volksbanken / Raiffeisenbanken](https://www.vr.de/privatkunden/unsere-produkte/was-ist-ein-girokonto/online-banking/dauerauftrag-einrichten-oder-aendern.html)
+   - [Commerzbank](https://service.commerzbank.de/wie-richte-ich-einen-dauerauftrag-ein)
+   - [ING](https://www.ing.de/hilfe/banking/)
+   - [Hypovereinsbank](https://www.hypovereinsbank.de/hvb/kontaktwege/dauerauftrag)
+   - [BUNQ](https://together.bunq.com/d/84-schedule-a-zahlung)
+   - [N26](https://support.n26.com/de-de/zahlungen-ueberweisungen-und-abhebungen/lastschriften-und-dauerauftrage/wie-erstelle-und-verwalte-ich-dauerauftrage)
+   - [Revolut](https://help.revolut.com/de-LU/help/receiving-zahlungen/sending-money-to-an-external-bank-account/how-to-schedule-recurring-zahlungen/business/)
+   - Deine Bank ist nicht aufgeführt? Suche einfach den Namen deiner Bank zusammen mit „wiederkehrende Überweisung" oder „Dauerauftrag", um Anleitungen zu finden. Wende dich bei weiteren Problemen an deine Bank.
 3. Stell sicher, dass alle Details mit den in deinem Dashboard angezeigten Details übereinstimmen, und bestätige die wiederkehrende Überweisung bei deiner Bank.
 4. Viel Spaß mit deinem SCNX-Abonnement!
 
@@ -104,12 +105,12 @@ Kontaktiere [billing@scootkit.com](mailto:billing@scootkit.com), um dies zu prü
 
 Hier sind einige mögliche Gründe, warum das passieren kann:
 
-* Deine Karte wurde in Russland bzw. von einer russischen Bank ausgestellt
-* Deine Karte wurde in einem Land ausgestellt, das von internationalen Sanktionen betroffen ist
-* Deine Karte war schon einmal in einen Betrug verwickelt
-* Die von dir eingegebenen Daten sind ungültig
-* Unser Zahlungsanbieter hat deine Transaktion als risikoreich eingestuft und abgelehnt
-* Deine Karte wurde als gestohlen gemeldet
+- Deine Karte wurde in Russland bzw. von einer russischen Bank ausgestellt
+- Deine Karte wurde in einem Land ausgestellt, das von internationalen Sanktionen betroffen ist
+- Deine Karte war schon einmal in einen Betrug verwickelt
+- Die von dir eingegebenen Daten sind ungültig
+- Unser Zahlungsanbieter hat deine Transaktion als risikoreich eingestuft und abgelehnt
+- Deine Karte wurde als gestohlen gemeldet
 
 Bitte [kontaktiere unser Team](https://scnx.app/de/help), wenn du der Meinung bist, dass keiner dieser Gründe zutrifft.
 
@@ -150,11 +151,11 @@ Um SCNX nutzen zu können, musst du einen bestimmten Zugriff auf dein Discord-Ko
 Wir sind in der Europäischen Union registriert und halten uns an Gesetze wie die [Datenschutz-Grundverordnung](https://dsgvo-gesetz.de/) (eines der strengsten Datenschutzgesetze). Du kannst jederzeit die Löschung gespeicherter Daten verlangen. Wir respektieren deine Privatsphäre, da wir glauben, dass Privatsphäre ein Menschenrecht ist. Unsere Datenschutzerklärung findest du [hier](https://scootkit.net/privacy).
 :::
 
-| Zugriffsrecht | Erklärung |
-|--------------|-----------|
-| Zugriff auf deinen Benutzernamen, deinen Avatar und dein Banner | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an. |
-| Zugriff auf E-Mail-Adresse | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
-| Wissen, auf welchen Servern du dich befindest | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest. |
+| Zugriffsrecht                                                   | Erklärung                                                                                                                                                                                                              |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Zugriff auf deinen Benutzernamen, deinen Avatar und dein Banner | Wir benötigen diese Informationen, um dich zu identifizieren und diese Informationen im Dashboard anzuzeigen. Wir zeigen beispielsweise dein Profilbild im Dashboard an.                                               |
+| Zugriff auf E-Mail-Adresse                                      | Dies ist erforderlich, um dir Rechnungen und rechtliche Informationen (z. B. Richtlinienänderungen) zu senden. Wir sind kein bestimmter Big Bot mit blauem Profilbild und werden dir niemals Marketing-E-Mails senden. |
+| Wissen, auf welchen Servern du dich befindest                   | Im Dashboard zeigen wir alle Server an, auf die du Zugriff hast. Damit dies funktioniert, müssen wir wissen, auf welchen Servern du dich derzeit befindest.                                                            |
 
 ## E-Mail & Benachrichtigungen
 
@@ -186,6 +187,7 @@ Stelle sicher, dass du immer Zugriff auf die E-Mail-Adresse hast, die mit deinem
 ### Ich erhalte keine E-Mails von SCNX {#no-emails}
 
 Überprüfe Folgendes:
+
 - Schaue in deinem **Spam-/Junk-Ordner** nach E-Mails von `@scnx.xyz` und `@scootkit.com`
 - Stelle sicher, dass deine Discord-E-Mail korrekt und erreichbar ist
 - Füge folgende Adressen zu deinen Kontakten oder sicheren Absendern hinzu: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scootkit.com`, `legal@scootkit.com`, `compliance@scnx.xyz`

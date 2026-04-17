@@ -8,6 +8,7 @@ toc_max_heading_level: 3
 Häufig gestellte Fragen dazu, wie Server auf SCNX funktionieren.
 
 **Schnellnavigation:**
+
 - **Einrichtung:** [Owner-Anforderung](#owner) | [Administrator-Zugriff](#administrator) | [Servereinstellungen](#settings) | [SCNX Bot entfernen](#scnx-manager-bot)
 - **Bots:** [Mehrere Bots](#multiple-bots) | [Bot funktioniert nicht](#bot-issues) | [Custom Bot vs. Support Bot](#bot-comparison)
 - **Funktionen:** [Enhanced Security](#enhanced-security) | [Trusted Admins](#trusted-admins) | [Backups](#backups) | [dcserver.link](#dcserver-link) | [Bildspeicher](#images) | [Analytics](#analytics)
@@ -43,6 +44,7 @@ SCNX ist dafür gedacht, mehrere generische Bots auf einem Server durch einen vo
 ### Mein Bot funktioniert nicht / ist offline {#bot-issues}
 
 Wenn dein Bot offline ist oder nicht reagiert, schau in den Troubleshooting-Leitfaden für deinen Bot-Typ:
+
 - [Custom Bot Troubleshooting](/docs/custom-bot/troubleshooting)
 - [Support Bot Troubleshooting](/docs/support-bot/troubleshooting)
 
@@ -90,6 +92,7 @@ SCNX bietet vier Pläne an: **Starter** (kostenlos), **Unlimited**, **Profession
 ### Was sind die Limits des kostenlosen Starter-Plans? {#starter-limits}
 
 Mit dem Starter-Plan:
+
 - Muss dein Custom Bot **alle 7 Tage** durch das Ansehen einer kurzen Werbung verlängert werden
 - Kein Zugang zum Support Bot
 - Keine Linked Roles
@@ -138,12 +141,14 @@ So löschst du deinen Server:
 Du erhältst eine Bestätigungs-E-Mail, sobald die Löschung abgeschlossen ist.
 
 :::warning Vor dem Löschen beachten
-- **Bezahlte Pläne werden nicht erstattet.** Wenn du eine Erstattung möchtest, beantrage diese gemäß unserer [Erstattungsrichtlinie](https://scootk.it/scnx-refund-policy) *vor* dem Löschen.
+
+- **Bezahlte Pläne werden nicht erstattet.** Wenn du eine Erstattung möchtest, beantrage diese gemäß unserer [Erstattungsrichtlinie](https://scootk.it/scnx-refund-policy) _vor_ dem Löschen.
 - **Serverspezifische Käufe** (wie Marketplace-Module) gehen dauerhaft verloren. Übertrage sie vorher auf einen anderen Server, falls nötig.
 - Du kannst einen Server nur **einmal alle 48 Stunden** löschen, um Missbrauch zu verhindern.
-:::
+  :::
 
 **Wenn die Löschung fehlschlägt**, erhältst du eine Fehler-E-Mail. Dies kann passieren, wenn:
+
 - Ein interner Fehler während des Bereinigungsprozesses aufgetreten ist (Bot-Entfernung, Datenlöschung)
 - Der Server sich in einem unerwarteten Zustand befand (z. B. aktives Abonnement konnte nicht gekündigt werden)
 

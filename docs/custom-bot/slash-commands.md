@@ -1,9 +1,9 @@
 # Permissions & Slash Commands
 
-Discord provides a centralized system for managing Slash Commands.  
+Discord provides a centralized system for managing Slash Commands.
 This system allows server administrators to control permissions for bots and their commands in detail.
 
-Because of the underlying permission logic, it is necessary to define which actions bots and users are allowed to perform.  
+Because of the underlying permission logic, it is necessary to define which actions bots and users are allowed to perform.
 This guide explains how to configure these permissions for your bot.
 
 ## Configuring Custom Bot Permissions
@@ -12,9 +12,9 @@ This guide explains how to configure these permissions for your bot.
 
 To manage permissions for Slash Commands:
 
-1. Open **Server Settings**  
-2. Navigate to **Integrations → Bots & Apps**  
-3. Select the desired bot  
+1. Open **Server Settings**
+2. Navigate to **Integrations → Bots & Apps**
+3. Select the desired bot
 4. Click **Manage**
 
 ![Command Permissions Menu, on how to access the permissions section](@site/docs/assets/custom-bot/slash-commands/en/integrations-1.png)
@@ -31,15 +31,16 @@ Select any Slash Command to open the permissions configuration menu.
 
 ![Command Settings, showing the permissions configuration menu on how to configure channels, roles, and users](@site/docs/assets/custom-bot/slash-commands/en/ausführen.png)
 
-For each command, you can specify:  
-* Which **roles** are allowed to execute it  
-* Which **users** have access  
-* In which **channels** the command can be used
+For each command, you can specify:
+
+- Which **roles** are allowed to execute it
+- Which **users** have access
+- In which **channels** the command can be used
 
 :::warning Important Note
-For most commands, the bot does **not** perform additional permission checks  
-(with some exceptions, e.g. `/moderate`).  
-Any user granted execution rights here can use **all subcommands** of this command without further restrictions.  
+For most commands, the bot does **not** perform additional permission checks
+(with some exceptions, e.g. `/moderate`).
+Any user granted execution rights here can use **all subcommands** of this command without further restrictions.
 Permissions should therefore be assigned carefully.
 :::
 
@@ -50,7 +51,8 @@ Some Slash Commands require specific Discord server permissions by default.
 If a command has required permissions (for example **Moderate Members**), only members with these server permissions can use the command initially.
 
 Discord will display a notice such as:
-* "Members need server permissions to use this command."
+
+- "Members need server permissions to use this command."
 
 These default permissions apply until they are explicitly overridden by assigning roles or users in the command permissions menu.
 
@@ -60,13 +62,13 @@ This ensures that sensitive commands remain restricted unless access is intentio
 
 Discord allows managing permissions for multiple commands at once:
 
-* Synchronized commands inherit identical settings  
-* Individual commands can be excluded from synchronization manually  
-* Commands that cannot be synchronized can still be configured individually
+- Synchronized commands inherit identical settings
+- Individual commands can be excluded from synchronization manually
+- Commands that cannot be synchronized can still be configured individually
 
 ## Using the Custom Bot
 
-Permissions for Slash Commands can be configured directly through the bot menu, without needing to re-upload commands to Discord.  
+Permissions for Slash Commands can be configured directly through the bot menu, without needing to re-upload commands to Discord.
 All available options for assigning permissions can be set within the interface described above.
 
 ## Questions or Support

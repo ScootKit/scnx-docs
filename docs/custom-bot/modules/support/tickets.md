@@ -12,9 +12,9 @@ only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" t
 
 ## Features {#features}
 
-* Users can open a ticket by clicking a button below a customizable message.
-* Add multiple ticket category with independent configuration.
-* Automatically generate encrypted ticket transcripts.
+- Users can open a ticket by clicking a button below a customizable message.
+- Add multiple ticket category with independent configuration.
+- Automatically generate encrypted ticket transcripts.
 
 ## Setup {#setup}
 
@@ -26,12 +26,12 @@ only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" t
 
 ## Usage {#usage}
 
-* Users will be able to open new tickets by clicking on a button below the ticket creation message.
-* Once a ticket has been opened, the bot will create a new channel in the configured category and mentions the
+- Users will be able to open new tickets by clicking on a button below the ticket creation message.
+- Once a ticket has been opened, the bot will create a new channel in the configured category and mentions the
   configured roles.
-* Staff members and the user who created the ticket will be able to close the ticket by clicking on the "Close Ticket"
+- Staff members and the user who created the ticket will be able to close the ticket by clicking on the "Close Ticket"
   button below the first message sent in the ticket by the bot (will also be pinned).
-* Once a ticket has been closed, the bot will generate a ticket transcript containing all message sent. This transcript
+- Once a ticket has been closed, the bot will generate a ticket transcript containing all message sent. This transcript
   will be sent
   in the configured log channel and to the user (if enabled).
 
@@ -47,7 +47,7 @@ and the field values are on a different language,
 consider [switching the language](/docs/scnx/guilds/bots#bot-language) of your bot.
 
 | Field                                | Description                                                                                                                                                                                         |
-|--------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Name                                 | Name of the ticket category. This will be displayed to users and staff members.                                                                                                                     |
 | Ticket create category               | New ticket channels will be created in this category on your Discord when a user opens a new ticket.                                                                                                |
 | Ticket create channel                | The ticket creation message will be sent into this channel. Users will be able to open a ticket in this category by clicking on a button below the message sent into this channel.                  |
@@ -64,40 +64,40 @@ consider [switching the language](/docs/scnx/guilds/bots#bot-language) of your b
 
 If you are experiencing issues with this module please make sure that
 
-* the bot has enough permissions to create, delete and manage channels.
-* your [category configuration](#configuration) is valid and no empty categories are added.
-* your server has less than 500 channels (limit by Discord).
-* The ticket log channel is configured correctly, and the bot has permissions to send messages into it.
-* The content of the ticket create and close buttons are correct.
-* The ticket create channel is empty.
+- the bot has enough permissions to create, delete and manage channels.
+- your [category configuration](#configuration) is valid and no empty categories are added.
+- your server has less than 500 channels (limit by Discord).
+- The ticket log channel is configured correctly, and the bot has permissions to send messages into it.
+- The content of the ticket create and close buttons are correct.
+- The ticket create channel is empty.
 
 ## Stored data {#data-usage}
 
 The following data will be stored about every ticket created by clicking on a button:
 
-* A unique integer identifying the database entry.
-* Whether the ticket has been closed.
-* The ID of the user who created the ticket.
-* The ID of the ticket channel.
-* If the ticket was closed: The URL to the ticket transcript.
-* The number of messages sent in the ticket.
-* Any additional users added to the ticket (currently unsupported).
-* The category of the ticket.
-* Metadata about the entry (date when created and last updated).
+- A unique integer identifying the database entry.
+- Whether the ticket has been closed.
+- The ID of the user who created the ticket.
+- The ID of the ticket channel.
+- If the ticket was closed: The URL to the ticket transcript.
+- The number of messages sent in the ticket.
+- Any additional users added to the ticket (currently unsupported).
+- The category of the ticket.
+- Metadata about the entry (date when created and last updated).
 
 The following data will be stored about every ticket creation message (these are the messages that allow users to open
 tickets):
 
-* A unique integer identifying the database entry.
-* The ID of the message.
-* The ID of the channel the message was sent in.
-* The category of the ticket.
-* Metadata about the entry (date when created and last updated)
+- A unique integer identifying the database entry.
+- The ID of the message.
+- The ID of the channel the message was sent in.
+- The category of the ticket.
+- Metadata about the entry (date when created and last updated)
 
 Ticket Transcripts will be encrypted and stored at [ScootKit Paste](https://paste.scootkit.net)
 running [PrivateBin](https://github.com/PrivateBin/PrivateBin). This means that ScootKit won't be able to decrypt ticket
 transcripts. Ticket transcripts will be decrypted by your browser when accessing the URL. This ensures the privacy of
 your users. Ticket transcripts will be deleted after one year.
 
-There is no way to remove a ticket from the database.  
+There is no way to remove a ticket from the database.
 To remove all data stored about tickets, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
