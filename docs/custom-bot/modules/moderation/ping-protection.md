@@ -18,11 +18,11 @@ Protect specific members and roles from unwanted mentions with configurable mode
 ## Setup {#setup}
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=ping-protection) on your server.
-2. Open the [General Configuration](#configuration) and add the users or roles you want to protect.
-3. Configure any whitelisted users, roles, or channels that should be allowed to ping protected members.
-4. If you want to use AutoMod blocking, enable it in the configuration. The bot will create and maintain a Discord AutoMod rule automatically.
+2. Open the [General Configuration](#configuration-general) and add the users and/or roles you want to protect.
+3. Configure any whitelisted users, roles, and/or channels that should be allowed to ping protected roles/members.
+4. Optionally you can use Discord's native AutoMod feature to block messages before they are sent. This can be enabled by enabling 'Enable AutoMod' in the configuration.
 5. Optionally configure [moderation actions](#configuration-moderation) to automatically punish users who repeatedly ping protected members.
-6. Make sure the bot has `View Channel`, `Send Messages`, and `Embed Links` permissions in channels where protected members might be pinged. If using AutoMod, the bot also needs `Manage Server` permission. For moderation actions, the bot needs `Moderate Members` (for mute) or `Kick Members` (for kick).
+6. Make sure the bot has `View Channel`, `Send Messages`, and `Embed Links` permissions in channels where protected members/roles might be pinged. If using AutoMod, the bot also needs `Manage Server` permission. For moderation actions, the bot needs `Moderate Members` (for mute) and/or `Kick Members` (for kick) - this depends on which actions you enable.
 
 ## Usage {#usage}
 
@@ -34,11 +34,13 @@ Once set up, the module works automatically:
 
 ### Viewing ping history and actions {#viewing-history}
 
-Administrators can use the `/ping-protection user panel` command to view a management panel for any user. This panel shows their ping count, moderation action count, and provides buttons to view detailed history or delete all data for that user.
+* Users can use the `/ping-protection user history` command to view a **user's (or their own) ping history**. Each pinging event is logged (if enabled) with a timestamp, and a link to the message containing the ping.
+* Users can use the `/ping-protection user actions-history` command to view a **user's (or their own) moderation actions history**. Each moderation action is logged, and contains the punishment type, the duration (only if the action was a mute), a timestamp and the reason.
 
 ### Protected and whitelisted lists {#lists}
 
-Use `/ping-protection list protected` to see all protected users and roles, and `/ping-protection list whitelisted` to see all whitelisted users, roles, and channels.
+Use `/ping-protection list protected` to see all **protected users and roles**.
+Use `/ping-protection list whitelisted` to see all **whitelisted users, roles, and channels**.
 
 ## Commands {#commands}
 
@@ -56,7 +58,7 @@ Use `/ping-protection list protected` to see all protected users and roles, and 
 
 ### General Configuration {#configuration-general}
 
-In this configuration file, you set up the protection rules and whitelists. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/configuration).
+In this configuration file, you set up the protection and ping rules, whitelists, automod settings and the warning message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/configuration).
 
 | Field                                 | Description                                                                                                                                           |
 | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
