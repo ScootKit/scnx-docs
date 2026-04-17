@@ -45,7 +45,7 @@ Außerdem gibt es noch die Karten „Ziehe 2" und „Farbwahl und ziehe 4": Dadu
 | Befehl | Beschreibung                                                                                                                              |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `/uno` | Startet ein Uno-Spiel im aktuellen Kanal. Weitere Informationen zur Funktionsweise findest du im [Abschnitt zur Verwendung](#usage) oben. |
-|  |
+|        |
 
 ## Fehlerbehebung {#troubleshooting}
 

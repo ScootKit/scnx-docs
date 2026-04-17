@@ -4,7 +4,7 @@ Bevor du mit SCNX loslegen kannst, musst du ein paar Dinge einrichten. Aber dein
 
 ## 0. Was ist SCNX (nicht) {#step-0}
 
-SCNX ist **für Communitys entwickelt**. Du kannst ****keinen öffentlichen Bot**** mit SCNX erstellen, aber du kannst einen Bot für
+SCNX ist **für Communitys entwickelt**. Du kannst \***\*keinen öffentlichen Bot\*\*** mit SCNX erstellen, aber du kannst einen Bot für
 _deinen_ Server erstellen, den du vollständig anpassen kannst.
 
 ## 1. Bei SCNX anmelden {#step-1}
