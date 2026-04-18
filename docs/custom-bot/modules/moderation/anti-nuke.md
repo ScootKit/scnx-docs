@@ -29,205 +29,33 @@ Anti-nuke is designed to slow down compromised accounts and rogue bots before th
 
 ## Important considerations {#considerations}
 
-Read this section in full before enabling anti-nuke on a production server. Enabling the module constitutes your acknowledgement of every point below. This section describes what the module is, how it works, what it cannot do, and the terms under which it is provided.
-
-### What anti-nuke is {#considerations-what}
-
-Anti-nuke is a best-effort mitigation tool that watches for destructive actions (mass channel/role/emoji deletions, mass bans/kicks, permission escalations, webhook abuse, and similar patterns) and responds according to your configured thresholds. It is **one layer** of a defence-in-depth setup, **not** a guarantee of safety.
-
-It is not a replacement for:
-
-* Sound Discord role and channel permission hygiene.
-* Verified, trusted staff — ideally with enforced 2FA.
-* Regular audit-log reviews.
-* Independent off-platform backups of anything you cannot afford to lose.
-
-If you are treating anti-nuke as your only line of defence, stop here and fix that first.
-
-### Threat model {#considerations-threat-model}
-
-Anti-nuke is designed to slow down and/or stop **authenticated destructive activity performed from inside the server**, such as:
-
-* A compromised staff account performing mass channel or role deletions.
-* A rogue staff member attempting to wipe content before leaving.
-* A malicious or misbehaving bot added to the server with elevated permissions.
-* A self-bot or hijacked session performing bulk bans, kicks, or permission escalations.
-
-It is **not** designed to protect against, and cannot protect against:
-
-* Attackers who already hold SCNX dashboard configuration access (they can disable the module).
-* Compromise of the server owner account (Discord itself disallows bots from acting against the owner).
-* Attacks on the bot's hosting infrastructure, the SCNX platform, or Discord itself.
-* Phishing, social engineering, token theft, or attacks that occur outside Discord.
-* Slow, low-volume attrition attacks that stay below configured thresholds.
-* Damage that has already completed before the bot receives the event.
-* Destructive actions taken on data or platforms outside of this Discord server.
-
-Think of anti-nuke as a trip-wire against **fast, bulk, in-server** destructive activity, not as a general-purpose security product.
+Read this section before enabling anti-nuke on a production server. It describes how the module works, what it cannot do, and the terms under which it is provided.
 
 ### How it works {#considerations-how-it-works}
 
-The bot watches Discord gateway events and audit log entries for destructive actions. Two detection paths run in parallel:
+The bot watches Discord gateway events and audit log entries for destructive actions. When a single user exceeds the configured number of a given action type inside a sliding time window, the bot executes the configured response (alert, strip roles, ban, or strip dangerous permissions) and stores snapshots so the affected resources can be reviewed and, where possible, restored via `/anti-nuke undo`.
 
-1. **Gateway events** fire the moment Discord broadcasts a change (e.g. `CHANNEL_DELETE`). They are fast but do not always carry executor information and do not cover every audit-logged action type.
-2. **Audit-log polling** fetches newly written audit entries periodically. It is authoritative on who performed an action but lags behind real time by seconds to (occasionally) minutes, and can be rate-limited or delayed by Discord.
+### Limitations you must accept {#considerations-limitations}
 
-Events from the two paths are **deduplicated** using a combination of action type, target ID, executor ID, and a short time window, so a single action is only counted once.
+* **The bot must be online and connected.** Detection, responses, and snapshot storage all stop when the bot is offline, disconnected from the gateway, rate-limited by Discord, or crashed. Actions that happen during an outage are neither detected nor recoverable through this module.
+* **Role hierarchy is enforced by Discord.** The bot can only strip roles from or ban users whose highest role is below the bot's own role. Keep the bot positioned above every staff role it needs to act on — otherwise responses will be logged as failed but not enforced.
+* **The server owner is untouchable.** Discord does not allow bots to ban or strip roles from the server owner. Anti-nuke still detects and logs owner actions, but cannot take an automated response against them.
+* **Undo is best-effort.** Some resources can be recreated from snapshots (channels, roles, emojis, threads, guild settings, webhooks, permission changes, mass role removals); others cannot be automatically reversed (kicked members, member prunes, sticker deletions, integration creations, or any message history in deleted channels). Keep independent server backups for anything you cannot afford to lose.
+* **Thresholds are sliding windows, not absolute rate limits.** A patient attacker who stays just under the configured limits will not be detected. The default thresholds are a conservative starting point — tune them to match your server's normal activity and your own risk tolerance.
+* **Detection is not 100% reliable.** Discord can delay audit log entries, drop events during gateway disconnects, or return incomplete data. The module's hybrid detection (gateway + audit log) and deduplication reduce the impact of this, but cannot eliminate it.
+* **Misconfiguration silently removes protection.** Disabled action types, raised thresholds, a `Response Action` set to `alert`, an unset or inaccessible log channel, an overly broad Exempt Users list, or an expired snapshot retention window will all reduce or disable protection without surfacing a visible error. Review the configuration regularly, and re-verify after any staff change or dashboard permission change.
+* **The bot itself needs sufficient Discord permissions.** Without the permissions listed in [Setup](#setup), individual response actions and undo operations will fail. Permission issues are logged but do not block the rest of the module from running.
 
-For each tracked action, the bot:
+### Liability {#considerations-liability}
 
-1. Writes a row to the action-tracking table with the action type, target ID, executor ID, and timestamp.
-2. Captures a snapshot of the affected resource (where applicable — channel configuration, role settings, emoji image bytes, permission overwrite state, etc.) into the snapshot table, tied to a potential future nuke event.
-3. Counts how many rows this executor has accumulated for this action type within the configured sliding time window.
-4. If the count exceeds the configured threshold, it creates a `NukeEvent`, runs the configured response action against the executor, and sends a log embed to the configured log channel.
+Anti-nuke is provided on a best-effort basis as a tool to help mitigate destructive actions — it is not a guarantee of safety or data preservation. SCNX and the module authors accept **no liability** for any damage, data loss, missed detections, false positives, unintended bans or role changes, incomplete undo results, or any other consequence arising from:
 
-All detection state is database-backed, not in-memory, so a bot restart mid-nuke does not reset the counters. Incomplete nuke responses (bot crashed while running the response action) are surfaced on the next startup. See [Crash safety](#crash-safety).
-
-### Detection limits {#considerations-detection}
-
-* **Discord is the source of truth, not the bot.** The module relies on Discord's gateway events and audit log. Some actions do not produce audit log entries, some are reported with missing or delayed executor information, and Discord rate-limits and outages can drop or delay events entirely. Any such event may go undetected or be attributed to the wrong executor.
-* **Thresholds are sliding windows.** A patient attacker who stays just under your configured limits, or uses actions that are not tracked, will not trigger a response. Default thresholds are a conservative starting point — tune them to match your server's legitimate baseline traffic and your own risk tolerance.
-* **Non-tracked actions are invisible.** The module tracks a fixed set of action types (see [Tracked action types](#action-types)). Anything outside that list — including future Discord features, niche API calls, and actions Discord does not expose via audit log — will not register at all.
-* **Executor attribution can be wrong or missing.** Some audit entries arrive with no executor, a bot executor, or an executor that represents a webhook or integration rather than the person who caused the change. The module cannot magically reconstruct the real actor in these cases and may either miss the event or act against the wrong entity. Review log channel output during suspected incidents.
-* **False positives are possible.** Legitimate bulk operations by staff can trip thresholds and cause the bot to strip roles, ban, or alert on users you did not intend. Use **Exempt Users** and `/anti-nuke whitelist add` before any planned bulk work, and keep someone with dashboard access available to reverse a bad response.
-* **Hybrid detection reduces but does not eliminate gaps.** The gateway + audit-log combination with deduplication covers most cases, but gaps are inherent to the Discord API and cannot be fully removed. Plan for some percentage of events to be missed, delayed, or misattributed.
-* **Misconfiguration silently removes protection.** Disabled action types, raised thresholds, `Response Action` set to `alert`, an unset or inaccessible log channel, an overly broad Exempt Users list, an always-valid whitelist entry, or an expired snapshot retention window all reduce or disable protection without surfacing a visible error. Review the configuration regularly and again after every staff change.
-* **Response actions themselves can fail.** The bot can only strip roles or ban users it is able to affect under Discord's permission and hierarchy rules (see [Role hierarchy and scope](#considerations-scope)). A failed response is logged but not retried, and the attacker continues to operate until stopped manually.
-
-### Downtime and availability {#considerations-downtime}
-
-Anti-nuke only works while the bot process is running, connected to Discord, and actively receiving events. During **any** period in which the bot is offline, restarting, updating, disconnected, rate-limited, throttled, queued, reconnecting, or otherwise not actively processing events:
-
-* No detection of any kind will occur.
-* No response actions (alert, strip-roles, ban, strip-dangerous-permissions) will be executed.
-* No snapshots will be written.
-* Actions taken during that period will **not** be retroactively evaluated once the bot returns.
-
-Downtime can be caused by many factors outside any single party's control, including but not limited to:
-
-* Discord API outages, partial outages, or regional incidents.
-* Discord gateway instability, reconnection storms, or elevated latency.
-* Discord-side rate limits applied to the bot or the guild.
-* Network issues, DNS issues, or hosting provider incidents.
-* SCNX platform maintenance, deployments, upgrades, or outages.
-* Module updates, bot restarts, or configuration reloads (including routine ones you or another staff member trigger from the dashboard).
-* Database unavailability, slow queries, or lock contention.
-* Bugs or defects in this module or in any dependency.
-
-No service that depends on a third-party API — and this module depends on Discord — can offer a hard real-time protection guarantee. Plan accordingly:
-
-* Do not rely on anti-nuke as your only safeguard.
-* Keep independent off-platform backups of server data you care about.
-* Consider external monitoring (e.g. a separate status-check tool) to alert you when the bot is offline.
-
-**SCNX makes no uptime guarantee for this module or for the bot as a whole and accepts no liability for damage occurring during any period of reduced availability, regardless of cause or duration.**
-
-### Role hierarchy and scope {#considerations-scope}
-
-* **The server owner is untouchable.** Discord does not allow bots to ban or strip roles from the server owner. Anti-nuke can detect and log owner actions but cannot take an automated response against them. If the owner account is compromised, this module will not protect you — treat owner-account security (strong password, 2FA, session hygiene) as a prerequisite, not a bonus.
-* **Role hierarchy is enforced by Discord.** The bot can only strip roles from or ban users whose highest role is below the bot's own highest role. Keep the bot positioned above every staff role it needs to act on — otherwise responses will be logged as failed but not enforced. Review role position after every major reshuffle.
-* **Integrations and bots have their own role.** When you add another bot or integration to your server, Discord creates a managed role for it. If that role is placed above the anti-nuke bot's role, anti-nuke cannot stop that bot from nuking. Audit managed roles as well as human-assignable ones.
-* **Only users the bot can see.** The bot cannot act on users it no longer has cached or who have already left the server, and cannot reverse actions performed by Discord itself (e.g. Trust & Safety bans, Discord-side deletions).
-* **Webhook actions have no executor.** Messages and reactions sent by webhooks are not attributable to a Discord user. Anti-nuke's webhook-spam tracking acts on the webhook itself (e.g. deletion), not the person who created the webhook, if the two can be told apart at all.
-* **Bot permissions matter.** Without the permissions listed in [Setup](#setup), individual response actions and undo operations will fail. Permission issues are logged but do not block the rest of the module from running. A bot that cannot ban but is configured to respond with `ban` will silently fail that particular response.
-
-### Undo limitations {#considerations-undo}
-
-Undo restores resources the bot snapshotted prior to the event, and **only** those resources. Understand what the snapshots actually capture:
-
-* **Channels:** configuration, permission overwrites, and position at the moment of deletion. Messages inside the channel are **not** captured — Discord does not permit bots to bulk-copy message history in a way that survives deletion.
-* **Roles:** name, colour, permissions, hoist/mentionable flags, and position at the moment of deletion. Role **memberships** (which users had the role) are captured for mass-role-removal events only; for outright role deletion, which users previously held the role cannot be reconstructed with full fidelity.
-* **Emojis:** name and the image bytes the bot was able to fetch before deletion. If Discord already purged the image when the bot attempts to download it, the emoji cannot be restored.
-* **Permission overwrites:** the prior state of overwrites for a channel. Undoing reverts to that prior state; any legitimate changes made between the snapshot and the undo are overwritten.
-* **Mass role removals:** the list of users who held the affected roles at the time of snapshot, so roles can be re-assigned.
-
-Undo **cannot and will not** recover:
-
-* Deleted message content or message history of any kind.
-* Kicks or bans that were already lifted, or users who rejoined and left again.
-* Member prune actions — pruned members must be re-invited manually.
-* Custom stickers, emojis, soundboards, or sticker/emoji metadata not captured by a snapshot (e.g. deleted between audit-log arrival and snapshot download).
-* Integrations, webhooks with their original tokens, application commands registered by other bots, or third-party integrations.
-* Server boosts, boost perks, vanity URLs, partnership status, discovery settings, or any resource Discord does not expose to bots.
-* Anything outside the snapshot retention window you have configured — snapshots older than the configured retention are deleted automatically.
-
-Undo is a partial recovery aid. It is **not** a backup. Treat it as a time-saving tool for recent incidents, and maintain your own independent backups for anything you cannot afford to lose.
-
-### Configuration bypass risk {#considerations-bypass}
-
-Dashboard configuration access for this bot grants the ability to fully bypass anti-nuke. The server owner, all co-owners, and every Trusted Admin with the "Change and Reload Configuration" permission can:
-
-* Lower or remove thresholds, or disable individual action types.
-* Disable the module entirely.
-* Clear snapshots or reset the module database, erasing undo history.
-* Add themselves or anyone else to **Exempt Users** or the whitelist.
-* Change the **Response Action** to a harmless value such as `alert`.
-* Read or delete snapshot and event data.
-* Change the log channel to a private one or to an inaccessible channel so staff cannot see alerts.
-
-The **Exempt Users** list is also the only gate for `/anti-nuke` command access — the command does **not** use Discord permissions. Anti-nuke cannot protect against someone who already has the ability to change its configuration. Mitigations:
-
-* Keep the owner, co-owner, and Trusted Admin rosters as small as practical.
-* Pair the "Change and Reload Configuration" permission with high-trust individuals only.
-* Review these rosters whenever a staff member changes role or leaves.
-* Consider moving the log channel to one only a small group can read, and audit changes to it.
-* Remember that disabling the module is logged in the SCNX audit log even if on-Discord activity is not — review that audit log if you suspect tampering.
-
-### Operational guidance {#considerations-operations}
-
-Recommendations that go beyond the defaults:
-
-* **Tune thresholds to your server's baseline.** A 1 000-member hobby server behaves very differently from a 100 000-member community. Watch the log channel for a week before relying on the defaults, and adjust thresholds that produce false alarms or miss real patterns.
-* **Whitelist before planned bulk work.** Use `/anti-nuke whitelist add` for planned cleanups. Keep the window short and remove the entry afterwards with `/anti-nuke whitelist remove`.
-* **Keep at least two Exempt Users.** A single exempt user is a single point of failure — if their account is compromised or they are unavailable during an incident, nobody can run `/anti-nuke undo`. Two or three trusted users is a reasonable minimum.
-* **Use a dedicated log channel.** The log channel should be writable by the bot and readable by your trust-&-safety staff, with restrictive message-edit/delete permissions for everyone else.
-* **Monitor bot liveness externally.** Anti-nuke cannot alert you that it is offline. Use an external uptime monitor, or rely on other bot signals (status page, scheduled heartbeats), if catching downtime matters to you.
-* **Review after incidents.** After any nuke detection — real or false positive — read the event log, confirm the response was appropriate, and adjust thresholds, whitelists, or exempt lists accordingly.
-* **Drill occasionally.** On a staging server, trigger a controlled action above threshold to confirm your alerts, response actions, and undo all still work. Configuration drift is real.
-
-### Your responsibility {#considerations-responsibility}
-
-* You are solely responsible for your threshold configuration, response action choice, Exempt Users list, log channel, snapshot retention, and the overall suitability of this module for your server.
-* You are solely responsible for your Discord role hierarchy, channel and role permissions, staff vetting, 2FA enforcement, dashboard access control, and off-platform backups.
-* You are solely responsible for testing your configuration and keeping it reviewed as your server grows and your staff changes.
-* You are solely responsible for monitoring the bot's availability and for any independent detection or response systems you choose to run alongside anti-nuke.
-* You are solely responsible for compliance with Discord's Terms of Service, Community Guidelines, and Developer Policy in relation to the response actions you configure — for example, mass-banning real users based on misconfigured thresholds is your action, not ours.
-
-### Pre-enable checklist {#considerations-checklist}
-
-Before flipping anti-nuke on in production, confirm:
-
-* [ ] You have read this entire *Important considerations* section and accept the stated limits and disclaimers.
-* [ ] The bot role is positioned above every staff role you expect it to act on.
-* [ ] The bot has the Discord permissions listed in [Setup](#setup).
-* [ ] A dedicated log channel exists and the bot can send embeds in it.
-* [ ] At least two trusted users are in the **Exempt Users** list so `/anti-nuke undo` can be run during an incident.
-* [ ] The list of SCNX dashboard co-owners and Trusted Admins has been reviewed and trimmed to people you actually trust with server-wide destructive power.
-* [ ] You have independent off-platform backups of anything you cannot afford to lose.
-* [ ] You have planned (and preferably tested) how you would recover from false positives — who can whitelist, who can undo, who can reverse bans.
-* [ ] You understand that during any bot/Discord/SCNX downtime, anti-nuke does nothing, and you are comfortable with that risk.
-
-### No warranty and liability disclaimer {#considerations-liability}
-
-Anti-nuke is provided **as-is** and **as-available**, without warranty of any kind — whether express, implied, or statutory — including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, reliability, availability, non-infringement, or uninterrupted operation. No advice or information obtained from SCNX, this bot, its documentation, or its staff creates any warranty not expressly stated here.
-
-To the maximum extent permitted by applicable law, SCNX, its operators, maintainers, contributors, and affiliates accept **no liability** for any direct, indirect, incidental, special, consequential, exemplary, or punitive damages — including but not limited to loss of data, loss of channels, loss of roles, loss of members, loss of messages, loss of revenue, loss of reputation, loss of time, cost of substitute services, or any other intangible loss — arising out of or in connection with:
-
-* The use of, or inability to use, this module.
-* Missed detections, delayed detections, false positives, false negatives, incorrect executor attribution, or incorrect responses.
-* **Any period of bot, SCNX platform, Discord, or infrastructure downtime, outage, partial outage, degraded service, maintenance window, or unavailability, regardless of cause or duration.**
-* Configuration errors, misconfiguration, or bypass by anyone with configuration or dashboard access, including the server owner, co-owners, and Trusted Admins.
-* Compromise of the server owner account, staff accounts, bot tokens, or any third-party account.
-* Any action or omission of Discord itself, including enforcement actions, feature removals, API changes, outages, and rate limits.
+* Misconfiguration of thresholds, response actions, exempt lists, or permissions.
+* Outages, disconnects, rate limits, or bugs in the bot, the SCNX platform, Discord's API, or any third-party service.
+* Attacks that bypass detection, exploit Discord platform behavior, or are performed by users with legitimate configuration access.
 * Loss of snapshots or undo history due to retention policies, database resets, or the module being disabled.
-* Bugs, defects, regressions, or unexpected behaviour in this module, in any dependency, or in any service the bot relies on.
-* Any response action (alert, strip-roles, ban, strip-dangerous-permissions) taken against a real user, whether correctly or incorrectly, and any downstream consequence of that action.
 
-This applies even if SCNX has been advised of the possibility of such damages and even if a remedy set forth herein is found to have failed of its essential purpose.
-
-Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability for certain damages. In those jurisdictions, SCNX's liability is limited to the minimum extent permitted by applicable law, and the rest of this disclaimer remains in force.
-
-By enabling this module you confirm that you have read, understood, and accepted all of the above in full, and that you are enabling anti-nuke **at your own risk**.
+You are responsible for your server's configuration, for keeping administrator and SCNX dashboard permissions appropriate for the people who hold them, and for maintaining your own independent backups of any data you cannot afford to lose.
 
 ## Setup {#setup}
 
