@@ -18,7 +18,7 @@ Ermögliche es deinen Benutzern, gemeinsam zu zählen.
 
 1. Aktiviere das Modul in [deinem SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=counter&ref=scnx-app-docs).
 2. Öffne die [Konfiguration](#configuration) und richte mindestens einen Zählkanal ein.
-3. Der Bot benötigt die Berechtigungen „Nachrichten verwalten“, „Reaktionen hinzufügen“ und „Kanal verwalten“ in den Zählkanälen.
+3. Der Bot benötigt die Berechtigungen "Nachrichten verwalten", "Reaktionen hinzufügen" und "Kanal verwalten" in den Zählkanälen.
 
 ## Nutzung {#usage}
 
@@ -70,14 +70,14 @@ In dieser Konfigurationsdatei kannst du Ziele festlegen, um Benutzer zu belohnen
 <details>
     <summary>Der Bot reagiert nicht im Zähl-Kanal</summary>
     <ul>
-        <li>Stelle sicher, dass der Kanal in der Konfiguration zur Liste „Kanäle“ hinzugefügt wurde.</li>
-        <li>Stelle sicher, dass der Bot im Kanal über die Berechtigung „Reaktionen hinzufügen“ verfügt.</li>
+        <li>Stelle sicher, dass der Kanal in der Konfiguration zur Liste "Kanäle" hinzugefügt wurde.</li>
+        <li>Stelle sicher, dass der Bot im Kanal über die Berechtigung "Reaktionen hinzufügen" verfügt.</li>
     </ul>
 </details>
 <details>
     <summary>Mathematische Ausdrücke funktionieren nicht</summary>
     <ul>
-        <li>Stelle sicher, dass die Option „Nutzern erlauben, Mathematik in ihren Nachrichten zu verwenden?“ in der Konfiguration aktiviert ist.</li>
+        <li>Stelle sicher, dass die Option "Nutzern erlauben, Mathematik in ihren Nachrichten zu verwenden?" in der Konfiguration aktiviert ist.</li>
     </ul>
 </details>
 <details>
