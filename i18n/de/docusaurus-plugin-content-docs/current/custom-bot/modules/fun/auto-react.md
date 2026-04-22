@@ -17,7 +17,7 @@ Reagiert automatisch mit ausgewählten Emojis in ausgewählten Kanälen oder wen
 
 1. Aktiviere das Modul in deinem [SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=auto-react&ref=scnx-app-docs).
 2. Konfiguriere das Modul wie im [Abschnitt Konfiguration](#configuration) beschrieben, um deine Reaktionen und Antworten einzurichten..
-3. Der Bot benötigt die Berechtigung „Reaktionen hinzufügen“ in jedem Kanal, in dem er reagieren soll.
+3. Der Bot benötigt die Berechtigung "Reaktionen hinzufügen" in jedem Kanal, in dem er reagieren soll.
 
 ## Nutzung {#usage}
 
@@ -59,7 +59,7 @@ In dieser Konfigurationsdatei kannst du automatische Antworten auf Erwähnungen 
 <details>
     <summary>Der Bot reagiert nicht auf Nachrichten</summary>
     <ul>
-        <li>Stelle sicher, dass der Bot die Berechtigung „Reaktionen hinzufügen“ in dem Kanal hat.</li>
+        <li>Stelle sicher, dass der Bot die Berechtigung "Reaktionen hinzufügen" in dem Kanal hat.</li>
         <li>Stelle sicher, dass die Emojis gültig sind. Wenn benutzerdefinierte Emojis verwendet werden, muss der Bot Zugriff darauf haben.</li>
         <li>Vergewissere dich, dass die korrekten Kanal-, Benutzer- oder Rollen-IDs konfiguriert sind.</li>
     </ul>
@@ -67,6 +67,6 @@ In dieser Konfigurationsdatei kannst du automatische Antworten auf Erwähnungen 
 <details>
     <summary>Der Bot reagiert nicht auf Erwähnungen in Antworten</summary>
     <ul>
-        <li>Standardmäßig reagiert der Bot nur auf direkte @Erwähnungen. Deaktiviere die Option „Nur auf @Erwähnungen reagieren?“, um auch auf Erwähnungen in Antworten zu reagieren.</li>
+        <li>Standardmäßig reagiert der Bot nur auf direkte @Erwähnungen. Deaktiviere die Option "Nur auf @Erwähnungen reagieren?", um auch auf Erwähnungen in Antworten zu reagieren.</li>
     </ul>
 </details>
