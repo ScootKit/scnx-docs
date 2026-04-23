@@ -55,7 +55,7 @@ The title/color of the dashboard embed is customized via the [Dashboard title (o
 
 ## Priority roles {#priority-roles}
 
-Users with any of the configured priority roles are placed on a priority tier. Priority users are always pulled before non-priority users, in the order they joined. Priority users see the same DM flow as regular users; their priority status is reflected in the dashboard (tagged with `[priority]`) and in the user's [call history](/docs/support-bot/voice-support/commands#history).
+Users with any of the configured priority roles are placed on a priority tier. Priority users are always pulled before non-priority users, in the order they joined. Priority users see the same DM flow as regular users; their priority status is reflected in the dashboard (tagged with `[priority]`) and in the user's [call history](/docs/support-bot/voice-support/commands).
 
 Priority roles are purely queue-position - priority users can still be placed on the [blocklist](/docs/support-bot/voice-support/commands#blocklist) and are subject to the same state-mode rules as everyone else.
 
@@ -143,7 +143,7 @@ Each thread starts with an info embed showing:
 - The user's prior history (session count, total notes, completed/abandoned counts)
 - A digest of the 3 most recent prior notes
 
-All [notes](/docs/support-bot/voice-support/commands#note), [debriefs](#debrief), and [feedback submissions](#user-feedback) are also posted into the thread. When the call ends, the thread is archived.
+All [notes](/docs/support-bot/voice-support/commands), [debriefs](#debrief), and [feedback submissions](#user-feedback) are also posted into the thread. When the call ends, the thread is archived.
 
 | Field              | Description                                                                         |
 | ------------------ | ----------------------------------------------------------------------------------- |
