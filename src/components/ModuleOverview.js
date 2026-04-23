@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {usePluginData} from '@docusaurus/useGlobalData';
 import ModuleIcon from './ModuleIcon';
+import EarlyAccessBanner from './EarlyAccessBanner';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
@@ -218,7 +219,11 @@ export default function ModuleOverview({moduleName}) {
     if (!moduleData) return <i className="data-warning">Can not display module overview: Module "{moduleName}" not
         found.</i>;
 
-    return <><div className="card margin-bottom--md">
+    const moduleName_ = moduleData.humanReadableName[i18n.currentLocale] || moduleData.humanReadableName.en;
+
+    return <>
+    {moduleData.earlyAccess && <EarlyAccessBanner feature={moduleName_}/>}
+    <div className="card margin-bottom--md">
         <div className="flex card-h padding--md" style={{alignItems: 'center'}}>
             <div style={{
                 fontSize: 40,
@@ -262,10 +267,9 @@ export default function ModuleOverview({moduleName}) {
                         id="modules.ossLink">open-source</Translate></a>
                 }}>{'This module is {ossLink}.'}</Translate>
                 </div>}
-                {moduleData.earlyAccess && <div style={{color: '#60A5FA'}}>
-                    <FontAwesomeIcon width={14} icon={faInfoCircle} style={{marginRight: '0.25rem'}}/> <Translate
-                    id="module.earlyAccess">This module is currently only available to users with
-                    Early-Access.</Translate>
+                {moduleData.earlyAccess && <div className="module-card-info-item" style={{color: '#A78BFA'}}>
+                    <FontAwesomeIcon width={14} icon={faStar} style={{marginRight: '0.25rem'}}/> <Translate
+                    id="module.earlyAccess">Early Access — unlocked with the ScootKit Membership perk.</Translate>
                 </div>}
                 {moduleData.hasDB && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faDatabase} style={{marginRight: '0.25rem'}}/> <Translate
