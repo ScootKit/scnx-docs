@@ -1,130 +1,139 @@
 ---
 sidebar_position: 6
-title: Bilderspeicher
-description: Optimiere deine SCNX-Serververwaltung mit dem Guild Image Storage, einer zentralisierten Bildbibliothek für dein Team. Lade Bilder einfach hoch, organisiere sie oder generiere sie per KI, um sie nahtlos für deine Custom- und Support-Bot-Konfigurationen zu nutzen.
+title: Dateispeicher
+description: Eine gemeinsame Dateibibliothek für deinen Discord-Server - lade Bilder, Audio, Videos und Dokumente hoch, generiere sie mit KI und verwende sie wieder in Custom Bot, Support Bot und Team-Workflows.
 ---
 
-# Server-Bilderspeicher {#guild-image-storage}
+# Server-Dateispeicher {#guild-file-storage}
 
-Server-Bilderspeicher ist die gemeinsame, zentrale Bilderbibliothek deines Servers auf SCNX. Es ermöglicht deinem
-gesamten Team, Bilder einfach hochzuladen, zu organisieren und in all deinen Bot-Konfigurationen wiederzuverwenden.
-Verabschiede dich von dem Aufwand, Dateien in deinen persönlichen Speicher hochzuladen und sie manuell mit deinem Team
-teilen zu müssen!
+Der Server-Dateispeicher ist die gemeinsame, zentrale Asset-Bibliothek deines Servers auf SCNX. Hier liegen Bilder, Audio, Videos, Dokumente und Ticket-Anhänge an einem Ort - ein einziger Platz, an dem dein Team Dateien hochladen, generieren, durchsuchen und über alle SCNX-Funktionen hinweg wiederverwenden kann.
 
-Wenn diese Funktion für deinen Server aktiviert ist, findest du **Bilder** in der Navigationsleiste deines Servers.
+Ursprünglich eine reine Bildbibliothek, unterstützt sie mittlerweile jede Datei, die das Dashboard oder deine Bots benötigen: MP3s für [Voice-Support-Wartemusik](/docs/support-bot/voice-support/configuration#waiting-music), PDFs aus Ticket-Anhängen, Banner für Embeds, KI-generierte Clips und mehr. Du findest **Dateien** in der Navigationsleiste deines Servers.
 
-## Warum Server-Bilderspeicher nutzen? {#why-use-guild-image-storage}
+## Warum nutzen {#why-use-it}
 
-Wann immer du ein Bild für deinen Custom Bot oder Support Bot benötigst – wie zum Beispiel ein Willkommensbanner, ein
-Embed-Thumbnail oder einen automatisierten Anhang –, kannst du es direkt aus deiner gemeinsamen Serverbibliothek
-abrufen.
+Wann immer dein Custom Bot, Support Bot oder das Dashboard eine Datei benötigt - ein Willkommensbanner, ein Embed-Thumbnail, einen Voice-over-Clip, einen archivierten Ticket-Anhang - wird sie hier abgerufen. Eine Bibliothek, eine Quote, eine Team-Ansicht.
 
-- **Team-Zusammenarbeit:** Jeder **vertrauenswürdige Admin** auf deinem Server kann Bilder aus der gemeinsamen
-  Bibliothek ansehen, bearbeiten und löschen, was sicherstellt, dass dein Team das Branding und die Assets des Servers
-  problemlos gemeinsam pflegen kann.
-- **Sofortige Anwendung:** Wähle Bilder direkt über eine integrierte Auswahl aus, während du deine Bots bearbeitest, mit
-  der Möglichkeit, nahtlos zwischen deiner gemeinsamen Serverbibliothek und deinen persönlichen Dateien zu wechseln.
-- **Einmal hochladen, überall nutzen:** Lade ein Bild einmal auf den Server hoch, und jeder in deinem Team kann es in
-  jeder Bot-Konfiguration verwenden.
+- **Team-Zusammenarbeit:** Jeder **vertrauenswürdige Admin** auf deinem Server kann Dateien aus der gemeinsamen Bibliothek ansehen, bearbeiten und löschen, damit euer Team die Assets eures Servers gemeinsam pflegen kann.
+- **Überall nutzbar:** Jeder Datei-Picker in SCNX (Bild-Felder, Audio-Felder usw.) zeigt diese Bibliothek neben deinen persönlichen Dateien an, mit einem Klick zum Wechseln zwischen beiden.
+- **Einmal hochladen, überall verwenden:** Lade eine Datei einmal in die Serverbibliothek hoch oder generiere sie dort, und jeder in deinem Team kann sie in jeder Konfiguration verwenden.
+- **Füllt sich automatisch:** Dein Support Bot kann [Ticket-Anhänge automatisch archivieren](/docs/support-bot/general/modmail-net#attachment-archival), damit sie die kurzlebigen Discord-Links überdauern.
 
 ## Migration vom persönlichen Speicher {#migrating-from-personal-storage}
 
 :::info Käufe für persönlichen Speicher
-Jeder zusätzliche Speicherplatz, den du zuvor für deinen persönlichen Bereich gekauft hast, verbleibt auf deinem
-persönlichen Konto.
-**Persönlicher Speicher kann nicht auf das Server-Bilderspeicher-Kontingent eines Servers übertragen werden.** Du kannst
-ihn wie gewohnt weiterverwenden.
+Jeder zusätzliche Speicherplatz, den du zuvor für deinen persönlichen Bereich gekauft hast, verbleibt auf deinem persönlichen Konto.
+**Persönlicher Speicher kann nicht auf das Serverspeicher-Kontingent übertragen werden.** Du kannst ihn wie gewohnt weiterverwenden.
 Bitte beachte außerdem, dass du keine neuen Speicher-Upgrades mehr für deinen persönlichen Bereich kaufen kannst.
 :::
 
-Wenn du SCNX schon eine Weile nutzt, bist du wahrscheinlich mit dem persönlichen Bilder-Upload-Bereich
-unter [scnx.app/user/file](https://scnx.app/de/user/files) vertraut.
+Wenn du SCNX schon eine Weile nutzt, bist du wahrscheinlich mit dem persönlichen Datei-Upload-Bereich unter [scnx.app/user/files](https://scnx.app/de/user/files) vertraut.
 
-Server-Bilderspeicher ist ein völlig separater, gemeinsamer Bereich. Um deine bestehenden Bilder aus deinem persönlichen
-Bereich in die gemeinsame Serverbibliothek zu verschieben, **musst du sie manuell neu hochladen**.
+Server-Dateispeicher ist ein völlig separater, gemeinsamer Bereich. Um deine bestehenden Dateien aus deinem persönlichen Bereich in die gemeinsame Serverbibliothek zu verschieben, **musst du sie manuell neu hochladen**.
 
-1. Lade die Bilder, die du teilen möchtest, aus deinem [persönlichen Bereich](https://scnx.app/de/user/files) herunter.
-2. Navigiere zur **Bilder**-Seite deines Servers.
+1. Lade die Dateien, die du teilen möchtest, aus deinem [persönlichen Bereich](https://scnx.app/de/user/files) herunter.
+2. Navigiere zur **Dateien**-Seite deines Servers.
 3. Lade die Dateien in die [neue gemeinsame Bibliothek](https://scnx.app/de/glink?page=images) hoch.
 
-## Bilder zu deiner Bibliothek hinzufügen {#adding-images-to-your-library}
+## Dateien zur Bibliothek hinzufügen {#adding-files-to-your-library}
 
-Es gibt zwei Möglichkeiten, Bilder in die Bibliothek deines Servers zu bekommen: Dateien hochladen oder sie mit KI
-generieren.
+Es gibt vier Wege, wie Dateien in die Bibliothek deines Servers gelangen:
 
-### 1. Dateien hochladen {#uploading-files}
+1. **Du lädst sie direkt hoch** über die Dateien-Seite oder jeden Datei-Picker im Dashboard.
+2. **Du generierst sie mit KI** — Bilder aus einem Text-Prompt oder [Voice-Support-Audio](/docs/support-bot/voice-support/ai-audio) (Text-to-Speech + Musik).
+3. **Der Support Bot archiviert automatisch** — [Ticket-Anhänge](/docs/support-bot/general/modmail-net#attachment-archival) werden in der Bibliothek gespeichert, sobald sie eingehen, damit sie die kurzlebigen Discord-Links überdauern.
+4. **Der Custom Bot speichert automatisch** — zum Beispiel **Moderationslog-Beweisbilder** (Bild-Belege, die bei Mod-Aktionen erfasst werden), **Starboard-Nachrichten** (Bilder aus gesternten Nachrichten, die auch nach Bearbeitung oder Löschung der Originale erhalten bleiben) und andere Anhang-bewahrende Module.
 
-:::success Direkte Uploads funktionieren auch!
-Wenn du ein Bild zur Verwendung in einem Konfigurationsfeld auswählst, kannst du auch direkt ein Bild in den Speicher
-deines Servers hochladen:
+Wege 1 und 2 liegen unter deiner direkten Kontrolle; 3 und 4 laufen im Hintergrund, sobald die zugehörigen Module aktiviert sind.
 
-![Screenshot, der die direkte Bild-Upload-Option innerhalb eines Konfigurationsfeldes zeigt](@site/docs/assets/scnx/guilds/files/direct-upload.png)
+### 1. Dateien selbst hochladen {#uploading-files}
+
+:::success Direkter Upload ebenfalls möglich!
+Beim Auswählen einer Datei für ein Konfigurationsfeld kannst du auch direkt aus dem Picker heraus hochladen - kein Umweg über die Bibliothek nötig.
+
+![Screenshot, der die direkte Upload-Option in einem Konfigurationsfeld zeigt](@site/docs/assets/scnx/guilds/files/direct-upload.png)
 :::
 
-![Screenshot, der demonstriert, wie man Dateien auf der Bilder-Seite per Drag & Drop oder durch Auswahl hochlädt](@site/docs/assets/scnx/guilds/files/how-to-upload.png)
+![Screenshot, der zeigt, wie man Dateien per Drag & Drop hochlädt](@site/docs/assets/scnx/guilds/files/how-to-upload.png)
 
-1. Navigiere über die Seitenleiste deines Servers zu **Bilder**.
-2. Ziehe deine Dateien per Drag & Drop direkt in den Upload-Bereich oder klicke auf den Bereich, um die Dateiauswahl
-   deines Geräts zu öffnen.
-3. Du kannst mehrere Dateien auf einmal hochladen. Jede Datei wird einzeln verarbeitet, und ein Pop-up bestätigt, ob der
-   Upload erfolgreich war oder ein Fehler aufgetreten ist.
+1. Öffne **Dateien** in der Seitenleiste deines Servers.
+2. Ziehe Dateien in den Upload-Bereich oder klicke ihn an, um den Datei-Browser deines Geräts zu öffnen.
+3. Mehrere Dateien gleichzeitig funktionieren problemlos. Jede wird einzeln verarbeitet und liefert eine eigene Bestätigungs-Benachrichtigung.
 
-_Hinweis: Wenn du eine identische Datei hochlädst, die bereits in der Bibliothek existiert, wird SCNX automatisch das
-bestehende Bild zurückgeben, um unnötige Duplikate zu vermeiden._
+_Wenn du eine Datei hochlädst, die mit einer bereits vorhandenen identisch ist, gibt SCNX den existierenden Eintrag zurück, statt eine zweite Kopie zu speichern._
 
-#### Dateianforderungen {#file-requirements}
+#### Was hochladbar ist {#file-requirements}
 
-Um eine reibungslose Leistung zu gewährleisten, muss jede einzelne Datei **25 MB oder kleiner** sein. Größere Dateien
-werden automatisch abgelehnt.
+Jede Datei muss **25 MB oder kleiner** sein. Direkt-Uploads unterstützen folgende Formate:
 
-| Format | Erlaubte Erweiterungen |
-| ------ | ---------------------- |
-| JPEG   | `.jpg`, `.jpeg`        |
-| PNG    | `.png`                 |
-| GIF    | `.gif`                 |
+| Kategorie | Formate                           |
+| --------- | --------------------------------- |
+| Bilder    | `.jpg` / `.jpeg`, `.png`, `.gif`  |
+| Audio     | `.mp3`, `.wav`                    |
 
-### 2. Bilder mit KI generieren {#ai-generation}
+Von Bots hochgeladene Dateien (Ticket-Anhänge, Mod-Log-Screenshots usw.) können zusätzliche Formate enthalten - Video (`.mp4`, `.webm`, `.mov`), PDFs, ZIPs und Klartext - die dann zusammen mit allem anderen in deiner Bibliothek erscheinen.
 
-:::info Kein Fan von Bildgenerierung?
-Der Serverbesitzer und Administratoren können diese Funktion in
-den [Servereinstellungen](https://scnx.app/glink?page=settings) ganz einfach deaktivieren. Die Option erscheint dann
-nicht mehr im Dashboard. Module mit Bildgenerierungsfunktion funktionieren weiterhin und müssen, falls gewünscht,
-manuell deaktiviert werden.
+### 2. Dateien mit KI generieren {#ai-generation}
+
+Das SCNX-Dashboard kann zwei Arten von Inhalten direkt aus den relevanten Pickern für dich generieren. Beide werden in [KI-Coins](https://faq.scnx.app/ki-auf-scnx/) abgerechnet und **keines zählt zu deiner Dateispeicher-Quote** — generierte Dateien werden mit Coins bezahlt, nicht mit Bytes.
+
+#### KI-Bilder {#ai-images}
+
+:::info Kein Fan von KI-Bildgenerierung?
+Serverinhaber und Administratoren können diese Funktion in den [Servereinstellungen](https://scnx.app/de/glink?page=settings) deaktivieren. Wenn deaktiviert, verschwindet die **Mit KI generieren**-Box auf der Dateien-Seite. Module, die KI-Bildgenerierung nutzen, funktionieren weiter und müssen separat deaktiviert werden, falls gewünscht.
+
+Dieser Schalter steuert ausschließlich die **Bildgenerierung auf der Dateien-Seite**. Er **blendet den Generate (AI)-Tab in den [Voice-Support-Audio-Pickern](/docs/support-bot/voice-support/ai-audio) nicht aus** — die KI-Audio-Generierung wird unabhängig davon gesteuert.
 :::
 
-Du brauchst ein Bild, hast aber keine Datei parat? Du kannst eines von Grund auf neu erstellen, indem du einen
-Text-Prompt direkt auf der Bilder-Seite verwendest.
+Generiere ein Bild aus einem Text-Prompt direkt auf der Bibliotheksseite.
 
-![Screenshot des Eingabefeldes für die KI-Bildgenerierung](@site/docs/assets/scnx/guilds/files/generate-image.png)
+![Screenshot der KI-Bildgenerierungs-Prompt-Box](@site/docs/assets/scnx/guilds/files/generate-image.png)
 
-1. Suche die Box **Mit KI generieren**.
-2. Gib eine detaillierte Beschreibung dessen ein, was du möchtest (bis zu 1.000 Zeichen).
-3. Klicke auf **Bild generieren**.
-4. Das Bild wird automatisch in deiner Bibliothek erscheinen und zur einfachen Filterung mit `ai` getaggt.
+1. Finde die **Mit KI generieren**-Box auf der Dateien-Seite.
+2. Beschreibe in bis zu 1.000 Zeichen, was du möchtest.
+3. Klicke auf **Bild generieren**. Das Ergebnis erscheint in deiner Bibliothek und ist mit dem Tag `ai` zum Filtern versehen.
 
-**Wichtige Details zur KI-Generierung:**
+| Element             | Wert                                                                                                            |
+| ------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Kosten              | 15 KI-Coins pro Bild. Die Generierung wird blockiert, falls dein Guthaben niedriger ist.                          |
+| Abmessungen         | 1024 × 1024 Pixel.                                                                                              |
+| Inhaltsrichtlinie   | Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Für abgelehnte Prompts **fallen keine Kosten** an. |
 
-- **Kosten:** 15 KI-Guthaben pro Bild. Wenn dein Guthaben unter 15 KI-Guthaben liegt, wird die Generierung blockiert,
-  bis du mehr über das SCNX-Dashboard kaufst.
-- **Abmessungen:** Alle generierten Bilder haben gestochen scharfe 1024 × 1024 Pixel.
-- **Inhaltsrichtlinie:** Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Dir wird für
-  abgelehnte Prompts _kein_ KI-Guthaben berechnet.
+#### KI-Audio (TTS + Musik) {#ai-audio}
 
-## Speicherlimits verstehen {#understanding-storage-limits}
+In den Audio-Pickern jeder [Voice-Support-Playlist](/docs/support-bot/voice-support/configuration#waiting-music) lässt der Tab **Generate (AI)** dich folgendes erzeugen:
 
-Jeder Server hat ein bestimmtes Speicherkontingent basierend auf seinem SCNX-Plan. Du kannst deine Nutzung einfach über
-den **Speicher**-Fortschrittsbalken oben auf der Bilder-Seite verfolgen.
+- **Text-to-Speech-Clips** — wähle eine Sprache und Stimme, tippe das Skript (bis zu 10.000 Zeichen), erhalte ein abspielbares Voice-over.
+- **Musik-Tracks** — beschreibe die Stimmung (z.B. _"warmes Lo-Fi, sanftes Klavier, kein Gesang"_), wähle eine Dauer zwischen 3 Sekunden und 5 Minuten und SCNX generiert einen loop-tauglichen Track.
 
-:::tip KI-Bilder zählen nicht zum Kontingent!
-Da du KI-Guthaben verwendest, um sie zu erstellen, belegen Bilder, die über
-die [KI-Funktion des SCNX-Dashboards](#ai-generation) und jegliche [Bot-KI-Funktionen](/docs/custom-bot/modules/ai)
-generiert wurden, **keinen** Speicherplatz des Kontingents deines Servers.
+Vollständige Details, Preise und Tipps findest du auf der Seite [KI-Audio-Generierung](/docs/support-bot/voice-support/ai-audio). Alles, was dort erzeugt wird, landet automatisch in dieser Bibliothek und ist überall dort verfügbar, wo ein Audio-Picker angezeigt wird.
+
+### 3. Support-Bot-Ticket-Anhänge {#ticket-attachments}
+
+Wenn die Option **Ticket-Anhänge in SCNX archivieren** aktiviert ist, kopiert dein Support Bot jeden Anhang aus einem Modmail- oder Ticket-System-Ticket in diese Bibliothek, sobald die Nachricht eingeht. Das hält die Datei nutzbar, nachdem der kurzlebige Discord-Anhangs-Link abgelaufen ist — entscheidend für [modmail.net-Transkripte](/docs/support-bot/general/modmail-net), die Tage später angesehen werden.
+
+Archivierte Anhänge verhalten sich wie jede andere Datei in der Bibliothek: du kannst sie durchsuchen, suchen, taggen, umbenennen und löschen. Vollständige Details (inklusive Deaktivierung der Archivierung und wie Löschung mit alten Transkripten zusammenwirkt) findest du auf der Seite [modmail.net-Funktionen](/docs/support-bot/general/modmail-net#attachment-archival).
+
+### 4. Automatische Custom-Bot-Speicherungen {#custom-bot-uploads}
+
+Mehrere Custom-Bot-Module bewahren Discord-Anhänge in der Bibliothek, damit sie sichtbar bleiben, auch wenn die ursprüngliche Nachricht sich ändert oder gelöscht wird. Die häufigsten sind:
+
+- **Moderationslog-Beweisbilder** — wenn bei einer Mod-Aktion ein Screenshot oder die Anhänge der betreffenden Nachricht erfasst werden, werden diese Bilder hier gespeichert und dauerhaft vom Log-Eintrag referenziert.
+- **Starboard** — wenn eine Nachricht genug Sterne sammelt, um auf dem Starboard zu landen, werden alle darin enthaltenen Bilder in die Bibliothek kopiert, damit der Starboard-Eintrag auch nach Bearbeitung oder Löschung der Originalnachricht korrekt gerendert wird.
+- **Weitere anhang-bewahrende Module** — jede Custom-Bot-Funktion, die einen Anhang über die ursprüngliche Discord-Nachricht hinaus erhalten muss, nutzt diese Bibliothek.
+
+Diese Speicherungen zählen zu deiner Dateispeicher-Quote (es sind echte Dateien, die du hostest). Wenn du bevorzugst, dass der Custom Bot überhaupt nichts in deiner Bibliothek archiviert, deaktiviere den zentralen Datei-Speicher-Schalter in der [Custom-Bot-Kernkonfiguration](/docs/custom-bot/intro) — das deaktiviert automatische Speicherungen in allen Modulen auf einmal. Keine Jagd nach einzelnen Modul-Schaltern.
+
+## Speicherlimits {#understanding-storage-limits}
+
+Jeder Server hat ein Speicher-Kontingent basierend auf seinem SCNX-Plan. Verfolge deine Nutzung über den **Speicher**-Fortschrittsbalken oben auf der Bibliotheksseite.
+
+:::tip KI-Inhalte zählen nicht zu deiner Quote
+Da du sie mit KI-Coins bezahlst, zählen alle Inhalte, die du über die KI-Tools von SCNX generierst - [Dashboard-KI-Bilder](#ai-images), [KI-Audio (TTS und Musik)](#ai-audio) und alle [Custom-Bot-KI-Funktionen](/docs/custom-bot/modules/ai) - **nicht** zu deiner Dateispeicher-Quote. Generiere so viele, wie dein Coin-Guthaben zulässt, ohne dir Sorgen um den Speicher zu machen.
 :::
 
 :::info Was ist mit Bot-Uploads?
-Bilder, die dein Custom Bot oder Support Bot automatisch speichert (zum Beispiel Ticket-Anhänge oder
-Mod-Log-Screenshot-Beweise), zählen **durchaus** zu diesem Speicherlimit. Du kannst diese Funktionen normalerweise in
-den betroffenen Modulen deaktivieren, wenn du den Server-Bilderspeicher nicht nutzen möchtest.
+Dateien, die dein Custom Bot oder Support Bot automatisch speichert — [Ticket-Anhänge des Support Bots](/docs/support-bot/general/modmail-net#attachment-archival), [Mod-Log-Beweisbilder und Starboard-Bilder des Custom Bots](#custom-bot-uploads) und Ähnliches — **zählen** zu diesem Kontingent. Jede Funktion, die die Bibliothek nutzt, bietet eine eigene Option zum Deaktivieren an; zum Beispiel der Schalter [Ticket-Anhänge in SCNX archivieren](/docs/support-bot/general/modmail-net#attachment-archival) des Support Bots.
 :::
 
 | SCNX-Plan    | Gesamtspeicher |
@@ -134,93 +143,72 @@ den betroffenen Modulen deaktivieren, wenn du den Server-Bilderspeicher nicht nu
 | Professional | ~1 GB          |
 | Enterprise   | ~2 GB          |
 
-Wenn dein Server sein Speicherlimit erreicht, werden neue Uploads blockiert, bis du entweder ältere Bilder löschst oder
-den SCNX-Plan deines Servers upgradest. Wenn ein Bot versucht, ein Bild hochzuladen, wird dies ebenfalls fehlschlagen,
-was dazu führt, dass kein Bild hochgeladen wird.
+Wenn dein Server das Limit erreicht, werden neue Uploads blockiert, bis du alte Dateien löschst oder deinen SCNX-Plan aufrüstest. Bots, die bei erschöpftem Kontingent hochzuladen versuchen, überspringen den Upload stillschweigend — die Funktion arbeitet weiter, kann nur nichts Neues speichern.
 
-![Screenshot der Server-Bilderspeicher-Galerie, der hochgeladene Bilder und den Speicher-Fortschrittsbalken zeigt](@site/docs/assets/scnx/guilds/files/guild-images.png)
+![Screenshot der Dateibibliotheks-Galerie mit Dateien und Speicherfortschrittsbalken](@site/docs/assets/scnx/guilds/files/guild-images.png)
 
-## Deine Assets organisieren und finden {#organizing-and-finding-your-assets}
+## Dateien organisieren und finden {#organizing-and-finding-your-assets}
 
-Wenn deine Bibliothek wächst, ist es entscheidend, das richtige Bild schnell zu finden. SCNX bietet dir verschiedene
-Tools, um Ordnung zu halten.
+Mit wachsender Bibliothek wird schnelles Wiederfinden wichtig. SCNX bietet mehrere Werkzeuge, um Ordnung zu halten.
 
-### Organisationstools {#organization-tools}
+### Organisationswerkzeuge {#organization-tools}
 
-- **Tags:** Gruppiere deine Bilder nach Kampagne, Saison oder Bot-Modul. Du kannst bis zu **10 Tags** pro Bild
-  hinzufügen (jeweils max. 30 Zeichen). Verwende die Schaltfläche **Tags bearbeiten** auf einer Bildkarte, um sie zu
-  verwalten. Ein Klick auf einen Tag filtert sofort deine gesamte Bibliothek.
-- **Anzeigenamen:** Gib deinen Bildern erkennbare Namen! Standardmäßig verwendet das System den ursprünglichen
-  Dateinamen, aber du kannst ihn mithilfe der Schaltfläche **Umbenennen** in etwas Eindeutiges ändern (bis zu 100
-  Zeichen).
-- **Markieren (Favoriten):** Klicke auf das **★-Symbol** bei einem beliebigen Bild, um es zu markieren. Markierte Bilder
-  werden für den sofortigen Zugriff oben in deiner Bibliothek angeheftet.
+- **Tags:** Gruppiere Dateien nach Kampagne, Bot-Modul, Ticket-Thema oder beliebigen anderen Kriterien. Bis zu **10 Tags** pro Datei (max. 30 Zeichen je Tag). Nutze **Tags bearbeiten** auf einer Dateikarte zur Verwaltung; ein Klick auf ein Tag filtert die gesamte Bibliothek danach.
+- **Anzeigenamen:** Gib Dateien erkennbare Namen. Standardmäßig wird der ursprüngliche Dateiname verwendet, aber du kannst mit dem **Umbenennen**-Button auf beliebige Namen bis zu 100 Zeichen umbenennen. Praktisch für KI-generiertes Audio, das standardmäßig einen generischen Namen erhält.
+- **Favorisieren:** Klicke auf das **★** an einer Datei, um sie oben in der Bibliothek anzuheften.
 
 ### Suchen und Filtern {#searching-and-filtering}
 
-Verwende die Filterleiste über dem Bildraster, um deine Ansicht einzugrenzen. Du kannst diese Filter kombinieren, um
-genau das zu finden, was du brauchst, und auf **Filter löschen** klicken, um deine Ansicht zurückzusetzen.
+Nutze die Filterleiste über dem Raster, um deine Ansicht einzuschränken. Filter lassen sich kombinieren — klicke **Filter löschen**, um sie zurückzusetzen.
 
-| Tool                 | Was es tut                                                                                                        |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Suchleiste**       | Sucht nach passendem Text im Anzeigenamen oder im ursprünglichen Dateinamen.                                      |
-| **Nach Tag filtern** | Zeigt nur die Bilder an, auf die ein bestimmter Tag angewendet wurde.                                             |
-| **Nur markierte**    | Verbirgt alles außer deinen favorisierten (markierten) Bildern.                                                   |
-| **Typ-Tabs**         | Filtert Bilder danach, wie sie erstellt wurden: _Alle, Hochgeladen, KI-generiert, Custom Bot_ oder _Support Bot_. |
+| Werkzeug           | Was es tut                                                                                                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Suchleiste**     | Durchsucht Anzeigename und ursprünglichen Dateinamen nach passenden Texten.                                                                              |
+| **Tag-Filter**     | Zeigt nur Dateien mit einem bestimmten Tag.                                                                                                              |
+| **Nur Favoriten**  | Zeigt nur deine favorisierten (gesternten) Dateien.                                                                                                      |
+| **Typ-Tabs**       | Filtert nach Herkunft: _Alle, Hochgeladen, KI-generiert, Custom Bot_ oder _Support Bot_. Nützlich zum Finden bot-archivierter Ticket-Anhänge oder KI-Audio. |
 
-_Hinweis: Um die Ladezeiten kurz zu halten, zeigt die Bibliothek 25 Bilder pro Seite an. Verwende die Schaltflächen
-Zurück / Weiter unten, um zu navigieren._
+_Für schnelle Ladezeiten zeigt die Bibliothek 25 Dateien pro Seite. Nutze die Vor-/Zurück-Buttons unten zum Navigieren._
 
-## Bilder verwalten und löschen {#managing-and-deleting-images}
+## Dateien verwalten und löschen {#managing-and-deleting-images}
 
-Jede Bildkarte verfügt über ein Schnellaktionsmenü, das dir bei der Verwaltung deiner Dateien hilft.
+Jede Dateikarte hat ein Schnell-Aktions-Menü:
 
-| Aktion                              | Was sie tut                                                            |
-| ----------------------------------- | ---------------------------------------------------------------------- |
-| **URL kopieren**                    | Kopiert den direkten CDN-Link in deine Zwischenablage.                 |
-| **Vorschau**                        | Öffnet eine Vorschau des Bildes in Originalgröße.                      |
-| **Herunterladen**                   | Lädt die originale Bilddatei direkt auf dein aktuelles Gerät herunter. |
-| **Umbenennen**                      | Ändert den Anzeigenamen des Bildes.                                    |
-| **Tags bearbeiten**                 | Ermöglicht dir das Hinzufügen oder Entfernen von Organisations-Tags.   |
-| **Markieren / Markierung aufheben** | Heftet das Bild oben in der Bibliothek an oder löst es.                |
-| **Löschen**                         | Entfernt das Bild dauerhaft.                                           |
+| Aktion                | Was es tut                                                  |
+| --------------------- | ----------------------------------------------------------- |
+| **URL kopieren**      | Kopiert die Direkt-URL der Datei in die Zwischenablage.     |
+| **Vorschau**          | Öffnet eine Vorschau (Bilder) oder spielt die Datei ab (Audio/Video). |
+| **Herunterladen**     | Lädt die Originaldatei auf dein Gerät.                       |
+| **Umbenennen**        | Ändert den Anzeigenamen.                                     |
+| **Tags bearbeiten**   | Fügt Tags hinzu oder entfernt sie.                           |
+| **Favorisieren / Entfernen** | Heftet die Datei an oder löst die Pinnung.               |
+| **Löschen**           | Entfernt die Datei dauerhaft.                                |
 
-### Bilder löschen {#deleting-images}
+### Dateien löschen {#deleting-images}
 
-:::danger Vorsicht! Alles löschen ist irreversibel
-Die Schaltfläche **Alle Bilder löschen** in der linken Seitenleiste wird **jedes einzelne Bild** in der Bibliothek
-deines Servers sofort und dauerhaft löschen.
-
-Dies schließt Bilder ein, die derzeit von deinen Bots verwendet werden! Tue dies nur, wenn du absolut sicher bist, dass
-du keine aktiven Bot-Setups zerstörst.
+:::danger Vorsicht — „Alle löschen" ist irreversibel
+Der Button **Alle Dateien löschen** in der linken Seitenleiste löscht sofort und unwiderruflich **jede Datei** in der Bibliothek deines Servers - einschließlich Dateien, die aktuell von deinen Bots verwendet, in Ticket-Transkripten referenziert oder in Konfigurationen eingebettet sind. Tu das nur, wenn du wirklich sicher bist, dass nichts Aktives darauf angewiesen ist.
 :::
 
-:::info Cache-Leerung
-Während ein Bild sofort aus deiner Bibliotheksansicht entfernt wird, kann es bis zu **24 Stunden** dauern, bis es
-vollständig aus allen Systemen und Caches gelöscht ist. Während dieser Zeit lädt das Bild möglicherweise noch dort, wo
-es zuvor verlinkt war. Inhalte, die auf Discord gesendet wurden, könnten länger laden, es sei denn, du löschst
-Nachrichten mit dem Bild manuell.
+:::info Cache-Löschung
+Eine Datei wird im selben Moment aus deiner Bibliothek entfernt, in dem du sie löschst, aber einige CDN- und Browser-Caches können eine zuvor geladene Kopie bis zu einigen Tagen weiter ausliefern, bevor sie aufholen. Das ist normales Web-Verhalten - nicht etwas, das SCNX (oder unser Support-Team) erzwingen kann. Bereits auf Discord gesendete Nachrichten können die Datei länger laden, bis diese Nachrichten manuell gelöscht werden.
 :::
 
-Du kannst Speicherplatz freigeben, indem du Bilder löschst, die du nicht mehr benötigst.
+Du gibst Speicherplatz frei, indem du nicht mehr benötigte Dateien löschst.
 
-- **Einzelnes Löschen:** Klicke bei einer beliebigen Bildkarte auf **Löschen**.
-- **Massenlöschen:** Klicke auf das Kontrollkästchen auf mehreren Bildkarten (ein blauer Ring erscheint). Oben wird eine
-  Leiste eingeblendet, die die Anzahl deiner Auswahl anzeigt. Klicke auf **Ausgewählte löschen**. _(Maximal 50 Bilder
-  auf einmal)._
+- **Einzellöschung:** Klicke **Löschen** auf einer Dateikarte.
+- **Massenlöschung:** Aktiviere die Checkbox auf mehreren Karten (ein blauer Ring erscheint), dann klicke **Ausgewählte löschen** in der oberen Leiste. Max. 50 Dateien pro Aktion.
 
-## Wie du deine Bilder in Bot-Konfigurationen verwendest {#how-to-use-your-images-in-bot-configurations}
+## Dateien in Bot-Konfigurationen verwenden {#how-to-use-your-images-in-bot-configurations}
 
-Wann immer du ein Bildfeld (wie ein Thumbnail oder Banner) in deiner Custom Bot- oder Support Bot-Konfiguration
-bearbeitest, gibt dir die Bildauswahl nun Zugriff auf sowohl deine persönlichen als auch deine Serverdateien.
+Jeder Datei-Picker in SCNX - für Bilder, Audio, Anhänge und mehr - gibt dir Zugriff auf die Bibliothek deines Servers und deine persönlichen Dateien an einem Ort.
 
-Innerhalb der Auswahl kannst du:
+Innerhalb eines Pickers kannst du:
 
-1. **Tabs wechseln:** Wechsle einfach zwischen deinen **Serverbildern** (geteilt) und deinen **persönlichen Bildern**.
-2. **Durchsuchen und Filtern:** Durchsuche die gemeinsame Serverbibliothek und filtere nach Tag.
-3. **Sofort auswählen:** Klicke auf ein Bild, und seine URL wird automatisch in das Konfigurationsfeld eingefügt.
-4. **Direkt hochladen:** Du musst die Seite nicht verlassen! Klicke auf den Upload-Button oder ziehe eine neue Datei per
-   Drag & Drop direkt in die Auswahl. Das Bild wird direkt in den Tab hochgeladen, den du gerade geöffnet hast (Server
-   oder Persönlich), und sofort ausgewählt.
+1. **Tabs wechseln:** Zwischen **Server-Dateien** (geteilt) und **Persönlichen Dateien** umschalten.
+2. **Durchsuchen und Filtern:** Die gemeinsame Bibliothek durchsuchen und nach Tag filtern.
+3. **Sofort auswählen:** Klicke eine Datei an und ihre URL wird automatisch ins Konfigurationsfeld übernommen.
+4. **Direkt hochladen:** Klicke den Upload-Button oder ziehe eine Datei in den Picker. Die Datei wird in den gerade aktiven Tab (Server oder Persönlich) hochgeladen und sofort ausgewählt.
+5. **Mit KI generieren (wo relevant):** Audio-Picker enthalten einen **Generate (AI)**-Tab für TTS und Musik, und die Dateien-Seite bietet Bildgenerierung - siehe den [KI-Abschnitt](#ai-generation).
 
-![Screenshot des modalen Bildauswahlfensters, das die Tabs Serverbilder und Persönliche Bilder zeigt](@site/docs/assets/scnx/guilds/files/image-upload.png)
+![Screenshot des Picker-Modals mit den Tabs Server-Dateien und Persönliche Dateien](@site/docs/assets/scnx/guilds/files/image-upload.png)

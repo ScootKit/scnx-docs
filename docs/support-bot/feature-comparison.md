@@ -8,6 +8,10 @@ description: Compare the Modmail and Ticket System features of the SCNX Discord 
 
 Use this comparison to decide which system is right for your server - or use both at the same time. Both systems can be enabled simultaneously and share the same bot, blocklist, forms, opening hours, and analytics.
 
+:::info Voice Support
+A third system, [Voice Support](/docs/support-bot/voice-support/intro), is available as an early-access preview for holders of the [ScootKit Membership](https://membership.scootkit.com) Early Access perk. It's a live-voice queue (users join a voice channel, staff pull them into private support channels one at a time) rather than a text-based ticket flow, so it sits outside this comparison table. See the [Voice Support introduction](/docs/support-bot/voice-support/intro) for details.
+:::
+
 ## Ticket creation
 
 |                                                | Modmail | Ticket System |
