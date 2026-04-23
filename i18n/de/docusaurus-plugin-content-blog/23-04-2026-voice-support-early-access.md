@@ -10,7 +10,7 @@ tags:
   - Voice Support
   - Early Access
   - SCNX
-image: ./assets/23-04-2026-voice-support-early-access/de.jpg
+image: ../../../blog/assets/23-04-2026-voice-support-early-access/de.jpg
 ---
 
 Wir haben dem Support-Bot ein drittes System hinzugefügt: **Voice Support**, eine Live-Voice-Warteschlange. Nutzer
