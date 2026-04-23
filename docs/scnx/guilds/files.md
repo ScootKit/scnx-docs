@@ -43,16 +43,16 @@ shared server library, **you will need to manually re-upload them**.
 There are four ways files end up in your server's library:
 
 1. **You upload them directly** via the Files page or any file picker in the dashboard.
-2. **You generate them with AI** — images from a text prompt, or [voice-support audio](/docs/support-bot/voice-support/ai-audio) (text-to-speech + music).
-3. **The Support Bot archives them automatically** — [ticket attachments](/docs/support-bot/general/modmail-net#attachment-archival) are saved into the library as they come in, so they survive after Discord's short-lived attachment links expire.
-4. **The Custom Bot saves them automatically** — for example, **mod-log proof screenshots** (image evidence captured when a moderation action is taken), **starboard messages** (images from starred messages preserved after the original is edited or deleted), and other attachment-preserving modules.
+2. **You generate them with AI** - images from a text prompt, or [voice-support audio](/docs/support-bot/voice-support/ai-audio) (text-to-speech + music).
+3. **The Support Bot archives them automatically** - [ticket attachments](/docs/support-bot/general/modmail-net#attachment-archival) are saved into the library as they come in, so they survive after Discord's short-lived attachment links expire.
+4. **The Custom Bot saves them automatically** - for example, **mod-log proof screenshots** (image evidence captured when a moderation action is taken), **starboard messages** (images from starred messages preserved after the original is edited or deleted), and other attachment-preserving modules.
 
 Paths 1 and 2 are under your direct control; 3 and 4 run in the background once the related modules are enabled.
 
 ### 1. Uploading files yourself {#uploading-files}
 
 :::success Direct uploads also work!
-When selecting a file for a configuration field, you can also upload directly from the picker — no need to visit the library first.
+When selecting a file for a configuration field, you can also upload directly from the picker - no need to visit the library first.
 
 ![Screenshot showing the direct upload option within a configuration field](@site/docs/assets/scnx/guilds/files/direct-upload.png)
 :::
@@ -69,23 +69,23 @@ _If you upload a file that's identical to one already in the library, SCNX retur
 
 Every file must be **25 MB or smaller**. Direct uploads support the following types:
 
-| Category | Formats                             |
-| -------- | ----------------------------------- |
-| Images   | `.jpg` / `.jpeg`, `.png`, `.gif`    |
-| Audio    | `.mp3`, `.wav`                      |
+| Category | Formats                          |
+| -------- | -------------------------------- |
+| Images   | `.jpg` / `.jpeg`, `.png`, `.gif` |
+| Audio    | `.mp3`, `.wav`                   |
 
-Bot-uploaded files (ticket attachments, mod-log screenshots, etc.) can include additional formats — video (`.mp4`, `.webm`, `.mov`), PDFs, ZIPs, and plain text — which then show up in your library alongside everything else.
+Bot-uploaded files (ticket attachments, mod-log screenshots, etc.) can include additional formats - video (`.mp4`, `.webm`, `.mov`), PDFs, ZIPs, and plain text - which then show up in your library alongside everything else.
 
 ### 2. Generating files with AI {#ai-generation}
 
-SCNX's dashboard can generate two kinds of content for you, right from the relevant pickers. Both are charged in [AI Coins](https://faq.scnx.app/ki-auf-scnx/) and, importantly, **neither counts against your file-storage quota** — generated files are paid for in coins, not bytes.
+SCNX's dashboard can generate two kinds of content for you, right from the relevant pickers. Both are charged in [AI Coins](https://faq.scnx.app/ki-auf-scnx/) and, importantly, **neither counts against your file-storage quota** - generated files are paid for in coins, not bytes.
 
 #### AI images {#ai-images}
 
 :::info Not a fan of AI image generation?
 Server owners and administrators can disable this feature in [server settings](https://scnx.app/glink?page=settings). When disabled, the dashboard's **Generate with AI** box on the Files page disappears. Modules that use AI image generation keep working and need to be disabled separately if you want them off.
 
-This toggle only controls **image generation on the Files page**. It does **not** hide the **Generate (AI)** tab inside [voice-support audio pickers](/docs/support-bot/voice-support/ai-audio) — AI audio generation is controlled independently.
+This toggle only controls **image generation on the Files page**. It does **not** hide the **Generate (AI)** tab inside [voice-support audio pickers](/docs/support-bot/voice-support/ai-audio) - AI audio generation is controlled independently.
 :::
 
 Generate an image from a text prompt, straight from the library page.
@@ -96,24 +96,24 @@ Generate an image from a text prompt, straight from the library page.
 2. Describe what you want in up to 1,000 characters.
 3. Click **Generate Image**. The result appears in your library, tagged `ai` for easy filtering.
 
-| Item            | Value                                                                                                        |
-| --------------- | ------------------------------------------------------------------------------------------------------------ |
-| Cost            | 15 AI Coins per image. Generation is blocked if your balance is lower.                                        |
-| Dimensions      | 1024 × 1024 pixels.                                                                                           |
-| Content policy  | Prompts violating our safety guidelines are rejected. You're **not** charged AI Coins for rejected prompts.   |
+| Item           | Value                                                                                                       |
+| -------------- | ----------------------------------------------------------------------------------------------------------- |
+| Cost           | 15 AI Coins per image. Generation is blocked if your balance is lower.                                      |
+| Dimensions     | 1024 × 1024 pixels.                                                                                         |
+| Content policy | Prompts violating our safety guidelines are rejected. You're **not** charged AI Coins for rejected prompts. |
 
 #### AI audio (TTS + music) {#ai-audio}
 
 Inside the audio picker of any [voice-support playlist](/docs/support-bot/voice-support/configuration#waiting-music), a **Generate (AI)** tab lets you produce:
 
-- **Text-to-speech clips** — pick a language and voice, type the script (up to 10,000 chars), get a ready-to-play voice-over.
-- **Music tracks** — describe the vibe (e.g. _"warm lo-fi, mellow piano, no vocals"_), pick a duration between 3 seconds and 5 minutes, and SCNX generates a loop-ready track.
+- **Text-to-speech clips** - pick a language and voice, type the script (up to 10,000 chars), get a ready-to-play voice-over.
+- **Music tracks** - describe the vibe (e.g. _"warm lo-fi, mellow piano, no vocals"_), pick a duration between 3 seconds and 5 minutes, and SCNX generates a loop-ready track.
 
 Full details, pricing, and tips are on the [AI Audio Generation](/docs/support-bot/voice-support/ai-audio) page. Everything produced there lands in this library automatically and is available anywhere an audio picker is shown.
 
 ### 3. Support Bot ticket attachments {#ticket-attachments}
 
-When **Archive ticket attachments to SCNX** is enabled, your Support Bot copies every attachment posted in a modmail or ticket-system ticket into this library as the message comes in. That keeps the file usable after Discord's short-lived attachment link expires — critical for [modmail.net transcripts](/docs/support-bot/general/modmail-net) viewed days later.
+When **Archive ticket attachments to SCNX** is enabled, your Support Bot copies every attachment posted in a modmail or ticket-system ticket into this library as the message comes in. That keeps the file usable after Discord's short-lived attachment link expires - critical for [modmail.net transcripts](/docs/support-bot/general/modmail-net) viewed days later.
 
 Archived attachments behave like any other file in the library: you can browse, search, tag, rename, and delete them. Full details (including how to disable archival and how deletion interacts with old transcripts) are on the [modmail.net Features](/docs/support-bot/general/modmail-net#attachment-archival) page.
 
@@ -121,11 +121,11 @@ Archived attachments behave like any other file in the library: you can browse, 
 
 Several Custom Bot modules preserve Discord attachments into the library so they remain visible after the source message changes or is deleted. The most common are:
 
-- **Moderation log proof images** — when a mod action captures a screenshot or the offending message's attachments, those images are stored here and referenced from the log entry indefinitely.
-- **Starboard** — when a message gets enough stars to land on the starboard, any images it carries are copied into the library so the starboard entry keeps rendering correctly even if the original message is edited or deleted.
-- **Other attachment-preserving modules** — any Custom Bot feature that needs an attachment to outlive the original Discord message uses this library.
+- **Moderation log proof images** - when a mod action captures a screenshot or the offending message's attachments, those images are stored here and referenced from the log entry indefinitely.
+- **Starboard** - when a message gets enough stars to land on the starboard, any images it carries are copied into the library so the starboard entry keeps rendering correctly even if the original message is edited or deleted.
+- **Other attachment-preserving modules** - any Custom Bot feature that needs an attachment to outlive the original Discord message uses this library.
 
-These saves count against your file-storage quota (they're real files you're hosting). If you'd rather the Custom Bot not archive to your library at all, turn the single file-saving toggle off in the [Custom Bot core configuration](/docs/custom-bot/intro) — it disables automatic saves across every module in one go. No need to hunt per-module toggles.
+These saves count against your file-storage quota (they're real files you're hosting). If you'd rather the Custom Bot not archive to your library at all, turn the single file-saving toggle off in the [Custom Bot core configuration](/docs/custom-bot/intro) - it disables automatic saves across every module in one go. No need to hunt per-module toggles.
 
 ## Storage limits {#understanding-storage-limits}
 
@@ -136,7 +136,7 @@ Because you pay for them with AI Coins, anything you generate through SCNX's AI 
 :::
 
 :::info What about bot uploads?
-Files your Custom Bot or Support Bot saves automatically — [Support Bot ticket attachments](/docs/support-bot/general/modmail-net#attachment-archival), [Custom Bot mod-log proof images, starboard images](#custom-bot-uploads), and similar — **do** count against this quota. Each feature that uses the library exposes its own toggle if you'd rather not archive; for example, the Support Bot's [Archive ticket attachments to SCNX](/docs/support-bot/general/modmail-net#attachment-archival) switch.
+Files your Custom Bot or Support Bot saves automatically - [Support Bot ticket attachments](/docs/support-bot/general/modmail-net#attachment-archival), [Custom Bot mod-log proof images, starboard images](#custom-bot-uploads), and similar - **do** count against this quota. Each feature that uses the library exposes its own toggle if you'd rather not archive; for example, the Support Bot's [Archive ticket attachments to SCNX](/docs/support-bot/general/modmail-net#attachment-archival) switch.
 :::
 
 | SCNX Plan    | Total Storage |
@@ -164,11 +164,11 @@ As your library grows, finding the right file quickly matters. SCNX gives you se
 
 Use the filter bar above the grid to narrow your view. Filters combine - hit **Clear filters** to reset.
 
-| Tool              | What it does                                                                                                                                                  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Search bar**    | Matches text in the display name or the original filename.                                                                                                    |
-| **Filter by tag** | Shows only files with a specific tag applied.                                                                                                                 |
-| **Starred only**  | Shows only your favorited (starred) files.                                                                                                                    |
+| Tool              | What it does                                                                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Search bar**    | Matches text in the display name or the original filename.                                                                                                         |
+| **Filter by tag** | Shows only files with a specific tag applied.                                                                                                                      |
+| **Starred only**  | Shows only your favorited (starred) files.                                                                                                                         |
 | **Type tabs**     | Filter by origin: _All, Uploaded, AI Generated, Custom Bot,_ or _Support Bot_. Useful for finding your bot-archived ticket attachments or your AI-generated audio. |
 
 _To keep loading fast, the library displays 25 files per page. Use the Previous / Next buttons at the bottom to navigate._
@@ -177,19 +177,19 @@ _To keep loading fast, the library displays 25 files per page. Use the Previous 
 
 Every file card has a quick-action menu:
 
-| Action            | What it does                                          |
-| ----------------- | ----------------------------------------------------- |
-| **Copy URL**      | Copies the file's direct URL to your clipboard.       |
+| Action            | What it does                                              |
+| ----------------- | --------------------------------------------------------- |
+| **Copy URL**      | Copies the file's direct URL to your clipboard.           |
 | **Preview**       | Opens a preview (images) or plays the file (audio/video). |
-| **Download**      | Downloads the original file to your device.           |
-| **Rename**        | Changes the display name.                             |
-| **Edit Tags**     | Adds or removes tags.                                 |
-| **Star / Unstar** | Pins or unpins the file.                              |
-| **Delete**        | Permanently removes the file.                         |
+| **Download**      | Downloads the original file to your device.               |
+| **Rename**        | Changes the display name.                                 |
+| **Edit Tags**     | Adds or removes tags.                                     |
+| **Star / Unstar** | Pins or unpins the file.                                  |
+| **Delete**        | Permanently removes the file.                             |
 
 ### Deleting files {#deleting-images}
 
-:::danger Careful — Clear All is irreversible
+:::danger Careful - Clear All is irreversible
 The **Clear all files** button in the left sidebar will instantly and permanently delete **every file** in your server's library - including files currently being used by your bots, referenced in ticket transcripts, or embedded in configurations. Only do this if you're absolutely sure nothing active depends on them.
 :::
 

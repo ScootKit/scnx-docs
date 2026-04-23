@@ -38,10 +38,10 @@ Useful for greeting messages, queue-closed announcements, hold music voiceovers,
 
 ### Pricing {#tts-pricing}
 
-| Item                | Value                                                                     |
-| ------------------- | ------------------------------------------------------------------------- |
-| Cost rate           | 1 AI Coin per 4 characters (rounded up), with a minimum of 1 coin.        |
-| Maximum text length | 10,000 characters per generation.                                         |
+| Item                | Value                                                              |
+| ------------------- | ------------------------------------------------------------------ |
+| Cost rate           | 1 AI Coin per 4 characters (rounded up), with a minimum of 1 coin. |
+| Maximum text length | 10,000 characters per generation.                                  |
 
 The exact cost is shown live as you type, and the button is disabled if your balance is insufficient. A "Buy more coins" link appears when you're short.
 
@@ -57,10 +57,10 @@ Useful for producing waiting music that matches your server's vibe without sourc
 
 ### Pricing {#music-pricing}
 
-| Item              | Value                                                      |
-| ----------------- | ---------------------------------------------------------- |
-| Cost rate         | 12 AI Coins per second (= 600 coins per minute).           |
-| Duration range    | 3 seconds to 300 seconds (5 minutes) per generation.       |
+| Item           | Value                                                |
+| -------------- | ---------------------------------------------------- |
+| Cost rate      | 12 AI Coins per second (= 600 coins per minute).     |
+| Duration range | 3 seconds to 300 seconds (5 minutes) per generation. |
 
 Again, the live cost preview updates as you drag the duration slider, and the button is disabled if you can't afford the generation.
 
@@ -76,11 +76,11 @@ Again, the live cost preview updates as you drag the duration slider, and the bu
 
 Both generators run every request through a safety check. If the prompt is rejected, you'll see a clear moderation message and **no coins are deducted**. Other errors the UI surfaces:
 
-| Situation                    | What you'll see                                                                      |
-| ---------------------------- | ------------------------------------------------------------------------------------ |
-| Not enough AI Coins          | The generate button is disabled and a "Buy more coins" link appears.                 |
-| Generation rejected (policy) | "Your prompt was rejected by moderation" or similar - coins are _not_ charged.        |
-| Too many concurrent requests | A "currently busy" notice - retry in a few seconds.                                   |
+| Situation                    | What you'll see                                                                                |
+| ---------------------------- | ---------------------------------------------------------------------------------------------- |
+| Not enough AI Coins          | The generate button is disabled and a "Buy more coins" link appears.                           |
+| Generation rejected (policy) | "Your prompt was rejected by moderation" or similar - coins are _not_ charged.                 |
+| Too many concurrent requests | A "currently busy" notice - retry in a few seconds.                                            |
 | Generic failure              | A one-line error message. If it persists, reach out at [scnx.app/help](https://scnx.app/help). |
 
 ## Related {#related}
