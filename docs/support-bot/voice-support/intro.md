@@ -41,22 +41,22 @@ Users with any of the configured [priority roles](/docs/support-bot/voice-suppor
 
 Voice support can be in one of two states: **open** (users can queue) or **offline** (users can't reach your team). Two state modes decide which it is:
 
-| Mode             | When it's open                                                                                                                                                                                 |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `staff-presence` | Whenever at least one staff member is sitting in a support channel. This is the default - when all staff leave voice, the queue closes automatically.                                          |
+| Mode             | When it's open                                                                                                                                                                                                                                                                                 |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `staff-presence` | Whenever at least one staff member is sitting in a support channel. This is the default - when all staff leave voice, the queue closes automatically.                                                                                                                                          |
 | `opening-hours`  | During the [opening hours](/docs/support-bot/general/opening-hours) configured for your bot, regardless of whether staff are in voice. Combine with [staff summon](/docs/support-bot/voice-support/configuration#staff-summon) to ping your team when users arrive but nobody's connected yet. |
 
 While voice support is offline, you can optionally leave the channel unlocked and play [closed-state music](/docs/support-bot/voice-support/configuration#closed-music) so users can wait inside the channel until you reopen.
 
 ## Main components {#components}
 
-| Component             | Purpose                                                                                                                                                                                                                         |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Queue channel**     | The voice channel users join to queue up. Can live inside or outside the support category.                                                                                                                                       |
-| **Support category**  | A Discord category whose voice channels (except the queue channel) are treated as staff support channels. Users get pulled into these.                                                                                           |
-| **Dashboard channel** | A text channel where the bot posts a live status embed - open/offline, staff count, current queue, active calls, and a **Pull Next User** button.                                                                                |
-| **Thread mode**       | Optional: when a staff member pulls a user, the bot creates a private thread under the dashboard channel with call metadata, prior history, and buttons. Notes, debriefs, and feedback are posted into the thread.               |
-| **Staff summon**      | Optional (opening-hours mode only): when users are waiting but no staff are connected, the bot posts a ping into a configured channel with the number of waiters and the first person in line.                                   |
+| Component             | Purpose                                                                                                                                                                                                            |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Queue channel**     | The voice channel users join to queue up. Can live inside or outside the support category.                                                                                                                         |
+| **Support category**  | A Discord category whose voice channels (except the queue channel) are treated as staff support channels. Users get pulled into these.                                                                             |
+| **Dashboard channel** | A text channel where the bot posts a live status embed - open/offline, staff count, current queue, active calls, and a **Pull Next User** button.                                                                  |
+| **Thread mode**       | Optional: when a staff member pulls a user, the bot creates a private thread under the dashboard channel with call metadata, prior history, and buttons. Notes, debriefs, and feedback are posted into the thread. |
+| **Staff summon**      | Optional (opening-hours mode only): when users are waiting but no staff are connected, the bot posts a ping into a configured channel with the number of waiters and the first person in line.                     |
 
 ## Key features {#features}
 
