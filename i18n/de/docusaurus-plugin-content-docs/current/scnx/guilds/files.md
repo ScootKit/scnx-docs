@@ -40,9 +40,9 @@ Server-Dateispeicher ist ein völlig separater, gemeinsamer Bereich. Um deine be
 Es gibt vier Wege, wie Dateien in die Bibliothek deines Servers gelangen:
 
 1. **Du lädst sie direkt hoch** über die Dateien-Seite oder jeden Datei-Picker im Dashboard.
-2. **Du generierst sie mit KI** — Bilder aus einem Text-Prompt oder [Voice-Support-Audio](/docs/support-bot/voice-support/ai-audio) (Text-to-Speech + Musik).
-3. **Der Support Bot archiviert automatisch** — [Ticket-Anhänge](/docs/support-bot/general/modmail-net#attachment-archival) werden in der Bibliothek gespeichert, sobald sie eingehen, damit sie die kurzlebigen Discord-Links überdauern.
-4. **Der Custom Bot speichert automatisch** — zum Beispiel **Moderationslog-Beweisbilder** (Bild-Belege, die bei Mod-Aktionen erfasst werden), **Starboard-Nachrichten** (Bilder aus gesternten Nachrichten, die auch nach Bearbeitung oder Löschung der Originale erhalten bleiben) und andere Anhang-bewahrende Module.
+2. **Du generierst sie mit KI** - Bilder aus einem Text-Prompt oder [Voice-Support-Audio](/docs/support-bot/voice-support/ai-audio) (Text-to-Speech + Musik).
+3. **Der Support Bot archiviert automatisch** - [Ticket-Anhänge](/docs/support-bot/general/modmail-net#attachment-archival) werden in der Bibliothek gespeichert, sobald sie eingehen, damit sie die kurzlebigen Discord-Links überdauern.
+4. **Der Custom Bot speichert automatisch** - zum Beispiel **Moderationslog-Beweisbilder** (Bild-Belege, die bei Mod-Aktionen erfasst werden), **Starboard-Nachrichten** (Bilder aus gesternten Nachrichten, die auch nach Bearbeitung oder Löschung der Originale erhalten bleiben) und andere Anhang-bewahrende Module.
 
 Wege 1 und 2 liegen unter deiner direkten Kontrolle; 3 und 4 laufen im Hintergrund, sobald die zugehörigen Module aktiviert sind.
 
@@ -66,23 +66,23 @@ _Wenn du eine Datei hochlädst, die mit einer bereits vorhandenen identisch ist,
 
 Jede Datei muss **25 MB oder kleiner** sein. Direkt-Uploads unterstützen folgende Formate:
 
-| Kategorie | Formate                           |
-| --------- | --------------------------------- |
-| Bilder    | `.jpg` / `.jpeg`, `.png`, `.gif`  |
-| Audio     | `.mp3`, `.wav`                    |
+| Kategorie | Formate                          |
+| --------- | -------------------------------- |
+| Bilder    | `.jpg` / `.jpeg`, `.png`, `.gif` |
+| Audio     | `.mp3`, `.wav`                   |
 
 Von Bots hochgeladene Dateien (Ticket-Anhänge, Mod-Log-Screenshots usw.) können zusätzliche Formate enthalten - Video (`.mp4`, `.webm`, `.mov`), PDFs, ZIPs und Klartext - die dann zusammen mit allem anderen in deiner Bibliothek erscheinen.
 
 ### 2. Dateien mit KI generieren {#ai-generation}
 
-Das SCNX-Dashboard kann zwei Arten von Inhalten direkt aus den relevanten Pickern für dich generieren. Beide werden in [KI-Coins](https://faq.scnx.app/ki-auf-scnx/) abgerechnet und **keines zählt zu deiner Dateispeicher-Quote** — generierte Dateien werden mit Coins bezahlt, nicht mit Bytes.
+Das SCNX-Dashboard kann zwei Arten von Inhalten direkt aus den relevanten Pickern für dich generieren. Beide werden in [KI-Coins](https://faq.scnx.app/ki-auf-scnx/) abgerechnet und **keines zählt zu deiner Dateispeicher-Quote** - generierte Dateien werden mit Coins bezahlt, nicht mit Bytes.
 
 #### KI-Bilder {#ai-images}
 
 :::info Kein Fan von KI-Bildgenerierung?
 Serverinhaber und Administratoren können diese Funktion in den [Servereinstellungen](https://scnx.app/de/glink?page=settings) deaktivieren. Wenn deaktiviert, verschwindet die **Mit KI generieren**-Box auf der Dateien-Seite. Module, die KI-Bildgenerierung nutzen, funktionieren weiter und müssen separat deaktiviert werden, falls gewünscht.
 
-Dieser Schalter steuert ausschließlich die **Bildgenerierung auf der Dateien-Seite**. Er **blendet den Generate (AI)-Tab in den [Voice-Support-Audio-Pickern](/docs/support-bot/voice-support/ai-audio) nicht aus** — die KI-Audio-Generierung wird unabhängig davon gesteuert.
+Dieser Schalter steuert ausschließlich die **Bildgenerierung auf der Dateien-Seite**. Er **blendet den Generate (AI)-Tab in den [Voice-Support-Audio-Pickern](/docs/support-bot/voice-support/ai-audio) nicht aus** - die KI-Audio-Generierung wird unabhängig davon gesteuert.
 :::
 
 Generiere ein Bild aus einem Text-Prompt direkt auf der Bibliotheksseite.
@@ -93,24 +93,24 @@ Generiere ein Bild aus einem Text-Prompt direkt auf der Bibliotheksseite.
 2. Beschreibe in bis zu 1.000 Zeichen, was du möchtest.
 3. Klicke auf **Bild generieren**. Das Ergebnis erscheint in deiner Bibliothek und ist mit dem Tag `ai` zum Filtern versehen.
 
-| Element             | Wert                                                                                                            |
-| ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Kosten              | 15 KI-Coins pro Bild. Die Generierung wird blockiert, falls dein Guthaben niedriger ist.                          |
-| Abmessungen         | 1024 × 1024 Pixel.                                                                                              |
-| Inhaltsrichtlinie   | Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Für abgelehnte Prompts **fallen keine Kosten** an. |
+| Element           | Wert                                                                                                                             |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Kosten            | 15 KI-Coins pro Bild. Die Generierung wird blockiert, falls dein Guthaben niedriger ist.                                         |
+| Abmessungen       | 1024 × 1024 Pixel.                                                                                                               |
+| Inhaltsrichtlinie | Prompts, die gegen unsere Sicherheitsrichtlinien verstoßen, werden abgelehnt. Für abgelehnte Prompts **fallen keine Kosten** an. |
 
 #### KI-Audio (TTS + Musik) {#ai-audio}
 
 In den Audio-Pickern jeder [Voice-Support-Playlist](/docs/support-bot/voice-support/configuration#waiting-music) lässt der Tab **Generate (AI)** dich folgendes erzeugen:
 
-- **Text-to-Speech-Clips** — wähle eine Sprache und Stimme, tippe das Skript (bis zu 10.000 Zeichen), erhalte ein abspielbares Voice-over.
-- **Musik-Tracks** — beschreibe die Stimmung (z.B. _"warmes Lo-Fi, sanftes Klavier, kein Gesang"_), wähle eine Dauer zwischen 3 Sekunden und 5 Minuten und SCNX generiert einen loop-tauglichen Track.
+- **Text-to-Speech-Clips** - wähle eine Sprache und Stimme, tippe das Skript (bis zu 10.000 Zeichen), erhalte ein abspielbares Voice-over.
+- **Musik-Tracks** - beschreibe die Stimmung (z.B. _"warmes Lo-Fi, sanftes Klavier, kein Gesang"_), wähle eine Dauer zwischen 3 Sekunden und 5 Minuten und SCNX generiert einen loop-tauglichen Track.
 
 Vollständige Details, Preise und Tipps findest du auf der Seite [KI-Audio-Generierung](/docs/support-bot/voice-support/ai-audio). Alles, was dort erzeugt wird, landet automatisch in dieser Bibliothek und ist überall dort verfügbar, wo ein Audio-Picker angezeigt wird.
 
 ### 3. Support-Bot-Ticket-Anhänge {#ticket-attachments}
 
-Wenn die Option **Ticket-Anhänge in SCNX archivieren** aktiviert ist, kopiert dein Support Bot jeden Anhang aus einem Modmail- oder Ticket-System-Ticket in diese Bibliothek, sobald die Nachricht eingeht. Das hält die Datei nutzbar, nachdem der kurzlebige Discord-Anhangs-Link abgelaufen ist — entscheidend für [modmail.net-Transkripte](/docs/support-bot/general/modmail-net), die Tage später angesehen werden.
+Wenn die Option **Ticket-Anhänge in SCNX archivieren** aktiviert ist, kopiert dein Support Bot jeden Anhang aus einem Modmail- oder Ticket-System-Ticket in diese Bibliothek, sobald die Nachricht eingeht. Das hält die Datei nutzbar, nachdem der kurzlebige Discord-Anhangs-Link abgelaufen ist - entscheidend für [modmail.net-Transkripte](/docs/support-bot/general/modmail-net), die Tage später angesehen werden.
 
 Archivierte Anhänge verhalten sich wie jede andere Datei in der Bibliothek: du kannst sie durchsuchen, suchen, taggen, umbenennen und löschen. Vollständige Details (inklusive Deaktivierung der Archivierung und wie Löschung mit alten Transkripten zusammenwirkt) findest du auf der Seite [modmail.net-Funktionen](/docs/support-bot/general/modmail-net#attachment-archival).
 
@@ -118,11 +118,11 @@ Archivierte Anhänge verhalten sich wie jede andere Datei in der Bibliothek: du 
 
 Mehrere Custom-Bot-Module bewahren Discord-Anhänge in der Bibliothek, damit sie sichtbar bleiben, auch wenn die ursprüngliche Nachricht sich ändert oder gelöscht wird. Die häufigsten sind:
 
-- **Moderationslog-Beweisbilder** — wenn bei einer Mod-Aktion ein Screenshot oder die Anhänge der betreffenden Nachricht erfasst werden, werden diese Bilder hier gespeichert und dauerhaft vom Log-Eintrag referenziert.
-- **Starboard** — wenn eine Nachricht genug Sterne sammelt, um auf dem Starboard zu landen, werden alle darin enthaltenen Bilder in die Bibliothek kopiert, damit der Starboard-Eintrag auch nach Bearbeitung oder Löschung der Originalnachricht korrekt gerendert wird.
-- **Weitere anhang-bewahrende Module** — jede Custom-Bot-Funktion, die einen Anhang über die ursprüngliche Discord-Nachricht hinaus erhalten muss, nutzt diese Bibliothek.
+- **Moderationslog-Beweisbilder** - wenn bei einer Mod-Aktion ein Screenshot oder die Anhänge der betreffenden Nachricht erfasst werden, werden diese Bilder hier gespeichert und dauerhaft vom Log-Eintrag referenziert.
+- **Starboard** - wenn eine Nachricht genug Sterne sammelt, um auf dem Starboard zu landen, werden alle darin enthaltenen Bilder in die Bibliothek kopiert, damit der Starboard-Eintrag auch nach Bearbeitung oder Löschung der Originalnachricht korrekt gerendert wird.
+- **Weitere anhang-bewahrende Module** - jede Custom-Bot-Funktion, die einen Anhang über die ursprüngliche Discord-Nachricht hinaus erhalten muss, nutzt diese Bibliothek.
 
-Diese Speicherungen zählen zu deiner Dateispeicher-Quote (es sind echte Dateien, die du hostest). Wenn du bevorzugst, dass der Custom Bot überhaupt nichts in deiner Bibliothek archiviert, deaktiviere den zentralen Datei-Speicher-Schalter in der [Custom-Bot-Kernkonfiguration](/docs/custom-bot/intro) — das deaktiviert automatische Speicherungen in allen Modulen auf einmal. Keine Jagd nach einzelnen Modul-Schaltern.
+Diese Speicherungen zählen zu deiner Dateispeicher-Quote (es sind echte Dateien, die du hostest). Wenn du bevorzugst, dass der Custom Bot überhaupt nichts in deiner Bibliothek archiviert, deaktiviere den zentralen Datei-Speicher-Schalter in der [Custom-Bot-Kernkonfiguration](/docs/custom-bot/intro) - das deaktiviert automatische Speicherungen in allen Modulen auf einmal. Keine Jagd nach einzelnen Modul-Schaltern.
 
 ## Speicherlimits {#understanding-storage-limits}
 
@@ -133,7 +133,7 @@ Da du sie mit KI-Coins bezahlst, zählen alle Inhalte, die du über die KI-Tools
 :::
 
 :::info Was ist mit Bot-Uploads?
-Dateien, die dein Custom Bot oder Support Bot automatisch speichert — [Ticket-Anhänge des Support Bots](/docs/support-bot/general/modmail-net#attachment-archival), [Mod-Log-Beweisbilder und Starboard-Bilder des Custom Bots](#custom-bot-uploads) und Ähnliches — **zählen** zu diesem Kontingent. Jede Funktion, die die Bibliothek nutzt, bietet eine eigene Option zum Deaktivieren an; zum Beispiel der Schalter [Ticket-Anhänge in SCNX archivieren](/docs/support-bot/general/modmail-net#attachment-archival) des Support Bots.
+Dateien, die dein Custom Bot oder Support Bot automatisch speichert - [Ticket-Anhänge des Support Bots](/docs/support-bot/general/modmail-net#attachment-archival), [Mod-Log-Beweisbilder und Starboard-Bilder des Custom Bots](#custom-bot-uploads) und Ähnliches - **zählen** zu diesem Kontingent. Jede Funktion, die die Bibliothek nutzt, bietet eine eigene Option zum Deaktivieren an; zum Beispiel der Schalter [Ticket-Anhänge in SCNX archivieren](/docs/support-bot/general/modmail-net#attachment-archival) des Support Bots.
 :::
 
 | SCNX-Plan    | Gesamtspeicher |
@@ -143,7 +143,7 @@ Dateien, die dein Custom Bot oder Support Bot automatisch speichert — [Ticket-
 | Professional | ~1 GB          |
 | Enterprise   | ~2 GB          |
 
-Wenn dein Server das Limit erreicht, werden neue Uploads blockiert, bis du alte Dateien löschst oder deinen SCNX-Plan aufrüstest. Bots, die bei erschöpftem Kontingent hochzuladen versuchen, überspringen den Upload stillschweigend — die Funktion arbeitet weiter, kann nur nichts Neues speichern.
+Wenn dein Server das Limit erreicht, werden neue Uploads blockiert, bis du alte Dateien löschst oder deinen SCNX-Plan aufrüstest. Bots, die bei erschöpftem Kontingent hochzuladen versuchen, überspringen den Upload stillschweigend - die Funktion arbeitet weiter, kann nur nichts Neues speichern.
 
 ![Screenshot der Dateibibliotheks-Galerie mit Dateien und Speicherfortschrittsbalken](@site/docs/assets/scnx/guilds/files/guild-images.png)
 
@@ -159,14 +159,14 @@ Mit wachsender Bibliothek wird schnelles Wiederfinden wichtig. SCNX bietet mehre
 
 ### Suchen und Filtern {#searching-and-filtering}
 
-Nutze die Filterleiste über dem Raster, um deine Ansicht einzuschränken. Filter lassen sich kombinieren — klicke **Filter löschen**, um sie zurückzusetzen.
+Nutze die Filterleiste über dem Raster, um deine Ansicht einzuschränken. Filter lassen sich kombinieren - klicke **Filter löschen**, um sie zurückzusetzen.
 
-| Werkzeug           | Was es tut                                                                                                                                               |
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Suchleiste**     | Durchsucht Anzeigename und ursprünglichen Dateinamen nach passenden Texten.                                                                              |
-| **Tag-Filter**     | Zeigt nur Dateien mit einem bestimmten Tag.                                                                                                              |
-| **Nur Favoriten**  | Zeigt nur deine favorisierten (gesternten) Dateien.                                                                                                      |
-| **Typ-Tabs**       | Filtert nach Herkunft: _Alle, Hochgeladen, KI-generiert, Custom Bot_ oder _Support Bot_. Nützlich zum Finden bot-archivierter Ticket-Anhänge oder KI-Audio. |
+| Werkzeug          | Was es tut                                                                                                                                                  |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Suchleiste**    | Durchsucht Anzeigename und ursprünglichen Dateinamen nach passenden Texten.                                                                                 |
+| **Tag-Filter**    | Zeigt nur Dateien mit einem bestimmten Tag.                                                                                                                 |
+| **Nur Favoriten** | Zeigt nur deine favorisierten (gesternten) Dateien.                                                                                                         |
+| **Typ-Tabs**      | Filtert nach Herkunft: _Alle, Hochgeladen, KI-generiert, Custom Bot_ oder _Support Bot_. Nützlich zum Finden bot-archivierter Ticket-Anhänge oder KI-Audio. |
 
 _Für schnelle Ladezeiten zeigt die Bibliothek 25 Dateien pro Seite. Nutze die Vor-/Zurück-Buttons unten zum Navigieren._
 
@@ -174,19 +174,19 @@ _Für schnelle Ladezeiten zeigt die Bibliothek 25 Dateien pro Seite. Nutze die V
 
 Jede Dateikarte hat ein Schnell-Aktions-Menü:
 
-| Aktion                | Was es tut                                                  |
-| --------------------- | ----------------------------------------------------------- |
-| **URL kopieren**      | Kopiert die Direkt-URL der Datei in die Zwischenablage.     |
-| **Vorschau**          | Öffnet eine Vorschau (Bilder) oder spielt die Datei ab (Audio/Video). |
-| **Herunterladen**     | Lädt die Originaldatei auf dein Gerät.                       |
-| **Umbenennen**        | Ändert den Anzeigenamen.                                     |
-| **Tags bearbeiten**   | Fügt Tags hinzu oder entfernt sie.                           |
-| **Favorisieren / Entfernen** | Heftet die Datei an oder löst die Pinnung.               |
-| **Löschen**           | Entfernt die Datei dauerhaft.                                |
+| Aktion                       | Was es tut                                                            |
+| ---------------------------- | --------------------------------------------------------------------- |
+| **URL kopieren**             | Kopiert die Direkt-URL der Datei in die Zwischenablage.               |
+| **Vorschau**                 | Öffnet eine Vorschau (Bilder) oder spielt die Datei ab (Audio/Video). |
+| **Herunterladen**            | Lädt die Originaldatei auf dein Gerät.                                |
+| **Umbenennen**               | Ändert den Anzeigenamen.                                              |
+| **Tags bearbeiten**          | Fügt Tags hinzu oder entfernt sie.                                    |
+| **Favorisieren / Entfernen** | Heftet die Datei an oder löst die Pinnung.                            |
+| **Löschen**                  | Entfernt die Datei dauerhaft.                                         |
 
 ### Dateien löschen {#deleting-images}
 
-:::danger Vorsicht — „Alle löschen" ist irreversibel
+:::danger Vorsicht - „Alle löschen" ist irreversibel
 Der Button **Alle Dateien löschen** in der linken Seitenleiste löscht sofort und unwiderruflich **jede Datei** in der Bibliothek deines Servers - einschließlich Dateien, die aktuell von deinen Bots verwendet, in Ticket-Transkripten referenziert oder in Konfigurationen eingebettet sind. Tu das nur, wenn du wirklich sicher bist, dass nichts Aktives darauf angewiesen ist.
 :::
 
