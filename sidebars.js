@@ -320,7 +320,7 @@ const sidebars = {
                 },
                 {
                     type: 'link',
-                    href: 'https://feedback.scnx.xyz',
+                    href: 'https://featureboard.net',
                     label: 'Suggest new features'
                 },
                 {

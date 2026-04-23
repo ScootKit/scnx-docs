@@ -269,7 +269,7 @@ export default function ModuleOverview({moduleName}) {
                 </div>}
                 {moduleData.earlyAccess && <div className="module-card-info-item" style={{color: '#A78BFA'}}>
                     <FontAwesomeIcon width={14} icon={faStar} style={{marginRight: '0.25rem'}}/> <Translate
-                    id="module.earlyAccess">Early Access — unlocked with the ScootKit Membership perk.</Translate>
+                    id="module.earlyAccess">Early Access - unlocked with the ScootKit Membership perk.</Translate>
                 </div>}
                 {moduleData.hasDB && <div className="module-card-info-item">
                     <FontAwesomeIcon width={14} icon={faDatabase} style={{marginRight: '0.25rem'}}/> <Translate

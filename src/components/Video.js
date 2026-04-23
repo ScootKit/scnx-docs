@@ -7,7 +7,10 @@ import {faArrowCircleRight} from '@fortawesome/pro-solid-svg-icons';
 
 export default function Video({url}) {
     const [allowed, setAllowed] = useState(false);
-    if (url.includes('youtu.be')) url = url.replace('youtu.be', 'youtube.com');
+    // Convert short youtu.be/ID links to the canonical watch URL so react-player
+    // recognizes them. Plain `youtube.com/ID` (without `/watch?v=`) is not valid.
+    const shortMatch = url.match(/youtu\.be\/([A-Za-z0-9_-]+)/);
+    if (shortMatch) url = `https://www.youtube.com/watch?v=${shortMatch[1]}`;
     const urlData = new URL(url.replaceAll('www.', ''));
 
     useEffect(() => {
@@ -44,6 +47,6 @@ export default function Video({url}) {
     </div>;
 
     return <div className="player-wrapper">
-        <ReactPlayer url={url} className="react-player" controls={true}/>
+        <ReactPlayer url={url} className="react-player" controls={true} width="100%" height="100%"/>
     </div>;
 }

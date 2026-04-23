@@ -48,6 +48,15 @@ export default function EarlyAccessBanner({feature, description}) {
                 )}
             </p>
 
+            <p className="ea-banner__body ea-banner__body--sub">
+                <Translate id="earlyAccess.generalAvailability">
+                    Memberships fund the dev work behind features like this - that's the first reason they exist.
+                    Running Early Access the way we do is a real second-order upshot: a smaller group of members
+                    catches edge cases before GA, so by the time the feature rolls out to every SCNX server 3 to 4
+                    months later, it's demonstrably better. Both are true; neither is cover for the other.
+                </Translate>
+            </p>
+
             <div className="ea-banner__footnote">
                 <Translate id="earlyAccess.footnote">
                     Unlocked instantly on purchase · Active across every server you manage

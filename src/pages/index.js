@@ -37,12 +37,13 @@ const products = [
     },
     {
         title: 'Support Bot',
-        description: <Translate id="home.product.sb">Professional ticket handling with modmail and ticket system features.</Translate>,
+        description: <Translate id="home.product.sb">Professional support on Discord - modmail, channel-based tickets, and live voice support.</Translate>,
         link: '/docs/support-bot/intro',
         faIcon: faHeadset,
         links: [
             {label: <Translate id="home.p.sb.modmail">Modmail</Translate>, href: '/docs/support-bot/modmail'},
             {label: <Translate id="home.p.sb.tickets">Ticket System</Translate>, href: '/docs/support-bot/ticket-system'},
+            {label: <Translate id="home.p.sb.voice">Voice Support</Translate>, href: '/docs/support-bot/voice-support/intro'},
             {label: <Translate id="home.p.sb.setup">Setup Guide</Translate>, href: '/docs/support-bot'},
             {label: <Translate id="home.p.sb.troubleshoot">Troubleshooting</Translate>, href: '/docs/support-bot/troubleshooting'},
         ],
@@ -79,7 +80,8 @@ const articleCategories = [
             {title: <Translate id="home.a.customcmds">Build Custom Commands</Translate>, link: '/docs/custom-bot/custom-commands', desc: <Translate id="home.a.customcmds.d">Create powerful slash commands with a visual editor.</Translate>},
             {title: <Translate id="home.a.slashcmds">Slash Commands Overview</Translate>, link: '/docs/custom-bot/slash-commands', desc: <Translate id="home.a.slashcmds.d">Understand how slash commands work on SCNX.</Translate>},
             {title: <Translate id="home.a.botmanage">Bot Status & Management</Translate>, link: '/docs/scnx/guilds/bots', desc: <Translate id="home.a.botmanage.d">Start, stop, restart your bot and understand the status panel.</Translate>},
-            {title: <Translate id="home.a.images">Guild Image Storage</Translate>, link: '/docs/scnx/guilds/files', desc: <Translate id="home.a.images.d">Upload and manage images for your bot configurations.</Translate>},
+            {title: <Translate id="home.a.images">Guild File Storage</Translate>, link: '/docs/scnx/guilds/files', desc: <Translate id="home.a.images.d">Upload, generate, and manage files for your bot configurations.</Translate>},
+            {title: <Translate id="home.a.voice">Voice Support (Early Access)</Translate>, link: '/docs/support-bot/voice-support/intro', desc: <Translate id="home.a.voice.d">Live voice queue - users join a channel to wait, staff pull them into private support calls.</Translate>},
         ],
     },
     {
@@ -109,7 +111,7 @@ const articleCategories = [
         articles: [
             {title: <Translate id="home.a.botissues">Bot not working?</Translate>, link: '/docs/scnx/guilds/bots', desc: <Translate id="home.a.botissues.d">Common bot issues and how to fix them.</Translate>},
             {title: <Translate id="home.a.cbtrouble">Custom Bot Troubleshooting</Translate>, link: '/docs/custom-bot/troubleshooting', desc: <Translate id="home.a.cbtrouble.d">Diagnose and fix Custom Bot problems.</Translate>},
-            {title: <Translate id="home.a.sbtrouble">Support Bot Troubleshooting</Translate>, link: '/docs/support-bot/troubleshooting', desc: <Translate id="home.a.sbtrouble.d">Diagnose and fix Support Bot problems.</Translate>},
+            {title: <Translate id="home.a.sbtrouble">Support Bot Troubleshooting</Translate>, link: '/docs/support-bot/troubleshooting', desc: <Translate id="home.a.sbtrouble.d">Diagnose and fix Modmail, Ticket System, and Voice Support problems.</Translate>},
             {title: <Translate id="home.a.serverfaq">Server FAQ</Translate>, link: '/docs/scnx/guilds/faq', desc: <Translate id="home.a.serverfaq.d">Common questions about servers, bots, and features.</Translate>},
             {title: <Translate id="home.a.billingfaq">Billing FAQ</Translate>, link: '/docs/scnx/account-and-billing/faq', desc: <Translate id="home.a.billingfaq.d">Payment issues, subscriptions, and account questions.</Translate>},
         ],

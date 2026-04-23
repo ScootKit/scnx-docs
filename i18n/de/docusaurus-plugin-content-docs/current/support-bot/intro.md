@@ -6,19 +6,23 @@ description: Der fortschrittlichste Discord-Support-Bot mit Modmail, Ticket-Syst
 
 # Der fortschrittlichste Discord-Support-Bot der Welt
 
-Baue eine erstklassige Support-Erfahrung für deine Discord-Community auf. Der SCNX Support-Bot vereint ein leistungsstarkes **Modmail-System** und ein flexibles **Ticket-System** in einem Bot - damit hast du alles, was du brauchst, um Anfragen zu verwalten, Feedback zu sammeln und deinen Support-Workflow zu optimieren.
+Baue eine erstklassige Support-Erfahrung für deine Discord-Community auf. Der SCNX Support-Bot vereint ein leistungsstarkes **Modmail-System**, ein flexibles **Ticket-System** und eine Live-**Voice-Support-Warteschlange** in einem Bot - damit hast du alles, was du brauchst, um Anfragen zu verwalten, Feedback zu sammeln und deinen Support-Workflow zu optimieren.
 
 Egal ob du eine kleine Community oder einen großen Server mit tausenden Mitgliedern betreibst - der SCNX Support-Bot wächst mit dir. Konfiguriere Öffnungszeiten, richte automatisches Ticket-Schließen ein, aktiviere KI-gestützte Ticket-Zusammenfassungen und verfolge die Leistung deines Teams - alles über ein intuitives Dashboard.
 
-## Zwei Systeme, ein Bot {#two-systems}
+## Drei Systeme, ein Bot {#two-systems}
 
-|                           | [Modmail](/de/docs/support-bot/modmail/intro)                                                                                                                | [Ticket-System](/de/docs/support-bot/ticket-system/intro)                                                                               |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **So funktioniert's**     | Nutzer erstellen Tickets, indem sie deinem Bot eine DM senden. Nachrichten werden zwischen den DMs des Nutzers und einem privaten Team-Kanal weitergeleitet. | Nutzer erstellen Tickets über Knöpfe, Dropdown-Menüs oder Befehle auf deinem Server. Für jedes Ticket wird ein privater Kanal erstellt. |
-| **Ideal für**             | Server, die eine private, DM-basierte Support-Erfahrung wollen. Nutzer müssen nicht in einem öffentlichen Kanal interagieren.                                | Server, die einen kanalbasierten Support-Ablauf wollen, bei dem alles direkt auf dem Server passiert.                                   |
-| **Einzigartige Features** | Anonyme Nachrichten, Snippets (Schnellantworten), Tipp-Weiterleitung, Bearbeiten/Löschen von Nachrichten                                                     | Ticket-Limits pro Thema, benötigte Rollen pro Thema, Knopffarben pro Thema                                                              |
+|                           | [Modmail](/de/docs/support-bot/modmail/intro)                                                                                                                | [Ticket-System](/de/docs/support-bot/ticket-system/intro)                                                                               | [Voice Support](/de/docs/support-bot/voice-support/intro)                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **So funktioniert's**     | Nutzer erstellen Tickets, indem sie deinem Bot eine DM senden. Nachrichten werden zwischen den DMs des Nutzers und einem privaten Team-Kanal weitergeleitet. | Nutzer erstellen Tickets über Knöpfe, Dropdown-Menüs oder Befehle auf deinem Server. Für jedes Ticket wird ein privater Kanal erstellt. | Nutzer treten einem Sprachkanal bei, um sich in die Warteschlange zu stellen. Teammitglieder holen sie nacheinander in ihre eigenen Support-Sprachkanäle. |
+| **Ideal für**             | Server, die eine private, DM-basierte Support-Erfahrung wollen. Nutzer müssen nicht in einem öffentlichen Kanal interagieren.                                | Server, die einen kanalbasierten Support-Ablauf wollen, bei dem alles direkt auf dem Server passiert.                                   | Server, die mit Nutzern per Voice sprechen möchten - Onboarding-Gespräche, 1:1-Coaching, Live-Fehlersuche.                                           |
+| **Einzigartige Features** | Anonyme Nachrichten, Snippets (Schnellantworten), Tipp-Weiterleitung, Bearbeiten/Löschen von Nachrichten                                                     | Ticket-Limits pro Thema, benötigte Rollen pro Thema, Knopffarben pro Thema                                                              | Priority-Warteschlange, Wartemusik, Closed-State-Musik, Notizen & Verlauf pro Anruf, Debrief-Formular, Anruf-Thread im Dashboard-Kanal              |
 
-Beide Systeme teilen sich [allgemeine Funktionen](/de/docs/support-bot/general/bot-configuration) wie Öffnungszeiten, Formulare, Statistiken, Ticketauslastung, geschätzte Wartezeiten und mehr. Nicht sicher, welches System das richtige ist? Schau dir den [Feature-Vergleich](/de/docs/support-bot/feature-comparison) an.
+Alle drei Systeme teilen sich [allgemeine Funktionen](/de/docs/support-bot/general/bot-configuration) wie Öffnungszeiten, Formulare, Statistiken, Ticketauslastung, geschätzte Wartezeiten und mehr. Nicht sicher, welches System das richtige ist? Schau dir den [Feature-Vergleich](/de/docs/support-bot/feature-comparison) an.
+
+:::info Voice Support ist Early Access
+Voice Support ist eine Early-Access-Preview, die durch den Early-Access-Perk der [ScootKit-Mitgliedschaft](https://membership.scootkit.com) freigeschaltet wird - ein eigenes Abonnement, unabhängig von deinem SCNX-Plan. Details findest du in der [Voice-Support-Einführung](/de/docs/support-bot/voice-support/intro).
+:::
 
 ## Funktionen auf einen Blick {#key-features}
 
@@ -36,6 +40,7 @@ Beide Systeme teilen sich [allgemeine Funktionen](/de/docs/support-bot/general/b
 - **Blockierungsliste** - Sperre Nutzer, die gegen Regeln verstoßen, mit optionaler Dauer und Begründung.
 - **Wartungsmodus** - Deaktiviere die Ticket-Erstellung vorübergehend, wenn dein Team nicht verfügbar ist.
 - **Eigenes Branding** - Lege deine eigene Embed-Fußzeile und ein eigenes Bild fest, passend zur Identität deines Servers.
+- **Voice Support** (Early Access) - Biete Live-Voice-Support an. Nutzer treten einem Sprachkanal bei, um in die Warteschlange zu kommen; Teammitglieder holen sie einzeln in ihre eigenen Sprachkanäle - mit optionaler Wartemusik, Notizen pro Anruf, Anruf-Threads, Debrief-Formularen und Nutzer-Feedback.
 
 ## Erste Schritte {#getting-started}
 

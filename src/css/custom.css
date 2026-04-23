@@ -30,6 +30,11 @@
 .video-consent {
     width: 100%;
     height: 240px;
+    margin-bottom: 1.5rem;
+}
+
+.video-consent:last-child {
+    margin-bottom: 0;
 }
 
 .video-consent-description {
@@ -314,16 +319,27 @@ a.card:hover {
 
 .player-wrapper {
     position: relative;
-    padding-top: 360px;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
     border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.player-wrapper:last-child {
+    margin-bottom: 0;
 }
 
 .react-player {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 20px;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 12px;
     overflow: hidden;
+}
+
+.react-player iframe {
+    border-radius: 12px;
 }
 
 select {
@@ -351,7 +367,7 @@ input[type=text] {
 }
 
 /* =========================================================================
- * EarlyAccessBanner — access-credential aesthetic for EA feature callouts
+ * EarlyAccessBanner - access-credential aesthetic for EA feature callouts
  * Paired aesthetic: technical spec sheet × keycard reader on brand palette
  * ========================================================================= */
 
@@ -373,7 +389,7 @@ input[type=text] {
     isolation: isolate;
 }
 
-/* Left rail — glowing accent strip, brand gradient top-to-bottom */
+/* Left rail - glowing accent strip, brand gradient top-to-bottom */
 .ea-banner::before {
     content: '';
     position: absolute;
@@ -390,7 +406,7 @@ input[type=text] {
         0 0 3px rgba(74, 222, 128, 0.85);
 }
 
-/* Corner bracket, top-right — "spec sheet" typographic detail */
+/* Corner bracket, top-right - "spec sheet" typographic detail */
 .ea-banner::after {
     content: '';
     position: absolute;
@@ -492,6 +508,15 @@ input[type=text] {
     color: rgba(229, 229, 229, 0.88);
     font-size: 0.95rem;
     line-height: 1.58;
+    max-width: 62ch;
+}
+
+.ea-banner__body--sub {
+    font-size: 0.87rem;
+    color: rgba(229, 229, 229, 0.62);
+    border-left: 2px solid rgba(74, 222, 128, 0.3);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
     max-width: 62ch;
 }
 
@@ -606,7 +631,7 @@ input[type=text] {
     }
 }
 
-/* Respect prefers-reduced-motion — kill the pulse ring */
+/* Respect prefers-reduced-motion - kill the pulse ring */
 @media (prefers-reduced-motion: reduce) {
     .ea-banner__pulse::after {
         animation: none;
