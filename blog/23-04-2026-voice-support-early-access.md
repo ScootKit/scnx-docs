@@ -109,6 +109,5 @@ Voice Support is in early access for a reason. Edge cases we haven't hit yet, fl
 ours, features we cut and probably shouldn't have - this is the window to tell us. Drop notes in
 the [SCNX Discord](https://scootk.it/dc-de) or on [Featureboard](https://featureboard.net).
 
-
 Greetings from Munich,\
 \- Simon
