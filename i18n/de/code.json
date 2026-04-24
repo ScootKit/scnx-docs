@@ -922,7 +922,7 @@
     "description": "Default description text in the Early Access banner when no custom description is provided"
   },
   "earlyAccess.generalAvailability": {
-    "message": "Mitgliedschaften finanzieren die Entwicklungsarbeit hinter Funktionen wie dieser - das ist der erste Grund, warum es sie gibt. Die Art, wie wir Early Access fahren, ist ein echter zweitrangiger Effekt: ein paar Dutzend Mitglieder erwischen Edge Cases vor der GA, sodass die Funktion bei jedem SCNX-Server 3 bis 4 Monate später besser landet. Beides stimmt; keines ist Deckmantel fürs andere.",
+    "message": "Mitgliedschaften finanzieren die Entwicklungsarbeit hinter Funktionen wie dieser. Außerdem erlauben sie uns, in einem kleinen Rahmen mit unseren Mitgliedern die Funktion zu testen und durch Feedback zu verbessern. Die Funktion landet trotzdem auf jedem SCNX-Server in 3 bis 4 Monate später.",
     "description": "Sub-paragraph in the Early Access banner explaining general availability timeline and Membership rationale"
   },
   "earlyAccess.footnote": {
