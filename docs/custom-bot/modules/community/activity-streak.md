@@ -1,6 +1,6 @@
 # Activity Streaks
 
-Reward users for being active every day, week, or month with an activity score that resets if they become inactive again.
+Reward users for being active every day, week, or month with an activity score that resets if they become inactive again!
 
 <ModuleOverview moduleName="activity-streak" />
 
