@@ -89,15 +89,15 @@ configuration file.
 
 In addition to the [global parameters](/docs/custom-bot/global-parameters) and `%level%` / `%role%`, level-up messages (both the channel message and the role-reward variant, including random and selected level-up messages) support these placeholders:
 
-| Placeholder         | Value                                                                                  |
-| ------------------- | -------------------------------------------------------------------------------------- |
-| `%xpGained%`        | The XP awarded for the action that triggered the level up.                             |
-| `%xpType%`          | Whether the level up came from a `Message` or from `Voice` activity.                   |
-| `%totalXP%`         | The user's total XP after the level up.                                                |
-| `%nextLevelXP%`     | The XP required to reach the next level.                                               |
-| `%totalMessages%`   | The user's lifetime message count.                                                     |
-| `%messagesToday%`   | The user's message count for the current day (resets at midnight in the bot timezone). |
-| `%voiceTimeToday%`  | The user's voice time for the current day (resets at midnight in the bot timezone).    |
+| Placeholder        | Value                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| `%xpGained%`       | The XP awarded for the action that triggered the level up.                             |
+| `%xpType%`         | Whether the level up came from a `Message` or from `Voice` activity.                   |
+| `%totalXP%`        | The user's total XP after the level up.                                                |
+| `%nextLevelXP%`    | The XP required to reach the next level.                                               |
+| `%totalMessages%`  | The user's lifetime message count.                                                     |
+| `%messagesToday%`  | The user's message count for the current day (resets at midnight in the bot timezone). |
+| `%voiceTimeToday%` | The user's voice time for the current day (resets at midnight in the bot timezone).    |
 
 Additionally, you might want to adjust the level up message for a specific level. This is possible in
 the [Selected messages configuration file](#configuration-special-levelup-messages). If any user reaches a level
