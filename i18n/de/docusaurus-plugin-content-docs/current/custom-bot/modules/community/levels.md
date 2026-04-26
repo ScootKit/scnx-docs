@@ -97,15 +97,15 @@ Nachrichtenkonfigurationsdatei zurück.
 
 Zusätzlich zu den [globalen Parametern](/docs/custom-bot/global-parameters) sowie `%level%` / `%role%` unterstützen Levelaufstiegsnachrichten (sowohl die Kanal-Nachricht als auch die Rollen-Reward-Variante, inklusive zufälliger und ausgewählter Levelaufstiegsnachrichten) folgende Platzhalter:
 
-| Platzhalter         | Wert                                                                                                  |
-| ------------------- | ----------------------------------------------------------------------------------------------------- |
-| `%xpGained%`        | Die XP, die für die Aktion vergeben wurden, die den Levelaufstieg ausgelöst hat.                      |
-| `%xpType%`          | Ob der Levelaufstieg durch eine `Message` (Nachricht) oder durch `Voice`-Aktivität entstanden ist.    |
-| `%totalXP%`         | Die gesamten XP des Nutzers nach dem Levelaufstieg.                                                   |
-| `%nextLevelXP%`     | Die XP, die für das nächste Level erforderlich sind.                                                  |
-| `%totalMessages%`   | Die Lifetime-Nachrichtenanzahl des Nutzers.                                                           |
-| `%messagesToday%`   | Die heutige Nachrichtenanzahl des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).            |
-| `%voiceTimeToday%`  | Die heutige Voice-Zeit des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).                   |
+| Platzhalter        | Wert                                                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| `%xpGained%`       | Die XP, die für die Aktion vergeben wurden, die den Levelaufstieg ausgelöst hat.                   |
+| `%xpType%`         | Ob der Levelaufstieg durch eine `Message` (Nachricht) oder durch `Voice`-Aktivität entstanden ist. |
+| `%totalXP%`        | Die gesamten XP des Nutzers nach dem Levelaufstieg.                                                |
+| `%nextLevelXP%`    | Die XP, die für das nächste Level erforderlich sind.                                               |
+| `%totalMessages%`  | Die Lifetime-Nachrichtenanzahl des Nutzers.                                                        |
+| `%messagesToday%`  | Die heutige Nachrichtenanzahl des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).         |
+| `%voiceTimeToday%` | Die heutige Voice-Zeit des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).                |
 
 Zusätzlich möchtest du vielleicht die Levelaufstiegsnachricht für ein bestimmtes Level anpassen. Dies ist in
 der [Konfigurationsdatei für ausgewählte Nachrichten](#configuration-special-levelup-messages) möglich. Wenn ein Nutzer
