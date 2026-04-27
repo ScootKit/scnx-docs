@@ -9,6 +9,7 @@ Lass Nutzer Nachrichten in einen Starboard-Kanal hervorheben, indem sie darauf r
 - Nutzer können lustige, interessante oder anderweitig bemerkenswerte Nachrichten durch eine Reaktion hervorheben.
 - Begrenze die Anzahl an Sternen, die ein Nutzer pro Stunde vergeben kann, damit wirklich besondere Nachrichten hervorgehoben werden.
 - Schließe Rollen und Kanäle aus, um unerwünschte Nachrichten aus dem Starboard fernzuhalten.
+- Bildanhänge an gestarrten Nachrichten werden automatisch in die [Dateibibliothek](/docs/scnx/guilds/files) deines Servers archiviert, sodass alte Starboard-Posts ihre Bilder behalten, auch nachdem Discords CDN-URLs abgelaufen sind.
 
 ## Einrichtung {#setup}
 
@@ -21,6 +22,12 @@ Lass Nutzer Nachrichten in einen Starboard-Kanal hervorheben, indem sie darauf r
 
 - Sobald das Modul [eingerichtet](#setup) ist, können Nutzer auf Nachrichten mit dem konfigurierten Starboard-Emoji reagieren.
 - Solange sie ihr Sterne-Kontingent pro Stunde nicht ausgenutzt haben, wird die Nachricht entweder in den Starboard-Kanal gesendet oder die Anzahl der Sterne wird um eins erhöht.
+
+### Dauerhafte Bildarchivierung {#image-archival}
+
+Sobald eine Nachricht ins Starboard gepostet wird, werden alle Bildanhänge in die [Dateibibliothek](/docs/scnx/guilds/files) deines Servers hochgeladen, und der Starboard-Post verwendet diese dauerhafte URL. So brechen alte Starboard-Einträge nicht mehr, sobald Discords kurzlebige CDN-URLs ablaufen.
+
+Archivierte Bilder zählen auf das [Datei-Speicherkontingent](/docs/scnx/guilds/files#understanding-storage-limits) deines Servers. Um dies zu deaktivieren, aktiviere **Anhang-Archivierung deaktivieren** in der allgemeinen Konfiguration des Bots; in diesem Fall greift das Starboard wieder auf Discords ablaufende URLs zurück, und alte Posts werden mit der Zeit erneut defekt sein.
 
 ## Konfiguration {#configuration}
 

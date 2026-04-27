@@ -907,5 +907,34 @@
   "footer.legal.spa": { "message": "Bot-Hosting SPA" },
   "footer.trademark": { "message": "\"ScootKit\" ist eine in Deutschland eingetragene Marke. Nicht verbunden mit Discord Inc." },
   "footer.status.operational": { "message": "Alle Systeme funktionieren" },
-  "footer.status.degraded": { "message": "Einige Systeme beeinträchtigt" }
+  "footer.status.degraded": { "message": "Einige Systeme beeinträchtigt" },
+
+  "earlyAccess.badge": {
+    "message": "Early Access",
+    "description": "Badge label on the Early Access banner"
+  },
+  "earlyAccess.meta": {
+    "message": "ScootKit-Mitgliedschaft",
+    "description": "Meta chip in the top-right of the Early Access banner"
+  },
+  "earlyAccess.defaultDescription": {
+    "message": "Early Access ist ein optionaler Perk der ScootKit-Mitgliedschaft. Mitglieder bekommen Preview-Funktionen wie diese vor der allgemeinen Veröffentlichung und helfen mit Feedback mitzugestalten. Die Mitgliedschaft ist ein eigenes Abonnement, unabhängig von deinem SCNX-Plan, und kann auf der Mitgliedschafts-Seite abgeschlossen werden.",
+    "description": "Default description text in the Early Access banner when no custom description is provided"
+  },
+  "earlyAccess.generalAvailability": {
+    "message": "Mitgliedschaften finanzieren die Entwicklungsarbeit hinter Funktionen wie dieser. Außerdem erlauben sie uns, in einem kleinen Rahmen mit unseren Mitgliedern die Funktion zu testen und durch Feedback zu verbessern. Die Funktion landet trotzdem auf jedem SCNX-Server in 3 bis 4 Monate später.",
+    "description": "Sub-paragraph in the Early Access banner explaining general availability timeline and Membership rationale"
+  },
+  "earlyAccess.footnote": {
+    "message": "Sofort freigeschaltet beim Kauf · Aktiv auf jedem Server, den du verwaltest",
+    "description": "Small monospace footnote below the banner body"
+  },
+  "earlyAccess.unlock": {
+    "message": "Mit Mitgliedschaft freischalten",
+    "description": "Primary CTA button label on the Early Access banner"
+  },
+  "earlyAccess.learnMore": {
+    "message": "Mehr über die Mitgliedschaft",
+    "description": "Secondary ghost button label on the Early Access banner"
+  }
 }
