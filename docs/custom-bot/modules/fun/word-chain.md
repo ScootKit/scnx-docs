@@ -33,46 +33,46 @@ In a configured chain channel, members send single words. Each new word must sta
 
 <SlashCommandExplanation />
 
-| Command                            | Description                                                                                                            |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `/word-chain status`               | Shows the last word, the required next letter, the current chain length, and the longest chain so far (ephemeral).     |
-| `/word-chain stats`                | Shows a top-15 contributor leaderboard for the active chain plus the longest-chain record (ephemeral).                 |
+| Command                             | Description                                                                                                             |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `/word-chain status`                | Shows the last word, the required next letter, the current chain length, and the longest chain so far (ephemeral).      |
+| `/word-chain stats`                 | Shows a top-15 contributor leaderboard for the active chain plus the longest-chain record (ephemeral).                  |
 | `/word-chain reset [reason:<Text>]` | _Moderator-only._ Resets the chain back to an empty state. The optional reason is included in the public reset message. |
 
 ## Configuration {#configuration}
 
 In this configuration file, you can configure the Word Chain game. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=word-chain%7Cconfig).
 
-| Field                                                | Description                                                                                                                                                  |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Channels                                             | Channels in which the Word Chain game runs.                                                                                                                  |
-| Minimum word length                                  | Minimum number of letters a word must have to be accepted.                                                                                                   |
-| Allow repeated words?                                | If disabled, a word can only appear once per chain.                                                                                                          |
-| Treat ß and ss as equivalent (German only)           | If enabled, a trailing `ß` is treated as equivalent to `ss` for last-letter matching.                                                                        |
-| Moderator role                                       | Role required to run `/word-chain reset`. Leave empty to require the "Manage Messages" permission.                                                           |
-| Success-Reaction                                     | The emoji the bot reacts with when a valid word is accepted.                                                                                                 |
-| Remove reactions after 5 seconds?                    | If enabled, the success reaction is removed after 5 seconds to keep the channel clean.                                                                       |
-| Only one continuous message per user                 | If enabled, users cannot post two words in a row.                                                                                                            |
-| Message on wrong input                               | Sent when a user provides invalid input (auto-deleted after 8 seconds).                                                                                      |
-| Restart chain when a user posts an invalid word?     | If enabled, any invalid input resets the chain.                                                                                                              |
-| Message when chain resets                            | _Only visible if the option above is enabled._ Sent in the channel when the chain resets due to an invalid word.                                             |
-| Protect against users deleting the last word?        | If enabled, the bot reposts the last accepted word if its message gets deleted.                                                                              |
-| Deletion protection message                          | _Only visible if deletion protection is enabled._ Sent when a user deletes the last accepted word.                                                           |
-| Restrict users who repeatedly post invalid messages? | If enabled, users who reach the configured threshold of wrong messages are restricted (either by removing their "Send Messages" permission or by adding a strike role).        |
-| Amount of wrong messages to trigger action           | _Only visible if strikes are enabled._ Wrong messages a user has to send to trigger restriction.                                                             |
-| Give role on action, instead of removing permission  | _Only visible if strikes are enabled._ If enabled, the strike role is added instead of removing the "Send Messages" permission.                              |
-| Role given when strike threshold reached             | _Only visible if the option above is enabled._ The role given to users when they reach the strike threshold.                                                 |
-| Message when user gets actioned                      | _Only visible if strikes are enabled._ The message sent when a user reaches the configured strike count.                                                     |
-| Channel topic template (leave blank to disable)      | Channel topic set after each accepted word. Available placeholders: `%lastword%`, `%nextletter%`, `%count%`.                                                 |
+| Field                                                | Description                                                                                                                                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channels                                             | Channels in which the Word Chain game runs.                                                                                                                             |
+| Minimum word length                                  | Minimum number of letters a word must have to be accepted.                                                                                                              |
+| Allow repeated words?                                | If disabled, a word can only appear once per chain.                                                                                                                     |
+| Treat ß and ss as equivalent (German only)           | If enabled, a trailing `ß` is treated as equivalent to `ss` for last-letter matching.                                                                                   |
+| Moderator role                                       | Role required to run `/word-chain reset`. Leave empty to require the "Manage Messages" permission.                                                                      |
+| Success-Reaction                                     | The emoji the bot reacts with when a valid word is accepted.                                                                                                            |
+| Remove reactions after 5 seconds?                    | If enabled, the success reaction is removed after 5 seconds to keep the channel clean.                                                                                  |
+| Only one continuous message per user                 | If enabled, users cannot post two words in a row.                                                                                                                       |
+| Message on wrong input                               | Sent when a user provides invalid input (auto-deleted after 8 seconds).                                                                                                 |
+| Restart chain when a user posts an invalid word?     | If enabled, any invalid input resets the chain.                                                                                                                         |
+| Message when chain resets                            | _Only visible if the option above is enabled._ Sent in the channel when the chain resets due to an invalid word.                                                        |
+| Protect against users deleting the last word?        | If enabled, the bot reposts the last accepted word if its message gets deleted.                                                                                         |
+| Deletion protection message                          | _Only visible if deletion protection is enabled._ Sent when a user deletes the last accepted word.                                                                      |
+| Restrict users who repeatedly post invalid messages? | If enabled, users who reach the configured threshold of wrong messages are restricted (either by removing their "Send Messages" permission or by adding a strike role). |
+| Amount of wrong messages to trigger action           | _Only visible if strikes are enabled._ Wrong messages a user has to send to trigger restriction.                                                                        |
+| Give role on action, instead of removing permission  | _Only visible if strikes are enabled._ If enabled, the strike role is added instead of removing the "Send Messages" permission.                                         |
+| Role given when strike threshold reached             | _Only visible if the option above is enabled._ The role given to users when they reach the strike threshold.                                                            |
+| Message when user gets actioned                      | _Only visible if strikes are enabled._ The message sent when a user reaches the configured strike count.                                                                |
+| Channel topic template (leave blank to disable)      | Channel topic set after each accepted word. Available placeholders: `%lastword%`, `%nextletter%`, `%count%`.                                                            |
 
 ### Milestones {#config-milestones}
 
 In this configuration file, you can set up milestones to reward users for contributing words to a single chain. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=word-chain%7Cmilestones).
 
-| Field      | Description                                                                                |
-| ---------- | ------------------------------------------------------------------------------------------ |
-| Word count | The number of accepted words a user must contribute in a single chain to reach this milestone. |
-| Roles      | Roles given to the user when they reach this milestone (optional).                          |
+| Field      | Description                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------------- |
+| Word count | The number of accepted words a user must contribute in a single chain to reach this milestone.      |
+| Roles      | Roles given to the user when they reach this milestone (optional).                                  |
 | Message    | A congratulatory message sent when the user reaches this milestone (auto-deleted after 10 seconds). |
 
 ## Troubleshooting {#troubleshooting}

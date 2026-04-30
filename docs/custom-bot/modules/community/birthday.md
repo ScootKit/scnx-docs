@@ -83,37 +83,37 @@ The configuration is organized into tabs in the dashboard - the rows below are g
 
 ### Birthday Embed
 
-| Field                       | Description                                                                                                                                                          |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Birthday-Embed              | Customize the appearance (title, description, color, thumbnail, image) of the birthday embed.                                                                        |
-| Set Birthday Button Label   | The label for the "Set Birthday" button on the birthday embed. Clear this field to hide the button entirely.                                                         |
-| User Display Mode           | How users are displayed in the birthday embed. Options: Mention (clickable @mention), Tag (username), or Nickname (server nickname).                                 |
-| Use Components V2 Layout    | If enabled, the birthday embed is rendered using Discord's Components V2 system instead of a classic embed.                                                          |
-| Clear User Messages Daily   | If enabled, the bot deletes messages from other users in the birthday channel every day to keep it clean.                                                            |
+| Field                     | Description                                                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Birthday-Embed            | Customize the appearance (title, description, color, thumbnail, image) of the birthday embed.                                        |
+| Set Birthday Button Label | The label for the "Set Birthday" button on the birthday embed. Clear this field to hide the button entirely.                         |
+| User Display Mode         | How users are displayed in the birthday embed. Options: Mention (clickable @mention), Tag (username), or Nickname (server nickname). |
+| Use Components V2 Layout  | If enabled, the birthday embed is rendered using Discord's Components V2 system instead of a classic embed.                          |
+| Clear User Messages Daily | If enabled, the bot deletes messages from other users in the birthday channel every day to keep it clean.                            |
 
 ### Messages
 
-| Field                          | Description                                                                                                                  |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
-| Birthday Message               | The congratulation message sent when a user has a birthday but did not provide their birth year.                             |
-| Birthday message with age      | The congratulation message sent when a user has a birthday and provided their birth year, including their age.               |
-| "Successfully changed"-Message | The message shown when a user successfully registers or updates their birthday.                                              |
+| Field                          | Description                                                                                                    |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| Birthday Message               | The congratulation message sent when a user has a birthday but did not provide their birth year.               |
+| Birthday message with age      | The congratulation message sent when a user has a birthday and provided their birth year, including their age. |
+| "Successfully changed"-Message | The message shown when a user successfully registers or updates their birthday.                                |
 
 ### Pre-Birthday Notifications
 
-| Field                                     | Description                                                                                                                                                                                                                |
-| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable pre-birthday notifications?        | If enabled, the bot posts a notification in the birthday channel a configurable number of days before each user's birthday.                                                                                                |
-| Pre-birthday lead times (days)            | _Only visible if pre-birthday notifications are enabled._ List of lead times (in days) before a birthday at which to post a notification. For example, `[1, 7]` sends a notification both 7 days and 1 day before the birthday. |
-| Pre-birthday message                      | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did not provide a birth year. The `%days%` placeholder gives the number of days remaining.                           |
-| Pre-birthday message with age             | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did provide a birth year. Supports the `%age%` placeholder for the age the user will turn.                           |
+| Field                              | Description                                                                                                                                                                                                                     |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable pre-birthday notifications? | If enabled, the bot posts a notification in the birthday channel a configurable number of days before each user's birthday.                                                                                                     |
+| Pre-birthday lead times (days)     | _Only visible if pre-birthday notifications are enabled._ List of lead times (in days) before a birthday at which to post a notification. For example, `[1, 7]` sends a notification both 7 days and 1 day before the birthday. |
+| Pre-birthday message               | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did not provide a birth year. The `%days%` placeholder gives the number of days remaining.                                |
+| Pre-birthday message with age      | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did provide a birth year. Supports the `%age%` placeholder for the age the user will turn.                                |
 
 ### Commands
 
-| Field                                  | Description                                                                                                                                       |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable admin birthday management?      | If enabled, the `/manage-birthday` command becomes available for server admins to set, remove, lock, and unlock user birthdays.                   |
-| /birthday upcoming default range (days) | Default number of days the `/birthday upcoming` subcommand will look ahead if the user does not specify a range. Defaults to 30.                  |
+| Field                                   | Description                                                                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Enable admin birthday management?       | If enabled, the `/manage-birthday` command becomes available for server admins to set, remove, lock, and unlock user birthdays.  |
+| /birthday upcoming default range (days) | Default number of days the `/birthday upcoming` subcommand will look ahead if the user does not specify a range. Defaults to 30. |
 
 ## Troubleshooting {#troubleshooting}
 

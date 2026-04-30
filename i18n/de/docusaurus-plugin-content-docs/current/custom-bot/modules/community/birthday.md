@@ -83,13 +83,13 @@ Die Konfiguration ist im Dashboard in Tabs organisiert – die folgenden Zeilen 
 
 ### Geburtstags-Embed
 
-| Feld                                | Beschreibung                                                                                                                                                |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Birthday-Embed                      | Passe das Erscheinungsbild (Titel, Beschreibung, Farbe, Thumbnail, Bild) des Geburtstags-Embeds an.                                                         |
-| Geburtstag-festlegen-Button-Label   | Die Beschriftung des "Geburtstag festlegen"-Buttons im Geburtstags-Embed. Leere dieses Feld, um den Button vollständig auszublenden.                        |
-| Anzeigemodus für Nutzer             | Wie Nutzer im Geburtstags-Embed angezeigt werden. Optionen: Mention (klickbare @-Erwähnung), Tag (Nutzername) oder Nickname (Server-Nickname).              |
-| Components V2-Layout verwenden      | Falls aktiviert, wird das Geburtstags-Embed mit Discords Components-V2-System statt als klassisches Embed gerendert.                                        |
-| Tägliches Löschen von Nutzer-Nachrichten | Falls aktiviert, löscht der Bot täglich Nachrichten anderer Nutzer im Geburtstags-Kanal, um diesen sauber zu halten.                                    |
+| Feld                                     | Beschreibung                                                                                                                                   |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Birthday-Embed                           | Passe das Erscheinungsbild (Titel, Beschreibung, Farbe, Thumbnail, Bild) des Geburtstags-Embeds an.                                            |
+| Geburtstag-festlegen-Button-Label        | Die Beschriftung des "Geburtstag festlegen"-Buttons im Geburtstags-Embed. Leere dieses Feld, um den Button vollständig auszublenden.           |
+| Anzeigemodus für Nutzer                  | Wie Nutzer im Geburtstags-Embed angezeigt werden. Optionen: Mention (klickbare @-Erwähnung), Tag (Nutzername) oder Nickname (Server-Nickname). |
+| Components V2-Layout verwenden           | Falls aktiviert, wird das Geburtstags-Embed mit Discords Components-V2-System statt als klassisches Embed gerendert.                           |
+| Tägliches Löschen von Nutzer-Nachrichten | Falls aktiviert, löscht der Bot täglich Nachrichten anderer Nutzer im Geburtstags-Kanal, um diesen sauber zu halten.                           |
 
 ### Nachrichten
 
@@ -101,19 +101,19 @@ Die Konfiguration ist im Dashboard in Tabs organisiert – die folgenden Zeilen 
 
 ### Vor-Geburtstags-Benachrichtigungen
 
-| Feld                                              | Beschreibung                                                                                                                                                                                                                              |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Vor-Geburtstags-Benachrichtigungen aktivieren?    | Falls aktiviert, postet der Bot eine konfigurierbare Anzahl an Tagen vor dem Geburtstag jedes Nutzers eine Benachrichtigung im Geburtstagskanal.                                                                                          |
-| Vorlaufzeiten für Vor-Geburtstag (Tage)           | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Liste der Vorlaufzeiten (in Tagen) vor einem Geburtstag, an denen eine Benachrichtigung gesendet werden soll. Beispiel: `[1, 7]` sendet sowohl 7 Tage als auch 1 Tag vor dem Geburtstag eine Benachrichtigung. |
-| Vor-Geburtstags-Nachricht                         | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Die Vor-Geburtstags-Nachricht, die für Nutzer gesendet wird, die kein Geburtsjahr angegeben haben. Der Platzhalter `%days%` gibt die Anzahl der verbleibenden Tage an. |
-| Vor-Geburtstags-Nachricht mit Alter               | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Die Vor-Geburtstags-Nachricht, die für Nutzer gesendet wird, die ein Geburtsjahr angegeben haben. Unterstützt den Platzhalter `%age%` für das Alter, das der Nutzer erreichen wird. |
+| Feld                                           | Beschreibung                                                                                                                                                                                                                                                                           |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vor-Geburtstags-Benachrichtigungen aktivieren? | Falls aktiviert, postet der Bot eine konfigurierbare Anzahl an Tagen vor dem Geburtstag jedes Nutzers eine Benachrichtigung im Geburtstagskanal.                                                                                                                                       |
+| Vorlaufzeiten für Vor-Geburtstag (Tage)        | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Liste der Vorlaufzeiten (in Tagen) vor einem Geburtstag, an denen eine Benachrichtigung gesendet werden soll. Beispiel: `[1, 7]` sendet sowohl 7 Tage als auch 1 Tag vor dem Geburtstag eine Benachrichtigung. |
+| Vor-Geburtstags-Nachricht                      | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Die Vor-Geburtstags-Nachricht, die für Nutzer gesendet wird, die kein Geburtsjahr angegeben haben. Der Platzhalter `%days%` gibt die Anzahl der verbleibenden Tage an.                                         |
+| Vor-Geburtstags-Nachricht mit Alter            | _Nur sichtbar, wenn Vor-Geburtstags-Benachrichtigungen aktiviert sind._ Die Vor-Geburtstags-Nachricht, die für Nutzer gesendet wird, die ein Geburtsjahr angegeben haben. Unterstützt den Platzhalter `%age%` für das Alter, das der Nutzer erreichen wird.                            |
 
 ### Befehle
 
-| Feld                                                | Beschreibung                                                                                                                                              |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Admin-Geburtstagsverwaltung aktivieren?             | Falls aktiviert, steht Server-Administratoren der Befehl `/manage-birthday` zur Verfügung, um Geburtstage von Nutzern festzulegen, zu entfernen, zu sperren oder zu entsperren. |
-| /birthday upcoming Standard-Bereich (Tage)          | Standardanzahl an Tagen, die der Unterbefehl `/birthday upcoming` vorausschaut, wenn der Nutzer keinen Bereich angibt. Standardwert: 30.                  |
+| Feld                                       | Beschreibung                                                                                                                                                                    |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Admin-Geburtstagsverwaltung aktivieren?    | Falls aktiviert, steht Server-Administratoren der Befehl `/manage-birthday` zur Verfügung, um Geburtstage von Nutzern festzulegen, zu entfernen, zu sperren oder zu entsperren. |
+| /birthday upcoming Standard-Bereich (Tage) | Standardanzahl an Tagen, die der Unterbefehl `/birthday upcoming` vorausschaut, wenn der Nutzer keinen Bereich angibt. Standardwert: 30.                                        |
 
 ## Fehlerbehebung {#troubleshooting}
 
