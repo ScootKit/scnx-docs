@@ -12,7 +12,7 @@ A powerful, highly customizable staff management system to track activity, moder
 - **Infractions & Suspensions** - Issue warnings, strikes, demotions, terminations, or mark staff as under investigation. Temporary suspensions automatically remove staff roles and assign a suspension role.
 - **Promotions** - Promote staff members with optional automatic role assignment and customizable announcements.
 - **Staff Profiles & Reviews** - Individual staff profiles with a 1-5 star rating system, review history, and reputation tracking.
-- **Activity Checks** - Periodic staff activity verification with response tracking and configurable check windows.
+- **Activity Checks** - Periodic staff activity verification with response tracking, configurable check windows, a fully customizable end-of-check embed, and tracking of who started each check (or "system" for automated checks).
 - **Role-based access control** - Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
 
 ## Setup {#setup}
@@ -60,6 +60,12 @@ Each staff member has a profile that can be viewed with `/staff-management profi
 ### Activity Checks {#activity-checks}
 
 Management can start periodic activity checks targeting specific roles with `/staff-management activity-check start`. Staff members must respond within the configured time window. Results can be viewed and managed by supervisors.
+
+When a check ends - whether manually via `/staff-management activity-check end`, automatically when the duration expires, or when the round is cancelled - the original check message is replaced with the configurable **Ended Activity Check Embed**. The end embed renders the user who started the check (or "system" for automated checks) and the number of staff members who responded.
+
+### Duty admin panel {#duty-admin}
+
+Supervisors can manage other staff members' shifts via `/duty admin`. Buttons in the admin panel refresh inline rather than posting a new ephemeral message each time, so the panel stays clean across multiple actions.
 
 ## Commands {#commands}
 
@@ -109,7 +115,15 @@ This module has 8 configuration files. Open them in your [dashboard](https://scn
 | Promotions         | Promotion announcements, role assignment, and notification settings.        |
 | Reviews            | Rating system settings, self-rating prevention, and access restrictions.    |
 | Profiles           | Staff profile fields and customization options.                             |
-| Activity Checks    | Check windows, target roles, and response tracking settings.                |
+| Activity Checks    | Check windows, target roles, response tracking, and the customizable start/end embeds. |
+
+### Notable fields {#configuration-fields}
+
+| File            | Field                       | Description                                                                                                                                                                                                                              |
+| --------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Activity Checks | Activity Check Embed        | The message sent when an activity check starts. Supports placeholders `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, and `%initiator%` (renders "system" for automated checks).          |
+| Activity Checks | Ended Activity Check Embed  | The message that replaces the start embed when the check ends. Supports the same placeholders as the start embed plus `%responded-count%`.                                                                                               |
+| Promotions      | Auto-Add New Role?          | If enabled, the bot automatically gives the promoted user the new rank role. Defaults to **disabled** for new servers - automatic role assignment can expose a server to abuse if a promoter has access to high-permission roles.        |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -126,6 +140,13 @@ This module has 8 configuration files. Open them in your [dashboard](https://scn
   <ul>
     <li>Ensure the bot's role is positioned above the staff member's roles in the role hierarchy.</li>
     <li>Check that a <strong>Suspension Role</strong> is configured in the Infractions configuration.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Activity check messages still look active after the check ended</summary>
+  <ul>
+    <li>Older messages that pre-date the close-on-end fix may still show the original embed. New checks ended after the update will be properly replaced with the configured <strong>Ended Activity Check Embed</strong>, including for Components V2 templates.</li>
   </ul>
 </details>
 
