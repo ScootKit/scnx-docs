@@ -9,6 +9,7 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 - Verfolge die Aktivitäts-Streaks von Nutzern basierend auf einem konfigurierbaren Zeitraum (täglich, wöchentlich oder monatlich).
 - Streaks werden auf Null zurückgesetzt, wenn ein Nutzer für einen gesamten Zeitraum inaktiv bleibt.
 - Weise automatisch Rollen als Belohnung zu, wenn Nutzer bestimmte Streak-Meilensteine erreichen.
+- Behalte optional nur die höchste Streak-Rolle eines Nutzers, indem niedrigere Stufen automatisch entfernt werden, sobald er aufsteigt.
 - Zeige die aktuelle Streak-Anzahl optional im Nicknamen eines Nutzers an.
 - Der „Mitarbeiter-verwaltete Streaks?"-Modus ermöglicht es Moderatoren, Streaks manuell hinzuzufügen und zurückzusetzen, anstatt des automatischen Trackings.
 - Nutzer können einen verlorenen Streak einmal pro Verlust wiederherstellen (sofern aktiviert).
@@ -58,6 +59,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Streak im Nicknamen anzeigen?                          | Falls aktiviert, hängt der Bot die aktuelle Streak-Anzahl des Nutzers an dessen Nicknamen an.                                                                                                     |
 | Nutzern erlauben, den Streak im Nickname auszublenden? | Falls aktiviert, können Nutzer `/streak hide` verwenden, um die Anzeige ihres Streaks in ihrem Nickname an- oder auszuschalten. Nur verfügbar, wenn „Streak im Nickname anzeigen?" aktiviert ist. |
 | Streak-Belohnungsrollen                                | Rollenbelohnungen für das Erreichen bestimmter Streak-Meilensteine. Die „Ganze Zahl" ist die Streak-Anzahl und „Rolle wählen" ist die zuzuweisende Rolle.                                         |
+| Only keep highest streak role (Nur höchste Streak-Rolle behalten) | Falls aktiviert, werden niedrigere Streak-Rollen automatisch entfernt, wenn ein Nutzer eine höhere Streak-Schwelle erreicht, sodass jeder Nutzer nur die Rolle seiner aktuellen Stufe behält. Falls deaktiviert, stapeln sich Streak-Rollen. |
 | Streak-Anzeigungs-Nachricht                            | Passe das Embed an, das beim Aufrufen eines Streaks angezeigt wird.                                                                                                                               |
 | Ignorierte Kanäle                                      | Kanäle, in denen Nachrichten nicht für Streaks gezählt werden.                                                                                                                                    |
 | Ignorierte Rollen                                      | Rollen, deren Mitglieder-Nachrichten nicht für Streaks zählen.                                                                                                                                    |
