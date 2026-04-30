@@ -34,50 +34,50 @@ When a moderator decides the round is done, they run [`/word-story end`](#comman
 
 <SlashCommandExplanation />
 
-| Command                          | Description                                                                                                                                  |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/word-story status`             | Shows the current word count and the last 30 words of the story (ephemeral).                                                                 |
-| `/word-story full`               | Shows the full current story in an ephemeral embed.                                                                                          |
-| `/word-story stats`              | Shows a top-15 contributor leaderboard for the active story (ephemeral).                                                                     |
-| `/word-story end [title:<Text>]` | _Moderator-only._ Ends the active round, posts the finished story to the archive channel (if configured), and resets the channel for a new round. |
-| `/word-story new [opening:<Word>]` | _Moderator-only._ Starts a fresh round in an empty channel. Optionally seeds the story with a single opening word.                          |
+| Command                            | Description                                                                                                                                       |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/word-story status`               | Shows the current word count and the last 30 words of the story (ephemeral).                                                                      |
+| `/word-story full`                 | Shows the full current story in an ephemeral embed.                                                                                               |
+| `/word-story stats`                | Shows a top-15 contributor leaderboard for the active story (ephemeral).                                                                          |
+| `/word-story end [title:<Text>]`   | _Moderator-only._ Ends the active round, posts the finished story to the archive channel (if configured), and resets the channel for a new round. |
+| `/word-story new [opening:<Word>]` | _Moderator-only._ Starts a fresh round in an empty channel. Optionally seeds the story with a single opening word.                                |
 
 ## Configuration {#configuration}
 
 In this configuration file, you can configure the One-Word Story game. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=one-word-story%7Cconfig).
 
-| Field                                                | Description                                                                                                                              |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Channels                                             | Channels in which the One-Word Story game runs.                                                                                          |
-| Archive channel                                      | Channel where finished stories are posted (and pinned) when a moderator runs `/word-story end`. Leave empty to disable archiving.        |
-| Moderator role                                       | Role required to run mod-only commands (`/word-story end`, `/word-story new`). Leave empty to require the "Manage Messages" permission. |
-| Success-Reaction                                     | The emoji the bot reacts with when a word is accepted.                                                                                   |
-| Remove reactions after 5 seconds?                    | If enabled, the success reaction is removed after 5 seconds to keep the channel clean.                                                   |
-| Only one continuous message per user                 | If enabled, users cannot contribute two words in a row.                                                                                  |
-| Message on wrong input                               | The message sent when a user provides invalid input (auto-deleted after 8 seconds).                                                      |
-| Protect against users deleting the last word?        | If enabled, the bot reposts the last accepted word if its message gets deleted.                                                          |
-| Deletion protection message                          | _Only visible if deletion protection is enabled._ The message sent when a user deletes the last accepted word.                           |
-| Cap maximum story length?                            | If enabled, no further words are accepted once the story reaches the configured length. A moderator must run `/word-story end` to start a new round. |
-| Maximum story length                                 | _Only visible if the cap is enabled._ Number of words at which the round automatically locks.                                            |
-| Message when story reaches the cap                   | _Only visible if the cap is enabled._ Sent the first time the cap is hit in a round. Subsequent over-cap messages are deleted silently.  |
-| Send idle hint to moderators?                        | If enabled, the moderator role is pinged once after a configurable number of hours without a new word, suggesting the round be ended.    |
-| Idle hint after X hours                              | _Only visible if the idle hint is enabled._ Hours of inactivity before the moderator role is pinged.                                     |
-| Idle hint message                                    | _Only visible if the idle hint is enabled._ The message used for the idle ping.                                                          |
+| Field                                                | Description                                                                                                                                                             |
+| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channels                                             | Channels in which the One-Word Story game runs.                                                                                                                         |
+| Archive channel                                      | Channel where finished stories are posted (and pinned) when a moderator runs `/word-story end`. Leave empty to disable archiving.                                       |
+| Moderator role                                       | Role required to run mod-only commands (`/word-story end`, `/word-story new`). Leave empty to require the "Manage Messages" permission.                                 |
+| Success-Reaction                                     | The emoji the bot reacts with when a word is accepted.                                                                                                                  |
+| Remove reactions after 5 seconds?                    | If enabled, the success reaction is removed after 5 seconds to keep the channel clean.                                                                                  |
+| Only one continuous message per user                 | If enabled, users cannot contribute two words in a row.                                                                                                                 |
+| Message on wrong input                               | The message sent when a user provides invalid input (auto-deleted after 8 seconds).                                                                                     |
+| Protect against users deleting the last word?        | If enabled, the bot reposts the last accepted word if its message gets deleted.                                                                                         |
+| Deletion protection message                          | _Only visible if deletion protection is enabled._ The message sent when a user deletes the last accepted word.                                                          |
+| Cap maximum story length?                            | If enabled, no further words are accepted once the story reaches the configured length. A moderator must run `/word-story end` to start a new round.                    |
+| Maximum story length                                 | _Only visible if the cap is enabled._ Number of words at which the round automatically locks.                                                                           |
+| Message when story reaches the cap                   | _Only visible if the cap is enabled._ Sent the first time the cap is hit in a round. Subsequent over-cap messages are deleted silently.                                 |
+| Send idle hint to moderators?                        | If enabled, the moderator role is pinged once after a configurable number of hours without a new word, suggesting the round be ended.                                   |
+| Idle hint after X hours                              | _Only visible if the idle hint is enabled._ Hours of inactivity before the moderator role is pinged.                                                                    |
+| Idle hint message                                    | _Only visible if the idle hint is enabled._ The message used for the idle ping.                                                                                         |
 | Restrict users who repeatedly post invalid messages? | If enabled, users who reach the configured threshold of wrong messages are restricted (either by removing their "Send Messages" permission or by adding a strike role). |
-| Amount of wrong messages to trigger action           | _Only visible if strikes are enabled._ Wrong messages a user has to send to trigger restriction.                                         |
-| Give role on action, instead of removing permission  | _Only visible if strikes are enabled._ If enabled, the strike role is added to the user instead of removing their "Send Messages" permission. |
-| Role given when strike threshold reached             | _Only visible if the option above is enabled._ The role given to users when they reach the strike threshold.                             |
-| Message when user gets actioned                      | _Only visible if strikes are enabled._ The message sent when a user reaches the configured strike count.                                 |
-| Channel topic template (leave blank to disable)      | Channel topic set after each accepted word. Available placeholders: `%lastword%`, `%firstword%`, `%count%`.                              |
+| Amount of wrong messages to trigger action           | _Only visible if strikes are enabled._ Wrong messages a user has to send to trigger restriction.                                                                        |
+| Give role on action, instead of removing permission  | _Only visible if strikes are enabled._ If enabled, the strike role is added to the user instead of removing their "Send Messages" permission.                           |
+| Role given when strike threshold reached             | _Only visible if the option above is enabled._ The role given to users when they reach the strike threshold.                                                            |
+| Message when user gets actioned                      | _Only visible if strikes are enabled._ The message sent when a user reaches the configured strike count.                                                                |
+| Channel topic template (leave blank to disable)      | Channel topic set after each accepted word. Available placeholders: `%lastword%`, `%firstword%`, `%count%`.                                                             |
 
 ### Milestones {#config-milestones}
 
 In this configuration file, you can set up milestones to reward users for contributing words to a single story. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=one-word-story%7Cmilestones).
 
-| Field      | Description                                                                                  |
-| ---------- | -------------------------------------------------------------------------------------------- |
-| Word count | The number of accepted words a user must contribute in a single story to reach this milestone. |
-| Roles      | Roles given to the user when they reach this milestone (optional).                            |
+| Field      | Description                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------------- |
+| Word count | The number of accepted words a user must contribute in a single story to reach this milestone.      |
+| Roles      | Roles given to the user when they reach this milestone (optional).                                  |
 | Message    | A congratulatory message sent when the user reaches this milestone (auto-deleted after 10 seconds). |
 
 ## Troubleshooting {#troubleshooting}

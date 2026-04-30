@@ -106,24 +106,24 @@ Supervisors can manage other staff members' shifts via `/duty admin`. Buttons in
 
 This module has 8 configuration files. Open them in your [dashboard](https://scnx.app/glink?page=bot/configuration?query=staff-management-system).
 
-| Configuration File | Description                                                                 |
-| ------------------ | --------------------------------------------------------------------------- |
-| General            | Staff/supervisor/management roles, log channel, and general settings.       |
-| Shifts             | Duty types, shift quotas, leaderboard settings, and break configuration.    |
-| Status             | LoA and reduced activity settings, approval workflow, and role assignments. |
-| Infractions        | Infraction types, suspension settings, DM notifications, and expiration.    |
-| Promotions         | Promotion announcements, role assignment, and notification settings.        |
-| Reviews            | Rating system settings, self-rating prevention, and access restrictions.    |
-| Profiles           | Staff profile fields and customization options.                             |
+| Configuration File | Description                                                                            |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| General            | Staff/supervisor/management roles, log channel, and general settings.                  |
+| Shifts             | Duty types, shift quotas, leaderboard settings, and break configuration.               |
+| Status             | LoA and reduced activity settings, approval workflow, and role assignments.            |
+| Infractions        | Infraction types, suspension settings, DM notifications, and expiration.               |
+| Promotions         | Promotion announcements, role assignment, and notification settings.                   |
+| Reviews            | Rating system settings, self-rating prevention, and access restrictions.               |
+| Profiles           | Staff profile fields and customization options.                                        |
 | Activity Checks    | Check windows, target roles, response tracking, and the customizable start/end embeds. |
 
 ### Notable fields {#configuration-fields}
 
-| File            | Field                       | Description                                                                                                                                                                                                                              |
-| --------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Activity Checks | Activity Check Embed        | The message sent when an activity check starts. Supports placeholders `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, and `%initiator%` (renders "system" for automated checks).          |
-| Activity Checks | Ended Activity Check Embed  | The message that replaces the start embed when the check ends. Supports the same placeholders as the start embed plus `%responded-count%`.                                                                                               |
-| Promotions      | Auto-Add New Role?          | If enabled, the bot automatically gives the promoted user the new rank role. Defaults to **disabled** for new servers - automatic role assignment can expose a server to abuse if a promoter has access to high-permission roles.        |
+| File            | Field                      | Description                                                                                                                                                                                                                       |
+| --------------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Activity Checks | Activity Check Embed       | The message sent when an activity check starts. Supports placeholders `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, and `%initiator%` (renders "system" for automated checks).   |
+| Activity Checks | Ended Activity Check Embed | The message that replaces the start embed when the check ends. Supports the same placeholders as the start embed plus `%responded-count%`.                                                                                        |
+| Promotions      | Auto-Add New Role?         | If enabled, the bot automatically gives the promoted user the new rank role. Defaults to **disabled** for new servers - automatic role assignment can expose a server to abuse if a promoter has access to high-permission roles. |
 
 ## Troubleshooting {#troubleshooting}
 

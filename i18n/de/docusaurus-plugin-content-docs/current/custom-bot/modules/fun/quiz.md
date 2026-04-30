@@ -73,13 +73,13 @@ Unter [Quiz berbeiten](https://scnx.app/de/glink?page=bot/configuration?file=qui
 
 Jede Quizfrage hat folgende Felder:
 
-| Feld                  | Beschreibung                                                                                              |
-| --------------------- | --------------------------------------------------------------------------------------------------------- |
-| Frage oder Behauptung | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?".                              |
-| Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                   |
-| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft". |
-| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite".            |
-| Headline (optional)   | Optionaler Embed-Titel, der über der Frage angezeigt wird. Leer lassen, um den in den [Nachrichten](#config-strings) konfigurierten Standard-Quiz-Titel zu verwenden. |
+| Feld                  | Beschreibung                                                                                                                                                                                    |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frage oder Behauptung | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?".                                                                                                                    |
+| Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                                                                                                         |
+| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft".                                                                                       |
+| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite".                                                                                                  |
+| Headline (optional)   | Optionaler Embed-Titel, der über der Frage angezeigt wird. Leer lassen, um den in den [Nachrichten](#config-strings) konfigurierten Standard-Quiz-Titel zu verwenden.                           |
 | Image (optional)      | Optionales Bild, das über den Antwortmöglichkeiten angezeigt wird (z. B. Filmszene, Flagge, visueller Hinweis). Über den Bild-Picker des Dashboards hochladen oder eine `http(s)`-URL einfügen. |
 
 ## Fehlerbehebung {#troubleshooting}
