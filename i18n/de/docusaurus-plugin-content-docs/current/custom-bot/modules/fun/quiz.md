@@ -8,6 +8,8 @@ Erstelle Quizze für deine Nutzer und lasse sie gegeneinander antreten.
 
 Erstelle einfach Quizze auf deinem Server, lasse deine Mitglieder auf einer Bestenliste konkurrieren und beantworte automatisch eine festgelegte Anzahl von Fragen pro Tag.
 
+Quizfragen können optional ein Bild (über den Antwortmöglichkeiten angezeigt, nützlich für visuelle Quizze wie Filmszenen oder Flaggen-Erkennung) und eine eigene Überschrift enthalten, die den standardmäßigen Quiz-Titel für diese spezifische Frage ersetzt. Beide Felder werden pro Frage in der [Quiz-Liste](#config-quiz) konfiguriert. Das Bild kann direkt über den Bild-Picker des Dashboards hochgeladen (in der [Dateibibliothek](/de/docs/scnx/guilds/files) deines Servers gespeichert) oder als `http(s)`-URL eingefügt werden.
+
 ## Einrichtung {#setup}
 
 Aktiviere das Modul [in deinem SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) und [konfiguriere](#configuration) es.
@@ -71,12 +73,14 @@ Unter [Quiz berbeiten](https://scnx.app/de/glink?page=bot/configuration?file=qui
 
 Jede Quizfrage hat folgende Felder:
 
-| Feld                  | Beschreibung                                                                                              |
-| --------------------- | --------------------------------------------------------------------------------------------------------- |
-| Frage oder Behauptung | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?".                              |
-| Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                   |
-| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft". |
-| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite".            |
+| Feld                  | Beschreibung                                                                                                                                                                                    |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frage oder Behauptung | Titel des Quiz, sollte eine Frage sein, z.B. „Was ist dein Lieblingsspiel?".                                                                                                                    |
+| Zeitlimit             | Zeit, nach der eine Antwort ungültig ist. Standardwert ist eine Minute.                                                                                                                         |
+| Richtige Antworten    | Liste aller korrekten Antworten. Diese werden mit den falschen Antworten gemischt. Beispiel: „Minecraft".                                                                                       |
+| Falsche Antworten     | Das Gegenteil der richtigen Antworten – bei Auswahl verliert der Nutzer. Beispiel: „Fortnite".                                                                                                  |
+| Headline (optional)   | Optionaler Embed-Titel, der über der Frage angezeigt wird. Leer lassen, um den in den [Nachrichten](#config-strings) konfigurierten Standard-Quiz-Titel zu verwenden.                           |
+| Image (optional)      | Optionales Bild, das über den Antwortmöglichkeiten angezeigt wird (z. B. Filmszene, Flagge, visueller Hinweis). Über den Bild-Picker des Dashboards hochladen oder eine `http(s)`-URL einfügen. |
 
 ## Fehlerbehebung {#troubleshooting}
 
