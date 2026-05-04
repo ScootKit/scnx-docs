@@ -9,6 +9,7 @@ Let users highlight messages into a starboard channel by reacting.
 - Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
 - Limit the amount of stars a user can give per hour to make sure the messages are actually special.
 - Exclude roles and channels to keep unwanted messages out of the starboard.
+- Image attachments on starred messages are automatically archived to your server's [file library](/docs/scnx/guilds/files), so old starboard posts keep their images after Discord's CDN URLs expire.
 
 ## Setup {#setup}
 
@@ -24,6 +25,12 @@ Let users highlight messages into a starboard channel by reacting.
   emoji.
 - As long as they haven't used up their quota of stars per hour, the message will either be
   sent to the starboard channel or the amount of stars will be increased by one.
+
+### Permanent image archival {#image-archival}
+
+When a message is sent to the starboard, any image attachments on it are uploaded to your server's [file library](/docs/scnx/guilds/files) and the starboard post is rendered against that permanent URL. This stops old starboard posts from breaking once Discord's short-lived CDN URLs expire.
+
+Archived images count against your server's [file-storage quota](/docs/scnx/guilds/files#understanding-storage-limits). To opt out, enable **Disable attachment archival** in the bot's General Configuration; with archival disabled, starboard images revert to Discord's expiring URLs and old posts will eventually break again.
 
 ## Configuration {#configuration}
 

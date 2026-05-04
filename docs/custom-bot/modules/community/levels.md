@@ -10,6 +10,7 @@ Easy to use levelling system with a lot of customization!
 
 - Grant a random amount of XP to users for messages they send with configurable amounts and cooldown.
 - Grant XP based on the amount of time a user [spends in a voice channel](#voice-xp).
+- Show [daily message and voice stats](#commands-user) on `/profile` next to the lifetime totals.
 - Select one of [three leveling curves](#level-curves) or [enter your own](#custom-level-curve).
 - Add roles as [level rewards](#level-rewards).
 - Configure [custom level up messages](#level-up-messages) - you can add custom messages for specific levels or use random
@@ -63,6 +64,10 @@ which will be edited every 5 minutes going forward.
 
 ![Screenshot of a live leaderboard from the ScootKit Server](@site/docs/assets/custom-bot/modules/levels/live-leaderboard-en.png)
 
+### Daily activity stats {#daily-stats}
+
+The `/profile` embed shows today's message count and today's voice time alongside the lifetime totals, so members can see their current-day activity at a glance. The daily counters reset at midnight in the bot's configured timezone.
+
 ### Level messages {#level-up-messages}
 
 When a user levels up a level, a level message will be sent by default. You can [configure](#configuration) in which
@@ -81,6 +86,18 @@ the [random level-up messages configuration file](#configuration-random-levelup-
 feature is particularly useful to make leveling fun on servers as level up messages are unique and not repeating. If no
 random messages are available for any given required type, the bot will fall back to the configuration in your message
 configuration file.
+
+In addition to the [global parameters](/docs/custom-bot/global-parameters) and `%level%` / `%role%`, level-up messages (both the channel message and the role-reward variant, including random and selected level-up messages) support these placeholders:
+
+| Placeholder        | Value                                                                                  |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| `%xpGained%`       | The XP awarded for the action that triggered the level up.                             |
+| `%xpType%`         | Whether the level up came from a `Message` or from `Voice` activity.                   |
+| `%totalXP%`        | The user's total XP after the level up.                                                |
+| `%nextLevelXP%`    | The XP required to reach the next level.                                               |
+| `%totalMessages%`  | The user's lifetime message count.                                                     |
+| `%messagesToday%`  | The user's message count for the current day (resets at midnight in the bot timezone). |
+| `%voiceTimeToday%` | The user's voice time for the current day (resets at midnight in the bot timezone).    |
 
 Additionally, you might want to adjust the level up message for a specific level. This is possible in
 the [Selected messages configuration file](#configuration-special-levelup-messages). If any user reaches a level
@@ -271,11 +288,12 @@ system (and by extension, the trust of your community).
 
 These commands can be used by users on your server.
 
-| Command                            | Description                                                                                                                                                                    |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `/profile `                        | Display your profile, including how much XP and levels you have and your role multipliers (if any).                                                                            |
-| `/profile [user:<User>]`           | Display the profile of a user, including their XP and levels the user and their role multipliers (if any).                                                                     |
-| `/leaderboard [sort-by:<Boolean>]` | Display the leaderboard of the server, sorted by into groups by either XP or levels, based on either [your configuration](#configuration) or the `sort-by` parameter provided. |
+| Command                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/profile `                        | Display your profile, including XP, level, role multipliers (if any), and today's message count and voice time.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `/profile [user:<User>]`           | Display the profile of a user, including their XP, level, role multipliers (if any), and today's message count and voice time.                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `/leaderboard [sort-by:<Boolean>]` | Display the leaderboard of the server, sorted by into groups by either XP or levels, based on either [your configuration](#configuration) or the `sort-by` parameter provided. The reply is ephemeral - only the user who ran the command sees it.                                                                                                                                                                                                                                                                                |
+| `/calculate-level level:<Integer>` | _Opt-in. Only available if "Enable /calculate-level command" is enabled in the [configuration](#configuration-config)._ Shows the configured level formula, the XP required to reach the given level, and how many messages (min/avg/max) are needed. When [voice XP](#voice-xp) is enabled, also reports the voice-channel minutes required. The input level matches what users see in `/profile` (respects the "Start with Level 0?" setting). Targets above the configured maximum level are rejected when the cap is enabled. |
 
 ### Administrator commands {#commands-administrator}
 
@@ -337,6 +355,7 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 | Blacklisted roles                                             | Roles that are excluded from leveling. Users with any of these roles won't receive XP for sending messages.                                                                                                                                                                                                 |
 | Enable maximum level?                                         | If enabled, users will stop leveling up after reaching the configured maximum level.                                                                                                                                                                                                                        |
 | Maximum level                                                 | _Only visible if "Enable maximum level?" is enabled._<br/>The highest level a user can reach. Users will stop gaining levels (but may still gain XP) after reaching this level.                                                                                                                             |
+| Enable /calculate-level command                               | If enabled, server members can use the [`/calculate-level`](#commands-user) command to calculate the XP and number of messages (and voice minutes, if applicable) required to reach a specific level based on the configured level curve and XP-per-message range.                                          |
 | Cheats                                                        | To manage [levels and XP manually](#manage-levels), enable this option. This makes your level system unfair, if abused by admins.                                                                                                                                                                           |
 
 ### Message configuration {#configuration-strings}

@@ -27,6 +27,7 @@ Advanced security and moderation system with tons of features for keeping your s
 - Four moderator permission levels to control who can perform which actions.
 - Optional nickname changes on mute or quarantine.
 - All actions are logged to a configurable log channel.
+- [Proof attachments](#evidence-archival) on moderation actions are archived to your server's [file library](/docs/scnx/guilds/files), so old case logs stay viewable after Discord's CDN URLs expire.
 
 ## Setup {#setup}
 
@@ -99,6 +100,12 @@ Moderators can create, view, edit, and delete notes about users. Notes are usefu
 ### Actions history {#actions}
 
 Moderators can view all past moderation actions taken against a user, including warns, mutes, kicks, bans, and quarantines.
+
+### Evidence archival {#evidence-archival}
+
+Whenever a moderator attaches a `proof` file to a moderation action (warn, mute, kick, ban, channel-mute, or report), the attachment is uploaded to your server's [file library](/docs/scnx/guilds/files) and the case log links to that permanent URL instead of Discord's expiring CDN URL. Old cases stay open as evidence, even months after the action.
+
+Stored proof files count against your server's [file-storage quota](/docs/scnx/guilds/files#understanding-storage-limits). To opt out, enable **Disable attachment archival** in the bot's General Configuration; with archival disabled, evidence links revert to Discord's URLs and will eventually expire.
 
 ## Commands {#commands}
 

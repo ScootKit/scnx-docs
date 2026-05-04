@@ -230,7 +230,7 @@
     transform: translateX(2px);
 }
 
-/* Product sub-links — pill style */
+/* Product sub-links - pill style */
 .productSubLinks {
     display: flex;
     gap: 0.4rem;
