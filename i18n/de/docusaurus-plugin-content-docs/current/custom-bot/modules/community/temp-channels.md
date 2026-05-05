@@ -80,6 +80,13 @@ In dieser Konfigurationsdatei kannst du das Modul konfigurieren. Öffne sie in d
 | Archivkategorie                            | Die Kategorie, in die archivierte Kanäle verschoben werden. Diese Kategorie sollte für normale Benutzer ausgeblendet sein.                                                                                                                          |
 | Archivierte Kanäle nach (Stunden) löschen  | Wie lange ein archivierter Kanal aufbewahrt wird, bevor er dauerhaft gelöscht wird. Auf 180 setzen, um ihn nie automatisch zu löschen. Standard: 168 (7 Tage).                                                                                      |
 
+:::tip
+Die **Nutzerlisten-Nachricht**, die `/temp-channel list-users` sendet (`listUsers` in der Konfiguration),
+unterstützt beide Formate des [Nachrichten-Editors](/de/docs/scnx/guilds/message-editor/). Wenn die konfigurierte
+Nachricht den V4-Editor verwendet und den Platzhalter `%users%` nicht enthält, wird die Liste der erlaubten Nutzer
+als Text-Display-Block am Ende der Nachricht angehängt, statt sie in eine Embed-Beschreibung zu quetschen.
+:::
+
 ### Kanalarchivierung {#archiving}
 
 Wenn die Archivierung aktiviert ist, werden temporäre Kanäle nicht gelöscht, sobald alle Mitglieder sie verlassen. Stattdessen werden sie in eine konfigurierte Archiv-Kategorie verschoben und alle Berechtigungen werden entzogen. Wenn der ursprüngliche Ersteller dem Erstellungskanal erneut beitritt, wird sein archivierter Kanal wiederhergestellt (wobei der vorherige öffentliche/private Modus und die Liste der zugelassenen Benutzer erhalten bleiben), anstatt einen neuen Kanal zu erstellen.

@@ -69,6 +69,11 @@ Bans a user from the server. Optionally specify a duration for a temporary ban a
 
 Quarantines a user by assigning them the quarantine role and optionally removing all their other roles (roles are saved and restored on unquarantine). Optionally specify a duration for automatic removal. Requires moderator level 4 or higher.
 
+If **Strip new roles from quarantined users** is enabled (see [Configuration](#configuration-config)), the bot also
+removes any role that gets added to the user while they are quarantined - including reaction roles, self-roles
+picked from Discord's Channels & Roles tab, and roles assigned by other bots. Managed roles like server boosts and
+integration-managed roles are left in place.
+
 #### Channel-mute {#channel-mute}
 
 Mutes a user in the current channel only by modifying the channel's permission overwrites. This prevents the user from sending messages in that specific channel. Requires moderator level 2 or higher.
@@ -149,6 +154,7 @@ In this configuration file, you set up the core moderation settings. Open it in 
 | Quarantine-Role                                      | Role assigned to quarantined users. All other roles are removed (and saved for restoration).                                                                             |
 | Report-Channel                                       | Channel where user reports are sent. Falls back to the log channel if not set.                                                                                           |
 | Remove all roles on quarantine                       | If enabled, all roles are removed from a user when they are quarantined. Roles are saved and restored on unquarantine.                                                   |
+| Strip new roles from quarantined users               | If enabled, any role added to a quarantined user (via Discord's Channels & Roles tab, reaction roles, or another bot) is automatically removed again. Managed roles such as server boosts and integration roles are kept untouched. Off by default. |
 | Moderator-Level 1                                    | Roles that can perform: Warn.                                                                                                                                            |
 | Moderator-Level 2                                    | Roles that can perform: Warn, Mute, Unmute, Lock, Unlock, Channel-mute, Remove Channel-Mute.                                                                             |
 | Moderator-Level 3                                    | Roles that can perform: Warn, Mute, Unmute, Kick, Clear.                                                                                                                 |
@@ -168,7 +174,7 @@ In this configuration file, you set up the core moderation settings. Open it in 
 | Default Mute-Duration                                | Default mute duration when none is specified. Also used for automod actions. Maximum 28 days.                                                                            |
 | Should warns be deleted automatically?               | If enabled, warns are automatically removed after the configured expiration period.                                                                                      |
 | Time after which warns will be automatically removed | Duration after which warns expire (e.g., "3 months", "1y", "2w").                                                                                                        |
-| Change nicknames on Mute- / Quarantine               | If enabled, users will be renamed when muted or quarantined.                                                                                                             |
+| Change nicknames on Mute- / Quarantine               | If enabled, users will be renamed when muted or quarantined. The mute / quarantine prefix is applied through the [central nickname manager](/docs/custom-bot/modules/community/nicknames#central-nickname-manager), so it is added once (re-muting never produces `[Muted] [Muted] X`) and unmuting / unquarantining preserves any role prefix or active streak suffix. |
 | New nickname on mute                                 | Nickname template when a user is muted. Supports `%nickname%` (original nickname).                                                                                       |
 | Nickname during quarantine                           | Nickname template when a user is quarantined. Supports `%nickname%` (original nickname).                                                                                 |
 

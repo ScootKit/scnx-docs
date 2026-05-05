@@ -8,9 +8,13 @@ Einfaches Modul zum Bearbeiten von Benutzer-Nicknamen basierend auf Rollen.
 
 - Füge Mitgliedern automatisch Präfixe und/oder Suffixe zu ihren Nicknames hinzu, basierend auf ihren Rollen.
 - Unterstützt mehrere Rollen mit verschiedenen Präfixen und Suffixen – die hierarchisch höchste Rolle hat Priorität.
-- Nicknames werden automatisch aktualisiert, wenn sich die Rollen oder der Nickname eines Mitglieds ändern.
+- Nicknames werden automatisch aktualisiert, wenn sich die Rollen oder der Nickname eines Mitglieds ändern – auch
+  dann, wenn in derselben Aktualisierung eine Rolle entfernt und gleichzeitig eine andere hinzugefügt wird.
 - Alle vorhandenen Mitglieder werden beim Start des Bots umbenannt.
 - Optionale Erzwingung von Anzeigenamen anstelle von benutzerdefinierten Nicknames.
+- Stimmt sich mit anderen Modulen ab, die Nicknames verändern (Activity-Streak, AFK-System, Moderation,
+  Name-List-Cleaner, Custom Commands), und nutzt dafür einen [zentralen Nickname-Manager](#central-nickname-manager),
+  damit Präfixe, Suffixe und Overrides sich nicht mehr gegenseitig überschreiben.
 
 ## Einrichtung {#setup}
 
@@ -25,6 +29,31 @@ Dieses Modul funktioniert automatisch – es gibt keine Befehle. Wenn sich die R
 Das Modul wertet Rollen von der höchsten bis zur niedrigsten Position in der Rollenhierarchie aus. Die erste gefundene übereinstimmende Rollenkonfiguration wird angewendet. Wenn ein Mitglied keine übereinstimmenden Rollen hat, bleibt sein Nickname unverändert (wobei vorhandene Präfixe/Suffixe von zuvor passenden Rollen entfernt werden).
 
 Beim Start scannt der Bot alle vorhandenen Mitglieder und wendet die korrekten Präfixe und Suffixe an.
+
+Wird der Nickname eines Mitglieds extern geändert (in Discord, durch einen anderen Bot oder per `/nick`), übernimmt
+der Bot den neuen Wert als gespeicherten Basisnamen – beim nächsten rollenbedingten Update wird der Nickname aus
+diesem Basis­namen neu zusammengesetzt und das konfigurierte Präfix/Suffix wieder darübergelegt.
+
+## Zentraler Nickname-Manager {#central-nickname-manager}
+
+Alle bot-seitigen Nickname-Änderungen auf dem Server werden zentral koordiniert. Jedes Modul, das Nicknames
+verändert (Rollen-Präfix/Suffix hier, Activity-Streak-Suffixe, AFK-Marker, Mute-/Quarantäne-Präfixe, Bereinigung
+durch den Name-List-Cleaner, die Aktion `Nickname ändern` in Custom Commands) liefert seinen Beitrag, und der
+Manager rendert den finalen String in einer festen Reihenfolge:
+
+1. Der Basisname. Wenn dieses Modul aktiviert ist, liefert es den gespeicherten bevorzugten Namen des Mitglieds;
+   andernfalls greift der Manager auf den Discord-Anzeigenamen zurück.
+2. Bereinigung durch den [Name-List-Cleaner](/de/docs/custom-bot/modules/tools/name-list-cleaner/), falls aktiviert.
+3. Rollen-Präfixe/-Suffixe aus diesem Modul (nur wenn aktiviert) und Streak-Suffixe aus
+   [Activity-Streak](/de/docs/custom-bot/modules/community/activity-streak/).
+4. Wrapping-Overrides wie `[Muted]`, `[AFK]` oder Quarantäne-Präfixe.
+
+Der Manager ruft Discord nur auf, wenn sich der gerenderte Wert tatsächlich vom aktuellen Nickname unterscheidet.
+Das reduziert Audit-Log-Rauschen und Discord-API-Anfragen auf aktiven Servern.
+
+Der Manager selbst ist immer aktiv, unabhängig davon, welche Module aktiviert sind. Bei deaktiviertem Modul werden
+keine Rollen-Präfixe und -Suffixe angewendet, die Beiträge der anderen Module (Mute, AFK, Cleaner, ...) laufen aber
+weiterhin durch dieselbe Pipeline.
 
 ## Konfiguration {#configuration}
 
@@ -65,6 +94,13 @@ Jeder Eintrag in dieser Liste stellt eine Rollenregel mit den folgenden Feldern 
   <summary>Der falsche Präfix/Suffix wird angewendet.</summary>
 
 Das Modul verwendet die höchste Rolle in der Serverhierarchie, für die ein Präfix/Suffix konfiguriert wurde. Stelle sicher, dass deine Rollenregeln für die richtigen Rollen konfiguriert sind und die Rollenpositionen auf deinem Server deinen Erwartungen entsprechen.
+
+</details>
+
+<details>
+  <summary>Der Nickname enthält doppelte Präfixe oder Suffixe</summary>
+
+Dieses Problem trat in älteren Bot-Versionen auf, wenn das Rollen-Nicknamen-Modul gemeinsam mit Activity-Streak (oder ähnlichen nickname-verändernden Modulen) lief: Bei jedem Streak-Update konnte das Rollen-Suffix erneut angehängt werden, sodass schließlich der gesamte 32-Zeichen-Nickname mit gestapelten Dekorationen gefüllt war. Der [zentrale Nickname-Manager](#central-nickname-manager) verhindert das, indem er den finalen String aus den Beiträgen aller Module rendert, statt den Nickname wiederholt direkt zu bearbeiten. Sollten weiterhin doppelte Dekorationen sichtbar sein, starte den Bot einmal neu, damit der Manager die Basisnamen der betroffenen Mitglieder aus dem aktuellen Nickname neu aufbaut.
 
 </details>
 

@@ -26,14 +26,15 @@ Allow users to set their AFK-Status and notify other users if they try to reach 
 ## Usage {#usage}
 
 Users can start an AFK-Session using [`/afk start`](#commands), optionally specifying a reason for their absence and
-toggling automatic AFK session end. When starting the AFK session, the bot will prefix the nickname of the user
-with `[AFK]` and save the current nickname of the user. Whenever a member with an active AFK session gets pinged (
-either as a @mention or
-as a reply), the bot will send a notification message informing the user that the pinged member is currently
-unavailable.
+toggling automatic AFK session end. When starting the AFK session, the bot wraps the nickname of the user with the
+`[AFK]` prefix through the [central nickname manager](/docs/custom-bot/modules/community/nicknames#central-nickname-manager).
+Whenever a member with an active AFK session gets pinged (either as a @mention or as a reply), the bot will send a
+notification message informing the user that the pinged member is currently unavailable.
 If the AFK user sends a new message on your Discord (if not disabled) or uses [`/afk end`](#commands), the AFK session
 will end and the bot won't comment on new pings of the user.
-When the AFK session ends, the bot will revert the nickname of the user to the original value.
+When the AFK session ends, the `[AFK]` prefix is removed and the nickname re-renders against the user's current
+state - so if their roles changed or their activity streak advanced during the AFK session, the resulting nickname
+reflects the new state instead of restoring a stale snapshot.
 
 ## Commands {#commands}
 
@@ -72,7 +73,6 @@ The following data is being stored about every user that has a current AFK sessi
 
 - Their unique Discord User-ID.
 - The reason of their absence, set via the `reason` parameter in the [`/afk start`](#commands) command.
-- The current nickname of the user when they start the AFK session.
 - Whether the AFK session should end automatically, set via the `auto-end` parameter in the [`/afk start`](#commands)
   command.
 - Metadata about the entry (date when created and last updated)
