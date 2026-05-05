@@ -100,8 +100,8 @@ Alle benutzerdefinierten System-Prompts durchlaufen ein strenges automatisches S
 oder die Nutzungsbedingungen von Discord verstößt, wird dein KI-Modul sofort dauerhaft deaktiviert.**
 
 **Einspruch gegen eine Deaktivierung:**
-Um gegen eine Moduldeaktivierung Einspruch einzulegen, musst du eine E-Mail an **legal@scootkit.com** mit der genauen Betreffzeile senden:
-`AI Prompt [GuildID]`. Unser Team wird deinen Einspruch innerhalb von 2-3 Werktagen bearbeiten.
+Um gegen eine Moduldeaktivierung Einspruch einzulegen, eröffne ein [Support-Ticket](https://scnx.app/de/user/support/new?topic=cmnewauac001v13dsssxa8rlh).
+Unser Team wird deinen Einspruch innerhalb von 2-3 Werktagen bearbeiten.
 
 Für vollständige Details zu dieser Richtlinie und unserer rechtlichen Begründung, überprüfe bitte
 unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos).

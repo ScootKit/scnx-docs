@@ -100,8 +100,8 @@ All custom system prompts undergo strict automatic scanning before being saved. 
 guidelines or Discord's Terms of Service, your AI module will be permanently deactivated immediately.**
 
 **Appealing a Deactivation:**
-To appeal a module deactivation, you must email **legal@scootkit.com** with the exact subject line:
-`AI Prompt [GuildID]`. Our team will process your appeal within 2-3 business days.
+To appeal a module deactivation, [open a support ticket](https://scnx.app/user/support/new?topic=cmnewauac001v13dsssxa8rlh).
+Our team will process your appeal within 2-3 business days.
 
 For full details regarding this policy and our legal justification, please review
 our [Terms of Service](https://scootk.it/scnx-tos).
