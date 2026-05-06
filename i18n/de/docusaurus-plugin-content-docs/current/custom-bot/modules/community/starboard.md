@@ -58,6 +58,11 @@ In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzun
   </ul>
 </details>
 
+<details>
+  <summary>Reaktionen in altersbeschränkten (NSFW) Kanälen werden nicht gepostet</summary>
+  <p>Um zu verhindern, dass altersbeschränkte Inhalte in Kanäle ohne Altersbeschränkung gelangen, ignoriert der Bot stillschweigend Sterne auf Nachrichten aus einem altersbeschränkten Kanal, wenn der Starboard-Kanal nicht ebenfalls altersbeschränkt ist. Damit Nachrichten aus altersbeschränkten Kanälen ins Starboard gelangen, markiere deinen Starboard-Kanal in den Discord-Kanaleinstellungen ebenfalls als <strong>altersbeschränkt</strong>. Posts aus nicht altersbeschränkten Kanälen funktionieren unabhängig von dieser Einstellung weiterhin. Dieses Verhalten ist zur Einhaltung der Discord-Richtlinien vorgesehen und kann nicht deaktiviert werden.</p>
+</details>
+
 ## Gespeicherte Daten {#data-usage}
 
 Folgende Daten werden zu jeder vom Bot gesendeten Starboard-Nachricht gespeichert:
