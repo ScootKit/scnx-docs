@@ -21,8 +21,8 @@ The Message Editor is available in two versions:
 Both editors include a [live preview](#preview), [parameter insertion](#parameters), [copy/paste](#copy-paste), and
 [message sharing](#share).
 
-:::info V4 Rollout
-V4 is currently in beta and available to all servers on all plans on supported product and fields.
+:::info V4 Availability
+V4 is generally available to all servers on all plans, on every supported field.
 :::
 
 ---
@@ -86,7 +86,12 @@ The V4 editor uses Discord's Components V2 system. Instead of embeds, you build 
 components that can be nested inside containers. You can add up to **40 components** per message, and reorder them
 via **drag-and-drop**.
 
-![](@site/docs/assets/scnx/guilds/message-editor/v4-editor-overview.png)
+![The V4 editor on the SCNX dashboard - drag-and-drop components on the left, live preview on the right](@site/docs/assets/scnx/guilds/message-editor/v4-editor-overview.png)
+
+Here's an example of what a finished V4 message looks like - two containers with different accent colors, a server-icon
+section, game role buttons, and three sectioned rules each with their own thumbnail:
+
+![A Pixel Haven welcome and rules message built in V4 - teal welcome container with the server icon and game role buttons, plus an orange rules container with three sectioned rules and an "I agree" / "Read full rules" action row](@site/docs/assets/scnx/guilds/message-editor/v4-rendered-example.png)
 
 ### Available components {#v4-components}
 
@@ -203,7 +208,9 @@ The editor validates your message before saving. Common issues:
 <details>
   <summary>I don't see the V4 editor option</summary>
 
-The V4 editor is rolling out gradually. Check the <a href="#overview">rollout schedule</a> above. <a href="https://membership.scootkit.com">ScootKit Members</a> (Level 2+) get instant access.
+V4 is available on every SCNX server and every plan. If you don't see the **"Switch to V4 Editor"** button, make sure
+you're on the latest dashboard (hard-refresh your browser) and that the field you're editing supports V4 - a few
+legacy fields are still V3-only.
 
 </details>
 
