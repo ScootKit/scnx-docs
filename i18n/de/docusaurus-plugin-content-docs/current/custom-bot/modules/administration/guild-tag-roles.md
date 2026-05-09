@@ -1,6 +1,6 @@
 # Server-Tag-Rollen
 
-Belohne Benutzer, die den Server-Tag deines Servers ausrüsten, mit Rollen.
+Belohne Benutzer mit Rollen, die den Tag deines Servers tragen.
 
 <ModuleOverview moduleName="guild-tag-roles" />
 

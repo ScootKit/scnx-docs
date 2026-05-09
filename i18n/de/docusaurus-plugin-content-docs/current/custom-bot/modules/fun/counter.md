@@ -33,11 +33,11 @@ Benutzer senden Zahlen in den konfigurierten Zählkanälen. Die erste Zahl ist `
 
 ### Konfiguration {#config-main}
 
-In dieser Konfigurationsdatei kannst du das Zählspiel konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=counter%7Cconfig).
+In dieser Konfigurationsdatei kannst du das Zähl-Spiel konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=counter%7Cconfig).
 
 | Feld                                                      | Beschreibung                                                                                                        |
 | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Kanäle                                                    | Kanäle, in denen Benutzer am Zählspiel teilnehmen können.                                                     |
+| Kanäle                                                    | Kanäle, in denen Benutzer am Zähl-Spiel teilnehmen können.                                                     |
 | Kanalbeschreibung                                         | Text, der als Kanalthema festgelegt wird, nachdem jemand gezählt hat. Verwende `%x%` für die nächste Zahl. Zum Deaktivieren leer lassen. |
 | Erfolgsreaktion                                           | Das Emoji, mit dem der Bot reagiert, wenn ein Benutzer korrekt zählt.                                                       |
 | Spiel neustarten, wenn sich jemand verzählt               | Wenn aktiviert, startet das Spiel bei 1 neu, wenn ein Benutzer die falsche Zahl sendet.                                          |
@@ -93,7 +93,7 @@ In dieser Konfigurationsdatei kannst du Ziele festlegen, um Benutzer zu belohnen
 Die folgenden Daten werden zu jedem Zähl-Kanal gespeichert:
 
 - Die Kanal-ID
-- Die aktuelle Zahl im Zählspiel
+- Die aktuelle Zahl im Zähl-Spiel
 - Die ID des Benutzers, der zuletzt gezählt hat
 - Eine Anzahl der gültigen Nachrichten pro Benutzer in diesem Kanal
 - Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
