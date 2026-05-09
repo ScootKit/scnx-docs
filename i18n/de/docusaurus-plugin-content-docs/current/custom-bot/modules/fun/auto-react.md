@@ -16,7 +16,7 @@ Reagiert automatisch mit ausgewählten Emojis in ausgewählten Kanälen oder wen
 ## Einrichtung {#setup}
 
 1. Aktiviere das Modul in deinem [SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=auto-react&ref=scnx-app-docs).
-2. Konfiguriere das Modul wie im [Abschnitt Konfiguration](#configuration) beschrieben, um deine Reaktionen und Antworten einzurichten..
+2. Konfiguriere das Modul wie im [Abschnitt Konfiguration](#configuration) beschrieben, um deine Reaktionen und Antworten einzurichten.
 3. Der Bot benötigt die Berechtigung "Reaktionen hinzufügen" in jedem Kanal, in dem er reagieren soll.
 
 ## Nutzung {#usage}
