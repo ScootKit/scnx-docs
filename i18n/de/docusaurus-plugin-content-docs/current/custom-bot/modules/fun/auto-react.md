@@ -6,12 +6,12 @@ Reagiert automatisch mit ausgewählten Emojis in ausgewählten Kanälen oder wen
 
 ## Funktionen {#features}
 
-* Reagiert in konfigurierten Kanälen oder Kategorien automatisch mit festgelegten Emojis auf jede Nachricht.
-* Reagiert auf Nachrichten, wenn ein bestimmter Benutzer erwähnt wird (per @mention).
-* Reagiert auf Nachrichten von bestimmten Benutzern (Autoren) oder Benutzern mit bestimmten Rollen.
-* Antwortet automatisch mit einer konfigurierten Nachricht, wenn ein bestimmter Benutzer erwähnt wird.
-* Unterstützung für mehrere Emojis pro Trigger (getrennt durch `|`).
-* Option, nur auf direkte @Erwähnungen oder auch auf Erwähnungen in Antworten zu reagieren.
+- Reagiert in konfigurierten Kanälen oder Kategorien automatisch mit festgelegten Emojis auf jede Nachricht.
+- Reagiert auf Nachrichten, wenn ein bestimmter Benutzer erwähnt wird (per @mention).
+- Reagiert auf Nachrichten von bestimmten Benutzern (Autoren) oder Benutzern mit bestimmten Rollen.
+- Antwortet automatisch mit einer konfigurierten Nachricht, wenn ein bestimmter Benutzer erwähnt wird.
+- Unterstützung für mehrere Emojis pro Trigger (getrennt durch `|`).
+- Option, nur auf direkte @Erwähnungen oder auch auf Erwähnungen in Antworten zu reagieren.
 
 ## Einrichtung {#setup}
 
@@ -23,12 +23,12 @@ Reagiert automatisch mit ausgewählten Emojis in ausgewählten Kanälen oder wen
 
 Sobald das Modul konfiguriert ist, arbeitet es automatisch ohne jegliche Benutzerinteraktion. Wenn eine Nachricht gesendet wird, prüft der Bot die folgenden Trigger nacheinander und reagiert entsprechend:
 
-* Wenn die Nachricht in einem konfigurierten **Kanal** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
-* Wenn die Nachricht in einem Kanal innerhalb einer konfigurierten **Kategorie** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
-* Wenn der Autor der Nachricht eine konfigurierte **Rolle** hat, reagiert der Bot mit den festgelegten Emojis.
-* Wenn die Nachricht von einem konfigurierten **Autor** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
-* Wenn ein konfigurierter **Benutzer in der Nachricht erwähnt wird**, reagiert der Bot mit den festgelegten Emojis.
-* Wenn ein konfigurierter **Benutzer erwähnt wird** und eine Antwort konfiguriert ist, antwortet der Bot mit der festgelegten Nachricht.
+- Wenn die Nachricht in einem konfigurierten **Kanal** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
+- Wenn die Nachricht in einem Kanal innerhalb einer konfigurierten **Kategorie** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
+- Wenn der Autor der Nachricht eine konfigurierte **Rolle** hat, reagiert der Bot mit den festgelegten Emojis.
+- Wenn die Nachricht von einem konfigurierten **Autor** gesendet wird, reagiert der Bot mit den festgelegten Emojis.
+- Wenn ein konfigurierter **Benutzer in der Nachricht erwähnt wird**, reagiert der Bot mit den festgelegten Emojis.
+- Wenn ein konfigurierter **Benutzer erwähnt wird** und eine Antwort konfiguriert ist, antwortet der Bot mit der festgelegten Nachricht.
 
 ## Konfiguration {#configuration}
 
