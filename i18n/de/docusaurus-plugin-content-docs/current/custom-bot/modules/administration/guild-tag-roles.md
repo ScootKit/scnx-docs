@@ -32,6 +32,6 @@ Dies ist die Konfigurationsdatei für das Modul. Öffne sie in deinem [Dashboard
 
 ## Fehlerbehebung {#troubleshooting}
 
-- **Rollen werden nicht zugewiesen**: Stelle sicher, dass der Bot über die Berechtigung "Rollen verwalten" verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob der Benutzer das Server-Tag sowohl ausgerüstet als auch auf „sichtbar“ gestellt hat.
+- **Rollen werden nicht zugewiesen**: Stelle sicher, dass der Bot über die Berechtigung "Rollen verwalten" verfügt und dass die höchste Rolle des Bots über den Rollen steht, die du zuweisen möchtest. Überprüfe außerdem, ob der Benutzer das Server-Tag sowohl ausgerüstet als auch auf "sichtbar" gestellt hat.
 - **Rollen werden nicht sofort aktualisiert**: Die Echtzeit-Erkennung hängt davon ab, dass Discord Daten zum Server-Tag in User-Update-Events sendet. Falls eine Änderung nicht sofort erfasst wird, korrigiert der regelmäßige Sync (alle 3 Stunden) dies nach.
 - **Das Modul scheint Änderungen am Server-Tag nicht zu erkennen**: Stelle sicher, dass für deinen Discord-Server in den Server-Einstellungen tatsächlich ein Server-Tag konfiguriert wurde. Der Bot prüft, ob der primäre Server des Benutzers mit deinem Server übereinstimmt.
