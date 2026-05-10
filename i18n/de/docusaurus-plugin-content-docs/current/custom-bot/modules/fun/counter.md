@@ -35,35 +35,35 @@ Benutzer senden Zahlen in den konfigurierten Zählkanälen. Die erste Zahl ist `
 
 In dieser Konfigurationsdatei kannst du das Zähl-Spiel konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=counter%7Cconfig).
 
-| Feld                                                      | Beschreibung                                                                                                        |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Kanäle                                                    | Kanäle, in denen Benutzer am Zähl-Spiel teilnehmen können.                                                     |
-| Kanalbeschreibung                                         | Text, der als Kanalthema festgelegt wird, nachdem jemand gezählt hat. Verwende `%x%` für die nächste Zahl. Zum Deaktivieren leer lassen. |
-| Erfolgsreaktion                                           | Das Emoji, mit dem der Bot reagiert, wenn ein Benutzer korrekt zählt.                                                       |
-| Spiel neustarten, wenn sich jemand verzählt               | Wenn aktiviert, startet das Spiel bei 1 neu, wenn ein Benutzer die falsche Zahl sendet.                                          |
-| Nachricht, wenn das Spiel neugestartet wird               | Die Nachricht, die gesendet wird, wenn das Spiel aufgrund eines Fehlers beim Zählen neu startet.                                                       |
-| Nutzer müssen abwechselnd zählen                          | Wenn aktiviert, müssen sich die Benutzer abwechseln und können nicht zwei Zahlen hintereinander zählen.                                            |
-| Verhindern, dass Nutzer die letzte Zählungsnachricht löschen? | Wenn aktiviert, sendet der Bot eine Nachricht, wenn die letzte Zählnachricht gelöscht wird, um Verwirrung zu vermeiden.          |
-| Löschschutznachricht                                      | Die Nachricht, die gesendet wird, wenn die letzte korrekte Zählnachricht gelöscht wird.                                            |
-| Reaktionen nach 5 Sekunden entfernen?                     | Wenn aktiviert, werden die Reaktionen des Bots nach 5 Sekunden entfernt, um den Kanal sauber zu halten.                    |
-| Nachricht bei falscher Eingabe                            | Die Nachricht, die gesendet wird, wenn ein Benutzer eine ungültige Eingabe macht.                                                             |
-| Anzahl von falschen Antworten, um eine Aktion auszulösen  | Die Anzahl der falschen Nachrichten, die ein Benutzer senden muss, bevor er eingeschränkt wird. Zum Deaktivieren auf 0 setzen.                        |
-| Rolle bei Sperrung vergeben, anstatt Rechte zu entfernen  | Wenn aktiviert, wird dem Benutzer eine Rolle zugewiesen, anstatt ihm die Berechtigung zum Senden von Nachrichten zu entziehen.                        |
-| Rolle, die bei Sperrung vergeben wird                     | Die Rolle, die eingeschränkten Benutzern zugewiesen wird (gilt nur, wenn die oben genannte Option aktiviert ist).                 |
-| Nachricht, wenn ein Nutzer gesperrt wird                  | Die Nachricht, die gesendet wird, wenn ein Benutzer eingeschränkt wird.                                                                    |
-| Textcharaktere in der Nachricht erlauben?                 | Wenn aktiviert, können Benutzer neben der Zahl auch zusätzlichen Text in ihren Nachrichten angeben.                             |
-| Nutzern erlauben, Mathematik in ihren Nachrichten zu verwenden? | Wenn aktiviert, können Benutzer mathematische Ausdrücke einreichen, die die korrekte nächste Zahl ergeben.                    |
-| Zahlen-Easter-Eggs aktivieren?                            | Wenn aktiviert, reagiert der Bot bei bestimmten Zahlen (z. B. 42, 69, 100, 420) mit speziellen Emojis.                       |
+| Feld                                                            | Beschreibung                                                                                                                             |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Kanäle                                                          | Kanäle, in denen Benutzer am Zähl-Spiel teilnehmen können.                                                                               |
+| Kanalbeschreibung                                               | Text, der als Kanalthema festgelegt wird, nachdem jemand gezählt hat. Verwende `%x%` für die nächste Zahl. Zum Deaktivieren leer lassen. |
+| Erfolgsreaktion                                                 | Das Emoji, mit dem der Bot reagiert, wenn ein Benutzer korrekt zählt.                                                                    |
+| Spiel neustarten, wenn sich jemand verzählt                     | Wenn aktiviert, startet das Spiel bei 1 neu, wenn ein Benutzer die falsche Zahl sendet.                                                  |
+| Nachricht, wenn das Spiel neugestartet wird                     | Die Nachricht, die gesendet wird, wenn das Spiel aufgrund eines Fehlers beim Zählen neu startet.                                         |
+| Nutzer müssen abwechselnd zählen                                | Wenn aktiviert, müssen sich die Benutzer abwechseln und können nicht zwei Zahlen hintereinander zählen.                                  |
+| Verhindern, dass Nutzer die letzte Zählungsnachricht löschen?   | Wenn aktiviert, sendet der Bot eine Nachricht, wenn die letzte Zählnachricht gelöscht wird, um Verwirrung zu vermeiden.                  |
+| Löschschutznachricht                                            | Die Nachricht, die gesendet wird, wenn die letzte korrekte Zählnachricht gelöscht wird.                                                  |
+| Reaktionen nach 5 Sekunden entfernen?                           | Wenn aktiviert, werden die Reaktionen des Bots nach 5 Sekunden entfernt, um den Kanal sauber zu halten.                                  |
+| Nachricht bei falscher Eingabe                                  | Die Nachricht, die gesendet wird, wenn ein Benutzer eine ungültige Eingabe macht.                                                        |
+| Anzahl von falschen Antworten, um eine Aktion auszulösen        | Die Anzahl der falschen Nachrichten, die ein Benutzer senden muss, bevor er eingeschränkt wird. Zum Deaktivieren auf 0 setzen.           |
+| Rolle bei Sperrung vergeben, anstatt Rechte zu entfernen        | Wenn aktiviert, wird dem Benutzer eine Rolle zugewiesen, anstatt ihm die Berechtigung zum Senden von Nachrichten zu entziehen.           |
+| Rolle, die bei Sperrung vergeben wird                           | Die Rolle, die eingeschränkten Benutzern zugewiesen wird (gilt nur, wenn die oben genannte Option aktiviert ist).                        |
+| Nachricht, wenn ein Nutzer gesperrt wird                        | Die Nachricht, die gesendet wird, wenn ein Benutzer eingeschränkt wird.                                                                  |
+| Textcharaktere in der Nachricht erlauben?                       | Wenn aktiviert, können Benutzer neben der Zahl auch zusätzlichen Text in ihren Nachrichten angeben.                                      |
+| Nutzern erlauben, Mathematik in ihren Nachrichten zu verwenden? | Wenn aktiviert, können Benutzer mathematische Ausdrücke einreichen, die die korrekte nächste Zahl ergeben.                               |
+| Zahlen-Easter-Eggs aktivieren?                                  | Wenn aktiviert, reagiert der Bot bei bestimmten Zahlen (z. B. 42, 69, 100, 420) mit speziellen Emojis.                                   |
 
 ### Ziele {#config-milestones}
 
 In dieser Konfigurationsdatei kannst du Ziele festlegen, um Benutzer zu belohnen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=counter%7Cmilestones).
 
-| Feld          | Beschreibung                                                                     |
-| ------------- | ------------------------------------------------------------------------------- |
+| Feld            | Beschreibung                                                                                               |
+| --------------- | ---------------------------------------------------------------------------------------------------------- |
 | Nachrichtenzahl | Die Anzahl der gültigen Zählnachrichten, die ein Benutzer senden muss, um diesen Meilenstein zu erreichen. |
-| Rollen        | Rollen, die dem Benutzer zugewiesen werden, wenn er diesen Meilenstein erreicht (optional).             |
-| Nachricht     | Eine Glückwunschbotschaft, die gesendet wird, wenn der Benutzer diesen Meilenstein erreicht.             |
+| Rollen          | Rollen, die dem Benutzer zugewiesen werden, wenn er diesen Meilenstein erreicht (optional).                |
+| Nachricht       | Eine Glückwunschbotschaft, die gesendet wird, wenn der Benutzer diesen Meilenstein erreicht.               |
 
 ## Fehlerbehebung {#troubleshooting}
 

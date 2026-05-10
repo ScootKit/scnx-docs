@@ -38,7 +38,7 @@ Ein paar Sachen, die in V3 entweder umständlich oder gar nicht möglich waren.
 
 ### Sections: Text links, Accessory rechts
 
-Was mir in V3 am meisten gefehlt hat: ein Bild *neben* einem Absatz. Embeds erlaubten ein Thumbnail oben rechts, aber
+Was mir in V3 am meisten gefehlt hat: ein Bild _neben_ einem Absatz. Embeds erlaubten ein Thumbnail oben rechts, aber
 das war immer winzig und immer in der Ecke. Wer zusätzlich einen Button wollte - tja, der Button landete am Ende der
 Nachricht, nicht neben dem Text, zu dem er gehörte. Du hast also einen Absatz geschrieben, darauf gezeigt und gehofft,
 dass der Leser runterscrollt und wieder zurück, um zu sehen, was der Button überhaupt macht.
@@ -103,16 +103,16 @@ Gleiches Prinzip für Emoji (`:`) und für `@`- und `#`-Mentions in Feldern, die
 
 Zum Nachschlagen - alles, was du in eine V4-Nachricht reinwerfen kannst:
 
-| Komponente        | Was sie macht                                                                                  |
-| ----------------- | ---------------------------------------------------------------------------------------------- |
-| **Text Display**  | Ein Markdown-Textblock. Bis zu 4.000 Zeichen.                                                  |
-| **Container**     | Gruppiert Komponenten mit Akzentfarbe. Kommt einem Embed am nächsten, nur flexibler.           |
-| **Section**       | 1-3 Textzeilen mit einem Thumbnail oder Button rechts.                                         |
-| **Media Gallery** | 1-10 Bilder in einem Grid, das sich auch wirklich wie ein Grid verhält.                        |
-| **Action Row**    | Bis zu 5 Buttons oder ein Dropdown.                                                            |
-| **Separator**     | Trenner, mit oder ohne Linie.                                                                  |
-| **Image**         | Ein hochgeladenes Bild, an beliebiger Stelle.                                                  |
-| **Dynamic Image** | Pro-Nachricht generiertes Bild (wie in V3).                                                    |
+| Komponente        | Was sie macht                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| **Text Display**  | Ein Markdown-Textblock. Bis zu 4.000 Zeichen.                                        |
+| **Container**     | Gruppiert Komponenten mit Akzentfarbe. Kommt einem Embed am nächsten, nur flexibler. |
+| **Section**       | 1-3 Textzeilen mit einem Thumbnail oder Button rechts.                               |
+| **Media Gallery** | 1-10 Bilder in einem Grid, das sich auch wirklich wie ein Grid verhält.              |
+| **Action Row**    | Bis zu 5 Buttons oder ein Dropdown.                                                  |
+| **Separator**     | Trenner, mit oder ohne Linie.                                                        |
+| **Image**         | Ein hochgeladenes Bild, an beliebiger Stelle.                                        |
+| **Dynamic Image** | Pro-Nachricht generiertes Bild (wie in V3).                                          |
 
 40 pro Nachricht, alle draggable, Container können alles davon halten - außer andere Container.
 
