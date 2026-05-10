@@ -3,7 +3,7 @@
 In diesem Artikel erklären wir dir, wie du Direktnachrichten aktivierst, um beispielsweise Nachrichten von deinem Bot erhalten zu können.
 
 :::tip Nachrichtenanfragen
-Du kannst Nachrichten-Anfragen aktivieren, um nicht befreundete Absender in einer separaten Liste anzuzeigen. Dort kannst du dir eine Vorschau der Nachrichten ansehen und sie entweder annehmen oder ignorieren.
+Du kannst Nachrichtenanfragen aktivieren, um nicht befreundete Absender in einer separaten Liste anzuzeigen. Dort kannst du dir eine Vorschau der Nachrichten ansehen und sie entweder annehmen oder ignorieren.
 :::
 
 ## Direktnachrichten global aktivieren {#activate-dms-global}
