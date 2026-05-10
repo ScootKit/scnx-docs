@@ -43,6 +43,10 @@ For each ticket topic (in both Modmail and the Ticket System), you can override 
 | Override estimated wait time for this topic | If enabled, you can set a fixed estimated wait time for this topic instead of using the calculated value.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Disable estimated wait time for this topic" is not enabled._</blockquote></details></small> |
 | Overridden wait time (minutes)              | The fixed estimated wait time in minutes to display for this topic.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Override estimated wait time for this topic" is enabled._</blockquote></details></small>                                          |
 
+:::info Hold time excluded
+Time that a ticket spent on hold is automatically excluded from the historical data used to compute estimated wait times. Intentional pauses don't inflate the estimate shown to users.
+:::
+
 ### Message configuration {#message-configuration}
 
 These settings are configured separately for each enabled system (Modmail and Ticket System).

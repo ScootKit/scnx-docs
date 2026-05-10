@@ -21,23 +21,8 @@ The Message Editor is available in two versions:
 Both editors include a [live preview](#preview), [parameter insertion](#parameters), [copy/paste](#copy-paste), and
 [message sharing](#share).
 
-:::info V4 Rollout
-V4 is currently in beta and rolling out gradually. The V3 editor will remain available indefinitely - you are never
-forced to switch to V4.
-
-| Phase        | Date           | Servers         |
-| ------------ | -------------- | --------------- |
-| Phase 1      | March 17, 2026 | 5% of servers   |
-| Phase 2      | March 31, 2026 | 15% of servers  |
-| Phase 3      | April 14, 2026 | 25% of servers  |
-| Phase 4      | April 21, 2026 | 40% of servers  |
-| Phase 5      | April 28, 2026 | 50% of servers  |
-| Full rollout | May 5, 2026    | 100% of servers |
-
-Servers are selected randomly in each phase - there is no way to check or predict which phase your server will be
-included in.
-
-Don't want to wait? [ScootKit Members](https://membership.scootkit.com) (Level 2+) get instant access to the V4 editor.
+:::info V4 Availability
+V4 is generally available to all servers on all plans, on every supported field.
 :::
 
 ---
@@ -80,7 +65,9 @@ Use the color picker or enter a HEX color code directly to set the embed accent 
 - **Custom Command Buttons** - Trigger a [Custom Command](/docs/custom-bot/custom-commands) with a **Button**
   trigger when clicked.
 - **Custom Command Dropdown** - A select menu that triggers a custom command when an option is selected.
-- **Self-Role Dropdown** - A select menu that lets users assign roles to themselves.
+- **Self-Role Dropdown** - A select menu that lets users assign roles to themselves. Selecting an option opens an
+  ephemeral confirmation that lists the roles to be added or removed; the member can adjust the selection there and
+  has to confirm with **Apply** before any role is changed.
 
 ### Image attachments {#v3-attachments}
 
@@ -99,7 +86,12 @@ The V4 editor uses Discord's Components V2 system. Instead of embeds, you build 
 components that can be nested inside containers. You can add up to **40 components** per message, and reorder them
 via **drag-and-drop**.
 
-![](@site/docs/assets/scnx/guilds/message-editor/v4-editor-overview.png)
+![The V4 editor on the SCNX dashboard - drag-and-drop components on the left, live preview on the right](@site/docs/assets/scnx/guilds/message-editor/v4-editor-overview.png)
+
+Here's an example of what a finished V4 message looks like - two containers with different accent colors, a server-icon
+section, game role buttons, and three sectioned rules each with their own thumbnail:
+
+![A Pixel Haven welcome and rules message built in V4 - teal welcome container with the server icon and game role buttons, plus an orange rules container with three sectioned rules and an "I agree" / "Read full rules" action row](@site/docs/assets/scnx/guilds/message-editor/v4-rendered-example.png)
 
 ### Available components {#v4-components}
 
@@ -134,7 +126,9 @@ A select menu inside an Action Row with up to **25 options** (each with label, o
 Options can be reordered via drag-and-drop. Two action types are supported:
 
 - **Custom Command Dropdown** - Each option triggers a Custom Command when selected.
-- **Self-Role Dropdown** - Each option assigns a role. Supports configurable min/max selection counts.
+- **Self-Role Dropdown** - Each option assigns a role. Supports configurable min/max selection counts. Selecting
+  options opens an ephemeral confirmation listing the roles to add or remove; the member must press **Apply** to
+  commit, or **Cancel** to discard. The original public message is not modified.
 
 ---
 
@@ -214,7 +208,9 @@ The editor validates your message before saving. Common issues:
 <details>
   <summary>I don't see the V4 editor option</summary>
 
-The V4 editor is rolling out gradually. Check the <a href="#overview">rollout schedule</a> above. <a href="https://membership.scootkit.com">ScootKit Members</a> (Level 2+) get instant access.
+V4 is available on every SCNX server and every plan. If you don't see the **"Switch to V4 Editor"** button, make sure
+you're on the latest dashboard (hard-refresh your browser) and that the field you're editing supports V4 - a few
+legacy fields are still V3-only.
 
 </details>
 

@@ -11,6 +11,7 @@ Einfach zu bedienendes Level-System mit vielen Anpassungsmöglichkeiten!
 - Verleihe eine zufällige Menge an XP an Nutzer für Nachrichten, die sie senden, mit konfigurierbaren Mengen und
   Abklingzeit.
 - Verleihe XP basierend auf der Zeit, die ein Nutzer [in einem Sprachkanal verbringt](#voice-xp).
+- Zeige [tägliche Nachrichten- und Voice-Statistiken](#commands-user) im `/profile`-Embed neben den Lifetime-Werten an.
 - Wähle eine von [drei Levelkurven](#level-curves) oder [gib deine eigene ein](#custom-level-curve).
 - Füge Rollen als [Levelbelohnungen](#level-rewards) hinzu.
 - Konfiguriere [bestimmte Levelaufstiegsnachrichten](#level-up-messages) - du kannst bestimmte Nachrichten für bestimmte
@@ -69,6 +70,10 @@ Kanal, die fortan alle 5 Minuten bearbeitet wird.
 
 ![Screenshot einer Live-Rangliste vom ScootKit Server](@site/docs/assets/custom-bot/modules/levels/live-leaderboard-de.png)
 
+### Tägliche Aktivitätsstatistik {#daily-stats}
+
+Das `/profile`-Embed zeigt neben den Lifetime-Werten an, wie viele Nachrichten der Nutzer heute geschrieben und wie viel Zeit er heute im Voice verbracht hat. Die Tageszähler werden um Mitternacht in der konfigurierten Zeitzone des Bots zurückgesetzt.
+
 ### Levelaufstiegsnachrichten {#level-up-messages}
 
 Wenn ein Nutzer ein Level aufsteigt, wird standardmäßig eine Levelaufstiegsnachricht gesendet. Du
@@ -89,6 +94,18 @@ ausgewählt. Diese Funktion ist besonders nützlich, um das Leveln auf Servern u
 Levelaufstiegsnachrichten einzigartig sind und sich nicht wiederholen. Wenn für einen bestimmten erforderlichen Typ
 keine zufälligen Nachrichten verfügbar sind, greift der Bot auf die Konfiguration in deiner
 Nachrichtenkonfigurationsdatei zurück.
+
+Zusätzlich zu den [globalen Parametern](/docs/custom-bot/global-parameters) sowie `%level%` / `%role%` unterstützen Levelaufstiegsnachrichten (sowohl die Kanal-Nachricht als auch die Rollen-Reward-Variante, inklusive zufälliger und ausgewählter Levelaufstiegsnachrichten) folgende Platzhalter:
+
+| Platzhalter        | Wert                                                                                               |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| `%xpGained%`       | Die XP, die für die Aktion vergeben wurden, die den Levelaufstieg ausgelöst hat.                   |
+| `%xpType%`         | Ob der Levelaufstieg durch eine `Message` (Nachricht) oder durch `Voice`-Aktivität entstanden ist. |
+| `%totalXP%`        | Die gesamten XP des Nutzers nach dem Levelaufstieg.                                                |
+| `%nextLevelXP%`    | Die XP, die für das nächste Level erforderlich sind.                                               |
+| `%totalMessages%`  | Die Lifetime-Nachrichtenanzahl des Nutzers.                                                        |
+| `%messagesToday%`  | Die heutige Nachrichtenanzahl des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).         |
+| `%voiceTimeToday%` | Die heutige Voice-Zeit des Nutzers (Reset um Mitternacht in der Zeitzone des Bots).                |
 
 Zusätzlich möchtest du vielleicht die Levelaufstiegsnachricht für ein bestimmtes Level anpassen. Dies ist in
 der [Konfigurationsdatei für ausgewählte Nachrichten](#configuration-special-levelup-messages) möglich. Wenn ein Nutzer
@@ -302,11 +319,12 @@ Level-System
 
 Diese Befehle können von Nutzern auf deinem Server verwendet werden.
 
-| Befehl                             | Beschreibung                                                                                                                                                                                       |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/profile `                        | Zeige dein Profil an, einschließlich deiner XP und Level sowie deiner Rollenmultiplikatoren (falls vorhanden).                                                                                     |
-| `/profile [user:<Nutzer>]`         | Zeige das Profil eines Nutzers an, einschließlich seiner XP und Level sowie seiner Rollenmultiplikatoren (falls vorhanden).                                                                        |
-| `/leaderboard [sort-by:<Boolean>]` | Zeige die Rangliste des Servers an, sortiert in Gruppen entweder nach XP oder Leveln, basierend auf entweder [deiner Konfiguration](#configuration) oder dem bereitgestellten `sort-by`-Parameter. |
+| Befehl                             | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/profile `                        | Zeige dein Profil an, einschließlich deiner XP, Level, Rollenmultiplikatoren (falls vorhanden) sowie deiner heutigen Nachrichten- und Voice-Zeit.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `/profile [user:<Nutzer>]`         | Zeige das Profil eines Nutzers an, einschließlich seiner XP, Level, Rollenmultiplikatoren (falls vorhanden) sowie seiner heutigen Nachrichten- und Voice-Zeit.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `/leaderboard [sort-by:<Boolean>]` | Zeige die Rangliste des Servers an, sortiert in Gruppen entweder nach XP oder Leveln, basierend auf entweder [deiner Konfiguration](#configuration) oder dem bereitgestellten `sort-by`-Parameter. Die Antwort ist ephemeral – nur der Nutzer, der den Befehl ausgeführt hat, sieht sie.                                                                                                                                                                                                                                                                                                                                                        |
+| `/calculate-level level:<Integer>` | _Opt-in. Nur verfügbar, wenn „Befehl /calculate-level aktivieren" in der [Konfiguration](#configuration-config) aktiviert ist._ Zeigt die konfigurierte Levelformel, die für das angegebene Level erforderliche XP-Menge und die dafür benötigte Anzahl an Nachrichten (min/durchschn./max) an. Wenn [Voice-XP](#voice-xp) aktiviert sind, werden zusätzlich die benötigten Sprachkanal-Minuten ausgewiesen. Das eingegebene Level entspricht dem, was Nutzer in `/profile` sehen (berücksichtigt die Einstellung „Mit Level 0 starten?"). Werte oberhalb des konfigurierten Maximallevels werden abgelehnt, wenn die Begrenzung aktiviert ist. |
 
 ### Administratorbefehle {#commands-administrator}
 
@@ -369,6 +387,10 @@ kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=
 | Maximale Anzahl der in der Live-Rangliste angezeigten Nutzer   | Dies ist die maximale Anzahl der Nutzer, die im Live-Ranglisten-Kanal angezeigt werden. /leaderboard zeigt weiterhin die vollständige Rangliste an.<br/>_Es können Werte kleiner oder gleich 25 eingegeben werden._                                                                                                                                                    |
 | Mit Level 0 starten?                                           | Standardmäßig starten Nutzer mit Level 1. Wenn du diese Option aktivierst, starten alle Nutzer mit Level Null. Dies ist nur eine kosmetische Einstellung und kann daher rückwirkend angewendet werden. [Levelformeln](#level-curves) verwenden weiterhin das Level-System ab Eins beginnend, dies wird den Nutzern jedoch nicht angezeigt.                             |
 | Nutzernamen statt Erwähnungen in der Live-Rangliste verwenden? | Wenn aktiviert, verwendet der Bot den Tag der Nutzer im Ranglisten-Kanal-Embed anstelle ihrer Erwähnung.                                                                                                                                                                                                                                                               |
+| Ausgeschlossene Rollen                                         | Rollen, die vom Leveln ausgeschlossen sind. Nutzer mit einer dieser Rollen erhalten keine XP für gesendete Nachrichten.                                                                                                                                                                                                                                                |
+| Maximallevel aktivieren?                                       | Wenn aktiviert, steigen Nutzer nach Erreichen des konfigurierten Maximallevels nicht mehr auf.                                                                                                                                                                                                                                                                         |
+| Maximallevel                                                   | _Nur sichtbar, wenn „Maximallevel aktivieren?" aktiviert ist._<br/>Das höchste Level, das ein Nutzer erreichen kann. Nutzer steigen nach Erreichen dieses Levels nicht mehr auf (können aber weiterhin XP erhalten).                                                                                                                                                   |
+| Befehl /calculate-level aktivieren                             | Wenn aktiviert, können Servermitglieder den Befehl [`/calculate-level`](#commands-user) verwenden, um basierend auf der konfigurierten Levelkurve und dem XP-pro-Nachricht-Bereich die für ein bestimmtes Level erforderlichen XP und die Anzahl an Nachrichten (sowie Voice-Minuten, sofern zutreffend) zu berechnen.                                                 |
 | Cheats                                                         | Um [Level und XP manuell zu verwalten](#manage-levels), aktiviere diese Option. Dies macht dein Level-System unfair, wenn es von Admins missbraucht wird.                                                                                                                                                                                                              |
 
 ### Nachrichtenkonfiguration {#configuration-strings}

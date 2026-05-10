@@ -81,7 +81,10 @@ Verwende den Farbwähler oder gib direkt einen HEX-Farbcode ein, um die Embed-Ak
 - **Custom-Command-Buttons** - Lösen einen [Custom Command](/docs/custom-bot/custom-commands) mit einem
   **Button**-Trigger beim Klicken aus.
 - **Custom-Command-Dropdown** - Ein Auswahlmenü, das beim Auswählen einer Option einen Custom Command auslöst.
-- **Selbstrollen-Dropdown** - Ein Auswahlmenü, mit dem Nutzer sich selbst Rollen zuweisen können.
+- **Selbstrollen-Dropdown** - Ein Auswahlmenü, mit dem Nutzer sich selbst Rollen zuweisen können. Beim Auswählen
+  einer Option öffnet sich eine ephemere Bestätigung, die auflistet, welche Rollen hinzugefügt oder entfernt werden;
+  Mitglieder können die Auswahl dort anpassen und müssen mit **Übernehmen** bestätigen, bevor eine Rolle geändert
+  wird.
 
 ### Bildanhänge {#v3-attachments}
 
@@ -135,7 +138,10 @@ Ein Auswahlmenü in einer Action Row mit bis zu **25 Optionen** (jeweils mit Lab
 Emoji). Optionen können per Drag-and-Drop neu angeordnet werden. Zwei Aktionstypen werden unterstützt:
 
 - **Custom-Command-Dropdown** - Jede Option löst einen Custom Command beim Auswählen aus.
-- **Selbstrollen-Dropdown** - Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl.
+- **Selbstrollen-Dropdown** - Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl. Beim
+  Auswählen öffnet sich eine ephemere Bestätigung mit den hinzuzufügenden bzw. zu entfernenden Rollen; das Mitglied
+  muss mit **Übernehmen** bestätigen oder kann mit **Abbrechen** verwerfen. Die ursprüngliche öffentliche Nachricht
+  bleibt unverändert.
 
 ---
 

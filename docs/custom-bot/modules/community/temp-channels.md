@@ -80,6 +80,13 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Archive category             | The category where archived channels are moved. This category should be hidden from regular users.                                                                                    |
 | Archive delete after (hours) | How long an archived channel is kept before being permanently deleted. Set to `0` to never auto-delete. Default: 168 (7 days).                                                        |
 
+:::tip
+The **List users message** sent by `/temp-channel list-users` (`listUsers` in the configuration) supports both
+formats of the [message editor](/docs/scnx/guilds/message-editor). When the configured message uses the V4 editor and
+does not include the `%users%` placeholder, the allowed-users list is appended as a Text Display block at the end of
+the message instead of being squashed into an embed description.
+:::
+
 ### Channel archiving {#archiving}
 
 When archiving is enabled, temporary channels are not deleted when all members leave. Instead, they are moved to a

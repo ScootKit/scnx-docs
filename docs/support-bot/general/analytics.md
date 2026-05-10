@@ -29,10 +29,9 @@ description: Track your Discord support performance with detailed analytics, res
 
 The following commands are available if enabled in the [Staff Commands configuration](/docs/support-bot/general/bot-configuration#staff-commands):
 
-| Command                   | Description                                                                                                                      |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `/analytics`              | Shows server-wide analytics for your support system (open tickets, average response time, average close time, rating, and more). |
-| `/analytics staff:<User>` | Shows analytics for a specific team member (messages sent, average response time, tickets handled).                              |
+| Command                                                                                          | Description                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/analytics [days:<1-30>] [member:<User>] [system:<all\|modmail\|ticket-system\|voice-support>]` | Shows support analytics. `days` selects the window (1–30, default 7), `member` narrows to a single team member, and `system` filters to one product area (or `all` for a combined view). Percentages compare the selected window against the preceding window of the same length. The reply is ephemeral. |
 
 ## Available metrics {#available-metrics}
 

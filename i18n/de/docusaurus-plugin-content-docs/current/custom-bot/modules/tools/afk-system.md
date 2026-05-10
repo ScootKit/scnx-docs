@@ -23,12 +23,16 @@ Erlaube Nutzern einen AFK-Status zu setzen, der anderen Nutzern automatisch mitg
 ## Nutzung {#usage}
 
 Nutzer können eine AFK-Sitzung mit [`/afk start`](#commands) starten, optional kann hierbei ein Grund für ihre Abwesenheit angegeben werden und festelegt werden,
-ob die AFK-Sitzung automatisch beendet wird. Zu Beginn einer AFK-Sitzung wird der Bot dem Nickname des Nutzers `[AFK]` als Präfix anfügen und den aktuellen Nickname
-des Nutzers speichern. Wenn ein Nutzer mit aktiver AFK-Sitzung erwähnt wird (entweder als @Erwähnung oder durch eine Antwort), sendet der Bot eine Nachricht um den
-Nutzer darüber zu informieren, dass der erwähnte Nutzer aktuell nicht verfügbar ist.
+ob die AFK-Sitzung automatisch beendet wird. Zu Beginn einer AFK-Sitzung legt der Bot den `[AFK]`-Präfix über den
+[zentralen Nickname-Manager](/de/docs/custom-bot/modules/community/nicknames/#central-nickname-manager) auf den
+Nicknamen des Nutzers. Wenn ein Nutzer mit aktiver AFK-Sitzung erwähnt wird (entweder als @Erwähnung oder durch eine
+Antwort), sendet der Bot eine Nachricht um den Nutzer darüber zu informieren, dass der erwähnte Nutzer aktuell nicht
+verfügbar ist.
 Wenn der AFK Nutzer eine Nachricht auf deinem Server sendet (wenn er dies nicht deaktiviert hat) oder [`/afk end`](#commands) verwendet, wird die AFK-Sitzung
 beendet und der Bot antwortet nicht mehr auf Erwähnungen des Nutzers.
-Mit dem Ende der AFK-Sitzung wird der Bot den Nickname des Nutzers auf seinen vorherigen Nickname zurücksetzen.
+Mit dem Ende der AFK-Sitzung wird der `[AFK]`-Präfix entfernt und der Nickname auf Basis des aktuellen Zustands neu
+zusammengesetzt - wenn sich Rollen oder die Aktivitätsserie während der AFK-Sitzung geändert haben, spiegelt der
+neue Nickname den aktuellen Stand wider und nicht einen veralteten Snapshot vom Beginn der Sitzung.
 
 ## Befehle {#commands}
 
@@ -64,7 +68,6 @@ Bearbeite Informations- und Befehlantwortnachrichten in der
 
 - Ihre eindeutige Discord Nutzer-Indentifikationsnummer.
 - Der Grund ihrer Abwensenheit, wenn dieser mit dem `reason` Parameter im [`/afk start`](#commands) Befehl festgelegt wurde.
-- Der aktuelle Nickname des Nutzers zu Beginn der AFK-Sitzung.
 - Ob die AFK-Sitzung automatisch beendet werden soll, durch den `auto-end` Parameter im [`/afk start`](#commands) festgelegt.
 - Metadata über den Eintrag (Zeitpunkt der Erstellung und der letzten Aktualisierung)
 

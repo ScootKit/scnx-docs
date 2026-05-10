@@ -32,7 +32,7 @@ Hourly messages are sent once per hour. You can restrict which hours the message
 
 ### Daily messages {#daily}
 
-Daily messages are sent once per day. You can restrict which days the message is sent by specifying allowed week-days (0 = Sunday, 1 = Monday, ..., 6 = Saturday) and/or allowed days of the month (1-31). If no restrictions are set, the message will be sent every day.
+Daily messages are sent once per day. You can restrict which days the message is sent by specifying allowed week-days (1 = Sunday, 2 = Monday, ..., 7 = Saturday) and/or allowed days of the month (1-31). If no restrictions are set, the message will be sent every day.
 
 ### Cron messages {#cronjob}
 
@@ -58,7 +58,7 @@ Open this configuration in your [dashboard](https://scnx.app/glink?page=bot/conf
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
 | Channel            | The channel in which the message should be sent.                                                                   |
 | Message            | The message content to send. Supports embeds.                                                                      |
-| Limit Week-Days to | If one or more values are set (0 = Sunday, 6 = Saturday), the message will only be sent on those days of the week. |
+| Limit Week-Days to | If one or more values are set (1 = Sunday, 7 = Saturday), the message will only be sent on those days of the week. |
 | Limit days to      | If one or more values are set (1-31), the message will only be sent on those days of the month.                    |
 
 ### Cronjob (advanced) {#configuration-cronjob}

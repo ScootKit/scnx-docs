@@ -6,19 +6,23 @@ description: The most advanced Discord support bot with modmail, ticket system, 
 
 # The world's most advanced Discord Support Bot
 
-Build a world-class support experience for your Discord community. The SCNX Support Bot combines a powerful **Modmail system** and a flexible **Ticket System** into one bot - giving you everything you need to manage user requests, collect feedback, and optimize your support workflow.
+Build a world-class support experience for your Discord community. The SCNX Support Bot combines a powerful **Modmail system**, a flexible **Ticket System**, and a live **Voice Support** queue into one bot - giving you everything you need to manage user requests, collect feedback, and optimize your support workflow.
 
 Whether you're running a small community or a large server with thousands of members, the SCNX Support Bot scales with you. Configure opening hours, set up automated ticket closing, enable AI-powered ticket summaries, and track your team's performance - all from one intuitive dashboard.
 
-## Two systems, one bot {#two-systems}
+## Three systems, one bot {#two-systems}
 
-|                     | [Modmail](/docs/support-bot/modmail/intro)                                                                     | [Ticket System](/docs/support-bot/ticket-system/intro)                                                                    |
-| ------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **How it works**    | Users open tickets by DMing your bot. Messages are relayed between the user's DMs and a private staff channel. | Users open tickets via buttons, dropdown menus, or commands on your server. A private channel is created for each ticket. |
-| **Best for**        | Servers that want a private, DM-based support experience. Users don't need to interact in a public channel.    | Servers that want a channel-based support flow where everything happens directly on the server.                           |
-| **Unique features** | Anonymous messages, snippets (quick replies), typing relay, message editing/deletion                           | Per-topic ticket limits, per-topic required roles, button colors per topic                                                |
+|                     | [Modmail](/docs/support-bot/modmail/intro)                                                                     | [Ticket System](/docs/support-bot/ticket-system/intro)                                                                    | [Voice Support](/docs/support-bot/voice-support/intro)                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| **How it works**    | Users open tickets by DMing your bot. Messages are relayed between the user's DMs and a private staff channel. | Users open tickets via buttons, dropdown menus, or commands on your server. A private channel is created for each ticket. | Users join a voice channel to queue up. Staff pull them into their own support voice channels one at a time.                   |
+| **Best for**        | Servers that want a private, DM-based support experience. Users don't need to interact in a public channel.    | Servers that want a channel-based support flow where everything happens directly on the server.                           | Servers that want to talk to users over voice - onboarding calls, 1:1 coaching, live troubleshooting.                          |
+| **Unique features** | Anonymous messages, snippets (quick replies), typing relay, message editing/deletion                           | Per-topic ticket limits, per-topic required roles, button colors per topic                                                | Priority queue, waiting music, closed-state music, per-call notes & history, debrief form, call thread under dashboard channel |
 
-Both systems share [general features](/docs/support-bot/general/bot-configuration) like opening hours, forms, analytics, ticket utilization, estimated wait times, and more. Not sure which is right for you? Check the [Feature Comparison](/docs/support-bot/feature-comparison).
+All three systems share [general features](/docs/support-bot/general/bot-configuration) like opening hours, forms, analytics, ticket utilization, estimated wait times, and more. Not sure which is right for you? Check the [Feature Comparison](/docs/support-bot/feature-comparison).
+
+:::info Voice Support is early access
+Voice support is an early-access preview unlocked by the [ScootKit Membership](https://membership.scootkit.com) Early Access perk - a separate subscription from your SCNX plan. See the [Voice Support introduction](/docs/support-bot/voice-support/intro) for details.
+:::
 
 ## Key features at a glance {#key-features}
 
@@ -36,6 +40,7 @@ Both systems share [general features](/docs/support-bot/general/bot-configuratio
 - **Blocklist** - Block abusive users from opening tickets, with optional duration and reason.
 - **Maintenance Mode** - Temporarily disable ticket creation while your team is unavailable.
 - **Custom Branding** - Set your own embed footer and image to match your server's identity.
+- **Voice Support** (early access) - Offer live voice support. Users queue by joining a voice channel; staff pull them into their own voice channel one at a time, with optional waiting music, per-call notes, call threads, debrief forms, and user feedback.
 
 ## Getting started {#getting-started}
 

@@ -8,6 +8,8 @@ Create quiz for your users and let them compete against each other.
 
 Easily create quizzes on your server, let your members compete on a leaderboard and automatically let them answer the specified amount of questions per day.
 
+Quiz questions can optionally include an image (displayed above the answer choices, useful for visual quiz like movie scenes or flag identification) and a custom headline that replaces the default quiz title for that specific question. Both fields are configured per question in the [quiz list](#config-quiz). The image can be uploaded directly via the dashboard's image picker (stored in your server's [file library](/docs/scnx/guilds/files)) or pasted as an `http(s)` URL.
+
 ## Setup {#setup}
 
 First step is to simply enable the module in [your SCNX dashboard](https://scnx.app/glink?page=bot/modules?query=quiz&ref=scnx-app-docs) and [configure the module](#configuration).
@@ -77,6 +79,8 @@ Every quiz question has the following fields:
 | Time limit            | After which time the answer of a user is deemed invalid if they've taken longer than this time to answer. Defaults to one minute.                                          |
 | Correct answers       | A list of all correct answers. The correct options are shuffled together with the wrong answers. In the above example, this could be an element with the text "Minecraft". |
 | Wrong answers         | The opposite of the correct answers - if users answer this, they lose. For example, this could contain "Fortnite".                                                         |
+| Headline (optional)   | Optional embed title shown above the question. Leave empty to use the default quiz title configured in the [strings](#config-strings).                                     |
+| Image (optional)      | Optional image displayed above the answer choices (e.g. movie scene, flag, visual hint). Upload via the dashboard's image picker or paste an `http(s)` URL.                |
 
 ## Troubleshooting {#troubleshooting}
 

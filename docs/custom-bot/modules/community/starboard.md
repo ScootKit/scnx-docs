@@ -9,6 +9,7 @@ Let users highlight messages into a starboard channel by reacting.
 - Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
 - Limit the amount of stars a user can give per hour to make sure the messages are actually special.
 - Exclude roles and channels to keep unwanted messages out of the starboard.
+- Image attachments on starred messages are automatically archived to your server's [file library](/docs/scnx/guilds/files), so old starboard posts keep their images after Discord's CDN URLs expire.
 
 ## Setup {#setup}
 
@@ -24,6 +25,12 @@ Let users highlight messages into a starboard channel by reacting.
   emoji.
 - As long as they haven't used up their quota of stars per hour, the message will either be
   sent to the starboard channel or the amount of stars will be increased by one.
+
+### Permanent image archival {#image-archival}
+
+When a message is sent to the starboard, any image attachments on it are uploaded to your server's [file library](/docs/scnx/guilds/files) and the starboard post is rendered against that permanent URL. This stops old starboard posts from breaking once Discord's short-lived CDN URLs expire.
+
+Archived images count against your server's [file-storage quota](/docs/scnx/guilds/files#understanding-storage-limits). To opt out, enable **Disable attachment archival** in the bot's General Configuration; with archival disabled, starboard images revert to Discord's expiring URLs and old posts will eventually break again.
 
 ## Configuration {#configuration}
 
@@ -53,6 +60,11 @@ Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configurati
     <li>Make sure your configured starboard message is valid - check the error log in your dashboard to find errors.</li>
     <li>Make sure the users try to react haven't reached their star limit within the last hour. Consider increasing the limit or waiting until it ran out.</li>
   </ul>
+</details>
+
+<details>
+  <summary>Reactions on age-restricted (NSFW) channels are not posted</summary>
+  <p>To prevent age-restricted content from leaking into channels that are not marked as such, the bot silently skips starring messages from an age-restricted channel into a non-age-restricted starboard channel. To star messages from age-restricted channels, mark your starboard channel as <strong>Age-Restricted</strong> in Discord's channel settings as well. Posts from non-age-restricted channels will continue to work regardless of this setting. This behavior is in place to comply with Discord's guidelines and cannot be disabled.</p>
 </details>
 
 ## Stored data {#data-usage}
