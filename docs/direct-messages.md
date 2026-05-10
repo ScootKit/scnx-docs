@@ -15,7 +15,7 @@ To open your direct messages globally for everyone, follow these steps:
 3. Under "Social Permissions," enable "Direct Messages."
 
 ![](@site/docs/assets/direct-messages/user-settings.png)
-![](@site/docs/assets/direct-messages/activate-dms-global.png)
+![](@site/docs/assets/direct-messages/en/activate-dms-global.png)
 
 :::note How the setting is applied
 This setting only applies to servers you join after enabling it. On servers you have already joined, you need to [enable direct messages individually](#activate-dms-server).
@@ -31,4 +31,4 @@ To open your direct messages only for certain servers, follow these steps:
 4. Enable "Direct Messages."
 
 ![](@site/docs/assets/direct-messages/user-settings.png)
-![](@site/docs/assets/direct-messages/activate-dms-server.png)
+![](@site/docs/assets/direct-messages/en/activate-dms-server.png)
