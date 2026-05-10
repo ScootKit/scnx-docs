@@ -36,22 +36,22 @@ Sobald das Modul konfiguriert ist, arbeitet es automatisch ohne jegliche Benutze
 
 In dieser Konfigurationsdatei kannst du automatische Reaktionen konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-react%7Cconfigs/config).
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Kanäle | Füge Kanäle und die Emojis hinzu, mit denen der Bot auf jede Nachricht reagieren soll. Mehrere Emojis können mit `\|` getrennt werden. |
-| Erwähnungen | Füge Benutzer und die Emojis hinzu, mit denen der Bot reagieren soll, wenn sie erwähnt werden. Mehrere Emojis können mit `\|` getrennt werden. |
-| Rollen | Füge Rollen hinzu. Wenn ein Benutzer mit einer dieser Rollen eine Nachricht sendet, reagiert der Bot mit den konfigurierten Emojis. Mehrere Emojis können mit `\|` getrennt werden. |
-| Autoren | Füge Benutzer und die Emojis hinzu, mit denen der Bot auf deren Nachrichten reagieren soll. Mehrere Emojis können mit `\|` getrennt werden. |
-| Kategorien | Füge Kategorien und die Emojis hinzu, mit denen der Bot auf jede Nachricht in Kanälen dieser Kategorie reagieren soll. Mehrere Emojis können mit `\|` getrennt werden. |
-| Nur auf @Erwähnungen reagieren? | Wenn aktiviert, reagiert der Bot nur auf direkte @Erwähnungen. Wenn deaktiviert, reagiert der Bot auch auf Erwähnungen in Antworten oder andere Arten von Erwähnungen. |
+| Feld                            | Beschreibung                                                                                                                                                                        |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kanäle                          | Füge Kanäle und die Emojis hinzu, mit denen der Bot auf jede Nachricht reagieren soll. Mehrere Emojis können mit `\|` getrennt werden.                                              |
+| Erwähnungen                     | Füge Benutzer und die Emojis hinzu, mit denen der Bot reagieren soll, wenn sie erwähnt werden. Mehrere Emojis können mit `\|` getrennt werden.                                      |
+| Rollen                          | Füge Rollen hinzu. Wenn ein Benutzer mit einer dieser Rollen eine Nachricht sendet, reagiert der Bot mit den konfigurierten Emojis. Mehrere Emojis können mit `\|` getrennt werden. |
+| Autoren                         | Füge Benutzer und die Emojis hinzu, mit denen der Bot auf deren Nachrichten reagieren soll. Mehrere Emojis können mit `\|` getrennt werden.                                         |
+| Kategorien                      | Füge Kategorien und die Emojis hinzu, mit denen der Bot auf jede Nachricht in Kanälen dieser Kategorie reagieren soll. Mehrere Emojis können mit `\|` getrennt werden.              |
+| Nur auf @Erwähnungen reagieren? | Wenn aktiviert, reagiert der Bot nur auf direkte @Erwähnungen. Wenn deaktiviert, reagiert der Bot auch auf Erwähnungen in Antworten oder andere Arten von Erwähnungen.              |
 
 ### Antworten {#config-replies}
 
 In dieser Konfigurationsdatei kannst du automatische Antworten auf Erwähnungen von Benutzern konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=auto-react%7Cconfigs/replies).
 
-| Feld | Beschreibung |
-|-------|-------------|
-| Nutzer | Der Benutzer, dessen Erwähnung die Antwort auslösen soll. |
+| Feld    | Beschreibung                                                                            |
+| ------- | --------------------------------------------------------------------------------------- |
+| Nutzer  | Der Benutzer, dessen Erwähnung die Antwort auslösen soll.                               |
 | Antwort | Die Antwortnachricht, die der Bot sendet, wenn der konfigurierte Benutzer erwähnt wird. |
 
 ## Fehlerbehebung {#troubleshooting}

@@ -36,7 +36,7 @@ A few things that were awkward or impossible before.
 
 ### Sections: text on the left, accessory on the right
 
-The thing I missed most in V3: putting an image *next to* a paragraph. Embeds let you have a thumbnail in the
+The thing I missed most in V3: putting an image _next to_ a paragraph. Embeds let you have a thumbnail in the
 top-right, but it was always tiny and always in the corner. If you also wanted a button - well, the button went to the
 bottom of the message, not next to the text it belonged with. So you'd write a paragraph, point to it, and hope the
 reader scrolled down and back up to see what the button actually did.

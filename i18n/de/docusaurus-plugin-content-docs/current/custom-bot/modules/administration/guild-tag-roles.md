@@ -26,8 +26,8 @@ Einmal konfiguriert, arbeitet das Modul automatisch. Wenn ein Benutzer das Serve
 
 Dies ist die Konfigurationsdatei für das Modul. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=guild-tag-roles%7Cconfig).
 
-| Feld | Beschreibung                                                                       |
-| ----- | --------------------------------------------------------------------------------- |
+| Feld   | Beschreibung                                                                                                             |
+| ------ | ------------------------------------------------------------------------------------------------------------------------ |
 | Rollen | Rollen, die Benutzern zugewiesen werden sollen, die das Server-Tag deines Servers ausgerüstet haben und anzeigen lassen. |
 
 ## Fehlerbehebung {#troubleshooting}
