@@ -11,7 +11,7 @@ Du kannst Nachrichten-Anfragen aktivieren, um nicht befreundete Absender in eine
 Um deine Direktnachrichten für alle global zu öffnen, befolge diese Schritte:
 
 1. Öffne deine Benutzereinstellungen.
-2. Klicke auf "Inahlte & Soziales" in der Seitenleiste.
+2. Klicke auf "Inhalte & Soziales" in der Seitenleiste.
 3. Aktiviere unter "Soziale Berechtigungen" die Option "Direktnachrichten".
 
 ![](@site/docs/assets/direct-messages/user-settings.png)
@@ -26,7 +26,7 @@ Diese Einstellung wird nur bei Servern angewendet, welchen du neu beitrittst. Au
 Um deine Direktnachrichten nur für bestimmte Server zu öffnen, befolge diese Schritte:
 
 1. Öffne deine Benutzereinstellungen.
-2. Klicke auf "Inahlte & Soziales" in der Seitenleiste.
+2. Klicke auf "Inhalte & Soziales" in der Seitenleiste.
 3. Wähle unter "Soziale Berechtigungen" deinen gewünschten Server aus der Liste aus.
 4. Aktiviere die Option "Direktnachrichten".
 
