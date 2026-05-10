@@ -1,6 +1,6 @@
 # Duell
 
-Lasse Benutzer das Spiel „Duell“ auf deinem Discord spielen.
+Lasse Benutzer das Spiel "Duell" auf deinem Discord spielen.
 
 <ModuleOverview moduleName="duel" />
 
