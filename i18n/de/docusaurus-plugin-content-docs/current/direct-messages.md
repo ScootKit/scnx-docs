@@ -18,7 +18,7 @@ Um deine Direktnachrichten für alle global zu öffnen, befolge diese Schritte:
 ![](@site/docs/assets/direct-messages/de/activate-dms-global.png)
 
 :::note Anwendung der Einstellung
-Diese Einstellung wird nur bei Servern angewendet, welchen du neu beitrittst. Auf Servern, welchen du bereits beigetreten bist, musst du Direktnachrichten [einzeln aktivieren](#activate-dms-server).
+Diese Einstellung wird nur bei Servern angewendet, denen du neu beitrittst. Auf Servern, denen du bereits beigetreten bist, musst du Direktnachrichten [einzeln aktivieren](#activate-dms-server).
 :::
 
 ## Direktnachrichten für einzelne Server aktivieren {#activate-dms-server}

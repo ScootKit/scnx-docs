@@ -3,7 +3,7 @@
 In this article, we explain how to enable direct messages so you can receive messages from your bot, for example.
 
 :::tip Message requests
-You can enable Message requests to show non-friend senders in a separate list. There you can preview messages and choose to accept or ignore them.
+You can enable "Message Requests" to show non-friend senders in a separate list. There you can preview messages and choose to accept or ignore them.
 :::
 
 ## Enable direct messages globally {#activate-dms-global}
