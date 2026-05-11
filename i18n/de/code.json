@@ -905,6 +905,7 @@
   "footer.legal.privacy": { "message": "Datenschutzerklärung" },
   "footer.legal.tos": { "message": "Nutzungsbedingungen" },
   "footer.legal.spa": { "message": "Bot-Hosting SPA" },
+  "footer.legal.dpa": { "message": "Auftragsverarbeitungsvereinbarung" },
   "footer.trademark": { "message": "\"ScootKit\" ist eine in Deutschland eingetragene Marke. Nicht verbunden mit Discord Inc." },
   "footer.status.operational": { "message": "Alle Systeme funktionieren" },
   "footer.status.degraded": { "message": "Einige Systeme beeinträchtigt" },

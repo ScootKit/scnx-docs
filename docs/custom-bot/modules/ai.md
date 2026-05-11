@@ -68,19 +68,11 @@ First, [enable the module](https://scnx.app/glink?page=bot%2Fmodules%3Ftag%3Dai)
 respond to user messages by answering with AI generated content based on ChatGPT. We recommend enabling a 30 second
 slow-mode in this channel to avoid losing all your AI Coins in seconds.
 
-:::warning BEFORE YOU DECIDE TO CHANGE THE PERSONALITY OF YOUR AI-CHAT
-Personalities like "troll" are known to insult, gaslight and even threaten users. We highly recommend using the "
-default" personality. You are using this feature at your own risk.
-:::
-
 ### Configuration Options
 
 - **Personality:** Depending on this setting, the AI-Chat-Bot will behave differently.
   - **default:** The default personality - designed to help users and answer requests. Recommanded and the best option
     for most servers.
-  - **troll:** This personality will insult users and basically to everything to get a lauth out of them. TO NOT USE
-    THIS PERSONALITY WITHOUT ACTIVE MODERATORS MODERATING THE ANSWERS OF THE MODEL.
-  - **liar:** Conspiracy theorist and a notorious liar. We recommand active moderators monitoring answers.
   - **rude starbucks employee:** This personality will role-play with your users as a starbucks rude employee.
 - **Response Length:** Controls how long the AI's responses will be.
 - **Trigger Mode:** Determines which messages trigger an AI response. 'All messages' replicates the default behaviour.

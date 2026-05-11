@@ -26,6 +26,7 @@ const legalLinks = [
     {label: <Translate id="footer.legal.privacy">Privacy Policy</Translate>, href: 'https://scootkit.net/privacy'},
     {label: <Translate id="footer.legal.tos">Terms of Service</Translate>, href: 'https://scootk.it/scnx-tos'},
     {label: <Translate id="footer.legal.spa">Bot Hosting SPA</Translate>, href: 'https://scootk.it/scnx-spa'},
+    {label: <Translate id="footer.legal.dpa">Data Processing Agreement</Translate>, href: 'https://scootk.it/scnx-dpa'},
 ];
 
 const socialLinks = [

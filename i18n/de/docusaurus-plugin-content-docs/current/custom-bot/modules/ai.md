@@ -68,19 +68,11 @@ Aktiviere zuerst [das Modul](https://scnx.app/glink?page=bot%2Fmodules%3Ftag%3Da
 auf Benutzernachrichten antworten, indem er mit KI-generierten Inhalten basierend auf ChatGPT antwortet. Wir empfehlen, einen 30-sekündigen
 Slow-Mode in diesem Kanal zu aktivieren, um zu vermeiden, dass du all deine AI Coins in Sekunden verlierst.
 
-:::warning BEVOR DU DICH ENTSCHEIDEST, DIE PERSÖNLICHKEIT DEINES KI-CHATS ZU ÄNDERN
-Persönlichkeiten wie "troll" sind dafür bekannt, Benutzer zu beleidigen, zu manipulieren (gaslight) und sogar zu bedrohen. Wir empfehlen dringend, die "
-default" (Standard) Persönlichkeit zu verwenden. Du nutzt diese Funktion auf eigenes Risiko.
-:::
-
 ### Konfigurationsoptionen
 
 - **Persönlichkeit (Personality):** Abhängig von dieser Einstellung wird sich der AI-Chat-Bot unterschiedlich verhalten.
   - **default:** Die Standardpersönlichkeit - entwickelt, um Benutzern zu helfen und Anfragen zu beantworten. Empfohlen und die beste Option
     für die meisten Server.
-  - **troll:** Diese Persönlichkeit wird Benutzer beleidigen und im Grunde alles tun, um sie zum Lachen zu bringen. VERWENDE
-    DIESE PERSÖNLICHKEIT NICHT OHNE AKTIVE MODERATOREN, DIE DIE ANTWORTEN DES MODELLS MODERIEREN.
-  - **liar:** Verschwörungstheoretiker und notorischer Lügner. Wir empfehlen aktive Moderatoren, die die Antworten überwachen.
   - **rude starbucks employee:** Diese Persönlichkeit wird mit deinen Benutzern Rollenspiele als unhöflicher Starbucks-Mitarbeiter durchführen.
 - **Antwortlänge (Response Length):** Steuert, wie lang die Antworten der KI sein werden.
 - **Auslösemodus (Trigger Mode):** Bestimmt, welche Nachrichten eine KI-Antwort auslösen. 'Alle Nachrichten' (All messages) repliziert das Standardverhalten.
