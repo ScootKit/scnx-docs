@@ -19,14 +19,14 @@ Every message the AI FAQ feature sends is editable from your dashboard. This pag
 
 You can drop any of these into a message and the bot will fill them in before sending:
 
-| Placeholder    | What it becomes                                                       |
-| -------------- | --------------------------------------------------------------------- |
-| `%aiAnswer%`   | The AI-generated answer text. **Required** inside the two answer-wrapper messages. |
-| `%username%`   | The member's username.                                                |
-| `%mention%`    | A clickable mention of the member.                                    |
-| `%tag%`        | The member's full Discord tag.                                        |
-| `%userID%`     | The member's Discord ID.                                              |
-| `%guildName%`  | Your server's name.                                                   |
+| Placeholder   | What it becomes                                                                    |
+| ------------- | ---------------------------------------------------------------------------------- |
+| `%aiAnswer%`  | The AI-generated answer text. **Required** inside the two answer-wrapper messages. |
+| `%username%`  | The member's username.                                                             |
+| `%mention%`   | A clickable mention of the member.                                                 |
+| `%tag%`       | The member's full Discord tag.                                                     |
+| `%userID%`    | The member's Discord ID.                                                           |
+| `%guildName%` | Your server's name.                                                                |
 
 All the standard [global placeholders](/docs/support-bot/general/global-placeholders) (bot identity, timestamps, opening hours, etc.) are also supported.
 

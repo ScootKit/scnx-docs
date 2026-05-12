@@ -12,13 +12,13 @@ AI FAQ uses your server's **AI credits** every time the bot generates an answer 
 
 Each paid plan tier comes with a free monthly grant of AI credits, topped up on the **25th of each month**. Unused credits roll over into the next month - you never lose what you didn't spend.
 
-| Plan tier     | Monthly credits |
-| ------------- | --------------- |
-| STARTER       | 25              |
-| ACTIVE_GUILD  | 100             |
-| PRO           | 250             |
-| UNLIMITED     | 300             |
-| PROFESSIONAL  | 600             |
+| Plan tier    | Monthly credits |
+| ------------ | --------------- |
+| STARTER      | 25              |
+| ACTIVE_GUILD | 100             |
+| PRO          | 250             |
+| UNLIMITED    | 300             |
+| PROFESSIONAL | 600             |
 
 If you regularly run out before the monthly refresh, you can top up from the [**Pricing**](https://scnx.app/glink?page=pricing) page in your dashboard.
 

@@ -63,7 +63,7 @@ After any change on AI FAQ settings, the dashboard will ask you to reload the bo
 
 ## What happens after you save an entry {#after-save}
 
-When you save a new or edited FAQ entry, the bot reads the answer text, splits it into searchable chunks, and stores them so the AI can find the right one later. This usually takes under 10 seconds. The dashboard shows an "indexing…" badge while it runs and switches to "ready" when the entry is live. From that moment on, the AI is using it to answer questions.
+When you save a new or edited FAQ entry, the bot reads the answer text, splits it into searchable chunks, and stores them so the AI can find the right one later. This usually takes under 10 seconds. The dashboard shows an "indexing..." badge while it runs and switches to "ready" when the entry is live. From that moment on, the AI is using it to answer questions.
 
 If indexing fails (usually a transient hiccup with the AI provider), the bot retries automatically every 30 minutes - you don't need to do anything.
 
