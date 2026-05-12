@@ -77,7 +77,7 @@ The default out-of-credits message with a ticket button can feel abrupt. A warme
 
 If you want the out-of-credits message to direct members to a specific staff channel instead of just saying "AI unavailable":
 
-> Our AI helper is temporarily unavailable. For now, please post your question in <#YOUR_HELP_CHANNEL_ID> and one of our team will get back to you. Sorry for the inconvenience.
+> Our AI helper is temporarily unavailable. For now, please post your question in `<#YOUR_HELP_CHANNEL_ID>` and one of our team will get back to you. Sorry for the inconvenience.
 
 Replace `YOUR_HELP_CHANNEL_ID` with your channel's ID. The bot won't auto-fill that one - it's a literal Discord channel mention you paste in.
 
