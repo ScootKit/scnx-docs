@@ -1,18 +1,18 @@
 # Staff Management System
 
-A powerful, highly customizable staff management system to track activity, moderate personnel, and maintain detailed staff records.
+A powerful, highly customizable staff management system designed to track activity, moderate personell, and maintain detailed staff records seamlessly.
 
 <ModuleOverview moduleName="staff-management-system" />
 
 ## Features {#features}
 
-- **Shift management** - On-duty/off-duty tracking with clock-in/clock-out, multi-break support (with per-shift break count), configurable duty types, duty time leaderboard, and shift quotas.
-- **Shift change log** - Optional audit log channel that records every shift event (start, break, resume, end, void) with elapsed time, break count, and the staff member involved.
-- **Leave of Absence & Reduced Activity** - Staff can request LoA or reduced activity status with an approval workflow, optional role assignment, and configurable maximum durations.
-- **Infractions & Suspensions** - Issue warnings, strikes, demotions, terminations, or mark staff as under investigation. Temporary suspensions automatically remove staff roles and assign a suspension role.
-- **Promotions** - Promote staff members with optional automatic role assignment and customizable announcements.
-- **Staff Profiles & Reviews** - Individual staff profiles with a 1-5 star rating system, review history, and reputation tracking.
-- **Activity Checks** - Periodic staff activity verification with response tracking, configurable check windows, a fully customizable end-of-check embed, and tracking of who started each check (or "system" for automated checks).
+- **Infractions & Suspensions**: Issue warnings, strikes, demotions, terminations, mark staff as under investigation or issue custom infraction types. Suspensions temporarily remove the staff roles of a staff member for the specified duration in the command.
+- **Promotions**: Promote staff members with optional automatic role assignment and customizable announcements for both in the channel and DM's (if enabled).
+- **Staff Reviews**: Let users review staff members with a rating from 1 - 5 stars and their feedback with a customizable review message. You can also let members review other (normal) members and let staff review themselves.
+- **Shift management**: Let staff members go on/off-duty and take breaks while tracking their shift time, which contributes to a customizable leaderboard (weekly/monthly). Admins can manage staff shifts by manually adding time, forcing members off duty, or voiding shifts entirely. Set custom shift types, establish quotas for specific roles, configure minimum shift durations, and log all shift changes.
+- **Leave of Absence & Reduced Activity**: Staff can request a Leave of Absence (LOA) or Reduced Activity (RA) status with an approval workflow, optional role assignment, and configurable maximum durations. You can also optionally enable status logging which logs every status update for each staff member.
+- **Staff Profiles**: Let staff members (or also normal members) have their own nickname and introduction in a customizable embed, which users can see via a command. Supervisors/Management can also reset a staff member's profile if needed.
+- **Activity Checks**: Allow admins to host activity checks which staff members have to reach to with a custom duration. Exemptions can also be set together with automation settings to automatically host activity checks. Results for activity checks are logged with an optional role ping to choice which shows an overview of who reacted, who didn't react and who were exempt. 
 - **Role-based access control** - Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
 
 ## Setup {#setup}
