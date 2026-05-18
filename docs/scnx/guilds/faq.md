@@ -165,4 +165,8 @@ If deletion fails, you can try again later or contact [legal@scootkit.com](mailt
 
 ### My server got banned / deactivated / flagged on SCNX {#banned}
 
-Oh no - please follow the instructions on your dashboard. If you need help, please [reach out to our staff](https://scnx.app/help).
+Every enforcement action SCNX issues against a server comes with an explanation for the decision sent by email. The same statement, along with the type, status, scope, and decision date, is visible in the [**Policy & Compliance**](https://scnx.app/glink?page=policy) tab of your server.
+
+If you believe the decision is wrong, you can file a **voluntary reconsideration** within **6 months** of the decision date by clicking **Appeal this decision** on the enforcement card. This opens a customer-to-SCNX support ticket with the correct topic pre-selected. Reconsideration is a single round - the outcome will either reverse the decision (action lifted) or uphold it (action stands and reconsideration is exhausted).
+
+See the [Policy & Compliance documentation](/docs/scnx/guilds/policy#enforcement) for a full walkthrough. If you still need help, [reach out to our staff](https://scnx.app/help).

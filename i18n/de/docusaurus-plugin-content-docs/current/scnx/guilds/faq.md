@@ -156,4 +156,8 @@ Bei fehlgeschlagener Löschung kannst du es später erneut versuchen oder [legal
 
 ### Mein Server wurde auf SCNX gesperrt / deaktiviert / markiert {#banned}
 
-Oh nein – bitte folge den Anweisungen in deinem Dashboard. Wenn du Hilfe benötigst, [wende dich bitte an unser Team](https://scnx.app/help).
+Jede Durchsetzungsmaßnahme, die SCNX gegen einen Server ergreift, wird mit einer Begründung per E-Mail zugestellt. Dieselbe Begründung sowie Art, Status, Umfang und Entscheidungsdatum sind im Tab [**Richtlinien & Compliance**](https://scnx.app/glink?page=policy) deines Servers einsehbar.
+
+Falls du die Entscheidung für falsch hältst, kannst du innerhalb von **6 Monaten** ab dem Entscheidungsdatum eine **freiwillige Wiederbetrachtung** beantragen, indem du auf der Durchsetzungs-Karte auf **Diese Entscheidung anfechten** klickst. Damit wird ein Kunden-Supportticket an SCNX mit dem passenden Thema vorausgewählt eröffnet. Die Wiederbetrachtung ist einmalig - das Ergebnis hebt die Entscheidung entweder auf (Maßnahme aufgehoben) oder bestätigt sie (Maßnahme bleibt bestehen, Wiederbetrachtung damit abgeschlossen).
+
+Eine ausführliche Anleitung findest du in der [Richtlinien & Compliance-Dokumentation](/docs/scnx/guilds/policy#enforcement). Falls du weiterhin Hilfe benötigst, [wende dich an unser Team](https://scnx.app/help).
