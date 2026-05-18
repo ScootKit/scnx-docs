@@ -83,6 +83,30 @@ Dieser Fehler ist bekannt und wird bearbeitet.
 1. Öffne die [Modul-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 2. Wähle die gewünschten Rollen in dem [jeweiligen Konfigurationsfeld](#configuration-config).
 
+### Beitritts-Rollen als Basis-Rollen behandeln {#base-roles}
+
+Wenn du **Beitritts-Rollen als Basis-Rollen behandeln (automatisch wiederherstellen)** in der Hauptkonfiguration des Welcomers aktivierst, behandelt der Bot jede unter "Rollen bei Beitritt vergeben" eingetragene Rolle als harte Garantie — jedes reguläre Mitglied wird im Besitz dieser Rollen gehalten.
+
+Wenn aktiviert, setzt der Bot dies auf vier Wegen durch:
+
+1. **Sofortiges erneutes Vergeben bei manueller Entfernung.** Entfernt ein Moderator oder Admin eine der Beitritts-Rollen von einem Mitglied, fügt der Bot sie innerhalb von ~2 Sekunden wieder hinzu. Das heißt, du kannst keine Beitritts-Rolle einzeln entziehen, solange diese Option aktiv ist — schalte sie vorher aus, falls nötig.
+2. **Vergabe nach Aufhebung eines Halte-Zustands.** Wenn ein Mitglied aus Quarantäne, Join Gate oder Anti-Join-Raid entlassen wird, vergibt der Bot sofort alle fehlenden Beitritts-Rollen.
+3. **Vergabe nach Abschluss der Mitgliedschafts-Prüfung.** Schließt ein wartendes Mitglied Discords Mitgliedschafts-Prüfung ab, erhält es die Beitritts-Rollen (das passiert bereits ohne die Option; sie bleibt mit der Option korrekt aktiviert).
+4. **Täglicher Abgleich.** Täglich um 03:00 UTC iteriert der Bot über jedes gecachte Server-Mitglied und vergibt fehlende Beitritts-Rollen an reguläre Mitglieder. Ein initialer Abgleich läuft außerdem ~60 Sekunden nach dem Bot-Start — dies stellt Rollen wieder her, die während Ausfallzeiten verloren gegangen sind (z. B. wenn Nutzer die Mitgliedschafts-Prüfung abgeschlossen haben, während der Bot offline war).
+
+**Mitglieder, die durch diese Funktion niemals Beitritts-Rollen erhalten:**
+
+- Bots
+- Mitglieder, die aktuell die Quarantäne-Rolle der Moderation tragen
+- Mitglieder mit einem aktiven `QuarantineState`-Datenbank-Eintrag (deckt laufende Quarantänen und Wiederbeitritte zuvor quarantänierter Nutzer ab)
+- Mitglieder, die die Join-Gate-Halte-Rolle tragen (wenn Join Gate die Aktion "Rolle vergeben" nutzt)
+- Mitglieder, die die Anti-Join-Raid-Halte-Rolle tragen (wenn Anti-Join-Raid die Aktion "Rolle vergeben" nutzt)
+- Wartende Nutzer, die die Mitgliedschafts-Prüfung noch nicht abgeschlossen haben (es sei denn, "Rollen sofort vergeben" ist ebenfalls aktiviert)
+
+**Race-Schutz.** Wenn der Bot selbst eine Beitritts-Rolle im Rahmen einer Moderations-Aktion entfernt (Quarantäne, Join Gate, Anti-Join-Raid), zeigt das Audit-Log den Bot als Ausführenden an. Die Basis-Rollen-Funktion prüft das Audit-Log, bevor sie eine Rolle erneut vergibt, und überspringt vom Bot ausgelöste Entfernungen. Ein nachgelagerter Watchdog macht die erneute Vergabe rückgängig, falls innerhalb von 5 Sekunden eine Quarantäne-Rolle erscheint — damit wird auch der ungünstigste Race-Fall abgedeckt.
+
+**Performance.** Der tägliche Abgleich iteriert ausschließlich über den Mitglieder-Cache (vom Gateway gefüllt). Er ruft Discords "List Guild Members"-Endpunkt nicht auf und ist daher auch auf großen Servern unbedenklich. API-Aufrufe erfolgen nur für Mitglieder, denen tatsächlich eine Rolle fehlt.
+
 ## Nutzung {#usage}
 
 Nach dem [Einrichten](#setup) des Moduls werden Nachrichten automatisch jedes mal gesendet, wenn die jeweilige Aktion ausgelöst wird.
@@ -127,6 +151,7 @@ in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=welc
 | Nutzern Rollen beim Beitreten geben | Diese Rollen werden Mitgliedern gegeben, die deinem Server beitreten. Das wird nicht rückwirkend angewandt, nutze dafür das [Massrole-Modul](/docs/custom-bot/modules/tools/massrole).                   |
 | Bots ignorieren?                    | Wenn aktiviert (und das ist sehr empfehlenswert), werden keine Willkommens- und Verlassensnachrichten verschickt, wenn das Mitglied ein Bot ist.                                                         |
 | Zusätzliche Rollen beim Boost geben | Diese Rollen werden einem Mitglied zusätzlich zu der von Discord vergebenen Boost-Rolle gegeben, wenn es deinen Server boostet. Die Rollen werden entfernt, wenn das Mitglied all seine Boosts entfernt. |
+| Beitritts-Rollen als Basis-Rollen behandeln | Wenn aktiviert, stellt der Bot sicher, dass jedes reguläre Mitglied alle konfigurierten Beitritts-Rollen besitzt — durch reaktive erneute Vergabe und einen täglichen Abgleich. Details und Ausnahmen unter [Beitritts-Rollen als Basis-Rollen behandeln](#base-roles). |
 | Willkommensnachricht löschen        | Wenn aktiviert werden Willkommensnachrichten automatisch gelöscht, wenn das Mitglied deinen Server innerhalb von sieben Tagen wieder verlässt.                                                           |
 
 ### Zufällige Nachrichten {#configuration-random-messages}
