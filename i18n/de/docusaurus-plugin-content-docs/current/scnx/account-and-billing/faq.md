@@ -165,7 +165,7 @@ SCNX verwendet die **E-Mail-Adresse deines Discord-Kontos**, um dir wichtige Mit
 
 - **Rechnungen und Zahlungsbestätigungen**
 - **Server-Deaktivierungshinweise**
-- **Moderationsentscheidungen** (Begründung gemäß SCNX-Nutzungsbedingungen §23, gesendet von `compliance@scnx.xyz` - siehe den Tab [Richtlinien & Compliance](/docs/scnx/guilds/policy#enforcement))
+- **Moderationsentscheidungen** (Begründung gemäß SCNX-Nutzungsbedingungen §23, gesendet von `compliance@scnx.xyz` - siehe den Tab [Richtlinien & Compliance](https://scnx.app/glink?page=policy) des betroffenen Servers)
 - **2FA-Zurücksetzungsbestätigungen**
 - **SCNX Care Kulanzgutscheine**
 - **Löschbestätigungen**

@@ -106,6 +106,10 @@ Upgrade auf Unlimited oder höher, um diese Einschränkungen aufzuheben.
 
 Um SCNX auf irgendeine gewerbliche Weise oder in einer gewerblichen Situation zu nutzen, musst du den [Professional Plan](https://scnx.xyz/plans) erwerben. Lies diesen [FAQ-Artikel](https://faq.scnx.app/commercial-usage-of-scnx/), um mehr zu erfahren, gewerbliche Nutzung auf SCNX zu melden oder dagegen Einspruch zu erheben.
 
+### Wie bekomme ich einen Auftragsverarbeitungsvertrag (AVV / DPA) für meinen Server? {#dpa}
+
+SCNX erstellt einen unterzeichneten AVV (Data Processing Agreement) auf Anfrage im Tab [**Richtlinien & Compliance**](https://scnx.app/glink?page=policy) deines Servers. Trage einmalig die Daten deiner Rechtsperson ein, und SCNX erzeugt ein archivierfertiges, unterschriebenes PDF. Der gleiche Tab bietet zudem den Generator für die EU-AI-Act-Offenlegung, falls du KI-Funktionen auf deinem Server betreibst.
+
 ## Serververwaltung
 
 ### Kann ich alle meine SCNX-Daten von einem Server auf einen anderen übertragen? {#transfer}
@@ -160,4 +164,4 @@ Jede Durchsetzungsmaßnahme, die SCNX gegen einen Server ergreift, wird mit eine
 
 Falls du die Entscheidung für falsch hältst, kannst du innerhalb von **6 Monaten** ab dem Entscheidungsdatum eine **freiwillige Wiederbetrachtung** beantragen, indem du auf der Durchsetzungs-Karte auf **Diese Entscheidung anfechten** klickst. Damit wird ein Kunden-Supportticket an SCNX mit dem passenden Thema vorausgewählt eröffnet. Die Wiederbetrachtung ist einmalig - das Ergebnis hebt die Entscheidung entweder auf (Maßnahme aufgehoben) oder bestätigt sie (Maßnahme bleibt bestehen, Wiederbetrachtung damit abgeschlossen).
 
-Eine ausführliche Anleitung findest du in der [Richtlinien & Compliance-Dokumentation](/docs/scnx/guilds/policy#enforcement). Falls du weiterhin Hilfe benötigst, [wende dich an unser Team](https://scnx.app/help).
+Falls du weiterhin Hilfe benötigst, [wende dich an unser Team](https://scnx.app/help).

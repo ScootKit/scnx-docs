@@ -115,6 +115,10 @@ Upgrade to Unlimited or higher to remove these limitations.
 
 To use SCNX in any commercial manner or situation, you'll need to purchase the [Professional Plan](https://scnx.xyz/plans). Please read this [FAQ-Article](https://faq.scnx.app/commercial-usage-of-scnx/) to learn more about, appeal or report commercial usage on SCNX.
 
+### How do I get a Data Processing Agreement (DPA) for my server? {#dpa}
+
+SCNX generates a signed DPA on demand from the [**Policy & Compliance**](https://scnx.app/glink?page=policy) tab of your server. Fill in your legal-entity details once and SCNX renders a ready-to-archive signed PDF. The same tab also exposes the EU AI Act disclosure generator if you operate AI features on your server.
+
 ## Server Management
 
 ### Can I transfer all my SCNX data from one server to another? {#transfer}
@@ -169,4 +173,4 @@ Every enforcement action SCNX issues against a server comes with an explanation 
 
 If you believe the decision is wrong, you can file a **voluntary reconsideration** within **6 months** of the decision date by clicking **Appeal this decision** on the enforcement card. This opens a customer-to-SCNX support ticket with the correct topic pre-selected. Reconsideration is a single round - the outcome will either reverse the decision (action lifted) or uphold it (action stands and reconsideration is exhausted).
 
-See the [Policy & Compliance documentation](/docs/scnx/guilds/policy#enforcement) for a full walkthrough. If you still need help, [reach out to our staff](https://scnx.app/help).
+If you still need help, [reach out to our staff](https://scnx.app/help).
