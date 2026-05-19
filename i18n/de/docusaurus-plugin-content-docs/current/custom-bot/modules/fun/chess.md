@@ -50,7 +50,7 @@ Nach deinem Zug wird das Bild des Schachbretts aktualisiert und der Gegner wird 
 
 ### Remis, Aufgeben und Verlauf {#actions}
 
-- **Remis anbieten** – Klicke auf die Schaltfläche "Remis anbieten" (nur in PvP-Spielen, gegen die KI nicht verfügbar). Dein Gegner sieht bei seinem nächsten Zug eine Schaltfläche „Remis annehmen“. Wenn er stattdessen einen Zug ausführt, wird das Remis-Angebot implizit abgelehnt.
+- **Remis anbieten** – Klicke auf die Schaltfläche "Remis anbieten" (nur in PvP-Spielen, gegen die KI nicht verfügbar). Dein Gegner sieht bei seinem nächsten Zug eine Schaltfläche "Remis annehmen". Wenn er stattdessen einen Zug ausführt, wird das Remis-Angebot implizit abgelehnt.
 - **Aufgeben** – Klicke auf "Aufgeben" und bestätige die Auswahl. Der Gegner gewinnt sofort.
 - **Züge** – Klicke auf "Züge", um den vollständigen Spielverlauf anzuzeigen.
   
