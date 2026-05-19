@@ -6,15 +6,15 @@ Simple module to say "Hi" to new members, give them roles automatically and say 
 
 ## Features {#features}
 
-* Welcome new members with custom messages (and dynamic images).
-* Say bye to members who left your server.
-* Thank users who boosted your server with custom messages and emotionally blackmail them by sending a message when they
+- Welcome new members with custom messages (and dynamic images).
+- Say bye to members who left your server.
+- Thank users who boosted your server with custom messages and emotionally blackmail them by sending a message when they
   remove their boost.
-* Add an unlimited amount of welcome, boost or leave messages in different channels.
-* Automatically grant roles to new members and boosters.
-* Let the bot use a random message to get some variety in your welcome, leave, boost and unboost messages.
-* Automatically delete welcome-messages of members who left within 7 days after joining.
-* Add a button below messages that allows your existing members to welcome users.
+- Add an unlimited amount of welcome, boost or leave messages in different channels.
+- Automatically grant roles to new members and boosters.
+- Let the bot use a random message to get some variety in your welcome, leave, boost and unboost messages.
+- Automatically delete welcome-messages of members who left within 7 days after joining.
+- Add a button below messages that allows your existing members to welcome users.
 
 ## Setup {#setup}
 
@@ -31,18 +31,18 @@ will get deleted if the user leaves your server within seven days.
    the "join" Message-Type
    and [configure it](#configuration-channels).
 3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
+   - If you want to use random messages, enable the "Random messages?" option, open
      the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
      configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
      join".
-   * If you want to send the same message every time, use
+   - If you want to send the same message every time, use
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
      to [configure the message](#configuration-channels).
 
 ### Set up Boost / Unboost Messages {#setup-boost-messages}
 
-Boost-Messages gets send when a user boosts the server *for the first time* and the Unboost-Message will get send when a
-user removes *all of their* boosts from your server. This messages will not get resend if a user increases or decreases
+Boost-Messages gets send when a user boosts the server _for the first time_ and the Unboost-Message will get send when a
+user removes _all of their_ boosts from your server. This messages will not get resend if a user increases or decreases
 the amount of boosts on your server due to
 a [Discord API limitation](https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560).
 
@@ -53,11 +53,11 @@ a [Discord API limitation](https://github.com/discord/discord-api-docs/discussio
    the "Boost" or "Unboost" Message-Type
    and [configure it](#configuration-channels).
 3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
+   - If you want to use random messages, enable the "Random messages?" option, open
      the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
      configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
      boost" or "unboost".
-   * If you want to send the same message every time, use
+   - If you want to send the same message every time, use
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
      to [configure the message](#configuration-channels).
 
@@ -72,11 +72,11 @@ Leave messages will get send every time a user leaves your server.
    the "leave" Message-Type
    and [configure it](#configuration-channels).
 3. Configure the message:
-   * If you want to use random messages, enable the "Random messages?" option, open
+   - If you want to use random messages, enable the "Random messages?" option, open
      the [random messages](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Frandom-messages)
      configuration file and [configure](#configuration-random-messages) the random messages with the Message-Type "
      leave".
-   * If you want to send the same message every time, use
+   - If you want to send the same message every time, use
      the [channel configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fchannels)
      to [configure the message](#configuration-channels).
 
@@ -90,6 +90,30 @@ This issue is known and is being worked on.
 
 1. Open the [module configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 2. Select the desired roles in the [respective configuration fields](#configuration-config).
+
+### Treat join roles as base roles {#base-roles}
+
+If you enable **Treat join roles as base roles (auto-restore)** in the welcomer's main configuration, the bot treats every role under "Give roles on join" as a hard guarantee - every regular member is kept in possession of them.
+
+When enabled, the bot enforces this in four ways:
+
+1. **Instant re-add on manual removal.** If a moderator or admin removes one of the join roles from a member, the bot re-adds it within ~2 seconds. This means you cannot strip a join role from an individual user while this option is on - disable it first if you need to.
+2. **Grant on holding-state release.** When a member is released from quarantine, Join Gate hold, or Anti-Join-Raid hold, the bot grants any missing join roles immediately.
+3. **Grant on screening completion.** When a pending user completes Discord's membership screening, they receive the join roles (this already happens without the option; it remains correct with the option enabled).
+4. **Daily sweep.** Every day at 03:00 UTC the bot iterates every cached server member and grants any missing join roles to regular members. An initial sweep also runs ~60 seconds after the bot starts up - this is what recovers join-role grants missed during downtime (e.g. users who completed membership screening while the bot was offline).
+
+**Members never granted join roles via this feature:**
+
+- Bots
+- Members currently holding the moderation quarantine role
+- Members with an active `QuarantineState` database record (covers in-flight quarantines and rejoins of previously-quarantined users)
+- Members holding the Join Gate hold role (when Join Gate uses the "give role" action)
+- Members holding the Anti-Join-Raid hold role (when Anti-Join-Raid uses the "give role" action)
+- Pending users who haven't completed membership screening (unless "Immediately give roles" is also enabled)
+
+**Race protection.** When the bot itself removes a join role during a moderation action (quarantine, Join Gate, Anti-Join-Raid), the audit log shows the bot as the executor. The base-roles feature checks the audit log before re-adding any role and skips bot-initiated removals. A post-grant watchdog also reverts the re-add if a quarantine role appears within 5 seconds afterwards, closing the worst-case race.
+
+**Performance.** The daily sweep iterates only the member cache (populated by Discord via the gateway). It does not call Discord's "List Guild Members" endpoint, so it is safe on large servers. API calls are made only for members who actually need a missing role added.
 
 ## Usage {#usage}
 
@@ -119,15 +143,15 @@ send different event types in the same channel.
 Each Channel has the following configuration options:
 
 | Field                                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel                                                   | This is the channel the message will get sent in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | Channel-Type                                              | Depending on this value, this particular Config-Element will represent the configuration for a specific event type (see [setup](#setup). The following options are available: <ul><li><code>join</code>: This Config-Element will be applied when a new member joins your server.</li><li><code>leave</code>: This Config-Element will be applied when a member leaves your server.</li><li><code>boost</code>: This Config-Element will be applied when a member boosts your server for the first time.</li><li><code>unboost</code>: This Config-Element will be applied when a member removes their last boost from your server.</li></ul> |
-| Random messages                                           | If this option is enabled, the "Message" value will *NOT* be applied. Instead, a [random message](#configuration-random-messages) with the same Channel-Type will get sent randomly.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| Message                                                   | This will be the message sent in this channel, if "Random messages" is not enabled. This option [supports dynamic image generation](https://scootk.it/imgen) to make your messages even more pretty ✨.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Welcome Button                                            | *This option is only available, when "Channel Type" is set to "join"*<br/>If enabled, a button will get added below each message. One other member can then click on this button, which will trigger the configured message to be sent.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| Welcome Button Content                                    | *Only visible if "Welcome Button" is enabled.*<br/>This will be the content of the button added below messages. The value needs to be less than 100 characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| Channel in which the welcome-button should send a message | *Only visible if "Welcome Button" is enabled.*<br/>This is the channel the welcome message will get sent in once another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| Welcome Button Message                                    | *Only visible if "Welcome Button" is enabled.*<br/>This is the message that gets sent in the configured channel when another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Random messages                                           | If this option is enabled, the "Message" value will _NOT_ be applied. Instead, a [random message](#configuration-random-messages) with the same Channel-Type will get sent randomly.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Message                                                   | This will be the message sent in this channel, if "Random messages" is not enabled. This option [supports dynamic image generation](https://scootk.it/imgen) to make your messages even more pretty ✨.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Welcome Button                                            | _This option is only available, when "Channel Type" is set to "join"_<br/>If enabled, a button will get added below each message. One other member can then click on this button, which will trigger the configured message to be sent.                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Welcome Button Content                                    | _Only visible if "Welcome Button" is enabled._<br/>This will be the content of the button added below messages. The value needs to be less than 100 characters.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Channel in which the welcome-button should send a message | _Only visible if "Welcome Button" is enabled._<br/>This is the channel the welcome message will get sent in once another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Welcome Button Message                                    | _Only visible if "Welcome Button" is enabled._<br/>This is the message that gets sent in the configured channel when another member presses the welcome button.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ### Module configuration {#configuration-config}
 
@@ -135,15 +159,16 @@ In this configuration file allows you to [set up welcome- and boost roles](#setu
 features of this module. Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 
-| Field                          | Description                                                                                                                                                                          |
-|--------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.    |
-| Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                          |
-| Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts. |
-| Immediately give roles         | If enabled, join roles are assigned immediately when a user joins. If disabled, roles are assigned after the user completes Discord's onboarding (rules acceptance).                  |
-| Send DM on join                | If enabled, the bot sends a direct message to new users when they join the server.                                                                                                   |
-| Join DM Message                | *Only visible if "Send DM on join" is enabled.*<br/>The message sent via DM to new users when they join your server.                                                                 |
-| Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                        |
+| Field                          | Description                                                                                                                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.                                                            |
+| Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                                                                                  |
+| Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts.                                                         |
+| Immediately give roles         | If enabled, join roles are assigned immediately when a user joins. If disabled, roles are assigned after the user completes Discord's onboarding (rules acceptance).                                                                         |
+| Treat join roles as base roles | When enabled, the bot guarantees every regular member holds all configured join roles via reactive re-adds and a daily sweep. See [Treat join roles as base roles](#base-roles) for the full list of exclusions and race-protection details. |
+| Send DM on join                | If enabled, the bot sends a direct message to new users when they join the server.                                                                                                                                                           |
+| Join DM Message                | _Only visible if "Send DM on join" is enabled._<br/>The message sent via DM to new users when they join your server.                                                                                                                         |
+| Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                                                                                |
 
 ### Random messages {#configuration-random-messages}
 
@@ -157,9 +182,9 @@ When [a channel](#configuration-channels) uses the "Random messages" option, a r
 get selected.
 :::
 
-| Field        | Description                                                                                                                                                                                              |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Message-Type | *see the "Channel-Type" option in the [channel configuration](#configuration-channels).*                                                                                                                 |
+| Field        | Description                                                                                                                                                                                               |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Message-Type | _see the "Channel-Type" option in the [channel configuration](#configuration-channels)._                                                                                                                  |
 | Message      | This is the message that gets send if this message object will get selected randomly. This option [supports dynamic image generation](https://scootk.it/imgen) to make your messages even more pretty ✨. |
 
 ## Troubleshooting {#troubleshooting}
@@ -181,25 +206,27 @@ to our friendly staff at [scnx.app/help](https://scnx.app/help).
 <details>
    <summary>I am experiencing issues with a dynamically generated image.</summary>
 
-   Please visit <a href="https://scootk.it/imgen">scootk.it/imgen</a>, as shown in the error image.
+Please visit <a href="https://scootk.it/imgen">scootk.it/imgen</a>, as shown in the error image.
+
 </details>
 
 <details>
    <summary>No message is being sent when a user adds another boost to their existing server boost.</summary>
 
-   This happens due to a <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API limitation</a>. We cannot change this behavior.
+This happens due to a <a href="https://github.com/discord/discord-api-docs/discussions/3228#discussioncomment-1717560">Discord API limitation</a>. We cannot change this behavior.
+
 </details>
 
 ## Stored data {#data-usage}
 
 The following data will get stored for every configured welcome message every time a new member joins:
 
-* A unique integer identifying the database entry
-* The unique Discord User-ID of the member who just joined and triggered the welcome message
-* The unique Discord Message-ID of the welcome message that got sent by the bot
-* The unique Discord Channel-ID of the channel the welcome message got sent in by the bot
-* The exact time the member joined the server
-* Metadata about the entry (date when created and last updated)
+- A unique integer identifying the database entry
+- The unique Discord User-ID of the member who just joined and triggered the welcome message
+- The unique Discord Message-ID of the welcome message that got sent by the bot
+- The unique Discord Channel-ID of the channel the welcome message got sent in by the bot
+- The exact time the member joined the server
+- Metadata about the entry (date when created and last updated)
 
 This data will get used to delete the sent welcome messages if the user leaves the server within seven days after
 joins (if [enabled](#configuration-config)). There is no way to stop the bot from storing data (as toggling this feature
