@@ -53,7 +53,7 @@ Nach deinem Zug wird das Bild des Schachbretts aktualisiert und der Gegner wird 
 - **Remis anbieten** – Klicke auf die Schaltfläche "Remis anbieten" (nur in PvP-Spielen, gegen die KI nicht verfügbar). Dein Gegner sieht bei seinem nächsten Zug eine Schaltfläche "Remis annehmen". Wenn er stattdessen einen Zug ausführt, wird das Remis-Angebot implizit abgelehnt.
 - **Aufgeben** – Klicke auf "Aufgeben" und bestätige die Auswahl. Der Gegner gewinnt sofort.
 - **Züge** – Klicke auf "Züge", um den vollständigen Spielverlauf anzuzeigen.
-  
+
 ### Zugzeitüberschreitungen {#timeouts}
 
 Wenn ein Spieler innerhalb des konfigurierten Zeitlimits keinen Zug ausführt, erhält er eine Erinnerung im Thread. Wenn er innerhalb der Verfallzeit immer noch keinen Zug ausführt, wird das Spiel automatisch als verloren gewertet.
@@ -93,7 +93,7 @@ Wenn ein Spieler innerhalb des konfigurierten Zeitlimits keinen Zug ausführt, e
   <summary>Mein Zug wurde als ungültig abgelehnt</summary>
   <ul>
     <li>Stelle sicher, dass du einen legalen Zug eingibst. Die Fehlermeldung listet alle legalen Züge für deine aktuelle Position auf.</li>
-    <li>Wenn du eine Notation wie <code>Nf3</code> erwendest und mehrere Springer f3 erreichen können, nutze stattdessen die Koordinatennotation (z. B. <code>G1F3</code>).</li>
+    <li>Wenn du eine Notation wie <code>Nf3</code> verwendest und mehrere Springer f3 erreichen können, nutze stattdessen die Koordinatennotation (z. B. <code>G1F3</code>).</li>
   </ul>
 </details>
 
