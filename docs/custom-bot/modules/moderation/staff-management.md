@@ -19,15 +19,15 @@ A powerful, highly customizable staff management system designed to track activi
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=staff-management-system) on your server.
 2. Open the [General Configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) and set the **Staff Roles**, **Supervisor Roles**, and **Management Roles** to control who can access which features.
-3. Set up a **Log Channel** where staff management events will be logged.
+3. Select a channel for the **General Log Channel**, which is the default channel for logging events in this module.
 4. Configure the individual feature settings as needed:
-   - [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) - Duty types, quotas, and leaderboard settings.
-   - [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) - LoA and reduced activity settings.
-   - [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) - Infraction types, suspension settings, and DM notifications.
-   - [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) - Promotion announcements and role assignment.
-   - [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) - Rating system settings.
-   - [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) - Staff profile customization.
-   - [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) - Activity verification settings.
+  - [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) - Infraction types, suspension settings, and DM notifications.
+  - [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) - Promotion announcements and role assignment.
+  - [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) - Reviews system settings and message customization.
+  - [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) - Duty types, quotas, and leaderboard settings.
+  - [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) - LoA and reduced activity settings.
+  - [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) - Staff profile customization and settings.
+  - [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) - Activity checks settings.
 
 ## Usage {#usage}
 
