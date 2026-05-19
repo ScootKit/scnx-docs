@@ -36,6 +36,7 @@ Voice support is an early-access preview unlocked by the [ScootKit Membership](h
 - **Estimated Wait Time** - Automatically calculate and display estimated wait times based on historical ticket data.
 - **Ticket Utilization** - Monitor ticket capacity with a two-level warning system and inform users when capacity is high.
 - **AI Ticket Summaries** - Get an AI-generated summary of every closed ticket, sent directly to your log channel.
+- **[AI FAQ](/docs/support-bot/ai-faq/intro)** (early access) - Let an AI answer common questions from a staff-authored FAQ, both in channels and before tickets are opened.
 - **modmail.net Integration** - View ticket transcripts in a clean web interface instead of plain text files.
 - **Blocklist** - Block abusive users from opening tickets, with optional duration and reason.
 - **Maintenance Mode** - Temporarily disable ticket creation while your team is unavailable.

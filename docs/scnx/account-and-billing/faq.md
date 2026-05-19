@@ -193,6 +193,7 @@ SCNX uses the **email address from your Discord account** to send you important 
 
 - **Invoices and payment confirmations**
 - **Server deactivation notices**
+- **Moderation decisions** (statement of reasons under SCNX ToS §23, sent from `compliance@scnx.xyz` - see the [Policy & Compliance tab](https://scnx.app/glink?page=policy) of the affected server)
 - **2FA reset confirmations**
 - **SCNX Care accommodation vouchers**
 - **Deletion confirmations**
