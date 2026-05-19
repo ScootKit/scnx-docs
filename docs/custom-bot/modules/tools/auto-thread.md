@@ -6,8 +6,8 @@ Automatically creates a thread under each message that gets posted in a selected
 
 ## Features {#features}
 
-* Automatically create a thread below message sent in configured channels.
-* Customize the name of the thread and its default archive duration.
+- Automatically create a thread below message sent in configured channels.
+- Customize the name of the thread and its default archive duration.
 
 ## Setup {#setup}
 
@@ -27,7 +27,7 @@ In this configuration file you can configure in which channels the module should
 Open [this file in your Dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-thread|config).
 
 | Field                   | Description                                                                                                                                                                                                  |
-|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Channels                | If a message is being sent into a channel configured here, the bot will create a thread below this message automatically.                                                                                    |
 | Thread Name             | This will be the name of the thread provided.                                                                                                                                                                |
 | Thread archive duration | New threads will be given this archive duration. The value is in minutes and you can select one of the available options. The max option will automatically set the highest value available for your server. |
@@ -36,7 +36,7 @@ Open [this file in your Dashboard](https://scnx.app/glink?page=bot/configuration
 
 If the bot isn't creating threads automatically, please make sure that
 
-* the channel you are sending messages in is added to the [configuration](#configuration).
-* the [configured](#configuration) thread name is less than 100 characters long.
-* the bot has "Create public thread" and "Send messages" permissions on the channel.
-* no thread was previously created below the message.
+- the channel you are sending messages in is added to the [configuration](#configuration).
+- the [configured](#configuration) thread name is less than 100 characters long.
+- the bot has "Create public thread" and "Send messages" permissions on the channel.
+- no thread was previously created below the message.

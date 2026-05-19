@@ -23,6 +23,7 @@ const config = {
         locales: ['en', 'de', 'it']
     },
     trailingSlash: true,
+    clientModules: [require.resolve('./src/fontawesome.js')],
     scripts: [],
     stylesheets: [
             {
@@ -153,14 +154,14 @@ const config = {
                 },
                 links: [
                     {
-                        title: 'Docs',
+                        title: 'Documentation',
                         items: [
                             {
-                                label: 'Get started 🚀',
-                                to: '/docs/intro'
+                                label: 'Getting Started',
+                                to: '/docs/setup'
                             },
                             {
-                                label: 'SCNX',
+                                label: 'SCNX Platform',
                                 to: '/docs/scnx/intro'
                             },
                             {
@@ -168,12 +169,33 @@ const config = {
                                 to: '/docs/custom-bot/intro'
                             },
                             {
-                                label: 'Modmail',
-                                to: '/docs/modmail/intro'
+                                label: 'Support Bot',
+                                to: '/docs/support-bot/intro'
                             },
                             {
                                 label: 'Linked Roles',
                                 to: '/docs/linked-roles/intro'
+                            }
+                        ]
+                    },
+                    {
+                        title: 'SCNX',
+                        items: [
+                            {
+                                label: 'Open Dashboard',
+                                href: 'https://scnx.app/'
+                            },
+                            {
+                                label: 'Plans & Pricing',
+                                href: 'https://scnx.xyz/plans'
+                            },
+                            {
+                                label: 'Changelogs',
+                                href: 'https://scnx.app/changelogs'
+                            },
+                            {
+                                label: 'Get Help',
+                                href: 'https://scnx.app/help'
                             }
                         ]
                     },
@@ -185,7 +207,7 @@ const config = {
                                 href: 'https://scootk.it/dc'
                             },
                             {
-                                label: 'Twitter / X',
+                                label: 'X / Twitter',
                                 href: 'https://scootk.it/twitter'
                             },
                             {
@@ -193,37 +215,12 @@ const config = {
                                 href: 'https://scootk.it/insta'
                             },
                             {
-                                label: 'GitHub',
-                                href: 'https://scootk.it/gh'
-                            },
-                            {
-                                label: 'Facebook',
-                                href: 'https://sccootk.it/facebook'
-                            },
-                            {
                                 label: 'YouTube',
                                 href: 'https://scootk.it/yt'
-                            }
-                        ]
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Need help with SCNX?',
-                                href: 'https://scnx.app/help'
                             },
                             {
-                                label: 'Open SCNX Dashboard',
-                                href: 'https://scnx.app/'
-                            },
-                            {
-                                label: 'View SCNX Product Page',
-                                href: 'https://scnx.xyz'
-                            },
-                            {
-                                label: 'Help us improve these docs',
-                                href: 'https://github.com/ScootKit/scnx-docs'
+                                label: 'GitHub',
+                                href: 'https://scootk.it/gh'
                             }
                         ]
                     }
@@ -254,7 +251,7 @@ const config = {
                 async loadContent() {
                     if (fs.existsSync('./api-responses.json')) return require('./api-responses.json').modules;
                     const scnxOrgAuthorData = {};
-                    let moduleData = await (await fetch('https://scnx.app/api/scn/modules')).json();
+                    let moduleData = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     for (const botModule of moduleData) {
                         if (!botModule.author.scnxOrgID || scnxOrgAuthorData[botModule.author.scnxOrgID]) continue;
                         const res = await fetch('https://scnx.app/api/marketplace/organizations/' + botModule.author.scnxOrgID);
@@ -271,6 +268,42 @@ const config = {
                         moduleDataWithOrgs.push({...botModule, orgData: scnxOrgAuthorData[botModule.author.scnxOrgID]});
                     }
                     return moduleDataWithOrgs;
+                },
+                async contentLoaded({content, actions}) {
+                    actions.setGlobalData(content);
+                }
+            };
+        },
+        function () {
+            function renderChangelogMarkdown(data, micromark) {
+                for (const item of (data.items || [])) {
+                    for (const moduleItem of (item.items || [])) {
+                        for (const change of (moduleItem.items || [])) {
+                            for (const lang of ['en', 'de', 'it', 'nl']) {
+                                if (change[lang]) change[lang + 'Html'] = micromark(change[lang]);
+                            }
+                        }
+                    }
+                }
+                return data;
+            }
+            return {
+                name: 'scnx-module-changelogs',
+                async loadContent() {
+                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    const {micromark} = await import('micromark');
+                    const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
+                    const changelogs = {};
+                    for (const mod of modules) {
+                        try {
+                            const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            if (res.ok) {
+                                const data = await res.json();
+                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                            }
+                        } catch (e) { /* skip module */ }
+                    }
+                    return changelogs;
                 },
                 async contentLoaded({content, actions}) {
                     actions.setGlobalData(content);

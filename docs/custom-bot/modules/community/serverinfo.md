@@ -6,11 +6,11 @@ Display an auto-updating embed with server statistics and information in a chann
 
 ## Features {#features}
 
-* Displays an auto-updating embed with customizable server information in a designated channel.
-* Supports a wide range of dynamic variables including member count, bot count, online count, boost statistics, channel count, role count, and more.
-* Configurable embed fields with support for inline display.
-* Count members with a specific role or online members with a specific role.
-* The embed updates automatically every 5 minutes.
+- Displays an auto-updating embed with customizable server information in a designated channel.
+- Supports a wide range of dynamic variables including member count, bot count, online count, boost statistics, channel count, role count, and more.
+- Configurable embed fields with support for inline display.
+- Count members with a specific role or online members with a specific role.
+- The embed updates automatically every 5 minutes.
 
 ## Setup {#setup}
 
@@ -32,10 +32,10 @@ This module has multiple configuration files. Please review them below.
 
 In this configuration file, you can configure the functionality of this module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=serverinfo%7Cconfigs%2Fconfig).
 
-| Field | Description |
-|-------|-------------|
+| Field   | Description                                                       |
+| ------- | ----------------------------------------------------------------- |
 | Channel | The channel where the server information embed will be displayed. |
-| Embed | Customize the embed's title, description, and color. |
+| Embed   | Customize the embed's title, description, and color.              |
 
 ### Embed-Fields {#configuration-fields}
 
@@ -43,11 +43,11 @@ In this configuration file, you can add and customize the fields displayed in th
 
 Each entry represents a field in the embed with the following options:
 
-| Field | Description |
-|-------|-------------|
-| Feld-Name | The name/title of the embed field. |
+| Field         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Feld-Name     | The name/title of the embed field.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | Field-Content | The content of the field. You can use the following variables: `%memberCount%` (total members), `%botCount%` (bots), `%userCount%` (non-bot users), `%onlineMemberCount%` (online members), `%daysSinceCreation%` (days since server creation), `%guildCreationTimestamp%` (creation date), `%guildBoosts%` (boost count), `%boostLevel%` (current boost tier), `%boosterCount%` (number of boosters), `%channelCount%` (channels), `%roleCount%` (roles), `%emojiCount%` (emojis), `%newline%` (line break), `%userWithRoleCount-<ID>%` (members with a specific role), `%onlineUserWithRoleCount-<ID>%` (online members with a specific role). |
-| Inline Field? | If enabled, the field will be displayed inline alongside other inline fields. |
+| Inline Field? | If enabled, the field will be displayed inline alongside other inline fields.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -63,5 +63,6 @@ Each entry represents a field in the embed with the following options:
 <details>
   <summary>Role-based member counts are showing incorrect values</summary>
 
-  Make sure you are using the correct role ID in the variable (e.g., <code>%userWithRoleCount-123456789%</code>). Also note that online member counts depend on the bot's presence intent and may not be accurate if the server is very large.
+Make sure you are using the correct role ID in the variable (e.g., <code>%userWithRoleCount-123456789%</code>). Also note that online member counts depend on the bot's presence intent and may not be accurate if the server is very large.
+
 </details>

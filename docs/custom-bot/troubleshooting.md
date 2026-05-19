@@ -56,7 +56,8 @@ Here are the most common permission-related issues and how to resolve them:
 <details>
   <summary>Missing Access</summary>
 
-  The bot cannot see the channel it needs to operate in. To fix this:
+The bot cannot see the channel it needs to operate in. To fix this:
+
   <ol>
     <li>Go to the channel settings in Discord.</li>
     <li>Open the "Permissions" tab.</li>
@@ -68,7 +69,8 @@ Here are the most common permission-related issues and how to resolve them:
 <details>
   <summary>Missing Permissions to send messages</summary>
 
-  The bot can see the channel but cannot send messages. Grant the bot the following permissions in the channel:
+The bot can see the channel but cannot send messages. Grant the bot the following permissions in the channel:
+
   <ul>
     <li><code>Send Messages</code></li>
     <li><code>Embed Links</code> (required for embeds)</li>
@@ -79,7 +81,8 @@ Here are the most common permission-related issues and how to resolve them:
 <details>
   <summary>Missing Permissions to manage roles</summary>
 
-  The bot cannot assign or remove roles. To fix this:
+The bot cannot assign or remove roles. To fix this:
+
   <ol>
     <li>Make sure the bot has the <code>Manage Roles</code> permission on your server.</li>
     <li>In the server's role hierarchy (Server Settings > Roles), the bot's role must be <strong>above</strong> any role it needs to assign or remove.</li>
@@ -90,13 +93,15 @@ Here are the most common permission-related issues and how to resolve them:
 <details>
   <summary>Missing Permissions to manage channels</summary>
 
-  The bot cannot modify channel settings (e.g., for channel stats, temp channels, or locking). Grant the bot the <code>Manage Channels</code> permission on the server or on the specific channels.
+The bot cannot modify channel settings (e.g., for channel stats, temp channels, or locking). Grant the bot the <code>Manage Channels</code> permission on the server or on the specific channels.
+
 </details>
 
 <details>
   <summary>Missing Permissions to moderate members</summary>
 
-  The bot cannot mute (timeout) members. Make sure:
+The bot cannot mute (timeout) members. Make sure:
+
   <ul>
     <li>The bot has the <code>Moderate Members</code> permission.</li>
     <li>The bot's role is above the target user's highest role in the role hierarchy.</li>
@@ -106,7 +111,8 @@ Here are the most common permission-related issues and how to resolve them:
 <details>
   <summary>Missing Permissions to kick or ban members</summary>
 
-  Make sure:
+Make sure:
+
   <ul>
     <li>The bot has the <code>Kick Members</code> and/or <code>Ban Members</code> permissions.</li>
     <li>The bot's role is above the target user's highest role in the role hierarchy.</li>
@@ -144,17 +150,17 @@ of their permissions or role position. There is no workaround for this.
 
 Here are common errors you might find in your bot's error log and what they mean:
 
-| Error | Meaning | Solution |
-|-------|---------|----------|
-| `Missing Access` | The bot cannot see a channel. | Grant the bot `View Channel` permission in the affected channel. |
-| `Missing Permissions` | The bot lacks a required permission for an action. | Check which permission is needed and grant it to the bot. |
-| `Unknown Channel` | A configured channel no longer exists. | Update your configuration to use a valid channel. |
-| `Unknown Role` | A configured role no longer exists. | Update your configuration to use a valid role. |
-| `Unknown Message` | A referenced message was deleted. | Reconfigure the module or let the bot recreate the message. |
-| `Invalid Form Body` | A message or embed exceeds Discord's character limits. | Shorten your configured messages or embed content. |
-| `DiscordAPIError[50013]` | The bot lacks permissions for the action. | Review and fix the bot's permissions (see [Permission issues](#permissions)). |
-| `DiscordAPIError[50001]` | The bot cannot access the resource. | Grant the bot access to the channel or resource. |
-| `DiscordAPIError[30005]` | Too many roles on the server. | Discord limits the number of roles. Remove unused roles. |
+| Error                    | Meaning                                                | Solution                                                                      |
+| ------------------------ | ------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| `Missing Access`         | The bot cannot see a channel.                          | Grant the bot `View Channel` permission in the affected channel.              |
+| `Missing Permissions`    | The bot lacks a required permission for an action.     | Check which permission is needed and grant it to the bot.                     |
+| `Unknown Channel`        | A configured channel no longer exists.                 | Update your configuration to use a valid channel.                             |
+| `Unknown Role`           | A configured role no longer exists.                    | Update your configuration to use a valid role.                                |
+| `Unknown Message`        | A referenced message was deleted.                      | Reconfigure the module or let the bot recreate the message.                   |
+| `Invalid Form Body`      | A message or embed exceeds Discord's character limits. | Shorten your configured messages or embed content.                            |
+| `DiscordAPIError[50013]` | The bot lacks permissions for the action.              | Review and fix the bot's permissions (see [Permission issues](#permissions)). |
+| `DiscordAPIError[50001]` | The bot cannot access the resource.                    | Grant the bot access to the channel or resource.                              |
+| `DiscordAPIError[30005]` | Too many roles on the server.                          | Discord limits the number of roles. Remove unused roles.                      |
 
 ## Using the error log {#error-log}
 
@@ -171,89 +177,89 @@ If your issue is related to a specific module, check its troubleshooting section
 
 ### Administration modules
 
-* [Admin-Tools](/docs/custom-bot/modules/administration/admin-tools#troubleshooting) - Channel/role moving, emoji importing, temporary roles
-* [Auto-Delete](/docs/custom-bot/modules/administration/auto-delete#troubleshooting) - Automatic message deletion
-* [Channel-Stats](/docs/custom-bot/modules/administration/channel-stats#troubleshooting) - Statistics channels
-* [Logging](/docs/custom-bot/modules/administration/logging#troubleshooting) - Server change logging
-* [Partner-List](/docs/custom-bot/modules/administration/partner-list#troubleshooting) - Partner listing
-* [Status-Roles](/docs/custom-bot/modules/administration/status-roles#troubleshooting) - Roles based on Discord status
-* [Suggestions](/docs/custom-bot/modules/administration/suggestions#troubleshooting) - Suggestion system
-* [Staff-Goals](/docs/custom-bot/modules/administration/team-goals#troubleshooting) - Weekly staff message goals
-* [Staff-List](/docs/custom-bot/modules/administration/team-list#troubleshooting) - Auto-updating staff embed
-* [Welcome and Boosts](/docs/custom-bot/modules/administration/welcomer#troubleshooting) - Welcome, leave, and boost messages
+- [Admin-Tools](/docs/custom-bot/modules/administration/admin-tools#troubleshooting) - Channel/role moving, emoji importing, temporary roles
+- [Auto-Delete](/docs/custom-bot/modules/administration/auto-delete#troubleshooting) - Automatic message deletion
+- [Channel-Stats](/docs/custom-bot/modules/administration/channel-stats#troubleshooting) - Statistics channels
+- [Logging](/docs/custom-bot/modules/administration/logging#troubleshooting) - Server change logging
+- [Partner-List](/docs/custom-bot/modules/administration/partner-list#troubleshooting) - Partner listing
+- [Status-Roles](/docs/custom-bot/modules/administration/status-roles#troubleshooting) - Roles based on Discord status
+- [Suggestions](/docs/custom-bot/modules/administration/suggestions#troubleshooting) - Suggestion system
+- [Staff-Goals](/docs/custom-bot/modules/administration/team-goals#troubleshooting) - Weekly staff message goals
+- [Staff-List](/docs/custom-bot/modules/administration/team-list#troubleshooting) - Auto-updating staff embed
+- [Welcome and Boosts](/docs/custom-bot/modules/administration/welcomer#troubleshooting) - Welcome, leave, and boost messages
 
 ### Bot modules
 
-* [Betterstatus](/docs/custom-bot/modules/bot/betterstatus#troubleshooting) - Custom bot status
-* [Reaction Roles](/docs/custom-bot/modules/bot/reaction-roles#troubleshooting) - Self-assignable roles via reactions
+- [Betterstatus](/docs/custom-bot/modules/bot/betterstatus#troubleshooting) - Custom bot status
+- [Reaction Roles](/docs/custom-bot/modules/bot/reaction-roles#troubleshooting) - Self-assignable roles via reactions
 
 ### Community modules
 
-* [Activity Streaks](/docs/custom-bot/modules/community/activity-streak#troubleshooting) - Activity streak tracking
-* [Anonymous Chat](/docs/custom-bot/modules/community/anonymous-chat#troubleshooting) - Anonymous messaging
-* [Birthday-Calendar](/docs/custom-bot/modules/community/birthday#troubleshooting) - Birthday tracking
-* [Color me](/docs/custom-bot/modules/community/color-me#troubleshooting) - Custom color roles
-* [Economy](/docs/custom-bot/modules/community/economy-system#troubleshooting) - Virtual economy system
-* [Giveaways](/docs/custom-bot/modules/community/giveaways#troubleshooting) - Giveaway system
-* [Hunt the Code](/docs/custom-bot/modules/community/hunt-the-code#troubleshooting) - Code hunting game
-* [Level System](/docs/custom-bot/modules/community/levels#troubleshooting) - XP and leveling
-* [Live Messages](/docs/custom-bot/modules/community/live-messages#troubleshooting) - Dynamic stats messages
-* [Nicknames](/docs/custom-bot/modules/community/nicknames#troubleshooting) - Role-based nicknames
-* [Polls](/docs/custom-bot/modules/community/polls#troubleshooting) - Poll system
-* [Reminders](/docs/custom-bot/modules/community/reminders#troubleshooting) - Reminder system
-* [Server Information](/docs/custom-bot/modules/community/serverinfo#troubleshooting) - Server info channel
-* [Starboard](/docs/custom-bot/modules/community/starboard#troubleshooting) - Message starboard
-* [Sticky Messages](/docs/custom-bot/modules/community/sticky-messages#troubleshooting) - Sticky messages
-* [Temp Channels](/docs/custom-bot/modules/community/temp-channels#troubleshooting) - Temporary voice channels
+- [Activity Streaks](/docs/custom-bot/modules/community/activity-streak#troubleshooting) - Activity streak tracking
+- [Anonymous Chat](/docs/custom-bot/modules/community/anonymous-chat#troubleshooting) - Anonymous messaging
+- [Birthday-Calendar](/docs/custom-bot/modules/community/birthday#troubleshooting) - Birthday tracking
+- [Color me](/docs/custom-bot/modules/community/color-me#troubleshooting) - Custom color roles
+- [Economy](/docs/custom-bot/modules/community/economy-system#troubleshooting) - Virtual economy system
+- [Giveaways](/docs/custom-bot/modules/community/giveaways#troubleshooting) - Giveaway system
+- [Hunt the Code](/docs/custom-bot/modules/community/hunt-the-code#troubleshooting) - Code hunting game
+- [Level System](/docs/custom-bot/modules/community/levels#troubleshooting) - XP and leveling
+- [Live Messages](/docs/custom-bot/modules/community/live-messages#troubleshooting) - Dynamic stats messages
+- [Nicknames](/docs/custom-bot/modules/community/nicknames#troubleshooting) - Role-based nicknames
+- [Polls](/docs/custom-bot/modules/community/polls#troubleshooting) - Poll system
+- [Reminders](/docs/custom-bot/modules/community/reminders#troubleshooting) - Reminder system
+- [Server Information](/docs/custom-bot/modules/community/serverinfo#troubleshooting) - Server info channel
+- [Starboard](/docs/custom-bot/modules/community/starboard#troubleshooting) - Message starboard
+- [Sticky Messages](/docs/custom-bot/modules/community/sticky-messages#troubleshooting) - Sticky messages
+- [Temp Channels](/docs/custom-bot/modules/community/temp-channels#troubleshooting) - Temporary voice channels
 
 ### Games & Fun modules
 
-* [Auto-React](/docs/custom-bot/modules/fun/auto-react#troubleshooting) - Automatic reactions
-* [Count-Game](/docs/custom-bot/modules/fun/counter#troubleshooting) - Counting game
-* [Duel](/docs/custom-bot/modules/fun/duel#troubleshooting) - Duel game
-* [Emoji-Quiz](/docs/custom-bot/modules/fun/emoji-quiz#troubleshooting) - Emoji guessing game
-* [Flag-Quiz](/docs/custom-bot/modules/fun/flag-quiz#troubleshooting) - Flag guessing game
-* [Fun Commands](/docs/custom-bot/modules/fun#troubleshooting) - Social interaction commands
-* [Guess the Number](/docs/custom-bot/modules/fun/guess-the-number#troubleshooting) - Number guessing game
-* [Holidays](/docs/custom-bot/modules/fun/holidays#troubleshooting) - Holiday features
-* [Quiz](/docs/custom-bot/modules/fun/quiz#troubleshooting) - Quiz system
-* [Rock-Paper-Scissors](/docs/custom-bot/modules/fun/rock-paper-scissors#troubleshooting) - RPS game
-* [Tic-Tac-Toe](/docs/custom-bot/modules/fun/tic-tak-toe#troubleshooting) - Tic-Tac-Toe game
-* [UNO](/docs/custom-bot/modules/fun/uno#troubleshooting) - UNO card game
+- [Auto-React](/docs/custom-bot/modules/fun/auto-react#troubleshooting) - Automatic reactions
+- [Count-Game](/docs/custom-bot/modules/fun/counter#troubleshooting) - Counting game
+- [Duel](/docs/custom-bot/modules/fun/duel#troubleshooting) - Duel game
+- [Emoji-Quiz](/docs/custom-bot/modules/fun/emoji-quiz#troubleshooting) - Emoji guessing game
+- [Flag-Quiz](/docs/custom-bot/modules/fun/flag-quiz#troubleshooting) - Flag guessing game
+- [Fun Commands](/docs/custom-bot/modules/fun#troubleshooting) - Social interaction commands
+- [Guess the Number](/docs/custom-bot/modules/fun/guess-the-number#troubleshooting) - Number guessing game
+- [Holidays](/docs/custom-bot/modules/fun/holidays#troubleshooting) - Holiday features
+- [Quiz](/docs/custom-bot/modules/fun/quiz#troubleshooting) - Quiz system
+- [Rock-Paper-Scissors](/docs/custom-bot/modules/fun/rock-paper-scissors#troubleshooting) - RPS game
+- [Tic-Tac-Toe](/docs/custom-bot/modules/fun/tic-tak-toe#troubleshooting) - Tic-Tac-Toe game
+- [UNO](/docs/custom-bot/modules/fun/uno#troubleshooting) - UNO card game
 
 ### Integration modules
 
-* [Minecraft-Status](/docs/custom-bot/modules/integrations/minecraft-status#troubleshooting) - Minecraft server status
-* [Reddit Notifications](/docs/custom-bot/modules/integrations/reddit-notifications#troubleshooting) - Reddit post notifications
-* [RSS Notifications](/docs/custom-bot/modules/integrations/rss-notifications#troubleshooting) - RSS feed notifications
-* [Threads Notifications](/docs/custom-bot/modules/integrations/threads-notifications#troubleshooting) - Threads post notifications
-* [TikTok Notifications](/docs/custom-bot/modules/integrations/tiktok-notifications#troubleshooting) - TikTok video notifications
-* [Twitch Notifications](/docs/custom-bot/modules/integrations/twitch-notifications#troubleshooting) - Twitch stream notifications
-* [YouTube Notifications](/docs/custom-bot/modules/integrations/youtube-notifications#troubleshooting) - YouTube video/stream notifications
+- [Minecraft-Status](/docs/custom-bot/modules/integrations/minecraft-status#troubleshooting) - Minecraft server status
+- [Reddit Notifications](/docs/custom-bot/modules/integrations/reddit-notifications#troubleshooting) - Reddit post notifications
+- [RSS Notifications](/docs/custom-bot/modules/integrations/rss-notifications#troubleshooting) - RSS feed notifications
+- [Threads Notifications](/docs/custom-bot/modules/integrations/threads-notifications#troubleshooting) - Threads post notifications
+- [TikTok Notifications](/docs/custom-bot/modules/integrations/tiktok-notifications#troubleshooting) - TikTok video notifications
+- [Twitch Notifications](/docs/custom-bot/modules/integrations/twitch-notifications#troubleshooting) - Twitch stream notifications
+- [YouTube Notifications](/docs/custom-bot/modules/integrations/youtube-notifications#troubleshooting) - YouTube video/stream notifications
 
 ### Moderation modules
 
-* [Anti-Ghostping](/docs/custom-bot/modules/moderation/anti-ghostping#troubleshooting) - Ghost-ping detection
-* [Info-Commands](/docs/custom-bot/modules/moderation/info-commands#troubleshooting) - Information commands
-* [Invite-Tracking](/docs/custom-bot/modules/moderation/invite-tracking#troubleshooting) - Invite tracking
-* [Moderation](/docs/custom-bot/modules/moderation#troubleshooting) - Full moderation system
-* [Ping-Protection](/docs/custom-bot/modules/moderation/ping-protection#troubleshooting) - Ping protection
+- [Anti-Ghostping](/docs/custom-bot/modules/moderation/anti-ghostping#troubleshooting) - Ghost-ping detection
+- [Info-Commands](/docs/custom-bot/modules/moderation/info-commands#troubleshooting) - Information commands
+- [Invite-Tracking](/docs/custom-bot/modules/moderation/invite-tracking#troubleshooting) - Invite tracking
+- [Moderation](/docs/custom-bot/modules/moderation#troubleshooting) - Full moderation system
+- [Ping-Protection](/docs/custom-bot/modules/moderation/ping-protection#troubleshooting) - Ping protection
 
 ### Support modules
 
-* [Applications](/docs/custom-bot/modules/support/applications#troubleshooting) - Application system
-* [Forum-Support](/docs/custom-bot/modules/support/forum-support#troubleshooting) - Forum-based support
-* [Ping on VC-Join](/docs/custom-bot/modules/support/ping-on-vc-join#troubleshooting) - Voice channel join notifications
-* [Tickets](/docs/custom-bot/modules/support/tickets#troubleshooting) - Ticket system
+- [Applications](/docs/custom-bot/modules/support/applications#troubleshooting) - Application system
+- [Forum-Support](/docs/custom-bot/modules/support/forum-support#troubleshooting) - Forum-based support
+- [Ping on VC-Join](/docs/custom-bot/modules/support/ping-on-vc-join#troubleshooting) - Voice channel join notifications
+- [Tickets](/docs/custom-bot/modules/support/tickets#troubleshooting) - Ticket system
 
 ### Tool modules
 
-* [AFK-System](/docs/custom-bot/modules/tools/afk-system#troubleshooting) - AFK status system
-* [Auto-Messager](/docs/custom-bot/modules/tools/auto-messager#troubleshooting) - Automated messages
-* [Auto-Publisher](/docs/custom-bot/modules/tools/auto-publisher#troubleshooting) - Auto-publish in news channels
-* [Auto-Thread](/docs/custom-bot/modules/tools/auto-thread#troubleshooting) - Automatic thread creation
-* [Massrole](/docs/custom-bot/modules/tools/massrole#troubleshooting) - Mass role assignment
-* [Name List Cleaner](/docs/custom-bot/modules/tools/name-list-cleaner#troubleshooting) - Username cleaning
+- [AFK-System](/docs/custom-bot/modules/tools/afk-system#troubleshooting) - AFK status system
+- [Auto-Messager](/docs/custom-bot/modules/tools/auto-messager#troubleshooting) - Automated messages
+- [Auto-Publisher](/docs/custom-bot/modules/tools/auto-publisher#troubleshooting) - Auto-publish in news channels
+- [Auto-Thread](/docs/custom-bot/modules/tools/auto-thread#troubleshooting) - Automatic thread creation
+- [Massrole](/docs/custom-bot/modules/tools/massrole#troubleshooting) - Mass role assignment
+- [Name List Cleaner](/docs/custom-bot/modules/tools/name-list-cleaner#troubleshooting) - Username cleaning
 
 ## Still need help? {#help}
 

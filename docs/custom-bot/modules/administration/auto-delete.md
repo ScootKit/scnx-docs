@@ -6,11 +6,11 @@ This module allows you to delete messages from a channel after a specified timeo
 
 ## Features {#features}
 
-* Automatically delete messages in channels after a specified time
-  * Optionally, always keep a certain number of messages in a channel
-  * No deletion of pinned messages
-* Automatically delete messages from a voice-channel after every member left
-  * Optionally, add a delay before message deletion
+- Automatically delete messages in channels after a specified time
+  - Optionally, always keep a certain number of messages in a channel
+  - No deletion of pinned messages
+- Automatically delete messages from a voice-channel after every member left
+  - Optionally, add a delay before message deletion
 
 ## Setup {#setup}
 
@@ -43,7 +43,7 @@ This configuration file allows specifying from which channels messages should ge
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cchannels).
 
 | Configuration-Option       | Description                                                                                                                                                                                                                                                                                                                            |
-|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel                    | This is the channel to which this specific set of instructions should get applied. Auto-Deletion will be performed in this channel.                                                                                                                                                                                                    |
 | Timeout                    | This is the amount of time (in minutes) after which messages sent to this channel should get deleted automatically. To accommodate slow devices (and slow readers), we suggest setting this above two minutes.                                                                                                                         |
 | Purge on Start             | When enabled, your bot will delete every message in the channel (that these configuration options apply to) automatically on restart of your bot. If disabled, no existing messages will get deleted. The bot can only delete up to 100 messages at a time and no messages older than 14 days due to a limitation from Discord's side. |
@@ -58,7 +58,7 @@ Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-delete%7Cvoice-channels).
 
 | Configuration-Option | Description                                                                                                                                                                 |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel              | This is the channel to which this specific set of instructions should get applied. Auto-Deletion will be performed in this channel, once all members have left the channel. |
 | Timeout              | This is the delay (in minutes) between the last user left the channel and the deletion gets performed. Set this to zero, to enable immediate deletion.                      |
 | Purge on Start       | When enabled, your bot will delete every message on restart of your bot if no member is present in the voice-channel. If disabled, no existing messages will get deleted.   |
@@ -67,8 +67,8 @@ your [dashboard](https://scnx.app/glink?page=bot/configuration?file=auto-delete%
 
 If automatic deletion isn't performed, please check the following:
 
-* Your bot needs "View channel", "Manage messages", "View message history" on channels that auto deletion should get
+- Your bot needs "View channel", "Manage messages", "View message history" on channels that auto deletion should get
   performed on.
-* Please make sure "Amount of messages to keep" is below 50.
-* Please make sure you sent new messages into the channel if you haven't enabled "Purge on Start".
-* Please make sure the message you want to be deleted isn't pinned.
+- Please make sure "Amount of messages to keep" is below 50.
+- Please make sure you sent new messages into the channel if you haven't enabled "Purge on Start".
+- Please make sure the message you want to be deleted isn't pinned.

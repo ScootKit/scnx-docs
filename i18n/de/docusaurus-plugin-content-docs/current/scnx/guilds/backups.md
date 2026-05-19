@@ -17,7 +17,7 @@ Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einlade
 ## Was ist in Backups enthalten? {#included}
 
 | Funktion            | Beschreibung                                                                                                                                                     |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Kanäle              | Backups werden jeden Kanal auf deinem Discord enthalten. Dies beinhalten: Kanalname, Kanalbeschreibung, Cooldown, Kanalberechtigungen und mehr                   |
 | Rollen              | Backups werden jede Rolle auf deinem Discord enthalten. Gespeicherte Rollen-Daten beinhalten: Berechtigungen, Name, Farbe und mehr                               |
 | Emojis              | Backups werden jedes Emoji auf deinem Discord enthalten. Dies Beinhaltet das Emoji-Bild an sich sowie den emoji-name. Sticker sind ggf. auch mit inbegriffen.    |
@@ -33,13 +33,13 @@ Das Erstellen eines Backups kann bis zu 15 Minuten dauern. Dies ist abhängig vo
 ![](@site/docs/assets/scnx/guilds/backups/create.png)
 
 Nach der Erstellung des Backups (dies kann eine Weile dauern) kannst du es in der Backup-Liste ansehen und verwalten. Folgende Optionen sind verfügbar:
-* Backup wiederherstellen: Ermöglicht dir das Backup auf diesem oder einem anderen Server wiederherzustellen. Im Abschnitt [Backups wiederherstellen](#restore) kannst du mehr darüber erfahren.
-* Server-Sperre deaktivieren / aktivieren: Erlaubt / Verbietet die Wiederherstellung deines Backups auf anderen Servern. Im Abschnitt [Backups auf anderen Servern wiederherstellen](#restore-other-server) kannst du mehr darüber erfahren.
-* Backup löschen: Löscht das Backup dauerhaft von unseren Server. Diese Option ist endgültig und kann nicht rückgängig gemacht werden.
-* Backup exportieren: Exportiert das Backup als JSON-Datei. Im Abschnitt [Backups wiederherstellen](#export) kannst du mehr darüber erfahren.
+
+- Backup wiederherstellen: Ermöglicht dir das Backup auf diesem oder einem anderen Server wiederherzustellen. Im Abschnitt [Backups wiederherstellen](#restore) kannst du mehr darüber erfahren.
+- Server-Sperre deaktivieren / aktivieren: Erlaubt / Verbietet die Wiederherstellung deines Backups auf anderen Servern. Im Abschnitt [Backups auf anderen Servern wiederherstellen](#restore-other-server) kannst du mehr darüber erfahren.
+- Backup löschen: Löscht das Backup dauerhaft von unseren Server. Diese Option ist endgültig und kann nicht rückgängig gemacht werden.
+- Backup exportieren: Exportiert das Backup als JSON-Datei. Im Abschnitt [Backups wiederherstellen](#export) kannst du mehr darüber erfahren.
 
 ![](@site/docs/assets/scnx/guilds/backups/backup.png)
-
 
 ## Automatische Backups {#automatic}
 
@@ -53,15 +53,15 @@ Sommerzeit ggf. die angezeigte Uhrzeit der Erstellung deines Backups beeinflusse
 
 Automatische Backups verwenden die Backup-Slots deines Servers. Wenn keine mehr verfügbar sind, wird das System automatisch das älteste Backup überschreiben. Deine manuellen Backups werden jedoch nie verändert. Sollten alle Backup-Slots von manuellen Backups verwendet werden, werden keine automatischen Backups erstellt.
 
-
 ## Backups wiederherstellen {#restore}
 
 ### Wiederherstellung auf dem ursprünglichen Server {#restore-self}
 
 Bevor du ein Backup wiederherstellst, passe bitte folgende Einstellungen an deinem Discord an:
-* Schiebe die Rolle des (verifizierten) SCNX-Bots über alle anderen Rollen und gib ihr Administrator-Berechtigungen
-* Deaktiviere die "Community"-Einstellung deines Servers in den Einstellungen (du kannst sie danach wieder aktivieren)
-* Verstehe, dass dieser Vorgang alle Nachrichten, Kanäle und Rollen von deinem Server löscht
+
+- Schiebe die Rolle des (verifizierten) SCNX-Bots über alle anderen Rollen und gib ihr Administrator-Berechtigungen
+- Deaktiviere die "Community"-Einstellung deines Servers in den Einstellungen (du kannst sie danach wieder aktivieren)
+- Verstehe, dass dieser Vorgang alle Nachrichten, Kanäle und Rollen von deinem Server löscht
 
 Um ein Backup auf deinem Server wiederherzustellen, öffne das [Backup-Dashboard](https://scnx.app/de/glink?page=backups) deines Servers und klicke auf das Backup, das du wiederherstellen möchtest. Als nächstes klicke auf "Backup wiederherstellen". Dir wird ein Befehl angezeigt werden. Kopiere ihn mit dem "Befehl kopieren" Knopf und füge ihn in deinem Server ein. Stelle sicher, dass du den Befehl mit dem (verifizierten) SCNX-Bot ausführst.
 
@@ -90,7 +90,6 @@ Die Server-Sperre ist ein Sicherheitsmechanismus für dein Backup: Wenn sie deak
 ![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
 Nachdem du die Server-Sperre deaktiviert hast, folge bitte den Anweisungen zur [Wiederherstellung auf dem ursprünglichen Server](#restore-self). Wir empfehlen dir nachdem du fertig bist, unbedingt die Server-Sperre wieder zu aktivieren - das funktioniert genauso wie das Deaktivieren.
-
 
 ## Fehlerbehebung {#throubleshooting}
 

@@ -21,7 +21,7 @@ folge [dieser Anleitung von Discord](https://support.discord.com/hc/de/articles/
 
 Sobald du die Nutzer-ID kopiert hast, öffne die [Nutzerseite für verknüpfte Rollen](https://scnx.app/de/glink?page=linked-roles/users).
 Klicke auf
-„Nutzer hinzufügen“, um einen weiteren Nutzer hinzuzufügen.
+„Nutzer hinzufügen", um einen weiteren Nutzer hinzuzufügen.
 
 Gib als Nächstes die zuvor kopierte Nutzer-ID ein, gib optional eine Tagline ein und wähle aus, welche Rollen der Nutzer erhalten soll.
 Bitte beachte, dass [öffentliche Rollen](/docs/linked-roles/role-management#public-roles) nicht zugewiesen oder entfernt werden können, da diese Rollen von
@@ -57,6 +57,6 @@ deines Dashboards. Dort kannst du nach dem Nutzer suchen, den du entfernen möch
 nach Rollen filtern, um den gewünschten Nutzer zu finden.
 
 Sobald du den Nutzer gefunden hast, klicke auf seinen Dashboard-Eintrag, um die Nutzeroberfläche für die Nutzerverwaltung anzuzeigen. Dort kannst du
-auf „Nutzer entfernen“ klicken, um die Nutzerdaten zu löschen. Das Entfernen des Nutzers führt dazu, dass alle seine Rollen entfernt werden und
+auf „Nutzer entfernen" klicken, um die Nutzerdaten zu löschen. Das Entfernen des Nutzers führt dazu, dass alle seine Rollen entfernt werden und
 er sich erneut autorisieren muss, wenn er plant, Rollen erneut zu beanspruchen. Bitte beachte, dass dies Nutzer nicht daran hindert,
 [öffentliche Rollen](/docs/linked-roles/role-management#public-roles) jederzeit erneut zu beanspruchen.

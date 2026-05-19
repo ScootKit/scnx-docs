@@ -48,21 +48,21 @@ You can configure a few aspects of this module, including customizing the detect
 the [configuration](https://scnx.app/glink?page=bot/configuration?query=anti&file=anti-ghostping|config).
 
 | Field                 | Description                                                                                                                                                                                                                                                              |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Wait for Bot-Messages | If enabled, your bot will wait for about two after a message with a ping gets deleted. If another bot or webhook gets send in the channel, the bot will not detect the deletion as ghost ping. Learn more about how this could be useful in the [usage](#usage) section. |
 | Ignored Channels      | The bot will not try to detect any ghost pings sent in channels and categories configured here.                                                                                                                                                                          |
 | Ghostping-Message     | The bot will send this message in current channel when a ghost ping gets detected.                                                                                                                                                                                       |
 
 ## Troubleshooting {#troubleshooting}
 
-* Make sure the bot has "Read messages", "Send messages" and "Manage messages" permissions on all channels ghost pings
+- Make sure the bot has "Read messages", "Send messages" and "Manage messages" permissions on all channels ghost pings
   should get detected in.
-* Make sure the deleted message matches the requirements for ghost ping:
-   * The message needs to contain pings of other server members. Please note that not all @mentions are pings (@silent
-     messages, for example).
-   * The message needs to be deleted within a minute after the message got sent.
-   * Make sure the message was not sent in an [ignored channel](#configuration).
-* Please note that deletions performed by staff members might also count as ghost pings, as the bot can't detect who
+- Make sure the deleted message matches the requirements for ghost ping:
+  - The message needs to contain pings of other server members. Please note that not all @mentions are pings (@silent
+    messages, for example).
+  - The message needs to be deleted within a minute after the message got sent.
+  - Make sure the message was not sent in an [ignored channel](#configuration).
+- Please note that deletions performed by staff members might also count as ghost pings, as the bot can't detect who
   deleted the message.
 
 :::info Looking for something else?

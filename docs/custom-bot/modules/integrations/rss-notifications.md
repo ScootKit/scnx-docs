@@ -6,10 +6,10 @@ Send a message to a channel when a new item appears in an RSS or Atom feed.
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when new items appear in any RSS or Atom feed.
-* Customize the notification message with item details such as title, description, URL, publish date and media.
-* Monitor multiple feeds simultaneously, each with its own notification channel and message format.
-* Supports media extraction from feed entries, including images from media:content, media:thumbnail and enclosure elements.
+- Receive notifications in a Discord channel when new items appear in any RSS or Atom feed.
+- Customize the notification message with item details such as title, description, URL, publish date and media.
+- Monitor multiple feeds simultaneously, each with its own notification channel and message format.
+- Supports media extraction from feed entries, including images from media:content, media:thumbnail and enclosure elements.
 
 ## Setup {#setup}
 
@@ -28,11 +28,11 @@ Only items published within the last twenty minutes will trigger notifications, 
 
 This configuration file allows you to set up feeds to monitor for new items. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=rss-notifications%7Cfeeds).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| RSS / Atom Feed URL | The URL to a valid RSS or Atom feed. The feed will be checked every fifteen minutes. |
-| Message | The message sent to the configured channel when a new item appears in the feed. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field               | Description                                                                                                                                                       |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel             | The Discord channel in which the notification should be sent.                                                                                                     |
+| RSS / Atom Feed URL | The URL to a valid RSS or Atom feed. The feed will be checked every fifteen minutes.                                                                              |
+| Message             | The message sent to the configured channel when a new item appears in the feed. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -60,8 +60,8 @@ This configuration file allows you to set up feeds to monitor for new items. Ope
 
 The following data is being stored about every sent notification:
 
-* The item ID (or link if no ID is available)
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+- The item ID (or link if no ID is available)
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

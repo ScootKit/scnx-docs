@@ -11,9 +11,9 @@ PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 
 Before you can create your Custom-Bot on SCNX, please make sure that
 
-* you have [added your Server to SCNX](/docs/setup).
-* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
-* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
+- you have [added your Server to SCNX](/docs/setup).
+- you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
+- you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
 
@@ -94,12 +94,12 @@ visit [scnx.app/help](https://scnx.app/help).
 
 If you did everything right, your bot should now be online on Discord. Pat yourself on the back. You did a great job and
 are now ready to explore the universe of a highly-customizable Discord-Bot for your community - not just a Discord-Bot,
-*your* Discord-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
+_your_ Discord-Bot[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Here are a few things you can do now:
 
-* enable a few of the many Custom-Bot-Modules.
-* use Bot-Log-In to create messages with Self-Roles and more.
-* create Custom-Commands to do fun things.
-* configure the behavior of your bot.
-* and much more, open the [Custom-Bot Documentation](/docs/custom-bot/intro) to view every option.
+- enable a few of the many Custom-Bot-Modules.
+- use Bot-Log-In to create messages with Self-Roles and more.
+- create Custom-Commands to do fun things.
+- configure the behavior of your bot.
+- and much more, open the [Custom-Bot Documentation](/docs/custom-bot/intro) to view every option.

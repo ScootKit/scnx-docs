@@ -53,10 +53,10 @@ offers multiple features and customizability options.
 
 The following features are available on SCNX:
 
-* Easy management of [Linked Roles](/docs/linked-roles/role-management) in the SCNX Dashboard.
-* [Assign and remove](/docs/linked-roles/user-management) roles from users.
-* Multiple themes available for the [authorization page](/docs/linked-roles/settings#authorization-page).
-* Off-Brand options available with the [Professional Plan](/docs/scnx/guilds/plans).
-* Authorization with your custom Discord App.
-* You can set up [public linked roles](/docs/linked-roles/role-management#public-roles) that can be claimed by any user.
-* Excellent customer support on [our Discord](https://scootk.it/dc-en) in English and German.
+- Easy management of [Linked Roles](/docs/linked-roles/role-management) in the SCNX Dashboard.
+- [Assign and remove](/docs/linked-roles/user-management) roles from users.
+- Multiple themes available for the [authorization page](/docs/linked-roles/settings#authorization-page).
+- Off-Brand options available with the [Professional Plan](/docs/scnx/guilds/plans).
+- Authorization with your custom Discord App.
+- You can set up [public linked roles](/docs/linked-roles/role-management#public-roles) that can be claimed by any user.
+- Excellent customer support on [our Discord](https://scootk.it/dc-en) in English and German.

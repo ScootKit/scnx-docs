@@ -6,10 +6,10 @@ Send a message to a channel when a streamer goes live on Twitch.
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when a configured Twitch streamer goes live.
-* Customize the notification message with stream details such as the streamer name, game, title, thumbnail and URL.
-* Optionally assign a "Live" role to the streamer's Discord account while they are streaming, and remove it when they go offline.
-* Monitor multiple streamers simultaneously, each with its own notification channel, message format and live role.
+- Receive notifications in a Discord channel when a configured Twitch streamer goes live.
+- Customize the notification message with stream details such as the streamer name, game, title, thumbnail and URL.
+- Optionally assign a "Live" role to the streamer's Discord account while they are streaming, and remove it when they go offline.
+- Monitor multiple streamers simultaneously, each with its own notification channel, message format and live role.
 
 ## Setup {#setup}
 
@@ -29,14 +29,14 @@ If the live role feature is enabled for a streamer, the configured role will be 
 
 This configuration file allows you to set up Twitch streamers to monitor. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=twitch-notifications%7Cconfigs%2Fstreamers).
 
-| Field | Description |
-|-------|-------------|
-| Live-Messages | The message sent to the configured channel when the streamer goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
-| Channel | The Discord channel in which the live notification should be sent. |
-| Streamer | The Twitch username of the streamer to monitor. |
-| Use Live-Role | Whether the live role feature should be activated for this streamer. |
-| Discord-User ID | The Discord user ID of the streamer. Only required if the live role feature is enabled. |
-| Live Role | The role to assign to the streamer when they are live. Only required if the live role feature is enabled. |
+| Field           | Description                                                                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Live-Messages   | The message sent to the configured channel when the streamer goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Channel         | The Discord channel in which the live notification should be sent.                                                                                        |
+| Streamer        | The Twitch username of the streamer to monitor.                                                                                                           |
+| Use Live-Role   | Whether the live role feature should be activated for this streamer.                                                                                      |
+| Discord-User ID | The Discord user ID of the streamer. Only required if the live role feature is enabled.                                                                   |
+| Live Role       | The role to assign to the streamer when they are live. Only required if the live role feature is enabled.                                                 |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -64,8 +64,8 @@ This configuration file allows you to set up Twitch streamers to monitor. Open i
 
 The following data is being stored about every monitored streamer:
 
-* The Twitch username of the streamer (used as a unique identifier)
-* The timestamp of when the current stream started (used to detect new streams)
-* Metadata about the entry (date when created and last updated)
+- The Twitch username of the streamer (used as a unique identifier)
+- The timestamp of when the current stream started (used to detect new streams)
+- Metadata about the entry (date when created and last updated)
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

@@ -6,12 +6,12 @@ Let a set message always appear at the end of a channel.
 
 ## Features {#features}
 
-* Configure messages that always appear as the latest message in a channel.
-* Whenever a new message is sent in the channel, the bot automatically deletes the old sticky message and reposts it.
-* Support for multiple sticky messages across different channels.
-* Built-in rate limiting to prevent spam when messages are sent rapidly (5-second cooldown).
-* Optionally react to messages from other bots in the channel.
-* Sticky messages support both plain text and embed formatting.
+- Configure messages that always appear as the latest message in a channel.
+- Whenever a new message is sent in the channel, the bot automatically deletes the old sticky message and reposts it.
+- Support for multiple sticky messages across different channels.
+- Built-in rate limiting to prevent spam when messages are sent rapidly (5-second cooldown).
+- Optionally react to messages from other bots in the channel.
+- Sticky messages support both plain text and embed formatting.
 
 ## Setup {#setup}
 
@@ -23,6 +23,7 @@ Let a set message always appear at the end of a channel.
 This module works automatically -- there are no commands. Once configured, the bot will maintain the sticky message at the bottom of each configured channel.
 
 When a new message is sent in a channel with a sticky message:
+
 1. The bot deletes the previous sticky message.
 2. The bot reposts the sticky message as the latest message.
 
@@ -34,10 +35,10 @@ In this configuration file, you can manage your sticky messages. Open it in your
 
 Each entry in the list represents a sticky message with the following fields:
 
-| Field | Description |
-|-------|-------------|
-| Channel | The channel where the sticky message should appear. |
-| Message | The message content to display. Supports embed formatting. |
+| Field           | Description                                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------------------- |
+| Channel         | The channel where the sticky message should appear.                                                         |
+| Message         | The message content to display. Supports embed formatting.                                                  |
 | Respond to bots | If enabled, the sticky message will also be reposted when messages from other bots are sent in the channel. |
 
 ## Troubleshooting {#troubleshooting}
@@ -53,5 +54,6 @@ Each entry in the list represents a sticky message with the following fields:
 <details>
   <summary>The sticky message is not updating when bots send messages</summary>
 
-  By default, the bot does not react to messages from other bots. Enable the "Respond to bots" option in the sticky message configuration for the relevant channel.
+By default, the bot does not react to messages from other bots. Enable the "Respond to bots" option in the sticky message configuration for the relevant channel.
+
 </details>

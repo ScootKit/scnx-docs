@@ -33,10 +33,10 @@ Verknüpfte Rollen auf SCNX machen die Nutzung auf deinem Server besonders einfa
 
 Folgende Funktionen sind auf SCNX verfügbar:
 
-* Einfache Verwaltung von [verknüpften Rollen](/docs/linked-roles/role-management) im SCNX-Dashboard.
-* [Rollen zuweisen und entfernen](/docs/linked-roles/user-management) bei Nutzern.
-* Verschiedene Farbschemata für die [Autorisierungsseite](/docs/linked-roles/settings#authorization-page) verfügbar.
-* Off-Brand-Optionen mit dem [Professional-Plan](/docs/scnx/guilds/plans).
-* Autorisierung mit deiner eigenen Discord-App.
-* Du kannst [öffentliche verknüpfte Rollen](/docs/linked-roles/role-management#public-roles) erstellen, die von jedem Nutzer beansprucht werden können.
-* Exzellenter Kundensupport auf [unserem Discord](https://scootk.it/dc-de) auf Deutsch und Englisch.
+- Einfache Verwaltung von [verknüpften Rollen](/docs/linked-roles/role-management) im SCNX-Dashboard.
+- [Rollen zuweisen und entfernen](/docs/linked-roles/user-management) bei Nutzern.
+- Verschiedene Farbschemata für die [Autorisierungsseite](/docs/linked-roles/settings#authorization-page) verfügbar.
+- Off-Brand-Optionen mit dem [Professional-Plan](/docs/scnx/guilds/plans).
+- Autorisierung mit deiner eigenen Discord-App.
+- Du kannst [öffentliche verknüpfte Rollen](/docs/linked-roles/role-management#public-roles) erstellen, die von jedem Nutzer beansprucht werden können.
+- Exzellenter Kundensupport auf [unserem Discord](https://scootk.it/dc-de) auf Deutsch und Englisch.

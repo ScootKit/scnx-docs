@@ -20,7 +20,7 @@ angezeigt, sobald die Nachricht abgesendet wurde.
 Hier sind alle verfügbaren Formate:
 
 | Format                       | Beispiel                        |
-|------------------------------|---------------------------------|
+| ---------------------------- | ------------------------------- |
 | Kurze Zeit                   | 09:52                           |
 | Lange Zeit                   | 09:52:29                        |
 | Kurzes Datum                 | 30.08.2023                      |
@@ -38,14 +38,14 @@ um zu sehen, wie viel XP für das Level notwendig sind.
 
 ### Hilfreiche Tipps & Tricks für dein Level-System
 
-* Jeder Nutzer startet bei Level 1.
-* Zwar kannst du nicht das XP anpassen, was man für ein bestimmtes Level benötigt, aber du kannst anpassen, wie viel XP
+- Jeder Nutzer startet bei Level 1.
+- Zwar kannst du nicht das XP anpassen, was man für ein bestimmtes Level benötigt, aber du kannst anpassen, wie viel XP
   Nutzer pro Nachricht verdienen - das erlaubt es dir effektiv auch, Level-Ups zu kontrollieren.
-* Diese Berechnung gibt dir keine Infos darüber, wie viele Nachrichten man braucht, um ein bestimmtes Level zu
+- Diese Berechnung gibt dir keine Infos darüber, wie viele Nachrichten man braucht, um ein bestimmtes Level zu
   erreichen.
-* Mit folgender Formel kannst du das notwendige XP
+- Mit folgender Formel kannst du das notwendige XP
   berechnen: `XPNeededToLevelUp = (LevelToCalculate - 1) * 750 + ((LevelToCalculate - 1) * 500) [XP]`.
-* Wir empfehlen dir, das XP deines Servers regelmäßig zurückzusetzen, damit auch neue Mitglieder hohe Platzierungen
+- Wir empfehlen dir, das XP deines Servers regelmäßig zurückzusetzen, damit auch neue Mitglieder hohe Platzierungen
   erreichen können - gib aber älteren, aktiveren Nutzern etwas Kleines im Gegenzug :heart:
 
 ## SCNX GLink-Ersteller {#glink-generator}

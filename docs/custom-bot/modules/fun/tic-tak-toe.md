@@ -6,11 +6,11 @@ Let your users play Tic-Tac-Toe against each other!
 
 ## Features {#features}
 
-* Challenge another user to a game of Tic-Tac-Toe.
-* Interactive button-based 3x3 grid gameplay directly in Discord.
-* Invitation system with accept/deny options and automatic expiry.
-* The starting player is randomly selected for fairness.
-* Color-coded game pieces (green and yellow circles) for easy identification.
+- Challenge another user to a game of Tic-Tac-Toe.
+- Interactive button-based 3x3 grid gameplay directly in Discord.
+- Invitation system with accept/deny options and automatic expiry.
+- The starting player is randomly selected for fairness.
+- Color-coded game pieces (green and yellow circles) for easy identification.
 
 ## Setup {#setup}
 
@@ -25,15 +25,15 @@ Once the game starts, a 3x3 grid of buttons appears. Players take turns clicking
 
 The game ends when:
 
-* A player gets three in a row (horizontally, vertically, or diagonally) and wins.
-* All cells are filled without a winner, resulting in a draw.
+- A player gets three in a row (horizontally, vertically, or diagonally) and wins.
+- All cells are filled without a winner, resulting in a draw.
 
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command | Description |
-|---------|-------------|
+| Command                    | Description                                      |
+| -------------------------- | ------------------------------------------------ |
 | `/tic-tac-toe user:<User>` | Challenge another user to a game of Tic-Tac-Toe. |
 
 ## Troubleshooting {#troubleshooting}

@@ -6,13 +6,13 @@ Select a number and let your users guess.
 
 ## Features {#features}
 
-* Admins can manually create guess-the-number game sessions in any channel.
-* Optional game channel mode that automatically starts a new game when the previous one is solved.
-* Users guess by typing numbers in the channel; the bot reacts to indicate correct, wrong, or invalid guesses.
-* Optional higher/lower hint reactions on wrong guesses.
-* Configurable start and end messages.
-* Channel locking after a game ends (in non-game-channel mode) to prevent further messages.
-* Optional leaderboard tracking player statistics (guesses and wins) with a top 20 ranking.
+- Admins can manually create guess-the-number game sessions in any channel.
+- Optional game channel mode that automatically starts a new game when the previous one is solved.
+- Users guess by typing numbers in the channel; the bot reacts to indicate correct, wrong, or invalid guesses.
+- Optional higher/lower hint reactions on wrong guesses.
+- Configurable start and end messages.
+- Channel locking after a game ends (in non-game-channel mode) to prevent further messages.
+- Optional leaderboard tracking player statistics (guesses and wins) with a top 20 ranking.
 
 ## Setup {#setup}
 
@@ -27,10 +27,10 @@ Select a number and let your users guess.
 
 Admins (users with a configured admin role) can create a game session in any channel using `/guess-the-number create`. Once started, users guess by sending numbers in the channel. The bot reacts to each guess:
 
-* A check mark for the correct number (the game ends and the winner is announced).
-* A cross for a wrong guess, or up/down arrows if higher/lower reactions are enabled.
-* A no-entry sign for invalid input (not a number or outside the min/max range).
-* A stop sign if an admin tries to guess (admins cannot participate in manual games).
+- A check mark for the correct number (the game ends and the winner is announced).
+- A cross for a wrong guess, or up/down arrows if higher/lower reactions are enabled.
+- A no-entry sign for invalid input (not a number or outside the min/max range).
+- A stop sign if an admin tries to guess (admins cannot participate in manual games).
 
 After a game ends, the channel is locked. Admins can also end a game early with `/guess-the-number end` or check the current game state with `/guess-the-number status`.
 
@@ -42,11 +42,11 @@ When game channel mode is enabled, a dedicated channel is used where games autom
 
 <SlashCommandExplanation />
 
-| Command | Description |
-|---------|-------------|
+| Command                                                                   | Description                                                                                                                    |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | `/guess-the-number create min:<Integer> max:<Integer> [number:<Integer>]` | Start a new game in the current channel with the specified range. Optionally set the exact number to guess (otherwise random). |
-| `/guess-the-number status` | Show the status of the current game in this channel (number, range, guess count, owner). Only visible to the command user. |
-| `/guess-the-number end` | End the current game in this channel. |
+| `/guess-the-number status`                                                | Show the status of the current game in this channel (number, range, guess count, owner). Only visible to the command user.     |
+| `/guess-the-number end`                                                   | End the current game in this channel.                                                                                          |
 
 ## Configuration {#configuration}
 
@@ -54,24 +54,24 @@ When game channel mode is enabled, a dedicated channel is used where games autom
 
 In this configuration file, you can configure the game behavior and messages. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=guess-the-number%7Cconfigs/config).
 
-| Field | Description |
-|-------|-------------|
-| Admin-Roles | Roles that are allowed to create and manage game sessions using the `/guess-the-number` command. |
-| Start-Message | Message sent at the beginning of a new game round. |
-| End-Message | Message sent when a game round ends and a winner is found. |
+| Field                               | Description                                                                                                                                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Admin-Roles                         | Roles that are allowed to create and manage game sessions using the `/guess-the-number` command.                                                                                |
+| Start-Message                       | Message sent at the beginning of a new game round.                                                                                                                              |
+| End-Message                         | Message sent when a game round ends and a winner is found.                                                                                                                      |
 | React with Lower / Higher reactions | If enabled, the bot reacts with up/down arrows on wrong guesses to indicate whether the correct number is higher or lower. If disabled, wrong guesses receive a cross reaction. |
-| Enable leaderboard? | If enabled, every guess and every win is tracked per user. A **Leaderboard** button appears on new game start messages, and players can view the top 20 players ranked by wins. |
+| Enable leaderboard?                 | If enabled, every guess and every win is tracked per user. A **Leaderboard** button appears on new game start messages, and players can view the top 20 players ranked by wins. |
 
 ### Gamechannel Mode {#config-channel}
 
 In this configuration file, you can enable and configure the automatic game channel. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=guess-the-number%7Cconfigs/channel).
 
-| Field | Description |
-|-------|-------------|
+| Field                    | Description                                                                       |
+| ------------------------ | --------------------------------------------------------------------------------- |
 | Enable Gamechannel mode? | If enabled, a dedicated game channel is used where new games start automatically. |
-| Gamechannel | The text channel used for automatic games. |
-| Minimum number | The lower bound for the random number range in automatic games. |
-| Highest number | The upper bound for the random number range in automatic games. |
+| Gamechannel              | The text channel used for automatic games.                                        |
+| Minimum number           | The lower bound for the random number range in automatic games.                   |
+| Highest number           | The upper bound for the random number range in automatic games.                   |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -100,17 +100,17 @@ In this configuration file, you can enable and configure the automatic game chan
 
 The following data is being stored about every game session:
 
-* The channel ID where the game takes place
-* The number to guess, and the min/max range
-* The ID of the user who created the game (owner)
-* The total number of guesses
-* Whether the game has ended
-* Metadata about the entry (date when created and last updated)
+- The channel ID where the game takes place
+- The number to guess, and the min/max range
+- The ID of the user who created the game (owner)
+- The total number of guesses
+- Whether the game has ended
+- Metadata about the entry (date when created and last updated)
 
 When the leaderboard is enabled, the following additional data is stored per user:
 
-* The Discord User ID
-* Total number of guesses
-* Total number of wins
+- The Discord User ID
+- Total number of guesses
+- Total number of wins
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

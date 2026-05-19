@@ -12,14 +12,14 @@ PROFESSIONAL: "Hosted 24/7, as long as your plan is active."}} />
 
 Before you can create your own Modmail on SCNX, please make sure that
 
-* you have [added your Server to SCNX](/docs/setup).
-* your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+- you have [added your Server to SCNX](/docs/setup).
+- your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
   or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
   free trial, if
   available for you.
-* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an
+- you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an
   administrator of the server you want to enable this feature.
-* you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
+- you've got a few minutes time (our estimate is that this takes around two minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
 
@@ -119,11 +119,11 @@ If you did everything right, your Modmail should now be online on Discord. Pat y
 and
 are now ready to explore the universe of a highly advanced and fully customizable Modmail for your community - not just
 a Modmail,
-it's *your* Modmail[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
+it's _your_ Modmail[.](https://cdn.scderox.de/IUopj39jjiOPASDioh/7xpodw.jpg)
 
 Here are a few things you can do now:
 
-* try your Modmail: Send it a DM and observe how it opens a ticket for your team to answer.
-* [configure](/docs/modmail/configuration) and enable more Modmail features.
-* level up your support system by discovering [advanced Modmail features](/docs/modmail/advanced-features).
-* and much more, open the [Modmail Documentation](/docs/modmail/intro) to view every option.
+- try your Modmail: Send it a DM and observe how it opens a ticket for your team to answer.
+- [configure](/docs/modmail/configuration) and enable more Modmail features.
+- level up your support system by discovering [advanced Modmail features](/docs/modmail/advanced-features).
+- and much more, open the [Modmail Documentation](/docs/modmail/intro) to view every option.

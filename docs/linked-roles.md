@@ -30,13 +30,13 @@ we're working on an English translation.
 
 Before you can enable Linked Roles on your server, please ensure that
 
-* you have [added your Server to SCNX](/docs/setup).
-* your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
+- you have [added your Server to SCNX](/docs/setup).
+- your server has the paid [Unlimited](/docs/scnx/guilds/plans) (<PlanPrice plan="UNLIMITED" type="MONTHLY"/>)
   or [Professional](/docs/scnx/guilds/plans) (<PlanPrice plan="PROFESSIONAL" type="MONTHLY"/>) plan, or consider using a
   free trial, if
   available for you.
-* you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
-* you've got 5-10 minutes of time (our estimate is that this takes around six minutes to finish on a computer, on mobile
+- you are the owner, a [trusted admin with the Co-Owner permission](/docs/scnx/guilds/trusted-admins) or an administrator of the server you want to enable this feature.
+- you've got 5-10 minutes of time (our estimate is that this takes around six minutes to finish on a computer, on mobile
   it may take
   a bit longer) to finish this guide - don't stop in the middle; your progress won't be saved.
 

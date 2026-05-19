@@ -1,6 +1,6 @@
 # Bot Log-In
 
-Send messages, embeds, and forum posts as your bot — directly from the SCNX Dashboard. You can also use this feature to
+Send messages, embeds, and forum posts as your bot - directly from the SCNX Dashboard. You can also use this feature to
 create self-role messages with buttons.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
@@ -9,17 +9,17 @@ create self-role messages with buttons.
 
 Bot Log-In lets you control your bot's messages from the dashboard without needing Discord on your device. You can:
 
-* Send messages and rich embeds in any channel your bot has access to.
-* Edit previously sent bot messages.
-* Attach files to messages.
-* Add interactive components like buttons and select menus (including self-role buttons).
-* Create forum posts in forum channels.
-* View an audit log of all messages sent via the dashboard.
+- Send messages and rich embeds in any channel your bot has access to.
+- Edit previously sent bot messages.
+- Attach files to messages.
+- Add interactive components like buttons and select menus (including self-role buttons).
+- Create forum posts in forum channels.
+- View an audit log of all messages sent via the dashboard.
 
 ## Setup {#setup}
 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login) on your SCNX Dashboard.
-2. Make sure your bot is **online** — Bot Log-In requires your bot to be running without any core issues.
+2. Make sure your bot is **online** - Bot Log-In requires your bot to be running without any core issues.
 3. Your bot needs the **View Channel** and **Send Messages** permissions in any channel you want to send messages to.
 
 :::caution
@@ -33,19 +33,19 @@ channel you want to interact with. Users who are not members of the server will 
 Server owners and members with the **Administrator** permission have access to all channels automatically. For other
 members, the following channel permissions are required:
 
-* **Sending or editing a message**: `View Channel` and `Send Messages`
-* **Viewing messages in a channel**: `View Channel`, `Read Message History`, and `Send Messages`
-:::
+- **Sending or editing a message**: `View Channel` and `Send Messages`
+- **Viewing messages in a channel**: `View Channel`, `Read Message History`, and `Send Messages`
+  :::
 
 ## Sending a message {#send-message}
 
 1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).
 2. Select the channel you want to send the message to from the channel list on the left.
 3. Compose your message using the [message editor](/docs/scnx/guilds/message-editor). You can:
-    * Write plain text in the message field.
-    * Add one or more embeds with custom title, description, color, fields, images, footer, and more.
-    * Attach files.
-    * Add message components (see [Adding components](#components)).
+   - Write plain text in the message field.
+   - Add one or more embeds with custom title, description, color, fields, images, footer, and more.
+   - Attach files.
+   - Add message components (see [Adding components](#components)).
 4. Click **"Send message"** to send.
 
 :::tip
@@ -67,13 +67,13 @@ You can edit messages that were previously sent by your bot (including messages 
 You can attach interactive components to messages sent via Bot Log-In. For a detailed overview of all
 available components, see the [Message Editor documentation](/docs/scnx/guilds/message-editor).
 
-* **Custom Command Buttons** — Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
+- **Custom Command Buttons** - Buttons that trigger your [Custom Commands](/docs/custom-bot/custom-commands) when
   clicked. Configure these in the message editor's component section and link them to a Custom Command with a button
   trigger.
-* **Link Buttons** — Buttons that open a URL when clicked.
-* **Role Buttons** — Buttons that add or remove a role when clicked, allowing members to self-assign roles. This is a
+- **Link Buttons** - Buttons that open a URL when clicked.
+- **Role Buttons** - Buttons that add or remove a role when clicked, allowing members to self-assign roles. This is a
   modern, cleaner alternative to reaction roles.
-* **Select Menus** — Dropdown menus that let users select from a list of options. Can be linked to Custom Commands.
+- **Select Menus** - Dropdown menus that let users select from a list of options. Can be linked to Custom Commands.
 
 :::info
 To use Custom Command Buttons, you need to first [create a Custom Command](/docs/custom-bot/custom-commands) with a
@@ -96,10 +96,10 @@ If the selected channel is a forum channel, you can create a new post:
 Bot Log-In keeps a log of all messages sent through the dashboard. Click **"Sent messages"** to view the audit log,
 which shows:
 
-* The channel each message was sent to.
-* Who sent the message from the dashboard.
-* Whether the message was **delivered** or **not delivered**.
-* The message format.
+- The channel each message was sent to.
+- Who sent the message from the dashboard.
+- Whether the message was **delivered** or **not delivered**.
+- The message format.
 
 This is useful for keeping track of what was sent and troubleshooting failed deliveries.
 
@@ -108,16 +108,18 @@ This is useful for keeping track of what was sent and troubleshooting failed del
 <details>
   <summary>Bot Log-In shows "Bot is offline"</summary>
 
-  Your bot needs to be online and running without core issues. Check the
-  <a href="https://scnx.app/glink?page=bot/manage">bot dashboard</a> for any error messages and refer to the
-  <a href="/docs/custom-bot/troubleshooting">troubleshooting guide</a>.
+Your bot needs to be online and running without core issues. Check the
+<a href="https://scnx.app/glink?page=bot/manage">bot dashboard</a> for any error messages and refer to the
+<a href="/docs/custom-bot/troubleshooting">troubleshooting guide</a>.
+
 </details>
 
 <details>
   <summary>I can't see any channels / "No text channels" error</summary>
 
-  Your bot needs the <b>View Channel</b> and <b>Send Messages</b> permissions on the channels you want to use. Ask a
-  server administrator to check the bot's channel permissions.
+Your bot needs the <b>View Channel</b> and <b>Send Messages</b> permissions on the channels you want to use. Ask a
+server administrator to check the bot's channel permissions.
+
 </details>
 
 <details>

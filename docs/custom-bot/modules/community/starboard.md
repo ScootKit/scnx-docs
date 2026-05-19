@@ -6,9 +6,10 @@ Let users highlight messages into a starboard channel by reacting.
 
 ## Features {#features}
 
-* Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
-* Limit the amount of stars a user can give per hour to make sure the messages are actually special.
-* Exclude roles and channels to keep unwanted messages out of the starboard.
+- Let users feature funny, interesting or otherwise noteworthy messages by reacting on them.
+- Limit the amount of stars a user can give per hour to make sure the messages are actually special.
+- Exclude roles and channels to keep unwanted messages out of the starboard.
+- Image attachments on starred messages are automatically archived to your server's [file library](/docs/scnx/guilds/files), so old starboard posts keep their images after Discord's CDN URLs expire.
 
 ## Setup {#setup}
 
@@ -20,10 +21,16 @@ Let users highlight messages into a starboard channel by reacting.
 
 ## Usage {#usage}
 
-* Once [set up](#setup), users are able to react on messages using the configured starboard
+- Once [set up](#setup), users are able to react on messages using the configured starboard
   emoji.
-* As long as they haven't used up their quota of stars per hour, the message will either be
+- As long as they haven't used up their quota of stars per hour, the message will either be
   sent to the starboard channel or the amount of stars will be increased by one.
+
+### Permanent image archival {#image-archival}
+
+When a message is sent to the starboard, any image attachments on it are uploaded to your server's [file library](/docs/scnx/guilds/files) and the starboard post is rendered against that permanent URL. This stops old starboard posts from breaking once Discord's short-lived CDN URLs expire.
+
+Archived images count against your server's [file-storage quota](/docs/scnx/guilds/files#understanding-storage-limits). To opt out, enable **Disable attachment archival** in the bot's General Configuration; with archival disabled, starboard images revert to Discord's expiring URLs and old posts will eventually break again.
 
 ## Configuration {#configuration}
 
@@ -31,7 +38,7 @@ In this configuration file, you can [set up](#setup) the starboard channel, mess
 Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=starboard%7Cconfig).
 
 | Field                   | Description                                                                                                                                                                                                                                                                    |
-|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Starboard channel       | This configures the channel into which messages starred by users are sent.                                                                                                                                                                                                     |
 | Emoji                   | Users can "star" a message by reacting on it with this emoji.                                                                                                                                                                                                                  |
 | Message                 | This is the message sent in the starboard channel if users react to a message using the configured emoji. There available parameters are visible in your dashboard.                                                                                                            |
@@ -55,18 +62,24 @@ Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configurati
   </ul>
 </details>
 
+<details>
+  <summary>Reactions on age-restricted (NSFW) channels are not posted</summary>
+  <p>To prevent age-restricted content from leaking into channels that are not marked as such, the bot silently skips starring messages from an age-restricted channel into a non-age-restricted starboard channel. To star messages from age-restricted channels, mark your starboard channel as <strong>Age-Restricted</strong> in Discord's channel settings as well. Posts from non-age-restricted channels will continue to work regardless of this setting. This behavior is in place to comply with Discord's guidelines and cannot be disabled.</p>
+</details>
+
 ## Stored data {#data-usage}
 
 The following data is being stored about every starboard message sent by the bot:
 
-* The message ID of the starred message
-* The message ID of the message in the starboard channel
-* Metadata about the entry (date when created and last updated)
+- The message ID of the starred message
+- The message ID of the message in the starboard channel
+- Metadata about the entry (date when created and last updated)
 
 The bot also stores the following data about every user that has reacted to a message:
-* The user ID of the user
-* The message ID of the message they starred
-* Metadata about the entry (date when created and last updated)
+
+- The user ID of the user
+- The message ID of the message they starred
+- Metadata about the entry (date when created and last updated)
 
 Once a day, all starboard user data older than one hour is removed from the database.
 You can remove a starboard message from the database by removing all reactions from it. To

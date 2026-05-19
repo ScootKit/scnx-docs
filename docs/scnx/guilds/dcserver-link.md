@@ -18,7 +18,7 @@ Your own CustomBot will automatically create invites for members wanting to join
 to worry about expiring invites.
 
 To view, copy or [change](#change-url) your current dcserver.link-URL, open
-the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the 
+the [server settings page](https://scnx.app/glink?page=settings) of your server on SCNX and scroll down to the
 "dcserver.link-URL" section.
 
 ## Setup {#setup}
@@ -58,7 +58,7 @@ Please make sure you whitelist the your CustomBot from security systems such as 
 interfere with the generation of dcserver.link URLs.
 
 You can select which channel the invite should be generated in [your dashboard](https://scnx.app/glink?page=settings).
-If none is set, SCNX will choose a channel at random to create an invite in. 
+If none is set, SCNX will choose a channel at random to create an invite in.
 
 ## URL disputes {#disputes}
 
@@ -72,6 +72,7 @@ are, however, a few exemptions:
     please report it to our staff (<a href="mailto:abuse@scnx.xyz">abuse@scnx.xyz</a>) and we'll take appropriate
     action. The URL can then no longer be
     used.
+
 </details>
 <details>
     <summary>Small server VS. Big server</summary>
@@ -81,6 +82,7 @@ are, however, a few exemptions:
     examine a request on a case-by-case basis and might decide to transfer a dcserver.link URL. To start such a
     request <a
     href="https://scnx.app/help">contact our staff</a>.
+
 </details>
 <details>
     <summary>Trademark infringements</summary>
@@ -89,6 +91,7 @@ are, however, a few exemptions:
     href="mailto:legal@scootkit.net">legal@scootkit.net</a>) with a legal request for removal. After that request went
     through (and the content was removed),
     you might be able to claim the dcserver.link URL by responding to the confirmation E-Mail (optional).
+
 </details>
 <details>
     <summary>Inactive / deleted servers on SCNX</summary>
@@ -96,4 +99,5 @@ are, however, a few exemptions:
     When a server is <a href="/docs/scnx/guilds/faq#deletion">deleted from SCNX</a>, their dcserver.link URL will be deleted permanently. This does not
     happen when a server is deactivated / flagged on SCNX - in such cases, the URL will just become inactive, but will
     still be claimed. Expired Starter-Plans do not affect the usability of dcserver.link URLs.
+
 </details>

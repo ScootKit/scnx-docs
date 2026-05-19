@@ -15,7 +15,7 @@ our [FAQ Article](https://faq.scnx.app/data-collection-with-analytics/) to learn
 that. [Users can opt out](#user-opt-out) and no message (or attachment) content will ever be saved.
 :::
 
-:::info 
+:::info
 To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to your server.
 :::
 
@@ -29,37 +29,36 @@ on "Enable analytics".
 ## Use in Dashboard {#dashboard}
 
 In your [analytics dashboard](https://scnx.app/glink?page=analytics) you will be able to see the following data based on a timeframe which you can select on the top of your dashboard:
-* Messages & Commands: You'll see a graph showing how many messages and commands have been sent on each day in the timeframe.
-* 10 most used channels: This is a graph showing what percentage of the messages has been sent in which channel.
-* Most active users: These are the 15. most active servers (who haven't enabled [privacy mode](#user-opt-out)).
-* Memberflow (always last 30 days): This shows the number of bots, users and active members on each day in the timeframe.
-* Most active hours during the day: This graph shows how many messages have been sent on average at what time on your server.
-* At a glance: This section gives you a quick overview of your server. It includes the following data:
-* Number of messages sent in the timeframe
-* Number of commands used in the timeframe
-* Average messages per day
-* Number of active members on your server (excluding users who haven't enabled [privacy mode](#user-opt-out))
-* Number of users on your server
-* Number of bots on your server
 
-*Please note that, depending on your timeframe, some of these parts might be unavailable.*
+- Messages & Commands: You'll see a graph showing how many messages and commands have been sent on each day in the timeframe.
+- 10 most used channels: This is a graph showing what percentage of the messages has been sent in which channel.
+- Most active users: These are the 15. most active servers (who haven't enabled [privacy mode](#user-opt-out)).
+- Memberflow (always last 30 days): This shows the number of bots, users and active members on each day in the timeframe.
+- Most active hours during the day: This graph shows how many messages have been sent on average at what time on your server.
+- At a glance: This section gives you a quick overview of your server. It includes the following data:
+- Number of messages sent in the timeframe
+- Number of commands used in the timeframe
+- Average messages per day
+- Number of active members on your server (excluding users who haven't enabled [privacy mode](#user-opt-out))
+- Number of users on your server
+- Number of bots on your server
+
+_Please note that, depending on your timeframe, some of these parts might be unavailable._
 
 ![](@site/docs/assets/scnx/guilds/analytics/dashboard.png)
-
 
 ## Use analytics as Slash-Commands {#slash-commands}
 
 Any user on your server can use the Slash-Commands of the verified SCNX Bot (you can configure this in the
 Discord-Server-Settings under "Integrations"). The following commands are available:
 
-* `/stats guild`: Shows a statistics overview of your server. This includes the 10 most active channels and users in the
-last 30 days and an "At a glance" section where you can find the total number of messages and commands in the last 30
-days.
-* `/stats user`: Shows a statistics overview of any user on your server. This includes the 10 most active channels (and the number of messages sent in them) and an "At a glance" section where you can find the total number of messages and commands in the last 30
-days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use this command (/ shown data about).
+- `/stats guild`: Shows a statistics overview of your server. This includes the 10 most active channels and users in the
+  last 30 days and an "At a glance" section where you can find the total number of messages and commands in the last 30
+  days.
+- `/stats user`: Shows a statistics overview of any user on your server. This includes the 10 most active channels (and the number of messages sent in them) and an "At a glance" section where you can find the total number of messages and commands in the last 30
+  days. Users who have enabled [privacy mode](#user-opt-out) won't be able to use this command (/ shown data about).
 
 ![](@site/docs/assets/scnx/guilds/analytics/commands.png)
-
 
 ## Troubleshooting {#troubleshooting}
 
@@ -111,11 +110,11 @@ sent, or you are worried about personal data being stored about you, you can ena
 using `/privacy enable` on any server. This global (meaning that SCNX will store no data about you on any server)
 toggle will affect the following:
 
-* All data about messages sent by you will be anonymized (= your Discord-User-ID will be removed from the database
-entries) - this means that we will not know that *you* sent a message, we'll only know that a message was sent
-* All messages sent in the future by you will be saved anonymized (= not associated with your Discord-User-ID) - this
-means that we will not know that *you* sent a message, we'll only know that a message was sent
-* Users who have enabled privacy mode will still count towards memberflow data (as this does not incldue storing Discord-User-IDs)
+- All data about messages sent by you will be anonymized (= your Discord-User-ID will be removed from the database
+  entries) - this means that we will not know that _you_ sent a message, we'll only know that a message was sent
+- All messages sent in the future by you will be saved anonymized (= not associated with your Discord-User-ID) - this
+  means that we will not know that _you_ sent a message, we'll only know that a message was sent
+- Users who have enabled privacy mode will still count towards memberflow data (as this does not incldue storing Discord-User-IDs)
 
 You disable this privacy mode (opt back) using `/privacy disable`. Please note that this will not re-associate past
 messages sent by you (this is not even possible), meaning that only new messages will be shown in commands and in the

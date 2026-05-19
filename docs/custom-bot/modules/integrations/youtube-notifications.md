@@ -6,12 +6,12 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 
 ## Features {#features}
 
-* Receive notifications in a Discord channel when a YouTube channel uploads a new video.
-* Receive notifications when a YouTube channel starts a livestream.
-* Optionally filter out YouTube Shorts from video notifications.
-* Optionally assign a "Live" role to the YouTuber's Discord account while they are livestreaming, and remove it when they go offline.
-* Monitor multiple YouTube channels simultaneously, each with its own notification channel and message format.
-* Customize notification messages with details such as channel name, title, description, URL and thumbnail.
+- Receive notifications in a Discord channel when a YouTube channel uploads a new video.
+- Receive notifications when a YouTube channel starts a livestream.
+- Optionally filter out YouTube Shorts from video notifications.
+- Optionally assign a "Live" role to the YouTuber's Discord account while they are livestreaming, and remove it when they go offline.
+- Monitor multiple YouTube channels simultaneously, each with its own notification channel and message format.
+- Customize notification messages with details such as channel name, title, description, URL and thumbnail.
 
 ## Setup {#setup}
 
@@ -25,8 +25,8 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 
 After [setting up](#setup) and [configuring](#configuration) this module, no additional actions are required. The bot will automatically check configured YouTube channels for new videos and livestreams every five minutes.
 
-* When a new **video** is uploaded, the configured notification message will be sent to the specified Discord channel. Only videos published within the last 24 hours will trigger notifications.
-* When a channel starts a **livestream**, the configured notification message will be sent. If the live role feature is enabled, the configured role will be added to the YouTuber's Discord account when they go live and removed when the stream ends.
+- When a new **video** is uploaded, the configured notification message will be sent to the specified Discord channel. Only videos published within the last 24 hours will trigger notifications.
+- When a channel starts a **livestream**, the configured notification message will be sent. If the live role feature is enabled, the configured role will be added to the YouTuber's Discord account when they go live and removed when the stream ends.
 
 ## Configuration {#configuration}
 
@@ -36,25 +36,25 @@ This module has two configuration files - one for video upload notifications and
 
 In this configuration file, you can set up YouTube channels to monitor for new video uploads. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=youtube-notifications%7Cchannels).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| YouTube @-Handle or Channel-ID | The YouTube @-handle or channel ID of the YouTube channel to monitor. Channel IDs starting with `UC` are also supported. |
-| Ignore shorts? | If enabled, no notifications will be sent when a YouTube Short is uploaded. Normal videos will still trigger notifications. |
-| Message | The message sent to the configured channel when a new video is uploaded. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field                          | Description                                                                                                                                                |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel                        | The Discord channel in which the notification should be sent.                                                                                              |
+| YouTube @-Handle or Channel-ID | The YouTube @-handle or channel ID of the YouTube channel to monitor. Channel IDs starting with `UC` are also supported.                                   |
+| Ignore shorts?                 | If enabled, no notifications will be sent when a YouTube Short is uploaded. Normal videos will still trigger notifications.                                |
+| Message                        | The message sent to the configured channel when a new video is uploaded. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
 ### Live Notification YouTube Channels {#configuration-live-channels}
 
 In this configuration file, you can set up YouTube channels to monitor for livestreams. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=youtube-notifications%7Clive-channels).
 
-| Field | Description |
-|-------|-------------|
-| Channel | The Discord channel in which the notification should be sent. |
-| YouTube @-Handle | The YouTube @-handle of the channel to monitor for livestreams. |
-| Message | The message sent to the configured channel when the YouTube channel goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
-| Use Live-Role | Whether the live role feature should be activated for this YouTube channel. |
-| Discord-User ID | The Discord user ID of the YouTuber. Only required if the live role feature is enabled. |
-| Live Role | The role to assign to the YouTuber when they are live. Only required if the live role feature is enabled. |
+| Field            | Description                                                                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel          | The Discord channel in which the notification should be sent.                                                                                                    |
+| YouTube @-Handle | The YouTube @-handle of the channel to monitor for livestreams.                                                                                                  |
+| Message          | The message sent to the configured channel when the YouTube channel goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Use Live-Role    | Whether the live role feature should be activated for this YouTube channel.                                                                                      |
+| Discord-User ID  | The Discord user ID of the YouTuber. Only required if the live role feature is enabled.                                                                          |
+| Live Role        | The role to assign to the YouTuber when they are live. Only required if the live role feature is enabled.                                                        |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -94,13 +94,15 @@ In this configuration file, you can set up YouTube channels to monitor for lives
 The following data is being stored by this module:
 
 **For every video notification sent:**
-* The YouTube video ID
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+
+- The YouTube video ID
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 **For every livestream notification sent:**
-* The YouTube livestream ID
-* The Discord message ID of the notification
-* The Discord channel ID where the notification was sent
+
+- The YouTube livestream ID
+- The Discord message ID of the notification
+- The Discord channel ID where the notification was sent
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

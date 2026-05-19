@@ -9,7 +9,6 @@ tags:
   - Newsletter
   - SCNX
   - Events
-
 ---
 
 # 🧑‍🎄 Dezember steht vor der Tür: Nutze unser neues Modul, um deinen Discord-Server mit einem Adventskalender abzuheben
@@ -38,9 +37,9 @@ Das Modul ermöglicht es dir, in einem Kanal deiner Wahl 24 Türchen zu senden. 
 SCNX ist ein Dienst, bei dem du einen komplett anpassbaren Discord-Bot für deinen Server erstellen kannst, ganz ohne Programmieren. Du kannst [dieser einfachen Anleitung](/docs/setup) folgen, um direkt loszulegen.
 :::
 
-* **Konfiguriere das Modul:** Du legst einige grundlegende Einstellungen fest und bestimmst, was Nutzer hinter den Türchen erwartet. Das Modul ist sehr einfach zu verstehen - solltest du trotzdem Probleme haben, hilft dir unser [exzellenter Kundensupport](https://scnx.app/de/help) gerne weiter.
-* **Deine Community öffnet jeden Tag das jeweilige Türchen:** Nutzer können jeden Tag in deinem Adventskalender-Kanal interaktiv das heutige Türchen öffnen. Daraufhin erhalten auch nur sie die von dir angepasste Nachricht und eventuell weiteres, wie z.B. eine Rolle.
-* **Der interaktive Adventskalender aktualisiert sich automatisch:** Jede Stunde aktualisiert sich dein Adventskalender automatisch - inklusive aktuellem Datum und weiteren spannenden Infos, z.B. wie viele Nutzer am Adventskalender teilnehmen
+- **Konfiguriere das Modul:** Du legst einige grundlegende Einstellungen fest und bestimmst, was Nutzer hinter den Türchen erwartet. Das Modul ist sehr einfach zu verstehen - solltest du trotzdem Probleme haben, hilft dir unser [exzellenter Kundensupport](https://scnx.app/de/help) gerne weiter.
+- **Deine Community öffnet jeden Tag das jeweilige Türchen:** Nutzer können jeden Tag in deinem Adventskalender-Kanal interaktiv das heutige Türchen öffnen. Daraufhin erhalten auch nur sie die von dir angepasste Nachricht und eventuell weiteres, wie z.B. eine Rolle.
+- **Der interaktive Adventskalender aktualisiert sich automatisch:** Jede Stunde aktualisiert sich dein Adventskalender automatisch - inklusive aktuellem Datum und weiteren spannenden Infos, z.B. wie viele Nutzer am Adventskalender teilnehmen
 
 ![Screenshot mit der Adventskalendernachricht auf Discord](@site/blog/assets/winter-holidays-module/image.png)
 ![Screenshot mit den Konfigurationsoptionen für das Modul "Winter Holidays" auf scnx.app](@site/blog/assets/winter-holidays-module/image2.png)
@@ -50,6 +49,7 @@ SCNX ist ein Dienst, bei dem du einen komplett anpassbaren Discord-Bot für dein
 Mit einem virtuellem Adventskalender hebst du deinen Server von der Masse ab, während du deiner Community ein spannendes Event bietest. Während diesem Event kommen Nutzer jeden Tag zu deinem Server zurück, weshalb du mit höherer Aktivität rechnen kannst. Es ist außerdem sowohl für deine Community als auch für dich extrem einfach zu nutzen und zu erstellen, obwohl du fast alles anpassen kannst.
 
 ## 💡Tipps für einen noch besseres Event
+
 Weitere Tipps und Tricks, die auch noch mehr auf die konkrete Umsetzung auf deinem Server eingehen, gibt es in unserem [scnx.tips-Artikel](https://scnx.tips/winter-holidays-2025/).
 
 ## ✉️ Questions or Problems? {#help}

@@ -1,0 +1,60 @@
+name: Docs Lint
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'i18n/**'
+      - 'blog/**'
+      - 'src/pages/**'
+
+jobs:
+  lint:
+    name: Lint docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for em dashes
+        run: |
+          FILES=$(grep -rl '—' docs/ i18n/ blog/ src/pages/ --include='*.md' --include='*.mdx' --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.json' 2>/dev/null || true)
+          if [ -n "$FILES" ]; then
+            echo "::error::Em dashes found. Use ' -' instead."
+            grep -rn '—' docs/ i18n/ blog/ src/pages/ --include='*.md' --include='*.mdx' --include='*.js' --include='*.jsx' --include='*.ts' --include='*.tsx' --include='*.json'
+            exit 1
+          fi
+
+      - name: Check for curly/smart quotes
+        run: |
+          FILES=$(grep -rPl '[\x{201C}\x{201D}\x{2018}\x{2019}]' docs/ i18n/ blog/ src/pages/ --include='*.md' --include='*.mdx' --include='*.json' 2>/dev/null || true)
+          if [ -n "$FILES" ]; then
+            echo "::error::Smart/curly quotes found. Use straight quotes instead."
+            grep -rPn '[\x{201C}\x{201D}\x{2018}\x{2019}]' docs/ i18n/ blog/ src/pages/ --include='*.md' --include='*.mdx' --include='*.json'
+            exit 1
+          fi
+
+      - name: Check for trailing whitespace
+        run: |
+          FILES=$(grep -rln ' $' docs/ i18n/ blog/ --include='*.md' --include='*.mdx' 2>/dev/null || true)
+          if [ -n "$FILES" ]; then
+            echo "::warning::Trailing whitespace found in:"
+            echo "$FILES"
+          fi
+
+      - name: Check for non-breaking spaces
+        run: |
+          FILES=$(grep -rPl '\xC2\xA0' docs/ i18n/ blog/ --include='*.md' --include='*.mdx' 2>/dev/null || true)
+          if [ -n "$FILES" ]; then
+            echo "::error::Non-breaking spaces found. Use regular spaces instead."
+            grep -rPn '\xC2\xA0' docs/ i18n/ blog/ --include='*.md' --include='*.mdx'
+            exit 1
+          fi
+
+      - name: Check for ellipsis character
+        run: |
+          FILES=$(grep -rPl '\x{2026}' docs/ i18n/ blog/ --include='*.md' --include='*.mdx' 2>/dev/null || true)
+          if [ -n "$FILES" ]; then
+            echo "::error::Ellipsis character found. Use '...' instead."
+            grep -rPn '\x{2026}' docs/ i18n/ blog/ --include='*.md' --include='*.mdx'
+            exit 1
+          fi

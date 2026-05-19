@@ -1,16 +1,16 @@
 ## Type of PR
 
 - [ ] Translation update / creation
-- [ ] Original file creation
-- [ ] Original file content (not typo) update
-- [ ] Original file typo update
+- [ ] New documentation page
+- [ ] Content update (not a typo fix)
+- [ ] Typo / grammar fix
+
+## Summary
+
+<!-- Briefly describe what this PR changes and why. -->
 
 ## Checks
 
-If you have changed the content (/ meaning) of an original file, please confirm:
-
-- [ ] Yes, I have copied the updated section to all translations of this file manually.
-
-## Notes
-
-Please enter additional information here.
+- [ ] I have verified that my changes do not contain em dashes, smart quotes, or other special characters (the CI lint will catch these).
+- [ ] If I changed an original (English) file's content or meaning, I have updated all translations of this file.
+- [ ] If I added a new page, it has correct frontmatter (`sidebar_position`, `title`, `description`).

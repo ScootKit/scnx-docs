@@ -18,7 +18,7 @@ To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to you
 ## What is included in Backups? {#included}
 
 | Feature        | Description                                                                                                                                            |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Channels       | Backups will include every channel on your Discord. Channel data includes: Channel name, Channel topic, Channel cooldown, Channel permissions and more |
 | Roles          | Backups will include every role on your Discord. Saved Role data includes: Permissions, name, color and more                                           |
 | Emojis         | Backups will include every Emoji on your Discord. This includes the actual emoji-image and emoji-name. Stickers might also be included.                |
@@ -35,13 +35,13 @@ Creating a backup might take up to 15 minutes, depending on the number of messag
 
 After the backup has been created (this can take a while), you'll be able to view the backup in your backup-list and
 manage it. These options are available:
-* Restore backup: Allows you to restore the backup on this or another server. Please read more in the [restore backups](#restore) section.
-* Disable / enable Guild-Lock: Allows / Disallows your Backup to be restored on other servers. Please read more in the [restore backups on other servers](#restore-other-server) section.
-* Delete backup: Permanently deletes the backup from our servers. This can not be reversed.
-* Export backup: Exports the backup as a JSON-File.  Please read more in the [export backups](#export) section.
+
+- Restore backup: Allows you to restore the backup on this or another server. Please read more in the [restore backups](#restore) section.
+- Disable / enable Guild-Lock: Allows / Disallows your Backup to be restored on other servers. Please read more in the [restore backups on other servers](#restore-other-server) section.
+- Delete backup: Permanently deletes the backup from our servers. This can not be reversed.
+- Export backup: Exports the backup as a JSON-File. Please read more in the [export backups](#export) section.
 
 ![](@site/docs/assets/scnx/guilds/backups/backup.png)
-
 
 ## Automatic backups {#automatic}
 
@@ -56,15 +56,15 @@ might affect the display time of creation on your backup.
 
 Automated backups will use the backup-slots available to your guild. If there aren't any available, the system will overwrite the oldest automatic backup. Your manual backups never get touched. If manual backups occupy all backup-slots, no automatic backups will be created.
 
-
 ## Restore backups {#restore}
 
 ### Restore on original server {#restore-self}
 
 Before restoring a backup, please adjust the following settings on your Discord:
-* Move the (verified) SCNX Bot's role above all other roles and give it Administrator permissions
-* Disable the community feature of your server in the Server Settings (you can re-enable it later)
-* Understand that continuing will delete all messages, channels and roles from your server
+
+- Move the (verified) SCNX Bot's role above all other roles and give it Administrator permissions
+- Disable the community feature of your server in the Server Settings (you can re-enable it later)
+- Understand that continuing will delete all messages, channels and roles from your server
 
 To restore a backup on your server, visit the [backup dashboard](https://scnx.app/glink?page=backups) of your server and click on the backup you want to restore. Next, click on "Restore backup". You'll be shown a command. Use the "Copy command" button to copy the command and paste it into Discord on your server. Make sure that you are executing this command with the (verified) SCNX-Bot.
 
@@ -80,7 +80,6 @@ Confirming this request will delete all current channels & roles on your Discord
 
 After confirming, the SCNX Bot will start by deleting all existing channels and roles from your server. Once that's done, the SCNX Bot will start restoring your data. This might take up to **20 minutes** or even more. Once done, the SCNX Bot will ping you (or DM you). This will also happen if something went wrong.
 
-
 ### Restore on other servers {#restore-other-server}
 
 :::tip
@@ -93,7 +92,6 @@ The guild lock is a protection mechanism for your backup: Anyone with the backup
 ![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
 
 After disabling the guild-lock, please follow the same instructions as [restoring on the original server](#restore-self). When you are done, we highly recommend re-enabling the Guild-Lock - you can do that the same way you enabled it.
-
 
 ## Troubleshooting {#throubleshooting}
 

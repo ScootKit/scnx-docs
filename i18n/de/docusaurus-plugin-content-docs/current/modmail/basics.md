@@ -32,17 +32,17 @@ Manchmal müssen ähnliche oder sich wiederholende Nachrichten an Nutzer gesende
 
 Um Snippets zu verwenden, können Teammitglieder:
 
-* den Befehl `/s snippet:<SnippetSchlüssel>` nutzen, um ein Snippet direkt in ein Ticket zu senden. Dies ist die einfachste Methode, da ein Auto-Vervollständigungsmenü Teammitgliedern hilft, das richtige Snippet auszuwählen.
-* `!!<SnippetSchlüssel>` schreiben (ersetze `<SnippetSchlüssel>` mit dem Schlüssel des Snippets), um den Inhalt eines Snippets direkt in ein Ticket zu senden.
-* `{{<SnippetSchlüssel}}` in eine beliebige Nachricht einfügen, die an einen Nutzer gesendet wird. `{{<SnippetSchlüssel}}` wird durch den Snippet-Inhalt ersetzt, während der Rest der Nachricht unverändert bleibt.
+- den Befehl `/s snippet:<SnippetSchlüssel>` nutzen, um ein Snippet direkt in ein Ticket zu senden. Dies ist die einfachste Methode, da ein Auto-Vervollständigungsmenü Teammitgliedern hilft, das richtige Snippet auszuwählen.
+- `!!<SnippetSchlüssel>` schreiben (ersetze `<SnippetSchlüssel>` mit dem Schlüssel des Snippets), um den Inhalt eines Snippets direkt in ein Ticket zu senden.
+- `{{<SnippetSchlüssel}}` in eine beliebige Nachricht einfügen, die an einen Nutzer gesendet wird. `{{<SnippetSchlüssel}}` wird durch den Snippet-Inhalt ersetzt, während der Rest der Nachricht unverändert bleibt.
 
 Zur Verwaltung von Snippets stehen Teammitgliedern folgende Befehle zur Verfügung:
 
-* Erstelle ein neues Snippet mit `/snippets create key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
-* Bearbeite ein bestehendes Snippet mit `/snippets edit key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
-* Lösche ein Snippet mit `/snippet delete key:<SnippetSchlüssel>`.
-* Vorschau eines Snippets mit `/snippet preview key:<SnippetSchlüssel>`.
-* Liste aller Snippets mit `/snippets list [page:<Nummer>]`.
+- Erstelle ein neues Snippet mit `/snippets create key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
+- Bearbeite ein bestehendes Snippet mit `/snippets edit key:<SnippetSchlüssel> [close-buttons:<Boolean>] [form:<Formular>]`.
+- Lösche ein Snippet mit `/snippet delete key:<SnippetSchlüssel>`.
+- Vorschau eines Snippets mit `/snippet preview key:<SnippetSchlüssel>`.
+- Liste aller Snippets mit `/snippets list [page:<Nummer>]`.
 
 ## Anonyme Nachrichten {#anonymous-messages}
 
@@ -50,8 +50,8 @@ Manchmal möchten Teammitglieder ihren Namen nicht mit Nutzern teilen. Um dies z
 
 Die Identität der Teammitglieder wird bei anonymen Nachrichten nicht für Nutzer sichtbar sein, jedoch weiterhin im Log und im Ticket-Kanal angezeigt.
 
-* Anonyme Nachrichten können mit `!ar <Nachricht>` gesendet werden.
-* [Snippets](#snippets) können anonym gesendet werden, indem entweder `!!!<SnippetSchlüssel>` geschrieben oder der Befehl `/as` verwendet wird.
+- Anonyme Nachrichten können mit `!ar <Nachricht>` gesendet werden.
+- [Snippets](#snippets) können anonym gesendet werden, indem entweder `!!!<SnippetSchlüssel>` geschrieben oder der Befehl `/as` verwendet wird.
 
 ## Nutzer auf die Blockliste setzen {#blacklist}
 
@@ -59,7 +59,7 @@ Manchmal missbrauchen Nutzer den Support-Service. Um zu verhindern, dass solche 
 
 <SlashCommandExplanation />
 
-* `/blacklist list`: Listet alle Nutzer auf, die auf der Blockliste stehen.
-* `/blacklist add user:<Nutzer> reason:<Text> [duration:<Dauer>]`: Fügt einen Nutzer zur Blockliste hinzu. Standardmäßig sind Blocklisteneinträge dauerhaft, es sei denn, eine Dauer wird konfiguriert (z. B. `2d4h` für eine Sperre von 2 Tagen und 4 Stunden).
-* `/blacklist remove user:<Nutzer>`: Entfernt einen Nutzer von der Blockliste.
-* `/blacklist status user:<Nutzer>`: Prüft, ob ein Nutzer auf der Blockliste steht. Der Grund und die Dauer der Sperre werden ebenfalls angezeigt.
+- `/blacklist list`: Listet alle Nutzer auf, die auf der Blockliste stehen.
+- `/blacklist add user:<Nutzer> reason:<Text> [duration:<Dauer>]`: Fügt einen Nutzer zur Blockliste hinzu. Standardmäßig sind Blocklisteneinträge dauerhaft, es sei denn, eine Dauer wird konfiguriert (z. B. `2d4h` für eine Sperre von 2 Tagen und 4 Stunden).
+- `/blacklist remove user:<Nutzer>`: Entfernt einen Nutzer von der Blockliste.
+- `/blacklist status user:<Nutzer>`: Prüft, ob ein Nutzer auf der Blockliste steht. Der Grund und die Dauer der Sperre werden ebenfalls angezeigt.
