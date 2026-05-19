@@ -101,6 +101,6 @@ Wenn ein Spieler innerhalb des konfigurierten Zeitlimits keinen Zug ausführt, e
 
 Die folgenden Daten werden von diesem Modul gespeichert:
 
-* **Spielaufzeichnungen**: Spieler-IDs, Brettzustand (FEN), Anzahl der Züge, Spielstatus, Thread-/Kanal-IDs und Zeitstempel für jedes Spiel. Beendete Spiele werden für den Verlauf unbegrenzt aufbewahrt.
+- **Spielaufzeichnungen**: Spieler-IDs, Brettzustand (FEN), Anzahl der Züge, Spielstatus, Thread-/Kanal-IDs und Zeitstempel für jedes Spiel. Beendete Spiele werden für den Verlauf unbegrenzt aufbewahrt.
 
 Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database).
