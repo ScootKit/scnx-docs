@@ -32,8 +32,8 @@ Beide Spieler treffen ihre Wahl gleichzeitig. Sobald beide gewählt haben, wird 
 
 <SlashCommandExplanation />
 
-| Befehl             | Beschreibung                    |
-| ------------------- | --------------------------------- |
+| Befehl              | Beschreibung                                          |
+| ------------------- | ----------------------------------------------------- |
 | `/duel user:<User>` | Fordere einen anderen Benutzer zu einem Duell heraus. |
 
 ## Fehlerbehebung {#troubleshooting}
