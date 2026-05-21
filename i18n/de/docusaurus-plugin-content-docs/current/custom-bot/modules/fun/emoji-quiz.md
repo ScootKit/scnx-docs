@@ -67,7 +67,7 @@ In dieser Konfigurationsdatei kannst du deine eigenen Quizfragen hinzufügen. Ö
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-    <summary>Das Bot postet keine Quizfragen</summary>
+    <summary>Der Bot postet keine Quizfragen</summary>
     <ul>
         <li>Stelle sicher, dass der Spiel-Kanal leer und in der Konfiguration korrekt eingestellt ist.</li>
         <li>Stelle sicher, dass der Bot die Berechtigungen "Nachrichten verwalten", "Kanäle verwalten" und "Nachrichtenverlauf anzeigen" im Spiel-Kanal hat.</li>
@@ -97,7 +97,7 @@ Die folgenden Daten werden über jede Spielaktion gespeichert (Tipp, Überspring
 
 Wenn die Bestenliste aktiviert ist, werden die folgenden Daten über jeden teilnehmenden Benutzer gespeichert:
 
-- Die User-ID
+- Die Benutzer-ID
 - Die Gesamtpunktzahl
 - Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 
