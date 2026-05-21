@@ -11,7 +11,7 @@ Spiele Schach gegen andere Servermitglieder oder die KI, direkt in Discord!
 - Drei Möglichkeiten, Züge zu machen: Gib einen Zug direkt im Spiel-Thread ein, verwende die algebraische Notation über ein Popup-Modal (z. B. `e2e4`, `Nf3`, `O-O`) oder nutze geführte Auswahlmenüs, um deine Figur und das Zielfeld auszuwählen.
 - Volle Rochade-Unterstützung – verwende die Standardnotation (`O-O`, `O-O-O`) oder die Koordinatennotation (`e1g1`). Rochadezüge sind in den Auswahlmenüs gekennzeichnet.
 - **Bauerntransformations-Auswahl** – Wenn ein Bauer die letzte Reihe erreicht, wähle über ein Dropdown-Menü aus, in welche Figur er umgewandelt werden soll (Dame, Turm, Läufer oder Springer), anstatt immer zu einer Dame gezwungen zu sein.
-- **Materialbilanz-Anzeige** – Das Spiel-Embed zeigt nach jedem Zug an, wer materiell im Vorteil ist (z. B. *Weiß +3*).
+- **Materialbilanz-Anzeige** – Das Spiel-Embed zeigt nach jedem Zug an, wer materiell im Vorteil ist (z. B. _Weiß +3_).
 - Visuelle Schachbrett-Bilder werden für jeden Zug generiert, inklusive Hervorhebung von Schach und dem letzten Zug. Das Brett wird automatisch aus der Perspektive des Spielers gerendert, der an der Reihe ist, sodass asynchrone Spiele deine eigenen Figuren immer unten anzeigen.
 - Remisangebote, Aufgaben und die Zughistorie sind integriert. Remisangebote sind nur in PvP-Spielen verfügbar, nicht gegen die KI.
 - Beendete Spiele enthalten eine **Züge**-Schaltfläche im letzten Brett-Embed, um den gesamten Spielverlauf schnell zu überprüfen.
@@ -62,23 +62,23 @@ Wenn ein Spieler innerhalb des konfigurierten Zeitlimits keinen Zug ausführt, e
 
 <SlashCommandExplanation />
 
-| Befehl                                               | Beschreibung                                                     |
-| ----------------------------------------------------- | --------------------------------------------------------------- |
-| `/chess challenge user:<User>`                        | Fordere ein anderes Mitglied zu einer Schachpartie heraus.                      |
-| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Starte eine Schachpartie gegen die KI (Standard-Schwierigkeitsgrad: Mittel). |
-| `/chess games`                                        | Zeige deine aktiven Schachpartien an.                                  |
-| `/chess history [user:<User>]`                        | Zeige den Verlauf beendeter Schachpartien an (deine eigenen oder die eines anderen Spielers).  |
+| Befehl                                                | Beschreibung                                                                                  |
+| ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `/chess challenge user:<User>`                        | Fordere ein anderes Mitglied zu einer Schachpartie heraus.                                    |
+| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Starte eine Schachpartie gegen die KI (Standard-Schwierigkeitsgrad: Mittel).                  |
+| `/chess games`                                        | Zeige deine aktiven Schachpartien an.                                                         |
+| `/chess history [user:<User>]`                        | Zeige den Verlauf beendeter Schachpartien an (deine eigenen oder die eines anderen Spielers). |
 
 ## Konfiguration {#configuration}
 
 Öffne die Konfiguration in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=chess%7Cconfiguration).
 
-| Feld                   | Beschreibung                                                                                              | Standard |
-| ----------------------- | -------------------------------------------------------------------------------------------------------- | ------- |
-| Zugzeitüberschreitung (Stunden)    | Stunden, bis eine Erinnerung im Spiel-Thread gesendet wird.                                               | 24      |
-| Aufgeben Zeitüberschreitung (Stunden) | Stunden der Inaktivität, bis das Spiel automatisch als verloren gewertet wird.                                                        | 48      |
-| Maximale gleichzeitige Spiele    | Maximale Anzahl aktiver Spiele pro Spieler.                                                         | 5       |
-| KI-Gegner aktiviert     | Ermögliche Spielern, Partien gegen die KI zu starten. Wenn diese Option deaktiviert ist, wird der Befehl `/chess challenge-ai` ausgeblendet. | true    |
+| Feld                                  | Beschreibung                                                                                                                                 | Standard |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Zugzeitüberschreitung (Stunden)       | Stunden, bis eine Erinnerung im Spiel-Thread gesendet wird.                                                                                  | 24       |
+| Aufgeben Zeitüberschreitung (Stunden) | Stunden der Inaktivität, bis das Spiel automatisch als verloren gewertet wird.                                                               | 48       |
+| Maximale gleichzeitige Spiele         | Maximale Anzahl aktiver Spiele pro Spieler.                                                                                                  | 5        |
+| KI-Gegner aktiviert                   | Ermögliche Spielern, Partien gegen die KI zu starten. Wenn diese Option deaktiviert ist, wird der Befehl `/chess challenge-ai` ausgeblendet. | true     |
 
 ## Fehlerbehebung {#troubleshooting}
 

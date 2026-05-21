@@ -43,26 +43,26 @@ Wenn die Bestenliste aktiviert ist, erhalten Benutzer 2 Punkte für einen richti
 
 In dieser Konfigurationsdatei kannst du das Emoji-Quiz konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=emoji-quiz%7Cconfig).
 
-| Feld                                                    | Beschreibung                                                                                                                                    |
-| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Eigene Spiel-Fragen verwenden?                             | Falls aktiviert, werden deine benutzerdefinierten Fragen anstelle der integrierten Datenbank verwendet. Dies deaktiviert einige Funktionen wie den Schutz vor doppelten Fragen. |
-| Spiel-Kanal                                            | Der Textkanal, in dem das Quiz stattfindet. Der Kanal muss leer sein.                                                                     |
-| Maximale Anzahl von Tipps pro Nutzer pro Stunde | Maximale Anzahl an Freischaltungen des ersten Buchstabens, die ein Benutzer pro Stunde anfordern kann.                                                                            |
-| Maximale Anzahl von Tipps pro Nutzer pro Stunde               | Maximale Anzahl an Tippanfragen, die ein Benutzer pro Stunde stellen kann.                                                                                     |
-| Maximale Anzahl von Überspringen pro Nutzer pro Stunde              | Maximale Anzahl an Überspringungen einer Frage, die ein Benutzer pro Stunde durchführen kann.                                                                                  |
-| Falsche Antworten löschen? (empfohlen)                      | Falls aktiviert, werden falsche Tipps nach 5 Sekunden gelöscht, um den Kanal sauber zu halten.                                                             |
-| Bestenliste aktivieren                                 | Falls aktiviert, erscheint eine Bestenlisten-Schaltfläche und Benutzer erhalten Punkte für richtige Tipps.                                                          |
-| Immune Rollen                                      | Rollen, die von den Limits für das Überspringen, Hinweisen und Enthüllen des ersten Buchstabens ausgenommen sind.                                                                        |
+| Feld                                                   | Beschreibung                                                                                                                                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Eigene Spiel-Fragen verwenden?                         | Falls aktiviert, werden deine benutzerdefinierten Fragen anstelle der integrierten Datenbank verwendet. Dies deaktiviert einige Funktionen wie den Schutz vor doppelten Fragen. |
+| Spiel-Kanal                                            | Der Textkanal, in dem das Quiz stattfindet. Der Kanal muss leer sein.                                                                                                           |
+| Maximale Anzahl von Tipps pro Nutzer pro Stunde        | Maximale Anzahl an Freischaltungen des ersten Buchstabens, die ein Benutzer pro Stunde anfordern kann.                                                                          |
+| Maximale Anzahl von Tipps pro Nutzer pro Stunde        | Maximale Anzahl an Tippanfragen, die ein Benutzer pro Stunde stellen kann.                                                                                                      |
+| Maximale Anzahl von Überspringen pro Nutzer pro Stunde | Maximale Anzahl an Überspringungen einer Frage, die ein Benutzer pro Stunde durchführen kann.                                                                                   |
+| Falsche Antworten löschen? (empfohlen)                 | Falls aktiviert, werden falsche Tipps nach 5 Sekunden gelöscht, um den Kanal sauber zu halten.                                                                                  |
+| Bestenliste aktivieren                                 | Falls aktiviert, erscheint eine Bestenlisten-Schaltfläche und Benutzer erhalten Punkte für richtige Tipps.                                                                      |
+| Immune Rollen                                          | Rollen, die von den Limits für das Überspringen, Hinweisen und Enthüllen des ersten Buchstabens ausgenommen sind.                                                               |
 
 ### Eigene Spielfragen {#config-custom}
 
 In dieser Konfigurationsdatei kannst du deine eigenen Quizfragen hinzufügen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=emoji-quiz%7Ccustom-questions).
 
-| Feld             | Beschreibung                                                                         |
-| ----------------- | ------------------------------------------------------------------------------------- |
-| Fragestellung (= Emojis) | Die den Benutzern angezeigte Emoji-Kombination.                                            |
-| Tipp (optional)   | Ein Text-Hinweis, den Benutzer anfordern können. Leer lassen, um die Tipp-Schaltfläche für diese Frage auszublenden. |
-| Lösung         | Die Antwort, die Benutzer erraten müssen.                                                  |
+| Feld                     | Beschreibung                                                                                                         |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Fragestellung (= Emojis) | Die den Benutzern angezeigte Emoji-Kombination.                                                                      |
+| Tipp (optional)          | Ein Text-Hinweis, den Benutzer anfordern können. Leer lassen, um die Tipp-Schaltfläche für diese Frage auszublenden. |
+| Lösung                   | Die Antwort, die Benutzer erraten müssen.                                                                            |
 
 ## Fehlerbehebung {#troubleshooting}
 
