@@ -200,7 +200,7 @@ Wenn du weiterhin keine E-Mails erhältst, [kontaktiere unser Support-Team](http
 ### Wo bekomme ich Hilfe? {#get-help}
 
 - **Support-Seite:** [scnx.app/de/help](https://scnx.app/de/help)
-- **Discord:** [scootk.it/dc](https://scootk.it/dc)
+- **Discord:** [scootk.it/dc-de](https://scootk.it/dc-de)
 - **Abrechnungsfragen:** [Eröffne ein Ticket](https://scnx.app/de/user/support/new) oder sende eine E-Mail an [billing@scnx.xyz](mailto:billing@scnx.xyz)
 
 Für Fragen außerhalb der EU wende dich bitte an unsere [autorisierten Wiederverkäufer](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/).
