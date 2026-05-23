@@ -191,7 +191,7 @@ Stelle sicher, dass du immer Zugriff auf die E-Mail-Adresse hast, die mit deinem
 
 - Schaue in deinem **Spam-/Junk-Ordner** nach E-Mails von `@scnx.xyz` und `@scootkit.com`
 - Stelle sicher, dass deine Discord-E-Mail korrekt und erreichbar ist
-- Füge folgende Adressen zu deinen Kontakten oder sicheren Absendern hinzu: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scootkit.com`, `legal@scootkit.com`, `compliance@scnx.xyz`
+- Füge folgende Adressen zu deinen Kontakten oder sicheren Absendern hinzu: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `legal@scootkit.com`, `compliance@scnx.xyz`
 
 Wenn du weiterhin keine E-Mails erhältst, [kontaktiere unser Support-Team](https://scnx.app/help).
 
@@ -201,6 +201,6 @@ Wenn du weiterhin keine E-Mails erhältst, [kontaktiere unser Support-Team](http
 
 - **Support-Seite:** [scnx.app/de/help](https://scnx.app/de/help)
 - **Discord:** [scootk.it/dc](https://scootk.it/dc)
-- **Abrechnungsfragen:** [billing@scootkit.com](mailto:billing@scootkit.com)
+- **Abrechnungsfragen:** [Eröffne ein Ticket](https://scnx.app/de/user/support/new) oder sende eine E-Mail an [billing@scnx.xyz](mailto:billing@scnx.xyz)
 
 Für Fragen außerhalb der EU wende dich bitte an unsere [autorisierten Wiederverkäufer](https://corp.scootkit.com/docs/scnx/policies/authorized-resellers/).
