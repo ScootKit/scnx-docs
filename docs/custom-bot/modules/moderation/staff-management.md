@@ -31,18 +31,6 @@ A powerful, highly customizable staff management system designed to track activi
 
 ## Usage {#usage}
 
-### Shifts {#shifts}
-
-Staff members can clock in and out of shifts using the `/duty manage` command. The panel updates its title depending on the current shift state (_On Duty_, _On Break_, _Shift Ended_), so staff always see what action is available next. While on duty, they can take multiple breaks - the bot counts them and includes the break count in the end-of-shift DM report.
-
-If **Shift change logging** is enabled in the Shifts configuration, the bot posts an audit entry to the configured channel every time a shift is started, paused, resumed, ended, or voided.
-
-Supervisors can view who is currently on duty with `/duty active` and see duty time statistics with `/duty leaderboard` and `/duty time`.
-
-### Leave of Absence & Reduced Activity {#status}
-
-Staff members can request a Leave of Absence or Reduced Activity status using `/loa request` or `/reduced-activity request`. Supervisors can approve or deny requests. Active statuses can be viewed with the `list` subcommand.
-
 ### Infractions {#infractions}
 
 Supervisors can issue infractions to staff members using `/staff-management infraction issue`. Available infraction types include warnings, strikes, demotions, terminations, and under investigation. Staff can also be suspended with `/staff-management infraction suspend`, which temporarily removes their staff roles. Supervisors are prevented from issuing infractions or suspensions to themselves.
@@ -53,9 +41,21 @@ Infraction and suspension templates support a shared set of placeholders for cus
 
 Supervisors can promote staff members using `/staff-management promotion promote`. Promotions can optionally assign a new role automatically and send an announcement to a configured channel.
 
-### Staff Profiles & Reviews {#profiles}
+### Staff Reviews {#reviews}
 
-Each staff member has a profile that can be viewed with `/staff-management profile view`. Users can submit reviews and ratings for staff members. Profiles track average ratings and review history.
+Ts is removed cuz that made 0 sense with both the new and the old topic; W.I.P
+
+### Shifts {#shifts}
+
+Staff members go on- or off-duty and take a break with the `/duty manage` command, where a panel shows up with some informaiton about their shift time, and 3 buttons to manage their duty. The embed title also changes dynamically depending on their duty status. Staff can take multiple breaks per shift, and those break times are not included in the total duty time - the staff member also receives an end-of-shift (EOS) report in their DM's after they end their shift.
+
+If **Log Shift Changes** is enabled in the Shifts configuration, then the bot will send an embed with inforrmation each time a staff member changes their shift, with actions such as: Going on-duty, taking a break- going off duty and admin actions - these changes can be logged in a custom channel, if that's not set, then it will use the default log channel.
+
+Staff members can view who is currently on duty with `/duty active`, see the duty time leaderboard with `/duty leaderboard` and see their (or someone else's) total duty time with `/duty time`.
+
+### Leave of Absence & Reduced Activity {#status}
+
+Staff members can request a Leave of Absence or Reduced Activity status using `/loa request` or `/reduced-activity request`. Supervisors can approve or deny requests. Active statuses can be viewed with the `list` subcommand.
 
 ### Activity Checks {#activity-checks}
 
@@ -63,9 +63,10 @@ Management can start periodic activity checks targeting specific roles with `/st
 
 When a check ends - whether manually via `/staff-management activity-check end`, automatically when the duration expires, or when the round is cancelled - the original check message is replaced with the configurable **Ended Activity Check Embed**. The end embed renders the user who started the check (or "system" for automated checks) and the number of staff members who responded.
 
-### Duty admin panel {#duty-admin}
+### Staff Profiles {#profiles}
 
-Supervisors can manage other staff members' shifts via `/duty admin`. Buttons in the admin panel refresh inline rather than posting a new ephemeral message each time, so the panel stays clean across multiple actions.
+W.I.P
+
 
 ## Commands {#commands}
 
