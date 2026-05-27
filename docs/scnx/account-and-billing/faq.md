@@ -193,6 +193,7 @@ SCNX uses the **email address from your Discord account** to send you important 
 
 - **Invoices and payment confirmations**
 - **Server deactivation notices**
+- **Moderation decisions** (statement of reasons under SCNX ToS §23, sent from `compliance@scnx.xyz` - see the [Policy & Compliance tab](https://scnx.app/glink?page=policy) of the affected server)
 - **2FA reset confirmations**
 - **SCNX Care accommodation vouchers**
 - **Deletion confirmations**
@@ -218,7 +219,7 @@ Check the following:
 
 - Look in your **spam/junk folder** for emails from `@scnx.xyz` and `@scootkit.com`
 - Make sure your Discord email is correct and accessible
-- Add the following addresses to your contacts or safe senders list: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scootkit.com`, `legal@scootkit.com`, `compliance@scnx.xyz`
+- Add the following addresses to your contacts or safe senders list: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `legal@scootkit.com`, `compliance@scnx.xyz`
 
 If you're still not receiving emails, [contact our support team](https://scnx.app/help).
 
@@ -226,6 +227,6 @@ If you're still not receiving emails, [contact our support team](https://scnx.ap
 
 ### Where can I get help? {#help}
 
-- Visit our [help center](https://scnx.app/help) to contact the support team
-- Join our [Discord server](https://scootk.it/dc) for community support
-- Browse this [documentation](/) for guides and tutorials
+- **Support page:** [scnx.app/help](https://scnx.app/help)
+- **Discord:** [scootk.it/dc-en](https://scootk.it/dc-en)
+- **Billing questions:** [Open a ticket](https://scnx.app/user/support/new) or send an email to [billing@scnx.xyz](mailto:billing@scnx.xyz)

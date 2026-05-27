@@ -91,6 +91,30 @@ This issue is known and is being worked on.
 1. Open the [module configuration](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 2. Select the desired roles in the [respective configuration fields](#configuration-config).
 
+### Treat join roles as base roles {#base-roles}
+
+If you enable **Treat join roles as base roles (auto-restore)** in the welcomer's main configuration, the bot treats every role under "Give roles on join" as a hard guarantee - every regular member is kept in possession of them.
+
+When enabled, the bot enforces this in four ways:
+
+1. **Instant re-add on manual removal.** If a moderator or admin removes one of the join roles from a member, the bot re-adds it within ~2 seconds. This means you cannot strip a join role from an individual user while this option is on - disable it first if you need to.
+2. **Grant on holding-state release.** When a member is released from quarantine, Join Gate hold, or Anti-Join-Raid hold, the bot grants any missing join roles immediately.
+3. **Grant on screening completion.** When a pending user completes Discord's membership screening, they receive the join roles (this already happens without the option; it remains correct with the option enabled).
+4. **Daily sweep.** Every day at 03:00 UTC the bot iterates every cached server member and grants any missing join roles to regular members. An initial sweep also runs ~60 seconds after the bot starts up - this is what recovers join-role grants missed during downtime (e.g. users who completed membership screening while the bot was offline).
+
+**Members never granted join roles via this feature:**
+
+- Bots
+- Members currently holding the moderation quarantine role
+- Members with an active `QuarantineState` database record (covers in-flight quarantines and rejoins of previously-quarantined users)
+- Members holding the Join Gate hold role (when Join Gate uses the "give role" action)
+- Members holding the Anti-Join-Raid hold role (when Anti-Join-Raid uses the "give role" action)
+- Pending users who haven't completed membership screening (unless "Immediately give roles" is also enabled)
+
+**Race protection.** When the bot itself removes a join role during a moderation action (quarantine, Join Gate, Anti-Join-Raid), the audit log shows the bot as the executor. The base-roles feature checks the audit log before re-adding any role and skips bot-initiated removals. A post-grant watchdog also reverts the re-add if a quarantine role appears within 5 seconds afterwards, closing the worst-case race.
+
+**Performance.** The daily sweep iterates only the member cache (populated by Discord via the gateway). It does not call Discord's "List Guild Members" endpoint, so it is safe on large servers. API calls are made only for members who actually need a missing role added.
+
 ## Usage {#usage}
 
 After [setting up](#setup) the module, messages will get automatically sent every time the event gets triggered.
@@ -135,15 +159,16 @@ In this configuration file allows you to [set up welcome- and boost roles](#setu
 features of this module. Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?file=welcomer%7Cconfigs%2Fconfig).
 
-| Field                          | Description                                                                                                                                                                          |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.    |
-| Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                          |
-| Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts. |
-| Immediately give roles         | If enabled, join roles are assigned immediately when a user joins. If disabled, roles are assigned after the user completes Discord's onboarding (rules acceptance).                 |
-| Send DM on join                | If enabled, the bot sends a direct message to new users when they join the server.                                                                                                   |
-| Join DM Message                | _Only visible if "Send DM on join" is enabled._<br/>The message sent via DM to new users when they join your server.                                                                 |
-| Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                        |
+| Field                          | Description                                                                                                                                                                                                                                  |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Give roles on join             | These roles will be given to members who joined your server. This won't get applied retroactively, use the [massrole module](/docs/custom-bot/modules/tools/massrole) to do this.                                                            |
+| Ignore bots?                   | If enabled (this is highly recommended), welcome and leave messages won't get sent if the user joining or leaving is a bot.                                                                                                                  |
+| Give additional roles on boost | These roles will be given to members who boosted your server in addition to their boost-role assigned by Discord. The roles will get removed if the member removes all their boosts.                                                         |
+| Immediately give roles         | If enabled, join roles are assigned immediately when a user joins. If disabled, roles are assigned after the user completes Discord's onboarding (rules acceptance).                                                                         |
+| Treat join roles as base roles | When enabled, the bot guarantees every regular member holds all configured join roles via reactive re-adds and a daily sweep. See [Treat join roles as base roles](#base-roles) for the full list of exclusions and race-protection details. |
+| Send DM on join                | If enabled, the bot sends a direct message to new users when they join the server.                                                                                                                                                           |
+| Join DM Message                | _Only visible if "Send DM on join" is enabled._<br/>The message sent via DM to new users when they join your server.                                                                                                                         |
+| Delete welcome message         | If enabled, sent welcome messages will get deleted automatically if the user leaves your server within seven days after join.                                                                                                                |
 
 ### Random messages {#configuration-random-messages}
 

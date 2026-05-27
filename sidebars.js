@@ -55,6 +55,10 @@ const sidebars = {
                 {
                     type: 'doc',
                     id: 'discord-ids'
+                },
+                {
+                    type: 'doc',
+                    id: 'direct-messages'
                 }
             ]
         },
