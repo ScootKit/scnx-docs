@@ -33,39 +33,84 @@ A powerful, highly customizable staff management system designed to track activi
 
 ### Infractions {#infractions}
 
-Supervisors can issue infractions to staff members using `/staff-management infraction issue`. Available infraction types include warnings, strikes, demotions, terminations, and under investigation. Staff can also be suspended with `/staff-management infraction suspend`, which temporarily removes their staff roles. Supervisors are prevented from issuing infractions or suspensions to themselves.
+[Supervisors](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) can issue infractions to staff members with the `\staff-management infraction issue` command. Infraction types can be configured in the [configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions), with the default infraction types being: 'Warning, Strike, Demotion, Termination and Under Investigation'.
+Staff **cannot infract themselves**.
+You can also:
+- Void infractions for an user with the `/staff-management infraction void` command - this keeps the infraction in history, but the punishment is no longer "active". This can be done by either using the message link of the infraction, or the case ID. (Only supervisors+ can void infractions)
+- View the infractions history of an user with the `/staff-management infraction history` command - this shows all previous infractions of an user.
 
-Infraction and suspension templates support a shared set of placeholders for customizing log messages and DMs: `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%type%`, `%reason%`, `%case-id%`, and `%end-date%` (plus `%duration%` for suspensions). Promotions and reviews use a parallel naming scheme (`%staff-mention%`, `%reviewer-mention%`, `%new-role-name%`, etc.) - see the relevant configuration page for the full list.
+Infractions (including suspensions) can optionally also be sent to the infracted staff member's DM's by enabling the 'DM User on infraction' option - these messages are also configurable.
 
 ### Promotions {#promotions}
 
-Supervisors can promote staff members using `/staff-management promotion promote`. Promotions can optionally assign a new role automatically and send an announcement to a configured channel.
+[Supervisors](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) can promote staff members to a higher rank by using the `/staff-management promotion promote` command. Users can also view an user's promotion history with the `/staff-management promotion history` command - this shows the full history of promotions for that user.
+
+The promotion message is customizable, and a message could be sent to the promotes user's DM's by enabling the 'DM Promoted User' option - that message is also customizable.
+
+Optionally, the bot can also automatically add the new role upon promotion.
+**⚠️ WARNING: This option is dangerous and could start server raids or make it worse during server raids to grant unauthorized users higher permission roles which grants dangerous permissions. The addition of roles cannot be reverted automatically - it is recommended to keep this setting disabled!**
 
 ### Staff Reviews {#reviews}
 
-Ts is removed cuz that made 0 sense with both the new and the old topic; W.I.P
+Enabling the [reviews system ](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) allows users to review (staff) members with a stars ⭐ rating system and feedback - all in a configurable message and channel.
+
+Additionally there are 2 options to refine the reviews experience to your needs:
+- Allow Self-Rating: This option allows staff to review themselves. (This is not recommended for a fair and honest reviews system - it's useful to test reviews on yourself though)
+- Only let users review staff: This option only allows members to review [staff members](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration).
 
 ### Shifts {#shifts}
 
-Staff members go on- or off-duty and take a break with the `/duty manage` command, where a panel shows up with some informaiton about their shift time, and 3 buttons to manage their duty. The embed title also changes dynamically depending on their duty status. Staff can take multiple breaks per shift, and those break times are not included in the total duty time - the staff member also receives an end-of-shift (EOS) report in their DM's after they end their shift.
+Staff members can go on- or off-duty and take a break with the `/duty manage` command, where a panel shows up with some information about their shift time, and 3 buttons to manage their duty. The embed title also changes dynamically depending on their duty status. Staff can take multiple breaks per shift, and those break times are not included in the total duty time - the staff member also receives an end-of-shift (EOS) report in their DM's after they end their shift.
 
-If **Log Shift Changes** is enabled in the Shifts configuration, then the bot will send an embed with inforrmation each time a staff member changes their shift, with actions such as: Going on-duty, taking a break- going off duty and admin actions - these changes can be logged in a custom channel, if that's not set, then it will use the default log channel.
+Shift types are fully custom, meaning you can have multiple different shift types with a custom name. You can also set a minimum shift time duration, which requires staff members to have a minimum of x minutes of shift time or the time they went on duty doesn't count towards their total duty time and quota (if enabled) - default is 0, meaning all shift time counts.
+
+A duty leaderboard can also be enabled, letting staff members check the top people who have the most shift time, going from most to least. The leaderboard timeframe is also customizable, from weekly, monthly and all-time.
+
+A quota system can also be enabled, requiring staff to meet the specific amount of hours of duty time each week/month to meet your quota. These can be different per role, and their highest role that's listed there, counts as their quota. The quota can also be 0 hours, meaning that specific role has no quota.
+The quota status shows on their `/duty time` command.
+
+If 'Log Shift Changes' is enabled in the Shifts configuration, then the bot will send an embed with information each time a staff member changes their shift, with actions such as: Going on-duty, taking a break, going off duty and admin actions - these changes can be logged in a custom channel, if that's not set, then it will use the default log channel.
 
 Staff members can view who is currently on duty with `/duty active`, see the duty time leaderboard with `/duty leaderboard` and see their (or someone else's) total duty time with `/duty time`.
 
-### Leave of Absence & Reduced Activity {#status}
+### Leave of Absence & Reduced Activity status {#status}
 
-Staff members can request a Leave of Absence or Reduced Activity status using `/loa request` or `/reduced-activity request`. Supervisors can approve or deny requests. Active statuses can be viewed with the `list` subcommand.
+You can configure if staff members can [request a Leave of Absence (LoA) and/or a Reduced Activity (RA)](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus). LoA's are for staff members who want to go away and have little to no responsibilities to being staff, while a RA is for staff members who still want to actively work as staff, but do less copared to normal staff.
 
-### Activity Checks {#activity-checks}
+**Leave of Absence (LoA)**
+The LoA system can be enabled individually by enabling the 'Enable LoA System` option.
+After enabling that option, you will be able to select the LoA role given upon the start of their LoA, configure the maximum days they can request a LoA for, and if a LoA request requires approval or not.
 
-Management can start periodic activity checks targeting specific roles with `/staff-management activity-check start`. Staff members must respond within the configured time window. Results can be viewed and managed by supervisors.
+**Reduced Activity (RA)**
+The RA system can be enabled individually by enabling the 'Enable RA System' option.
+After enabling that option, you will be able to select the RA role given upon the start of their RA, configure the maximum days they can request a RA for, and if a RA request requires approval or not.
 
-When a check ends - whether manually via `/staff-management activity-check end`, automatically when the duration expires, or when the round is cancelled - the original check message is replaced with the configurable **Ended Activity Check Embed**. The end embed renders the user who started the check (or "system" for automated checks) and the number of staff members who responded.
+Additionally, you can:
+- Configure the status request channel where the requests for a status are sent (if approval is required)
+- Choose if you want to log status changes (Going on or off LoA/RA, extensions or early ends and other administrative actions)
+- Select the status log channel
 
 ### Staff Profiles {#profiles}
 
-W.I.P
+[Staff profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/profiles) allow (staff) members to have their own profile with their own nickname and introduction.
+
+You can also configure if you only want staff members and above to have a custom staff profile, or also allow all normal members to have a custom profile, and who can manually reset a (staff) member's profile (supervisor+ or management only).
+
+The profile embed is also customizable - edit it to your wishes!
+
+### Activity Checks {#activity-checks}
+
+[Activity checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) can be enabled, which allows supervisors+ to start periodic activity checks that sends a customizable message into the configured channel, which allows staff members to click on a button to confirm that they are active and have seen the message.
+
+Settings to configure the system to your needs:
+- Roles to Check: Select the role(s) you want the bot to check that respond to the button - leave this empty to use the standard staff role from the [general configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration).
+- Check Duration: The duration of activity checks in *hours*. The maximum value is 168 hours (1 week) and the minimum is 1 hour.
+- Activity Check Embed & Ended Activity Check Embed: Configure the activity check messages to your wishes! The ended message is the message that replaces the original message when it has ended. (⚠️ Warning: If your original activity check message is components V2, then the ended message also needs to be components V2, otherwise it won't be edited - this is due to Discord limitations)
+- Default Sending Channel: The channel to send the activity checks in - this can be overridden when using the `/staff-management activity-check start` command.
+
+Additionally, you can **automate** the activity checks. You can set an interval (weekly, biweekly, monthly or use a cronjob) to select how often it should send the activity check, set the cronjob if you selected 'Cronjob', select the weekday that the activity check should happen, and the week of the month if you selected 'Monthly' in the interval.
+
+Results are sent into the configured results channel (leave empty to use the default log channel), with an option to ping a custom role when the results are posted.
 
 
 ## Commands {#commands}
