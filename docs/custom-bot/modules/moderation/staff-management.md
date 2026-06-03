@@ -119,20 +119,20 @@ Results are sent into the configured results channel (leave empty to use the def
 
 | Command                                            | Description                                           |
 | -------------------------------------------------- | ----------------------------------------------------- |
-| `/duty manage`                                     | Clock in/out of a shift or take a break.              |
-| `/duty active`                                     | View currently on-duty staff members.                 |
-| `/duty leaderboard`                                | View the duty time leaderboard.                       |
-| `/duty time`                                       | View your own duty time statistics.                   |
-| `/duty admin`                                      | Administrative duty management (supervisor+).         |
-| `/loa request`                                     | Request a Leave of Absence.                           |
-| `/loa view`                                        | View your current LoA status.                         |
-| `/loa list`                                        | List all active LoA requests.                         |
-| `/loa admin`                                       | Approve, deny, or manage LoA requests (supervisor+).  |
-| `/reduced-activity request`                        | Request Reduced Activity status.                      |
-| `/reduced-activity view`                           | View your current Reduced Activity status.            |
-| `/reduced-activity list`                           | List all active Reduced Activity statuses.            |
-| `/reduced-activity admin`                          | Manage Reduced Activity requests (supervisor+).       |
-| `/staff-management panel`                          | Open the staff management panel.                      |
+| `/duty active`                                     | View who are currently on duty per shift type.        |
+| `/duty manage [type:<Text>]`                       | Replies with a duty management panel to go on-/off-duty or on break.                                               |
+| `/duty time [type:<Text>]`                         | View your total duty time and previous shifts.        |
+| `/duty leaderboard [type:<Text>]`                  | View the leaderboard with the people with the most duty time per shift type (or all shift types)                      |
+| `/duty admin user:<User>`                          | Manage the duty and shift time of an user (supervisor+)|
+| `/staff-status loa request duration:<Text> reason:<Text>`| Request a Leave of Absence with the duration and reason to request.                      |
+| `/staff-status loa view [user:<User>]`             | View your or someone else's current LoA status.       |
+| `/staff-status loa list filter:<Text>`             | List the LoA requests based on which filter you chose (Active/Expired/All)                                         |
+| `/staff-status loa admin user:<User>`              | Extend or manually end the LoA of an user or view the LoA history (supervisor+)                                        |
+| `/staff-status ra request duration:<Text> reason:<Text>`| Request a Reduced Activity with the duration and reason to request.                      |
+| `/staff-status ra view [user:<User>]`              | View your or someone else's current RA status.        |
+| `/staff-status ra list filter:<Text>`              | List the RA requests based on which filter you chose (Active/Expired/All)                                         |
+| `/staff-status ra admin user:<User>`               | Extend or manually end the RA of an user or view the RA history (supervisor+)                                        |
+| `/staff-management panel user:<User>`              | Opens the staff management panel about an user, with all information about them per feature, which also includes data deletion options. (supervisor+)                 |
 | `/staff-management infraction issue user:<User>`   | Issue an infraction to a staff member.                |
 | `/staff-management infraction suspend user:<User>` | Suspend a staff member.                               |
 | `/staff-management infraction history user:<User>` | View a staff member's infraction history.             |
