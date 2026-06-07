@@ -21,10 +21,11 @@ Der Nachrichten-Editor ist in zwei Versionen verfügbar:
 Beide Editoren bieten eine [Live-Vorschau](#preview), [Parameter-Einfügung](#parameters),
 [Kopieren/Einfügen](#copy-paste) und [Nachrichten-Teilen](#share).
 
-:::info Editor-Auswahl
+:::info V4 Verfügbarkeit
 Der V4-Editor steht standardmäßig auf allen Servern zur Verfügung. Der V3-Editor bleibt jedoch dauerhaft verfügbar, 
 du kannst selbst bei jeder Nachricht entscheiden, welche Version du nutzen möchtest.
 :::
+
 
 ---
 
