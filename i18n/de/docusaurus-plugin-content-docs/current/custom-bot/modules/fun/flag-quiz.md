@@ -14,7 +14,7 @@ Lege einen Kanal als Flaggen-Raten-Kanal fest und lasse deine Benutzer Flaggen v
 - Falsche Rateversuche können automatisch gelöscht werden, um den Kanal sauber zu halten.
 - Details über die vorherige Flagge anzeigen, nachdem sie gelöst oder übersprungen wurde (Ländercode, Hauptstadt, Region, Kontinent).
 - Immunitätsrollen zur Umgehung von Ratenbegrenzungen bei Aktionen.
-  
+
 ## Einrichtung {#setup}
 
 1. Aktiviere das Modul in [deinem SCNX-Dashboard](https://scnx.app/de/glink?page=bot/modules?query=flag-quiz&ref=scnx-app-docs).
@@ -41,16 +41,16 @@ Wenn die Bestenliste aktiviert ist, erhalten Benutzer 1 Punkt für jeden korrekt
 
 In dieser Konfigurationsdatei kannst du das Flaggen-Quiz konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=flag-quiz%7Cconfig).
 
-| Feld                                     | Beschreibung                                                                         |
-| ----------------------------------------- | ----------------------------------------------------------------------------------- |
-| Spiel-Kanal                              | Der Textkanal, in dem das Quiz stattfindet. Der Kanal muss leer sein.             |
-| Maximale Anzahl von Tipps pro Nutzer pro Stunde | Maximale Anzahl an ersten Buchstaben, die ein Benutzer pro Stunde anfordern kann.                 |
-| Maximale Anzahl von Überspringen pro Nutzer pro Stunde | Maximale Anzahl an Flaggen, die ein Benutzer pro Stunde überspringen kann.                          |
-| Falsche Antworten löschen? (empfohlen)       | Wenn diese Option aktiviert ist, werden falsche Rateversuche nach 5 Sekunden gelöscht, um den Kanal sauber zu halten.    |
-| Minimale Schwierigkeit                      | Die minimale Schwierigkeit der angezeigten Flaggen (1 = am leichtesten, 5 = am schwersten).                   |
-| Maximale Schwierigkeit                      | Die maximale Schwierigkeit der angezeigten Flaggen (1 = am leichtesten, 5 = am schwersten).                   |
-| Bestenliste aktivieren                        | Wenn diese Option aktiviert ist, wird eine Bestenlisten-Schaltfläche angezeigt und Benutzer erhalten Punkte für korrekte Rateversuche. |
-| Immune Rollen                           | Rollen, die von den Limits für das Überspringen und das Anzeigen des ersten Buchstabens ausgenommen sind.                       |
+| Feld                                                   | Beschreibung                                                                                                                           |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Spiel-Kanal                                            | Der Textkanal, in dem das Quiz stattfindet. Der Kanal muss leer sein.                                                                  |
+| Maximale Anzahl von Tipps pro Nutzer pro Stunde        | Maximale Anzahl an ersten Buchstaben, die ein Benutzer pro Stunde anfordern kann.                                                      |
+| Maximale Anzahl von Überspringen pro Nutzer pro Stunde | Maximale Anzahl an Flaggen, die ein Benutzer pro Stunde überspringen kann.                                                             |
+| Falsche Antworten löschen? (empfohlen)                 | Wenn diese Option aktiviert ist, werden falsche Rateversuche nach 5 Sekunden gelöscht, um den Kanal sauber zu halten.                  |
+| Minimale Schwierigkeit                                 | Die minimale Schwierigkeit der angezeigten Flaggen (1 = am leichtesten, 5 = am schwersten).                                            |
+| Maximale Schwierigkeit                                 | Die maximale Schwierigkeit der angezeigten Flaggen (1 = am leichtesten, 5 = am schwersten).                                            |
+| Bestenliste aktivieren                                 | Wenn diese Option aktiviert ist, wird eine Bestenlisten-Schaltfläche angezeigt und Benutzer erhalten Punkte für korrekte Rateversuche. |
+| Immune Rollen                                          | Rollen, die von den Limits für das Überspringen und das Anzeigen des ersten Buchstabens ausgenommen sind.                              |
 
 ## Fehlerbehebung {#troubleshooting}
 
