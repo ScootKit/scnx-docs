@@ -21,24 +21,11 @@ Der Nachrichten-Editor ist in zwei Versionen verfügbar:
 Beide Editoren bieten eine [Live-Vorschau](#preview), [Parameter-Einfügung](#parameters),
 [Kopieren/Einfügen](#copy-paste) und [Nachrichten-Teilen](#share).
 
-:::info V4-Rollout
-V4 befindet sich aktuell in der Beta-Phase und wird schrittweise ausgerollt. Der V3-Editor bleibt dauerhaft
-verfügbar - du wirst niemals gezwungen, auf V4 zu wechseln.
-
-| Phase                 | Datum          | Server          |
-| --------------------- | -------------- | --------------- |
-| Phase 1               | 17. März 2026  | 5% der Server   |
-| Phase 2               | 31. März 2026  | 15% der Server  |
-| Phase 3               | 14. April 2026 | 25% der Server  |
-| Phase 4               | 21. April 2026 | 40% der Server  |
-| Phase 5               | 28. April 2026 | 50% der Server  |
-| Vollständiger Rollout | 5. Mai 2026    | 100% der Server |
-
-Server werden in jeder Phase zufällig ausgewählt - es gibt keine Möglichkeit zu prüfen oder vorherzusagen, in
-welcher Phase dein Server hinzugefügt wird.
-
-Du möchtest nicht warten? [ScootKit-Mitglieder](https://membership.scootkit.com) (Level 2+) erhalten sofortigen Zugang zum V4-Editor.
+:::info V4 Verfügbarkeit
+Der V4-Editor steht standardmäßig auf allen Servern zur Verfügung. Der V3-Editor bleibt jedoch dauerhaft verfügbar, 
+du kannst selbst bei jeder Nachricht entscheiden, welche Version du nutzen möchtest.
 :::
+
 
 ---
 
