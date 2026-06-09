@@ -43,6 +43,10 @@ As soon as you have access to the ticket channel, you can send messages to the u
 
 To send internal messages that are **not** relayed to the user, prefix your message with `!` (for example, `!This is an internal note`).
 
+:::note Reply-prefix mode
+Your server can optionally flip this around: when **reply-prefix mode** is enabled, everything you type stays an internal note **unless** you start it with a configured reply prefix (for example `!r Your reply` or `+Your reply`). Snippets (`!!`) and anonymous replies (`!ar`) are still sent as normal. This is configured by an admin under the modmail settings.
+:::
+
 ## Anonymous messages {#anonymous-messages}
 
 Sometimes, staff members prefer not to share their name with the user. To send an anonymous message (credited to your highest role instead of your name), prefix your message with `!ar ` (for example, `!ar Your request has been processed.`).
@@ -106,11 +110,86 @@ To use snippets, staff members can:
 
 To manage snippets, the following commands are available to staff members:
 
-- `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` - Create a new snippet. Enter a new, unused snippet key as the `key` parameter. Optionally enable `close-buttons` to add a close button below the snippet message or set `form` to attach a form. A dialog will appear to enter the snippet content.
-- `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` - Edit an existing snippet. Select an existing snippet key and update its settings or content.
+- `/modmail snippets create key:<SnippetKey> [form:<Form>]` - Create a new snippet. Enter a new, unused snippet key as the `key` parameter. A dialog then opens where you enter the content, tick **Attach close buttons** to add a close button below the snippet message, and pick a form to attach from the **Attach a form** dropdown (or *None*). The optional `form` slash parameter is only used as a fallback if you have more than 24 forms (too many to fit the dropdown).
+- `/modmail snippets edit key:<SnippetKey> [form:<Form>]` - Edit an existing snippet. Select an existing snippet key; the same dialog opens pre-filled with the current content, close-button setting, and attached form so you can change them.
 - `/modmail snippets delete key:<SnippetKey>` - Delete a snippet permanently. This cannot be undone.
 - `/modmail snippets preview key:<SnippetKey>` - Preview a snippet's content and details.
 - `/modmail snippets list [page:<Number>]` - List all available snippets with their usage counts.
+
+### Dynamic variables {#snippet-variables}
+
+Snippet content can include `%variables%` that are automatically replaced with live data when the snippet is sent.
+This lets a single snippet greet each user by name, reference the current topic, link the ticket channel, and more.
+Variables work in both `!!<SnippetKey>` and inline `{{<SnippetKey>}}` snippets. Any variable that has no value (for
+example a nickname that is not set) is replaced with an empty string. Text that is not a known variable is left
+unchanged.
+
+#### Ticket author
+
+| Variable | Description |
+|---|---|
+| `%userID%` | The ticket author's Discord user ID |
+| `%userTag%` | The ticket author's username |
+| `%userUsername%` | The ticket author's raw username |
+| `%userName%` | The ticket author's display name (nickname if set, otherwise username) |
+| `%userMention%` | Mentions the ticket author |
+| `%userAvatar%` | URL of the ticket author's avatar |
+| `%userNickname%` | The ticket author's server nickname |
+| `%userCreatedAt%` | When the author's account was created |
+| `%userCreatedAtRelative%` | Account creation, relative (e.g. "2 years ago") |
+| `%userJoinedAt%` | When the author joined the server |
+| `%userJoinedAtRelative%` | Server join, relative |
+| `%userHighestRole%` | Name of the author's highest role |
+| `%userHighestRoleID%` | ID of the author's highest role |
+| `%userRoleColor%` | Hex color of the author's highest role |
+| `%userBoostingSince%` | When the author started boosting the server |
+| `%userBoostingSinceRelative%` | Boosting since, relative |
+
+#### Responding staff member
+
+| Variable | Description |
+|---|---|
+| `%staffID%` | The responding staff member's user ID |
+| `%staffTag%` | The staff member's username |
+| `%staffUsername%` | The staff member's raw username |
+| `%staffName%` | The staff member's display name |
+| `%staffMention%` | Mentions the staff member |
+| `%staffAvatar%` | URL of the staff member's avatar |
+| `%staffNickname%` | The staff member's server nickname |
+| `%staffCreatedAt%` | When the staff member's account was created |
+| `%staffCreatedAtRelative%` | Account creation, relative |
+| `%staffJoinedAt%` | When the staff member joined the server |
+| `%staffJoinedAtRelative%` | Server join, relative |
+| `%staffHighestRole%` | Name of the staff member's highest role |
+| `%staffHighestRoleID%` | ID of the staff member's highest role |
+| `%staffRoleColor%` | Hex color of the staff member's highest role |
+
+#### Ticket
+
+| Variable | Description |
+|---|---|
+| `%ticketID%` | The ticket's display ID |
+| `%ticketTopic%` | The ticket's topic name |
+| `%ticketTopicID%` | The ticket's topic ID |
+| `%ticketState%` | The ticket's current state |
+| `%ticketCreatedAt%` | When the ticket was created |
+| `%ticketCreatedAtRelative%` | Ticket creation, relative |
+| `%ticketChannel%` | Mentions the ticket channel |
+| `%ticketChannelID%` | The ticket channel's ID |
+| `%ticketClaimedBy%` | Mentions the staff member the ticket is assigned to |
+| `%ticketClaimedByID%` | ID of the assigned staff member |
+| `%ticketCustomName%` | The ticket's custom name |
+
+#### Global
+
+These general variables are also available in snippets:
+
+| Variable | Description |
+|---|---|
+| `%botName%`, `%botID%`, `%botAvatar%`, `%botTag%`, `%botMention%` | Details of the bot |
+| `%guildName%`, `%guildID%`, `%guildIcon%` | Details of the server |
+| `%timestamp%`, `%shortTime%`, `%longTime%`, `%shortDate%`, `%longDate%`, `%shortDateTime%`, `%longDateTime%`, `%relativeTime%` | The current time in various Discord time formats |
+| `%openingHours%` | The rendered opening hours |
 
 ### Send forms {#send-forms}
 
