@@ -108,6 +108,65 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 - Discord begrenzt Kanal-Umbenennungen auf 2 pro 10 Minuten. Der Bot erzwingt auf seiner Seite eine 4-minütige Abkühlzeit; schnelle Offen/Offline-Wechsel können eine Umbenennung verzögern, bis die Abkühlzeit abgelaufen ist.
 - Bestätige, dass der Bot die Berechtigung **Kanäle verwalten** am Warteschlangen-Kanal hat.
 
+## Forum-Support-Probleme {#forum-support}
+
+### Neue Forum-Threads werden nicht bearbeitet {#forum-no-handling}
+
+- Stelle sicher, dass **Forum-Support** aktiviert und der Forum-Kanal auf der Seite [Forum-Kanäle](https://scnx.app/glink?page=support-system/forum-support/channels) hinzugefügt ist.
+- Der Kanal muss ein Discord-**Forum**-Kanal sein - kein normaler Textkanal.
+- Prüfe die Berechtigungen des Bots im Forum-Kanal: Er braucht **Kanal ansehen**, **Nachrichten in Threads senden**, **Öffentliche Threads erstellen**, **Threads verwalten** und **Nachrichten verwalten**.
+- Es werden nur Threads automatisch erfasst, die **nach** dem Aktivieren von Forum-Support erstellt wurden.
+
+### Die `/forum`-Befehle werden nicht angezeigt {#forum-commands-missing}
+
+- Die Befehle erscheinen nur, wenn Forum-Support [aktiviert](/de/docs/support-bot/forum-support/configuration#main) und das Feature für deinen Server verfügbar ist (Early Access).
+- Discord kann ein paar Minuten brauchen, um Slash-Befehle zu aktualisieren - starte deinen Discord-Client vollständig neu.
+
+### Das Team-Warteschlangen-Panel erscheint nicht {#forum-no-panel}
+
+- Lege in der [Konfiguration](/de/docs/support-bot/forum-support/configuration#main) einen **Kanal für das Warteschlangen-Panel** fest.
+- Der Bot braucht die Berechtigung, in diesem Kanal Nachrichten zu senden und zu bearbeiten.
+
+### Mitglieder können nicht in ihrem eigenen Thread antworten {#forum-locked}
+
+- Wenn du **Sperren bis beansprucht** aktiviert hast, bleibt der Thread gesperrt, bis ein Teammitglied ihn beansprucht - das Beanspruchen entsperrt ihn automatisch. Siehe [Claiming](/de/docs/support-bot/forum-support/claiming#lock-until-claimed).
+
+### Nachrichten anderer Mitglieder werden immer wieder gelöscht {#forum-deleted}
+
+- Das ist die Option **Nur Ersteller und Team dürfen schreiben**. Schalte sie in der [Konfiguration](/de/docs/support-bot/forum-support/configuration#thread-writing) aus, wenn alle kommentieren dürfen sollen.
+
+### Priority-Threads kommen nicht in der Warteschlange nach vorn {#forum-priority}
+
+- Priorität ergibt sich aus einem als priorisiert markierten [Thema](/de/docs/support-bot/forum-support/topics) oder aus den [Priority](/de/docs/support-bot/forum-support/configuration#priority)-Einstellungen eines Forum-Kanals (Priority-Rollen oder -Tag). Stelle sicher, dass eines davon konfiguriert ist.
+
+### Feedback oder Schließ-DMs werden nicht gesendet {#forum-feedback-dm}
+
+- Das Mitglied hat möglicherweise DMs deaktiviert - der Bot kann Nutzern, die Direktnachrichten blockieren, nichts senden.
+- Prüfe beim Feedback, dass es [aktiviert](/de/docs/support-bot/forum-support/support-feedback) ist und der Thread länger als die konfigurierte Mindestdauer bestand.
+
+## AI-FAQ-Probleme {#ai-faq}
+
+### Der AI-FAQ-Bereich fehlt in meinem Dashboard {#ai-faq-missing}
+
+- AI FAQ ist eine Early-Access-Beta. Wenn du den Bereich nicht siehst, ist dein Server noch nicht in der Beta - fordere Zugang über das [Kontaktformular](https://scnx.app/user/support/new?topic=cmp0a46s300e9yxcfspiqvgc0) an.
+- Dein Support-Bot muss v3 oder neuer sein - ältere Versionen enthalten AI FAQ nicht.
+
+### Die KI beantwortet keine Fragen {#ai-not-answering}
+
+- Schalte den Hauptschalter ein: **Einstellungen → AI FAQ auf diesem Server aktivieren**.
+- Der Hauptschalter allein bewirkt nichts - du musst der KI auch sagen, **wo** sie antworten soll. Aktiviere die [Kanal-Auto-Antwort](/de/docs/support-bot/ai-faq/channel-mode) und/oder den [Pre-Ticket-Gatekeeper](/de/docs/support-bot/ai-faq/pre-ticket-gatekeeper).
+- Die KI antwortet aus deiner Wissensdatenbank. Wenn du noch keine [FAQ-Einträge](/de/docs/support-bot/ai-faq/faq-entries) geschrieben hast, hat sie nichts, worauf sie antworten kann.
+- Stelle sicher, dass du noch KI-Credits hast (siehe unten).
+
+### Die KI hat plötzlich aufgehört zu antworten {#ai-out-of-credits}
+
+- Wahrscheinlich sind deine **KI-Credits** aufgebraucht. Jede Antwort kostet Credits - prüfe **Einstellungen → Status** auf der AI-FAQ-Seite. Dein monatliches Guthaben wird am 25. aufgefüllt, oder du kaufst Credits nach. Siehe [Credits & Preise](/de/docs/support-bot/ai-faq/credits-and-pricing).
+
+### Die Antworten sind unpassend oder nicht hilfreich {#ai-bad-answers}
+
+- Die KI antwortet nur aus deinen [FAQ-Einträgen](/de/docs/support-bot/ai-faq/faq-entries) - füge klarere, spezifischere Einträge hinzu, die abdecken, was deine Mitglieder wirklich fragen.
+- Nutze die [Insights](/de/docs/support-bot/ai-faq/insights), um zu sehen, was gefragt wird und wo die Antworten zu kurz greifen.
+
 ## Brauchst du noch Hilfe? {#still-need-help}
 
 Wenn dein Problem hier nicht aufgelistet ist, erstelle gerne ein Ticket auf unserem [Discord-Server](https://scootk.it/dc-de) - wir helfen dir gerne weiter!

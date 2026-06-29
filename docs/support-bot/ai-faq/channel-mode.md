@@ -80,6 +80,8 @@ When the AI can't find a good match in your FAQ, the answer message includes an 
 
 If you later disable whichever subsystem you picked, the dashboard automatically switches the fallback back to "Don't show an Open Ticket button" so members aren't routed into something that isn't running.
 
+By default the **Open a ticket** button only appears when the AI couldn't answer well. If you'd rather give members a way out on **every** answer, turn on **Always show the open-ticket button** - the button is then shown under every AI reply, not just the "I couldn't find an answer" ones. This still requires an escalation target (modmail or ticket system) to be selected above; with the target set to "Don't show an Open Ticket button", no button is shown.
+
 ## What it costs {#cost}
 
 Every channel-mode answer uses some AI credits. The exact amount depends on what the AI actually did (rejected the message, chatted briefly without searching, or ran a full FAQ search) and which AI provider your server is on. The full breakdown is on the [Credits and pricing](/docs/support-bot/ai-faq/credits-and-pricing) page, along with tips on cutting spend.

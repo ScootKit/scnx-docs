@@ -37,12 +37,13 @@ const products = [
     },
     {
         title: 'Support Bot',
-        description: <Translate id="home.product.sb">Professional support on Discord - modmail, channel-based tickets, and live voice support.</Translate>,
+        description: <Translate id="home.product.sb">Professional support on Discord - modmail, channel-based tickets, public forum support, and live voice support.</Translate>,
         link: '/docs/support-bot/intro',
         faIcon: faHeadset,
         links: [
             {label: <Translate id="home.p.sb.modmail">Modmail</Translate>, href: '/docs/support-bot/modmail'},
             {label: <Translate id="home.p.sb.tickets">Ticket System</Translate>, href: '/docs/support-bot/ticket-system'},
+            {label: <Translate id="home.p.sb.forum">Forum Support</Translate>, href: '/docs/support-bot/forum-support/intro'},
             {label: <Translate id="home.p.sb.voice">Voice Support</Translate>, href: '/docs/support-bot/voice-support/intro'},
             {label: <Translate id="home.p.sb.setup">Setup Guide</Translate>, href: '/docs/support-bot'},
             {label: <Translate id="home.p.sb.troubleshoot">Troubleshooting</Translate>, href: '/docs/support-bot/troubleshooting'},
