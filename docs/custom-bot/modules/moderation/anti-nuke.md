@@ -4,14 +4,25 @@ Detect and respond to destructive server actions (nuking) with configurable thre
 
 <ModuleOverview moduleName="anti-nuke" />
 
+:::warning
+**Anti-nuke cannot protect against users who can reconfigure it.** Anyone with the Discord Administrator permission can run `/anti-nuke whitelist add` to whitelist themselves or an accomplice. Anyone with access to the SCNX dashboard for this bot (the server owner, co-owners, or Trusted Admins with the "Change and Reload Configuration" permission) can also:
+
+* Add users to the **Exempt Users** list.
+* Raise thresholds, disable action types, or change the **Response Action** to `alert`.
+* Reset the module database, wiping action records, snapshots, and undo history.
+* Disable the module entirely.
+
+Anti-nuke is designed to slow down compromised accounts and rogue bots before they cause catastrophic damage — it cannot stop someone who has legitimate configuration access and acts deliberately. Only grant Administrator, Co-Owner, or Custom-Bot configuration permissions to people you actually trust.
+:::
+
 ## Features {#features}
 
 * Detects 19 different types of destructive server actions, including mass channel/role deletion, mass bans/kicks, permission escalation, webhook spam, and more.
 * Hybrid detection system using both gateway events (instant detection) and audit log entries (catch-all backup) with automatic deduplication.
 * Configurable per-action thresholds: set how many actions of each type within a sliding time window trigger a response.
 * Four response actions: alert only, strip all roles, ban the executor, or strip only dangerous permissions.
-* Temporary whitelist system to allow trusted users to perform bulk actions without triggering detection (e.g., during planned restructures).
-* Undo system to reverse damage caused by a nuke event — restores deleted channels, roles, emojis, and more from stored snapshots.
+* Temporary whitelist system to allow trusted users to perform bulk actions without triggering a response (e.g., during planned restructures).
+* Undo system to reverse damage caused by a nuke event — restores deleted channels, roles, emojis, threads, webhooks, guild settings, channel permission overwrites, role permissions, and mass-role-removal changes from stored snapshots. Member kicks, member prunes, sticker deletions, and integration creations cannot be automatically reversed.
 * All detection data is stored in the database (not in-memory), ensuring crash safety — if the bot restarts during a nuke, incomplete events are flagged for manual review.
 * Permanently exempt specific users from detection.
 * Detailed logging of all detected events to a configurable log channel.
@@ -24,7 +35,7 @@ Detect and respond to destructive server actions (nuking) with configurable thre
    * **alert**: Only send an alert to the log channel. No action is taken against the user.
    * **strip-roles** (default): Remove all roles from the user, preventing further damage.
    * **ban**: Ban the user from the server.
-   * **strip-dangerous-permissions**: Remove only dangerous permissions (Administrator, Manage Channels, Manage Roles, etc.) from the user's roles.
+   * **strip-dangerous-permissions**: Remove dangerous permissions from the user's roles. The stripped permissions are Administrator, Manage Channels, Manage Roles, Ban Members, Kick Members, Manage Guild, and Manage Webhooks.
 4. Optionally add users to the **Exempt Users** list if they should never trigger anti-nuke detection (e.g., the server owner).
 5. Review the [Thresholds configuration](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cthresholds) and adjust limits for each action type as needed for your server.
 6. Make sure the bot has the following permissions: **Administrator** (recommended), or at minimum **View Audit Log**, **Manage Roles**, **Ban Members**, **Manage Channels**, **Manage Webhooks**, **Manage Guild Expressions**, **View Channel**, **Send Messages**, and **Embed Links**.
@@ -44,7 +55,7 @@ Detection uses a hybrid approach: gateway events provide instant detection, whil
 
 ### Temporary whitelists {#whitelists}
 
-Before performing planned bulk actions (e.g., reorganizing channels or cleaning up roles), administrators can temporarily whitelist a user. Whitelisted users bypass all anti-nuke detection for the specified duration.
+Before performing planned bulk actions (e.g., reorganizing channels or cleaning up roles), administrators can temporarily whitelist a user. Whitelisted users' actions are still recorded, but thresholds are not evaluated and no response action is triggered for the specified duration.
 
 * Use `/anti-nuke whitelist add` to create a temporary whitelist entry with a duration and reason.
 * Use `/anti-nuke whitelist remove` to revoke a whitelist entry early.
@@ -61,7 +72,7 @@ If a nuke is detected, the bot stores snapshots of affected resources (channel c
 3. The bot will attempt to restore all affected resources using the stored snapshots.
 
 :::warning
-Undo is a best-effort recovery. Some data (like message history in deleted channels) cannot be restored. The undo system works best when used promptly after detection.
+Undo is a best-effort recovery. Some data cannot be restored — message history in deleted channels is lost, and the following action types have no automated undo: member kicks, member prunes, sticker deletions, and integration creations. The undo system works best when used promptly after detection.
 :::
 
 ### Crash safety {#crash-safety}
@@ -146,7 +157,7 @@ Each action type has three settings:
     <li>Make sure the module is enabled and the bot has the <code>View Audit Log</code> permission.</li>
     <li>Check that the relevant action type is enabled in the <a href="#configuration-thresholds">Thresholds configuration</a>.</li>
     <li>Ensure the user performing the actions is not in the <strong>Exempt Users</strong> list and does not have an active whitelist entry.</li>
-    <li>The bot cannot detect actions performed by the server owner, as Discord prevents bots from taking action against the owner.</li>
+    <li>Actions performed by the server owner are still detected and logged, but no automated response can be taken — Discord does not allow bots to ban or strip roles from the server owner. See the next section for details.</li>
   </ul>
 </details>
 
