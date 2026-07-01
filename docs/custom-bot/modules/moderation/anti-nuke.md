@@ -5,14 +5,16 @@ Detect and respond to destructive server actions (nuking) with configurable thre
 <ModuleOverview moduleName="anti-nuke" />
 
 :::warning
-**Anti-nuke cannot protect against users who can reconfigure it.** Anyone with the Discord Administrator permission can run `/anti-nuke whitelist add` to whitelist themselves or an accomplice. Anyone with access to the SCNX dashboard for this bot (the server owner, co-owners, or Trusted Admins with the "Change and Reload Configuration" permission) can also:
+**Anti-nuke cannot protect against users who can reconfigure it.** Access to the `/anti-nuke` commands (including `whitelist add`) is controlled by the **Exempt Users** list, not by Discord permissions. Separately, anyone with access to the SCNX dashboard for this bot (the server owner, co-owners, or Trusted Admins with the "Change and Reload Configuration" permission) can bypass anti-nuke entirely by:
 
-* Add users to the **Exempt Users** list.
-* Raise thresholds, disable action types, or change the **Response Action** to `alert`.
-* Reset the module database, wiping action records, snapshots, and undo history.
-* Disable the module entirely.
+* Adding themselves or an accomplice to the **Exempt Users** list (which also grants access to the `/anti-nuke` commands).
+* Raising thresholds, disabling action types, or changing the **Response Action** to **Alert only**.
+* Resetting the module database, wiping action records, snapshots, and undo history.
+* Disabling the module entirely.
 
-Anti-nuke is designed to slow down compromised accounts and rogue bots before they cause catastrophic damage — it cannot stop someone who has legitimate configuration access and acts deliberately. Only grant Administrator, Co-Owner, or Custom-Bot configuration permissions to people you actually trust.
+Anti-nuke is designed to slow down compromised accounts and rogue bots before they cause catastrophic damage. It cannot stop someone who has legitimate configuration access and acts deliberately. Only grant SCNX dashboard configuration access to people you actually trust.
+
+**Before you rely on this module, read [Considerations and limitations](#considerations) in full.** It is a best-effort mitigation layer, not a guarantee, and it will not protect you in several important situations.
 :::
 
 ## Features {#features}
@@ -22,8 +24,8 @@ Anti-nuke is designed to slow down compromised accounts and rogue bots before th
 * Configurable per-action thresholds: set how many actions of each type within a sliding time window trigger a response.
 * Four response actions: alert only, strip all roles, ban the executor, or strip only dangerous permissions.
 * Temporary whitelist system to allow trusted users to perform bulk actions without triggering a response (e.g., during planned restructures).
-* Undo system to reverse damage caused by a nuke event — restores deleted channels, roles, emojis, threads, webhooks, guild settings, channel permission overwrites, role permissions, and mass-role-removal changes from stored snapshots. Member kicks, member prunes, sticker deletions, and integration creations cannot be automatically reversed.
-* All detection data is stored in the database (not in-memory), ensuring crash safety — if the bot restarts during a nuke, incomplete events are flagged for manual review.
+* Undo system to reverse damage caused by a nuke event, either with the **Undo** button on each alert or the `/anti-nuke undo` command. It restores deleted channels, roles, emojis, stickers, threads, webhooks, guild settings, channel permission overwrites, role permissions, and mass-role-removal changes from stored snapshots. Emoji and sticker recovery is best-effort and depends on the image having been archived. Member kicks, member prunes, and integration creations cannot be automatically reversed.
+* All detection data is stored in the database (not in-memory), ensuring crash safety: if the bot restarts during a nuke, incomplete events are flagged for manual review.
 * Permanently exempt specific users from detection.
 * Detailed logging of all detected events to a configurable log channel.
 
@@ -31,15 +33,15 @@ Anti-nuke is designed to slow down compromised accounts and rogue bots before th
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=anti-nuke) on your server.
 2. Open the [Configuration](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cconfiguration) and set the **Log Channel** where anti-nuke alerts will be sent.
-3. Choose your preferred **Response Action** — this determines what happens to the user who triggered a nuke detection:
-   * **alert**: Only send an alert to the log channel. No action is taken against the user.
-   * **strip-roles** (default): Remove all roles from the user, preventing further damage.
-   * **ban**: Ban the user from the server.
-   * **strip-dangerous-permissions**: Remove dangerous permissions from the user's roles. The stripped permissions are Administrator, Manage Channels, Manage Roles, Ban Members, Kick Members, Manage Guild, and Manage Webhooks.
-4. Optionally add users to the **Exempt Users** list if they should never trigger anti-nuke detection (e.g., the server owner).
+3. Choose your preferred **Response Action**. This determines what happens to the user who triggered a nuke detection:
+   * **Alert only**: Only send an alert to the log channel. No action is taken against the user.
+   * **Strip all roles** (default): Remove all roles from the user, preventing further damage.
+   * **Ban**: Ban the user from the server.
+   * **Strip dangerous permissions**: Remove dangerous permissions from the user's roles. The stripped permissions are Administrator, Manage Channels, Manage Roles, Ban Members, Kick Members, Manage Guild, and Manage Webhooks. Because this edits the roles themselves, it affects every member who holds those roles, not only the executor.
+4. Add trusted users to the **Exempt Users** list. Listed users never trigger anti-nuke detection, and this list is also the only gate for who may use the `/anti-nuke` commands and the alert **Undo** button (Discord permissions such as Administrator do not grant access on their own).
 5. Review the [Thresholds configuration](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cthresholds) and adjust limits for each action type as needed for your server.
 6. Make sure the bot has the following permissions: **Administrator** (recommended), or at minimum **View Audit Log**, **Manage Roles**, **Ban Members**, **Manage Channels**, **Manage Webhooks**, **Manage Guild Expressions**, **View Channel**, **Send Messages**, and **Embed Links**.
-7. Ensure the bot's role is positioned as high as possible in the role hierarchy — the bot can only strip roles or ban users whose highest role is below the bot's role.
+7. Ensure the bot's role is positioned as high as possible in the role hierarchy. The bot can only strip roles or ban users whose highest role is below the bot's role.
 
 ## Usage {#usage}
 
@@ -65,14 +67,15 @@ Whitelist entries expire automatically and are cleaned up on bot restart.
 
 ### Undoing damage {#undo}
 
-If a nuke is detected, the bot stores snapshots of affected resources (channel configurations, role settings, emoji images, etc.). Administrators can use the undo system to attempt to reverse the damage:
+If a nuke is detected, the bot stores snapshots of affected resources (channel configurations, role settings, emoji images, etc.). Users on the **Exempt Users** list can reverse the damage in one of two ways:
 
-1. Run `/anti-nuke undo` to see a list of recent nuke events that can be undone.
-2. Select the event from the dropdown menu.
-3. The bot will attempt to restore all affected resources using the stored snapshots.
+* **From the alert:** click the **Undo** button on the "Nuke Detected" alert, then confirm. Once complete, this also reverses the response taken against the executor (for example, unbanning them or restoring their stripped roles).
+* **With the command:** run `/anti-nuke undo`, then select the event from the dropdown menu.
+
+Either way, the bot attempts to restore all affected resources using the stored snapshots and reports what was restored and what could not be.
 
 :::warning
-Undo is a best-effort recovery. Some data cannot be restored — message history in deleted channels is lost, and the following action types have no automated undo: member kicks, member prunes, sticker deletions, and integration creations. The undo system works best when used promptly after detection.
+Undo is a best-effort recovery. Some data cannot be restored: message history in deleted channels is lost, a server's icon and vanity URL are not restored (its name and description are), and member kicks, member prunes, and integration creations have no automated undo. Emoji and sticker recovery depends on the image having been archived. The undo system works best when used promptly after detection.
 :::
 
 ### Crash safety {#crash-safety}
@@ -81,7 +84,63 @@ All detection data is persisted to the database immediately. If the bot crashes 
 
 * Incomplete response actions are flagged and reported in the log channel on restart.
 * Snapshot data is preserved for undo recovery.
-* Action tracking records linked to un-resolved nuke events are retained until the event is undone or manually resolved.
+* Action tracking records linked to unresolved nuke events are retained until the event is undone or manually resolved.
+
+## Considerations and limitations {#considerations}
+
+:::danger Read this before relying on anti-nuke
+Anti-nuke is a **best-effort mitigation layer, not a guarantee of safety.** It watches for destructive patterns and responds according to your thresholds, but it can be evaded, misconfigured, or simply offline at the wrong moment. Treat it as one layer in a defence-in-depth setup and nothing more. Enabling this module is done at your own risk.
+:::
+
+### It is not a replacement for good security hygiene {#considerations-hygiene}
+
+Anti-nuke does not remove the need for any of the following, and is far weaker without them:
+
+- Sound Discord role and channel permission hygiene (do not hand out Administrator freely).
+- Verified, trusted staff, ideally with enforced 2FA.
+- Regular audit-log reviews.
+- Independent, off-platform backups of anything you cannot afford to lose.
+
+### Detection limits {#considerations-detection}
+
+- The bot relies on Discord's gateway events and audit log. Some actions produce no audit-log entry, some are reported with missing or delayed executor information, and Discord rate limits or outages can drop or delay events. Any such event may go undetected.
+- Thresholds are time-windowed counters. An attacker acting slowly enough to stay under your thresholds, or using actions that are not tracked, will not trigger a response.
+- False positives are possible. Legitimate bulk operations by staff can trip thresholds and cause the bot to strip roles, ban, or alert on people you did not intend. Tune thresholds and use the **Exempt Users** list or `/anti-nuke whitelist add` before planned bulk work.
+- Misconfiguration silently reduces protection. Disabled action types, raised thresholds, a **Response Action** of **Alert only**, an unset log channel, an overly broad Exempt Users list, or a short snapshot-retention window all weaken or disable protection without surfacing a visible error.
+
+### Downtime and availability {#considerations-downtime}
+
+Anti-nuke **only works while the bot is running, connected to Discord, and actively receiving events.** During any period in which the bot is offline, restarting, updating, disconnected, rate-limited, or otherwise not processing events:
+
+- No detection of any kind occurs.
+- No response actions are executed.
+- No snapshots are written.
+- Actions taken during that period are **not** retroactively evaluated once the bot returns.
+
+Downtime can be caused by Discord outages, gateway instability or rate limits, network or hosting incidents, SCNX platform maintenance, module updates and restarts, database issues, or bugs. SCNX makes no uptime guarantee for this module or the bot as a whole.
+
+### Hierarchy and scope {#considerations-hierarchy}
+
+- The bot **cannot act against the server owner** under any circumstances. If the owner account is compromised, this module will not protect you.
+- The bot **cannot act on users whose highest role is at or above the bot's own highest role.** Keep the bot's role near the top of the role list, or response actions will silently fail.
+- The bot cannot act on users it cannot see (for example, someone who has already left), and cannot reverse actions performed by Discord itself.
+
+### Undo limitations {#considerations-undo}
+
+Undo restores only the resources the bot snapshotted before the event. It is a partial recovery aid, **not** a backup, and it cannot recover:
+
+- Deleted message content or message history of any kind.
+- Kicks or bans that were already lifted, pruned members, or anything outside the configured snapshot-retention window.
+- Emojis or stickers whose image could not be archived, and resource types with no automated undo (member kicks, member prunes, integration creations).
+- Anything Discord does not expose to bots (server boosts, vanity URL, partnership or discovery settings, and similar).
+
+### Configuration bypass risk {#considerations-bypass}
+
+Anyone with dashboard configuration access for this bot can fully bypass anti-nuke, as described in the warning at the top of this page. The **Exempt Users** list is also the only gate for `/anti-nuke` command access. Anti-nuke cannot protect against someone who already has the ability to change its configuration, so review and minimise who holds server ownership, co-owner status, or the "Change and Reload Configuration" permission.
+
+### Your responsibility {#considerations-responsibility}
+
+You are solely responsible for your threshold configuration, response-action choice, Exempt Users list, log channel, snapshot retention, role hierarchy, staff vetting, 2FA enforcement, dashboard access control, and off-platform backups, as well as for testing your configuration and keeping it reviewed as your server grows. Anti-nuke is provided as-is and as-available, without warranty of any kind, and SCNX accepts no liability for damage, data loss, missed or delayed detections, false positives, downtime, or configuration bypass, regardless of cause.
 
 ## Tracked action types {#action-types}
 
@@ -121,7 +180,7 @@ Each action type can be individually enabled/disabled and has its own threshold 
 | `/anti-nuke undo`                                                          | Show recent nuke events and select one to undo.                                    |
 | `/anti-nuke status`                                                        | Show current anti-nuke system status and statistics.                               |
 
-All commands require the **Administrator** permission.
+All commands (and the alert **Undo** button) are restricted to users on the **Exempt Users** list configured in the [General Configuration](#configuration-general). Discord permissions such as Administrator do not grant access on their own.
 
 ## Configuration {#configuration}
 
@@ -132,7 +191,7 @@ Configure the general settings of the anti-nuke system. Open it in your [dashboa
 | Field                       | Description                                                                                          |
 |-----------------------------|------------------------------------------------------------------------------------------------------|
 | Log Channel                 | Channel where anti-nuke alerts and event logs are sent.                                              |
-| Response Action             | What to do when a nuke is detected: `alert`, `strip-roles`, `ban`, or `strip-dangerous-permissions`. |
+| Response Action             | What to do when a nuke is detected: **Alert only**, **Strip all roles**, **Ban**, or **Strip dangerous permissions**. |
 | Exempt Users                | Users who are completely exempt from anti-nuke detection.                                            |
 | Snapshot Retention (days)   | How long to keep resource snapshots for undo recovery (default: 30 days).                            |
 | Action Log Retention (days) | How long to keep individual action tracking records (default: 7 days).                               |
@@ -157,16 +216,16 @@ Each action type has three settings:
     <li>Make sure the module is enabled and the bot has the <code>View Audit Log</code> permission.</li>
     <li>Check that the relevant action type is enabled in the <a href="#configuration-thresholds">Thresholds configuration</a>.</li>
     <li>Ensure the user performing the actions is not in the <strong>Exempt Users</strong> list and does not have an active whitelist entry.</li>
-    <li>Actions performed by the server owner are still detected and logged, but no automated response can be taken — Discord does not allow bots to ban or strip roles from the server owner. See the next section for details.</li>
+    <li>Actions performed by the server owner are still detected and logged, but no automated response can be taken. Discord does not allow bots to ban or strip roles from the server owner. See the next section for details.</li>
   </ul>
 </details>
 
 <details>
   <summary>The bot detected a nuke but did not take action</summary>
   <ul>
-    <li>Check that the <strong>Response Action</strong> is set to something other than <code>alert</code>.</li>
+    <li>Check that the <strong>Response Action</strong> is set to something other than <strong>Alert only</strong>.</li>
     <li>Ensure the bot's role is positioned above the executor's highest role in the role hierarchy. The bot cannot strip roles from or ban users with a higher role.</li>
-    <li>If the executor is the server owner, the bot will only send an alert — Discord does not allow bots to take action against the server owner.</li>
+    <li>If the executor is the server owner, the bot will only send an alert. Discord does not allow bots to take action against the server owner.</li>
   </ul>
 </details>
 
@@ -183,7 +242,7 @@ Each action type has three settings:
   <summary>The undo command is not restoring everything</summary>
   <ul>
     <li>Undo is best-effort. Some data like message history in deleted channels cannot be restored.</li>
-    <li>Ensure snapshots have not expired — check the <strong>Snapshot Retention</strong> setting in the configuration.</li>
+    <li>Ensure snapshots have not expired. Check the <strong>Snapshot Retention</strong> setting in the configuration.</li>
     <li>The bot needs sufficient permissions to recreate resources (e.g., <code>Manage Channels</code> to recreate deleted channels).</li>
   </ul>
 </details>
