@@ -4,6 +4,12 @@ Zeige ein automatisch aktualisierendes Embed mit Serverstatistiken und Informati
 
 <ModuleOverview moduleName="serverinfo" />
 
+:::tip Mehr gewünscht? Nutze Live-Nachrichten
+Das Modul [Live-Nachrichten](/docs/custom-bot/modules/community/live-messages) kann alles, was dieses Modul kann, und mehr: mehrere automatisch aktualisierende Nachrichten in verschiedenen Kanälen, vollständige Nachrichtenformatierung (nicht nur ein einzelnes Embed), zusätzliche Statistiken (Sprach-/Idle-/DND-Zahlen, Aufschlüsselung nach Kanaltypen, Sticker und mehr) sowie Live-Statistiken aus anderen Modulen (Tickets, Gewinnspiele, Wirtschaft, Level und mehr).
+
+Wenn du nur ein einzelnes, einfaches Serverinformations-Embed benötigst, bleibt dieses Modul eine gute, fokussierte Wahl. Wenn du umfangreichere oder mehrere Statistik-Anzeigen möchtest, nutze stattdessen Live-Nachrichten. Es gibt keine automatische Migration zwischen den beiden - du würdest den Inhalt in Live-Nachrichten manuell neu erstellen.
+:::
+
 ## Funktionen {#features}
 
 - Zeigt ein automatisch aktualisierendes Embed mit anpassbaren Serverinformationen in einem festgelegten Kanal an.
