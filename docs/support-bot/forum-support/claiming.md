@@ -20,11 +20,11 @@ Forum Support gives your whole team one shared queue. Threads are claimed by a s
 
 The panel is a live message the bot keeps up to date in your [staff queue panel channel](/docs/support-bot/forum-support/configuration#main). It groups threads into:
 
-| Group           | Meaning                                                            |
-| --------------- | ----------------------------------------------------------------- |
-| **Unclaimed**   | Waiting for someone to pick them up.                              |
-| **In progress** | Currently claimed and being worked on.                            |
-| **Handed back** | Were claimed, then returned to the queue and need a new owner.    |
+| Group           | Meaning                                                        |
+| --------------- | -------------------------------------------------------------- |
+| **Unclaimed**   | Waiting for someone to pick them up.                           |
+| **In progress** | Currently claimed and being worked on.                         |
+| **Handed back** | Were claimed, then returned to the queue and need a new owner. |
 
 Priority threads (see [Topics](/docs/support-bot/forum-support/topics) and per-channel [Priority](/docs/support-bot/forum-support/configuration#priority)) appear first within each group.
 

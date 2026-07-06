@@ -78,12 +78,12 @@ If a member picks a topic that has a [form](/docs/support-bot/general/forms) att
 
 Which topics the gatekeeper screens is controlled in two layers: a **global default** and a **per-topic override**.
 
-**Global default**  - on the AI FAQ settings page, under **Default for topics**:
+**Global default** - on the AI FAQ settings page, under **Default for topics**:
 
 - **Screen all topics by default** _(default)_ - the gatekeeper runs on every topic unless a topic opts out.
 - **Don't screen topics by default** - the gatekeeper runs on no topic unless a topic opts in. Handy when you only want the AI on a few high-volume topics (like a general "Question" topic) and want everything else to behave normally.
 
-**Per-topic override**  - on each topic's settings page (Ticket Topics for [Modmail](https://scnx.app/glink?page=support-system/modmail/ticket-topics) or the [Ticket System](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics)), the **AI gatekeeper for this topic** option lets you override the default for that one topic:
+**Per-topic override** - on each topic's settings page (Ticket Topics for [Modmail](https://scnx.app/glink?page=support-system/modmail/ticket-topics) or the [Ticket System](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics)), the **AI gatekeeper for this topic** option lets you override the default for that one topic:
 
 - **Follow global default** - uses whichever default you picked above.
 - **Always screen with AI** - the gatekeeper always runs on this topic.

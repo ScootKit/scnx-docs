@@ -41,11 +41,11 @@ Format: `text/plain`. Consists of three components in a string:
 1. The timestamp the response was generated
 2. A "," character
 3. The actual JSON-Body (see table below)
-   | Key | Description |
-   | ---- | --- |
-   | event | Name of the event or request |
-   | guildID? | ID of the associated guild |
-   | body | Body of the request, depending on the event type |
+   | Key      | Description                                      |
+   | -------- | ------------------------------------------------ |
+   | event    | Name of the event or request                     |
+   | guildID? | ID of the associated guild                       |
+   | body     | Body of the request, depending on the event type |
 
 ### Installation Events
 

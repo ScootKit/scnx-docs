@@ -24,14 +24,14 @@ Collect a quick star rating from members after their thread closes, so you can m
 
 ## Configuration {#configuration}
 
-| Setting                       | What it does                                                                                                       |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Enable feedback**           | Asks members to rate their experience after a thread closes.                                                       |
-| **Anonymous feedback**        | When on, the member's identity isn't stored with their rating.                                                    |
-| **Send results to a channel** | Posts submitted feedback to a channel of your choice.                                                              |
-| **Feedback channel**          | The channel that receives the results (when the option above is on).                                              |
-| **Minimum thread duration**   | Only ask for feedback on threads that were open at least this long, so trivial threads are skipped.               |
-| **Custom questions**          | Add your own follow-up questions to the rating modal (short or paragraph answers, optional/required).             |
+| Setting                       | What it does                                                                                          |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Enable feedback**           | Asks members to rate their experience after a thread closes.                                          |
+| **Anonymous feedback**        | When on, the member's identity isn't stored with their rating.                                        |
+| **Send results to a channel** | Posts submitted feedback to a channel of your choice.                                                 |
+| **Feedback channel**          | The channel that receives the results (when the option above is on).                                  |
+| **Minimum thread duration**   | Only ask for feedback on threads that were open at least this long, so trivial threads are skipped.   |
+| **Custom questions**          | Add your own follow-up questions to the rating modal (short or paragraph answers, optional/required). |
 
 The rate-request and post-submission messages are customizable right on this page.
 

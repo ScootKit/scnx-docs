@@ -49,23 +49,23 @@ Threads carrying a configured [priority](/docs/support-bot/forum-support/configu
 
 At any moment, the bot knows whether a thread is waiting on your team or on the member. This is what drives the reminders, the auto-close timer and how threads are sorted in the staff queue:
 
-| Status              | What it means                                                       |
-| ------------------- | ------------------------------------------------------------------ |
-| **New**             | Just opened - nobody has claimed or answered it yet.               |
-| **Waiting on team** | The member is waiting for your team to reply.                      |
-| **Waiting on user** | Your team replied and is now waiting for the member.              |
+| Status              | What it means                                                              |
+| ------------------- | -------------------------------------------------------------------------- |
+| **New**             | Just opened - nobody has claimed or answered it yet.                       |
+| **Waiting on team** | The member is waiting for your team to reply.                              |
+| **Waiting on user** | Your team replied and is now waiting for the member.                       |
 | **Handed back**     | Someone claimed it, then returned it to the queue for another team member. |
-| **Closed**          | Resolved and closed.                                               |
+| **Closed**          | Resolved and closed.                                                       |
 
 ## Main components {#components}
 
-| Component               | Purpose                                                                                                                                                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Forum channel(s)**    | One or more Discord forum channels the bot manages. Each can have its own welcome/close messages, solved tag, locking, topics and overrides.            |
-| **Staff queue panel**   | A live embed posted in a channel of your choice showing unclaimed, in-progress and handed-back threads, with **Claim** / **Assign me** buttons.         |
-| **Topics (tags)**       | Map forum tags to topics for per-topic welcome messages and priority. See [Topics](/docs/support-bot/forum-support/topics). |
-| **AI auto-answer**      | Optional first-response AI that tries to resolve the thread before a human is involved, with "did this help?" deflect buttons.                          |
-| **Log channel**         | Optional channel that receives a close summary plus a transcript file for every closed thread. Can be set globally or per forum channel.                |
+| Component             | Purpose                                                                                                                                         |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Forum channel(s)**  | One or more Discord forum channels the bot manages. Each can have its own welcome/close messages, solved tag, locking, topics and overrides.    |
+| **Staff queue panel** | A live embed posted in a channel of your choice showing unclaimed, in-progress and handed-back threads, with **Claim** / **Assign me** buttons. |
+| **Topics (tags)**     | Map forum tags to topics for per-topic welcome messages and priority. See [Topics](/docs/support-bot/forum-support/topics).                     |
+| **AI auto-answer**    | Optional first-response AI that tries to resolve the thread before a human is involved, with "did this help?" deflect buttons.                  |
+| **Log channel**       | Optional channel that receives a close summary plus a transcript file for every closed thread. Can be set globally or per forum channel.        |
 
 ## Key features {#features}
 

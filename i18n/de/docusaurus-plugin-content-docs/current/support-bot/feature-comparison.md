@@ -10,18 +10,18 @@ Der SCNX Support-Bot bietet vier Support-Systeme. Du kannst beliebige Kombinatio
 
 ## Auf einen Blick {#at-a-glance}
 
-|                                  | Modmail               | Ticket-System              | Forum-Support                    | Sprachsupport             |
-| -------------------------------- | --------------------- | -------------------------- | -------------------------------- | ------------------------- |
-| **Wie Mitglieder dich erreichen** | DM an den Bot         | Knopf anklicken            | Beitrag in einem öffentlichen Forum | Einem Sprachkanal beitreten |
-| **Sichtbarkeit**                 | Privat                | Privater Kanal             | **Öffentlicher Thread**          | Privater Sprachkanal      |
-| **Art der Konversation**         | Text (weitergeleitet) | Text (im Kanal)            | Text (öffentlich)                | Live-Sprache              |
-| **Eingebaute KI-Erstantwort**    | ➖ (über AI FAQ)      | ➖ (über AI FAQ)           | ✅                               | ❌                        |
-| **Gemeinsame Warteschlange & Claiming** | ✅            | ✅                         | ✅                               | ✅ (Nächsten holen)       |
-| **Auto-Schließen & SLA-Erinnerungen** | ✅              | ✅                         | ✅                               | ➖                        |
-| **Feedback & Sternebewertungen** | ✅                    | ✅                         | ✅                               | ✅                        |
-| **Statistiken & Wartezeit**      | ✅                    | ✅                         | ✅                               | ✅                        |
-| **Am besten für**                | Privater 1:1-Support  | Strukturierte private Tickets | Öffentliche, wiederverwendbare Antworten | Echtzeit-Sprachsupport |
-| **Verfügbarkeit**                | Alle Support-Bot-Pläne | Alle Support-Bot-Pläne    | Early-Access-Vorschau            | Early-Access-Vorschau     |
+|                                         | Modmail                | Ticket-System                 | Forum-Support                            | Sprachsupport               |
+| --------------------------------------- | ---------------------- | ----------------------------- | ---------------------------------------- | --------------------------- |
+| **Wie Mitglieder dich erreichen**       | DM an den Bot          | Knopf anklicken               | Beitrag in einem öffentlichen Forum      | Einem Sprachkanal beitreten |
+| **Sichtbarkeit**                        | Privat                 | Privater Kanal                | **Öffentlicher Thread**                  | Privater Sprachkanal        |
+| **Art der Konversation**                | Text (weitergeleitet)  | Text (im Kanal)               | Text (öffentlich)                        | Live-Sprache                |
+| **Eingebaute KI-Erstantwort**           | ➖ (über AI FAQ)       | ➖ (über AI FAQ)              | ✅                                       | ❌                          |
+| **Gemeinsame Warteschlange & Claiming** | ✅                     | ✅                            | ✅                                       | ✅ (Nächsten holen)         |
+| **Auto-Schließen & SLA-Erinnerungen**   | ✅                     | ✅                            | ✅                                       | ➖                          |
+| **Feedback & Sternebewertungen**        | ✅                     | ✅                            | ✅                                       | ✅                          |
+| **Statistiken & Wartezeit**             | ✅                     | ✅                            | ✅                                       | ✅                          |
+| **Am besten für**                       | Privater 1:1-Support   | Strukturierte private Tickets | Öffentliche, wiederverwendbare Antworten | Echtzeit-Sprachsupport      |
+| **Verfügbarkeit**                       | Alle Support-Bot-Pläne | Alle Support-Bot-Pläne        | Early-Access-Vorschau                    | Early-Access-Vorschau       |
 
 :::info Legende
 ✅ unterstützt &nbsp;·&nbsp; ❌ nicht unterstützt &nbsp;·&nbsp; ➖ für die Funktionsweise dieses Systems nicht relevant
@@ -46,38 +46,38 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 
 ## Nachrichten & Kommunikation
 
-|                                                       | Modmail | Ticket-System | Forum-Support |
-| ----------------------------------------------------- | :-----: | :-----------: | :-----------: |
-| Konversation findet direkt im Kanal/Thread statt      |   ❌    |      ✅       |      ✅       |
-| Nachrichten werden per DM weitergeleitet              |   ✅    |      ❌       |      ➖       |
-| Anonyme Team-Nachrichten                              |   ✅    |      ❌       |      ❌       |
-| Snippets (wiederverwendbare Schnellantworten)         |   ✅    |      ❌       |      ❌       |
-| Anpassbare Bot-Nachrichten (Willkommen, Schließen ...)  |   ✅    |      ✅       |      ✅       |
-| Thread nur für Ersteller & Team                       |   ❌    |      ➖       |      ✅       |
-| Knopf „Frühere Tickets ansehen"                       |   ✅    |      ❌       |      ❌       |
+|                                                        | Modmail | Ticket-System | Forum-Support |
+| ------------------------------------------------------ | :-----: | :-----------: | :-----------: |
+| Konversation findet direkt im Kanal/Thread statt       |   ❌    |      ✅       |      ✅       |
+| Nachrichten werden per DM weitergeleitet               |   ✅    |      ❌       |      ➖       |
+| Anonyme Team-Nachrichten                               |   ✅    |      ❌       |      ❌       |
+| Snippets (wiederverwendbare Schnellantworten)          |   ✅    |      ❌       |      ❌       |
+| Anpassbare Bot-Nachrichten (Willkommen, Schließen ...) |   ✅    |      ✅       |      ✅       |
+| Thread nur für Ersteller & Team                        |   ❌    |      ➖       |      ✅       |
+| Knopf „Frühere Tickets ansehen"                        |   ✅    |      ❌       |      ❌       |
 
 ## Ticket-Verwaltung
 
-|                                            |      Modmail      | Ticket-System | Forum-Support |
-| ------------------------------------------ | :---------------: | :-----------: | :-----------: |
-| Themen / Kategorien                        |        ✅         |      ✅       |      ✅       |
-| Claiming / Zuweisung                       |        ✅         |      ✅       |      ✅       |
-| Beanspruchtes zurück in die Warteschlange  |        ➖         |      ➖       |      ✅       |
-| Halten / pausieren                         |        ✅         |      ✅       |      ❌       |
-| Umbenennen                                 |        ✅         |      ✅       |      ➖       |
-| Zusätzliche Mitglieder                     |        ✅         |      ✅       |      ➖       |
-| Geplantes Schließen                        |        ✅         |      ✅       |      ❌       |
-| Schließanfragen (Bestätigung Nutzer/Team)  |        ✅         |      ✅       |      ❌       |
-| Schließgründe (eigene & vordefinierte)     |        ✅         |      ❌       |      ❌       |
-| Limit: ein Ticket pro Nutzer               |        ✅         |      ✅       |      ❌       |
-| Priorität pro Thema                        |        ❌         |      ❌       |      ✅       |
-| Priorität nach Mitglieder-Rolle            |        ❌         |      ❌       |      ✅       |
-| Knopf „Schließen" / „Als gelöst markieren" |        ✅         |      ✅       |      ✅       |
-| „Gelöst"-Tag beim Schließen anwenden       |        ➖         |      ➖       |      ✅       |
-| Beim Schließen archivieren                 |        ✅         |      ❌       |      ✅       |
-| Geschlossene wieder öffnen                 |        ✅         |      ❌       |      ❌       |
-| DM-Bestätigung beim Schließen              |        ✅         |      ✅       |      ✅       |
-| Transkript an Schließ-DM anhängen          |        ✅         |      ✅       |      ✅       |
+|                                            | Modmail | Ticket-System | Forum-Support |
+| ------------------------------------------ | :-----: | :-----------: | :-----------: |
+| Themen / Kategorien                        |   ✅    |      ✅       |      ✅       |
+| Claiming / Zuweisung                       |   ✅    |      ✅       |      ✅       |
+| Beanspruchtes zurück in die Warteschlange  |   ➖    |      ➖       |      ✅       |
+| Halten / pausieren                         |   ✅    |      ✅       |      ❌       |
+| Umbenennen                                 |   ✅    |      ✅       |      ➖       |
+| Zusätzliche Mitglieder                     |   ✅    |      ✅       |      ➖       |
+| Geplantes Schließen                        |   ✅    |      ✅       |      ❌       |
+| Schließanfragen (Bestätigung Nutzer/Team)  |   ✅    |      ✅       |      ❌       |
+| Schließgründe (eigene & vordefinierte)     |   ✅    |      ❌       |      ❌       |
+| Limit: ein Ticket pro Nutzer               |   ✅    |      ✅       |      ❌       |
+| Priorität pro Thema                        |   ❌    |      ❌       |      ✅       |
+| Priorität nach Mitglieder-Rolle            |   ❌    |      ❌       |      ✅       |
+| Knopf „Schließen" / „Als gelöst markieren" |   ✅    |      ✅       |      ✅       |
+| „Gelöst"-Tag beim Schließen anwenden       |   ➖    |      ➖       |      ✅       |
+| Beim Schließen archivieren                 |   ✅    |      ❌       |      ✅       |
+| Geschlossene wieder öffnen                 |   ✅    |      ❌       |      ❌       |
+| DM-Bestätigung beim Schließen              |   ✅    |      ✅       |      ✅       |
+| Transkript an Schließ-DM anhängen          |   ✅    |      ✅       |      ✅       |
 
 ## Automatisierung
 
@@ -97,28 +97,28 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 
 ## Feedback, Statistiken & Überwachung
 
-|                                          | Modmail | Ticket-System | Forum-Support |
-| ---------------------------------------- | :-----: | :-----------: | :-----------: |
-| Support-Feedback / Sternebewertungen     |   ✅    |      ✅       |      ✅       |
-| Eigene Feedback-Fragen                   |   ✅    |      ✅       |      ✅       |
-| Anonymes Feedback                        |   ✅    |      ✅       |      ✅       |
-| Bewertungen im Dashboard sichtbar        |   ✅    |      ✅       |      ✅       |
-| Statistik-Dashboard                      |   ✅    |      ✅       |      ✅       |
-| Statistik-Slash-Befehl                   |   ✅    |      ✅       |      ✅       |
-| Statistik-Kanäle                         |   ✅    |      ✅       |      ❌       |
-| Ticket-Auslastung (Kapazitätsüberwachung) |  ✅    |      ✅       |      ✅       |
-| Geschätzte Wartezeit                     |   ✅    |      ✅       |      ✅       |
-| KI-Zusammenfassungen                     |   ✅    |      ✅       |      ✅       |
+|                                           | Modmail | Ticket-System | Forum-Support |
+| ----------------------------------------- | :-----: | :-----------: | :-----------: |
+| Support-Feedback / Sternebewertungen      |   ✅    |      ✅       |      ✅       |
+| Eigene Feedback-Fragen                    |   ✅    |      ✅       |      ✅       |
+| Anonymes Feedback                         |   ✅    |      ✅       |      ✅       |
+| Bewertungen im Dashboard sichtbar         |   ✅    |      ✅       |      ✅       |
+| Statistik-Dashboard                       |   ✅    |      ✅       |      ✅       |
+| Statistik-Slash-Befehl                    |   ✅    |      ✅       |      ✅       |
+| Statistik-Kanäle                          |   ✅    |      ✅       |      ❌       |
+| Ticket-Auslastung (Kapazitätsüberwachung) |   ✅    |      ✅       |      ✅       |
+| Geschätzte Wartezeit                      |   ✅    |      ✅       |      ✅       |
+| KI-Zusammenfassungen                      |   ✅    |      ✅       |      ✅       |
 
 ## Weitere Funktionen
 
-|                                      | Modmail | Ticket-System | Forum-Support |
-| ------------------------------------ | :-----: | :-----------: | :-----------: |
-| Eigene Formulare / Modal-Dialoge     |   ✅    |      ✅       |      ❌       |
-| Blockierungsliste (mit Dauer & Grund) |  ✅    |      ✅       |      ✅       |
-| modmail.net-Transkript-Integration   |   ✅    |      ✅       |      ✅       |
-| Log-Kanal pro Vorgang                |   ➖    |      ➖       |      ✅       |
-| Eigenes Bot-Branding (Footer & Bild) |   ✅    |      ✅       |      ✅       |
-| Wartungsmodus                        |   ✅    |      ✅       |      ✅       |
-| Mehrere Kanäle / Oberflächen         |   ➖    |      ➖       |      ✅       |
-| Support für Nicht-Server-Mitglieder  |   ✅    |      ❌       |      ❌       |
+|                                       | Modmail | Ticket-System | Forum-Support |
+| ------------------------------------- | :-----: | :-----------: | :-----------: |
+| Eigene Formulare / Modal-Dialoge      |   ✅    |      ✅       |      ❌       |
+| Blockierungsliste (mit Dauer & Grund) |   ✅    |      ✅       |      ✅       |
+| modmail.net-Transkript-Integration    |   ✅    |      ✅       |      ✅       |
+| Log-Kanal pro Vorgang                 |   ➖    |      ➖       |      ✅       |
+| Eigenes Bot-Branding (Footer & Bild)  |   ✅    |      ✅       |      ✅       |
+| Wartungsmodus                         |   ✅    |      ✅       |      ✅       |
+| Mehrere Kanäle / Oberflächen          |   ➖    |      ➖       |      ✅       |
+| Support für Nicht-Server-Mitglieder   |   ✅    |      ❌       |      ❌       |
