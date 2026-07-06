@@ -24,11 +24,11 @@ Topics let you turn your forum channel's **tags** into smart behaviors. A single
 
 For each topic you can set:
 
-| Setting              | What it does                                                                                                            |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Tag**              | The forum tag this topic applies to. Threads opened with this tag use the topic's settings.                            |
-| **Welcome message**  | A custom welcome posted (and pinned) when a thread opens with this tag, instead of the channel's default welcome.      |
-| **Priority**         | When on, threads with this tag are sorted ahead of everyone else in the [staff queue](/docs/support-bot/forum-support/claiming). |
+| Setting             | What it does                                                                                                                     |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Tag**             | The forum tag this topic applies to. Threads opened with this tag use the topic's settings.                                      |
+| **Welcome message** | A custom welcome posted (and pinned) when a thread opens with this tag, instead of the channel's default welcome.                |
+| **Priority**        | When on, threads with this tag are sorted ahead of everyone else in the [staff queue](/docs/support-bot/forum-support/claiming). |
 
 :::tip Two ways to set priority
 Marking a topic as priority is the simplest way to prioritize a whole category. If you'd rather prioritize threads by **who** opened them (for example a "Customer" role), use the per-channel [Priority](/docs/support-bot/forum-support/configuration#priority) settings instead - both feed the same queue.

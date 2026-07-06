@@ -7,10 +7,10 @@ Detect and respond to destructive server actions (nuking) with configurable thre
 :::warning
 **Anti-nuke cannot protect against users who can reconfigure it.** Access to the `/anti-nuke` commands (including `whitelist add`) is controlled by the **Exempt Users** list, not by Discord permissions. Separately, anyone with access to the SCNX dashboard for this bot (the server owner, co-owners, or Trusted Admins with the "Change and Reload Configuration" permission) can bypass anti-nuke entirely by:
 
-* Adding themselves or an accomplice to the **Exempt Users** list (which also grants access to the `/anti-nuke` commands).
-* Raising thresholds, disabling action types, or changing the **Response Action** to **Alert only**.
-* Resetting the module database, wiping action records, snapshots, and undo history.
-* Disabling the module entirely.
+- Adding themselves or an accomplice to the **Exempt Users** list (which also grants access to the `/anti-nuke` commands).
+- Raising thresholds, disabling action types, or changing the **Response Action** to **Alert only**.
+- Resetting the module database, wiping action records, snapshots, and undo history.
+- Disabling the module entirely.
 
 Anti-nuke is designed to slow down compromised accounts and rogue bots before they cause catastrophic damage. It cannot stop someone who has legitimate configuration access and acts deliberately. Only grant SCNX dashboard configuration access to people you actually trust.
 
@@ -19,25 +19,25 @@ Anti-nuke is designed to slow down compromised accounts and rogue bots before th
 
 ## Features {#features}
 
-* Detects 19 different types of destructive server actions, including mass channel/role deletion, mass bans/kicks, permission escalation, webhook spam, and more.
-* Hybrid detection system using both gateway events (instant detection) and audit log entries (catch-all backup) with automatic deduplication.
-* Configurable per-action thresholds: set how many actions of each type within a sliding time window trigger a response.
-* Four response actions: alert only, strip all roles, ban the executor, or strip only dangerous permissions.
-* Temporary whitelist system to allow trusted users to perform bulk actions without triggering a response (e.g., during planned restructures).
-* Undo system to reverse damage caused by a nuke event, either with the **Undo** button on each alert or the `/anti-nuke undo` command. It restores deleted channels, roles, emojis, stickers, threads, webhooks, guild settings, channel permission overwrites, role permissions, and mass-role-removal changes from stored snapshots. Emoji and sticker recovery is best-effort and depends on the image having been archived. Member kicks, member prunes, and integration creations cannot be automatically reversed.
-* All detection data is stored in the database (not in-memory), ensuring crash safety: if the bot restarts during a nuke, incomplete events are flagged for manual review.
-* Permanently exempt specific users from detection.
-* Detailed logging of all detected events to a configurable log channel.
+- Detects 19 different types of destructive server actions, including mass channel/role deletion, mass bans/kicks, permission escalation, webhook spam, and more.
+- Hybrid detection system using both gateway events (instant detection) and audit log entries (catch-all backup) with automatic deduplication.
+- Configurable per-action thresholds: set how many actions of each type within a sliding time window trigger a response.
+- Four response actions: alert only, strip all roles, ban the executor, or strip only dangerous permissions.
+- Temporary whitelist system to allow trusted users to perform bulk actions without triggering a response (e.g., during planned restructures).
+- Undo system to reverse damage caused by a nuke event, either with the **Undo** button on each alert or the `/anti-nuke undo` command. It restores deleted channels, roles, emojis, stickers, threads, webhooks, guild settings, channel permission overwrites, role permissions, and mass-role-removal changes from stored snapshots. Emoji and sticker recovery is best-effort and depends on the image having been archived. Member kicks, member prunes, and integration creations cannot be automatically reversed.
+- All detection data is stored in the database (not in-memory), ensuring crash safety: if the bot restarts during a nuke, incomplete events are flagged for manual review.
+- Permanently exempt specific users from detection.
+- Detailed logging of all detected events to a configurable log channel.
 
 ## Setup {#setup}
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=anti-nuke) on your server.
 2. Open the [Configuration](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cconfiguration) and set the **Log Channel** where anti-nuke alerts will be sent.
 3. Choose your preferred **Response Action**. This determines what happens to the user who triggered a nuke detection:
-   * **Alert only**: Only send an alert to the log channel. No action is taken against the user.
-   * **Strip all roles** (default): Remove all roles from the user, preventing further damage.
-   * **Ban**: Ban the user from the server.
-   * **Strip dangerous permissions**: Remove dangerous permissions from the user's roles. The stripped permissions are Administrator, Manage Channels, Manage Roles, Ban Members, Kick Members, Manage Guild, and Manage Webhooks. Because this edits the roles themselves, it affects every member who holds those roles, not only the executor.
+   - **Alert only**: Only send an alert to the log channel. No action is taken against the user.
+   - **Strip all roles** (default): Remove all roles from the user, preventing further damage.
+   - **Ban**: Ban the user from the server.
+   - **Strip dangerous permissions**: Remove dangerous permissions from the user's roles. The stripped permissions are Administrator, Manage Channels, Manage Roles, Ban Members, Kick Members, Manage Guild, and Manage Webhooks. Because this edits the roles themselves, it affects every member who holds those roles, not only the executor.
 4. Add trusted users to the **Exempt Users** list. Listed users never trigger anti-nuke detection, and this list is also the only gate for who may use the `/anti-nuke` commands and the alert **Undo** button (Discord permissions such as Administrator do not grant access on their own).
 5. Review the [Thresholds configuration](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cthresholds) and adjust limits for each action type as needed for your server.
 6. Make sure the bot has the following permissions: **Administrator** (recommended), or at minimum **View Audit Log**, **Manage Roles**, **Ban Members**, **Manage Channels**, **Manage Webhooks**, **Manage Guild Expressions**, **View Channel**, **Send Messages**, and **Embed Links**.
@@ -59,9 +59,9 @@ Detection uses a hybrid approach: gateway events provide instant detection, whil
 
 Before performing planned bulk actions (e.g., reorganizing channels or cleaning up roles), administrators can temporarily whitelist a user. Whitelisted users' actions are still recorded, but thresholds are not evaluated and no response action is triggered for the specified duration.
 
-* Use `/anti-nuke whitelist add` to create a temporary whitelist entry with a duration and reason.
-* Use `/anti-nuke whitelist remove` to revoke a whitelist entry early.
-* Use `/anti-nuke whitelist list` to view all active whitelist entries.
+- Use `/anti-nuke whitelist add` to create a temporary whitelist entry with a duration and reason.
+- Use `/anti-nuke whitelist remove` to revoke a whitelist entry early.
+- Use `/anti-nuke whitelist list` to view all active whitelist entries.
 
 Whitelist entries expire automatically and are cleaned up on bot restart.
 
@@ -69,8 +69,8 @@ Whitelist entries expire automatically and are cleaned up on bot restart.
 
 If a nuke is detected, the bot stores snapshots of affected resources (channel configurations, role settings, emoji images, etc.). Users on the **Exempt Users** list can reverse the damage in one of two ways:
 
-* **From the alert:** click the **Undo** button on the "Nuke Detected" alert, then confirm. Once complete, this also reverses the response taken against the executor (for example, unbanning them or restoring their stripped roles).
-* **With the command:** run `/anti-nuke undo`, then select the event from the dropdown menu.
+- **From the alert:** click the **Undo** button on the "Nuke Detected" alert, then confirm. Once complete, this also reverses the response taken against the executor (for example, unbanning them or restoring their stripped roles).
+- **With the command:** run `/anti-nuke undo`, then select the event from the dropdown menu.
 
 Either way, the bot attempts to restore all affected resources using the stored snapshots and reports what was restored and what could not be.
 
@@ -82,9 +82,9 @@ Undo is a best-effort recovery. Some data cannot be restored: message history in
 
 All detection data is persisted to the database immediately. If the bot crashes or restarts during a nuke event:
 
-* Incomplete response actions are flagged and reported in the log channel on restart.
-* Snapshot data is preserved for undo recovery.
-* Action tracking records linked to unresolved nuke events are retained until the event is undone or manually resolved.
+- Incomplete response actions are flagged and reported in the log channel on restart.
+- Snapshot data is preserved for undo recovery.
+- Action tracking records linked to unresolved nuke events are retained until the event is undone or manually resolved.
 
 ## Considerations and limitations {#considerations}
 
@@ -145,7 +145,7 @@ You are solely responsible for your threshold configuration, response-action cho
 ## Tracked action types {#action-types}
 
 | Action Type                   | Description                                           | Default Threshold |
-|-------------------------------|-------------------------------------------------------|-------------------|
+| ----------------------------- | ----------------------------------------------------- | ----------------- |
 | Channel Deletion              | Channels being deleted                                | 3 in 60s          |
 | Channel Creation              | Channels being created in bulk                        | 5 in 60s          |
 | Role Deletion                 | Roles being deleted                                   | 3 in 60s          |
@@ -173,7 +173,7 @@ Each action type can be individually enabled/disabled and has its own threshold 
 <SlashCommandExplanation />
 
 | Command                                                                    | Description                                                                        |
-|----------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `/anti-nuke whitelist add user:<User> duration:<String> [reason:<String>]` | Add a temporary whitelist entry. Duration supports formats like `30m`, `2h`, `1d`. |
 | `/anti-nuke whitelist remove user:<User>`                                  | Remove an active whitelist entry for a user.                                       |
 | `/anti-nuke whitelist list`                                                | List all currently active whitelist entries.                                       |
@@ -188,13 +188,13 @@ All commands (and the alert **Undo** button) are restricted to users on the **Ex
 
 Configure the general settings of the anti-nuke system. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=anti-nuke%7Cconfiguration).
 
-| Field                       | Description                                                                                          |
-|-----------------------------|------------------------------------------------------------------------------------------------------|
-| Log Channel                 | Channel where anti-nuke alerts and event logs are sent.                                              |
+| Field                       | Description                                                                                                           |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Log Channel                 | Channel where anti-nuke alerts and event logs are sent.                                                               |
 | Response Action             | What to do when a nuke is detected: **Alert only**, **Strip all roles**, **Ban**, or **Strip dangerous permissions**. |
-| Exempt Users                | Users who are completely exempt from anti-nuke detection.                                            |
-| Snapshot Retention (days)   | How long to keep resource snapshots for undo recovery (default: 30 days).                            |
-| Action Log Retention (days) | How long to keep individual action tracking records (default: 7 days).                               |
+| Exempt Users                | Users who are completely exempt from anti-nuke detection.                                                             |
+| Snapshot Retention (days)   | How long to keep resource snapshots for undo recovery (default: 30 days).                                             |
+| Action Log Retention (days) | How long to keep individual action tracking records (default: 7 days).                                                |
 
 ### Thresholds {#configuration-thresholds}
 
@@ -203,7 +203,7 @@ Configure detection thresholds for each action type. Open it in your [dashboard]
 Each action type has three settings:
 
 | Field               | Description                                                            |
-|---------------------|------------------------------------------------------------------------|
+| ------------------- | ---------------------------------------------------------------------- |
 | Track [Action Type] | Enable or disable detection for this action type.                      |
 | Max [Action Type]   | Number of actions within the time window before triggering a response. |
 | Timeframe (seconds) | The sliding time window in seconds used to count actions.              |
@@ -259,9 +259,9 @@ Each action type has three settings:
 
 The following data is stored by this module:
 
-* **Action records**: The action type, target ID, executor ID, and timestamp of every tracked destructive action. Automatically cleaned up after the configured retention period (default: 7 days).
-* **Snapshots**: Detailed resource data (channel settings, role configurations, emoji images, etc.) for undo recovery. Automatically cleaned up after the configured retention period (default: 30 days).
-* **Nuke events**: Records of detected nuke incidents, including the executor, action type, action count, response taken, and whether the event has been undone.
-* **Whitelist entries**: User ID, granting user, reason, and expiration time for temporary whitelist entries. Automatically cleaned up on expiration.
+- **Action records**: The action type, target ID, executor ID, and timestamp of every tracked destructive action. Automatically cleaned up after the configured retention period (default: 7 days).
+- **Snapshots**: Detailed resource data (channel settings, role configurations, emoji images, etc.) for undo recovery. Automatically cleaned up after the configured retention period (default: 30 days).
+- **Nuke events**: Records of detected nuke incidents, including the executor, action type, action count, response taken, and whether the event has been undone.
+- **Whitelist entries**: User ID, granting user, reason, and expiration time for temporary whitelist entries. Automatically cleaned up on expiration.
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).

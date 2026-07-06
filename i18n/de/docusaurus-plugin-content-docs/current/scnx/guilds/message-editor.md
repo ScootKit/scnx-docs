@@ -22,10 +22,9 @@ Beide Editoren bieten eine [Live-Vorschau](#preview), [Parameter-Einfügung](#pa
 [Kopieren/Einfügen](#copy-paste) und [Nachrichten-Teilen](#share).
 
 :::info V4 Verfügbarkeit
-Der V4-Editor steht standardmäßig auf allen Servern zur Verfügung. Der V3-Editor bleibt jedoch dauerhaft verfügbar, 
+Der V4-Editor steht standardmäßig auf allen Servern zur Verfügung. Der V3-Editor bleibt jedoch dauerhaft verfügbar,
 du kannst selbst bei jeder Nachricht entscheiden, welche Version du nutzen möchtest.
 :::
-
 
 ---
 

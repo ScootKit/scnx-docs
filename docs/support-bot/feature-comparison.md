@@ -10,18 +10,18 @@ The SCNX Support Bot offers four support systems. You can enable any combination
 
 ## At a glance {#at-a-glance}
 
-|                                | Modmail              | Ticket System          | Forum Support                | Voice Support           |
-| ------------------------------ | -------------------- | ---------------------- | ---------------------------- | ----------------------- |
-| **How members reach you**      | DM the bot           | Click a button         | Post in a public forum       | Join a voice channel    |
-| **Visibility**                 | Private              | Private channel        | **Public thread**            | Private voice           |
-| **Conversation style**         | Text (relayed)       | Text (in a channel)    | Text (in the open)           | Live voice              |
-| **Built-in AI first answer**   | ➖ (via AI FAQ)      | ➖ (via AI FAQ)        | ✅                           | ❌                      |
-| **Shared queue & claiming**    | ✅                   | ✅                     | ✅                           | ✅ (pull next)          |
-| **Auto-close & SLA reminders** | ✅                   | ✅                     | ✅                           | ➖                      |
-| **Feedback & star ratings**    | ✅                   | ✅                     | ✅                           | ✅                      |
-| **Analytics & wait-time**      | ✅                   | ✅                     | ✅                           | ✅                      |
-| **Best for**                   | Private 1:1 help     | Structured private tickets | Public, reusable answers | Real-time voice help    |
-| **Availability**               | All Support Bot plans | All Support Bot plans | Early-access preview         | Early-access preview    |
+|                                | Modmail               | Ticket System              | Forum Support            | Voice Support        |
+| ------------------------------ | --------------------- | -------------------------- | ------------------------ | -------------------- |
+| **How members reach you**      | DM the bot            | Click a button             | Post in a public forum   | Join a voice channel |
+| **Visibility**                 | Private               | Private channel            | **Public thread**        | Private voice        |
+| **Conversation style**         | Text (relayed)        | Text (in a channel)        | Text (in the open)       | Live voice           |
+| **Built-in AI first answer**   | ➖ (via AI FAQ)       | ➖ (via AI FAQ)            | ✅                       | ❌                   |
+| **Shared queue & claiming**    | ✅                    | ✅                         | ✅                       | ✅ (pull next)       |
+| **Auto-close & SLA reminders** | ✅                    | ✅                         | ✅                       | ➖                   |
+| **Feedback & star ratings**    | ✅                    | ✅                         | ✅                       | ✅                   |
+| **Analytics & wait-time**      | ✅                    | ✅                         | ✅                       | ✅                   |
+| **Best for**                   | Private 1:1 help      | Structured private tickets | Public, reusable answers | Real-time voice help |
+| **Availability**               | All Support Bot plans | All Support Bot plans      | Early-access preview     | Early-access preview |
 
 :::info Legend
 ✅ supported &nbsp;·&nbsp; ❌ not supported &nbsp;·&nbsp; ➖ not applicable to how this system works
@@ -46,54 +46,54 @@ The detailed tables below compare the three **text-based** systems in depth. **V
 
 ## Messaging & communication
 
-|                                                            | Modmail | Ticket System | Forum Support |
-| ---------------------------------------------------------- | :-----: | :-----------: | :-----------: |
-| Conversation happens directly in a channel/thread          |   ❌    |      ✅       |      ✅       |
-| Messages relayed via DM                                    |   ✅    |      ❌       |      ➖       |
-| Anonymous staff messages                                   |   ✅    |      ❌       |      ❌       |
-| Snippets (reusable quick responses)                        |   ✅    |      ❌       |      ❌       |
-| Customizable bot messages (welcome, close, etc.)           |   ✅    |      ✅       |      ✅       |
-| Keep the thread to the asker & staff only                  |   ❌    |      ➖       |      ✅       |
-| View past tickets button                                   |   ✅    |      ❌       |      ❌       |
+|                                                   | Modmail | Ticket System | Forum Support |
+| ------------------------------------------------- | :-----: | :-----------: | :-----------: |
+| Conversation happens directly in a channel/thread |   ❌    |      ✅       |      ✅       |
+| Messages relayed via DM                           |   ✅    |      ❌       |      ➖       |
+| Anonymous staff messages                          |   ✅    |      ❌       |      ❌       |
+| Snippets (reusable quick responses)               |   ✅    |      ❌       |      ❌       |
+| Customizable bot messages (welcome, close, etc.)  |   ✅    |      ✅       |      ✅       |
+| Keep the thread to the asker & staff only         |   ❌    |      ➖       |      ✅       |
+| View past tickets button                          |   ✅    |      ❌       |      ❌       |
 
 ## Ticket management
 
-|                                           |      Modmail      | Ticket System | Forum Support |
-| ----------------------------------------- | :---------------: | :-----------: | :-----------: |
-| Topics / categories                       |        ✅         |      ✅       |      ✅       |
-| Claiming / assignment                     |        ✅         |      ✅       |      ✅       |
-| Hand a claimed item back to the queue     |        ➖         |      ➖       |      ✅       |
-| Hold / pause                              |        ✅         |      ✅       |      ❌       |
-| Rename                                    |        ✅         |      ✅       |      ➖       |
-| Additional members                        |        ✅         |      ✅       |      ➖       |
-| Scheduled closing                         |        ✅         |      ✅       |      ❌       |
-| Close requests (user/staff confirmation)  |        ✅         |      ✅       |      ❌       |
-| Close reasons (custom & predefined)       |        ✅         |      ❌       |      ❌       |
-| One ticket per user limit                 |        ✅         |      ✅       |      ❌       |
-| Per-topic priority                        |        ❌         |      ❌       |      ✅       |
-| Priority by member role                   |        ❌         |      ❌       |      ✅       |
-| Close / "mark solved" button              |        ✅         |      ✅       |      ✅       |
-| Apply a "solved" tag on close             |        ➖         |      ➖       |      ✅       |
-| Archive on close                          |        ✅         |      ❌       |      ✅       |
-| Reopen closed items                       |        ✅         |      ❌       |      ❌       |
-| DM confirmation on close                  |        ✅         |      ✅       |      ✅       |
-| Attach transcript to close DM             |        ✅         |      ✅       |      ✅       |
+|                                          | Modmail | Ticket System | Forum Support |
+| ---------------------------------------- | :-----: | :-----------: | :-----------: |
+| Topics / categories                      |   ✅    |      ✅       |      ✅       |
+| Claiming / assignment                    |   ✅    |      ✅       |      ✅       |
+| Hand a claimed item back to the queue    |   ➖    |      ➖       |      ✅       |
+| Hold / pause                             |   ✅    |      ✅       |      ❌       |
+| Rename                                   |   ✅    |      ✅       |      ➖       |
+| Additional members                       |   ✅    |      ✅       |      ➖       |
+| Scheduled closing                        |   ✅    |      ✅       |      ❌       |
+| Close requests (user/staff confirmation) |   ✅    |      ✅       |      ❌       |
+| Close reasons (custom & predefined)      |   ✅    |      ❌       |      ❌       |
+| One ticket per user limit                |   ✅    |      ✅       |      ❌       |
+| Per-topic priority                       |   ❌    |      ❌       |      ✅       |
+| Priority by member role                  |   ❌    |      ❌       |      ✅       |
+| Close / "mark solved" button             |   ✅    |      ✅       |      ✅       |
+| Apply a "solved" tag on close            |   ➖    |      ➖       |      ✅       |
+| Archive on close                         |   ✅    |      ❌       |      ✅       |
+| Reopen closed items                      |   ✅    |      ❌       |      ❌       |
+| DM confirmation on close                 |   ✅    |      ✅       |      ✅       |
+| Attach transcript to close DM            |   ✅    |      ✅       |      ✅       |
 
 ## Automation
 
-|                                          | Modmail | Ticket System | Forum Support |
-| ---------------------------------------- | :-----: | :-----------: | :-----------: |
-| Auto-close on inactivity                 |   ✅    |      ✅       |      ✅       |
-| Auto-close when user leaves server       |   ✅    |      ✅       |      ❌       |
-| Inactivity warning before auto-close     |   ✅    |      ✅       |      ✅       |
-| Team member inactivity reminders         |   ✅    |      ✅       |      ✅       |
-| Unassigned / unclaimed reminders         |   ✅    |      ✅       |      ✅       |
-| Only remind inside opening hours         |   ✅    |      ✅       |      ✅       |
-| Opening hours                            |   ✅    |      ✅       |      ✅       |
-| Closed-hours notice to the member        |   ✅    |      ➖       |      ✅       |
-| Team notification on new items           |   ➖    |      ✅       |      ✅       |
-| Built-in AI first answer / deflection    |   ❌    |      ❌       |      ✅       |
-| Holiday detection & custom holidays      |   ✅    |      ✅       |      ✅       |
+|                                       | Modmail | Ticket System | Forum Support |
+| ------------------------------------- | :-----: | :-----------: | :-----------: |
+| Auto-close on inactivity              |   ✅    |      ✅       |      ✅       |
+| Auto-close when user leaves server    |   ✅    |      ✅       |      ❌       |
+| Inactivity warning before auto-close  |   ✅    |      ✅       |      ✅       |
+| Team member inactivity reminders      |   ✅    |      ✅       |      ✅       |
+| Unassigned / unclaimed reminders      |   ✅    |      ✅       |      ✅       |
+| Only remind inside opening hours      |   ✅    |      ✅       |      ✅       |
+| Opening hours                         |   ✅    |      ✅       |      ✅       |
+| Closed-hours notice to the member     |   ✅    |      ➖       |      ✅       |
+| Team notification on new items        |   ➖    |      ✅       |      ✅       |
+| Built-in AI first answer / deflection |   ❌    |      ❌       |      ✅       |
+| Holiday detection & custom holidays   |   ✅    |      ✅       |      ✅       |
 
 ## Feedback, analytics & monitoring
 

@@ -27,10 +27,10 @@ Forum Support can let AI take a first pass at every new thread, answering common
 
 AI auto-answer lives in the **AI** section of the [Configuration](/docs/support-bot/forum-support/configuration#ai) page. The section only appears when AI is available for your server.
 
-| Setting                | What it does                                                                                                              |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| **Enable AI answers**  | Posts an AI first response on new threads, with the yes/no buttons.                                                       |
-| **AI summary on claim**| DMs the claiming staff member a short summary of the conversation so far.                                                 |
+| Setting                 | What it does                                                              |
+| ----------------------- | ------------------------------------------------------------------------- |
+| **Enable AI answers**   | Posts an AI first response on new threads, with the yes/no buttons.       |
+| **AI summary on claim** | DMs the claiming staff member a short summary of the conversation so far. |
 
 You can customize the acknowledgement messages for the **Yes** and **No** buttons in the [Messages](/docs/support-bot/forum-support/configuration#messages) section.
 
