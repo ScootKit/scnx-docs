@@ -52,9 +52,9 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 | Nachrichten werden per DM weitergeleitet              |   ✅    |      ❌       |      ➖       |
 | Anonyme Team-Nachrichten                              |   ✅    |      ❌       |      ❌       |
 | Snippets (wiederverwendbare Schnellantworten)         |   ✅    |      ❌       |      ❌       |
-| Anpassbare Bot-Nachrichten (Willkommen, Schließen …)  |   ✅    |      ✅       |      ✅       |
+| Anpassbare Bot-Nachrichten (Willkommen, Schließen ...)  |   ✅    |      ✅       |      ✅       |
 | Thread nur für Ersteller & Team                       |   ❌    |      ➖       |      ✅       |
-| Knopf „Frühere Tickets ansehen“                       |   ✅    |      ❌       |      ❌       |
+| Knopf „Frühere Tickets ansehen"                       |   ✅    |      ❌       |      ❌       |
 
 ## Ticket-Verwaltung
 
@@ -72,8 +72,8 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 | Limit: ein Ticket pro Nutzer               |        ✅         |      ✅       |      ❌       |
 | Priorität pro Thema                        |        ❌         |      ❌       |      ✅       |
 | Priorität nach Mitglieder-Rolle            |        ❌         |      ❌       |      ✅       |
-| Knopf „Schließen“ / „Als gelöst markieren“ |        ✅         |      ✅       |      ✅       |
-| „Gelöst“-Tag beim Schließen anwenden       |        ➖         |      ➖       |      ✅       |
+| Knopf „Schließen" / „Als gelöst markieren" |        ✅         |      ✅       |      ✅       |
+| „Gelöst"-Tag beim Schließen anwenden       |        ➖         |      ➖       |      ✅       |
 | Beim Schließen archivieren                 |        ✅         |      ❌       |      ✅       |
 | Geschlossene wieder öffnen                 |        ✅         |      ❌       |      ❌       |
 | DM-Bestätigung beim Schließen              |        ✅         |      ✅       |      ✅       |
