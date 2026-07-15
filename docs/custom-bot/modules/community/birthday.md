@@ -11,7 +11,7 @@ Let users set their birthday and congratulate them when they have a birthday.
 - The bot automatically sends birthday congratulation messages every day at midnight.
 - Optionally assign a birthday role to users on their birthday (removed automatically the next day).
 - If a user provides their birth year, the congratulation message can include their age.
-- Optional pre-birthday notifications posted in the birthday channel a configurable number of days before a user's birthday. Multiple lead times can be configured (e.g. both 7 days and 1 day before).
+- Optional pre-birthday notifications posted a configurable number of days before a user's birthday. Multiple lead times can be configured (e.g. both 7 days and 1 day before), and they can optionally be routed to their own channel, separate from the actual congratulation messages.
 - `/birthday upcoming` lets any member preview the next N days of upcoming birthdays without browsing the embed.
 - Birthday data is automatically removed when a member leaves the server.
 - Optional admin birthday management: admins can set, remove, lock, and unlock user birthdays.
@@ -101,12 +101,13 @@ The configuration is organized into tabs in the dashboard - the rows below are g
 
 ### Pre-Birthday Notifications
 
-| Field                              | Description                                                                                                                                                                                                                     |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable pre-birthday notifications? | If enabled, the bot posts a notification in the birthday channel a configurable number of days before each user's birthday.                                                                                                     |
-| Pre-birthday lead times (days)     | _Only visible if pre-birthday notifications are enabled._ List of lead times (in days) before a birthday at which to post a notification. For example, `[1, 7]` sends a notification both 7 days and 1 day before the birthday. |
-| Pre-birthday message               | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did not provide a birth year. The `%days%` placeholder gives the number of days remaining.                                |
-| Pre-birthday message with age      | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did provide a birth year. Supports the `%age%` placeholder for the age the user will turn.                                |
+| Field                              | Description                                                                                                                                                                                                                                                                                              |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable pre-birthday notifications? | If enabled, the bot posts a notification in the birthday channel a configurable number of days before each user's birthday.                                                                                                                                                                              |
+| (optional) Pre-Birthday-Channel    | _Only visible if pre-birthday notifications are enabled._ Optional separate channel for pre-birthday reminders. If empty, they are sent to the notification channel (if set) or otherwise the birthday channel. Use this to keep pre-birthday reminders apart from the actual "Happy birthday" messages. |
+| Pre-birthday lead times (days)     | _Only visible if pre-birthday notifications are enabled._ List of lead times (in days) before a birthday at which to post a notification. For example, `[1, 7]` sends a notification both 7 days and 1 day before the birthday.                                                                          |
+| Pre-birthday message               | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did not provide a birth year. The `%days%` placeholder gives the number of days remaining.                                                                                                         |
+| Pre-birthday message with age      | _Only visible if pre-birthday notifications are enabled._ The pre-birthday message sent for users who did provide a birth year. Supports the `%age%` placeholder for the age the user will turn.                                                                                                         |
 
 ### Commands
 

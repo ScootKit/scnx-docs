@@ -108,6 +108,65 @@ description: Solutions for common issues with the SCNX Support Bot.
 - Discord rate-limits channel renames to 2 per 10 minutes. The bot enforces a 4-minute cooldown on its side; rapid open/close flaps may queue a rename until the cooldown clears.
 - Confirm the bot has **Manage Channel** permission on the queue channel.
 
+## Forum Support issues {#forum-support}
+
+### New forum threads aren't being handled {#forum-no-handling}
+
+- Make sure **Forum Support** is enabled and the forum channel is added on the [Forum Channels](https://scnx.app/glink?page=support-system/forum-support/channels) page.
+- The channel must be a Discord **Forum** channel - not a normal text channel.
+- Check the bot's permissions in the forum channel: it needs **View Channel**, **Send Messages in Threads**, **Create Public Threads**, **Manage Threads**, and **Manage Messages**.
+- Only threads created **after** you enabled Forum Support are picked up automatically.
+
+### The `/forum` commands don't show up {#forum-commands-missing}
+
+- The commands only appear when Forum Support is [enabled](/docs/support-bot/forum-support/configuration#main) and the feature is available for your server (early access).
+- Discord can take a few minutes to refresh slash commands - try fully restarting your Discord client.
+
+### The staff queue panel isn't appearing {#forum-no-panel}
+
+- Set a **staff queue panel channel** in the [configuration](/docs/support-bot/forum-support/configuration#main).
+- The bot needs permission to send and edit messages in that channel.
+
+### Members can't reply in their own thread {#forum-locked}
+
+- If you turned on **Lock until claimed**, the thread stays locked until a staff member claims it - claiming unlocks it automatically. See [Claiming](/docs/support-bot/forum-support/claiming#lock-until-claimed).
+
+### Other members' messages keep getting deleted {#forum-deleted}
+
+- That's the **Only the original poster and staff can write** option. Turn it off in the [configuration](/docs/support-bot/forum-support/configuration#thread-writing) if you want everyone to be able to comment.
+
+### Priority threads aren't jumping the queue {#forum-priority}
+
+- Priority comes from a [topic](/docs/support-bot/forum-support/topics) marked as priority, or from a forum channel's [Priority](/docs/support-bot/forum-support/configuration#priority) settings (priority roles or tag). Make sure one of those is configured.
+
+### Feedback or close DMs aren't being sent {#forum-feedback-dm}
+
+- The member may have DMs disabled - the bot can't message users who block direct messages.
+- For feedback, confirm it's [enabled](/docs/support-bot/forum-support/support-feedback) and that the thread lasted longer than the configured minimum duration.
+
+## AI FAQ issues {#ai-faq}
+
+### The AI FAQ section isn't in my dashboard {#ai-faq-missing}
+
+- AI FAQ is an early-access beta. If you don't see the section, your server isn't in the beta yet - request access via the [contact form](https://scnx.app/user/support/new?topic=cmp0a46s300e9yxcfspiqvgc0).
+- Your Support Bot must be running v3 or newer - older builds don't include AI FAQ.
+
+### The AI isn't answering questions {#ai-not-answering}
+
+- Turn on the master switch: **Settings → Enable AI FAQ on this server**.
+- The master switch alone does nothing - you also have to tell it **where** to answer. Enable [channel auto-answer](/docs/support-bot/ai-faq/channel-mode) and/or the [pre-ticket gatekeeper](/docs/support-bot/ai-faq/pre-ticket-gatekeeper).
+- The AI answers from your knowledge base. If you haven't written any [FAQ entries](/docs/support-bot/ai-faq/faq-entries) yet, it has nothing to answer from.
+- Make sure you have AI credits left (see below).
+
+### The AI suddenly stopped answering {#ai-out-of-credits}
+
+- You've most likely run out of **AI credits**. Each answer costs credits - check **Settings → Status** on the AI FAQ page for your balance. Your monthly grant tops up on the 25th, or you can top up. See [Credits & Pricing](/docs/support-bot/ai-faq/credits-and-pricing).
+
+### The answers are off-topic or unhelpful {#ai-bad-answers}
+
+- The AI only answers from your [FAQ entries](/docs/support-bot/ai-faq/faq-entries) - add clearer, more specific entries that cover what your members actually ask.
+- Use [Insights](/docs/support-bot/ai-faq/insights) to see what's being asked and where the answers fall short.
+
 ## Still need help? {#still-need-help}
 
 If your issue is not listed here, feel free to create a ticket on our [Discord server](https://scootk.it/dc-de) - we're happy to help!

@@ -13,7 +13,7 @@ Members are never blocked from reaching your team - the "I still need help" butt
 ## Features {#features}
 
 - Switch on for [Modmail](/docs/support-bot/modmail/intro), the [Ticket System](/docs/support-bot/ticket-system/intro), or both.
-- Skip the AI step on specific topics that always need a human.
+- Screen every topic by default, or opt in only specific topics - your choice.
 - For Modmail, optionally use the member's first DM as the question so they don't see a pop-up at all.
 - Plays nicely with your existing [forms](/docs/support-bot/general/forms) - show the form after the AI, skip it, or skip the AI on form topics entirely.
 - "That solved it" / "I still need help" buttons let the member decide what happens next.
@@ -26,7 +26,7 @@ Members are never blocked from reaching your team - the "I still need help" butt
 3. Pick how the gatekeeper should behave when a topic has a required form - see [Topics with forms](#form-behavior) below.
 4. (Modmail only) Decide whether the member's first DM should be used as the question without a pop-up - see [Modmail-specific options](#modmail-options).
 5. Optionally customize the [modal labels and messages](#messages).
-6. Optionally mark any ticket topic as "skip the AI gate" if it should always go straight to a human - see [Skipping the gate per topic](#per-topic-opt-out).
+6. Choose which topics the gatekeeper screens - a global default plus a per-topic override on each topic - see [Choosing which topics to screen](#per-topic-opt-out).
 7. Save and reload the bot.
 
 ## What members experience {#flow}
@@ -74,11 +74,24 @@ If a member picks a topic that has a [form](/docs/support-bot/general/forms) att
 - **Skip the form entirely** - the ticket opens immediately when the member clicks **I still need help**, no form. Use this when the AI pop-up already captures everything the form would have asked for and you don't want to ask twice.
 - **Don't gate topics that have a form** - the AI gatekeeper is skipped entirely on topics with required forms. Members go straight to the form and the ticket flow as if the AI gatekeeper didn't exist. Best when your form is already a thorough pre-screen and adding the AI step would feel redundant.
 
-## Skipping the gate per topic {#per-topic-opt-out}
+## Choosing which topics to screen {#per-topic-opt-out}
 
-You can mark individual ticket topics as "skip the AI gate" so members on that topic always go straight to a human. This is configured on each topic's settings page, under the topics list for [Modmail](https://scnx.app/glink?page=support-system/modmail/ticket-topics) or the [Ticket System](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics) (more on writing the topics themselves in the [Modmail](/docs/support-bot/modmail/ticket-topics) and [Ticket System](/docs/support-bot/ticket-system/ticket-topics) docs).
+Which topics the gatekeeper screens is controlled in two layers: a **global default** and a **per-topic override**.
 
-Good candidates for skipping:
+**Global default** - on the AI FAQ settings page, under **Default for topics**:
+
+- **Screen all topics by default** _(default)_ - the gatekeeper runs on every topic unless a topic opts out.
+- **Don't screen topics by default** - the gatekeeper runs on no topic unless a topic opts in. Handy when you only want the AI on a few high-volume topics (like a general "Question" topic) and want everything else to behave normally.
+
+**Per-topic override** - on each topic's settings page (Ticket Topics for [Modmail](https://scnx.app/glink?page=support-system/modmail/ticket-topics) or the [Ticket System](https://scnx.app/glink?page=support-system/ticket-system/ticket-topics)), the **AI gatekeeper for this topic** option lets you override the default for that one topic:
+
+- **Follow global default** - uses whichever default you picked above.
+- **Always screen with AI** - the gatekeeper always runs on this topic.
+- **Never screen (straight to a human)** - the gatekeeper is skipped for this topic; the ticket opens normally.
+
+So a typical opt-in setup is: set the global default to **Don't screen topics by default**, then set your high-volume topics to **Always screen**. A typical opt-out setup is: leave the default as **Screen all topics by default**, then set a few high-touch topics to **Never screen**.
+
+Good candidates for **Never screen**:
 
 - **High-touch topics** like refund disputes, partnership requests, or moderation appeals - things where you always want a human first.
 - **Internal-only topics** that shouldn't be in the AI's flow at all.
@@ -108,7 +121,7 @@ You run support entirely through Modmail DMs and want the AI to catch the easy q
 - **Try AI before opening a modmail ticket:** on.
 - **Try AI before opening a ticket-system ticket:** off (you don't use it).
 - **Use the user's initial message as the question:** on. Members lead with their question in DMs, so there's no need for a separate pop-up.
-- **Per-topic opt-out:** any "report a user" or "appeal" topic, since those always need a human first.
+- **Per-topic override:** set any "report a user" or "appeal" topic to **Never screen**, since those always need a human first.
 
 ### Ticket System server with structured forms
 
@@ -117,7 +130,7 @@ Your members open tickets via a button, and most topics have a [form](/docs/supp
 - **Try AI before opening a ticket-system ticket:** on.
 - **Try AI before opening a modmail ticket:** off (or on if you also use Modmail).
 - **When a topic has a required form:** **Show the form after the AI answer** - the gatekeeper runs first, then if the member clicks "I still need help" they fill in the form before the ticket opens.
-- **Per-topic opt-out:** anything where you don't want the AI involved at all - typically partnership requests, refund disputes, or moderation appeals.
+- **Per-topic override:** set anything where you don't want the AI involved at all to **Never screen** - typically partnership requests, refund disputes, or moderation appeals.
 
 ### Server where the form already collects everything
 

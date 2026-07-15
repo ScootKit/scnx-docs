@@ -30,7 +30,7 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 - Im automatischen Modus verfolgt der Bot die Nutzeraktivität basierend auf gesendeten Nachrichten. Wenn ein Nutzer während eines neuen Zeitraums eine Nachricht sendet, wird sein Streak erhöht. Verpasst er einen gesamten Zeitraum, wird sein Streak automatisch auf Null zurückgesetzt.
 - Im „Mitarbeiter-verwaltete Streaks?"-Modus verwenden Teammitglieder den Befehl [`/streak add`](#commands), um Nutzern manuell Streak-Punkte hinzuzufügen.
 - Nutzer können ihren aktuellen und ihren längsten Streak einsehen, indem sie den Befehl [`/streak view`](#commands) nutzen.
-- Falls die Streak-Wiederherstellung aktiviert ist, können Nutzer, die ihren Streak verloren haben, diesen einmalig über [`/streak restore`](#commands) wiederherstellen.
+- Falls die Streak-Wiederherstellung aktiviert ist, können Nutzer, die ihren Streak verloren haben, diesen einmalig über [`/streak restore`](#commands) wiederherstellen. Du kannst optional ein Zeitlimit (in Tagen) festlegen, nach dem ein verlorener Streak nicht mehr wiederhergestellt werden kann. Bei der Wiederherstellung wird der höhere Wert aus aktuellem und vorherigem Streak behalten, sodass ein Mitglied, das bereits einen neuen Streak begonnen hat, keinen Fortschritt verliert.
 - Wenn ein Nutzer eine Streak-Anzahl erreicht, die einer konfigurierten Rollenbelohnung entspricht, wird die Rolle automatisch zugewiesen.
 
 ## Befehle {#commands}
@@ -43,7 +43,7 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 | `/streak add user:<User>`       | Füge einem Nutzer manuell einen Streak-Punkt hinzu. Nur im „Mitarbeiter-verwaltete Streaks?"-Modus verfügbar. Erfordert eine konfigurierte Team-Rolle.                                                                                                                                    |
 | `/streak remove user:<User>`    | Zieht einen Punkt vom Streak-Zähler eines Nutzers ab. Hilfreich, um Fehler zu korrigieren, ohne den Streak vollständig zurückzusetzen. Nur im „Mitarbeiter-verwaltete Streaks?"-Modus verfügbar. Erfordert eine konfigurierte Team-Rolle.                                                 |
 | `/streak reset user:<User>`     | Setzt den Streak eines Nutzers vollständig zurück. Dabei werden sowohl der aktuelle Streak als auch alle gespeicherten Backups gelöscht und sämtliche streakbezogenen Rollen entfernt. Nur im „Mitarbeiter-verwaltete Streaks?"-Modus verfügbar. Erfordert eine konfigurierte Team-Rolle. |
-| `/streak restore [user:<User>]` | Stelle einen zuvor verlorenen Streak wieder her. Nur verfügbar, wenn die Streak-Wiederherstellung aktiviert ist. Kann nur einmal pro Streak-Verlust verwendet werden.                                                                                                                     |
+| `/streak restore [user:<User>]` | Stelle einen zuvor verlorenen Streak wieder her. Nur verfügbar, wenn die Streak-Wiederherstellung aktiviert ist. Kann nur einmal pro Streak-Verlust und nur innerhalb des konfigurierten Zeitlimits (falls gesetzt) verwendet werden.                                                     |
 | `/streak leaderboard`           | Zeigt die 20 aktivsten Streaks auf dem Server an. Verfügbar sowohl im „Mitarbeiter-verwaltete Streaks?"- als auch im automatischen Modus.                                                                                                                                                 |
 | `/streak hide`                  | Schaltet die Anzeige deines Streaks in deinem Nickname an oder aus. Nur verfügbar, wenn die Nickname-Anzeige aktiviert ist und die Option „Nutzern erlauben, den Streak im Nickname auszublenden?" eingeschaltet wurde.                                                                   |
 
@@ -65,6 +65,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Ignorierte Rollen                                                 | Rollen, deren Mitglieder-Nachrichten nicht für Streaks zählen.                                                                                                                                                                               |
 | Streak-Wiederherstellung aktivieren?                              | Falls aktiviert, können Nutzer einen verlorenen Streak einmal pro Verlust wiederherstellen.                                                                                                                                                  |
 | Rollen, die Streaks wiederherstellen dürfen                       | Rollen, die berechtigt sind, den Befehl „restore" zu nutzen. Falls das Feld leer bleibt, können alle Nutzer Streaks wiederherstellen.                                                                                                        |
+| Wiederherstellungs-Zeitlimit (Tage)                               | Wie viele Tage nach dem Verlust eines Streaks Nutzer diesen noch mit `/streak restore` wiederherstellen können. Auf `0` setzen für kein Zeitlimit. Nur wirksam, wenn „Streak-Wiederherstellung aktivieren?" eingeschaltet ist.               |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -103,6 +104,7 @@ Die folgenden Daten werden über jeden Nutzer mit einem aktiven oder vergangenen
 - Datum, Woche oder Monat der letzten Aktivität (abhängig vom konfigurierten Zeitraum)
 - Die vorherige Streak-Anzahl (für Wiederherstellungszwecke)
 - Der Zeitstempel der letzten Wiederherstellung
+- Der Zeitstempel, wann der Streak zuletzt verloren wurde (zur Durchsetzung des Wiederherstellungs-Zeitlimits)
 - Metadaten über den Eintrag (Erstellungsdatum und Zeitpunkt der letzten Aktualisierung)
 
 Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database).

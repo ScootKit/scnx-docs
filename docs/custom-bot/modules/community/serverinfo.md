@@ -4,6 +4,12 @@ Display an auto-updating embed with server statistics and information in a chann
 
 <ModuleOverview moduleName="serverinfo" />
 
+:::tip Looking for more? Try Live Messages
+The [Live Messages](/docs/custom-bot/modules/community/live-messages) module can do everything this module does and more: multiple auto-updating messages across different channels, full message formatting (not just a single embed), extra statistics (voice/idle/DND counts, channel-type breakdowns, stickers, and more), and live stats pulled from other modules (tickets, giveaways, economy, levels, and more).
+
+If you only need a single, simple server-information embed, this module stays a great, focused choice. If you want richer or multiple stat displays, use Live Messages instead. There is no automatic migration between the two - you would recreate the content in Live Messages by hand.
+:::
+
 ## Features {#features}
 
 - Displays an auto-updating embed with customizable server information in a designated channel.
