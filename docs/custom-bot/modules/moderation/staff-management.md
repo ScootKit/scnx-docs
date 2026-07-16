@@ -210,25 +210,25 @@ Configure reviews settings in the [reviews configuration](https://scnx.app/glink
 
 ### Shifts Configuration {#configuration-shifts}
 
-**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
-Configure active shift tracking rules, quotas, and leaderboards in the [shifts configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/shifts) file.
+Configure the shifts sytem for staff members, duty types, shift time leaderboards, shift time quota's for specific roles, and manage the shifts status logging in the [shifts configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/shifts)
 
 | Field                          | Description                                                                                       |
 | ------------------------------ | ------------------------------------------------------------------------------------------------- |
-| Enable Shifts                  | Toggles whether staff members can manage on-duty/off-duty statuses and log session times.          |
-| On-Duty Role                   | An optional role dynamically assigned to staff members while they remain actively on duty.        |
-| Duty Types                     | Custom tracking sub-categories staff can select when initiating a session (e.g., Support, Patrol). |
-| Minimum Shift Duration         | Absolute minimum duration in minutes a session must last to be saved to historical database logs. |
-| Enable duty leaderboard        | Activates visibility for public server leaderboard commands tracking performance metrics.         |
-| Leaderboard Timeframe          | Sets the tracking timeframe window calculated for the duty leaderboard (Weekly, Monthly, All-time).|
-| Enable Quota System            | Activates structured hour compliance goals staff are evaluated against per loop.                  |
-| Quota Timeframe                | Specifies the cyclical evaluation recurrence frequency window for quotas (Weekly or Monthly).     |
-| Role Quotas                    | Assigns required duty hours per role. An individual's highest matching role tracks as their goal. |
-| Log Shift Changes              | Toggles detailed status auditing embeds whenever personnel adjust their shift state.             |
-| Channel for shift change logs  | Dedicated target channel for auditing shift updates. Reverts to general logs if left blank.       |
+| Enable Shifts                  | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more.        |
+| On-Duty Role                   | An optional role that is given to a staff member when going on-duty. This is removed when the staff member goes off-duty. This is handy to easily identify poeple who are on-duty without using any commands.                      |
+| Duty Types                     | Custom categories of duty types to allow staff to select their appropriate purpose of duty.       |
+| Minimum Shift Duration (minutes)| The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time.                                                                                                                           |
+| Enable duty leaderboard        | Toggles the ability for staff to see a leaderboard of the people with the most duty time at the top.                                                                                                                                 |
+| Leaderboard Timeframe          | Sets the timeframe of the total duty times shown in the leaderboard. Choose between weekly,  monthly and all-time.                                                                                                                |
+| Enable Quota System            | Toggles the quota system, allowing you to configure duty times expected from members with a specific role.                                                                                                                       |
+| Quota Timeframe                | Sets the timeframe that is counted towards the quota. Choose between Weekly or Monthly.           |
+| Role Quotas                    | Assigns expected duty times per role. The user's quota will be their highest configured role.     |
+| Log Shift Changes              | Toggles the detailed shift logs. These logs shift updates from an user, such as starting/ending their shift.                                                                                                                         |
+| Channel for shift change logs  | The channel where shift change logs are sent. Leave empty to use the general log channel.         |
 
 ### Status Configuration {#configuration-status}
 
+**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
 Configure availability workflows and leaf tracking metrics in the [status configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) file.
 
 | Field                        | Description                                                                                   |
