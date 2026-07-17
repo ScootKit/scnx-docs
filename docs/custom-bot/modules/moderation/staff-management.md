@@ -81,6 +81,8 @@ You can configure if staff members can [request a Leave of Absence (LoA) and/or 
 The LoA system can be enabled individually by enabling the 'Enable LoA System` option.
 After enabling that option, you will be able to select the LoA role given upon the start of their LoA, configure the maximum days they can request a LoA for, and if a LoA request requires approval or not.
 
+The LoA system is meant for staff who want to go on a temporary leave, and be exempt from the expected staff duties.
+
 **Reduced Activity (RA)**
 The RA system can be enabled individually by enabling the 'Enable RA System' option.
 After enabling that option, you will be able to select the RA role given upon the start of their RA, configure the maximum days they can request a RA for, and if a RA request requires approval or not.
@@ -89,6 +91,8 @@ Additionally, you can:
 - Configure the status request channel where the requests for a status are sent (if approval is required)
 - Choose if you want to log status changes (Going on or off LoA/RA, extensions or early ends and other administrative actions)
 - Select the status log channel
+
+The RA system is meant for staff who want to go on a temporary leave, but can still do some limited work. Meaning they can still do some staff duties, but are expected to do (way) less than normal.
 
 ### Staff Profiles {#profiles}
 
@@ -228,26 +232,26 @@ Configure the shifts sytem for staff members, duty types, shift time leaderboard
 
 ### Status Configuration {#configuration-status}
 
-**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
-Configure availability workflows and leaf tracking metrics in the [status configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) file.
+Configure the Leave of Absence and Reduced Activity systems, allowing staff to be temporarily exempted from staff duties in the [status conifugration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/status)
 
 | Field                        | Description                                                                                   |
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
-| Enable Status System         | Master switch that unlocks the Leave of Absence and Reduced Activity status proposal engines. |
-| Enable LoA System            | Toggles whether staff can request full Leaves of Absence to excuse their duties completely.   |
-| LoA Role                     | Optional tracking role assigned to staff while on approved Leave of Absence.                  |
-| Maximum LoA Duration (days)  | Hard upper constraint setting the maximum allowed length in days a staff member can request.  |
-| Require Approval for LoA?    | If checked, requests enter a pending queue demanding manual supervisor authorization.        |
-| Enable RA System             | Toggles whether staff can submit proposals for a Reduced Activity status window.              |
-| RA Role                      | Optional tracking role assigned to staff during approved Reduced Activity status windows.     |
-| Maximum RA Duration (days)   | Hard upper constraint setting the maximum allowed length in days a staff member can request.  |
-| Require Approval for RA?     | If checked, Reduced Activity entries demand supervisor confirmation before taking effect.      |
-| Status Request Channel       | Targeted room where pending status proposals are dispatched to supervisors for action.        |
-| Log status changes           | Toggles historical logging updates covering status transitions, early closures, or updates.   |
-| Status Change Log Channel    | Dedicated target log channel for status history. Reverts to general logs if empty.            |
+| Enable Status System         | Toggles the status system, allowing you to toggle LoA and RA settings.                        |
+| Enable LoA System            | Toggles whether staff can request Leave of Absences.                                          |
+| LoA Role                     | Optional role assigned to staff members when they are on LoA. This is optional, but recommended to easily identify who is on LoA.                                                                                                 |
+| Maximum LoA Duration (days)  | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
+| Require Approval for LoA?    | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
+| Enable RA System             | Toggles whether staff can request Reduced Activities.                                         |
+| RA Role                      | Optional role assigned to staff members when they are on RA. This is optional, but recommended to easily identify who is on RA.                                                                                                  |
+| Maximum RA Duration (days)   | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
+| Require Approval for RA?     | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
+| Status Request Channel       | The channel where status requests are sent for approval/denial.                               |
+| Log status changes           | Toggles the status logging, which logs all changes in statuses from staff members. This sends embed logs about changes to a staff member's LoA/RA, such as starting it, ending it, the status being extended etc.                  |
+| Status Change Log Channel    | The channel where status changes are logged. This can be empty to use the general log channel.                                                                                                                       |
 
 ### Profiles Configuration {#configuration-profiles}
 
+**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
 Configure custom fields and visualization layouts in the [profiles configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) file.
 
 | Field                          | Description                                                                                   |
