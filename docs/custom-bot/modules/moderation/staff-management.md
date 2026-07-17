@@ -158,7 +158,7 @@ This module features multiple independent configuration files allowing you to tw
 
 ### General Configuration {#configuration-configuration}
 
-Configure staff access levels and default log channels in the [general configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/configuration) file.
+Configure staff access levels and default log channels in the [general configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/configuration).
 
 | Field               | Description                                                                                 |
 | ------------------- | ------------------------------------------------------------------------------------------- |
@@ -169,13 +169,13 @@ Configure staff access levels and default log channels in the [general configura
 
 ### Infractions Configuration {#configuration-infractions}
 
-Configure infractions and suspensions in the [infractions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/infractions) file.
+Configure infractions and suspensions in the [infractions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/infractions).
 
 | Field                           | Description                                                                                  |
 | ------------------------------- | -------------------------------------------------------------------------------------------- |
 | Enable Infractions System       | Enables the infractions system with custom infraction types and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**    |
 | Infraction Types                | Custom infraction types with custom names.                                                   |
-| Enable Suspensions System       | Toggles whether suspensions temporarily strip standard permissions from disciplined users.   |
+| Enable Suspensions System       | Toggles whether suspensions temporarily strip standard permissions from disciplined users. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                            |
 | Hierarchy Base Role             | Threshold baseline. When suspended, the bot strips all roles positioned at or above this.    |
 | Suspended Role (Optional)       | An optional role to assign to a staff member when they are suspended.                        |
 | Suspension Announcement Message | The custom message that's sent when a staff member is suspended.                             |
@@ -187,7 +187,7 @@ Configure infractions and suspensions in the [infractions configuration](https:/
 
 ### Promotions Configuration {#configuration-promotions}
 
-Configure the promotions system in the [promotions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/promotions) file.
+Configure the promotions system in the [promotions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/promotions).
 
 | Field                        | Description                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -202,11 +202,11 @@ Configure the promotions system in the [promotions configuration](https://scnx.a
 
 ### Reviews Configuration {#configuration-reviews}
 
-Configure reviews settings in the [reviews configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/reviews) file.
+Configure reviews settings in the [reviews configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/reviews).
 
 | Field                        | Description                                                                             |
 | ---------------------------- | --------------------------------------------------------------------------------------- |
-| Enable Reviews System        | Enables the reviews system, allowing users to review (staff) members.                   |
+| Enable Reviews System        | Enables the reviews system, allowing users to review (staff) members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**  |
 | Reviews Log Channel          | The channel where reviews are sent.                                                     |
 | Allow Self-Rating?           | Toggles whether staff can rate themselves.                                              |
 | Only let users review staff  | When enabled, users can only review staff members.                                      |
@@ -214,11 +214,11 @@ Configure reviews settings in the [reviews configuration](https://scnx.app/glink
 
 ### Shifts Configuration {#configuration-shifts}
 
-Configure the shifts sytem for staff members, duty types, shift time leaderboards, shift time quota's for specific roles, and manage the shifts status logging in the [shifts configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/shifts)
+Configure the shifts sytem for staff members, duty types, shift time leaderboards, shift time quota's for specific roles, and manage the shifts status logging in the [shifts configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/shifts).
 
 | Field                          | Description                                                                                       |
 | ------------------------------ | ------------------------------------------------------------------------------------------------- |
-| Enable Shifts                  | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more.        |
+| Enable Shifts                  | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                           |
 | On-Duty Role                   | An optional role that is given to a staff member when going on-duty. This is removed when the staff member goes off-duty. This is handy to easily identify poeple who are on-duty without using any commands.                      |
 | Duty Types                     | Custom categories of duty types to allow staff to select their appropriate purpose of duty.       |
 | Minimum Shift Duration (minutes)| The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time.                                                                                                                           |
@@ -232,16 +232,16 @@ Configure the shifts sytem for staff members, duty types, shift time leaderboard
 
 ### Status Configuration {#configuration-status}
 
-Configure the Leave of Absence and Reduced Activity systems, allowing staff to be temporarily exempted from staff duties in the [status conifugration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/status)
+Configure the Leave of Absence and Reduced Activity systems, allowing staff to be temporarily exempted from staff duties in the [status conifugration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/status).
 
 | Field                        | Description                                                                                   |
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
 | Enable Status System         | Toggles the status system, allowing you to toggle LoA and RA settings.                        |
-| Enable LoA System            | Toggles whether staff can request Leave of Absences.                                          |
+| Enable LoA System            | Toggles whether staff can request Leave of Absences. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
 | LoA Role                     | Optional role assigned to staff members when they are on LoA. This is optional, but recommended to easily identify who is on LoA.                                                                                                 |
 | Maximum LoA Duration (days)  | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
 | Require Approval for LoA?    | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
-| Enable RA System             | Toggles whether staff can request Reduced Activities.                                         |
+| Enable RA System             | Toggles whether staff can request Reduced Activities. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
 | RA Role                      | Optional role assigned to staff members when they are on RA. This is optional, but recommended to easily identify who is on RA.                                                                                                  |
 | Maximum RA Duration (days)   | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
 | Require Approval for RA?     | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
@@ -251,19 +251,19 @@ Configure the Leave of Absence and Reduced Activity systems, allowing staff to b
 
 ### Profiles Configuration {#configuration-profiles}
 
-**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
-Configure custom fields and visualization layouts in the [profiles configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) file.
+Configure (staff) profiles with a custom profile embed and other settings in the [staff profile configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/profiles).
 
 | Field                          | Description                                                                                   |
 | ------------------------------ | --------------------------------------------------------------------------------------------- |
-| Enable Staff Profiles          | Unlocks profile cards tracking operational statistics, bios, and ratings.                     |
-| Only allow staff and higher... | Limits custom profile editing to staff roles. If disabled, all server members can edit bios. |
-| Profile Moderation Permission  | Sets the lowest access tier authorized to forcibly wipe another member's bio.                |
-| Profile Embed                  | The layout configuration defining field displays when rendering staff profiles via command.   |
+| Enable Staff Profiles          | Toggles the staff profile system, allowing staff members to set their custom nickname and introduction. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                  |
+| Only allow staff and higher to have their own customizable profile | Toggles that only staff members can edit their profile or not. If this is disabled, then all members can have their own profile with their own nickname and introduction.                       |
+| Profile Moderation Permission  | Sets whether supervisors+ or management+ can wipe the profile of a different (staff) member.                                                                                                                          |
+| Profile Embed                  | Customize the profile embed here. ⚠️ **Note: Although this feature works without an embed, an embed is still highly recommended for the best experience.**                                                                     |
 
 ### Activity Checks Configuration {#configuration-activity-checks}
 
-Configure manual and automated verification sequences in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) file.
+**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
+Configue manual and auomated activity checks to check if staff are active in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/activity-checks).
 
 | Field                        | Description                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- |
