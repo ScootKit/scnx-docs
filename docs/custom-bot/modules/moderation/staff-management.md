@@ -262,25 +262,26 @@ Configure (staff) profiles with a custom profile embed and other settings in the
 
 ### Activity Checks Configuration {#configuration-activity-checks}
 
-**IGNORE EVERYTHING FROM HERE ON. MADE WITH AI, OBVIOUSLY NOT AS GOOD BUT I AM TOO LAZY TO MAKE THE TABELS ETC** *W.I.P*
 Configue manual and auomated activity checks to check if staff are active in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/activity-checks).
 
 | Field                        | Description                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- |
-| Enable Activity Checks       | Unlocks manual and automated activity verification checking tools for admins.                     |
-| Roles to Check               | Roles expected to verify active status. Leaves blank to evaluate default general staff roles.     |
-| Check Duration (Hours)       | Length of the validation window in hours before a verification block expires (Max: 168).          |
-| Activity Check Embed         | Message layout dispatched into targeted text rooms when starting an active verification check.    |
-| Ended Activity Check Embed   | Layout replacing the initial button message block once the tracking expiration concludes.        |
-| Default Sending Channel      | Fallback target room for verification deployments if no command channel option is supplied.       |
-| Automated Checks             | Toggles whether background scheduler routines systematically dispatch automated verification runs. |
-| Automated Check Interval     | Selects automated scheduler frequency values (Weekly, Biweekly, Monthly, or custom Cronjob).      |
-| Automated Check Cronjob      | Custom cron pattern rules evaluation string. Evaluates only if interval is set to Cronjob.        |
-| Automated Check Week Day     | Day of the week specified to deploy automated verification checks (e.g., Monday).                 |
-| Automated Check Month Week   | Week index of the month targeted for automated deployments when interval targets Monthly.         |
-| Results Channel              | Target destination where activity compliance overviews post. Reverts to general logs if blank.    |
-| Ping on Results              | Toggles whether the system alerts roles with a ping mention when check result overviews post.    |
-| Roles to Ping                | Roles mentioned with pings when check summary result sheets post.                                 |
+| Enable Activity Checks       | Toggles the Activity Checks system, allowing you to check the activity of staff members, both manually as automatically.                                                                                                         |
+| Roles to Check               | Roles that are expected to respond to the activity check. Leave empty to use the general staff roles.                                                                                                                             |
+| Check Duration (Hours)       | The duration of the activity check. The minimum is 1hr and the maximum is 168hrs (1 week)         |
+| Activity Check Embed         | The customizable activity check embed.                                                            |
+| Ended Activity Check Embed   | The customizable activity check embed, which is edited from the activity check embed when the activity check has ended.                                                                                                          |
+| Default Sending Channel      | The channel to send the acitvity checks in. This can be overriden in the command.                 |
+| Exceptions rule              | The rule to select who are exempted from the activity checks. Choose between none, only LoA, only RA, LoA and RA or use a custom role.                                                                                               |
+| Custom Exception Roles       | The role(s) that are exempted from activity checks when 'custom role(s)' was chosen above.        |
+| Automated Checks             | Toggles the automated activity checks system.                                                     |
+| Automated Check Interval     | Choose how often you want the activity check to be (Weekly, Biweekly, Monthly or a cronjob)       |
+| Automated Check Cronjob      | Custom cronjob to set the frequency exactly how you want. *Note: Using a cronjob generator like https://crontab.guru/ is recommended, unless you know yourself how a cronjob pattern works.*                                       |
+| Automated Check Week Day     | The day of the week to send the activity check.                                                   |
+| Automated Check Month Week   | The week of the month to send the activity check when 'monthly' was chosen for the interval.      |
+| Results Channel              | The channel where the activity check results are posted. The results include who reacted, who didn't, and who were exempted. Leave empty to use the general log channel.                                                         |
+| Ping on Results              | Toggles whether a role is pinged with the results or not.                                         |
+| Roles to Ping                | The custom role(s) to ping with the results.                                                      |
 
 ## Troubleshooting {#troubleshooting}
 
