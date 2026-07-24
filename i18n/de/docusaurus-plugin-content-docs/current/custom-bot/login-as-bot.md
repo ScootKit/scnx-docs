@@ -1,6 +1,6 @@
 # Versende Nachrichten / Embeds, Self-Rollen und mehr
 
-Sende Nachrichten, Embeds und Forenposts über deinen Bot – direkt aus dem SCNX-Dashboard. Du kannst diese Funktion auch nutzen, um Selbst-Rollen-Nachrichten mit Knöpfen zu erstellen.
+Sende Nachrichten, Embeds und Forenposts über deinen Bot - direkt aus dem SCNX-Dashboard. Du kannst diese Funktion auch nutzen, um Selbst-Rollen-Nachrichten mit Knöpfen zu erstellen.
 
 <IncludedInPlan data={{PROFESSIONAL: true, UNLIMITED: true, STARTER: true}} />
 
@@ -39,6 +39,74 @@ Falls dein Bot offline ist oder kritische Probleme aufweist, kannst du Als Bot a
 :::tip
 Nutze die Vorschau im Nachrichten-Editor, um zu sehen, wie deine Nachricht vor dem Absenden aussehen wird.
 :::
+
+## Nachrichten planen {#scheduling}
+
+Anstatt eine Nachricht sofort zu senden, kannst du sie so planen, dass sie zu einem späteren Zeitpunkt in einem Kanal
+gepostet wird - und sie optional in einem festen Rhythmus wiederholen lassen, bis du sie abbrichst. Geplante Nachrichten
+werden von deinem Bot verwaltet, du musst also das Dashboard nicht geöffnet halten, und ausstehende Nachrichten
+überstehen Bot-Neustarts.
+
+### Eine Nachricht planen {#schedule-message}
+
+1. Öffne die Seite [Als Bot anmelden](https://scnx.app/glink?page=bot/login).
+2. Wähle den Kanal aus, in den die Nachricht gepostet werden soll.
+3. Verfasse deine Nachricht mit dem [Nachrichten-Editor](/de/docs/scnx/guilds/message-editor), genau wie bei einer normalen Nachricht.
+4. Wähle eine Sendezeit in der Zukunft und optional eine Wiederholung.
+5. Speichere die geplante Nachricht.
+
+Die Sendezeit wird in der konfigurierten Zeitzone deines Bots interpretiert - derselben Zeitzone, die auch überall
+sonst verwendet wird. Die Uhrzeit muss in der Zukunft liegen.
+
+### Wiederkehrende Nachrichten {#recurring}
+
+Eine geplante Nachricht kann sich in einem **täglichen**, **wöchentlichen** oder **monatlichen** Rhythmus wiederholen:
+
+- **Täglich** - jeden Tag zur selben Uhrzeit.
+- **Wöchentlich** - alle 7 Tage, am selben Wochentag und zur selben Uhrzeit.
+- **Monatlich** - am selben Tag des Monats.
+
+Wiederkehrende Nachrichten laufen, bis du sie abbrichst - es gibt kein Enddatum und keine maximale Anzahl. Nach
+jedem Senden bereitet der Bot das nächste Auftreten vor, und er bereitet es auch beim Start erneut vor, sodass ein
+Bot-Neustart die Serie nie unterbricht.
+
+Bei monatlichen Nachrichten ist der Sendetag am Tag des Monats des ersten Auftretens verankert. In kürzeren Monaten
+wird dieser Tag auf den letzten Tag des Monats begrenzt und danach wieder ausgeweitet - eine Nachricht, die zum
+Beispiel auf den 31. verankert ist, wird am 31. Jan., 28. Feb., 31. März, 30. Apr. usw. ausgelöst.
+
+### Bearbeiten, Abbrechen und Auflisten {#manage-scheduled}
+
+- **Auflisten** - das Dashboard zeigt deine ausstehenden geplanten Nachrichten an, jeweils mit ihrer nächsten
+  Sendezeit und, bei wiederkehrenden Nachrichten, ihrem Rhythmus.
+- **Bearbeiten** - du kannst den Inhalt, die Sendezeit oder die Wiederholung einer ausstehenden geplanten Nachricht
+  ändern. Eine wiederkehrende Nachricht wieder in eine Einmal-Nachricht umzuwandeln oder umgekehrt wird unterstützt.
+- **Abbrechen** - beim Abbrechen wird die geplante Nachricht entfernt. Das Abbrechen einer wiederkehrenden Nachricht
+  stoppt die gesamte Serie.
+
+### Verpasste und fehlgeschlagene Auftreten {#reliability}
+
+- **Verpasste Ausführungen überspringen** - falls dein Bot offline ist, wenn ein Auftreten fällig wäre, wird dieses
+  Auftreten übersprungen statt verspätet gesendet. Die Serie wird beim nächsten zukünftigen Zeitpunkt fortgesetzt.
+- **Selbstheilende Fehlschläge** - falls ein Auftreten nicht gesendet werden kann (zum Beispiel, weil der Kanal
+  gelöscht wurde oder der Bot den Zugriff verloren hat), versucht die Serie es weiterhin im normalen Rhythmus, stoppt
+  sich aber nach **5 aufeinanderfolgenden fehlgeschlagenen Auftreten** selbst. Ein einziges erfolgreiches Senden setzt
+  diesen Zähler zurück.
+
+### Limits für ausstehende Nachrichten {#scheduling-limits}
+
+Die Anzahl der **ausstehenden** geplanten Nachrichten, die du gleichzeitig haben kannst, ist pro Tarif begrenzt. Eine
+wiederkehrende Serie zählt als eine einzige ausstehende Nachricht, und gesendete, abgebrochene oder gestoppte
+Nachrichten zählen nicht zum Limit.
+
+| Tarif                     | Max. ausstehende geplante Nachrichten |
+| ------------------------- | ------------------------------------- |
+| STARTER                   | 2                                     |
+| ACTIVE_GUILD              | 10                                    |
+| UNLIMITED / PRO           | 25                                    |
+| PROFESSIONAL / ENTERPRISE | 50                                    |
+
+Wenn du das Limit deines Tarifs erreicht hast, wird das Planen einer neuen Nachricht abgelehnt und nichts erstellt -
+brich eine ausstehende Nachricht ab oder warte, bis sie gesendet wurde, um einen Platz freizugeben.
 
 ## Eine Nachricht bearbeiten {#edit-message}
 

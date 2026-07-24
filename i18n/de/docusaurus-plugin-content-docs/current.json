@@ -191,6 +191,10 @@
     "message": "Eigene Befehle",
     "description": "The label for the doc item 'Custom Commands' in sidebar 'customBotSidebar', linking to the doc custom-bot/custom-commands"
   },
+  "sidebar.customBotSidebar.doc.Commands": {
+    "message": "Befehle",
+    "description": "The label for the doc item 'Commands' in sidebar 'customBotSidebar', linking to the doc custom-bot/commands"
+  },
   "sidebar.customBotSidebar.doc.Send messages / embeds, Self-Roles & more": {
     "message": "Versende Nachrichten / Embeds, Self-Rollen & mehr",
     "description": "The label for the doc item 'Send messages / embeds, Self-Roles & more' in sidebar 'customBotSidebar', linking to the doc custom-bot/login-as-bot"

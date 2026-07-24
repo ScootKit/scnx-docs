@@ -23,7 +23,7 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 
 ## Usage {#usage}
 
-After [setting up](#setup) and [configuring](#configuration) this module, no additional actions are required. The bot will automatically check configured YouTube channels for new videos and livestreams every five minutes.
+After [setting up](#setup) and [configuring](#configuration) this module, no additional actions are required. The bot will automatically check configured YouTube channels for new videos and livestreams every 60 seconds, so go-live and upload notifications usually arrive within about a minute. An overlap guard prevents a slow check from starting a second one on top of it, so notifications are never duplicated.
 
 - When a new **video** is uploaded, the configured notification message will be sent to the specified Discord channel. Only videos published within the last 24 hours will trigger notifications.
 - When a channel starts a **livestream**, the configured notification message will be sent. If the live role feature is enabled, the configured role will be added to the YouTuber's Discord account when they go live and removed when the stream ends.
@@ -63,7 +63,7 @@ In this configuration file, you can set up YouTube channels to monitor for lives
 <ul>
     <li>Make sure the YouTube @-handle or channel ID is correct.</li>
     <li>Ensure the bot has "View channel", "Send messages" and "Embed links" permissions on the notification channel.</li>
-    <li>The module checks for new videos every five minutes. Please wait for the next check cycle.</li>
+    <li>The module checks for new videos every 60 seconds. Please wait for the next check cycle.</li>
     <li>If the "Ignore shorts?" option is enabled, YouTube Shorts will not trigger notifications.</li>
     <li>If a YouTube channel cannot be found, it will be skipped until the bot is restarted or the configuration is reloaded.</li>
 </ul>
@@ -74,7 +74,7 @@ In this configuration file, you can set up YouTube channels to monitor for lives
 <ul>
     <li>Make sure the YouTube @-handle is correct.</li>
     <li>Ensure the bot has "View channel", "Send messages" and "Embed links" permissions on the notification channel.</li>
-    <li>The module checks for livestreams every five minutes. Please wait for the next check cycle.</li>
+    <li>The module checks for livestreams every 60 seconds. Please wait for the next check cycle.</li>
 </ul>
 </details>
 

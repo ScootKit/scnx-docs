@@ -66,7 +66,7 @@ explizit überschrieben werden, indem Rollen oder einzelne Nutzer hinzugefügt w
 So stellt Discord sicher, dass sensible Befehle nur von autorisierten Mitgliedern
 verwendet werden, sofern der Zugriff nicht bewusst erweitert wird.
 
-## Synchronisation von Befehlen
+## Synchronisation von Befehlen {#command-synchronization}
 
 Discord bietet die Möglichkeit, Berechtigungseinstellungen für mehrere
 Befehle gemeinsam zu verwalten.

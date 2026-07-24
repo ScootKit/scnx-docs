@@ -70,10 +70,17 @@ Slow-Mode in diesem Kanal zu aktivieren, um zu vermeiden, dass du all deine AI C
 
 ### Konfigurationsoptionen
 
-- **Persönlichkeit (Personality):** Abhängig von dieser Einstellung wird sich der AI-Chat-Bot unterschiedlich verhalten.
-  - **default:** Die Standardpersönlichkeit - entwickelt, um Benutzern zu helfen und Anfragen zu beantworten. Empfohlen und die beste Option
-    für die meisten Server.
-  - **rude starbucks employee:** Diese Persönlichkeit wird mit deinen Benutzern Rollenspiele als unhöflicher Starbucks-Mitarbeiter durchführen.
+- **Persönlichkeit (Personality):** Abhängig von dieser Einstellung wird sich der AI-Chat-Bot unterschiedlich verhalten. Die
+  folgenden integrierten Persönlichkeiten sind verfügbar:
+  - **Hilfreicher Chat-Bot (Standard):** Die Standardpersönlichkeit - entwickelt, um Benutzern zu helfen und Anfragen zu beantworten. Empfohlen
+    und die beste Option für die meisten Server.
+  - **Witziger Freund:** Eine lockerere, unbeschwertere Persönlichkeit.
+  - **Unfreundlicher Kaffee Mitarbeiter:** Diese Persönlichkeit wird mit deinen Benutzern Rollenspiele als unhöflicher Kaffeehaus-Mitarbeiter durchführen.
+
+  Die früheren Persönlichkeiten "Troll" und "Verschwörungstheoretiker / Lügner" wurden entfernt, um den Regeln des EU AI Act
+  zu manipulativen und täuschenden KI-Systemen zu entsprechen. Jeder Server, der eine davon ausgewählt hatte, fällt automatisch
+  auf die Standardpersönlichkeit zurück.
+
 - **Antwortlänge (Response Length):** Steuert, wie lang die Antworten der KI sein werden.
 - **Auslösemodus (Trigger Mode):** Bestimmt, welche Nachrichten eine KI-Antwort auslösen. 'Alle Nachrichten' (All messages) repliziert das Standardverhalten.
   Andere Modi beschränken Antworten auf spezifische Auslöser.
@@ -81,23 +88,74 @@ Slow-Mode in diesem Kanal zu aktivieren, um zu vermeiden, dass du all deine AI C
   diesem Wort oder dieser Phrase beginnt (z. B. 'Hey Bot').
 - **Verlauf zurücksetzen (Resetting History):** Bitte tippe nach der Konfiguration `=== RESET ===` in den KI-Kanal, um den Konversationsverlauf zurückzusetzen.
 
-### Benutzerdefinierter System-Prompt & Strenge Moderation
+### Benutzerdefinierter System-Prompt & Automatische Überprüfung
 
 Wenn festgelegt, ersetzt dieser Text die Persönlichkeitseinstellung als System-Prompt der KI. Maximal 1000 Zeichen - längerer Text wird
 automatisch abgeschnitten. Eine Sicherheitsklausel wird immer angehängt und kann nicht entfernt werden. Du bist voll verantwortlich für das
 Verhalten der KI, wenn du einen benutzerdefinierten Prompt verwendest.
 
-:::danger Automatisches Prompt-Scannen & Strenge Moderation
-Alle benutzerdefinierten System-Prompts durchlaufen ein strenges automatisches Scannen, bevor sie gespeichert werden. **Wenn dein Prompt gegen unsere Sicherheitsrichtlinien
-oder die Nutzungsbedingungen von Discord verstößt, wird dein KI-Modul sofort dauerhaft deaktiviert.**
+Zum Schutz aller und zur Erfüllung unserer rechtlichen Pflichten wird jeder benutzerdefinierte System-Prompt automatisch
+überprüft, bevor er aktiv wird. Der Rest dieses Abschnitts erklärt genau, was wir prüfen, was bei einer Ablehnung
+passiert und wie du Einspruch einlegen kannst.
 
-**Einspruch gegen eine Deaktivierung:**
-Um gegen eine Moduldeaktivierung Einspruch einzulegen, eröffne ein [Support-Ticket](https://scnx.app/de/user/support/new?topic=cmnewauac001v13dsssxa8rlh).
-Unser Team wird deinen Einspruch innerhalb von 2-3 Werktagen bearbeiten.
+#### Was wir überprüfen
 
-Für vollständige Details zu dieser Richtlinie und unserer rechtlichen Begründung, überprüfe bitte
-unsere [Nutzungsbedingungen](https://scootk.it/scnx-tos).
+- Wir überprüfen ausschließlich den benutzerdefinierten System-Prompt, den du festlegst. Das geschieht automatisch bei
+  jedem Start oder Neustart deines Bots.
+- Wir überprüfen niemals die Unterhaltungen in deinem Kanal und niemals das, was deine Mitglieder schreiben. Die
+  Überprüfung betrifft nur die Anweisungen, die du dem Bot gibst.
+
+#### Wie die Überprüfung funktioniert
+
+Die Überprüfung ist vollständig automatisch. Ein KI-Prüfer gleicht den Prompt mit den Kategorien für die zulässige
+Nutzung in Abschnitt 8 unserer [Nutzungsbedingungen](https://scootk.it/scnx-tos) ab.
+
+#### Was zur Ablehnung eines Prompts führt
+
+Ein Prompt wird abgelehnt, wenn er eines der folgenden Dinge tut:
+
+- **Sexualisierung von Minderjährigen:** sexuelle Inhalte mit Personen unter 18 Jahren.
+- **Wahrscheinlich nach deutschem Recht rechtswidrige Inhalte:** Inhalte, die wahrscheinlich nach deutschem Recht rechtswidrig sind.
+- **Gezielte Belästigung oder Hassrede:** Angriffe auf Personen oder Gruppen aufgrund ihrer Identität.
+- **Sammeln personenbezogener Daten:** den Bot anweisen, persönliche Informationen über Nutzer zu sammeln.
+- **Täuschende Identitätsvortäuschung oder Betrug:** sich als jemand anderes ausgeben oder den Bot zur Täuschung oder zum
+  Betrug einsetzen.
+- **Verstoß gegen Discords Regeln:** Verhalten anweisen, das gegen Discords
+  [Nutzungsbedingungen](https://discord.com/terms) verstößt.
+
+#### Verwarnungen und was passiert
+
+Jeder abgelehnte Prompt zählt als eine Verwarnung. Verwarnungen werden über ein fortlaufendes 90-Tage-Fenster gezählt.
+
+- **Erste Verwarnung:** nur dieser Prompt wird blockiert. Alles andere funktioniert weiter. Lege einen neuen Prompt fest,
+  der die Überprüfung besteht, und nach dem nächsten Neustart deines Bots wird der KI-Chat-Kanal automatisch wieder
+  aktiviert.
+- **Sperrung des Moduls:** eine zweite Verwarnung innerhalb des 90-Tage-Fensters oder eine Ablehnung in einer Kategorie
+  mit hohem Schweregrad (Sexualisierung von Minderjährigen oder wahrscheinlich nach deutschem Recht rechtswidrige Inhalte) sperrt das gesamte
+  KI-Chat-Modul.
+
+Ein gesperrtes Modul kann nicht durch Bearbeiten des Prompts entsperrt werden. Es kann nur durch einen Einspruch oder
+eine Entscheidung unseres Teams wieder freigegeben werden.
+
+:::note Nur der betroffene Kanal wird deaktiviert
+Ein benutzerdefinierter Prompt, der die Überprüfung nicht besteht, deaktiviert nur den spezifischen KI-Chat-Kanal, zu dem
+er gehört - der Rest des Moduls und alle anderen KI-Chat-Kanäle funktionieren weiter. Dieser Kanal erholt sich automatisch,
+sobald du einen Prompt festlegst, der die Überprüfung besteht; für eine erste Verwarnung musst du kein Support-Ticket eröffnen.
 :::
+
+Verwarnungen fallen automatisch aus dem 90-Tage-Fenster heraus, eine Modulsperre läuft jedoch nie von selbst ab - sie endet nur durch einen erfolgreichen Einspruch oder eine Entscheidung unseres Teams.
+
+#### Begründung und Einspruch
+
+:::info Begründung
+Jede Ablehnung sendet eine E-Mail an den Server-Inhaber. Gemäß dem EU Digital Services Act (Artikel 17) enthält diese
+E-Mail eine Begründung und eine Anleitung zum Einlegen eines Einspruchs. Dein aktueller Stand - deine Verwarnungen und ob
+das Modul gesperrt ist - wird außerdem auf der Seite des Moduls in deinem Dashboard angezeigt.
+:::
+
+Um Einspruch einzulegen, eröffne ein [Support-Ticket](https://scnx.app/de/user/support/new?topic=cmnewauac001v13dsssxa8rlh).
+Ein Mitglied unseres Teams prüft jeden Einspruch. Für vollständige Details zu dieser Richtlinie überprüfe bitte unsere
+[Nutzungsbedingungen](https://scootk.it/scnx-tos).
 
 ### Preise & Häufige Fehler
 

@@ -70,10 +70,17 @@ slow-mode in this channel to avoid losing all your AI Coins in seconds.
 
 ### Configuration Options
 
-- **Personality:** Depending on this setting, the AI-Chat-Bot will behave differently.
-  - **default:** The default personality - designed to help users and answer requests. Recommanded and the best option
-    for most servers.
-  - **rude starbucks employee:** This personality will role-play with your users as a starbucks rude employee.
+- **Personality:** Depending on this setting, the AI-Chat-Bot will behave differently. The following built-in
+  personalities are available:
+  - **Helpful Chat-Bot (default):** The default personality - designed to help users and answer requests. Recommended
+    and the best option for most servers.
+  - **Funny friend:** A more casual, light-hearted personality.
+  - **Rude coffee shop employee:** This personality will role-play with your users as a rude coffee shop employee.
+
+  The former "Troll" and "Conspiracy theorist / Liar" personalities have been removed to comply with the EU AI Act's
+  rules on manipulative and deceptive AI systems. Any server that had one of them selected falls back to the default
+  personality automatically.
+
 - **Response Length:** Controls how long the AI's responses will be.
 - **Trigger Mode:** Determines which messages trigger an AI response. 'All messages' replicates the default behaviour.
   Other modes restrict responses to specific triggers.
@@ -81,23 +88,70 @@ slow-mode in this channel to avoid losing all your AI Coins in seconds.
   this word or phrase (e.g. 'Hey Bot').
 - **Resetting History:** After configuring, please type `=== RESET ===` in the ai channel to reset conversation history.
 
-### Custom System Prompt & Strict Moderation
+### Custom System Prompt & Automated Review
 
 If set, this text replaces the Personality setting as the AI's system prompt. Maximum 1000 characters - longer text is
 truncated automatically. A safety clause is always appended and cannot be removed. You are fully responsible for the
 AI's behaviour when using a custom prompt.
 
-:::danger Automatic Prompt Scanning & Strict Moderation
-All custom system prompts undergo strict automatic scanning before being saved. **If your prompt violates our safety
-guidelines or Discord's Terms of Service, your AI module will be permanently deactivated immediately.**
+To keep everyone safe and to meet our legal obligations, every custom system prompt is checked automatically before it
+goes live. The rest of this section explains exactly what we check, what happens if a prompt is rejected, and how to
+appeal.
 
-**Appealing a Deactivation:**
-To appeal a module deactivation, [open a support ticket](https://scnx.app/user/support/new?topic=cmnewauac001v13dsssxa8rlh).
-Our team will process your appeal within 2-3 business days.
+#### What we review
 
-For full details regarding this policy and our legal justification, please review
+- We only review the custom system prompt you set. We do this automatically each time your bot starts or restarts.
+- We never review the conversations in your channel, and we never review what your members write. The review is only
+  about the instructions you give the bot.
+
+#### How the review works
+
+The review is fully automated. An AI reviewer checks the prompt against the acceptable-use categories in section 8 of
 our [Terms of Service](https://scootk.it/scnx-tos).
+
+#### What gets a prompt rejected
+
+A prompt is rejected if it does any of the following:
+
+- **Sexualization of minors:** sexual content involving anyone under 18.
+- **Content likely illegal under German law:** content that is likely illegal under German law.
+- **Targeted harassment or hate speech:** attacking people or groups based on who they are.
+- **Collecting personal data:** instructing the bot to gather personal information about users.
+- **Deceptive impersonation or scams:** pretending to be someone else or framing the bot to deceive or defraud.
+- **Breaking Discord's rules:** instructing behaviour that violates Discord's
+  [Terms of Service](https://discord.com/terms).
+
+#### Strikes and what happens
+
+Each rejected prompt counts as one strike. Strikes are counted over a rolling 90-day window.
+
+- **First strike:** only that prompt is blocked. Everything else keeps working. Set a new prompt that passes review, and
+  after your bot's next restart the AI chat channel is re-enabled automatically.
+- **Module lock:** a second strike within the 90-day window, or any rejection in a high-severity category
+  (sexualization of minors, or content likely illegal under German law), locks the whole AI chat module.
+
+A locked module cannot be unlocked by editing the prompt. It can only be reopened through an appeal or a decision by our
+staff.
+
+:::note Only the affected channel is disabled
+A custom prompt that fails review disables only the specific AI chat channel it belongs to - the rest of the module and
+any other AI chat channels keep working. That channel recovers automatically once you set a prompt that passes review;
+you do not need to open a support ticket for a first strike.
 :::
+
+Strikes age out of the 90-day window automatically, but a module lock never expires on its own - it ends only through a successful appeal or a decision by our staff.
+
+#### Statement of reasons and how to appeal
+
+:::info Statement of reasons
+Every rejection sends an email to the server owner. In line with the EU Digital Services Act (Article 17), that email
+includes a statement of reasons and instructions for appealing. Your current standing - your strikes and whether the
+module is locked - is also shown on the module's page in your dashboard.
+:::
+
+To appeal, [open a support ticket](https://scnx.app/user/support/new?topic=cmnewauac001v13dsssxa8rlh). A member of our
+team reviews every appeal. For full details on this policy, please review our
+[Terms of Service](https://scootk.it/scnx-tos).
 
 ### Pricing & Common Errors
 

@@ -63,9 +63,9 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Streak View Message                       | Customize the embed displayed when viewing a streak.                                                                                                                                              |
 | Ignored Channels                          | Channels where messages do not count toward streaks.                                                                                                                                              |
 | Ignored Roles                             | Roles whose members' messages do not count toward streaks.                                                                                                                                        |
-| Enable Restore                            | If enabled, users can restore a lost streak once per loss.                                                                                                                                        |
-| Restore Roles                             | Roles that are allowed to use the restore command. If empty, all users can restore.                                                                                                               |
-| Restore time limit (days)                 | How many days after losing a streak users can still restore it with `/streak restore`. Set to `0` for no time limit. Only applies when "Enable Restore" is turned on.                             |
+| Enable streak restore?                    | If enabled, users can restore a lost streak once per loss.                                                                                                                                        |
+| Roles allowed to restore streaks          | Roles that are allowed to use the restore command. If empty, all users can restore.                                                                                                               |
+| Restore time limit (days)                 | How many days after losing a streak users can still restore it with `/streak restore`. Set to `0` for no time limit. Only applies when "Enable streak restore?" is turned on.                     |
 
 ## Troubleshooting {#troubleshooting}
 

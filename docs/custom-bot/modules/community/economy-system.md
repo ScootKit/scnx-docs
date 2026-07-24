@@ -108,33 +108,33 @@ In this configuration file, you can configure the functionality of this module. 
 
 In this configuration file, you can customize the messages sent by this module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=economy-system%7Cconfigs%2Fstrings).
 
-| Field                | Description                                                                  |
-| -------------------- | ---------------------------------------------------------------------------- |
-| not found message    | Message shown when a shop item cannot be found.                              |
-| not enough money     | Message shown when a user does not have enough currency to buy an item.      |
-| shop message         | The embed displayed in the shop channel showing all available items.         |
-| item string          | The format used for each item in the shop message.                           |
-| cooldown             | Message shown when a user attempts to use a command while on cooldown.       |
-| workSuccess          | Array of messages randomly shown when a user successfully works.             |
-| crimeSuccess         | Array of messages randomly shown when a user successfully commits a crime.   |
-| crimeFail            | Array of messages randomly shown when a user fails at committing a crime.    |
-| robSuccess           | Message shown when a user successfully robs another user.                    |
-| leaderboardEmbed     | Customize the appearance of the leaderboard embed.                           |
-| dailyReward          | Message shown when a user collects their daily reward.                       |
-| weeklyReward         | Message shown when a user collects their weekly reward.                      |
-| balanceReply         | The embed displayed when a user checks their balance.                        |
-| userNotFound         | Message shown when the specified user cannot be found.                       |
-| buyMsg               | Message shown when a user purchases a shop item.                             |
-| itemCreate           | Message shown when a shop item is created.                                   |
-| itemDelete           | Message shown when a shop item is deleted.                                   |
-| itemEdit             | Message shown when a shop item is edited.                                    |
-| deposit message      | Message shown when a user deposits currency to the bank.                     |
-| withdraw message     | Message shown when a user withdraws currency from the bank.                  |
-| message drop message | Array of messages shown when a user receives a message drop.                 |
-| rebuy message        | Message shown when a user tries to buy an item they already own.             |
-| multiple matches     | Message shown when multiple shop items match the search query.               |
-| no matches           | Message shown when no shop item matches the search query.                    |
-| item duplicate       | Message shown when trying to create a shop item with an existing ID or name. |
+| Field                | Description                                                                                                                                                                                                                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| not found message    | Message shown when a shop item cannot be found.                                                                                                                                                                                                                                        |
+| not enough money     | Message shown when a user does not have enough currency to buy an item.                                                                                                                                                                                                                |
+| shop message         | The embed displayed in the shop channel showing all available items.                                                                                                                                                                                                                   |
+| item string          | The format used for each item in the shop message.                                                                                                                                                                                                                                     |
+| cooldown             | Message shown when a user attempts to use a command while on cooldown.                                                                                                                                                                                                                 |
+| workSuccess          | Array of messages randomly shown when a user successfully works.                                                                                                                                                                                                                       |
+| crimeSuccess         | Array of messages randomly shown when a user successfully commits a crime.                                                                                                                                                                                                             |
+| crimeFail            | Array of messages randomly shown when a user fails at committing a crime.                                                                                                                                                                                                              |
+| robSuccess           | Message shown when a user successfully robs another user.                                                                                                                                                                                                                              |
+| leaderboardEmbed     | Customize the appearance of the leaderboard embed.                                                                                                                                                                                                                                     |
+| dailyReward          | Message shown when a user collects their daily reward.                                                                                                                                                                                                                                 |
+| weeklyReward         | Message shown when a user collects their weekly reward.                                                                                                                                                                                                                                |
+| balanceReply         | The embed displayed when a user checks their balance.                                                                                                                                                                                                                                  |
+| userNotFound         | Message shown when the specified user cannot be found.                                                                                                                                                                                                                                 |
+| buyMsg               | Message shown when a user purchases a shop item.                                                                                                                                                                                                                                       |
+| itemCreate           | Message shown when a shop item is created.                                                                                                                                                                                                                                             |
+| itemDelete           | Message shown when a shop item is deleted.                                                                                                                                                                                                                                             |
+| itemEdit             | Message shown when a shop item is edited.                                                                                                                                                                                                                                              |
+| deposit message      | Message shown when a user deposits currency to the bank.                                                                                                                                                                                                                               |
+| withdraw message     | Message shown when a user withdraws currency from the bank.                                                                                                                                                                                                                            |
+| message drop message | Array of custom messages sent when a user receives a message drop - one is picked at random for each drop. Supports full embed formatting and the `%earned%` placeholder (the amount earned, including the currency symbol). Leave empty to fall back to the built-in default message. |
+| rebuy message        | Message shown when a user tries to buy an item they already own.                                                                                                                                                                                                                       |
+| multiple matches     | Message shown when multiple shop items match the search query.                                                                                                                                                                                                                         |
+| no matches           | Message shown when no shop item matches the search query.                                                                                                                                                                                                                              |
+| item duplicate       | Message shown when trying to create a shop item with an existing ID or name.                                                                                                                                                                                                           |
 
 ## Troubleshooting {#troubleshooting}
 

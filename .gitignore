@@ -1,5 +1,11 @@
 # Dependencies
 /node_modules
+/.yarn/cache
+/.yarn/install-state.gz
+
+# IDE / tooling
+/.idea
+/.claude
 
 # Production
 /build
