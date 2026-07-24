@@ -52,6 +52,69 @@ members, the following channel permissions are required:
 Use the [preview in the message editor](/docs/scnx/guilds/message-editor#preview) to see how your message will look before sending it.
 :::
 
+## Scheduling messages {#scheduling}
+
+Instead of sending a message right away, you can schedule it to be posted in a channel at a future time - and
+optionally have it repeat on a fixed cadence until you cancel it. Scheduled messages are handled by your bot, so
+you do not need to keep the dashboard open, and pending messages survive bot restarts.
+
+### Scheduling a message {#schedule-message}
+
+1. Open the [Bot Log-In page](https://scnx.app/glink?page=bot/login).
+2. Select the channel you want the message to be posted in.
+3. Compose your message using the [message editor](/docs/scnx/guilds/message-editor), just like a normal message.
+4. Choose a send time in the future and, optionally, a recurrence.
+5. Save the scheduled message.
+
+The send time is interpreted in your bot's configured timezone - the same timezone used everywhere else. The time
+must be in the future.
+
+### Recurring messages {#recurring}
+
+A scheduled message can repeat on a **daily**, **weekly**, or **monthly** cadence:
+
+- **Daily** - every day at the same time.
+- **Weekly** - every 7 days, on the same weekday and time.
+- **Monthly** - on the same day of the month.
+
+Recurring messages run until you cancel them - there is no end date or maximum count. After each send, the bot
+re-arms the next occurrence, and it also re-arms on startup, so a bot restart never breaks the series.
+
+For monthly messages, the send day is anchored to the day of the month of the first occurrence. In shorter months
+that day is clamped to the last day of the month, then re-expands afterwards - for example, a message anchored to
+the 31st fires on Jan 31, Feb 28, Mar 31, Apr 30, and so on.
+
+### Editing, cancelling, and listing {#manage-scheduled}
+
+- **List** - the dashboard shows your pending scheduled messages, each with its next send time and, for recurring
+  messages, its cadence.
+- **Edit** - you can change the content, send time, or recurrence of a pending scheduled message. Turning a
+  recurring message back into a one-shot, or vice versa, is supported.
+- **Cancel** - cancelling a scheduled message removes it. Cancelling a recurring message stops the whole series.
+
+### Missed and failed occurrences {#reliability}
+
+- **Skip missed runs** - if your bot is offline when an occurrence is due, that occurrence is skipped rather than
+  sent late. The series resumes at the next future slot.
+- **Self-healing failures** - if an occurrence fails to send (for example because the channel was deleted or the
+  bot lost access), the series keeps trying on its normal cadence but stops itself after **5 consecutive failed
+  occurrences**. A single successful send resets that counter.
+
+### Pending message limits {#scheduling-limits}
+
+The number of **pending** scheduled messages you can have at once is capped per plan. A recurring series counts as
+a single pending message, and sent, cancelled, or stopped messages do not count toward the limit.
+
+| Plan                      | Max pending scheduled messages |
+| ------------------------- | ------------------------------ |
+| STARTER                   | 2                              |
+| ACTIVE_GUILD              | 10                             |
+| UNLIMITED / PRO           | 25                             |
+| PROFESSIONAL / ENTERPRISE | 50                             |
+
+When you are at your plan's limit, scheduling a new message is rejected and nothing is created - cancel or wait
+for a pending message to be sent to free up a slot.
+
 ## Editing a message {#edit-message}
 
 You can edit messages that were previously sent by your bot (including messages sent via Bot Log-In).

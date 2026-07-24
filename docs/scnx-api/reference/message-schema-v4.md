@@ -367,6 +367,46 @@ Triggers a custom command when clicked. **Guild-specific** - not recommended for
 | `type`              | string | `"customCommandButton"`               |
 | `id`                | string | The custom command's button click ID. |
 
+#### Flow Button {#flow-button}
+
+Starts a flow (a custom command built in the flow editor) when clicked. **Guild-specific** - not recommended for shared
+content.
+
+```json
+{
+  "type": 2,
+  "style": 1,
+  "label": "Open a ticket",
+  "scnx_action": {
+    "type": "flowButton",
+    "flowId": "cf2cf39f-8e65-441c-9abd-6764357abb67",
+    "state": "open"
+  }
+}
+```
+
+| `scnx_action` field | Type   | Description                                                                                                |
+| ------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| `type`              | string | `"flowButton"`                                                                                            |
+| `flowId`            | string | ID of the flow to start when clicked.                                                                     |
+| `state`             | string | Optional. A short state string handed to the flow (readable from the button's trigger). Max 80 characters. |
+
+:::note Reserved
+`flowWaitButton` (`{ "type": "flowWaitButton", "flowId": "..." }`) - a button that resolves a mid-flow wait - is
+reserved and ships with the flow executor milestone. Do not emit it yet.
+:::
+
+#### How Flow Custom IDs Are Generated {#flow-custom-id}
+
+At send time SCNX derives each flow component's Discord `custom_id` from its `scnx_action`:
+
+| Action                              | Generated `custom_id`          |
+| ----------------------------------- | ------------------------------ |
+| `flowButton` without `state`        | `ccv3:<flowId>`                |
+| `flowButton` with `state` `s`       | `ccv3:<flowId>:<s>`            |
+| a raw custom id with no flow target | `<s>` verbatim                 |
+| `flowWaitButton` (reserved)         | `ccv3w:<executionId>:<id>`     |
+
 #### Button Fields {#button-fields}
 
 | Field         | Type    | Required           | Description                                                                                                    |
@@ -447,15 +487,45 @@ Each option triggers a custom command. **Guild-specific** - not recommended for 
 }
 ```
 
+#### Flow Dropdown {#flow-dropdown}
+
+Starts a flow when an option is chosen. **Guild-specific** - not recommended for shared content.
+
+```json
+{
+  "type": 3,
+  "placeholder": "Choose an action",
+  "scnx_action": {
+    "type": "flowElement",
+    "flowId": "cf2cf39f-8e65-441c-9abd-6764357abb67"
+  },
+  "options": [
+    {
+      "label": "Open a ticket",
+      "value": "open"
+    },
+    {
+      "label": "Close a ticket",
+      "value": "close"
+    }
+  ]
+}
+```
+
+| `scnx_action` field | Type   | Description                                        |
+| ------------------- | ------ | ------------------------------------------------- |
+| `type`              | string | `"flowElement"`                                   |
+| `flowId`            | string | ID of the flow to start when an option is chosen. |
+
 #### String Select Fields {#string-select-fields}
 
-| Field         | Type    | Required | Description                                                                         |
-| ------------- | ------- | -------- | ----------------------------------------------------------------------------------- |
-| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                            |
-| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                         |
-| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`. |
-| `scnx_action` | object  | Yes      | `{ "type": "roleElement" }` or `{ "type": "customCommandElement" }`.                |
-| `options`     | array   | Yes      | 1–25 options.                                                                       |
+| Field         | Type    | Required | Description                                                                              |
+| ------------- | ------- | -------- | --------------------------------------------------------------------------------------- |
+| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                                |
+| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                             |
+| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`.     |
+| `scnx_action` | object  | Yes      | `{ "type": "roleElement" }`, `{ "type": "customCommandElement" }`, or `{ "type": "flowElement" }`. |
+| `options`     | array   | Yes      | 1–25 options.                                                                           |
 
 #### Option Fields {#option-fields}
 
@@ -481,8 +551,10 @@ will not work:
 | Disabled Button                                            | Yes                                  |
 | Self-Role Button                                           | No - role IDs are server-specific    |
 | Custom Command Button                                      | No - command IDs are server-specific |
+| Flow Button                                                | No - flow IDs are server-specific    |
 | Self-Role Dropdown                                         | No - role IDs are server-specific    |
 | Custom Command Dropdown                                    | No - command IDs are server-specific |
+| Flow Dropdown                                              | No - flow IDs are server-specific    |
 
 Stick to **text, images, containers, and link buttons** for content you plan to share.
 

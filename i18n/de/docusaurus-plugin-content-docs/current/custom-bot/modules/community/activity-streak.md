@@ -65,7 +65,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Ignorierte Rollen                                                 | Rollen, deren Mitglieder-Nachrichten nicht für Streaks zählen.                                                                                                                                                                               |
 | Streak-Wiederherstellung aktivieren?                              | Falls aktiviert, können Nutzer einen verlorenen Streak einmal pro Verlust wiederherstellen.                                                                                                                                                  |
 | Rollen, die Streaks wiederherstellen dürfen                       | Rollen, die berechtigt sind, den Befehl „restore" zu nutzen. Falls das Feld leer bleibt, können alle Nutzer Streaks wiederherstellen.                                                                                                        |
-| Wiederherstellungs-Zeitlimit (Tage)                               | Wie viele Tage nach dem Verlust eines Streaks Nutzer diesen noch mit `/streak restore` wiederherstellen können. Auf `0` setzen für kein Zeitlimit. Nur wirksam, wenn „Streak-Wiederherstellung aktivieren?" eingeschaltet ist.               |
+| Wiederherstellungsfrist (Tage)                                    | Wie viele Tage nach dem Verlust eines Streaks Nutzer diesen noch mit `/streak restore` wiederherstellen können. Auf `0` setzen für kein Zeitlimit. Nur wirksam, wenn „Streak-Wiederherstellung aktivieren?" eingeschaltet ist.               |
 
 ## Fehlerbehebung {#troubleshooting}
 

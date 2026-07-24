@@ -15,6 +15,7 @@ only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" t
 - Users can open a ticket by clicking a button below a customizable message.
 - Add multiple ticket category with independent configuration.
 - Automatically generate encrypted ticket transcripts.
+- Optionally copy the ticket category's permission overwrites to new ticket channels.
 
 ## Setup {#setup}
 
@@ -31,6 +32,8 @@ only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" t
   configured roles.
 - Staff members and the user who created the ticket will be able to close the ticket by clicking on the "Close Ticket"
   button below the first message sent in the ticket by the bot (will also be pinned).
+- Ticket participants (your staff and the user who opened the ticket) can attach files and embed links inside the ticket
+  channel.
 - Once a ticket has been closed, the bot will generate a ticket transcript containing all message sent. This transcript
   will be sent
   in the configured log channel and to the user (if enabled).
@@ -46,19 +49,20 @@ It's not possible to configure multiple ticket categories into one ticket creati
 and the field values are on a different language,
 consider [switching the language](/docs/scnx/guilds/bots#bot-language) of your bot.
 
-| Field                                | Description                                                                                                                                                                                         |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name                                 | Name of the ticket category. This will be displayed to users and staff members.                                                                                                                     |
-| Ticket create category               | New ticket channels will be created in this category on your Discord when a user opens a new ticket.                                                                                                |
-| Ticket create channel                | The ticket creation message will be sent into this channel. Users will be able to open a ticket in this category by clicking on a button below the message sent into this channel.                  |
-| Ticket roles                         | These roles will be pinged when a new ticket gets opened in this category and these roles will be given access to ticket channels.                                                                  |
-| Log channel                          | The transcript of closed channels will be sent into this channel.                                                                                                                                   |
-| Ticket create message                | This message will be sent in the "Ticket create channel" and users will be able to open a ticket in this category by clicking on a button below this message.                                       |
-| Send user DM when ticket gets closed | If enabled, users will be sent a DM when their ticket gets closed.                                                                                                                                  |
-| User DM                              | <i>Only visible if "Send user DM when ticket gets closed" is enabled.</i><br/>This message will be sent to the user when their ticket gets closed. You can include a link to the ticket transcript. |
-| Ticket-Created Message               | This message will be sent into new tickets when they get created. A button to close the ticket will be added below this message.                                                                    |
-| Ticket create button                 | This will be the content of the button below the ticket creation message and will open a new ticket when clicked.                                                                                   |
-| Ticket close button                  | This will be the content of the button below the ticket created message and will close the ticket when clicked.                                                                                     |
+| Field                                | Description                                                                                                                                                                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                                 | Name of the ticket category. This will be displayed to users and staff members.                                                                                                                                                               |
+| Ticket create category               | New ticket channels will be created in this category on your Discord when a user opens a new ticket.                                                                                                                                          |
+| Ticket create channel                | The ticket creation message will be sent into this channel. Users will be able to open a ticket in this category by clicking on a button below the message sent into this channel.                                                            |
+| Ticket roles                         | These roles will be pinged when a new ticket gets opened in this category and these roles will be given access to ticket channels.                                                                                                            |
+| Copy category permissions            | If enabled, the permission overwrites from the "Ticket create category" are copied to the new ticket channel when a ticket is opened (`@everyone` stays denied). Off by default. Later changes to the category are not applied automatically. |
+| Log channel                          | The transcript of closed channels will be sent into this channel.                                                                                                                                                                             |
+| Ticket create message                | This message will be sent in the "Ticket create channel" and users will be able to open a ticket in this category by clicking on a button below this message.                                                                                 |
+| Send user DM when ticket gets closed | If enabled, users will be sent a DM when their ticket gets closed.                                                                                                                                                                            |
+| User DM                              | <i>Only visible if "Send user DM when ticket gets closed" is enabled.</i><br/>This message will be sent to the user when their ticket gets closed. You can include a link to the ticket transcript.                                           |
+| Ticket-Created Message               | This message will be sent into new tickets when they get created. A button to close the ticket will be added below this message.                                                                                                              |
+| Ticket create button                 | This will be the content of the button below the ticket creation message and will open a new ticket when clicked.                                                                                                                             |
+| Ticket close button                  | This will be the content of the button below the ticket created message and will close the ticket when clicked.                                                                                                                               |
 
 ## Troubleshooting {#troubleshooting}
 

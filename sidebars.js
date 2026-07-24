@@ -152,6 +152,11 @@ const sidebars = {
                 },
                 {
                     type: 'doc',
+                    label: 'Commands',
+                    id: 'custom-bot/commands'
+                },
+                {
+                    type: 'doc',
                     label: 'Slash commands & Permissions',
                     id: 'custom-bot/slash-commands'
                 }

@@ -29,8 +29,9 @@ Let users apply for staff positions, partnerships, and more - with customizable 
 - Users can apply using `/apply` and selecting a category, or by using the drop-down menu in the info channel (if configured).
 - The bot sends the first question to the user via DM. The user responds with a message, and the bot sends the next question. This continues until all questions are answered.
 - Users can cancel their application at any time by sending `!cancel` during the DM process.
+- An application session is only cleaned up after 30 minutes of inactivity. The timer resets with every answer, so long applications no longer time out mid-flow - only genuinely abandoned sessions are cleaned up. When a session does time out, the bot DMs the user to let them know the application timed out and that they can start over with `/apply`.
 - Once all questions are answered, the application is submitted. The applicant receives a confirmation message with a link to their submitted answers, and a notification is sent to the configured notification channel.
-- In the notification channel, staff members can view the application and click "Approve" or "Deny" buttons. They can optionally provide a reason.
+- In the notification channel, staff members can view the application and click "Approve" or "Deny" buttons. They can optionally provide a reason. Once an application is processed, that application's own Approve and Deny buttons are disabled.
 - The applicant is notified via DM about the approval or denial, including the reason if one was provided.
 - If roles are configured for the category, approved applicants automatically receive those roles.
 - Users cannot submit a new application while they have a pending one. If a cooldown is configured, users must also wait the specified duration between submissions.
