@@ -24,7 +24,7 @@
     "@docusaurus/plugin-pwa": "^3.10.2",
     "@docusaurus/plugin-sitemap": "^3.10.2",
     "@docusaurus/preset-classic": "^3.10.2",
-    "@docusaurus/theme-common": "3.10.0",
+    "@docusaurus/theme-common": "^3.10.2",
     "@fortawesome/fontawesome-svg-core": "7.1.0",
     "@fortawesome/free-brands-svg-icons": "7.1.0",
     "@fortawesome/pro-duotone-svg-icons": "7.1.0",
@@ -46,7 +46,7 @@
     "remark-math": "6.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.10.0"
+    "@docusaurus/module-type-aliases": "^3.10.2"
   },
   "browserslist": {
     "production": [

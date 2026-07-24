@@ -5,7 +5,7 @@ Sende eine Nachricht in einen Kanal, wenn ein TikTok-Creator ein neues TikTok ve
 <ModuleOverview moduleName="tiktok-notifications" />
 
 :::info
-TikTok-Benachrichtigungen funktionieren nur für Creators, die ihr TikTok-Konto mit SCNX verbunden (beansprucht) haben. Wenn ein konfigurierter Creator sein Konto nicht verbunden hat, werden Benachrichtigungen für ihn pausiert und der Creator wird als Problem in deinem [Dashboard](/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers) aufgeführt, zusammen mit einem Link, über den der Creator sein Konto verbinden kann. Nicht verbundene Creators werden einmal pro Tag erneut überprüft, und Benachrichtigungen werden automatisch fortgesetzt, sobald das Konto verbunden wurde.
+TikTok-Benachrichtigungen funktionieren nur für Creators, die ihr TikTok-Konto mit SCNX verbunden (beansprucht) haben. Wenn ein konfigurierter Creator sein Konto nicht verbunden hat, werden Benachrichtigungen für ihn pausiert und der Creator wird als Problem in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers) aufgeführt, zusammen mit einem Link, über den der Creator sein Konto verbinden kann. Nicht verbundene Creators werden einmal pro Tag erneut überprüft, und Benachrichtigungen werden automatisch fortgesetzt, sobald das Konto verbunden wurde.
 :::
 
 ## Funktionen {#features}
@@ -16,7 +16,7 @@ TikTok-Benachrichtigungen funktionieren nur für Creators, die ihr TikTok-Konto 
 
 ## Einrichtung {#setup}
 
-1. Öffne die [Konfiguration der TikTok-Creators](/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers).
+1. Öffne die [Konfiguration der TikTok-Creators](https://scnx.app/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers).
 2. Klicke auf "Neues Element hinzufügen" und konfiguriere den TikTok-Nutzernamen und den Benachrichtigungskanal wie im [Konfigurationsabschnitt](#configuration) beschrieben.
 3. Stelle sicher, dass der Bot im konfigurierten Benachrichtigungskanal die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Links einbetten" hat.
 4. Lade die Konfiguration deines Bots neu, um die Änderungen zu übernehmen.
@@ -31,7 +31,7 @@ Benachrichtigungen werden nur für Creators gesendet, die ihr TikTok-Konto mit S
 
 ## Konfiguration {#configuration}
 
-Mit dieser Konfigurationsdatei kannst du TikTok-Konten einrichten, die auf neue Videos überwacht werden sollen. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers).
+Mit dieser Konfigurationsdatei kannst du TikTok-Konten einrichten, die auf neue Videos überwacht werden sollen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=tiktok-notifications%7Cusers).
 
 | Feld                          | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

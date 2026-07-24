@@ -37,8 +37,8 @@ Fortschrittliches Sicherheits- und Moderationssystem mit unzähligen Funktionen,
 
 ## Einrichtung {#setup}
 
-1. [Aktiviere das Modul](/de/glink?page=bot/modules?query=moderation) auf deinem Server.
-2. Öffne die [Konfiguration](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/config) und lege den **Log-Kanal** fest, in dem Moderationsaktionen protokolliert werden.
+1. [Aktiviere das Modul](https://scnx.app/de/glink?page=bot/modules?query=moderation) auf deinem Server.
+2. Öffne die [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/config) und lege den **Log-Kanal** fest, in dem Moderationsaktionen protokolliert werden.
 3. Richte deine **Moderationslevel** in der [Moderationslevel-Konfiguration](#configuration-modlevels) ein. Erstelle ein Level pro Team-Stufe, liste die Rollen auf, die dazugehören, und hake genau die Berechtigungen ab, die diese Rollen haben sollen (Verwarnen, Stummschalten, Kicken, Bannen, Quarantäne und mehr). Wenn du von einer älteren Version aktualisierst, werden deine bestehenden Moderator-Level-1-4-Rollen beim Start automatisch in gleichwertige Level migriert, sodass dein Team ohne jede Änderung weiterarbeiten kann.
 4. Alle Moderatoren müssen außerdem den `/moderate`-Befehl ausführen können. Konfiguriere dies in deinen Discord-Servereinstellungen (Servereinstellungen > Integrationen).
 5. Wenn du Quarantäne nutzen möchtest, lege die **Quarantäne-Rolle** in der Konfiguration fest. Diese Rolle sollte eingeschränkte Berechtigungen haben, und die Rolle des Bots sollte in der Rollenhierarchie über ihr platziert sein.
@@ -182,7 +182,7 @@ Hinweise:
 
 ### Konfiguration {#configuration-config}
 
-In dieser Konfigurationsdatei richtest du die zentralen Moderationseinstellungen ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/config).
+In dieser Konfigurationsdatei richtest du die zentralen Moderationseinstellungen ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/config).
 
 Moderator-Berechtigungen befinden sich nicht mehr hier - sie werden in der separaten Konfiguration [Moderationslevel](#configuration-modlevels) definiert. Die alten Moderator-Level-1-4-Rollenfelder werden beim Start automatisch in gleichwertige Level migriert und danach ausgeblendet.
 
@@ -224,7 +224,7 @@ Moderator-Berechtigungen befinden sich nicht mehr hier - sie werden in der separ
 
 ### Moderationslevel {#configuration-modlevels}
 
-In dieser Konfigurationsdatei definierst du deine benutzerdefinierten Moderationslevel. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/modLevels).
+In dieser Konfigurationsdatei definierst du deine benutzerdefinierten Moderationslevel. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/modLevels).
 
 Jedes Level ist ein Eintrag, der die Rollen auflistet, für die es gilt, und die Berechtigungen, die diese Rollen erhalten. Erstelle so viele benannte Level, wie du möchtest - zum Beispiel ein Trial-Mod-Level mit nur Verwarnen und Stummschalten und ein dediziertes Anti-Raid-Level mit nichts als Lockdown-Kontrolle. Ein Mitglied erhält die kombinierten Berechtigungen jedes Levels, dessen Rollen es besitzt. Wenn du aktualisierst, wird dein altes Moderator-Level-1-4-Setup automatisch in gleichwertige Level migriert und funktioniert genau wie zuvor.
 
@@ -247,7 +247,7 @@ Jedes Level ist ein Eintrag, der die Rollen auflistet, für die es gilt, und die
 
 ### Anti-Spam {#anti-spam}
 
-In dieser Konfigurationsdatei richtest du das Anti-Spam-System ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiSpam).
+In dieser Konfigurationsdatei richtest du das Anti-Spam-System ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiSpam).
 
 Anti-Spam ist in einzelne Detektoren aufgeteilt, die du separat aktivierst, einstellst und mit Aktionen versiehst. Es gibt eine Reihe geteilter Einstellungen und eine Standardaktion, und dann kann jeder Detektor das Zeitfenster, die Aktion und das Auto-Lösch-Verhalten überschreiben und seine eigene Benachrichtigungsnachricht verwenden.
 
@@ -294,7 +294,7 @@ Die Detektoren und ihre Grenzwert-Felder sind:
 
 ### Einschränkungen für neue Mitglieder {#new-member-restrictions}
 
-Diese Einstellungen befinden sich in der [Anti-Spam-Konfiguration](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiSpam) unter der Kategorie Neue-Mitglieder-Einschränkungen. Sie verlangen eine Mindestzeit auf dem Server, bevor neue Mitglieder Anhänge und/oder Links posten dürfen - eine einfache Wand gegen Wegwerf-Accounts, die beitreten und sofort einen Scam-Link einfügen. Nachrichten, die gegen die Regel verstoßen, werden mit einem optionalen Hinweis gelöscht, und Wiederholungstäter können zu einer Moderationsaktion eskaliert werden.
+Diese Einstellungen befinden sich in der [Anti-Spam-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiSpam) unter der Kategorie Neue-Mitglieder-Einschränkungen. Sie verlangen eine Mindestzeit auf dem Server, bevor neue Mitglieder Anhänge und/oder Links posten dürfen - eine einfache Wand gegen Wegwerf-Accounts, die beitreten und sofort einen Scam-Link einfügen. Nachrichten, die gegen die Regel verstoßen, werden mit einem optionalen Hinweis gelöscht, und Wiederholungstäter können zu einer Moderationsaktion eskaliert werden.
 
 | Feld                                       | Beschreibung                                                                                                       |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
@@ -310,7 +310,7 @@ Diese Einstellungen befinden sich in der [Anti-Spam-Konfiguration](/de/glink?pag
 
 ### Log-Nachrichten {#configuration-logmessages}
 
-In dieser Konfigurationsdatei passt du die Fall-Log-Nachrichten an, die in deinen Moderations-Log-Kanal und optional in einen öffentlichen Log-Kanal gepostet werden. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/logMessages).
+In dieser Konfigurationsdatei passt du die Fall-Log-Nachrichten an, die in deinen Moderations-Log-Kanal und optional in einen öffentlichen Log-Kanal gepostet werden. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/logMessages).
 
 Jeder Aktionstyp hat seine eigene bearbeitbare Embed-Vorlage, die mit dem vollständigen Embed-Editor geöffnet wird: **Stummschaltung**, **Stummschaltung aufheben**, **Quarantäne**, **Quarantäne aufheben**, **Kick**, **Bann**, **Verwarnung**, **Kanal-Stummschaltung**, **Kanal-Stummschaltung aufheben**, **Verwarnung entfernen** und **Entbannungs-Log-Nachricht**. Die Embed-Farbe wird immer automatisch gesetzt (gelb für temporär, grün für Aufhebungen, rot für Basis-Aktionen) und überschreibt jede Farbe in der Vorlage; die Felder für Ablauf, Beweis und Kanal werden automatisch angehängt, wenn sie zutreffen.
 
@@ -344,7 +344,7 @@ Spiegle Aktionen optional in einen zweiten, öffentlichen Kanal mit einer separa
 
 ### Anti-Join-Raid {#anti-join-raid}
 
-In dieser Konfigurationsdatei richtest du das Anti-Join-Raid-System ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiJoinRaid).
+In dieser Konfigurationsdatei richtest du das Anti-Join-Raid-System ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiJoinRaid).
 
 | Feld                     | Beschreibung                                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -357,7 +357,7 @@ In dieser Konfigurationsdatei richtest du das Anti-Join-Raid-System ein. Öffne 
 
 ### Join Gate {#join-gate}
 
-In dieser Konfigurationsdatei richtest du das Join Gate ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/joinGate).
+In dieser Konfigurationsdatei richtest du das Join Gate ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/joinGate).
 
 | Feld                    | Beschreibung                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -372,7 +372,7 @@ In dieser Konfigurationsdatei richtest du das Join Gate ein. Öffne sie in deine
 
 ### Anti-Grief {#anti-grief}
 
-In dieser Konfigurationsdatei richtest du das Anti-Grief-System ein, um Moderator-Missbrauch zu verhindern. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiGrief).
+In dieser Konfigurationsdatei richtest du das Anti-Grief-System ein, um Moderator-Missbrauch zu verhindern. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/antiGrief).
 
 Diese Funktion setzt automatisch Moderatoren in Quarantäne, die die konfigurierten Limits für Moderationsaktionen innerhalb eines Zeitfensters überschreiten. Damit dies korrekt funktioniert, platziere die Rolle deines Bots über allen anderen Rollen und stelle sicher, dass die Quarantäne-Rolle direkt darunter liegt.
 
@@ -387,7 +387,7 @@ Diese Funktion setzt automatisch Moderatoren in Quarantäne, die die konfigurier
 
 ### Verifikation {#verification}
 
-In dieser Konfigurationsdatei richtest du das Verifikationssystem für neue Mitglieder ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/verification).
+In dieser Konfigurationsdatei richtest du das Verifikationssystem für neue Mitglieder ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/verification).
 
 #### Verifikationsarten
 
@@ -432,7 +432,7 @@ Der Wiederholungszähler bleibt über Bot-Neustarts hinweg erhalten. Wenn ein Nu
 
 ### Lockdown {#configuration-lockdown}
 
-In dieser Konfigurationsdatei richtest du das serverweite Lockdown-System ein. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/lockdown).
+In dieser Konfigurationsdatei richtest du das serverweite Lockdown-System ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/lockdown).
 
 | Feld                                                          | Beschreibung                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -449,7 +449,7 @@ In dieser Konfigurationsdatei richtest du das serverweite Lockdown-System ein. �
 
 ### Nachrichten {#configuration-strings}
 
-In dieser Konfigurationsdatei kannst du alle vom Modul gesendeten Nachrichten anpassen. Öffne sie in deinem [Dashboard](/de/glink?page=bot/configuration?file=moderation%7Cconfigs/strings).
+In dieser Konfigurationsdatei kannst du alle vom Modul gesendeten Nachrichten anpassen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/strings).
 
 | Feld                           | Beschreibung                                                                                                                                                       |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
