@@ -125,6 +125,13 @@ Some actions are only available for certain trigger types. For example, "Show a 
 triggers (slash commands, buttons). Unsupported actions are silently skipped.
 :::
 
+### Notes {#notes}
+
+**Note** is an editor-only action. It holds up to 1000 characters of free text and does nothing at all when the command
+runs - it is never executed, never sent to Discord, and never visible to your members. Use it to record why a step
+exists or to leave a reminder for whoever edits the command next. Add one from a step's menu in the flow editor
+("Add note after"), or search the action picker for "note" or "comment".
+
 ## Parameters {#parameters}
 
 Custom commands support dynamic parameters that get replaced with actual values when the command runs. You can use

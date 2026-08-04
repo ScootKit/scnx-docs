@@ -51,7 +51,7 @@ Fortschrittliches Sicherheits- und Moderationssystem mit unzähligen Funktionen,
 
 Moderatoren verwenden den `/moderate`-Befehl mit verschiedenen Unterbefehlen, um Aktionen durchzuführen. Jede Aktion wird im konfigurierten Log-Kanal protokolliert. Nutzer erhalten eine DM-Benachrichtigung, wenn eine Moderationsaktion gegen sie ausgeführt wird (sofern ihre DMs geöffnet sind).
 
-Jede Aktion kann optional [beteiligte Nutzer](#involved-users) markieren. Wenn [benutzerdefinierte Fall-Titel](#configuration-config) aktiviert sind, wird den Befehlen Verwarnen, Stummschalten, Bannen, Kicken, Quarantäne und Kanal-Stummschaltung ein kurzes **Titel**-Feld hinzugefügt, das dann erforderlich wird.
+Jede Aktion kann optional [beteiligte Nutzer](#involved-users) markieren. Wenn [benutzerdefinierte Fall-Titel](#configuration-config) aktiviert sind, wird jedem Aktionsbefehl ein kurzes **Titel**-Feld hinzugefügt, das dann erforderlich wird. Das gilt auch für die Aufhebungen (Entstummen, Entbannen, Quarantäne aufheben, Kanal-Stummschaltung aufheben, Verwarnung zurücknehmen) und den **Aufheben**-Knopf, da eine Aufhebung als eigener Fall im Log festgehalten wird.
 
 #### Verwarnen {#warn}
 
@@ -98,6 +98,10 @@ Verwarnen, Stummschalten, Kicken und Bannen sind auch als Rechtsklick-Aktionen v
 
 Wenn **Aufheben-Buttons** aktiviert sind (siehe [Konfiguration](#configuration-config)), zeigen Moderations-Log-Nachrichten und die [Aktionsansicht](#actions) einen **Bestrafung aufheben**-Button, der einen Mute, Ban, eine Quarantäne oder Verwarnung mit einem Klick rückgängig macht. Du wirst nach einem Grund gefragt, und die Aktion wird rückgängig gemacht. Der Button ist berechtigungsgeschützt: Nur Teammitglieder, deren [Moderationslevel](#configuration-modlevels) diesen Aktionstyp erlaubt, können ihn aufheben.
 
+Der Aufheben-Dialog richtet sich nach denselben beiden Fall-Anforderungen wie die Befehle: Der Grund ist erforderlich, wenn **Grund verlangen** aktiviert ist, und ein **Titel**-Feld wird hinzugefügt und erforderlich, wenn **Benutzerdefinierten Fall-Titel verlangen** aktiviert ist.
+
+Egal wie du eine Bestrafung aufhebst - per Button oder mit einem `/moderate`-Aufhebungsbefehl -, die Log-Nachricht der Aufhebung wird als Antwort auf die Log-Nachricht des ursprünglichen Falls gesendet, sodass du direkt dorthin springen kannst. Das gilt auch für das [öffentliche Log](#configuration-logmessages), wo die Aufhebung auf die öffentliche Kopie des Falls antwortet. Wurde die ursprüngliche Nachricht gelöscht, wurde der Fall nie öffentlich geloggt oder hat sich der Log-Kanal seitdem geändert, wird die Aufhebung einfach eigenständig geloggt.
+
 ### Dauer bearbeiten {#edit-duration}
 
 Verwende `/moderate edit-duration` oder den **Dauer bearbeiten**-Button und -Dialog in der [Aktionsansicht](#actions) (angezeigt, wenn **Aufheben-Buttons** aktiviert sind), um einen aktiven temporären Mute, Ban oder eine Quarantäne nach der Anwendung zu verkürzen oder zu verlängern. Der betroffene Nutzer wird per DM über die Änderung informiert (siehe die **Nachricht bei Dauer-Änderung** unter [Nachrichten](#configuration-strings)).
@@ -120,7 +124,7 @@ Moderatoren können Notizen über Nutzer erstellen, ansehen, bearbeiten und lös
 
 ### Aktionsverlauf {#actions}
 
-Moderatoren können alle vergangenen Moderationsaktionen gegen einen Nutzer ansehen, einschließlich Warns, Mutes, Kicks, Bans und Quarantänen. In dieser Ansicht befinden sich die Buttons pro Fall: [eine Bestrafung aufheben](#lift-punishment), [ihre Dauer](#edit-duration) oder ihren [Grund bearbeiten](#edit-reason), [Beweise hinzufügen](#evidence-archival) und [beteiligte Nutzer verknüpfen](#involved-users) - jeweils angezeigt, wenn die zugehörige Funktion aktiviert ist.
+Moderatoren können alle vergangenen Moderationsaktionen gegen einen Nutzer ansehen, einschließlich Warns, Mutes, Kicks, Bans und Quarantänen. In dieser Ansicht befinden sich die Buttons pro Fall: [eine Bestrafung aufheben](#lift-punishment), [ihre Dauer](#edit-duration) oder ihren [Grund bearbeiten](#edit-reason), [Beweise hinzufügen](#evidence-archival) und [beteiligte Nutzer verknüpfen](#involved-users) - jeweils angezeigt, wenn die zugehörige Funktion aktiviert ist. Der [benutzerdefinierte Titel](#configuration-config) eines Falls wird, sofern vorhanden, oben in dessen Detailansicht angezeigt.
 
 ### Beweis-Archivierung {#evidence-archival}
 
@@ -175,7 +179,7 @@ Mit aktiviertem **Native Moderationsaktionen importieren** (siehe [Konfiguration
 Hinweise:
 
 - Ob `reason` und `proof` erforderlich sind, hängt von den Konfigurationsoptionen **Begründung erzwingen** und **Beweis-Bild erzwingen** ab.
-- Wenn **Benutzerdefinierten Fall-Titel verlangen** aktiviert ist, erscheint eine zusätzliche erforderliche Option `title:<Text>` bei Verwarnen, Stummschalten, Bannen, Kicken, Quarantäne und Kanal-Stummschaltung (sowie in deren Rechtsklick-Dialogen). Wenn die Funktion aus ist, wird überhaupt keine Titel-Option hinzugefügt.
+- Wenn **Benutzerdefinierten Fall-Titel verlangen** aktiviert ist, erscheint eine zusätzliche erforderliche Option `title:<Text>` bei jedem Aktionsbefehl: Verwarnen, Stummschalten, Bannen, Kicken, Quarantäne und Kanal-Stummschaltung, deren Aufhebungen (Entstummen, Entbannen, Quarantäne aufheben, Kanal-Stummschaltung aufheben, Verwarnung zurücknehmen), den Rechtsklick-Dialogen sowie im Dialog des **Aufheben**-Knopfes. Wenn die Funktion aus ist, wird überhaupt keine Titel-Option hinzugefügt.
 - Die Unterbefehle `edit-duration`, `edit-reason`, `add-proof` und `involve` wirken auf einen bestehenden Fall über dessen ID und funktionieren nur, wenn ihr jeweiliger Opt-in-Schalter aktiviert ist.
 
 ## Konfiguration {#configuration}

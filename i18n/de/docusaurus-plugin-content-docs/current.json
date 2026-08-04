@@ -334,5 +334,9 @@
   "sidebar.supportBotSidebar.doc.Troubleshooting issues": {
     "message": "Troubleshooting issues",
     "description": "The label for the doc item 'Troubleshooting issues' in sidebar 'supportBotSidebar', linking to the doc support-bot/troubleshooting"
+  },
+  "sidebar.customBotSidebar.doc.Analytics: what is collected": {
+    "message": "Analytics: Was erfasst wird",
+    "description": "The label for the doc item custom-bot/analytics-data in sidebar customBotSidebar, linking to the doc custom-bot/analytics-data"
   }
 }
