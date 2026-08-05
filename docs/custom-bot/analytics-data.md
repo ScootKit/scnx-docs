@@ -28,6 +28,10 @@ Everything below is a number or a date. There is no message text anywhere in it.
 | Members posting for the first time       | A count          |
 | Members and bots on the server           | A daily snapshot |
 
+### Automated moderation
+
+A count per day of how often each kind of automatic moderation triggered, for example a blocked invite link or a spam burst. Only the kind of trigger and how many times it fired are recorded. Who triggered it is not part of this figure.
+
 ### Per channel
 
 Message counts per channel, per day. Which channels are busiest, and which have gone quiet.
@@ -64,7 +68,6 @@ This means you control the data directly, and it also means the analytics tab ne
 | Data                                                          | Kept for                                           |
 | ------------------------------------------------------------- | -------------------------------------------------- |
 | Daily and hourly totals, per channel, per role and per member | Indefinitely, until you delete it                  |
-| Per channel and per hour detail                               | 30 days                                            |
 | Recent activity records                                       | Until the size limit is reached, then oldest first |
 
 ## Who is responsible for this data

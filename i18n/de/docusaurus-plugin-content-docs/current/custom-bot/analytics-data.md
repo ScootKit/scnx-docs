@@ -28,6 +28,10 @@ Alles unten ist eine Zahl oder ein Datum. Nachrichtentext kommt darin nirgends v
 | Mitglieder, die zum ersten Mal schreiben                 | Anzahl                  |
 | Mitglieder und Bots auf dem Server                       | Tägliche Momentaufnahme |
 
+### Automatische Moderation
+
+Eine Anzahl pro Tag, wie oft welche Art der automatischen Moderation ausgelöst hat, zum Beispiel ein blockierter Einladungslink oder eine Spam-Welle. Erfasst wird nur die Art des Auslösers und wie oft er gegriffen hat. Wer ihn ausgelöst hat, gehört nicht zu dieser Zahl.
+
 ### Pro Kanal
 
 Nachrichtenzahlen pro Kanal und Tag. Welche Kanäle am aktivsten sind und welche eingeschlafen sind.
@@ -64,7 +68,6 @@ Das heißt, du hast die Daten direkt in der Hand. Es heißt aber auch, dass der 
 | Daten                                                           | Aufbewahrung                              |
 | --------------------------------------------------------------- | ----------------------------------------- |
 | Tages- und Stundensummen, pro Kanal, pro Rolle und pro Mitglied | Unbegrenzt, bis du sie löschst            |
-| Detail pro Kanal und pro Stunde                                 | 30 Tage                                   |
 | Aktuelle Aktivitätseinträge                                     | Bis zur Größengrenze, dann älteste zuerst |
 
 ## Wer für diese Daten verantwortlich ist
