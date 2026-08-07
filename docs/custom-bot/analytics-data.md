@@ -7,8 +7,8 @@ You are welcome to link your members to this page.
 ## The short version
 
 - Analytics records **counts and timestamps**, never the text of anything.
-- The data lives in **your own bot**, on your own hosting, not on SCNX servers.
-- **You** decide whether it runs at all, and whether members can opt out.
+- The data lives in **your own bot's database**, on the bot hosting ScootKit runs for you. It is not pooled into a shared SCNX analytics service.
+- **You** decide whether it runs at all, what you use it for, and whether members can opt out. In data-protection terms you are the controller for it.
 - Nothing is collected until you switch analytics on.
 
 ## What is recorded
@@ -50,7 +50,7 @@ A capped list of recent individual events, each holding only an event type, a me
 
 ## What is not recorded
 
-- **The text of messages.** Not stored, not processed, not received. Your bot does not request the Discord permission that would deliver message content, so it never arrives in the first place. This is a property of how the bot connects to Discord, not a promise about what it chooses to ignore.
+- **The text of messages.** Analytics never stores it, never reads it and never asks for it. Counting a message works on a payload that has no text in it, and analytics does not request the Discord permission that would fill that in. This is a property of how analytics connects to Discord, not a promise about what it chooses to ignore. Some other modules do need message text to do their job at all, so if you have any of those switched on your bot does request that permission for them. It makes no difference here: nothing in analytics reads a message's text, and there is no field anywhere in the analytics data that could hold one.
 - **Attachments, images, files or links.** None of their contents, and no counts of them either.
 - **Message edits or deletions.**
 - **Direct messages.** Only activity in the server itself is counted.
@@ -59,9 +59,16 @@ A capped list of recent individual events, each holding only an event type, a me
 
 ## Where the data is stored
 
-In your bot's own database, on the hosting that runs your bot. It is not copied to SCNX, and SCNX keeps no cache of it. When you open the analytics tab, the dashboard asks your bot for the figures at that moment and displays them without storing them.
+In your own bot's database. Your bot runs on a Bot-Host, one of the physical servers ScootKit operates for exactly that purpose, so that database sits on ScootKit's hosting rather than on a machine of your own. You choose which Bot-Host your bot uses, and Bot-Hosts sit in different regions, so that choice is also what decides which country this data physically sits in. See [Change Bot-Host](/docs/scnx/guilds/bots#bot-host).
 
-This means you control the data directly, and it also means the analytics tab needs your bot to be running. If your bot is stopped, the tab will tell you so rather than showing you old numbers.
+ScootKit handles the data for you, on your instructions, under the Data Processing Agreement that is part of your SCNX contract. In the wording of that agreement, you are the controller and ScootKit is the processor. The companies ScootKit uses to run the hosting are listed as sub-processors on your server's Policy & Compliance tab.
+
+Two things are easily confused with this, and both are worth being exact about:
+
+- Your figures are **not** pooled into a shared SCNX analytics service. They stay your server's own and are not merged with any other server's.
+- The dashboard keeps **no copy** of them. When you open the analytics tab, it asks your bot for the figures at that moment and displays them without storing them.
+
+That second point is why the analytics tab needs your bot to be running. If your bot is stopped, the tab will tell you so rather than showing you old numbers.
 
 ## How long it is kept
 
@@ -72,13 +79,13 @@ This means you control the data directly, and it also means the analytics tab ne
 
 ## Who is responsible for this data
 
-Because collection happens in your own bot rather than on a shared SCNX service, **you are responsible for your members' activity data**, not SCNX. You decide whether analytics runs, whether members can opt out, and when data is deleted.
+**You are responsible for your members' activity data**, not SCNX. You are the controller for it: you decide whether analytics runs at all, what you use the figures for, whether members can opt out, and when data is deleted. ScootKit processes it for you, on your instructions, under the Data Processing Agreement that comes with your SCNX contract.
 
 That is also why the member opt-out is something you switch on rather than something that is always present. Whether your server needs one depends on your community and on the rules that apply to you, and that judgement is yours to make.
 
 ## Letting members opt out
 
-Analytics has a setting called **Allow members to opt out**. It is off by default.
+Analytics has a setting called **Let members opt out of analytics**. It is off by default.
 
 When you switch it on, members can run `/analytics-privacy` in your server to stop being individually counted.
 
@@ -100,7 +107,7 @@ Because role activity is counted per role rather than per person, a role with on
 
 Switching analytics off stops all collection. Your existing data is kept, so you can switch it back on later and pick up where you left off.
 
-Deleting the data is a separate, deliberate action, because it cannot be undone and there is no backup anywhere else.
+Deleting the data is a separate, deliberate action, because the dashboard cannot undo it. It clears the data from your bot's live database straight away. ScootKit's hosting also keeps disaster-recovery backups, which exist only so a server can be restored after a failure; a copy can survive in those for up to 90 days before it rotates out.
 
 ## History from before you moved to your own bot
 
@@ -113,3 +120,5 @@ Some things were never recorded by the old system, specifically **joins, leaves 
 If a member asks what you hold about them, `/mystats` shows them their own figures. It only ever shows the person running it; nobody can look up anyone else.
 
 If a member asks you to delete their data, switching on the member opt-out lets them do it themselves with `/analytics-privacy`.
+
+If a member has a question about this data, or wants it changed or removed, you are the person to ask. You are the controller, so those decisions are yours. ScootKit runs the hosting on your behalf under the Data Processing Agreement described above and will not make them for you.

@@ -7,8 +7,8 @@ Du darfst diese Seite gerne an deine Mitglieder weitergeben.
 ## Kurz gesagt
 
 - Analytics erfasst **Zahlen und Zeitpunkte**, niemals den Text von irgendetwas.
-- Die Daten liegen in **deinem eigenen Bot**, auf deinem eigenen Hosting, nicht auf SCNX-Servern.
-- **Du** entscheidest, ob Analytics überhaupt läuft und ob Mitglieder sich abmelden können.
+- Die Daten liegen in **der Datenbank deines eigenen Bots**, auf dem Bot-Hosting, das ScootKit für dich betreibt. Sie fließen nicht in einen gemeinsamen SCNX-Analytics-Dienst ein.
+- **Du** entscheidest, ob Analytics überhaupt läuft, wofür du es nutzt und ob Mitglieder sich abmelden können. Datenschutzrechtlich bist du dafür der Verantwortliche.
 - Solange du Analytics nicht einschaltest, wird nichts erfasst.
 
 ## Was erfasst wird
@@ -50,7 +50,7 @@ Eine begrenzte Liste einzelner Ereignisse, die jeweils nur eine Ereignisart, ein
 
 ## Was nicht erfasst wird
 
-- **Der Text von Nachrichten.** Wird nicht gespeichert, nicht verarbeitet, nicht empfangen. Dein Bot fordert die Discord-Berechtigung, die Nachrichteninhalte liefert, gar nicht erst an. Der Inhalt kommt also nie an. Das ist eine Eigenschaft der Verbindung zu Discord, kein Versprechen darüber, was der Bot ignoriert.
+- **Der Text von Nachrichten.** Analytics speichert ihn nicht, liest ihn nicht und fordert ihn nicht an. Für das Zählen einer Nachricht genügt eine Übermittlung ohne Textinhalt, und Analytics fordert die Discord-Berechtigung, die diesen Inhalt liefern würde, gar nicht erst an. Das ist eine Eigenschaft der Verbindung von Analytics zu Discord, kein Versprechen darüber, was ignoriert wird. Manche anderen Module brauchen den Nachrichtentext dagegen zwingend, um überhaupt zu funktionieren. Wenn du eines davon eingeschaltet hast, fordert dein Bot die Berechtigung für dieses Modul an. Für Analytics ändert das nichts: Nichts in Analytics liest den Text einer Nachricht, und in den Analytics-Daten gibt es kein Feld, das ihn aufnehmen könnte.
 - **Anhänge, Bilder, Dateien oder Links.** Weder deren Inhalte noch deren Anzahl.
 - **Bearbeitungen oder Löschungen von Nachrichten.**
 - **Direktnachrichten.** Nur Aktivität auf dem Server selbst wird gezählt.
@@ -59,9 +59,16 @@ Eine begrenzte Liste einzelner Ereignisse, die jeweils nur eine Ereignisart, ein
 
 ## Wo die Daten liegen
 
-In der Datenbank deines eigenen Bots, auf dem Hosting, das deinen Bot betreibt. Sie werden nicht zu SCNX kopiert, und SCNX hält keinen Zwischenspeicher davon. Wenn du den Analytics-Tab öffnest, fragt das Dashboard deinen Bot in diesem Moment nach den Zahlen und zeigt sie an, ohne sie zu speichern.
+In der Datenbank deines eigenen Bots. Dein Bot läuft auf einem Bot-Host, also auf einem der physischen Server, die ScootKit genau dafür betreibt. Diese Datenbank liegt damit auf dem Hosting von ScootKit und nicht auf einem Rechner, der dir gehört. Du wählst selbst, welchen Bot-Host dein Bot nutzt, und die Bot-Hosts stehen in verschiedenen Regionen. Diese Wahl entscheidet also auch darüber, in welchem Land diese Daten physisch liegen. Siehe [Bot-Host wechseln](/docs/scnx/guilds/bots#bot-host).
 
-Das heißt, du hast die Daten direkt in der Hand. Es heißt aber auch, dass der Analytics-Tab deinen laufenden Bot braucht. Ist dein Bot gestoppt, sagt der Tab dir das, statt dir alte Zahlen zu zeigen.
+ScootKit verarbeitet die Daten für dich, in deinem Auftrag, auf Grundlage der Auftragsverarbeitungsvereinbarung (AVV), die Teil deines SCNX-Vertrags ist. In der Sprache dieser Vereinbarung bist du der Verantwortliche und ScootKit der Auftragsverarbeiter. Welche Unternehmen ScootKit für den Betrieb des Hostings einsetzt, steht als Liste der Unterauftragsverarbeiter im Tab **Richtlinien & Compliance** deines Servers.
+
+Zwei Dinge werden damit leicht verwechselt, und bei beiden lohnt sich Genauigkeit:
+
+- Deine Zahlen fließen **nicht** in einen gemeinsamen SCNX-Analytics-Dienst ein. Sie bleiben die Zahlen deines Servers und werden nicht mit denen anderer Server zusammengeführt.
+- Das Dashboard behält **keine Kopie** davon. Wenn du den Analytics-Tab öffnest, fragt es deinen Bot in diesem Moment nach den Zahlen und zeigt sie an, ohne sie zu speichern.
+
+Wegen des zweiten Punktes braucht der Analytics-Tab deinen laufenden Bot. Ist dein Bot gestoppt, sagt der Tab dir das, statt dir alte Zahlen zu zeigen.
 
 ## Wie lange die Daten bleiben
 
@@ -72,13 +79,13 @@ Das heißt, du hast die Daten direkt in der Hand. Es heißt aber auch, dass der 
 
 ## Wer für diese Daten verantwortlich ist
 
-Weil die Erfassung in deinem eigenen Bot stattfindet und nicht auf einem gemeinsamen SCNX-Dienst, bist **du für die Aktivitätsdaten deiner Mitglieder verantwortlich**, nicht SCNX. Du entscheidest, ob Analytics läuft, ob Mitglieder sich abmelden können und wann Daten gelöscht werden.
+**Du bist für die Aktivitätsdaten deiner Mitglieder verantwortlich**, nicht SCNX. Du bist dafür der Verantwortliche im datenschutzrechtlichen Sinn: Du entscheidest, ob Analytics überhaupt läuft, wofür du die Zahlen nutzt, ob Mitglieder sich abmelden können und wann Daten gelöscht werden. ScootKit verarbeitet sie für dich, in deinem Auftrag, auf Grundlage der Auftragsverarbeitungsvereinbarung, die zu deinem SCNX-Vertrag gehört.
 
 Deshalb ist die Abmeldemöglichkeit für Mitglieder auch etwas, das du einschaltest, und nicht etwas, das immer da ist. Ob dein Server eine braucht, hängt von deiner Community und von den für dich geltenden Regeln ab. Diese Einschätzung liegt bei dir.
 
 ## Mitgliedern die Abmeldung erlauben
 
-Analytics hat eine Einstellung namens **Mitgliedern erlauben, sich abzumelden**. Sie ist standardmäßig aus.
+Analytics hat eine Einstellung namens **Mitgliedern erlauben, Analytics zu deaktivieren**. Sie ist standardmäßig aus.
 
 Wenn du sie einschaltest, können Mitglieder auf deinem Server `/analytics-privacy` ausführen, um nicht mehr einzeln gezählt zu werden.
 
@@ -100,7 +107,7 @@ Weil Rollenaktivität pro Rolle und nicht pro Person gezählt wird, kann eine Ro
 
 Analytics auszuschalten stoppt jede Erfassung. Deine vorhandenen Daten bleiben erhalten, du kannst also später wieder einschalten und dort weitermachen, wo du aufgehört hast.
 
-Das Löschen der Daten ist ein eigener, bewusster Schritt, weil es sich nicht rückgängig machen lässt und es nirgends eine Sicherung gibt.
+Das Löschen der Daten ist ein eigener, bewusster Schritt, weil das Dashboard es nicht rückgängig machen kann. Es entfernt die Daten sofort aus der laufenden Datenbank deines Bots. Zusätzlich führt ScootKit für das Hosting Notfall-Datensicherungen, die allein dazu dienen, einen Server nach einem Ausfall wiederherzustellen. Darin kann eine Kopie noch bis zu 90 Tage bestehen bleiben, bis sie aus der Rotation fällt.
 
 ## Verlauf aus der Zeit vor deinem eigenen Bot
 
@@ -113,3 +120,5 @@ Manches hat das alte System nie erfasst, konkret **Beitritte, Austritte und Erst
 Fragt ein Mitglied, was du über es gespeichert hast, zeigt `/mystats` ihm seine eigenen Zahlen. Der Befehl zeigt immer nur die Person, die ihn ausführt. Niemand kann jemand anderen abfragen.
 
 Bittet ein Mitglied dich, seine Daten zu löschen, kann es das mit eingeschalteter Abmeldemöglichkeit über `/analytics-privacy` selbst tun.
+
+Hat ein Mitglied eine Frage zu diesen Daten oder möchte es sie ändern oder entfernen lassen, ist die richtige Ansprechperson du. Du bist der Verantwortliche, also liegen diese Entscheidungen bei dir. ScootKit betreibt das Hosting in deinem Auftrag auf Grundlage der oben beschriebenen Auftragsverarbeitungsvereinbarung und trifft sie nicht für dich.
