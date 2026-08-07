@@ -61,7 +61,7 @@ A capped list of recent individual events, each holding only an event type, a me
 
 In your own bot's database. Your bot runs on a Bot-Host, one of the physical servers ScootKit operates for exactly that purpose, so that database sits on ScootKit's hosting rather than on a machine of your own. You choose which Bot-Host your bot uses, and Bot-Hosts sit in different regions, so that choice is also what decides which country this data physically sits in. See [Change Bot-Host](/docs/scnx/guilds/bots#bot-host).
 
-ScootKit handles the data for you, on your instructions, under the Data Processing Agreement that is part of your SCNX contract. In the wording of that agreement, you are the controller and ScootKit is the processor. The companies ScootKit uses to run the hosting are listed as sub-processors on your server's Policy & Compliance tab.
+ScootKit handles the data for you, on your instructions, under the [Data Processing Agreement](https://corp.scootkit.com/docs/scnx/policies/data-processing-agreement/) that is part of your SCNX contract. In the wording of that agreement, you are the controller and ScootKit is the processor. The companies ScootKit uses to run the hosting are listed as sub-processors on your server's Policy & Compliance tab.
 
 Two things are easily confused with this, and both are worth being exact about:
 
@@ -79,7 +79,7 @@ That second point is why the analytics tab needs your bot to be running. If your
 
 ## Who is responsible for this data
 
-**You are responsible for your members' activity data**, not SCNX. You are the controller for it: you decide whether analytics runs at all, what you use the figures for, whether members can opt out, and when data is deleted. ScootKit processes it for you, on your instructions, under the Data Processing Agreement that comes with your SCNX contract.
+**You are responsible for your members' activity data**, not SCNX. You are the controller for it: you decide whether analytics runs at all, what you use the figures for, whether members can opt out, and when data is deleted. ScootKit processes it for you, on your instructions, under the [Data Processing Agreement](https://corp.scootkit.com/docs/scnx/policies/data-processing-agreement/) that comes with your SCNX contract.
 
 That is also why the member opt-out is something you switch on rather than something that is always present. Whether your server needs one depends on your community and on the rules that apply to you, and that judgement is yours to make.
 
