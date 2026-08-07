@@ -85,7 +85,7 @@ Deshalb schaltest du die Abmeldemöglichkeit für Mitglieder auch selbst ein; si
 
 ## Mitgliedern die Abmeldung erlauben
 
-Analytics hat dafür eine Einstellung: **Mitgliedern erlauben, sich von der Analyse abzumelden**. Sie ist standardmäßig aus.
+Analytics hat dafür eine Einstellung: **Mitgliedern erlauben, sich von der individuellen Analytics-Erfassung abzumelden**. Sie ist standardmäßig aus.
 
 Wenn du sie einschaltest, können Mitglieder auf deinem Server `/analytics-privacy` ausführen, um nicht mehr einzeln gezählt zu werden.
 
