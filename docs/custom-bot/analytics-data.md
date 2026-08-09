@@ -1,19 +1,19 @@
 # Analytics: what is collected
 
-Analytics counts activity on your server so you can see how busy it is, which channels people use, and how your membership changes over time. This page describes exactly what is recorded, where it is stored, and what you and your members can do about it.
-
-You are welcome to link your members to this page.
+Analytics counts what happens on your server: messages sent, members joining and leaving, which channels get used. This page lists exactly what it records, where the data sits, and how to get a copy or delete it. If a member asks what the bot knows about them, you can send them this page.
 
 ## The short version
 
-- Analytics records **counts and timestamps**, never the text of anything.
-- The data lives in **your own bot's database**, on the bot hosting ScootKit runs for you. It is not pooled into a shared SCNX analytics service.
-- **You** decide whether it runs at all, what you use it for, and whether members can opt out. In data-protection terms you are the controller for it.
+- Analytics records counts and timestamps. It never stores the text of a message, and it never asks Discord for the permission to read one.
+- The data sits in your own bot's database, on the Bot-Host you picked. The dashboard keeps no copy, and nothing is merged with other servers.
 - Nothing is collected until you switch analytics on.
+- You are responsible for this data: in data-protection terms you're the controller, and ScootKit processes it for you.
 
 ## What is recorded
 
-Everything below is a number or a date. There is no message text anywhere in it.
+Everything analytics stores is a number or a date.
+
+Until you switch analytics on, none of it exists. The database tables are never created, the bot attaches no listeners, and it doesn't even ask Discord for the events involved.
 
 ### Server totals, per day and per hour
 
@@ -28,117 +28,94 @@ Everything below is a number or a date. There is no message text anywhere in it.
 | Members posting for the first time       | A count          |
 | Members and bots on the server           | A daily snapshot |
 
-### Automated moderation
+### Automatic moderation
 
-A count per day of how often each kind of automatic moderation triggered, for example a blocked invite link or a spam burst. Only the kind of trigger and how many times it fired are recorded. Who triggered it is not part of this figure.
+How often each kind of automatic moderation fired, per day: a blocked invite link, a spam burst, and so on. Only the type of trigger and the count are stored. Who triggered it is not in there.
 
-### Per channel
+### Per channel and per role
 
-Message counts per channel, per day. Which channels are busiest, and which have gone quiet.
-
-### Per role
-
-Message counts per role, per day. Which parts of your community are active.
+Message counts per day, for each channel and each role. This is what shows you which channels are busy and which parts of your community are active.
 
 ### Per member
 
-Message counts, reaction counts and voice seconds per member, per day, plus a lifetime message total, the date of their first message, and the date they were last active. This is what powers the most-active-members list and each member's own `/mystats`.
+Messages, reactions and voice seconds per day, plus a lifetime message total, the date of their first message and the date they were last active. This powers the most-active-members list and each member's own `/mystats`.
 
 ### Recent activity records
 
-A capped list of recent individual events, each holding only an event type, a member ID, a channel ID and a timestamp. It exists so activity can be examined in detail for a short period. It has a fixed size limit and older records are discarded automatically as new ones arrive, so on a busy server it covers days and on a quiet one it covers months.
+A list of the latest individual events. Each entry holds only an event type, a member ID, a channel ID and a timestamp. The list has a fixed size cap: as new events arrive, the oldest fall off. On a busy server it reaches back a few days, on a quiet one a few months.
 
-## What is not recorded
+## What is never recorded
 
-- **The text of messages.** Analytics never stores it, never reads it and never asks for it. Counting a message works on a payload that has no text in it, and analytics does not request the Discord permission that would fill that in. This is a property of how analytics connects to Discord, not a promise about what it chooses to ignore. Some other modules do need message text to do their job at all, so if you have any of those switched on your bot does request that permission for them. It makes no difference here: nothing in analytics reads a message's text, and there is no field anywhere in the analytics data that could hold one.
-- **Attachments, images, files or links.** None of their contents, and no counts of them either.
+- **Message text.** Counting a message needs no text. Discord tells the bot that a message happened without including what it said, and analytics never requests the permission that would add the text. Some other modules do need that permission and request it when you switch them on. Even then, nothing in analytics reads a message's text, and there is no field in the analytics data that could hold one.
+- **Attachments, images, files or links.** Neither their contents nor how many there were.
 - **Message edits or deletions.**
-- **Direct messages.** Only activity in the server itself is counted.
-- **Anything from channels your bot cannot see.** If the bot has no access to a channel, that channel does not appear in analytics at all.
-- **Bots.** Other bots' messages and commands are ignored entirely.
+- **Direct messages.** Only activity inside the server counts.
+- **Channels your bot cannot see.** No access, no data.
+- **Other bots.** Their messages and commands are ignored.
 
-## Where the data is stored
+## Where the data lives and who's responsible
 
-In your own bot's database. Your bot runs on a Bot-Host, one of the physical servers ScootKit operates for exactly that purpose, so that database sits on ScootKit's hosting rather than on a machine of your own. You choose which Bot-Host your bot uses, and Bot-Hosts sit in different regions, so that choice is also what decides which country this data physically sits in. See [Change Bot-Host](/docs/scnx/guilds/bots#bot-host).
+Your bot has its own database, and everything above lives in it. The bot runs on a Bot-Host, one of the servers ScootKit operates. [Which one is your choice](/docs/scnx/guilds/bots#bot-host), and because Bot-Hosts sit in different regions, that choice also decides which country the data is physically in.
 
-ScootKit handles the data for you, on your instructions, under the [Data Processing Agreement](https://corp.scootkit.com/docs/scnx/policies/data-processing-agreement/) that is part of your SCNX contract. In the wording of that agreement, you are the controller and ScootKit is the processor. The companies ScootKit uses to run the hosting are listed as sub-processors on your server's Policy & Compliance tab.
+Two things follow from that setup:
 
-Two things are easily confused with this, and both are worth being exact about:
+- Your figures stay your server's own. There is no shared SCNX analytics service, and no merging across servers.
+- The dashboard stores nothing. Each time you open the analytics tab, it asks your bot for the figures right then. If your bot is stopped, there is nothing to ask, and the tab tells you so.
 
-- Your figures are **not** pooled into a shared SCNX analytics service. They stay your server's own and are not merged with any other server's.
-- The dashboard keeps **no copy** of them. When you open the analytics tab, it asks your bot for the figures at that moment and displays them without storing them.
-
-That second point is why the analytics tab needs your bot to be running. If your bot is stopped, the tab will tell you so rather than showing you old numbers.
+In data-protection terms you are the controller for this data and ScootKit is the processor, under the [Data Processing Agreement](https://corp.scootkit.com/docs/scnx/policies/data-processing-agreement/) that comes with your SCNX contract. The hosting companies ScootKit uses are listed as sub-processors on your server's Policy & Compliance tab. The decisions about the data are yours: whether analytics runs, what the figures are used for, when they are deleted. ScootKit won't make them for you.
 
 ## How long it is kept
 
-| Data                                                          | Kept for                                           |
-| ------------------------------------------------------------- | -------------------------------------------------- |
-| Daily and hourly totals, per channel, per role and per member | Indefinitely, until you delete it                  |
-| Recent activity records                                       | Until the size limit is reached, then oldest first |
-
-## Who is responsible for this data
-
-**You are responsible for your members' activity data**, not SCNX. You are the controller for it: you decide whether analytics runs at all, what you use the figures for, whether members can opt out, and when data is deleted. ScootKit processes it for you, on your instructions, under the [Data Processing Agreement](https://corp.scootkit.com/docs/scnx/policies/data-processing-agreement/) that comes with your SCNX contract.
-
-That is also why the member opt-out is something you switch on rather than something that is always present. Whether your server needs one depends on your community and on the rules that apply to you, and that judgement is yours to make.
+| Data                                                       | Kept for                                         |
+| ---------------------------------------------------------- | ------------------------------------------------ |
+| Daily and hourly totals, per channel, per role, per member | Until you delete them                            |
+| Recent activity records                                    | Until the size cap is reached, then oldest first |
 
 ## Letting members opt out
 
-Analytics has a setting called **Let members opt out of analytics**. It is off by default.
+There is a setting for this: **Let members opt out of analytics**. It's off by default. Whether to offer it is your call; that depends on your community and the rules that apply to you.
 
-When you switch it on, members can run `/analytics-privacy` in your server to stop being individually counted.
+With it on, members can run `/analytics-privacy` in your server to stop being counted as individuals. For a member who opts out:
 
-For a member who opts out:
+- Their existing per-day records are anonymised, and their lifetime total, first-message date and last-active date are cleared.
+- Their recent activity records are deleted.
+- Their future activity still counts in the server totals, with no link back to them.
 
-- Their existing per-day activity records are made anonymous, and their lifetime totals, first-message date and last-active date are cleared.
-- Their recent activity records are removed.
-- Future activity is still counted in your server totals, but is never linked to them.
+Server totals don't drop when someone opts out. Their messages really happened; what disappears is the connection between those messages and the person.
 
-Server totals do not change when someone opts out. Their messages genuinely happened and still count towards how busy your server is. What disappears is the link between those messages and the person.
-
-Opting out takes effect straight away. A member can opt back in later, but data already removed is not restored.
+Opting out takes effect immediately. A member can opt back in later, but removed data stays gone.
 
 :::note
-Because role activity is counted per role rather than per person, a role with only one or two members can still indicate who was active. Bear that in mind if you use single-member roles.
+Role activity is counted per role. If a role has only one or two members, its numbers can still show who was active. Keep that in mind if you use single-member roles.
 :::
 
-## Downloading a copy of the data
+## Getting a copy
 
-Under **Privacy** on the analytics tab there is **Download a copy of this data**. It produces a single JSON file holding every view the dashboard can show for your server, assembled in your browser from your bot's own answers.
+**Download a copy of this data** sits under **Privacy** on the analytics tab, and only the server owner can use it. It builds a single JSON file in your browser from your bot's answers. Nothing is stored at ScootKit along the way.
 
-Two things about it are worth knowing:
+The file covers your entire history, whatever time range you have on screen, and includes cards you've hidden from your dashboard. It also always contains a list of anything that could not be exported, even when that list is empty.
 
-- It covers **your whole history**, not the time range you are currently looking at. A copy holding only the last 30 days would not be a copy of your data.
-- It is **JSON rather than CSV**. A CSV file holds one table, and this export holds around forty of them, so a single spreadsheet could not represent it honestly.
-
-The file always contains a list of anything that could not be exported, even when that list is empty, so a partial download can never be mistaken for a complete one. Cards you have hidden from your dashboard are still included: hiding a card changes what you look at, not what you hold.
-
-Only the server owner can download it.
-
-## Turning analytics off, and deleting the data
+## Switching off, and deleting
 
 Switching analytics off stops all collection. Your existing data is kept, so you can switch it back on later and pick up where you left off.
 
-Deleting the data is a separate, deliberate action: **Delete all analytics data**, also under **Privacy**. You have to tick a confirmation before the button will do anything, because the dashboard cannot undo it. When it finishes it shows you exactly what was removed, table by table, with a row count for each.
+**Delete all analytics data**, in the same **Privacy** section, is the permanent step. You have to tick a confirmation first, and the dashboard cannot undo it. The deletion runs as a single database transaction: it either completes in full or changes nothing at all. Afterwards you get a report of what was removed, table by table, with a row count for each.
 
-It is all or nothing. The deletion runs as a single database transaction, so it either completes in full or changes nothing at all.
+Two things survive it on purpose:
 
-Two things deliberately survive it:
+- **Your members' opt-out choices.** Anyone who opted out stays opted out. Their data is deleted like everyone else's, and the record of their choice is kept, so deleting the data doesn't quietly re-enrol them.
+- **Disaster-recovery backups.** These exist so a server can be restored after a failure. A copy can persist in them for up to 90 days.
 
-- **Your members' own choices.** A member who opted out stays opted out. Their data is cleared like everyone else's, but the record that they asked not to be counted remains, so deleting the data does not quietly re-enrol them.
-- **Disaster-recovery backups.** ScootKit's hosting keeps these only so a server can be restored after a failure. A copy can survive in them for up to 90 days before it rotates out.
+## History from before your own bot
 
-## History from before you moved to your own bot
+If your server used analytics before moving to its own bot, the history was transferred and the old copy deleted.
 
-If your server used analytics before it moved into your own bot, your history was transferred across and the old copy was deleted.
+The old system never recorded joins, leaves or first-time posters. For dates before the transfer, those figures show as _not recorded_, and the point where your own bot took over is marked.
 
-Some things were never recorded by the old system, specifically **joins, leaves and first-time posters**. For dates before the transfer, the analytics tab shows those as _not recorded_ rather than as zero, and marks the point where your own bot's collection began. A zero there would mean nobody joined, which is not what happened. We would rather show you an honest gap.
+## When a member asks
 
-## Your members' rights
+`/mystats` shows a member their own figures and nothing else. Nobody can look up another person. If you need to answer a data request yourself, the JSON copy above contains everything your bot holds.
 
-If a member asks what you hold about them, `/mystats` shows them their own figures. It only ever shows the person running it; nobody can look up anyone else. If you need to answer such a request yourself, the JSON copy described above contains everything your bot holds.
+For deletion requests, switch on the member opt-out and the member can handle it themselves with `/analytics-privacy`.
 
-If a member asks you to delete their data, switching on the member opt-out lets them do it themselves with `/analytics-privacy`.
-
-If a member has a question about this data, or wants it changed or removed, you are the person to ask. You are the controller, so those decisions are yours. ScootKit runs the hosting on your behalf under the Data Processing Agreement described above and will not make them for you.
+You are the contact for questions about this data. If a member wants something changed or removed beyond that, the decision is yours to make as the controller.
