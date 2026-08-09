@@ -103,11 +103,31 @@ Die Abmeldung wirkt sofort. Ein Mitglied kann sich später wieder anmelden; bere
 Weil Rollenaktivität pro Rolle und nicht pro Person gezählt wird, kann eine Rolle mit nur einem oder zwei Mitgliedern trotzdem erkennen lassen, wer aktiv war. Denk daran, wenn du Rollen mit nur einem Mitglied verwendest.
 :::
 
+## Eine Kopie der Daten herunterladen
+
+Im Bereich **Datenschutz** im Tab **Statistiken** findest du **Kopie dieser Daten herunterladen**. Sie erzeugt eine einzelne JSON-Datei mit allen Auswertungen, die das Dashboard für deinen Server anzeigen kann. Die Datei wird dabei in deinem Browser aus den Antworten deines Bots zusammengesetzt.
+
+Zwei Dinge sind dabei wichtig:
+
+- Sie enthält **deinen gesamten Verlauf**, nicht nur den Zeitraum, den du gerade ansiehst. Eine Kopie mit nur den letzten 30 Tagen wäre keine Kopie deiner Daten.
+- Sie ist **JSON und kein CSV**. Eine CSV-Datei enthält genau eine Tabelle, dieser Export dagegen rund vierzig. Eine einzelne Tabellendatei könnte das nicht ehrlich abbilden.
+
+Die Datei enthält immer eine Liste dessen, was sich nicht exportieren ließ, auch wenn diese Liste leer ist. So kann ein unvollständiger Download nie wie ein vollständiger aussehen. Auch ausgeblendete Karten sind enthalten: Das Ausblenden ändert, was du siehst, nicht das, was gespeichert ist.
+
+Herunterladen kann die Kopie nur der Serverinhaber.
+
 ## Analytics ausschalten und Daten löschen
 
 Wenn du Analytics ausschaltest, wird nichts mehr erfasst. Deine vorhandenen Daten bleiben erhalten. Du kannst Analytics später wieder einschalten und dort weitermachen, wo du aufgehört hast.
 
-Das Löschen der Daten ist ein eigener, bewusster Schritt, weil das Dashboard es nicht rückgängig machen kann. Die Daten verschwinden sofort aus der laufenden Datenbank deines Bots. Zusätzlich hält ScootKit für das Hosting Sicherungskopien für den Notfall vor; sie dienen allein dazu, einen Server nach einem Ausfall wiederherzustellen. Darin kann eine Kopie noch bis zu 90 Tage überdauern, bevor sie aus der Rotation fällt.
+Das Löschen der Daten ist ein eigener, bewusster Schritt: **Alle Analysedaten löschen**, ebenfalls im Bereich **Datenschutz**. Du musst eine Bestätigung setzen, bevor die Schaltfläche etwas tut, denn das Dashboard kann das Löschen nicht rückgängig machen. Danach siehst du genau, was entfernt wurde: aufgeschlüsselt nach Tabelle, jeweils mit der Anzahl der gelöschten Einträge.
+
+Es gilt ganz oder gar nicht. Das Löschen läuft in einer einzigen Datenbanktransaktion und wird daher entweder vollständig ausgeführt oder ändert überhaupt nichts.
+
+Zwei Dinge bleiben bewusst erhalten:
+
+- **Die Entscheidungen deiner Mitglieder.** Wer sich abgemeldet hat, bleibt abgemeldet. Die Daten werden wie bei allen anderen gelöscht, aber der Vermerk, dass jemand nicht gezählt werden möchte, bleibt bestehen. Das Löschen meldet also niemanden stillschweigend wieder an.
+- **Sicherungskopien für den Notfall.** ScootKit hält sie für das Hosting allein dafür vor, einen Server nach einem Ausfall wiederherzustellen. Darin kann eine Kopie noch bis zu 90 Tage überdauern, bevor sie aus der Rotation fällt.
 
 ## Verlauf aus der Zeit vor deinem eigenen Bot
 
@@ -117,7 +137,7 @@ Manches hat das alte System nie erfasst, konkret **Beitritte, Austritte und neue
 
 ## Die Rechte deiner Mitglieder
 
-Möchte ein Mitglied wissen, was du über es gespeichert hast, zeigt ihm `/mystats` seine eigenen Zahlen. Der Befehl zeigt immer nur die Zahlen der Person, die ihn ausführt; niemand kann jemand anderen abfragen.
+Möchte ein Mitglied wissen, was du über es gespeichert hast, zeigt ihm `/mystats` seine eigenen Zahlen. Der Befehl zeigt immer nur die Zahlen der Person, die ihn ausführt; niemand kann jemand anderen abfragen. Willst du eine solche Anfrage selbst beantworten, enthält die oben beschriebene JSON-Kopie alles, was dein Bot gespeichert hat.
 
 Bittet dich ein Mitglied, seine Daten zu löschen, kann es das über `/analytics-privacy` selbst erledigen, sobald du die Abmeldemöglichkeit eingeschaltet hast.
 

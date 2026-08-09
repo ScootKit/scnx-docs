@@ -103,11 +103,31 @@ Opting out takes effect straight away. A member can opt back in later, but data 
 Because role activity is counted per role rather than per person, a role with only one or two members can still indicate who was active. Bear that in mind if you use single-member roles.
 :::
 
+## Downloading a copy of the data
+
+Under **Privacy** on the analytics tab there is **Download a copy of this data**. It produces a single JSON file holding every view the dashboard can show for your server, assembled in your browser from your bot's own answers.
+
+Two things about it are worth knowing:
+
+- It covers **your whole history**, not the time range you are currently looking at. A copy holding only the last 30 days would not be a copy of your data.
+- It is **JSON rather than CSV**. A CSV file holds one table, and this export holds around forty of them, so a single spreadsheet could not represent it honestly.
+
+The file always contains a list of anything that could not be exported, even when that list is empty, so a partial download can never be mistaken for a complete one. Cards you have hidden from your dashboard are still included: hiding a card changes what you look at, not what you hold.
+
+Only the server owner can download it.
+
 ## Turning analytics off, and deleting the data
 
 Switching analytics off stops all collection. Your existing data is kept, so you can switch it back on later and pick up where you left off.
 
-Deleting the data is a separate, deliberate action, because the dashboard cannot undo it. It clears the data from your bot's live database straight away. ScootKit's hosting also keeps disaster-recovery backups, which exist only so a server can be restored after a failure; a copy can survive in those for up to 90 days before it rotates out.
+Deleting the data is a separate, deliberate action: **Delete all analytics data**, also under **Privacy**. You have to tick a confirmation before the button will do anything, because the dashboard cannot undo it. When it finishes it shows you exactly what was removed, table by table, with a row count for each.
+
+It is all or nothing. The deletion runs as a single database transaction, so it either completes in full or changes nothing at all.
+
+Two things deliberately survive it:
+
+- **Your members' own choices.** A member who opted out stays opted out. Their data is cleared like everyone else's, but the record that they asked not to be counted remains, so deleting the data does not quietly re-enrol them.
+- **Disaster-recovery backups.** ScootKit's hosting keeps these only so a server can be restored after a failure. A copy can survive in them for up to 90 days before it rotates out.
 
 ## History from before you moved to your own bot
 
@@ -117,7 +137,7 @@ Some things were never recorded by the old system, specifically **joins, leaves 
 
 ## Your members' rights
 
-If a member asks what you hold about them, `/mystats` shows them their own figures. It only ever shows the person running it; nobody can look up anyone else.
+If a member asks what you hold about them, `/mystats` shows them their own figures. It only ever shows the person running it; nobody can look up anyone else. If you need to answer such a request yourself, the JSON copy described above contains everything your bot holds.
 
 If a member asks you to delete their data, switching on the member opt-out lets them do it themselves with `/analytics-privacy`.
 
