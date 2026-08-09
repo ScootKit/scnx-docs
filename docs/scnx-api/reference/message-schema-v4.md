@@ -386,9 +386,9 @@ content.
 ```
 
 | `scnx_action` field | Type   | Description                                                                                                |
-| ------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| `type`              | string | `"flowButton"`                                                                                            |
-| `flowId`            | string | ID of the flow to start when clicked.                                                                     |
+| ------------------- | ------ | ---------------------------------------------------------------------------------------------------------- |
+| `type`              | string | `"flowButton"`                                                                                             |
+| `flowId`            | string | ID of the flow to start when clicked.                                                                      |
 | `state`             | string | Optional. A short state string handed to the flow (readable from the button's trigger). Max 80 characters. |
 
 :::note Reserved
@@ -400,12 +400,12 @@ reserved and ships with the flow executor milestone. Do not emit it yet.
 
 At send time SCNX derives each flow component's Discord `custom_id` from its `scnx_action`:
 
-| Action                              | Generated `custom_id`          |
-| ----------------------------------- | ------------------------------ |
-| `flowButton` without `state`        | `ccv3:<flowId>`                |
-| `flowButton` with `state` `s`       | `ccv3:<flowId>:<s>`            |
-| a raw custom id with no flow target | `<s>` verbatim                 |
-| `flowWaitButton` (reserved)         | `ccv3w:<executionId>:<id>`     |
+| Action                              | Generated `custom_id`      |
+| ----------------------------------- | -------------------------- |
+| `flowButton` without `state`        | `ccv3:<flowId>`            |
+| `flowButton` with `state` `s`       | `ccv3:<flowId>:<s>`        |
+| a raw custom id with no flow target | `<s>` verbatim             |
+| `flowWaitButton` (reserved)         | `ccv3w:<executionId>:<id>` |
 
 #### Button Fields {#button-fields}
 
@@ -512,20 +512,20 @@ Starts a flow when an option is chosen. **Guild-specific** - not recommended for
 }
 ```
 
-| `scnx_action` field | Type   | Description                                        |
+| `scnx_action` field | Type   | Description                                       |
 | ------------------- | ------ | ------------------------------------------------- |
 | `type`              | string | `"flowElement"`                                   |
 | `flowId`            | string | ID of the flow to start when an option is chosen. |
 
 #### String Select Fields {#string-select-fields}
 
-| Field         | Type    | Required | Description                                                                              |
-| ------------- | ------- | -------- | --------------------------------------------------------------------------------------- |
-| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                                |
-| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                             |
-| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`.     |
+| Field         | Type    | Required | Description                                                                                        |
+| ------------- | ------- | -------- | -------------------------------------------------------------------------------------------------- |
+| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                                           |
+| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                                        |
+| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`.                |
 | `scnx_action` | object  | Yes      | `{ "type": "roleElement" }`, `{ "type": "customCommandElement" }`, or `{ "type": "flowElement" }`. |
-| `options`     | array   | Yes      | 1–25 options.                                                                           |
+| `options`     | array   | Yes      | 1–25 options.                                                                                      |
 
 #### Option Fields {#option-fields}
 
