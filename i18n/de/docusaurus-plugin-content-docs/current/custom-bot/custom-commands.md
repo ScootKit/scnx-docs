@@ -115,6 +115,10 @@ Aktionen sind die einzelnen Arbeitsschritte, die dein Bot ausführt. Die folgend
 Manche Aktionen sind nur für bestimmte Trigger-Typen verfügbar. Beispielsweise funktioniert „Dialog anzeigen" nur bei interaktionsbasierten Triggern (Slash-Befehlen, Knöpfen). Nicht unterstützte Aktionen werden lautlos übersprungen.
 :::
 
+### Notizen {#notes}
+
+**Notiz** ist eine reine Editor-Aktion. Sie fasst bis zu 1000 Zeichen Freitext und tut beim Ausführen des Befehls überhaupt nichts - sie wird nie ausgeführt, nie an Discord gesendet und ist für deine Mitglieder nie sichtbar. Halte damit fest, wozu ein Schritt gut ist, oder hinterlasse einen Hinweis für die nächste Bearbeitung. Du fügst eine Notiz über das Menü eines Schrittes im Flow-Editor hinzu („Notiz danach hinzufügen") oder indem du in der Aktionen-Auswahl nach „Notiz" oder „Kommentar" suchst.
+
 ## Parameter {#parameters}
 
 Custom Commands unterstützen dynamische Parameter, die beim Ausführen des Befehls durch tatsächliche Werte ersetzt werden. Du kannst Parameter in jedem Textfeld innerhalb deiner Aktionen verwenden.

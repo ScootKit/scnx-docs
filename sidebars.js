@@ -325,6 +325,10 @@ const sidebars = {
                 },
                 {
                     type: 'doc',
+                    id: 'custom-bot/analytics-data'
+                },
+                {
+                    type: 'doc',
                     id: 'custom-bot/global-parameters'
                 },
                 {

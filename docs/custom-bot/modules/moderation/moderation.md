@@ -51,7 +51,7 @@ Advanced security and moderation system with tons of features for keeping your s
 
 Moderators use the `/moderate` command with various subcommands to perform actions. Each action is logged in the configured log channel. Users receive a DM notification when a moderation action is taken against them (if their DMs are open).
 
-Every action can optionally tag [involved users](#involved-users). When [custom case titles](#configuration-config) are enabled, a short **title** field is added to the warn, mute, ban, kick, quarantine, and channel-mute commands and becomes required.
+Every action can optionally tag [involved users](#involved-users). When [custom case titles](#configuration-config) are enabled, a short **title** field is added to every action command and becomes required. This includes the reversals (unmute, unban, unquarantine, remove-channel-mute, revoke-warn) and the one-click **Lift** button, because a lift is recorded as its own case in the log.
 
 #### Warn {#warn}
 
@@ -98,6 +98,10 @@ Warn, Mute, Kick, and Ban are also available as right-click actions. Right-click
 
 When **Lift-punishment buttons** are enabled (see [Configuration](#configuration-config)), moderation log messages and the [actions view](#actions) show a **Lift punishment** button that reverses a mute, ban, quarantine, or warn in one click. You are prompted for a reason, and the action is undone. The button is permission-gated: only staff whose [moderation level](#configuration-modlevels) allows that action type can lift it.
 
+The lift prompt follows the same two case-requirement toggles as the commands: the reason is required when **Require a reason** is on, and a **title** field is added and required when **Require a custom case title** is on.
+
+However you reverse a punishment - the button or a `/moderate` reversal command - the reversal's log message is posted as a reply to the original case's log message, so you can jump straight back to it. This applies to the [public log](#configuration-logmessages) too, where the reversal replies to the public copy of the case. If the original message was deleted, was never publicly logged, or the log channel has changed since, the reversal is simply logged on its own.
+
 ### Edit duration {#edit-duration}
 
 Use `/moderate edit-duration`, or the **Edit duration** button and modal in the [actions view](#actions) (shown when **Lift-punishment buttons** are enabled), to shorten or extend an active temporary mute, ban, or quarantine after it was applied. The affected user is notified of the change by DM (see the **Duration Changed Message** in [Messages](#configuration-strings)).
@@ -120,7 +124,7 @@ Moderators can create, view, edit, and delete notes about users. Notes are usefu
 
 ### Actions history {#actions}
 
-Moderators can view all past moderation actions taken against a user, including warns, mutes, kicks, bans, and quarantines. The view is where the per-case buttons live: [lift a punishment](#lift-punishment), [edit its duration](#edit-duration) or [reason](#edit-reason), [add proof](#evidence-archival), and [link involved users](#involved-users) - each shown when its feature is enabled.
+Moderators can view all past moderation actions taken against a user, including warns, mutes, kicks, bans, and quarantines. The view is where the per-case buttons live: [lift a punishment](#lift-punishment), [edit its duration](#edit-duration) or [reason](#edit-reason), [add proof](#evidence-archival), and [link involved users](#involved-users) - each shown when its feature is enabled. A case's [custom title](#configuration-config), when it has one, is shown at the top of its detail view.
 
 ### Evidence archival {#evidence-archival}
 
@@ -175,7 +179,7 @@ With **Import native moderation actions** enabled (see [Configuration](#configur
 Notes:
 
 - Whether `reason` and `proof` are required depends on the **Force moderators to set a reason** and **Force moderators to upload proof** configuration options.
-- When **Require a custom case title** is enabled, an additional required `title:<Text>` option appears on warn, mute, ban, kick, quarantine, and channel-mute (and their right-click modals). When the feature is off, no title option is added at all.
+- When **Require a custom case title** is enabled, an additional required `title:<Text>` option appears on every action command: warn, mute, ban, kick, quarantine, and channel-mute, their reversals (unmute, unban, unquarantine, remove-channel-mute, revoke-warn), the right-click modals, and the **Lift** button's modal. When the feature is off, no title option is added at all.
 - The `edit-duration`, `edit-reason`, `add-proof`, and `involve` subcommands act on an existing case by its ID and only work when their matching opt-in toggle is enabled.
 
 ## Configuration {#configuration}

@@ -106,9 +106,9 @@ Upgrade auf Unlimited oder höher, um diese Einschränkungen aufzuheben.
 
 Um SCNX auf irgendeine gewerbliche Weise oder in einer gewerblichen Situation zu nutzen, musst du den [Professional Plan](https://scnx.xyz/plans) erwerben. Lies diesen [FAQ-Artikel](https://faq.scnx.app/commercial-usage-of-scnx/), um mehr zu erfahren, gewerbliche Nutzung auf SCNX zu melden oder dagegen Einspruch zu erheben.
 
-### Wie bekomme ich einen Auftragsverarbeitungsvertrag (AVV / DPA) für meinen Server? {#dpa}
+### Wie bekomme ich eine Auftragsverarbeitungsvereinbarung (AVV / DPA) für meinen Server? {#dpa}
 
-SCNX erstellt einen unterzeichneten AVV (Data Processing Agreement) auf Anfrage im Tab [**Richtlinien & Compliance**](https://scnx.app/glink?page=policy) deines Servers. Trage einmalig die Daten deiner Rechtsperson ein, und SCNX erzeugt ein archivierfertiges, unterschriebenes PDF. Der gleiche Tab bietet zudem den Generator für die EU-AI-Act-Offenlegung, falls du KI-Funktionen auf deinem Server betreibst.
+SCNX erstellt eine unterzeichnete AVV (Data Processing Agreement) auf Anfrage im Tab [**Richtlinien & Compliance**](https://scnx.app/glink?page=policy) deines Servers. Trage einmalig die Daten deiner Rechtsperson ein, und SCNX erzeugt ein archivierfertiges, unterschriebenes PDF. Der gleiche Tab bietet zudem den Generator für die EU-AI-Act-Offenlegung, falls du KI-Funktionen auf deinem Server betreibst.
 
 ## Serververwaltung
 
