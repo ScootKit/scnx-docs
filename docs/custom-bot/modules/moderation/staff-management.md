@@ -262,7 +262,7 @@ Configure (staff) profiles with a custom profile embed and other settings in the
 
 ### Activity Checks Configuration {#configuration-activity-checks}
 
-Configue manual and auomated activity checks to check if staff are active in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/activity-checks).
+Configue manual and automated activity checks to check if staff are active in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/activity-checks).
 
 | Field                        | Description                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -285,13 +285,46 @@ Configue manual and auomated activity checks to check if staff are active in the
 
 ## Troubleshooting {#troubleshooting}
 
-W.I.P
+Sometimes you can experience issues that may not be as easy to fix. Most of the issues that you might experience will be listed here, where you can see the possible fixes to your issue. If your issue is not listed here, or it did not solve your issue, feel free to contact [our support team](https://scnx.app/help).
+
 <details>
     <summary>I am promoting someone with the setting 'auto-add new role' enabled, but the role is not given to the user</summary>
     
     This usually happens because the bot is missing permissions to add the role to that user. The bot might have a role that's lower than the role that the user is being promoted to. This is a Discord hierarchy issue, and not a bug. Try the steps below to fix the issue:
     * Make sure your bot has a role that's higher than the role you are promoting a user to. We recommend setting a role higher than all the lower-risk roles you would promote users to. Higher-risk roles (users who can kick/ban etc) are not recommended to be given roles automatically due to raid protection.
     * It is recommended to give your bot the `administrator` permission to allow the bot to give roles to users. This could also be the issue that the bot does not have permission to add/remove roles to users.
+</details>
+
+<details>
+    <summary>Ending a staff shift did not add time to the total shift time of an user</summary>
+    <ul>
+        <li>Make sure to check the **Minimum Shift Duration** setting in the <a href="#configuration-shifts">Shifts Configuration</a>. The user might've ended a shift before meeting that amount of on-duty time. All shifts under that time period are not counted towards the total shift time to avoid shift farming. Set it to 0 (default) to count all shifts.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>When suspending an user, the roles are not being removed.</summary>
+    <ul>
+        <li>Make sure that the user's highest role is **lower** than the bot's highest role. The bot cannot manage roles above it's own role.</li>
+        <li>Make sure that the suspension heirachy role is set properly in the <a href="#configuration-infractions">infractions configuration</a> so that the role is actually on the user, and roles above it are removed.</li>
+        <li>Make sure that the bot has the `Manage Roles` permission to remove/add roles. We recommend giving the bot `administrator` permission to have all permissions without worrying with individual permissions.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>After an activity check ended, the activity check message never changes to the ended message.</summary>
+    <ul>
+        <li>Make sure that both messages use either the default message editor, or components V2 (message editor V4). If one of either messages use a different type of Discord message, it won't update. This is a Discord limitation and not a bug.</li>
+        <li>Make sure the bot isn't running with any issues when the activity check ends. Check the results message to see if it actually ended (properly). Other problems are liekly logged in the error-logs of your bot. Please contact our support team via https://scnx.app/help for help with that.</li>
+    </ul>
+</details>
+
+<details>
+    <summary>I enabled promotions/infractions/reviews/LoA/RA/staff profiles/shifts but I cannot see the commands for that feature.</summary>
+    
+    The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being seen.
+    But it many cases this requries you to restart the bot to re-sync the commands. A configuration reload can sometimes also let the commands appear, but restarting is more reliable.
+    If you don't see the commands evena fter restarting, please refresh your Discord client (Ctrl + R on desktop, fully close and re-open Discord for mobile) to see the commands.
 </details>
 
 ## Stored data {#data-usage}
