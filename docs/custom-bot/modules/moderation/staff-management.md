@@ -286,6 +286,13 @@ Configue manual and auomated activity checks to check if staff are active in the
 ## Troubleshooting {#troubleshooting}
 
 W.I.P
+<details>
+    <summary>I am promoting someone with the setting 'auto-add new role' enabled, but the role is not given to the user</summary>
+    
+    This usually happens because the bot is missing permissions to add the role to that user. The bot might have a role that's lower than the role that the user is being promoted to. This is a Discord hierarchy issue, and not a bug. Try the steps below to fix the issue:
+    * Make sure your bot has a role that's higher than the role you are promoting a user to. We recommend setting a role higher than all the lower-risk roles you would promote users to. Higher-risk roles (users who can kick/ban etc) are not recommended to be given roles automatically due to raid protection.
+    * It is recommended to give your bot the `administrator` permission to allow the bot to give roles to users. This could also be the issue that the bot does not have permission to add/remove roles to users.
+</details>
 
 ## Stored data {#data-usage}
 
