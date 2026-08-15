@@ -324,11 +324,90 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
     
     The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being seen.
     But it many cases this requries you to restart the bot to re-sync the commands. A configuration reload can sometimes also let the commands appear, but restarting is more reliable.
-    If you don't see the commands evena fter restarting, please refresh your Discord client (Ctrl + R on desktop, fully close and re-open Discord for mobile) to see the commands.
+    If you don't see the commands even after restarting, please refresh your Discord client (Ctrl + R on desktop, fully close and re-open Discord for mobile) to see the commands.
 </details>
 
 ## Stored data {#data-usage}
 
-W.I.P
+The Staff Managament Module is a big module, which means many things can be stored at once. To commit to the fullest of our transparency commitment, I will explain everything that's stored with multiple details.
+There is a sub-category for each database model, meaning you get an insight for every single bit of data stored. use the dropdown to see the details of that stored data.
+
+### Activity Checks {#data-usage-activity-checks}
+
+This feature contains **o** individually deletable stored data pieces.
+<details>
+    <summary>Activity Check ID</summary>
+
+    The activity check ID is currently used internally. Each activity check has an unique ID, making sure that people react to the correct activity check, and that results are based on the exact activity check.
+</details>
+
+<details>
+    <summary>Message ID</summary>
+    
+    The message ID is stored to keep track of the activity check message that was sent, and to identify the exact message to edit after the activity check has ended.
+</details>
+
+<details>
+    <summary>Channel ID</summary>
+
+    The channel ID is stored to keep track of where the activity check message was sent. This is shown to the user when initiating an activity check, and when checking the status of the activity check.
+</details>
+
+<details>
+    <summary>End Time</summary>
+
+    The end time is stored to keep track of when an activity check has ended. As this is a date, it records the exact date + time when it has ended.
+</details>
+
+<details>
+    <summary>Target Roles</summary>
+
+    The target roles are stored to keep track of which roles are required to respond to the activity check. This is a critical part of this feature. Without this, activity checks will be completely unusable.
+</details>
+
+<details>
+    <summary>Responded Users</summary>
+
+    The responded users are stored to check who responded to the activity checks. This is also shown at the end results.
+</details>
+
+<details>
+    <summary>Status</summary>
+
+    The activity check status is stored to check if an activity check is currently active or inactive.
+</details>
+
+<details>
+    <summary>Iniatior ID</summary>
+
+    The initiator ID is stored to know who started the activity check. This is null if it's an automated check (showcased as 'system' in the activity check message)
+</details>
+
+<details>
+    <summary>Is Automated</summary>
+
+    The check of 'isAutomated' is stored to see if the check was an automated check. This is an additional check besides initiator ID to make sure it was an automated check.
+</details>
+
+**ActivityCheckResponse model below**
+*All data from the ActivityCheckResponse model is deleted when deleting the activity check data from an user.*
+
+<details>
+    <summary>ID</summary>
+
+    The response ID is used to assign an unique number (ID) to each user as the "response ID". This is mainly stored to prevent double-entries.
+</details>
+
+<details>
+    <summary>Activity Check ID</summary>
+
+    The activity check ID is stored to recognize which activity check the user responded to.
+</details>
+
+<details>
+    <summary>User ID</summary>
+
+    The user ID is stored to know which user responded to the activity check.
+</details>
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
