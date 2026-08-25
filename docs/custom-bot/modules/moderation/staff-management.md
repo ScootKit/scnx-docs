@@ -334,7 +334,6 @@ There is a sub-category for each database model, meaning you get an insight for 
 
 ### Activity Checks {#data-usage-activity-checks}
 
-This feature contains **o** individually deletable stored data pieces.
 <details>
     <summary>Activity Check ID</summary>
 
@@ -390,7 +389,7 @@ This feature contains **o** individually deletable stored data pieces.
 </details>
 
 **ActivityCheckResponse model below**
-*All data from the ActivityCheckResponse model is deleted when deleting the activity check data from an user.*
+*All data from the 'ActivityCheckResponse' model is deleted when deleting the activity check data from an user. To delete the data from 'ActivityCheckResponse' for an user, go to the user panel > Data deletion > Activity Checks and confirm the data deletion.*
 
 <details>
     <summary>ID</summary>
@@ -408,6 +407,62 @@ This feature contains **o** individually deletable stored data pieces.
     <summary>User ID</summary>
 
     The user ID is stored to know which user responded to the activity check.
+</details>
+
+### Infractions {#data-usage-infractions}
+
+<details>
+    <summary>Case ID</summary>
+
+    The case ID is used to give each infraction a unique identifier-code. This can be showcased on each infraction, and is used when voiding an infraction.
+</details>
+
+<details>
+    <summary>User ID</summary>
+
+    The user ID is stored to know exactly who was infracted by the user ID, especially useful for pinging that infracted staff member.
+</details>
+
+<details>
+    <summary>Issuer ID</summary>
+
+    The issuer ID is stored to know who exactly infracted a staff member.
+</details>
+
+<details>
+    <summary>Type</summary>
+
+    The type is used to recognize which infraction type was issued.
+</details>
+
+<details>
+    <summary>Reason</summary>
+
+    The reason is stored to know what the reason for each infraction is. This is showcased in the user's infraction history.
+</details>
+
+<details>
+    <summary>Duration Days</summary>
+
+    The duration in days is used to know exactly how many days a suspension lasts.
+</details>
+
+<details>
+    <summary>Active</summary>
+
+    The active boolean is used to know if a suspension is currently active or has already ended.
+</details>
+
+<details>
+    <summary>Message URL</summary>
+
+    The message URL is stored to remember the exact infraction message. Used to match infractions when a staff members voids an infraction via message URL.
+</details>
+
+<details>
+    <summary>Expires At</summary>
+
+    The expires at date is used to know when an infraction expires.
 </details>
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
