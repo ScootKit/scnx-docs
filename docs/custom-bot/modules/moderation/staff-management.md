@@ -536,9 +536,9 @@ There is a sub-category for each database model, meaning you get an insight for 
 </details>
 
 <details>
-    <summary>Points</summary>
+    <summary>Points (ignore)</summary>
 
-    Not used. Was made for a feature I planned, though i've since cancelled the idea :/
+    Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
 </details>
 
 <details>
