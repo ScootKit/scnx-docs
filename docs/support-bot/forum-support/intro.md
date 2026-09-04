@@ -77,6 +77,7 @@ At any moment, the bot knows whether a thread is waiting on your team or on the 
 - **Volume-aware ETA** - post an adaptive estimated wait time based on recent resolution times.
 - **Write restriction** - optionally keep threads to the original poster and staff only, deleting other members' messages (with an optional explanation DM).
 - **Closed-hours notice** - automatically tell members when they post outside your [opening hours](/docs/support-bot/general/opening-hours).
+- **Open post limit** - cap how many posts one member can have open at once, with exempt roles and a per-forum override.
 - **Transcripts** - save a full transcript of every thread to [modmail.net](https://modmail.net).
 - **Log channel & close DM** - post a close summary + transcript to a staff channel, and DM the member when their thread closes (both customizable, both settable per forum channel).
 - **Team notifications** - ping your staff roles in a channel whenever a new thread opens.

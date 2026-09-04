@@ -69,7 +69,7 @@ The detailed tables below compare the three **text-based** systems in depth. **V
 | Scheduled closing                        |   ✅    |      ✅       |      ❌       |
 | Close requests (user/staff confirmation) |   ✅    |      ✅       |      ❌       |
 | Close reasons (custom & predefined)      |   ✅    |      ❌       |      ❌       |
-| One ticket per user limit                |   ✅    |      ✅       |      ❌       |
+| One ticket per user limit                |   ✅    |      ✅       |      ✅       |
 | Per-topic priority                       |   ❌    |      ❌       |      ✅       |
 | Priority by member role                  |   ❌    |      ❌       |      ✅       |
 | Close / "mark solved" button             |   ✅    |      ✅       |      ✅       |
