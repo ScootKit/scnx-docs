@@ -110,6 +110,13 @@ them.
 Search SCNX's documentation and fetch a page as markdown, and browse or install marketplace modules (an installed
 module always arrives switched off, so it never activates automatically).
 
+### Check whether you can publish
+
+See which marketplace publisher organizations your account could publish under, whether each one has accepted the
+marketplace terms, and whether it has a support link set - the publishing-readiness check the assistant runs before
+it helps you put a module on the marketplace. This is the one thing the connector reads that belongs to your SCNX
+account rather than to a server you selected.
+
 ## What it deliberately cannot do {#out-of-scope}
 
 The connector is scoped to Custom Commands v3 - the flows and modules you build yourself with `create-module` and
@@ -136,6 +143,9 @@ If you ask it to do any of these, it should tell you plainly that it doesn't sup
   arm from the dashboard.
 - **Test runs are always simulations.** `run-test` is a forced dry run - it never sends, edits, or deletes
   anything on Discord, regardless of read-only or read-write access.
+- **Almost everything is scoped to the servers you picked.** The one exception is the publishing-readiness check,
+  which is account-scoped: it lists the marketplace publisher organizations you could publish under, plus their
+  terms and support-link status. It reads nothing else about your account.
 - **No Discord message or member content is ever returned.** Execution traces and storage inspection are
   structural by default. The only way to see a raw stored value is `inspect-storage` with `includeValues: true`,
   which needs a read-write grant and is logged every time it's used.
