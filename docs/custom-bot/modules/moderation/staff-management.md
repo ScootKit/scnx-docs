@@ -635,7 +635,7 @@ There is a sub-category for each database model, meaning you get an insight for 
     The message URL of the review.
 </details>
 
-### Staff Shift {data-usage-shifts}
+### Staff Shift {#data-usage-shifts}
 
 *All data from the 'Staff Shift' model is deleted when deleting the ***shifts*** data from an user. To delete the data from 'StaffShift' for an user, go to the user panel > Data deletion > Delete Shifts and confirm the data deletion.*
 
