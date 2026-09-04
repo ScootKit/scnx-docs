@@ -93,6 +93,42 @@ Every message the bot posts is fully customizable with our message editor - text
 
 Turn on **Send closed notice** to automatically let members know when they post outside your [opening hours](/docs/support-bot/general/opening-hours). The message can include your opening hours so people know when to expect a reply. Your team still sees the thread - this just sets expectations.
 
+### Open post limit {#open-thread-limit}
+
+Keep a single member from filling your forum with posts. When the limit is on, the bot counts how many posts that member already has open in the same forum channel and turns away anything above your maximum.
+
+Discord gives bots no way to stop a post from being created, so the bot acts right after the post appears. The count is live - as soon as one of the member's posts is closed, whether the member presses **Mark as solved**, your team closes it, or it auto-closes, a slot frees up again. There is no reset schedule and no counter to clear.
+
+| Setting                          | What it does                                                                                                                                                                                                                                                                                                        |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Limit open posts per member**  | Turns the limit on. Off by default.                                                                                                                                                                                                                                                                                 |
+| **Maximum open posts**           | How many posts one member may have open at the same time in the same forum channel. `1` or higher, `3` by default.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Limit open posts per member" is enabled._</blockquote></details></small>                                       |
+| **Count posts that are on hold** | When on, posts your team has put on hold still count against the member. Off by default, so a post on hold doesn't stop them from asking something else.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Limit open posts per member" is enabled._</blockquote></details></small> |
+| **Exempt roles**                 | Members with any of these roles are never limited.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Limit open posts per member" is enabled._</blockquote></details></small>                                                                                                       |
+| **When the limit is reached**    | Whether the post that went over the limit is archived or deleted - see below.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Limit open posts per member" is enabled._</blockquote></details></small>                                                                            |
+| **Limit reached message**        | The notice the member gets when they hit the limit. Fully customizable with the message editor - text, embeds, colors and images.<br/><small><details><summary>Requirement</summary><blockquote>_Only available if "Limit open posts per member" is enabled._</blockquote></details></small>                        |
+
+**When the limit is reached** decides what happens to the post:
+
+- **Archive the post** (default) - the bot posts your notice in the new post, then locks and archives it. The member keeps everything they wrote and can read why their post was turned away.
+- **Delete the post** - the bot DMs the member your notice together with a copy of what they wrote, then deletes the post. If the DM can't be delivered because the member has DMs closed, the bot archives the post instead, so nobody ever loses their text.
+
+:::tip Different limits per forum
+Each forum channel can set its own **Maximum open posts (override)** on the [Forum Channels](#forum-channels) page - leave it blank to use the global number, or set it to `0` to switch the limit off for that one channel.
+:::
+
+#### Placeholders {#thread-limit-placeholders}
+
+These three placeholders work in the **Limit reached message** only:
+
+| Placeholder        | What it becomes                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------- |
+| `%openThreads%`    | How many posts the member currently has open.                                       |
+| `%threadLimit%`    | The maximum you configured.                                                         |
+| `%openThreadList%` | A clickable list of the member's open posts, each with how long ago it was created. |
+
+All the standard [global placeholders](/docs/support-bot/general/global-placeholders) (bot identity, timestamps, opening hours, etc.) work here too.
+
 ### Blocklist {#blocklist}
 
 Members on your bot's blocklist can be stopped from using Forum Support.
@@ -118,19 +154,20 @@ The [Forum Channels](https://scnx.app/glink?page=support-system/forum-support/ch
 
 For **each** forum channel you can set:
 
-| Setting                             | What it does                                                                                                                |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| **Forum channel**                   | The Discord forum channel to manage.                                                                                        |
-| **Welcome message (override)**      | A welcome message just for this channel (otherwise the global one is used).                                                 |
-| **Closed message (override)**       | A message posted in the thread when it's closed.                                                                            |
-| **Log channel (override)**          | Send this channel's close summaries to a specific log channel instead of the [default](#log-channel).                       |
-| **Close DM message (override)**     | A custom [close DM](#close-dm) message for this channel.                                                                    |
-| **Solved tag**                      | A forum tag automatically applied to threads when they're marked solved.                                                    |
-| **Lock until claimed**              | Locks a new thread so the member can't add more until a staff member claims it. Claiming unlocks it automatically.          |
-| **Lock on close**                   | Locks the thread when it's closed.                                                                                          |
-| **Only OP and staff can write**     | Same as the global option, but just for this channel.                                                                       |
-| **Staff member roles (override)**   | Use different staff roles for this channel.                                                                                 |
-| **Priority** ([details](#priority)) | Treat threads as high-priority based on the asker's roles or a chosen forum tag, with an optional priority welcome message. |
+| Setting                             | What it does                                                                                                                                     |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Forum channel**                   | The Discord forum channel to manage.                                                                                                             |
+| **Welcome message (override)**      | A welcome message just for this channel (otherwise the global one is used).                                                                      |
+| **Closed message (override)**       | A message posted in the thread when it's closed.                                                                                                 |
+| **Log channel (override)**          | Send this channel's close summaries to a specific log channel instead of the [default](#log-channel).                                            |
+| **Close DM message (override)**     | A custom [close DM](#close-dm) message for this channel.                                                                                         |
+| **Solved tag**                      | A forum tag automatically applied to threads when they're marked solved.                                                                         |
+| **Lock until claimed**              | Locks a new thread so the member can't add more until a staff member claims it. Claiming unlocks it automatically.                               |
+| **Lock on close**                   | Locks the thread when it's closed.                                                                                                               |
+| **Only OP and staff can write**     | Same as the global option, but just for this channel.                                                                                            |
+| **Maximum open posts (override)**   | A different [open post limit](#open-thread-limit) for this channel. Leave blank to use the global number, or set `0` to turn the limit off here. |
+| **Staff member roles (override)**   | Use different staff roles for this channel.                                                                                                      |
+| **Priority** ([details](#priority)) | Treat threads as high-priority based on the asker's roles or a chosen forum tag, with an optional priority welcome message.                      |
 
 ### Default log channel {#log-channel}
 
