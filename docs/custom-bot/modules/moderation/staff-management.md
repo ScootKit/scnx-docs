@@ -330,349 +330,91 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 ## Stored data {#data-usage}
 
 The Staff Managament Module is a big module, which means many things can be stored at once. To commit to the fullest of our transparency commitment, I will explain everything that's stored with multiple details.
-There is a sub-category for each database model, meaning you get an insight for every single bit of data stored. use the dropdown to see the details of that stored data.
+There is a sub-category for each database model, meaning you get an insight for every single bit of data stored.
 
 ### Activity Checks {#data-usage-activity-checks}
 
-<details>
-    <summary>Activity Check ID</summary>
-
-    The activity check ID is currently used internally. Each activity check has an unique ID, making sure that people react to the correct activity check, and that results are based on the exact activity check.
-</details>
-
-<details>
-    <summary>Message ID</summary>
-    
-    The message ID is stored to keep track of the activity check message that was sent, and to identify the exact message to edit after the activity check has ended.
-</details>
-
-<details>
-    <summary>Channel ID</summary>
-
-    The channel ID is stored to keep track of where the activity check message was sent. This is shown to the user when initiating an activity check, and when checking the status of the activity check.
-</details>
-
-<details>
-    <summary>End Time</summary>
-
-    The end time is stored to keep track of when an activity check has ended. As this is a date, it records the exact date + time when it has ended.
-</details>
-
-<details>
-    <summary>Target Roles</summary>
-
-    The target roles are stored to keep track of which roles are required to respond to the activity check. This is a critical part of this feature. Without this, activity checks will be completely unusable.
-</details>
-
-<details>
-    <summary>Responded Users</summary>
-
-    The responded users are stored to check who responded to the activity checks. This is also shown at the end results.
-</details>
-
-<details>
-    <summary>Status</summary>
-
-    The activity check status is stored to check if an activity check is currently active or inactive.
-</details>
-
-<details>
-    <summary>Iniatior ID</summary>
-
-    The initiator ID is stored to know who started the activity check. This is null if it's an automated check (showcased as 'system' in the activity check message)
-</details>
-
-<details>
-    <summary>Is Automated</summary>
-
-    The check of 'isAutomated' is stored to see if the check was an automated check. This is an additional check besides initiator ID to make sure it was an automated check.
-</details>
+- **Activity Check ID:** The activity check ID is currently used internally. Each activity check has an unique ID, making sure that people react to the correct activity check, and that results are based on the exact activity check.
+- **Message ID:** The message ID is stored to keep track of the activity check message that was sent, and to identify the exact message to edit after the activity check has ended.
+- **Channel ID:** The channel ID is stored to keep track of where the activity check message was sent. This is shown to the user when initiating an activity check, and when checking the status of the activity check.
+- **End Time:** The end time is stored to keep track of when an activity check has ended. As this is a date, it records the exact date + time when it has ended.
+- **Target Roles:** The target roles are stored to keep track of which roles are required to respond to the activity check. This is a critical part of this feature. Without this, activity checks will be completely unusable.
+- **Responded Users:** The responded users are stored to check who responded to the activity checks. This is also shown at the end results.
+- **Status:** The activity check status is stored to check if an activity check is currently active or inactive.
+- **Iniatior ID:** The initiator ID is stored to know who started the activity check. This is null if it's an automated check (showcased as 'system' in the activity check message)
+- **Is Automated:** The check of 'isAutomated' is stored to see if the check was an automated check. This is an additional check besides initiator ID to make sure it was an automated check.
 
 **ActivityCheckResponse model below**
 *All data from the 'ActivityCheckResponse' model is deleted when deleting the activity check data from an user. To delete the data from 'ActivityCheckResponse' for an user, go to the user panel > Data deletion > Delete Activity Checks and confirm the data deletion.*
 
-<details>
-    <summary>ID</summary>
-
-    The response ID is used to assign an unique number (ID) to each user as the "response ID". This is mainly stored to prevent double-entries.
-</details>
-
-<details>
-    <summary>Activity Check ID</summary>
-
-    The activity check ID is stored to recognize which activity check the user responded to.
-</details>
-
-<details>
-    <summary>User ID</summary>
-
-    The user ID is stored to know which user responded to the activity check.
-</details>
+- **ID:** The response ID is used to assign an unique number (ID) to each user as the "response ID". This is mainly stored to prevent double-entries.
+- **Activity Check ID:** The activity check ID is stored to recognize which activity check the user responded to.
+- **User ID:** The user ID is stored to know which user responded to the activity check.
 
 ### Infractions {#data-usage-infractions}
 
 *All data from the 'Infraction' model is deleted when deleting the ***infraction*** data from an user. To delete the data from 'Infraction' for an user, go to the user panel > Data deletion > Delete Infractions and confirm the data deletion.*
 
-<details>
-    <summary>Case ID</summary>
-
-    The case ID is used to give each infraction a unique identifier-code. This can be showcased on each infraction, and is used when voiding an infraction.
-</details>
-
-<details>
-    <summary>User ID</summary>
-
-    The user ID is stored to know exactly who was infracted by the user ID, especially useful for pinging that infracted staff member.
-</details>
-
-<details>
-    <summary>Issuer ID</summary>
-
-    The issuer ID is stored to know who exactly infracted a staff member.
-</details>
-
-<details>
-    <summary>Type</summary>
-
-    The type is used to recognize which infraction type was issued.
-</details>
-
-<details>
-    <summary>Reason</summary>
-
-    The reason is stored to know what the reason for each infraction is. This is showcased in the user's infraction history.
-</details>
-
-<details>
-    <summary>Duration Days</summary>
-
-    The duration in days is used to know exactly how many days a suspension lasts.
-</details>
-
-<details>
-    <summary>Active</summary>
-
-    The active boolean is used to know if a suspension is currently active or has already ended.
-</details>
-
-<details>
-    <summary>Message URL</summary>
-
-    The message URL is stored to remember the exact infraction message. Used to match infractions when a staff members voids an infraction via message URL.
-</details>
-
-<details>
-    <summary>Expires At</summary>
-
-    The expires at date is used to know when an infraction expires.
-</details>
+- **Case ID:** The case ID is used to give each infraction a unique identifier-code. This can be showcased on each infraction, and is used when voiding an infraction.
+- **User ID:** The user ID is stored to know exactly who was infracted by the user ID, especially useful for pinging that infracted staff member.
+- **Issuer ID:** The issuer ID is stored to know who exactly infracted a staff member.
+- **Type:** The type is used to recognize which infraction type was issued.
+- **Reason:** The reason is stored to know what the reason for each infraction is. This is showcased in the user's infraction history.
+- **Duration Days:** The duration in days is used to know exactly how many days a suspension lasts.
+- **Active:** The active boolean is used to know if a suspension is currently active or has already ended.
+- **Message URL:** The message URL is stored to remember the exact infraction message. Used to match infractions when a staff members voids an infraction via message URL.
+- **Expires At:** The expires at date is used to know when an infraction expires.
 
 ### LoA/Status requests {#data-usage-status}
 
 *All data from the 'LoaRequest' model is deleted when deleting the ***status*** data from an user. To delete the data from 'LoaRequest' for an user, go to the user panel > Data deletion > Delete Status and confirm the data deletion.*
 
-<details>
-    <summary>ID</summary>
-
-    The ID is stored to identify a specific LoA/RA.
-</details>
-
-<details>
-    <summary>User ID</summary>
-
-    The user ID is stored to know who requested the status.
-</details>
-
-<details>
-    <summary>Type</summary>
-
-    The type field is used to remember and know if the user requested an LoA or an RA.
-</details>
-
-<details>
-    <summary>Reason</summary>
-
-    The reason of the status request.
-</details>
-
-<details>
-    <summary>Start Date</summary>
-
-    The start date of the status. Used for seeing when the status started and calculting the end date.
-</details>
-
-<details>
-    <summary>End Date</summary>
-
-    The end date of the status.
-</details>
-
-<details>
-    <summary>Status</summary>
-
-    The current status of a LoA/RA (e.g. pending, approved, denied)
-</details>
-
-<details>
-    <summary>Approver ID</summary>
-
-    The user ID of the staff member who approved the LoA/RA.
-</details>
-
-<details>
-    <summary>Rejection reason</summary>
-
-    The rejection reason is used to know the reason why a status was denied. This is shown, both to higher ups and the staff member who requested the status.
-</details>
+- **ID:** The ID is stored to identify a specific LoA/RA.
+- **User ID:** The user ID is stored to know who requested the status.
+- **Type:** The type field is used to remember and know if the user requested an LoA or an RA.
+- **Reason:** The reason of the status request.
+- **Start Date:** The start date of the status. Used for seeing when the status started and calculting the end date.
+- **End Date:** The end date of the status.
+- **Status:** The current status of a LoA/RA (e.g. pending, approved, denied)
+- **Approver ID:** The user ID of the staff member who approved the LoA/RA.
+- **Rejection reason:** The rejection reason is used to know the reason why a status was denied. This is shown, both to higher ups and the staff member who requested the status.
 
 ### Staff Profile {#data-usage-profile}
 
 *All data from the 'StaffProfile' model is deleted when deleting the ***shifts*** data from an user. To delete the data from 'StaffProfile' for an user, go to the user panel > Data deletion > Delete Shifts and confirm the data deletion.*
 
-<details>
-    <summary>User ID</summary>
-
-    The User ID of the staff member.
-</details>
-
-<details>
-    <summary>Points (ignore)</summary>
-
-    Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
-</details>
-
-<details>
-    <summary>On Duty</summary>
-
-    The on duty boolean is used to recognize if an user is currently on duty. If so, things are done like giving the on duty role, if configured.
-</details>
-
-<details>
-    <summary>last Clock In</summary>
-
-    The last clock in date is used to remember when the user last went on duty. Also used to calculate the total shift time.
-</details>
-
-<details>
-    <summary>Activity status</summary>
-
-    This is used to recognize what status the user is on, like off-duty, on-duty, suspended etc. This is also shown in the staff profile.
-</details>
-
-<details>
-    <summary>Is Suspended</summary>
-
-    This boolean is used to know if the user is suspended.
-</details>
-
-<details>
-    <summary>Suspended Roles</summary>
-
-    This acts as a snapshot of roles the staff member had before being suspended, and is kept so it knows which roles to give back once the suspension has ended.
-</details>
-
-<details>
-    <summary>Custom Nickname</summary>
-
-    The custom name configured by the staff member for the staff profile.
-</details>
-
-<details>
-    <summary>Custom Intro</summary>
-
-    The custom introduction configured by the staff member for the staff profile.
-</details>
-
-<details>
-    <summary>On Break</summary>
-
-    This checks if the user is currently on break or not.
-</details>
-
-<details>
-    <summary>Break Start Time</summary>
-
-    The start time of the break, used to calculate the break duration and subtract it from the total duty time.
-</details>
+- **User ID:** The User ID of the staff member.
+- **Points (ignore):** Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
+- **On Duty:** The on duty boolean is used to recognize if an user is currently on duty. If so, things are done like giving the on duty role, if configured.
+- **last Clock In:** The last clock in date is used to remember when the user last went on duty. Also used to calculate the total shift time.
+- **Activity status:** This is used to recognize what status the user is on, like off-duty, on-duty, suspended etc. This is also shown in the staff profile.
+- **Is Suspended:** This boolean is used to know if the user is suspended.
+- **Suspended Roles:** This acts as a snapshot of roles the staff member had before being suspended, and is kept so it knows which roles to give back once the suspension has ended.
+- **Custom Nickname:** The custom name configured by the staff member for the staff profile.
+- **Custom Intro:** The custom introduction configured by the staff member for the staff profile.
+- **On Break:** This checks if the user is currently on break or not.
+- **Break Start Time:** The start time of the break, used to calculate the break duration and subtract it from the total duty time.
 
 ### Staff Review {#data-usage-reviews}
 
 *All data from the 'StaffReview' model is deleted when deleting the ***reviews*** data from an user. To delete the data from 'StaffReview' for an user, go to the user panel > Data deletion > Delete Reviews and confirm the data deletion.*
 
-<details>
-    <summary>ID</summary>
-
-    The ID of the review.
-</details>
-
-<details>
-    <summary>Target ID</summary>
-
-    The user ID of the staff member being reviewed.
-</details>
-
-<details>
-    <summary>Author ID</summary>
-
-    The user ID of the user who reviewed the staff member.
-</details>
-
-<details>
-    <summary>Stars</summary>
-
-    The amount of stars the user rated the staff member.
-</details>
-
-<details>
-    <summary>Comment</summary>
-
-    The text the user added to the review.
-</details>
-
-<details>
-    <summary>Message URL</summary>
-
-    The message URL of the review.
-</details>
+- **ID:** The ID of the review.
+- **Target ID:** The user ID of the staff member being reviewed.
+- **Author ID:** The user ID of the user who reviewed the staff member.
+- **Stars:** The amount of stars the user rated the staff member.
+- **Comment:** The text the user added to the review.
+- **Message URL:** The message URL of the review.
 
 ### Staff Shift {#data-usage-shifts}
 
 *All data from the 'Staff Shift' model is deleted when deleting the ***shifts*** data from an user. To delete the data from 'StaffShift' for an user, go to the user panel > Data deletion > Delete Shifts and confirm the data deletion.*
 
-<details>
-    <summary>User ID</summary>
-
-    The user ID of the staff member.
-</details>
-
-<details>
-    <summary>Start Time</summary>
-
-    The starting time of the staff member's shift. Works with end time to calculate the total shift time.
-</details>
-
-<details>
-    <summary>End Time</summary>
-
-    The end time of the staff member's shift. Works with start time to calculate the total shift time.
-</details>
-
-<details>
-    <summary>Duration</summary>
-
-    The total calculated shift duration. Shown in the EOS (End-Of-Shift) report, duty time etc.
-</details>
-
-<details>
-    <summary>Type</summary>
-
-    The shift type the staff member is using.
-</details>
-
-<details>
-    <summary>Break Count</summary>
-
-    The total amount of breaks an user had during their shift.
-</details>
+- **User ID:** The user ID of the staff member.
+- **Start Time:** The starting time of the staff member's shift. Works with end time to calculate the total shift time.
+- **End Time:** The end time of the staff member's shift. Works with start time to calculate the total shift time.
+- **Duration:** The total calculated shift duration. Shown in the EOS (End-Of-Shift) report, duty time etc.
+- **Type:** The shift type the staff member is using.
+- **Break Count:** The total amount of breaks an user had during their shift.
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
