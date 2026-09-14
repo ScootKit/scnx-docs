@@ -22,7 +22,7 @@ Set weekly messages-goals and voice-activity-goals for your staff-members.
 
 ## Usage {#usage}
 
-- The requirements get [evaluated](#module-terms) every 7 days after module activation automatically.
+- The requirements get [evaluated](#module-terms) automatically once a week, on the configured "Weekly Summary Day" and "Weekly Summary Hour".
 - You can always check the message progress of you or another user with [`/team-goals progress`](#commands) and see their
   goal-history with [`/team-goals history`](#commands).
 - If the voice goal is enabled, you can check voice activity progress with [`/team-goals voice-progress`](#commands).
@@ -31,16 +31,16 @@ Set weekly messages-goals and voice-activity-goals for your staff-members.
 
 <SlashCommandExplanation />
 
-| Command                                    | Description                                                                                                                                                                                                 |
-| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/team-goals progress [user:<User>]`       | Shows the message progress (amount of messages left to reach the goal, time left, ...) towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown).          |
-| `/team-goals voice-progress [user:<User>]` | Shows the voice activity progress (minutes spent in voice channels, goal, time left) towards the voice goal of the current [evaluation period](#module-terms). Only available if the voice goal is enabled. |
-| `/team-goals history [user:<User>]`        | Shows the goal-history (amount of messages, goal reached or not, percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).                           |
+| Command                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/team-goals progress [user:<User>]`       | Shows your progress towards the goal of the current [evaluation period](#module-terms) (if empty, your progress will be shown). With the voice goal disabled, this is a paragraph with the messages left to reach the goal, a progress bar, and the deadline. With the voice goal enabled, this becomes three status lines instead - messages sent/goal, voice minutes sent/goal, and the next summary date - each with its own tick or cross, with the embed title and colour reflecting the overall result according to the configured "Goal Mode". |
+| `/team-goals voice-progress [user:<User>]` | Shows the voice activity progress (minutes spent in voice channels, goal, time left) towards the voice goal of the current [evaluation period](#module-terms). Only available if the voice goal is enabled.                                                                                                                                                                                                                                                                                                                                           |
+| `/team-goals history [user:<User>]`        | Shows the goal-history (amount of messages, voice minutes if the voice goal is enabled, goal reached or not according to the configured "Goal Mode", percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).                                                                                                                                                                                                                                                                                 |
 
 ## Definition of module-specific terms {#module-terms}
 
-- An **evaluation** is the time when a user gets evaluated. This happens once a week. The actual time is dependent on
-  the time the module got first enabled - the first evaluation will happen exactly one week after that. In an
+- An **evaluation** is the time when a user gets evaluated. This happens once a week, on the
+  configured [Weekly Summary Day and Weekly Summary Hour](#configuration), in your bot's configured timezone. In an
   evaluation, the bot will compare the amount messages sent in the current evaluation period to
   the [configured goal](#configuration), triggering the [configured failed / archived message](#configuration) to be
   sent. Once all users got evaluated, the next evaluation period starts.
@@ -52,23 +52,44 @@ This configuration file allows you to configure how this module will behave and 
 Open it in
 your [dashboard](https://scnx.app/glink?page=bot/configuration?query=goal&file=team-goals%7Cconfig).
 
-| Field                                    | Description                                                                                                                                                                                                                                                                   |
-| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Staff-Roles                              | These roles will get [evaluated](#module-terms) every week regarding their progress towards the goal. Only messages from users with these roles will get tracked.                                                                                                             |
-| Weekly Message Goal                      | The amount of messages staff members need to send in each [evaluation period](#module-terms) to archive the goal.                                                                                                                                                             |
-| Goal-Archived-Message                    | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they reach their goals.                                                                           |
-| Goal-Failed-Message                      | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they fail to reach their goals.                                                                   |
-| Send messages in channels instead of DMs | If enabled, staff members will receive their [goal evaluation](#module-terms) in a channel instead via DMs.                                                                                                                                                                   |
-| Channel to send messages in              | _Only visible if "Send messages in channels instead of DMs" is enabled._<br/>Every [evaluation](#module-terms), the goal message will get sent into this channel instead via DMs.                                                                                             |
-| Users can see each others statistics     | If enabled, users will be able to add the `[user:<User>]` to their command and will be able to see each others statistics.                                                                                                                                                    |
-| Ignored channels                         | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                                                                                          |
-| Message goal overwrites                  | Optionally overwrite the weekly message goal for specific roles. First field: Role ID. Second field: Custom goal for that role. Users with this role will have this goal instead of the default weekly goal.                                                                  |
-| Enable Voice Goal                        | If enabled, staff members will also be evaluated on their voice channel activity. Voice minutes are tracked whenever a user with a Staff-Role is connected to a voice channel.                                                                                                |
-| Weekly Voice Goal (minutes)              | _Only visible if "Enable Voice Goal" is enabled._<br/>The number of minutes staff members need to spend in voice channels each [evaluation period](#module-terms) to reach the voice goal. Default: 60.                                                                       |
-| Ignored Voice Channels                   | _Only visible if "Enable Voice Goal" is enabled._<br/>Time spent in these voice channels won't be counted towards the voice goal.                                                                                                                                             |
-| Voice Goal Achieved Message              | _Only visible if "Enable Voice Goal" is enabled._<br/>The message sent each evaluation to staff members who reached their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters.       |
-| Voice Goal Failed Message                | _Only visible if "Enable Voice Goal" is enabled._<br/>The message sent each evaluation to staff members who did not reach their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters. |
-| Voice goal overwrites                    | _Only visible if "Enable Voice Goal" is enabled._<br/>Optionally overwrite the weekly voice goal for specific roles. First field: Role ID. Second field: Custom voice goal in minutes for that role.                                                                          |
+:::info
+The weekly summary now fires on the configured "Weekly Summary Day" and "Weekly Summary Hour", in your bot's
+configured timezone, instead of the fixed moment the module was first enabled. On the first evaluation after
+upgrading, existing servers move from their previous, arbitrary slot to the new one - this makes exactly one week
+shorter or longer, by up to seven days.
+:::
+
+:::info
+With the voice goal enabled, staff members now get one combined weekly message by default instead of separate
+message-goal and voice-goal messages (see "Combined Goal Achieved Message" and "Combined Goal Failed Message" below).
+To keep the previous behaviour, turn off "Send one combined message per staff member" - your existing
+Goal-Archived-Message, Goal-Failed-Message, Voice Goal Achieved Message and Voice Goal Failed Message templates are
+untouched and take effect again immediately.
+:::
+
+| Field                                      | Description                                                                                                                                                                                                                                                                                                |
+| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Staff-Roles                                | These roles will get [evaluated](#module-terms) every week regarding their progress towards the goal. Only messages from users with these roles will get tracked.                                                                                                                                          |
+| Weekly Message Goal                        | The amount of messages staff members need to send in each [evaluation period](#module-terms) to archive the goal.                                                                                                                                                                                          |
+| Goal-Archived-Message                      | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they reach their goals. Supports `%voiceMinutes%` and `%voiceGoal%`, populated with `0` if the voice goal is disabled.         |
+| Goal-Failed-Message                        | This is the message sent (either via DM or in the configured channel) every [evaluation](#module-terms) for every user tracked (every user with a configured Staff-Role) if they fail to reach their goals. Supports `%voiceMinutes%` and `%voiceGoal%`, populated with `0` if the voice goal is disabled. |
+| Send messages in channels instead of DMs   | If enabled, staff members will receive their [goal evaluation](#module-terms) in a channel instead via DMs.                                                                                                                                                                                                |
+| Channel to send messages in                | _Only visible if "Send messages in channels instead of DMs" is enabled._<br/>Every [evaluation](#module-terms), the goal message will get sent into this channel instead via DMs.                                                                                                                          |
+| Users can see each others statistics       | If enabled, users will be able to add the `[user:<User>]` to their command and will be able to see each others statistics.                                                                                                                                                                                 |
+| Ignored channels                           | Messages sent by users with at least one of the Staff-Roles in these channels won't get counted towards their goals.                                                                                                                                                                                       |
+| Message goal overwrites                    | Optionally overwrite the weekly message goal for specific roles. First field: Role ID. Second field: Custom goal for that role. Users with this role will have this goal instead of the default weekly goal.                                                                                               |
+| Enable Voice Goal                          | If enabled, staff members will also be evaluated on their voice channel activity. Voice minutes are tracked whenever a user with a Staff-Role is connected to a voice channel.                                                                                                                             |
+| Weekly Voice Goal (minutes)                | _Only visible if "Enable Voice Goal" is enabled._<br/>The number of minutes staff members need to spend in voice channels each [evaluation period](#module-terms) to reach the voice goal. Default: 60.                                                                                                    |
+| Ignored Voice Channels                     | _Only visible if "Enable Voice Goal" is enabled._<br/>Time spent in these voice channels won't be counted towards the voice goal.                                                                                                                                                                          |
+| Voice Goal Achieved Message                | _Only visible if "Enable Voice Goal" is enabled._<br/>The message sent each evaluation to staff members who reached their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters.                                    |
+| Voice Goal Failed Message                  | _Only visible if "Enable Voice Goal" is enabled._<br/>The message sent each evaluation to staff members who did not reach their voice goal. Leave empty to not send a separate voice goal message. Supports `%voiceMinutes%`, `%voiceGoal%`, and all message goal parameters.                              |
+| Voice goal overwrites                      | _Only visible if "Enable Voice Goal" is enabled._<br/>Optionally overwrite the weekly voice goal for specific roles. First field: Role ID. Second field: Custom voice goal in minutes for that role.                                                                                                       |
+| Weekly Summary Day                         | The weekday the weekly summary is sent and the [evaluation period](#module-terms) resets, in your bot's configured timezone. Default: Monday.                                                                                                                                                              |
+| Weekly Summary Hour                        | The full hour the weekly summary is sent, in your bot's configured timezone. Default: 09:00.                                                                                                                                                                                                               |
+| Send one combined message per staff member | _Only visible if "Enable Voice Goal" is enabled._<br/>If enabled, the message goal and the voice goal get reported in a single weekly message instead of two separate ones. Enabled by default.                                                                                                            |
+| Goal Mode                                  | _Only visible if "Enable Voice Goal" is enabled._<br/>Whether a staff member has to meet both the message goal and the voice goal, or whether meeting either one is enough to pass the [evaluation](#module-terms).                                                                                        |
+| Combined Goal Achieved Message             | _Only visible if "Send one combined message per staff member" is enabled._<br/>The message sent once a week to staff members who met their weekly goal, when combined messages are enabled. Supports `%messageStatus%`, `%voiceStatus%`, and all message- and voice-goal parameters.                       |
+| Combined Goal Failed Message               | _Only visible if "Send one combined message per staff member" is enabled._<br/>The message sent once a week to staff members who did not meet their weekly goal, when combined messages are enabled. Supports `%messageStatus%`, `%voiceStatus%`, and all message- and voice-goal parameters.              |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -86,9 +107,16 @@ Please make sure that
 <details>
   <summary>How can I change the time when users get evaluated?</summary>
 
-There's no easy way to do this. The evaluation time is based on the exact time you first enabled the module (evaluation will always happen every week that day at that time). If you <i>really</i> need
-another evaluation time, you could disable the module, <a href="/docs/custom-bot/additional-features#reset-module-database">purge the module database</a> and wait until the exact time when you want
-evaluations to happen and enable the module then.
+Open the <a href="#configuration">module configuration</a> and change "Weekly Summary Day" and/or "Weekly Summary Hour" to the
+weekday and hour (in your bot's configured timezone) you want evaluations to happen. The change takes effect the next
+time the module reloads its configuration - no need to disable the module or purge its database.
+
+Keep in mind that the current evaluation period always ends at the next occurrence of the newly configured slot, so
+changing it while a period is running cuts that period short or stretches it, once - the same way moving the summary
+day from Monday to Tuesday on a Monday afternoon would. The same happens right after enabling the module: with the
+defaults (Monday, 09:00), enabling it on a Sunday at 20:00 evaluates every staff member about 13 hours later, showing
+a goal of 100 messages as failed with 0 sent. Set the day and hour to your desired schedule right after installing,
+before staff start accumulating counts, to avoid an unexpectedly short first period.
 
 </details>
 
