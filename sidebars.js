@@ -411,6 +411,59 @@ const sidebars = {
             ]
         }
     ],
+    sitesSidebar: [
+        {
+            type: 'category',
+            collapsed: false,
+            label: 'SCNX Sites',
+            link: {
+                type: 'doc',
+                id: 'sites/intro'
+            },
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Overview & getting started',
+                    id: 'sites/intro'
+                },
+                {
+                    type: 'doc',
+                    label: 'The editor workspace',
+                    id: 'sites/editor'
+                },
+                {
+                    type: 'doc',
+                    label: 'Custom domains',
+                    id: 'sites/custom-domains'
+                },
+                {
+                    type: 'doc',
+                    label: 'Forms',
+                    id: 'sites/forms'
+                },
+                {
+                    type: 'doc',
+                    label: 'Blog & announcements',
+                    id: 'sites/blog'
+                },
+                {
+                    type: 'doc',
+                    label: 'Events',
+                    id: 'sites/events'
+                },
+                {
+                    type: 'doc',
+                    label: 'Announcement bar, redirects & link-in-bio',
+                    id: 'sites/small-features'
+                },
+                {
+                    type: 'doc',
+                    label: 'Publishing & going live',
+                    id: 'sites/publishing'
+                }
+            ]
+        }
+    ],
     apiSidebar: [
         {
             type: 'category',

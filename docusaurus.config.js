@@ -132,6 +132,12 @@ const config = {
                         position: 'left',
                         label: 'Linked Roles'
                     },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'sitesSidebar',
+                        position: 'left',
+                        label: 'Sites'
+                    },
                     {to: 'blog', label: 'News', position: 'right'},
                     {
                         type: 'localeDropdown',
@@ -175,6 +181,10 @@ const config = {
                             {
                                 label: 'Linked Roles',
                                 to: '/docs/linked-roles/intro'
+                            },
+                            {
+                                label: 'Sites',
+                                to: '/docs/sites/intro'
                             }
                         ]
                     },
