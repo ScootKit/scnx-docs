@@ -8,7 +8,7 @@ description: Connect Claude or ChatGPT to SCNX to author, validate, simulate and
 
 SCNX runs a remote [MCP](https://modelcontextprotocol.io) server at `https://mcp.scnx.app`. It lets an AI assistant
 such as Claude or ChatGPT read your server's setup and help you build, test and debug **Custom Commands v3 (CCV3)**
-flows - the visual flow-based commands described in the [Custom Commands documentation](/docs/custom-bot/custom-commands).
+flows - the visual flow-based commands that are currently in beta.
 
 This is for you if you already build custom commands on SCNX and want an assistant that can look up the exact
 actions and triggers available on your bot, write flows for you, check them for errors, run them safely, and help
@@ -30,9 +30,8 @@ will refuse to do anything until they are.
   those calls fail.
 - You need a **logged-in SCNX account** (the same one used for [scnx.app](https://scnx.app)) to complete the
   authorization step below.
+- You need to be part of the Custom Commands V3 Beta Program.
 
-If a tool call targets a server you don't have access to, or one where the bot isn't reachable, it returns a clear
-refusal instead of guessing or falling back to something else.
 
 ## Connecting {#connecting}
 
@@ -92,7 +91,6 @@ the bot never actually sends, edits or deletes anything on Discord.
 ### Deploy (read-write only)
 
 Create, update and delete modules and flows, set a module's configuration values, and reload the bot when needed.
-Every write is snapshotted first and can be undone with a restore.
 
 ### Debug past runs
 
@@ -149,10 +147,3 @@ If you ask it to do any of these, it should tell you plainly that it doesn't sup
 - **No Discord message or member content is ever returned.** Execution traces and storage inspection are
   structural by default. The only way to see a raw stored value is `inspect-storage` with `includeValues: true`,
   which needs a read-write grant and is logged every time it's used.
-
-## Privacy and support {#privacy-and-support}
-
-Read the [ScootKit Privacy Policy](https://corp.scootkit.com/docs/legal/privacy/) to see how your data is handled.
-
-Something not working as documented here? Visit [scnx.app/help](https://scnx.app/help) - when reporting an issue,
-include the server ID, the flow ID, and the execution number and error code if the problem involves a failed run.
