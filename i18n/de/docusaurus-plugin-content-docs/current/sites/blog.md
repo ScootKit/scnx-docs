@@ -2,9 +2,14 @@
 sidebar_position: 5
 title: Blog & Ankündigungen
 description: Schreibe Beiträge und Ankündigungen für deine SCNX-Website - Entwürfe, Titelbilder, die /blog-Seite, RSS und der Latest-posts-Block.
+unlisted: true
 ---
 
 # Blog & Ankündigungen
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Gib deiner Community einen Ort, um deine Neuigkeiten zu lesen. Der Blog ist eine Sammlung von Beiträgen mit eigener Übersichtsseite, einem RSS-Feed und einem Block, den du auf jede Seite setzen kannst, um deine neuesten Beiträge zu zeigen.
 

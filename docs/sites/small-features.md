@@ -2,9 +2,14 @@
 sidebar_position: 7
 title: Announcement bar, redirects & link-in-bio
 description: Smaller SCNX Sites features - the announcement bar, redirects, and the compact link-in-bio page layout.
+unlisted: true
 ---
 
 # Announcement bar, redirects & link-in-bio
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 A few smaller features round out your site. You will find the first two in the **Site** section of the editor, and the layout option on each page.
 

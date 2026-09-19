@@ -2,9 +2,14 @@
 sidebar_position: 7
 title: Ankündigungsleiste, Weiterleitungen & Link-in-Bio
 description: Kleinere SCNX-Sites-Funktionen - die Ankündigungsleiste, Weiterleitungen und das kompakte Link-in-Bio-Layout.
+unlisted: true
 ---
 
 # Ankündigungsleiste, Weiterleitungen & Link-in-Bio
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Ein paar kleinere Funktionen runden deine Website ab. Die ersten beiden findest du im Bereich **Site** des Editors, die Layout-Option auf jeder Seite.
 

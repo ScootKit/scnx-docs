@@ -2,9 +2,14 @@
 sidebar_position: 5
 title: Blog & announcements
 description: Write posts and announcements for your SCNX site - drafts, cover images, the /blog page, RSS, and the latest-posts block.
+unlisted: true
 ---
 
 # Blog & announcements
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 Give your community somewhere to read your news. The blog is a set of posts with its own overview page, an RSS feed, and a block you can drop onto any page to show your newest posts.
 

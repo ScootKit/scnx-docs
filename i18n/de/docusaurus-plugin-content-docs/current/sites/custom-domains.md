@@ -2,9 +2,14 @@
 sidebar_position: 3
 title: Eigene Domains
 description: Verbinde deine eigene Domain mit deiner SCNX-Website - die zwei nötigen DNS-Einträge, wie du sie bei deinem Anbieter anlegst und wie die Prüfung abläuft.
+unlisted: true
 ---
 
 # Eigene Domains
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Jede SCNX-Website hat eine kostenlose Adresse, die auf `scnx.site` endet, etwa `my-community.scnx.site`. Wenn du eine eigene Domain besitzt, kannst du sie verbinden, sodass deine Website unter deiner eigenen Adresse erreichbar ist, zum Beispiel `www.example.com`.
 

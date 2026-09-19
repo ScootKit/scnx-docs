@@ -2,9 +2,14 @@
 sidebar_position: 1
 title: SCNX Sites
 description: Bau deiner Discord-Community eine eigene Website - eine öffentliche Startseite mit deiner eigenen Adresse auf scnx.site, ganz ohne Code.
+unlisted: true
 ---
 
 # SCNX Sites
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 SCNX Sites macht aus deiner Discord-Community eine echte Website. Du bekommst eine öffentliche Startseite mit deiner eigenen Adresse, gebaut aus fertigen Blöcken in einem visuellen Editor. Du musst nichts programmieren und nichts selbst hosten.
 

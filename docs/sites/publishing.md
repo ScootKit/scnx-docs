@@ -2,9 +2,14 @@
 sidebar_position: 8
 title: Publishing & going live
 description: How publishing works on SCNX Sites - drafts, the snapshot model, version history and rollback, and maintenance mode.
+unlisted: true
 ---
 
 # Publishing & going live
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 Your site has two states: the **draft** you edit, and the **live** version visitors see. This page explains how one becomes the other, and which parts of your site update the moment you change them.
 

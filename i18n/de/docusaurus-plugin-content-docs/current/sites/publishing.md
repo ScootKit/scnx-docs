@@ -2,9 +2,14 @@
 sidebar_position: 8
 title: Veröffentlichen & Live gehen
 description: Wie das Veröffentlichen bei SCNX Sites funktioniert - Entwürfe, das Snapshot-Modell, Versionsverlauf und Rollback sowie der Wartungsmodus.
+unlisted: true
 ---
 
 # Veröffentlichen & Live gehen
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Deine Website hat zwei Zustände: den **Entwurf**, den du bearbeitest, und die **Live**-Version, die Besucher sehen. Diese Seite erklärt, wie aus dem einen das andere wird und welche Teile deiner Website sich sofort ändern, wenn du sie anpasst.
 

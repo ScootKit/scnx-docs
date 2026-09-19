@@ -2,9 +2,14 @@
 sidebar_position: 3
 title: Custom domains
 description: Connect your own domain to your SCNX site - the two DNS records you need, how to add them at your provider, and how verification works.
+unlisted: true
 ---
 
 # Custom domains
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 Every SCNX site comes with a free address that ends in `scnx.site`, like `my-community.scnx.site`. If you own your own domain, you can connect it so your site is reachable at your own address instead, for example `www.example.com`.
 

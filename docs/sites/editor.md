@@ -2,9 +2,14 @@
 sidebar_position: 2
 title: The editor workspace
 description: A tour of the SCNX Sites editor - pages, blocks, inline text editing, themes, autosave, undo/redo, preview and publishing.
+unlisted: true
 ---
 
 # The editor workspace
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 The editor is a full-screen workspace where you build your whole site. Open it from the Sites overview card in your dashboard with **Open editor**.
 

@@ -2,9 +2,14 @@
 sidebar_position: 4
 title: Forms
 description: Build forms on your SCNX site - field types, opening and closing, the submissions inbox, retention, CSV export and Discord notifications.
+unlisted: true
 ---
 
 # Forms
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 Forms let visitors send you structured information: staff applications, event sign-ups, contact requests, feedback and more. The answers are collected privately in your dashboard, not posted publicly on your site.
 

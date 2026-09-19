@@ -2,9 +2,14 @@
 sidebar_position: 6
 title: Events
 description: Zeige deine kommenden geplanten Discord-Events auf deiner SCNX-Website mit dem Events-Block.
+unlisted: true
 ---
 
 # Events
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Der **Events**-Block zeigt die kommenden geplanten Discord-Events deiner Community auf deiner Website, sodass Besucher sehen, was ansteht, ohne erst Discord zu öffnen.
 

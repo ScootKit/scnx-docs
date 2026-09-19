@@ -2,9 +2,14 @@
 sidebar_position: 6
 title: Events
 description: Show your upcoming Discord scheduled events on your SCNX site with the Events block.
+unlisted: true
 ---
 
 # Events
+
+:::caution This documentation is changing during the beta
+SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
+:::
 
 The **Events** block shows your community's upcoming Discord scheduled events on your site, so visitors can see what is coming up without opening Discord first.
 

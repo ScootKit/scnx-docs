@@ -2,9 +2,14 @@
 sidebar_position: 4
 title: Formulare
 description: Baue Formulare auf deiner SCNX-Website - Feldtypen, Öffnen und Schließen, der Antworten-Eingang, Aufbewahrung, CSV-Export und Discord-Benachrichtigungen.
+unlisted: true
 ---
 
 # Formulare
+
+:::caution Diese Dokumentation ändert sich während der Beta
+SCNX Sites befindet sich in der aktiven Beta-Phase, und wir ändern dabei laufend eine Menge. Sobald der aktuelle Beta-Zyklus abgeschlossen ist, überarbeiten wir diese Dokumentation - bis dahin können einzelne Details auf dieser Seite veraltet sein.
+:::
 
 Formulare lassen Besucher dir strukturierte Informationen senden: Team-Bewerbungen, Event-Anmeldungen, Kontaktanfragen, Feedback und mehr. Die Antworten werden privat in deinem Dashboard gesammelt, nicht öffentlich auf deiner Website gezeigt.
 
