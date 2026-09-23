@@ -322,8 +322,8 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 <details>
     <summary>I enabled promotions/infractions/reviews/LoA/RA/staff profiles/shifts but I cannot see the commands for that feature.</summary>
     
-    The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being seen.
-    But it many cases this requries you to restart the bot to re-sync the commands. A configuration reload can sometimes also let the commands appear, but restarting is more reliable.
+    The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being shown.
+    A configuration reload often makes the commands appear, though sometimes a restart is required.
     If you don't see the commands even after restarting, please refresh your Discord client (Ctrl + R on desktop, fully close and re-open Discord for mobile) to see the commands.
 </details>
 
