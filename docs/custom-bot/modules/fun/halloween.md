@@ -92,6 +92,8 @@ All dates use the timezone configured for your bot.
 
 The bot keeps a single message in the leaderboard channel up to date, at most once per minute. It ranks members by the candy they earned during the season, so buying something in the shop, losing candy to a trick or being spooked never costs a place. The message also shows how many days are left until Halloween and is protected against auto-delete.
 
+The leaderboard's title, final title, color, thumbnail and image can all be customized in [Messages](#configuration-strings). The test leaderboard uses the same look, so you can preview it in the test channel.
+
 The countdown channel is renamed once a day, including outside the event, and gets its own name on October 31st.
 
 ## Commands {#commands}
@@ -183,6 +185,11 @@ In this configuration file, you can customize every message of the event. Open i
 | "Limit reached"-Message                   | Sent when a member already bought an item as often as allowed.                                                                                         |
 | "Purchase could not be completed"-Message | Sent when a purchase could not be finished, for example because the role could not be handed out. The purchase is cancelled and the candy is refunded. |
 | Purchase Confirmation                     | Sent when a purchase went through. Items with their own purchase message use that one instead.                                                         |
+| Leaderboard Title                         | Title of the live leaderboard message. Leave empty to use the built-in title.                                                                          |
+| Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Leave empty to use the built-in title.                                       |
+| Leaderboard Color                         | Color of the leaderboard embed, for example "ORANGE" or a hex code like "#ff7518". Leave empty for no color. An invalid value is ignored.              |
+| Leaderboard Thumbnail                     | Small image shown in the corner of the leaderboard embed. Leave empty for none.                                                                        |
+| Leaderboard Image                         | Large image shown at the bottom of the leaderboard embed. Leave empty for none.                                                                        |
 
 ### Candy Shop Items {#configuration-shop-items}
 
