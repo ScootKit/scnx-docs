@@ -12,7 +12,7 @@ A powerful, highly customizable staff management system designed to track activi
 - **Shift management**: Let staff members go on/off-duty and take breaks while tracking their shift time, which contributes to a customizable leaderboard (weekly/monthly). Admins can manage staff shifts by manually adding time, forcing members off duty, or voiding shifts entirely. Set custom shift types, establish quotas for specific roles, configure minimum shift durations, and log all shift changes.
 - **Leave of Absence & Reduced Activity**: Staff can request a Leave of Absence (LOA) or Reduced Activity (RA) status with an approval workflow, optional role assignment, and configurable maximum durations. You can also optionally enable status logging which logs every status update for each staff member.
 - **Staff Profiles**: Let staff members (or also normal members) have their own nickname and introduction in a customizable embed, which users can see via a command. Supervisors/Management can also reset a staff member's profile if needed.
-- **Activity Checks**: Allow admins to host activity checks which staff members have to reach to with a custom duration. Exemptions can also be set together with automation settings to automatically host activity checks. Results for activity checks are logged with an optional role ping to choice which shows an overview of who reacted, who didn't react and who were exempt. 
+- **Activity Checks**: Allow supervisors+ to host activity checks which staff members have to reach to with a custom duration. Exemptions can also be set together with automation settings to automatically host activity checks. Results for activity checks are logged with an optional role ping to choice which shows an overview of who reacted, who didn't react and who were exempt. 
 - **Role-based access control** - Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
 
 ## Setup {#setup}
@@ -71,7 +71,7 @@ The quota status shows on their `/duty time` command.
 
 If 'Log Shift Changes' is enabled in the Shifts configuration, then the bot will send an embed with information each time a staff member changes their shift, with actions such as: Going on-duty, taking a break, going off duty and admin actions - these changes can be logged in a custom channel, if that's not set, then it will use the default log channel.
 
-Staff members can view who is currently on duty with `/duty active`, see the duty time leaderboard with `/duty leaderboard` and see their (or someone else's) total duty time with `/duty time`.
+Staff members can view who is currently on duty with `/duty active`, see the duty time leaderboard with `/duty leaderboard` and see their total duty time with `/duty time`.
 
 ### Leave of Absence & Reduced Activity status {#status}
 
@@ -125,7 +125,7 @@ Results are sent into the configured results channel (leave empty to use the def
 | -------------------------------------------------- | ----------------------------------------------------- |
 | `/duty active`                                     | View who are currently on duty or on break per shift type.|
 | `/duty manage [type:<Text>]`                       | Responds with a duty management panel allowing staff to clock on-duty, off-duty, or go on break.|
-| `/duty time [type:<Text>]`                         | View your own or another user's cumulative duty time statistics and previous shifts history.|
+| `/duty time [type:<Text>]`                         | View your own cumulative duty time statistics and previous shifts history.|
 | `/duty leaderboard [type:<Text>]`                  | View the server leaderboard showing staff with the most tracked duty time sorted by shift type.|
 | `/duty admin user:<User>`                          | Allows supervisors and management to adjust a staff member's shift logs, manually add time, force them off duty, or process forced duty time removals via a custom time duration string.|
 | `/staff-status loa request duration:<Text> reason:<Text>` | Submit a formal request for a Leave of Absence with a specified duration and reasoning.|
@@ -136,7 +136,7 @@ Results are sent into the configured results channel (leave empty to use the def
 | `/staff-status ra view [user:<User>]`              | Check your own or another target staff member's active Reduced Activity details.|
 | `/staff-status ra list filter:<Text>`              | List filtered Reduced Activity status records based on your choice (`Active`, `Expired`, or `All`).|
 | `/staff-status ra admin user:<User>`               | Administrative command to extend or manually end a staff member's active RA period, or view their complete history.|
-| `/staff-management panel user:<User>`              | Opens an interactive dashboard overview of a staff member with details per feature and data deletion options. Supervisors+ only.|
+| `/staff-management panel user:<User>`              | Opens an interactive dashboard overview of a staff member with details per feature and data deletion options.  |
 | `/staff-management infraction issue user:<User> type:<Text> reason:<Text> [expiry:<Text>]`| Issue an infraction type to a staff member.|
 | `/staff-management infraction suspend user:<User> duration:<Text> reason:<Text>` | Temporarily suspend a staff member, stripping their staff roles automatically for a custom duration.|
 | `/staff-management infraction history user:<User>` | View the infractions history of an user.|
@@ -151,6 +151,16 @@ Results are sent into the configured results channel (leave empty to use the def
 | `/staff-management profile wipe user:<User>`       | Allows supervisors+ or management+ to reset the profile of a (staff) member.|
 | `/staff-management review submit user:<User> stars:<Integer> comment:<Text>`| Submit a review to a (staff) member with a rating (1 - 5 stars) and feedback.|
 | `/staff-management review history [user:<User>]`   | View the review history of an user.|
+
+We recommend changing your server settings to adjust who can/can't see a specific command. This applies for all commands:
+
+<ul>
+    <li>`/staff-management`: Best to only show it to staff members.</li>
+    <li>`/duty`: Best to only show it to staff members.</li>
+    <li>`/staff-status`: Best to only show it to staff members.</li>
+</ul>
+
+Follow [this guide](/docs/custom-bot/slash-commands) to adjust your server settings.
 
 ## Configuration {#configuration}
 
@@ -192,13 +202,13 @@ Configure the promotions system in the [promotions configuration](https://scnx.a
 | Field                        | Description                                                                                       |
 | ---------------------------- | ------------------------------------------------------------------------------------------------- |
 | Enable Promotions System     | Enables the promotions system to promote staff members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                         |
-| Auto-Add New Role?           | Automatically adds the role the user is being promoted to. **Warning: it's recommended to KEEP THIS SETTING OFF to prevent unauthorised server raids with granting dangerous roles to users. View the note below this table for a more detailed explanation.**                                                                                                            |
+| Auto-Add New Role?           | Automatically adds the role the user is being promoted to. **Warning: Dangerous action! View the note below this table for a more detailed explanation.**                                                                           |
 | Promotions Channel           | The channel where the promotions are sent. Can be overridden manually via the command.            |
 | Promotion Announcement Embed | The custom message that's sent when a staff member is promoted.                                   |
 | DM Promoted User?            | Toggles whether the bot sends a promotion message to the member's DM's as well.                   |
 | Promotion DM Embed           | The custom message sent to the user's DM's when they are promoted.                                |
 
-**⚠️ Warnings: Keeping the 'Auto-Add new role' setting OFF is RECOMMENDED. This is to avoid raids by letting malicious users grant dangerous roles with dangerous permissions to users, which helps them raid the server. The bot CANNOT PROTECT ITSELF against malicious actions, and we cannot guarantee a no-raid usage with this setting enabled. Please enable backups when having this setting enabled!**
+**⚠️ Warning: Keeping the 'Auto-Add new role' setting OFF is RECOMMENDED. This is to avoid raids by letting malicious users grant dangerous roles with dangerous permissions to users, which helps them raid the server. The bot CANNOT PROTECT ITSELF against malicious actions, and we cannot guarantee a no-raid usage with this setting enabled. Please enable backups when having this setting enabled!**
 
 ### Reviews Configuration {#configuration-reviews}
 
@@ -221,7 +231,7 @@ Configure the shifts sytem for staff members, duty types, shift time leaderboard
 | Enable Shifts                  | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                           |
 | On-Duty Role                   | An optional role that is given to a staff member when going on-duty. This is removed when the staff member goes off-duty. This is handy to easily identify poeple who are on-duty without using any commands.                      |
 | Duty Types                     | Custom categories of duty types to allow staff to select their appropriate purpose of duty.       |
-| Minimum Shift Duration (minutes)| The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time.                                                                                                                           |
+| Minimum Shift Duration (minutes)| The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time. **Warning: shifts that end before this time are DELETED and CANNOT be recovered!**                                        |
 | Enable duty leaderboard        | Toggles the ability for staff to see a leaderboard of the people with the most duty time at the top.                                                                                                                                 |
 | Leaderboard Timeframe          | Sets the timeframe of the total duty times shown in the leaderboard. Choose between weekly,  monthly and all-time.                                                                                                                |
 | Enable Quota System            | Toggles the quota system, allowing you to configure duty times expected from members with a specific role.                                                                                                                       |
@@ -239,12 +249,12 @@ Configure the Leave of Absence and Reduced Activity systems, allowing staff to b
 | Enable Status System         | Toggles the status system, allowing you to toggle LoA and RA settings.                        |
 | Enable LoA System            | Toggles whether staff can request Leave of Absences. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
 | LoA Role                     | Optional role assigned to staff members when they are on LoA. This is optional, but recommended to easily identify who is on LoA.                                                                                                 |
-| Maximum LoA Duration (days)  | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
+| Maximum LoA Duration (days)  | The limit in days of how long staff members can request an LoA. Their LoA is automatically denied and not requested when their LoA duration request exceeds that limit.                                                          |
 | Require Approval for LoA?    | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
 | Enable RA System             | Toggles whether staff can request Reduced Activities. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
 | RA Role                      | Optional role assigned to staff members when they are on RA. This is optional, but recommended to easily identify who is on RA.                                                                                                  |
-| Maximum RA Duration (days)   | The limit in days of how long staff members can request an LoA. Their LoA is autoamtically denied and not requested when their LoA duration request exceeds that limit.                                                          |
-| Require Approval for RA?     | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
+| Maximum RA Duration (days)   | The limit in days of how long staff members can request an RA. Their RA is automatically denied and not requested when their LoA duration request exceeds that limit.                                                          |
+| Require Approval for RA?     | Toggles if RA requests require an approval from supervisors to see if their RA is a valid reason and duration.                                                                                                                  |
 | Status Request Channel       | The channel where status requests are sent for approval/denial.                               |
 | Log status changes           | Toggles the status logging, which logs all changes in statuses from staff members. This sends embed logs about changes to a staff member's LoA/RA, such as starting it, ending it, the status being extended etc.                  |
 | Status Change Log Channel    | The channel where status changes are logged. This can be empty to use the general log channel.                                                                                                                       |
@@ -258,7 +268,7 @@ Configure (staff) profiles with a custom profile embed and other settings in the
 | Enable Staff Profiles          | Toggles the staff profile system, allowing staff members to set their custom nickname and introduction. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                  |
 | Only allow staff and higher to have their own customizable profile | Toggles that only staff members can edit their profile or not. If this is disabled, then all members can have their own profile with their own nickname and introduction.                       |
 | Profile Moderation Permission  | Sets whether supervisors+ or management+ can wipe the profile of a different (staff) member.                                                                                                                          |
-| Profile Embed                  | Customize the profile embed here. ⚠️ **Note: Although this feature works without an embed, an embed is still highly recommended for the best experience.**                                                                     |
+| Profile Embed                  | Customize the profile embed here. *Note: Although this feature works without an embed, an embed is still highly recommended for the best experience.*                                                                               |
 
 ### Activity Checks Configuration {#configuration-activity-checks}
 
@@ -298,7 +308,7 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 <details>
     <summary>Ending a staff shift did not add time to the total shift time of an user</summary>
     <ul>
-        <li>Make sure to check the **Minimum Shift Duration** setting in the <a href="#configuration-shifts">Shifts Configuration</a>. The user might've ended a shift before meeting that amount of on-duty time. All shifts under that time period are not counted towards the total shift time to avoid shift farming. Set it to 0 (default) to count all shifts.</li>
+        <li>Make sure to check the **Minimum Shift Duration** setting in the <a href="#configuration-shifts">Shifts Configuration</a>. The user might've ended a shift before meeting that amount of on-duty time. All shifts under that time period are not counted towards the total shift time to avoid shift farming. Set it to 0 (default) to count all shifts. **All shifts ended before the minimum shift time are __deleted__ and cannot be recovered.**</li>
     </ul>
 </details>
 
@@ -320,11 +330,14 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 </details>
 
 <details>
-    <summary>I enabled promotions/infractions/reviews/LoA/RA/staff profiles/shifts but I cannot see the commands for that feature.</summary>
+    <summary>I enabled promotions/infractions/reviews/staff status/LoA/RA/staff profiles/shifts but I cannot see the commands for that feature.</summary>
     
-    The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being shown.
-    A configuration reload often makes the commands appear, though sometimes a restart is required.
-    If you don't see the commands even after restarting, please refresh your Discord client (Ctrl + R on desktop, fully close and re-open Discord for mobile) to see the commands.
+    The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being shown. Try these steps to fix it:
+    1. Make sure the feature is actually enabled and is not experiencing issues.
+    2. Reload the configuration.
+    3. If that didn't work, try restarting the bot.
+    4. If that also didn't work, refresh your Diacord client (Ctrl + R on desktop, fully close and re-open Discord on mobile)
+
 </details>
 
 ## Stored data {#data-usage}
@@ -387,7 +400,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 - **Points (ignore):** Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
 - **On Duty:** The on duty boolean is used to recognize if an user is currently on duty. If so, things are done like giving the on duty role, if configured.
 - **last Clock In:** The last clock in date is used to remember when the user last went on duty. Also used to calculate the total shift time.
-- **Activity status:** This is used to recognize what status the user is on, like off-duty, on-duty, suspended etc. This is also shown in the staff profile.
+- **Activity status:** This is used to recognize what status the user is on: On-duty, on LoA or on RA. This is also shown in the staff profile.
 - **Is Suspended:** This boolean is used to know if the user is suspended.
 - **Suspended Roles:** This acts as a snapshot of roles the staff member had before being suspended, and is kept so it knows which roles to give back once the suspension has ended.
 - **Custom Nickname:** The custom name configured by the staff member for the staff profile.
