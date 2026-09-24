@@ -42,6 +42,18 @@ Der Bot benötigt diese Berechtigungen:
 - "Kanäle verwalten" für den Countdown-Kanal, damit er umbenannt werden kann.
 - "Rollen verwalten" für die Spuk-Rolle und für jede Rolle, die im Shop verkauft wird. Die eigene Rolle des Bots muss in der Rollenhierarchie über diesen Rollen stehen.
 
+## Das Event testen {#testing}
+
+Du kannst das Event zu jeder Zeit im Jahr in einem Test-Kanal ausprobieren, ohne das echte Event zu beeinflussen. Aktiviere den "Testmodus" in der [Konfiguration](#configuration-config) und lege einen "Test-Kanal" fest. Über die Kanalberechtigungen bestimmst du, wer den Test-Kanal sieht und mitmachen kann.
+
+Solange der Testmodus aktiv ist:
+
+- Der Test-Kanal verhält sich immer wie das laufende Event: `/trickortreat`, `/spook` und `/candyshop` funktionieren dort, Kürbisse spawnen dort und der Test-Kanal bekommt eine eigene Bestenliste.
+- Test-Süßigkeiten, Testkäufe und die Test-Bestenliste sind komplett vom echten Event getrennt. Die echte Bestenliste, die Abschluss-Ankündigung und das Zurücksetzen der Saison sehen keine Testdaten, und Testkäufe verbrauchen keinen echten Bestand.
+- Die Spuk-Rolle und im Shop gekaufte Rollen werden wirklich vergeben, sodass du die gesamte Einrichtung prüfen kannst.
+
+Wenn du den Testmodus ausschaltest oder den Test-Kanal änderst, werden alle Testdaten entfernt: Test-Süßigkeiten, Testkäufe, die Test-Bestenliste, die Spuk-Rolle aus Test-Streichen und die im Test-Kanal gekauften Shop-Rollen. Shop-Rollen, die ein Mitglied schon vor dem Test hatte, bleiben erhalten.
+
 ## Nutzung {#usage}
 
 ### Das Event-Jahr {#event-year}
@@ -126,6 +138,8 @@ In dieser Konfigurationsdatei kannst du das Halloween-Event einrichten. Öffne s
 | Mindest-Guthaben des Ziels             | Mitglieder mit weniger Süßigkeiten als diesem Wert können nicht erschreckt werden.                                                                                                                                                                                             |
 | Bestenlisten-Kanal                     | Text- oder Ankündigungskanal für die sich selbst aktualisierende Bestenlisten-Nachricht und die Abschluss-Ankündigung. Leer lassen, um beides zu deaktivieren.                                                                                                                 |
 | Einträge der Bestenliste               | Wie viele Mitglieder auf der Bestenlisten-Nachricht und in der Abschluss-Ankündigung angezeigt werden.                                                                                                                                                                         |
+| Testmodus                              | Wenn aktiviert, läuft das Event mit getrennten Testdaten im Test-Kanal, damit du es jederzeit ausprobieren kannst. Siehe [Das Event testen](#testing).                                                                                                                         |
+| Test-Kanal                             | Kanal, in dem das Test-Event läuft, solange der Testmodus aktiv ist.                                                                                                                                                                                                           |
 
 ### Nachrichten {#configuration-strings}
 
@@ -195,6 +209,7 @@ In dieser Konfigurationsdatei legst du fest, was deine Mitglieder mit ihren Sü�
     <ul>
         <li>Das ist die Antwort außerhalb der Saison. Das Event läuft vom 1. bis zum 31. Oktober, der Shop bleibt bis zum 7. November offen.</li>
         <li>Alle Daten richten sich nach der Zeitzone, die für deinen Bot eingestellt ist.</li>
+        <li>Wenn du das Event außerhalb von Oktober testen möchtest, aktiviere <strong>Testmodus</strong> und lege einen Test-Kanal in der Konfiguration fest.</li>
     </ul>
 </details>
 <details>

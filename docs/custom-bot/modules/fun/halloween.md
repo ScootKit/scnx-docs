@@ -42,6 +42,18 @@ The bot needs these permissions:
 - "Manage Channels" for the countdown channel, so it can be renamed.
 - "Manage Roles" for the haunted role and for every role sold in the shop. The bot's own role has to be above them in the role hierarchy.
 
+## Testing the event {#testing}
+
+You can try the event at any time of the year in a test channel, without affecting the real event. Enable "Test mode" in the [configuration](#configuration-config) and set a "Test channel". Use channel permissions to decide who can see the test channel and take part.
+
+While test mode is on:
+
+- The test channel always behaves like the live event: `/trickortreat`, `/spook` and `/candyshop` work there, pumpkins spawn there and the test channel gets its own leaderboard.
+- Test candy, purchases and the test leaderboard are completely separate from the real event. The real leaderboard, the closing announcement and the season reset never see test data, and test purchases do not use up the real stock.
+- The haunted role and roles bought in the shop are handed out for real, so you can check the whole setup.
+
+When you turn test mode off or change the test channel, all test data is removed: test candy, test purchases, the test leaderboard, the haunted role from test tricks and the shop roles bought in the test channel. Members keep shop roles they already had before testing.
+
 ## Usage {#usage}
 
 ### The event year {#event-year}
@@ -126,6 +138,8 @@ In this configuration file, you can set up the Halloween event. Open it in your 
 | Minimum Target Balance              | Members with less candy than this cannot be spooked.                                                                                                                                                                               |
 | Leaderboard Channel                 | Text or announcement channel for the self-updating leaderboard message and the closing announcement. Leave empty to disable both.                                                                                                  |
 | Leaderboard Entries                 | How many members are shown on the leaderboard message and in the closing announcement.                                                                                                                                             |
+| Test mode                           | If enabled, the event runs with separate test data in the test channel, so you can try it at any time. See [Testing the event](#testing).                                                                                          |
+| Test channel                        | Channel in which the test event runs while test mode is enabled.                                                                                                                                                                   |
 
 ### Messages {#configuration-strings}
 
@@ -195,6 +209,7 @@ In this configuration file, you can set up what your members can buy with their 
     <ul>
         <li>That is the off-season reply. The event runs from October 1st to October 31st, and the shop stays open until November 7th.</li>
         <li>All dates use the timezone configured for your bot.</li>
+        <li>If you want to test the event outside of October, enable <strong>test mode</strong> and set a test channel in the configuration.</li>
     </ul>
 </details>
 <details>
