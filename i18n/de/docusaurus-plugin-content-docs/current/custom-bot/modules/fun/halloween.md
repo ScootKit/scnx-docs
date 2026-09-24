@@ -39,6 +39,7 @@ Jede Funktion wird über eine einzige Einstellung aktiviert. Eine Funktion, dere
 Der Bot benötigt diese Berechtigungen:
 
 - "Kanal ansehen", "Nachrichten senden" und "Links einbetten" in den Spawn-Kanälen und im Bestenlisten-Kanal.
+- "Kanal ansehen", "Nachrichten senden", "Links einbetten", "Nachrichtenverlauf anzeigen" und "Nachrichten anheften" im Test-Kanal, damit er die Test-Bestenliste und die Erklär-Nachricht posten und anheften kann.
 - "Kanäle verwalten" für den Countdown-Kanal, damit er umbenannt werden kann.
 - "Rollen verwalten" für die Spuk-Rolle und für jede Rolle, die im Shop verkauft wird. Die eigene Rolle des Bots muss in der Rollenhierarchie über diesen Rollen stehen.
 
@@ -48,11 +49,15 @@ Du kannst das Event zu jeder Zeit im Jahr in einem Test-Kanal ausprobieren, ohne
 
 Solange der Testmodus aktiv ist:
 
-- Der Test-Kanal verhält sich immer wie das laufende Event: `/trickortreat`, `/spook` und `/candyshop` funktionieren dort, Kürbisse spawnen dort und der Test-Kanal bekommt eine eigene Bestenliste.
+- Der Test-Kanal verhält sich immer wie das laufende Event: `/trickortreat`, `/spook` und `/candyshop` funktionieren dort zu jeder Zeit im Jahr, Kürbisse spawnen dort und der Test-Kanal bekommt eine eigene Bestenliste.
+- Die erste Nachricht einer neuen Testsitzung lässt sofort einen Kürbis erscheinen, sodass du nicht das normale Intervall abwarten musst. Danach folgen die Kürbisse dem normalen Spawn-Intervall.
+- Sobald eine Testsitzung beginnt, postet der Bot eine Erklär-Nachricht in den Test-Kanal und heftet sie zusammen mit der Test-Bestenliste an.
 - Test-Süßigkeiten, Testkäufe und die Test-Bestenliste sind komplett vom echten Event getrennt. Die echte Bestenliste, die Abschluss-Ankündigung und das Zurücksetzen der Saison sehen keine Testdaten, und Testkäufe verbrauchen keinen echten Bestand.
 - Die Spuk-Rolle und im Shop gekaufte Rollen werden wirklich vergeben, sodass du die gesamte Einrichtung prüfen kannst.
 
-Wenn du den Testmodus ausschaltest oder den Test-Kanal änderst, werden alle Testdaten entfernt: Test-Süßigkeiten, Testkäufe, die Test-Bestenliste, die Spuk-Rolle aus Test-Streichen und die im Test-Kanal gekauften Shop-Rollen. Shop-Rollen, die ein Mitglied schon vor dem Test hatte, bleiben erhalten.
+Wenn du den Testmodus ausschaltest oder den Test-Kanal änderst, werden alle Testdaten entfernt: Test-Süßigkeiten, Testkäufe, die Test-Bestenliste, die Erklär-Nachricht, die Spuk-Rolle aus Test-Streichen und die im Test-Kanal gekauften Shop-Rollen. Shop-Rollen, die ein Mitglied schon vor dem Test hatte, bleiben erhalten.
+
+Wenn du die Halloween-Befehle in deinen Discord-Servereinstellungen (Integrationen) auf bestimmte Kanäle eingeschränkt hast, erlaube sie auch im Test-Kanal.
 
 ## Nutzung {#usage}
 
@@ -128,7 +133,7 @@ In dieser Konfigurationsdatei kannst du das Halloween-Event einrichten. Öffne s
 | Minimale Kürbis-Belohnung              | Geringste Menge an Süßigkeiten, die das Einsammeln eines Kürbisses gibt.                                                                                                                                                                                                       |
 | Maximale Kürbis-Belohnung              | Größte Menge an Süßigkeiten, die das Einsammeln eines Kürbisses gibt.                                                                                                                                                                                                          |
 | Verfallszeit (Minuten)                 | Wie lange ein nicht eingesammelter Kürbis einsammelbar bleibt, bevor er verrottet. Kürbisse überleben nie über Mitternacht am 1. November hinaus, egal wie hoch der Wert ist.                                                                                                  |
-| Automatische Spawns pro Tag            | Anzahl der Kürbisse, die täglich in einen zufälligen Spawn-Kanal fallen, auch wenn niemand schreibt. Auf 0 setzen, um nur bei Aktivität zu spawnen.                                                                                                                            |
+| Automatische Spawns pro Tag            | Anzahl der Kürbisse, die täglich in einen zufälligen Spawn-Kanal fallen, auch wenn niemand schreibt. Auf 0 setzen, um nur bei Aktivität zu spawnen. Höchstens 10.                                                                                                              |
 | Automatische Spawns: früheste Stunde   | Früheste Stunde des Tages (0-23), zu der ein automatischer Kürbis fallen darf.                                                                                                                                                                                                 |
 | Automatische Spawns: späteste Stunde   | Späteste Stunde des Tages (0-23), zu der ein automatischer Kürbis fallen darf. Muss später als die früheste Stunde sein.                                                                                                                                                       |
 | /spook aktivieren                      | Wenn aktiviert, können Mitglieder einmal am Tag mit `/spook` versuchen, sich gegenseitig Süßigkeiten zu stehlen.                                                                                                                                                               |
@@ -244,12 +249,15 @@ Die folgenden Daten werden über jeden Kauf gespeichert:
 - Name, Typ und Preis des gekauften Artikels
 - Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 
+Der Testmodus speichert dieselben Mitglieder- und Kaufdaten getrennt für den Test-Kanal. Sie werden gelöscht, wenn der Testmodus ausgeschaltet oder der Test-Kanal geändert wird.
+
 Die folgenden Daten werden für das Event selbst gespeichert:
 
 - Die Kanal-ID und die Nachrichten-ID der Bestenlisten-Nachricht
 - Welche Saison bereits ihre Abschluss-Ankündigung bekommen hat und welche bereits zurückgesetzt wurde
+- Solange der Testmodus aktiv ist: der aktive Test-Kanal, die Kanal-ID und Nachrichten-ID der Test-Bestenliste und der Erklär-Nachricht sowie die im Test-Kanal vergebenen Rollen (Discord-Benutzer-ID und Rollen-ID)
 - Metadaten über den Eintrag (Erstellungsdatum und Datum der letzten Aktualisierung)
 
-Alle Mitglieder-Daten und alle Käufe werden am 8. November automatisch gelöscht, wenn die Saison zurückgesetzt wird.
+Alle Mitglieder-Daten und alle Käufe des echten Events werden am 8. November automatisch gelöscht, wenn die Saison zurückgesetzt wird.
 
 Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database).

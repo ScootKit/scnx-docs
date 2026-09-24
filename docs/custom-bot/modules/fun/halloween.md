@@ -39,6 +39,7 @@ Each feature is activated by a single setting. A feature whose setting is empty 
 The bot needs these permissions:
 
 - "View Channel", "Send Messages" and "Embed Links" in the spawn channels and in the leaderboard channel.
+- "View Channel", "Send Messages", "Embed Links", "Read Message History" and "Pin Messages" in the test channel, so it can post and pin the test leaderboard and the explainer message.
 - "Manage Channels" for the countdown channel, so it can be renamed.
 - "Manage Roles" for the haunted role and for every role sold in the shop. The bot's own role has to be above them in the role hierarchy.
 
@@ -48,11 +49,15 @@ You can try the event at any time of the year in a test channel, without affecti
 
 While test mode is on:
 
-- The test channel always behaves like the live event: `/trickortreat`, `/spook` and `/candyshop` work there, pumpkins spawn there and the test channel gets its own leaderboard.
+- The test channel always behaves like the live event: `/trickortreat`, `/spook` and `/candyshop` work there at any time of the year, pumpkins spawn there and the test channel gets its own leaderboard.
+- The first message posted in a fresh test session spawns a pumpkin right away, so you don't have to wait out the normal spawn interval. After that, pumpkins follow the normal interval.
+- When a test session starts, the bot posts an explainer message into the test channel and pins it, together with the test leaderboard.
 - Test candy, purchases and the test leaderboard are completely separate from the real event. The real leaderboard, the closing announcement and the season reset never see test data, and test purchases do not use up the real stock.
 - The haunted role and roles bought in the shop are handed out for real, so you can check the whole setup.
 
-When you turn test mode off or change the test channel, all test data is removed: test candy, test purchases, the test leaderboard, the haunted role from test tricks and the shop roles bought in the test channel. Members keep shop roles they already had before testing.
+When you turn test mode off or change the test channel, all test data is removed: test candy, test purchases, the test leaderboard, the explainer message, the haunted role from test tricks and the shop roles bought in the test channel. Members keep shop roles they already had before testing.
+
+If you restricted the Halloween commands to certain channels in your Discord server settings (Integrations), allow them in the test channel too.
 
 ## Usage {#usage}
 
@@ -128,7 +133,7 @@ In this configuration file, you can set up the Halloween event. Open it in your 
 | Minimum Pumpkin Reward              | Lowest amount of candy claiming a pumpkin gives.                                                                                                                                                                                   |
 | Maximum Pumpkin Reward              | Highest amount of candy claiming a pumpkin gives.                                                                                                                                                                                  |
 | Despawn Time (minutes)              | How long an unclaimed pumpkin stays claimable before it rots away. Pumpkins never survive past midnight of November 1st, no matter how long this is.                                                                               |
-| Wake-Up Spawns per Day              | Number of pumpkins dropped into a random spawn channel every day, even when nobody is talking. Set to 0 to only spawn on activity.                                                                                                 |
+| Wake-Up Spawns per Day              | Number of pumpkins dropped into a random spawn channel every day, even when nobody is talking. Set to 0 to only spawn on activity. At most 10.                                                                                     |
 | Wake-Up Spawns: earliest hour       | Earliest hour of the day (0-23) at which a wake-up pumpkin may drop.                                                                                                                                                               |
 | Wake-Up Spawns: latest hour         | Latest hour of the day (0-23) at which a wake-up pumpkin may drop. Has to be later than the earliest hour.                                                                                                                         |
 | Enable /spook                       | If enabled, members can try to steal candy from each other once a day with `/spook`.                                                                                                                                               |
@@ -244,12 +249,15 @@ The following data is being stored about every purchase:
 - The name, type and price of the bought item
 - Metadata about the entry (date when created and last updated)
 
+Test mode stores the same member and purchase data separately for the test channel. It is deleted when test mode is turned off or the test channel is changed.
+
 The following data is being stored for the event itself:
 
 - The channel ID and message ID of the leaderboard message
 - Which season has already received its closing announcement and which one has already been reset
+- While test mode is on: the active test channel, the channel ID and message ID of the test leaderboard and the explainer message, and the roles handed out in the test channel (Discord User ID and role ID)
 - Metadata about the entry (date when created and last updated)
 
-All member data and all purchases are deleted automatically on November 8th, when the season is reset.
+All member data and all purchases of the real event are deleted automatically on November 8th, when the season is reset.
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
