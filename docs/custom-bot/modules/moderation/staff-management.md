@@ -342,8 +342,15 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 
 ## Stored data {#data-usage}
 
-The Staff Managament Module is a big module, which means many things can be stored at once. To commit to the fullest of our transparency commitment, I will explain everything that's stored with multiple details.
+The Staff Managament Module is a big module, which means many things can be stored at once. To support our commitment to full transparency, this guide explains every piece of stored data by database models.
 There is a sub-category for each database model, meaning you get an insight for every single bit of data stored.
+With each model, there is also an explanation of which data gets deleted.
+
+### Timestamps Note
+All database models automatically record two standard timestamps:
+- **Created At:** The exact date and time the record was created.
+- **Updated At:** The exact date and time the record was last modified.
+These are not custom-made fields and are done automatically by the system.
 
 ### Activity Checks {#data-usage-activity-checks}
 
@@ -358,7 +365,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 - **Is Automated:** The check of 'isAutomated' is stored to see if the check was an automated check. This is an additional check besides initiator ID to make sure it was an automated check.
 
 **ActivityCheckResponse model below**
-*All data from the 'ActivityCheckResponse' model is deleted when deleting the activity check data from an user. To delete the data from 'ActivityCheckResponse' for an user, go to the user panel > Data deletion > Delete Activity Checks and confirm the data deletion.*
+*Deleting activity checks data via the user panel (`Data Deletion > Delete Activity Checks`) deletes all response records for that specific user from the `ActivityCheckResponse` table. Note that the user's ID will still remain listed in the `respondedUsers` summary field of past `ActivityCheck` records.*
 
 - **ID:** The response ID is used to assign an unique number (ID) to each user as the "response ID". This is mainly stored to prevent double-entries.
 - **Activity Check ID:** The activity check ID is stored to recognize which activity check the user responded to.
@@ -366,7 +373,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 
 ### Infractions {#data-usage-infractions}
 
-*All data from the 'Infraction' model is deleted when deleting the ***infraction*** data from an user. To delete the data from 'Infraction' for an user, go to the user panel > Data deletion > Delete Infractions and confirm the data deletion.*
+*Deleting infractions data via the user panel (`Data Deletion > Delete Infractions`) removes all infraction records where the user is the **target** (`userId`). Infractions that this user issued to other staff members (`issuerId`) are preserved for accountability.*
 
 - **Case ID:** The case ID is used to give each infraction a unique identifier-code. This can be showcased on each infraction, and is used when voiding an infraction.
 - **User ID:** The user ID is stored to know exactly who was infracted by the user ID, especially useful for pinging that infracted staff member.
@@ -380,7 +387,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 
 ### LoA/Status requests {#data-usage-status}
 
-*All data from the 'LoaRequest' model is deleted when deleting the ***status*** data from an user. To delete the data from 'LoaRequest' for an user, go to the user panel > Data deletion > Delete Status and confirm the data deletion.*
+*Deleting status data (`Data Deletion > Delete Status`) resets the user's active `activityStatus` on their profile to null. Historical `LoaRequest` rows are preserved for administrative auditing.*
 
 - **ID:** The ID is stored to identify a specific LoA/RA.
 - **User ID:** The user ID is stored to know who requested the status.
@@ -392,9 +399,20 @@ There is a sub-category for each database model, meaning you get an insight for 
 - **Approver ID:** The user ID of the staff member who approved the LoA/RA.
 - **Rejection reason:** The rejection reason is used to know the reason why a status was denied. This is shown, both to higher ups and the staff member who requested the status.
 
+### Promotions {#data-usage-promotions}
+
+*Deleting promotions data via the user panel (`Data Deletion > Delete Promotions`) deletes all historical logs where the user was the recipient of a promotion or demotion.*
+
+- **ID:** Unique ID to recognize the specific promotion ID.
+- **User ID:** The user ID of the staff member being promoted.
+- **Issuer ID:** The user ID of the manager who executed the promotion.
+- **New Role:** The newly assigned role (ID).
+- **Reason:** The reason documented for the promotion.
+- **Message URL:** The message URL of the promotion message.
+
 ### Staff Profile {#data-usage-profile}
 
-*All data from the 'StaffProfile' model is deleted when deleting the ***shifts*** data from an user. To delete the data from 'StaffProfile' for an user, go to the user panel > Data deletion > Delete Shifts and confirm the data deletion.*
+*The `StaffProfile` row itself is persistent and is **never deleted** by panel actions. Deleting shifts data (`Data Deletion > Delete Shifts`) only resets active shift tracking fields (`onDuty`, `onBreak`, `breakStartTime`, `lastClockIn`). Selecting `Delete ALL data` resets custom profile details (`customNickname`, `customIntro`) and clears suspension status back to defaults.*
 
 - **User ID:** The User ID of the staff member.
 - **Points (ignore):** Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
@@ -410,7 +428,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 
 ### Staff Review {#data-usage-reviews}
 
-*All data from the 'StaffReview' model is deleted when deleting the ***reviews*** data from an user. To delete the data from 'StaffReview' for an user, go to the user panel > Data deletion > Delete Reviews and confirm the data deletion.*
+*Deleting reviews via the user panel (`Data Deletion > Delete Reviews`) removes all reviews where the user was the **target** of the review (`targetId`). Reviews written by this user for other staff members (`authorId`) are preserved.*
 
 - **ID:** The ID of the review.
 - **Target ID:** The user ID of the staff member being reviewed.
@@ -421,7 +439,7 @@ There is a sub-category for each database model, meaning you get an insight for 
 
 ### Staff Shift {#data-usage-shifts}
 
-*All data from the 'Staff Shift' model is deleted when deleting the ***shifts*** data from an user. To delete the data from 'StaffShift' for an user, go to the user panel > Data deletion > Delete Shifts and confirm the data deletion.*
+*Data in the `staffShift` model are preserved for individual shifts, quota tracking etc. These cannot be deleted unless you purge the module database.*
 
 - **User ID:** The user ID of the staff member.
 - **Start Time:** The starting time of the staff member's shift. Works with end time to calculate the total shift time.
