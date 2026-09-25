@@ -185,9 +185,9 @@ In this configuration file, you can customize every message of the event. Open i
 | "Limit reached"-Message                   | Sent when a member already bought an item as often as allowed.                                                                                         |
 | "Purchase could not be completed"-Message | Sent when a purchase could not be finished, for example because the role could not be handed out. The purchase is cancelled and the candy is refunded. |
 | Purchase Confirmation                     | Sent when a purchase went through. Items with their own purchase message use that one instead.                                                         |
-| Leaderboard Title                         | Title of the live leaderboard message. Leave empty to use the built-in title.                                                                          |
-| Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Leave empty to use the built-in title.                                       |
-| Leaderboard Color                         | Color of the leaderboard embed, for example "ORANGE" or a hex code like "#ff7518". Leave empty for no color. An invalid value is ignored.              |
+| Leaderboard Title                         | Title of the live leaderboard message. Defaults to "🎃 Halloween Leaderboard".                                                                         |
+| Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Defaults to "🎃 Final Halloween standings".                                  |
+| Leaderboard Color                         | Color of the leaderboard embed, set with a color picker. Defaults to orange (`#e67e22`).                                                               |
 | Leaderboard Thumbnail                     | Small image shown in the corner of the leaderboard embed. Leave empty for none.                                                                        |
 | Leaderboard Image                         | Large image shown at the bottom of the leaderboard embed. Leave empty for none.                                                                        |
 
