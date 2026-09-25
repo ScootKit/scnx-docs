@@ -92,6 +92,8 @@ Alle Daten richten sich nach der Zeitzone, die für deinen Bot eingestellt ist.
 
 Der Bot hält eine einzelne Nachricht im Bestenlisten-Kanal aktuell, höchstens einmal pro Minute. Sortiert wird nach den Süßigkeiten, die im Laufe der Saison verdient wurden - ein Einkauf im Shop, verlorene Süßigkeiten durch Saures oder ein erfolgreicher Schreck kosten also nie einen Platz. Die Nachricht zeigt außerdem, wie viele Tage es noch bis Halloween sind, und ist vor dem automatischen Löschen geschützt.
 
+Titel, Endstand-Titel, Farbe, Vorschaubild und Bild der Bestenliste lassen sich in [Nachrichten](#configuration-strings) anpassen. Die Test-Bestenliste verwendet dieselbe Optik, sodass du sie im Test-Kanal ansehen kannst.
+
 Der Countdown-Kanal wird einmal täglich umbenannt, auch außerhalb des Events, und bekommt am 31. Oktober einen eigenen Namen.
 
 ## Befehle {#commands}
@@ -183,6 +185,11 @@ In dieser Konfigurationsdatei kannst du jede Nachricht des Events anpassen. Öff
 | "Limit erreicht"-Nachricht                         | Wird gesendet, wenn ein Mitglied einen Artikel schon so oft gekauft hat wie erlaubt.                                                                                                            |
 | "Kauf konnte nicht abgeschlossen werden"-Nachricht | Wird gesendet, wenn ein Kauf nicht abgeschlossen werden konnte, zum Beispiel weil die Rolle nicht vergeben werden konnte. Der Kauf wird abgebrochen und die Süßigkeiten werden zurückerstattet. |
 | Kauf-Bestätigung                                   | Wird nach einem erfolgreichen Kauf gesendet. Artikel mit eigener Kauf-Nachricht verwenden stattdessen diese.                                                                                    |
+| Bestenlisten-Titel                                 | Titel der laufenden Bestenlisten-Nachricht. Standardmäßig "🎃 Halloween-Bestenliste".                                                                                                           |
+| Bestenlisten-Titel: Endstand                       | Titel der Bestenlisten-Nachricht, sobald sie auf den Endstand umschaltet. Standardmäßig "🎃 Endstand der Halloween-Bestenliste".                                                                |
+| Bestenlisten-Farbe                                 | Farbe des Bestenlisten-Embeds, festgelegt über einen Farbwähler. Standardmäßig Orange (`#e67e22`).                                                                                              |
+| Bestenlisten-Vorschaubild                          | Kleines Bild, das in der Ecke des Bestenlisten-Embeds angezeigt wird. Leer lassen für keins.                                                                                                    |
+| Bestenlisten-Bild                                  | Großes Bild, das am unteren Rand des Bestenlisten-Embeds angezeigt wird. Leer lassen für keins.                                                                                                 |
 
 ### Süßigkeiten-Shop-Artikel {#configuration-shop-items}
 
