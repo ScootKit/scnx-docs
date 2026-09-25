@@ -1,6 +1,6 @@
 # Ping-Protection
 
-Protect specific members and roles from unwanted mentions with configurable moderation actions.
+Protect specific members and roles against unwanted pings with support for whitelisted channels, Discord's AutoMod integration and moderation capabilities with a custom ping message.
 
 <ModuleOverview moduleName="ping-protection" />
 
@@ -13,10 +13,9 @@ Protect specific members and roles from unwanted mentions with configurable mode
 - Optionally use Discord's native AutoMod to block messages containing protected pings before they are sent.
 - Configurable moderation actions (mute or kick) when a user pings protected members/roles too many times, with
   optional [role-based ping thresholds](#role-thresholds) per action.
-- [Unified user panel](#user-panel) for viewing ping and moderation history and managing stored data, with
-  per-category deletion cooldowns.
+- [A user panel](#user-panel) to have a quick overview of that user's ping and moderation history with the ability to delete categorised stored data about the user.
 - Configurable data retention policies for ping history and moderation logs.
-- Track users who leave and rejoin the server.
+- Keep user logs & data after they left the server (or not) with a customizable time.
 
 ## Setup {#setup}
 
