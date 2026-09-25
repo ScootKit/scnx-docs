@@ -41,43 +41,43 @@ Drag a block onto the page, or use the **+** insert bar that appears between blo
 
 **Layout**
 
-| Block | What it does |
-| --- | --- |
-| Hero | Big banner with a title and subtitle at the top of a page. |
-| Section header | A heading to introduce a new section. |
-| Columns | Place blocks side by side in multiple columns. Columns stack on small screens. |
-| Spacer | Add vertical empty space between blocks. |
-| Divider | A horizontal line to separate content. |
-| Card grid | A grid of cards with images, titles and links. |
-| Tabs | Group content into switchable tabs. |
-| Accordion | Expandable sections that open one at a time. |
+| Block          | What it does                                                                   |
+| -------------- | ------------------------------------------------------------------------------ |
+| Hero           | Big banner with a title and subtitle at the top of a page.                     |
+| Section header | A heading to introduce a new section.                                          |
+| Columns        | Place blocks side by side in multiple columns. Columns stack on small screens. |
+| Spacer         | Add vertical empty space between blocks.                                       |
+| Divider        | A horizontal line to separate content.                                         |
+| Card grid      | A grid of cards with images, titles and links.                                 |
+| Tabs           | Group content into switchable tabs.                                            |
+| Accordion      | Expandable sections that open one at a time.                                   |
 
 **Content**
 
-| Block | What it does |
-| --- | --- |
-| Text | A rich text block written in Markdown. |
-| Image | A single image with an optional caption and link. |
-| Image gallery | Show several images in a grid. |
-| Video | Embed a YouTube or Twitch video. |
-| Quote | Highlight a quote with an optional author. |
-| Call to action | A prompt with buttons to drive an action. |
-| Icon grid | A grid of icons with short labels. |
-| Countdown | A live countdown to a date and time. |
+| Block          | What it does                                      |
+| -------------- | ------------------------------------------------- |
+| Text           | A rich text block written in Markdown.            |
+| Image          | A single image with an optional caption and link. |
+| Image gallery  | Show several images in a grid.                    |
+| Video          | Embed a YouTube or Twitch video.                  |
+| Quote          | Highlight a quote with an optional author.        |
+| Call to action | A prompt with buttons to drive an action.         |
+| Icon grid      | A grid of icons with short labels.                |
+| Countdown      | A live countdown to a date and time.              |
 
 **Discord**
 
-| Block | What it does |
-| --- | --- |
-| Join button | A button that invites visitors to your Discord. |
-| Links | A list or grid of links, linktree-style. |
-| About | A rich text block about your community. |
-| Staff team | Introduce your team members. |
-| Rules | A numbered or plain list of rules. |
-| FAQ | Frequently asked questions and answers. |
-| [Form](/docs/sites/forms) | An application or contact form people can fill in. |
-| [Latest posts](/docs/sites/blog) | Cards linking to your newest blog posts. |
-| [Events](/docs/sites/events) | Upcoming Discord events from your server. |
+| Block                            | What it does                                       |
+| -------------------------------- | -------------------------------------------------- |
+| Join button                      | A button that invites visitors to your Discord.    |
+| Links                            | A list or grid of links, linktree-style.           |
+| About                            | A rich text block about your community.            |
+| Staff team                       | Introduce your team members.                       |
+| Rules                            | A numbered or plain list of rules.                 |
+| FAQ                              | Frequently asked questions and answers.            |
+| [Form](/docs/sites/forms)        | An application or contact form people can fill in. |
+| [Latest posts](/docs/sites/blog) | Cards linking to your newest blog posts.           |
+| [Events](/docs/sites/events)     | Upcoming Discord events from your server.          |
 
 :::note Images come from your server's image library
 Image fields (banners, covers, gallery pictures) use your server's existing image library, the same one your bot uses. Paste an outside image link and it will be rejected when you save. Pick an image from the library instead.

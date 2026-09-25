@@ -26,10 +26,10 @@ You can connect up to three custom domains to one site.
 
 Connecting a domain needs **both** of these DNS records. One on its own is not enough.
 
-| Record | Purpose |
-| --- | --- |
+| Record              | Purpose                                                                                                                          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | **CNAME** (routing) | Points your domain at our servers so we can serve your site and get an HTTPS certificate for it. Its target is `sites.scnx.app`. |
-| **TXT** (ownership) | Proves the domain is really yours. It contains a unique code tied to your domain. |
+| **TXT** (ownership) | Proves the domain is really yours. It contains a unique code tied to your domain.                                                |
 
 The editor shows you the exact **Type**, **Name** and **Target** for both records, with a copy button on each. Always copy the values from your own dashboard: the TXT ownership code is unique to your domain.
 

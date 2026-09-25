@@ -28,13 +28,13 @@ A form only shows up on your site once you add a Form block to a page and choose
 
 Each question has a type:
 
-| Type | What the visitor sees |
-| --- | --- |
-| **Short answer** | A single-line text box. |
-| **Long answer** | A multi-line text box for longer replies. |
-| **Pick one** | Choose a single option from a list you define. |
+| Type             | What the visitor sees                              |
+| ---------------- | -------------------------------------------------- |
+| **Short answer** | A single-line text box.                            |
+| **Long answer**  | A multi-line text box for longer replies.          |
+| **Pick one**     | Choose a single option from a list you define.     |
 | **Pick several** | Tick any number of options from a list you define. |
-| **Yes / No** | A simple yes-or-no choice. |
+| **Yes / No**     | A simple yes-or-no choice.                         |
 
 For each question you can set whether it **has to be filled in**, and a **max characters** limit for text answers. **Pick one** and **Pick several** questions need at least one choice, and every choice has to be different.
 

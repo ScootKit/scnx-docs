@@ -41,43 +41,43 @@ Zieh einen Block auf die Seite oder nutze die **+**-Einfügeleiste, die zwischen
 
 **Layout**
 
-| Block | Was er tut |
-| --- | --- |
-| Hero | Großes Banner mit Titel und Untertitel oben auf einer Seite. |
-| Section header | Eine Überschrift, um einen neuen Abschnitt einzuleiten. |
-| Columns | Blöcke nebeneinander in mehreren Spalten. Spalten stapeln sich auf kleinen Bildschirmen. |
-| Spacer | Fügt vertikalen Leerraum zwischen Blöcken ein. |
-| Divider | Eine waagerechte Linie zum Trennen von Inhalten. |
-| Card grid | Ein Raster aus Karten mit Bildern, Titeln und Links. |
-| Tabs | Inhalte in umschaltbare Tabs gruppieren. |
-| Accordion | Ausklappbare Abschnitte, die einzeln öffnen. |
+| Block          | Was er tut                                                                               |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| Hero           | Großes Banner mit Titel und Untertitel oben auf einer Seite.                             |
+| Section header | Eine Überschrift, um einen neuen Abschnitt einzuleiten.                                  |
+| Columns        | Blöcke nebeneinander in mehreren Spalten. Spalten stapeln sich auf kleinen Bildschirmen. |
+| Spacer         | Fügt vertikalen Leerraum zwischen Blöcken ein.                                           |
+| Divider        | Eine waagerechte Linie zum Trennen von Inhalten.                                         |
+| Card grid      | Ein Raster aus Karten mit Bildern, Titeln und Links.                                     |
+| Tabs           | Inhalte in umschaltbare Tabs gruppieren.                                                 |
+| Accordion      | Ausklappbare Abschnitte, die einzeln öffnen.                                             |
 
 **Content**
 
-| Block | Was er tut |
-| --- | --- |
-| Text | Ein Rich-Text-Block, geschrieben in Markdown. |
-| Image | Ein einzelnes Bild mit optionaler Bildunterschrift und Link. |
-| Image gallery | Mehrere Bilder in einem Raster zeigen. |
-| Video | Ein YouTube- oder Twitch-Video einbetten. |
-| Quote | Ein Zitat mit optionalem Autor hervorheben. |
-| Call to action | Ein Hinweis mit Buttons, der zu einer Aktion antreibt. |
-| Icon grid | Ein Raster aus Icons mit kurzen Beschriftungen. |
-| Countdown | Ein Live-Countdown bis zu einem Datum und einer Uhrzeit. |
+| Block          | Was er tut                                                   |
+| -------------- | ------------------------------------------------------------ |
+| Text           | Ein Rich-Text-Block, geschrieben in Markdown.                |
+| Image          | Ein einzelnes Bild mit optionaler Bildunterschrift und Link. |
+| Image gallery  | Mehrere Bilder in einem Raster zeigen.                       |
+| Video          | Ein YouTube- oder Twitch-Video einbetten.                    |
+| Quote          | Ein Zitat mit optionalem Autor hervorheben.                  |
+| Call to action | Ein Hinweis mit Buttons, der zu einer Aktion antreibt.       |
+| Icon grid      | Ein Raster aus Icons mit kurzen Beschriftungen.              |
+| Countdown      | Ein Live-Countdown bis zu einem Datum und einer Uhrzeit.     |
 
 **Discord**
 
-| Block | Was er tut |
-| --- | --- |
-| Join button | Ein Button, der Besucher zu deinem Discord einlädt. |
-| Links | Eine Liste oder ein Raster aus Links, im Linktree-Stil. |
-| About | Ein Rich-Text-Block über deine Community. |
-| Staff team | Stelle deine Teammitglieder vor. |
-| Rules | Eine nummerierte oder einfache Liste von Regeln. |
-| FAQ | Häufige Fragen und Antworten. |
-| [Form](/docs/sites/forms) | Ein Bewerbungs- oder Kontaktformular zum Ausfüllen. |
+| Block                            | Was er tut                                               |
+| -------------------------------- | -------------------------------------------------------- |
+| Join button                      | Ein Button, der Besucher zu deinem Discord einlädt.      |
+| Links                            | Eine Liste oder ein Raster aus Links, im Linktree-Stil.  |
+| About                            | Ein Rich-Text-Block über deine Community.                |
+| Staff team                       | Stelle deine Teammitglieder vor.                         |
+| Rules                            | Eine nummerierte oder einfache Liste von Regeln.         |
+| FAQ                              | Häufige Fragen und Antworten.                            |
+| [Form](/docs/sites/forms)        | Ein Bewerbungs- oder Kontaktformular zum Ausfüllen.      |
 | [Latest posts](/docs/sites/blog) | Karten, die zu deinen neuesten Blog-Beiträgen verlinken. |
-| [Events](/docs/sites/events) | Kommende Discord-Events von deinem Server. |
+| [Events](/docs/sites/events)     | Kommende Discord-Events von deinem Server.               |
 
 :::note Bilder kommen aus der Bildbibliothek deines Servers
 Bildfelder (Banner, Titelbilder, Galeriebilder) nutzen die bestehende Bildbibliothek deines Servers, dieselbe, die auch dein Bot verwendet. Fügst du einen externen Bildlink ein, wird er beim Speichern abgelehnt. Wähle stattdessen ein Bild aus der Bibliothek.

@@ -32,7 +32,6 @@ will refuse to do anything until they are.
   authorization step below.
 - You need to be part of the Custom Commands V3 Beta Program.
 
-
 ## Connecting {#connecting}
 
 The connector is an OAuth 2.1 server, so connecting always goes through your browser - no API key to copy. The flow

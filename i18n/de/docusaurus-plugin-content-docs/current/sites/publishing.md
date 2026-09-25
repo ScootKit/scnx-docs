@@ -32,13 +32,13 @@ Wenn du veröffentlichst, wird dein Seitenlayout **snapshottet**: die genauen Se
 
 Manche Dinge sind aber bewusst **live** und aktualisieren sich sofort, ohne Veröffentlichung:
 
-| Snapshottet (braucht eine Veröffentlichung) | Live (aktualisiert sofort) |
-| --- | --- |
-| Seiten, Blöcke und ihr Text | [Blog-Beiträge](/docs/sites/blog) |
-| Design, Theme und Seitenlayout | [Formulare](/docs/sites/forms) und ihre Antworten |
-| Website-Einstellungen, Navigation und Fußbereich | [Events](/docs/sites/events) |
-| | [Weiterleitungen](/docs/sites/small-features#redirects) |
-| | [Die Ankündigungsleiste](/docs/sites/small-features#announcement-bar) |
+| Snapshottet (braucht eine Veröffentlichung)      | Live (aktualisiert sofort)                                            |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| Seiten, Blöcke und ihr Text                      | [Blog-Beiträge](/docs/sites/blog)                                     |
+| Design, Theme und Seitenlayout                   | [Formulare](/docs/sites/forms) und ihre Antworten                     |
+| Website-Einstellungen, Navigation und Fußbereich | [Events](/docs/sites/events)                                          |
+|                                                  | [Weiterleitungen](/docs/sites/small-features#redirects)               |
+|                                                  | [Die Ankündigungsleiste](/docs/sites/small-features#announcement-bar) |
 
 Die Idee ist einfach: dein Seitenlayout bleibt unter deiner Kontrolle und ändert sich nur, wenn du veröffentlichst, während Neuigkeiten, Formulare, Events und kurze Hinweise Dinge sind, die du sofort erwartest.
 
