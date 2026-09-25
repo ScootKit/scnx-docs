@@ -12,7 +12,7 @@ A powerful, highly customizable staff management system designed to track activi
 - **Shift management**: Let staff members go on/off-duty and take breaks while tracking their shift time, which contributes to a customizable leaderboard (weekly/monthly). Admins can manage staff shifts by manually adding time, forcing members off duty, or voiding shifts entirely. Set custom shift types, establish quotas for specific roles, configure minimum shift durations, and log all shift changes.
 - **Leave of Absence & Reduced Activity**: Staff can request a Leave of Absence (LOA) or Reduced Activity (RA) status with an approval workflow, optional role assignment, and configurable maximum durations. You can also optionally enable status logging which logs every status update for each staff member.
 - **Staff Profiles**: Let staff members (or also normal members) have their own nickname and introduction in a customizable embed, which users can see via a command. Supervisors/Management can also reset a staff member's profile if needed.
-- **Activity Checks**: Allow supervisors+ to host activity checks which staff members have to reach to with a custom duration. Exemptions can also be set together with automation settings to automatically host activity checks. Results for activity checks are logged with an optional role ping to choice which shows an overview of who reacted, who didn't react and who were exempt. 
+- **Activity Checks**: Allow supervisors+ to host activity checks which staff members have to reach to with a custom duration. Exemptions can also be set together with automation settings to automatically host activity checks. Results for activity checks are logged with an optional role ping to choice which shows an overview of who reacted, who didn't react and who were exempt.
 - **Role-based access control** - Three access tiers: Staff Roles (basic commands), Supervisor Roles (management capabilities), and Management Roles (full access including data deletion).
 
 ## Setup {#setup}
@@ -21,13 +21,14 @@ A powerful, highly customizable staff management system designed to track activi
 2. Open the [General Configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) and set the **Staff Roles**, **Supervisor Roles**, and **Management Roles** to control who can access which features.
 3. Select a channel for the **General Log Channel**, which is the default channel for logging events in this module.
 4. Configure the individual feature settings as needed:
-  - [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) - Infraction types, suspension settings, and DM notifications.
-  - [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) - Promotion announcements and role assignment.
-  - [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) - Reviews system settings and message customization.
-  - [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) - Duty types, quotas, and leaderboard settings.
-  - [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) - LoA and reduced activity settings.
-  - [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) - Staff profile customization and settings.
-  - [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) - Activity checks settings.
+
+- [Infractions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) - Infraction types, suspension settings, and DM notifications.
+- [Promotions](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cpromotions) - Promotion announcements and role assignment.
+- [Reviews](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) - Reviews system settings and message customization.
+- [Shifts](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cshifts) - Duty types, quotas, and leaderboard settings.
+- [Status](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cstatus) - LoA and reduced activity settings.
+- [Profiles](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cprofiles) - Staff profile customization and settings.
+- [Activity Checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) - Activity checks settings.
 
 ## Usage {#usage}
 
@@ -36,6 +37,7 @@ A powerful, highly customizable staff management system designed to track activi
 [Supervisors](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) can issue infractions to staff members with the `\staff-management infraction issue` command. Infraction types can be configured in the [configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cinfractions), with the default infraction types being: 'Warning, Strike, Demotion, Termination and Under Investigation'.
 Staff **cannot infract themselves**.
 You can also:
+
 - Void infractions for an user with the `/staff-management infraction void` command - this keeps the infraction in history, but the punishment is no longer "active". This can be done by either using the message link of the infraction, or the case ID. (Only supervisors+ can void infractions)
 - View the infractions history of an user with the `/staff-management infraction history` command - this shows all previous infractions of an user.
 
@@ -55,6 +57,7 @@ Optionally, the bot can also automatically add the new role upon promotion.
 Enabling the [reviews system ](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Creviews) allows users to review (staff) members with a stars ⭐ rating system and feedback - all in a configurable message and channel.
 
 Additionally there are 2 options to refine the reviews experience to your needs:
+
 - Allow Self-Rating: This option allows staff to review themselves. (This is not recommended for a fair and honest reviews system - it's useful to test reviews on yourself though)
 - Only let users review staff: This option only allows members to review [staff members](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration).
 
@@ -88,6 +91,7 @@ The RA system can be enabled individually by enabling the 'Enable RA System' opt
 After enabling that option, you will be able to select the RA role given upon the start of their RA, configure the maximum days they can request a RA for, and if a RA request requires approval or not.
 
 Additionally, you can:
+
 - Configure the status request channel where the requests for a status are sent (if approval is required)
 - Choose if you want to log status changes (Going on or off LoA/RA, extensions or early ends and other administrative actions)
 - Select the status log channel
@@ -107,8 +111,9 @@ The profile embed is also customizable - edit it to your wishes!
 [Activity checks](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cactivity-checks) can be enabled, which allows supervisors+ to start periodic activity checks that sends a customizable message into the configured channel, which allows staff members to click on a button to confirm that they are active and have seen the message.
 
 Settings to configure the system to your needs:
+
 - Roles to Check: Select the role(s) you want the bot to check that respond to the button - leave this empty to use the standard staff role from the [general configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration).
-- Check Duration: The duration of activity checks in *hours*. The maximum value is 168 hours (1 week) and the minimum is 1 hour.
+- Check Duration: The duration of activity checks in _hours_. The maximum value is 168 hours (1 week) and the minimum is 1 hour.
 - Activity Check Embed & Ended Activity Check Embed: Configure the activity check messages to your wishes! The ended message is the message that replaces the original message when it has ended. (⚠️ Warning: If your original activity check message is components V2, then the ended message also needs to be components V2, otherwise it won't be edited - this is due to Discord limitations)
 - Default Sending Channel: The channel to send the activity checks in - this can be overridden when using the `/staff-management activity-check start` command.
 
@@ -116,41 +121,40 @@ Additionally, you can **automate** the activity checks. You can set an interval 
 
 Results are sent into the configured results channel (leave empty to use the default log channel), with an option to ping a custom role when the results are posted.
 
-
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command                                            | Description                                           |
-| -------------------------------------------------- | ----------------------------------------------------- |
-| `/duty active`                                     | View who are currently on duty or on break per shift type.|
-| `/duty manage [type:<Text>]`                       | Responds with a duty management panel allowing staff to clock on-duty, off-duty, or go on break.|
-| `/duty time [type:<Text>]`                         | View your own cumulative duty time statistics and previous shifts history.|
-| `/duty leaderboard [type:<Text>]`                  | View the server leaderboard showing staff with the most tracked duty time sorted by shift type.|
-| `/duty admin user:<User>`                          | Allows supervisors and management to adjust a staff member's shift logs, manually add time, force them off duty, or process forced duty time removals via a custom time duration string.|
-| `/staff-status loa request duration:<Text> reason:<Text>` | Submit a formal request for a Leave of Absence with a specified duration and reasoning.|
-| `/staff-status loa view [user:<User>]`             | Check your own or another targeted staff member's active Leave of Absence duration and details.|
-| `/staff-status loa list filter:<Text>`             | List filtered LoA tracking status records based on your choice (`Active`, `Expired`, or `All`).|
-| `/staff-status loa admin user:<User>`              | Administrative command to extend or manually end a staff member's active LoA, or view their complete history.|
-| `/staff-status ra request duration:<Text> reason:<Text>` | Submit a request for a period of Reduced Activity with a specified duration and reasoning.|
-| `/staff-status ra view [user:<User>]`              | Check your own or another target staff member's active Reduced Activity details.|
-| `/staff-status ra list filter:<Text>`              | List filtered Reduced Activity status records based on your choice (`Active`, `Expired`, or `All`).|
-| `/staff-status ra admin user:<User>`               | Administrative command to extend or manually end a staff member's active RA period, or view their complete history.|
-| `/staff-management panel user:<User>`              | Opens an interactive dashboard overview of a staff member with details per feature and data deletion options.  |
-| `/staff-management infraction issue user:<User> type:<Text> reason:<Text> [expiry:<Text>]`| Issue an infraction type to a staff member.|
-| `/staff-management infraction suspend user:<User> duration:<Text> reason:<Text>` | Temporarily suspend a staff member, stripping their staff roles automatically for a custom duration.|
-| `/staff-management infraction history user:<User>` | View the infractions history of an user.|
-| `/staff-management infraction void reference:<Text>`| Voids an infraction via its case ID or message link while keeping the history.|
-| `/staff-management promotion promote user:<User> rank:<Role> reason:<Text> [channel:<Channel>]`| Promotes a staff member. Optionally in a different channel than the default with the 'channel' option.|
-| `/staff-management promotion history user:<User>`  | View the promotions history of an user.|
-| `/staff-management activity-check start [channel:<Channel>]`| Manually starts an activity check for the staff members.|
-| `/staff-management activity-check view`            | Check the current status of the current active activity check.|
-| `/staff-management activity-check end`             | Manually ends an activity check.|
-| `/staff-management profile view [user:<User>]`     | View the profile of a (staff) member.|
-| `/staff-management profile edit`                   | Allows (staff) members to edit their profile.|
-| `/staff-management profile wipe user:<User>`       | Allows supervisors+ or management+ to reset the profile of a (staff) member.|
-| `/staff-management review submit user:<User> stars:<Integer> comment:<Text>`| Submit a review to a (staff) member with a rating (1 - 5 stars) and feedback.|
-| `/staff-management review history [user:<User>]`   | View the review history of an user.|
+| Command                                                                                         | Description                                                                                                                                                                              |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/duty active`                                                                                  | View who are currently on duty or on break per shift type.                                                                                                                               |
+| `/duty manage [type:<Text>]`                                                                    | Responds with a duty management panel allowing staff to clock on-duty, off-duty, or go on break.                                                                                         |
+| `/duty time [type:<Text>]`                                                                      | View your own cumulative duty time statistics and previous shifts history.                                                                                                               |
+| `/duty leaderboard [type:<Text>]`                                                               | View the server leaderboard showing staff with the most tracked duty time sorted by shift type.                                                                                          |
+| `/duty admin user:<User>`                                                                       | Allows supervisors and management to adjust a staff member's shift logs, manually add time, force them off duty, or process forced duty time removals via a custom time duration string. |
+| `/staff-status loa request duration:<Text> reason:<Text>`                                       | Submit a formal request for a Leave of Absence with a specified duration and reasoning.                                                                                                  |
+| `/staff-status loa view [user:<User>]`                                                          | Check your own or another targeted staff member's active Leave of Absence duration and details.                                                                                          |
+| `/staff-status loa list filter:<Text>`                                                          | List filtered LoA tracking status records based on your choice (`Active`, `Expired`, or `All`).                                                                                          |
+| `/staff-status loa admin user:<User>`                                                           | Administrative command to extend or manually end a staff member's active LoA, or view their complete history.                                                                            |
+| `/staff-status ra request duration:<Text> reason:<Text>`                                        | Submit a request for a period of Reduced Activity with a specified duration and reasoning.                                                                                               |
+| `/staff-status ra view [user:<User>]`                                                           | Check your own or another target staff member's active Reduced Activity details.                                                                                                         |
+| `/staff-status ra list filter:<Text>`                                                           | List filtered Reduced Activity status records based on your choice (`Active`, `Expired`, or `All`).                                                                                      |
+| `/staff-status ra admin user:<User>`                                                            | Administrative command to extend or manually end a staff member's active RA period, or view their complete history.                                                                      |
+| `/staff-management panel user:<User>`                                                           | Opens an interactive dashboard overview of a staff member with details per feature and data deletion options.                                                                            |
+| `/staff-management infraction issue user:<User> type:<Text> reason:<Text> [expiry:<Text>]`      | Issue an infraction type to a staff member.                                                                                                                                              |
+| `/staff-management infraction suspend user:<User> duration:<Text> reason:<Text>`                | Temporarily suspend a staff member, stripping their staff roles automatically for a custom duration.                                                                                     |
+| `/staff-management infraction history user:<User>`                                              | View the infractions history of an user.                                                                                                                                                 |
+| `/staff-management infraction void reference:<Text>`                                            | Voids an infraction via its case ID or message link while keeping the history.                                                                                                           |
+| `/staff-management promotion promote user:<User> rank:<Role> reason:<Text> [channel:<Channel>]` | Promotes a staff member. Optionally in a different channel than the default with the 'channel' option.                                                                                   |
+| `/staff-management promotion history user:<User>`                                               | View the promotions history of an user.                                                                                                                                                  |
+| `/staff-management activity-check start [channel:<Channel>]`                                    | Manually starts an activity check for the staff members.                                                                                                                                 |
+| `/staff-management activity-check view`                                                         | Check the current status of the current active activity check.                                                                                                                           |
+| `/staff-management activity-check end`                                                          | Manually ends an activity check.                                                                                                                                                         |
+| `/staff-management profile view [user:<User>]`                                                  | View the profile of a (staff) member.                                                                                                                                                    |
+| `/staff-management profile edit`                                                                | Allows (staff) members to edit their profile.                                                                                                                                            |
+| `/staff-management profile wipe user:<User>`                                                    | Allows supervisors+ or management+ to reset the profile of a (staff) member.                                                                                                             |
+| `/staff-management review submit user:<User> stars:<Integer> comment:<Text>`                    | Submit a review to a (staff) member with a rating (1 - 5 stars) and feedback.                                                                                                            |
+| `/staff-management review history [user:<User>]`                                                | View the review history of an user.                                                                                                                                                      |
 
 We recommend changing your server settings to adjust who can/can't see a specific command. This applies for all commands:
 
@@ -170,43 +174,43 @@ This module features multiple independent configuration files allowing you to tw
 
 Configure staff access levels and default log channels in the [general configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/configuration).
 
-| Field               | Description                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------- |
-| Staff Roles         | Role(s) that are granted permission to use basic staff utilities like managing their shifts, request a LoA/RA, receive reviews and more.                                                                                       |
-| Supervisor Roles    | Role(s) authorized to review LoA/RA requests, manage staff profiles, issue infractions, promote staff members and more.                                                                                                           |
-| Management Roles    | Administrators holding full unrestricted access over module profiles and data deletionoptions.|
-| General Log Channel | The default logging channel for features that log events (such as status if enabled)        |
+| Field               | Description                                                                                                                              |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Staff Roles         | Role(s) that are granted permission to use basic staff utilities like managing their shifts, request a LoA/RA, receive reviews and more. |
+| Supervisor Roles    | Role(s) authorized to review LoA/RA requests, manage staff profiles, issue infractions, promote staff members and more.                  |
+| Management Roles    | Administrators holding full unrestricted access over module profiles and data deletionoptions.                                           |
+| General Log Channel | The default logging channel for features that log events (such as status if enabled)                                                     |
 
 ### Infractions Configuration {#configuration-infractions}
 
 Configure infractions and suspensions in the [infractions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/infractions).
 
-| Field                           | Description                                                                                  |
-| ------------------------------- | -------------------------------------------------------------------------------------------- |
-| Enable Infractions System       | Enables the infractions system with custom infraction types and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**    |
-| Infraction Types                | Custom infraction types with custom names.                                                   |
-| Enable Suspensions System       | Toggles whether suspensions temporarily strip standard permissions from disciplined users. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                            |
-| Hierarchy Base Role             | Threshold baseline. When suspended, the bot strips all roles positioned at or above this.    |
-| Suspended Role (Optional)       | An optional role to assign to a staff member when they are suspended.                        |
-| Suspension Announcement Message | The custom message that's sent when a staff member is suspended.                             |
-| Infraction Log Channel          | Targeted destination channel where public infraction announcements and suspension embeds post.|
-| Infraction Announcement Message | The custom message that's sent when a staff member is infracted.                             |
-| DM User on infraction?          | A toggle to choose if the infractions and suspensions are sent to the infracted user's DM's. |
-| Infraction DM Message           | The custom message that's sent in the staff member's DM's when they are infracted.           |
-| Suspension DM Message           | The custom message that's sent in the staff member's DM's when they are suspended.           |
+| Field                           | Description                                                                                                                                                                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Infractions System       | Enables the infractions system with custom infraction types and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                      |
+| Infraction Types                | Custom infraction types with custom names.                                                                                                                                                                                                        |
+| Enable Suspensions System       | Toggles whether suspensions temporarily strip standard permissions from disciplined users. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.** |
+| Hierarchy Base Role             | Threshold baseline. When suspended, the bot strips all roles positioned at or above this.                                                                                                                                                         |
+| Suspended Role (Optional)       | An optional role to assign to a staff member when they are suspended.                                                                                                                                                                             |
+| Suspension Announcement Message | The custom message that's sent when a staff member is suspended.                                                                                                                                                                                  |
+| Infraction Log Channel          | Targeted destination channel where public infraction announcements and suspension embeds post.                                                                                                                                                    |
+| Infraction Announcement Message | The custom message that's sent when a staff member is infracted.                                                                                                                                                                                  |
+| DM User on infraction?          | A toggle to choose if the infractions and suspensions are sent to the infracted user's DM's.                                                                                                                                                      |
+| Infraction DM Message           | The custom message that's sent in the staff member's DM's when they are infracted.                                                                                                                                                                |
+| Suspension DM Message           | The custom message that's sent in the staff member's DM's when they are suspended.                                                                                                                                                                |
 
 ### Promotions Configuration {#configuration-promotions}
 
 Configure the promotions system in the [promotions configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/promotions).
 
-| Field                        | Description                                                                                       |
-| ---------------------------- | ------------------------------------------------------------------------------------------------- |
-| Enable Promotions System     | Enables the promotions system to promote staff members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                         |
-| Auto-Add New Role?           | Automatically adds the role the user is being promoted to. **Warning: Dangerous action! View the note below this table for a more detailed explanation.**                                                                           |
-| Promotions Channel           | The channel where the promotions are sent. Can be overridden manually via the command.            |
-| Promotion Announcement Embed | The custom message that's sent when a staff member is promoted.                                   |
-| DM Promoted User?            | Toggles whether the bot sends a promotion message to the member's DM's as well.                   |
-| Promotion DM Embed           | The custom message sent to the user's DM's when they are promoted.                                |
+| Field                        | Description                                                                                                                                                                                                    |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Promotions System     | Enables the promotions system to promote staff members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.** |
+| Auto-Add New Role?           | Automatically adds the role the user is being promoted to. **Warning: Dangerous action! View the note below this table for a more detailed explanation.**                                                      |
+| Promotions Channel           | The channel where the promotions are sent. Can be overridden manually via the command.                                                                                                                         |
+| Promotion Announcement Embed | The custom message that's sent when a staff member is promoted.                                                                                                                                                |
+| DM Promoted User?            | Toggles whether the bot sends a promotion message to the member's DM's as well.                                                                                                                                |
+| Promotion DM Embed           | The custom message sent to the user's DM's when they are promoted.                                                                                                                                             |
 
 **⚠️ Warning: Keeping the 'Auto-Add new role' setting OFF is RECOMMENDED. This is to avoid raids by letting malicious users grant dangerous roles with dangerous permissions to users, which helps them raid the server. The bot CANNOT PROTECT ITSELF against malicious actions, and we cannot guarantee a no-raid usage with this setting enabled. Please enable backups when having this setting enabled!**
 
@@ -214,84 +218,84 @@ Configure the promotions system in the [promotions configuration](https://scnx.a
 
 Configure reviews settings in the [reviews configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/reviews).
 
-| Field                        | Description                                                                             |
-| ---------------------------- | --------------------------------------------------------------------------------------- |
-| Enable Reviews System        | Enables the reviews system, allowing users to review (staff) members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**  |
-| Reviews Log Channel          | The channel where reviews are sent.                                                     |
-| Allow Self-Rating?           | Toggles whether staff can rate themselves.                                              |
-| Only let users review staff  | When enabled, users can only review staff members.                                      |
-| Review Message               | The customizable (embed) message that gets sent to the review channel.                  |
+| Field                       | Description                                                                                                                                                                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Reviews System       | Enables the reviews system, allowing users to review (staff) members. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.** |
+| Reviews Log Channel         | The channel where reviews are sent.                                                                                                                                                                                          |
+| Allow Self-Rating?          | Toggles whether staff can rate themselves.                                                                                                                                                                                   |
+| Only let users review staff | When enabled, users can only review staff members.                                                                                                                                                                           |
+| Review Message              | The customizable (embed) message that gets sent to the review channel.                                                                                                                                                       |
 
 ### Shifts Configuration {#configuration-shifts}
 
 Configure the shifts sytem for staff members, duty types, shift time leaderboards, shift time quota's for specific roles, and manage the shifts status logging in the [shifts configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/shifts).
 
-| Field                          | Description                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------- |
-| Enable Shifts                  | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                           |
-| On-Duty Role                   | An optional role that is given to a staff member when going on-duty. This is removed when the staff member goes off-duty. This is handy to easily identify poeple who are on-duty without using any commands.                      |
-| Duty Types                     | Custom categories of duty types to allow staff to select their appropriate purpose of duty.       |
-| Minimum Shift Duration (minutes)| The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time. **Warning: shifts that end before this time are DELETED and CANNOT be recovered!**                                        |
-| Enable duty leaderboard        | Toggles the ability for staff to see a leaderboard of the people with the most duty time at the top.                                                                                                                                 |
-| Leaderboard Timeframe          | Sets the timeframe of the total duty times shown in the leaderboard. Choose between weekly,  monthly and all-time.                                                                                                                |
-| Enable Quota System            | Toggles the quota system, allowing you to configure duty times expected from members with a specific role.                                                                                                                       |
-| Quota Timeframe                | Sets the timeframe that is counted towards the quota. Choose between Weekly or Monthly.           |
-| Role Quotas                    | Assigns expected duty times per role. The user's quota will be their highest configured role.     |
-| Log Shift Changes              | Toggles the detailed shift logs. These logs shift updates from an user, such as starting/ending their shift.                                                                                                                         |
-| Channel for shift change logs  | The channel where shift change logs are sent. Leave empty to use the general log channel.         |
+| Field                            | Description                                                                                                                                                                                                                                                      |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Shifts                    | Toggles the shifts system for staff members, allowing them to go on-duty, on-break, or off-duty and more. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.** |
+| On-Duty Role                     | An optional role that is given to a staff member when going on-duty. This is removed when the staff member goes off-duty. This is handy to easily identify poeple who are on-duty without using any commands.                                                    |
+| Duty Types                       | Custom categories of duty types to allow staff to select their appropriate purpose of duty.                                                                                                                                                                      |
+| Minimum Shift Duration (minutes) | The minimum duration in minutes that staff have to be on-duty for it to count towards their total duty time. **Warning: shifts that end before this time are DELETED and CANNOT be recovered!**                                                                  |
+| Enable duty leaderboard          | Toggles the ability for staff to see a leaderboard of the people with the most duty time at the top.                                                                                                                                                             |
+| Leaderboard Timeframe            | Sets the timeframe of the total duty times shown in the leaderboard. Choose between weekly, monthly and all-time.                                                                                                                                                |
+| Enable Quota System              | Toggles the quota system, allowing you to configure duty times expected from members with a specific role.                                                                                                                                                       |
+| Quota Timeframe                  | Sets the timeframe that is counted towards the quota. Choose between Weekly or Monthly.                                                                                                                                                                          |
+| Role Quotas                      | Assigns expected duty times per role. The user's quota will be their highest configured role.                                                                                                                                                                    |
+| Log Shift Changes                | Toggles the detailed shift logs. These logs shift updates from an user, such as starting/ending their shift.                                                                                                                                                     |
+| Channel for shift change logs    | The channel where shift change logs are sent. Leave empty to use the general log channel.                                                                                                                                                                        |
 
 ### Status Configuration {#configuration-status}
 
 Configure the Leave of Absence and Reduced Activity systems, allowing staff to be temporarily exempted from staff duties in the [status conifugration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/status).
 
-| Field                        | Description                                                                                   |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| Enable Status System         | Toggles the status system, allowing you to toggle LoA and RA settings.                        |
-| Enable LoA System            | Toggles whether staff can request Leave of Absences. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
-| LoA Role                     | Optional role assigned to staff members when they are on LoA. This is optional, but recommended to easily identify who is on LoA.                                                                                                 |
-| Maximum LoA Duration (days)  | The limit in days of how long staff members can request an LoA. Their LoA is automatically denied and not requested when their LoA duration request exceeds that limit.                                                          |
-| Require Approval for LoA?    | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                                  |
-| Enable RA System             | Toggles whether staff can request Reduced Activities. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                     |
-| RA Role                      | Optional role assigned to staff members when they are on RA. This is optional, but recommended to easily identify who is on RA.                                                                                                  |
-| Maximum RA Duration (days)   | The limit in days of how long staff members can request an RA. Their RA is automatically denied and not requested when their LoA duration request exceeds that limit.                                                          |
-| Require Approval for RA?     | Toggles if RA requests require an approval from supervisors to see if their RA is a valid reason and duration.                                                                                                                  |
-| Status Request Channel       | The channel where status requests are sent for approval/denial.                               |
-| Log status changes           | Toggles the status logging, which logs all changes in statuses from staff members. This sends embed logs about changes to a staff member's LoA/RA, such as starting it, ending it, the status being extended etc.                  |
-| Status Change Log Channel    | The channel where status changes are logged. This can be empty to use the general log channel.                                                                                                                       |
+| Field                       | Description                                                                                                                                                                                                       |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Status System        | Toggles the status system, allowing you to toggle LoA and RA settings.                                                                                                                                            |
+| Enable LoA System           | Toggles whether staff can request Leave of Absences. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**       |
+| LoA Role                    | Optional role assigned to staff members when they are on LoA. This is optional, but recommended to easily identify who is on LoA.                                                                                 |
+| Maximum LoA Duration (days) | The limit in days of how long staff members can request an LoA. Their LoA is automatically denied and not requested when their LoA duration request exceeds that limit.                                           |
+| Require Approval for LoA?   | Toggles if LoA requests require an approval from supervisors to see if their LoA is a valid reason and duration.                                                                                                  |
+| Enable RA System            | Toggles whether staff can request Reduced Activities. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**      |
+| RA Role                     | Optional role assigned to staff members when they are on RA. This is optional, but recommended to easily identify who is on RA.                                                                                   |
+| Maximum RA Duration (days)  | The limit in days of how long staff members can request an RA. Their RA is automatically denied and not requested when their LoA duration request exceeds that limit.                                             |
+| Require Approval for RA?    | Toggles if RA requests require an approval from supervisors to see if their RA is a valid reason and duration.                                                                                                    |
+| Status Request Channel      | The channel where status requests are sent for approval/denial.                                                                                                                                                   |
+| Log status changes          | Toggles the status logging, which logs all changes in statuses from staff members. This sends embed logs about changes to a staff member's LoA/RA, such as starting it, ending it, the status being extended etc. |
+| Status Change Log Channel   | The channel where status changes are logged. This can be empty to use the general log channel.                                                                                                                    |
 
 ### Profiles Configuration {#configuration-profiles}
 
 Configure (staff) profiles with a custom profile embed and other settings in the [staff profile configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/profiles).
 
-| Field                          | Description                                                                                   |
-| ------------------------------ | --------------------------------------------------------------------------------------------- |
-| Enable Staff Profiles          | Toggles the staff profile system, allowing staff members to set their custom nickname and introduction. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.**                                                                                                  |
-| Only allow staff and higher to have their own customizable profile | Toggles that only staff members can edit their profile or not. If this is disabled, then all members can have their own profile with their own nickname and introduction.                       |
-| Profile Moderation Permission  | Sets whether supervisors+ or management+ can wipe the profile of a different (staff) member.                                                                                                                          |
-| Profile Embed                  | Customize the profile embed here. *Note: Although this feature works without an embed, an embed is still highly recommended for the best experience.*                                                                               |
+| Field                                                              | Description                                                                                                                                                                                                                                                    |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Staff Profiles                                              | Toggles the staff profile system, allowing staff members to set their custom nickname and introduction. **Note: Due to a feature being used to hide this feature's command if it's disabled, your bot may require a restart to show this feature's commands.** |
+| Only allow staff and higher to have their own customizable profile | Toggles that only staff members can edit their profile or not. If this is disabled, then all members can have their own profile with their own nickname and introduction.                                                                                      |
+| Profile Moderation Permission                                      | Sets whether supervisors+ or management+ can wipe the profile of a different (staff) member.                                                                                                                                                                   |
+| Profile Embed                                                      | Customize the profile embed here. _Note: Although this feature works without an embed, an embed is still highly recommended for the best experience._                                                                                                          |
 
 ### Activity Checks Configuration {#configuration-activity-checks}
 
 Configue manual and automated activity checks to check if staff are active in the [activity checks configuration](https://scnx.app/glink?page=bot/configuration?file=staff-management-system|configs/activity-checks).
 
-| Field                        | Description                                                                                       |
-| ---------------------------- | ------------------------------------------------------------------------------------------------- |
-| Enable Activity Checks       | Toggles the Activity Checks system, allowing you to check the activity of staff members, both manually as automatically.                                                                                                         |
-| Roles to Check               | Roles that are expected to respond to the activity check. Leave empty to use the general staff roles.                                                                                                                             |
-| Check Duration (Hours)       | The duration of the activity check. The minimum is 1hr and the maximum is 168hrs (1 week)         |
-| Activity Check Embed         | The customizable activity check embed.                                                            |
-| Ended Activity Check Embed   | The customizable activity check embed, which is edited from the activity check embed when the activity check has ended.                                                                                                          |
-| Default Sending Channel      | The channel to send the acitvity checks in. This can be overriden in the command.                 |
-| Exceptions rule              | The rule to select who are exempted from the activity checks. Choose between none, only LoA, only RA, LoA and RA or use a custom role.                                                                                               |
-| Custom Exception Roles       | The role(s) that are exempted from activity checks when 'custom role(s)' was chosen above.        |
-| Automated Checks             | Toggles the automated activity checks system.                                                     |
-| Automated Check Interval     | Choose how often you want the activity check to be (Weekly, Biweekly, Monthly or a cronjob)       |
-| Automated Check Cronjob      | Custom cronjob to set the frequency exactly how you want. *Note: Using a cronjob generator like https://crontab.guru/ is recommended, unless you know yourself how a cronjob pattern works.*                                       |
-| Automated Check Week Day     | The day of the week to send the activity check.                                                   |
-| Automated Check Month Week   | The week of the month to send the activity check when 'monthly' was chosen for the interval.      |
-| Results Channel              | The channel where the activity check results are posted. The results include who reacted, who didn't, and who were exempted. Leave empty to use the general log channel.                                                         |
-| Ping on Results              | Toggles whether a role is pinged with the results or not.                                         |
-| Roles to Ping                | The custom role(s) to ping with the results.                                                      |
+| Field                      | Description                                                                                                                                                                                  |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Enable Activity Checks     | Toggles the Activity Checks system, allowing you to check the activity of staff members, both manually as automatically.                                                                     |
+| Roles to Check             | Roles that are expected to respond to the activity check. Leave empty to use the general staff roles.                                                                                        |
+| Check Duration (Hours)     | The duration of the activity check. The minimum is 1hr and the maximum is 168hrs (1 week)                                                                                                    |
+| Activity Check Embed       | The customizable activity check embed.                                                                                                                                                       |
+| Ended Activity Check Embed | The customizable activity check embed, which is edited from the activity check embed when the activity check has ended.                                                                      |
+| Default Sending Channel    | The channel to send the acitvity checks in. This can be overriden in the command.                                                                                                            |
+| Exceptions rule            | The rule to select who are exempted from the activity checks. Choose between none, only LoA, only RA, LoA and RA or use a custom role.                                                       |
+| Custom Exception Roles     | The role(s) that are exempted from activity checks when 'custom role(s)' was chosen above.                                                                                                   |
+| Automated Checks           | Toggles the automated activity checks system.                                                                                                                                                |
+| Automated Check Interval   | Choose how often you want the activity check to be (Weekly, Biweekly, Monthly or a cronjob)                                                                                                  |
+| Automated Check Cronjob    | Custom cronjob to set the frequency exactly how you want. _Note: Using a cronjob generator like https://crontab.guru/ is recommended, unless you know yourself how a cronjob pattern works._ |
+| Automated Check Week Day   | The day of the week to send the activity check.                                                                                                                                              |
+| Automated Check Month Week | The week of the month to send the activity check when 'monthly' was chosen for the interval.                                                                                                 |
+| Results Channel            | The channel where the activity check results are posted. The results include who reacted, who didn't, and who were exempted. Leave empty to use the general log channel.                     |
+| Ping on Results            | Toggles whether a role is pinged with the results or not.                                                                                                                                    |
+| Roles to Ping              | The custom role(s) to ping with the results.                                                                                                                                                 |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -299,10 +303,11 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 
 <details>
     <summary>I am promoting someone with the setting 'auto-add new role' enabled, but the role is not given to the user</summary>
-    
+
     This usually happens because the bot is missing permissions to add the role to that user. The bot might have a role that's lower than the role that the user is being promoted to. This is a Discord hierarchy issue, and not a bug. Try the steps below to fix the issue:
     * Make sure your bot has a role that's higher than the role you are promoting a user to. We recommend setting a role higher than all the lower-risk roles you would promote users to. Higher-risk roles (users who can kick/ban etc) are not recommended to be given roles automatically due to raid protection.
     * It is recommended to give your bot the `administrator` permission to allow the bot to give roles to users. This could also be the issue that the bot does not have permission to add/remove roles to users.
+
 </details>
 
 <details>
@@ -331,7 +336,7 @@ Sometimes you can experience issues that may not be as easy to fix. Most of the 
 
 <details>
     <summary>I enabled promotions/infractions/reviews/staff status/LoA/RA/staff profiles/shifts but I cannot see the commands for that feature.</summary>
-    
+
     The features listed use a system where the commands for those features are hidden when they are not utilised. This gives the user a better experience overall with less commands being shown. Try these steps to fix it:
     1. Make sure the feature is actually enabled and is not experiencing issues.
     2. Reload the configuration.
@@ -347,10 +352,12 @@ There is a sub-category for each database model, meaning you get an insight for 
 With each model, there is also an explanation of which data gets deleted.
 
 ### Timestamps Note
+
 All database models automatically record two standard timestamps:
+
 - **Created At:** The exact date and time the record was created.
 - **Updated At:** The exact date and time the record was last modified.
-These are not custom-made fields and are done automatically by the system.
+  These are not custom-made fields and are done automatically by the system.
 
 ### Activity Checks {#data-usage-activity-checks}
 
@@ -365,7 +372,7 @@ These are not custom-made fields and are done automatically by the system.
 - **Is Automated:** The check of 'isAutomated' is stored to see if the check was an automated check. This is an additional check besides initiator ID to make sure it was an automated check.
 
 **ActivityCheckResponse model below**
-*Deleting activity checks data via the user panel (`Data Deletion > Delete Activity Checks`) deletes all response records for that specific user from the `ActivityCheckResponse` table. Note that the user's ID will still remain listed in the `respondedUsers` summary field of past `ActivityCheck` records.*
+_Deleting activity checks data via the user panel (`Data Deletion > Delete Activity Checks`) deletes all response records for that specific user from the `ActivityCheckResponse` table. Note that the user's ID will still remain listed in the `respondedUsers` summary field of past `ActivityCheck` records._
 
 - **ID:** The response ID is used to assign an unique number (ID) to each user as the "response ID". This is mainly stored to prevent double-entries.
 - **Activity Check ID:** The activity check ID is stored to recognize which activity check the user responded to.
@@ -373,7 +380,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### Infractions {#data-usage-infractions}
 
-*Deleting infractions data via the user panel (`Data Deletion > Delete Infractions`) removes all infraction records where the user is the **target** (`userId`). Infractions that this user issued to other staff members (`issuerId`) are preserved for accountability.*
+_Deleting infractions data via the user panel (`Data Deletion > Delete Infractions`) removes all infraction records where the user is the **target** (`userId`). Infractions that this user issued to other staff members (`issuerId`) are preserved for accountability._
 
 - **Case ID:** The case ID is used to give each infraction a unique identifier-code. This can be showcased on each infraction, and is used when voiding an infraction.
 - **User ID:** The user ID is stored to know exactly who was infracted by the user ID, especially useful for pinging that infracted staff member.
@@ -387,7 +394,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### LoA/Status requests {#data-usage-status}
 
-*Deleting status data (`Data Deletion > Delete Status`) resets the user's active `activityStatus` on their profile to null. Historical `LoaRequest` rows are preserved for administrative auditing.*
+_Deleting status data (`Data Deletion > Delete Status`) resets the user's active `activityStatus` on their profile to null. Historical `LoaRequest` rows are preserved for administrative auditing._
 
 - **ID:** The ID is stored to identify a specific LoA/RA.
 - **User ID:** The user ID is stored to know who requested the status.
@@ -401,7 +408,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### Promotions {#data-usage-promotions}
 
-*Deleting promotions data via the user panel (`Data Deletion > Delete Promotions`) deletes all historical logs where the user was the recipient of a promotion or demotion.*
+_Deleting promotions data via the user panel (`Data Deletion > Delete Promotions`) deletes all historical logs where the user was the recipient of a promotion or demotion._
 
 - **ID:** Unique ID to recognize the specific promotion ID.
 - **User ID:** The user ID of the staff member being promoted.
@@ -412,7 +419,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### Staff Profile {#data-usage-profile}
 
-*The `StaffProfile` row itself is persistent and is **never deleted** by panel actions. Deleting shifts data (`Data Deletion > Delete Shifts`) only resets active shift tracking fields (`onDuty`, `onBreak`, `breakStartTime`, `lastClockIn`). Selecting `Delete ALL data` resets custom profile details (`customNickname`, `customIntro`) and clears suspension status back to defaults.*
+_The `StaffProfile` row itself is persistent and is **never deleted** by panel actions. Deleting shifts data (`Data Deletion > Delete Shifts`) only resets active shift tracking fields (`onDuty`, `onBreak`, `breakStartTime`, `lastClockIn`). Selecting `Delete ALL data` resets custom profile details (`customNickname`, `customIntro`) and clears suspension status back to defaults._
 
 - **User ID:** The User ID of the staff member.
 - **Points (ignore):** Not used. Was made for a feature I planned, though i've since cancelled the idea :/ (will be removed in the next update).
@@ -428,7 +435,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### Staff Review {#data-usage-reviews}
 
-*Deleting reviews via the user panel (`Data Deletion > Delete Reviews`) removes all reviews where the user was the **target** of the review (`targetId`). Reviews written by this user for other staff members (`authorId`) are preserved.*
+_Deleting reviews via the user panel (`Data Deletion > Delete Reviews`) removes all reviews where the user was the **target** of the review (`targetId`). Reviews written by this user for other staff members (`authorId`) are preserved._
 
 - **ID:** The ID of the review.
 - **Target ID:** The user ID of the staff member being reviewed.
@@ -439,7 +446,7 @@ These are not custom-made fields and are done automatically by the system.
 
 ### Staff Shift {#data-usage-shifts}
 
-*Data in the `staffShift` model are preserved for individual shifts, quota tracking etc. These cannot be deleted unless you purge the module database.*
+_Data in the `staffShift` model are preserved for individual shifts, quota tracking etc. These cannot be deleted unless you purge the module database._
 
 - **User ID:** The user ID of the staff member.
 - **Start Time:** The starting time of the staff member's shift. Works with end time to calculate the total shift time.

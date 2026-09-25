@@ -26,10 +26,10 @@ Du kannst bis zu drei eigene Domains mit einer Website verbinden.
 
 Um eine Domain zu verbinden, brauchst du **beide** DNS-Einträge. Einer allein reicht nicht.
 
-| Eintrag | Zweck |
-| --- | --- |
+| Eintrag             | Zweck                                                                                                                                                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **CNAME** (Routing) | Zeigt deine Domain auf unsere Server, damit wir deine Website ausliefern und ein HTTPS-Zertifikat dafür holen können. Das Ziel ist `sites.scnx.app`. |
-| **TXT** (Eigentum) | Belegt, dass die Domain wirklich dir gehört. Er enthält einen einzigartigen Code, der an deine Domain gebunden ist. |
+| **TXT** (Eigentum)  | Belegt, dass die Domain wirklich dir gehört. Er enthält einen einzigartigen Code, der an deine Domain gebunden ist.                                  |
 
 Der Editor zeigt dir für beide Einträge den genauen **Type**, **Name** und das **Target**, jeweils mit einem Kopier-Button. Kopiere die Werte immer aus deinem eigenen Dashboard: der TXT-Eigentumscode ist einzigartig für deine Domain.
 

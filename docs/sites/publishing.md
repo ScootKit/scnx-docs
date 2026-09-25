@@ -32,13 +32,13 @@ When you publish, your page layout is **snapshotted**: the exact pages, blocks, 
 
 Some things, though, are deliberately **live** and update straight away, without a publish:
 
-| Snapshotted (needs a publish) | Live (updates right away) |
-| --- | --- |
-| Pages, blocks and their text | [Blog posts](/docs/sites/blog) |
-| Design, theme and page layout | [Forms](/docs/sites/forms) and their answers |
-| Site settings, navigation and footer | [Events](/docs/sites/events) |
-| | [Redirects](/docs/sites/small-features#redirects) |
-| | [The announcement bar](/docs/sites/small-features#announcement-bar) |
+| Snapshotted (needs a publish)        | Live (updates right away)                                           |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| Pages, blocks and their text         | [Blog posts](/docs/sites/blog)                                      |
+| Design, theme and page layout        | [Forms](/docs/sites/forms) and their answers                        |
+| Site settings, navigation and footer | [Events](/docs/sites/events)                                        |
+|                                      | [Redirects](/docs/sites/small-features#redirects)                   |
+|                                      | [The announcement bar](/docs/sites/small-features#announcement-bar) |
 
 The idea is simple: your page layout stays under your control and only changes when you publish, while news, forms, events and quick notices are things you expect to be immediate.
 

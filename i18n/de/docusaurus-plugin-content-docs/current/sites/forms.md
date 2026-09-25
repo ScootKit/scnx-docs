@@ -28,13 +28,13 @@ Ein Formular erscheint erst auf deiner Website, wenn du einen Form-Block auf ein
 
 Jede Frage hat einen Typ:
 
-| Typ | Was die Besucherin sieht |
-| --- | --- |
-| **Short answer** | Ein einzeiliges Textfeld. |
-| **Long answer** | Ein mehrzeiliges Textfeld für längere Antworten. |
-| **Pick one** | Eine einzelne Option aus einer von dir festgelegten Liste wählen. |
+| Typ              | Was die Besucherin sieht                                                |
+| ---------------- | ----------------------------------------------------------------------- |
+| **Short answer** | Ein einzeiliges Textfeld.                                               |
+| **Long answer**  | Ein mehrzeiliges Textfeld für längere Antworten.                        |
+| **Pick one**     | Eine einzelne Option aus einer von dir festgelegten Liste wählen.       |
 | **Pick several** | Beliebig viele Optionen aus einer von dir festgelegten Liste ankreuzen. |
-| **Yes / No** | Eine einfache Ja-oder-Nein-Wahl. |
+| **Yes / No**     | Eine einfache Ja-oder-Nein-Wahl.                                        |
 
 Für jede Frage kannst du festlegen, ob sie **ausgefüllt werden muss**, und eine **maximale Zeichenzahl** für Textantworten. **Pick one**- und **Pick several**-Fragen brauchen mindestens eine Auswahl, und jede Auswahl muss verschieden sein.
 
