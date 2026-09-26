@@ -1,6 +1,6 @@
 # Ping-Protection
 
-Protect specific members and roles from unwanted mentions with configurable moderation actions.
+Protect specific members and roles against unwanted pings with support for whitelisted channels, Discord's AutoMod integration and moderation capabilities with a custom ping message.
 
 <ModuleOverview moduleName="ping-protection" />
 
@@ -13,19 +13,19 @@ Protect specific members and roles from unwanted mentions with configurable mode
 - Optionally use Discord's native AutoMod to block messages containing protected pings before they are sent.
 - Configurable moderation actions (mute or kick) when a user pings protected members/roles too many times, with
   optional [role-based ping thresholds](#role-thresholds) per action.
-- [Unified user panel](#user-panel) for viewing ping and moderation history and managing stored data, with
-  per-category deletion cooldowns.
+- [A user panel](#user-panel) to have a quick overview of that user's ping and moderation history with the ability to delete categorised stored data about the user.
 - Configurable data retention policies for ping history and moderation logs.
-- Track users who leave and rejoin the server.
+- Keep user logs & data after they left the server (or not) with a customizable time.
 
 ## Setup {#setup}
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=ping-protection) on your server.
 2. Open the [General Configuration](#configuration-general) and add the users and/or roles you want to protect.
-3. Configure any whitelisted users, roles, and/or channels that should be allowed to ping protected roles/members.
+3. Configure any whitelisted users, roles, and/or channels that should be allowed to ping protected roles/members. Setting a whitelisted category is supported, and makes all (new) channels inside that category automatically whitelisted. Voice channels are also supported (chats in the vc's).
 4. Optionally you can use Discord's native AutoMod feature to block messages before they are sent. This can be enabled by enabling 'Enable automod' in the configuration.
 5. Optionally configure [moderation actions](#configuration-moderation) to automatically punish users who repeatedly ping protected members.
-6. Make sure the bot has `View Channel`, `Send Messages`, and `Embed Links` permissions in channels where protected members/roles might be pinged. If using AutoMod, the bot also needs `Manage Server` permission. For moderation actions, the bot needs `Time out members` (for mute) and `Kick, Approve and Reject Members` (for kick).
+6. Optionally configure [data storage](#configuration-storage) to configure if you want to store pings history. 
+7. Make sure the bot has `View Channel`, `Send Messages`, and `Embed Links` permissions in channels where protected members/roles might be pinged. When using AutoMod, the bot also needs the `Manage Server` permission. For moderation actions, the bot needs the `Time out members` (for mutes) and `Kick, Approve and Reject Members` (for kicks) permissions. *We recommend granting your bot the `Administrator` permission to avoid having to configure individual permissions.*
 
 ## Usage {#usage}
 
@@ -33,30 +33,42 @@ Once set up, the module works automatically:
 
 - When a user pings a protected member or role, the bot sends a warning message in the channel.
 - If AutoMod is enabled, the message is blocked before it is sent, and the user sees a custom block message.
-- Pings are recorded in the user's history. If configured moderation thresholds are reached, the bot automatically mutes or kicks the user.
+- Pings are recorded in the user's history. If configured moderation thresholds are reached, the bot automatically mutes or kicks the user. *Note: Pings history can be disabled, which also means moderation actions don't work. This can be useful if you want to keep the module simple.*
+
+### View a user's ping- or moderation history {#user-history}
+
+When [ping history](#configuration-storage) is enabled, you can view a user's ping history by using the following command:
+- `/ping-protection user history`
+And view a user's moderation actions history by using the following command:
+- `/ping-protection user actions-history`
+
+### Protected and whitelisted lists {#lists}
+
+Use `/ping-protection list protected` to see all **protected users and roles**.
+Use `/ping-protection list whitelisted` to see all **whitelisted users, roles, and channels**.
+
+### Temporarily toggling protection status {#protection-toggle}
+
+When you allow protected members to toggle their protection status in [the configuration](#configuration), protected members can use the `/ping-protection toggle` command to temporarily toggle their protection status. This allows pings in the meantime, and lets them toggle it right back on using the same command.
+This is especially useful for protected members who don't mind being pinged for a period of time.
+To prevent abuse and forgetfulness, the protection is automatically toggled back on after 24h, if not manually re-enabled before that time.
 
 ### User panel {#user-panel}
 
-`/ping-protection user panel` opens a single ephemeral panel for a user with a dropdown to navigate between four
-pages:
+The ping protection module offers a simple user panel which opens an ephemeral panel showing a quick overview and user information at a quick glance without using multiple commands. These are the exact features in the user panel:
 
-- **Overview** - summary counts of stored pings and moderation actions.
-- **Ping history** - every recorded ping with a timestamp and a link to the message (or "Blocked by AutoMod" when
-  AutoMod intercepted it).
-- **Moderation history** - every moderation action taken by the module against the user, including action type,
-  reason, timestamp, and mute duration where applicable.
-- **Data deletion** - lets you delete the ping history, the moderation history, or all stored data for the user
-  separately.
+- **User overview:** A quick summary of the ping history and moderation actions of the user.
+- **Ping history:** Just like the `/ping-protection user history` command, this shows every recorded ping which the user sent with a link to the message. If AutoMod is enabled, there's no link, instead a text saying "Blocked by AutoMod".
+- **Moderation history:** Just like the `/ping-protection user actions-history` command, this shows every moderation action taken against the user, including which action type was taken, the reason, timestamp and mute duration if applicable.
+- **Data deletion:** This is an exclusive page to the user panel and allows administrators to delete the user's ping history, moderation actions history or all stored data for the user. To access the data deletion page, the user musthave the `Administrator` permissions.
 
-The standalone commands `/ping-protection user history` and `/ping-protection user actions-history` remain
-available; they open the same paginated history / actions view that the panel renders, but as a single page without
-the navigation dropdown.
+*Note: The user panel is limited to users with the `Administrator` and `Manage Server` permissions, while the data deletion page is limited to users with the `Administrator` permissions. The panel can also only be accessed when the [ping history](#configuration-storage) is enabled.*
 
-#### Data deletion and cooldowns {#data-deletion}
+### Data deletion and cooldowns {#data-deletion}
 
-The data-deletion page exposes three actions: delete the **ping history**, delete the **moderation history**, or
+The [data-deletion page](#user-panel) exposes three actions: delete the **ping history**, delete the **moderation history**, or
 **delete all stored data** for the user. The full wipe additionally clears the user's leaver record, requires the
-moderator to have **Administrator** permission, and prompts a confirmation step before it runs.
+moderator to have **`Administrator`** permission, and prompts a confirmation step before it runs.
 
 After any deletion, a single cooldown is set on that user that blocks every deletion category until it expires:
 
@@ -65,11 +77,6 @@ After any deletion, a single cooldown is set on that user that blocks every dele
 
 While a cooldown is active, attempting any deletion on that user shows the cooldown's expiry timestamp. Automatic
 retention-based deletion (see [Data Storage](#configuration-storage)) is unaffected by these cooldowns.
-
-### Protected and whitelisted lists {#lists}
-
-Use `/ping-protection list protected` to see all **protected users and roles**.
-Use `/ping-protection list whitelisted` to see all **whitelisted users, roles, and channels**.
 
 ## Commands {#commands}
 
