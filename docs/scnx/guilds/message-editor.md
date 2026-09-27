@@ -66,8 +66,20 @@ Use the color picker or enter a HEX color code directly to set the embed accent 
   trigger when clicked.
 - **Custom Command Dropdown** - A select menu that triggers a custom command when an option is selected.
 - **Self-Role Dropdown** - A select menu that lets users assign roles to themselves. Selecting an option opens an
-  ephemeral confirmation that lists the roles to be added or removed; the member can adjust the selection there and
-  has to confirm with **Apply** before any role is changed.
+  ephemeral confirmation prefilled with the resulting roles. The member can adjust it there; only pressing
+  **Confirm changes** changes any role, and **Cancel** discards the selection. Each dropdown has a **Selection
+  mode** that controls how a pick is applied:
+
+  - **Replace** - the pick replaces all of the member's roles from this dropdown (default for existing dropdowns).
+  - **Keep & add** - picked roles are added, existing roles are kept; members remove roles by unticking them in
+    the confirmation (default for new dropdowns once their maximum is above 1; a new dropdown with no maximum set
+    is single-choice and always uses Replace).
+  - **Toggle** - picking a role the member doesn't have adds it, picking one they have removes it; other roles
+    are untouched.
+
+  Dropdowns that only allow one selection always use Replace, and the mode picker is shown but disabled. If a
+  selection would exceed the dropdown's maximum (or go below its minimum), the confirmation shows a warning and
+  disables **Confirm changes** until it's adjusted.
 
 ### Image attachments {#v3-attachments}
 
@@ -126,9 +138,22 @@ A select menu inside an Action Row with up to **25 options** (each with label, o
 Options can be reordered via drag-and-drop. Two action types are supported:
 
 - **Custom Command Dropdown** - Each option triggers a Custom Command when selected.
-- **Self-Role Dropdown** - Each option assigns a role. Supports configurable min/max selection counts. Selecting
-  options opens an ephemeral confirmation listing the roles to add or remove; the member must press **Apply** to
-  commit, or **Cancel** to discard. The original public message is not modified.
+- **Self-Role Dropdown** - Each option assigns a role. Supports configurable min/max selection counts and a
+  **Selection mode** that controls how a pick is applied:
+
+  - **Replace** - the pick replaces all of the member's roles from this dropdown (default for existing dropdowns).
+  - **Keep & add** - picked roles are added, existing roles are kept; members remove roles by unticking them in
+    the confirmation (default for new dropdowns once their maximum is above 1; a new dropdown with no maximum set
+    is single-choice and always uses Replace).
+  - **Toggle** - picking a role the member doesn't have adds it, picking one they have removes it; other roles
+    are untouched.
+
+  Dropdowns that only allow one selection always use Replace, and the mode picker is shown but disabled. Selecting
+  options opens an ephemeral confirmation prefilled with the resulting roles; the member can adjust it there, but
+  only pressing **Confirm changes** commits the change, and **Cancel** discards it - the original public message is
+  not modified. If a selection would exceed the dropdown's maximum (or go below its minimum), the confirmation
+  shows a warning and disables **Confirm changes** until it's adjusted. Without a minimum, members can untick every
+  role and remove all roles from this dropdown; set a minimum to prevent that.
 
 ---
 

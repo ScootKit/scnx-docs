@@ -435,7 +435,8 @@ Each option assigns a Discord role. **Guild-specific** - not recommended for sha
   "min_values": 0,
   "max_values": 3,
   "scnx_action": {
-    "type": "roleElement"
+    "type": "roleElement",
+    "mode": "keep"
   },
   "options": [
     {
@@ -459,6 +460,12 @@ Each option assigns a Discord role. **Guild-specific** - not recommended for sha
 
 The `min_values` and `max_values` fields are only available for Self-Role Dropdowns. They control how many roles a user
 can select at once.
+
+An optional `mode` field on the `roleElement` action controls how a pick is applied: `"replace"` (default when
+omitted) makes the pick the member's complete set from this dropdown, `"keep"` adds picked roles while keeping
+roles the member already has, and `"toggle"` adds roles the member doesn't have and removes ones they do. When the
+dropdown only allows one selection (`max_values` is `1`, including when it is left unset), it always behaves as
+`"replace"`, whatever `mode` is set to.
 
 #### Custom Command Dropdown {#custom-command-dropdown}
 
@@ -519,13 +526,13 @@ Starts a flow when an option is chosen. **Guild-specific** - not recommended for
 
 #### String Select Fields {#string-select-fields}
 
-| Field         | Type    | Required | Description                                                                                        |
-| ------------- | ------- | -------- | -------------------------------------------------------------------------------------------------- |
-| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                                           |
-| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                                        |
-| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: number of options, max: `25`.                |
-| `scnx_action` | object  | Yes      | `{ "type": "roleElement" }`, `{ "type": "customCommandElement" }`, or `{ "type": "flowElement" }`. |
-| `options`     | array   | Yes      | 1–25 options.                                                                                      |
+| Field         | Type    | Required | Description                                                                                                                                                                                                                         |
+| ------------- | ------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `placeholder` | string  | No       | Text shown when nothing is selected. Max 150 characters.                                                                                                                                                                            |
+| `min_values`  | integer | No       | Minimum selections required (Self-Role only). Default: `0`.                                                                                                                                                                         |
+| `max_values`  | integer | No       | Maximum selections allowed (Self-Role only). Default: `1`, max: `25`.                                                                                                                                                               |
+| `scnx_action` | object  | Yes      | `{ "type": "roleElement", "mode"?: "replace" \| "keep" \| "toggle" }` (`mode` optional, default `"replace"`, forced to `"replace"` when `max_values` is `1`), `{ "type": "customCommandElement" }`, or `{ "type": "flowElement" }`. |
+| `options`     | array   | Yes      | 1–25 options.                                                                                                                                                                                                                       |
 
 #### Option Fields {#option-fields}
 
