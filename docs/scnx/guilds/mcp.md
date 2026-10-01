@@ -69,7 +69,8 @@ read-only connection.
 ### Read your setup
 
 Look up your server's channels and roles, the bot's actual Discord permissions, and its remaining Custom Commands
-budget and deploy/activation quota - useful pre-flight checks before authoring anything.
+budget and deploy/activation quota (including how much of your hourly write budget is left) - useful pre-flight
+checks before authoring anything.
 
 ### Learn the format and browse the catalog
 
@@ -80,7 +81,8 @@ modules.
 ### Author and validate flows
 
 Read your existing modules, flows and their configuration values, then validate a flow or module document and get
-back structured errors and warnings - not a guess, not a silent pass.
+back structured errors and warnings - not a guess, not a silent pass. You can also read or validate a whole app - a
+module together with all its flows and configuration values - as a single document.
 
 ### Simulate safely
 
@@ -90,6 +92,9 @@ the bot never actually sends, edits or deletes anything on Discord.
 ### Deploy (read-write only)
 
 Create, update and delete modules and flows, set a module's configuration values, and reload the bot when needed.
+A whole app (module, flows and configuration values) can be saved in one call, which uses only a single deploy no
+matter how many flows it contains. Every write is snapshotted first, and the assistant can list those snapshots and
+restore one to undo a change.
 
 ### Debug past runs
 
@@ -104,15 +109,20 @@ them.
 
 ### Read documentation and the marketplace
 
-Search SCNX's documentation and fetch a page as markdown, and browse or install marketplace modules (an installed
-module always arrives switched off, so it never activates automatically).
+Search SCNX's documentation and fetch a page as markdown, browse the changelogs, and browse marketplace modules.
+Installing a marketplace module needs a read-write connection, and an installed module always arrives switched off,
+so it never activates automatically.
 
 ### Check whether you can publish
 
 See which marketplace publisher organizations your account could publish under, whether each one has accepted the
 marketplace terms, and whether it has a support link set - the publishing-readiness check the assistant runs before
-it helps you put a module on the marketplace. This is the one thing the connector reads that belongs to your SCNX
-account rather than to a server you selected.
+it helps you put a module on the marketplace. This is the one thing the connector reads that belongs to
+your SCNX account rather than to a server you selected.
+
+The assistant can also read the built-in publishing guide and run the real publish checks against a module -
+required listing details, portability and the organization's prerequisites - without publishing anything. The
+actual publishing always happens in the dashboard.
 
 ## What it deliberately cannot do {#out-of-scope}
 
