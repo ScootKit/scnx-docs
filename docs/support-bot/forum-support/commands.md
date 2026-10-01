@@ -25,7 +25,7 @@ Commands and staff buttons only work for members with one of your configured [st
 
 ### In the staff queue panel {#panel-buttons}
 
-The queue panel lives in your [staff queue panel channel](/docs/support-bot/forum-support/configuration#main) and updates itself as the queue changes. It groups threads into **Unclaimed**, **In progress**, and **Handed back**.
+The queue panel lives in your [staff panel channel](/docs/support-bot/forum-support/configuration#main) and updates itself as the queue changes. It groups threads into **Unclaimed**, **In progress**, and **Handed back**.
 
 | Button             | What it does                                            |
 | ------------------ | ------------------------------------------------------- |

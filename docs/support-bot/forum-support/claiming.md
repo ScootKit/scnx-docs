@@ -18,7 +18,7 @@ Forum Support gives your whole team one shared queue. Threads are claimed by a s
 
 ## The queue panel {#panel}
 
-The panel is a live message the bot keeps up to date in your [staff queue panel channel](/docs/support-bot/forum-support/configuration#main). It groups threads into:
+The panel is a live message the bot keeps up to date in your [staff panel channel](/docs/support-bot/forum-support/configuration#main). It groups threads into:
 
 | Group           | Meaning                                                        |
 | --------------- | -------------------------------------------------------------- |

@@ -46,7 +46,7 @@ The settings below all live on the same page as the channel list. Each one is th
 
 **Ignore accounts younger than** - the **Ignore accounts younger than** setting (in days, default 0 = off) hides messages from very new accounts from the AI. Set this if you're getting noise from throwaway accounts or first-day joiners who haven't read the FAQ yet.
 
-**Feedback buttons** - turning on **Show thumbs-up / thumbs-down feedback buttons** adds those two buttons below every AI answer. Members can rate whether the answer was helpful, and you can review the totals on the [Insights](/docs/support-bot/ai-faq/insights) page to spot FAQ entries that need a rewrite.
+**Feedback buttons** - turning on **Show 👍 / 👎 feedback buttons** adds those two buttons below every AI answer. Members can rate whether the answer was helpful, and you can review the totals on the [Insights](/docs/support-bot/ai-faq/insights) page to spot FAQ entries that need a rewrite.
 
 ## Follow-up replies {#follow-up-replies}
 
@@ -76,7 +76,7 @@ When the AI can't find a good match in your FAQ, the answer message includes an 
 
 - **Don't show an Open Ticket button** - the AI just says it can't help. Pick this if you'd rather members not be routed into tickets automatically.
 - **Open a modmail DM** - the button starts a Modmail conversation. Only available if [Modmail](/docs/support-bot/modmail/intro) is enabled.
-- **Open a Ticket System ticket** - the button creates a regular [Ticket System](/docs/support-bot/ticket-system/intro) ticket. Only available if the Ticket System is enabled.
+- **Open a ticket-system ticket** - the button creates a regular [Ticket System](/docs/support-bot/ticket-system/intro) ticket. Only available if the Ticket System is enabled.
 
 If you later disable whichever subsystem you picked, the dashboard automatically switches the fallback back to "Don't show an Open Ticket button" so members aren't routed into something that isn't running.
 

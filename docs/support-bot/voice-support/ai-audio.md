@@ -10,7 +10,7 @@ Instead of sourcing and hosting your own audio files, you can generate **text-to
 
 ## Where to find it {#where-to-find-it}
 
-Any time the dashboard shows an audio picker - for the [waiting music](/docs/support-bot/voice-support/configuration#waiting-music) or [closed-state music](/docs/support-bot/voice-support/configuration#closed-music) playlist - you'll see a **Generate (AI)** tab next to **Upload** and **Library**. That tab splits further into **TTS** (text-to-speech) and **Music**.
+Any time the dashboard shows an audio picker - for the [waiting music](/docs/support-bot/voice-support/configuration#waiting-music) or [closed-state music](/docs/support-bot/voice-support/configuration#closed-music) playlist - you'll see a **Generate (AI)** tab next to **Your uploads** and **SCNX library**. That tab splits further into **Text-to-Speech** and **Music**.
 
 Both tools work the same way:
 
@@ -30,9 +30,9 @@ Useful for greeting messages, queue-closed announcements, hold music voiceovers,
 
 ### How it works {#tts-flow}
 
-1. Pick a **language**. The picker defaults to your browser language if available, and shows a count next to each language.
-2. Optionally enable **Include multilingual voices** to add voices that work across any language (handy for mixed-language queues).
-3. Pick a **voice**. Each voice card shows the voice name, an accent label, a short use-case tag, and a preview button. You can listen to the preview before selecting it.
+1. Pick a **Language**. The picker defaults to your browser language if available, and shows a count next to each language.
+2. Optionally enable **Also show multilingual voices** to add voices that work across any language (handy for mixed-language queues).
+3. Pick a **Voice**. Each voice card shows the voice name, an accent label, a short use-case tag, and a preview button. You can listen to the preview before selecting it.
 4. Type the text you want spoken - up to 10,000 characters.
 5. Click **Generate**. The cost is calculated from the text length (see pricing below).
 
@@ -43,7 +43,7 @@ Useful for greeting messages, queue-closed announcements, hold music voiceovers,
 | Cost rate           | 1 AI Coin per 4 characters (rounded up), with a minimum of 1 coin. |
 | Maximum text length | 10,000 characters per generation.                                  |
 
-The exact cost is shown live as you type, and the button is disabled if your balance is insufficient. A "Buy more coins" link appears when you're short.
+The exact cost is shown live as you type, and the button is disabled if your balance is insufficient. A "Buy coins" link appears when you're short.
 
 ## Music {#music}
 
@@ -51,8 +51,8 @@ Useful for producing waiting music that matches your server's vibe without sourc
 
 ### How it works {#music-flow}
 
-1. Write a **prompt** describing the vibe, instrumentation, tempo, and mood - e.g. _"warm lo-fi beat, mellow piano, soft drums, 70 BPM, no vocals"_. Up to 4,100 characters.
-2. Pick a **duration** between 3 seconds and 5 minutes (default: 60 seconds).
+1. Write a **Music prompt** describing the vibe, instrumentation, tempo, and mood - e.g. _"warm lo-fi beat, mellow piano, soft drums, 70 BPM, no vocals"_. Up to 4,100 characters.
+2. Pick a **Duration** between 3 seconds and 5 minutes (default: 60 seconds).
 3. Click **Generate**. Music generation takes longer than TTS - the UI shows a progress indicator.
 
 ### Pricing {#music-pricing}
@@ -78,7 +78,7 @@ Both generators run every request through a safety check. If the prompt is rejec
 
 | Situation                    | What you'll see                                                                                |
 | ---------------------------- | ---------------------------------------------------------------------------------------------- |
-| Not enough AI Coins          | The generate button is disabled and a "Buy more coins" link appears.                           |
+| Not enough AI Coins          | The generate button is disabled and a "Buy coins" link appears.                                |
 | Generation rejected (policy) | "Your prompt was rejected by moderation" or similar - coins are _not_ charged.                 |
 | Too many concurrent requests | A "currently busy" notice - retry in a few seconds.                                            |
 | Generic failure              | A one-line error message. If it persists, reach out at [scnx.app/help](https://scnx.app/help). |

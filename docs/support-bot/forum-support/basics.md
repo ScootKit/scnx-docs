@@ -28,7 +28,7 @@ Open **Forum Support** in your [Support Bot dashboard](https://scnx.app/glink?pa
 
 On the [Configuration](/docs/support-bot/forum-support/configuration) page set:
 
-- A **staff queue panel channel** - a text channel where your team picks up threads.
+- A **Staff panel channel** - a text channel where your team picks up threads.
 - One or more **staff member roles** - who's allowed to claim and answer.
 
 That's the minimum. Everything else (AI answers, auto-close, wait-time estimates, feedback, log channel, close DM) is optional and covered in the [configuration guide](/docs/support-bot/forum-support/configuration).

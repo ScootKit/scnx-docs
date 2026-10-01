@@ -99,12 +99,12 @@ description: Solutions for common issues with the SCNX Support Bot.
 
 - Verify **waiting music** is enabled and at least one track is configured in the [waiting-music section](/docs/support-bot/voice-support/configuration#waiting-music).
 - If three tracks failed to stream in a row, the bot automatically disables playback and posts a notice in the [dashboard channel](/docs/support-bot/voice-support/configuration#dashboard-channel). Fix or replace the failing URLs and re-enable music.
-- With **Join on demand** enabled, the bot only connects once a user joins the queue channel - an empty queue means no music is streaming by design.
+- With **Only join voice when someone is in the queue** enabled, the bot only connects once a user joins the queue channel - an empty queue means no music is streaming by design.
 - AI-generated tracks that 404 after being deleted from the [file library](/docs/scnx/guilds/files) will fail to play - regenerate or upload a replacement.
 
 ### Queue channel name doesn't change between open/offline {#channel-name-stuck}
 
-- Make sure **Enable channel rename** is on and both the online/offline names are set - a blank target name simply skips that transition.
+- Make sure **Rename queue channel on state change** is on and both the online/offline names are set - a blank target name simply skips that transition.
 - Discord rate-limits channel renames to 2 per 10 minutes. The bot enforces a 4-minute cooldown on its side; rapid open/close flaps may queue a rename until the cooldown clears.
 - Confirm the bot has **Manage Channel** permission on the queue channel.
 

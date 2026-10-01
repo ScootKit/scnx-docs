@@ -9,6 +9,7 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 - Receive notifications in a Discord channel when a YouTube channel uploads a new video.
 - Receive notifications when a YouTube channel starts a livestream.
 - Optionally filter out YouTube Shorts from video notifications.
+- Optionally skip upcoming or scheduled premieres and livestreams in video notifications until they are published as a regular video.
 - Optionally assign a "Live" role to the YouTuber's Discord account while they are livestreaming, and remove it when they go offline.
 - Monitor multiple YouTube channels simultaneously, each with its own notification channel and message format.
 - Customize notification messages with details such as channel name, title, description, URL and thumbnail.
@@ -36,12 +37,13 @@ This module has two configuration files - one for video upload notifications and
 
 In this configuration file, you can set up YouTube channels to monitor for new video uploads. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=youtube-notifications%7Cchannels).
 
-| Field                          | Description                                                                                                                                                |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel                        | The Discord channel in which the notification should be sent.                                                                                              |
-| YouTube @-Handle or Channel-ID | The YouTube @-handle or channel ID of the YouTube channel to monitor. Channel IDs starting with `UC` are also supported.                                   |
-| Ignore shorts?                 | If enabled, no notifications will be sent when a YouTube Short is uploaded. Normal videos will still trigger notifications.                                |
-| Message                        | The message sent to the configured channel when a new video is uploaded. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+| Field                                          | Description                                                                                                                                                                                     |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel                                        | The Discord channel in which the notification should be sent.                                                                                                                                   |
+| YouTube @-Handle or Channel-ID                 | The YouTube @-handle or channel ID of the YouTube channel to monitor. Channel IDs starting with `UC` are also supported.                                                                        |
+| Ignore shorts?                                 | If enabled, no notifications will be sent when a YouTube Short is uploaded. Normal videos will still trigger notifications.                                                                     |
+| Ignore upcoming/scheduled premieres & streams? | If enabled, scheduled premieres and livestreams will not trigger an upload notification while they are still upcoming or live. They notify normally once they are published as a regular video. |
+| Message                                        | The message sent to the configured channel when a new video is uploaded. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i>                                      |
 
 ### Live Notification YouTube Channels {#configuration-live-channels}
 
@@ -65,6 +67,7 @@ In this configuration file, you can set up YouTube channels to monitor for lives
     <li>Ensure the bot has "View channel", "Send messages" and "Embed links" permissions on the notification channel.</li>
     <li>The module checks for new videos every 60 seconds. Please wait for the next check cycle.</li>
     <li>If the "Ignore shorts?" option is enabled, YouTube Shorts will not trigger notifications.</li>
+    <li>If the "Ignore upcoming/scheduled premieres & streams?" option is enabled, premieres and livestreams will only trigger a notification once they are published as a regular video.</li>
     <li>If a YouTube channel cannot be found, it will be skipped until the bot is restarted or the configuration is reloaded.</li>
 </ul>
 </details>
