@@ -29,10 +29,9 @@ description: Verfolge die Leistung deines Discord-Supports mit detaillierten Sta
 
 Die folgenden Befehle sind verfügbar, wenn sie in der [Team-Befehle Konfiguration](/de/docs/support-bot/general/bot-configuration#staff-commands) aktiviert sind:
 
-| Befehl                      | Beschreibung                                                                                                                                                  |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/analytics`                | Zeigt serverweite Statistiken für dein Support-System (offene Tickets, durchschnittliche Antwortzeit, durchschnittliche Schließungszeit, Bewertung und mehr). |
-| `/analytics staff:<Nutzer>` | Zeigt Statistiken für ein bestimmtes Teammitglied (gesendete Nachrichten, durchschnittliche Antwortzeit, bearbeitete Tickets).                                |
+| Befehl                                                                                             | Beschreibung                                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/analytics [days:<1-30>] [member:<Nutzer>] [system:<all\|modmail\|ticket-system\|voice-support>]` | Zeigt Support-Statistiken. `days` wählt den Zeitraum (1–30, Standard 7), `member` beschränkt die Anzeige auf ein einzelnes Teammitglied und `system` filtert auf einen Produktbereich (oder `all` für eine kombinierte Ansicht). Prozentwerte vergleichen den gewählten Zeitraum mit dem vorherigen Zeitraum gleicher Länge. Die Antwort ist ephemeral. |
 
 ## Verfügbare Kennzahlen {#available-metrics}
 
@@ -58,8 +57,14 @@ Die folgenden Befehle sind verfügbar, wenn sie in der [Team-Befehle Konfigurati
 
 ### Team-Leaderboard
 
-| Kennzahl                      | Beschreibung                                                                           |
-| ----------------------------- | -------------------------------------------------------------------------------------- |
-| Gesendete Nachrichten         | Die Gesamtanzahl der von jedem Teammitglied gesendeten Nachrichten über alle Tickets.  |
-| Durchschnittliche Antwortzeit | Die durchschnittliche Zeit, die jedes Teammitglied zum Antworten auf Tickets benötigt. |
-| Beantwortete Tickets          | Die Gesamtanzahl der einzelnen Tickets, an denen jedes Teammitglied teilgenommen hat.  |
+| Kennzahl                      | Beschreibung                                                                                                                                                                                                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Gesendete Nachrichten         | Die Gesamtanzahl der von jedem Teammitglied gesendeten Nachrichten über alle Tickets.                                                                                                                                                                        |
+| Durchschnittliche Antwortzeit | Die durchschnittliche Zeit, die jedes Teammitglied zum Antworten auf Tickets benötigt.                                                                                                                                                                       |
+| Beantwortete Tickets          | Die Gesamtanzahl der einzelnen Tickets, an denen jedes Teammitglied teilgenommen hat.                                                                                                                                                                        |
+| Durchschnittliche Bewertung   | Die durchschnittliche Feedback-Bewertung (1-5) für Tickets, die diesem Teammitglied zugewiesen sind. Wird nur angezeigt, wenn [Support-Feedback](/de/docs/support-bot/modmail/support-feedback) aktiviert ist und das Teammitglied Bewertungen erhalten hat. |
+| Anzahl Bewertungen            | Die Anzahl der Feedback-Bewertungen, die diesem Teammitglied zugeordnet sind.                                                                                                                                                                                |
+
+:::info Pausierung und Statistiken
+Die Zeit, die ein Ticket pausiert ist, wird automatisch aus allen Berechnungen von Antwortzeit und Lösungszeit ausgeschlossen. So spiegeln deine Statistiken die tatsächliche Leistung des Teams wider, ohne durch bewusste Pausierungen verfälscht zu werden.
+:::

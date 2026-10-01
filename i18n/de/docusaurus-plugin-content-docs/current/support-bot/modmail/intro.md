@@ -15,7 +15,7 @@ Für einen schnellen und unkomplizierten Einstieg in Modmail für dich und deine
 Das Modmail-System vom SCNX Support-Bot ermöglicht Nutzern, Support-Tickets zu erstellen, indem sie dem Bot eine Direktnachricht senden. Wenn ein Nutzer dem Bot eine Nachricht schreibt, wird ein Ticket-Kanal auf deinem Server erstellt, in dem Teammitglieder die Nachricht sehen und darauf antworten können. Alle Antworten von Teammitgliedern werden per DM an den Nutzer weitergeleitet, sodass eine nahtlose Konversation entsteht, ohne dass der Nutzer einen bestimmten Kanal betreten muss.
 
 Um dir einen besseren Überblick zu bieten, haben wir die einzelnen Funktionen in diesem Artikel in verschiedene Sektionen unterteilt.
-Des weiteren findest du alle Funktionen natürlich noch einmal ausführlich in den jeweiligen Dokumentationsseiten.
+Des Weiteren findest du alle Funktionen natürlich noch einmal ausführlich in den jeweiligen Dokumentationsseiten.
 
 ## Hauptfunktionen {#key-features}
 

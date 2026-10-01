@@ -26,7 +26,7 @@ description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem 
 
 | Feld                                               | Beschreibung                                                                                                                                                                                                         |
 | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aktiviere Support-Bewertungen                      | Aktiviert oder deaktiviert die Funktion für dein Ticket-System.                                                                                                                                                      |
+| Aktiviere Support-Bewertungen                      | Aktiviert oder deaktiviert die Funktion für dein Modmail-System.                                                                                                                                                     |
 | Feedback-Nachricht                                 | Diese Nachricht wird dein Bot an den Nutzer senden, nachdem sein Ticket geschlossen wurde.                                                                                                                           |
 | Eingereichte Nachricht                             | Diese Nachricht wird aus der Feedback-Nachricht editiert, nachdem der Nutzer seine Bewertung abgegeben hat.                                                                                                          |
 | Feedback-Fragen bearbeiten                         | Diese Fragen werden im Bewertungs-Dialog angezeigt. Mehr Infos zum Einstellen der Feedback-Fragen findest du [hier](#manage-feedback-questions).                                                                     |
@@ -34,7 +34,7 @@ description: Sammle Sternebewertungen und eigenes Feedback von Nutzern nach dem 
 | Antworten in einen Kanal senden                    | Wenn aktiviert, werden Bewertungen in einen Kanal gesendet – anderenfalls findest du die Bewertungen der letzten 30 Tage in deinem [Dashboard](https://scnx.app/glink?page=support-system/modmail/support-feedback). |
 | Kanal, in den die Antworten gesendet werden sollen | _Nur verfügbar, wenn "Antworten in einen Kanal senden" aktiviert ist._<br/>In diesen Kanal wird dein Bot eingereichte Bewertungen senden.                                                                            |
 | Benachrichtigungsnachricht anpassen?               | _Nur verfügbar, wenn "Antworten in einen Kanal senden" aktiviert ist._<br/>Wenn aktiviert, kannst du die Benachrichtigungsnachricht für neue Bewertungen anpassen.                                                   |
-| Feedback-Benachrichtigungsnachricht                | _Nur verfügbar, wenn "Antworten in einen Kanal senden" und "Benachrichtigungsnachricht anpassen" aktiviert sind._<br/>Diese Nachricht wird dein Bot bei einer neu eingereichten Bewertung senden.                    |
+| Feedback-Benachrichtigungsnachricht                | _Nur verfügbar, wenn "Antworten in einen Kanal senden" und "Benachrichtigungsnachricht anpassen?" aktiviert sind._<br/>Diese Nachricht wird dein Bot bei einer neu eingereichten Bewertung senden.                   |
 
 ### Feedback-Fragen verwalten {#manage-feedback-questions}
 

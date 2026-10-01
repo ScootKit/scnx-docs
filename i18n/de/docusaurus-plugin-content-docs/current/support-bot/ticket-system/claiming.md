@@ -8,7 +8,7 @@ description: Weise Discord-Support-Tickets Teammitgliedern zu, sende Claim-Benac
 
 ## Funktionen {#features}
 
-- Aktiviere das Claimen von Tickets, um doppelte Ticketbesetzung zu vermeiden.
+- Aktiviere das Claimen von Tickets, um zu verhindern, dass Tickets doppelt bearbeitet werden.
 - Blende nicht zugewiesene Tickets für ein Teammitglied aus.
 - Sperre den Kanal vor dem Claimen eines Tickets.
 - Sende Zuweisungsbenachrichtigungen in einen Kanal, um Teammitglieder über neue Tickets zu informieren.
@@ -35,10 +35,10 @@ description: Weise Discord-Support-Tickets Teammitgliedern zu, sende Claim-Benac
 
 ### Erweiterte Nachrichten-Konfiguration {#advanced-message-configuration}
 
-| Feld                                            | Beschreibung                                                                                                                                                                                                                                            |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Zuweisung Ausstehend Nachricht                  | Diese Nachricht wird bei ausstehender Zuweisung in den Ticket-Kanal gesendet.                                                                                                                                                                           |
-| Zuweisungsknopf im Ticket anzeigen              | Wenn aktiviert, wird ein Knopf zum Zuweisen zur Ticket-Nachricht hinzugefügt.                                                                                                                                                                           |
-| Zuweisungsknopf-Text                            | Dieser Text wird auf dem Zuweisungsknopf unter der Ticket-Nachricht angezeigt.<br/><small><details><summary>Voraussetzung</summary><blockquote>_Nur verfügbar, wenn „Zuweisungsknopf im Ticket anzeigen" aktiviert ist._</blockquote></details></small> |
-| Zuweisungsnachricht                             | Diese Nachricht wird bei erfolgreicher Zuweisung in den Ticket-Kanal gesendet.                                                                                                                                                                          |
-| Teammitglieder Ticketbenachrichtigungsnachricht | Diese Nachricht wird bei Erstellung eines neuen Tickets in den [konfigurierten](#main-configuration) Kanal gesendet.                                                                                                                                    |
+| Feld                                                | Beschreibung                                                                                                                                                                                                                                            |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Zuweisung Ausstehend Nachricht                      | Diese Nachricht wird bei ausstehender Zuweisung in den Ticket-Kanal gesendet.                                                                                                                                                                           |
+| Zuweisungsknopf im Ticket anzeigen                  | Wenn aktiviert, wird ein Knopf zum Zuweisen zur Ticket-Nachricht hinzugefügt.                                                                                                                                                                           |
+| Zuweisungsknopf-Text                                | Dieser Text wird auf dem Zuweisungsknopf unter der Ticket-Nachricht angezeigt.<br/><small><details><summary>Voraussetzung</summary><blockquote>_Nur verfügbar, wenn „Zuweisungsknopf im Ticket anzeigen" aktiviert ist._</blockquote></details></small> |
+| Zuweisungsnachricht                                 | Diese Nachricht wird bei erfolgreicher Zuweisung in den Ticket-Kanal gesendet.                                                                                                                                                                          |
+| Ticketbenachrichtigungsnachricht für Teammitglieder | Diese Nachricht wird bei Erstellung eines neuen Tickets in den [konfigurierten](#main-configuration) Kanal gesendet.                                                                                                                                    |

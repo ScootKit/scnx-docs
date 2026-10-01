@@ -69,19 +69,19 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 - Stelle sicher, dass der Claim-Knopf aktiviert ist, wenn Teammitglieder per Knopf claimen sollen.
 - Überprüfe, ob der Benachrichtigungskanal existiert und der Bot die Berechtigung hat, dort Nachrichten zu senden.
 
-## Voice-Support-Probleme {#voice-support}
+## Sprachsupport-Probleme {#voice-support}
 
 ### Die `/voice`-Befehle werden nicht angezeigt {#voice-commands-missing}
 
-- Voice Support ist eine Early-Access-Preview. Die `/voice`-Befehle werden nur registriert, solange der Serverinhaber den Early-Access-Perk der [ScootKit-Mitgliedschaft](https://membership.scootkit.com) besitzt.
-- Stelle sicher, dass Voice Support in deinem Dashboard [aktiviert](/de/docs/support-bot/voice-support/configuration#main-configuration-configuration) ist.
-- Lade den Bot nach dem Umschalten der Early-Access- oder „Voice Support aktivieren"-Schalter neu - die Slash-Befehlsliste wird erst beim Neustart des Bots aktualisiert.
+- Sprachsupport ist eine Early-Access-Preview. Die `/voice`-Befehle werden nur registriert, solange der Serverinhaber den Early-Access-Perk der [ScootKit-Mitgliedschaft](https://membership.scootkit.com) besitzt.
+- Stelle sicher, dass Sprachsupport in deinem Dashboard [aktiviert](/de/docs/support-bot/voice-support/configuration#main-configuration-configuration) ist.
+- Lade den Bot nach dem Umschalten der Early-Access- oder „Sprachsupport aktivieren"-Schalter neu - die Slash-Befehlsliste wird erst beim Neustart des Bots aktualisiert.
 
-### Voice Support bleibt offline {#voice-support-offline}
+### Sprachsupport bleibt offline {#voice-support-offline}
 
-- Prüfe den **Status-Modus**. Im Modus `staff-presence` ist Voice Support geschlossen, bis mindestens ein Teammitglied einem Kanal in der Support-Kategorie beitritt. Im Modus `opening-hours` ist er außerhalb der konfigurierten [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) geschlossen.
+- Prüfe den **Status-Modus**. Im Modus `staff-presence` ist Sprachsupport geschlossen, bis mindestens ein Teammitglied einem Kanal in der Support-Kategorie beitritt. Im Modus `opening-hours` ist er außerhalb der konfigurierten [Öffnungszeiten](/de/docs/support-bot/general/opening-hours) geschlossen.
 - Stelle sicher, dass ein Mitglied einer [Team-Rolle](/de/docs/support-bot/voice-support/configuration#main-configuration-configuration) in einem Sprachkanal **innerhalb der Support-Kategorie** verbunden ist (nicht im Warteschlangen-Kanal selbst).
-- Wenn du Voice Support gerade aktiviert hast, warte bis zu 60 Sekunden auf die Aktualisierung des Dashboard-Embeds - der Status-Ticker läuft einmal pro Minute.
+- Wenn du Sprachsupport gerade aktiviert hast, warte bis zu 60 Sekunden auf die Aktualisierung des Dashboard-Embeds - der Status-Ticker läuft einmal pro Minute.
 
 ### Nutzer erhalten keine Positions-DMs {#no-position-dms}
 
@@ -91,20 +91,20 @@ description: Lösungen für häufige Probleme mit dem SCNX Support-Bot.
 
 ### „Nächsten Nutzer holen"-Knopf reagiert nicht / ist ausgegraut {#pull-next-not-working}
 
-- Der Knopf ist deaktiviert, solange Voice Support offline oder die Warteschlange leer ist - prüfe den Status im Dashboard-Embed.
+- Der Knopf ist deaktiviert, solange Sprachsupport offline oder die Warteschlange leer ist - prüfe den Status im Dashboard-Embed.
 - Das klickende Teammitglied muss in einem **Support-Kanal** sitzen (jeder Sprachkanal in der Support-Kategorie außer dem Warteschlangen-Kanal). Klicks aus dem Warteschlangen-Kanal werden absichtlich ignoriert - die Warteschlange ist für Nutzer, nicht für das Team.
 - Bestätige, dass das klickende Mitglied eine der konfigurierten [Team-Rollen](/de/docs/support-bot/voice-support/configuration#main-configuration-configuration) hat.
 
 ### Wartemusik spielt nicht {#music-not-playing}
 
 - Prüfe, ob **Wartemusik aktivieren** eingeschaltet ist und mindestens ein Track im [Wartemusik-Abschnitt](/de/docs/support-bot/voice-support/configuration#waiting-music) konfiguriert ist.
-- Wenn drei Tracks in Folge fehlschlagen, deaktiviert der Bot die Wiedergabe automatisch und postet einen Hinweis im [Dashboard-Kanal](/de/docs/support-bot/voice-support/configuration#dashboard-channel). Fehlerhafte URLs korrigieren oder ersetzen und die Musik wieder aktivieren.
-- Mit aktiviertem **Auf Abruf verbinden** verbindet sich der Bot erst, wenn ein Nutzer dem Warteschlangen-Kanal beitritt - eine leere Warteschlange bedeutet beabsichtigt keine laufende Musik.
+- Wenn drei Tracks in Folge fehlschlagen, deaktiviert der Bot die Wiedergabe automatisch und postet einen Hinweis im [Dashboard-Kanal](/de/docs/support-bot/voice-support/configuration#dashboard-channel). Korrigiere oder ersetze die fehlerhaften URLs und aktiviere die Musik wieder.
+- Mit aktiviertem **Bot nur beitreten lassen, wenn jemand in der Warteschlange ist** verbindet sich der Bot erst, wenn ein Nutzer dem Warteschlangen-Kanal beitritt - eine leere Warteschlange bedeutet beabsichtigt keine laufende Musik.
 - KI-generierte Tracks, die nach dem Löschen aus der [Dateibibliothek](/de/docs/scnx/guilds/files) 404 zurückgeben, schlagen bei der Wiedergabe fehl - generiere sie erneut oder lade eine Ersatzdatei hoch.
 
 ### Warteschlangen-Kanalname wechselt nicht zwischen Offen/Offline {#channel-name-stuck}
 
-- Stelle sicher, dass **Kanal-Umbenennung aktivieren** eingeschaltet ist und beide Online-/Offline-Namen gesetzt sind - ein leerer Zielname überspringt diesen Übergang einfach.
+- Stelle sicher, dass **Warteschlangen-Kanal bei Zustandswechsel umbenennen** eingeschaltet ist und beide Online-/Offline-Namen gesetzt sind - ein leerer Zielname überspringt diesen Übergang einfach.
 - Discord begrenzt Kanal-Umbenennungen auf 2 pro 10 Minuten. Der Bot erzwingt auf seiner Seite eine 4-minütige Abkühlzeit; schnelle Offen/Offline-Wechsel können eine Umbenennung verzögern, bis die Abkühlzeit abgelaufen ist.
 - Bestätige, dass der Bot die Berechtigung **Kanäle verwalten** am Warteschlangen-Kanal hat.
 

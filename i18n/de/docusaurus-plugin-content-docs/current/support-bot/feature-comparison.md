@@ -27,10 +27,10 @@ Der SCNX Support-Bot bietet vier Support-Systeme. Du kannst beliebige Kombinatio
 ✅ unterstützt &nbsp;·&nbsp; ❌ nicht unterstützt &nbsp;·&nbsp; ➖ für die Funktionsweise dieses Systems nicht relevant
 :::
 
-Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme im Detail. Der **Sprachsupport** ist ein Live-Sprach-Flow statt eines Text-Ticket-Flows und wird daher in der Übersicht oben sowie in seiner eigenen [Einführung](/docs/support-bot/voice-support/intro) behandelt, nicht Zeile für Zeile hier.
+Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme im Detail. Der **Sprachsupport** ist ein Live-Sprach-Flow statt eines Text-Ticket-Flows und wird daher in der Übersicht oben sowie in seiner eigenen [Einführung](/de/docs/support-bot/voice-support/intro) behandelt, nicht Zeile für Zeile hier.
 
 :::info AI FAQ
-[AI FAQ](/docs/support-bot/ai-faq/intro) ist ein Early-Access-Feature, das sich über Modmail und das Ticket-System legt (Forum-Support hat seine eigenen [eingebauten KI-Antworten](/docs/support-bot/forum-support/ai-deflection)). Es nutzt eine vom Team gepflegte Wissensdatenbank, um Fragen zu beantworten und einfache Anfragen abzufangen, bevor ein Ticket geöffnet wird - es ist also kein konkurrierendes System. Siehe die [AI-FAQ-Einführung](/docs/support-bot/ai-faq/intro).
+[AI FAQ](/de/docs/support-bot/ai-faq/intro) ist ein Early-Access-Feature, das sich über Modmail und das Ticket-System legt (Forum-Support hat seine eigenen [eingebauten KI-Antworten](/de/docs/support-bot/forum-support/ai-deflection)). Es nutzt eine vom Team gepflegte Wissensdatenbank, um Fragen zu beantworten und einfache Anfragen abzufangen, bevor ein Ticket geöffnet wird - es ist also kein konkurrierendes System. Siehe die [AI-FAQ-Einführung](/de/docs/support-bot/ai-faq/intro).
 :::
 
 ## Wie Mitglieder Support starten
@@ -69,7 +69,7 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 | Geplantes Schließen                        |   ✅    |      ✅       |      ❌       |
 | Schließanfragen (Bestätigung Nutzer/Team)  |   ✅    |      ✅       |      ❌       |
 | Schließgründe (eigene & vordefinierte)     |   ✅    |      ❌       |      ❌       |
-| Limit: ein Ticket pro Nutzer               |   ✅    |      ✅       |      ❌       |
+| Limit: ein Ticket pro Nutzer               |   ✅    |      ✅       |      ✅       |
 | Priorität pro Thema                        |   ❌    |      ❌       |      ✅       |
 | Priorität nach Mitglieder-Rolle            |   ❌    |      ❌       |      ✅       |
 | Knopf „Schließen" / „Als gelöst markieren" |   ✅    |      ✅       |      ✅       |
@@ -87,7 +87,7 @@ Die ausführlichen Tabellen unten vergleichen die drei **textbasierten** Systeme
 | Auto-Schließen, wenn der Nutzer den Server verlässt  |   ✅    |      ✅       |      ❌       |
 | Inaktivitäts-Warnung vor dem Auto-Schließen          |   ✅    |      ✅       |      ✅       |
 | Inaktivitäts-Erinnerungen an Teammitglieder          |   ✅    |      ✅       |      ✅       |
-| Erinnerungen an nicht zugewiesene/beanspruchte       |   ✅    |      ✅       |      ✅       |
+| Erinnerungen an nicht zugewiesene/unbeanspruchte     |   ✅    |      ✅       |      ✅       |
 | Nur innerhalb der Öffnungszeiten erinnern            |   ✅    |      ✅       |      ✅       |
 | Öffnungszeiten                                       |   ✅    |      ✅       |      ✅       |
 | Hinweis außerhalb der Öffnungszeiten an das Mitglied |   ✅    |      ➖       |      ✅       |
