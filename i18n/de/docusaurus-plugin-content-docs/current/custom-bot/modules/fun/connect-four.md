@@ -28,6 +28,9 @@ Der erste Spieler, der vier Rechtecke seiner Farbe in einer beliebigen Reihe hat
 
 <SlashCommandExplanation />
 
-| Befehl          | Beschreibung                                                                                                                                                                                                                                       |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/connect-four` | Dieser Befehl startet ein Vier gewinnt-Spiel gegen den ausgewählten Nutzer. Du kannst außerdem die `field_size`-Option verwenden, um die Breite und Höhe festzulegen - diese ist standardmäßig 7, du kannst aber jede Zahl von 4 bis 10 eintragen. |
+| Befehl                                         | Beschreibung                                                                                                                                                                                                                                       |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/connect-four`                                | Dieser Befehl startet ein Vier gewinnt-Spiel gegen den ausgewählten Nutzer. Du kannst außerdem die `field_size`-Option verwenden, um die Breite und Höhe festzulegen - diese ist standardmäßig 7, du kannst aber jede Zahl von 4 bis 10 eintragen. |
+| Challenge to Connect Four (Nutzer-Kontextmenü) | Rechtsklick auf einen Nutzer und "Apps" > "Challenge to Connect Four" wählen, um ihn zu einer Partie herauszufordern. Funktioniert wie `/connect-four` mit der Standard-Spielfeldgröße.                                                            |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.

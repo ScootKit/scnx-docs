@@ -168,7 +168,7 @@ Follow [this guide](/docs/custom-bot/slash-commands) to adjust your server setti
 
 ### Context menu actions {#context-menu-actions}
 
-The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**:
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps** (see [Setting up context menu commands](/docs/custom-bot/commands#context-menus)):
 
 | Action               | Description                                                                                                                                                   |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -307,22 +307,6 @@ Configue manual and automated activity checks to check if staff are active in th
 | Results Channel            | The channel where the activity check results are posted. The results include who reacted, who didn't, and who were exempted. Leave empty to use the general log channel.                     |
 | Ping on Results            | Toggles whether a role is pinged with the results or not.                                                                                                                                    |
 | Roles to Ping              | The custom role(s) to ping with the results.                                                                                                                                                 |
-
-### Placeholders {#configuration-placeholders}
-
-The customizable messages support the following placeholders (written like `%placeholder%`):
-
-| Message                                           | Placeholders                                                                                                                                         |
-| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Infraction Announcement Message                   | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                   |
-| Suspension Announcement Message                   | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`               |
-| Infraction DM Message                             | `%user%`, `%issuer-name%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                                                                           |
-| Suspension DM Message                             | `%user%`, `%issuer-name%`, `%type%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`                                                             |
-| Promotion Announcement Embed & Promotion DM Embed | `%user-mention%`, `%new-role-name%`, `%new-role-mention%`, `%promoter-mention%`, `%promoter-name%`, `%reason%`, `%user-avatar%`, `%promoter-avatar%` |
-| Review Message                                    | `%staff-mention%`, `%reviewer-mention%`, `%stars%`, `%rating%`, `%comment%`, `%staff-avatar%`, `%reviewer-avatar%`                                   |
-| Profile Embed                                     | `%user-mention%`, `%username%`, `%nickname%`, `%intro%`, `%status%`, `%rating%`, `%avatar%`                                                          |
-| Activity Check Embed                              | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`                                         |
-| Ended Activity Check Embed                        | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`, `%responded-count%`                    |
 
 ## Troubleshooting {#troubleshooting}
 

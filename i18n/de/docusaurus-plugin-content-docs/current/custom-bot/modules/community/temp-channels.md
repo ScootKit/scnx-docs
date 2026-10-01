@@ -52,6 +52,10 @@ Alternativ kannst du die tastenbasierte Benutzeroberfläche zur Verwaltung deine
 | `/temp-channel remove-user user:<User>`                                                        | Entziehe einem Benutzer den Zugriff auf deinen temporären Kanal. Nur verfügbar, wenn die Option „Kanaländerungen erlauben" aktiviert ist.                          |
 | `/temp-channel list-users`                                                                     | Zeige eine Liste der Benutzer an, denen Zugriff auf deinen Kanal gewährt wurde. Nur verfügbar, wenn die Option „Kanaländerungen erlauben" aktiviert ist.           |
 | `/temp-channel edit [user-limit:<Integer>] [bitrate:<Integer>] [name:<Text>] [nsfw:<Boolean>]` | Bearbeite die Einstellungen deines temporären Kanals. Nur verfügbar, wenn die Option „Kanaländerungen erlauben" aktiviert ist.                                     |
+| `Add to Channel` (Nutzer-Kontextmenü)                                                          | Fügt einen Nutzer zu deinem temporären Kanal hinzu. Nur der Ersteller des temporären Kanals kann es in diesem Kanal nutzen.                                        |
+| `Remove from Channel` (Nutzer-Kontextmenü)                                                     | Entfernt einen Nutzer aus deinem temporären Kanal. Nur der Ersteller des temporären Kanals kann es in diesem Kanal nutzen.                                         |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Konfiguration {#configuration}
 

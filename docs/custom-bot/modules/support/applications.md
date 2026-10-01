@@ -44,6 +44,14 @@ Let users apply for staff positions, partnerships, and more - with customizable 
 | ---------------------------- | ----------------------------------------------------------------------------------------- |
 | `/apply category:<Category>` | Start an application in the specified category. The category field supports autocomplete. |
 
+| Command            | Type                 | Description                                                                                                                                |
+| ------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Approve User`     | User context command | Opens a form with a reason to approve the most recent application of the selected user. Requires the **Moderate Members** permission.      |
+| `Deny User`        | User context command | Opens a form with a reason to deny the most recent application of the selected user. Requires the **Moderate Members** permission.         |
+| `View Application` | User context command | Shows the answers of the most recent application of the selected user (only visible to you). Requires the **Moderate Members** permission. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 ### Application-Categories {#configuration-categories}

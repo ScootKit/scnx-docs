@@ -28,6 +28,9 @@ The first player that gets four rectangles of their color in any row wins the ga
 
 <SlashCommandExplanation />
 
-| Command         | Description                                                                                                                                                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/connect-four` | This command starts a Connect Four game against the specified user. You can also use the `field_size` option to define the width and height of the game field - it is 7 by default, but you can enter any value from 4 to 10. |
+| Command                                       | Description                                                                                                                                                                                                                   |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/connect-four`                               | This command starts a Connect Four game against the specified user. You can also use the `field_size` option to define the width and height of the game field - it is 7 by default, but you can enter any value from 4 to 10. |
+| Challenge to Connect Four (user context menu) | Right-click a user and choose "Apps" > "Challenge to Connect Four" to challenge them to a game. Works like `/connect-four` with the default field size.                                                                       |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.

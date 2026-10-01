@@ -37,12 +37,16 @@ If insecure message submission is enabled, users can also type directly into the
 
 <SlashCommandExplanation />
 
-| Command                                                                   | Description                                                                                                                                                                      |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/anonymous-message message:<Text> [reset-identity:<Boolean>]`            | Send an anonymous message to the configured channel. Optionally reset your anonymous identity before sending (only available if identity reset is enabled in the configuration). |
-| `/moderate-anonymous-channel disable display-name:<Text> [reason:<Text>]` | Block a user from sending anonymous messages by their anonymous display name. Optionally provide a reason. Requires the Moderate Members permission.                             |
-| `/moderate-anonymous-channel enable display-name:<Text>`                  | Unblock a previously blocked user by their anonymous display name. Requires the Moderate Members permission.                                                                     |
-| `/moderate-anonymous-channel delete-message message:<Text>`               | Delete an anonymous message. The message parameter supports autocomplete to search by content or ID. Requires the Moderate Members permission.                                   |
+| Command                                                                   | Description                                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/anonymous-message message:<Text> [reset-identity:<Boolean>]`            | Send an anonymous message to the configured channel. Optionally reset your anonymous identity before sending (only available if identity reset is enabled in the configuration).                                                   |
+| `/moderate-anonymous-channel disable display-name:<Text> [reason:<Text>]` | Block a user from sending anonymous messages by their anonymous display name. Optionally provide a reason. Requires the Moderate Members permission.                                                                               |
+| `/moderate-anonymous-channel enable display-name:<Text>`                  | Unblock a previously blocked user by their anonymous display name. Requires the Moderate Members permission.                                                                                                                       |
+| `/moderate-anonymous-channel delete-message message:<Text>`               | Delete an anonymous message. The message parameter supports autocomplete to search by content or ID. Requires the Moderate Members permission.                                                                                     |
+| `Block User` (user context menu)                                          | Block a user from the anonymous chat. Opens a form asking for a reason. Works like `/moderate-anonymous-channel disable`, but you pick the real user instead of entering a display name. Requires the Moderate Members permission. |
+| `Warn User` (user context menu)                                           | Warn a user about their anonymous-chat conduct. The warning is sent to the user by direct message. Requires the Moderate Members permission.                                                                                       |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

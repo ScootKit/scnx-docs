@@ -83,6 +83,15 @@ Use `/ping-protection list whitelisted` to see all **whitelisted users, roles, a
 | `/ping-protection list protected`                   | View all protected users and roles.                                                                                  |
 | `/ping-protection list whitelisted`                 | View all whitelisted roles, channels, and users.                                                                     |
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**. They are turned off by default, see [Setting up context menu commands](/docs/custom-bot/commands#context-menus).
+
+| Action                    | Type | Description                                                                                        | Default permission |
+| ------------------------- | ---- | -------------------------------------------------------------------------------------------------- | ------------------ |
+| `View Ping History`       | User | Shows the user's ping history, like `/ping-protection user history`.                               | Moderate Members   |
+| `View Moderation History` | User | Shows the moderation actions taken against the user, like `/ping-protection user actions-history`. | Moderate Members   |
+
 ## Configuration {#configuration}
 
 ### General Configuration {#configuration-general}

@@ -39,9 +39,9 @@ Archivierte Bilder zählen auf das [Datei-Speicherkontingent](/docs/scnx/guilds/
 
 <SlashCommandExplanation />
 
-| Befehl          | Beschreibung                                                                                                                                                                                   |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Quote Message` | Eine Kontextmenü-Aktion für Nachrichten (Apps). Klicke mit der rechten Maustaste auf eine Nachricht oder drücke lange darauf und wähle sie aus, um diese Nachricht als Zitat erneut zu posten. |
+| Befehl          | Beschreibung                                                                                                                                                                                                                                                                       |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Quote Message` | Eine Kontextmenü-Aktion für Nachrichten (Apps). Klicke mit der rechten Maustaste auf eine Nachricht oder drücke lange darauf und wähle sie aus, um diese Nachricht als Zitat erneut zu posten. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus). |
 
 Die **Quote Message**-Aktion berücksichtigt dieselbe Konfiguration wie das linkbasierte Zitieren. Wenn das Zitieren für das Ziel unterdrückt wird (zum Beispiel weil **Botnachrichten ignorieren?** aktiviert ist oder **Selbst-Zitate erlauben?** deaktiviert ist und du deine eigene Nachricht zitierst), antwortet der Bot privat (ephemeral) und postet nichts.
 

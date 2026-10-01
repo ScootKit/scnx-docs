@@ -33,18 +33,6 @@ This configuration file allows you to set up Threads accounts to monitor for new
 | Threads-Username | The @handle of the Threads user you want to receive notifications from.                                                                                                       |
 | Message          | The message sent to the configured channel when the user publishes a new thread on Threads. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
-### Message parameters {#message-parameters}
-
-You can use the following parameters in the message:
-
-| Parameter    | Description                 |
-| ------------ | --------------------------- |
-| `%userName%` | Name of the Threads user    |
-| `%url%`      | Link to the post on Threads |
-| `%preview%`  | Preview content of the post |
-
-The default message is an embed with the title "🧵%userName% just posted on Threads", the description `%preview%` followed by a "Read full content on Threads" link to `%url%`, the color `#2ccce4` and an "Open in Threads" button linking to `%url%`.
-
 Only the latest post of an account is checked on each run.
 
 ## Troubleshooting {#troubleshooting}

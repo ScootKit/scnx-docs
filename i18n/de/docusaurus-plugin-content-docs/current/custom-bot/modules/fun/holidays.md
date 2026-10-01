@@ -75,12 +75,6 @@ In dieser Konfigurationsdatei kannst du den Adventskalender einrichten. Öffne s
 | Tag 1-24 Belohnungsrollen (optional)                                        | Rollen, die Benutzer erhalten, wenn sie das Türchen des jeweiligen Tages öffnen.                                                                                                 |
 | Emojis                                                                      | Die Emojis, die auf den Kalender-Buttons angezeigt werden. Du kannst für jeden Tag (1-24) ein Emoji festlegen.                                                                   |
 
-In den Nachrichten kannst du folgende Platzhalter verwenden:
-
-- `%day%`: In der Kalendernachricht der heutige Tag des Monats. In den Tagesnachrichten der geöffnete Tag. In der Nachricht für falsche Tage der Tag, den der Nutzer öffnen wollte.
-- `%totalOpened%` (nur Kalendernachricht): Die Gesamtzahl der in diesem Jahr geöffneten Türchen.
-- `%daysToGo%` (nur Tagesnachrichten): Die verbleibenden Tage bis Heiligabend.
-
 ## Fehlerbehebung {#troubleshooting}
 
 <details>

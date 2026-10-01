@@ -43,6 +43,8 @@ In einem konfigurierten Wortketten-Kanal senden Mitglieder einzelne Wörter. Jed
 | Protect Last Word (Nachrichten-Kontextmenü)         | _Nur für Moderatoren._ Rechtsklick auf das zuletzt akzeptierte Wort und "Apps" > "Protect Last Word" wählen, damit der Bot es zusammen mit dem erforderlichen nächsten Buchstaben erneut postet. |
 | Reset Chain After Message (Nachrichten-Kontextmenü) | _Nur für Moderatoren._ Rechtsklick auf eine Nachricht und "Apps" > "Reset Chain After Message" wählen, um die Kette zurückzusetzen. Der Nachrichtenlink wird als Grund verwendet.                |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In dieser Konfigurationsdatei kannst du das Wortkette-Spiel konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=word-chain%7Cconfig).

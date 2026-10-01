@@ -31,6 +31,15 @@ Siehe dir unseren [SCNX Modmail Bot](https://modmail.net) an - ab <PlanPrice pla
 - Ticket-Teilnehmer (dein Team und der Nutzer, der das Ticket geöffnet hat) können im Ticket-Kanal Dateien anhängen und Links einbetten.
 - Nachdem das Ticket geschlossen wurde, wird der Bot ein Protokoll mit allen gesendeten Nachrichten erstellen. Dies wird in den eingestellten Log-Kanal und an den Nutzer gesendet (falls aktiviert).
 
+## Befehle {#commands}
+
+| Befehl                        | Typ                       | Beschreibung                                                                                                                                                                                    |
+| ----------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Create Ticket About Message` | Nachrichten-Kontextbefehl | Öffnet ein Ticket zur ausgewählten Nachricht, mit dem ersten konfigurierten Ticket-Typ. Das Ticket verlinkt auf die Nachricht und zitiert ihren Inhalt. Für alle verfügbar.                     |
+| `Close Ticket`                | Nachrichten-Kontextbefehl | Schließt das Ticket, in dem sich die ausgewählte Nachricht befindet, wie der "Close Ticket"-Knopf. Erfordert die Berechtigung **Kanäle verwalten**. Funktioniert nur in offenen Ticket-Kanälen. |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In dieser Datei kannst du die Ticket-Kategorie einstellen. Jedes Ticket hat seine eigene Ticket-Erstellungs-Nachricht haben, welche in den eingestellten Kanal gesendet wird. Die Ticket-Kategorie wird unabhängig von den anderen Kategorien agieren. Du kannst die [Datei in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=tickets|config) öffnen, um zu loszulegen.

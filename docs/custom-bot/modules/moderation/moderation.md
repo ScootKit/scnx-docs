@@ -7,7 +7,7 @@ Advanced security and moderation system with tons of features for keeping your s
 ## Features {#features}
 
 - Comprehensive moderation commands: [warn](#warn), [mute](#mute), [kick](#kick), [ban](#ban), [quarantine](#quarantine), [channel-mute](#channel-mute), and [clear](#clear).
-- Warn, Mute, Kick, and Ban are also available as right-click [context-menu actions](#context-menu-actions) on users and messages, and they accept evidence.
+- Warn, Mute, Kick, and Ban are also available as right-click [context-menu actions](#context-menu-actions) on users, and they accept evidence (see [Setting up context menu commands](/docs/custom-bot/commands#context-menus)).
 - Support for temporary bans, mutes, and quarantines with automatic expiration, plus [editable durations](#edit-duration) that shorten or extend an active punishment after the fact.
 - [Lift punishments in one click](#lift-punishment) straight from the log message or the actions view.
 - [Channel lock and unlock](#lock-unlock) commands to restrict messaging in a channel.
@@ -92,7 +92,17 @@ Locks or unlocks the current channel, preventing or allowing the @everyone role 
 
 ### Context-menu actions {#context-menu-actions}
 
-Warn, Mute, Kick, and Ban are also available as right-click actions. Right-click a user (or a message, then choose **Apps**) and pick **Warn**, **Mute**, **Kick**, or **Ban**. A modal opens for the reason and, when [custom case titles](#configuration-config) are enabled, the title. Every context-menu action includes an optional evidence field where you can upload up to ten proof images in one go. There are also **Report User** and **Report Message** actions for members, and a **Mod History** action that shows a user's past cases.
+Warn, Mute, Kick, and Ban are also available as right-click actions. Right-click a user, open **Apps**, and pick **Warn**, **Mute**, **Kick**, or **Ban**. A modal opens for the reason and, when [custom case titles](#configuration-config) are enabled, the title. Every context-menu action includes an optional evidence field where you can upload up to ten proof images in one go. The following context menu actions are available. To set them up, see [Setting up context menu commands](/docs/custom-bot/commands#context-menus).
+
+| Action           | Type    | Description                                                                                                                             | Default permission |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| `Warn`           | User    | Warns the user.                                                                                                                         | Moderate Members   |
+| `Mute`           | User    | Mutes the user for the default duration.                                                                                                | Moderate Members   |
+| `Kick`           | User    | Kicks the user.                                                                                                                         | Kick Members       |
+| `Ban`            | User    | Bans the user.                                                                                                                          | Ban Members        |
+| `Mod History`    | User    | Shows the moderation actions taken against the user, like `/moderate actions`. Requires at least the moderation level needed for warns. | Moderate Members   |
+| `Report User`    | User    | Reports the user to the moderation team. Opens a modal for the reason and optional proof.                                               | Everyone           |
+| `Report Message` | Message | Reports the message to the moderation team. Opens a modal for the reason.                                                               | Everyone           |
 
 ### Lift punishment {#lift-punishment}
 

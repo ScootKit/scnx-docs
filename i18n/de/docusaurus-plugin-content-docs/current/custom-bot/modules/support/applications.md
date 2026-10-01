@@ -44,6 +44,14 @@ Lass deine Mitglieder sich für Teampositionen, Partnerschaften und mehr bewerbe
 | ---------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `/apply category:<Category>` | Starte eine Bewerbung in der angegebenen Kategorie. Das Kategorie-Feld unterstützt Autovervollständigung. |
 
+| Befehl             | Typ                  | Beschreibung                                                                                                                                             |
+| ------------------ | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Approve User`     | Nutzer-Kontextbefehl | Öffnet ein Formular mit einem Grund, um die neueste Bewerbung des ausgewählten Nutzers anzunehmen. Erfordert die Berechtigung **Mitglieder moderieren**. |
+| `Deny User`        | Nutzer-Kontextbefehl | Öffnet ein Formular mit einem Grund, um die neueste Bewerbung des ausgewählten Nutzers abzulehnen. Erfordert die Berechtigung **Mitglieder moderieren**. |
+| `View Application` | Nutzer-Kontextbefehl | Zeigt die Antworten der neuesten Bewerbung des ausgewählten Nutzers an (nur für dich sichtbar). Erfordert die Berechtigung **Mitglieder moderieren**.    |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 ### Bewerbungen-Kategorien {#configuration-categories}

@@ -33,22 +33,6 @@ In dieser Konfigurationsdatei kannst du Subreddits einrichten, die auf neue Thre
 | Subbredit-Name (r/\<NameHier>) | Der Name des Subreddits, der überwacht werden soll (der Teil nach `r/`).                                                                                                                           |
 | Nachricht                      | Die Nachricht, die in den konfigurierten Kanal gesendet wird, wenn ein neuer Thread gepostet wird. Unterstützt Embeds.<br/><i>Bitte sieh dir die verfügbaren Parameter in deinem Dashboard an.</i> |
 
-### Nachrichten-Parameter {#message-parameters}
-
-Du kannst folgende Parameter in der Nachricht verwenden:
-
-| Parameter             | Beschreibung                                     |
-| --------------------- | ------------------------------------------------ |
-| `%title%`             | Name des Threads                                 |
-| `%url%`               | Link zum Thread                                  |
-| `%authorName%`        | Name des Erstellers des Threads                  |
-| `%mediaURL%`          | URL zu einer angehängten Mediendatei des Threads |
-| `%subredditTitle%`    | Titel des Subreddits                             |
-| `%subredditSubtitle%` | Untertitel des Subreddits                        |
-| `%subredditName%`     | Name des Subreddits (z. B. /r/ich_iel)           |
-
-Die Standardnachricht lautet "📰 Neuer Thread in %subredditName% (%subredditTitle%) verfügbar: %url%".
-
 Bei jedem Durchlauf werden nur die 10 neuesten Threads eines Subreddits geprüft.
 
 ## Fehlerbehebung {#troubleshooting}

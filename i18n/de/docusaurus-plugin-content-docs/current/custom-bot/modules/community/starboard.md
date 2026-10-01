@@ -29,6 +29,16 @@ Sobald eine Nachricht ins Starboard gepostet wird, werden alle Bildanhänge in d
 
 Archivierte Bilder zählen auf das [Datei-Speicherkontingent](/docs/scnx/guilds/files#understanding-storage-limits) deines Servers. Um dies zu deaktivieren, aktiviere **Anhang-Archivierung deaktivieren** in der allgemeinen Konfiguration des Bots; in diesem Fall greift das Starboard wieder auf Discords ablaufende URLs zurück, und alte Posts werden mit der Zeit erneut defekt sein.
 
+## Befehle {#commands}
+
+<SlashCommandExplanation />
+
+| Befehl                                   | Beschreibung                                                                                                                  |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `Star Message` (Nachrichten-Kontextmenü) | Fügt diese Nachricht sofort zum Starboard hinzu, unabhängig von der Einstellung **Mindestanzahl Sterne**. Für alle verfügbar. |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In der Konfiguration kannst du den Starboard-Kanal, die Nachricht und die Nutzungsmöglichkeiten für Nutzer in Discord festlegen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=starboard%7Cconfig).

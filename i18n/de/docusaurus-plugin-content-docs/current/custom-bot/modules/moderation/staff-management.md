@@ -168,7 +168,7 @@ Folge [dieser Anleitung](/de/docs/custom-bot/slash-commands), um deine Serverein
 
 ### Kontextmenü-Aktionen {#context-menu-actions}
 
-Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste auf einen Nutzer klickst (auf dem Handy lange drücken) und **Apps** wählst:
+Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste auf einen Nutzer klickst (auf dem Handy lange drücken) und **Apps** wählst (siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus)):
 
 | Aktion               | Beschreibung                                                                                                                                                                                          |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -307,22 +307,6 @@ Konfiguriere manuelle und automatisierte Aktivitäts-Checks, um zu prüfen, ob T
 | Ergebniskanal                           | Der Kanal, in dem die Ergebnisse des Aktivitäts-Checks gepostet werden. Die Ergebnisse zeigen, wer reagiert hat, wer nicht und wer ausgenommen war. Leer lassen, um den Allgemeinen Protokoll-Kanal zu verwenden.       |
 | Ping bei Ergebnissen                    | Legt fest, ob eine Rolle mit den Ergebnissen gepingt wird oder nicht.                                                                                                                                                   |
 | Rollen zu benachrichtigen               | Die eigene(n) Rolle(n), die mit den Ergebnissen gepingt werden.                                                                                                                                                         |
-
-### Platzhalter {#configuration-placeholders}
-
-Die anpassbaren Nachrichten unterstützen die folgenden Platzhalter (geschrieben wie `%placeholder%`):
-
-| Nachricht                                              | Platzhalter                                                                                                                                          |
-| ------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Verstoßankündigungsnachricht                           | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                   |
-| Suspendierungsankündigungsnachricht                    | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`               |
-| Verstoß-DM-Nachricht                                   | `%user%`, `%issuer-name%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                                                                           |
-| Suspendierungs-DM-Nachricht                            | `%user%`, `%issuer-name%`, `%type%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`                                                             |
-| Beförderungsankündigungs-Embed & Beförderungs-DM-Embed | `%user-mention%`, `%new-role-name%`, `%new-role-mention%`, `%promoter-mention%`, `%promoter-name%`, `%reason%`, `%user-avatar%`, `%promoter-avatar%` |
-| Bewertungsnachricht                                    | `%staff-mention%`, `%reviewer-mention%`, `%stars%`, `%rating%`, `%comment%`, `%staff-avatar%`, `%reviewer-avatar%`                                   |
-| Profilembed                                            | `%user-mention%`, `%username%`, `%nickname%`, `%intro%`, `%status%`, `%rating%`, `%avatar%`                                                          |
-| Aktivitäts-Check-Embed                                 | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`                                         |
-| Beendetes Aktivitäts-Check-Embed                       | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`, `%responded-count%`                    |
 
 ## Fehlerbehebung {#troubleshooting}
 

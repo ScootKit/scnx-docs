@@ -41,6 +41,8 @@ Simple module to manage the roles of many members at once.
 | `Add Role to User`         | Adds a role selected in a dropdown to this single member. Requires one of the admin roles.      |
 | `Remove Role from User`    | Removes a role selected in a dropdown from this single member. Requires one of the admin roles. |
 
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 ### Configuration {#configuration-config}

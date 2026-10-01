@@ -62,12 +62,16 @@ If a player does not move within the configured timeout, they receive a reminder
 
 <SlashCommandExplanation />
 
-| Command                                               | Description                                                     |
-| ----------------------------------------------------- | --------------------------------------------------------------- |
-| `/chess challenge user:<User>`                        | Challenge another member to a chess game.                       |
-| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Start a chess game against the AI (default difficulty: Medium). |
-| `/chess games`                                        | List your active chess games.                                   |
-| `/chess history [user:<User>]`                        | View completed chess game history (yours or another player's).  |
+| Command                                               | Description                                                                                                                  |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `/chess challenge user:<User>`                        | Challenge another member to a chess game.                                                                                    |
+| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Start a chess game against the AI (default difficulty: Medium).                                                              |
+| `/chess games`                                        | List your active chess games.                                                                                                |
+| `/chess history [user:<User>]`                        | View completed chess game history (yours or another player's).                                                               |
+| View Chess History (user context menu)                | Right-click a user and choose "Apps" > "View Chess History" to see their completed chess games. Works like `/chess history`. |
+| Challenge to Chess (user context menu)                | Right-click a user and choose "Apps" > "Challenge to Chess" to challenge them to a game. Works like `/chess challenge`.      |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

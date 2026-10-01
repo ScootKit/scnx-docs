@@ -38,6 +38,8 @@ Bearbeite Supportanfragen in öffentlichen Foren - sende eine Nachricht, wenn ei
 | ------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Close Thread | Nachrichten-Kontextbefehl | Schließt den Forum-Post, in dem sich die ausgewählte Nachricht befindet ("Diesen Forum-Support-Beitrag schließen"). Erfordert die Berechtigung **Mitglieder moderieren**. Funktioniert wie der Schließen-Knopf: Der Geschlossen-Tag wird hinzugefügt (falls aktiviert), die "Anfrage-Gelöst-Nachricht" wird gesendet, der Thread wird gesperrt (falls aktiviert) und archiviert. Funktioniert nur in Posts von Forum-Kanälen, die in diesem Modul konfiguriert sind. |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In dieser Konfigurationsdatei richtest du Forum-Kanäle für den Support ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=forum-support%7Cchannels).

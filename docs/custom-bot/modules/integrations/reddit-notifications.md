@@ -33,22 +33,6 @@ This configuration file allows you to set up subreddits to monitor for new threa
 | Subreddit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`).                                                                                                 |
 | Message                        | The message sent to the configured channel when a new thread gets posted. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
-### Message parameters {#message-parameters}
-
-You can use the following parameters in the message:
-
-| Parameter             | Description                                 |
-| --------------------- | ------------------------------------------- |
-| `%title%`             | Title of the thread                         |
-| `%url%`               | Link to the thread                          |
-| `%authorName%`        | Name of the author of the thread            |
-| `%mediaURL%`          | URL to an attached media file of the thread |
-| `%subredditTitle%`    | Title of the subreddit                      |
-| `%subredditSubtitle%` | Subtitle of the subreddit                   |
-| `%subredditName%`     | Name of the subreddit (e.g. /r/irl)         |
-
-The default message is "📰 New Thread availible in %subredditName% (%subredditTitle%): %url%".
-
 For each check, only the 10 newest threads of a subreddit are considered.
 
 ## Troubleshooting {#troubleshooting}

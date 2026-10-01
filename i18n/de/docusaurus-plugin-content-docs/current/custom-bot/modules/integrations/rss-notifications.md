@@ -34,24 +34,6 @@ In dieser Konfigurationsdatei kannst du Feeds einrichten, die auf neue Inhalte �
 | RSS-/Atom-Feed-URL | Die URL zu einem gültigen RSS- oder Atom-Feed. Der Feed wird alle fünfzehn Minuten geprüft.                                                                                                             |
 | Nachricht          | Die Nachricht, die in den konfigurierten Kanal gesendet wird, wenn ein neuer Eintrag im Feed erscheint. Unterstützt Embeds.<br/><i>Bitte sieh dir die verfügbaren Parameter in deinem Dashboard an.</i> |
 
-### Nachrichten-Parameter {#message-parameters}
-
-Du kannst folgende Parameter in der Nachricht verwenden:
-
-| Parameter           | Beschreibung                            |
-| ------------------- | --------------------------------------- |
-| `%title%`           | Titel des Eintrages                     |
-| `%description%`     | Beschreibung des Eintrages              |
-| `%id%`              | ID des Eintrages                        |
-| `%url%`             | Link zum Eintrag                        |
-| `%feedTitle%`       | Titel des Feeds                         |
-| `%feedDescription%` | Beschreibung des Feeds                  |
-| `%feedURL%`         | Link des Feeds                          |
-| `%mediaURL%`        | URL zu einem Medium im Eintrag          |
-| `%publishedAt%`     | Datum der Veröffentlichung des Eintrags |
-
-Die Standardnachricht ist ein Embed mit dem Titel "📰 Neuer Inhalt in %feedTitle%", der Beschreibung `**%title%**`, `%description%` und einem Link "Artikel lesen" auf `%url%`, der Farbe `#37d67a` und `%mediaURL%` als Bild.
-
 Bei jedem Durchlauf werden nur die 10 neuesten Einträge eines Feeds geprüft, und Beschreibungen von Einträgen werden auf 920 Zeichen gekürzt.
 
 ## Fehlerbehebung {#troubleshooting}

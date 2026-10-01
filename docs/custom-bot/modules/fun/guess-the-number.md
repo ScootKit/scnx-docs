@@ -64,14 +64,6 @@ In this configuration file, you can configure the game behavior and messages. Op
 | React with Lower / Higher reactions | If enabled, the bot reacts with up/down arrows on wrong guesses to indicate whether the correct number is higher or lower. If disabled, wrong guesses receive a cross reaction. |
 | Enable leaderboard?                 | If enabled, every guess and every win is tracked per user. A **Leaderboard** button appears on new game start messages, and players can view the top 20 players ranked by wins. |
 
-You can use the following placeholders in the messages:
-
-- `%min%`: The lowest possible number (start and end message).
-- `%max%`: The highest possible number (start and end message).
-- `%winner%` (end message only): Mention of the winner.
-- `%guessCount%` (end message only): Number of guesses in this game.
-- `%number%` (end message only): The number that had to be guessed.
-
 ### Gamechannel Mode {#config-channel}
 
 In this configuration file, you can enable and configure the automatic game channel. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=guess-the-number%7Cconfigs/channel).

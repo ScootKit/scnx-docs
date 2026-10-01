@@ -46,6 +46,8 @@ Wenn ein Moderator entscheidet, dass die Runde abgeschlossen ist, führt er [`/w
 | `/word-story new [opening:<Word>]`    | _Nur für Moderatoren._ Startet eine neue Runde in einem leeren Kanal. Optional kann die Geschichte mit einem einzelnen Anfangswort begonnen werden.                                   |
 | View Story Stats (Nutzer-Kontextmenü) | Rechtsklick auf einen Nutzer und "Apps" > "View Story Stats" wählen, um zu sehen, wie viele Wörter er zur aktiven Geschichte beigetragen hat und welchen Platz er belegt (ephemeral). |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In dieser Konfigurationsdatei kannst du das Ein-Wort-Geschichte-Spiel konfigurieren. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=one-word-story%7Cconfig).

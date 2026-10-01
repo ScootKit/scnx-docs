@@ -82,6 +82,15 @@ Mit `/ping-protection list whitelisted` siehst du alle **freigestellten Nutzer, 
 | `/ping-protection list protected`                   | Zeigt alle geschützten Nutzer und Rollen an.                                                                                  |
 | `/ping-protection list whitelisted`                 | Zeigt alle freigestellten Rollen, Kanäle und Nutzer an.                                                                       |
 
+### Kontextmenü-Aktionen {#context-menu-actions}
+
+Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste auf einen Nutzer klickst (auf dem Handy lange drücken) und **Apps** wählst. Sie sind standardmäßig ausgeschaltet, siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus).
+
+| Aktion                    | Typ    | Beschreibung                                                                                             | Standardberechtigung  |
+| ------------------------- | ------ | -------------------------------------------------------------------------------------------------------- | --------------------- |
+| `View Ping History`       | Nutzer | Zeigt den Ping-Verlauf des Nutzers, wie `/ping-protection user history`.                                 | Mitglieder moderieren |
+| `View Moderation History` | Nutzer | Zeigt die gegen den Nutzer ergriffenen Moderationsaktionen, wie `/ping-protection user actions-history`. | Mitglieder moderieren |
+
 ## Konfiguration {#configuration}
 
 ### Allgemeine Konfiguration {#configuration-general}

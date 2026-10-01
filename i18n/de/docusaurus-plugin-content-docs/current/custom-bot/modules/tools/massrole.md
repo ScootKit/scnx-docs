@@ -41,6 +41,8 @@ Einfaches Modul, um die Rollen vieler Mitglieder gleichzeitig zu verwalten.
 | `Add Role to User`          | Fügt diesem einzelnen Mitglied eine im Dropdown ausgewählte Rolle hinzu. Erfordert eine der Admin-Rollen.   |
 | `Remove Role from User`     | Entfernt eine im Dropdown ausgewählte Rolle von diesem einzelnen Mitglied. Erfordert eine der Admin-Rollen. |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 ### Konfiguration {#configuration-config}

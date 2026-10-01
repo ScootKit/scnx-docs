@@ -37,6 +37,8 @@ Das Spiel endet, wenn:
 | `/tic-tac-toe user:<Nutzer>`                  | Fordere einen anderen Nutzer zu einer Runde Tic Tac Toe heraus.                                                     |
 | Challenge to Tic Tac Toe (Nutzer-Kontextmenü) | Rechtsklick auf einen Nutzer und "Apps" > "Challenge to Tic Tac Toe" wählen, um ihn zu einer Runde herauszufordern. |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Fehlerbehebung {#troubleshooting}
 
 <details>

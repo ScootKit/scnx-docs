@@ -42,10 +42,12 @@ Außerdem gibt es noch die Karten „Ziehe 2" und „Farbwahl und ziehe 4": Dadu
 
 <SlashCommandExplanation />
 
-| Befehl | Beschreibung                                                                                                                              |
-| ------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `/uno` | Startet ein Uno-Spiel im aktuellen Kanal. Weitere Informationen zur Funktionsweise findest du im [Abschnitt zur Verwendung](#usage) oben. |
-|        |
+| Befehl                                | Beschreibung                                                                                                                                   |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/uno`                                | Startet ein Uno-Spiel im aktuellen Kanal. Weitere Informationen zur Funktionsweise findest du im [Abschnitt zur Verwendung](#usage) oben.      |
+| Challenge to Uno (Nutzer-Kontextmenü) | Rechtsklick auf einen Nutzer und "Apps" > "Challenge to Uno" wählen, um wie mit `/uno` eine Uno-Runde zu starten und diesen Nutzer einzuladen. |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Fehlerbehebung {#troubleshooting}
 

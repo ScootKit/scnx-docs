@@ -34,24 +34,6 @@ This configuration file allows you to set up feeds to monitor for new items. Ope
 | RSS / Atom Feed URL | The URL to a valid RSS or Atom feed. The feed will be checked every fifteen minutes.                                                                              |
 | Message             | The message sent to the configured channel when a new item appears in the feed. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
-### Message parameters {#message-parameters}
-
-You can use the following parameters in the message:
-
-| Parameter           | Description                  |
-| ------------------- | ---------------------------- |
-| `%title%`           | Title of the item            |
-| `%description%`     | Description of the item      |
-| `%id%`              | ID of the item               |
-| `%url%`             | Link of the item             |
-| `%feedTitle%`       | Title of the feed            |
-| `%feedDescription%` | Description of the feed      |
-| `%feedURL%`         | Link of the feed             |
-| `%mediaURL%`        | URL to a media in the entry  |
-| `%publishedAt%`     | Date when item was published |
-
-The default message is an embed with the title "📰 New item in %feedTitle%", the description `**%title%**`, `%description%` and a "Read article" link to `%url%`, the color `#37d67a` and `%mediaURL%` as image.
-
 Only the 10 newest entries of a feed are checked on each run, and item descriptions are shortened to 920 characters.
 
 ## Troubleshooting {#troubleshooting}

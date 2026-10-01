@@ -39,6 +39,8 @@ Nutzer können die unten beschriebenen Slash-Befehle verwenden, um miteinander z
 | `Slap` (Nutzer-Kontextmenü)                 | Rechtsklick auf einen Nutzer und "Apps" > "Slap" wählen, um ihn zu schlagen. Funktioniert wie `/slap`.                                 |
 | `Pat` (Nutzer-Kontextmenü)                  | Rechtsklick auf einen Nutzer und "Apps" > "Pat" wählen, um ihn zu tätscheln. Funktioniert wie `/pat`.                                  |
 
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 In dieser Konfigurationsdatei kannst du die vom Modul verwendeten Nachrichten und Bilder anpassen. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=fun%7Cconfig).
@@ -59,15 +61,6 @@ In dieser Konfigurationsdatei kannst du die vom Modul verwendeten Nachrichten un
 | Tätschel-Bilder       | Liste von Bild-URLs, aus denen bei Nutzung von `/pat` zufällig eine ausgewählt wird.  |
 | 8ball-Nachricht       | Nachricht, die gesendet wird, wenn jemand `/random 8ball` benutzt.                    |
 | 8ball-Antworten       | Liste möglicher Antworten, die der 8ball geben kann.                                  |
-
-Die folgenden Platzhalter können in den Nachrichten verwendet werden:
-
-- `%name%` (nur IKEA-Nachricht): Der zufällig generierte IKEA-Produktname.
-- `%min%`, `%max%`, `%number%` (nur Zufallszahl-Nachricht): Der Minimalwert, der Maximalwert und die generierte Zahl.
-- `%number%` (nur Würfel-Nachricht): Die gewürfelte Zahl.
-- `%site%` (nur Münzwurf-Nachricht): Die Seite, auf die die Münze gefallen ist.
-- `%authorID%`, `%userID%` (Umarmungs-, Kuss-, Schlag- und Tätschel-Nachrichten): Die ID des Nutzers, der den Befehl ausgeführt hat, und die ID des ausgewählten Nutzers.
-- `%answer%` (nur 8ball-Nachricht): Die zufällig ausgewählte Antwort.
 
 ## Fehlerbehebung {#troubleshooting}
 

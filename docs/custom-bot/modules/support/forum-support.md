@@ -38,6 +38,8 @@ Process support requests in public forums - send a message when a new thread get
 | ------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Close Thread | Message context command | Closes the forum post the selected message is in. Requires the **Moderate Members** permission. Works like the close button: it adds the closed tag (if enabled), sends the "Request closed message", locks the thread (if enabled) and archives it. Only works in posts in forum channels configured in this module. |
 
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 In this configuration file, you set up forum channels for support. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=forum-support%7Cchannels).

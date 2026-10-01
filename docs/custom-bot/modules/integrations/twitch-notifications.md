@@ -38,18 +38,6 @@ This configuration file allows you to set up Twitch streamers to monitor. Open i
 | Discord-User ID | The Discord user ID of the streamer. Only required if the live role feature is enabled.                                                                   |
 | Live Role       | The role to assign to the streamer when they are live. Only required if the live role feature is enabled.                                                 |
 
-### Live message placeholders {#placeholders}
-
-The following placeholders can be used in the "Live-Messages" field:
-
-| Placeholder      | Description                                                                 |
-| ---------------- | --------------------------------------------------------------------------- |
-| `%streamer%`     | Name of the Streamer                                                        |
-| `%game%`         | Game which is streamed                                                      |
-| `%url%`          | Link to the stream                                                          |
-| `%title%`        | Title of the Stream                                                         |
-| `%thumbnailUrl%` | The Link to the thumbnail of the Stream (can be used as an image in embeds) |
-
 ## Troubleshooting {#troubleshooting}
 
 <details>

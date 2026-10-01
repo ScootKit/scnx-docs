@@ -46,6 +46,8 @@ When a moderator decides the round is done, they run [`/word-story end`](#comman
 | `/word-story new [opening:<Word>]`   | _Moderator-only._ Starts a fresh round in an empty channel. Optionally seeds the story with a single opening word.                                |
 | View Story Stats (user context menu) | Right-click a user and choose "Apps" > "View Story Stats" to see how many words they contributed to the active story and their rank (ephemeral).  |
 
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 In this configuration file, you can configure the One-Word Story game. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=one-word-story%7Cconfig).

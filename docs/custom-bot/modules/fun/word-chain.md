@@ -43,6 +43,8 @@ In a configured chain channel, members send single words. Each new word must sta
 | Protect Last Word (message context menu)         | _Moderator-only._ Right-click the last accepted word and choose "Apps" > "Protect Last Word" to make the bot repost it with the required next letter.      |
 | Reset Chain After Message (message context menu) | _Moderator-only._ Right-click a message and choose "Apps" > "Reset Chain After Message" to reset the chain; the message link is used as the reason.        |
 
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 In this configuration file, you can configure the Word Chain game. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=word-chain%7Cconfig).

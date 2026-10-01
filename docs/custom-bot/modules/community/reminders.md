@@ -36,6 +36,9 @@ When the reminder triggers, the bot sends the configured notification message al
 | Command                                           | Description                                                                                                                                                                                                                                |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Set a reminder. The `in` parameter accepts a [duration format](/docs/custom-bot/additional-features#durations) (e.g., "2h", "30m", "1d"). The `what` parameter is the reminder message. Set `dm` to `true` to receive the reminder via DM. |
+| `Create Reminder` (message context menu)          | Remind yourself about a message. Opens a form asking when you want to be reminded; the reminder contains a link to the message.                                                                                                            |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

@@ -41,6 +41,14 @@ Fortschrittliches Modul, um Vorschläge auf deinem Server zu bearbeiten.
 | `/manage-suggestion accept id:<VorschlagsID> comment:<Text>` | Erlaubt es Admins, einen von einem Nutzer eingereichten Vorschlag zu akzeptieren. Der Kommentar wird in der aktualisierten Nachricht angezeigt. |
 | `/manage-suggestion deny id:<VorschlagsID> comment:<Text>`   | Erlaubt es Admins, einen von einem Nutzer eingereichten Vorschlag abzulehnen. Der Kommentar wird in der aktualisierten Nachricht angezeigt.     |
 
+| Befehl                  | Typ                       | Beschreibung                                                                                                                                                                                                                         |
+| ----------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Approve Suggestion`    | Nachrichten-Kontextbefehl | Öffnet ein Formular mit optionalem Kommentar, um den Vorschlag anzunehmen, zu dem die ausgewählte Nachricht gehört. Erfordert die Berechtigung **Nachrichten verwalten**. Funktioniert nur bei Vorschlags-Nachrichten dieses Moduls. |
+| `Deny Suggestion`       | Nachrichten-Kontextbefehl | Öffnet ein Formular mit optionalem Grund, um den Vorschlag abzulehnen, zu dem die ausgewählte Nachricht gehört. Erfordert die Berechtigung **Nachrichten verwalten**. Funktioniert nur bei Vorschlags-Nachrichten dieses Moduls.     |
+| `Convert to Suggestion` | Nachrichten-Kontextbefehl | Wandelt die ausgewählte Nachricht in einen Vorschlag um. Der Vorschlag wird dem Autor der Nachricht zugeordnet, nicht dir. Erfordert die Berechtigung **Nachrichten verwalten**.                                                     |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 Mit dieser Konfigurationsdatei kannst du Funktionen des Moduls konfigurieren und das Aussehen von Nachrichten verändern.

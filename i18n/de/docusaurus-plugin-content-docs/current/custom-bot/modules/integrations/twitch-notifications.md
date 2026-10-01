@@ -38,18 +38,6 @@ In dieser Konfigurationsdatei kannst du die zu überwachenden Twitch-Streamer fe
 | Discord-Benutzer ID   | Die Discord-Benutzer-ID des Streamers. Nur erforderlich, wenn die Live-Rolle aktiviert ist.                                                                                         |
 | Live Rolle            | Die Rolle, die dem Streamer zugewiesen wird, solange er live ist. Nur erforderlich, wenn die Live-Rolle aktiviert ist.                                                              |
 
-### Platzhalter für die Live-Nachricht {#placeholders}
-
-Im Feld "Live-Nachricht" kannst du die folgenden Platzhalter verwenden:
-
-| Platzhalter      | Beschreibung                                                            |
-| ---------------- | ----------------------------------------------------------------------- |
-| `%streamer%`     | Name des Streamers                                                      |
-| `%game%`         | Spiel, welches gestreamt wird                                           |
-| `%url%`          | Link zum Twitch-Stream                                                  |
-| `%title%`        | Titel des Streams                                                       |
-| `%thumbnailUrl%` | Link zum Thumbnail des Streams (kann als Bild in Embeds genutzt werden) |
-
 ## Fehlerbehebung {#troubleshooting}
 
 <details>

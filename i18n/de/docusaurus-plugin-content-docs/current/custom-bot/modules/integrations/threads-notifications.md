@@ -33,18 +33,6 @@ In dieser Konfigurationsdatei kannst du Threads-Konten einrichten, die auf neue 
 | Thread-Nutzername | Der @Handle des Threads-Nutzers, von dem du Benachrichtigungen erhalten möchtest.                                                                                                                                            |
 | Nachricht         | Die Nachricht, die in den konfigurierten Kanal gesendet wird, wenn der Nutzer einen neuen Thread auf Threads veröffentlicht. Unterstützt Embeds.<br/><i>Bitte sieh dir die verfügbaren Parameter in deinem Dashboard an.</i> |
 
-### Nachrichten-Parameter {#message-parameters}
-
-Du kannst folgende Parameter in der Nachricht verwenden:
-
-| Parameter    | Beschreibung                 |
-| ------------ | ---------------------------- |
-| `%userName%` | Name des Threads-Nutzers     |
-| `%url%`      | Link zum Beitrag auf Threads |
-| `%preview%`  | Inhalt der Beitragsvorschau  |
-
-Die Standardnachricht ist ein Embed mit dem Titel "🧵%userName% hat gerade auf Threads gepostet", der Beschreibung `%preview%` gefolgt von einem Link "Gesamten Inhalt auf Threads lesen" auf `%url%`, der Farbe `#2ccce4` und einem Button "Auf Threads öffnen", der auf `%url%` verlinkt.
-
 Bei jedem Durchlauf wird nur der neueste Beitrag eines Kontos geprüft.
 
 ## Fehlerbehebung {#troubleshooting}

@@ -64,14 +64,6 @@ In dieser Konfigurationsdatei kannst du das Spielverhalten und die Nachrichten f
 | Reagiere mit Niedriger-/Höher-Emojis | Wenn aktiviert, reagiert der Bot bei falschen Versuchen mit Pfeilen nach oben/unten, um anzuzeigen, ob die gesuchte Zahl höher oder niedriger ist. Falls deaktiviert, erhalten falsche Versuche eine Kreuz-Reaktion. |
 | Bestenliste aktivieren?              | Wenn aktiviert, werden jeder Versuch und jeder Sieg pro Nutzer erfasst. Bei neuen Startnachrichten erscheint ein Button **Rangliste**, über den Spieler die Top 20 nach Siegen sehen können.                         |
 
-In den Nachrichten kannst du folgende Platzhalter verwenden:
-
-- `%min%`: Die kleinstmögliche Zahl (Start- und Endnachricht).
-- `%max%`: Die größtmögliche Zahl (Start- und Endnachricht).
-- `%winner%` (nur Endnachricht): Erwähnung des Gewinners.
-- `%guessCount%` (nur Endnachricht): Anzahl der Versuche in diesem Spiel.
-- `%number%` (nur Endnachricht): Die Zahl, die erraten werden musste.
-
 ### Spielkanal-Modus {#config-channel}
 
 In dieser Konfigurationsdatei kannst du den automatischen Spielkanal aktivieren und einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=guess-the-number%7Cconfigs/channel).
