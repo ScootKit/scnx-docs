@@ -24,6 +24,7 @@ Word-association game (Szólánc / letzter-Buchstabe-Spiel) where each new word 
 2. In the [configuration](#configuration), add at least one channel to the "Channels" list.
 3. The bot needs the "Send Messages", "Add Reactions", "Manage Messages", and "Manage Channels" permissions in the configured channels (the last one is required for the channel topic feature).
 4. Optionally configure a moderator role - members with this role (or with the "Manage Messages" permission, if no role is set) can run the `/word-chain reset` command.
+5. If you use the strike system with a role instead of removing permissions, the bot also needs the "Manage Roles" permission.
 
 ## Usage {#usage}
 
@@ -33,11 +34,14 @@ In a configured chain channel, members send single words. Each new word must sta
 
 <SlashCommandExplanation />
 
-| Command                             | Description                                                                                                             |
-| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `/word-chain status`                | Shows the last word, the required next letter, the current chain length, and the longest chain so far (ephemeral).      |
-| `/word-chain stats`                 | Shows a top-15 contributor leaderboard for the active chain plus the longest-chain record (ephemeral).                  |
-| `/word-chain reset [reason:<Text>]` | _Moderator-only._ Resets the chain back to an empty state. The optional reason is included in the public reset message. |
+| Command                                          | Description                                                                                                                                                |
+| ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/word-chain status`                             | Shows the last word, the required next letter, the current chain length, and the longest chain so far (ephemeral).                                         |
+| `/word-chain stats`                              | Shows a top-15 contributor leaderboard for the active chain plus the longest-chain record (ephemeral).                                                     |
+| `/word-chain reset [reason:<Text>]`              | _Moderator-only._ Resets the chain back to an empty state. The optional reason is included in the public reset message.                                    |
+| Word Chain Status for User (user context menu)   | Right-click a user and choose "Apps" > "Word Chain Status for User" to see how many words they contributed to the active chain and their rank (ephemeral). |
+| Protect Last Word (message context menu)         | _Moderator-only._ Right-click the last accepted word and choose "Apps" > "Protect Last Word" to make the bot repost it with the required next letter.      |
+| Reset Chain After Message (message context menu) | _Moderator-only._ Right-click a message and choose "Apps" > "Reset Chain After Message" to reset the chain; the message link is used as the reason.        |
 
 ## Configuration {#configuration}
 

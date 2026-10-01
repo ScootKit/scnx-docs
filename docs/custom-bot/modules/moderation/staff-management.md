@@ -166,6 +166,17 @@ We recommend changing your server settings to adjust who can/can't see a specifi
 
 Follow [this guide](/docs/custom-bot/slash-commands) to adjust your server settings.
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**:
+
+| Action               | Description                                                                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Issue Infraction`   | Opens a form to issue an infraction (type, reason and optional expiry) to the user, like `/staff-management infraction issue`. Only supervisors+ can use it.  |
+| `Promote User`       | Shows a role selection to promote the user, like `/staff-management promotion promote`. Only supervisors+ can use it.                                         |
+| `Submit Review`      | Opens a form for the stars and comment to review the user, like `/staff-management review submit`. The 'Only let users review staff' option applies here too. |
+| `View Staff Profile` | Shows the profile of the user, like `/staff-management profile view`.                                                                                         |
+
 ## Configuration {#configuration}
 
 This module features multiple independent configuration files allowing you to tweak tracking logic. Open and manage them directly on your [dashboard](https://scnx.app/glink?page=bot/configuration?open-module=staff-management-system).
@@ -296,6 +307,22 @@ Configue manual and automated activity checks to check if staff are active in th
 | Results Channel            | The channel where the activity check results are posted. The results include who reacted, who didn't, and who were exempted. Leave empty to use the general log channel.                     |
 | Ping on Results            | Toggles whether a role is pinged with the results or not.                                                                                                                                    |
 | Roles to Ping              | The custom role(s) to ping with the results.                                                                                                                                                 |
+
+### Placeholders {#configuration-placeholders}
+
+The customizable messages support the following placeholders (written like `%placeholder%`):
+
+| Message                                           | Placeholders                                                                                                                                         |
+| ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Infraction Announcement Message                   | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                   |
+| Suspension Announcement Message                   | `%user%`, `%user-avatar%`, `%issuer-mention%`, `%issuer-name%`, `%issuer-avatar%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`               |
+| Infraction DM Message                             | `%user%`, `%issuer-name%`, `%type%`, `%end-date%`, `%reason%`, `%case-id%`                                                                           |
+| Suspension DM Message                             | `%user%`, `%issuer-name%`, `%type%`, `%duration%`, `%end-date%`, `%reason%`, `%case-id%`                                                             |
+| Promotion Announcement Embed & Promotion DM Embed | `%user-mention%`, `%new-role-name%`, `%new-role-mention%`, `%promoter-mention%`, `%promoter-name%`, `%reason%`, `%user-avatar%`, `%promoter-avatar%` |
+| Review Message                                    | `%staff-mention%`, `%reviewer-mention%`, `%stars%`, `%rating%`, `%comment%`, `%staff-avatar%`, `%reviewer-avatar%`                                   |
+| Profile Embed                                     | `%user-mention%`, `%username%`, `%nickname%`, `%intro%`, `%status%`, `%rating%`, `%avatar%`                                                          |
+| Activity Check Embed                              | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`                                         |
+| Ended Activity Check Embed                        | `%end-time%`, `%duration%`, `%staff-mention%`, `%supervisor-mention%`, `%management-mention%`, `%initiator%`, `%responded-count%`                    |
 
 ## Troubleshooting {#troubleshooting}
 

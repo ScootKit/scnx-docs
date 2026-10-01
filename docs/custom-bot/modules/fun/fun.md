@@ -34,6 +34,10 @@ Users can use the slash commands described below to interact with each other or 
 | `/random dice`                                 | Roll a six-sided dice.                                                                                      |
 | `/random coinflip`                             | Flip a coin.                                                                                                |
 | `/random 8ball`                                | Ask the magic 8ball a question and receive a random answer.                                                 |
+| `Hug` (user context menu)                      | Right-click a user and choose "Apps" > "Hug" to hug them. Works like `/hug`.                                |
+| `Kiss` (user context menu)                     | Right-click a user and choose "Apps" > "Kiss" to kiss them. Works like `/kiss`.                             |
+| `Slap` (user context menu)                     | Right-click a user and choose "Apps" > "Slap" to slap them. Works like `/slap`.                             |
+| `Pat` (user context menu)                      | Right-click a user and choose "Apps" > "Pat" to pat them. Works like `/pat`.                                |
 
 ## Configuration {#configuration}
 
@@ -55,6 +59,15 @@ In this configuration file, you can customize the messages and images used by th
 | Pat images            | List of image URLs from which one is randomly selected when `/pat` is used.  |
 | 8ball Message         | Message sent when someone uses `/random 8ball`.                              |
 | 8ball responses       | List of possible answers the 8ball can give.                                 |
+
+The following placeholders can be used in the messages:
+
+- `%name%` (IKEA message only): The randomly generated IKEA product name.
+- `%min%`, `%max%`, `%number%` (random number message only): The minimal value, the maximal value and the generated number.
+- `%number%` (dice roll message only): The rolled number.
+- `%site%` (coin toss message only): The side on which the coin landed.
+- `%authorID%`, `%userID%` (hug, kiss, slap and pat messages): The ID of the user who ran the command and the ID of the targeted user.
+- `%answer%` (8ball message only): The randomly selected answer.
 
 ## Troubleshooting {#troubleshooting}
 

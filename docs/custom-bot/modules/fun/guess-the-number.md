@@ -32,6 +32,8 @@ Admins (users with a configured admin role) can create a game session in any cha
 - A no-entry sign for invalid input (not a number or outside the min/max range).
 - A stop sign if an admin tries to guess (admins cannot participate in manual games).
 
+Every start message contains a button "What does the reaction under my guess mean?" that explains the reactions to the user who clicks it.
+
 After a game ends, the channel is locked. Admins can also end a game early with `/guess-the-number end` or check the current game state with `/guess-the-number status`.
 
 ### Game channel mode
@@ -61,6 +63,14 @@ In this configuration file, you can configure the game behavior and messages. Op
 | End-Message                         | Message sent when a game round ends and a winner is found.                                                                                                                      |
 | React with Lower / Higher reactions | If enabled, the bot reacts with up/down arrows on wrong guesses to indicate whether the correct number is higher or lower. If disabled, wrong guesses receive a cross reaction. |
 | Enable leaderboard?                 | If enabled, every guess and every win is tracked per user. A **Leaderboard** button appears on new game start messages, and players can view the top 20 players ranked by wins. |
+
+You can use the following placeholders in the messages:
+
+- `%min%`: The lowest possible number (start and end message).
+- `%max%`: The highest possible number (start and end message).
+- `%winner%` (end message only): Mention of the winner.
+- `%guessCount%` (end message only): Number of guesses in this game.
+- `%number%` (end message only): The number that had to be guessed.
 
 ### Gamechannel Mode {#config-channel}
 
