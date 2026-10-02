@@ -86,23 +86,25 @@ Slow-Mode in diesem Kanal zu aktivieren, um zu vermeiden, dass du all deine AI C
   Andere Modi beschränken Antworten auf spezifische Auslöser.
 - **Auslöseschlüsselwort (Trigger Keyword):** Wenn festgelegt und der Auslösemodus 'Schlüsselwort' (keyword) enthält, antwortet die KI nur, wenn eine Nachricht mit
   diesem Wort oder dieser Phrase beginnt (z. B. 'Hey Bot').
-- **Persona (optional):** Lässt einen KI-Kanal unter einem eigenen Namen und Avatar antworten statt unter dem deines Bots.
-  Siehe [Als Persona antworten](#persona).
+- **Als eigene Persona antworten? (optional):** Lässt einen KI-Kanal unter einem eigenen Namen und Avatar antworten statt
+  unter dem deines Bots, festgelegt mit **Name der Persona** und **Avatar der Persona**. Siehe [Als Persona antworten](#persona).
 - **Verlauf zurücksetzen (Resetting History):** Bitte tippe nach der Konfiguration `=== RESET ===` in den KI-Kanal, um den Konversationsverlauf zurückzusetzen.
 
 ### Als Persona antworten {#persona}
 
-Jeder KI-Chat-Kanal kann als eigene Persona antworten. Gib der Persona in der Modul-Konfiguration einen Namen und einen
-Avatar. Antworten in diesem Kanal zeigen dann diesen Namen und Avatar statt denen deines Bots.
+Jeder KI-Chat-Kanal kann als eigene Persona antworten. Aktiviere **Als eigene Persona antworten?** für den Kanal und lege
+einen **Namen der Persona** und optional einen **Avatar der Persona** fest. Antworten in diesem Kanal zeigen dann diesen
+Namen und Avatar statt denen deines Bots. Ohne Avatar wird der Avatar deines Bots verwendet.
 
 - Dein Bot sendet Persona-Antworten über einen Webhook im Kanal. Stelle sicher, dass dein Bot in diesem Kanal die
-  Berechtigung **Webhooks verwalten** hat.
+  Berechtigung **Webhooks verwalten** hat. Kann die Persona nicht genutzt werden (zum Beispiel weil die Berechtigung fehlt
+  oder Discord den Namen nicht akzeptiert), antwortet dein Bot selbst, damit keine Antwort verloren geht.
 - Persona-Antworten werden als normale Nachrichten gesendet, nicht als Antwort auf die Nachricht des Mitglieds.
 - Mitglieder können auf eine Nachricht der Persona antworten, um das Gespräch fortzusetzen. Das funktioniert, wenn dein
   Auslösemodus Antworten einschließt.
 - Fehlermeldungen wie "This server is out of AI Coins" kommen weiterhin von deinem Bot, nicht von der Persona.
-- Die Persona ändert nur Namen und Avatar. Wie die KI spricht, bestimmt weiterhin die Einstellung Persönlichkeit oder
-  der benutzerdefinierte System-Prompt.
+- Die Persona ändert Namen und Avatar. Ist der Name kurz und einfach, erfährt auch die KI, dass das ihr Name ist. Wie die
+  KI spricht, bestimmt weiterhin die Einstellung Persönlichkeit oder der benutzerdefinierte System-Prompt.
 - Eine Persona-Antwort kostet genauso viel wie jede andere Antwort.
 
 ### Benutzerdefinierter System-Prompt & Automatische Überprüfung
@@ -213,7 +215,7 @@ Bilder werden mit unserem neuesten Bildmodell erstellt, das bessere Ergebnisse l
 
 In der Modul-Konfiguration kannst du die Bildqualität für deinen Server wählen:
 
-- **Standard:** Gute Qualität zum niedrigeren Preis.
+- **Standard (Voreinstellung):** Gute Qualität zum niedrigeren Preis.
 - **HD:** Mehr Details und schärfere Bilder. HD-Bilder brauchen etwas länger und kosten mehr AI Coins.
 
 ### Preise & Häufige Fehler

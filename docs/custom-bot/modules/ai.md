@@ -86,23 +86,25 @@ slow-mode in this channel to avoid losing all your AI Coins in seconds.
   Other modes restrict responses to specific triggers.
 - **Trigger Keyword:** If set and trigger mode includes 'keyword', the AI will only respond when a message starts with
   this word or phrase (e.g. 'Hey Bot').
-- **Persona (optional):** Lets an AI channel answer under its own name and avatar instead of your bot's. See
-  [Answering as a persona](#persona).
+- **Answer as a custom persona? (optional):** Lets an AI channel answer under its own name and avatar instead of your
+  bot's, set with **Persona name** and **Persona avatar**. See [Answering as a persona](#persona).
 - **Resetting History:** After configuring, please type `=== RESET ===` in the ai channel to reset conversation history.
 
 ### Answering as a persona {#persona}
 
-Each AI chat channel can answer as its own persona. Give the persona a name and an avatar in the module configuration.
-Answers in that channel then show this name and avatar instead of your bot's.
+Each AI chat channel can answer as its own persona. Turn on **Answer as a custom persona?** for the channel and set a
+**Persona name** and, if you like, a **Persona avatar**. Answers in that channel then show this name and avatar instead
+of your bot's. Without an avatar, your bot's avatar is used.
 
 - Your bot sends persona answers through a webhook in the channel. Make sure your bot has the **Manage Webhooks**
-  permission in that channel.
+  permission in that channel. If the persona can't be used (for example because the permission is missing or Discord
+  doesn't accept the name), your bot answers itself, so no answer gets lost.
 - Persona answers are posted as normal messages, not as replies to the member's message.
 - Members can reply to a persona message to continue the conversation. This works when your trigger mode includes
   replies.
 - Error notices, like "This server is out of AI Coins", still come from your bot, not from the persona.
-- The persona only changes the name and avatar. The Personality or Custom System Prompt setting still decides how the
-  AI talks.
+- The persona changes the name and avatar. If the name is short and simple, the AI is also told that this is its name.
+  The Personality or Custom System Prompt setting still decides how the AI talks.
 - A persona answer costs the same as any other answer.
 
 ### Custom System Prompt & Automated Review
@@ -209,7 +211,7 @@ Images are created with our newest image model, which gives better results than 
 
 In the module configuration, you can choose the image quality for your server:
 
-- **Standard:** Good quality at the lower price.
+- **Standard (default):** Good quality at the lower price.
 - **HD:** More detail and sharper images. HD images take a bit longer to generate and cost more AI Coins.
 
 ### Pricing & Common Errors
