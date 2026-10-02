@@ -28,15 +28,15 @@ Once configured, the module runs automatically. Messages are sent based on the c
 
 ### Hourly messages {#hourly}
 
-Hourly messages are sent once per hour. You can restrict which hours the message is sent by specifying the allowed hours (0-23). If no hours are specified, the message will be sent every hour.
+Hourly messages are sent once per hour. You can restrict which hours the message is sent by specifying the allowed hours (0-23). If no hours are specified, the message will be sent every hour. Hourly messages are sent at minute 1 of the hour (for example 14:01).
 
 ### Daily messages {#daily}
 
-Daily messages are sent once per day. You can restrict which days the message is sent by specifying allowed week-days (1 = Sunday, 2 = Monday, ..., 7 = Saturday) and/or allowed days of the month (1-31). If no restrictions are set, the message will be sent every day.
+Daily messages are sent once per day. You can restrict which days the message is sent by specifying allowed week-days (1 = Sunday, 2 = Monday, ..., 7 = Saturday) and/or allowed days of the month (1-31). If no restrictions are set, the message will be sent every day. Daily messages are sent at 06:01.
 
 ### Cron messages {#cronjob}
 
-For advanced scheduling, you can use cron expressions. This gives you full control over when messages are sent. The cron expression format follows the standard five-field format: `minute hour day-of-month month day-of-week`.
+For advanced scheduling, you can use cron expressions. This gives you full control over when messages are sent. The cron expression format follows the standard five-field format: `minute hour day-of-month month day-of-week`. The default expression is `1 6 1-31 * *` (every day at 06:01).
 
 ## Configuration {#configuration}
 

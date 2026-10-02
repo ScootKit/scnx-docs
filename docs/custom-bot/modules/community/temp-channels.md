@@ -52,6 +52,10 @@ Alternatively, if a settings channel or no-mic channel is configured, you can us
 | `/temp-channel remove-user user:<User>`                                                        | Revoke a user's access to your temporary channel. Only available if "Allow change of channel mode" is enabled.                              |
 | `/temp-channel list-users`                                                                     | View a list of users who have been granted access to your channel. Only available if "Allow change of channel mode" is enabled.             |
 | `/temp-channel edit [user-limit:<Integer>] [bitrate:<Integer>] [name:<Text>] [nsfw:<Boolean>]` | Edit your temporary channel's settings. Only available if "Allow editing the channel" is enabled.                                           |
+| `Add to Channel` (user context menu)                                                           | Add a user to your temporary channel. Only the creator of the temporary channel can use it, inside that channel.                            |
+| `Remove from Channel` (user context menu)                                                      | Remove a user from your temporary channel. Only the creator of the temporary channel can use it, inside that channel.                       |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

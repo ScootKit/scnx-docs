@@ -45,6 +45,9 @@ Nutzer nehmen an der Code-Jagd teil:
 | `/hunt-the-code-admin create-code display-name:<Text> [code:<Text>]` | Erstelle einen neuen Code mit einem Anzeigenamen. Wenn keine Code-Zeichenfolge angegeben wird, wird automatisch eine generiert. Erfordert die Berechtigung `Nachrichten verwalten`.                                                    |
 | `/hunt-the-code-admin report`                                        | Erstelle einen detaillierten Bericht der aktuellen Code-Jagd-Sitzung, einschließlich Nutzer-Ranglisten und Code-Statistiken. Der Bericht wird als temporäres Dokument hochgeladen. Erfordert die Berechtigung `Nachrichten verwalten`. |
 | `/hunt-the-code-admin end`                                           | Beende die aktuelle Code-Jagd-Sitzung. Erstellt einen Abschlussbericht und löscht anschließend alle Codes sowie den Nutzerfortschritt. Erfordert die Berechtigung `Nachrichten verwalten`.                                             |
+| `View Hunt Profile` (Nutzer-Kontextmenü)                             | Zeigt das Hunt-Profil eines Nutzers an. Funktioniert wie `/hunt-the-code profile`.                                                                                                                                                     |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Konfiguration {#configuration}
 

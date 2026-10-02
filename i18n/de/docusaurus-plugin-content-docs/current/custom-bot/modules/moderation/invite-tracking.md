@@ -43,6 +43,14 @@ Verstöße werden dazu führen, dass dein Server und Account von SCNX gesperrt w
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/trace-invites user:<Nutzer>` | Dieser Befehl zeigt dir die Einladungsaktivitäten eines Nutzers. Du erhältst Informationen wie: wer den Nutzer eingeladen hat, wen der Nutzer eingeladen hat und wie viele Einladungen der Nutzer erstellt hat. Außerdem steht dir ein Knopf zur Verfügung, welcher dir erlaubt, alle Einladungen eines Nutzers zu entfernen. |
 
+### Kontextmenü-Aktionen {#context-menu-actions}
+
+Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste auf einen Nutzer klickst (auf dem Handy lange drücken) und **Apps** wählst. Sie sind standardmäßig ausgeschaltet, siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus).
+
+| Aktion         | Typ    | Beschreibung                                                     | Standardberechtigung  |
+| -------------- | ------ | ---------------------------------------------------------------- | --------------------- |
+| `View Invites` | Nutzer | Zeigt die Einladungsaktivität des Nutzers, wie `/trace-invites`. | Mitglieder moderieren |
+
 ## Konfiguration {#configuration}
 
 Nutze diese Konfiguration, um einen Log-Kanal festzulegen - [öffne die Seite in deinem Dashboard](https://scnx.app/de/glink?page=bot/configuration?query=invit&file=invite-tracking|config).

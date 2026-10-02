@@ -56,7 +56,7 @@ While voice support is offline, you can optionally leave the channel unlocked an
 | **Support category**  | A Discord category whose voice channels (except the queue channel) are treated as staff support channels. Users get pulled into these.                                                                             |
 | **Dashboard channel** | A text channel where the bot posts a live status embed - open/offline, staff count, current queue, active calls, and a **Pull Next User** button.                                                                  |
 | **Thread mode**       | Optional: when a staff member pulls a user, the bot creates a private thread under the dashboard channel with call metadata, prior history, and buttons. Notes, debriefs, and feedback are posted into the thread. |
-| **Staff summon**      | Optional (opening-hours mode only): when users are waiting but no staff are connected, the bot posts a ping into a configured channel with the number of waiters and the first person in line.                     |
+| **Staff summon**      | Optional: the bot posts a ping into a configured channel, either when users are waiting but no staff are connected (opening-hours mode only) or on every queue join.                                               |
 
 ## Key features {#features}
 
@@ -67,7 +67,7 @@ While voice support is offline, you can optionally leave the channel unlocked an
 - **Waiting music** - loop a list of audio tracks in the queue channel while users wait. A separate closed-state track list plays when voice support is offline.
 - **AI audio generation** - generate voiceover announcements and background music for your playlists directly from the dashboard, charged in AI Coins. See [AI Audio Generation](/docs/support-bot/voice-support/ai-audio).
 - **Automatic channel rename** - optionally rename the queue channel based on open/closed state (e.g. `voice-support` ↔ `voice-support-closed`).
-- **Lock on close** - optionally deny the `Connect` permission on the queue channel while voice support is offline.
+- **Lock queue channel when support is closed** - optionally deny the `Connect` permission on the queue channel while voice support is offline.
 - **Debrief form** - configurable modal that staff fills out at call end; answers logged to the thread and optionally a debrief channel.
 - **User feedback** - optional star-rating DM sent to users after a call, with custom follow-up questions and an anonymity toggle.
 - **Estimated wait time** - adaptive estimate based on a rolling window of recent calls (and, in `opening-hours` mode, a rolling "time to get staff online" average).
@@ -77,5 +77,5 @@ While voice support is offline, you can optionally leave the channel unlocked an
 1. Pick up the **Early Access** perk on [ScootKit Membership](https://membership.scootkit.com) - it unlocks voice support (and future preview features) across every server you manage.
 2. Open **Voice Support** in your [Support Bot dashboard](https://scnx.app/glink?page=support-system/manage).
 3. Follow the [configuration guide](/docs/support-bot/voice-support/configuration) - at minimum, you'll need a queue channel, a support category, a dashboard channel, and at least one staff role.
-4. Flip the **Enable voice support** toggle.
+4. Click the **Enable Voice Support** button.
 5. Use the [`/voice` commands](/docs/support-bot/voice-support/commands) from any support channel to manage calls.

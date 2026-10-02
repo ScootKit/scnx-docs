@@ -42,9 +42,12 @@ Then there are the "Draw 2" and the "Color choice and draw 4" cards: This forces
 
 <SlashCommandExplanation />
 
-| Command | Description                                                                                                            |
-| ------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `/uno`  | Starts an Uno game in the current channel - you can find more about how it works in the [usage section](#usage) above. |
+| Command                              | Description                                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `/uno`                               | Starts an Uno game in the current channel - you can find more about how it works in the [usage section](#usage) above.   |
+| Challenge to Uno (user context menu) | Right-click a user and choose "Apps" > "Challenge to Uno" to start an Uno game like `/uno` and invite that user to join. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Troubleshooting {#troubleshooting}
 

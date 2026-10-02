@@ -32,9 +32,12 @@ The game ends when:
 
 <SlashCommandExplanation />
 
-| Command                    | Description                                      |
-| -------------------------- | ------------------------------------------------ |
-| `/tic-tac-toe user:<User>` | Challenge another user to a game of Tic-Tac-Toe. |
+| Command                                      | Description                                                                                    |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `/tic-tac-toe user:<User>`                   | Challenge another user to a game of Tic-Tac-Toe.                                               |
+| Challenge to Tic Tac Toe (user context menu) | Right-click a user and choose "Apps" > "Challenge to Tic Tac Toe" to challenge them to a game. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Troubleshooting {#troubleshooting}
 

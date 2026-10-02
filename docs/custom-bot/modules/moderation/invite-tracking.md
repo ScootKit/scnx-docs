@@ -51,6 +51,14 @@ from SCNX. Report abuse to [abuse@scnx.xyz](mailto:abuse@scnx.xyz).
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/trace-invites user:<User>` | This command shows the invite activity of a user. Information includes who invited the user, who the user invited, and what invites the user created. Additionally, a button to revoke all invites created by this user will be added below the response. |
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**. They are turned off by default, see [Setting up context menu commands](/docs/custom-bot/commands#context-menus).
+
+| Action         | Type | Description                                                   | Default permission |
+| -------------- | ---- | ------------------------------------------------------------- | ------------------ |
+| `View Invites` | User | Shows the invite activity of the user, like `/trace-invites`. | Moderate Members   |
+
 ## Configuration {#configuration}
 
 Use this configuration file to set up a

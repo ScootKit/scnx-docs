@@ -64,6 +64,13 @@ Every day at midnight, the bot checks for birthdays and:
 | `/manage-birthday remove user:<User>`                                             | Remove a user's birthday. Requires admin birthday management to be enabled.                                                                                                            |
 | `/manage-birthday lock user:<User>`                                               | Lock a user's birthday, preventing them from editing or deleting it. Requires admin birthday management to be enabled.                                                                 |
 | `/manage-birthday unlock user:<User>`                                             | Unlock a previously locked birthday. Requires admin birthday management to be enabled.                                                                                                 |
+| `View Birthday` (user context menu)                                               | View a user's birthday.                                                                                                                                                                |
+| `Set Birthday` (user context menu)                                                | Set a user's birthday. Opens a form asking for day, month and (unless disabled) year. Works like `/manage-birthday set`. Requires the Administrator permission.                        |
+| `Remove Birthday` (user context menu)                                             | Remove a user's birthday. Works like `/manage-birthday remove`. Requires the Administrator permission.                                                                                 |
+| `Lock Birthday` (user context menu)                                               | Lock a user's birthday. Works like `/manage-birthday lock`. Requires the Administrator permission.                                                                                     |
+| `Unlock Birthday` (user context menu)                                             | Unlock a user's birthday. Works like `/manage-birthday unlock`. Requires the Administrator permission.                                                                                 |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

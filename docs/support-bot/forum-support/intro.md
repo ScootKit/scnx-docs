@@ -88,6 +88,6 @@ At any moment, the bot knows whether a thread is waiting on your team or on the 
 
 1. Open **Forum Support** in your [Support Bot dashboard](https://scnx.app/glink?page=support-system/manage).
 2. Create (or pick) a **public forum channel** in Discord for your support.
-3. Add it on the [Forum Channels](https://scnx.app/glink?page=support-system/forum-support/channels) page and follow the [configuration guide](/docs/support-bot/forum-support/configuration) - set a staff queue panel channel and at least one staff member role.
+3. Add it on the [Forum Channels](https://scnx.app/glink?page=support-system/forum-support/channels) page and follow the [configuration guide](/docs/support-bot/forum-support/configuration) - set a staff panel channel and at least one staff member role.
 4. Flip the **Enable Forum Support** toggle.
 5. Use the [`/forum` commands](/docs/support-bot/forum-support/commands) and the panel buttons to work the queue.

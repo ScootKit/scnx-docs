@@ -7,7 +7,7 @@ Fortschrittliches Sicherheits- und Moderationssystem mit unzähligen Funktionen,
 ## Funktionen {#features}
 
 - Umfassende Moderationsbefehle: [Verwarnen](#warn), [Stummschalten](#mute), [Kicken](#kick), [Bannen](#ban), [Quarantäne](#quarantine), [Kanal-Stummschaltung](#channel-mute) und [Aufräumen](#clear).
-- Verwarnen, Stummschalten, Kicken und Bannen sind auch als Rechtsklick-[Kontextmenü-Aktionen](#context-menu-actions) auf Nutzer und Nachrichten verfügbar und nehmen Beweise entgegen.
+- Verwarnen, Stummschalten, Kicken und Bannen sind auch als Rechtsklick-[Kontextmenü-Aktionen](#context-menu-actions) auf Nutzer verfügbar und nehmen Beweise entgegen (siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus)).
 - Unterstützung für temporäre Bans, Mutes und Quarantänen mit automatischem Ablauf, plus [bearbeitbaren Dauern](#edit-duration), die eine aktive Bestrafung nachträglich verkürzen oder verlängern.
 - [Bestrafungen mit einem Klick aufheben](#lift-punishment) - direkt aus der Log-Nachricht oder der Aktionsansicht.
 - [Kanal sperren und entsperren](#lock-unlock), um das Schreiben in einem Kanal einzuschränken.
@@ -92,7 +92,17 @@ Sperrt oder entsperrt den aktuellen Kanal und verhindert oder erlaubt der @every
 
 ### Kontextmenü-Aktionen {#context-menu-actions}
 
-Verwarnen, Stummschalten, Kicken und Bannen sind auch als Rechtsklick-Aktionen verfügbar. Klicke mit der rechten Maustaste auf einen Nutzer (oder eine Nachricht und wähle dann **Apps**) und wähle **Verwarnen**, **Stummschalten**, **Kicken** oder **Bannen**. Ein Dialog öffnet sich für den Grund und, wenn [benutzerdefinierte Fall-Titel](#configuration-config) aktiviert sind, den Titel. Jede Kontextmenü-Aktion enthält ein optionales Beweis-Feld, in das du in einem Zug bis zu zehn Beweisbilder hochladen kannst. Es gibt außerdem die Aktionen **Nutzer melden** und **Nachricht melden** für Mitglieder sowie eine **Mod-Verlauf**-Aktion, die die vergangenen Fälle eines Nutzers zeigt.
+Warn, Mute, Kick und Ban sind auch als Rechtsklick-Aktionen verfügbar. Klicke mit der rechten Maustaste auf einen Nutzer, öffne **Apps** und wähle **Warn**, **Mute**, **Kick** oder **Ban**. Ein Dialog öffnet sich für den Grund und, wenn [benutzerdefinierte Fall-Titel](#configuration-config) aktiviert sind, den Titel. Jede Kontextmenü-Aktion enthält ein optionales Beweis-Feld, in das du in einem Zug bis zu zehn Beweisbilder hochladen kannst. Folgende Kontextmenü-Aktionen sind verfügbar. Zum Einrichten siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus).
+
+| Aktion           | Typ       | Beschreibung                                                                                                                                        | Standardberechtigung  |
+| ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| `Warn`           | Nutzer    | Diesen Nutzer verwarnen.                                                                                                                            | Mitglieder moderieren |
+| `Mute`           | Nutzer    | Diesen Nutzer stummschalten (Standarddauer).                                                                                                        | Mitglieder moderieren |
+| `Kick`           | Nutzer    | Diesen Nutzer kicken.                                                                                                                               | Mitglieder kicken     |
+| `Ban`            | Nutzer    | Diesen Nutzer bannen.                                                                                                                               | Mitglieder bannen     |
+| `Mod History`    | Nutzer    | Zeigt Moderationsmaßnahmen gegen diesen Nutzer, wie `/moderate actions`. Erfordert mindestens die Moderationsstufe, die für Verwarnungen nötig ist. | Mitglieder moderieren |
+| `Report User`    | Nutzer    | Diesen Nutzer dem Moderationsteam melden. Öffnet einen Dialog für Grund und optionale Beweise.                                                      | Alle                  |
+| `Report Message` | Nachricht | Diese Nachricht dem Moderationsteam melden. Öffnet einen Dialog für den Grund.                                                                      | Alle                  |
 
 ### Bestrafung aufheben {#lift-punishment}
 
@@ -116,7 +126,7 @@ Ein Fall kann sich auf mehr als eine Person beziehen - das Mitglied, das ihn gem
 
 ### Melden {#report}
 
-Jeder Nutzer kann einen anderen Nutzer mit `/report` melden oder mit der rechten Maustaste auf einen Nutzer oder eine Nachricht klicken und **Nutzer melden** / **Nachricht melden** verwenden. Eine Meldung enthält den Grund, optionale Beweisbilder (bis zu zehn in den Kontextmenü-Abläufen) und einen verschlüsselten Schnappschuss der aktuellen Nachrichten im Kanal. Meldungen werden an den konfigurierten Report-Kanal (oder den Log-Kanal, wenn kein Report-Kanal festgelegt ist) gesendet. Konfigurierte Rollen werden gepingt, wenn eine Meldung eingeht. Mitglieder, deren Moderationslevel als **Immun gegen Meldungen** markiert ist, können nicht gemeldet werden.
+Jeder Nutzer kann einen anderen Nutzer mit `/report` melden oder mit der rechten Maustaste auf einen Nutzer oder eine Nachricht klicken und **Report User** / **Report Message** verwenden. Eine Meldung enthält den Grund, optionale Beweisbilder (bis zu zehn in den Kontextmenü-Abläufen) und einen verschlüsselten Schnappschuss der aktuellen Nachrichten im Kanal. Meldungen werden an den konfigurierten Report-Kanal (oder den Log-Kanal, wenn kein Report-Kanal festgelegt ist) gesendet. Konfigurierte Rollen werden gepingt, wenn eine Meldung eingeht. Mitglieder, deren Moderationslevel als **Immun gegen Meldungen** markiert ist, können nicht gemeldet werden.
 
 ### Notizen {#notes}
 

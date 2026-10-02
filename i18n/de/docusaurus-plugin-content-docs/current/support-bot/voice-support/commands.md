@@ -1,0 +1,49 @@
+---
+sidebar_position: 3
+title: Befehle
+description: Referenz der Discord-Slash-Befehle unter /voice - nächsten Nutzer holen, Gespräch beenden, Notizen hinzufügen, Verlauf ansehen, Gespräche erzwungen schließen und die Sprachsupport-Blockierungsliste verwalten.
+---
+
+# Sprachsupport-Befehle
+
+Die gesamte Verwaltung von Sprachsupport läuft über den Slash-Befehl `/voice`. Die Befehle sind nur sichtbar, wenn Sprachsupport [aktiviert](/de/docs/support-bot/voice-support/configuration#main-configuration-configuration) ist und der Server-Besitzer das Perk [ScootKit Membership Early Access](https://membership.scootkit.com) besitzt.
+
+<SlashCommandExplanation />
+
+| Befehl                                                                    | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/voice queue`                                                            | Zeigt die aktuelle Warteschlange (zuerst Prioritätsnutzer, dann normale Nutzer) in einer ephemeren Antwort.                                                                                                                                                                                                                                                                                       |
+| `/voice next`                                                             | Holt den nächsten Nutzer aus der Warteschlange in deinen aktuellen Support-Sprachkanal. Du musst dich in einem Support-Kanal befinden (nicht im Warteschlangen-Kanal selbst).                                                                                                                                                                                                                     |
+| `/voice end [reason:<Text>]`                                              | Beendet dein aktives Gespräch. Ein optionaler Freitext-Grund wird am Ticket gespeichert und im Verlauf des Nutzers angezeigt.                                                                                                                                                                                                                                                                     |
+| `/voice note text:<Text>`                                                 | Fügt deinem aktiven Gespräch eine private Notiz hinzu. Notizen sind für anderes Team über `/voice history` und im [Thread](/de/docs/support-bot/voice-support/configuration#thread-mode) des Gesprächs (falls aktiviert) sichtbar.                                                                                                                                                                |
+| `/voice history user:<Nutzer>`                                            | Zeigt den Sprachsupport-Verlauf eines Nutzers: bis zu 10 aktuelle Sitzungen mit Status (abgeschlossen, abgebrochen, laufend), Dauer, zugewiesenem Teammitglied und den neuesten Notizen pro Sitzung.                                                                                                                                                                                              |
+| `/voice add user:<Nutzer>`                                                | Fügt einen Nutzer, der in der Warteschlange wartet, deinem aktiven Gespräch hinzu. Du musst mit dem Sprachkanal des Gesprächs verbunden sein.<br/><small><details><summary>Voraussetzung</summary><blockquote>_Nur verfügbar, wenn [Wartende Nutzer zu einem Anruf hinzufügen](/de/docs/support-bot/voice-support/configuration#add-users-to-call) aktiviert ist._</blockquote></details></small> |
+| `/voice close user:<Nutzer> [reason:<Text>]`                              | Schließt das aktive Gespräch eines anderen Teammitglieds mit dem angegebenen Nutzer erzwungen. Nützlich, wenn ein Teammitglied die Verbindung getrennt hat, ohne sein Gespräch sauber zu beenden.                                                                                                                                                                                                 |
+| `/voice blacklist add user:<Nutzer> [reason:<Text>] [expires:<ISO date>]` | Fügt einen Nutzer zur Sprachsupport-Blockierungsliste hinzu. Blockierte Nutzer können sich nicht einreihen. Optional mit Grund und Ablaufdatum (ISO-Format, z.B. `2026-06-01`). Ohne Ablaufdatum ist die Blockierung permanent.                                                                                                                                                                   |
+| `/voice blacklist remove user:<Nutzer>`                                   | Entfernt einen Nutzer von der Sprachsupport-Blockierungsliste.                                                                                                                                                                                                                                                                                                                                    |
+
+## Knöpfe in Kanälen {#buttons}
+
+Zusätzlich zu den Slash-Befehlen postet Sprachsupport Knöpfe an zwei Stellen:
+
+**Im [Dashboard-Kanal](/de/docs/support-bot/voice-support/configuration#dashboard-channel):**
+
+| Knopf              | Funktion                                                                                                                                                             |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Pull Next User     | Wie `/voice next` - holt den nächsten Nutzer aus der Warteschlange in deinen Support-Kanal. Deaktiviert, wenn die Warteschlange leer oder Sprachsupport offline ist. |
+| View Queue Details | Zeigt die aktuelle Warteschlange nach Stufe sortiert, mit Wartezeiten, in einer ephemeren Antwort.                                                                   |
+
+**Im integrierten Textbereich deines Support-Kanals (wird gepostet, wenn du einen Nutzer holst):**
+
+| Knopf                       | Funktion                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| End Call                    | Beendet das aktuelle Gespräch. Ist die [Nachbesprechung](/de/docs/support-bot/voice-support/configuration#debrief) aktiviert, öffnet sich danach ein Formular.                                                                                                                                                                                                            |
+| Add Note                    | Öffnet ein Formular, um dem aktiven Gespräch eine Notiz hinzuzufügen. Wie `/voice note`.                                                                                                                                                                                                                                                                                  |
+| Nutzer zum Anruf hinzufügen | Lässt dich einen wartenden Nutzer aus der Warteschlange auswählen und dem Gespräch hinzufügen. Wie `/voice add`.<br/><small><details><summary>Voraussetzung</summary><blockquote>_Wird nur angezeigt, wenn [Wartende Nutzer zu einem Anruf hinzufügen](/de/docs/support-bot/voice-support/configuration#add-users-to-call) aktiviert ist._</blockquote></details></small> |
+| View User History           | Wie `/voice history` - zeigt bisherige Gespräche und Notizen des Nutzers, mit dem du gerade sprichst.                                                                                                                                                                                                                                                                     |
+
+## Die Blockierungsliste {#blocklist}
+
+Sprachsupport hat eine **eigene Blockierungsliste**, getrennt von der [Blockierungsliste](/de/docs/support-bot/general/bot-configuration#main-configuration-configuration) des Support-Bots. Eine Blockierung auf der Voice-Liste betrifft nur Sprachsupport - der Nutzer kann weiterhin Modmail- oder Ticket-System-Tickets öffnen (sofern er nicht zusätzlich auf der Haupt-Blockierungsliste steht).
+
+Wenn ein blockierter Nutzer den Warteschlangen-Kanal betritt, erhält er eine DM, die ihm die Blockierung erklärt (mit dem konfigurierten Grund, falls vorhanden), und wird getrennt. Abgelaufene Blockierungen werden automatisch entfernt.

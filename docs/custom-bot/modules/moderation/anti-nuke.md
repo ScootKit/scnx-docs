@@ -63,14 +63,14 @@ Before performing planned bulk actions (e.g., reorganizing channels or cleaning 
 - Use `/anti-nuke whitelist remove` to revoke a whitelist entry early.
 - Use `/anti-nuke whitelist list` to view all active whitelist entries.
 
-Whitelist entries expire automatically and are cleaned up on bot restart.
+Whitelist entries expire automatically and are cleaned up on bot restart. Adding a new entry for a user who already has an active one replaces the old entry. If you don't provide a reason, a default "no reason" text is stored.
 
 ### Undoing damage {#undo}
 
 If a nuke is detected, the bot stores snapshots of affected resources (channel configurations, role settings, emoji images, etc.). Users on the **Exempt Users** list can reverse the damage in one of two ways:
 
 - **From the alert:** click the **Undo** button on the "Nuke Detected" alert, then confirm. Once complete, this also reverses the response taken against the executor (for example, unbanning them or restoring their stripped roles).
-- **With the command:** run `/anti-nuke undo`, then select the event from the dropdown menu.
+- **With the command:** run `/anti-nuke undo`, then select the event from the dropdown menu. The menu lists up to the 10 most recent events that have not been undone yet.
 
 Either way, the bot attempts to restore all affected resources using the stored snapshots and reports what was restored and what could not be.
 
@@ -179,6 +179,8 @@ Each action type can be individually enabled/disabled and has its own threshold 
 | `/anti-nuke whitelist list`                                                | List all currently active whitelist entries.                                       |
 | `/anti-nuke undo`                                                          | Show recent nuke events and select one to undo.                                    |
 | `/anti-nuke status`                                                        | Show current anti-nuke system status and statistics.                               |
+
+`/anti-nuke status` shows the current **Response Action**, the **Log Channel** (or "not configured"), the number of exempt users, the number of active whitelist entries, the number of nuke events in the last 7 days, and the **Snapshot Retention** in days. `/anti-nuke whitelist list` shows each active entry with its user, expiry time, the user who granted it, and the reason.
 
 All commands (and the alert **Undo** button) are restricted to users on the **Exempt Users** list configured in the [General Configuration](#configuration-general). Discord permissions such as Administrator do not grant access on their own.
 

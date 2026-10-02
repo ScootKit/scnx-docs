@@ -124,6 +124,16 @@ configuration. Once done, new messages will have a (configurable) button. When t
 members, it will get inactive (= it can't be pressed by anyone another time) and a [configurable](#configuration-config)
 message will get sent in the configured channel.
 
+## Commands {#commands}
+
+| Command                | Type                 | Description                                                                                                                                                                                                           |
+| ---------------------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Assign Join Roles`    | User context command | Gives the selected member the configured join roles they are missing. Does nothing while the member is on hold (for example pending verification). Requires the **Manage Roles** permission.                          |
+| `Check Welcome Status` | User context command | Shows the welcome and join role status of the selected member (only visible to you). Requires the **Manage Server** permission.                                                                                       |
+| `Restore Base Roles`   | User context command | Gives the selected member their missing join roles back, like the automatic [base roles](#base-roles) feature. Only works if **Treat join roles as base roles** is enabled. Requires the **Manage Roles** permission. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 This module is split in multiple configuration files. You can find them below.

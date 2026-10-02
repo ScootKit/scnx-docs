@@ -23,24 +23,30 @@ Collaborative storytelling game where each member adds exactly one word at a tim
 2. In the [configuration](#configuration), add at least one channel to the "Channels" list.
 3. The bot needs the "Send Messages", "Add Reactions", "Manage Messages", and "Manage Channels" permissions in the configured channels (the last one is required for the channel topic feature). If you configure an archive channel, the bot also needs "Send Messages" and "Manage Messages" (for pinning) there.
 4. Optionally configure a moderator role - members with this role (or with the "Manage Messages" permission, if no role is set) can run the mod-only commands.
+5. If you use the strike system with a role instead of permission removal, the bot needs the "Manage Roles" permission, and its role has to be above the strike role.
 
 ## Usage {#usage}
 
 In a configured story channel, members send messages containing exactly one word. The bot reacts with the configured success emoji to confirm the word was accepted, and optionally updates the channel topic. Invalid messages (more than one word, special characters, double-post by the same user, ...) are removed and the user is shown a brief hint that auto-deletes after 8 seconds.
 
-When a moderator decides the round is done, they run [`/word-story end`](#commands). The full story is rendered into an embed with all contributors and (if configured) posted to the archive channel before the channel state is reset.
+A message is accepted as a word if, after removing Markdown formatting (`*`, `_`, `~`, `` ` ``), it is exactly one word that contains at least one letter and consists only of letters, digits, apostrophes and hyphens, optionally followed by a single punctuation mark (`.`, `!`, `?`, `…`, `,`, `;` or `:`). Mentions, links and messages with several words are rejected.
+
+When a moderator decides the round is done, they run [`/word-story end`](#commands). The full story is rendered into an embed with all contributors and (if configured) posted to the archive channel before the channel state is reset. If a channel topic template is configured, the topic is also reset to a "new round" text.
 
 ## Commands {#commands}
 
 <SlashCommandExplanation />
 
-| Command                            | Description                                                                                                                                       |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/word-story status`               | Shows the current word count and the last 30 words of the story (ephemeral).                                                                      |
-| `/word-story full`                 | Shows the full current story in an ephemeral embed.                                                                                               |
-| `/word-story stats`                | Shows a top-15 contributor leaderboard for the active story (ephemeral).                                                                          |
-| `/word-story end [title:<Text>]`   | _Moderator-only._ Ends the active round, posts the finished story to the archive channel (if configured), and resets the channel for a new round. |
-| `/word-story new [opening:<Word>]` | _Moderator-only._ Starts a fresh round in an empty channel. Optionally seeds the story with a single opening word.                                |
+| Command                              | Description                                                                                                                                       |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/word-story status`                 | Shows the current word count and the last 30 words of the story (ephemeral).                                                                      |
+| `/word-story full`                   | Shows the full current story in an ephemeral embed.                                                                                               |
+| `/word-story stats`                  | Shows a top-15 contributor leaderboard for the active story (ephemeral).                                                                          |
+| `/word-story end [title:<Text>]`     | _Moderator-only._ Ends the active round, posts the finished story to the archive channel (if configured), and resets the channel for a new round. |
+| `/word-story new [opening:<Word>]`   | _Moderator-only._ Starts a fresh round in an empty channel. Optionally seeds the story with a single opening word.                                |
+| View Story Stats (user context menu) | Right-click a user and choose "Apps" > "View Story Stats" to see how many words they contributed to the active story and their rank (ephemeral).  |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 
@@ -61,7 +67,7 @@ In this configuration file, you can configure the One-Word Story game. Open it i
 | Maximum story length                                 | _Only visible if the cap is enabled._ Number of words at which the round automatically locks.                                                                           |
 | Message when story reaches the cap                   | _Only visible if the cap is enabled._ Sent the first time the cap is hit in a round. Subsequent over-cap messages are deleted silently.                                 |
 | Send idle hint to moderators?                        | If enabled, the moderator role is pinged once after a configurable number of hours without a new word, suggesting the round be ended.                                   |
-| Idle hint after X hours                              | _Only visible if the idle hint is enabled._ Hours of inactivity before the moderator role is pinged.                                                                    |
+| Idle hint after X hours                              | _Only visible if the idle hint is enabled._ Hours of inactivity before the moderator role is pinged. Requires a moderator role to be set.                               |
 | Idle hint message                                    | _Only visible if the idle hint is enabled._ The message used for the idle ping.                                                                                         |
 | Restrict users who repeatedly post invalid messages? | If enabled, users who reach the configured threshold of wrong messages are restricted (either by removing their "Send Messages" permission or by adding a strike role). |
 | Amount of wrong messages to trigger action           | _Only visible if strikes are enabled._ Wrong messages a user has to send to trigger restriction.                                                                        |

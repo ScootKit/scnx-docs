@@ -37,15 +37,21 @@ Reward users for being active every day, week, or month with an activity score t
 
 <SlashCommandExplanation />
 
-| Command                         | Description                                                                                                                                                                                        |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/streak view [user:<User>]`    | View your own or another user's current and longest streak.                                                                                                                                        |
-| `/streak add user:<User>`       | Manually add a streak point to a user. Only available in staff-managed mode. Requires a configured staff role.                                                                                     |
-| `/streak remove user:<User>`    | Subtract one from a user's streak count. Useful for correcting mistakes without fully resetting. Only available in staff-managed mode. Requires a configured staff role.                           |
-| `/streak reset user:<User>`     | Fully reset a user's streak, clearing both the current streak and any saved backup, and removing all streak-related roles. Only available in staff-managed mode. Requires a configured staff role. |
-| `/streak restore [user:<User>]` | Restore a previously lost streak. Only available if streak restoration is enabled. Can only be used once per streak loss, and only within the configured restore time limit (if one is set).       |
-| `/streak leaderboard`           | Show the top 20 active streaks on the server. Available in both staff-managed and automatic modes.                                                                                                 |
-| `/streak hide`                  | Toggle whether your streak is displayed in your nickname. Only available when nickname display is enabled and the "Allow users to hide streak from nickname?" option is turned on.                 |
+| Command                             | Description                                                                                                                                                                                        |
+| ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/streak view [user:<User>]`        | View your own or another user's current and longest streak.                                                                                                                                        |
+| `/streak add user:<User>`           | Manually add a streak point to a user. Only available in staff-managed mode. Requires a configured staff role.                                                                                     |
+| `/streak remove user:<User>`        | Subtract one from a user's streak count. Useful for correcting mistakes without fully resetting. Only available in staff-managed mode. Requires a configured staff role.                           |
+| `/streak reset user:<User>`         | Fully reset a user's streak, clearing both the current streak and any saved backup, and removing all streak-related roles. Only available in staff-managed mode. Requires a configured staff role. |
+| `/streak restore [user:<User>]`     | Restore a previously lost streak. Only available if streak restoration is enabled. Can only be used once per streak loss, and only within the configured restore time limit (if one is set).       |
+| `/streak leaderboard`               | Show the top 20 active streaks on the server. Available in both staff-managed and automatic modes.                                                                                                 |
+| `/streak hide`                      | Toggle whether your streak is displayed in your nickname. Only available when nickname display is enabled and the "Allow users to hide streak from nickname?" option is turned on.                 |
+| `View Streak` (user context menu)   | View a user's streak. Works like `/streak view`.                                                                                                                                                   |
+| `Add Streak` (user context menu)    | Add to a user's streak. Opens a form asking for the amount. Works like `/streak add`. Requires a configured staff role and the Moderate Members permission.                                        |
+| `Remove Streak` (user context menu) | Subtract one from a user's streak. Works like `/streak remove`. Requires a configured staff role and the Moderate Members permission.                                                              |
+| `Reset Streak` (user context menu)  | Fully reset a user's streak. Works like `/streak reset`. Requires a configured staff role and the Moderate Members permission.                                                                     |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

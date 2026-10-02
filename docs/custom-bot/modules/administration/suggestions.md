@@ -42,6 +42,14 @@ Advanced module to manage suggestions on your guild.
 | `/manage-suggestion accept id:<SuggestionID> comment:<Text>` | Allows admins to accept a suggestion submitted by a user. The comment will be displayed in the updated suggestion message. |
 | `/manage-suggestion deny id:<SuggestionID> comment:<Text>`   | Allows admins to deny a suggestion submitted by a user. The comment will be displayed in the updated suggestion message.   |
 
+| Command                 | Type                    | Description                                                                                                                                                                                     |
+| ----------------------- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Approve Suggestion`    | Message context command | Opens a form with an optional comment to approve the suggestion the selected message belongs to. Requires the **Manage Messages** permission. Only works on suggestion messages of this module. |
+| `Deny Suggestion`       | Message context command | Opens a form with an optional reason to deny the suggestion the selected message belongs to. Requires the **Manage Messages** permission. Only works on suggestion messages of this module.     |
+| `Convert to Suggestion` | Message context command | Turns the selected message into a suggestion. The suggestion is attributed to the author of the message, not to you. Requires the **Manage Messages** permission.                               |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 This configuration file allows you to configure features of the module and to change the appearance of messages.

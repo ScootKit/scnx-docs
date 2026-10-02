@@ -8,7 +8,7 @@ description: Eine gemeinsame Dateibibliothek für deinen Discord-Server - lade B
 
 Der Server-Dateispeicher ist die gemeinsame, zentrale Asset-Bibliothek deines Servers auf SCNX. Hier liegen Bilder, Audio, Videos, Dokumente und Ticket-Anhänge an einem Ort - ein einziger Platz, an dem dein Team Dateien hochladen, generieren, durchsuchen und über alle SCNX-Funktionen hinweg wiederverwenden kann.
 
-Ursprünglich eine reine Bildbibliothek, unterstützt sie mittlerweile jede Datei, die das Dashboard oder deine Bots benötigen: MP3s für [Voice-Support-Wartemusik](/docs/support-bot/voice-support/configuration#waiting-music), PDFs aus Ticket-Anhängen, Banner für Embeds, KI-generierte Clips und mehr. Du findest **Dateien** in der Navigationsleiste deines Servers.
+Ursprünglich eine reine Bildbibliothek, unterstützt sie mittlerweile jede Datei, die das Dashboard oder deine Bots benötigen: MP3s für [Sprachsupport-Wartemusik](/docs/support-bot/voice-support/configuration#waiting-music), PDFs aus Ticket-Anhängen, Banner für Embeds, KI-generierte Clips und mehr. Du findest **Dateien** in der Navigationsleiste deines Servers.
 
 ## Warum nutzen {#why-use-it}
 
@@ -40,7 +40,7 @@ Server-Dateispeicher ist ein völlig separater, gemeinsamer Bereich. Um deine be
 Es gibt vier Wege, wie Dateien in die Bibliothek deines Servers gelangen:
 
 1. **Du lädst sie direkt hoch** über die Dateien-Seite oder jeden Datei-Picker im Dashboard.
-2. **Du generierst sie mit KI** - Bilder aus einem Text-Prompt oder [Voice-Support-Audio](/docs/support-bot/voice-support/ai-audio) (Text-to-Speech + Musik).
+2. **Du generierst sie mit KI** - Bilder aus einem Text-Prompt oder [Sprachsupport-Audio](/docs/support-bot/voice-support/ai-audio) (Text-to-Speech + Musik).
 3. **Der Support Bot archiviert automatisch** - [Ticket-Anhänge](/docs/support-bot/general/modmail-net#attachment-archival) werden in der Bibliothek gespeichert, sobald sie eingehen, damit sie die kurzlebigen Discord-Links überdauern.
 4. **Der Custom Bot speichert automatisch** - zum Beispiel **Moderationslog-Beweisbilder** (Bild-Belege, die bei Mod-Aktionen erfasst werden), **Starboard-Nachrichten** (Bilder aus gesternten Nachrichten, die auch nach Bearbeitung oder Löschung der Originale erhalten bleiben) und andere Anhang-bewahrende Module.
 
@@ -82,7 +82,7 @@ Das SCNX-Dashboard kann zwei Arten von Inhalten direkt aus den relevanten Picker
 :::info Kein Fan von KI-Bildgenerierung?
 Serverinhaber und Administratoren können diese Funktion in den [Servereinstellungen](https://scnx.app/de/glink?page=settings) deaktivieren. Wenn deaktiviert, verschwindet die **Mit KI generieren**-Box auf der Dateien-Seite. Module, die KI-Bildgenerierung nutzen, funktionieren weiter und müssen separat deaktiviert werden, falls gewünscht.
 
-Dieser Schalter steuert ausschließlich die **Bildgenerierung auf der Dateien-Seite**. Er **blendet den Generate (AI)-Tab in den [Voice-Support-Audio-Pickern](/docs/support-bot/voice-support/ai-audio) nicht aus** - die KI-Audio-Generierung wird unabhängig davon gesteuert.
+Dieser Schalter steuert ausschließlich die **Bildgenerierung auf der Dateien-Seite**. Er **blendet den Generate (AI)-Tab in den [Sprachsupport-Audio-Pickern](/docs/support-bot/voice-support/ai-audio) nicht aus** - die KI-Audio-Generierung wird unabhängig davon gesteuert.
 :::
 
 Generiere ein Bild aus einem Text-Prompt direkt auf der Bibliotheksseite.
@@ -101,7 +101,7 @@ Generiere ein Bild aus einem Text-Prompt direkt auf der Bibliotheksseite.
 
 #### KI-Audio (TTS + Musik) {#ai-audio}
 
-In den Audio-Pickern jeder [Voice-Support-Playlist](/docs/support-bot/voice-support/configuration#waiting-music) lässt der Tab **Generate (AI)** dich folgendes erzeugen:
+In den Audio-Pickern jeder [Sprachsupport-Playlist](/docs/support-bot/voice-support/configuration#waiting-music) lässt der Tab **Generate (AI)** dich folgendes erzeugen:
 
 - **Text-to-Speech-Clips** - wähle eine Sprache und Stimme, tippe das Skript (bis zu 10.000 Zeichen), erhalte ein abspielbares Voice-over.
 - **Musik-Tracks** - beschreibe die Stimmung (z.B. _"warmes Lo-Fi, sanftes Klavier, kein Gesang"_), wähle eine Dauer zwischen 3 Sekunden und 5 Minuten und SCNX generiert einen loop-tauglichen Track.

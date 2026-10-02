@@ -184,16 +184,18 @@ A dropdown menu for role selection.
   ],
   "placeholder": "Select a role...",
   "minValue": 1,
-  "maxValue": 1
+  "maxValue": 1,
+  "mode": "replace"
 }
 ```
 
-| Field         | Type           | Constraints                                               |
-| ------------- | -------------- | --------------------------------------------------------- |
-| `roles`       | `RoleOption[]` | Max 25 items. Each must have `id` and `label`.            |
-| `placeholder` | `string`       | Max 150 characters. Optional.                             |
-| `minValue`    | `number`       | Minimum roles to select. Must be $<=$ `maxValue`.         |
-| `maxValue`    | `number`       | Maximum roles to select. Must be $<=$ roles array length. |
+| Field         | Type           | Constraints                                                                                                                        |
+| ------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `roles`       | `RoleOption[]` | Max 25 items. Each must have `id` and `label`.                                                                                     |
+| `placeholder` | `string`       | Max 150 characters. Optional.                                                                                                      |
+| `minValue`    | `number`       | Minimum roles to select. Must be $<=$ `maxValue`.                                                                                  |
+| `maxValue`    | `number`       | Maximum roles to select. Must be $<=$ roles array length.                                                                          |
+| `mode`        | `string`       | `"replace"`, `"keep"`, or `"toggle"`. Optional, defaults to `"replace"`. Ignored (always replace) when the effective maximum is 1. |
 
 ### SelectOption (Custom Command Elements)
 

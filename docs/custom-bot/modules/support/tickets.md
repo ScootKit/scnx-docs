@@ -38,6 +38,15 @@ only <PlanPrice plan="UNLIMITED" type="MONTHLY"/> (<PlanPrice plan="UNLIMITED" t
   will be sent
   in the configured log channel and to the user (if enabled).
 
+## Commands {#commands}
+
+| Command                       | Type                    | Description                                                                                                                                                            |
+| ----------------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Create Ticket About Message` | Message context command | Opens a ticket about the selected message, using the first configured ticket type. The ticket links back to the message and quotes its content. Available to everyone. |
+| `Close Ticket`                | Message context command | Closes the ticket the selected message is in, like the "Close Ticket" button. Requires the **Manage Channels** permission. Only works in open ticket channels.         |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 In this file, you can configure Ticket-Category. Each ticket category will have its own ticket creation message sent in

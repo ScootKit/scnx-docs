@@ -81,6 +81,35 @@ After saving, the bot updates the commands registered with Discord to match your
 As with all command changes, updates can take time to appear in Discord - newly enabled commands may take a while to show up, and removed ones a while to disappear. This is a Discord-side propagation delay, the same behavior described in the [Permissions & Slash Commands](/docs/custom-bot/slash-commands#command-synchronization) guide. Give it some time before assuming something is wrong.
 :::
 
+## Context menus {#context-menus}
+
+Context menu commands are the **User** and **Message** commands that appear when you right-click a member or a message in Discord and open the **Apps** submenu. They are switched off by default, so you have to turn on the ones you want.
+
+### Setting up context menu commands {#context-menu-setup}
+
+1. Make sure the module that provides the command is enabled. You can add more on the **Manage modules** link at the top of the Commands page.
+2. Open the **Commands** page in the Bot section of the SCNX Dashboard.
+3. Switch to the **User** tab for commands on members or the **Message** tab for commands on messages. Use **Search commands** to find a command by name or module.
+4. Turn on the toggle of every command you want to offer. The counter on the tab shows how many of the 15 allowed commands you use.
+5. Optionally type a new name into the field next to the command. The field is only editable while the command is turned on.
+6. Check the **Member preview** on the right. It shows the Discord menu as your members will see it, including your bot's name and avatar.
+7. Save with the bar that appears at the bottom of the page (**You have unsaved command changes**). If saving is blocked, the page lists what to fix under **Resolve these before saving**.
+8. Confirm **Reload configuration now** in the dialog that appears after saving. Command changes only apply after your bot reloads its configuration.
+
+To use a command in Discord, right-click a member (User) or a message (Message), open **Apps** and pick the command under your bot's name.
+
+### Managing commands {#managing-commands}
+
+The Commands page also controls which commands your bot offers in general:
+
+- **Slash tab:** commands are on by default and can be turned off. Slash commands cannot be renamed here. See [Enabling and disabling](#enable-disable).
+- **Grouping:** commands are grouped by module. Commands that do not belong to a module are listed in the **Built-in** group. The number next to each group shows how many of its commands are enabled.
+- **Who can use a command:** each command shows a badge, either **Everyone** or **Staff** followed by the required permission. You can change who may run it in Discord under Server Settings -> Integrations, see [Permissions & Slash Commands](/docs/custom-bot/slash-commands).
+- **Renaming:** names can be up to 32 characters long and must be unique per tab (ignoring upper and lower case). See [Renaming context-menu commands](#renaming).
+- **Limits:** Discord allows 100 slash commands, 15 user context commands and 15 message context commands. Once a tab is full, turning on another command opens **Command limit reached** and the command stays off. See [Limits](#limits).
+- **Plan-locked commands:** some commands are on by default and can only be turned off with a Professional plan. Without it the toggle is locked and the row shows that the plan is required to disable it.
+- The Commands page is currently in **Beta**, so some behavior may still change.
+
 ## Troubleshooting {#troubleshooting}
 
 <details>

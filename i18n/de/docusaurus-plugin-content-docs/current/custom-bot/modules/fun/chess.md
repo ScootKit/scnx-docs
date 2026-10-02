@@ -62,12 +62,16 @@ Wenn ein Spieler innerhalb des konfigurierten Zeitlimits keinen Zug ausführt, e
 
 <SlashCommandExplanation />
 
-| Befehl                                                | Beschreibung                                                                                  |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `/chess challenge user:<User>`                        | Fordere ein anderes Mitglied zu einer Schachpartie heraus.                                    |
-| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Starte eine Schachpartie gegen die KI (Standard-Schwierigkeitsgrad: Mittel).                  |
-| `/chess games`                                        | Zeige deine aktiven Schachpartien an.                                                         |
-| `/chess history [user:<User>]`                        | Zeige den Verlauf beendeter Schachpartien an (deine eigenen oder die eines anderen Spielers). |
+| Befehl                                                | Beschreibung                                                                                                                                           |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `/chess challenge user:<User>`                        | Fordere ein anderes Mitglied zu einer Schachpartie heraus.                                                                                             |
+| `/chess challenge-ai [difficulty:<Easy/Medium/Hard>]` | Starte eine Schachpartie gegen die KI (Standard-Schwierigkeitsgrad: Mittel).                                                                           |
+| `/chess games`                                        | Zeige deine aktiven Schachpartien an.                                                                                                                  |
+| `/chess history [user:<User>]`                        | Zeige den Verlauf beendeter Schachpartien an (deine eigenen oder die eines anderen Spielers).                                                          |
+| View Chess History (Nutzer-Kontextmenü)               | Rechtsklick auf einen Nutzer und "Apps" > "View Chess History" wählen, um dessen beendete Schachpartien anzuzeigen. Funktioniert wie `/chess history`. |
+| Challenge to Chess (Nutzer-Kontextmenü)               | Rechtsklick auf einen Nutzer und "Apps" > "Challenge to Chess" wählen, um ihn zu einer Partie herauszufordern. Funktioniert wie `/chess challenge`.    |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Konfiguration {#configuration}
 

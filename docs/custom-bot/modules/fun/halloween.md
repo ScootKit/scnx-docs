@@ -12,7 +12,7 @@ Run a yearly Halloween event on your server: your members collect candy, spook e
 - Pumpkins spawn in the channels you pick, both when your server is active and at random times during the day. The first member to click the button gets the candy.
 - `/spook` lets members steal candy from each other, with a chance of the spook backfiring. It can be switched off completely.
 - `/candyshop` sells the items you define: roles the bot hands out automatically, or custom prizes you fulfil yourself. Both support a global stock and a limit per member.
-- A self-updating leaderboard message ranks everyone by the candy they earned, so spending candy never costs a place.
+- A self-updating leaderboard message ranks everyone by the candy they earned, so spending candy never costs a place. It is posted year-round, showing a countdown to the next Halloween outside the event.
 - A countdown channel is renamed once a day, all year round.
 - On October 31st all earnings are doubled, and once the event is over the bot posts the final standings.
 - Between November 8th and September 30th the commands answer with a countdown to the next Halloween.
@@ -33,12 +33,13 @@ Each feature is activated by a single setting. A feature whose setting is empty 
 | Countdown channel                          | Set a "Countdown Channel", usually a voice channel nobody can join. Optionally adjust "Countdown Channel Name" and "Countdown Channel Name on Halloween".                           |
 | Haunted trick                              | Set a "Haunted Role". Without it, `/trickortreat` never uses the haunting trick and only rolls the other two.                                                                       |
 | Candy shop                                 | Add at least one item to the [Candy Shop Items](#configuration-shop-items) configuration. Without items, `/candyshop` answers that the shop is empty.                               |
+| Custom item fulfillment                    | Set a "Fulfillment Channel" so purchases of items of the type "Custom" are posted there instead of the bot's log channel.                                                           |
 | Spooking                                   | Nothing. `/spook` is on by default and can be switched off with "Enable /spook".                                                                                                    |
 | `/trickortreat`, candy, off-season replies | Nothing. These work out of the box.                                                                                                                                                 |
 
 The bot needs these permissions:
 
-- "View Channel", "Send Messages" and "Embed Links" in the spawn channels and in the leaderboard channel.
+- "View Channel", "Send Messages" and "Embed Links" in the spawn channels, the leaderboard channel and the fulfillment channel, if you set one.
 - "View Channel", "Send Messages", "Embed Links", "Read Message History" and "Pin Messages" in the test channel, so it can post and pin the test leaderboard and the explainer message.
 - "Manage Channels" for the countdown channel, so it can be renamed.
 - "Manage Roles" for the haunted role and for every role sold in the shop. The bot's own role has to be above them in the role hierarchy.
@@ -65,13 +66,13 @@ If you restricted the Halloween commands to certain channels in your Discord ser
 
 All dates use the timezone configured for your bot.
 
-| Period                         | What happens                                                                                                                                                                                                                                                    |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| October 1st to October 31st    | The event is live: `/trickortreat`, pumpkin spawns, `/spook`, the shop and the live leaderboard all work.                                                                                                                                                       |
-| October 31st                   | All candy earned from `/trickortreat` and from pumpkins is doubled. Candy moved by a spook is not doubled.                                                                                                                                                      |
-| November 1st to November 7th   | Earning is over. `/trickortreat` and `/spook` answer with the wind-down message and no pumpkins spawn, but `/candyshop` stays open so nobody sits on unspent candy. The bot posts the closing announcement and the leaderboard switches to the final standings. |
-| November 8th                   | The season is reset: all candy, all purchases and the haunted role are removed automatically.                                                                                                                                                                   |
-| November 8th to September 30th | Off-season. Every command and every leftover button answers with a countdown to the next Halloween. The countdown channel keeps counting down.                                                                                                                  |
+| Period                         | What happens                                                                                                                                                                                                                                                                                |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| October 1st to October 31st    | The event is live: `/trickortreat`, pumpkin spawns, `/spook`, the shop and the live leaderboard all work.                                                                                                                                                                                   |
+| October 31st                   | All candy earned from `/trickortreat` and from pumpkins is doubled. Candy moved by a spook is not doubled.                                                                                                                                                                                  |
+| November 1st to November 7th   | Earning is over. `/trickortreat` and `/spook` answer with the wind-down message and no pumpkins spawn, but `/candyshop` stays open so nobody sits on unspent candy. The bot posts the closing announcement and the leaderboard switches to the final standings.                             |
+| November 8th                   | The season is reset: all candy, all purchases and the haunted role are removed automatically.                                                                                                                                                                                               |
+| November 8th to September 30th | Off-season. Every command and every leftover button answers with a countdown to the next Halloween. The countdown channel keeps counting down, and the leaderboard message (once a "Leaderboard Channel" is set) shows "Halloween is coming" with the same countdown, refreshed once a day. |
 
 ### Earning candy {#earning-candy}
 
@@ -81,18 +82,20 @@ All dates use the timezone configured for your bot.
 
 ### Spending candy {#spending-candy}
 
-`/candyshop` shows the item list and the member's balance, only visible to the member who ran it. They pick an item from the menu and confirm the purchase with a button. Items whose stock is used up are marked as sold out in the menu.
+`/candyshop` shows the item list, each item with its price and description, and the member's balance, only visible to the member who ran it. Items whose stock is used up are struck through and marked as sold out, both in the list and in the buy menu below it.
+
+Picking an item from the menu shows a confirmation on the same message: the item and its description, the price, the member's balance before and after the purchase, how many are left when the item has a stock, and how many more times the member may buy it when it has a limit per member. If the member cannot buy it (not enough candy, sold out, the limit reached, or the item not available), the "Confirm purchase" button is disabled and the reason is shown. A "Back to shop" button returns to the full list, or the member can pick another item from the menu instead. After a successful purchase, the member gets the purchase message and the shop message updates to the list with the new balance.
 
 - Items of the type "Role" hand out the configured role immediately and permanently. If the role cannot be given, the purchase is cancelled and the candy is refunded.
-- Items of the type "Custom" are logged in the bot's log channel so you can hand out the prize yourself.
+- Items of the type "Custom" are posted to the "Fulfillment Channel" so you can hand out the prize yourself. Left empty, or if it cannot be reached, they go to the bot's log channel instead.
 - Stock and limit per member apply to the whole season and are checked while buying, so an item can never be oversold.
 - Every item can carry its own purchase message, written with the same editor as the messages in [Messages](#configuration-strings) - plain text or a full embed, with the `%item%`, `%price%`, `%balance%` and `%user%` placeholders. Left empty, the item uses the general purchase confirmation.
 
 ### Leaderboard and countdown {#leaderboard}
 
-The bot keeps a single message in the leaderboard channel up to date, at most once per minute. It ranks members by the candy they earned during the season, so buying something in the shop, losing candy to a trick or being spooked never costs a place. The message also shows how many days are left until Halloween and is protected against auto-delete.
+The bot posts a single message in the leaderboard channel and keeps it up to date, at most once per minute, as soon as a "Leaderboard Channel" is set - in every phase of the year, not just while the event runs. Outside the event it shows "Halloween is coming" with a countdown to the next Halloween, refreshed once a day so it never goes stale. Once the event is live it ranks members by the candy they earned during the season, so buying something in the shop, losing candy to a trick or being spooked never costs a place. From November 1st to 7th it shows the final standings, and the closing announcement is posted once the event ends. The message is protected against auto-delete.
 
-The leaderboard's title, final title, color, thumbnail and image can all be customized in [Messages](#configuration-strings). The test leaderboard uses the same look, so you can preview it in the test channel.
+The message is a title with a thumbnail next to it, the configured image directly below, a divider, then the ranking and the countdown. Its title, final title, color, thumbnail and image can all be customized in [Messages](#configuration-strings). The test leaderboard uses the same look, so you can preview it in the test channel. A leaderboard message posted by an older bot version (an embed) is replaced by a new message once automatically, and the old one is deleted.
 
 The countdown channel is renamed once a day, including outside the event, and gets its own name on October 31st.
 
@@ -114,39 +117,40 @@ This module has multiple configuration files. Please review them below.
 
 In this configuration file, you can set up the Halloween event. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=halloween%7Cconfig).
 
-| Field                               | Description                                                                                                                                                                                                                        |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Countdown Channel                   | Channel that is renamed once a day to show the days left until Halloween. Usually a voice channel nobody can join.                                                                                                                 |
-| Countdown Channel Name              | Name the countdown channel is renamed to. Use `%days%` for the days left until Halloween.                                                                                                                                          |
-| Countdown Channel Name on Halloween | Name the countdown channel is renamed to on October 31st.                                                                                                                                                                          |
-| Treat Chance (%)                    | Chance that `/trickortreat` gives candy instead of playing a trick.                                                                                                                                                                |
-| Minimum Treat Reward                | Lowest amount of candy a treat can give.                                                                                                                                                                                           |
-| Maximum Treat Reward                | Highest amount of candy a treat can give.                                                                                                                                                                                          |
-| Jackpot Chance (%)                  | Chance that a treat turns into a jackpot instead of a normal reward.                                                                                                                                                               |
-| Jackpot Reward                      | Amount of candy a jackpot gives.                                                                                                                                                                                                   |
-| Minimum Trick Loss                  | Lowest amount of candy a member can lose to a trick. The balance never drops below 0.                                                                                                                                              |
-| Maximum Trick Loss                  | Highest amount of candy a member can lose to a trick. The balance never drops below 0.                                                                                                                                             |
-| Show /trickortreat to everybody     | If enabled, the result of `/trickortreat` is posted publicly so the rest of the channel can see it. Switch it off to show it only to the member who ran the command. The "already collected today" reply stays private either way. |
-| Haunted Role                        | Role given to a member for a while when a trick haunts them. Leave empty to skip this kind of trick.                                                                                                                               |
-| Haunted Duration (minutes)          | How long the haunted role stays on a member before the bot removes it again.                                                                                                                                                       |
-| Pumpkin Spawn Channels              | Channels in which pumpkins can spawn. The bot needs permission to send messages in each of them. Leave empty to disable pumpkin spawns completely.                                                                                 |
-| Minimum Spawn Interval (hours)      | Shortest wait before the next pumpkin is armed. Once armed, it drops on the next message in one of the spawn channels.                                                                                                             |
-| Maximum Spawn Interval (hours)      | Longest wait before the next pumpkin is armed.                                                                                                                                                                                     |
-| Minimum Pumpkin Reward              | Lowest amount of candy claiming a pumpkin gives.                                                                                                                                                                                   |
-| Maximum Pumpkin Reward              | Highest amount of candy claiming a pumpkin gives.                                                                                                                                                                                  |
-| Despawn Time (minutes)              | How long an unclaimed pumpkin stays claimable before it rots away. Pumpkins never survive past midnight of November 1st, no matter how long this is.                                                                               |
-| Wake-Up Spawns per Day              | Number of pumpkins dropped into a random spawn channel every day, even when nobody is talking. Set to 0 to only spawn on activity. At most 10.                                                                                     |
-| Wake-Up Spawns: earliest hour       | Earliest hour of the day (0-23) at which a wake-up pumpkin may drop.                                                                                                                                                               |
-| Wake-Up Spawns: latest hour         | Latest hour of the day (0-23) at which a wake-up pumpkin may drop. Has to be later than the earliest hour.                                                                                                                         |
-| Enable /spook                       | If enabled, members can try to steal candy from each other once a day with `/spook`.                                                                                                                                               |
-| Spook Success Chance (%)            | Chance that a spook succeeds. If it fails, the same amount of candy moves the other way instead.                                                                                                                                   |
-| Spook Steal Percentage (%)          | Percentage of the target's balance that is stolen on a successful spook.                                                                                                                                                           |
-| Spook Steal Cap                     | Maximum amount of candy a single spook can move, no matter the percentage.                                                                                                                                                         |
-| Minimum Target Balance              | Members with less candy than this cannot be spooked.                                                                                                                                                                               |
-| Leaderboard Channel                 | Text or announcement channel for the self-updating leaderboard message and the closing announcement. Leave empty to disable both.                                                                                                  |
-| Leaderboard Entries                 | How many members are shown on the leaderboard message and in the closing announcement.                                                                                                                                             |
-| Test mode                           | If enabled, the event runs with separate test data in the test channel, so you can try it at any time. See [Testing the event](#testing).                                                                                          |
-| Test channel                        | Channel in which the test event runs while test mode is enabled.                                                                                                                                                                   |
+| Field                               | Description                                                                                                                                                                                                                                                             |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Countdown Channel                   | Channel that is renamed once a day to show the days left until Halloween. Usually a voice channel nobody can join.                                                                                                                                                      |
+| Countdown Channel Name              | Name the countdown channel is renamed to. Use `%days%` for the days left until Halloween.                                                                                                                                                                               |
+| Countdown Channel Name on Halloween | Name the countdown channel is renamed to on October 31st.                                                                                                                                                                                                               |
+| Treat Chance (%)                    | Chance that `/trickortreat` gives candy instead of playing a trick.                                                                                                                                                                                                     |
+| Minimum Treat Reward                | Lowest amount of candy a treat can give.                                                                                                                                                                                                                                |
+| Maximum Treat Reward                | Highest amount of candy a treat can give.                                                                                                                                                                                                                               |
+| Jackpot Chance (%)                  | Chance that a treat turns into a jackpot instead of a normal reward.                                                                                                                                                                                                    |
+| Jackpot Reward                      | Amount of candy a jackpot gives.                                                                                                                                                                                                                                        |
+| Minimum Trick Loss                  | Lowest amount of candy a member can lose to a trick. The balance never drops below 0.                                                                                                                                                                                   |
+| Maximum Trick Loss                  | Highest amount of candy a member can lose to a trick. The balance never drops below 0.                                                                                                                                                                                  |
+| Show /trickortreat to everybody     | If enabled, the result of `/trickortreat` is posted publicly so the rest of the channel can see it. Switch it off to show it only to the member who ran the command. The "already collected today" reply stays private either way.                                      |
+| Haunted Role                        | Role given to a member for a while when a trick haunts them. Leave empty to skip this kind of trick.                                                                                                                                                                    |
+| Haunted Duration (minutes)          | How long the haunted role stays on a member before the bot removes it again.                                                                                                                                                                                            |
+| Pumpkin Spawn Channels              | Channels in which pumpkins can spawn. The bot needs permission to send messages in each of them. Leave empty to disable pumpkin spawns completely.                                                                                                                      |
+| Minimum Spawn Interval (hours)      | Shortest wait before the next pumpkin is armed. Once armed, it drops on the next message in one of the spawn channels.                                                                                                                                                  |
+| Maximum Spawn Interval (hours)      | Longest wait before the next pumpkin is armed.                                                                                                                                                                                                                          |
+| Minimum Pumpkin Reward              | Lowest amount of candy claiming a pumpkin gives.                                                                                                                                                                                                                        |
+| Maximum Pumpkin Reward              | Highest amount of candy claiming a pumpkin gives.                                                                                                                                                                                                                       |
+| Despawn Time (minutes)              | How long an unclaimed pumpkin stays claimable before it rots away. Pumpkins never survive past midnight of November 1st, no matter how long this is.                                                                                                                    |
+| Wake-Up Spawns per Day              | Number of pumpkins dropped into a random spawn channel every day, even when nobody is talking. Set to 0 to only spawn on activity. At most 10.                                                                                                                          |
+| Wake-Up Spawns: earliest hour       | Earliest hour of the day (0-23) at which a wake-up pumpkin may drop.                                                                                                                                                                                                    |
+| Wake-Up Spawns: latest hour         | Latest hour of the day (0-23) at which a wake-up pumpkin may drop. Has to be later than the earliest hour.                                                                                                                                                              |
+| Enable /spook                       | If enabled, members can try to steal candy from each other once a day with `/spook`.                                                                                                                                                                                    |
+| Spook Success Chance (%)            | Chance that a spook succeeds. If it fails, the same amount of candy moves the other way instead.                                                                                                                                                                        |
+| Spook Steal Percentage (%)          | Percentage of the target's balance that is stolen on a successful spook.                                                                                                                                                                                                |
+| Spook Steal Cap                     | Maximum amount of candy a single spook can move, no matter the percentage.                                                                                                                                                                                              |
+| Minimum Target Balance              | Members with less candy than this cannot be spooked.                                                                                                                                                                                                                    |
+| Leaderboard Channel                 | Text or announcement channel for the self-updating leaderboard message and the closing announcement. Leave empty to disable both.                                                                                                                                       |
+| Leaderboard Entries                 | How many members are shown on the leaderboard message and in the closing announcement.                                                                                                                                                                                  |
+| Fulfillment Channel                 | Channel where purchases of items of the type "Custom" are posted so you can hand them out. Left empty, or if the channel cannot be reached, they go to the bot's log channel instead. Purchases made in the test channel are posted here too, marked as test purchases. |
+| Test mode                           | If enabled, the event runs with separate test data in the test channel, so you can try it at any time. See [Testing the event](#testing).                                                                                                                               |
+| Test channel                        | Channel in which the test event runs while test mode is enabled.                                                                                                                                                                                                        |
 
 ### Messages {#configuration-strings}
 
@@ -177,7 +181,7 @@ In this configuration file, you can customize every message of the event. Open i
 | Spook Rejected: bot                       | Sent when a member tries to spook a bot.                                                                                                               |
 | Spook Rejected: already used today        | Sent when a member already used their daily spook.                                                                                                     |
 | Spook Rejected: disabled                  | Sent when spooking is switched off on this server.                                                                                                     |
-| Candy Shop Message                        | Message of the `/candyshop` command. The item list and the buy menu are added below it.                                                                |
+| Candy Shop Message                        | Message of the `/candyshop` command. The item list is added into the message (into the embed when it is one); the buy menu is added below it.          |
 | "Shop is empty"-Message                   | Sent when no shop items have been configured.                                                                                                          |
 | "Item is gone"-Message                    | Sent when the picked item is not in the shop anymore, for example because it was removed or renamed while the listing was open.                        |
 | "Not enough candy"-Message                | Sent when a member cannot afford the item they picked.                                                                                                 |
@@ -187,24 +191,24 @@ In this configuration file, you can customize every message of the event. Open i
 | Purchase Confirmation                     | Sent when a purchase went through. Items with their own purchase message use that one instead.                                                         |
 | Leaderboard Title                         | Title of the live leaderboard message. Defaults to "🎃 Halloween Leaderboard".                                                                         |
 | Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Defaults to "🎃 Final Halloween standings".                                  |
-| Leaderboard Color                         | Color of the leaderboard embed, set with a color picker. Defaults to orange (`#e67e22`).                                                               |
-| Leaderboard Thumbnail                     | Small image shown in the corner of the leaderboard embed. Leave empty for none.                                                                        |
-| Leaderboard Image                         | Large image shown at the bottom of the leaderboard embed. Leave empty for none.                                                                        |
+| Leaderboard Color                         | Accent color of the leaderboard message, set with a color picker. Defaults to orange (`#e67e22`).                                                      |
+| Leaderboard Thumbnail                     | Small image shown next to the leaderboard title. Leave empty for none.                                                                                 |
+| Leaderboard Image                         | Large image shown below the leaderboard title. Leave empty for none.                                                                                   |
 
 ### Candy Shop Items {#configuration-shop-items}
 
 In this configuration file, you can set up what your members can buy with their candy. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=halloween%7Cshop-items).
 
-| Field                       | Description                                                                                                                          |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Item Name                   | Name of the item, shown in the shop. Should be unique. Renaming an item during the season resets its stock and its limit per member. |
-| Item Description            | Short description of the item, shown next to its name in the shop.                                                                   |
-| Price                       | Amount of candy this item costs.                                                                                                     |
-| Item Type                   | Role items grant the configured role automatically. Custom items are only logged, so you can hand them out yourself.                 |
-| Role (for "Role" items)     | Role granted permanently when the item is bought. Only used for items of the type "Role".                                            |
-| Stock                       | How often this item can be bought in total this season. Set to 0 for unlimited.                                                      |
-| Limit per User              | How often a single member can buy this item this season. Set to 0 for unlimited.                                                     |
-| (optional) Purchase Message | Message the buyer receives instead of the default purchase confirmation. Leave empty to use the default one.                         |
+| Field                       | Description                                                                                                                                                                                                                                        |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Item Name                   | Name of the item, shown in the shop. Should be unique. Renaming an item during the season resets its stock and its limit per member.                                                                                                               |
+| Item Description            | Short description of the item, shown next to its name in the shop.                                                                                                                                                                                 |
+| Price                       | Amount of candy this item costs.                                                                                                                                                                                                                   |
+| Item Type                   | Role items grant the configured role automatically. Custom items are only logged, so you can hand them out yourself - configure a Fulfillment Channel in this module's configuration, otherwise the purchase falls back to your bot's log channel. |
+| Role (for "Role" items)     | Role granted permanently when the item is bought. Only used for items of the type "Role".                                                                                                                                                          |
+| Stock                       | How often this item can be bought in total this season. Set to 0 for unlimited.                                                                                                                                                                    |
+| Limit per User              | How often a single member can buy this item this season. Set to 0 for unlimited.                                                                                                                                                                   |
+| (optional) Purchase Message | Message the buyer receives instead of the default purchase confirmation. Leave empty to use the default one.                                                                                                                                       |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -237,6 +241,19 @@ In this configuration file, you can set up what your members can buy with their 
     <ul>
         <li>Make sure the bot has the "Manage Channels" permission for that channel.</li>
         <li>The channel is renamed once per day, not immediately after a configuration change.</li>
+    </ul>
+</details>
+<details>
+    <summary>The leaderboard message is not posted</summary>
+    <ul>
+        <li>Make sure a "Leaderboard Channel" is set in the configuration.</li>
+        <li>Make sure the bot has "View Channel", "Send Messages", "Embed Links" and "Read Message History" there.</li>
+    </ul>
+</details>
+<details>
+    <summary>Custom purchases do not show up</summary>
+    <ul>
+        <li>Make sure a "Fulfillment Channel" is set, or that the bot's log channel is configured, and that the bot has "View Channel", "Send Messages" and "Embed Links" there.</li>
     </ul>
 </details>
 

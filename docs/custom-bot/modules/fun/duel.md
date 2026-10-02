@@ -32,9 +32,12 @@ Both players make their choices simultaneously. Once both have chosen, the round
 
 <SlashCommandExplanation />
 
-| Command             | Description                       |
-| ------------------- | --------------------------------- |
-| `/duel user:<User>` | Challenge another user to a duel. |
+| Command                  | Description                                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------------------------- |
+| `/duel user:<User>`      | Challenge another user to a duel.                                                              |
+| Duel (user context menu) | Right-click a user and choose "Apps" > "Duel" to challenge them to a duel. Works like `/duel`. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Troubleshooting {#troubleshooting}
 

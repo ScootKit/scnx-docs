@@ -9,7 +9,7 @@ Send a message to a channel when a new item appears in an RSS or Atom feed.
 - Receive notifications in a Discord channel when new items appear in any RSS or Atom feed.
 - Customize the notification message with item details such as title, description, URL, publish date and media.
 - Monitor multiple feeds simultaneously, each with its own notification channel and message format.
-- Supports media extraction from feed entries, including images from media:content, media:thumbnail and enclosure elements.
+- Supports media extraction from feed entries, including images from media:content, media:thumbnail and enclosure elements. If none of these is present, the first image inside the item's HTML content or description is used.
 
 ## Setup {#setup}
 
@@ -33,6 +33,8 @@ This configuration file allows you to set up feeds to monitor for new items. Ope
 | Channel             | The Discord channel in which the notification should be sent.                                                                                                     |
 | RSS / Atom Feed URL | The URL to a valid RSS or Atom feed. The feed will be checked every fifteen minutes.                                                                              |
 | Message             | The message sent to the configured channel when a new item appears in the feed. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
+
+Only the 10 newest entries of a feed are checked on each run, and item descriptions are shortened to 920 characters.
 
 ## Troubleshooting {#troubleshooting}
 

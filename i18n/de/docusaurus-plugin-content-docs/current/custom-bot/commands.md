@@ -81,6 +81,35 @@ Nach dem Speichern aktualisiert der Bot die bei Discord registrierten Befehle so
 Wie bei allen Befehlsänderungen kann es einige Zeit dauern, bis Aktualisierungen in Discord erscheinen - neu aktivierte Befehle können eine Weile brauchen, um aufzutauchen, und entfernte eine Weile, um zu verschwinden. Dies ist eine Verzögerung bei der Verbreitung auf Discord-Seite, dasselbe Verhalten, das in der Anleitung [Slashcommands & Berechtigungen](/de/docs/custom-bot/slash-commands#command-synchronization) beschrieben wird. Gib ihm etwas Zeit, bevor du annimmst, dass etwas nicht stimmt.
 :::
 
+## Kontextmenüs {#context-menus}
+
+Kontextmenü-Befehle sind die **Benutzer**- und **Nachricht**-Befehle, die erscheinen, wenn du in Discord per Rechtsklick auf ein Mitglied oder eine Nachricht das Untermenü **Apps** öffnest. Sie sind standardmäßig ausgeschaltet, du musst also die gewünschten aktivieren.
+
+### Kontextmenü-Befehle einrichten {#context-menu-setup}
+
+1. Stelle sicher, dass das Modul, das den Befehl bereitstellt, aktiviert ist. Weitere Module kannst du über den Link **Module verwalten** oben auf der Seite Befehle hinzufügen.
+2. Öffne die Seite **Befehle** im Bot-Bereich des SCNX-Dashboards.
+3. Wechsle zum Tab **Benutzer** für Befehle auf Mitglieder oder zum Tab **Nachricht** für Befehle auf Nachrichten. Mit **Befehle durchsuchen** findest du einen Befehl nach Name oder Modul.
+4. Aktiviere den Schalter jedes Befehls, den du anbieten möchtest. Der Zähler am Tab zeigt, wie viele der 15 erlaubten Befehle du nutzt.
+5. Optional kannst du im Feld neben dem Befehl einen neuen Namen eingeben. Das Feld ist nur bearbeitbar, solange der Befehl aktiviert ist.
+6. Prüfe die **Mitglieder-Vorschau** rechts. Sie zeigt das Discord-Menü so, wie deine Mitglieder es sehen, inklusive Name und Avatar deines Bots.
+7. Speichere über die Leiste am unteren Rand (**Du hast ungespeicherte Befehlsaenderungen**). Wenn das Speichern blockiert ist, listet die Seite unter **Bitte vor dem Speichern beheben** auf, was zu korrigieren ist.
+8. Bestätige im Dialog nach dem Speichern **Konfiguration jetzt neu laden**. Änderungen an Befehlen werden erst angewendet, wenn dein Bot seine Konfiguration neu lädt.
+
+Um einen Befehl in Discord zu nutzen, klicke mit der rechten Maustaste auf ein Mitglied (Benutzer) oder eine Nachricht (Nachricht), öffne **Apps** und wähle den Befehl unter dem Namen deines Bots.
+
+### Befehle verwalten {#managing-commands}
+
+Auf der Seite Befehle legst du auch generell fest, welche Befehle dein Bot anbietet:
+
+- **Tab Slash:** Befehle sind standardmäßig aktiv und können deaktiviert werden. Slash-Befehle lassen sich hier nicht umbenennen. Siehe [Aktivieren und Deaktivieren](#enable-disable).
+- **Gruppierung:** Befehle sind nach Modul gruppiert. Befehle ohne Modul stehen in der Gruppe **Integriert**. Die Zahl neben jeder Gruppe zeigt, wie viele ihrer Befehle aktiviert sind.
+- **Wer einen Befehl nutzen darf:** Jeder Befehl zeigt ein Label, entweder **Alle** oder **Team** mit der benötigten Berechtigung. Wer ihn ausführen darf, kannst du in Discord unter Servereinstellungen -> Integrationen ändern, siehe [Slashcommands & Berechtigungen](/de/docs/custom-bot/slash-commands).
+- **Umbenennen:** Namen dürfen bis zu 32 Zeichen lang sein und müssen pro Tab eindeutig sein (ohne Beachtung der Groß-/Kleinschreibung). Siehe [Kontextmenü-Befehle umbenennen](#renaming).
+- **Limits:** Discord erlaubt 100 Slash-Befehle, 15 Benutzer- und 15 Nachrichten-Kontextbefehle. Ist ein Tab voll, öffnet das Aktivieren eines weiteren Befehls **Befehlslimit erreicht** und der Befehl bleibt aus. Siehe [Limits](#limits).
+- **Plan-gesperrte Befehle:** Einige Befehle sind standardmäßig aktiv und lassen sich nur mit einem Professional-Plan deaktivieren. Ohne ihn ist der Schalter gesperrt und die Zeile zeigt, dass der Plan zum Deaktivieren erforderlich ist.
+- Die Seite Befehle befindet sich aktuell in der **Beta**, daher kann sich das Verhalten noch ändern.
+
 ## Fehlerbehebung {#troubleshooting}
 
 <details>

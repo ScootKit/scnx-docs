@@ -92,30 +92,35 @@ retention-based deletion (see [Data Storage](#configuration-storage)) is unaffec
 
 *📃Note: All `/ping-protection user` commands are hidden for a better user experience when `pings history` is disabled.*
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**. They are turned off by default, see [Setting up context menu commands](/docs/custom-bot/commands#context-menus).
+
+| Action                    | Type | Description                                                                                        | Default permission |
+| ------------------------- | ---- | -------------------------------------------------------------------------------------------------- | ------------------ |
+| `View Ping History`       | User | Shows the user's ping history, like `/ping-protection user history`.                               | Moderate Members   |
+| `View Moderation History` | User | Shows the moderation actions taken against the user, like `/ping-protection user actions-history`. | Moderate Members   |
+
 ## Configuration {#configuration}
 
 ### General Configuration {#configuration-general}
 
-In this configuration file, you set up the protection and ping rules, whitelists, AutoMod settings and the warning message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection|configs/configuration).
+In this configuration file, you set up the protection and ping rules, whitelists, AutoMod settings and the warning message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/configuration).
 
-| Field                                 | Description                                                   |
-| ------------------------------------- | --------------------------------------------------------------|
-| Protected Roles                       | Roles that are protected from pings.                          |
-| Protect all users with protected role | If enabled, all users with at least one protected role are protected, even if not listed individually.                                                                                |
-| Protected Users                       | Specific users who are protected from pings.                  |
-| Whitelisted Roles                     | Roles that are allowed to ping protected members/roles.       |
-| Whitelisted Channels                  | Channels (and channel categories) where pings to protected members/roles are ignored. Adding a category whitelists every channel under it. See [AutoMod and category exemptions](#automod-categories) for the AutoMod caveat.                                                                                 |
-| Whitelisted Users                     | Specific users whose pings to protected members/roles are ignored.|
-| Allow protected members to toggle their protection status temporarily | Enabling this allows protected users to toggle their protection off temporarily via the `/ping-protection toggle` command. The protection status gets set back to protected automatically after 24h have passed without manual re-toggling.                               |
-| Allow Reply Pings                     | If enabled, replying to a protected user's message (with mention enabled) is allowed.                                                                                                |
-| Self-Ping configuration               | Choose what happens when a protected user pings themselves: get punished, ignored, or receive fun easter eggs. Fun easter eggs also includes a special easter egg that has a 1% chance of appearing.                                                                                              |
-| Enable AutoMod                        | If enabled, the bot uses Discord's native AutoMod to block messages with pings to protected members/roles.                                                                             |
-| AutoMod Log Channel                   | The channel where AutoMod alerts are sent. Only applies if AutoMod is enabled.                                                                                                |
-| AutoMod Block Message                 | The message shown to users when their message is blocked by AutoMod.|
-| Warning Message                       | The message sent in the channel when a user pings a protected member or role. Supports `%target-name%`, `%target-mention%`, `%target-id%`, and `%pinger-id%` message parameters.      |
-| Kick punishment message               | The message sent to the user's DMs when the user got kicked by a moderation action. Supports `%reason%`, `%pings%`, `%timeframe%` and `%guild-name%` parameters.                    |
-| Automatically delete warning message  | If enabled, this will automatically delete the warning message sent after a custom time to keep the channel clean and sorted.                                                       |
-| Automatic message deletion time       | The custom time after which the bot will delete the warning message.|
+| Field                                 | Description                                                                                                                                                                                                                                                                                  |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Protected Roles                       | Roles that are protected from pings.                                                                                                                                                                                                                                                         |
+| Protect all users with protected role | If enabled, all users with at least one protected role are protected, even if not listed individually.                                                                                                                                                                                       |
+| Protected Users                       | Specific users who are protected from pings.                                                                                                                                                                                                                                                 |
+| Whitelisted Roles                     | Roles that are allowed to ping protected members/roles.                                                                                                                                                                                                                                      |
+| Whitelisted Channels                  | Channels (and channel categories) where pings to protected members/roles are ignored. Adding a category whitelists every channel under it. See [AutoMod and category exemptions](#automod-categories) for the AutoMod caveat.                                                                |
+| Whitelisted Users                     | Specific users whose pings to protected members/roles are ignored.                                                                                                                                                                                                                           |
+| Allow Reply Pings                     | If enabled, replying to a protected user's message (with mention enabled) is allowed.                                                                                                                                                                                                        |
+| Self-Ping configuration               | Choose what happens when a protected user pings themselves: get punished, ignored, or receive fun easter eggs. Fun easter eggs also includes a special easter egg that has a 1% chance of appearing. This setting does not apply while AutoMod is enabled, because AutoMod takes precedence. |
+| Enable AutoMod                        | If enabled, the bot uses Discord's native AutoMod to block messages with pings to protected members/roles.                                                                                                                                                                                   |
+| AutoMod Log Channel                   | The channel where AutoMod alerts are sent. It is recommended to use a private channel. Only applies if AutoMod is enabled.                                                                                                                                                                   |
+| AutoMod Block Message                 | The message shown to users when their message is blocked by AutoMod.                                                                                                                                                                                                                         |
+| Warning Message                       | The message sent in the channel when a user pings a protected member or role. Supports `%target-name%`, `%target-mention%`, `%target-id%`, and `%pinger-id%` message parameters.                                                                                                             |
 
 ### Moderation Actions {#configuration-moderation}
 

@@ -68,9 +68,23 @@ Verwende den Farbwähler oder gib direkt einen HEX-Farbcode ein, um die Embed-Ak
   **Button**-Trigger beim Klicken aus.
 - **Custom-Command-Dropdown** - Ein Auswahlmenü, das beim Auswählen einer Option einen Custom Command auslöst.
 - **Selbstrollen-Dropdown** - Ein Auswahlmenü, mit dem Nutzer sich selbst Rollen zuweisen können. Beim Auswählen
-  einer Option öffnet sich eine ephemere Bestätigung, die auflistet, welche Rollen hinzugefügt oder entfernt werden;
-  Mitglieder können die Auswahl dort anpassen und müssen mit **Übernehmen** bestätigen, bevor eine Rolle geändert
-  wird.
+  einer Option öffnet sich eine ephemere Bestätigung, vorausgefüllt mit den resultierenden Rollen. Das Mitglied kann
+  die Auswahl dort anpassen; erst ein Klick auf **Änderungen bestätigen** ändert die Rollen, mit **Abbrechen** wird
+  verworfen. Jedes Dropdown hat einen **Auswahlmodus**, der festlegt, wie eine Auswahl angewendet wird:
+
+  - **Ersetzen** - die Auswahl ersetzt alle Rollen aus diesem Dropdown, die das Mitglied hat (Standard für
+    bestehende Dropdowns).
+  - **Behalten & hinzufügen** - ausgewählte Rollen werden hinzugefügt, bestehende Rollen bleiben erhalten;
+    Mitglieder entfernen Rollen, indem sie sie in der Bestätigung abwählen (Standard für neue Dropdowns, sobald
+    deren Maximum über 1 liegt; ein neues Dropdown ohne gesetztes Maximum erlaubt nur eine Auswahl und verwendet
+    immer Ersetzen).
+  - **Umschalten** - die Auswahl einer Rolle, die das Mitglied noch nicht hat, fügt sie hinzu; die Auswahl einer
+    bereits vorhandenen Rolle entfernt sie; andere Rollen bleiben unverändert.
+
+  Dropdowns, bei denen nur eine Auswahl möglich ist, verwenden immer Ersetzen, und das Feld **Auswahlmodus**
+  wird angezeigt, ist aber deaktiviert. Würde eine Auswahl das konfigurierte Maximum überschreiten oder das Minimum
+  unterschreiten, zeigt die Bestätigung eine Warnung, und **Änderungen bestätigen** ist deaktiviert, bis die
+  Auswahl angepasst wurde.
 
 ### Bildanhänge {#v3-attachments}
 
@@ -124,10 +138,26 @@ Ein Auswahlmenü in einer Action Row mit bis zu **25 Optionen** (jeweils mit Lab
 Emoji). Optionen können per Drag-and-Drop neu angeordnet werden. Zwei Aktionstypen werden unterstützt:
 
 - **Custom-Command-Dropdown** - Jede Option löst einen Custom Command beim Auswählen aus.
-- **Selbstrollen-Dropdown** - Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl. Beim
-  Auswählen öffnet sich eine ephemere Bestätigung mit den hinzuzufügenden bzw. zu entfernenden Rollen; das Mitglied
-  muss mit **Übernehmen** bestätigen oder kann mit **Abbrechen** verwerfen. Die ursprüngliche öffentliche Nachricht
-  bleibt unverändert.
+- **Selbstrollen-Dropdown** - Jede Option weist eine Rolle zu. Unterstützt konfigurierbare Min-/Max-Auswahl und
+  einen **Auswahlmodus**, der festlegt, wie eine Auswahl angewendet wird:
+
+  - **Ersetzen** - die Auswahl ersetzt alle Rollen aus diesem Dropdown, die das Mitglied hat (Standard für
+    bestehende Dropdowns).
+  - **Behalten & hinzufügen** - ausgewählte Rollen werden hinzugefügt, bestehende Rollen bleiben erhalten;
+    Mitglieder entfernen Rollen, indem sie sie in der Bestätigung abwählen (Standard für neue Dropdowns, sobald
+    deren Maximum über 1 liegt; ein neues Dropdown ohne gesetztes Maximum erlaubt nur eine Auswahl und verwendet
+    immer Ersetzen).
+  - **Umschalten** - die Auswahl einer Rolle, die das Mitglied noch nicht hat, fügt sie hinzu; die Auswahl einer
+    bereits vorhandenen Rolle entfernt sie; andere Rollen bleiben unverändert.
+
+  Dropdowns, bei denen nur eine Auswahl möglich ist, verwenden immer Ersetzen, und das Feld **Auswahlmodus**
+  wird angezeigt, ist aber deaktiviert. Beim Auswählen öffnet sich eine ephemere Bestätigung, vorausgefüllt mit den
+  resultierenden Rollen; das Mitglied kann die Auswahl dort anpassen. Erst ein Klick auf **Änderungen bestätigen**
+  übernimmt die Änderungen, mit **Abbrechen** wird verworfen - die ursprüngliche öffentliche Nachricht bleibt
+  unverändert. Würde eine Auswahl das konfigurierte Maximum überschreiten oder das Minimum unterschreiten, zeigt
+  die Bestätigung eine Warnung, und **Änderungen bestätigen** ist deaktiviert, bis die Auswahl angepasst wurde.
+  Ohne Minimum können Mitglieder alle Rollen abwählen und so alle Rollen dieses Dropdowns entfernen; setze ein
+  Minimum, um das zu verhindern.
 
 ---
 

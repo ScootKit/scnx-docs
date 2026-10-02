@@ -23,6 +23,7 @@ Simple module to manage the roles of many members at once.
 - Use `/massrole add` to add a role to members on your server. You can optionally specify a target to limit the action to all users, only bots, or only humans.
 - Use `/massrole remove` to remove a specific role from members.
 - Use `/massrole remove-all` to remove all non-managed roles from members. This is a destructive action - use with caution.
+- Right-click (or long-press) a user and choose "Apps" > "Add Role to User" or "Remove Role from User" to change the roles of a single member. Select the role in the dropdown the bot shows you (only visible to you).
 - All commands will provide feedback on whether the action was executed successfully or if errors occurred (typically due to insufficient permissions for some members).
 
 ## Commands {#commands}
@@ -34,6 +35,13 @@ Simple module to manage the roles of many members at once.
 | `/massrole add role:<Role> [target:<Target>]`    | Adds the specified role to the targeted members. Target can be "all", "bots", or "humans" (defaults to "all").         |
 | `/massrole remove role:<Role> [target:<Target>]` | Removes the specified role from the targeted members. Target can be "all", "bots", or "humans" (defaults to "all").    |
 | `/massrole remove-all [target:<Target>]`         | Removes all non-managed roles from the targeted members. Target can be "all", "bots", or "humans" (defaults to "all"). |
+
+| Context menu action (user) | Description                                                                                     |
+| -------------------------- | ----------------------------------------------------------------------------------------------- |
+| `Add Role to User`         | Adds a role selected in a dropdown to this single member. Requires one of the admin roles.      |
+| `Remove Role from User`    | Removes a role selected in a dropdown from this single member. Requires one of the admin roles. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 
@@ -49,10 +57,14 @@ In this configuration file, you can configure the module. Open it in your [dashb
 
 In this configuration file, you can customize the messages sent by the module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=massrole%7Cconfigs/strings).
 
-| Field               | Description                                                                                                                             |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Action executed     | Message sent when a massrole action was executed successfully.                                                                          |
-| Action not executed | Message sent when a massrole action could not be fully executed, usually because the bot lacks sufficient permissions for some members. |
+| Field                             | Description                                                                                                                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Action executed                   | Message sent when a massrole action was executed successfully.                                                                                                                                    |
+| Action not executed               | Message sent when a massrole action could not be fully executed, usually because the bot lacks sufficient permissions for some members.                                                           |
+| Action partially executed         | Message sent when the action worked for some members but failed for others. Placeholders: `%succeeded%` (number of members updated) and `%failed%` (number of members that could not be updated). |
+| Missing "Manage Roles" permission | Message sent when the bot is missing the "Manage Roles" permission.                                                                                                                               |
+| Role above the bot                | Message sent when the targeted role is not below the bot's highest role. Placeholder: `%role%` (the targeted role).                                                                               |
+| Role managed by an integration    | Message sent when the targeted role is managed by an integration (for example a bot or the booster role) and can't be assigned manually. Placeholder: `%role%` (the targeted role).               |
 
 ## Troubleshooting {#troubleshooting}
 

@@ -13,6 +13,7 @@ Process support requests in public forums - send a message when a new thread get
 - Support for priority roles - send an additional message (e.g., pinging staff) when a user with a priority role creates a thread.
 - Add a configurable tag to priority threads for easy identification.
 - Configure multiple forum channels, each with independent settings.
+- Staff can close a thread with the "Close Thread" message context command.
 
 ## Setup {#setup}
 
@@ -25,31 +26,40 @@ Process support requests in public forums - send a message when a new thread get
 
 ## Usage {#usage}
 
-- When a user creates a new post in a configured forum channel, the bot automatically sends the configured welcome message as the first reply.
+- When a user creates a new post in a configured forum channel, the bot automatically sends the configured welcome message as the first reply and pins it in the thread.
 - If the close button is enabled, the original poster and members with configured staff roles can click the button to close the thread. The thread will be archived (and optionally locked) and a closing message will be sent.
 - If solved tags are configured, the bot will add the specified tag to the thread when it is closed.
 - If priority roles are enabled, an additional message is sent in the thread when the thread creator has one of the configured priority roles. A priority tag can also be added automatically.
+- Staff with the **Moderate Members** permission can right-click (or long-press) any message in a configured forum post and use **Apps > Close Thread** to close it, even if the close button is disabled.
+
+## Commands {#commands}
+
+| Command      | Type                    | Description                                                                                                                                                                                                                                                                                                           |
+| ------------ | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Close Thread | Message context command | Closes the forum post the selected message is in. Requires the **Moderate Members** permission. Works like the close button: it adds the closed tag (if enabled), sends the "Request closed message", locks the thread (if enabled) and archives it. Only works in posts in forum channels configured in this module. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 
 In this configuration file, you set up forum channels for support. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=forum-support%7Cchannels).
 
-| Field                        | Description                                                                                                                |
-| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Forum Channel                | The forum channel used for public support.                                                                                 |
-| Post Creation message        | Message sent as the first reply when a new thread is created. Supports `%userTag%`, `%userAvatar%`, and `%userMention%`.   |
-| Add close button?            | If enabled, a button will be added to the creation message allowing the OP and staff to close the thread.                  |
-| Close Button Content         | The label text of the close button.                                                                                        |
-| Staff-Roles                  | Roles that are allowed to close threads in addition to the original poster.                                                |
-| Lock thread when closing?    | If enabled, the thread will be locked (preventing further messages) in addition to being archived when closed.             |
-| Request closed message       | Message sent when a thread is closed. Supports `%threadUserTag%`, `%threadUserMention%`, `%userTag%`, and `%userMention%`. |
-| Add tag when closing?        | If enabled, a tag will be added to the thread when it is closed.                                                           |
-| Closed Tag                   | The name of the tag to add when closing. The tag must already exist on your forum channel. Do not include the tag emoji.   |
-| Enable Priority Roles?       | If enabled, an additional message is sent when a user with a priority role creates a thread.                               |
-| Priority Roles               | Roles that trigger the priority message when the thread creator has one of them.                                           |
-| Priority Message             | Message sent in the thread when the creator has a priority role. You can use this to ping staff.                           |
-| Add tag to priority tickets? | If enabled, a tag will be added to threads created by users with a priority role.                                          |
-| Priority Tag                 | The name of the tag to add to priority threads. The tag must already exist on your forum channel.                          |
+| Field                        | Description                                                                                                                                                                      |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Forum Channel                | The forum channel used for public support.                                                                                                                                       |
+| Post Creation message        | Message sent as the first reply when a new thread is created. Supports `%userTag%`, `%userAvatar%`, and `%userMention%`.                                                         |
+| Add close button?            | If enabled, a button will be added to the creation message allowing the OP and staff to close the thread.                                                                        |
+| Close Button Content         | The label text of the close button.                                                                                                                                              |
+| Staff-Roles                  | Roles that are allowed to close threads in addition to the original poster.                                                                                                      |
+| Lock thread when closing?    | If enabled, the thread will be locked (preventing further messages) in addition to being archived when closed.                                                                   |
+| Request closed message       | Message sent when a thread is closed. Supports `%threadUserTag%`, `%threadUserMention%`, `%userTag%`, and `%userMention%`.                                                       |
+| Add tag when closing?        | If enabled, a tag will be added to the thread when it is closed.                                                                                                                 |
+| Closed Tag                   | The name of the tag to add when closing. The tag must already exist on your forum channel. Do not include the tag emoji.                                                         |
+| Enable Priority Roles?       | If enabled, an additional message is sent when a user with a priority role creates a thread.                                                                                     |
+| Priority Roles               | Roles that trigger the priority message when the thread creator has one of them.                                                                                                 |
+| Priority Message             | Message sent in the thread when the creator has a priority role. You can use this to ping staff. Supports `%userTag%`, `%userAvatar%`, and `%userMention%` (the thread creator). |
+| Add tag to priority tickets? | If enabled, a tag will be added to threads created by users with a priority role.                                                                                                |
+| Priority Tag                 | The name of the tag to add to priority threads. The tag must already exist on your forum channel.                                                                                |
 
 ## Troubleshooting {#troubleshooting}
 

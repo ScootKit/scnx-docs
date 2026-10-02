@@ -36,6 +36,14 @@ Nutzer und Administratoren können alle [Slash-Befehle](#commands) verwenden, um
 | `/info role role:<Rolle>`         | Zeigt Informationen über die im Parameterfeld "role" ausgewählte Rolle an.                                                                                         |
 | `/info user [user:<Nutzer>]`      | Zeigt Informationen über einen Nutzer auf dem Server an. Wenn kein Wert im Feld "user" gesetzt wurde, werden Informationen über den ausführenden Nutzer angezeigt. |
 
+### Kontextmenü-Aktionen {#context-menu-actions}
+
+Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste auf einen Nutzer klickst (auf dem Handy lange drücken) und **Apps** wählst. Sie sind standardmäßig ausgeschaltet, siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus).
+
+| Aktion      | Typ    | Beschreibung                                           | Standardberechtigung |
+| ----------- | ------ | ------------------------------------------------------ | -------------------- |
+| `User Info` | Nutzer | Zeigt Informationen über den Nutzer, wie `/info user`. | Alle                 |
+
 ## Konfiguration {#configuration}
 
 In diesem Modul können einige sichtbare Feldnamen in

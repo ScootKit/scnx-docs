@@ -34,6 +34,12 @@ Users can use the slash commands described below to interact with each other or 
 | `/random dice`                                 | Roll a six-sided dice.                                                                                      |
 | `/random coinflip`                             | Flip a coin.                                                                                                |
 | `/random 8ball`                                | Ask the magic 8ball a question and receive a random answer.                                                 |
+| `Hug` (user context menu)                      | Right-click a user and choose "Apps" > "Hug" to hug them. Works like `/hug`.                                |
+| `Kiss` (user context menu)                     | Right-click a user and choose "Apps" > "Kiss" to kiss them. Works like `/kiss`.                             |
+| `Slap` (user context menu)                     | Right-click a user and choose "Apps" > "Slap" to slap them. Works like `/slap`.                             |
+| `Pat` (user context menu)                      | Right-click a user and choose "Apps" > "Pat" to pat them. Works like `/pat`.                                |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

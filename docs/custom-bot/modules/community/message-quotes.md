@@ -39,9 +39,9 @@ Archived images count against your server's [file-storage quota](/docs/scnx/guil
 
 <SlashCommandExplanation />
 
-| Command         | Description                                                                                                                |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `Quote Message` | A message context-menu (Apps) action. Right-click or long-press a message and select it to repost that message as a quote. |
+| Command         | Description                                                                                                                                                                                                 |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Quote Message` | A message context-menu (Apps) action. Right-click or long-press a message and select it to repost that message as a quote. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus). |
 
 The **Quote Message** action respects the same configuration as link-based quoting. If quoting is suppressed for the target (for example because **Ignore bot messages?** is on, or **Allow Self-quotes?** is off and you are quoting yourself), the bot replies privately (ephemerally) and posts nothing.
 

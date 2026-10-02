@@ -33,6 +33,8 @@ This configuration file allows you to set up subreddits to monitor for new threa
 | Subreddit-Name (r/\<NameHere>) | The name of the subreddit to monitor (the part after `r/`).                                                                                                 |
 | Message                        | The message sent to the configured channel when a new thread gets posted. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
+For each check, only the 10 newest threads of a subreddit are considered.
+
 ## Troubleshooting {#troubleshooting}
 
 <details>

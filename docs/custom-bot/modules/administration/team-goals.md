@@ -37,6 +37,12 @@ Set weekly messages-goals and voice-activity-goals for your staff-members.
 | `/team-goals voice-progress [user:<User>]` | Shows the voice activity progress (minutes spent in voice channels, goal, time left) towards the voice goal of the current [evaluation period](#module-terms). Only available if the voice goal is enabled.                                                                                                                                                                                                                                                                                                                                           |
 | `/team-goals history [user:<User>]`        | Shows the goal-history (amount of messages, voice minutes if the voice goal is enabled, goal reached or not according to the configured "Goal Mode", percentage of goals reached) in the last 10 weeks of the specified user (if empty, your progress will be shown).                                                                                                                                                                                                                                                                                 |
 
+| Command               | Type                 | Description                                                                                         |
+| --------------------- | -------------------- | --------------------------------------------------------------------------------------------------- |
+| `Check User Progress` | User context command | Shows the weekly goal progress of the selected member, same as [`/team-goals progress`](#commands). |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Definition of module-specific terms {#module-terms}
 
 - An **evaluation** is the time when a user gets evaluated. This happens once a week, on the

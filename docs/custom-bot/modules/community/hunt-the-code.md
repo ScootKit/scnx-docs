@@ -45,6 +45,9 @@ Users participate in the code hunt:
 | `/hunt-the-code-admin create-code display-name:<Text> [code:<Text>]` | Create a new code with a display name. If no code string is specified, one will be auto-generated. Requires the Manage Messages permission.                                                        |
 | `/hunt-the-code-admin report`                                        | Generate a detailed report of the current code hunt session, including user rankings and code statistics. The report is uploaded as a temporary document. Requires the Manage Messages permission. |
 | `/hunt-the-code-admin end`                                           | End the current code hunt session. Generates a final report, then deletes all codes and user progress. Requires the Manage Messages permission.                                                    |
+| `View Hunt Profile` (user context menu)                              | View a user's hunt profile. Works like `/hunt-the-code profile`.                                                                                                                                   |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
 
 ## Configuration {#configuration}
 

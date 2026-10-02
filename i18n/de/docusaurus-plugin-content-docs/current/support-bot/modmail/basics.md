@@ -4,7 +4,7 @@ title: Starter-Guide
 description: Kompletter Starter-Guide für dein Discord-Modmail-System  - lerne, wie du Tickets erstellst, beanspruchst, beantwortest und schließt.
 ---
 
-# Modmail Starter-Guide (Modmail 101)
+# Starter-Guide (Modmail 101)
 
 :::tip Gerne weitergeben!
 Leite diesen Guide gerne an deine Teammitglieder weiter, damit sie sich schneller im Modmail-System zurechtfinden und alle Funktionen entdecken können!
@@ -42,6 +42,10 @@ Wenn du deine Zuweisung entfernen möchtest, verwende `/modmail remove-claim`. U
 Sobald du Zugriff auf den Ticket-Kanal hast, kannst du dem Nutzer Nachrichten senden, indem du einfach im Kanal schreibst. Deine Nachricht wird per DM an den Nutzer weitergeleitet.
 
 Um interne Nachrichten zu senden, die **nicht** an den Nutzer weitergeleitet werden, stelle deiner Nachricht ein `!` voran (zum Beispiel `!Das ist eine interne Notiz`).
+
+:::note Antwort-Präfix-Modus
+Dein Server kann das auch umkehren: Wenn der **Antwort-Präfix-Modus** aktiviert ist, bleibt alles, was du schreibst, eine interne Notiz, **außer** du beginnst die Nachricht mit einem konfigurierten Antwort-Präfix (zum Beispiel `!r Deine Antwort` oder `+Deine Antwort`). Snippets (`!!`) und anonyme Antworten (`!ar`) werden weiterhin normal gesendet. Dies wird von einem Admin in den Modmail-Einstellungen konfiguriert.
+:::
 
 ## Anonyme Nachrichten {#anonymous-messages}
 
@@ -105,11 +109,86 @@ Um Snippets zu verwenden, können Teammitglieder:
 
 Um Snippets zu verwalten, stehen Teammitgliedern folgende Befehle zur Verfügung:
 
-- `/modmail snippets create key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` - Erstellt ein neues Snippet. Gib einen neuen, unbenutzten Snippet-Key als `key` Parameter ein. Optional kannst du `close-buttons` aktivieren, um einen Schließen-Knopf unter der Snippet-Nachricht hinzuzufügen, oder `form` setzen, um ein Formular anzuhängen. Ein Dialog erscheint zur Eingabe des Snippet-Inhalts.
-- `/modmail snippets edit key:<SnippetKey> [close-buttons:<Boolean>] [form:<Form>]` - Bearbeitet ein bestehendes Snippet. Wähle einen existierenden Snippet-Key und aktualisiere seine Einstellungen oder seinen Inhalt.
+- `/modmail snippets create key:<SnippetKey> [form:<Form>]` - Erstellt ein neues Snippet. Gib einen neuen, unbenutzten Snippet-Key als `key` Parameter ein. Anschließend öffnet sich ein Dialog, in dem du den Inhalt eingibst, **Schließen-Knöpfe anhängen** aktivierst, um einen Schließen-Knopf unter der Snippet-Nachricht hinzuzufügen, und über das Dropdown-Menü **Formular anhängen** ein Formular auswählst (oder _Keines_). Der optionale `form` Slash-Parameter wird nur als Fallback verwendet, wenn du mehr als 24 Formulare hast (zu viele für das Dropdown-Menü).
+- `/modmail snippets edit key:<SnippetKey> [form:<Form>]` - Bearbeitet ein bestehendes Snippet. Wähle einen existierenden Snippet-Key; derselbe Dialog öffnet sich mit dem aktuellen Inhalt, der Einstellung für Schließen-Knöpfe und dem angehängten Formular vorausgefüllt, sodass du sie ändern kannst.
 - `/modmail snippets delete key:<SnippetKey>` - Löscht ein Snippet dauerhaft. Dies kann nicht rückgängig gemacht werden.
 - `/modmail snippets preview key:<SnippetKey>` - Zeigt eine Vorschau des Snippet-Inhalts und seiner Details.
 - `/modmail snippets list [page:<Number>]` - Listet alle verfügbaren Snippets mit ihren Nutzungszahlen auf.
+
+### Dynamische Variablen {#snippet-variables}
+
+Snippet-Inhalte können `%variablen%` enthalten, die beim Senden des Snippets automatisch durch aktuelle Daten ersetzt werden.
+So kann ein einzelnes Snippet jeden Nutzer mit Namen begrüßen, das aktuelle Thema nennen, den Ticket-Kanal verlinken und mehr.
+Variablen funktionieren sowohl in `!!<SnippetKey>`- als auch in Inline-`{{<SnippetKey>}}`-Snippets. Jede Variable ohne Wert (zum
+Beispiel ein nicht gesetzter Nickname) wird durch einen leeren Text ersetzt. Text, der keine bekannte Variable ist, bleibt
+unverändert.
+
+#### Ticket-Ersteller
+
+| Variable                      | Beschreibung                                                                        |
+| ----------------------------- | ----------------------------------------------------------------------------------- |
+| `%userID%`                    | Die Discord-Nutzer-ID des Ticket-Erstellers                                         |
+| `%userTag%`                   | Der Benutzername des Ticket-Erstellers                                              |
+| `%userUsername%`              | Der rohe Benutzername des Ticket-Erstellers                                         |
+| `%userName%`                  | Der Anzeigename des Ticket-Erstellers (Nickname, falls gesetzt, sonst Benutzername) |
+| `%userMention%`               | Erwähnt den Ticket-Ersteller                                                        |
+| `%userAvatar%`                | URL des Avatars des Ticket-Erstellers                                               |
+| `%userNickname%`              | Der Server-Nickname des Ticket-Erstellers                                           |
+| `%userCreatedAt%`             | Wann der Account des Erstellers erstellt wurde                                      |
+| `%userCreatedAtRelative%`     | Account-Erstellung, relativ (z. B. "vor 2 Jahren")                                  |
+| `%userJoinedAt%`              | Wann der Ersteller dem Server beigetreten ist                                       |
+| `%userJoinedAtRelative%`      | Server-Beitritt, relativ                                                            |
+| `%userHighestRole%`           | Name der höchsten Rolle des Erstellers                                              |
+| `%userHighestRoleID%`         | ID der höchsten Rolle des Erstellers                                                |
+| `%userRoleColor%`             | Hex-Farbe der höchsten Rolle des Erstellers                                         |
+| `%userBoostingSince%`         | Seit wann der Ersteller den Server boostet                                          |
+| `%userBoostingSinceRelative%` | Boostet seit, relativ                                                               |
+
+#### Antwortendes Teammitglied
+
+| Variable                   | Beschreibung                                      |
+| -------------------------- | ------------------------------------------------- |
+| `%staffID%`                | Die Nutzer-ID des antwortenden Teammitglieds      |
+| `%staffTag%`               | Der Benutzername des Teammitglieds                |
+| `%staffUsername%`          | Der rohe Benutzername des Teammitglieds           |
+| `%staffName%`              | Der Anzeigename des Teammitglieds                 |
+| `%staffMention%`           | Erwähnt das Teammitglied                          |
+| `%staffAvatar%`            | URL des Avatars des Teammitglieds                 |
+| `%staffNickname%`          | Der Server-Nickname des Teammitglieds             |
+| `%staffCreatedAt%`         | Wann der Account des Teammitglieds erstellt wurde |
+| `%staffCreatedAtRelative%` | Account-Erstellung, relativ                       |
+| `%staffJoinedAt%`          | Wann das Teammitglied dem Server beigetreten ist  |
+| `%staffJoinedAtRelative%`  | Server-Beitritt, relativ                          |
+| `%staffHighestRole%`       | Name der höchsten Rolle des Teammitglieds         |
+| `%staffHighestRoleID%`     | ID der höchsten Rolle des Teammitglieds           |
+| `%staffRoleColor%`         | Hex-Farbe der höchsten Rolle des Teammitglieds    |
+
+#### Ticket
+
+| Variable                    | Beschreibung                                            |
+| --------------------------- | ------------------------------------------------------- |
+| `%ticketID%`                | Die angezeigte ID des Tickets                           |
+| `%ticketTopic%`             | Der Name des Ticket-Themas                              |
+| `%ticketTopicID%`           | Die ID des Ticket-Themas                                |
+| `%ticketState%`             | Der aktuelle Status des Tickets                         |
+| `%ticketCreatedAt%`         | Wann das Ticket erstellt wurde                          |
+| `%ticketCreatedAtRelative%` | Ticket-Erstellung, relativ                              |
+| `%ticketChannel%`           | Erwähnt den Ticket-Kanal                                |
+| `%ticketChannelID%`         | Die ID des Ticket-Kanals                                |
+| `%ticketClaimedBy%`         | Erwähnt das Teammitglied, dem das Ticket zugewiesen ist |
+| `%ticketClaimedByID%`       | ID des zugewiesenen Teammitglieds                       |
+| `%ticketCustomName%`        | Der benutzerdefinierte Name des Tickets                 |
+
+#### Global
+
+Diese allgemeinen Variablen sind auch in Snippets verfügbar:
+
+| Variable                                                                                                                       | Beschreibung                                            |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `%botName%`, `%botID%`, `%botAvatar%`, `%botTag%`, `%botMention%`                                                              | Details zum Bot                                         |
+| `%guildName%`, `%guildID%`, `%guildIcon%`                                                                                      | Details zum Server                                      |
+| `%timestamp%`, `%shortTime%`, `%longTime%`, `%shortDate%`, `%longDate%`, `%shortDateTime%`, `%longDateTime%`, `%relativeTime%` | Die aktuelle Zeit in verschiedenen Discord-Zeitformaten |
+| `%openingHours%`                                                                                                               | Die gerenderten Öffnungszeiten                          |
 
 ### Formulare senden {#send-forms}
 

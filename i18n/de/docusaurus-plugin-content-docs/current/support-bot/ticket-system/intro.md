@@ -32,4 +32,4 @@ Das Ticket-System erstellt für jede Support-Anfrage einen privaten Kanal auf de
 1. Aktiviere das Ticket-System in der [Konfiguration](/de/docs/support-bot/ticket-system/configuration#main-configuration).
 2. Richte deine Ticket-Kategorie, den Log-Kanal und die Teammitglieder-Rollen ein.
 3. Erstelle [Ticket-Themen](/de/docs/support-bot/ticket-system/ticket-topics) und richte [Ticket-Öffnungsnachrichten](/de/docs/support-bot/ticket-system/configuration#ticket-open-messages) ein.
-4. Teile den [Starter-Guide](/de/docs/support-bot/ticket-system/basics) mit deinem Team, damit sie wissen, wie das Ticket-System funktioniert.
+4. Teile den [Starter-Guide](/de/docs/support-bot/ticket-system/basics) mit deinem Team, damit es weiß, wie das Ticket-System funktioniert.

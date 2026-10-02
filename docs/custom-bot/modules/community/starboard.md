@@ -32,6 +32,16 @@ When a message is sent to the starboard, any image attachments on it are uploade
 
 Archived images count against your server's [file-storage quota](/docs/scnx/guilds/files#understanding-storage-limits). To opt out, enable **Disable attachment archival** in the bot's General Configuration; with archival disabled, starboard images revert to Discord's expiring URLs and old posts will eventually break again.
 
+## Commands {#commands}
+
+<SlashCommandExplanation />
+
+| Command                               | Description                                                                                                       |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `Star Message` (message context menu) | Add this message to the starboard right away, regardless of the **Minimum stars** setting. Available to everyone. |
+
+Context menu commands are turned off by default. See [Setting up context menu commands](/docs/custom-bot/commands#context-menus) to enable them.
+
 ## Configuration {#configuration}
 
 In this configuration file, you can [set up](#setup) the starboard channel, message and how users can use it in

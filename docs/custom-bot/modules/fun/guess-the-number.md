@@ -32,6 +32,8 @@ Admins (users with a configured admin role) can create a game session in any cha
 - A no-entry sign for invalid input (not a number or outside the min/max range).
 - A stop sign if an admin tries to guess (admins cannot participate in manual games).
 
+Every start message contains a button "What does the reaction under my guess mean?" that explains the reactions to the user who clicks it.
+
 After a game ends, the channel is locked. Admins can also end a game early with `/guess-the-number end` or check the current game state with `/guess-the-number status`.
 
 ### Game channel mode

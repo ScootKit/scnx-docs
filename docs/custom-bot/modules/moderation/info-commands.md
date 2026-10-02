@@ -39,6 +39,14 @@ Users and administrators can use any of the [slash commands](#commands) to view 
 | `/info role role:<Role>`            | Shows information about the role selected in the "role" parameter field.                                                                                  |
 | `/info user [user:<User>]`          | Shows information about a user on the server. If no value has been set in the "user" parameter field, information about the executing user will be shown. |
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps**. They are turned off by default, see [Setting up context menu commands](/docs/custom-bot/commands#context-menus).
+
+| Action      | Type | Description                                          | Default permission |
+| ----------- | ---- | ---------------------------------------------------- | ------------------ |
+| `User Info` | User | Shows information about the user, like `/info user`. | Everyone           |
+
 ## Configuration {#configuration}
 
 This module allows basic configuration of some visible field names in

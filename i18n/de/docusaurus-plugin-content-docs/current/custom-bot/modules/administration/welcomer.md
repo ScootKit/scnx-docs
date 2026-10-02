@@ -116,6 +116,16 @@ Nach dem Einstellen wird unter neuen Nachrichten ein (konfigurierbarer) Knopf an
 wird er inaktiv (= kann nicht mehr gedrückt werden) und eine [konfigurierbare](#configuration-config)
 Nachricht wird in den konfigurierten Kanal gesendet.
 
+## Befehle {#commands}
+
+| Befehl                 | Typ                  | Beschreibung                                                                                                                                                                                                                                                   |
+| ---------------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Assign Join Roles`    | Nutzer-Kontextbefehl | Weist dem ausgewählten Mitglied die konfigurierten Beitrittsrollen zu, die ihm fehlen. Tut nichts, solange das Mitglied zurückgehalten wird (z. B. wegen ausstehender Verifizierung). Erfordert die Berechtigung **Rollen verwalten**.                         |
+| `Check Welcome Status` | Nutzer-Kontextbefehl | Zeigt den Willkommens- und Beitrittsrollen-Status des ausgewählten Mitglieds an (nur für dich sichtbar). Erfordert die Berechtigung **Server verwalten**.                                                                                                      |
+| `Restore Base Roles`   | Nutzer-Kontextbefehl | Gibt dem ausgewählten Mitglied fehlende Beitrittsrollen zurück, wie die automatische [Basisrollen](#base-roles)-Funktion. Funktioniert nur, wenn **Beitrittsrollen als Basisrollen behandeln** aktiviert ist. Erfordert die Berechtigung **Rollen verwalten**. |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
+
 ## Konfiguration {#configuration}
 
 Dieses Modul ist in mehrere Konfigurationsdateien unteteilt. Du kannst diese weiter unten finden.

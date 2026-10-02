@@ -67,6 +67,13 @@ Falls Cheats aktiviert sind, können Administratoren `/economy add`, `/economy r
 | `/shop list`                                                                               | Sieh dir alle verfügbaren Artikel im Shop an.                                                                                                                                   |
 | `/shop delete [item-name:<Text>] [item-id:<Text>]`                                         | (Nur Shop-Verwalter) Lösche einen Shop-Artikel nach Name oder ID.                                                                                                               |
 | `/shop edit item-id:<Text> [item-new-name:<Text>] [new-price:<Integer>] [new-role:<Role>]` | (Nur Shop-Verwalter) Bearbeite den Namen, den Preis oder die Rolle eines existierenden Shop-Artikels.                                                                           |
+| `View Balance` (Nutzer-Kontextmenü)                                                        | Zeigt den Kontostand eines Mitglieds an. Funktioniert wie `/economy balance`.                                                                                                   |
+| `Rob User` (Nutzer-Kontextmenü)                                                            | Raubt diesen Nutzer aus. Funktioniert wie `/economy rob`.                                                                                                                       |
+| `Add Money` (Nutzer-Kontextmenü)                                                           | (Nur Admins) Fügt dem Kontostand eines Nutzers Geld hinzu. Öffnet ein Formular für den Betrag. Funktioniert wie `/economy add`. Erfordert, Wirtschafts-Administrator zu sein.   |
+| `Remove Money` (Nutzer-Kontextmenü)                                                        | (Nur Admins) Entfernt Geld vom Kontostand eines Nutzers. Öffnet ein Formular für den Betrag. Funktioniert wie `/economy remove`. Erfordert, Wirtschafts-Administrator zu sein.  |
+| `Set Balance` (Nutzer-Kontextmenü)                                                         | (Nur Admins) Legt den Kontostand eines Nutzers fest. Öffnet ein Formular für den Betrag. Funktioniert wie `/economy set`. Erfordert, Wirtschafts-Administrator zu sein.         |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Konfiguration {#configuration}
 

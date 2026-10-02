@@ -73,6 +73,7 @@ In this configuration file, you can set up the advent calendar. Open it in your 
 | Wrong day message                                                          | Message shown when a user tries to open a door that is not today's.                                                                            |
 | Day 1-24 Claiming Message                                                  | The message displayed when a user opens the corresponding day's door. Each day has its own configurable message.                               |
 | Day 1-24 Reward Roles (optional)                                           | Roles given to users when they open the corresponding day's door.                                                                              |
+| Emojis                                                                     | The emojis shown on the calendar buttons. You can set one emoji for each day (1-24).                                                           |
 
 ## Troubleshooting {#troubleshooting}
 

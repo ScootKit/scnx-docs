@@ -33,6 +33,8 @@ This configuration file allows you to set up Threads accounts to monitor for new
 | Threads-Username | The @handle of the Threads user you want to receive notifications from.                                                                                                       |
 | Message          | The message sent to the configured channel when the user publishes a new thread on Threads. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
 
+Only the latest post of an account is checked on each run.
+
 ## Troubleshooting {#troubleshooting}
 
 <details>

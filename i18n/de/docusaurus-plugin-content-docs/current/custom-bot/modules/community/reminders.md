@@ -36,6 +36,9 @@ Wenn die Erinnerung ausgelöst wird, sendet der Bot die konfigurierte Benachrich
 | Befehl                                            | Beschreibung                                                                                                                                                                                                                                                                         |
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `/remind-me in:<Text> what:<Text> [dm:<Boolean>]` | Erstelle eine Erinnerung. Der Parameter `in` akzeptiert ein [Zeitformat](/de/docs/custom-bot/additional-features/#durations) (z. B. „2h", „30m", „1d"). Der Parameter `what` ist die Erinnerungsnachricht. Setze `dm` auf `true`, um die Erinnerung per Direktnachricht zu erhalten. |
+| `Create Reminder` (Nachrichten-Kontextmenü)       | Erinnert dich an eine Nachricht. Öffnet ein Formular, in dem du angibst, wann du erinnert werden möchtest; die Erinnerung enthält einen Link zur Nachricht.                                                                                                                          |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Konfiguration {#configuration}
 

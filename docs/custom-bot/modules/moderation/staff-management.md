@@ -166,6 +166,17 @@ We recommend changing your server settings to adjust who can/can't see a specifi
 
 Follow [this guide](/docs/custom-bot/slash-commands) to adjust your server settings.
 
+### Context menu actions {#context-menu-actions}
+
+The following actions are also available by right-clicking a user (or long-pressing on mobile) and selecting **Apps** (see [Setting up context menu commands](/docs/custom-bot/commands#context-menus)):
+
+| Action               | Description                                                                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Issue Infraction`   | Opens a form to issue an infraction (type, reason and optional expiry) to the user, like `/staff-management infraction issue`. Only supervisors+ can use it.  |
+| `Promote User`       | Shows a role selection to promote the user, like `/staff-management promotion promote`. Only supervisors+ can use it.                                         |
+| `Submit Review`      | Opens a form for the stars and comment to review the user, like `/staff-management review submit`. The 'Only let users review staff' option applies here too. |
+| `View Staff Profile` | Shows the profile of the user, like `/staff-management profile view`.                                                                                         |
+
 ## Configuration {#configuration}
 
 This module features multiple independent configuration files allowing you to tweak tracking logic. Open and manage them directly on your [dashboard](https://scnx.app/glink?page=bot/configuration?open-module=staff-management-system).

@@ -32,9 +32,12 @@ Beide Spieler treffen ihre Wahl gleichzeitig. Sobald beide gewählt haben, wird 
 
 <SlashCommandExplanation />
 
-| Befehl              | Beschreibung                                          |
-| ------------------- | ----------------------------------------------------- |
-| `/duel user:<User>` | Fordere einen anderen Benutzer zu einem Duell heraus. |
+| Befehl                    | Beschreibung                                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `/duel user:<User>`       | Fordere einen anderen Benutzer zu einem Duell heraus.                                                                     |
+| Duel (Nutzer-Kontextmenü) | Rechtsklick auf einen Nutzer und "Apps" > "Duel" wählen, um ihn zu einem Duell herauszufordern. Funktioniert wie `/duel`. |
+
+Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 
 ## Fehlerbehebung {#troubleshooting}
 
