@@ -24,7 +24,7 @@ After [setting up](#setup) and [configuring](#configuration) this module, no add
 
 Only items published within the last thirty minutes will trigger notifications, so older items will not be sent retroactively.
 
-Feeds are fetched by SCNX servers rather than by your bot, and results can be a few minutes old because SCNX caches them. A feed that is only reachable from a private network will not work. Publishers can ask us to stop fetching their feed. If a publisher opted out, the feed is no longer checked and a warning is written to your bot's log.
+Feeds are fetched by SCNX servers rather than by your bot, and results can be a few minutes old because SCNX caches them. A feed that is only reachable from a private network will not work. Publishers can ask us to stop fetching their feed. If a publisher opted out, the feed cannot be checked and a warning is written to your bot's log.
 
 ## Configuration {#configuration}
 

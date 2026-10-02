@@ -24,7 +24,7 @@ Nachdem du dieses Modul [eingerichtet](#setup) und [konfiguriert](#configuration
 
 Nur Einträge, die innerhalb der letzten dreißig Minuten veröffentlicht wurden, lösen Benachrichtigungen aus. Ältere Einträge werden also nicht rückwirkend gesendet.
 
-Feeds werden von SCNX-Servern und nicht von deinem Bot abgerufen, und Ergebnisse können einige Minuten alt sein, weil SCNX sie zwischenspeichert. Ein Feed, der nur aus einem privaten Netzwerk erreichbar ist, funktioniert nicht. Anbieter können uns bitten, ihren Feed nicht mehr abzurufen. Hat ein Anbieter widersprochen, wird der Feed nicht mehr geprüft und eine Warnung in das Log deines Bots geschrieben.
+Feeds werden von SCNX-Servern und nicht von deinem Bot abgerufen, und Ergebnisse können einige Minuten alt sein, weil SCNX sie zwischenspeichert. Ein Feed, der nur aus einem privaten Netzwerk erreichbar ist, funktioniert nicht. Anbieter können uns bitten, ihren Feed nicht mehr abzurufen. Hat ein Anbieter widersprochen, kann der Feed nicht geprüft werden und eine Warnung in das Log deines Bots geschrieben.
 
 ## Konfiguration {#configuration}
 
