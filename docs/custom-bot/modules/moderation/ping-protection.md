@@ -82,52 +82,59 @@ retention-based deletion (see [Data Storage](#configuration-storage)) is unaffec
 
 <SlashCommandExplanation />
 
-| Command                                             | Description                                                                                                          |
-| --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `/ping-protection user panel user:<User>`           | Open the unified [user panel](#user-panel) with overview, ping history, moderation history, and data-deletion pages. |
-| `/ping-protection user history user:<User>`         | Open a standalone, paginated view of the user's ping history (no panel navigation).                                  |
-| `/ping-protection user actions-history user:<User>` | Open a standalone, paginated view of moderation actions taken against the user (no panel navigation).                |
-| `/ping-protection list protected`                   | View all protected users and roles.                                                                                  |
-| `/ping-protection list whitelisted`                 | View all whitelisted roles, channels, and users.                                                                     |
+| Command                                             | Description                                                  |
+| --------------------------------------------------- | -------------------------------------------------------------|
+| `/ping-protection user panel user:<User>`           | Open the unified [user panel](#user-panel)                   |
+| `/ping-protection user history user:<User>`         | Open a paginated view of the user's ping history.            |
+| `/ping-protection user actions-history user:<User>` | Open a paginated view of moderation actions taken against the user.                                                                                                                |
+| `/ping-protection list protected`                   | View all protected users and roles.                          |
+| `/ping-protection list whitelisted`                 | View all whitelisted roles, channels, and users.             |
+
+*📃Note: All `/ping-protection user` commands are hidden for a better user experience when `pings history` is disabled.*
 
 ## Configuration {#configuration}
 
 ### General Configuration {#configuration-general}
 
-In this configuration file, you set up the protection and ping rules, whitelists, AutoMod settings and the warning message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/configuration).
+In this configuration file, you set up the protection and ping rules, whitelists, AutoMod settings and the warning message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection|configs/configuration).
 
-| Field                                 | Description                                                                                                                                                                                                                   |
-| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Protected Roles                       | Roles that are protected from pings.                                                                                                                                                                                          |
-| Protect all users with protected role | If enabled, all users with at least one protected role are protected, even if not listed individually.                                                                                                                        |
-| Protected Users                       | Specific users who are protected from pings.                                                                                                                                                                                  |
-| Whitelisted Roles                     | Roles that are allowed to ping protected members/roles.                                                                                                                                                                       |
-| Whitelisted Channels                  | Channels (and channel categories) where pings to protected members/roles are ignored. Adding a category whitelists every channel under it. See [AutoMod and category exemptions](#automod-categories) for the AutoMod caveat. |
-| Whitelisted Users                     | Specific users whose pings to protected members/roles are ignored.                                                                                                                                                            |
-| Allow Reply Pings                     | If enabled, replying to a protected user's message (with mention enabled) is allowed.                                                                                                                                         |
-| Self-Ping configuration               | Choose what happens when a protected user pings themselves: get punished, ignored, or receive fun easter eggs. Fun easter eggs also includes a special easter egg that has a 1% chance of appearing.                          |
-| Enable AutoMod                        | If enabled, the bot uses Discord's native AutoMod to block messages with pings to protected members/roles.                                                                                                                    |
-| AutoMod Log Channel                   | The channel where AutoMod alerts are sent. Only applies if AutoMod is enabled.                                                                                                                                                |
-| AutoMod Block Message                 | The message shown to users when their message is blocked by AutoMod.                                                                                                                                                          |
-| Warning Message                       | The message sent in the channel when a user pings a protected member or role. Supports `%target-name%`, `%target-mention%`, `%target-id%`, and `%pinger-id%` message parameters.                                              |
+| Field                                 | Description                                                   |
+| ------------------------------------- | --------------------------------------------------------------|
+| Protected Roles                       | Roles that are protected from pings.                          |
+| Protect all users with protected role | If enabled, all users with at least one protected role are protected, even if not listed individually.                                                                                |
+| Protected Users                       | Specific users who are protected from pings.                  |
+| Whitelisted Roles                     | Roles that are allowed to ping protected members/roles.       |
+| Whitelisted Channels                  | Channels (and channel categories) where pings to protected members/roles are ignored. Adding a category whitelists every channel under it. See [AutoMod and category exemptions](#automod-categories) for the AutoMod caveat.                                                                                 |
+| Whitelisted Users                     | Specific users whose pings to protected members/roles are ignored.|
+| Allow protected members to toggle their protection status temporarily | Enabling this allows protected users to toggle their protection off temporarily via the `/ping-protection toggle` command. The protection status gets set back to protected automatically after 24h have passed without manual re-toggling.                               |
+| Allow Reply Pings                     | If enabled, replying to a protected user's message (with mention enabled) is allowed.                                                                                                |
+| Self-Ping configuration               | Choose what happens when a protected user pings themselves: get punished, ignored, or receive fun easter eggs. Fun easter eggs also includes a special easter egg that has a 1% chance of appearing.                                                                                              |
+| Enable AutoMod                        | If enabled, the bot uses Discord's native AutoMod to block messages with pings to protected members/roles.                                                                             |
+| AutoMod Log Channel                   | The channel where AutoMod alerts are sent. Only applies if AutoMod is enabled.                                                                                                |
+| AutoMod Block Message                 | The message shown to users when their message is blocked by AutoMod.|
+| Warning Message                       | The message sent in the channel when a user pings a protected member or role. Supports `%target-name%`, `%target-mention%`, `%target-id%`, and `%pinger-id%` message parameters.      |
+| Kick punishment message               | The message sent to the user's DMs when the user got kicked by a moderation action. Supports `%reason%`, `%pings%`, `%timeframe%` and `%guild-name%` parameters.                    |
+| Automatically delete warning message  | If enabled, this will automatically delete the warning message sent after a custom time to keep the channel clean and sorted.                                                       |
+| Automatic message deletion time       | The custom time after which the bot will delete the warning message.|
 
 ### Moderation Actions {#configuration-moderation}
 
-In this configuration file, you set up automatic punishments for repeated pings. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/moderation).
+In this configuration file, you set up automatic punishments for repeated pings. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection|configs/moderation).
 
 You can configure multiple punishment rules, each with its own threshold and action.
 
-| Field                             | Description                                                                                                                                                                                                   |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pings to trigger moderation       | The default number of pings required to trigger this moderation action.                                                                                                                                       |
-| Enable role-based ping thresholds | If enabled, exposes the **Role-based ping thresholds** field below. See [role-based thresholds](#role-thresholds).                                                                                            |
-| Role-based ping thresholds        | Per-role threshold overrides for this rule. Setting a role's value to `0` exempts members of that role from this action; for members with multiple configured roles, the value of their highest role is used. |
-| Use a custom timeframe            | If enabled, you can set a custom timeframe in days for this rule.                                                                                                                                             |
-| Timeframe (days)                  | The number of days in which the pings must occur to trigger this action. Only applies if custom timeframe is enabled.                                                                                         |
-| Action                            | The punishment to apply: mute or kick.                                                                                                                                                                        |
-| Mute Duration                     | How long to mute the user in minutes. Only applies when the action type is mute.                                                                                                                              |
-| Enable action logging             | If enabled, a message is sent in the channel when a moderation action is taken. When this is disabled, the configured action log message is also not sent.                                                    |
-| Action log message                | The message sent when a user is punished. Supports `%pinger-mention%`, `%pinger-name%`, `%action%`, `%pings%`, `%timeframe%`, and `%duration%` message parameters.                                            |
+| Field                             | Description                                                       |
+| --------------------------------- | ------------------------------------------------------------------|
+| Pings to trigger moderation       | The default number of pings required to trigger this moderation action.|
+| Type of ping                      | The type of pings required that would trigger your moderation action.|
+| Enable role-based ping thresholds | If enabled, you can manage your role-based [ping thresholds](#role-thresholds).|
+| Role-based ping thresholds        | Per-role threshold overrides for this rule. [More about role-based ping thresholds](#role-thresholds)|
+| Use a custom timeframe            | If enabled, you can set a custom timeframe for this rule in which the pings must occur.                                                                                                  |
+| Custom timeframe                  | The timeframe in which the pings must occur, use formats like 7d for 7 days and 4w for 4 weeks. Short values are also accepted, like 30s for 30 seconds.                                   |
+| Action                            | The punishment to apply: mute or kick.                            |
+| Mute Duration                     | How long to mute the user in minutes. Only applies when the action type is mute.|
+| Enable action logging             | If enabled, a customizable message is sent in the channel when a moderation action is taken.                                                                                               |
+| Action log message                | The message sent when a user is punished. Supports `%pinger-mention%`, `%pinger-name%`, `%action%`, `%pings%`, `%timeframe%`, and `%duration%` message parameters.             |
 
 #### Role-based ping thresholds {#role-thresholds}
 
@@ -140,31 +147,35 @@ Each moderation rule can override its default `Pings to trigger moderation` valu
 If a member has multiple roles with configured thresholds, the value of their **highest configured role** is used.
 A role with threshold `0` always wins, even over a higher role with a non-zero value, so an exempted role overrides
 any other configured role.
+*We recommend setting your role-based ping threshold in a logical order to avoid having members with a higher role that has lower limits than a lower role with higher limits.*
 
 If `Enable role-based ping thresholds` is off, the rule's default value applies to everyone.
 
 ### AutoMod and category exemptions {#automod-categories}
 
 Channel categories can be added to the **Whitelisted Channels** list and automatically exempt every channel under
-them from ping protection.
+them from protected pings, even new channels that get added. *This is very useful for ticket categories.*
 
 When **AutoMod is enabled**, however, Discord's native AutoMod cannot exempt channels by category. The bot still
 forwards the category exemption to its own ping checks (so no ping is logged and no moderation action is taken in
 that channel), but AutoMod will continue to **block the message itself** and post the configured AutoMod block
 message. To fully bypass AutoMod in a category, add each individual text channel to the whitelist instead.
+*This is a **Discord limitation** and unfortunately out of our control.*
+
+Additionally, AutoMod has character limits to protections and whitelists. *This means that your amount of protected members can be limited with AutoMod.* This is a limit of 1000 characters. Each user takes ~21 chars, which means there's palce for **about 47 protected members** with Discord's AutoMod.
 
 ### Data Storage {#configuration-storage}
 
-In this configuration file, you configure data retention policies. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection%7Cconfigs/storage).
+In this configuration file, you configure data retention policies. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=ping-protection|configs/storage).
 
-| Field                                           | Description                                                                                                                                                                                                                 |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Enable Ping History                             | If enabled, the bot keeps a history of pings to enforce moderation actions. **_This is required when you have moderation actions!_**                                                                                        |
-| Ping History Retention                          | How long to keep ping history, in weeks (minimum 4, maximum 96). This is the timeframe used for moderation actions (unless a custom timeframe is set).                                                                      |
-| Delete all the pings in history after timeframe | If enabled, all ping history for a user is deleted when the retention period expires, instead of only the oldest entries. This is useful if you want to treat the data history timeframe as a complete wipe to start fresh. |
-| Moderation Log Retention                        | How long to keep moderation action records, in months (minimum 1, maximum 24).                                                                                                                                              |
-| Keep user logs after they leave                 | If enabled, the bot keeps data about users after they leave the server.                                                                                                                                                     |
-| Leaver Data Retention                           | How long to keep data after a user leaves, in days (minimum 1, maximum 7). Only applies if leaver data retention is enabled.                                                                                                |
+| Field                                           | Description                                        |
+| ----------------------------------------------- | ---------------------------------------------------|
+| Enable Ping History                             | If enabled, the bot keeps a history of pings to enforce moderation actions. **_This is required for moderation actions!_**                                                |
+| Ping History Retention                          | How long to keep ping history, in weeks (minimum 4, maximum 96). This is also the timeframe used for moderation actions (unless a custom timeframe is set).                  |
+| Delete all the pings in history after timeframe | If enabled, all ping history for a user is deleted when the retention period expires, instead of only the oldest entries. This is useful if you want to treat the data history timeframe as a complete wipe to start fresh.                                                                          |
+| Moderation Log Retention                        | How long to keep moderation action records, in months (minimum 1, maximum 24).                                                                                           |
+| Keep user logs after they leave                 | If enabled, the bot keeps data about users after they leave the server.                                                                                                |
+| Leaver Data Retention                           | How long to keep data after a user leaves, in days (minimum 1, maximum 60). Only applies if leaver data retention is enabled.                                         |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -220,7 +231,7 @@ The following data is being stored by this module:
 
 | Data                                    | Reason for storage                                                                                                                                                                                                                                          | When this is stored/used                                                                                                                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| User ID                                 | This is stored from both the pinger, the protected user(s) and the pinged user. This is stored so the bot knows who pinged who, and who are protected from pings.                                                                                           | When someone pings a protected user, when a moderation action needs to be done, when the user history is viewed and when the user leaves the server. |
+| User ID                                 | This is stored from both the pinger, the protected user(s) and the pinged user. This is stored so the bot knows who pinged who, and who are protected from pings. This is also used to check who toggled their protection status and keeps that in mind.                                                        | When someone pings a protected user, when a moderation action needs to be done, when the user history is viewed and when the user leaves the server. |
 | Message URL                             | This is stored so the bot knows the link to the message where a ping occurred.                                                                                                                                                                              | When someone pings a protected user/role and when viewed in history. If the message was blocked by AutoMod, it shows "Blocked by AutoMod".           |
 | Role ID                                 | This is stored so the bot knows if someone has a protected or whitelisted role.                                                                                                                                                                             | When configured and set and when a user/role is being pinged to check it                                                                             |
 | Time and date for a ping                | This is stored so the bot knows when a message containing a ping towards a protected user or role was sent - this is showcased in the user history                                                                                                          | When a protected ping occurs and when viewed in history.                                                                                             |
@@ -228,6 +239,8 @@ The following data is being stored by this module:
 | Moderation reason and duration          | This is stored so the bot knows why and how long a moderation action was done - this is showcased in the user history.                                                                                                                                      | When set up, when a moderation action should be done and when history is viewed.                                                                     |
 | Time and date for the moderation action | This is stored so the bot knows when the moderation action was done - this is showcased in the user history.                                                                                                                                                | When a moderation action should be done and when history is viewed.                                                                                  |
 | Time and date of the user leaving       | This is stored so the bot knows when a user left the server - this is showcased in the logs and uses the configuration to know when to automatically delete the user logs depending on the [leaver retention](#configuration-storage) in the configuration. |
+| Ping Type                               | This is stored so the bot (and you) knows what type of ping occurred. | When checking ping history, moderation actions checks the ping types to moderate accordingly. |
+| Disabled until                          | Checks until when the protection has been toggled off. | When a member toggles their protection and to check when the protection should be turned back on. |
 
 Data is automatically deleted based on the configured retention periods. You can also delete data for a specific
 user through the data-deletion page of the [`/ping-protection user panel`](#user-panel) command, with separate
