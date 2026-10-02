@@ -29,7 +29,7 @@ Collaborative storytelling game where each member adds exactly one word at a tim
 
 In a configured story channel, members send messages containing exactly one word. The bot reacts with the configured success emoji to confirm the word was accepted, and optionally updates the channel topic. Invalid messages (more than one word, special characters, double-post by the same user, ...) are removed and the user is shown a brief hint that auto-deletes after 8 seconds.
 
-A message is accepted as a word if, after removing Markdown formatting (`*`, `_`, `~`, `` ` ``), it is exactly one word that contains at least one letter and consists only of letters, digits, apostrophes and hyphens, optionally followed by a single punctuation mark (`.`, `!`, `?`, `…`, `,`, `;` or `:`). Mentions, links and messages with several words are rejected.
+A message is accepted as a word if, after removing Markdown formatting (`*`, `_`, `~`, `` ` ``), it is exactly one word that contains at least one letter and consists only of letters, digits, apostrophes and hyphens, optionally followed by a single punctuation mark (`.`, `!`, `?`, `...`, `,`, `;` or `:`). Mentions, links and messages with several words are rejected.
 
 When a moderator decides the round is done, they run [`/word-story end`](#commands). The full story is rendered into an embed with all contributors and (if configured) posted to the archive channel before the channel state is reset. If a channel topic template is configured, the topic is also reset to a "new round" text.
 
