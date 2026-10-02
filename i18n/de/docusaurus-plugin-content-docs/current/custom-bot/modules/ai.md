@@ -86,7 +86,24 @@ Slow-Mode in diesem Kanal zu aktivieren, um zu vermeiden, dass du all deine AI C
   Andere Modi beschränken Antworten auf spezifische Auslöser.
 - **Auslöseschlüsselwort (Trigger Keyword):** Wenn festgelegt und der Auslösemodus 'Schlüsselwort' (keyword) enthält, antwortet die KI nur, wenn eine Nachricht mit
   diesem Wort oder dieser Phrase beginnt (z. B. 'Hey Bot').
+- **Persona (optional):** Lässt einen KI-Kanal unter einem eigenen Namen und Avatar antworten statt unter dem deines Bots.
+  Siehe [Als Persona antworten](#persona).
 - **Verlauf zurücksetzen (Resetting History):** Bitte tippe nach der Konfiguration `=== RESET ===` in den KI-Kanal, um den Konversationsverlauf zurückzusetzen.
+
+### Als Persona antworten {#persona}
+
+Jeder KI-Chat-Kanal kann als eigene Persona antworten. Gib der Persona in der Modul-Konfiguration einen Namen und einen
+Avatar. Antworten in diesem Kanal zeigen dann diesen Namen und Avatar statt denen deines Bots.
+
+- Dein Bot sendet Persona-Antworten über einen Webhook im Kanal. Stelle sicher, dass dein Bot in diesem Kanal die
+  Berechtigung **Webhooks verwalten** hat.
+- Persona-Antworten werden als normale Nachrichten gesendet, nicht als Antwort auf die Nachricht des Mitglieds.
+- Mitglieder können auf eine Nachricht der Persona antworten, um das Gespräch fortzusetzen. Das funktioniert, wenn dein
+  Auslösemodus Antworten einschließt.
+- Fehlermeldungen wie "This server is out of AI Coins" kommen weiterhin von deinem Bot, nicht von der Persona.
+- Die Persona ändert nur Namen und Avatar. Wie die KI spricht, bestimmt weiterhin die Einstellung Persönlichkeit oder
+  der benutzerdefinierte System-Prompt.
+- Eine Persona-Antwort kostet genauso viel wie jede andere Antwort.
 
 ### Benutzerdefinierter System-Prompt & Automatische Überprüfung
 
@@ -165,9 +182,77 @@ Dieses Modul belastet die AI Coins deines Servers.
 | :---------------------------------------------------------- | :-------- |
 | Nachricht in einem der ausgewählten AI-Chat-Kanäle gesendet | 1 AI Coin |
 
-_Dir werden keine Nachrichten berechnet, bei denen die KI-Antwortgenerierung fehlgeschlagen ist._
+_Dir werden keine Nachrichten berechnet, bei denen die KI-Antwortgenerierung fehlgeschlagen ist. Antworten als Persona kosten genauso viel._
 
 | Fehler                         | Ursache                                                                             | Was du tun kannst                                                                                       |
 | :----------------------------- | :---------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
 | This server is out of AI Coins | Dein Server hat nicht mehr genug AI Coins, um die angeforderten Aktionen abzudecken | Versuche, AI Coins auf der [Preisseite](https://scnx.app/glink?page=pricing) deines Servers aufzuladen. |
-| Error generating response      | OpenAI hat einen ungültigen Status                                                  |
+| Error generating response      | OpenAI hat einen ungültigen Statuscode zurückgegeben                                | Versuche es in ein paar Minuten erneut.                                                                 |
+
+### Einschränkungen
+
+Nachrichten, die an das Modell gesendet werden, können gekürzt werden. Antworten werden ab einer bestimmten Länge
+abgeschnitten, das Modell versucht aber, Sätze wenn möglich zu beenden. Wir empfehlen dieses Modul nicht, um Aufsätze
+oder andere lange Texte zu erstellen. Die Länge der Eingabe oder der Antwort ändert den Preis nicht. Du zahlst nur pro
+gesendeter Nachricht.
+
+---
+
+## /imagine (KI-Bildgenerierung)
+
+### Wie man es benutzt
+
+Aktiviere zuerst [das Modul](https://scnx.app/glink?page=bot%2Fmodules%3Ftag%3Dai) in deinem Dashboard. Jetzt kann jeder
+auf deinem Server mit `/imagine` Bilder generieren - die einzige Grenze ist deine Fantasie. Wir empfehlen, ein
+Rate-Limit einzurichten, damit der Befehl nicht gespammt wird: Öffne die Konfiguration des Moduls und richte das
+Rate-Limit ein. Es begrenzt, wie oft Nutzer den Befehl in einem bestimmten Zeitraum ausführen können.
+
+Bilder werden mit unserem neuesten Bildmodell erstellt, das bessere Ergebnisse liefert als bisher.
+
+### Bildqualität {#image-quality}
+
+In der Modul-Konfiguration kannst du die Bildqualität für deinen Server wählen:
+
+- **Standard:** Gute Qualität zum niedrigeren Preis.
+- **HD:** Mehr Details und schärfere Bilder. HD-Bilder brauchen etwas länger und kosten mehr AI Coins.
+
+### Preise & Häufige Fehler
+
+Dieses Modul belastet die AI Coins deines Servers. Der Preis hängt von der Bildqualität und der Bildgröße ab.
+
+| Aktion                        | Standard    | HD          |
+| :---------------------------- | :---------- | :---------- |
+| Quadratisches Bild generieren | 10 AI Coins | 25 AI Coins |
+| Bild im Hochformat generieren | 13 AI Coins | 25 AI Coins |
+| Bild im Querformat generieren | 13 AI Coins | 25 AI Coins |
+
+_Dir werden keine Befehle berechnet, bei denen die KI-Bildgenerierung fehlgeschlagen ist._
+
+| Fehler                         | Ursache                                                                                                                                               | Was du tun kannst                                                                                                               |
+| :----------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| This server is out of AI Coins | Dein Server hat nicht mehr genug AI Coins, um die angeforderten Aktionen abzudecken                                                                   | Versuche, AI Coins auf der [Preisseite](https://scnx.app/glink?page=pricing) deines Servers aufzuladen.                         |
+| Error generating response      | OpenAI hat einen ungültigen Statuscode zurückgegeben. Grund kann ein echter Fehler sein oder ein Prompt, der gegen die OpenAI Usage Policies verstößt | Versuche es in ein paar Minuten erneut. Wenn das nicht hilft, prüfe deinen Prompt auf Verstöße gegen die OpenAI Usage Policies. |
+
+### Einschränkungen
+
+Wenn dein Prompt gegen die [OpenAI Usage Policies](https://openai.com/policies/usage-policies) verstößt, schlägt deine
+Anfrage fehl.
+
+## Datenschutz & Urheberrecht
+
+Du bist alleiniger Eigentümer der generierten Inhalte. Wir behandeln generierte Inhalte aber als "Deine Inhalte" im Sinne
+unserer [Nutzungsbedingungen](https://sc-net.work/scnx-tos), was für den Betrieb dieses Dienstes nötig ist. Du kannst die
+generierten Inhalte ohne Namensnennung für jeden Zweck nutzen.
+
+ScootKit (das Unternehmen hinter SCNX) und OpenAI nutzen automatisierte Systeme, um eingegebene und generierte Inhalte auf
+Richtlinienverstöße zu prüfen. Generierte Inhalte (oder deine Eingaben) werden weder von uns noch von OpenAI zum Training
+von Modellen genutzt oder an andere verkauft.
+
+Wir können bestimmte Inhalte prüfen, um die Einhaltung unserer [Nutzungsbedingungen](https://sc-net.work/scnx-tos) und
+anderer Richtlinien sicherzustellen.
+
+ChatGPT ist ein Produkt von OpenAI. ScootKit hält die
+[OpenAI Terms of Service](https://openai.com/policies/terms-of-use), die
+[API Usage Policies](https://openai.com/policies/api-data-usage-policies) und die
+[Usage Policies](https://openai.com/policies/usage-policies) ein. Wenn du siehst, dass einer unserer Nutzer gegen diese
+Bedingungen verstößt, kontaktiere bitte abuse@scnx.xyz.

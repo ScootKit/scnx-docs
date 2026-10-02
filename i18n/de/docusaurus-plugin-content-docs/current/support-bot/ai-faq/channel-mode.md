@@ -84,7 +84,7 @@ Standardmäßig erscheint der Button **Open a ticket** nur, wenn die KI nicht gu
 
 ## Was es kostet {#cost}
 
-Jede Antwort im Kanal-Modus verbraucht einige AI-Credits. Die genaue Menge hängt davon ab, was die KI tatsächlich getan hat (die Nachricht abgelehnt, kurz geplaudert ohne zu suchen oder eine vollständige FAQ-Suche durchgeführt) und welchen KI-Anbieter dein Server nutzt. Die vollständige Aufschlüsselung findest du auf der Seite [Credits und Preise](/de/docs/support-bot/ai-faq/credits-and-pricing), zusammen mit Tipps zum Sparen.
+Jede Antwort im Kanal-Modus verbraucht einige AI-Credits. Die genaue Menge hängt davon ab, was die KI tatsächlich getan hat (die Nachricht abgelehnt, kurz geplaudert ohne zu suchen oder eine vollständige FAQ-Suche durchgeführt). Die vollständige Aufschlüsselung findest du auf der Seite [Credits und Preise](/de/docs/support-bot/ai-faq/credits-and-pricing), zusammen mit Tipps zum Sparen.
 
 :::tip Credit-Verbrauch planbar halten
 Die wichtigsten Stellschrauben für die Kosten im Kanal-Modus sind der **Cooldown**, die **Mindest-Fragelänge** und die Liste der ignorierten Präfixe. Wenn du eine davon verschärfst, läuft die KI seltener, ohne sinnvolle Antworten zu verlieren.
