@@ -4,147 +4,255 @@ sidebar_position: 2
 
 # Server Backups
 
-Back up messages, channels, roles and more of your server completely automatically and restore it in case anything goes wrong.
+Back up your server's channels, roles, settings and more, and restore them if something goes wrong. Backups are taken by your server's own bot, so you don't need to invite any other bot.
 
 :::tip We care about your privacy
-Because backups may contain sensitive user information and sensitive message content, they will be encrypted at rest and are only decrypted at runtime (e.g. when you restore a backup). Still, please do not post messages containing sensitive information (like Credit-Card-Details or Social-Security-Numbers) in channels
-that get backed up.
+Your bot encrypts each backup before it leaves your bot's host. Backups can also be protected with a password that only you know. Still, please don't post sensitive information (like card details or ID numbers) in channels that you back up.
 :::
 
 :::info
-To use this feature, [invite the SCNX-Bot](https://scootk.it/invite-scnx) to your server. Some feature require a separate Backups+ subscription.
+Backups used to be taken by the SCNX bot. That system has been discontinued. Read [what happened to backups by the SCNX bot](#legacy).
 :::
 
-## What is included in Backups? {#included}
+## Requirements {#requirements}
 
-| Feature        | Description                                                                                                                                            |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Channels       | Backups will include every channel on your Discord. Channel data includes: Channel name, Channel topic, Channel cooldown, Channel permissions and more |
-| Roles          | Backups will include every role on your Discord. Saved Role data includes: Permissions, name, color and more                                           |
-| Emojis         | Backups will include every Emoji on your Discord. This includes the actual emoji-image and emoji-name. Stickers might also be included.                |
-| Bans           | Backups will include every Ban on your Discord. Every ban includes a reason and the banned user.                                                       |
-| Members        | Backups will include which user had which role when the backup was created.<br/> **THIS FEATURE MIGHT NOT BE AVAILABLE TO EVERYONE**                   |
-| Guild-Settings | Backups will include Server name, icon, settings (like the AFK channel), Auto-Moderation rules and more                                                |
+Your server can take backups when:
 
-## Manual backups {#manual}
+- **Your server has its own bot on SCNX.** The SCNX bot isn't needed anymore.
+- **Your bot runs version 3.25.1 or newer.** Restart your bot to install the latest version.
+- **Your bot runs on a Next-Gen host.** Our older hosts can't take backups yet. You can [move your bot to a Next-Gen host](/docs/scnx/guilds/bots#bot-host), or wait until we upgrade your current host.
+- **Your bot is online.** Backups and restores run on your bot. Automatic backups are skipped while it's offline.
+- **Your bot has the Administrator permission** and its role is above all other roles. Without it, parts of your server are left out of backups, and restores are refused.
 
-To create a manual backup, please visit your [backup dashboard](https://scnx.app/glink?page=backups) in your SCNX Dashboard. Next, click on "Create backup" and select what [parts the backup should include](#included). Then, confirm your backup.
-Creating a backup might take up to 15 minutes, depending on the number of messages that need to get stored.
+If your bot isn't taking backups yet, the [backup page](https://scnx.app/glink?page=backups) tells you why and what to do.
 
-![](@site/docs/assets/scnx/guilds/backups/create.png)
+Some features have extra requirements:
 
-After the backup has been created (this can take a while), you'll be able to view the backup in your backup-list and
-manage it. These options are available:
+| Feature                           | Requires                                                                                    |
+|-----------------------------------|---------------------------------------------------------------------------------------------|
+| Automatic backups                 | Our Unlimited plan or higher, or Backup+                                                    |
+| Saving messages                   | Our Unlimited plan or higher, or Backup+                                                    |
+| Member roles and open forum posts | Our Professional plan or Backup+                                                            |
+| Password protection and export    | Our Professional plan or Backup+                                                            |
+| Member roles                      | A restart of your bot after turning them on. Some bot hosts don't support this.             |
+| Restoring and exporting           | Server owner or co-owner, with two-factor authentication on the SCNX account                |
+| Restoring to another server       | You own the other server on SCNX, and it has its own bot that is running and taking backups |
 
-- Restore backup: Allows you to restore the backup on this or another server. Please read more in the [restore backups](#restore) section.
-- Disable / enable Guild-Lock: Allows / Disallows your Backup to be restored on other servers. Please read more in the [restore backups on other servers](#restore-other-server) section.
-- Delete backup: Permanently deletes the backup from our servers. This can not be reversed.
-- Export backup: Exports the backup as a JSON-File. Please read more in the [export backups](#export) section.
+## What is included in a backup? {#included}
 
-![](@site/docs/assets/scnx/guilds/backups/backup.png)
+Every backup includes these on every plan:
+
+| Part            | What is saved                                                                                                       |
+|-----------------|---------------------------------------------------------------------------------------------------------------------|
+| Server settings | Name, verification level, notification and content filter settings, AFK channel, system and rules channel, and more |
+| Roles           | Name, color, permissions, icon, position and display settings                                                       |
+| Channels        | Every channel and category, with topic, slowmode, permissions, voice settings and forum tags                        |
+| Images          | Server icon, banner and invite background, emojis and stickers                                                      |
+| Server setup    | AutoMod rules, onboarding, welcome screen and scheduled events                                                      |
+
+You can also choose to include these:
+
+| Part             | What is saved                                                                        | Default |
+|------------------|--------------------------------------------------------------------------------------|---------|
+| Bans             | Every banned user and the ban reason                                                 | On      |
+| Member roles     | Which member has which role                                                          | Off     |
+| Messages         | The most recent messages in each text and announcement channel, with embeds and pins | Off     |
+| Open forum posts | The most recently active forum posts that are still open, with their messages        | Off     |
+
+Bans are on by default, because restoring a server without them would let banned users back in.
+
+What you can include, how many messages are saved and how many backups you can keep depends on your plan. The [backup page](https://scnx.app/glink?page=backups) shows your server's limits under **Your backup limits**. Parts your plan doesn't include are listed as **Not in your plan**.
+
+A few things are never included: nicknames, threads in text channels, closed (archived) forum posts, invites, webhooks and soundboard sounds. Attachments in saved messages are kept as links only, so they may no longer work after a restore.
+
+:::note Member roles need a restart
+To save member roles, your bot needs extra access from Discord that it can only request when it starts. After you turn on member roles, restart your bot. Some bot hosts don't support this. The backup page tells you if your bot can't save member roles.
+:::
+
+## Create a backup {#manual}
+
+1. Open the [backup page](https://scnx.app/glink?page=backups) and click **Create backup**.
+2. Under **Also include**, choose the optional parts you want in this backup. This only affects this one backup.
+3. Under **Encryption**, choose how the backup is protected. See [Password protection](#password).
+4. Click **Create backup**.
+
+Your bot starts right away and keeps running normally while it works. On a busy server, ten minutes is normal. You can close the window, and the backup will appear in your list when it's done.
+
+Make sure your bot has the Administrator permission. Without it, your bot can't see parts of your server, and those parts are left out.
+
+Each backup in your list shows when it was taken, its size, how it is encrypted, when it expires and what's in it. From there you can **Restore backup**, **Export backup** or **Delete backup**. Deleting a backup frees up its slot right away and doesn't affect your server.
 
 ## Automatic backups {#automatic}
 
-To enable automatic backups, visit the [backup dashboard](https://scnx.app/glink?page=backups) and select the number of
-backups you want to be created below "Automatic backups" and save the change.
+Automatic backups are off by default. To turn them on, open the [backup page](https://scnx.app/glink?page=backups), switch on **Create backups automatically** and save. Under **Also include in every backup** you choose the optional parts for your automatic backups.
 
-![](@site/docs/assets/scnx/guilds/backups/automatic-backups.png)
+- **When they run:** SCNX spreads the backups across the day. How many backups your bot creates per day depends on your plan. You can't choose the times. The first one runs within 24 hours.
+- **Where they are kept:** each automatic backup uses a slot. When all slots are full, new automatic backups are skipped. No existing backups are deleted. Automatic backups continue once you delete a backup.
+- **If your bot is offline:** that backup is skipped and isn't made up later.
+- **Encryption:** automatic backups always use your server's key, never a password.
 
-Based on your setting, SCNX will create a backup up to two times a day. This always happens at the same time of day,
-based on your server's timeslot. You can find the timeslot of your server in your dashboard. Please note that summer
-might affect the display time of creation on your backup.
+Under **Recent automatic backups** you can see whether each recent run completed, failed or was skipped.
 
-Automated backups will use the backup-slots available to your guild. If there aren't any available, the system will overwrite the oldest automatic backup. Your manual backups never get touched. If manual backups occupy all backup-slots, no automatic backups will be created.
+Our Starter plan doesn't include automatic backups unless your server has Backup+.
 
-## Restore backups {#restore}
+## How long backups are kept {#expiry}
 
-### Restore on original server {#restore-self}
+Backups expire one year after they were created. The backup page shows the expiry date on each backup, and you get a notification a week before one expires. Create a new backup before then if you want to keep a current copy.
 
-Before restoring a backup, please adjust the following settings on your Discord:
+If your server moves to a plan with fewer backup slots, no backups are deleted. You just can't create new ones until you are below your new limit.
 
-- Move the (verified) SCNX Bot's role above all other roles and give it Administrator permissions
-- Disable the community feature of your server in the Server Settings (you can re-enable it later)
-- Understand that continuing will delete all messages, channels and roles from your server
+## Password protection {#password}
 
-To restore a backup on your server, visit the [backup dashboard](https://scnx.app/glink?page=backups) of your server and click on the backup you want to restore. Next, click on "Restore backup". You'll be shown a command. Use the "Copy command" button to copy the command and paste it into Discord on your server. Make sure that you are executing this command with the (verified) SCNX-Bot.
+When you create a backup by hand, you can choose how it's encrypted:
 
-![](@site/docs/assets/scnx/guilds/backups/execute-command.png)
+- **Use my server's key:** the default. You can restore and export the backup without entering a password.
+- **Use a generated password (recommended):** SCNX generates a strong password and shows it once. Copy it and store it somewhere safe.
+- **Use my own password:** pick a long password that isn't easy to guess.
 
-Next, confirm your request using the button below the answer in Discord.
+:::danger Lost passwords can't be recovered
+SCNX never stores your backup password. If you lose it, the backup can never be opened, restored or exported. Not even our staff can open it.
+:::
+
+Password protection needs our Professional plan or Backup+.
+
+## Restore a backup {#restore}
+
+Only the server owner and co-owners can restore backups. Because a restore can change your live server, you need [two-factor authentication](/docs/scnx/account-and-billing/account-security) on your SCNX account and have to confirm your identity before each restore. If you haven't set up two-factor authentication yet, you can do it right from the restore dialog.
+
+Before you start, give your bot the Administrator permission and move its role above all other roles. Your bot can't change roles that are above its own.
+
+### Restore on the same server {#restore-self}
+
+1. Open the [backup page](https://scnx.app/glink?page=backups) and click **Restore backup** on the backup you want.
+2. **Choose what to restore.** For each part of the backup, pick one of:
+   - **Only add what's missing** (default): adds anything from the backup that's not on your server anymore. Nothing is deleted.
+   - **Replace everything in this section**: makes this part of your server match the backup. Anything that isn't in the backup is deleted.
+   - **Skip this section**: leaves this part of your server alone.
+3. **Review your changes.** Nothing has changed yet. The dialog shows what your choices will do.
+4. **Confirm.** If you chose to replace anything, type your server's exact name to confirm. Then click **Restore backup**.
+
+If the backup is protected with a password, you'll be asked for it before the restore starts.
 
 :::danger
-Confirming this request will delete all current channels & roles on your Discord and replace them with the channels & roles stored in your backup.
+**Replace everything in this section** deletes things on your server that can't be recovered. Replacing channels deletes the current channels, including their messages. If you're not sure, use **Only add what's missing**.
 :::
 
-![](@site/docs/assets/scnx/guilds/backups/confirm.png)
+A few things are never deleted, whatever you choose: your bot's own role, roles above it, roles that belong to other bots, and @everyone. Bans are never lifted. Member roles are only given to members who are on your server at the time of the restore.
 
-After confirming, the SCNX Bot will start by deleting all existing channels and roles from your server. Once that's done, the SCNX Bot will start restoring your data. This might take up to **20 minutes** or even more. Once done, the SCNX Bot will ping you (or DM you). This will also happen if something went wrong.
+Saved messages and forum posts are posted again by your bot under the original author's name and picture. If you restore messages twice, they will be posted twice.
 
-### Restore on other servers {#restore-other-server}
+You can follow the progress in the dashboard and stop the restore at any time. Changes made up to that point stay in place. When the restore is done, you get a **Restore report** that lists what was created, updated, deleted, kept or failed, and why something was left unchanged. Keep it as your record, as changes on Discord can't be undone.
 
-:::tip
-The server you want to restore the backup on does not need to be added to SCNX, but the [SCNX bot needs to be invited](https://scootk.it/invite-scnx).
-:::
+### Restore on another server {#restore-other-server}
 
-The restoration process is widely the same as [restoring the backup on your own server](#restore-self) - even the command used is the same. Still, before restoring a backup on another server, you'll need to disable the Guild-Lock on your server.
+In the first step of the restore dialog, choose **Restore to a different server** and pick the server. You can restore to any server that you own on SCNX, as long as it has its own bot that is running and taking backups. Servers that don't qualify are listed with the reason.
 
-The guild lock is a protection mechanism for your backup: Anyone with the backup code (the command displayed in the dashboard) can restore the backup on any server if it is disabled. Luckily, it's enabled by default. To disable it, visit the [backup dashboard](https://scnx.app/glink?page=backups), select your backup and click on "Disable Guild-Lock".
-![](@site/docs/assets/scnx/guilds/backups/disable-guild-lock.png)
+The rest works the same as [restoring on the same server](#restore-self).
 
-After disabling the guild-lock, please follow the same instructions as [restoring on the original server](#restore-self). When you are done, we highly recommend re-enabling the Guild-Lock - you can do that the same way you enabled it.
+## Export a backup {#export}
 
-## Troubleshooting {#throubleshooting}
+Click **Export backup** on a backup to download it as a JSON file. If the backup is protected with a password, you'll be asked for it. The file contains your backup in readable form, including message content, so only share it with people you trust.
+
+- Only the server owner and co-owners can export backups, and you need two-factor authentication.
+- Exporting needs our Professional plan or Backup+.
+- Images like emojis and the server icon are not part of the file.
+- You can't import an exported backup back into SCNX.
+
+## Backups by the SCNX bot {#legacy}
+
+Before backups moved to your own bot, they were taken by the SCNX bot. That system has been discontinued:
+
+- **The SCNX bot no longer creates backups.** Neither manual nor automatic ones. To keep backing up your server, make sure your bot meets the [requirements](#requirements).
+- **Your existing SCNX bot backups are kept.** They are listed under **Backups by the SCNX bot** on the backup page and don't count towards your backup slots.
+- **They are not converted.** Old backups stay in the old format. They can't be restored or exported from the dashboard like new backups, only with the SCNX bot.
+- **Backup+ carries over.** If your server has Backup+ from an earlier subscription or grant, it gets everything Backup+ includes in the new system.
+
+For these older backups you can:
+
+- **Restore** them with `/restore-backup` in Discord. Use **Copy restore command** on the backup page and run the command on your server with the SCNX bot. Only the Discord server owner can do this, and the SCNX bot needs the Administrator permission. This restore deletes all channels, roles and messages on your server first.
+- **Allow in other servers** to restore the backup on a different server. Switch it back with **Limit to this server** afterwards, because anyone with the backup code can restore it while it's allowed.
+- **Download** them, if your server has Backup+.
+- **Delete** them.
+
+## Who can manage backups {#permissions}
+
+The server owner and co-owners can do everything. You can let [trusted admins](/docs/scnx/guilds/trusted-admins) create and delete backups and change the automatic backup settings with the **Manage Backups** permission. Restoring and exporting always stay with the server owner and co-owners.
+
+## Deleting your bot or server {#deletion}
+
+- **Deleting your bot** destroys your server's key. All backups encrypted with that key are deleted too. Backups protected with your own password are kept. Adding a new bot creates a new key and can't bring the old backups back, so export anything you want to keep first.
+- **Deleting your server from SCNX** deletes all of its backups, including password-protected ones.
+
+## Troubleshooting {#troubleshooting}
 
 <details>
-    <summary>
-        When I create a backup, I see the following message: "Backup planning failed: ADMINISTRATOR permission needed,
-        but not granted"
-    </summary>
-    <li>Please make sure that the (verified) SCNX Bot has the Administrator permission and try again.</li>
+    <summary>The page says "No new backups are being created for this server"</summary>
+    <ul>
+        <li>Your bot isn't taking backups yet. The line below the message tells you why.</li>
+        <li>If your bot is too old, restart it to install the latest version.</li>
+        <li>If your bot runs on one of our older hosts, click <b>Switch to a Next-Gen host</b>, or wait until we upgrade your current host.</li>
+        <li>If your bot is stopped, start it from your bot's dashboard.</li>
+    </ul>
 </details>
 <details>
-    <summary>
-        When I create a backup, I see the following message: "Oh no, you got ratelimited"
-    </summary>
-    To ensure the safe performance of all authorized activities, we limit the number of backups a server can create
-    manually in a certain timeframe.
-    <li>Please wait the amount of time shown in the message.</li>
+    <summary>"Your bot didn't respond" or "Your bot hasn't loaded the backup settings for this server yet"</summary>
+    <ul>
+        <li>Check in your bot's dashboard that your bot is online.</li>
+        <li>Restart your bot, then try again. This is needed after your plan changed.</li>
+    </ul>
 </details>
 <details>
-    <summary>
-        My backup is shown in the SCNX Dashboard as "Errored"
-    </summary>
-    <li>Please make sure that the (verified) SCNX Bot has the Administrator permission and try again.</li>
-    <li>Please [contact our staff](https://scnx.app/help) to investigate this issue.</li>
+    <summary>A part of my server is missing from a backup</summary>
+    <ul>
+        <li>Open <b>What's in this backup</b> on the backup. Parts that were left out are marked <b>Not included</b> with the reason.</li>
+        <li>Give your bot the Administrator permission and move its role above all other roles.</li>
+        <li>For member roles, turn them on in your backup settings and restart your bot.</li>
+    </ul>
 </details>
 <details>
-    <summary>
-        When trying to restore a backup, the SCNX Bot messages me with "An error occurred when trying to restore your
-        backup ):"
-    </summary>
-    <li>Please make sure that the (verified) SCNX Bot has the Administrator permission and try again.</li>
-    <li>Please make sure you have disabled the community feature on your Discord and try again.</li>
-    <li>Please make sure that the role of the (verified) SCNX Bot is above all other roles and try again.</li>
-    <li>Please [contact our staff](https://scnx.app/help) to investigate this issue.</li>
+    <summary>"This backup is larger than your plan allows" or "Your bot doesn't have enough free disk space"</summary>
+    <ul>
+        <li>Leave out messages and forum posts, then try again.</li>
+        <li>If disk space is the problem, free up space in your bot's dashboard.</li>
+    </ul>
 </details>
 <details>
-    <summary>
-        SCNX is not creating automatic backups on your server
-    </summary>
-    <li>Please make sure that the (verified) SCNX Bot has the Administrator permission.</li>
-    <li>Please make sure you've actually [enabled this feature](#automatic] and saved the change.</li>
-    <li>Please make sure you have at least one backup-slot not occupied by a manual backup.</li>
-    <li>Please wait 24 hours for a backup to be created automatically.</li>
-    <li>You can't change the timeslot assigned to your server. You can always view the timeslot in your dashboard.</li>
+    <summary>I can't create a new backup because all slots are used</summary>
+    <ul>
+        <li>Delete a backup you no longer need. The slot becomes available right away.</li>
+    </ul>
 </details>
-
-## Export backups {#export}
-
-To export a backup, visit the [backup dashboard](https://scnx.app/glink?page=backups), select your backup and click on "Export backup". Your browser will - after a short delay - start downloading a JSON-File to your PC.
-Before downloading, please check the "Calculated size" of the backup to make sure you know how much data you are downloading.
-
-This JSON file was designed to work well with [discord-backup](https://github.com/Androz2091/discord-backup), but - as we do not use this library internally - we can not guarantee that the export will work flawlessly with it.
-Still, anyone with the technical knowledge can easily restore your backup using the export.
-The JSON file includes sensitive information, like message content, so only share it with users you trust.
-
-You can not import exported backups back into SCNX.
+<details>
+    <summary>No automatic backups are being created</summary>
+    <ul>
+        <li>Make sure <b>Create backups automatically</b> is on and saved.</li>
+        <li>Make sure you have at least one free backup slot.</li>
+        <li>Make sure your bot is online. Backups are skipped while it's offline.</li>
+        <li>Check <b>Recent automatic backups</b> to see what happened to each run.</li>
+    </ul>
+</details>
+<details>
+    <summary>Some items failed during a restore</summary>
+    <ul>
+        <li>Give your bot the Administrator permission and move its role above all other roles.</li>
+        <li>Run the restore again with <b>Only add what's missing</b>. It only adds what is still missing.</li>
+    </ul>
+</details>
+<details>
+    <summary>I see "Too many requests"</summary>
+    <ul>
+        <li>The number of backups and restores per hour is limited. Wait a few minutes, then try again.</li>
+    </ul>
+</details>
+<details>
+    <summary>I see "Our backup storage is currently unavailable"</summary>
+    <ul>
+        <li>Your backups are safe. Until the storage is back, you can't create, download, restore or delete backups. This usually takes a few minutes.</li>
+    </ul>
+</details>
+<details>
+    <summary>I see "This server has no backup key"</summary>
+    <ul>
+        <li>Please <a href="https://scnx.app/help">contact our staff</a> and we'll fix this for you.</li>
+    </ul>
+</details>
