@@ -18,7 +18,7 @@ be able to use their own set of features:
 - [Custom Support Bot](/docs/support-bot/intro): A fully configurable Discord support system with modmail and ticket features, built to handle support professionally, starting
   at <PlanPrice plan="UNLIMITED" type="MONTHLY" />. You
   can [get started with Support Bot](/docs/support-bot) or [open the full Support Bot Documentation](/docs/support-bot/intro).
-- [SCNX Backups](https://scnx.xyz/backups): A system to back up messages, channels, roles and more of your server. You
+- [SCNX Backups](https://scnx.xyz/backups): A system to back up channels, roles, settings, messages and more of your server, taken by your own bot. You
   can [open the Backups documentation](/docs/scnx/guilds/backups).
 - dcserver.link: Create an unique vanity URL to your server (e.g. `https://dcserver.link/yourservername`). You
   can [open dcserver.link documentation](/docs/scnx/guilds/dcserver-link).
@@ -26,7 +26,7 @@ be able to use their own set of features:
   server. [Open the Trusted-Admin documentation](/docs/scnx/guilds/trusted-admins) to learn more.
 - [Enhanced Security](/docs/scnx/guilds/enhanced-security): Require two-factor authentication for all configuration changes on your server.
 - [Guild Image Storage](/docs/scnx/guilds/files): Upload, organize, and reuse images across your bot configurations.
-- [Server Analytics](/docs/scnx/guilds/analytics): View detailed analytics and insights about your server's SCNX usage.
+- [Server Analytics](/docs/scnx/guilds/analytics): See how active your server is, how members come and go, and which channels and members are busiest.
 - [MCP Connector](/docs/scnx/guilds/mcp): Connect Claude or ChatGPT to author, validate, simulate and debug Custom Commands v3 flows for your server.
 
 To learn more about prices, subscriptions and plans on SCNX, visit

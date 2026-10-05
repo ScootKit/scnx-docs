@@ -4,113 +4,157 @@ sidebar_position: 2
 
 # Server-Statistiken
 
-Schalte detaillierte Statistiken über deinen Server frei – erhalte Infos, welche Mitglieder, Kanäle und an welchen Tagen auf deinem Server Aktivitäten sind.
-Schau dir die Mitgliederaktivität an und erhalte Prognosen für die Zukunft 🔮
+Sieh dir an, welche Mitglieder, Kanäle und Tage deinen Server am Laufen halten, wie Mitglieder kommen und gehen und wohin sich alles entwickelt. Die Statistiken erfasst der eigene Bot deines Servers, die Zahlen bleiben also bei deinem Server.
 
 :::tip Datenschutz liegt uns am Herzen
-Du fragst dich, welche Daten wir über deinen Server speichern und wie wir sie verwenden? Bitte lese
-unseren [FAQ-Artikel](https://faq.scnx.app/datenerhebung-bei-statistiken/), um mehr zu erfahren.
-
-**tl;dr**: Wir speichern Daten über Nachrichten nur für 30 Tage und danach nur noch die Anzahl.
-[Benutzer können sich abmelden](#user-opt-out) und es werden niemals Inhalte von Nachrichten (oder Anhängen) gespeichert.
+Die Statistiken zählen nur. Der Text einer Nachricht oder ein Anhang wird nie gespeichert. Die Daten liegen in der Datenbank deines eigenen Bots, und SCNX behält keine Kopie. [Hier steht genau, was erfasst wird](/docs/custom-bot/analytics-data).
 :::
 
 :::info
-Um diese Funktion zu verwenden, musst du den [SCNX-Bot auf deinen Server einladen](https://scootk.it/invite-scnx).
+Für die Statistiken braucht dein Server einen eigenen Bot. Hat dein Server noch keinen, bietet dir die Statistiken-Seite an, [einen einzurichten](/docs/scnx/guilds/bots). Der SCNX-Bot wird für Statistiken nicht mehr verwendet.
 :::
 
 ## Statistiken aktivieren {#enable}
 
-Um Statistiken zu aktivieren, besuche bitte die [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) deines Servers auf SCNX und klicke auf
-„Statistiken aktivieren".
+1. Öffne die [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) deines Servers.
+2. Klicke auf **Statistiken aktivieren**. Das können nur der Serverinhaber und Co-Inhaber.
+3. Starte deinen Bot neu. Dein Bot fängt erst beim nächsten Start mit dem Erfassen an, deshalb zeigt die Seite einen Button **Bot jetzt neu starten**. Ein Neustart dauert ein paar Sekunden. So lange ist dein Bot offline.
 
-![](@site/docs/assets/scnx/guilds/analytics/setup.png)
+Vor dem Neustart wird nichts erfasst. Danach taucht neue Aktivität nach etwa einer Minute auf.
 
-## Verwendung im Dashboard {#dashboard}
+Läuft dein Bot noch mit einer Version von vor den Statistiken, bittet dich die Seite, ihn zuerst zu aktualisieren.
 
-Im [Statistiken-Dashboard](https://scnx.app/de/glink?page=analytics) kannst du die folgenden Daten basierend auf einem Zeitraum sehen, den du oben in deinem Dashboard auswählen kannst:
+### Verlauf vom SCNX-Bot {#history}
 
-- Nachrichten und Befehle: Du siehst ein Diagramm, das zeigt, wie viele Nachrichten und Befehle an jedem Tag im Zeitraum gesendet wurden.
-- Zehn am meisten genutzte Kanäle: Dies ist eine Grafik, die zeigt, wie viel Prozent der Nachrichten in welchem Kanal gesendet wurden.
-- Aktivste Benutzer: Das sind die 15. aktivsten Nutzer (die den [Datenschutzmodus](#user-opt-out) nicht aktiviert haben).
-- Nutzerverlauf (immer letzte 30 Tage): Hier wird die Anzahl der Bots, Benutzer und aktive Mitglieder an jedem Tag des Zeitraums angezeigt.
-- Aktivste Stunden: Diese Grafik zeigt, wie viele Nachrichten durchschnittlich zu welcher Zeit auf deinem Server gesendet wurden.
-- Auf einen Blick: In diesem Abschnitt erhältst du einen schnellen Überblick über deinen Server. Folgende Daten werden angezeigt:
-- Anzahl der im Zeitraum gesendeten Nachrichten
-- Anzahl der im Zeitraum verwendeten Befehle
-- Durchschnittliche Nachrichten pro Tag
-- Anzahl der aktiven Mitglieder auf deinen Server (ausgenommen Benutzer, die den [Datenschutzmodus] aktiviert haben (#user-opt-out))
-- Anzahl der Benutzer auf deinem Server
-- Anzahl der Bots auf deinem Server
+Hat dein Server die Statistiken früher mit dem SCNX-Bot genutzt, wurde dieser Verlauf in deinen eigenen Bot übernommen. Beitritte, Austritte und Mitglieder, die zum ersten Mal schreiben, hat das alte System nie erfasst. Für Tage vor dem Umzug zeigen die Diagramme diese Werte deshalb als „nicht erfasst" an.
 
-_Bitte beachte, dass einige dieser Teile je nach Zeitraum möglicherweise nicht verfügbar sind._
+## Das Dashboard {#dashboard}
 
-![](@site/docs/assets/scnx/guilds/analytics/dashboard.png)
+Wähle oben auf der [Statistiken-Seite](https://scnx.app/de/glink?page=analytics) einen Zeitraum: **Letzte 24 Stunden**, **Letzte Woche** oder **Letzte 30 Tage**. Alle Karten richten sich danach. Die Seite fragt deinen Bot bei jedem Öffnen nach frischen Zahlen. Es gibt also keine Verzögerung und keine zwischengespeicherte Zusammenfassung.
 
-## Analysen als Slash-Commands verwenden {#slash-commands}
+Zeiten werden in der Statistik-Zeitzone deines Servers angezeigt (standardmäßig UTC). Der Serverinhaber kann sie ändern. Eine neue Zeitzone gilt nur für Aktivität, die nach der Änderung erfasst wird.
 
-Jeder Benutzer auf deinem Server kann die Slash-Befehle des verifizierten SCNX-Bots verwenden (du kannst dies unter
-Discord-Server-Einstellungen unter „Integrationen" konfigurieren). Folgende Befehle stehen zur Verfügung:
+Das Dashboard ist in Karten aufgeteilt. Die wichtigsten:
 
-- `/stats guild`: Zeigt eine Statistikübersicht deines Servers an. Dazu gehören die 10 aktivsten Kanäle und Benutzer in den
-  letzten 30 Tagen und einen Abschnitt mit einer „Zusammenfassung", in der du die Gesamtzahl der Nachrichten und Befehle in den letzten 30 Tagen findest.
-- `/stats user`: Zeigt eine Statistikübersicht eines Benutzers auf deinem Server an. Dazu gehören die zehn aktivsten Kanäle (und die Anzahl der darin gesendeten Nachrichten) sowie ein Abschnitt „Auf einen Blick", indem du die Gesamtzahl der Nachrichten und Befehle der letzten 30 Tage findest.
-  Benutzer, die den [Datenschutzmodus](#user-opt-out) aktiviert haben, können diesen Befehl nicht verwenden.
+- **Auf einen Blick**: Nachrichten, Befehle, durchschnittliche Nachrichten pro Tag, aktive Mitglieder, Benutzer und Bots.
+- **Nachrichten & Befehle**, **Aktivität nach Wochentag**, **Aktivste Stunden** und eine Heatmap, **wann dein Server aktiv ist**.
+- **Die 10 meistgenutzten Kanäle** und **Aktivste Mitglieder**.
+- **Mitgliederbewegung**: Benutzer, Bots, Beitritte, Austritte, neue Schreiber und Nettowachstum im gewählten Zeitraum.
+- **Sprache, Threads und Reaktionen**: Zeit in Sprachkanälen, Höchstwert pro Stunde in Sprachkanälen, Thread-Aktivität und Reaktionen.
+- **Bindung und Engagement**: Bindungskohorten, Anteil stiller Mitleser, neue vs. wiederkehrende Poster, Zeit bis zur ersten Nachricht, eine Mitglieder-Rangliste mit Aufsteigern, Stammmitglieder auf dem Absprung, Aktivität nach Rolle, Kanal- und Kategorie-Ranglisten und verwaiste Kanäle.
 
-![](@site/docs/assets/scnx/guilds/analytics/commands.png)
+Listen zeigen zuerst die Top 5. Klicke auf **Mehr anzeigen**, um den Rest zu sehen.
+
+### Modul-Karten {#module-cards}
+
+Manche Karten erscheinen nur, wenn das passende Modul auf deinem Bot aktiviert ist:
+
+| Modul                                                                      | Karten                                                                                                     |
+|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| [Moderation](/docs/custom-bot/modules/moderation)                          | Moderationsmaßnahmen nach Art, Automod-Auslöser, Beitritte und Quarantäne-Markierungen, Wiederholungstäter |
+| [Einladungs-Tracking](/docs/custom-bot/modules/moderation/invite-tracking) | Beitritte nach Einladungsquelle, Einladungsquelle und Verbleib                                             |
+| Tickets, Gewinnspiele, Vorschläge, Bewerbungen                             | Geöffnete und geschlossene Tickets, Gewinnspiel-Teilnahme, eingereichte Vorschläge und Bewerbungen         |
+| Level, Aktivitäts-Serien, Wirtschaftssystem                                | Level-Verteilung, längste Aktivitäts-Serien, Guthaben im Wirtschaftssystem                                 |
+| Custom Commands                                                            | Custom-Command-Ausführungen                                                                                |
+
+Die Karten zu meistgenutzten Befehlen, Fehlerquote der Befehle und Befehlsnutzung nach Modul gibt es immer.
+
+### Layout anpassen {#layout}
+
+Klicke auf **Layout anpassen**, um Karten umzusortieren oder auszublenden. Zieh eine Karte am Griff oder nutze die Pfeile, dann klicke auf **Layout speichern**. Ausgeblendete Karten werden gar nicht erst geladen. Das Layout gilt für den ganzen Server.
+
+Kommen neue Karten zu den Statistiken dazu, erscheinen sie unter deinem gespeicherten Layout. So kannst du sie selbst einsortieren.
+
+### Server Wrapped {#wrapped}
+
+Gegen Ende jedes Jahres erscheint auf der Statistiken-Seite ein Banner **Server Wrapped**. Es fasst das Jahr deines Servers auf einer Karte zusammen, die du teilen kannst. Wrapped-Karten aus vergangenen Jahren bleiben das ganze Jahr über abrufbar.
+
+## Slash-Befehle {#slash-commands}
+
+Dein Bot bringt zwei Befehle für Mitglieder mit. Beide antworten privat, nur wer den Befehl ausführt, sieht die Antwort.
+
+- `/mystats`: zeigt einem Mitglied seine eigenen Nachrichten und wann es zuerst und zuletzt aktiv war. Andere Mitglieder kann niemand nachschlagen.
+- `/serverstats`: zeigt serverweite Gesamtzahlen der letzten 7 Tage: Nachrichten, Befehle, durchschnittliche Nachrichten pro Tag, aktive Mitglieder, Mitglieder und Bots.
+
+Der Serverinhaber kann jeden Befehl unter **Datenschutz** unten auf der Statistiken-Seite ausschalten. Ausgeschaltete Befehle verschwinden ohne Neustart.
+
+## Datenschutz und Abmeldung für Mitglieder {#user-opt-out}
+
+Der Serverinhaber kann unter **Datenschutz** die Option **Mitglieder dürfen sich von der individuellen Erfassung abmelden** einschalten. Standardmäßig ist sie aus. Ist sie an, können Mitglieder auf deinem Server `/analytics-privacy opt-out` ausführen. Dann werden sie nicht mehr einzeln gezählt:
+
+- Ihre bisherige Aktivität wird anonymisiert. Ihre Gesamtzahl sowie das Datum der ersten und letzten Aktivität werden gelöscht.
+- Ihre künftige Aktivität zählt weiter in die Server-Summen, ist aber nicht mehr mit ihnen verknüpft.
+- Sie tauchen in keiner Mitgliederliste und keiner Rangliste mehr auf.
+
+Die Abmeldung gilt nur für deinen Server. Mit `/analytics-privacy opt-in` kann sich ein Mitglied wieder anmelden und wird ab dann wieder gezählt. Anonymisierter Verlauf bleibt anonym.
+
+[Mehr zur Abmeldung](/docs/custom-bot/analytics-data#mitgliedern-die-abmeldung-erlauben).
+
+## Daten herunterladen oder löschen {#data}
+
+Beides findest du unter **Datenschutz** auf der Statistiken-Seite. Nutzen kann es nur der Serverinhaber.
+
+- **Analysedaten herunterladen** erstellt in deinem Browser eine JSON-Datei mit allem, was dein Bot für die Statistiken gespeichert hat. Sie umfasst den ganzen Verlauf, nicht nur den Zeitraum, den du gerade siehst.
+- **Alle Analysedaten löschen** entfernt dauerhaft alle Statistikdaten, die dein Bot für deinen Server hat. Die Datenbank deines Bots ist die einzige Kopie, das lässt sich also nicht rückgängig machen. Lade vorher eine Kopie herunter, wenn du eine brauchst. Mitglieder, die sich abgemeldet haben, bleiben abgemeldet.
+
+Sind die Statistiken danach noch aktiv, beginnt die Erfassung wieder bei null.
+
+## Wer die Statistiken sehen kann {#permissions}
+
+Der Serverinhaber und Co-Inhaber können die Statistiken sehen und nutzen. [Vertrauenswürdigen Admins](/docs/scnx/guilds/trusted-admins) kannst du mit der Berechtigung **Anzeigen und Verwenden von Statistiken** Zugriff geben. Statistiken aktivieren, die Datenschutz-Einstellungen, die Zeitzone, Herunterladen und Löschen bleiben beim Serverinhaber.
 
 ## Fehlerbehebung {#troubleshooting}
 
 <details>
-    <summary>Nachrichten werden nicht im SCNX Analytics-Dashboard angezeigt</summary>
+    <summary>Die Seite zeigt „Dein Bot ist gerade offline"</summary>
     <ul>
-        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot berechtigt ist, den Kanal zu sehen, in den die Nachricht gesendet wurden.</li>
-        <li>Bitte beachte, dass das Dashboard ein Ergebnis einige Minuten lang zwischenspeichert. Bitte überprüfe den Zeitpunkt, an dem das Ergebnis im Dashboard generiert wurde (dies wird oben auf der Seite angezeigt und sollte wie folgt aussehen: „Diese Zusammenfassung wurde frisch für dich um 11:30:28 Uhr generiert").</li>
-        <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
-        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.</li>
+        <li>Dein Bot erfasst die Statistiken selbst. Solange er offline ist, gibt es also nichts anzuzeigen. Starte deinen Bot in seinem Dashboard.</li>
+        <li>Bots im kostenlosen Plan stoppen nach einer Weile ohne Aktivität automatisch.</li>
     </ul>
 </details>
 <details>
-    <summary>Ein Benutzer fehlt im Dashboard</summary>
+    <summary>Die Statistiken sind aktiviert, aber es wird nichts angezeigt</summary>
     <ul>
-                <li>Stelle sicher, dass der Benutzer eine Nachricht in einen Kanal gesendet hat, auf den der (verifizierte) SCNX-Bot Zugriff hat.</li>
-                <li>Versuche, das Statistiken-Dashboard in ein paar Minuten zu aktualisieren.</li>
-        <li>Benutzer, die den <a href="#user-opt-out">Datenschutzmodus</a> aktiviert haben, werden nicht im Dashboard angezeigt.</li>
+        <li>Stelle sicher, dass du deinen Bot nach dem Aktivieren neu gestartet hast. Vorher wird nichts erfasst.</li>
+        <li>Meldet die Seite, dass deinem Bot Ereignisse fehlen, die die Statistiken brauchen, klicke auf <b>Bot jetzt neu starten</b>. Kommt der Hinweis wieder, prüfe im Discord Developer Portal, ob der Server Members Intent für deinen Bot aktiviert ist.</li>
     </ul>
 </details>
 <details>
-         <summary>Ich sehe die Meldung „Es existieren nur wenige Nachrichten im gewählten Zeitraum, deswegen können einige Diagramme merkwürdig aussehen ^^"  im Dashboard</summary>
+    <summary>Nachrichten aus einem Kanal fehlen</summary>
     <ul>
-        <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
-        <li>Aktualisiere dein Dashboard.</li>
-         <li>Stelle sicher, dass Du einen ausreichenden Zeitraum ausgewählt hast (z. B. „Letzte 30 Tage" statt „Letzte 24 Stunden").</li>
-        <li>Stelle sicher, dass im ausgewählten Zeitraum mehr als 100 Nachrichten gesendet wurden.</li>
-        <li>Bitte stelle sicher, dass der (verifizierte) SCNX-Bot auf den Kanal zugreifen kann und den Nachrichtenverlauf sehen kann, über den die Nachrichten gesendet wurden.</li>
+        <li>Dein Bot zählt nur Kanäle, die er sehen kann. Prüfe seine Berechtigungen für diesen Kanal.</li>
+        <li>Nachrichten von Bots werden nicht gezählt, auch nicht die deines eigenen Bots.</li>
     </ul>
 </details>
 <details>
-    <summary>Anstatt deine Mitgliederaktivität zu sehen, zeigt dir das Dashboard diese Warnung an: „Um Daten über deine Mitglieder anzuzeigen, musst du Statistiken seit mindestens 48 Stunden aktiviert haben."</summary>
+    <summary>Ein Mitglied fehlt in den Listen</summary>
     <ul>
-        <li>Stelle sicher, dass Statistiken länger als 48 Stunden aktiviert sind.</li>
-        <li>Aktualisiere das Dashboard.</li>
-        <li>Stelle sicher, dass SCNX mindestens einen Kanal auf deinem Server sehen kann.</li>
+        <li>Stelle sicher, dass das Mitglied im gewählten Zeitraum eine Nachricht in einem Kanal geschrieben hat, den dein Bot sehen kann.</li>
+        <li>Mitglieder, die sich abgemeldet haben, erscheinen nicht in Mitgliederlisten.</li>
     </ul>
 </details>
-
-## Benutzer-Opt-Out {#user-opt-out}
-
-:::info Kurze Erinnerung
-Wir speichern keine Nachrichteninhalte, sondern nur Metadaten zu Nachrichten (und das nur für 30 Tage nach dem Absenden einer Nachricht).
-Alle infos findest du in unserem [FAQ-Artikel](https://faq.scnx.app/de/data-collection-with-analytics/).
-:::
-
-Wenn du (oder ein Benutzer deines Servers) nicht möchte, dass der Serverbesitzer und die Administratoren sehen können, wie viele Nachrichten du
-gesendet hast oder du befürchtest, dass personenbezogene Daten über dich oder deine Nutzer gespeichert werden, kannst du auf SCNX den „Datenschutzmodus" aktivieren.
-Verwende dafür den Befehl `/privacy enable` auf deinem Server. Diese globale Aktion (das bedeutet, dass SCNX auf keinem Server Daten über dich speichert)
-wird sich auf folgendes auswirken:
-
-- Alle zukünftig von dir gesendeten Nachrichten werden anonymisiert gespeichert (= nicht mit deiner Discord-Benutzer-ID verknüpft) – dies
-  bedeutet, dass wir nicht wissen, dass _du_ eine Nachricht gesendet hast, sondern nur, dass eine Nachricht gesendet wurde.
-- Benutzer, die den Datenschutzmodus aktiviert haben, zählen weiterhin zu den Mitgliederaktivtitäts-Daten (da dies nicht die Speicherung von Discord-Benutzer-IDs beinhaltet)
-
-Den Datenschutzmodus deaktivierst du mit `/privacy disable`. Bitte beachte, dass dadurch frühere Nachrichten, die von dir gesendet wurden, nicht erneut verknüpft werden können. Das heißt, nur neue Nachrichten werden wieder in Befehlen und im Dashboard angezeigt.
+<details>
+    <summary>Die Anzahl der Befehle wirkt zu niedrig</summary>
+    <ul>
+        <li>Gezählt werden nur Slash-Befehle, die auf deinem eigenen Bot ausgeführt werden. Befehle anderer Bots sind nicht dabei.</li>
+    </ul>
+</details>
+<details>
+    <summary>Ich sehe „Für die Mitgliederbewegung braucht es mindestens 48 Stunden an Statistikdaten."</summary>
+    <ul>
+        <li>Die Mitgliederbewegung braucht Daten von mindestens zwei Tagen. Schau wieder vorbei, wenn die Statistiken 48 Stunden gelaufen sind.</li>
+    </ul>
+</details>
+<details>
+    <summary>Ich sehe „Nicht genug Daten für ein Diagramm in diesem Zeitraum."</summary>
+    <ul>
+        <li>Wähle einen längeren Zeitraum, zum Beispiel „Letzte 30 Tage" statt „Letzte 24 Stunden".</li>
+        <li>Eine Lücke in einer Linie heißt, dass an dem Tag nichts erfasst wurde. Sie heißt nicht, dass der Wert null war.</li>
+    </ul>
+</details>
+<details>
+    <summary>Die Seite zeigt „Dein Bot kennt Statistiken noch nicht"</summary>
+    <ul>
+        <li>Dein Bot läuft mit einer älteren Version. Aktualisiere ihn im Dashboard deines Bots, dann funktioniert die Seite.</li>
+    </ul>
+</details>
