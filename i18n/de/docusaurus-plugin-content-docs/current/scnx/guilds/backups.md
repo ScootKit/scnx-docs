@@ -29,7 +29,7 @@ Wenn dein Bot noch keine Backups erstellt, zeigt dir die [Backup-Seite](https://
 Für manche Funktionen gelten zusätzliche Voraussetzungen:
 
 | Funktion                                   | Voraussetzung                                                                                             |
-|--------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | Automatische Backups                       | Unser Unlimited-Plan oder höher, oder Backup+                                                             |
 | Nachrichten sichern                        | Unser Unlimited-Plan oder höher, oder Backup+                                                             |
 | Mitgliederrollen und offene Forum-Beiträge | Unser Professional-Plan oder Backup+                                                                      |
@@ -43,7 +43,7 @@ Für manche Funktionen gelten zusätzliche Voraussetzungen:
 Diese Teile sind in jedem Plan in jedem Backup enthalten:
 
 | Teil                | Was gespeichert wird                                                                                                      |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------|
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | Servereinstellungen | Name, Verifizierungsstufe, Benachrichtigungs- und Inhaltsfilter-Einstellungen, AFK-Kanal, System- und Regelkanal und mehr |
 | Rollen              | Name, Farbe, Berechtigungen, Icon, Position und Anzeige-Einstellungen                                                     |
 | Kanäle              | Jeder Kanal und jede Kategorie, mit Beschreibung, Slowmode, Berechtigungen, Sprach-Einstellungen und Forum-Tags           |
@@ -53,7 +53,7 @@ Diese Teile sind in jedem Plan in jedem Backup enthalten:
 Diese Teile kannst du zusätzlich sichern:
 
 | Teil                  | Was gespeichert wird                                                                                  | Standard |
-|-----------------------|-------------------------------------------------------------------------------------------------------|----------|
+| --------------------- | ----------------------------------------------------------------------------------------------------- | -------- |
 | Bans                  | Jeder gebannte Nutzer und der Grund für den Ban                                                       | An       |
 | Mitgliederrollen      | Welches Mitglied welche Rolle hat                                                                     | Aus      |
 | Nachrichten           | Die neuesten Nachrichten in jedem Text- und Ankündigungskanal, mit Embeds und angepinnten Nachrichten | Aus      |

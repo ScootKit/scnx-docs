@@ -50,7 +50,7 @@ Listen zeigen zuerst die Top 5. Klicke auf **Mehr anzeigen**, um den Rest zu seh
 Manche Karten erscheinen nur, wenn das passende Modul auf deinem Bot aktiviert ist:
 
 | Modul                                                                      | Karten                                                                                                     |
-|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | [Moderation](/docs/custom-bot/modules/moderation)                          | Moderationsmaßnahmen nach Art, Automod-Auslöser, Beitritte und Quarantäne-Markierungen, Wiederholungstäter |
 | [Einladungs-Tracking](/docs/custom-bot/modules/moderation/invite-tracking) | Beitritte nach Einladungsquelle, Einladungsquelle und Verbleib                                             |
 | Tickets, Gewinnspiele, Vorschläge, Bewerbungen                             | Geöffnete und geschlossene Tickets, Gewinnspiel-Teilnahme, eingereichte Vorschläge und Bewerbungen         |

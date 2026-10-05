@@ -50,7 +50,7 @@ Lists show the top 5 first. Click **Show more** to see the rest.
 Some cards only appear when the matching module is enabled on your bot:
 
 | Module                                                                 | Cards                                                                                        |
-|------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | [Moderation](/docs/custom-bot/modules/moderation)                      | Moderation actions by type, automod triggers, joins and quarantine markers, repeat offenders |
 | [Invite tracking](/docs/custom-bot/modules/moderation/invite-tracking) | Joins by invite source, invite source vs. retention                                          |
 | Tickets, giveaways, suggestions, applications                          | Opened and closed tickets, giveaway participation, submitted suggestions and applications    |
