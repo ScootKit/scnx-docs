@@ -54,7 +54,7 @@ Wenn du dem SCNX-Support nicht selbst auf WhatsApp geschrieben hast, ist jede Wh
 
 - **Gib Verifizierungscodes, die du per WhatsApp oder SMS erhältst, niemals weiter**, egal wer behauptet, sie zu brauchen.
 - **Aktiviere die Zwei-Schritt-Verifizierung** in WhatsApp (Einstellungen > Account > Zweistufige Verifizierung), um dein WhatsApp-Konto zusätzlich zu schützen.
-- **Sei skeptisch** bei unaufgeforderten Nachrichten, die Druck aufbauen („Verifiziere jetzt, sonst wird dein Konto gelöscht“).
+- **Sei skeptisch** bei unaufgeforderten Nachrichten, die Druck aufbauen („Verifiziere jetzt, sonst wird dein Konto gelöscht").
 - **Prüfe den Absender** – offizielle SCNX-Kommunikation erfolgt über unser Dashboard, per E-Mail oder über Discord, nicht über beliebige WhatsApp-Nummern.
 
 ## Kann SCNX diese Nachrichten stoppen?
