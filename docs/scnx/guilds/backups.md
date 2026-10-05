@@ -29,7 +29,7 @@ If your bot isn't taking backups yet, the [backup page](https://scnx.app/glink?p
 Some features have extra requirements:
 
 | Feature                           | Requires                                                                                    |
-|-----------------------------------|---------------------------------------------------------------------------------------------|
+| --------------------------------- | ------------------------------------------------------------------------------------------- |
 | Automatic backups                 | Our Unlimited plan or higher, or Backup+                                                    |
 | Saving messages                   | Our Unlimited plan or higher, or Backup+                                                    |
 | Member roles and open forum posts | Our Professional plan or Backup+                                                            |
@@ -43,7 +43,7 @@ Some features have extra requirements:
 Every backup includes these on every plan:
 
 | Part            | What is saved                                                                                                       |
-|-----------------|---------------------------------------------------------------------------------------------------------------------|
+| --------------- | ------------------------------------------------------------------------------------------------------------------- |
 | Server settings | Name, verification level, notification and content filter settings, AFK channel, system and rules channel, and more |
 | Roles           | Name, color, permissions, icon, position and display settings                                                       |
 | Channels        | Every channel and category, with topic, slowmode, permissions, voice settings and forum tags                        |
@@ -53,7 +53,7 @@ Every backup includes these on every plan:
 You can also choose to include these:
 
 | Part             | What is saved                                                                        | Default |
-|------------------|--------------------------------------------------------------------------------------|---------|
+| ---------------- | ------------------------------------------------------------------------------------ | ------- |
 | Bans             | Every banned user and the ban reason                                                 | On      |
 | Member roles     | Which member has which role                                                          | Off     |
 | Messages         | The most recent messages in each text and announcement channel, with embeds and pins | Off     |
