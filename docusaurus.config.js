@@ -331,16 +331,17 @@ const config = {
                 }
                 return data;
             }
-            // What the changelog API answered during this build, so a build that ends up without changelogs can be explained
-            let fetchReport = {note: 'changelogs were not fetched (api-responses.json was used)'};
             return {
                 name: 'scnx-module-changelogs',
                 async loadContent() {
-                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    // api-responses.json (bin/download-api-responses.js) is a cache. An empty one is a failed download, not an answer.
+                    const cached = fs.existsSync('./api-responses.json') ? require('./api-responses.json').changelogs : null;
+                    if (cached && Object.keys(cached).length > 0) return cached;
+                    if (cached) console.warn('[scnx-module-changelogs] api-responses.json has no changelogs, loading them from the API instead');
                     const {micromark} = await import('micromark');
                     const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     const changelogs = {};
-                    fetchReport = {modules: modules.length, statuses: {}, withItems: 0, emptyItems: 0, failures: []};
+                    const fetchReport = {statuses: {}, withItems: 0, failures: []};
                     for (const mod of modules) {
                         try {
                             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
@@ -350,7 +351,7 @@ const config = {
                                 if (data && data.items && data.items.length > 0) {
                                     changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
                                     fetchReport.withItems++;
-                                } else fetchReport.emptyItems++;
+                                }
                             } else if (fetchReport.failures.length < 4) {
                                 fetchReport.failures.push({
                                     module: mod.name,
@@ -368,6 +369,7 @@ const config = {
                         }
                     }
                     console.log(`[scnx-module-changelogs] API answers: ${JSON.stringify(fetchReport.statuses)}, ${fetchReport.withItems} of ${modules.length} modules have changes`);
+                    if (fetchReport.failures.length > 0) console.warn(`[scnx-module-changelogs] first failures: ${JSON.stringify(fetchReport.failures)}`);
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
@@ -383,7 +385,6 @@ const config = {
                         fs.writeFileSync(path.join(directory, moduleName + '.json'), JSON.stringify(data));
                         index[moduleName] = {latest: data.versions[0].createdAt};
                     }
-                    fs.writeFileSync(path.join(directory, '_report.json'), JSON.stringify({builtAt: new Date().toISOString(), node: process.version, written: Object.keys(index).length, ...fetchReport}, null, 1));
                     console.log(`[scnx-module-changelogs] wrote changelogs for ${Object.keys(index).length} modules (${locale})`);
                     actions.setGlobalData(index);
                 }

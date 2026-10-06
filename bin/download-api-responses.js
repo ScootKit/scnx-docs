@@ -38,10 +38,12 @@ function renderChangelogMarkdown(data, micromark) {
             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
             if (res.ok) {
                 const data = await res.json();
-                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data);
+                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
             }
-        } catch (e) { /* skip module */ }
+        } catch (e) { console.warn(`Could not load the changelog of ${mod.name}: ${e.message}`); }
     }
+    if (Object.keys(changelogs).length === 0) throw new Error('No changelogs could be loaded, not writing api-responses.json');
+    console.log(`Loaded changelogs for ${Object.keys(changelogs).length} modules`);
     console.log('Done, saving…');
     const moduleDataWithOrgs = [];
     for (const botModule of moduleData) {
