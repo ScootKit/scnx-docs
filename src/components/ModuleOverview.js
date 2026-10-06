@@ -163,7 +163,7 @@ function ModuleChangelogs({moduleName, locale}) {
         </summary>
         <div className="module-changelogs-content">
             {state.status === 'loading' && <div className="module-changelog-entries">
-                <Translate id="module.changelogs.loading">Loading changes…</Translate>
+                <Translate id="module.changelogs.loading">Loading changes...</Translate>
             </div>}
             {state.versions.map(version => {
                 const versionDate = new Date(version.createdAt);
