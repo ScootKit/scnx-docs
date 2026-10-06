@@ -331,6 +331,8 @@ const config = {
                 }
                 return data;
             }
+            // What the changelog API answered during this build, so a build that ends up without changelogs can be explained
+            let fetchReport = {note: 'changelogs were not fetched (api-responses.json was used)'};
             return {
                 name: 'scnx-module-changelogs',
                 async loadContent() {
@@ -338,15 +340,34 @@ const config = {
                     const {micromark} = await import('micromark');
                     const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     const changelogs = {};
+                    fetchReport = {modules: modules.length, statuses: {}, withItems: 0, emptyItems: 0, failures: []};
                     for (const mod of modules) {
                         try {
                             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            fetchReport.statuses[res.status] = (fetchReport.statuses[res.status] || 0) + 1;
                             if (res.ok) {
                                 const data = await res.json();
-                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                if (data && data.items && data.items.length > 0) {
+                                    changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                    fetchReport.withItems++;
+                                } else fetchReport.emptyItems++;
+                            } else if (fetchReport.failures.length < 4) {
+                                fetchReport.failures.push({
+                                    module: mod.name,
+                                    status: res.status,
+                                    server: res.headers.get('server'),
+                                    cfMitigated: res.headers.get('cf-mitigated'),
+                                    contentType: res.headers.get('content-type'),
+                                    body: (await res.text()).replace(/\s+/g, ' ').slice(0, 240)
+                                });
                             }
-                        } catch (e) { console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`); }
+                        } catch (e) {
+                            fetchReport.statuses.error = (fetchReport.statuses.error || 0) + 1;
+                            if (fetchReport.failures.length < 4) fetchReport.failures.push({module: mod.name, error: e.message, cause: e.cause && String(e.cause.message || e.cause).slice(0, 160)});
+                            console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`);
+                        }
                     }
+                    console.log(`[scnx-module-changelogs] API answers: ${JSON.stringify(fetchReport.statuses)}, ${fetchReport.withItems} of ${modules.length} modules have changes`);
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
@@ -362,6 +383,7 @@ const config = {
                         fs.writeFileSync(path.join(directory, moduleName + '.json'), JSON.stringify(data));
                         index[moduleName] = {latest: data.versions[0].createdAt};
                     }
+                    fs.writeFileSync(path.join(directory, '_report.json'), JSON.stringify({builtAt: new Date().toISOString(), node: process.version, written: Object.keys(index).length, ...fetchReport}, null, 1));
                     console.log(`[scnx-module-changelogs] wrote changelogs for ${Object.keys(index).length} modules (${locale})`);
                     actions.setGlobalData(index);
                 }
