@@ -324,7 +324,9 @@ const config = {
                     for (const moduleItem of (item.items || [])) {
                         for (const change of (moduleItem.items || [])) {
                             for (const lang of ['en', 'de', 'it', 'nl']) {
-                                if (change[lang]) change[lang + 'Html'] = micromark(change[lang]);
+                                // Most changes have no text of their own in German or Italian, only the machine translation in "translations"
+                                const text = change[lang] || (typeof change.translations?.[lang] === 'string' ? change.translations[lang] : null);
+                                if (text) change[lang + 'Html'] = micromark(text);
                             }
                         }
                     }
