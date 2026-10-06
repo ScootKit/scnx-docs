@@ -5,6 +5,7 @@ import EarlyAccessBanner from './EarlyAccessBanner';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Translate from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Admonition from '@theme/Admonition';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
@@ -118,39 +119,40 @@ function formatChangeHtml(raw) {
 }
 
 function ModuleChangelogs({moduleName, locale}) {
-    const allModuleChangelogs = usePluginData('scnx-module-changelogs');
-    const data = allModuleChangelogs?.[moduleName];
-    if (!data || !data.items || data.items.length === 0) return null;
+    // The global data only says that there is a changelog and when it last changed. The changes themselves are a small
+    // static file (see the scnx-module-changelogs plugin in docusaurus.config.js) that is loaded when the box is opened.
+    const index = usePluginData('scnx-module-changelogs');
+    const latest = index?.[moduleName]?.latest;
+    const changelogUrl = useBaseUrl(`/changelogs/${locale}/${moduleName}.json`);
+    const [state, setState] = useState({status: 'idle', versions: []});
+    if (!latest) return null;
 
-    const versions = [];
-    for (const version of data.items) {
-        const changes = [];
-        for (const moduleItem of (version.items || [])) {
-            if (moduleItem.moduleName !== moduleName) continue;
-            for (const change of (moduleItem.items || [])) {
-                const html = change[locale + 'Html'] || change.enHtml || '';
-                const lines = formatChangeHtml(html);
-                for (const line of lines) {
-                    changes.push({id: change.id + line, relevance: change.relevance, html: line});
-                }
-            }
-        }
-        if (changes.length > 0) {
-            versions.push({
-                versionName: version.versionName,
-                date: version.createdAt,
-                slug: version.slug,
-                changes,
-            });
-        }
-    }
-    if (versions.length === 0) return null;
+    const loadChanges = (event) => {
+        if (!event.currentTarget.open || state.status !== 'idle') return;
+        setState({status: 'loading', versions: []});
+        fetch(changelogUrl)
+            .then((response) => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.json();
+            })
+            .then((data) => setState({
+                status: 'done',
+                versions: (data.versions || []).map((version) => ({
+                    ...version,
+                    changes: version.changes.flatMap((change) => formatChangeHtml(change.html).map((line) => ({
+                        id: change.id + line,
+                        relevance: change.relevance,
+                        html: line
+                    })))
+                })).filter((version) => version.changes.length > 0)
+            }))
+            .catch(() => setState({status: 'error', versions: []}));
+    };
 
-    const latestDate = new Date(versions[0].date);
-    const isRecent = (Date.now() - latestDate.getTime()) < 30 * 24 * 60 * 60 * 1000;
-    const changelogUrl = `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs?module=${moduleName}`;
+    const isRecent = (Date.now() - new Date(latest).getTime()) < 30 * 24 * 60 * 60 * 1000;
+    const changelogPageUrl = `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs?module=${moduleName}`;
 
-    return <details className={`module-changelogs ${isRecent ? 'module-changelogs--recent' : ''}`}>
+    return <details className={`module-changelogs ${isRecent ? 'module-changelogs--recent' : ''}`} onToggle={loadChanges}>
         <summary className="module-changelogs-summary">
             <FontAwesomeIcon icon={faChevronDown} width={12} className="module-changelogs-chevron"
                              style={{marginRight: '0.5rem', transition: 'transform 0.2s'}}/>
@@ -160,8 +162,11 @@ function ModuleChangelogs({moduleName, locale}) {
             </span>}
         </summary>
         <div className="module-changelogs-content">
-            {versions.slice(0, 3).map(version => {
-                const versionDate = new Date(version.date);
+            {state.status === 'loading' && <div className="module-changelog-entries">
+                <Translate id="module.changelogs.loading">Loading changes…</Translate>
+            </div>}
+            {state.versions.map(version => {
+                const versionDate = new Date(version.createdAt);
                 const versionUrl = version.slug
                     ? `https://scnx.app/${locale === 'en' ? '' : locale + '/'}changelogs/${version.slug}`
                     : null;
@@ -203,7 +208,7 @@ function ModuleChangelogs({moduleName, locale}) {
                 </div>;
             })}
             <div className="module-changelog-footer">
-                <Link href={changelogUrl} className="module-changelog-view-all">
+                <Link href={changelogPageUrl} className="module-changelog-view-all">
                     <Translate id="module.changelogs.viewAll">View all changes</Translate>
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} width={11} style={{marginLeft: '0.4rem'}}/>
                 </Link>

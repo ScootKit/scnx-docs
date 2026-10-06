@@ -27,3 +27,5 @@ yarn-error.log*
 
 ## Stored API Responses
 api-responses.json
+# Written by the scnx-module-changelogs plugin in docusaurus.config.js
+/static/changelogs

@@ -4,6 +4,7 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 const fs = require('fs');
+const path = require('path');
 const remarkMathModule = require('remark-math');
 const rehypeKatexModule = require('rehype-katex');
 const remarkMath = remarkMathModule.default || remarkMathModule;
@@ -30,28 +31,24 @@ function slimModule(botModule, locale) {
 }
 
 // A changelog version lists the changes of every module in that release, and the API also sends the full release
-// text and all translations. ModuleOverview only shows the changes of its own module, as <locale>Html with enHtml
-// as the fallback, so only that is kept. Without this the data was over 2 MB.
+// text and all translations. The "Recent changes" box on a module page only shows that module's own changes, in the
+// build's language (English as the fallback), for its three latest versions, so only that is kept.
 function slimChangelogs(changelogs, locale) {
     const slim = {};
     for (const [moduleName, data] of Object.entries(changelogs || {})) {
-        const items = [];
+        const versions = [];
         for (const version of (data.items || [])) {
-            const moduleItems = (version.items || [])
-                .filter((moduleItem) => moduleItem.moduleName === moduleName)
-                .map((moduleItem) => ({
-                    moduleName: moduleItem.moduleName,
-                    items: (moduleItem.items || []).map((change) => {
-                        const kept = {id: change.id, relevance: change.relevance, enHtml: change.enHtml};
-                        if (change[locale + 'Html'] !== undefined) kept[locale + 'Html'] = change[locale + 'Html'];
-                        return kept;
-                    })
-                }))
-                .filter((moduleItem) => moduleItem.items.length > 0);
-            if (moduleItems.length === 0) continue;
-            items.push({versionName: version.versionName, createdAt: version.createdAt, slug: version.slug, items: moduleItems});
+            const changes = [];
+            for (const moduleItem of (version.items || [])) {
+                if (moduleItem.moduleName !== moduleName) continue;
+                for (const change of (moduleItem.items || [])) {
+                    const html = change[locale + 'Html'] || change.enHtml || '';
+                    if (html) changes.push({id: change.id, relevance: change.relevance, html});
+                }
+            }
+            if (changes.length > 0) versions.push({versionName: version.versionName, createdAt: version.createdAt, slug: version.slug, changes});
         }
-        if (items.length > 0) slim[moduleName] = {items};
+        if (versions.length > 0) slim[moduleName] = {versions: versions.slice(0, 3)};
     }
     return slim;
 }
@@ -348,17 +345,31 @@ const config = {
                                 const data = await res.json();
                                 if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
                             }
-                        } catch (e) { /* skip module */ }
+                        } catch (e) { console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`); }
                     }
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
-                    actions.setGlobalData(slimChangelogs(content, context.i18n.currentLocale));
+                    // The changelogs are written as small static files that the page loads when the "Recent changes" box is
+                    // opened. Putting them in global data would add them to main.js, which every page has to download.
+                    const locale = context.i18n.currentLocale;
+                    const directory = path.join(context.siteDir, 'static', 'changelogs', locale);
+                    fs.rmSync(directory, {recursive: true, force: true});
+                    fs.mkdirSync(directory, {recursive: true});
+                    const index = {};
+                    for (const [moduleName, data] of Object.entries(slimChangelogs(content, locale))) {
+                        if (!/^[a-z0-9_-]+$/i.test(moduleName)) continue;
+                        fs.writeFileSync(path.join(directory, moduleName + '.json'), JSON.stringify(data));
+                        index[moduleName] = {latest: data.versions[0].createdAt};
+                    }
+                    console.log(`[scnx-module-changelogs] wrote changelogs for ${Object.keys(index).length} modules (${locale})`);
+                    actions.setGlobalData(index);
                 }
             };
         },
         '@docsearch/docusaurus-adapter',
         require.resolve('./plugins/lightDocsearchSidepanel'),
+        require.resolve('./plugins/moduleIconServer'),
         'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',
