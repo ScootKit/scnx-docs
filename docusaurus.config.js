@@ -334,19 +334,42 @@ const config = {
             return {
                 name: 'scnx-module-changelogs',
                 async loadContent() {
-                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    // api-responses.json (bin/download-api-responses.js) is a cache. An empty one is a failed download, not an answer.
+                    const cached = fs.existsSync('./api-responses.json') ? require('./api-responses.json').changelogs : null;
+                    if (cached && Object.keys(cached).length > 0) return cached;
+                    if (cached) console.warn('[scnx-module-changelogs] api-responses.json has no changelogs, loading them from the API instead');
                     const {micromark} = await import('micromark');
                     const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     const changelogs = {};
+                    const fetchReport = {statuses: {}, withItems: 0, failures: []};
                     for (const mod of modules) {
                         try {
                             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            fetchReport.statuses[res.status] = (fetchReport.statuses[res.status] || 0) + 1;
                             if (res.ok) {
                                 const data = await res.json();
-                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                if (data && data.items && data.items.length > 0) {
+                                    changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                    fetchReport.withItems++;
+                                }
+                            } else if (fetchReport.failures.length < 4) {
+                                fetchReport.failures.push({
+                                    module: mod.name,
+                                    status: res.status,
+                                    server: res.headers.get('server'),
+                                    cfMitigated: res.headers.get('cf-mitigated'),
+                                    contentType: res.headers.get('content-type'),
+                                    body: (await res.text()).replace(/\s+/g, ' ').slice(0, 240)
+                                });
                             }
-                        } catch (e) { console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`); }
+                        } catch (e) {
+                            fetchReport.statuses.error = (fetchReport.statuses.error || 0) + 1;
+                            if (fetchReport.failures.length < 4) fetchReport.failures.push({module: mod.name, error: e.message, cause: e.cause && String(e.cause.message || e.cause).slice(0, 160)});
+                            console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`);
+                        }
                     }
+                    console.log(`[scnx-module-changelogs] API answers: ${JSON.stringify(fetchReport.statuses)}, ${fetchReport.withItems} of ${modules.length} modules have changes`);
+                    if (fetchReport.failures.length > 0) console.warn(`[scnx-module-changelogs] first failures: ${JSON.stringify(fetchReport.failures)}`);
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
