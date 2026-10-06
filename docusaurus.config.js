@@ -9,6 +9,53 @@ const rehypeKatexModule = require('rehype-katex');
 const remarkMath = remarkMathModule.default || remarkMathModule;
 const rehypeKatex = rehypeKatexModule.default || rehypeKatexModule;
 
+// Whatever a plugin passes to setGlobalData is written into main.js, which every page has to download and
+// run before it becomes interactive. Each locale is built separately and the components only read the current
+// locale with English as the fallback, so translated fields are cut down to those two.
+function keepLocales(texts, locale) {
+    if (!texts || typeof texts !== 'object' || Array.isArray(texts)) return texts;
+    const picked = {};
+    for (const key of ['en', locale]) if (texts[key] !== undefined) picked[key] = texts[key];
+    return picked;
+}
+
+// enableWarning and legalDisclaimer are not shown in the docs, and one module's enableWarning alone is over 200 KB
+function slimModule(botModule, locale) {
+    const {enableWarning, legalDisclaimer, ...rest} = botModule;
+    return {
+        ...rest,
+        humanReadableName: keepLocales(botModule.humanReadableName, locale),
+        description: keepLocales(botModule.description, locale)
+    };
+}
+
+// A changelog version lists the changes of every module in that release, and the API also sends the full release
+// text and all translations. ModuleOverview only shows the changes of its own module, as <locale>Html with enHtml
+// as the fallback, so only that is kept. Without this the data was over 2 MB.
+function slimChangelogs(changelogs, locale) {
+    const slim = {};
+    for (const [moduleName, data] of Object.entries(changelogs || {})) {
+        const items = [];
+        for (const version of (data.items || [])) {
+            const moduleItems = (version.items || [])
+                .filter((moduleItem) => moduleItem.moduleName === moduleName)
+                .map((moduleItem) => ({
+                    moduleName: moduleItem.moduleName,
+                    items: (moduleItem.items || []).map((change) => {
+                        const kept = {id: change.id, relevance: change.relevance, enHtml: change.enHtml};
+                        if (change[locale + 'Html'] !== undefined) kept[locale + 'Html'] = change[locale + 'Html'];
+                        return kept;
+                    })
+                }))
+                .filter((moduleItem) => moduleItem.items.length > 0);
+            if (moduleItems.length === 0) continue;
+            items.push({versionName: version.versionName, createdAt: version.createdAt, slug: version.slug, items: moduleItems});
+        }
+        if (items.length > 0) slim[moduleName] = {items};
+    }
+    return slim;
+}
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'SCNX Documentation',
@@ -270,11 +317,11 @@ const config = {
                     return moduleDataWithOrgs;
                 },
                 async contentLoaded({content, actions}) {
-                    actions.setGlobalData(content);
+                    actions.setGlobalData(content.map((botModule) => slimModule(botModule, context.i18n.currentLocale)));
                 }
             };
         },
-        function () {
+        function (context) {
             function renderChangelogMarkdown(data, micromark) {
                 for (const item of (data.items || [])) {
                     for (const moduleItem of (item.items || [])) {
@@ -306,11 +353,12 @@ const config = {
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
-                    actions.setGlobalData(content);
+                    actions.setGlobalData(slimChangelogs(content, context.i18n.currentLocale));
                 }
             };
         },
         '@docsearch/docusaurus-adapter',
+        require.resolve('./plugins/lightDocsearchSidepanel'),
         'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',
