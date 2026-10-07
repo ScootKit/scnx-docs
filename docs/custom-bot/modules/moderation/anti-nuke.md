@@ -193,6 +193,7 @@ Configure the general settings of the anti-nuke system. Open it in your [dashboa
 | Field                       | Description                                                                                                           |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | Log Channel                 | Channel where anti-nuke alerts and event logs are sent.                                                               |
+| Alert Ping Roles            | Roles that are pinged when an anti-nuke alert is posted in the log channel.                                           |
 | Response Action             | What to do when a nuke is detected: **Alert only**, **Strip all roles**, **Ban**, or **Strip dangerous permissions**. |
 | Exempt Users                | Users who are completely exempt from anti-nuke detection.                                                             |
 | Snapshot Retention (days)   | How long to keep resource snapshots for undo recovery (default: 30 days).                                             |
