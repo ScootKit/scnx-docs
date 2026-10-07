@@ -165,7 +165,7 @@ You'll receive a confirmation email once the deletion is complete.
 - An internal error occurred during the cleanup process (bot removal, data deletion)
 - The server was in an unexpected state (e.g. active subscription couldn't be canceled)
 
-If deletion fails, you can try again later or contact [legal@scootkit.com](mailto:legal@scootkit.com) to have it deleted manually.
+If deletion fails, you can try again later or contact [compliance@scnx.xyz](mailto:compliance@scnx.xyz) to have it deleted manually.
 
 ### My server got banned / deactivated / flagged on SCNX {#banned}
 

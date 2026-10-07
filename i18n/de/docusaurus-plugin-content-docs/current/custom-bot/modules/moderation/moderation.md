@@ -21,6 +21,7 @@ Fortschrittliches Sicherheits- und Moderationssystem mit unzähligen Funktionen,
 - Automatische Bestrafungen basierend auf der Anzahl der Verwarnungen (z. B. Auto-Ban nach X Warns).
 - Ein vollständig konfigurierbares [Anti-Spam-System pro Typ](#anti-spam) - Nachrichtenrate, doppelte Inhalte, Erwähnungen, Massenerwähnungen, Anhang-/Bild-Spam, Link-Spam, Zeilen-/Zeichen-Fluten, Sticker-/Emoji-Spam, Kanal-Streuung und Text-Missbrauch - jeweils mit eigenem Schalter, Grenzwert, Zeitfenster und eigener Aktion.
 - [Einschränkungen für neue Mitglieder](#new-member-restrictions), die Anhänge und Links zurückhalten, bis ein Mitglied lange genug auf dem Server ist.
+- [Honeypot](#honeypot)-Kanäle, die jeden automatisch bestrafen, der dort schreibt, und so Spam-Bots und gekaperte Accounts ganz ohne Erkennungsregeln erwischen.
 - [Anti-Join-Raid](#anti-join-raid)-System, das Massenbeitritte erkennt.
 - [Join Gate](#join-gate), um verdächtige Accounts anhand von Accountalter und Profilbild zu blockieren.
 - [Anti-Grief](#anti-grief)-System, um Moderatoren, die ihre Berechtigungen missbrauchen, in Quarantäne zu setzen.
@@ -322,6 +323,51 @@ Diese Einstellungen befinden sich in der [Anti-Spam-Konfiguration](https://scnx.
 | Aktion                                     | Aktion für Wiederholungsverstöße; "übernehmen" verwendet die globale Anti-Spam-Aktion.                             |
 | Aktionsdauer (nur Mute/Ban)                | Dauer für einen Mute oder Ban; leer lassen für die Standarddauer.                                                  |
 
+### Honeypot {#honeypot}
+
+In dieser Konfigurationsdatei richtest du Honeypot-Kanäle ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/honeypot).
+
+Ein Honeypot ist ein Kanal, den echte Mitglieder meiden, in dem Spam-Bots und gekaperte Accounts aber trotzdem schreiben. Wer in einem Honeypot-Kanal schreibt, wird automatisch mit einer Verwarnung, Stummschaltung, einem Kick oder einem Ban bestraft, und auf Wunsch wird die Nachricht gelöscht. Die Bestrafung ist ein ganz normaler Moderationsfall, daher stammen der Fall, der Log-Eintrag und die DM an das Mitglied aus dem regulären Moderationssystem. Honeypot-Treffer zählen außerdem als Auto-Moderations-Auslöser in den Analysen deines Servers.
+
+:::warning Lass den Kanal für alle sichtbar und beschreibbar
+Mitglieder lösen den Honeypot nur durch Schreiben aus, daher muss der Kanal für alle sichtbar und beschreibbar bleiben. In einem Kanal, den ein Mitglied nicht sehen kann, kann es auch nicht schreiben. Gib dem Kanal einen auffälligen Namen und ein Thema wie "Hier nicht schreiben" und platziere ihn ganz oben oder ganz unten in deiner Kanalliste, damit echte Mitglieder ihn meiden, während Spam-Bots in jedem Kanal schreiben, den sie finden.
+:::
+
+| Feld                          | Beschreibung                                                                                                                                          |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aktiviert                     | Aktiviert oder deaktiviert das Honeypot-System.                                                                                                       |
+| Honeypot-Kanäle               | Die Kanäle, die als Honeypots dienen. Wer dort schreibt, wird bestraft.                                                                               |
+| Nachricht löschen             | Löscht die Nachricht, die im Honeypot-Kanal gesendet wurde. Standardmäßig aktiviert.                                                                  |
+| Aktion                        | Was mit einem Mitglied passiert, das in einem Honeypot-Kanal schreibt: verwarnen, stummschalten, kicken oder bannen. Standard ist Stummschaltung.     |
+| Dauer der Stummschaltung      | Wird nur verwendet, wenn die Aktion "Mitglied stummschalten" ist. Dauer der Stummschaltung (z. B. 1h, 7d); leer lassen für die Standarddauer.         |
+| Nur neue Mitglieder bestrafen | Wenn aktiviert, werden nur Mitglieder bestraft, die erst kürzlich beigetreten sind; alle anderen werden ignoriert.                                    |
+| Alter neuer Mitglieder        | Mitglieder, die vor weniger als dieser Zeit beigetreten sind (z. B. 1d, 7d), gelten als neue Mitglieder. Standard ist 7d.                             |
+| Ignorierte Rollen             | Mitglieder mit einer dieser Rollen werden nie bestraft.                                                                                               |
+| Ignorierte Nutzer             | Diese Nutzer werden nie bestraft.                                                                                                                     |
+| Hinweis am Ende behalten      | Hält eine Warnnachricht als letzte Nachricht in jedem Honeypot-Kanal, damit echte Mitglieder sie sehen, bevor sie schreiben. Standardmäßig aktiviert. |
+| Hinweisnachricht              | Nachricht, die am Ende jedes Honeypot-Kanals gehalten wird. Unterstützt Embeds.                                                                       |
+
+#### Wer bestraft wird {#honeypot-scope}
+
+Standardmäßig wird jedes Mitglied bestraft, das in einem Honeypot-Kanal schreibt. Mit **Nur neue Mitglieder bestrafen** werden nur Mitglieder bestraft, die innerhalb des **Alters neuer Mitglieder** beigetreten sind; alle anderen werden ignoriert. Folgende werden nie bestraft:
+
+- Mitglieder mit einer der **Ignorierten Rollen** und die **Ignorierten Nutzer**.
+- Moderatoren, deren [Moderationslevel](#configuration-modlevels) "Automod umgehen" gewährt.
+- Bot-Accounts, Webhooks und Systemnachrichten.
+- Mitglieder, die der Bot mit der gewählten Aktion nicht bestrafen kann, etwa der Serverbesitzer oder Mitglieder mit einer höheren Rolle als der Bot (bei Stummschaltung, Kick und Ban).
+
+Damit dasselbe Mitglied bei einer Nachrichtenflut nicht mehrfach bestraft wird, wird ein Mitglied höchstens einmal alle 10 Sekunden bestraft. Weitere Nachrichten in diesem Zeitfenster werden trotzdem gelöscht, wenn **Nachricht löschen** aktiviert ist.
+
+#### Hinweisnachricht {#honeypot-notice}
+
+Mit aktiviertem **Hinweis am Ende behalten** hält der Bot die **Hinweisnachricht** als letzte Nachricht in jedem Honeypot-Kanal. Nachdem dort jemand geschrieben hat, wird der Hinweis erneut ganz unten gepostet (höchstens alle 5 Sekunden pro Kanal), und wenn du den Text änderst, wird der Hinweis nach dem Neuladen der Konfiguration aktualisiert. Der Hinweis ist geschützt, daher entfernen ihn Auto-Delete-Funktionen nie.
+
+Der Bot benötigt in jedem Honeypot-Kanal diese Berechtigungen:
+
+- Kanal ansehen
+- Nachrichtenverlauf anzeigen, Nachrichten senden und Links einbetten, um den Hinweis zu halten
+- Nachrichten verwalten, wenn **Nachricht löschen** aktiviert ist
+
 ### Log-Nachrichten {#configuration-logmessages}
 
 In dieser Konfigurationsdatei passt du die Fall-Log-Nachrichten an, die in deinen Moderations-Log-Kanal und optional in einen öffentlichen Log-Kanal gepostet werden. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=moderation%7Cconfigs/logMessages).
@@ -494,6 +540,8 @@ In dieser Konfigurationsdatei kannst du alle vom Modul gesendeten Nachrichten an
 - **Der Quarantäne-Befehl funktioniert nicht**: Stelle sicher, dass die Quarantäne-Rolle konfiguriert ist und die Rolle des Bots in der Rollenhierarchie über der Quarantäne-Rolle steht. Der Bot benötigt die Berechtigung "Rollen verwalten".
 - **Bans/Kicks schlagen fehl**: Der Bot benötigt die Berechtigungen "Mitglieder bannen" und "Mitglieder kicken". Die höchste Rolle des Bots muss außerdem über der höchsten Rolle des Zielnutzers stehen.
 - **Anti-Spam erkennt keinen Spam**: Überprüfe, dass Anti-Spam insgesamt aktiviert ist, dass der spezifische Detektor, den du erwartest (zum Beispiel Link-Spam oder Text-Missbrauch), eingeschaltet ist und dass der Kanal nicht auf der Whitelist steht. Prüfe außerdem, dass die Rolle des Nutzers nicht auf der Whitelist steht oder "Automod umgehen" gewährt bekommt.
+- **Der Honeypot bestraft niemanden**: Prüfe, dass der Honeypot aktiviert ist und der Kanal unter **Honeypot-Kanäle** eingetragen ist. Mitglieder mit einer ignorierten Rolle, einem Eintrag bei den ignorierten Nutzern oder "Automod umgehen" sind ausgenommen, und bei aktiviertem **Nur neue Mitglieder bestrafen** werden auch langjährige Mitglieder ignoriert. Der Bot kann keine Mitglieder über seiner eigenen Rolle bestrafen, auch nicht den Besitzer. Ein Mitglied wird höchstens einmal alle 10 Sekunden bestraft.
+- **Der Honeypot-Hinweis erscheint nicht oder die Nachricht wird nicht gelöscht**: Der Bot benötigt im Kanal die Berechtigungen Kanal ansehen, Nachrichtenverlauf anzeigen, Nachrichten senden und Links einbetten, um den Hinweis zu halten, sowie Nachrichten verwalten, um Beiträge zu löschen. Siehe [Honeypot](#honeypot-notice).
 - **Invite-/Scam-Link-Erkennung funktioniert nicht**: Stelle sicher, dass "Aktion bei Invite" oder "Aktion bei Scam-Link" auf etwas anderes als "keine" gesetzt ist. Prüfe, dass der Kanal nicht auf der Whitelist steht.
 - **Verifikations-DMs schlagen fehl**: Manche Nutzer haben DMs deaktiviert. Wenn du einen "Restart Verification-Channel" einrichtest, können Nutzer ihre Verifikation nach dem Aktivieren von DMs erneut versuchen.
 - **Der Lockdown-Befehl ist nicht verfügbar**: Das Lockdown-System muss in der [Lockdown-Konfiguration](#configuration-lockdown) aktiviert werden, bevor der `/moderate lockdown`-Befehl erscheint.
@@ -519,6 +567,12 @@ Die folgenden Daten werden für Nutzer-Notizen gespeichert:
 - Die Nutzer-ID
 - Alle Notizen (einschließlich Notizinhalt, Autor-ID und Zeitstempeln)
 - Metadaten über den Eintrag (Datum der Erstellung und letzten Aktualisierung)
+
+Die folgenden Daten werden für Honeypot-Hinweise gespeichert:
+
+- Die Kanal-ID und die ID der Hinweisnachricht, die der Bot dort hält
+- Ein Hash des Hinweistextes, um Änderungen zu erkennen
+- Metadaten zum Eintrag (Datum der Erstellung und letzten Aktualisierung)
 
 Die folgenden Daten werden für den Lockdown-Zustand gespeichert:
 

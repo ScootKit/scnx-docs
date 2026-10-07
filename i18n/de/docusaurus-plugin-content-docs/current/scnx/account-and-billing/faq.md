@@ -58,7 +58,7 @@ Du kannst Zugriff auf SEPA-Lastschriftzahlungen anfragen, wenn du folgende Bedin
 
 Du findest deinen [Zahlungsverlauf im SCNX-Dashboard](https://scnx.app/user/payments).
 
-Um Zugriff auf SEPA-Lastschriftzahlungen auf SCNX zu beantragen, kontaktiere uns bitte per E-Mail an [billing@scootkit.com](mailto:billing@scootkit.com), wo wir dir gerne bei der Freischaltung helfen. Eventuell musst du uns Dokumente schicken, die nachweisen, dass dir das Bankkonto gehört.
+Um Zugriff auf SEPA-Lastschriftzahlungen auf SCNX zu beantragen, kontaktiere uns bitte per E-Mail an [billing@scnx.xyz](mailto:billing@scnx.xyz), wo wir dir gerne bei der Freischaltung helfen. Eventuell musst du uns Dokumente schicken, die nachweisen, dass dir das Bankkonto gehört.
 
 Unabhängig von dieser Verifizierung arbeiten wir mit unseren Partnern zusammen, um das Risiko von Zahlungsausfall zu senken, was bedeuten kann, dass einige Zahlungen aufgrund automatischer Risikobewertung abgelehnt werden.
 
@@ -99,7 +99,7 @@ Um deine Rechnungsadresse festzulegen, gehe zur [Zahlungsseite](https://scnx.app
 
 ### Ich bin von der Mehrwertsteuer befreit {#vat}
 
-Kontaktiere [billing@scootkit.com](mailto:billing@scootkit.com), um dies zu prüfen.
+Kontaktiere [billing@scnx.xyz](mailto:billing@scnx.xyz), um dies zu prüfen.
 
 ### Meine Karte wurde abgelehnt, aber alle meine Daten sind gültig {#no-reason-decline}
 
@@ -191,7 +191,7 @@ Stelle sicher, dass du immer Zugriff auf die E-Mail-Adresse hast, die mit deinem
 
 - Schaue in deinem **Spam-/Junk-Ordner** nach E-Mails von `@scnx.xyz` und `@scootkit.com`
 - Stelle sicher, dass deine Discord-E-Mail korrekt und erreichbar ist
-- Füge folgende Adressen zu deinen Kontakten oder sicheren Absendern hinzu: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `legal@scootkit.com`, `compliance@scnx.xyz`
+- Füge folgende Adressen zu deinen Kontakten oder sicheren Absendern hinzu: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `compliance@scnx.xyz`, `compliance@scnx.xyz`
 
 Wenn du weiterhin keine E-Mails erhältst, [kontaktiere unser Support-Team](https://scnx.app/help).
 
