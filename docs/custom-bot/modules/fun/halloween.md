@@ -56,7 +56,7 @@ While test mode is on:
 
 - The test channel always behaves like the live event: `/trickortreat`, `/spook` and `/candyshop` work there at any time of the year, pumpkins spawn there and the test channel gets its own leaderboard.
 - The first message posted in a fresh test session spawns a pumpkin right away, so you don't have to wait out the normal spawn interval. After that, pumpkins follow the normal interval.
-- A boss appears in the test channel right when a test session starts. After that, test bosses follow the daily schedule ("Bosses per Day" at random times between the wake-up spawn hours), on any date, regardless of the "Boss Channel" and the "Boss Week Start Day". Test bosses have their own data, so they never touch the real event.
+- Bosses do not appear on their own in test mode, neither when a test session starts nor on the daily schedule. Instead, the explainer message has a "Spawn test boss" button. It works on any date, regardless of the "Boss Channel" and the "Boss Week Start Day", and test bosses have their own data, so they never touch the real event. Only members with the Manage Server permission can use the button, it only works in the active test channel, and only one test boss can be open at a time: pressing it again points to the open one. Test sessions that were started before the bot was updated get the button automatically on the next bot restart or configuration reload.
 - When a test session starts, the bot posts an explainer message into the test channel and pins it, together with the test leaderboard.
 - Test candy, purchases and the test leaderboard are completely separate from the real event. The real leaderboard, the closing announcement and the season reset never see test data, and test purchases do not use up the real stock.
 - The haunted role and roles bought in the shop are handed out for real, so you can check the whole setup.
@@ -103,7 +103,7 @@ Picking an item from the menu shows a confirmation on the same message: the item
 
 During boss week, from the "Boss Week Start Day" (October 25th by default) to October 31st, bosses appear in the "Boss Channel". Leave the channel empty to switch bosses off.
 
-- **Appearance:** every day of boss week, "Bosses per Day" bosses (1 by default, at most 5) show up at random times between "Wake-Up Spawns: earliest hour" and "Wake-Up Spawns: latest hour". Set it to 0 to pause bosses. Each boss is picked at random from your "Bosses" list, which can also carry an image per boss. Your "Boss Spawn Message" is shown on the boss message, and a role mentioned in it is pinged once when the boss appears.
+- **Appearance:** every day of boss week, "Bosses per Day" bosses (1 by default, at most 5) show up at random times between "Wake-Up Spawns: earliest hour" and "Wake-Up Spawns: latest hour". Set it to 0 to pause bosses. Each boss is picked at random from your "Bosses" list, which can also carry an image per boss. Your "Boss Spawn Message" is shown on the boss message, and a role mentioned in it is pinged once when the boss appears. In test mode, bosses do not appear on their own, see [Testing the event](#testing).
 - **Joining:** the boss message has buttons to stake a preset amount (20%, 50% and 100% of the "Stake Limit per Member") and a button for a custom amount. A member can stake several times, up to the stake limit in total per boss. The stake is taken from their candy immediately and is final: it cannot be taken back.
 - **Boss HP:** the HP is fixed when the boss appears and grows with the number of active players, which are the members who used the module themselves within the last "Activity Window (days)" (`/trickortreat`, `/spook`, a shop purchase, a claimed pumpkin or a boss stake; being spooked does not count). HP is "Boss HP per Active Player" times the number of active players, counted as at least "Minimum Active Players". It is never lower than twice the "Stake Limit per Member", so a single member can never reach the maximum win chance alone.
 - **Win chance:** with almost nothing staked, the chance to win is the "Base Win Chance (%)". It rises with the candy pool up to the "Maximum Win Chance (%)", which is reached once the pool equals the boss HP. The boss message shows the current chance.
@@ -111,6 +111,36 @@ During boss week, from the "Boss Week Start Day" (October 25th by default) to Oc
 - **Leaderboard:** candy staked in a fight that is still open counts towards the leaderboard. Won fights raise a member's score, lost fights lower it.
 
 Fights are saved, so a bot restart never loses a stake: an open fight continues, and one that ended in the meantime is decided right away.
+
+#### Customizing boss messages {#boss-messages}
+
+The four boss messages "Boss Spawn Message", "Boss Defeated Message", "Boss Victorious Message" and "Boss Fled Message" are full messages in the [Messages](#configuration-strings) tab. You edit them in the message editor, and each one replaces the whole boss message for its state. The bot adds the stake buttons below the open-fight message ("Boss Spawn Message") and removes them again when the fight is decided.
+
+These placeholders are available:
+
+| Placeholder     | Available in               | Description                                                                                           |
+| --------------- | -------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `%name%`        | all four messages          | Name of the boss.                                                                                     |
+| `%image%`       | all four messages          | Image URL of the boss, empty when it has none.                                                        |
+| `%hp%`          | all four messages          | HP of the boss.                                                                                       |
+| `%hpLeft%`      | all four messages          | HP the pool has not covered yet.                                                                      |
+| `%hpBar%`       | all four messages          | Bar of the HP left.                                                                                   |
+| `%pool%`        | all four messages          | Candy staked in total.                                                                                |
+| `%fighters%`    | all four messages          | Number of fighters.                                                                                   |
+| `%chance%`      | all four messages          | Win chance, e.g. 45%. In the defeated and victorious messages, the chance the fight was decided with. |
+| `%maxChance%`   | all four messages          | Highest possible win chance, e.g. 65%.                                                                |
+| `%stakeCap%`    | all four messages          | Most candy one member can stake.                                                                      |
+| `%multiplier%`  | all four messages          | Win multiplier.                                                                                       |
+| `%endsAt%`      | all four messages          | When the fight is decided, as a relative timestamp.                                                   |
+| `%fighterList%` | defeated, victorious, fled | Every fighter with stake and payout. Members are not pinged.                                          |
+| `%roll%`        | defeated, victorious       | Number rolled from 1 to 100. The fighters win when it is at most the win chance.                      |
+
+Good to know:
+
+- A role ping only works in the "Boss Spawn Message". Add a role mention there, the other three messages do not ping.
+- If a boss has no image, image elements are left out. A section with the boss image as its accessory then shows only its text.
+- A very long fighter list is shortened, ending with an "...and N more" line.
+- If a customized message cannot be sent, for example because it is too long or has too many components, the bot uses the default message instead and writes a warning to the log.
 
 ### Leaderboard and countdown {#leaderboard}
 
@@ -192,50 +222,50 @@ In this configuration file, you can set up the Halloween event. Open it in your 
 
 In this configuration file, you can customize every message of the event. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=halloween%7Cstrings).
 
-| Field                                     | Description                                                                                                                                            |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Off-Season Message                        | Reply to every command and button outside of the event (November 8th to September 30th).                                                               |
-| Wind-Down Message                         | Reply to the earning commands between November 1st and 7th, when candy can only be spent.                                                              |
-| Closing Announcement                      | Posted in the leaderboard channel once Halloween is over.                                                                                              |
-| "Double candy"-Note                       | Added to reward messages on October 31st, when all earnings are doubled.                                                                               |
-| "Already collected today"-Message         | Sent when a member already used their daily `/trickortreat`.                                                                                           |
-| "Cooldown active"-Message                 | Sent when a member tries `/trickortreat` again before the configured cooldown is over. Only used with a cooldown above 0 hours.                        |
-| Treat Message                             | Sent when `/trickortreat` gives a member candy.                                                                                                        |
-| Jackpot Message                           | Sent when a treat turns into a jackpot.                                                                                                                |
-| Trick Message: candy lost                 | Sent when a trick costs the member candy.                                                                                                              |
-| Trick Message: haunted                    | Sent when a trick gives the member the haunted role for a while.                                                                                       |
-| Trick Message: harmless scare             | Sent when a trick is only a scare and costs nothing.                                                                                                   |
-| Pumpkin Spawn Message                     | Message posted when a pumpkin spawns. The claim button is added below it.                                                                              |
-| Pumpkin Claimed Message                   | The spawn message is edited to this once somebody claimed the pumpkin.                                                                                 |
-| Pumpkin Rotted Message                    | The spawn message is edited to this when nobody claimed the pumpkin in time.                                                                           |
-| "Too late"-Message                        | Sent privately to members who click the claim button after somebody else was faster.                                                                   |
-| Spook Success Message                     | Sent when a spook succeeds and candy moves to the spooker.                                                                                             |
-| Spook Backfire Message                    | Sent when a spook fails and the candy moves to the target instead.                                                                                     |
-| Spook: nothing to take                    | Sent when a spook was rolled but there was no candy to move at all, so neither side lost anything.                                                     |
-| Spook Rejected: target too poor           | Sent when the target does not have the configured minimum balance.                                                                                     |
-| Spook Rejected: same target twice         | Sent when a member tries to spook the same person they spooked last time.                                                                              |
-| Spook Rejected: yourself                  | Sent when a member tries to spook themselves.                                                                                                          |
-| Spook Rejected: bot                       | Sent when a member tries to spook a bot.                                                                                                               |
-| Spook Rejected: already used today        | Sent when a member already used their daily spook.                                                                                                     |
-| Spook Rejected: cooldown active           | Sent when a member tries to spook again before the configured `/spook` cooldown is over. Only used with a cooldown above 0 hours.                      |
-| Spook Rejected: disabled                  | Sent when spooking is switched off on this server.                                                                                                     |
-| Candy Shop Message                        | Message of the `/candyshop` command. The item list is added into the message (into the embed when it is one); the buy menu is added below it.          |
-| "Shop is empty"-Message                   | Sent when no shop items have been configured.                                                                                                          |
-| "Item is gone"-Message                    | Sent when the picked item is not in the shop anymore, for example because it was removed or renamed while the listing was open.                        |
-| "Not enough candy"-Message                | Sent when a member cannot afford the item they picked.                                                                                                 |
-| "Sold out"-Message                        | Sent when the stock of an item is used up.                                                                                                             |
-| "Limit reached"-Message                   | Sent when a member already bought an item as often as allowed.                                                                                         |
-| "Purchase could not be completed"-Message | Sent when a purchase could not be finished, for example because the role could not be handed out. The purchase is cancelled and the candy is refunded. |
-| Purchase Confirmation                     | Sent when a purchase went through. Items with their own purchase message use that one instead.                                                         |
-| Leaderboard Title                         | Title of the live leaderboard message. Defaults to "🎃 Halloween Leaderboard".                                                                         |
-| Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Defaults to "🎃 Final Halloween standings".                                  |
-| Leaderboard Color                         | Accent color of the leaderboard message, set with a color picker. Defaults to orange (`#e67e22`).                                                      |
-| Leaderboard Thumbnail                     | Small image shown next to the leaderboard title. Leave empty for none.                                                                                 |
-| Leaderboard Image                         | Large image shown below the leaderboard title. Leave empty for none.                                                                                   |
-| Boss Spawn Message                        | Shown on the boss message while the fight is open. Role mentions in it ping the role once when the boss appears.                                       |
-| Boss Defeated Message                     | Shown on the boss message after the fighters won.                                                                                                      |
-| Boss Victorious Message                   | Shown on the boss message after the boss won and the stakes were lost.                                                                                 |
-| Boss Fled Message                         | Shown on the boss message when nobody staked any candy.                                                                                                |
+| Field                                     | Description                                                                                                                                                                                                             |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Off-Season Message                        | Reply to every command and button outside of the event (November 8th to September 30th).                                                                                                                                |
+| Wind-Down Message                         | Reply to the earning commands between November 1st and 7th, when candy can only be spent.                                                                                                                               |
+| Closing Announcement                      | Posted in the leaderboard channel once Halloween is over.                                                                                                                                                               |
+| "Double candy"-Note                       | Added to reward messages on October 31st, when all earnings are doubled.                                                                                                                                                |
+| "Already collected today"-Message         | Sent when a member already used their daily `/trickortreat`.                                                                                                                                                            |
+| "Cooldown active"-Message                 | Sent when a member tries `/trickortreat` again before the configured cooldown is over. Only used with a cooldown above 0 hours.                                                                                         |
+| Treat Message                             | Sent when `/trickortreat` gives a member candy.                                                                                                                                                                         |
+| Jackpot Message                           | Sent when a treat turns into a jackpot.                                                                                                                                                                                 |
+| Trick Message: candy lost                 | Sent when a trick costs the member candy.                                                                                                                                                                               |
+| Trick Message: haunted                    | Sent when a trick gives the member the haunted role for a while.                                                                                                                                                        |
+| Trick Message: harmless scare             | Sent when a trick is only a scare and costs nothing.                                                                                                                                                                    |
+| Pumpkin Spawn Message                     | Message posted when a pumpkin spawns. The claim button is added below it.                                                                                                                                               |
+| Pumpkin Claimed Message                   | The spawn message is edited to this once somebody claimed the pumpkin.                                                                                                                                                  |
+| Pumpkin Rotted Message                    | The spawn message is edited to this when nobody claimed the pumpkin in time.                                                                                                                                            |
+| "Too late"-Message                        | Sent privately to members who click the claim button after somebody else was faster.                                                                                                                                    |
+| Spook Success Message                     | Sent when a spook succeeds and candy moves to the spooker.                                                                                                                                                              |
+| Spook Backfire Message                    | Sent when a spook fails and the candy moves to the target instead.                                                                                                                                                      |
+| Spook: nothing to take                    | Sent when a spook was rolled but there was no candy to move at all, so neither side lost anything.                                                                                                                      |
+| Spook Rejected: target too poor           | Sent when the target does not have the configured minimum balance.                                                                                                                                                      |
+| Spook Rejected: same target twice         | Sent when a member tries to spook the same person they spooked last time.                                                                                                                                               |
+| Spook Rejected: yourself                  | Sent when a member tries to spook themselves.                                                                                                                                                                           |
+| Spook Rejected: bot                       | Sent when a member tries to spook a bot.                                                                                                                                                                                |
+| Spook Rejected: already used today        | Sent when a member already used their daily spook.                                                                                                                                                                      |
+| Spook Rejected: cooldown active           | Sent when a member tries to spook again before the configured `/spook` cooldown is over. Only used with a cooldown above 0 hours.                                                                                       |
+| Spook Rejected: disabled                  | Sent when spooking is switched off on this server.                                                                                                                                                                      |
+| Candy Shop Message                        | Message of the `/candyshop` command. The item list is added into the message (into the embed when it is one); the buy menu is added below it.                                                                           |
+| "Shop is empty"-Message                   | Sent when no shop items have been configured.                                                                                                                                                                           |
+| "Item is gone"-Message                    | Sent when the picked item is not in the shop anymore, for example because it was removed or renamed while the listing was open.                                                                                         |
+| "Not enough candy"-Message                | Sent when a member cannot afford the item they picked.                                                                                                                                                                  |
+| "Sold out"-Message                        | Sent when the stock of an item is used up.                                                                                                                                                                              |
+| "Limit reached"-Message                   | Sent when a member already bought an item as often as allowed.                                                                                                                                                          |
+| "Purchase could not be completed"-Message | Sent when a purchase could not be finished, for example because the role could not be handed out. The purchase is cancelled and the candy is refunded.                                                                  |
+| Purchase Confirmation                     | Sent when a purchase went through. Items with their own purchase message use that one instead.                                                                                                                          |
+| Leaderboard Title                         | Title of the live leaderboard message. Defaults to "🎃 Halloween Leaderboard".                                                                                                                                          |
+| Leaderboard Title: final standings        | Title of the leaderboard message once it switches to the final standings. Defaults to "🎃 Final Halloween standings".                                                                                                   |
+| Leaderboard Color                         | Accent color of the leaderboard message, set with a color picker. Defaults to orange (`#e67e22`).                                                                                                                       |
+| Leaderboard Thumbnail                     | Small image shown next to the leaderboard title. Leave empty for none.                                                                                                                                                  |
+| Leaderboard Image                         | Large image shown below the leaderboard title. Leave empty for none.                                                                                                                                                    |
+| Boss Spawn Message                        | The boss message while the fight is open, updated as members join. The stake buttons are added below it. Role mentions in it ping the role once when the boss appears. See [Customizing boss messages](#boss-messages). |
+| Boss Defeated Message                     | Replaces the boss message after the fighters won. See [Customizing boss messages](#boss-messages).                                                                                                                      |
+| Boss Victorious Message                   | Replaces the boss message after the boss won and the stakes were lost. See [Customizing boss messages](#boss-messages).                                                                                                 |
+| Boss Fled Message                         | Replaces the boss message when nobody staked any candy. See [Customizing boss messages](#boss-messages).                                                                                                                |
 
 ### Candy Shop Items {#configuration-shop-items}
 
@@ -269,7 +299,7 @@ In this configuration file, you can set up what your members can buy with their 
         <li>Bosses only appear from the "Boss Week Start Day" until October 31st, at random times between "Wake-Up Spawns: earliest hour" and "Wake-Up Spawns: latest hour".</li>
         <li>Make sure "Bosses per Day" is above 0.</li>
         <li>Make sure the bot has "View Channel", "Send Messages", "Embed Links" and "Read Message History" in the boss channel.</li>
-        <li>While test mode is on, a boss channel that is the same as the test channel is ignored. Test bosses appear in the test channel instead.</li>
+        <li>While test mode is on, a boss channel that is the same as the test channel is ignored. Bosses do not appear on their own in the test channel either: use the "Spawn test boss" button on the test mode message there (requires the Manage Server permission).</li>
     </ul>
 </details>
 <details>
