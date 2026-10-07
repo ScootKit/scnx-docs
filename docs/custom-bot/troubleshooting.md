@@ -128,6 +128,23 @@ of their permissions or role position. There is no workaround for this.
 ## Configuration issues {#configuration}
 
 <details>
+  <summary>The bot shows configuration problems in the issue list</summary>
+  <ul>
+    <li>Your bot checks every configured role and channel to make sure it can use them, for example whether a reward role is above the bot's highest role or whether it can send messages in a log channel.</li>
+    <li>Each problem is listed together with the affected module and setting. Fix the cause (for example, move the bot's role higher or grant the missing channel permission) and the warning disappears automatically.</li>
+    <li>The check runs when the bot starts, after every configuration reload and whenever a channel or role changes. Disabled features are ignored.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>A module is disabled because of a missing privileged intent</summary>
+  <ul>
+    <li>If <strong>Server Members</strong>, <strong>Presence</strong> or <strong>Message Content</strong> is disabled in the Discord Developer Portal, the bot still starts, but modules that depend on the missing intent are disabled. Modules that only use it for optional features keep running.</li>
+    <li>The issue list shows which intent is missing and links to the correct Developer Portal page. Enable the intent there and restart your bot.</li>
+  </ul>
+</details>
+
+<details>
   <summary>Changes to configuration are not being applied</summary>
   <ul>
     <li>After changing configuration options in the dashboard, you need to reload your bot's configuration from the <a href="https://scnx.app/glink?page=bot/manage">Bot Status Panel</a>.</li>

@@ -15,8 +15,7 @@ visit [scnx.xyz/plans](https://scnx.xyz/plans).
 :::
 
 :::warning
-Plans do not include premium Backup features or other premium features offered by the SCNX-Bot. Those features require a
-separate subscription.
+The amount of [backups](/docs/scnx/guilds/backups#limits) your server can store, and which backup features it can use, depends on your plan.
 :::
 
 | Feature                                                                                   | Starter Plan                                                                           | Unlimited Plan                                                                                                                                | Professional Plan                                                                                                                                      |
