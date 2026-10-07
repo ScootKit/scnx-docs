@@ -374,6 +374,8 @@ In dieser Konfigurationsdatei passt du die Fall-Log-Nachrichten an, die in deine
 
 Jeder Aktionstyp hat seine eigene bearbeitbare Embed-Vorlage, die mit dem vollständigen Embed-Editor geöffnet wird: **Stummschaltung**, **Stummschaltung aufheben**, **Quarantäne**, **Quarantäne aufheben**, **Kick**, **Bann**, **Verwarnung**, **Kanal-Stummschaltung**, **Kanal-Stummschaltung aufheben**, **Verwarnung entfernen** und **Entbannungs-Log-Nachricht**. Die Embed-Farbe wird immer automatisch gesetzt (gelb für temporär, grün für Aufhebungen, rot für Basis-Aktionen) und überschreibt jede Farbe in der Vorlage; die Felder für Ablauf, Beweis und Kanal werden automatisch angehängt, wenn sie zutreffen.
 
+Im Fall-Log wird die genau eingegebene Dauer angezeigt, ein siebentägiger Mute steht dort also als sieben Tage und nicht als aus dem Ablaufdatum neu berechneter Wert. Zeigt deine Vorlage den Ablauf bereits über `%expires%` oder `%duration%` an, deaktiviere **Append expiry automatically** (Ablauf automatisch anhängen), um das automatische Feld „Aktion läuft ab am" auszublenden. Vorlagen ohne Embed (reiner Text) werden wie geschrieben gepostet, statt durch das Standard-Embed ersetzt zu werden.
+
 Vorlagen unterstützen diese Platzhalter:
 
 | Platzhalter                                           | Bedeutung                                                                                     |

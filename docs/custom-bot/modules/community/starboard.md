@@ -73,8 +73,13 @@ Discord. Open it in your [dashboard](https://scnx.app/glink?page=bot/configurati
 </details>
 
 <details>
+  <summary>Messages from members who left the server</summary>
+  <p>Messages from authors who have left the server can still be posted to the starboard.</p>
+</details>
+
+<details>
   <summary>Reactions on age-restricted (NSFW) channels are not posted</summary>
-  <p>To prevent age-restricted content from leaking into channels that are not marked as such, the bot silently skips starring messages from an age-restricted channel into a non-age-restricted starboard channel. To star messages from age-restricted channels, mark your starboard channel as <strong>Age-Restricted</strong> in Discord's channel settings as well. Posts from non-age-restricted channels will continue to work regardless of this setting. This behavior is in place to comply with Discord's guidelines and cannot be disabled.</p>
+  <p>To prevent age-restricted content from leaking into channels that are not marked as such, the bot silently skips starring messages from an age-restricted channel into a non-age-restricted starboard channel. Messages from channels inside an age-restricted category count as age-restricted too. To star messages from age-restricted channels, mark your starboard channel as <strong>Age-Restricted</strong> in Discord's channel settings as well. Posts from non-age-restricted channels will continue to work regardless of this setting. This behavior is in place to comply with Discord's guidelines and cannot be disabled.</p>
 </details>
 
 ## Stored data {#data-usage}

@@ -374,6 +374,8 @@ In this configuration file, you customize the case-log messages posted to your m
 
 Each action type has its own editable embed template, opened with the full embed editor: **Mute**, **Unmute**, **Quarantine**, **Unquarantine**, **Kick**, **Ban**, **Warn**, **Channel-mute**, **Channel-unmute**, **Unwarn**, and **Unban log message**. The embed color is always set automatically (yellow for temporary, green for reversals, red for base actions) and overrides any color in the template; the expiry, proof, and channel fields are appended automatically when they apply.
 
+The exact duration you entered is shown in the case log, so a seven-day mute reads as seven days instead of a value recalculated from its expiry date. If your template already shows the expiry via `%expires%` or `%duration%`, disable **Append expiry automatically** to hide the automatic "Action expires on" field. Templates without an embed (plain text) are posted as written instead of being replaced by the default embed.
+
 Templates support these placeholders:
 
 | Placeholder                                           | Meaning                                                                                 |

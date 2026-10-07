@@ -21,8 +21,8 @@ du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
 - [Eigener-Support-Bot](/docs/support-bot/intro): Ein komplett anpassbares Discord-Support-System mit Modmail- und Ticket-Funktionen, gebaut, um Support professionell zu bearbeiten - gehostet ab
   nur <PlanPrice plan="UNLIMITED" type="MONTHLY" />. Du kannst
   entweder [mit dem Support-Bot loslegen](/docs/support-bot) oder [die gesamte Support-Bot-Dokumentation](/docs/support-bot/intro) öffnen.
-- [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Nachrichten, Kanäle und Rollen deines Discord-Servers für den
-  Ernstfall zu speichern. Du kannst die
+- [SCNX Backups](https://scnx.xyz/de/backups): Ein System, um Kanäle, Rollen, Einstellungen, Nachrichten und mehr deines Discord-Servers für den
+  Ernstfall zu speichern. Die Backups erstellt dein eigener Bot. Du kannst die
   [Backup-Dokumentation](/docs/scnx/guilds/backups) öffnen.
 - dcserver.link: Erstelle deine eigene eindeutige URL für deinen Server (z. B. `https://dcserver.link/yourservername`).
   Du kannst
@@ -31,7 +31,7 @@ du willst und jeder von ihnen kann eigene Discord-Bots erstellen.
   Öffne die [Trusted-Admin-Dokumentation](/docs/scnx/guilds/trusted-admins), um mehr zu erfahren.
 - [Erweiterte Sicherheit](/docs/scnx/guilds/enhanced-security): Erfordert Zwei-Faktor-Authentifizierung für alle Konfigurationsänderungen auf deinem Server.
 - [Server-Bilderspeicher](/docs/scnx/guilds/files): Lade Bilder hoch, organisiere sie und verwende sie in deinen Bot-Konfigurationen wieder.
-- [Server-Analytik](/docs/scnx/guilds/analytics): Detaillierte Analytik und Einblicke über die SCNX-Nutzung deines Servers.
+- [Server-Analytik](/docs/scnx/guilds/analytics): Sieh, wie aktiv dein Server ist, wie Mitglieder kommen und gehen und welche Kanäle und Mitglieder am aktivsten sind.
 
 Um mehr über Preise, Abos und Pläne auf SCNX zu erfahren, besuche die [Abos & Pläne Dokumentation](/docs/scnx/guilds/plans).
 Außerdem haben wir noch eine detaillierte Seite mit [häufig gestellten Fragen](/docs/scnx/guilds/faq) über Server auf SCNX.

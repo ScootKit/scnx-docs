@@ -6,7 +6,7 @@ Ein leistungsstarkes, hochgradig anpassbares Staff-Management-System, mit dem du
 
 ## Funktionen {#features}
 
-- **Verstöße & Suspendierungen**: Vergib Verwarnungen, Strikes, Degradierungen und Kündigungen, markiere Teammitglieder als „Unter Untersuchung“ oder erstelle eigene Verstoßarten. Suspendierungen entziehen einem Teammitglied für die im Befehl angegebene Dauer vorübergehend seine Team-Rollen.
+- **Verstöße & Suspendierungen**: Vergib Verwarnungen, Strikes, Degradierungen und Kündigungen, markiere Teammitglieder als „Unter Untersuchung" oder erstelle eigene Verstoßarten. Suspendierungen entziehen einem Teammitglied für die im Befehl angegebene Dauer vorübergehend seine Team-Rollen.
 - **Beförderungen**: Befördere Teammitglieder mit optionaler automatischer Rollenvergabe und anpassbaren Ankündigungen, sowohl im Kanal als auch per Direktnachricht (falls aktiviert).
 - **Team-Bewertungen**: Lass Nutzer Teammitglieder mit einer Bewertung von 1 bis 5 Sternen und einem Feedback bewerten, mit einer anpassbaren Bewertungsnachricht. Du kannst auch zulassen, dass Mitglieder andere (normale) Mitglieder bewerten und dass Teammitglieder sich selbst bewerten.
 - **Schichtverwaltung**: Lass Teammitglieder in den Dienst und aus dem Dienst gehen und Pausen nehmen, während ihre Schichtzeit erfasst wird, die in eine anpassbare Bestenliste (wöchentlich/monatlich) einfließt. Admins können Schichten verwalten, indem sie manuell Zeit hinzufügen, Mitglieder zwangsweise aus dem Dienst nehmen oder Schichten komplett verwerfen. Lege eigene Schichtarten fest, richte Quoten für bestimmte Rollen ein, konfiguriere Mindestschichtdauern und protokolliere alle Schichtänderungen.
@@ -34,20 +34,20 @@ Ein leistungsstarkes, hochgradig anpassbares Staff-Management-System, mit dem du
 
 ### Verstöße {#infractions}
 
-[Aufsichtspersonen](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) können Teammitgliedern mit dem Befehl `/staff-management infraction issue` Verstöße erteilen. Verstoßarten lassen sich in der [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) festlegen. Standardmäßig gibt es die Verstoßarten „Warning, Strike, Demotion, Termination und Under Investigation“.
+[Aufsichtspersonen](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) können Teammitgliedern mit dem Befehl `/staff-management infraction issue` Verstöße erteilen. Verstoßarten lassen sich in der [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cinfractions) festlegen. Standardmäßig gibt es die Verstoßarten „Warning, Strike, Demotion, Termination und Under Investigation".
 Teammitglieder können sich **nicht selbst sanktionieren**.
 Du kannst außerdem:
 
-- Verstöße eines Nutzers mit dem Befehl `/staff-management infraction void` aufheben. Der Verstoß bleibt dabei im Verlauf erhalten, aber die Strafe ist nicht mehr „aktiv“. Das geht entweder über den Nachrichtenlink des Verstoßes oder die Fall-ID. (Nur Aufsichtspersonen und höher können Verstöße aufheben.)
+- Verstöße eines Nutzers mit dem Befehl `/staff-management infraction void` aufheben. Der Verstoß bleibt dabei im Verlauf erhalten, aber die Strafe ist nicht mehr „aktiv". Das geht entweder über den Nachrichtenlink des Verstoßes oder die Fall-ID. (Nur Aufsichtspersonen und höher können Verstöße aufheben.)
 - Den Verstoßverlauf eines Nutzers mit dem Befehl `/staff-management infraction history` ansehen. Er zeigt alle bisherigen Verstöße des Nutzers.
 
-Verstöße (einschließlich Suspendierungen) können optional auch per Direktnachricht an das sanktionierte Teammitglied gesendet werden, indem du die Option „DM-Benutzer bei Verstoß?“ aktivierst. Auch diese Nachrichten sind konfigurierbar.
+Verstöße (einschließlich Suspendierungen) können optional auch per Direktnachricht an das sanktionierte Teammitglied gesendet werden, indem du die Option „DM-Benutzer bei Verstoß?" aktivierst. Auch diese Nachrichten sind konfigurierbar.
 
 ### Beförderungen {#promotions}
 
 [Aufsichtspersonen](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) können Teammitglieder mit dem Befehl `/staff-management promotion promote` in einen höheren Rang befördern. Nutzer können außerdem mit dem Befehl `/staff-management promotion history` den Beförderungsverlauf eines Nutzers ansehen. Er zeigt den vollständigen Verlauf der Beförderungen dieses Nutzers.
 
-Die Beförderungsnachricht ist anpassbar. Durch Aktivieren der Option „Direktnachricht an beförderten Benutzer?“ kann zusätzlich eine Nachricht an die Direktnachrichten des beförderten Nutzers gesendet werden. Auch diese Nachricht ist anpassbar.
+Die Beförderungsnachricht ist anpassbar. Durch Aktivieren der Option „Direktnachricht an beförderten Benutzer?" kann zusätzlich eine Nachricht an die Direktnachrichten des beförderten Nutzers gesendet werden. Auch diese Nachricht ist anpassbar.
 
 Optional kann der Bot bei einer Beförderung auch automatisch die neue Rolle hinzufügen.
 **⚠️ WARNUNG: Diese Option ist gefährlich und kann Server-Raids auslösen oder bei Raids noch verschlimmern, indem unautorisierte Nutzer Rollen mit höheren Berechtigungen und gefährlichen Rechten erhalten. Das Hinzufügen von Rollen kann nicht automatisch rückgängig gemacht werden. Es wird empfohlen, diese Einstellung deaktiviert zu lassen!**
@@ -72,7 +72,7 @@ Außerdem kann eine Dienst-Bestenliste aktiviert werden, in der Teammitglieder s
 Zusätzlich kann ein Quotensystem aktiviert werden, das von Teammitgliedern verlangt, jede Woche bzw. jeden Monat eine bestimmte Anzahl an Stunden Dienstzeit zu erreichen, um die Quote zu erfüllen. Diese können je Rolle unterschiedlich sein. Als Quote zählt die höchste Rolle des Teammitglieds, die dort aufgeführt ist. Die Quote kann auch 0 Stunden betragen, was bedeutet, dass diese Rolle keine Quote hat.
 Der Quotenstatus wird im Befehl `/duty time` angezeigt.
 
-Wenn „Schichtänderungen protokollieren“ in der Konfiguration der Schichtverwaltung aktiviert ist, sendet der Bot jedes Mal, wenn ein Teammitglied seine Schicht ändert, ein Embed mit Informationen. Das gilt für Aktionen wie In-den-Dienst-Gehen, Pause, Aus-dem-Dienst-Gehen und Admin-Aktionen. Diese Änderungen können in einen eigenen Kanal protokolliert werden. Ist keiner festgelegt, wird der Standard-Protokollkanal verwendet.
+Wenn „Schichtänderungen protokollieren" in der Konfiguration der Schichtverwaltung aktiviert ist, sendet der Bot jedes Mal, wenn ein Teammitglied seine Schicht ändert, ein Embed mit Informationen. Das gilt für Aktionen wie In-den-Dienst-Gehen, Pause, Aus-dem-Dienst-Gehen und Admin-Aktionen. Diese Änderungen können in einen eigenen Kanal protokolliert werden. Ist keiner festgelegt, wird der Standard-Protokollkanal verwendet.
 
 Teammitglieder können mit `/duty active` sehen, wer gerade im Dienst ist, mit `/duty leaderboard` die Dienstzeit-Bestenliste ansehen und mit `/duty time` ihre gesamte Dienstzeit einsehen.
 
@@ -81,13 +81,13 @@ Teammitglieder können mit `/duty active` sehen, wer gerade im Dienst ist, mit `
 Du kannst festlegen, ob Teammitglieder [eine Abwesenheit (Leave of Absence, LoA) und/oder eine Reduzierte Aktivität (Reduced Activity, RA) beantragen](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cstatus) können. Eine LoA ist für Teammitglieder gedacht, die länger weg sind und kaum bis keine Pflichten im Team haben, während eine RA für Teammitglieder gedacht ist, die weiterhin aktiv im Team mitarbeiten möchten, aber weniger als normale Teammitglieder.
 
 **Abwesenheit (LoA)**
-Das LoA-System lässt sich einzeln aktivieren, indem du die Option „LoA-System aktivieren“ einschaltest.
+Das LoA-System lässt sich einzeln aktivieren, indem du die Option „LoA-System aktivieren" einschaltest.
 Nach dem Aktivieren kannst du die LoA-Rolle auswählen, die zu Beginn ihrer LoA vergeben wird, die maximale Anzahl an Tagen festlegen, für die eine LoA beantragt werden kann, und bestimmen, ob ein LoA-Antrag genehmigt werden muss oder nicht.
 
 Das LoA-System ist für Teammitglieder gedacht, die vorübergehend abwesend sind und von den erwarteten Team-Aufgaben befreit sein möchten.
 
 **Reduzierte Aktivität (RA)**
-Das RA-System lässt sich einzeln aktivieren, indem du die Option „RA-System aktivieren“ einschaltest.
+Das RA-System lässt sich einzeln aktivieren, indem du die Option „RA-System aktivieren" einschaltest.
 Nach dem Aktivieren kannst du die RA-Rolle auswählen, die zu Beginn ihrer RA vergeben wird, die maximale Anzahl an Tagen festlegen, für die eine RA beantragt werden kann, und bestimmen, ob ein RA-Antrag genehmigt werden muss oder nicht.
 
 Zusätzlich kannst du:
@@ -114,10 +114,10 @@ Einstellungen, um das System an deine Bedürfnisse anzupassen:
 
 - Rollen zur Überprüfung: Wähle die Rolle(n), die laut Bot auf den Button reagieren sollen. Lass das Feld leer, um die Standard-Team-Rolle aus der [Allgemeinen Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=staff-management-system%7Cconfiguration) zu verwenden.
 - Überprüfungsdauer: Die Dauer von Aktivitäts-Checks in _Stunden_. Der Höchstwert beträgt 168 Stunden (1 Woche), der Mindestwert 1 Stunde.
-- Aktivitäts-Check-Embed & Beendetes Aktivitäts-Check-Embed: Gestalte die Aktivitäts-Check-Nachrichten nach deinen Wünschen! Die „beendete“ Nachricht ersetzt die ursprüngliche Nachricht, sobald der Check beendet ist. (⚠️ Warnung: Wenn deine ursprüngliche Aktivitäts-Check-Nachricht Components V2 verwendet, muss auch die „beendete“ Nachricht Components V2 verwenden, sonst wird sie nicht bearbeitet. Das liegt an Einschränkungen von Discord.)
+- Aktivitäts-Check-Embed & Beendetes Aktivitäts-Check-Embed: Gestalte die Aktivitäts-Check-Nachrichten nach deinen Wünschen! Die „beendete" Nachricht ersetzt die ursprüngliche Nachricht, sobald der Check beendet ist. (⚠️ Warnung: Wenn deine ursprüngliche Aktivitäts-Check-Nachricht Components V2 verwendet, muss auch die „beendete" Nachricht Components V2 verwenden, sonst wird sie nicht bearbeitet. Das liegt an Einschränkungen von Discord.)
 - Standardkanal: Der Kanal, in den die Aktivitäts-Checks gesendet werden. Das lässt sich beim Verwenden des Befehls `/staff-management activity-check start` überschreiben.
 
-Zusätzlich kannst du die Aktivitäts-Checks **automatisieren**. Du kannst ein Intervall festlegen (wöchentlich, zweiwöchentlich, monatlich oder per Cronjob), wie oft der Aktivitäts-Check gesendet werden soll, den Cronjob festlegen, wenn du „Cronjob“ gewählt hast, den Wochentag auswählen, an dem der Aktivitäts-Check stattfinden soll, und die Woche des Monats, wenn du beim Intervall „Monatlich“ gewählt hast.
+Zusätzlich kannst du die Aktivitäts-Checks **automatisieren**. Du kannst ein Intervall festlegen (wöchentlich, zweiwöchentlich, monatlich oder per Cronjob), wie oft der Aktivitäts-Check gesendet werden soll, den Cronjob festlegen, wenn du „Cronjob" gewählt hast, den Wochentag auswählen, an dem der Aktivitäts-Check stattfinden soll, und die Woche des Monats, wenn du beim Intervall „Monatlich" gewählt hast.
 
 Die Ergebnisse werden in den konfigurierten Ergebniskanal gesendet (leer lassen, um den Standard-Protokollkanal zu verwenden), mit der Option, beim Veröffentlichen der Ergebnisse eine eigene Rolle zu pingen.
 
@@ -174,7 +174,7 @@ Die folgenden Aktionen sind auch verfügbar, indem du mit der rechten Maustaste 
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Issue Infraction`   | Öffnet ein Formular, um dem Nutzer einen Verstoß zu erteilen (Art, Grund und optionales Ablaufdatum), wie `/staff-management infraction issue`. Nur Aufsichtspersonen und höher können sie verwenden. |
 | `Promote User`       | Zeigt eine Rollenauswahl, um den Nutzer zu befördern, wie `/staff-management promotion promote`. Nur Aufsichtspersonen und höher können sie verwenden.                                                |
-| `Submit Review`      | Öffnet ein Formular für Sterne und Kommentar, um den Nutzer zu bewerten, wie `/staff-management review submit`. Die Option „Nur Benutzern erlauben, Mitarbeiter zu bewerten“ gilt auch hier.          |
+| `Submit Review`      | Öffnet ein Formular für Sterne und Kommentar, um den Nutzer zu bewerten, wie `/staff-management review submit`. Die Option „Nur Benutzern erlauben, Mitarbeiter zu bewerten" gilt auch hier.          |
 | `View Staff Profile` | Zeigt das Profil des Nutzers, wie `/staff-management profile view`.                                                                                                                                   |
 
 ## Konfiguration {#configuration}
@@ -223,7 +223,7 @@ Konfiguriere das Beförderungssystem in der [Konfiguration der Beförderungen](h
 | Direktnachricht an beförderten Benutzer? | Legt fest, ob der Bot zusätzlich eine Beförderungsnachricht an die Direktnachrichten des Mitglieds sendet.                                                                                                                                                 |
 | Beförderungs-DM-Embed                    | Die eigene Nachricht, die bei einer Beförderung an die Direktnachrichten des Nutzers gesendet wird.                                                                                                                                                        |
 
-**⚠️ Warnung: Die Einstellung „Automatisch neue Rolle hinzufügen?“ AUSGESCHALTET zu lassen, wird EMPFOHLEN. So vermeidest du Raids, bei denen böswillige Nutzer anderen Nutzern gefährliche Rollen mit gefährlichen Berechtigungen geben und ihnen so helfen, den Server zu raiden. Der Bot kann sich NICHT selbst vor böswilligen Aktionen schützen, und wir können bei aktivierter Einstellung keine Raid-Freiheit garantieren. Bitte aktiviere Backups, wenn du diese Einstellung nutzt!**
+**⚠️ Warnung: Die Einstellung „Automatisch neue Rolle hinzufügen?" AUSGESCHALTET zu lassen, wird EMPFOHLEN. So vermeidest du Raids, bei denen böswillige Nutzer anderen Nutzern gefährliche Rollen mit gefährlichen Berechtigungen geben und ihnen so helfen, den Server zu raiden. Der Bot kann sich NICHT selbst vor böswilligen Aktionen schützen, und wir können bei aktivierter Einstellung keine Raid-Freiheit garantieren. Bitte aktiviere Backups, wenn du diese Einstellung nutzt!**
 
 ### Mitarbeiterbewertungen {#configuration-reviews}
 
@@ -298,12 +298,12 @@ Konfiguriere manuelle und automatisierte Aktivitäts-Checks, um zu prüfen, ob T
 | Beendetes Aktivitäts-Check-Embed        | Das anpassbare Aktivitäts-Check-Embed, das nach dem Ende des Aktivitäts-Checks anstelle des Aktivitäts-Check-Embeds bearbeitet angezeigt wird.                                                                          |
 | Standardkanal                           | Der Kanal, in den die Aktivitäts-Checks gesendet werden. Das kann im Befehl überschrieben werden.                                                                                                                       |
 | Regel für Ausnahmen                     | Die Regel, wer von den Aktivitäts-Checks ausgenommen ist. Wähle zwischen keine, nur LoA, nur RA, LoA und RA oder eine eigene Rolle.                                                                                     |
-| Benutzerdefinierte Ausnahmerollen       | Die Rolle(n), die von Aktivitäts-Checks ausgenommen sind, wenn oben „Eigene Rolle(n)“ gewählt wurde.                                                                                                                    |
+| Benutzerdefinierte Ausnahmerollen       | Die Rolle(n), die von Aktivitäts-Checks ausgenommen sind, wenn oben „Eigene Rolle(n)" gewählt wurde.                                                                                                                    |
 | Automatisierte Überprüfungen            | Schaltet das automatisierte Aktivitäts-Check-System ein.                                                                                                                                                                |
 | Automatisiertes Überprüfungsintervall   | Wähle, wie oft der Aktivitäts-Check stattfinden soll (wöchentlich, zweiwöchentlich, monatlich oder per Cronjob).                                                                                                        |
 | Automatisierter Überprüfungs-Cronjob    | Eigener Cronjob, um die Häufigkeit genau so festzulegen, wie du möchtest. _Hinweis: Ein Cronjob-Generator wie https://crontab.guru/ wird empfohlen, sofern du nicht selbst weißt, wie ein Cronjob-Muster funktioniert._ |
 | Automatisierter Überprüfungs-Wochentag  | Der Wochentag, an dem der Aktivitäts-Check gesendet wird.                                                                                                                                                               |
-| Automatisierte Überprüfungs-Monatswoche | Die Woche des Monats, in der der Aktivitäts-Check gesendet wird, wenn beim Intervall „monatlich“ gewählt wurde.                                                                                                         |
+| Automatisierte Überprüfungs-Monatswoche | Die Woche des Monats, in der der Aktivitäts-Check gesendet wird, wenn beim Intervall „monatlich" gewählt wurde.                                                                                                         |
 | Ergebniskanal                           | Der Kanal, in dem die Ergebnisse des Aktivitäts-Checks gepostet werden. Die Ergebnisse zeigen, wer reagiert hat, wer nicht und wer ausgenommen war. Leer lassen, um den Allgemeinen Protokoll-Kanal zu verwenden.       |
 | Ping bei Ergebnissen                    | Legt fest, ob eine Rolle mit den Ergebnissen gepingt wird oder nicht.                                                                                                                                                   |
 | Rollen zu benachrichtigen               | Die eigene(n) Rolle(n), die mit den Ergebnissen gepingt werden.                                                                                                                                                         |
@@ -313,7 +313,7 @@ Konfiguriere manuelle und automatisierte Aktivitäts-Checks, um zu prüfen, ob T
 Manchmal können Probleme auftreten, die nicht ganz einfach zu beheben sind. Die meisten Probleme, die bei dir auftreten könnten, sind hier aufgelistet, zusammen mit möglichen Lösungen. Wenn dein Problem hier nicht aufgeführt ist oder die Lösung es nicht behoben hat, wende dich gerne an [unser Support-Team](https://scnx.app/help).
 
 <details>
-    <summary>Ich befördere jemanden mit aktivierter Einstellung „Automatisch neue Rolle hinzufügen?“, aber die Rolle wird dem Nutzer nicht gegeben</summary>
+    <summary>Ich befördere jemanden mit aktivierter Einstellung „Automatisch neue Rolle hinzufügen?", aber die Rolle wird dem Nutzer nicht gegeben</summary>
 
     Das passiert meistens, weil dem Bot die Berechtigung fehlt, dem Nutzer die Rolle hinzuzufügen. Möglicherweise hat der Bot eine Rolle, die niedriger ist als die Rolle, zu der der Nutzer befördert wird. Das ist ein Problem der Discord-Rollenhierarchie und kein Bug. Probiere die folgenden Schritte aus, um das Problem zu beheben:
     * Stelle sicher, dass dein Bot eine Rolle hat, die höher ist als die Rolle, zu der du einen Nutzer beförderst. Wir empfehlen, eine Rolle über allen Rollen mit geringerem Risiko zu setzen, zu denen du Nutzer befördern würdest. Rollen mit höherem Risiko (Nutzer, die kicken/bannen können usw.) sollten aus Gründen des Raid-Schutzes nicht automatisch vergeben werden.
@@ -324,7 +324,7 @@ Manchmal können Probleme auftreten, die nicht ganz einfach zu beheben sind. Die
 <details>
     <summary>Das Beenden einer Team-Schicht hat die Zeit nicht zur gesamten Schichtzeit eines Nutzers hinzugefügt</summary>
     <ul>
-        <li>Prüfe die Einstellung **Minimale Schichtdauer (Minuten)** in der <a href="#configuration-shifts">Konfiguration der Schichtverwaltung</a>. Möglicherweise hat der Nutzer eine Schicht beendet, bevor er diese Dienstzeit erreicht hatte. Alle Schichten unter diesem Zeitraum zählen nicht zur gesamten Schichtzeit, um „Shift Farming“ zu vermeiden. Setze den Wert auf 0 (Standard), damit alle Schichten zählen. **Alle Schichten, die vor der minimalen Schichtzeit beendet werden, werden __gelöscht__ und können nicht wiederhergestellt werden.**</li>
+        <li>Prüfe die Einstellung **Minimale Schichtdauer (Minuten)** in der <a href="#configuration-shifts">Konfiguration der Schichtverwaltung</a>. Möglicherweise hat der Nutzer eine Schicht beendet, bevor er diese Dienstzeit erreicht hatte. Alle Schichten unter diesem Zeitraum zählen nicht zur gesamten Schichtzeit, um „Shift Farming" zu vermeiden. Setze den Wert auf 0 (Standard), damit alle Schichten zählen. **Alle Schichten, die vor der minimalen Schichtzeit beendet werden, werden __gelöscht__ und können nicht wiederhergestellt werden.**</li>
     </ul>
 </details>
 
@@ -338,7 +338,7 @@ Manchmal können Probleme auftreten, die nicht ganz einfach zu beheben sind. Die
 </details>
 
 <details>
-    <summary>Nachdem ein Aktivitäts-Check beendet wurde, ändert sich die Aktivitäts-Check-Nachricht nie in die „beendete“ Nachricht.</summary>
+    <summary>Nachdem ein Aktivitäts-Check beendet wurde, ändert sich die Aktivitäts-Check-Nachricht nie in die „beendete" Nachricht.</summary>
     <ul>
         <li>Stelle sicher, dass beide Nachrichten entweder den Standard-Nachrichteneditor oder Components V2 (Nachrichteneditor V4) verwenden. Wenn eine der beiden Nachrichten eine andere Art von Discord-Nachricht nutzt, wird sie nicht aktualisiert. Das ist eine Einschränkung von Discord und kein Bug.</li>
         <li>Stelle sicher, dass der Bot beim Ende des Aktivitäts-Checks keine Probleme hat. Prüfe die Ergebnisnachricht, um zu sehen, ob er tatsächlich (ordnungsgemäß) beendet wurde. Andere Probleme werden wahrscheinlich in den Fehlerprotokollen deines Bots festgehalten. Bitte wende dich dafür über https://scnx.app/help an unser Support-Team.</li>
@@ -379,13 +379,13 @@ Alle Datenbankmodelle erfassen automatisch zwei Standard-Zeitstempel:
 - **Target Roles:** Die Zielrollen werden gespeichert, um nachzuverfolgen, welche Rollen auf den Aktivitäts-Check reagieren müssen. Das ist ein entscheidender Teil dieser Funktion. Ohne sie sind Aktivitäts-Checks komplett unbrauchbar.
 - **Responded Users:** Die Nutzer, die reagiert haben, werden gespeichert, um zu prüfen, wer auf die Aktivitäts-Checks reagiert hat. Das wird auch in den Endergebnissen angezeigt.
 - **Status:** Der Status des Aktivitäts-Checks wird gespeichert, um zu prüfen, ob ein Aktivitäts-Check gerade aktiv oder inaktiv ist.
-- **Iniatior ID:** Die Initiator-ID wird gespeichert, um zu wissen, wer den Aktivitäts-Check gestartet hat. Sie ist null, wenn es sich um einen automatisierten Check handelt (in der Aktivitäts-Check-Nachricht als „system“ dargestellt).
-- **Is Automated:** Der Wert „isAutomated“ wird gespeichert, um zu sehen, ob der Check ein automatisierter Check war. Das ist eine zusätzliche Prüfung neben der Initiator-ID, um sicherzustellen, dass es ein automatisierter Check war.
+- **Iniatior ID:** Die Initiator-ID wird gespeichert, um zu wissen, wer den Aktivitäts-Check gestartet hat. Sie ist null, wenn es sich um einen automatisierten Check handelt (in der Aktivitäts-Check-Nachricht als „system" dargestellt).
+- **Is Automated:** Der Wert „isAutomated" wird gespeichert, um zu sehen, ob der Check ein automatisierter Check war. Das ist eine zusätzliche Prüfung neben der Initiator-ID, um sicherzustellen, dass es ein automatisierter Check war.
 
 **ActivityCheckResponse-Modell unten**
 _Das Löschen von Aktivitäts-Check-Daten über das Nutzer-Panel (`Data Deletion > Delete Activity Checks`) löscht alle Antwort-Datensätze dieses Nutzers aus der Tabelle `ActivityCheckResponse`. Beachte, dass die ID des Nutzers weiterhin im Zusammenfassungsfeld `respondedUsers` vergangener `ActivityCheck`-Datensätze aufgeführt bleibt._
 
-- **ID:** Die Antwort-ID dient dazu, jedem Nutzer als „Antwort-ID“ eine eindeutige Nummer (ID) zuzuweisen. Sie wird hauptsächlich gespeichert, um Doppeleinträge zu verhindern.
+- **ID:** Die Antwort-ID dient dazu, jedem Nutzer als „Antwort-ID" eine eindeutige Nummer (ID) zuzuweisen. Sie wird hauptsächlich gespeichert, um Doppeleinträge zu verhindern.
 - **Activity Check ID:** Die Aktivitäts-Check-ID wird gespeichert, um zu erkennen, auf welchen Aktivitäts-Check der Nutzer reagiert hat.
 - **User ID:** Die Nutzer-ID wird gespeichert, um zu wissen, welcher Nutzer auf den Aktivitäts-Check reagiert hat.
 
@@ -399,7 +399,7 @@ _Das Löschen von Verstoßdaten über das Nutzer-Panel (`Data Deletion > Delete 
 - **Type:** Die Art wird verwendet, um zu erkennen, welche Verstoßart erteilt wurde.
 - **Reason:** Der Grund wird gespeichert, um zu wissen, was der Grund für jeden Verstoß ist. Er wird im Verstoßverlauf des Nutzers angezeigt.
 - **Duration Days:** Die Dauer in Tagen wird verwendet, um genau zu wissen, wie viele Tage eine Suspendierung dauert.
-- **Active:** Der Boolean „active“ wird verwendet, um zu wissen, ob eine Suspendierung gerade aktiv ist oder bereits beendet wurde.
+- **Active:** Der Boolean „active" wird verwendet, um zu wissen, ob eine Suspendierung gerade aktiv ist oder bereits beendet wurde.
 - **Message URL:** Die Nachrichten-URL wird gespeichert, um sich die genaue Verstoßnachricht zu merken. Sie wird verwendet, um Verstöße zuzuordnen, wenn ein Teammitglied einen Verstoß über die Nachrichten-URL aufhebt.
 - **Expires At:** Das Ablaufdatum wird verwendet, um zu wissen, wann ein Verstoß abläuft.
 
@@ -409,7 +409,7 @@ _Das Löschen von Statusdaten (`Data Deletion > Delete Status`) setzt den aktive
 
 - **ID:** Die ID wird gespeichert, um eine bestimmte LoA/RA zu identifizieren.
 - **User ID:** Die Nutzer-ID wird gespeichert, um zu wissen, wer den Status beantragt hat.
-- **Type:** Das Feld „Type“ wird verwendet, um sich zu merken und zu wissen, ob der Nutzer eine LoA oder eine RA beantragt hat.
+- **Type:** Das Feld „Type" wird verwendet, um sich zu merken und zu wissen, ob der Nutzer eine LoA oder eine RA beantragt hat.
 - **Reason:** Der Grund des Statusantrags.
 - **Start Date:** Das Startdatum des Status. Wird verwendet, um zu sehen, wann der Status begann, und um das Enddatum zu berechnen.
 - **End Date:** Das Enddatum des Status.
@@ -434,7 +434,7 @@ _Die `StaffProfile`-Zeile selbst ist dauerhaft und wird durch Panel-Aktionen **n
 
 - **User ID:** Die Nutzer-ID des Teammitglieds.
 - **Points (ignore):** Nicht verwendet. Wurde für eine geplante Funktion angelegt, die inzwischen aber verworfen wurde (wird im nächsten Update entfernt).
-- **On Duty:** Der Boolean „onDuty“ wird verwendet, um zu erkennen, ob ein Nutzer gerade im Dienst ist. Falls ja, werden Dinge wie das Vergeben der Im-Dienst-Rolle erledigt, sofern konfiguriert.
+- **On Duty:** Der Boolean „onDuty" wird verwendet, um zu erkennen, ob ein Nutzer gerade im Dienst ist. Falls ja, werden Dinge wie das Vergeben der Im-Dienst-Rolle erledigt, sofern konfiguriert.
 - **last Clock In:** Das Datum des letzten Dienstbeginns wird verwendet, um sich zu merken, wann der Nutzer zuletzt in den Dienst ging. Es wird auch zur Berechnung der gesamten Schichtzeit verwendet.
 - **Activity status:** Wird verwendet, um zu erkennen, in welchem Status der Nutzer ist: im Dienst, auf LoA oder auf RA. Das wird auch im Teamprofil angezeigt.
 - **Is Suspended:** Dieser Boolean wird verwendet, um zu wissen, ob der Nutzer suspendiert ist.

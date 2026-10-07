@@ -91,7 +91,7 @@ const articleCategories = [
         articles: [
             {title: <Translate id="home.a.admins">Trusted Admins & Permissions</Translate>, link: '/docs/scnx/guilds/trusted-admins', desc: <Translate id="home.a.admins.d">Grant dashboard access to your team with granular permissions.</Translate>},
             {title: <Translate id="home.a.enhanced">Enhanced Security</Translate>, link: '/docs/scnx/guilds/enhanced-security', desc: <Translate id="home.a.enhanced.d">Require 2FA for all configuration changes on your server.</Translate>},
-            {title: <Translate id="home.a.backups">Server Backups</Translate>, link: '/docs/scnx/guilds/backups', desc: <Translate id="home.a.backups.d">Back up messages, channels, roles and more with the SCNX Bot.</Translate>},
+            {title: <Translate id="home.a.backups">Server Backups</Translate>, link: '/docs/scnx/guilds/backups', desc: <Translate id="home.a.backups.d">Back up channels, roles, messages and more with your own bot.</Translate>},
             {title: <Translate id="home.a.analytics">Server Analytics</Translate>, link: '/docs/scnx/guilds/analytics', desc: <Translate id="home.a.analytics.d">Track server activity and engagement metrics.</Translate>},
             {title: <Translate id="home.a.dcserver">dcserver.link</Translate>, link: '/docs/scnx/guilds/dcserver-link', desc: <Translate id="home.a.dcserver.d">Create a vanity URL for your Discord server.</Translate>},
         ],

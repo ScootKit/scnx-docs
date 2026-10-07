@@ -31,7 +31,7 @@ Open your server on the SCNX dashboard and click **Settings** in the sidebar. Fr
 
 ### Can I remove the SCNX Management Bot? {#scnx-manager-bot}
 
-Yes. Simply kick the bot from your server. Servers without the SCNX Bot can't use SCNX Bot features like [backups](/docs/scnx/guilds/backups) or [analytics](/docs/scnx/guilds/analytics). All hosting features, including all features of your bots, are unaffected.
+Yes. Simply kick the bot from your server. [Backups](/docs/scnx/guilds/backups) and [analytics](/docs/scnx/guilds/analytics) now run on your server's own bot, so they keep working. You only need the SCNX Bot to restore [older backups it created](/docs/scnx/guilds/backups#legacy). All hosting features, including all features of your bots, are unaffected.
 
 ## Bots
 
@@ -69,7 +69,7 @@ Trusted Admins let server owners grant other users access to their server's SCNX
 
 ### How do backups work? {#backups}
 
-SCNX can back up your server's messages, channels, roles, and more. Backups are managed through the SCNX Management Bot and can be restored at any time. See the [Backups documentation](/docs/scnx/guilds/backups).
+SCNX can back up your server's channels, roles, settings, messages and more. Your server's own bot takes the backups, on a schedule or whenever you want, and you can restore them from the dashboard. See the [Backups documentation](/docs/scnx/guilds/backups).
 
 ### What is dcserver.link? {#dcserver-link}
 
@@ -81,7 +81,7 @@ Guild Image Storage lets you upload, organize, and reuse images across all your 
 
 ### How do server analytics work? {#analytics}
 
-SCNX provides analytics about your server's activity, including member statistics and more. Analytics require the SCNX Management Bot to be on your server. See the [Analytics documentation](/docs/scnx/guilds/analytics).
+SCNX provides analytics about your server's activity, including member statistics and more. Your server's own bot collects the data and keeps it in its own database. See the [Analytics documentation](/docs/scnx/guilds/analytics).
 
 ## Plans & Commercial Usage
 

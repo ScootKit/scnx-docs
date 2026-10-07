@@ -31,7 +31,7 @@ Ja! Jeder Discord-Nutzer mit der Berechtigung **Administrator** kann einen Serve
 
 ### Kann ich den SCNX Management Bot entfernen? {#scnx-manager-bot}
 
-Ja. Kicke den Bot einfach von deinem Server. Server ohne den SCNX Bot können keine SCNX-Bot-Funktionen wie [Backups](/docs/scnx/guilds/backups) oder [Analytics](/docs/scnx/guilds/analytics) nutzen. Alle Hosting-Funktionen, einschließlich aller Funktionen deiner Bots, sind davon nicht betroffen.
+Ja. Kicke den Bot einfach von deinem Server. [Backups](/docs/scnx/guilds/backups) und [Analytics](/docs/scnx/guilds/analytics) laufen jetzt über den eigenen Bot deines Servers und funktionieren weiter. Den SCNX Bot brauchst du nur noch, um [ältere Backups, die er erstellt hat](/docs/scnx/guilds/backups#legacy), wiederherzustellen. Alle Hosting-Funktionen, einschließlich aller Funktionen deiner Bots, sind davon nicht betroffen.
 
 ## Bots
 
@@ -69,7 +69,7 @@ Trusted Admins ermöglichen es Server-Ownern, anderen Nutzern Zugriff auf das SC
 
 ### Wie funktionieren Backups? {#backups}
 
-SCNX kann Nachrichten, Kanäle, Rollen und mehr deines Servers sichern. Backups werden über den SCNX Management Bot verwaltet und können jederzeit wiederhergestellt werden. Weitere Informationen findest du in der [Backups Dokumentation](/docs/scnx/guilds/backups).
+SCNX kann Kanäle, Rollen, Einstellungen, Nachrichten und mehr deines Servers sichern. Die Backups erstellt der eigene Bot deines Servers, automatisch oder wann immer du willst. Wiederherstellen kannst du sie im Dashboard. Weitere Informationen findest du in der [Backups Dokumentation](/docs/scnx/guilds/backups).
 
 ### Was ist dcserver.link? {#dcserver-link}
 
@@ -81,7 +81,7 @@ Der Guild Image Storage ermöglicht es dir, Bilder hochzuladen, zu organisieren 
 
 ### Wie funktioniert die Server-Analytics? {#analytics}
 
-SCNX bietet Analysen zur Aktivität deines Servers, einschließlich Mitgliederstatistiken und mehr. Analytics erfordert, dass der SCNX Management Bot auf deinem Server ist. Weitere Informationen findest du in der [Analytics Dokumentation](/docs/scnx/guilds/analytics).
+SCNX bietet Analysen zur Aktivität deines Servers, einschließlich Mitgliederstatistiken und mehr. Der eigene Bot deines Servers sammelt die Daten und speichert sie in seiner eigenen Datenbank. Weitere Informationen findest du in der [Analytics Dokumentation](/docs/scnx/guilds/analytics).
 
 ## Pläne & gewerbliche Nutzung
 

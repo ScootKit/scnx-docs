@@ -343,8 +343,8 @@ aktiviert ist.
 | `/manage-levels edit-xp add user:<Nutzer> value:<Wert>`        | Fügt eine Anzahl von XP (`Wert`) zu den XP eines Nutzers hinzu.                                                                                                                            |
 | `/manage-levels edit-xp remove user:<Nutzer> value:<Wert>`     | Entfernt eine Anzahl von XP (`Wert`) von den XP eines Nutzers.                                                                                                                             |
 | `/manage-levels edit-xp set user:<Nutzer> value:<Wert>`        | Legt die Anzahl der XP (`Wert`) fest, die ein Nutzer hat.                                                                                                                                  |
-| `Set User XP` (Nutzer-Kontextmenü)                             | Legt die XP eines Nutzers fest. Öffnet ein Formular für den Wert. Funktioniert wie `/manage-levels edit-xp set`. Erfordert die Berechtigung „Administrator“ und die Option „Cheats“.       |
-| `Set User Level` (Nutzer-Kontextmenü)                          | Legt das Level eines Nutzers fest. Öffnet ein Formular für den Wert. Funktioniert wie `/manage-levels edit-level set`. Erfordert die Berechtigung „Administrator“ und die Option „Cheats“. |
+| `Set User XP` (Nutzer-Kontextmenü)                             | Legt die XP eines Nutzers fest. Öffnet ein Formular für den Wert. Funktioniert wie `/manage-levels edit-xp set`. Erfordert die Berechtigung „Administrator" und die Option „Cheats".       |
+| `Set User Level` (Nutzer-Kontextmenü)                          | Legt das Level eines Nutzers fest. Öffnet ein Formular für den Wert. Funktioniert wie `/manage-levels edit-level set`. Erfordert die Berechtigung „Administrator" und die Option „Cheats". |
 
 Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Befehle einrichten](/de/docs/custom-bot/commands#context-menus), um sie zu aktivieren.
 

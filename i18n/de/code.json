@@ -832,7 +832,7 @@
   "home.a.enhanced": { "message": "Erweiterte Sicherheit" },
   "home.a.enhanced.d": { "message": "Erfordere 2FA für alle Konfigurationsänderungen auf deinem Server." },
   "home.a.backups": { "message": "Server-Backups" },
-  "home.a.backups.d": { "message": "Sichere Nachrichten, Kanäle, Rollen und mehr mit dem SCNX-Bot." },
+  "home.a.backups.d": { "message": "Sichere Kanäle, Rollen, Nachrichten und mehr mit deinem eigenen Bot." },
   "home.a.analytics": { "message": "Server-Analytik" },
   "home.a.analytics.d": { "message": "Verfolge Serveraktivität und Engagement-Metriken." },
   "home.a.dcserver": { "message": "dcserver.link" },
