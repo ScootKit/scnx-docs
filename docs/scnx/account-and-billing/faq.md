@@ -88,7 +88,7 @@ You can request access if you meet the following requirements:
 - At least 20,00 EUR spent in total at SCNX
 - Only payments made directly to the ScootKit UG (haftungsbeschraenkt) are eligible
 
-Check your [payment history](https://scnx.app/user/payments) and contact [billing@scootkit.com](mailto:billing@scootkit.com) to request access.
+Check your [payment history](https://scnx.app/user/payments) and contact [billing@scnx.xyz](mailto:billing@scnx.xyz) to request access.
 
 ### How do I pay with a standing bank order? {#reoccurring-transfer}
 
@@ -128,7 +128,7 @@ Visit the [payment page](https://scnx.app/user/payments) and find the invoice da
 
 ### I am VAT exempt {#vat}
 
-Contact [billing@scootkit.com](mailto:billing@scootkit.com) to verify your account.
+Contact [billing@scnx.xyz](mailto:billing@scnx.xyz) to verify your account.
 
 ### How do I get a refund? {#refund}
 
@@ -219,7 +219,7 @@ Check the following:
 
 - Look in your **spam/junk folder** for emails from `@scnx.xyz` and `@scootkit.com`
 - Make sure your Discord email is correct and accessible
-- Add the following addresses to your contacts or safe senders list: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `legal@scootkit.com`, `compliance@scnx.xyz`
+- Add the following addresses to your contacts or safe senders list: `care@scnx.xyz`, `noreply@scnx.xyz`, `no-reply@scnx.xyz`, `billing@scnx.xyz`, `compliance@scnx.xyz`, `compliance@scnx.xyz`
 
 If you're still not receiving emails, [contact our support team](https://scnx.app/help).
 

@@ -156,7 +156,7 @@ Du erhältst eine Bestätigungs-E-Mail, sobald die Löschung abgeschlossen ist.
 - Ein interner Fehler während des Bereinigungsprozesses aufgetreten ist (Bot-Entfernung, Datenlöschung)
 - Der Server sich in einem unerwarteten Zustand befand (z. B. aktives Abonnement konnte nicht gekündigt werden)
 
-Bei fehlgeschlagener Löschung kannst du es später erneut versuchen oder [legal@scootkit.com](mailto:legal@scootkit.com) kontaktieren, um den Server manuell löschen zu lassen.
+Bei fehlgeschlagener Löschung kannst du es später erneut versuchen oder [compliance@scnx.xyz](mailto:compliance@scnx.xyz) kontaktieren, um den Server manuell löschen zu lassen.
 
 ### Mein Server wurde auf SCNX gesperrt / deaktiviert / markiert {#banned}
 
