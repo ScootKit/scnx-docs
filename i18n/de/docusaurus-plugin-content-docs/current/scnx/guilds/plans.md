@@ -14,7 +14,7 @@ korrekten Preise in deiner Währung zu sehen, öffne [scnx.xyz/de/plans](https:/
 :::
 
 :::warning
-Wie viele [Backups](/docs/scnx/guilds/backups#limits) dein Server speichern kann und welche Backup-Funktionen er nutzen kann, hängt von deinem Plan ab.
+Wie viele [Backups](/docs/scnx/guilds/backups#requirements) dein Server speichern kann und welche Backup-Funktionen er nutzen kann, hängt von deinem Plan ab.
 :::
 
 | Funktion                                                                                            | Starter-Plan                                                                                       | Unlimited-Plan                                                                                                                                  | Professional-Plan                                                                                                                                        |

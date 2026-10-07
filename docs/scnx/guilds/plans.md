@@ -15,7 +15,7 @@ visit [scnx.xyz/plans](https://scnx.xyz/plans).
 :::
 
 :::warning
-The amount of [backups](/docs/scnx/guilds/backups#limits) your server can store, and which backup features it can use, depends on your plan.
+The amount of [backups](/docs/scnx/guilds/backups#requirements) your server can store, and which backup features it can use, depends on your plan.
 :::
 
 | Feature                                                                                   | Starter Plan                                                                           | Unlimited Plan                                                                                                                                | Professional Plan                                                                                                                                      |
