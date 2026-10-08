@@ -142,6 +142,25 @@ Gut zu wissen:
 - Eine sehr lange Kämpferliste wird gekürzt und endet mit einer Zeile "...und N weitere".
 - Kann eine angepasste Nachricht nicht gesendet werden, zum Beispiel weil sie zu lang ist oder zu viele Komponenten hat, verwendet der Bot stattdessen die Standardnachricht und schreibt eine Warnung ins Log.
 
+#### Kämpfer pingen, wenn ein Boss endet {#boss-reply}
+
+Wird ein Kampf entschieden, antwortet der Bot einmal auf die Boss-Nachricht und pingt jeden Kämpfer. Ein Boss, der geflohen ist, weil niemand gekämpft hat, bekommt keine Antwort. Die Antwort ist standardmäßig aktiv und lässt sich mit "Kämpfer pingen, wenn ein Boss endet" abschalten. Ihr Text stammt aus zwei Nachrichten im Tab [Nachrichten](#configuration-strings), "Antwort: Boss besiegt" und "Antwort: Boss siegreich".
+
+Sie nutzen dieselben Platzhalter wie die Ergebnis-Nachrichten unter [Boss-Nachrichten anpassen](#boss-messages), außer `%fighterList%`, plus:
+
+| Platzhalter  | Beschreibung                                                                                                                                                    |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `%mentions%` | Die Kämpfer als Erwähnungen, höchster Einsatz zuerst. Kämpfer, die nicht in die Nachricht passen, werden als "und N weitere" zusammengefasst und nicht gepingt. |
+
+Gut zu wissen:
+
+- Gepingt werden nur die Kämpfer. `@everyone`, Rollen oder andere Nutzer, die du in die Nachricht schreibst, pingen nie.
+- Ohne `%mentions%` in der Nachricht wird niemand gepingt.
+- Pro Boss wird nur eine Antwort gesendet.
+- Wurde die Boss-Nachricht gelöscht, wird die Antwort stattdessen im Boss-Kanal gepostet.
+- Lehnt Discord eine angepasste Antwort ab, wird die Standardantwort verwendet.
+- Im [Testmodus](#testing) funktioniert es genauso.
+
 ### Bestenliste und Countdown {#leaderboard}
 
 Der Bot postet eine einzelne Nachricht im Bestenlisten-Kanal und hält sie aktuell, höchstens einmal pro Minute, sobald ein "Bestenlisten-Kanal" eingestellt ist - in jeder Phase des Jahres, nicht nur während das Event läuft. Außerhalb des Events zeigt sie "Halloween kommt" mit einem Countdown bis zum nächsten Halloween, einmal täglich aktualisiert, damit er nie veraltet. Sobald das Event läuft, sortiert sie nach den Süßigkeiten, die ein Mitglied besitzt, plus denen, die es im Shop ausgegeben hat, und denen, die es in einem noch offenen Boss-Kampf gesetzt hat. Ein Einkauf im Shop oder ein Einsatz kostet also nie einen Platz, verlorene Süßigkeiten durch Saures, Erschreckt-werden oder ein verlorener Boss-Kampf dagegen schon. Erfolgreiches Erschrecken und gewonnene Boss-Kämpfe verbessern den Platz eines Mitglieds. Mitglieder werden als Erwähnungen angezeigt, oder als Benutzernamen, wenn du "Nutzer-Tags statt Erwähnungen in der Bestenliste verwenden" aktivierst, was bei großen Servern empfohlen wird. Vom 1. bis zum 7. November zeigt sie den Endstand, und die Abschluss-Ankündigung wird gepostet, sobald das Event endet. Die Nachricht ist vor dem automatischen Löschen geschützt.
@@ -214,6 +233,7 @@ In dieser Konfigurationsdatei kannst du das Halloween-Event einrichten. Öffne s
 | Grundchance auf den Sieg (%)                               | Chance, einen Boss mit fast keinem Einsatz zu besiegen. Sie steigt mit dem Einsatz, bis dieser die LP des Bosses erreicht.                                                                                                                                                                           |
 | Maximale Siegchance (%)                                    | Chance, einen Boss zu besiegen, sobald der Einsatz seine LP erreicht. Ein Wert unter der Grundchance wird wie die Grundchance behandelt.                                                                                                                                                             |
 | Gewinn-Multiplikator                                       | Wird ein Boss besiegt, bekommt jeder Kämpfer seinen Einsatz mal diesen Wert zurück (abgerundet). Gewinnt der Boss, ist der Einsatz verloren. Wird am 31. Oktober nicht verdoppelt.                                                                                                                   |
+| Kämpfer pingen, wenn ein Boss endet                        | Wenn aktiviert, antwortet der Bot auf die Boss-Nachricht, sobald ein Kampf entschieden ist, und pingt jeden Kämpfer, siehe [Kämpfer pingen, wenn ein Boss endet](#boss-reply). Standardmäßig an. Hat niemand gekämpft, wird nichts gesendet.                                                         |
 | Bosse                                                      | Bosse, aus denen zufällig gewählt wird: der Name und optional eine Bild-URL, die auf der Boss-Nachricht angezeigt wird.                                                                                                                                                                              |
 | Testmodus                                                  | Wenn aktiviert, läuft das Event mit getrennten Testdaten im Test-Kanal, damit du es jederzeit ausprobieren kannst. Siehe [Das Event testen](#testing).                                                                                                                                               |
 | Test-Kanal                                                 | Kanal, in dem das Test-Event läuft, solange der Testmodus aktiv ist.                                                                                                                                                                                                                                 |
@@ -266,6 +286,8 @@ In dieser Konfigurationsdatei kannst du jede Nachricht des Events anpassen. Öff
 | Nachricht: Boss besiegt                            | Ersetzt die Boss-Nachricht, nachdem die Kämpfer gewonnen haben. Siehe [Boss-Nachrichten anpassen](#boss-messages).                                                                                                                                              |
 | Nachricht: Boss siegt                              | Ersetzt die Boss-Nachricht, nachdem der Boss gewonnen hat und die Einsätze verloren sind. Siehe [Boss-Nachrichten anpassen](#boss-messages).                                                                                                                    |
 | Nachricht: Boss geflohen                           | Ersetzt die Boss-Nachricht, wenn niemand Süßigkeiten gesetzt hat. Siehe [Boss-Nachrichten anpassen](#boss-messages).                                                                                                                                            |
+| Antwort: Boss besiegt                              | Wird als Antwort auf die Boss-Nachricht gesendet, nachdem die Kämpfer gewonnen haben, und pingt die Kämpfer, die sie erwähnt. Siehe [Kämpfer pingen, wenn ein Boss endet](#boss-reply).                                                                         |
+| Antwort: Boss siegreich                            | Wird als Antwort auf die Boss-Nachricht gesendet, nachdem der Boss gewonnen hat, und pingt die Kämpfer, die sie erwähnt. Siehe [Kämpfer pingen, wenn ein Boss endet](#boss-reply).                                                                              |
 
 ### Süßigkeiten-Shop-Artikel {#configuration-shop-items}
 

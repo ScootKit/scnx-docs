@@ -142,6 +142,25 @@ Good to know:
 - A very long fighter list is shortened, ending with an "...and N more" line.
 - If a customized message cannot be sent, for example because it is too long or has too many components, the bot uses the default message instead and writes a warning to the log.
 
+#### Pinging fighters when a boss ends {#boss-reply}
+
+When a fight is decided, the bot replies once to the boss message and pings every fighter. A boss that fled, because nobody fought, gets no reply. The reply is on by default and can be switched off with "Ping Fighters When a Boss Ends". Its text comes from two messages in the [Messages](#configuration-strings) tab, "Boss Defeated Reply" and "Boss Victorious Reply".
+
+They use the same placeholders as the result messages in [Customizing boss messages](#boss-messages), except `%fighterList%`, plus:
+
+| Placeholder  | Description                                                                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `%mentions%` | The fighters as mentions, biggest stake first. Fighters that do not fit into the message are summed up as "and N more" and are not pinged. |
+
+Good to know:
+
+- Only the fighters are pinged. `@everyone`, roles or other users written into the message never ping.
+- Without `%mentions%` in the message, nobody is pinged.
+- Only one reply is sent per boss.
+- If the boss message was deleted, the reply is posted in the boss channel instead.
+- If Discord rejects a customized reply, the default reply is used.
+- It works the same in [Test Mode](#testing).
+
 ### Leaderboard and countdown {#leaderboard}
 
 The bot posts a single message in the leaderboard channel and keeps it up to date, at most once per minute, as soon as a "Leaderboard Channel" is set - in every phase of the year, not just while the event runs. Outside the event it shows "Halloween is coming" with a countdown to the next Halloween, refreshed once a day so it never goes stale. Once the event is live it ranks members by the candy they hold, plus the candy they spent in the shop and the candy they staked in a boss fight that is still open. Buying something in the shop or staking candy therefore never costs a place, while losing candy to a trick, being spooked or losing a boss fight does. Spooking successfully and winning boss fights raises a member's place. Members are shown as mentions, or as usernames if you enable "Use User's Tags instead of their Mention in the Leaderboard", which is recommended for large servers. From November 1st to 7th it shows the final standings, and the closing announcement is posted once the event ends. The message is protected against auto-delete.
@@ -214,6 +233,7 @@ In this configuration file, you can set up the Halloween event. Open it in your 
 | Base Win Chance (%)                                         | Chance to beat a boss with almost nothing staked. It rises with the candy pool until the pool reaches the boss HP.                                                                                                                                                      |
 | Maximum Win Chance (%)                                      | Chance to beat a boss once the candy pool reaches its HP. A value below the base win chance is treated as the base win chance.                                                                                                                                          |
 | Win Multiplier                                              | When a boss is beaten, every fighter gets their stake back multiplied by this value (rounded down). When the boss wins, the stakes are lost. Not doubled on October 31st.                                                                                               |
+| Ping Fighters When a Boss Ends                              | If enabled, the bot replies to the boss message when a fight is decided and pings every fighter, see [Pinging fighters when a boss ends](#boss-reply). On by default. Nothing is sent when nobody fought.                                                               |
 | Bosses                                                      | Bosses to pick from at random: the name, and optionally an image URL shown on the boss message.                                                                                                                                                                         |
 | Test Mode                                                   | If enabled, the event runs with separate test data in the test channel, so you can try it at any time. See [Testing the event](#testing).                                                                                                                               |
 | Test Channel                                                | Channel in which the test event runs while Test Mode is enabled.                                                                                                                                                                                                        |
@@ -266,6 +286,8 @@ In this configuration file, you can customize every message of the event. Open i
 | Boss Defeated Message                     | Replaces the boss message after the fighters won. See [Customizing boss messages](#boss-messages).                                                                                                                      |
 | Boss Victorious Message                   | Replaces the boss message after the boss won and the stakes were lost. See [Customizing boss messages](#boss-messages).                                                                                                 |
 | Boss Fled Message                         | Replaces the boss message when nobody staked any candy. See [Customizing boss messages](#boss-messages).                                                                                                                |
+| Boss Defeated Reply                       | Sent as a reply to the boss message after the fighters won, pinging the fighters it mentions. See [Pinging fighters when a boss ends](#boss-reply).                                                                     |
+| Boss Victorious Reply                     | Sent as a reply to the boss message after the boss won, pinging the fighters it mentions. See [Pinging fighters when a boss ends](#boss-reply).                                                                         |
 
 ### Candy Shop Items {#configuration-shop-items}
 
