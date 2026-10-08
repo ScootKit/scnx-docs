@@ -25,3 +25,5 @@ Wähle einen **Zeitraum** von 7, 30 oder 90 Tagen, und du siehst:
 Das sind Seitenaufrufe, keine einzelnen Besucher. Gezählt wird nur deine veröffentlichte Website: Aufrufe deines Entwurfs im Editor oder über einen Vorschau-Link zählen nicht, und vor deiner ersten Veröffentlichung wird nichts gezählt.
 
 Die Statistiken sind von Grund auf datenschutzfreundlich. Aufrufe werden auf unseren Servern als einfache Tagessummen gezählt. Wir setzen dafür keine Tracking-Cookies und speichern keine IP-Adressen von Besuchern. Die IP-Adresse wird nur kurz genutzt, um das Land zu ermitteln. Bei Verweisen behalten wir nur die Adresse der Website, nicht den vollständigen Link.
+
+This product includes GeoLite2 Data created by MaxMind, available from [https://www.maxmind.com](https://www.maxmind.com).

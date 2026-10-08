@@ -25,3 +25,5 @@ Pick a **Time period** of 7, 30 or 90 days, and you see:
 These are page views, not unique visitors. Analytics only counts your published site: views of your draft through the editor or a preview link are not counted, and nothing is counted before your first publish.
 
 Analytics is privacy-friendly by design. Views are counted on our servers as simple daily totals. We do not set tracking cookies for it and we do not store visitors' IP addresses. A visitor's IP address is only used for a moment to work out their country. For referrers we only keep the website's address, not the full link.
+
+This product includes GeoLite2 Data created by MaxMind, available from [https://www.maxmind.com](https://www.maxmind.com).
