@@ -26,4 +26,4 @@ Das sind Seitenaufrufe, keine einzelnen Besucher. Gezählt wird nur deine veröf
 
 Die Statistiken sind von Grund auf datenschutzfreundlich. Aufrufe werden auf unseren Servern als einfache Tagessummen gezählt. Wir setzen dafür keine Tracking-Cookies und speichern keine IP-Adressen von Besuchern. Die IP-Adresse wird nur kurz genutzt, um das Land zu ermitteln. Bei Verweisen behalten wir nur die Adresse der Website, nicht den vollständigen Link.
 
-This product includes GeoLite2 Data created by MaxMind, available from [https://www.maxmind.com](https://www.maxmind.com).
+IP address data powered by [IPLocate.io](https://www.iplocate.io).
