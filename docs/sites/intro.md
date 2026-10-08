@@ -19,7 +19,11 @@ A site is a great landing page for new members, and a home base for the members 
 The website builder is currently rolling out to selected servers. If you open the Sites section and see "Sites isn't available here", it hasn't been enabled for your server yet.
 :::
 
+On that screen you can click **Notify me about Sites**. We send a confirmation email to your account address first, and once you confirm it, we email you when Sites opens up for more servers.
+
 ## What you can build {#what-you-can-build}
+
+![A published demo site with an announcement bar and an open dropdown menu](@site/docs/assets/sites/en/public-site.png)
 
 - A **landing page** that welcomes new members and links straight to your Discord.
 - A **rules page**, an **about page** and a **team page**, all with a shared menu and footer.
@@ -30,59 +34,94 @@ The website builder is currently rolling out to selected servers. If you open th
 
 ## How it works {#how-it-works}
 
-Your site lives in the **editor**, a full-screen workspace inside the SCNX dashboard. You build pages out of blocks, style everything with a theme, and click **Publish** when you are ready to go live. Until you publish, your changes stay a private draft.
+You build your pages in the **editor**, a full-screen workspace inside the SCNX dashboard. Pages are made of blocks, a theme styles the whole site, and you click **Publish** when you are ready to go live. Until you publish, your changes stay a private draft.
 
 Every site has a free address that ends in `scnx.site`, for example `my-community.scnx.site`. You can also [connect your own domain](/docs/sites/custom-domains) later.
 
 ## Create your site {#create}
 
-Open the Sites section for your server in the [SCNX dashboard](https://scnx.app) and click **Create your site**. The wizard has four short steps:
+Open **Sites** in your server's sidebar in the [SCNX dashboard](https://scnx.app) and click **Create your site**. You need edit access to the site to do this (see [Who can edit a site](#permissions)). The wizard has four short steps:
 
-1. **Name & address.** Give your site a name (you can change it later) and pick its address. The address has to be 3 to 63 letters, numbers and dashes, and it has to start and end with a letter or number. You will see whether the address you want is free as you type. You also pick the **address ending** here (for example `scnx.site`).
-2. **Template.** Start from a ready-made template, or from a **Blank** page and build it your way. Templates come with two or three pages of real blocks and placeholder text you can rewrite. See [Templates](#templates) below.
-3. **Language.** Pick the language your site's built-in text (buttons and labels like "Join the server") should use. You can still write your own content in any language.
+1. **Name & address.** Give your site a name (you can change it later in the settings) and pick its address. We suggest an address based on the name until you type your own. The address has to be 3 to 63 letters, numbers and dashes, and it has to start and end with a letter or number. A few words are reserved, and the wizard tells you right away if you picked one. If someone else already uses the address, you find out when you click **Create site**, and the wizard sends you back to this step to pick another one. When more than one **Address ending** is offered, you also choose it here.
+2. **Template.** Start from a ready-made template, or from a **Blank** page and build it your way. See [Templates](#templates) below.
+3. **Language.** Pick the language your site's built-in text (buttons and labels) should use: English or German. You can still write your own content in any language.
 4. **Confirm.** Review the summary, tick **I have read and agree to the SCNX Terms of Service**, and click **Create site**.
 
-We create your site as a **draft** so you can edit it before it goes live. Nothing is public until you publish.
+We create your site as a **draft** and take you straight into the editor, so you can work on it before it goes live. Nothing is public until you publish.
+
+:::note If the template could not be set up
+Your site is created first, and the template is filled in right after. In rare cases the second part fails, for example when our automatic content review is unavailable for a moment. Your site still exists. Click **Try again** to set up the template again, or **Open my site anyway** and build it in the editor.
+:::
 
 ### Templates {#templates}
 
-Templates give you a themed starting point instead of an empty page:
+![The template step of the create wizard with the Gaming community template selected](@site/docs/assets/sites/en/wizard-template.png)
 
-- **Gaming community** - a welcome page with game nights and a rules page with an FAQ.
-- **Esports team** - a pitch page, a roster and a weekly schedule.
-- **Link in bio** - one compact page for creators: a short intro and your links.
-- **Roleplay server** - a welcome page, a lore page and the rules of play.
-- **Community** - a friendly landing page plus an about page with your team.
-- **Blank** - an empty page. You add every section yourself.
+Templates give you a themed starting point instead of an empty page. Each one comes with its own theme, real blocks and a menu that already links its pages:
 
-Every line a template adds is placeholder text. Click it on the page to rewrite it in your own words.
+| Template         | What you get                                                                         |
+| ---------------- | ------------------------------------------------------------------------------------ |
+| Gaming community | A landing page with game nights, your latest posts and an FAQ, plus a rules page.    |
+| Esports team     | A landing page for the team, plus a page with the roster and the weekly schedule.    |
+| Link in bio      | One compact page for creators: a short intro, your links and what you make.          |
+| Roleplay server  | A landing page for the server, plus a world page with the factions and how you play. |
+| Community        | A friendly landing page, plus an about page with your story and your house rules.    |
+| Blank            | An empty page. You add every section yourself.                                       |
 
-## Landing in the workspace {#workspace}
+The text a template adds is placeholder text written in your site's language. Click any of it on the page to rewrite it in your own words. The **Link in bio** page has no menu or footer, so it is a single page on purpose.
 
-After the wizard, you land in the editor workspace. From here you can add and edit pages, restyle your whole site, build forms, write posts, connect a domain and publish. Head to [The editor workspace](/docs/sites/editor) for the full tour.
+## Your Sites section {#workspace}
 
-The dashboard Sites section itself stays small: an overview card with your address and status, an **Open editor** button, and an **Analytics** page. Everything else happens in the editor.
+Once your site exists, the **Sites** section in your server's sidebar has one entry for each part of it:
+
+| Entry      | What you do there                                                                                                                                                                                                           |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overview   | See your address, whether the site is published, and when you last published. Open the editor or your analytics from here.                                                                                                  |
+| Pages      | Add, rename, reorder and delete pages and set their layout. See [Pages](/docs/sites/editor#pages).                                                                                                                          |
+| Editor     | The full-screen workspace for page content, design, the footer and publishing. See [The editor workspace](/docs/sites/editor).                                                                                              |
+| Navigation | Build the menu at the top of your site. See [Navigation](/docs/sites/editor#navigation).                                                                                                                                    |
+| Blog       | Write and publish posts. See [Blog & announcements](/docs/sites/blog).                                                                                                                                                      |
+| Forms      | Build forms and read the answers. See [Forms](/docs/sites/forms).                                                                                                                                                           |
+| Domains    | Your site's address, custom domains and redirects. See [Custom domains](/docs/sites/custom-domains).                                                                                                                        |
+| Settings   | The site name, description and language, search and sharing, legal information, bot protection, maintenance mode, branding and deleting the site. See [Settings, analytics & smaller features](/docs/sites/small-features). |
+| Analytics  | Page views for your site. See [Settings, analytics & smaller features](/docs/sites/small-features).                                                                                                                         |
+
+At the bottom of the section, **More information in our Docs** links back to these docs. Entries you have no access to are not shown (see [Who can edit a site](#permissions)).
+
+### The overview {#overview}
+
+The overview card shows your site's address, its status (**Draft**, **Published** or **Disabled**) and the date you last published. **Open editor** takes you into the workspace. If you only have view access, the button reads **Open editor (view only)**.
+
+![The Sites overview with the site address, status and the Before you go live list](@site/docs/assets/sites/en/overview.png)
+
+Below the card, a **Before you go live** list points out anything worth fixing, each with a link to the right place:
+
+- your site is not published yet,
+- you have not added a privacy contact or privacy policy yet,
+- your menu is empty,
+- maintenance mode is on.
 
 ## Who can edit a site {#permissions}
 
-Access to a site follows your server's website permissions:
+Access to a site follows your server's website permissions. Server owners and co-owners always have full access. Everyone else needs the Websites permission, at one of three levels:
 
-- **View access** lets someone open the editor in a read-only "view only" mode. They can look around but not change anything.
-- **Edit access** lets someone build and edit pages, change the design, manage forms and posts, and publish.
-- **Admin access** is needed for the sensitive actions: connecting or removing a custom domain, deleting forms and their answers, and deleting the whole site.
+- **View access** lets someone open the Overview, Pages, Domains, Settings and Analytics, and open the editor in a read-only **View only** mode. They can look around and read the version history, but not change anything.
+- **Edit access** lets someone build and edit pages, change the design and the footer, build the navigation, write blog posts, manage forms, manage redirects, change the site settings and publish. The Navigation, Blog and Forms entries only show up with edit access.
+- **Admin access** is needed for the sensitive actions: connecting or removing a custom domain, deleting forms and their answers, rolling back to an earlier version, resetting the preview link and deleting the whole site.
 
-If you cannot do something in the editor, you probably need a higher access level. Ask a server admin who has it.
+If you cannot do something, you probably need a higher access level. Ask a server admin who has it.
 
 ## Branding {#branding}
 
-On the free beta, your site shows a small "Made with SCNX" badge in the footer, together with the required legal links. Our Professional plan hides the badge for a clean, white-labeled footer.
+Your site's footer always shows the required legal links. Unless your server is on our Professional plan or our Enterprise plan, the footer also shows a small "This site runs on SCNX" note. On those plans the note is hidden, so your footer is fully white-labeled.
+
+This follows your server's plan automatically, so there is nothing to set and nothing to republish. A plan change reaches your site within a few minutes. You can check what your site currently shows under **Settings** > **Branding**.
 
 ## Next steps {#next-steps}
 
-- [The editor workspace](/docs/sites/editor) - pages, blocks, design, autosave and publishing.
+- [The editor workspace](/docs/sites/editor) - pages, navigation, blocks, design, autosave and publishing.
 - [Custom domains](/docs/sites/custom-domains) - connect your own domain.
 - [Forms](/docs/sites/forms) - collect applications and contact requests.
 - [Blog & announcements](/docs/sites/blog) - post news with its own page and RSS feed.
 - [Events](/docs/sites/events) - show your upcoming Discord events.
-- [Publishing & going live](/docs/sites/publishing) - drafts, snapshots, versions and maintenance mode.
+- [Publishing & going live](/docs/sites/publishing) - drafts, versions and maintenance mode.
