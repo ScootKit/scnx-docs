@@ -2,7 +2,6 @@
 sidebar_position: 2
 title: The editor workspace
 description: A tour of the SCNX Sites editor - pages, navigation, blocks, inline text editing, themes, autosave, undo/redo, preview and publishing.
-unlisted: true
 ---
 
 # The editor workspace

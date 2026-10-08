@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: Blog & announcements
 description: Write posts for your SCNX site - drafts, scheduling, cover images, the /blog page, RSS, the Latest posts block and Discord announcements.
-unlisted: true
 ---
 
 # Blog & announcements

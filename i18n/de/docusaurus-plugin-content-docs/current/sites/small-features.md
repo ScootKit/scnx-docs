@@ -2,7 +2,6 @@
 sidebar_position: 7
 title: Einstellungen, Statistiken & kleinere Funktionen
 description: Die Einstellungen-Seite von SCNX Sites, die Website-Statistiken, die Ankündigungsleiste, Weiterleitungen und das kompakte Link-in-Bio-Layout.
-unlisted: true
 ---
 
 # Einstellungen, Statistiken & kleinere Funktionen

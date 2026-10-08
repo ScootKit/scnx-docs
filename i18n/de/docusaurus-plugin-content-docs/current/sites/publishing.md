@@ -2,7 +2,6 @@
 sidebar_position: 8
 title: Veröffentlichen & Live gehen
 description: Wie das Veröffentlichen bei SCNX Sites funktioniert - Entwürfe, das Veröffentlichen-Popover, was eine Veröffentlichung braucht und was live ist, Vorschau, Versionsverlauf und Zurücksetzen, Wartungsmodus und das Löschen einer Website.
-unlisted: true
 ---
 
 # Veröffentlichen & Live gehen

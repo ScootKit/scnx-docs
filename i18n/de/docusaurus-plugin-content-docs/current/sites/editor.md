@@ -2,7 +2,6 @@
 sidebar_position: 2
 title: Der Editor-Arbeitsbereich
 description: Eine Tour durch den SCNX-Sites-Editor - Seiten, Navigation, Blöcke, Inline-Textbearbeitung, Designs, Autosave, Rückgängig/Wiederherstellen, Vorschau und Veröffentlichen.
-unlisted: true
 ---
 
 # Der Editor-Arbeitsbereich

@@ -2,7 +2,6 @@
 sidebar_position: 3
 title: Eigene Domains
 description: Verbinde deine eigene Domain mit deiner SCNX-Website - die zwei nötigen DNS-Einträge, wie du sie bei deinem Anbieter anlegst und wie die Prüfung abläuft.
-unlisted: true
 ---
 
 # Eigene Domains

@@ -2,7 +2,6 @@
 sidebar_position: 7
 title: Settings, analytics & smaller features
 description: The SCNX Sites Settings page, site analytics, the announcement bar, redirects and the compact link-in-bio page layout.
-unlisted: true
 ---
 
 # Settings, analytics & smaller features

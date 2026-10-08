@@ -2,7 +2,6 @@
 sidebar_position: 5
 title: Blog & Ankündigungen
 description: Schreibe Beiträge für deine SCNX-Website - Entwürfe, Planung, Titelbilder, die /blog-Seite, RSS, der Block Neueste Beiträge und Discord-Ankündigungen.
-unlisted: true
 ---
 
 # Blog & Ankündigungen

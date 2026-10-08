@@ -2,7 +2,6 @@
 sidebar_position: 8
 title: Publishing & going live
 description: How publishing works on SCNX Sites - drafts, the publish popover, what needs a publish and what is live, previews, version history and rollback, maintenance mode and deleting a site.
-unlisted: true
 ---
 
 # Publishing & going live

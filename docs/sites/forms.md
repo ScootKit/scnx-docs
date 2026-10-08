@@ -2,7 +2,6 @@
 sidebar_position: 4
 title: Forms
 description: Build forms on your SCNX site - question types, bot protection, consent, opening and closing, the answers inbox, retention, CSV export, Discord notifications and visitor privacy.
-unlisted: true
 ---
 
 # Forms

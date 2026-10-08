@@ -2,7 +2,6 @@
 sidebar_position: 6
 title: Events
 description: Zeige deine kommenden geplanten Discord-Events auf deiner SCNX-Website mit dem Events-Block.
-unlisted: true
 ---
 
 # Events

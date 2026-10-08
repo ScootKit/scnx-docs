@@ -2,7 +2,6 @@
 sidebar_position: 3
 title: Custom domains
 description: Connect your own domain to your SCNX site - the two DNS records you need, how to add them at your provider, and how verification works.
-unlisted: true
 ---
 
 # Custom domains

@@ -2,7 +2,6 @@
 sidebar_position: 4
 title: Formulare
 description: Baue Formulare auf deiner SCNX-Website - Fragetypen, Bot-Schutz, Einwilligung, Öffnen und Schließen, der Antworten-Eingang, Aufbewahrung, CSV-Export, Discord-Benachrichtigungen und Privatsphäre der Besucher.
-unlisted: true
 ---
 
 # Formulare

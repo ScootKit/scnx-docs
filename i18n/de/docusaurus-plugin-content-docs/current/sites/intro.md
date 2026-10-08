@@ -2,7 +2,6 @@
 sidebar_position: 1
 title: SCNX Sites
 description: Bau deiner Discord-Community eine eigene Website - eine öffentliche Startseite mit deiner eigenen Adresse auf scnx.site, ganz ohne Code.
-unlisted: true
 ---
 
 # SCNX Sites
