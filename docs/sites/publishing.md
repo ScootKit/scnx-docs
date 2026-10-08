@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 title: Publishing & going live
 description: How publishing works on SCNX Sites - drafts, the publish popover, what needs a publish and what is live, previews, version history and rollback, maintenance mode and deleting a site.
 ---
@@ -16,7 +16,7 @@ Your site has two states: the **draft** you edit, and the **live** version visit
 
 Everything you change in the editor, on the **Pages** and **Navigation** pages, and in some of the **Settings** cards goes into your **draft**. The draft is private: only people with access to the site can see it. Visitors keep seeing the last version you published.
 
-Until you publish for the first time, your site is a draft and is not public at all. Its address shows nothing yet, and [Analytics](/docs/sites/small-features#analytics) does not count any views.
+Until you publish for the first time, your site is a draft and is not public at all. Its address shows nothing yet, and [Analytics](/docs/sites/analytics) does not count any views.
 
 ## Publishing {#publish}
 
@@ -53,9 +53,9 @@ Some things, though, are deliberately **live**. They reach visitors as soon as y
 | [Page layout](/docs/sites/small-features#link-in-bio) settings        | [Redirects](/docs/sites/small-features#redirects)                                                               |
 | Site name, description, language and favicon                          | [The announcement bar](/docs/sites/small-features#announcement-bar)                                             |
 | Share title, share description and share image                        | [Maintenance mode](#maintenance)                                                                                |
-|                                                                       | The [generated share card](/docs/sites/small-features#sharing) switch                                           |
+|                                                                       | The [generated share card](/docs/sites/settings#sharing) switch                                                 |
 |                                                                       | Your [address ending and custom domains](/docs/sites/custom-domains)                                            |
-|                                                                       | The "Made with SCNX" [badge](/docs/sites/small-features#branding), which follows your server's plan             |
+|                                                                       | The "Made with SCNX" [badge](/docs/sites/settings#branding), which follows your server's plan                   |
 
 The idea is simple: what your pages look like stays under your control and only changes when you publish. News, forms, events, quick notices and your addresses are things you expect to be immediate.
 

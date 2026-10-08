@@ -46,7 +46,7 @@ Hier kannst du:
 - **Seite hinzufügen** - dasselbe Formular mit Titel und Adresse wie im Editor.
 - **Im Editor öffnen** - direkt im Editor auf dieser Seite landen.
 - **Umbenennen** - den Seitentitel ändern. Die Adresse bleibt gleich.
-- **Seitenlayout** - die **Inhaltsbreite** auf **Standard** oder **Kompakt** (eine schmale, zentrierte Spalte) stellen und **Navigation und Footer ausblenden** einschalten, um Navigationsleiste, Fußbereich und Ankündigungsleiste nur auf dieser Seite zu entfernen. Beide Einstellungen sind unabhängig voneinander. So baust du eine [Link-in-Bio-Seite](/docs/sites/small-features).
+- **Seitenlayout** - die **Inhaltsbreite** auf **Standard** oder **Kompakt** (eine schmale, zentrierte Spalte) stellen und **Navigation und Footer ausblenden** einschalten, um Navigationsleiste, Fußbereich und Ankündigungsleiste nur auf dieser Seite zu entfernen. Beide Einstellungen sind unabhängig voneinander. So baust du eine [Link-in-Bio-Seite](/docs/sites/small-features#link-in-bio).
 - **Seite löschen** - eine Seite samt Inhalt entfernen. Deine Startseite kann nicht gelöscht werden.
 
 Zieh eine Seite oder nutze die Pfeile, um die Reihenfolge zu ändern. Die Reihenfolge auf diesem Bildschirm ist die Reihenfolge deiner Seiten in der Sitemap. Dein Menü ändert sie nicht: das baust du auf dem Bildschirm [Navigation](#navigation).
@@ -226,7 +226,7 @@ Die Blöcke Hero, Text und Handlungsaufruf haben im rechten Panel eine Option **
 Öffne **Footer & Leiste** in der linken Leiste für die Teile, die alle Seiten gemeinsam haben:
 
 - **Fußzeile** - **Social-Links** (Plattform wählen und Adresse einfügen) und zusätzliche **Fußzeilen-Links**, unten auf jeder Seite. Änderungen an der Fußzeile gehen mit deiner nächsten Veröffentlichung live.
-- **Ankündigungsleiste** - ein Streifen über deiner Navigation für eine kurze Nachricht. Anders als fast alles andere geht sie von selbst live, ohne dass du deine Website neu veröffentlichst. Siehe [Einstellungen, Statistiken & kleinere Funktionen](/docs/sites/small-features).
+- **Ankündigungsleiste** - ein Streifen über deiner Navigation für eine kurze Nachricht. Anders als fast alles andere geht sie von selbst live, ohne dass du deine Website neu veröffentlichst. Siehe [Ankündigungsleiste](/docs/sites/small-features#announcement-bar).
 
 Der Website-Name, Suche & Teilen, die rechtlichen Angaben und die übrigen Website-Einstellungen findest du auf dem Bildschirm **Einstellungen**.
 

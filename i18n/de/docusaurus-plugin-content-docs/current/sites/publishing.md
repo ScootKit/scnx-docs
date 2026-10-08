@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 title: Veröffentlichen & Live gehen
 description: Wie das Veröffentlichen bei SCNX Sites funktioniert - Entwürfe, das Veröffentlichen-Popover, was eine Veröffentlichung braucht und was live ist, Vorschau, Versionsverlauf und Zurücksetzen, Wartungsmodus und das Löschen einer Website.
 ---
@@ -16,7 +16,7 @@ Deine Website hat zwei Zustände: den **Entwurf**, den du bearbeitest, und die *
 
 Alles, was du im Editor, auf den Seiten **Seiten** und **Navigation** und in einigen Karten der **Einstellungen** änderst, landet in deinem **Entwurf**. Der Entwurf ist privat: Nur Leute mit Zugriff auf die Website sehen ihn. Besucher sehen weiter die zuletzt veröffentlichte Version.
 
-Bis du zum ersten Mal veröffentlichst, ist deine Website ein Entwurf und gar nicht öffentlich. Unter ihrer Adresse ist noch nichts zu sehen, und die [Statistiken](/docs/sites/small-features#analytics) zählen noch keine Aufrufe.
+Bis du zum ersten Mal veröffentlichst, ist deine Website ein Entwurf und gar nicht öffentlich. Unter ihrer Adresse ist noch nichts zu sehen, und die [Statistiken](/docs/sites/analytics) zählen noch keine Aufrufe.
 
 ## Veröffentlichen {#publish}
 
@@ -53,9 +53,9 @@ Manche Dinge sind aber bewusst **live**. Sie erreichen Besucher, sobald du sie s
 | [Seitenlayout](/docs/sites/small-features#link-in-bio)-Einstellungen     | [Weiterleitungen](/docs/sites/small-features#redirects)                                                                                    |
 | Website-Name, Beschreibung, Sprache und Favicon                          | [Die Ankündigungsleiste](/docs/sites/small-features#announcement-bar)                                                                      |
 | Titel, Beschreibung und Bild beim Teilen                                 | [Wartungsmodus](#maintenance)                                                                                                              |
-|                                                                          | Der Schalter für das [erzeugte Vorschaubild](/docs/sites/small-features#sharing)                                                           |
+|                                                                          | Der Schalter für das [erzeugte Vorschaubild](/docs/sites/settings#sharing)                                                                 |
 |                                                                          | Deine [Adress-Endung und eigenen Domains](/docs/sites/custom-domains)                                                                      |
-|                                                                          | Das "Made with SCNX"-[Badge](/docs/sites/small-features#branding), das sich nach dem Tarif deines Servers richtet                          |
+|                                                                          | Das "Made with SCNX"-[Badge](/docs/sites/settings#branding), das sich nach dem Tarif deines Servers richtet                                |
 
 Die Idee ist einfach: Wie deine Seiten aussehen, bleibt unter deiner Kontrolle und ändert sich nur, wenn du veröffentlichst. Neuigkeiten, Formulare, Events, kurze Hinweise und deine Adressen sind Dinge, die du sofort erwartest.
 

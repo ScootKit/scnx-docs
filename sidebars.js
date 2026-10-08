@@ -453,8 +453,18 @@ const sidebars = {
                 },
                 {
                     type: 'doc',
-                    label: 'Settings, analytics & smaller features',
+                    label: 'Announcement bar, redirects & link-in-bio',
                     id: 'sites/small-features'
+                },
+                {
+                    type: 'doc',
+                    label: 'Settings',
+                    id: 'sites/settings'
+                },
+                {
+                    type: 'doc',
+                    label: 'Analytics',
+                    id: 'sites/analytics'
                 },
                 {
                     type: 'doc',

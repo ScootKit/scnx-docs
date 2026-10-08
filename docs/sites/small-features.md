@@ -1,77 +1,16 @@
 ---
 sidebar_position: 7
-title: Settings, analytics & smaller features
-description: The SCNX Sites Settings page, site analytics, the announcement bar, redirects and the compact link-in-bio page layout.
+title: Announcement bar, redirects & link-in-bio
+description: The announcement bar, redirects and the compact link-in-bio page layout in SCNX Sites.
 ---
 
-# Settings, analytics & smaller features
+# Announcement bar, redirects & link-in-bio
 
 :::caution This documentation is changing during the beta
 SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll be reworking this documentation once the current beta cycle wraps up, so some details on this page may be outdated in the meantime.
 :::
 
-This page covers the parts of your site that are not pages or blocks: the **Settings** page, **Analytics**, and a few smaller features. You find **Settings** and **Analytics** in the Sites menu in your server's dashboard, next to **Overview**, **Pages**, **Editor**, **Navigation**, **Blog**, **Forms** and **Domains**.
-
-## The Settings page {#settings}
-
-![The General card on the Settings page](@site/docs/assets/sites/en/settings.png)
-
-**Settings** holds everything about your site that is not a page and not its look. It is split into cards, in this order: **General**, **Search & sharing**, **Legal information**, **Bot protection**, **Maintenance mode**, **Branding** and **Danger zone**.
-
-Each card has its own **Save** button, so nothing changes until you save that card. Everyone with access to the site can open this page. Changing a card needs edit access, and deleting the site needs admin access.
-
-:::note Some settings need a publish
-**General** and **Search & sharing** are part of your site's draft. After you save them, your changes reach visitors with your next [publish](/docs/sites/publishing#publish). Everything else on this page, including the share card switch, takes effect as soon as you save. See [what needs a publish and what is live](/docs/sites/publishing#snapshot) for the full list.
-:::
-
-### General {#general}
-
-- **Site name**: the name of your site, used in the browser tab and in link previews.
-- **Description**: a short summary of your community, used for search engines and link previews.
-- **Language**: the language of your site's built-in text, like buttons and labels. You can pick **English** or **Deutsch**. Your own content stays exactly as you wrote it.
-- **Favicon**: the small icon in the browser tab. Pick an image from your server's image library. If you do not set one, your site uses your Discord server's icon.
-
-### Search & sharing {#sharing}
-
-This card controls how your site looks in search results and when someone shares a link to it, for example on Discord or Twitter/X.
-
-- **Share title**: the title in link previews. If you set one, it is used for every page. Leave it empty and each page uses its own page title. Blog posts always use their own title.
-- **Share description**: the text under the title. Leave it empty and your site's **Description** is used.
-- **Share image**: the preview image. Pick one from your server's image library.
-
-Below these fields is a switch for the **generated share card**. When it is on and you have not set a **Share image**, we create a preview image for you: a wide card with your site name, description and server icon, in your theme's colours and heading font. It updates by itself when any of those change, so you never have to remake it.
-
-If you turn the switch off, shared links use your **Share image** if you set one, and otherwise your server's icon. This switch is live and does not need a publish.
-
-### Legal information and Bot protection {#legal}
-
-**Legal information** is where you link your privacy policy, your imprint and a contact for data questions. **Bot protection** lets you choose how the spam check on your forms looks to visitors. Both matter most once your site has a form, so they are explained on the [Forms](/docs/sites/forms) page. Both take effect right away.
-
-### Maintenance mode and Danger zone {#maintenance-and-delete}
-
-**Maintenance mode** temporarily replaces your whole site with a short notice. **Danger zone** is where you delete your site. Both are explained on [Publishing & going live](/docs/sites/publishing).
-
-### Branding {#branding}
-
-The **Branding** card tells you whether your site shows the small "Made with SCNX" badge. There is nothing to set here: it follows your server's plan automatically. Our Professional plan hides the badge. A plan change reaches your site within a few minutes, without a publish.
-
-## Analytics {#analytics}
-
-![The Analytics page with daily page views, top pages, referrers and countries](@site/docs/assets/sites/en/analytics.png)
-
-**Analytics** shows how many people look at your site. Open it from the Sites menu, or from the **Analytics** link on the Sites overview.
-
-Pick a **Time period** of 7, 30 or 90 days, and you see:
-
-- **Total page views** for that period,
-- a chart of **Page views per day**,
-- **Top pages**: your most viewed pages, including your blog and blog posts,
-- **Top referrers**: the websites that sent visitors to you, with **Direct / none** for visits without one,
-- **Top countries**: where your visitors come from.
-
-These are page views, not unique visitors. Analytics only counts your published site: views of your draft through the editor or a preview link are not counted, and nothing is counted before your first publish.
-
-Analytics is privacy-friendly by design. Views are counted on our servers as simple daily totals. We do not set tracking cookies for it and we do not store visitors' IP addresses. A visitor's IP address is only used for a moment to work out their country. For referrers we only keep the website's address, not the full link.
+This page covers a few smaller features of your site: the announcement bar, redirects and the compact link-in-bio layout. The **Settings** and **Analytics** pages of the Sites menu have their own pages here: [Settings](/docs/sites/settings) and [Analytics](/docs/sites/analytics).
 
 ## Announcement bar {#announcement-bar}
 

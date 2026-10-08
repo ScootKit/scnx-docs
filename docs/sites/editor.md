@@ -46,7 +46,7 @@ From here you can:
 - **Add page** - the same title-and-address form as in the editor.
 - **Open in editor** - jump straight into the editor on that page.
 - **Rename** - change the page title. The address stays the same.
-- **Page layout** - set the **Content width** to **Standard** or **Compact** (a narrow, centred column), and turn on **Hide navigation and footer** to remove the navigation bar, the footer and the announcement bar on that page only. The two settings are independent. This is how you build a [link-in-bio page](/docs/sites/small-features).
+- **Page layout** - set the **Content width** to **Standard** or **Compact** (a narrow, centred column), and turn on **Hide navigation and footer** to remove the navigation bar, the footer and the announcement bar on that page only. The two settings are independent. This is how you build a [link-in-bio page](/docs/sites/small-features#link-in-bio).
 - **Delete page** - remove a page and its content. Your home page can't be deleted.
 
 Drag a page, or use the arrows, to change the order. The order on this screen is the order your pages appear in your sitemap. It does not change your menu: you build that on the [Navigation](#navigation) screen.
@@ -226,7 +226,7 @@ The Hero, Text and Call to action blocks have a **Background** option in the rig
 Open **Footer & bar** in the left strip for the parts every page shares:
 
 - **Footer** - **Social links** (pick a platform and paste the address) and extra **Footer links**, shown at the bottom of every page. Footer changes go live with your next publish.
-- **Announcement bar** - a strip above your navigation for one short message. Unlike almost everything else, it goes live on its own, without publishing your site again. See [Settings, analytics & smaller features](/docs/sites/small-features).
+- **Announcement bar** - a strip above your navigation for one short message. Unlike almost everything else, it goes live on its own, without publishing your site again. See [Announcement bar](/docs/sites/small-features#announcement-bar).
 
 The site name, search and sharing, legal information and the other site settings are on the **Settings** screen.
 

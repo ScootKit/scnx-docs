@@ -73,17 +73,17 @@ The text a template adds is placeholder text written in your site's language. Cl
 
 Once your site exists, the **Sites** section in your server's sidebar has one entry for each part of it:
 
-| Entry      | What you do there                                                                                                                                                                                                           |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Overview   | See your address, whether the site is published, and when you last published. Open the editor or your analytics from here.                                                                                                  |
-| Pages      | Add, rename, reorder and delete pages and set their layout. See [Pages](/docs/sites/editor#pages).                                                                                                                          |
-| Editor     | The full-screen workspace for page content, design, the footer and publishing. See [The editor workspace](/docs/sites/editor).                                                                                              |
-| Navigation | Build the menu at the top of your site. See [Navigation](/docs/sites/editor#navigation).                                                                                                                                    |
-| Blog       | Write and publish posts. See [Blog & announcements](/docs/sites/blog).                                                                                                                                                      |
-| Forms      | Build forms and read the answers. See [Forms](/docs/sites/forms).                                                                                                                                                           |
-| Domains    | Your site's address, custom domains and redirects. See [Custom domains](/docs/sites/custom-domains).                                                                                                                        |
-| Settings   | The site name, description and language, search and sharing, legal information, bot protection, maintenance mode, branding and deleting the site. See [Settings, analytics & smaller features](/docs/sites/small-features). |
-| Analytics  | Page views for your site. See [Settings, analytics & smaller features](/docs/sites/small-features).                                                                                                                         |
+| Entry      | What you do there                                                                                                                                                                       |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Overview   | See your address, whether the site is published, and when you last published. Open the editor or your analytics from here.                                                              |
+| Pages      | Add, rename, reorder and delete pages and set their layout. See [Pages](/docs/sites/editor#pages).                                                                                      |
+| Editor     | The full-screen workspace for page content, design, the footer and publishing. See [The editor workspace](/docs/sites/editor).                                                          |
+| Navigation | Build the menu at the top of your site. See [Navigation](/docs/sites/editor#navigation).                                                                                                |
+| Blog       | Write and publish posts. See [Blog & announcements](/docs/sites/blog).                                                                                                                  |
+| Forms      | Build forms and read the answers. See [Forms](/docs/sites/forms).                                                                                                                       |
+| Domains    | Your site's address, custom domains and redirects. See [Custom domains](/docs/sites/custom-domains).                                                                                    |
+| Settings   | The site name, description and language, search and sharing, legal information, bot protection, maintenance mode, branding and deleting the site. See [Settings](/docs/sites/settings). |
+| Analytics  | Page views for your site. See [Analytics](/docs/sites/analytics).                                                                                                                       |
 
 At the bottom of the section, **More information in our Docs** links back to these docs. Entries you have no access to are not shown (see [Who can edit a site](#permissions)).
 
@@ -114,7 +114,7 @@ If you cannot do something, you probably need a higher access level. Ask a serve
 
 Your site's footer always shows the required legal links. Unless your server is on our Professional plan or our Enterprise plan, the footer also shows a small "This site runs on SCNX" note. On those plans the note is hidden, so your footer is fully white-labeled.
 
-This follows your server's plan automatically, so there is nothing to set and nothing to republish. A plan change reaches your site within a few minutes. You can check what your site currently shows under **Settings** > **Branding**.
+This follows your server's plan automatically, so there is nothing to set and nothing to republish. A plan change reaches your site within a few minutes. You can check what your site currently shows under [**Settings** > **Branding**](/docs/sites/settings#branding).
 
 ## Next steps {#next-steps}
 
@@ -123,4 +123,7 @@ This follows your server's plan automatically, so there is nothing to set and no
 - [Forms](/docs/sites/forms) - collect applications and contact requests.
 - [Blog & announcements](/docs/sites/blog) - post news with its own page and RSS feed.
 - [Events](/docs/sites/events) - show your upcoming Discord events.
+- [Announcement bar, redirects & link-in-bio](/docs/sites/small-features) - smaller features for your site.
+- [Settings](/docs/sites/settings) - name, sharing, legal information, maintenance mode and branding.
+- [Analytics](/docs/sites/analytics) - page views, top pages, referrers and countries.
 - [Publishing & going live](/docs/sites/publishing) - drafts, versions and maintenance mode.

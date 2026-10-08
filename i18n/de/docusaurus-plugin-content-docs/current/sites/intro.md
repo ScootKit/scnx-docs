@@ -73,17 +73,17 @@ Die Texte, die eine Vorlage einfügt, sind Platzhalter in der Sprache deiner Web
 
 Sobald deine Website existiert, hat der Bereich **Sites** in der Seitenleiste deines Servers einen Eintrag für jeden Teil davon:
 
-| Eintrag       | Was du dort machst                                                                                                                                                                                                                     |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Übersicht     | Sieh deine Adresse, ob die Website veröffentlicht ist und wann du zuletzt veröffentlicht hast. Von hier öffnest du den Editor oder deine Statistiken.                                                                                  |
-| Seiten        | Seiten hinzufügen, umbenennen, umsortieren und löschen und ihr Layout festlegen. Siehe [Seiten](/docs/sites/editor#pages).                                                                                                             |
-| Editor        | Der bildschirmfüllende Arbeitsbereich für Seiteninhalte, Design, den Fußbereich und das Veröffentlichen. Siehe [Der Editor-Arbeitsbereich](/docs/sites/editor).                                                                        |
-| Navigation    | Bau das Menü oben auf deiner Website. Siehe [Navigation](/docs/sites/editor#navigation).                                                                                                                                               |
-| Blog          | Beiträge schreiben und veröffentlichen. Siehe [Blog & Ankündigungen](/docs/sites/blog).                                                                                                                                                |
-| Formulare     | Formulare bauen und die Antworten lesen. Siehe [Formulare](/docs/sites/forms).                                                                                                                                                         |
-| Domains       | Die Adresse deiner Website, eigene Domains und Weiterleitungen. Siehe [Eigene Domains](/docs/sites/custom-domains).                                                                                                                    |
-| Einstellungen | Name, Beschreibung und Sprache der Website, Suche & Teilen, rechtliche Angaben, Bot-Schutz, Wartungsmodus, Branding und das Löschen der Website. Siehe [Einstellungen, Statistiken & kleinere Funktionen](/docs/sites/small-features). |
-| Statistiken   | Seitenaufrufe deiner Website. Siehe [Einstellungen, Statistiken & kleinere Funktionen](/docs/sites/small-features).                                                                                                                    |
+| Eintrag       | Was du dort machst                                                                                                                                                                            |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Übersicht     | Sieh deine Adresse, ob die Website veröffentlicht ist und wann du zuletzt veröffentlicht hast. Von hier öffnest du den Editor oder deine Statistiken.                                         |
+| Seiten        | Seiten hinzufügen, umbenennen, umsortieren und löschen und ihr Layout festlegen. Siehe [Seiten](/docs/sites/editor#pages).                                                                    |
+| Editor        | Der bildschirmfüllende Arbeitsbereich für Seiteninhalte, Design, den Fußbereich und das Veröffentlichen. Siehe [Der Editor-Arbeitsbereich](/docs/sites/editor).                               |
+| Navigation    | Bau das Menü oben auf deiner Website. Siehe [Navigation](/docs/sites/editor#navigation).                                                                                                      |
+| Blog          | Beiträge schreiben und veröffentlichen. Siehe [Blog & Ankündigungen](/docs/sites/blog).                                                                                                       |
+| Formulare     | Formulare bauen und die Antworten lesen. Siehe [Formulare](/docs/sites/forms).                                                                                                                |
+| Domains       | Die Adresse deiner Website, eigene Domains und Weiterleitungen. Siehe [Eigene Domains](/docs/sites/custom-domains).                                                                           |
+| Einstellungen | Name, Beschreibung und Sprache der Website, Suche & Teilen, rechtliche Angaben, Bot-Schutz, Wartungsmodus, Branding und das Löschen der Website. Siehe [Einstellungen](/docs/sites/settings). |
+| Statistiken   | Seitenaufrufe deiner Website. Siehe [Statistiken](/docs/sites/analytics).                                                                                                                     |
 
 Ganz unten im Bereich führt **Mehr Informationen in unseren Docs** zurück zu dieser Dokumentation. Einträge, auf die du keinen Zugriff hast, werden nicht angezeigt (siehe [Wer eine Website bearbeiten kann](#permissions)).
 
@@ -114,7 +114,7 @@ Wenn du etwas nicht tun kannst, brauchst du wahrscheinlich eine höhere Stufe. F
 
 Im Fußbereich deiner Website stehen immer die vorgeschriebenen rechtlichen Links. Wenn dein Server nicht in unserem Professional-Tarif oder unserem Enterprise-Tarif ist, zeigt der Fußbereich außerdem einen kleinen Hinweis "Diese Website läuft auf SCNX". In diesen Tarifen ist der Hinweis ausgeblendet, dein Fußbereich ist also komplett white-labeled.
 
-Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts einstellen und nichts neu veröffentlichen. Eine Tarifänderung kommt innerhalb weniger Minuten auf deiner Website an. Was deine Website gerade zeigt, siehst du unter **Einstellungen** > **Branding**.
+Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts einstellen und nichts neu veröffentlichen. Eine Tarifänderung kommt innerhalb weniger Minuten auf deiner Website an. Was deine Website gerade zeigt, siehst du unter [**Einstellungen** > **Branding**](/docs/sites/settings#branding).
 
 ## Nächste Schritte {#next-steps}
 
@@ -123,4 +123,7 @@ Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts eins
 - [Formulare](/docs/sites/forms) - sammle Bewerbungen und Kontaktanfragen.
 - [Blog & Ankündigungen](/docs/sites/blog) - poste Neuigkeiten mit eigener Seite und RSS-Feed.
 - [Events](/docs/sites/events) - zeige deine kommenden Discord-Events.
+- [Ankündigungsleiste, Weiterleitungen & Link-in-Bio](/docs/sites/small-features) - kleinere Funktionen für deine Website.
+- [Einstellungen](/docs/sites/settings) - Name, Teilen, rechtliche Angaben, Wartungsmodus und Branding.
+- [Statistiken](/docs/sites/analytics) - Seitenaufrufe, Top-Seiten, Verweise und Länder.
 - [Veröffentlichen & Live gehen](/docs/sites/publishing) - Entwürfe, Versionen und Wartungsmodus.
