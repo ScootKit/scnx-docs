@@ -155,9 +155,10 @@ Sie nutzen dieselben Platzhalter wie die Ergebnis-Nachrichten unter [Boss-Nachri
 Gut zu wissen:
 
 - Gepingt werden nur die Kämpfer. `@everyone`, Rollen oder andere Nutzer, die du in die Nachricht schreibst, pingen nie.
-- Ohne `%mentions%` in der Nachricht wird niemand gepingt.
+- Ohne `%mentions%` in der Nachricht wird niemand gepingt. Erwähnungen pingen nur im Nachrichtentext, nicht in einem Embed.
 - Pro Boss wird nur eine Antwort gesendet.
 - Wurde die Boss-Nachricht gelöscht, wird die Antwort stattdessen im Boss-Kanal gepostet.
+- Kann der Bot die Antwort nicht senden, zum Beispiel wegen fehlender Berechtigungen, versucht er es bis zu 2 Stunden nach Ende des Kampfes erneut und verwirft sie dann, damit niemand wegen eines alten Kampfes gepingt wird.
 - Lehnt Discord eine angepasste Antwort ab, wird die Standardantwort verwendet.
 - Im [Testmodus](#testing) funktioniert es genauso.
 

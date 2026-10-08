@@ -155,9 +155,10 @@ They use the same placeholders as the result messages in [Customizing boss messa
 Good to know:
 
 - Only the fighters are pinged. `@everyone`, roles or other users written into the message never ping.
-- Without `%mentions%` in the message, nobody is pinged.
+- Without `%mentions%` in the message, nobody is pinged. Mentions only ping in the message text, not inside an embed.
 - Only one reply is sent per boss.
 - If the boss message was deleted, the reply is posted in the boss channel instead.
+- If the bot cannot send the reply, for example because of missing permissions, it retries for up to 2 hours after the fight ended and then drops it, so nobody gets pinged about an old fight.
 - If Discord rejects a customized reply, the default reply is used.
 - It works the same in [Test Mode](#testing).
 
