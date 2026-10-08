@@ -55,7 +55,7 @@ Manche Dinge sind aber bewusst **live**. Sie erreichen Besucher, sobald du sie s
 | Titel, Beschreibung und Bild beim Teilen                                 | [Wartungsmodus](#maintenance)                                                                                                              |
 |                                                                          | Der Schalter für das [erzeugte Vorschaubild](/docs/sites/settings#sharing)                                                                 |
 |                                                                          | Deine [Adress-Endung und eigenen Domains](/docs/sites/custom-domains)                                                                      |
-|                                                                          | Das "Diese Website läuft auf SCNX"-[Badge](/docs/sites/settings#branding), das sich nach dem Tarif deines Servers richtet                  |
+|                                                                          | Das "Diese Website läuft auf SCNX"-[Zeile](/docs/sites/settings#branding), das sich nach dem Tarif deines Servers richtet                  |
 
 Die Idee ist einfach: Wie deine Seiten aussehen, bleibt unter deiner Kontrolle und ändert sich nur, wenn du veröffentlichst. Neuigkeiten, Formulare, Events, kurze Hinweise und deine Adressen sind Dinge, die du sofort erwartest.
 

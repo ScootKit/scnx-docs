@@ -62,6 +62,6 @@ The **Imprint** field is for a link to your imprint: a page that says who runs t
 
 ## Branding {#branding}
 
-The **Branding** card tells you whether your footer shows the small SCNX badge, the SCNX logo with the words "This site runs on SCNX". It reads **SCNX badge shown** or **SCNX badge hidden**. There is nothing to set here: it follows your server's plan automatically. Our Professional plan and our Enterprise plan hide the badge. A plan change reaches your site within a few minutes, without a publish.
+The **Branding** card tells you whether your footer shows the small SCNX line, the SCNX logo with the words "This site runs on SCNX". It reads **SCNX line shown** or **SCNX line hidden**. There is nothing to set here: it follows your server's plan automatically. Our Professional plan and our Enterprise plan hide the line. A plan change reaches your site within a few minutes, without a publish.
 
 The **Platform Imprint**, **Platform Privacy** and **Report this page** links stay in your footer on every plan. See [Branding](/docs/sites/intro#branding).

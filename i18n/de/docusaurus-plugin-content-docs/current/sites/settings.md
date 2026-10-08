@@ -62,6 +62,6 @@ Der **Wartungsmodus** ersetzt deine ganze Website vorübergehend durch einen kur
 
 ## Branding {#branding}
 
-Die Karte **Branding** zeigt dir, ob dein Footer das kleine SCNX-Badge zeigt, also das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX". Dort steht **SCNX-Badge sichtbar** oder **SCNX-Badge ausgeblendet**. Hier gibt es nichts einzustellen: Das richtet sich automatisch nach dem Tarif deines Servers. Unser Professional-Tarif und unser Enterprise-Tarif blenden das Badge aus. Ein Tarifwechsel erreicht deine Website innerhalb weniger Minuten, ohne Veröffentlichung.
+Die Karte **Branding** zeigt dir, ob dein Footer die kleine SCNX-Zeile zeigt, also das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX". Dort steht **SCNX-Zeile sichtbar** oder **SCNX-Zeile ausgeblendet**. Hier gibt es nichts einzustellen: Das richtet sich automatisch nach dem Tarif deines Servers. Unser Professional-Tarif und unser Enterprise-Tarif blenden die Zeile aus. Ein Tarifwechsel erreicht deine Website innerhalb weniger Minuten, ohne Veröffentlichung.
 
 Die Links **Plattform-Impressum**, **Plattform-Datenschutz** und **Diese Seite melden** bleiben in jedem Tarif in deinem Footer. Siehe [Branding](/docs/sites/intro#branding).
