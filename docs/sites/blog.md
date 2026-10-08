@@ -52,7 +52,7 @@ You don't need to save. The editor saves a moment after you stop typing, and the
 
 | Top bar shows                         | What it means                                                                    |
 | ------------------------------------- | -------------------------------------------------------------------------------- |
-| **Saving…** / **Saved**               | Your changes are being saved, or are saved.                                      |
+| **Saving...** / **Saved**             | Your changes are being saved, or are saved.                                      |
 | **Add a title to save**               | A new post is only created once it has a title.                                  |
 | **Not saved: fix highlighted fields** | Something is not valid. Fix the field that is marked, and saving picks up again. |
 | **Not saved** with **Retry**          | Saving failed. Click **Retry**. If you try to leave, we warn you first.          |

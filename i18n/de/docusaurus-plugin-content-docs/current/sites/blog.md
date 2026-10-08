@@ -52,7 +52,7 @@ Du musst nicht speichern. Der Editor speichert kurz nachdem du aufhörst zu tipp
 
 | Obere Leiste zeigt                                  | Was das heißt                                                                                                        |
 | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Speichert…** / **Gespeichert**                    | Deine Änderungen werden gerade gespeichert oder sind gespeichert.                                                    |
+| **Speichert...** / **Gespeichert**                  | Deine Änderungen werden gerade gespeichert oder sind gespeichert.                                                    |
 | **Titel hinzufügen zum Speichern**                  | Ein neuer Beitrag wird erst angelegt, wenn er einen Titel hat.                                                       |
 | **Nicht gespeichert: markierte Felder korrigieren** | Etwas ist ungültig. Korrigiere das markierte Feld, dann wird wieder gespeichert.                                     |
 | **Nicht gespeichert** mit **Erneut versuchen**      | Speichern hat nicht geklappt. Klick auf **Erneut versuchen**. Willst du die Seite verlassen, warnen wir dich vorher. |
