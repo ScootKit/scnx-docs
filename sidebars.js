@@ -468,6 +468,11 @@ const sidebars = {
                 },
                 {
                     type: 'doc',
+                    label: 'Content rules & legal',
+                    id: 'sites/content-and-legal'
+                },
+                {
+                    type: 'doc',
                     label: 'Publishing & going live',
                     id: 'sites/publishing'
                 }

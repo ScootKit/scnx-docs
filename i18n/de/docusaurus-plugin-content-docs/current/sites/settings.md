@@ -41,9 +41,20 @@ Unter diesen Feldern liegt ein Schalter für das **erzeugte Vorschaubild**. Ist 
 
 Schaltest du ihn aus, zeigen geteilte Links dein **Bild beim Teilen**, falls du eins festgelegt hast, und sonst das Icon deines Servers. Dieser Schalter ist live und braucht keine Veröffentlichung.
 
+### Von Suchmaschinen gefunden werden {#search-engines}
+
+Für Suchmaschinen wie Google musst du nichts einrichten. Sobald deine Website veröffentlicht ist, hat sie automatisch:
+
+- eine **Sitemap** unter `/sitemap.xml`: eine Liste all deiner Seiten und veröffentlichten Blog-Beiträge, die Suchmaschinen lesen, um sie zu finden. Deine Seiten stehen darin in der Reihenfolge, die du auf dem Bildschirm [Seiten](/docs/sites/editor#pages) festlegst.
+- eine **robots.txt** unter `/robots.txt`: eine kurze Datei, die Suchmaschinen sagt, was sie sich ansehen dürfen. Sie erlaubt deine ganze veröffentlichte Website.
+
+Deine Entwürfe bleiben aus den Suchergebnissen draußen. [Vorschau-Links](/docs/sites/publishing#preview) sind so markiert, dass Suchmaschinen sie nicht aufnehmen, und eine Website, die noch nicht veröffentlicht ist oder im Wartungsmodus läuft, bittet Suchmaschinen, fernzubleiben.
+
 ## Rechtliche Angaben und Bot-Schutz {#legal}
 
 Unter **Rechtliche Angaben** verlinkst du deine Datenschutzerklärung, dein Impressum und einen Kontakt für Datenfragen. Unter **Bot-Schutz** wählst du, wie die Spam-Prüfung deiner Formulare für Besucher aussieht. Beides ist vor allem wichtig, sobald deine Website ein Formular hat, deshalb erklären wir es auf der Seite [Formulare](/docs/sites/forms). Beides wirkt sofort.
+
+Das Feld **Impressum** ist für einen Link zu deinem Impressum: eine Seite, auf der steht, wer die Website betreibt und wie man ihn erreicht. In manchen Ländern, zum Beispiel in Deutschland, brauchen viele Websites eins. Wir schreiben es nicht für dich, also verlinke eine Seite, die du schon hast. Es muss ein vollständiger Link sein, der mit `https://` beginnt. Dein Impressum erscheint als Link im Footer deiner Website, neben deiner Datenschutzerklärung. Ob deine Website ein Impressum braucht, erklären wir unter [Inhaltsregeln & Rechtliches](/docs/sites/content-and-legal).
 
 ## Wartungsmodus und Gefahrenzone {#maintenance-and-delete}
 
@@ -51,4 +62,6 @@ Der **Wartungsmodus** ersetzt deine ganze Website vorübergehend durch einen kur
 
 ## Branding {#branding}
 
-Die Karte **Branding** zeigt dir, ob deine Website das kleine "Made with SCNX"-Badge anzeigt. Hier gibt es nichts einzustellen: Das richtet sich automatisch nach dem Tarif deines Servers. Unser Professional-Tarif blendet das Badge aus. Ein Tarifwechsel erreicht deine Website innerhalb weniger Minuten, ohne Veröffentlichung.
+Die Karte **Branding** zeigt dir, ob dein Footer das kleine SCNX-Badge zeigt, also das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX". Dort steht **SCNX-Badge sichtbar** oder **SCNX-Badge ausgeblendet**. Hier gibt es nichts einzustellen: Das richtet sich automatisch nach dem Tarif deines Servers. Unser Professional-Tarif und unser Enterprise-Tarif blenden das Badge aus. Ein Tarifwechsel erreicht deine Website innerhalb weniger Minuten, ohne Veröffentlichung.
+
+Die Links **Plattform-Impressum**, **Plattform-Datenschutz** und **Diese Seite melden** bleiben in jedem Tarif in deinem Footer. Siehe [Branding](/docs/sites/intro#branding).

@@ -132,6 +132,14 @@ Sobald eine Domain aktiv ist, prüfen wir ihre Einträge alle paar Stunden erneu
 - **Lass beide Einträge stehen.** Wird der CNAME- oder TXT-Eintrag später bei deinem Anbieter entfernt oder geändert, zeigt die Domain **Prüfungen schlagen fehl**. Eine fehlgeschlagene Prüfung kann ein kurzes Problem sein. Schlagen zwei Prüfungen hintereinander fehl, liefert die Domain deine Website nicht mehr aus und steht wieder auf **DNS ausstehend**. Deine Website ist weiterhin unter ihrer `scnx.site`-Adresse erreichbar, und die Domain wird von selbst wieder aktiv, sobald die Einträge zurück sind, bei der nächsten Prüfung oder wenn du auf **Prüfen** klickst. Das schützt deine Domain davor, von jemand anderem übernommen zu werden, falls sie einmal nicht mehr auf uns zeigt.
 - **Eine nicht verifizierte Domain wird nach 14 Tagen freigegeben.** Fügst du eine Domain hinzu, schließt aber die DNS-Einrichtung nie ab, entfernen wir sie nach zwei Wochen, damit sie nicht halb verbunden herumliegt. Das Dashboard zählt die verbleibenden Tage herunter. Du kannst sie jederzeit wieder hinzufügen.
 
+### Eine Adresse zum Teilen wählen {#one-address}
+
+Sobald eine eigene Domain aktiv ist, ist deine Website unter mehr als einer Adresse erreichbar: unter deiner `scnx.site`-Adresse und unter jeder deiner eigenen Domains. Besucher bleiben auf der Adresse, über die sie kommen. Sie werden nicht auf eine andere weitergeleitet.
+
+Jede Adresse gibt sich gegenüber Suchmaschinen und Link-Vorschauen auch als Hauptversion deiner Website aus. Die Links in deiner Sitemap, die Adresse in Link-Vorschauen auf Discord und anderswo und der Hinweis "das ist die Originalseite" für Suchmaschinen nutzen immer die Adresse, über die der Besucher oder die Suchmaschine gekommen ist. Deine Adressen werden nicht zu einer zusammengeführt.
+
+Wähle also eine Adresse, meist deine eigene Domain, und nutze sie überall, wo du deine Website teilst: auf deinem Discord-Server, in sozialen Netzwerken und in deiner Bio. So sehen Suchmaschinen und Besucher eine einheitliche Adresse.
+
 ## Eine Domain entfernen {#remove}
 
 Um eine Domain zu trennen, klick neben ihr auf das Papierkorb-Symbol (**Domain entfernen**) und bestätige. Besucher erreichen deine Website dann nicht mehr über diese Adresse. Die DNS-Einträge bei deinem Anbieter kannst du danach löschen.

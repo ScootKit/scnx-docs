@@ -29,6 +29,11 @@ The **Forms** page needs edit access to the site, even just to look at it, becau
 
 A form only shows up on your site once you add a Form block to a page and pick it there. If you haven't built a form yet, the block's picker links you to **Forms** with **Create one in Forms**.
 
+The **Form** picker in the block also tells you when something is off with the form you picked:
+
+- A form you have closed shows "(closed)" after its name, for example "Application form (closed)". The block stays on your page, and visitors see that the form is closed. See [Opening and closing a form](#open-close).
+- A form you have deleted shows as "Deleted form" followed by a code. Visitors see "This form isn't available right now." Pick another form or remove the block, then publish.
+
 The Form block also has two optional texts of its own: **Submit button** (the button label) and **Thank-you message** (what visitors see after sending). If your site's footer has a Discord link, a **Join us on Discord** link shows under the thank-you message too.
 
 Each form has three tabs: **Questions**, **Settings** and **Answers**. Click **All forms** to go back to the list.
@@ -81,9 +86,9 @@ When someone ticks the box, we save the exact text they agreed to with their ans
 Each form has an **Accept answers** checkbox in its **Settings** tab:
 
 - **On** - the form accepts answers ("Open").
-- **Off** - visitors still see the form, but they cannot send it ("Closed"). They get a friendly message instead.
+- **Off** - the form is closed ("Closed"). Instead of the questions, visitors see the form's name and "This form is currently closed."
 
-You can also set an **Answer limit**. Once the form has collected that many answers, it stops accepting new ones on its own. Leave it empty for no limit.
+You can also set an **Answer limit**. Once the form has collected that many answers, it stops accepting new ones on its own. Visitors then see "This form is no longer accepting responses." Leave it empty for no limit.
 
 Click **Save settings** after changing anything on this tab.
 
@@ -174,4 +179,4 @@ Forms themselves are live. Their questions and settings take effect right away, 
 
 The **Form** block is part of your page, though. Adding the block to a page, removing it, or changing its **Submit button** or **Thank-you message** text shows up on your live site after you [publish](/docs/sites/publishing).
 
-If you delete a form that is still placed on a page, the block stays but visitors see that the form isn't available. Remove the block or pick another form, then publish.
+If you delete a form that is still placed on a page, the block stays, the picker shows "Deleted form", and visitors see "This form isn't available right now." Remove the block or pick another form, then publish.

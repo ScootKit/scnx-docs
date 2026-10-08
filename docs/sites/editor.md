@@ -49,6 +49,8 @@ From here you can:
 - **Page layout** - set the **Content width** to **Standard** or **Compact** (a narrow, centred column), and turn on **Hide navigation and footer** to remove the navigation bar, the footer and the announcement bar on that page only. The two settings are independent. This is how you build a [link-in-bio page](/docs/sites/small-features#link-in-bio).
 - **Delete page** - remove a page and its content. Your home page can't be deleted.
 
+Your home page is always the page at `/`, the one visitors see when they open your site's address. You can't make a different page the home page. To change what visitors land on, edit the content of that page.
+
 Drag a page, or use the arrows, to change the order. The order on this screen is the order your pages appear in your sitemap. It does not change your menu: you build that on the [Navigation](#navigation) screen.
 
 A page address is set when the page is created and can't be changed afterwards. To use a different address, create a new page and delete the old one.
@@ -130,51 +132,90 @@ Sections give you a whole part of a page at once. Every line a section adds is p
 
 ### The block catalog {#block-catalog}
 
+The **Options** column lists the settings you find in the right panel when the block is selected. Titles, labels and other text are edited on the page itself, so they are not listed here.
+
 **Layout**
 
-| Block          | What it does                                                                              |
-| -------------- | ----------------------------------------------------------------------------------------- |
-| Hero           | Big banner with a title and subtitle at the top of a page.                                |
-| Section header | A heading to introduce a new section.                                                     |
-| Columns        | Place blocks side by side in multiple columns. Columns stack on small screens.            |
-| Spacer         | Add vertical empty space between blocks.                                                  |
-| Divider        | A horizontal line to separate content.                                                    |
-| Card grid      | A grid of cards with images, titles and links.                                            |
-| Tabs           | Group content into switchable tabs.                                                       |
-| Accordion      | Expandable sections. Turn on **Allow multiple open** to let more than one open at a time. |
+| Block          | What it does                                                                   | Options                                                                                                                                  |
+| -------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Hero           | Big banner with a title and subtitle at the top of a page.                     | **Banner image**, **Show server icon** (your Discord server's icon above the title), **Alignment** (left, center, right), **Background** |
+| Section header | A heading to introduce a new section.                                          | **Alignment** (left, center, right)                                                                                                      |
+| Columns        | Place blocks side by side in multiple columns. Columns stack on small screens. | **Gap** between the columns: **Small**, **Medium** or **Large**                                                                          |
+| Spacer         | Add vertical empty space between blocks.                                       | **Height (px)**, 32 by default                                                                                                           |
+| Divider        | A horizontal line to separate content.                                         | **Style** (**Solid**, **Dashed**, **Dotted**) and **Color** (**Primary**, **Secondary**, **Accent**, **Border**, **Muted**)              |
+| Card grid      | A grid of cards with images, titles and links.                                 | **Columns**, and per card an **Image** and a **Link URL**                                                                                |
+| Tabs           | Group content into switchable tabs.                                            | None, everything is edited on the page                                                                                                   |
+| Accordion      | Expandable sections.                                                           | **Allow multiple open** lets more than one section be open at a time. When it is off, opening one closes the others.                     |
 
 **Content**
 
-| Block                            | What it does                                       |
-| -------------------------------- | -------------------------------------------------- |
-| Text                             | A rich text block written in Markdown.             |
-| Image                            | A single image with an optional caption and link.  |
-| Image gallery                    | Show several images in a grid.                     |
-| Video                            | Embed a YouTube or Twitch video.                   |
-| Quote                            | Highlight a quote with an optional author.         |
-| Call to action                   | A prompt with buttons to drive an action.          |
-| Icon grid                        | A grid of icons with short labels.                 |
-| Countdown                        | A live countdown to a date and time.               |
-| [Form](/docs/sites/forms)        | An application or contact form people can fill in. |
-| [Latest posts](/docs/sites/blog) | Cards linking to your newest blog posts.           |
-| [Events](/docs/sites/events)     | Upcoming Discord events from your server.          |
+| Block                            | What it does                                       | Options                                                                                                           |
+| -------------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Text                             | A rich text block written in Markdown.             | **Background**                                                                                                    |
+| Image                            | A single image with an optional caption and link.  | **Alt text** (describes the image for screen readers), **Link URL**, **Width** (Small, Medium, Large, Full width) |
+| Image gallery                    | Show several images in a grid.                     | **Columns**, and per image the **Image** and its **Alt text**                                                     |
+| [Video](#video)                  | Embed a YouTube or Twitch video.                   | **URL**, see [Video](#video) below                                                                                |
+| Quote                            | Highlight a quote with an optional author.         | **Avatar**, a picture shown next to the author                                                                    |
+| Call to action                   | A prompt with buttons to drive an action.          | **Buttons**, each with a **Link URL** and a **Style** (**Primary**, **Secondary**, **Outline**), **Background**   |
+| Icon grid                        | A grid of icons with short labels.                 | **Columns**, and per item an **Icon** or an **Image** (see [Icon picker](#icon-picker))                           |
+| Countdown                        | A live countdown to a date and time.               | **Target date**, **Expired message** (shown once the countdown is over)                                           |
+| [Form](/docs/sites/forms)        | An application or contact form people can fill in. | **Form** (which form to show), **Thank-you message**                                                              |
+| [Latest posts](/docs/sites/blog) | Cards linking to your newest blog posts.           | **How many posts**, 3 by default                                                                                  |
+| [Events](/docs/sites/events)     | Upcoming Discord events from your server.          | **How many events**, 3 by default, and **Countdown to the next event**                                            |
 
 **Discord**
 
-| Block       | What it does                                    |
-| ----------- | ----------------------------------------------- |
-| Join button | A button that invites visitors to your Discord. |
-| Links       | A list or grid of links.                        |
-| About       | A rich text block about your community.         |
-| Staff team  | Introduce your team members.                    |
-| Rules       | A numbered or plain list of rules.              |
-| FAQ         | Frequently asked questions and answers.         |
+| Block                       | What it does                                    | Options                                                                                                       |
+| --------------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| [Join button](#join-button) | A button that invites visitors to your Discord. | **Style** and **Size**, see [Join button](#join-button) below                                                 |
+| Links                       | A list or grid of links.                        | **Layout** (**List** or **Grid**), **Show icons**, and per link a **Link URL** and an optional **Icon** image |
+| About                       | A rich text block about your community.         | None, everything is edited on the page                                                                        |
+| Staff team                  | Introduce your team members.                    | **Layout** (**Default** or **Compact**, which fits more people in a row), and an **Avatar** per member        |
+| Rules                       | A numbered or plain list of rules.              | **Numbered**                                                                                                  |
+| FAQ                         | Frequently asked questions and answers.         | None. Your questions and answers are also added to the page as FAQ data that search engines can read.         |
 
 **Columns** holds other blocks. Use **Add column** and the remove button to change the number of columns, and **Add block** inside a column to fill it. If you remove a column that still has blocks in it, those blocks move into the neighbouring column instead of being deleted. A Columns block can't go inside another Columns block.
 
 :::note Images come from your server's image library
 Image fields (banners, covers, gallery pictures, avatars) use your server's existing image library, the same one your bot uses. An image link from anywhere else is rejected when you save, and the editor warns you about it first. Pick an image from the library instead.
 :::
+
+### Video {#video}
+
+The **Video** block plays a YouTube or Twitch video right on your page. It needs the video's **embed link**: a special address the video site gives you for showing a video on another website. The normal link from your browser's address bar does not work here.
+
+The **URL** field accepts these formats:
+
+| Video from                                 | What the link looks like                             |
+| ------------------------------------------ | ---------------------------------------------------- |
+| YouTube                                    | `https://www.youtube.com/embed/dQw4w9WgXcQ`          |
+| YouTube without cookies (privacy-enhanced) | `https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ` |
+| A Twitch channel                           | `https://player.twitch.tv/?channel=yourchannel`      |
+| A Twitch video (a past stream)             | `https://player.twitch.tv/?video=1234567890`         |
+
+A YouTube embed link can also carry YouTube's own extras after the video ID, for example `?start=30` to start 30 seconds in.
+
+Normal YouTube links like `https://www.youtube.com/watch?v=dQw4w9WgXcQ` or `https://youtu.be/dQw4w9WgXcQ` and normal Twitch links like `https://www.twitch.tv/yourchannel` are not accepted. If you paste one, the editor shows a warning under the field and the page is not saved until you replace it.
+
+To get the embed link:
+
+- **YouTube** - open the video, click **Share**, then **Embed**. In the code that appears, copy only the address inside `src="..."`. You can also build it yourself: take the video ID (the part after `watch?v=` or after `youtu.be/`) and put it after `https://www.youtube.com/embed/`.
+- **Twitch** - for a channel, put the channel name after `https://player.twitch.tv/?channel=`. For a past video, put the number from the video's address (`twitch.tv/videos/1234567890`) after `https://player.twitch.tv/?video=`.
+
+In the editor the block shows a placeholder instead of the real video. The video itself plays in the [preview](#preview) and on your live site.
+
+### Join button {#join-button}
+
+The **Join button** sends visitors straight to your Discord server. There is no invite link to paste: when a visitor clicks the button, your server's bot creates an invite for them. If you have set a channel for your [dcserver.link](/docs/scnx/guilds/dcserver-link#invites), the invite leads to that channel. Otherwise the bot picks a channel on its own. Invites made this way run out after a few hours, and a fresh one is made when needed, so the button never points to an old invite.
+
+For this to work, your bot needs to be on your server and allowed to create invites. The button only works on your published site. In the editor, clicking it does nothing.
+
+The button text is edited on the page. If you leave it empty, visitors see **Join Server** in your site's language. In the right panel you can set:
+
+- **Style** - **Primary**, **Secondary** or **Outline**.
+- **Size** - **Small**, **Medium** or **Large**.
+
+If no invite can be created, for example because the bot is offline, not on your server or not allowed to create invites, visitors see "Couldn't load the invite. Try again." under the button. Nothing else on the page is affected.
 
 ### Icon picker {#icon-picker}
 
@@ -225,8 +266,10 @@ The Hero, Text and Call to action blocks have a **Background** option in the rig
 
 Open **Footer & bar** in the left strip for the parts every page shares:
 
-- **Footer** - **Social links** (pick a platform and paste the address) and extra **Footer links**, shown at the bottom of every page. Footer changes go live with your next publish.
+- **Footer** - **Social links** (pick a platform and paste the address) and extra **Footer links**, shown at the bottom of every page. The platforms you can pick are **Discord**, **Twitter**, **YouTube**, **Twitch**, **Instagram**, **TikTok**, **GitHub** and **Website**, and each shows as its icon. Only links that start with `https://` or `http://` show up on your site. Footer changes go live with your next publish.
 - **Announcement bar** - a strip above your navigation for one short message. Unlike almost everything else, it goes live on its own, without publishing your site again. See [Announcement bar](/docs/sites/small-features#announcement-bar).
+
+Under your footer, every site also shows a small SCNX bar with a few fixed links. See [Branding](/docs/sites/intro#branding).
 
 The site name, search and sharing, legal information and the other site settings are on the **Settings** screen.
 

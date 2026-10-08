@@ -153,7 +153,7 @@ Dein Blog hat einen RSS-Feed unter **`/blog/rss.xml`**. Er listet deine neuesten
 
 ## Der Block Neueste Beiträge {#latest-posts}
 
-Um deine neuesten Beiträge auch anderswo zu zeigen, zum Beispiel auf deiner Startseite, füge den Block **Neueste Beiträge** auf einer beliebigen Seite hinzu. Er zeigt Karten, die zu deinen neuesten Beiträgen führen, und du kannst festlegen, wie viele gezeigt werden. Im Editor zeigt er Beispielkarten. Auf deiner Website zeigt er immer deine aktuellen veröffentlichten Beiträge.
+Um deine neuesten Beiträge auch anderswo zu zeigen, zum Beispiel auf deiner Startseite, füge den Block **Neueste Beiträge** auf einer beliebigen Seite hinzu. Er zeigt Karten, die zu deinen neuesten Beiträgen führen. Wie viele Karten er zeigt, legst du in den Optionen des Blocks mit **Wie viele Beiträge** fest. Standardmäßig sind es 3. Im Editor zeigt er Beispielkarten. Auf deiner Website zeigt er immer deine aktuellen veröffentlichten Beiträge.
 
 ## Dein Blog im Editor {#editor-preview}
 

@@ -30,7 +30,7 @@ Events sind immer live. Sie gehören nicht zu einer Veröffentlichung, ein neues
 
 Wähle den Block aus, um seine Optionen im rechten Panel zu sehen:
 
-- **Wie viele Events** - wie viele Event-Karten angezeigt werden, die nächsten zuerst.
+- **Wie viele Events** - wie viele Event-Karten angezeigt werden, die nächsten zuerst. Standardmäßig sind es 3, und du kannst das ändern.
 - **Countdown bis zum nächsten Event** - fügt über den Karten einen Live-Countdown hinzu, mit dem Namen des nächsten Events, das noch nicht begonnen hat.
 
 Das Panel zeigt dir außerdem, wie viele kommende Events dein Server gerade hat. So weißt du schon vor dem Veröffentlichen, ob der Block etwas anzeigen wird.

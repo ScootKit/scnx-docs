@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 title: Publishing & going live
 description: How publishing works on SCNX Sites - drafts, the publish popover, what needs a publish and what is live, previews, version history and rollback, maintenance mode and deleting a site.
 ---
@@ -55,7 +55,7 @@ Some things, though, are deliberately **live**. They reach visitors as soon as y
 | Share title, share description and share image                        | [Maintenance mode](#maintenance)                                                                                |
 |                                                                       | The [generated share card](/docs/sites/settings#sharing) switch                                                 |
 |                                                                       | Your [address ending and custom domains](/docs/sites/custom-domains)                                            |
-|                                                                       | The "Made with SCNX" [badge](/docs/sites/settings#branding), which follows your server's plan                   |
+|                                                                       | The "This site runs on SCNX" [badge](/docs/sites/settings#branding), which follows your server's plan           |
 
 The idea is simple: what your pages look like stays under your control and only changes when you publish. News, forms, events, quick notices and your addresses are things you expect to be immediate.
 

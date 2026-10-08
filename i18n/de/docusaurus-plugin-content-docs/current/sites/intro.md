@@ -20,6 +20,8 @@ Der Website-Builder wird gerade für ausgewählte Server freigeschaltet. Wenn du
 
 Auf diesem Bildschirm kannst du auf **Benachrichtige mich zu Sites** klicken. Wir schicken dir zuerst eine Bestätigungsmail an die Adresse deines Kontos. Sobald du sie bestätigt hast, schreiben wir dir, wenn Sites für mehr Server freigeschaltet wird.
 
+Sobald Sites für deinen Server freigeschaltet ist, erinnert dich ein kurzer Hinweis oben auf den Sites-Bildschirmen (außerhalb des Editors) daran, dass es sich um eine Beta handelt. Über den Link **Sende uns Feedback** kommst du zu unserer Feedback-Seite. Dort kannst du uns sagen, was gut läuft, was nicht und was dir fehlt.
+
 ## Was du bauen kannst {#what-you-can-build}
 
 ![Eine veröffentlichte Demo-Website mit Ankündigungsleiste und geöffnetem Dropdown-Menü](@site/docs/assets/sites/de/public-site.png)
@@ -112,7 +114,15 @@ Wenn du etwas nicht tun kannst, brauchst du wahrscheinlich eine höhere Stufe. F
 
 ## Branding {#branding}
 
-Im Fußbereich deiner Website stehen immer die vorgeschriebenen rechtlichen Links. Wenn dein Server nicht in unserem Professional-Tarif oder unserem Enterprise-Tarif ist, zeigt der Fußbereich außerdem einen kleinen Hinweis "Diese Website läuft auf SCNX". In diesen Tarifen ist der Hinweis ausgeblendet, dein Fußbereich ist also komplett white-labeled.
+Ganz unten auf jeder Seite, unter deinem eigenen Footer, zeigt deine Website eine kleine SCNX-Leiste. Darin stehen:
+
+- das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX",
+- die Links **Plattform-Impressum** und **Plattform-Datenschutz** mit den rechtlichen Angaben zu SCNX selbst,
+- der Link **Diese Seite melden**, über den Besucher uns Inhalte melden können, die gegen die Regeln verstoßen. Was nach einer Meldung passiert, steht unter [Inhaltsregeln & Rechtliches](/docs/sites/content-and-legal).
+
+Hast du unter [**Einstellungen** > **Rechtliche Angaben**](/docs/sites/settings#legal) deine eigene Datenschutzerklärung oder dein Impressum verlinkt, erscheinen sie ebenfalls in dieser Leiste, über den SCNX-Links.
+
+Die drei SCNX-Links stehen auf jeder Website, in jedem Tarif. In unserem Professional-Tarif und unserem Enterprise-Tarif sind das Logo und der Hinweis "Diese Website läuft auf SCNX" ausgeblendet, dein Footer trägt dann also kein SCNX-Branding. Die Links bleiben.
 
 Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts einstellen und nichts neu veröffentlichen. Eine Tarifänderung kommt innerhalb weniger Minuten auf deiner Website an. Was deine Website gerade zeigt, siehst du unter [**Einstellungen** > **Branding**](/docs/sites/settings#branding).
 

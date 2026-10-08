@@ -41,9 +41,20 @@ Below these fields is a switch for the **generated share card**. When it is on a
 
 If you turn the switch off, shared links use your **Share image** if you set one, and otherwise your server's icon. This switch is live and does not need a publish.
 
+### Found by search engines {#search-engines}
+
+You don't need to set anything up for search engines like Google. Once your site is published, it automatically has:
+
+- a **sitemap** at `/sitemap.xml`: a list of all your pages and published blog posts that search engines read to find them. Your pages appear in it in the order you set on the [Pages](/docs/sites/editor#pages) screen.
+- a **robots.txt** at `/robots.txt`: a short file that tells search engines what they may look at. It allows your whole published site.
+
+Your drafts stay out of search results. [Preview links](/docs/sites/publishing#preview) are marked so search engines don't list them, and a site that is not published yet or is in maintenance mode asks search engines to stay away.
+
 ## Legal information and Bot protection {#legal}
 
 **Legal information** is where you link your privacy policy, your imprint and a contact for data questions. **Bot protection** lets you choose how the spam check on your forms looks to visitors. Both matter most once your site has a form, so they are explained on the [Forms](/docs/sites/forms) page. Both take effect right away.
+
+The **Imprint** field is for a link to your imprint: a page that says who runs the website and how to reach them. Some countries, Germany for example, require one for many websites. We don't write it for you, so link a page you already have. It has to be a full link that starts with `https://`. Your imprint shows up as a link in your site's footer, next to your privacy policy. Whether your site needs an imprint is explained on [Content rules & legal](/docs/sites/content-and-legal).
 
 ## Maintenance mode and Danger zone {#maintenance-and-delete}
 
@@ -51,4 +62,6 @@ If you turn the switch off, shared links use your **Share image** if you set one
 
 ## Branding {#branding}
 
-The **Branding** card tells you whether your site shows the small "Made with SCNX" badge. There is nothing to set here: it follows your server's plan automatically. Our Professional plan hides the badge. A plan change reaches your site within a few minutes, without a publish.
+The **Branding** card tells you whether your footer shows the small SCNX badge, the SCNX logo with the words "This site runs on SCNX". It reads **SCNX badge shown** or **SCNX badge hidden**. There is nothing to set here: it follows your server's plan automatically. Our Professional plan and our Enterprise plan hide the badge. A plan change reaches your site within a few minutes, without a publish.
+
+The **Platform Imprint**, **Platform Privacy** and **Report this page** links stay in your footer on every plan. See [Branding](/docs/sites/intro#branding).

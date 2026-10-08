@@ -29,6 +29,11 @@ Die Seite **Formulare** braucht Bearbeitungszugriff auf die Website, auch nur zu
 
 Ein Formular erscheint erst auf deiner Website, wenn du einen Formular-Block auf eine Seite setzt und es dort auswählst. Hast du noch kein Formular gebaut, führt dich die Auswahl im Block mit **Leg eins unter Formulare an** zu **Formulare**.
 
+Die Auswahl **Formular** im Block zeigt dir auch, wenn mit dem gewählten Formular etwas nicht stimmt:
+
+- Ein Formular, das du geschlossen hast, zeigt "(geschlossen)" hinter seinem Namen, zum Beispiel "Bewerbung (geschlossen)". Der Block bleibt auf deiner Seite, und Besucher sehen, dass das Formular geschlossen ist. Siehe [Ein Formular öffnen und schließen](#open-close).
+- Ein Formular, das du gelöscht hast, erscheint als "Gelöschtes Formular" mit einem Code dahinter. Besucher sehen "Dieses Formular ist gerade nicht verfügbar." Wähle ein anderes Formular oder entferne den Block und veröffentliche danach.
+
 Der Formular-Block hat außerdem zwei eigene, optionale Texte: **Absenden-Button** (die Beschriftung des Buttons) und **Danke-Nachricht** (was Besucher nach dem Absenden sehen). Hat der Footer deiner Website einen Discord-Link, erscheint unter der Danke-Nachricht auch ein Link **Tritt unserem Discord-Server bei**.
 
 Jedes Formular hat drei Tabs: **Fragen**, **Einstellungen** und **Antworten**. Mit **Alle Formulare** kommst du zurück zur Liste.
@@ -81,9 +86,9 @@ Kreuzt jemand die Checkbox an, speichern wir den genauen Text, dem die Person zu
 Jedes Formular hat im Tab **Einstellungen** eine Checkbox **Antworten annehmen**:
 
 - **An** - das Formular nimmt Antworten an ("Offen").
-- **Aus** - Besucher sehen das Formular weiterhin, können es aber nicht abschicken ("Geschlossen"). Sie bekommen stattdessen eine freundliche Meldung.
+- **Aus** - das Formular ist geschlossen ("Geschlossen"). Statt der Fragen sehen Besucher den Namen des Formulars und "Dieses Formular ist gerade geschlossen."
 
-Du kannst außerdem ein **Antwort-Limit** setzen. Hat das Formular so viele Antworten gesammelt, nimmt es von selbst keine neuen mehr an. Lass das Feld leer für kein Limit.
+Du kannst außerdem ein **Antwort-Limit** setzen. Hat das Formular so viele Antworten gesammelt, nimmt es von selbst keine neuen mehr an. Besucher sehen dann "Dieses Formular nimmt keine Antworten mehr an." Lass das Feld leer für kein Limit.
 
 Klick auf **Einstellungen speichern**, nachdem du in diesem Tab etwas geändert hast.
 
@@ -174,4 +179,4 @@ Formulare selbst sind live. Ihre Fragen und Einstellungen wirken sofort, genauso
 
 Der **Formular**-Block gehört aber zu deiner Seite. Den Block auf eine Seite zu setzen, ihn zu entfernen oder den Text bei **Absenden-Button** oder **Danke-Nachricht** zu ändern, erscheint auf deiner Live-Website erst, nachdem du [veröffentlichst](/docs/sites/publishing).
 
-Löschst du ein Formular, das noch auf einer Seite steht, bleibt der Block stehen, aber Besucher sehen, dass das Formular nicht verfügbar ist. Entferne den Block oder wähle ein anderes Formular und veröffentliche danach.
+Löschst du ein Formular, das noch auf einer Seite steht, bleibt der Block stehen, die Auswahl zeigt "Gelöschtes Formular", und Besucher sehen "Dieses Formular ist gerade nicht verfügbar." Entferne den Block oder wähle ein anderes Formular und veröffentliche danach.

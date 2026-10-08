@@ -132,6 +132,14 @@ Once a domain is active, we check its records again every few hours.
 - **Leave both records in place.** If the CNAME or TXT record is later removed or changed at your provider, the domain shows **Checks failing**. One failed check can be a temporary blip. If two checks in a row fail, the domain stops serving your site and goes back to **Pending DNS**. Your site is still reachable at its `scnx.site` address, and the domain becomes active again by itself once the records are back, at the next check or when you click **Verify**. This protects your domain from being taken over by someone else if it ever stops pointing at us.
 - **An unverified domain is released after 14 days.** If you add a domain but never finish the DNS setup, we remove it after two weeks so it does not sit around half-connected. The dashboard counts down the days left. You can always add it again.
 
+### Pick one address to share {#one-address}
+
+Once a custom domain is active, your site is reachable at more than one address: your `scnx.site` address and each of your custom domains. Visitors on each address stay on that address. It is not forwarded to another one.
+
+Each address also presents itself to search engines and link previews as the main version of your site. The links in your sitemap, the address shown in link previews on Discord and elsewhere, and the "this is the original page" hint for search engines all use whichever address the visitor or search engine came in on. Your addresses are not merged into one.
+
+So pick one address, usually your custom domain, and use it everywhere you share your site: in your Discord server, on social media and in your bio. That way search engines and visitors see one consistent address.
+
 ## Removing a domain {#remove}
 
 To disconnect a domain, click the trash icon (**Remove domain**) next to it and confirm. Visitors will no longer reach your site at that address. You can delete the DNS records at your provider afterwards.

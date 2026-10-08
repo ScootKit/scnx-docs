@@ -30,7 +30,7 @@ Events are always live. They are not part of a publish, so a new event shows up 
 
 Select the block to see its options in the right panel:
 
-- **How many events** - how many event cards to show, soonest first.
+- **How many events** - how many event cards to show, soonest first. It is 3 by default, and you can change it.
 - **Countdown to the next event** - adds a live countdown above the cards, with the name of the next event that has not started yet.
 
 The panel also tells you how many upcoming events your server has right now, so you know whether the block will show anything before you publish.

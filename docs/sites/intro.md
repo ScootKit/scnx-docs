@@ -20,6 +20,8 @@ The website builder is currently rolling out to selected servers. If you open th
 
 On that screen you can click **Notify me about Sites**. We send a confirmation email to your account address first, and once you confirm it, we email you when Sites opens up for more servers.
 
+Once Sites is on for your server, a short note at the top of the Sites screens (outside the editor) reminds you that it is in beta. Its **Send feedback** link opens our feedback page, where you can tell us what works, what doesn't and what you are missing.
+
 ## What you can build {#what-you-can-build}
 
 ![A published demo site with an announcement bar and an open dropdown menu](@site/docs/assets/sites/en/public-site.png)
@@ -112,7 +114,15 @@ If you cannot do something, you probably need a higher access level. Ask a serve
 
 ## Branding {#branding}
 
-Your site's footer always shows the required legal links. Unless your server is on our Professional plan or our Enterprise plan, the footer also shows a small "This site runs on SCNX" note. On those plans the note is hidden, so your footer is fully white-labeled.
+At the very bottom of every page, under your own footer, your site shows a small SCNX bar. It holds:
+
+- the SCNX logo with the words "This site runs on SCNX",
+- a **Platform Imprint** and a **Platform Privacy** link, with the legal details for SCNX itself,
+- a **Report this page** link, so visitors can tell us about content that breaks the rules. See [Content rules & legal](/docs/sites/content-and-legal) for what happens with a report.
+
+If you have linked your own privacy policy or imprint under [**Settings** > **Legal information**](/docs/sites/settings#legal), they appear in this bar too, above the SCNX links.
+
+The three SCNX links are on every site, on every plan. On our Professional plan and our Enterprise plan, the logo and the "This site runs on SCNX" note are hidden, so your footer carries no SCNX branding. The links stay.
 
 This follows your server's plan automatically, so there is nothing to set and nothing to republish. A plan change reaches your site within a few minutes. You can check what your site currently shows under [**Settings** > **Branding**](/docs/sites/settings#branding).
 

@@ -153,7 +153,7 @@ Your blog has an RSS feed at **`/blog/rss.xml`**. It lists your newest posts wit
 
 ## The Latest posts block {#latest-posts}
 
-To show your newest posts somewhere else, for example on your home page, add the **Latest posts** block to any page. It shows cards linking to your most recent posts, and you can set how many to show. In the editor it shows sample cards. On your site it always shows your current published posts.
+To show your newest posts somewhere else, for example on your home page, add the **Latest posts** block to any page. It shows cards linking to your most recent posts. Set how many cards to show with **How many posts** in the block's options. It shows 3 by default. In the editor it shows sample cards. On your site it always shows your current published posts.
 
 ## Your blog in the editor {#editor-preview}
 

@@ -49,6 +49,8 @@ Hier kannst du:
 - **Seitenlayout** - die **Inhaltsbreite** auf **Standard** oder **Kompakt** (eine schmale, zentrierte Spalte) stellen und **Navigation und Footer ausblenden** einschalten, um Navigationsleiste, Fußbereich und Ankündigungsleiste nur auf dieser Seite zu entfernen. Beide Einstellungen sind unabhängig voneinander. So baust du eine [Link-in-Bio-Seite](/docs/sites/small-features#link-in-bio).
 - **Seite löschen** - eine Seite samt Inhalt entfernen. Deine Startseite kann nicht gelöscht werden.
 
+Deine Startseite ist immer die Seite unter `/`, also die Seite, die Besucher sehen, wenn sie die Adresse deiner Website öffnen. Du kannst keine andere Seite zur Startseite machen. Wenn Besucher woanders landen sollen, änderst du einfach den Inhalt dieser Seite.
+
 Zieh eine Seite oder nutze die Pfeile, um die Reihenfolge zu ändern. Die Reihenfolge auf diesem Bildschirm ist die Reihenfolge deiner Seiten in der Sitemap. Dein Menü ändert sie nicht: das baust du auf dem Bildschirm [Navigation](#navigation).
 
 Die Adresse einer Seite wird beim Erstellen festgelegt und kann danach nicht mehr geändert werden. Wenn du eine andere Adresse willst, erstell eine neue Seite und lösche die alte.
@@ -130,51 +132,90 @@ Abschnitte geben dir einen ganzen Teil einer Seite auf einmal. Jede Zeile, die e
 
 ### Der Block-Katalog {#block-catalog}
 
+Die Spalte **Optionen** zeigt die Einstellungen, die du im rechten Panel findest, wenn der Block ausgewählt ist. Titel, Beschriftungen und andere Texte bearbeitest du direkt auf der Seite, deshalb stehen sie hier nicht.
+
 **Layout**
 
-| Block                 | Was er macht                                                                                                |
-| --------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Hero                  | Großes Banner mit Titel und Untertitel oben auf einer Seite.                                                |
-| Abschnittsüberschrift | Eine Überschrift, um einen neuen Abschnitt einzuleiten.                                                     |
-| Spalten               | Platziere Blöcke nebeneinander in mehreren Spalten. Auf kleinen Bildschirmen stapeln sich die Spalten.      |
-| Abstand               | Füge vertikalen Leerraum zwischen Blöcken ein.                                                              |
-| Trennlinie            | Eine horizontale Linie, um Inhalte zu trennen.                                                              |
-| Kartenraster          | Ein Raster aus Karten mit Bildern, Titeln und Links.                                                        |
-| Tabs                  | Fasse Inhalte in umschaltbaren Tabs zusammen.                                                               |
-| Akkordeon             | Aufklappbare Abschnitte. Schalte **Mehrere gleichzeitig öffnen** ein, damit mehr als einer offen sein kann. |
+| Block                 | Was er macht                                                                                           | Optionen                                                                                                                                               |
+| --------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Hero                  | Großes Banner mit Titel und Untertitel oben auf einer Seite.                                           | **Bannerbild**, **Server-Icon anzeigen** (das Icon deines Discord-Servers über dem Titel), **Ausrichtung** (links, zentriert, rechts), **Hintergrund** |
+| Abschnittsüberschrift | Eine Überschrift, um einen neuen Abschnitt einzuleiten.                                                | **Ausrichtung** (links, zentriert, rechts)                                                                                                             |
+| Spalten               | Platziere Blöcke nebeneinander in mehreren Spalten. Auf kleinen Bildschirmen stapeln sich die Spalten. | **Abstand** zwischen den Spalten: **Klein**, **Mittel** oder **Groß**                                                                                  |
+| Abstand               | Füge vertikalen Leerraum zwischen Blöcken ein.                                                         | **Höhe (px)**, standardmäßig 32                                                                                                                        |
+| Trennlinie            | Eine horizontale Linie, um Inhalte zu trennen.                                                         | **Stil** (**Durchgezogen**, **Gestrichelt**, **Gepunktet**) und **Farbe** (**Primär**, **Sekundär**, **Akzent**, **Rahmen**, **Gedämpft**)             |
+| Kartenraster          | Ein Raster aus Karten mit Bildern, Titeln und Links.                                                   | **Spalten**, und pro Karte ein **Bild** und eine **Link-URL**                                                                                          |
+| Tabs                  | Fasse Inhalte in umschaltbaren Tabs zusammen.                                                          | Keine, alles wird auf der Seite bearbeitet                                                                                                             |
+| Akkordeon             | Aufklappbare Abschnitte.                                                                               | Mit **Mehrere gleichzeitig öffnen** können mehrere Abschnitte gleichzeitig offen sein. Ist es aus, schließt das Öffnen eines Abschnitts die anderen.   |
 
 **Inhalt**
 
-| Block                                | Was er macht                                                 |
-| ------------------------------------ | ------------------------------------------------------------ |
-| Text                                 | Ein formatierter Textblock in Markdown.                      |
-| Bild                                 | Ein einzelnes Bild mit optionaler Bildunterschrift und Link. |
-| Bildergalerie                        | Zeige mehrere Bilder in einem Raster.                        |
-| Video                                | Bette ein YouTube- oder Twitch-Video ein.                    |
-| Zitat                                | Hebe ein Zitat mit optionalem Autor hervor.                  |
-| Handlungsaufruf                      | Ein Aufruf mit Buttons, der zum Handeln anregt.              |
-| Icon-Raster                          | Ein Raster aus Icons mit kurzen Beschriftungen.              |
-| Countdown                            | Ein Live-Countdown bis zu einem Datum und einer Uhrzeit.     |
-| [Formular](/docs/sites/forms)        | Ein Bewerbungs- oder Kontaktformular zum Ausfüllen.          |
-| [Neueste Beiträge](/docs/sites/blog) | Karten, die zu deinen neuesten Blog-Beiträgen führen.        |
-| [Events](/docs/sites/events)         | Kommende Discord-Events von deinem Server.                   |
+| Block                                | Was er macht                                                 | Optionen                                                                                                                |
+| ------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Text                                 | Ein formatierter Textblock in Markdown.                      | **Hintergrund**                                                                                                         |
+| Bild                                 | Ein einzelnes Bild mit optionaler Bildunterschrift und Link. | **Alternativtext** (beschreibt das Bild für Screenreader), **Link-URL**, **Breite** (Klein, Mittel, Groß, Volle Breite) |
+| Bildergalerie                        | Zeige mehrere Bilder in einem Raster.                        | **Spalten**, und pro Bild das **Bild** und sein **Alternativtext**                                                      |
+| [Video](#video)                      | Bette ein YouTube- oder Twitch-Video ein.                    | **URL**, siehe [Video](#video) unten                                                                                    |
+| Zitat                                | Hebe ein Zitat mit optionalem Autor hervor.                  | **Avatar**, ein Bild neben dem Autor                                                                                    |
+| Handlungsaufruf                      | Ein Aufruf mit Buttons, der zum Handeln anregt.              | **Buttons**, jeweils mit **Link-URL** und **Stil** (**Primär**, **Sekundär**, **Umriss**), **Hintergrund**              |
+| Icon-Raster                          | Ein Raster aus Icons mit kurzen Beschriftungen.              | **Spalten**, und pro Eintrag ein **Icon** oder ein **Bild** (siehe [Icon-Auswahl](#icon-picker))                        |
+| Countdown                            | Ein Live-Countdown bis zu einem Datum und einer Uhrzeit.     | **Zieldatum**, **Nachricht nach Ablauf** (erscheint, wenn der Countdown vorbei ist)                                     |
+| [Formular](/docs/sites/forms)        | Ein Bewerbungs- oder Kontaktformular zum Ausfüllen.          | **Formular** (welches Formular gezeigt wird), **Danke-Nachricht**                                                       |
+| [Neueste Beiträge](/docs/sites/blog) | Karten, die zu deinen neuesten Blog-Beiträgen führen.        | **Wie viele Beiträge**, standardmäßig 3                                                                                 |
+| [Events](/docs/sites/events)         | Kommende Discord-Events von deinem Server.                   | **Wie viele Events**, standardmäßig 3, und **Countdown bis zum nächsten Event**                                         |
 
 **Discord**
 
-| Block            | Was er macht                                         |
-| ---------------- | ---------------------------------------------------- |
-| Beitreten-Button | Ein Button, der Besucher auf deinen Discord einlädt. |
-| Links            | Eine Liste oder ein Raster aus Links.                |
-| Über uns         | Ein formatierter Textblock über deine Community.     |
-| Team             | Stelle deine Teammitglieder vor.                     |
-| Regeln           | Eine nummerierte oder einfache Liste von Regeln.     |
-| FAQ              | Häufige Fragen und Antworten.                        |
+| Block                            | Was er macht                                         | Optionen                                                                                                                    |
+| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| [Beitreten-Button](#join-button) | Ein Button, der Besucher auf deinen Discord einlädt. | **Stil** und **Größe**, siehe [Beitreten-Button](#join-button) unten                                                        |
+| Links                            | Eine Liste oder ein Raster aus Links.                | **Layout** (**Liste** oder **Raster**), **Icons anzeigen**, und pro Link eine **Link-URL** und ein optionales **Icon**-Bild |
+| Über uns                         | Ein formatierter Textblock über deine Community.     | Keine, alles wird auf der Seite bearbeitet                                                                                  |
+| Team                             | Stelle deine Teammitglieder vor.                     | **Layout** (**Standard** oder **Kompakt**, mit mehr Personen pro Reihe) und ein **Avatar** pro Mitglied                     |
+| Regeln                           | Eine nummerierte oder einfache Liste von Regeln.     | **Nummeriert**                                                                                                              |
+| FAQ                              | Häufige Fragen und Antworten.                        | Keine. Deine Fragen und Antworten werden der Seite außerdem als FAQ-Daten hinzugefügt, die Suchmaschinen lesen können.      |
 
 **Spalten** enthält andere Blöcke. Mit **Spalte hinzufügen** und dem Entfernen-Button änderst du die Anzahl der Spalten, mit **Block hinzufügen** in einer Spalte füllst du sie. Wenn du eine Spalte entfernst, in der noch Blöcke sind, wandern diese Blöcke in die Nachbarspalte, statt gelöscht zu werden. Ein Spalten-Block kann nicht in einem anderen Spalten-Block stecken.
 
 :::note Bilder kommen aus der Bildbibliothek deines Servers
 Bildfelder (Banner, Titelbilder, Galeriebilder, Avatare) nutzen die bestehende Bildbibliothek deines Servers, dieselbe, die auch dein Bot verwendet. Ein Bildlink von irgendwo anders wird beim Speichern abgelehnt, und der Editor warnt dich vorher. Wähle stattdessen ein Bild aus der Bibliothek.
 :::
+
+### Video {#video}
+
+Der Block **Video** spielt ein YouTube- oder Twitch-Video direkt auf deiner Seite ab. Dafür braucht er den **Embed-Link** des Videos: eine besondere Adresse, die dir die Videoseite gibt, damit du ein Video auf einer anderen Website zeigen kannst. Der normale Link aus der Adressleiste deines Browsers funktioniert hier nicht.
+
+Das Feld **URL** nimmt diese Formate an:
+
+| Video von                                      | So sieht der Link aus                                |
+| ---------------------------------------------- | ---------------------------------------------------- |
+| YouTube                                        | `https://www.youtube.com/embed/dQw4w9WgXcQ`          |
+| YouTube ohne Cookies (erweiterter Datenschutz) | `https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ` |
+| Ein Twitch-Kanal                               | `https://player.twitch.tv/?channel=deinkanal`        |
+| Ein Twitch-Video (ein vergangener Stream)      | `https://player.twitch.tv/?video=1234567890`         |
+
+Ein YouTube-Embed-Link kann hinter der Video-ID auch YouTubes eigene Zusätze tragen, zum Beispiel `?start=30`, damit das Video bei Sekunde 30 startet.
+
+Normale YouTube-Links wie `https://www.youtube.com/watch?v=dQw4w9WgXcQ` oder `https://youtu.be/dQw4w9WgXcQ` und normale Twitch-Links wie `https://www.twitch.tv/deinkanal` werden nicht angenommen. Fügst du so einen ein, zeigt der Editor eine Warnung unter dem Feld, und die Seite wird erst gespeichert, wenn du ihn ersetzt.
+
+So bekommst du den Embed-Link:
+
+- **YouTube** - öffne das Video, klick auf **Teilen** und dann auf **Einbetten**. Kopiere aus dem Code, der erscheint, nur die Adresse in `src="..."`. Du kannst ihn auch selbst bauen: Nimm die Video-ID (den Teil nach `watch?v=` oder nach `youtu.be/`) und setz sie hinter `https://www.youtube.com/embed/`.
+- **Twitch** - für einen Kanal setzt du den Kanalnamen hinter `https://player.twitch.tv/?channel=`. Für ein vergangenes Video setzt du die Nummer aus der Adresse des Videos (`twitch.tv/videos/1234567890`) hinter `https://player.twitch.tv/?video=`.
+
+Im Editor zeigt der Block einen Platzhalter statt des echten Videos. Das Video selbst läuft in der [Vorschau](#preview) und auf deiner Live-Website.
+
+### Beitreten-Button {#join-button}
+
+Der **Beitreten-Button** schickt Besucher direkt auf deinen Discord-Server. Du musst keinen Einladungslink einfügen: Wenn ein Besucher auf den Button klickt, erstellt der Bot deines Servers eine Einladung für ihn. Hast du einen Kanal für deinen [dcserver.link](/docs/scnx/guilds/dcserver-link#invites) festgelegt, führt die Einladung in diesen Kanal. Sonst wählt der Bot selbst einen Kanal. Einladungen, die so entstehen, laufen nach ein paar Stunden ab, und bei Bedarf wird eine neue erstellt. Der Button zeigt also nie auf eine alte Einladung.
+
+Damit das klappt, muss dein Bot auf deinem Server sein und Einladungen erstellen dürfen. Der Button funktioniert nur auf deiner veröffentlichten Website. Im Editor passiert beim Klick nichts.
+
+Den Button-Text bearbeitest du direkt auf der Seite. Lässt du ihn leer, sehen Besucher **Server beitreten** in der Sprache deiner Website. Im rechten Panel kannst du einstellen:
+
+- **Stil** - **Primär**, **Sekundär** oder **Umriss**.
+- **Größe** - **Klein**, **Mittel** oder **Groß**.
+
+Kann keine Einladung erstellt werden, zum Beispiel weil der Bot offline ist, nicht auf deinem Server ist oder keine Einladungen erstellen darf, sehen Besucher unter dem Button den Hinweis, dass die Einladung nicht geladen werden konnte, mit der Bitte, es erneut zu versuchen. Der Rest der Seite ist davon nicht betroffen.
 
 ### Icon-Auswahl {#icon-picker}
 
@@ -225,8 +266,10 @@ Die Blöcke Hero, Text und Handlungsaufruf haben im rechten Panel eine Option **
 
 Öffne **Footer & Leiste** in der linken Leiste für die Teile, die alle Seiten gemeinsam haben:
 
-- **Fußzeile** - **Social-Links** (Plattform wählen und Adresse einfügen) und zusätzliche **Fußzeilen-Links**, unten auf jeder Seite. Änderungen an der Fußzeile gehen mit deiner nächsten Veröffentlichung live.
+- **Fußzeile** - **Social-Links** (Plattform wählen und Adresse einfügen) und zusätzliche **Fußzeilen-Links**, unten auf jeder Seite. Du kannst die Plattformen **Discord**, **Twitter**, **YouTube**, **Twitch**, **Instagram**, **TikTok**, **GitHub** und **Website** wählen, und jede erscheint als ihr Icon. Nur Links, die mit `https://` oder `http://` beginnen, erscheinen auf deiner Website. Änderungen an der Fußzeile gehen mit deiner nächsten Veröffentlichung live.
 - **Ankündigungsleiste** - ein Streifen über deiner Navigation für eine kurze Nachricht. Anders als fast alles andere geht sie von selbst live, ohne dass du deine Website neu veröffentlichst. Siehe [Ankündigungsleiste](/docs/sites/small-features#announcement-bar).
+
+Unter deinem Footer zeigt jede Website außerdem eine kleine SCNX-Leiste mit ein paar festen Links. Siehe [Branding](/docs/sites/intro#branding).
 
 Der Website-Name, Suche & Teilen, die rechtlichen Angaben und die übrigen Website-Einstellungen findest du auf dem Bildschirm **Einstellungen**.
 
