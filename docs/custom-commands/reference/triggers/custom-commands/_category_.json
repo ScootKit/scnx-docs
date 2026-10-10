@@ -1,0 +1,9 @@
+{
+  "label": "Custom commands",
+  "key": "ccv3-reference-triggers-custom-commands",
+  "position": 4,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}

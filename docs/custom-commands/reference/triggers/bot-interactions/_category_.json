@@ -1,0 +1,9 @@
+{
+  "label": "Bot interactions",
+  "key": "ccv3-reference-triggers-bot-interactions",
+  "position": 1,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}

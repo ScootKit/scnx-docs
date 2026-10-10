@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 5
 title: MCP Connector
 description: Verbinde Claude oder ChatGPT mit SCNX, um Custom-Commands-v3-Flows für deinen Discord-Server zu erstellen, zu validieren, zu simulieren und zu debuggen.
 ---

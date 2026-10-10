@@ -27,7 +27,7 @@ be able to use their own set of features:
 - [Enhanced Security](/docs/scnx/guilds/enhanced-security): Require two-factor authentication for all configuration changes on your server.
 - [Guild Image Storage](/docs/scnx/guilds/files): Upload, organize, and reuse images across your bot configurations.
 - [Server Analytics](/docs/scnx/guilds/analytics): See how active your server is, how members come and go, and which channels and members are busiest.
-- [MCP Connector](/docs/scnx/guilds/mcp): Connect Claude or ChatGPT to author, validate, simulate and debug Custom Commands v3 flows for your server.
+- [MCP Connector](/docs/custom-commands/mcp): Connect Claude or ChatGPT to author, validate, simulate and debug Custom Commands v3 flows for your server.
 
 To learn more about prices, subscriptions and plans on SCNX, visit
 the [Subscriptions & Plans documentation](/docs/scnx/guilds/plans). Additionally, we've added a

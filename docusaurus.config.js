@@ -176,6 +176,12 @@ const config = {
                         position: 'left',
                         label: 'Linked Roles'
                     },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'customCommandsSidebar',
+                        position: 'left',
+                        label: 'CCV3 (beta)'
+                    },
                     {to: 'blog', label: 'News', position: 'right'},
                     {
                         type: 'localeDropdown',

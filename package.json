@@ -14,7 +14,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations --locale de",
     "fix-tables": "npx markdown-table-formatter \"docs/**/*.{md,mdx}\"",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "generate:ccv3-reference": "node bin/generate-ccv3-reference.js"
   },
   "dependencies": {
     "@babel/runtime": "^7.25.0",
