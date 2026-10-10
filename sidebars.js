@@ -458,6 +458,21 @@ const sidebars = {
                 },
                 {
                     type: 'doc',
+                    label: 'Settings',
+                    id: 'sites/settings'
+                },
+                {
+                    type: 'doc',
+                    label: 'Analytics',
+                    id: 'sites/analytics'
+                },
+                {
+                    type: 'doc',
+                    label: 'Content rules & legal',
+                    id: 'sites/content-and-legal'
+                },
+                {
+                    type: 'doc',
                     label: 'Publishing & going live',
                     id: 'sites/publishing'
                 }

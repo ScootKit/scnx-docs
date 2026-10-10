@@ -22,7 +22,9 @@ Sende eine Nachricht in einen Kanal, wenn ein neuer Inhalt in einem RSS- oder At
 
 Nachdem du dieses Modul [eingerichtet](#setup) und [konfiguriert](#configuration) hast, sind keine weiteren Aktionen nötig. Der Bot prüft die konfigurierten Feeds automatisch alle fünfzehn Minuten auf neue Einträge. Wird ein neuer Eintrag gefunden, wird die konfigurierte Benachrichtigungsnachricht in den angegebenen Discord-Kanal gesendet.
 
-Nur Einträge, die innerhalb der letzten zwanzig Minuten veröffentlicht wurden, lösen Benachrichtigungen aus. Ältere Einträge werden also nicht rückwirkend gesendet.
+Nur Einträge, die innerhalb der letzten dreißig Minuten veröffentlicht wurden, lösen Benachrichtigungen aus. Ältere Einträge werden also nicht rückwirkend gesendet.
+
+Feeds werden von SCNX-Servern und nicht von deinem Bot abgerufen, und Ergebnisse können einige Minuten alt sein, weil SCNX sie zwischenspeichert. Ein Feed, der nur aus einem privaten Netzwerk erreichbar ist, funktioniert nicht. Anbieter können uns bitten, ihren Feed nicht mehr abzurufen. Hat ein Anbieter widersprochen, kann der Feed nicht geprüft werden und eine Warnung in das Log deines Bots geschrieben.
 
 ## Konfiguration {#configuration}
 
@@ -42,7 +44,8 @@ Bei jedem Durchlauf werden nur die 10 neuesten Einträge eines Feeds geprüft, u
 <summary>Benachrichtigungen werden nicht gesendet</summary>
 <ul>
     <li>Stelle sicher, dass die Feed-URL eine gültige RSS- oder Atom-Feed-URL ist.</li>
-    <li>Prüfe, dass der Feed öffentlich erreichbar ist und gültiges XML zurückgibt.</li>
+    <li>Prüfe, dass der Feed öffentlich aus dem Internet erreichbar ist und gültiges XML zurückgibt. Feeds hinter einem Login oder in einem privaten Netzwerk können nicht abgerufen werden.</li>
+    <li>Manche Anbieter blockieren Anfragen aus Rechenzentren. Funktioniert dein Feed in deinem Browser, aber hier nicht, blockiert der Anbieter möglicherweise SCNX-Server.</li>
     <li>Stelle sicher, dass der Bot im Benachrichtigungskanal die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Links einbetten" hat.</li>
     <li>Das Modul prüft alle fünfzehn Minuten auf neue Einträge. Bitte warte auf den nächsten Prüfdurchlauf.</li>
     <li>Beachte, dass Feeds normalisiert werden. Das bedeutet, dass nicht für jeden Feed alle Werte verfügbar sind.</li>

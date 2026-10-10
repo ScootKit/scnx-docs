@@ -193,6 +193,7 @@ Konfiguriere die allgemeinen Einstellungen des Anti-Nuke-Systems. Öffne sie in 
 | Feld                                 | Beschreibung                                                                                                                                               |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Log-Kanal                            | Kanal, in den Anti-Nuke-Warnungen und Ereignisprotokolle gesendet werden.                                                                                  |
+| Rollen für Warn-Pings                | Rollen, die gepingt werden, wenn eine Anti-Nuke-Warnung im Log-Kanal gepostet wird.                                                                        |
 | Antwortaktion                        | Was bei einer Nuke-Erkennung geschehen soll: **Nur benachrichtigen**, **Alle Rollen entfernen**, **Bannen** oder **Gefährliche Berechtigungen entfernen**. |
 | Ausgenommene Benutzer                | Nutzer, die vollständig von der Anti-Nuke-Erkennung ausgenommen sind.                                                                                      |
 | Snapshot-Aufbewahrung (Tage)         | Wie lange Ressourcen-Snapshots für die Wiederherstellung aufbewahrt werden (Standard: 30 Tage).                                                            |

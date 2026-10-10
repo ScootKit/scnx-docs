@@ -1,8 +1,7 @@
 ---
-sidebar_position: 8
+sidebar_position: 11
 title: Veröffentlichen & Live gehen
-description: Wie das Veröffentlichen bei SCNX Sites funktioniert - Entwürfe, das Snapshot-Modell, Versionsverlauf und Rollback sowie der Wartungsmodus.
-unlisted: true
+description: Wie das Veröffentlichen bei SCNX Sites funktioniert - Entwürfe, das Veröffentlichen-Popover, was eine Veröffentlichung braucht und was live ist, Vorschau, Versionsverlauf und Zurücksetzen, Wartungsmodus und das Löschen einer Website.
 ---
 
 # Veröffentlichen & Live gehen
@@ -15,54 +14,92 @@ Deine Website hat zwei Zustände: den **Entwurf**, den du bearbeitest, und die *
 
 ## Entwurf vs. veröffentlicht {#draft-vs-published}
 
-Alles, was du im Editor tust, ändert deinen **Entwurf**. Der Entwurf ist privat: nur Leute mit Zugriff auf die Website sehen ihn. Besucher sehen weiter die zuletzt veröffentlichte Version.
+Alles, was du im Editor, auf den Seiten **Seiten** und **Navigation** und in einigen Karten der **Einstellungen** änderst, landet in deinem **Entwurf**. Der Entwurf ist privat: Nur Leute mit Zugriff auf die Website sehen ihn. Besucher sehen weiter die zuletzt veröffentlichte Version.
 
-Wenn du mit deinem Entwurf zufrieden bist, klick auf **Publish**. Das Publish-Popover zeigt, was live geht:
+Bis du zum ersten Mal veröffentlichst, ist deine Website ein Entwurf und gar nicht öffentlich. Unter ihrer Adresse ist noch nichts zu sehen, und die [Statistiken](/docs/sites/analytics) zählen noch keine Aufrufe.
 
-- eine Liste der Seiten, die sich seit deiner letzten Veröffentlichung geändert haben, markiert als **New**, **Changed** oder **Removed**,
-- ob sich deine **Website-Einstellungen** geändert haben.
+## Veröffentlichen {#publish}
 
-Hat sich nichts geändert, steht auf dem Button "Published" und es gibt nichts zu tun. Seiten können auch nach einer Design-Änderung oder einem Plattform-Update in dieser Liste auftauchen, oder wenn du sie umsortierst, nicht nur wenn du ihren Text bearbeitest.
+![Das Veröffentlichen-Popover mit den geänderten Seiten und Einstellungen](@site/docs/assets/sites/de/publish-popover.png)
 
-Bis du je veröffentlicht hast, ist deine Website ein Entwurf und gar nicht öffentlich.
+Du veröffentlichst im Editor. Klick oben in der Leiste auf **Veröffentlichen**, um das Veröffentlichen-Popover zu öffnen. Dafür brauchst du Bearbeitungszugriff auf die Website. Beim Öffnen speichert das Popover zuerst alles, was noch offen ist, und zeigt dir dann, was live geht:
 
-## Das Snapshot-Modell {#snapshot}
+- eine Liste der Seiten, die sich seit deiner letzten Veröffentlichung geändert haben, markiert als **Neu**, **Geändert** oder **Entfernt**,
+- eine Zeile **Website-Einstellungen**, wenn sich deine websiteweiten Einstellungen geändert haben (zum Beispiel Design, Menü, Footer, Website-Name oder Bild beim Teilen).
 
-Wenn du veröffentlichst, wird dein Seitenlayout **snapshottet**: die genauen Seiten, Blöcke, Texte und das Design in diesem Moment werden eingefroren und als deine Live-Website ausgeliefert. Den Entwurf danach zu bearbeiten berührt den Live-Snapshot nicht, bis du erneut veröffentlichst. So bleibt deine Live-Website stabil, während du an der nächsten Version arbeitest.
+Prüf die Liste und klick dann unten im Popover auf **Veröffentlichen**. Eine zweite "Bist du sicher?"-Abfrage gibt es nicht: Das Popover ist die Bestätigung.
 
-Manche Dinge sind aber bewusst **live** und aktualisieren sich sofort, ohne Veröffentlichung:
+Ein paar weitere Dinge, die du im Popover sehen kannst:
 
-| Snapshottet (braucht eine Veröffentlichung)      | Live (aktualisiert sofort)                                            |
-| ------------------------------------------------ | --------------------------------------------------------------------- |
-| Seiten, Blöcke und ihr Text                      | [Blog-Beiträge](/docs/sites/blog)                                     |
-| Design, Theme und Seitenlayout                   | [Formulare](/docs/sites/forms) und ihre Antworten                     |
-| Website-Einstellungen, Navigation und Fußbereich | [Events](/docs/sites/events)                                          |
-|                                                  | [Weiterleitungen](/docs/sites/small-features#redirects)               |
-|                                                  | [Die Ankündigungsleiste](/docs/sites/small-features#announcement-bar) |
+- **Zuletzt veröffentlicht am** mit dem Datum, und einen Link **Live-Website öffnen**, sobald deine Website live ist.
+- Hat sich nichts geändert, steht auf dem Button in der Leiste **Veröffentlicht**, das Popover sagt **Alles ist veröffentlicht.** und es gibt nichts zu tun.
+- Seiten können als **Geändert** auftauchen, ohne dass du ihren Text bearbeitet hast, zum Beispiel nach einem Design- oder Plattform-Update oder wenn du Seiten umsortierst. Das ist normal.
+- Brauchen manche Blöcke noch Angaben, sagt dir das Popover, wie viele. Füll sie zuerst aus. Die betroffenen Blöcke sind im Editor markiert.
+- Konnten deine letzten Änderungen nicht alle gespeichert werden, warnt dich das Popover: Dann geht dein zuletzt gespeicherter Entwurf live, und die offenen Änderungen bleiben im Editor.
+- Hat deine Website ein Formular, aber keine verlinkte Datenschutzerklärung, bekommst du einen Hinweis mit einem Link, um das zu beheben. Er hält dich nicht vom Veröffentlichen ab. Mehr dazu unter [Formulare](/docs/sites/forms).
 
-Die Idee ist einfach: dein Seitenlayout bleibt unter deiner Kontrolle und ändert sich nur, wenn du veröffentlichst, während Neuigkeiten, Formulare, Events und kurze Hinweise Dinge sind, die du sofort erwartest.
+## Was eine Veröffentlichung braucht und was live ist {#snapshot}
+
+Wenn du veröffentlichst, wird ein **Snapshot** deiner Website erstellt: Die genauen Seiten, Blöcke, Texte, das Design und die websiteweiten Einstellungen in diesem Moment werden eingefroren und als deine Live-Website ausgeliefert. Den Entwurf danach zu bearbeiten berührt die Live-Version nicht, bis du erneut veröffentlichst. So bleibt deine Live-Website stabil, während du an der nächsten Version arbeitest.
+
+Manche Dinge sind aber bewusst **live**. Sie erreichen Besucher, sobald du sie speicherst, ohne Veröffentlichung:
+
+| Braucht eine Veröffentlichung                                            | Live (aktualisiert sofort)                                                                                                                 |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Seiten, Blöcke und ihr Text                                              | [Blog-Beiträge](/docs/sites/blog) (jeder Beitrag geht live, wenn du den Beitrag selbst veröffentlichst oder zu seinem geplanten Zeitpunkt) |
+| Der **Formular**-Block auf einer Seite, inklusive Button- und Danke-Text | Die Anzeige-Einstellungen deines Blogs auf der Seite **Blog**                                                                              |
+| Design und Theme                                                         | [Formulare](/docs/sites/forms) und ihre Antworten, **Bot-Schutz** und **Rechtliche Angaben**                                               |
+| Das Navigationsmenü und der Footer                                       | [Events](/docs/sites/events)                                                                                                               |
+| [Seitenlayout](/docs/sites/small-features#link-in-bio)-Einstellungen     | [Weiterleitungen](/docs/sites/small-features#redirects)                                                                                    |
+| Website-Name, Beschreibung, Sprache und Favicon                          | [Die Ankündigungsleiste](/docs/sites/small-features#announcement-bar)                                                                      |
+| Titel, Beschreibung und Bild beim Teilen                                 | [Wartungsmodus](#maintenance)                                                                                                              |
+|                                                                          | Der Schalter für das [erzeugte Vorschaubild](/docs/sites/settings#sharing)                                                                 |
+|                                                                          | Deine [Adress-Endung und eigenen Domains](/docs/sites/custom-domains)                                                                      |
+|                                                                          | Das "Diese Website läuft auf SCNX"-[Zeile](/docs/sites/settings#branding), das sich nach dem Tarif deines Servers richtet                  |
+
+Die Idee ist einfach: Wie deine Seiten aussehen, bleibt unter deiner Kontrolle und ändert sich nur, wenn du veröffentlichst. Neuigkeiten, Formulare, Events, kurze Hinweise und deine Adressen sind Dinge, die du sofort erwartest.
+
+:::tip Einstellungen und der Veröffentlichen-Button
+Die Karten **Allgemein** und **Suche & Teilen** auf der Seite **Einstellungen** haben ihren eigenen **Speichern**-Button, aber das Speichern dort aktualisiert nur deinen Entwurf. Dein neuer Website-Name, deine Beschreibung, Sprache, dein Favicon oder deine Texte beim Teilen erreichen Besucher mit deiner nächsten Veröffentlichung, und das Veröffentlichen-Popover listet sie als **Website-Einstellungen**. Der Schalter für das Vorschaubild in derselben Karte ist die Ausnahme: Er ist live.
+:::
 
 ## Vorschau vor dem Veröffentlichen {#preview}
 
-Nutze den **Preview**-Button, um deinen aktuellen Entwurf über einen privaten Link in einem neuen Tab zu öffnen, bevor er öffentlich ist. Diesen Link kannst du für eine zweite Meinung mit einem Teammitglied teilen. Du kannst den Vorschaulink in den Website-Einstellungen zurücksetzen, wodurch alle zuvor geteilten Links nicht mehr funktionieren.
+Klick oben in der Leiste des Editors auf **Vorschau**, um deinen aktuellen Entwurf in einem neuen Tab zu öffnen, genau so, wie Besucher ihn nach dem Veröffentlichen sehen. Die Vorschau läuft über einen privaten Vorschau-Link. Sie funktioniert also, bevor deine Website öffentlich ist, und auch, während der [Wartungsmodus](#maintenance) aktiv ist.
 
-## Versionsverlauf und Rollback {#versions}
+Um den Entwurf mit einem Teammitglied zu teilen, öffne das Veröffentlichen-Popover und klick auf **Vorschau-Link kopieren**. Jeder mit diesem Link kann deinen Entwurf sehen, teil ihn also nur mit Leuten, denen du vertraust.
 
-Jedes Mal, wenn du veröffentlichst, wird diese Version aufbewahrt. Öffne das Publish-Popover, um deinen **Versionsverlauf** zu sehen. Die aktuelle Live-Version ist als **Live** markiert.
+Ist ein Vorschau-Link irgendwo gelandet, wo er nicht hingehört, klick im Veröffentlichen-Popover auf **Link zurücksetzen**. Damit entsteht ein neuer Vorschau-Link, und alle vorher geteilten Links funktionieren nicht mehr. Zum Zurücksetzen brauchst du Admin-Zugriff.
 
-Hat eine Veröffentlichung ein Problem gebracht, wähle **Roll back** bei einer früheren Version, um sie wieder live zu schalten. Die neuesten Versionen werden aufbewahrt (die letzten zehn), sodass du immer einen Weg zurück zu einem funktionierenden Stand hast.
+## Versionsverlauf und Zurücksetzen {#versions}
+
+Jedes Mal, wenn du veröffentlichst, wird diese Version aufbewahrt. Öffne das Veröffentlichen-Popover und klapp **Versionsverlauf** auf, um deine veröffentlichten Versionen nach Datum zu sehen. Die aktuelle Live-Version ist als **Live** markiert. Wer nur ansehen darf, sieht statt **Veröffentlichen** einen Button **Versionsverlauf** und kann sich den Verlauf so ebenfalls ansehen.
+
+Hat eine Veröffentlichung ein Problem gebracht, klick bei einer früheren Version auf **Zurücksetzen** und bestätige. Diese Version ist dann sofort wieder deine Live-Website. Zum Zurücksetzen brauchst du Admin-Zugriff.
+
+Das Zurücksetzen ändert nur, was Besucher sehen. Dein Entwurf bleibt, wie er ist, deine nächste Veröffentlichung macht also wieder den Entwurf live. Deine letzten zehn Versionen werden aufbewahrt, sodass du immer einen Weg zurück zu einem funktionierenden Stand hast.
 
 ## Wartungsmodus {#maintenance}
 
-Der Wartungsmodus ersetzt deine ganze Website vorübergehend durch einen kurzen Hinweis, ohne etwas zu depublizieren. Nutze ihn, während du größere Änderungen machst.
+Der Wartungsmodus ersetzt deine ganze Website vorübergehend durch einen kurzen Hinweis, ohne etwas zurückzuziehen. Nutze ihn, während du größere Änderungen machst.
 
-Öffne den Bereich **Site** und finde **Maintenance mode**:
+Öffne **Einstellungen** im Sites-Menü und finde die Karte **Wartungsmodus**:
 
-- Schalte **Enable maintenance mode** ein.
-- Schreib die **Maintenance message**, die Besucher sehen sollen.
+- Schalte **Wartungsmodus aktivieren** ein.
+- Schreib die **Wartungsnachricht**, die Besucher sehen sollen.
+- Klick auf **Speichern**.
 
-Solange der Wartungsmodus an ist, sehen Besucher nur deinen Wartungshinweis. Die [Ankündigungsleiste](/docs/sites/small-features#announcement-bar) wird dort nicht gezeigt. Schalte ihn wieder aus, um deine Website genau so zurückzubringen, wie sie war.
+Der Wartungsmodus ist live: Er wirkt, sobald du speicherst, ohne Veröffentlichung. Solange er aktiv ist:
+
+- sehen Besucher auf jeder Seite nur deinen Wartungshinweis,
+- wird die [Ankündigungsleiste](/docs/sites/small-features#announcement-bar) nicht angezeigt,
+- sind dein Blog, deine Events und deine Weiterleitungen nicht erreichbar, und Formulare nehmen keine Antworten an,
+- zeigt deine [Vorschau](#preview) weiter die ganze Website, sodass du deine Arbeit prüfen kannst.
+
+Schalte ihn aus und speichere erneut, um deine Website genau so zurückzubringen, wie sie war. Deine Nachricht bleibt für das nächste Mal erhalten.
 
 ## Eine Website löschen {#delete}
 
-Eine Website zu löschen ist endgültig und braucht die Website-Admin-Berechtigung. Es entfernt alles: jede Seite, deine eigenen Domains, deine veröffentlichten Versionen, deine Weiterleitungen, deine Blog-Beiträge, deine Besuchsstatistiken und jedes Formular samt aller Antworten, die man dir geschickt hat. Nichts davon lässt sich zurückholen, deshalb wirst du gebeten, zur Bestätigung die Adresse deiner Website einzutippen.
+Das findest du ganz unten auf der Seite **Einstellungen**, in der Karte **Gefahrenzone**. Zum Löschen einer Website brauchst du Admin-Zugriff.
+
+Klick auf **Website löschen** und gib zur Bestätigung die Adresse deiner Website ein. Das Löschen ist endgültig und entfernt alles: alle deine Seiten, eigenen Domains und veröffentlichten Versionen, deine Weiterleitungen, deine Blog-Beiträge, deine Besuchsstatistik und jedes Formular samt aller Antworten, die man dir geschickt hat. Nichts davon lässt sich wiederherstellen.

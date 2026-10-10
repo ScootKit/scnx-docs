@@ -21,6 +21,7 @@ Advanced security and moderation system with tons of features for keeping your s
 - Automated punishments based on warning count (e.g., auto-ban after X warns).
 - A fully configurable, [per-type anti-spam](#anti-spam) system - message rate, duplicate content, mentions, mass mentions, attachment/image spam, link spam, newline/character floods, sticker/emoji spam, channel spread, and text abuse - each with its own toggle, threshold, timeframe, and action.
 - [New-member restrictions](#new-member-restrictions) that hold back attachments and links until a member has been on the server long enough.
+- [Honeypot](#honeypot) channels that automatically punish anyone who posts in them, which catches spam bots and compromised accounts without any detection rules.
 - [Anti-Join-Raid](#anti-join-raid) system detecting mass joins.
 - [Join Gate](#join-gate) to block suspicious accounts based on account age and profile picture.
 - [Anti-Grief](#anti-grief) system to quarantine moderators who abuse their permissions.
@@ -322,11 +323,58 @@ These settings live in the [Anti-Spam configuration](https://scnx.app/glink?page
 | Action                           | Action for repeat violations; "inherit" uses the global anti-spam action.                                          |
 | Action duration (only mute/ban)  | Duration for a mute or ban; leave empty for the default duration.                                                  |
 
+### Honeypot {#honeypot}
+
+In this configuration file, you set up honeypot channels. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=moderation%7Cconfigs/honeypot).
+
+A honeypot is a channel that real members avoid but spam bots and compromised accounts post in anyway. Anyone who posts in a honeypot channel is punished automatically with a warn, mute, kick, or ban, and optionally has the message deleted. The punishment is a normal moderation case, so the case, the log entry, and the DM to the member come from the regular moderation system. Honeypot hits also count as an auto-moderation trigger in your server's analytics.
+
+:::warning Keep the channel visible and writable for everyone
+Members can only trigger the honeypot by posting, so the channel must stay visible and writable for everyone. A member cannot post in a channel they cannot see. Give the channel an obvious name and topic such as "do not post here", and place it at the top or bottom of your channel list, so real members avoid it while spam bots post in every channel they find.
+:::
+
+| Field                       | Description                                                                                                                         |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Enabled?                    | Enable or disable the honeypot system.                                                                                              |
+| Honeypot channels           | The channels that act as honeypots. Anyone who posts in them is punished.                                                           |
+| Delete the message          | Delete the message that was posted in the honeypot channel. Enabled by default.                                                     |
+| Action                      | What happens to a member who posts in a honeypot channel: warn, mute, kick, or ban. Mute is the default.                            |
+| Mute duration               | Only used when the action is "Mute member". Duration of the mute (e.g. 1h, 7d); leave empty for the default mute duration.          |
+| Only punish new members     | If enabled, only members who joined recently are punished; everyone else is ignored.                                                |
+| New member age              | Members who joined less than this long ago (e.g. 1d, 7d) count as new members. Defaults to 7d.                                      |
+| Ignored roles               | Members with one of these roles are never punished.                                                                                 |
+| Ignored users               | These users are never punished.                                                                                                     |
+| Keep a notice at the bottom | Keep a warning message as the latest message in each honeypot channel, so real members see it before they post. Enabled by default. |
+| Notice message              | Message that is kept at the bottom of every honeypot channel. Supports embeds.                                                      |
+
+#### Who is punished {#honeypot-scope}
+
+By default, every member who posts in a honeypot channel is punished. With **Only punish new members**, only members who joined within the **New member age** are punished and everyone else is ignored. The following are never punished:
+
+- Members with one of the **Ignored roles** and the **Ignored users**.
+- Moderators whose [moderation level](#configuration-modlevels) grants "Bypass automod".
+- Bot accounts, webhooks, and system messages.
+- Members the bot cannot punish with the chosen action, such as the server owner or members with a higher role than the bot (for mute, kick, and ban).
+
+To avoid punishing the same member several times in a burst of messages, a member is punished at most once every 10 seconds. Further messages in that window are still deleted when **Delete the message** is enabled.
+
+#### Notice message {#honeypot-notice}
+
+With **Keep a notice at the bottom** enabled, the bot keeps the **Notice message** as the latest message in every honeypot channel. After someone posts there, the notice is posted again at the bottom (at most once every 5 seconds per channel), and when you change the text, the notice is updated after the configuration reloads. The notice is protected, so auto-delete features never remove it.
+
+The bot needs these permissions in each honeypot channel:
+
+- View Channel
+- Read Message History, Send Messages, and Embed Links, to keep the notice
+- Manage Messages, when **Delete the message** is enabled
+
 ### Log Messages {#configuration-logmessages}
 
 In this configuration file, you customize the case-log messages posted to your moderation log channel and, optionally, a public log channel. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=moderation%7Cconfigs/logMessages).
 
 Each action type has its own editable embed template, opened with the full embed editor: **Mute**, **Unmute**, **Quarantine**, **Unquarantine**, **Kick**, **Ban**, **Warn**, **Channel-mute**, **Channel-unmute**, **Unwarn**, and **Unban log message**. The embed color is always set automatically (yellow for temporary, green for reversals, red for base actions) and overrides any color in the template; the expiry, proof, and channel fields are appended automatically when they apply.
+
+The exact duration you entered is shown in the case log, so a seven-day mute reads as seven days instead of a value recalculated from its expiry date. If your template already shows the expiry via `%expires%` or `%duration%`, disable **Append expiry automatically** to hide the automatic "Action expires on" field. Templates without an embed (plain text) are posted as written instead of being replaced by the default embed.
 
 Templates support these placeholders:
 
@@ -494,6 +542,8 @@ In this configuration file, you can customize all messages sent by the module. O
 - **The quarantine command does not work**: Ensure the quarantine role is configured and that the bot's role is above the quarantine role in the role hierarchy. The bot needs "Manage Roles" permission.
 - **Bans/kicks fail**: The bot needs "Ban Members" and "Kick Members" permissions. The bot's highest role must also be above the target user's highest role.
 - **Anti-spam is not detecting spam**: Verify that anti-spam is enabled overall, that the specific detector you expect (for example Link Spam or Text Abuse) is turned on, and that the channel is not whitelisted. Also check that the user's role is not whitelisted or granted "Bypass automod".
+- **The honeypot does not punish anyone**: Check that the honeypot is enabled and the channel is listed under **Honeypot channels**. Members with an ignored role, an ignored user entry, or "Bypass automod" are exempt, and with **Only punish new members** enabled, long-standing members are ignored too. The bot cannot punish members above its own role, including the owner. A member is punished at most once every 10 seconds.
+- **The honeypot notice does not appear or the message is not deleted**: The bot needs View Channel, Read Message History, Send Messages, and Embed Links in the channel to keep the notice, and Manage Messages to delete posts. See [Honeypot](#honeypot-notice).
 - **Invite/scam link detection is not working**: Ensure the "Action on invite" or "Action on Scam-Link" is set to something other than "none". Check that the channel is not whitelisted.
 - **Verification DMs fail**: Some users have DMs disabled. If you set up a "Restart Verification-Channel", users can retry their verification after enabling DMs.
 - **Lockdown command is not available**: The lockdown system must be enabled in the [Lockdown Configuration](#configuration-lockdown) before the `/moderate lockdown` command appears.
@@ -518,6 +568,12 @@ The following data is stored for user notes:
 
 - The user ID
 - All notes (including note content, author ID, and timestamps)
+- Metadata about the entry (date when created and last updated)
+
+The following data is stored for honeypot notices:
+
+- The channel ID and the ID of the notice message the bot keeps there
+- A hash of the notice text, to detect changes
 - Metadata about the entry (date when created and last updated)
 
 The following data is stored for lockdown state:

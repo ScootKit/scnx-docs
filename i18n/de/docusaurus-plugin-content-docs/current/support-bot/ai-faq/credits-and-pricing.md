@@ -30,15 +30,9 @@ Jede KI-Antwort kostet eine kleine Menge Credits. Die genauen Kosten hängen dav
 - **Smalltalk oder Off-Topic-Geplauder** kostet **3 Credits**. Das passiert, wenn die KI ein kurzes „Danke" oder „Hi" beantwortet hat, ohne deine FAQ zu durchsuchen.
 - **Echte FAQ-Antwort** kostet **15 Credits**. Das ist der häufigste Fall: Die KI hat deine FAQ-Einträge durchsucht, den passenden Eintrag (oder mehrere) gefunden und darauf basierend eine Antwort geschrieben.
 
-### Anbieter-Multiplikator {#provider}
+### KI-Anbieter {#provider}
 
-Die obigen Werte gelten für den Anbieter OpenAI, der am günstigsten ist. Ist dein Server auf einen anderen Anbieter eingestellt, werden die Kosten pro Antwort multipliziert:
-
-- **OpenAI** - Basispreis (1×)
-- **Google Gemini** - 2× der Basispreis
-- **Anthropic** - 3× der Basispreis
-
-Eine echte FAQ-Antwort beim Anbieter Anthropic kostet also 45 Credits. Deinen aktuellen Anbieter siehst du unter **KI-Einstellungen → Status** auf der AI-FAQ-Seite, zusammen mit der Anzahl an Antworten, die dein aktuelles Guthaben zum Preis des aktuellen Anbieters abdeckt.
+Die Wahl eines anderen KI-Anbieters ist derzeit pausiert. Jeder Server nutzt den Standard-Anbieter und zahlt die Preise oben. Im Panel **KI-Einstellungen → Status** auf der AI-FAQ-Seite siehst du, wie viele Antworten dein aktuelles Guthaben abdeckt.
 
 ## Was das Speichern von FAQ-Einträgen kostet {#indexing}
 
@@ -54,7 +48,7 @@ Dasselbe im Kontext des Editors findest du unter [FAQ-Einträge schreiben](/de/d
 
 ## Realistische monatliche Ausgaben {#scenarios}
 
-Drei grobe Beispiele, wie ein Monat bei unterschiedlichem Aufkommen aussieht. Die tatsächlichen Zahlen hängen von der Mischung der Fragetypen (abgelehnt vs. Smalltalk vs. echte Suche) und deinem KI-Anbieter ab.
+Drei grobe Beispiele, wie ein Monat bei unterschiedlichem Aufkommen aussieht. Die tatsächlichen Zahlen hängen von der Mischung der Fragetypen ab (abgelehnt vs. Smalltalk vs. echte Suche).
 
 ### Ruhiger Hilfe-Kanal, hauptsächlich Smalltalk
 
@@ -66,7 +60,7 @@ Eine kleine Community, in der die KI etwa 30 Fragen pro Monat sieht, von denen d
 
 Das wird problemlos vom monatlichen Kontingent von **PRO** (250) oder **UNLIMITED** (300) abgedeckt. Bei **ACTIVE_GUILD** (100) wäre in den meisten Monaten eine kleine Aufladung nötig.
 
-### Aktiver Support-Server, OpenAI
+### Aktiver Support-Server
 
 Ein ausgelasteter Support-Server, auf dem die KI ~150 Fragen pro Monat bearbeitet, hauptsächlich echte FAQ-Abfragen über die Kanal-Auto-Antwort.
 
@@ -76,15 +70,15 @@ Ein ausgelasteter Support-Server, auf dem die KI ~150 Fragen pro Monat bearbeite
 
 Deutlich über dem monatlichen Kontingent jedes Plans - du wirst regelmäßig aufladen. Wenn du dauerhaft in diesem Bereich liegst, sprich uns gerne auf Enterprise-Mengenpreise an.
 
-### Server mit hohem Aufkommen bei Anthropic
+### Server mit hohem Aufkommen
 
-Ein größerer Server, der den Anbieter Anthropic (3×-Multiplikator) nutzt, mit ~500 Fragen pro Monat, hauptsächlich echte FAQ-Abfragen.
+Ein größerer Server mit ~500 Fragen pro Monat, hauptsächlich echte FAQ-Abfragen.
 
-- ~100 Smalltalk × (3 × 3) = 900 Credits
-- ~400 echte FAQ-Antworten × (15 × 3) = 18.000 Credits
-- **Gesamt: etwa 19.000 Credits / Monat**
+- ~100 Smalltalk × 3 Credits = 300 Credits
+- ~400 echte FAQ-Antworten × 15 Credits = 6.000 Credits
+- **Gesamt: etwa 6.300 Credits / Monat**
 
-Weit jenseits der Plan-Kontingente. Wechsle entweder zu OpenAI, um den Multiplikator loszuwerden (spart etwa zwei Drittel), oder nutze einen Enterprise-Plan mit mengenbasierten Credit-Preisen - siehe [Enterprise & Docs Sync](/de/docs/support-bot/ai-faq/enterprise-and-docs-sync).
+Weit jenseits der Plan-Kontingente. Lade regelmäßig auf oder nutze einen Enterprise-Plan mit mengenbasierten Credit-Preisen - siehe [Enterprise & Docs Sync](/de/docs/support-bot/ai-faq/enterprise-and-docs-sync).
 
 ## Credits aufladen {#top-ups}
 
@@ -111,8 +105,7 @@ Wenn du schneller Credits verbrauchst, als dir lieb ist, liegen die wichtigsten 
 - **Füge weitere zu ignorierende Präfixe hinzu**, um befehlsartige Nachrichten anderer Bots zu überspringen.
 - **Deaktiviere die Kanal-Auto-Antwort in lauten Kanälen** - den Pre-Ticket-Gatekeeper allein laufen zu lassen ist meist deutlich günstiger, da er nur dann ausgelöst wird, wenn jemand wirklich ein Ticket öffnet.
 - **Archiviere veraltete FAQ-Einträge**, damit sie nicht die Suche der KI belasten.
-- **Wechsle zu einem günstigeren Anbieter**, wenn der Qualitätsunterschied deines aktuellen Anbieters den Multiplikator nicht rechtfertigt.
 
 :::info Wo du deine Nutzung prüfst
-Das Panel **KI-Einstellungen → Status** auf der AI-FAQ-Seite zeigt dein aktuelles Guthaben, wie viele Antworten es ungefähr abdeckt, und deinen aktuellen Anbieter. Die Seite [Insights](/de/docs/support-bot/ai-faq/insights) zeigt, wie viele Antworten tatsächlich generiert wurden und wohin sie gingen.
+Das Panel **KI-Einstellungen → Status** auf der AI-FAQ-Seite zeigt dein aktuelles Guthaben und wie viele Antworten es ungefähr abdeckt. Die Seite [Insights](/de/docs/support-bot/ai-faq/insights) zeigt, wie viele Antworten tatsächlich generiert wurden und wohin sie gingen.
 :::

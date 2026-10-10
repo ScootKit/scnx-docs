@@ -14,8 +14,7 @@ korrekten Preise in deiner Währung zu sehen, öffne [scnx.xyz/de/plans](https:/
 :::
 
 :::warning
-Pläne enthalten keine Premium-Backup- oder andere Funktionen, die vom SCNX-Bot angeboten werden. Solche Funktionen
-benötigen ein separates Abonnement.
+Wie viele [Backups](/docs/scnx/guilds/backups#requirements) dein Server speichern kann und welche Backup-Funktionen er nutzen kann, hängt von deinem Plan ab.
 :::
 
 | Funktion                                                                                            | Starter-Plan                                                                                       | Unlimited-Plan                                                                                                                                  | Professional-Plan                                                                                                                                        |

@@ -125,6 +125,23 @@ Der Bot kann den Nicknamen des Server-Eigentümers nicht ändern. Dies ist eine 
 ## Fehler bei der Konfiguration {#configuration}
 
 <details>
+  <summary>Der Bot zeigt Konfigurationsprobleme in der Problemliste an</summary>
+  <ul>
+    <li>Dein Bot prüft alle eingestellten Rollen und Kanäle darauf, ob er sie verwenden kann, zum Beispiel ob eine Belohnungsrolle über seiner höchsten Rolle steht oder ob er in einen Log-Kanal schreiben darf.</li>
+    <li>Jedes Problem wird mit dem betroffenen Modul und der Einstellung aufgelistet. Behebe die Ursache (verschiebe zum Beispiel die Rolle des Bots weiter nach oben oder erteile die fehlende Kanalberechtigung), dann verschwindet der Hinweis automatisch.</li>
+    <li>Die Prüfung läuft beim Start des Bots, nach jedem Neuladen der Konfiguration und wenn sich ein Kanal oder eine Rolle ändert. Deaktivierte Funktionen werden übersprungen.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Ein Modul ist wegen eines fehlenden privilegierten Intents deaktiviert</summary>
+  <ul>
+    <li>Ist <strong>Server Members</strong>, <strong>Presence</strong> oder <strong>Message Content</strong> im Discord Developer Portal deaktiviert, startet der Bot trotzdem, aber Module, die den fehlenden Intent benötigen, werden deaktiviert. Module, die ihn nur für optionale Funktionen nutzen, laufen weiter.</li>
+    <li>In der Problemliste siehst du, welcher Intent fehlt, und gelangst direkt zur passenden Seite im Developer Portal. Aktiviere den Intent dort und starte deinen Bot neu.</li>
+  </ul>
+</details>
+
+<details>
   <summary>Änderungen an der Konfiguration werden nicht übernommen</summary>
   <ul>
     <li>Nachdem du die Einstellungen im Dashboard geändert hast, musst du die Konfiguration über das <a href="https://scnx.app/de/glink?page=bot/manage">„Bot-Status"-Panel</a> neuladen.</li>

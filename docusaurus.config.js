@@ -4,10 +4,54 @@ const {themes} = require('prism-react-renderer');
 const lightCodeTheme = themes.github;
 const darkCodeTheme = themes.dracula;
 const fs = require('fs');
+const path = require('path');
 const remarkMathModule = require('remark-math');
 const rehypeKatexModule = require('rehype-katex');
 const remarkMath = remarkMathModule.default || remarkMathModule;
 const rehypeKatex = rehypeKatexModule.default || rehypeKatexModule;
+
+// Whatever a plugin passes to setGlobalData is written into main.js, which every page has to download and
+// run before it becomes interactive. Each locale is built separately and the components only read the current
+// locale with English as the fallback, so translated fields are cut down to those two.
+function keepLocales(texts, locale) {
+    if (!texts || typeof texts !== 'object' || Array.isArray(texts)) return texts;
+    const picked = {};
+    for (const key of ['en', locale]) if (texts[key] !== undefined) picked[key] = texts[key];
+    return picked;
+}
+
+// enableWarning and legalDisclaimer are not shown in the docs, and one module's enableWarning alone is over 200 KB
+function slimModule(botModule, locale) {
+    const {enableWarning, legalDisclaimer, ...rest} = botModule;
+    return {
+        ...rest,
+        humanReadableName: keepLocales(botModule.humanReadableName, locale),
+        description: keepLocales(botModule.description, locale)
+    };
+}
+
+// A changelog version lists the changes of every module in that release, and the API also sends the full release
+// text and all translations. The "Recent changes" box on a module page only shows that module's own changes, in the
+// build's language (English as the fallback), for its three latest versions, so only that is kept.
+function slimChangelogs(changelogs, locale) {
+    const slim = {};
+    for (const [moduleName, data] of Object.entries(changelogs || {})) {
+        const versions = [];
+        for (const version of (data.items || [])) {
+            const changes = [];
+            for (const moduleItem of (version.items || [])) {
+                if (moduleItem.moduleName !== moduleName) continue;
+                for (const change of (moduleItem.items || [])) {
+                    const html = change[locale + 'Html'] || change.enHtml || '';
+                    if (html) changes.push({id: change.id, relevance: change.relevance, html});
+                }
+            }
+            if (changes.length > 0) versions.push({versionName: version.versionName, createdAt: version.createdAt, slug: version.slug, changes});
+        }
+        if (versions.length > 0) slim[moduleName] = {versions: versions.slice(0, 3)};
+    }
+    return slim;
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -270,17 +314,19 @@ const config = {
                     return moduleDataWithOrgs;
                 },
                 async contentLoaded({content, actions}) {
-                    actions.setGlobalData(content);
+                    actions.setGlobalData(content.map((botModule) => slimModule(botModule, context.i18n.currentLocale)));
                 }
             };
         },
-        function () {
+        function (context) {
             function renderChangelogMarkdown(data, micromark) {
                 for (const item of (data.items || [])) {
                     for (const moduleItem of (item.items || [])) {
                         for (const change of (moduleItem.items || [])) {
                             for (const lang of ['en', 'de', 'it', 'nl']) {
-                                if (change[lang]) change[lang + 'Html'] = micromark(change[lang]);
+                                // Most changes have no text of their own in German or Italian, only the machine translation in "translations"
+                                const text = change[lang] || (typeof change.translations?.[lang] === 'string' ? change.translations[lang] : null);
+                                if (text) change[lang + 'Html'] = micromark(text);
                             }
                         }
                     }
@@ -290,27 +336,65 @@ const config = {
             return {
                 name: 'scnx-module-changelogs',
                 async loadContent() {
-                    if (fs.existsSync('./api-responses.json') && require('./api-responses.json').changelogs) return require('./api-responses.json').changelogs;
+                    // api-responses.json (bin/download-api-responses.js) is a cache. An empty one is a failed download, not an answer.
+                    const cached = fs.existsSync('./api-responses.json') ? require('./api-responses.json').changelogs : null;
+                    if (cached && Object.keys(cached).length > 0) return cached;
+                    if (cached) console.warn('[scnx-module-changelogs] api-responses.json has no changelogs, loading them from the API instead');
                     const {micromark} = await import('micromark');
                     const modules = await (await fetch('https://scnx.app/api/scn/beta-modules')).json();
                     const changelogs = {};
+                    const fetchReport = {statuses: {}, withItems: 0, failures: []};
                     for (const mod of modules) {
                         try {
                             const res = await fetch(`https://scnx.app/api/changelogs?type=CUSTOM_BOT&branch=beta&module=${encodeURIComponent(mod.name)}&take=5`);
+                            fetchReport.statuses[res.status] = (fetchReport.statuses[res.status] || 0) + 1;
                             if (res.ok) {
                                 const data = await res.json();
-                                if (data && data.items && data.items.length > 0) changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                if (data && data.items && data.items.length > 0) {
+                                    changelogs[mod.name] = renderChangelogMarkdown(data, micromark);
+                                    fetchReport.withItems++;
+                                }
+                            } else if (fetchReport.failures.length < 4) {
+                                fetchReport.failures.push({
+                                    module: mod.name,
+                                    status: res.status,
+                                    server: res.headers.get('server'),
+                                    cfMitigated: res.headers.get('cf-mitigated'),
+                                    contentType: res.headers.get('content-type'),
+                                    body: (await res.text()).replace(/\s+/g, ' ').slice(0, 240)
+                                });
                             }
-                        } catch (e) { /* skip module */ }
+                        } catch (e) {
+                            fetchReport.statuses.error = (fetchReport.statuses.error || 0) + 1;
+                            if (fetchReport.failures.length < 4) fetchReport.failures.push({module: mod.name, error: e.message, cause: e.cause && String(e.cause.message || e.cause).slice(0, 160)});
+                            console.warn(`[scnx-module-changelogs] could not load the changelog of ${mod.name}: ${e.message}`);
+                        }
                     }
+                    console.log(`[scnx-module-changelogs] API answers: ${JSON.stringify(fetchReport.statuses)}, ${fetchReport.withItems} of ${modules.length} modules have changes`);
+                    if (fetchReport.failures.length > 0) console.warn(`[scnx-module-changelogs] first failures: ${JSON.stringify(fetchReport.failures)}`);
                     return changelogs;
                 },
                 async contentLoaded({content, actions}) {
-                    actions.setGlobalData(content);
+                    // The changelogs are written as small static files that the page loads when the "Recent changes" box is
+                    // opened. Putting them in global data would add them to main.js, which every page has to download.
+                    const locale = context.i18n.currentLocale;
+                    const directory = path.join(context.siteDir, 'static', 'changelogs', locale);
+                    fs.rmSync(directory, {recursive: true, force: true});
+                    fs.mkdirSync(directory, {recursive: true});
+                    const index = {};
+                    for (const [moduleName, data] of Object.entries(slimChangelogs(content, locale))) {
+                        if (!/^[a-z0-9_-]+$/i.test(moduleName)) continue;
+                        fs.writeFileSync(path.join(directory, moduleName + '.json'), JSON.stringify(data));
+                        index[moduleName] = {latest: data.versions[0].createdAt};
+                    }
+                    console.log(`[scnx-module-changelogs] wrote changelogs for ${Object.keys(index).length} modules (${locale})`);
+                    actions.setGlobalData(index);
                 }
             };
         },
         '@docsearch/docusaurus-adapter',
+        require.resolve('./plugins/lightDocsearchSidepanel'),
+        require.resolve('./plugins/moduleIconServer'),
         'docusaurus-plugin-image-zoom',
         [
             '@docusaurus/plugin-pwa',

@@ -22,7 +22,9 @@ Send a message to a channel when a new item appears in an RSS or Atom feed.
 
 After [setting up](#setup) and [configuring](#configuration) this module, no additional actions are required. The bot will automatically check configured feeds for new items every fifteen minutes. When a new item is found, the configured notification message will be sent to the specified Discord channel.
 
-Only items published within the last twenty minutes will trigger notifications, so older items will not be sent retroactively.
+Only items published within the last thirty minutes will trigger notifications, so older items will not be sent retroactively.
+
+Feeds are fetched by SCNX servers rather than by your bot, and results can be a few minutes old because SCNX caches them. A feed that is only reachable from a private network will not work. Publishers can ask us to stop fetching their feed. If a publisher opted out, the feed cannot be checked and a warning is written to your bot's log.
 
 ## Configuration {#configuration}
 
@@ -42,7 +44,8 @@ Only the 10 newest entries of a feed are checked on each run, and item descripti
 <summary>Notifications are not being sent</summary>
 <ul>
     <li>Make sure the feed URL is a valid RSS or Atom feed URL.</li>
-    <li>Verify that the feed is publicly accessible and returns valid XML.</li>
+    <li>Verify that the feed is publicly accessible from the internet and returns valid XML. Feeds behind a login or on a private network cannot be fetched.</li>
+    <li>Some providers block requests from data centers. If your feed works in your browser but not here, the provider may be blocking SCNX servers.</li>
     <li>Ensure the bot has "View channel", "Send messages" and "Embed links" permissions on the notification channel.</li>
     <li>The module checks for new items every fifteen minutes. Please wait for the next check cycle.</li>
     <li>Note that feeds are normalized, meaning that not all values may be available for every feed.</li>

@@ -86,7 +86,26 @@ slow-mode in this channel to avoid losing all your AI Coins in seconds.
   Other modes restrict responses to specific triggers.
 - **Trigger Keyword:** If set and trigger mode includes 'keyword', the AI will only respond when a message starts with
   this word or phrase (e.g. 'Hey Bot').
+- **Answer as a custom persona? (optional):** Lets an AI channel answer under its own name and avatar instead of your
+  bot's, set with **Persona name** and **Persona avatar**. See [Answering as a persona](#persona).
 - **Resetting History:** After configuring, please type `=== RESET ===` in the ai channel to reset conversation history.
+
+### Answering as a persona {#persona}
+
+Each AI chat channel can answer as its own persona. Turn on **Answer as a custom persona?** for the channel and set a
+**Persona name** and, if you like, a **Persona avatar**. Answers in that channel then show this name and avatar instead
+of your bot's. Without an avatar, your bot's avatar is used.
+
+- Your bot sends persona answers through a webhook in the channel. Make sure your bot has the **Manage Webhooks**
+  permission in that channel. If the persona can't be used (for example because the permission is missing or Discord
+  doesn't accept the name), your bot answers itself, so no answer gets lost.
+- Persona answers are posted as normal messages, not as replies to the member's message.
+- Members can reply to a persona message to continue the conversation. This works when your trigger mode includes
+  replies.
+- Error notices, like "This server is out of AI Coins", still come from your bot, not from the persona.
+- The persona changes the name and avatar. If the name is short and simple, the AI is also told that this is its name.
+  The Personality or Custom System Prompt setting still decides how the AI talks.
+- A persona answer costs the same as any other answer.
 
 ### Custom System Prompt & Automated Review
 
@@ -161,7 +180,7 @@ This module charges the AI-Coins of your server.
 | :------------------------------------------------ | :-------- |
 | Message sent one of the selected AI-Chat-Channels | 1 AI Coin |
 
-_You won't be charged for messages where AI answer generation failed._
+_You won't be charged for messages where AI answer generation failed. Answers sent as a persona cost the same._
 
 | Error                          | Cause                                                                         | What you can do                                                                                    |
 | :----------------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
@@ -186,15 +205,24 @@ only limit is your imagination. We recommend setting up a rate-limit to avoid sp
 configuration of the module and set up the rate-limit. It will limit the number of commands users can run in a specific
 timeframe based on your configuration.
 
+Images are created with our newest image model, which gives better results than before.
+
+### Image quality {#image-quality}
+
+In the module configuration, you can choose the image quality for your server:
+
+- **Standard (default):** Good quality at the lower price.
+- **HD:** More detail and sharper images. HD images take a bit longer to generate and cost more AI Coins.
+
 ### Pricing & Common Errors
 
-This module charges the AI-Coins of your server.
+This module charges the AI-Coins of your server. The price depends on the image quality and the image size.
 
-| Action                                          | Price       |
-| :---------------------------------------------- | :---------- |
-| Generation of images with the size of 1792x1024 | 13 AI Coins |
-| Generation of images with the size of 1024x1792 | 13 AI Coins |
-| Generation of images with the size of 1024x1024 | 10 AI Coins |
+| Action                       | Standard    | HD          |
+| :--------------------------- | :---------- | :---------- |
+| Generating a square image    | 10 AI Coins | 25 AI Coins |
+| Generating a portrait image  | 13 AI Coins | 25 AI Coins |
+| Generating a landscape image | 13 AI Coins | 25 AI Coins |
 
 _You won't be charged for commands where AI image generation failed._
 

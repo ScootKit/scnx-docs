@@ -84,7 +84,7 @@ By default the **Open a ticket** button only appears when the AI couldn't answer
 
 ## What it costs {#cost}
 
-Every channel-mode answer uses some AI credits. The exact amount depends on what the AI actually did (rejected the message, chatted briefly without searching, or ran a full FAQ search) and which AI provider your server is on. The full breakdown is on the [Credits and pricing](/docs/support-bot/ai-faq/credits-and-pricing) page, along with tips on cutting spend.
+Every channel-mode answer uses some AI credits. The exact amount depends on what the AI actually did (rejected the message, chatted briefly without searching, or ran a full FAQ search). The full breakdown is on the [Credits and pricing](/docs/support-bot/ai-faq/credits-and-pricing) page, along with tips on cutting spend.
 
 :::tip Keep credit usage predictable
 The biggest knobs for controlling channel-mode spend are the **Cooldown**, the **Minimum question length**, and the list of ignored prefixes. Tightening any of these reduces how often the AI runs without sacrificing meaningful answers.
