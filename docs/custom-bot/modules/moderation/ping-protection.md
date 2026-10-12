@@ -90,7 +90,7 @@ retention-based deletion (see [Data Storage](#configuration-storage)) is unaffec
 | `/ping-protection list protected`                   | View all protected users and roles.                          |
 | `/ping-protection list whitelisted`                 | View all whitelisted roles, channels, and users.             |
 
-*📃Note: All `/ping-protection user` commands are hidden for a better user experience when `pings history` is disabled.*
+*📃Note: All `/ping-protection user` commands are hidden for a better user experience when `pings history` is disabled. Additionally, `/ping-protection user history` and `/ping-protection user actions-history` require the `Moderate Members` permission to avoid everyone being able to use this command.*
 
 ### Context menu actions {#context-menu-actions}
 
