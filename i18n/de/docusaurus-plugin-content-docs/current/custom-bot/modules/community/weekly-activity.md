@@ -17,7 +17,7 @@ Belohne die aktivsten Mitglieder der Woche: Das Modul bewertet Nachrichten-, Spr
 
 1. [Aktiviere das Modul](https://scnx.app/de/glink?page=bot/modules?query=weekly-activity) auf deinem Server.
 2. Öffne die [Konfiguration](#configuration) und wähle den „Bestenlistenkanal" aus. Stelle sicher, dass der Bot dort Nachrichten senden kann.
-3. Wähle den „Wochentag" und die „Uhrzeit (HH:MM)", zu denen die Bestenliste gepostet wird. Die Uhrzeit gilt in der Zeitzone deines Servers.
+3. Wähle den „Wochentag" und die „Uhrzeit", zu denen die Bestenliste gepostet wird. Die Uhrzeit gilt in der Zeitzone deines Servers.
 4. Lege fest, welche Aktivitäten Punkte bringen und wie viele. Siehe [So werden Punkte gesammelt](#points).
 5. Wenn du eine Belohnungsrolle möchtest, erstelle sie auf deinem Server und wähle sie als „Belohnungsrolle" aus. Der Bot benötigt die Berechtigung `Rollen verwalten` und seine höchste Rolle muss über der Belohnungsrolle stehen.
 
@@ -63,7 +63,7 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Gesperrte Rollen                   | Mitglieder mit einer dieser Rollen sammeln keine Punkte.                                                                                                        |
 | Bestenlistenkanal                  | Kanal, in dem die wöchentliche Bestenliste gepostet wird.                                                                                                       |
 | Wochentag                          | Wochentag, an dem die Bestenliste gepostet wird.                                                                                                                |
-| Uhrzeit (HH:MM)                    | Uhrzeit (in der Zeitzone des Servers), zu der die Bestenliste gepostet wird. Ist der Wert keine gültige Uhrzeit, wird `20:00` verwendet.                        |
+| Uhrzeit                            | Uhrzeit (in der Zeitzone des Servers), zu der die Bestenliste gepostet wird. Das Dashboard zeigt je nach Sprache eine 12- oder 24-Stunden-Auswahl.              |
 | Größe der Bestenliste              | Wie viele Mitglieder in der Bestenliste angezeigt werden (1 bis 50).                                                                                            |
 | Belohnungsrolle                    | Rolle, die die aktivsten Mitglieder der Woche erhalten und die beim nächsten wöchentlichen Durchlauf wieder entfernt wird. Leer lassen, um sie zu deaktivieren. |
 | Mitglieder mit Belohnungsrolle     | Wie viele der besten Mitglieder die Belohnungsrolle erhalten (0 bis 50).                                                                                        |

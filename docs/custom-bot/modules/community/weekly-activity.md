@@ -17,7 +17,7 @@ Reward the most active members of the week: the module scores message, voice and
 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=weekly-activity) on your server.
 2. Open the [configuration](#configuration) and select the "Leaderboard channel". Make sure the bot can send messages there.
-3. Choose the "Weekday" and the "Time (HH:MM)" at which the leaderboard is posted. The time uses the time zone of your server.
+3. Choose the "Weekday" and the "Time" at which the leaderboard is posted. The time uses the time zone of your server.
 4. Adjust which activities earn points and how many. See [How points are earned](#points).
 5. If you want a reward role, create it on your server and select it as "Reward role". The bot needs the `Manage Roles` permission, and its highest role must be above the reward role.
 
@@ -50,26 +50,26 @@ You can change the reward role at any time. At the next run, the bot removes the
 
 In this configuration file, you can configure the module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=weekly-activity%7Cconfigs/config).
 
-| Field                      | Description                                                                                                                   |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Points for messages?       | If enabled, members earn points for sending messages.                                                                         |
-| Points per message         | Points a member earns for each counted message.                                                                               |
-| Message cooldown (seconds) | Minimum time between two messages of the same member that both earn points.                                                   |
-| Points for voice activity? | If enabled, members earn points for time spent in voice channels together with other members.                                 |
-| Points per voice minute    | Points a member earns for each minute of eligible voice activity.                                                             |
-| Points for reactions?      | If enabled, members earn points for reacting to messages of other members. Each member earns points at most once per message. |
-| Points per reaction        | Points a member earns for a counted reaction.                                                                                 |
-| Blacklisted channels       | Activity in these channels does not earn points.                                                                              |
-| Blacklisted roles          | Members with one of these roles do not earn points.                                                                           |
-| Leaderboard channel        | Channel in which the weekly leaderboard is posted.                                                                            |
-| Weekday                    | Day of the week on which the leaderboard is posted.                                                                           |
-| Time (HH:MM)               | Time of day (in the server time zone) at which the leaderboard is posted. If the value is not a valid time, `20:00` is used.  |
-| Leaderboard size           | How many members are shown on the leaderboard (1 to 50).                                                                      |
-| Reward role                | Role given to the most active members of the week and removed again at the next weekly run. Leave empty to disable.           |
-| Reward role members        | How many of the top members receive the reward role (0 to 50).                                                                |
-| Leaderboard message        | The message that is posted every week. Nobody is pinged, regardless of the content.                                           |
-| User display mode          | How members are shown on the leaderboard: Tag, Mention or Nickname.                                                           |
-| Row format                 | The line shown for each member on the leaderboard.                                                                            |
+| Field                      | Description                                                                                                                                           |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Points for messages?       | If enabled, members earn points for sending messages.                                                                                                 |
+| Points per message         | Points a member earns for each counted message.                                                                                                       |
+| Message cooldown (seconds) | Minimum time between two messages of the same member that both earn points.                                                                           |
+| Points for voice activity? | If enabled, members earn points for time spent in voice channels together with other members.                                                         |
+| Points per voice minute    | Points a member earns for each minute of eligible voice activity.                                                                                     |
+| Points for reactions?      | If enabled, members earn points for reacting to messages of other members. Each member earns points at most once per message.                         |
+| Points per reaction        | Points a member earns for a counted reaction.                                                                                                         |
+| Blacklisted channels       | Activity in these channels does not earn points.                                                                                                      |
+| Blacklisted roles          | Members with one of these roles do not earn points.                                                                                                   |
+| Leaderboard channel        | Channel in which the weekly leaderboard is posted.                                                                                                    |
+| Weekday                    | Day of the week on which the leaderboard is posted.                                                                                                   |
+| Time                       | Time of day (in the server time zone) at which the leaderboard is posted. The dashboard shows a 12-hour or 24-hour picker depending on your language. |
+| Leaderboard size           | How many members are shown on the leaderboard (1 to 50).                                                                                              |
+| Reward role                | Role given to the most active members of the week and removed again at the next weekly run. Leave empty to disable.                                   |
+| Reward role members        | How many of the top members receive the reward role (0 to 50).                                                                                        |
+| Leaderboard message        | The message that is posted every week. Nobody is pinged, regardless of the content.                                                                   |
+| User display mode          | How members are shown on the leaderboard: Tag, Mention or Nickname.                                                                                   |
+| Row format                 | The line shown for each member on the leaderboard.                                                                                                    |
 
 ## Customizing the post {#customizing}
 
