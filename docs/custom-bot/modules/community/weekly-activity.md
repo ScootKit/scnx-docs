@@ -36,8 +36,8 @@ Channels in "Blacklisted channels" and members with a role from "Blacklisted rol
 On the configured weekday and time, the bot:
 
 1. Counts the points of the week and ranks the members. Members who left the server and members without points are not listed.
-2. Posts the top members in the leaderboard channel. Members with the same points are ranked by who was active first.
-3. Gives the "Reward role" to the best members and removes it from the previous winners.
+2. Gives the "Reward role" to the best members and removes it from the previous winners.
+3. Posts the top members in the leaderboard channel. Members with the same points are ranked by who was active first.
 4. Starts a new week.
 
 If nobody earned any points, nothing is posted, and the reward role is removed from the previous winners.
@@ -77,17 +77,19 @@ The "Leaderboard message" is a normal message field, so you can change the title
 
 You can use these placeholders in the message:
 
-| Placeholder     | Replaced with                                                                                      |
-| --------------- | -------------------------------------------------------------------------------------------------- |
-| `%leaderboard%` | The ranked list of members, one line per member.                                                   |
-| `%week%`        | The week that just ended as a date range, for example "Oct 11, 2026 - Oct 18, 2026".               |
-| `%winners%`     | Mentions of the members who received the reward role. Empty if you did not select a "Reward role". |
+| Placeholder     | Replaced with                                                                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `%leaderboard%` | The ranked list of members, one line per member.                                                                                                              |
+| `%week%`        | The week that just ended as a date range, for example "Oct 11, 2026 - Oct 18, 2026". Discord shows the dates in each viewer's language and format.            |
+| `%winners%`     | Mentions of the members who received the reward role. Members the bot could not give the role to are not listed. Empty if you did not select a "Reward role". |
 
 Use "User display mode" to choose how members appear in the list:
 
 - **Tag**: The username, for example `alex`. Recommended for large servers.
 - **Mention**: A clickable `@mention`. This is the default.
-- **Nickname**: The server nickname. Members without a nickname are shown with their username.
+- **Nickname**: The server nickname. Members without a nickname are shown with their display name, and if that is not available, with their username.
+
+Special characters in names, such as `*`, `_` or links, are shown as plain text and do not change the formatting of the message.
 
 "Row format" controls each line of the list. Use `%rank%` for the position, `%user%` for the member and `%points%` for the points. The default is `%rank%. %user% - %points% points`.
 
@@ -95,7 +97,7 @@ Use "User display mode" to choose how members appear in the list:
 The post never pings anyone, even if your message contains `@everyone`, a role or a mention. Mentions are shown, but nobody receives a notification.
 :::
 
-If the list is too long for a Discord message, it is shortened and the members with the best ranks are kept. If you remove `%leaderboard%` from the message, the list is not posted.
+If the list is too long for a Discord message, whole lines are removed from the end of the list, so the members with the best ranks are kept and no line is cut in half. The bot counts every use of `%leaderboard%`, `%week%` and `%winners%` in your message, and the limits of the chosen message type. If you remove `%leaderboard%` from the message, the list is not posted.
 
 ## Troubleshooting {#troubleshooting}
 

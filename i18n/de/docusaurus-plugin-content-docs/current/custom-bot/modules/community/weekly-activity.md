@@ -36,8 +36,8 @@ Kanäle in „Gesperrte Kanäle" und Mitglieder mit einer Rolle aus „Gesperrte
 Am eingestellten Wochentag und zur eingestellten Uhrzeit macht der Bot Folgendes:
 
 1. Er zählt die Punkte der Woche und ordnet die Mitglieder in einer Rangliste. Mitglieder, die den Server verlassen haben, und Mitglieder ohne Punkte werden nicht aufgeführt.
-2. Er postet die besten Mitglieder im Bestenlistenkanal. Mitglieder mit gleicher Punktzahl werden danach geordnet, wer zuerst aktiv war.
-3. Er gibt den besten Mitgliedern die „Belohnungsrolle" und entfernt sie bei den bisherigen Gewinnern.
+2. Er gibt den besten Mitgliedern die „Belohnungsrolle" und entfernt sie bei den bisherigen Gewinnern.
+3. Er postet die besten Mitglieder im Bestenlistenkanal. Mitglieder mit gleicher Punktzahl werden danach geordnet, wer zuerst aktiv war.
 4. Er startet eine neue Woche.
 
 Hat niemand Punkte gesammelt, wird nichts gepostet und die Belohnungsrolle wird bei den bisherigen Gewinnern entfernt.
@@ -77,17 +77,19 @@ Die „Bestenlisten-Nachricht" ist ein normales Nachrichtenfeld, du kannst also 
 
 Diese Platzhalter kannst du in der Nachricht verwenden:
 
-| Platzhalter     | Wird ersetzt durch                                                                                                  |
-| --------------- | ------------------------------------------------------------------------------------------------------------------- |
-| `%leaderboard%` | Die Rangliste der Mitglieder, eine Zeile pro Mitglied.                                                              |
-| `%week%`        | Die soeben beendete Woche als Zeitraum, zum Beispiel „11.10.2026 - 18.10.2026".                                     |
-| `%winners%`     | Erwähnungen der Mitglieder, die die Belohnungsrolle erhalten haben. Leer, wenn keine „Belohnungsrolle" gewählt ist. |
+| Platzhalter     | Wird ersetzt durch                                                                                                                                                                                   |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `%leaderboard%` | Die Rangliste der Mitglieder, eine Zeile pro Mitglied.                                                                                                                                               |
+| `%week%`        | Die soeben beendete Woche als Zeitraum, zum Beispiel „11.10.2026 - 18.10.2026". Discord zeigt die Daten in der Sprache und im Format des jeweiligen Betrachters an.                                  |
+| `%winners%`     | Erwähnungen der Mitglieder, die die Belohnungsrolle erhalten haben. Mitglieder, denen der Bot die Rolle nicht geben konnte, werden nicht aufgeführt. Leer, wenn keine „Belohnungsrolle" gewählt ist. |
 
 Mit dem „Benutzeranzeigemodus" legst du fest, wie Mitglieder in der Liste erscheinen:
 
 - **Tag**: Der Benutzername, zum Beispiel `alex`. Empfohlen für große Server.
 - **Erwähnung**: Eine klickbare `@Erwähnung`. Das ist der Standard.
-- **Nickname**: Der Server-Spitzname. Mitglieder ohne Spitznamen werden mit ihrem Benutzernamen angezeigt.
+- **Nickname**: Der Server-Spitzname. Mitglieder ohne Spitznamen werden mit ihrem Anzeigenamen angezeigt, und falls dieser nicht verfügbar ist, mit ihrem Benutzernamen.
+
+Sonderzeichen in Namen, etwa `*`, `_` oder Links, werden als normaler Text angezeigt und verändern die Formatierung der Nachricht nicht.
 
 Das „Zeilenformat" bestimmt jede Zeile der Liste. Verwende `%rank%` für die Platzierung, `%user%` für das Mitglied und `%points%` für die Punkte. Der Standard ist `%rank%. %user% - %points% Punkte`.
 
@@ -95,7 +97,7 @@ Das „Zeilenformat" bestimmt jede Zeile der Liste. Verwende `%rank%` für die P
 Der Beitrag pingt nie jemanden, auch wenn deine Nachricht `@everyone`, eine Rolle oder eine Erwähnung enthält. Erwähnungen werden angezeigt, aber niemand erhält eine Benachrichtigung.
 :::
 
-Ist die Liste für eine Discord-Nachricht zu lang, wird sie gekürzt und die Mitglieder mit den besten Platzierungen bleiben erhalten. Entfernst du `%leaderboard%` aus der Nachricht, wird die Liste nicht gepostet.
+Ist die Liste für eine Discord-Nachricht zu lang, werden ganze Zeilen am Ende der Liste entfernt, sodass die Mitglieder mit den besten Platzierungen erhalten bleiben und keine Zeile mittendrin abgeschnitten wird. Der Bot zählt jede Verwendung von `%leaderboard%`, `%week%` und `%winners%` in deiner Nachricht sowie die Grenzen des gewählten Nachrichtentyps. Entfernst du `%leaderboard%` aus der Nachricht, wird die Liste nicht gepostet.
 
 ## Fehlerbehebung {#troubleshooting}
 
