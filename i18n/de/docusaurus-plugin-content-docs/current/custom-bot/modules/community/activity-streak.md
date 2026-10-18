@@ -16,6 +16,8 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 - Nutzer können einen verlorenen Streak einmal pro Verlust wiederherstellen (sofern aktiviert).
 - Der längste Streak wird separat erfasst und niemals zurückgesetzt.
 - Bestenliste zeigt die 20 aktivsten Streaks auf deinem Server.
+- Optionale Live-Bestenliste: eine Nachricht in einem Kanal deiner Wahl, die sich bei Streak-Änderungen selbst aktualisiert.
+- Anpassbare Streak-Emojis, auch eigene Server-Emojis.
 - Nutzer können deaktivieren, dass ihr Streak in ihrem Nickname angezeigt wird.
 
 ## Einrichtung {#setup}
@@ -25,6 +27,8 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 3. Wenn du Streak-Belohnungsrollen nutzen möchtest, erstelle die Rollen auf deinem Server und konfiguriere sie im Feld „Streak-Belohnungsrollen".
 4. Wenn die Streak-Anzahl auch im Nicknamen erscheinen soll, aktiviere die Option „Streak im Nicknamen anzeigen?". Stelle sicher, dass der Bot über die Berechtigung `Nicknames verwalten` verfügt.
 5. Wenn du den „Mitarbeiter-verwaltete Streaks?"-Modus anstelle der automatischen Verfolgung nutzen möchtest, aktiviere diesen und konfiguriere die entsprechenden Team-Rollen.
+6. Wenn du die Streak-Emojis ändern möchtest, setze „Emoji für aktive Streaks" und „Emoji für unterbrochene Streaks". Siehe [Streak-Emojis](#emojis).
+7. Wenn du eine Live-Bestenliste möchtest, aktiviere „Live-Bestenliste aktiviert?" und wähle einen „Bestenlisten-Kanal". Siehe [Live-Bestenliste](#live-leaderboard).
 
 ## Nutzung {#usage}
 
@@ -33,6 +37,22 @@ Belohne Nutzer für ihre tägliche, wöchentliche oder monatliche Aktivität mit
 - Nutzer können ihren aktuellen und ihren längsten Streak einsehen, indem sie den Befehl [`/streak view`](#commands) nutzen.
 - Falls die Streak-Wiederherstellung aktiviert ist, können Nutzer, die ihren Streak verloren haben, diesen einmalig über [`/streak restore`](#commands) wiederherstellen. Du kannst optional ein Zeitlimit (in Tagen) festlegen, nach dem ein verlorener Streak nicht mehr wiederhergestellt werden kann. Bei der Wiederherstellung wird der höhere Wert aus aktuellem und vorherigem Streak behalten, sodass ein Mitglied, das bereits einen neuen Streak begonnen hat, keinen Fortschritt verliert.
 - Wenn ein Nutzer eine Streak-Anzahl erreicht, die einer konfigurierten Rollenbelohnung entspricht, wird die Rolle automatisch zugewiesen.
+
+## Streak-Emojis {#emojis}
+
+Das Emoji neben Streaks ist konfigurierbar. „Emoji für aktive Streaks" (Standard 🔥) wird bei aktiven Streaks angezeigt, „Emoji für unterbrochene Streaks" (Standard ❄️) wird angezeigt, wenn ein Nutzer keinen aktiven Streak hat. Beide werden in `/streak view`, in den Bestenlisten und im Nickname-Zusatz verwendet.
+
+Du kannst ein Unicode-Emoji oder ein eigenes Server-Emoji im Format `<:name:123456789012345678>` eintragen. Discord kann eigene Emojis in Nicknamen nicht darstellen, daher wird im Nickname-Zusatz immer 🔥 verwendet.
+
+## Live-Bestenliste {#live-leaderboard}
+
+Wenn „Live-Bestenliste aktiviert?" eingeschaltet ist, pflegt der Bot im „Bestenlisten-Kanal" eine Nachricht, die sich selbst aktualisiert. Sie wird bei jeder Streak-Änderung und etwa alle 5 Minuten aktualisiert. Jede Zeile zeigt den Rang, den Nutzer, den aktuellen Streak (mit dem Streak-Emoji) und den längsten Streak.
+
+- Mit „Bestenlisten-Embed" legst du Titel, Farbe, Thumbnail, Bild und Beschreibung fest.
+- „Maximale Einträge" bestimmt, wie viele Nutzer angezeigt werden (1 bis 25).
+- „Benutzeranzeigemodus" steuert, ob Nutzer als Tag, Erwähnung oder Nickname angezeigt werden.
+- „Components-V2-Layout verwenden" stellt die Bestenliste mit Discords Components V2 statt als klassisches Embed dar.
+- „Nachrichten von Nutzern löschen" löscht bei jeder Aktualisierung Nachrichten anderer Nutzer im Bestenlisten-Kanal. Dafür braucht der Bot die Berechtigung `Nachrichten verwalten` in diesem Kanal.
 
 ## Befehle {#commands}
 
@@ -58,22 +78,31 @@ Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Bef
 
 In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=activity-streak%7Cconfigs/config).
 
-| Feld                                                                                                  | Beschreibung                                                                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Streak-Zeitraum                                                                                       | Wie oft Nutzer aktiv sein müssen, um ihren Streak aufrechtzuerhalten: täglich, wöchentlich oder monatlich.                                                                                                                                   |
-| Mitarbeiter-verwaltete Streaks?                                                                       | Falls aktiviert, werden Streaks manuell vom Team verwaltet, anstatt automatisch über Nachrichten erfasst zu werden.                                                                                                                          |
-| Mitarbeiter-Rollen (für mitarbeiter-verwalteten Modus)                                                | Rollen, die berechtigt sind, Streaks über die Befehle „add" und „reset" zu verwalten. Dies gilt nur, wenn der „Mitarbeiter-verwaltete Streaks?"-Modus aktiviert ist.                                                                         |
-| Streak im Nicknamen anzeigen?                                                                         | Falls aktiviert, hängt der Bot die aktuelle Streak-Anzahl des Nutzers an dessen Nicknamen an.                                                                                                                                                |
-| Nutzern erlauben, den Streak im Nickname auszublenden?                                                | Falls aktiviert, können Nutzer `/streak hide` verwenden, um die Anzeige ihres Streaks in ihrem Nickname an- oder auszuschalten. Nur verfügbar, wenn „Streak im Nickname anzeigen?" aktiviert ist.                                            |
-| Streak-Belohnungsrollen                                                                               | Rollenbelohnungen für das Erreichen bestimmter Streak-Meilensteine. Die „Ganze Zahl" ist die Streak-Anzahl und „Rolle wählen" ist die zuzuweisende Rolle.                                                                                    |
-| Only keep highest streak role (Nur höchste Streak-Rolle behalten)                                     | Falls aktiviert, werden niedrigere Streak-Rollen automatisch entfernt, wenn ein Nutzer eine höhere Streak-Schwelle erreicht, sodass jeder Nutzer nur die Rolle seiner aktuellen Stufe behält. Falls deaktiviert, stapeln sich Streak-Rollen. |
+| Feld                                                              | Beschreibung                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Streak-Zeitraum                                                   | Wie oft Nutzer aktiv sein müssen, um ihren Streak aufrechtzuerhalten: täglich, wöchentlich oder monatlich.                                                                                                                                   |
+| Emoji für aktive Streaks                                          | Emoji, das für aktive Streaks angezeigt wird. Unterstützt Unicode-Emojis und eigene Server-Emojis (z.B. `<:name:123456789012345678>`).                                                                                                       |
+| Emoji für unterbrochene Streaks                                   | Emoji, das angezeigt wird, wenn ein Nutzer keinen aktiven Streak hat. Unterstützt Unicode-Emojis und eigene Server-Emojis (z.B. `<:name:123456789012345678>`).                                                                               |
+| Mitarbeiter-verwaltete Streaks?                                   | Falls aktiviert, werden Streaks manuell vom Team verwaltet, anstatt automatisch über Nachrichten erfasst zu werden.                                                                                                                          |
+| Mitarbeiter-Rollen (für mitarbeiter-verwalteten Modus)            | Rollen, die berechtigt sind, Streaks über die Befehle „add" und „reset" zu verwalten. Dies gilt nur, wenn der „Mitarbeiter-verwaltete Streaks?"-Modus aktiviert ist.                                                                         |
+| Streak im Nicknamen anzeigen?                                     | Falls aktiviert, hängt der Bot die aktuelle Streak-Anzahl des Nutzers an dessen Nicknamen an.                                                                                                                                                |
+| Nutzern erlauben, den Streak im Nickname auszublenden?            | Falls aktiviert, können Nutzer `/streak hide` verwenden, um die Anzeige ihres Streaks in ihrem Nickname an- oder auszuschalten. Nur verfügbar, wenn „Streak im Nickname anzeigen?" aktiviert ist.                                            |
+| Streak-Belohnungsrollen                                           | Rollenbelohnungen für das Erreichen bestimmter Streak-Meilensteine. Die „Ganze Zahl" ist die Streak-Anzahl und „Rolle wählen" ist die zuzuweisende Rolle.                                                                                    |
+| Only keep highest streak role (Nur höchste Streak-Rolle behalten) | Falls aktiviert, werden niedrigere Streak-Rollen automatisch entfernt, wenn ein Nutzer eine höhere Streak-Schwelle erreicht, sodass jeder Nutzer nur die Rolle seiner aktuellen Stufe behält. Falls deaktiviert, stapeln sich Streak-Rollen. |
 | Remove streak roles when a streak is lost? (Streak-Rollen entfernen, wenn eine Streak verloren geht?) | Falls aktiviert, werden Streak-Belohnungsrollen entfernt, wenn ein Mitglied seine Streak verliert oder unter die Schwelle einer Rolle fällt. Falls deaktiviert (Standard), behalten Mitglieder verdiente Belohnungsrollen.                   |
-| Streak-Anzeigungs-Nachricht                                                                           | Passe das Embed an, das beim Aufrufen eines Streaks angezeigt wird.                                                                                                                                                                          |
-| Ignorierte Kanäle                                                                                     | Kanäle, in denen Nachrichten nicht für Streaks gezählt werden.                                                                                                                                                                               |
-| Ignorierte Rollen                                                                                     | Rollen, deren Mitglieder-Nachrichten nicht für Streaks zählen.                                                                                                                                                                               |
-| Streak-Wiederherstellung aktivieren?                                                                  | Falls aktiviert, können Nutzer einen verlorenen Streak einmal pro Verlust wiederherstellen.                                                                                                                                                  |
-| Rollen, die Streaks wiederherstellen dürfen                                                           | Rollen, die berechtigt sind, den Befehl „restore" zu nutzen. Falls das Feld leer bleibt, können alle Nutzer Streaks wiederherstellen.                                                                                                        |
-| Wiederherstellungsfrist (Tage)                                                                        | Wie viele Tage nach dem Verlust eines Streaks Nutzer diesen noch mit `/streak restore` wiederherstellen können. Auf `0` setzen für kein Zeitlimit. Nur wirksam, wenn „Streak-Wiederherstellung aktivieren?" eingeschaltet ist.               |
+| Streak-Anzeigungs-Nachricht                                       | Passe das Embed an, das beim Aufrufen eines Streaks angezeigt wird.                                                                                                                                                                          |
+| Ignorierte Kanäle                                                 | Kanäle, in denen Nachrichten nicht für Streaks gezählt werden.                                                                                                                                                                               |
+| Ignorierte Rollen                                                 | Rollen, deren Mitglieder-Nachrichten nicht für Streaks zählen.                                                                                                                                                                               |
+| Streak-Wiederherstellung aktivieren?                              | Falls aktiviert, können Nutzer einen verlorenen Streak einmal pro Verlust wiederherstellen.                                                                                                                                                  |
+| Rollen, die Streaks wiederherstellen dürfen                       | Rollen, die berechtigt sind, den Befehl „restore" zu nutzen. Falls das Feld leer bleibt, können alle Nutzer Streaks wiederherstellen.                                                                                                        |
+| Wiederherstellungsfrist (Tage)                                    | Wie viele Tage nach dem Verlust eines Streaks Nutzer diesen noch mit `/streak restore` wiederherstellen können. Auf `0` setzen für kein Zeitlimit. Nur wirksam, wenn „Streak-Wiederherstellung aktivieren?" eingeschaltet ist.               |
+| Live-Bestenliste aktiviert?                                       | Falls aktiviert, wird im Bestenlisten-Kanal eine Nachricht gepflegt, die sich selbst aktualisiert und die Streak-Bestenliste zeigt.                                                                                                          |
+| Bestenlisten-Kanal                                                | Kanal, in dem die Live-Streak-Bestenliste gesendet wird.                                                                                                                                                                                     |
+| Bestenlisten-Embed                                                | Passe Titel, Farbe, Thumbnail, Bild und Beschreibung des Bestenlisten-Embeds an.                                                                                                                                                             |
+| Maximale Einträge                                                 | Wie viele Nutzer in der Bestenliste angezeigt werden (1 bis 25).                                                                                                                                                                             |
+| Benutzeranzeigemodus                                              | Wie Nutzer in der Bestenliste angezeigt werden: Tag (Standard) zeigt den Benutzernamen, Erwähnung eine klickbare @Erwähnung, Nickname den Server-Spitznamen.                                                                                 |
+| Components-V2-Layout verwenden                                    | Falls aktiviert, wird die Bestenliste mit Discords Components-V2-System statt als klassisches Embed dargestellt.                                                                                                                             |
+| Nachrichten von Nutzern löschen                                   | Falls aktiviert, löscht der Bot bei jeder Aktualisierung der Bestenliste Nachrichten anderer Nutzer im Bestenlisten-Kanal, um ihn sauber zu halten. Erfordert die Berechtigung `Nachrichten verwalten`.                                      |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -100,6 +129,15 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
   <ul>
     <li>Überprüfe, ob die Streak-Rollenbelohnungen korrekt mit der richtigen Streak-Anzahl und Rolle konfiguriert sind.</li>
     <li>Stelle sicher, dass der Bot über die Berechtigung <code>Rollen verwalten</code> verfügt und seine eigene Rolle oberhalb der Belohnungsrollen platziert ist.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Die Live-Bestenliste erscheint nicht oder wird nicht aktualisiert</summary>
+  <ul>
+    <li>Stelle sicher, dass „Live-Bestenliste aktiviert?" eingeschaltet und ein „Bestenlisten-Kanal" ausgewählt ist.</li>
+    <li>Stelle sicher, dass der Bot den Kanal sehen, Nachrichten senden, Links einbetten und den Nachrichtenverlauf lesen kann. Für „Nachrichten von Nutzern löschen" braucht er zusätzlich <code>Nachrichten verwalten</code>.</li>
+    <li>Die Bestenliste wird bei Streak-Änderungen und etwa alle 5 Minuten aktualisiert, Änderungen können also einen Moment dauern.</li>
   </ul>
 </details>
 
