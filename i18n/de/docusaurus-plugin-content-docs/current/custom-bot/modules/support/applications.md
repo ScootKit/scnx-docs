@@ -7,6 +7,8 @@ Lass deine Mitglieder sich für Teampositionen, Partnerschaften und mehr bewerbe
 ## Funktionen {#features}
 
 - Erstelle mehrere Bewerbungs-Kategorien, jede mit eigenen Fragen, eigenem Benachrichtigungs-Kanal und eigenen Rollen.
+- Richte mehrere Bewerbungs-Panels ein, jedes mit eigenem Kanal, eigener Nachricht, eigenem Stil (Drop-Down-Menü oder ein Button pro Kategorie) und eigener Auswahl an Kategorien.
+- Optional füllen Bewerber ein Discord-Formular aus, statt Fragen per PN zu beantworten.
 - Nutzer starten den Bewerbungsprozess über den Befehl `/apply` oder über ein Drop-Down-Menü in einem konfigurierten Informationskanal.
 - Fragen werden dem Bewerber per PN gesendet und die Antworten nacheinander gesammelt.
 - Teammitglieder können Bewerbungen direkt im Benachrichtigungs-Kanal per Knopf annehmen oder ablehnen.
@@ -21,12 +23,16 @@ Lass deine Mitglieder sich für Teampositionen, Partnerschaften und mehr bewerbe
 1. [Aktiviere das Modul](https://scnx.app/de/glink?page=bot/modules?query=applications) auf deinem Server.
 2. Öffne die [Bewerbungen-Kategorien-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=applications%7Ccategories) und erstelle mindestens eine Bewerbungs-Kategorie. Lege den Kategorie-Namen, den Benachrichtigungs-Kanal, die Fragen und alle bei Annahme zu vergebenden Rollen fest.
 3. Öffne die [Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=applications%7Cconfig), um Nachrichten und Abklingzeit-Einstellungen anzupassen und optional einen Informationskanal mit Drop-Down-Menü für einen einfachen Zugang einzurichten.
-4. Wenn du die Informationskanal-Funktion nutzen willst, setze den "Bewerbungsinfokanal" auf einen Textkanal. Der Bot sendet dann eine Nachricht mit einem Drop-Down-Menü, über das Nutzer eine Kategorie auswählen und sich bewerben können.
-5. Stelle sicher, dass der Bot in den Benachrichtigungs-Kanälen die Berechtigungen **Kanal anzeigen** und **Nachrichten senden** hat. Für die Rollenvergabe bei Annahme benötigt der Bot **Rollen verwalten**, wobei seine höchste Rolle über den zu vergebenden Rollen stehen muss.
+4. Um Bewerbungs-Panels zu veröffentlichen, öffne die [Bewerbungs-Panels-Konfiguration](https://scnx.app/de/glink?page=bot/configuration?file=applications%7Cpanels) und füge ein Panel mit Kanal, Nachricht, Stil und den angebotenen Kategorien hinzu. Lass die Kategorien leer, um alle anzubieten.
+5. Wenn du die Informationskanal-Funktion nutzen willst, setze den "Bewerbungsinfokanal" auf einen Textkanal. Der Bot sendet dann eine Nachricht mit einem Drop-Down-Menü, über das Nutzer eine Kategorie auswählen und sich bewerben können.
+6. Stelle sicher, dass der Bot in den Benachrichtigungs-Kanälen die Berechtigungen **Kanal anzeigen** und **Nachrichten senden** hat. Für die Rollenvergabe bei Annahme benötigt der Bot **Rollen verwalten**, wobei seine höchste Rolle über den zu vergebenden Rollen stehen muss.
 
 ## Nutzung {#usage}
 
 - Nutzer können sich mit `/apply` und der Auswahl einer Kategorie bewerben oder über das Drop-Down-Menü im Informationskanal (falls konfiguriert).
+- Nutzer können sich auch über ein Bewerbungs-Panel bewerben: Je nach Stil des Panels wählen sie eine Kategorie im Drop-Down-Menü oder klicken auf den Button der Kategorie.
+- Bei Kategorien mit Discord-Formular öffnet sich direkt in Discord ein Formular. Der Bewerber füllt es aus und sendet es ab, PNs sind nicht nötig. Die Antworten erscheinen im Benachrichtigungs-Kanal zusammen mit den Knöpfen "Annehmen" und "Ablehnen" und der Bewerber erhält die Bestätigung aus der Einstellung "Formular-Abgesendet-Nachricht". Rollenanforderungen, Abklingzeit und die Regel einer offenen Bewerbung gelten auch für Formulare.
+- Für alle anderen Kategorien läuft der PN-Chat wie unten beschrieben ab.
 - Der Bot sendet dem Nutzer die erste Frage per PN. Der Nutzer antwortet mit einer Nachricht und der Bot sendet die nächste Frage. Das geht so weiter, bis alle Fragen beantwortet sind.
 - Nutzer können ihre Bewerbung jederzeit abbrechen, indem sie während des PN-Prozesses `!cancel` senden.
 - Eine Bewerbungs-Sitzung wird erst nach 30 Minuten Inaktivität beendet. Der Timer wird mit jeder Antwort zurückgesetzt, sodass lange Bewerbungen nicht mehr mitten im Prozess ablaufen - nur wirklich abgebrochene Sitzungen werden bereinigt. Wenn eine Sitzung abläuft, schickt der Bot dem Nutzer eine PN, um ihn zu informieren, dass die Bewerbung abgelaufen ist und dass er mit `/apply` von vorne beginnen kann.
@@ -58,19 +64,35 @@ Kontextmenü-Befehle sind standardmäßig ausgeschaltet. Siehe [Kontextmenü-Bef
 
 In dieser Konfigurationsdatei richtest du Bewerbungs-Kategorien mit ihren Fragen und Einstellungen ein. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=applications%7Ccategories).
 
-| Feld                                           | Beschreibung                                                                                                                                        |
-| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bewerbungs-Kategorie-Name                      | Der Name der Bewerbungs-Kategorie, der Nutzern angezeigt wird. Sollte eindeutig sein und nach eingegangenen Bewerbungen nicht mehr geändert werden. |
-| Benachrichtigungs-Kanal                        | Kanal, in den eingereichte Bewerbungen zur Prüfung durch das Team gesendet werden. Hier kann das Team Bewerbungen annehmen oder ablehnen.           |
-| Fragen                                         | Die Fragen, die Nutzern der Reihe nach gestellt werden. Nutzer beantworten jede Frage per PN mit bis zu 4000 Zeichen (2000 für Nicht-Nitro-Nutzer). |
-| Rollen                                         | Rollen, die Nutzern gegeben werden, deren Bewerbung angenommen wurde.                                                                               |
-| Rolle verlangen, um Bewerbungen zu bearbeiten? | Wenn aktiviert, können nur Nutzer mit bestimmten Rollen Bewerbungen in dieser Kategorie annehmen oder ablehnen.                                     |
-| Rollen, die Bewerbungen bearbeiten können      | Nur Nutzer mit einer dieser Rollen können Bewerbungen annehmen oder ablehnen (gilt nur, wenn die obige Option aktiviert ist).                       |
-| Rolle zum Bewerben verlangen?                  | Wenn aktiviert, benötigen Nutzer eine der konfigurierten Rollen, um sich in dieser Kategorie zu bewerben.                                           |
-| Zum Bewerben notwendige Rollen                 | Nur Nutzer mit einer dieser Rollen können sich in dieser Kategorie bewerben (gilt nur, wenn die obige Option aktiviert ist).                        |
-| "Notwendige Rolle fehlt" Nachricht             | Nachricht, die Nutzern angezeigt wird, die sich bewerben wollen, aber nicht die notwendigen Rollen haben.                                           |
-| Emoji                                          | Emoji für diese Kategorie, das im Drop-Down-Menü der Informationsnachricht verwendet wird, falls aktiviert.                                         |
-| Kategoriebeschreibung                          | Beschreibung für diese Kategorie, die im Drop-Down-Menü der Informationsnachricht verwendet wird, falls aktiviert.                                  |
+| Feld                                           | Beschreibung                                                                                                                                                                                                                                                          |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bewerbungs-Kategorie-Name                      | Der Name der Bewerbungs-Kategorie, der Nutzern angezeigt wird. Sollte eindeutig sein und nach eingegangenen Bewerbungen nicht mehr geändert werden.                                                                                                                   |
+| Benachrichtigungs-Kanal                        | Kanal, in den eingereichte Bewerbungen zur Prüfung durch das Team gesendet werden. Hier kann das Team Bewerbungen annehmen oder ablehnen.                                                                                                                             |
+| Fragen                                         | Die Fragen, die Nutzern der Reihe nach gestellt werden. Nutzer beantworten jede Frage per PN mit bis zu 4000 Zeichen (2000 für Nicht-Nitro-Nutzer).                                                                                                                   |
+| Discord-Formular statt PN-Chat verwenden       | Wenn aktiviert, füllen Nutzer ein Discord-Formular (Popup) aus, statt Fragen in ihren PNs zu beantworten. Das Feld "Fragen" wird dann durch das Feld "Bewerbungsformular" ersetzt.                                                                                    |
+| Bewerbungsformular                             | Die Eingabefelder des Formulars, bis zu 5 Textfragen. Jede kann eine kurze oder lange Antwort sein. Bezeichnungen dürfen bis zu 45 Zeichen lang sein, müssen eindeutig sein und dürfen nicht nur aus Ziffern bestehen. Antworten dürfen bis zu 700 Zeichen lang sein. |
+| Rollen                                         | Rollen, die Nutzern gegeben werden, deren Bewerbung angenommen wurde.                                                                                                                                                                                                 |
+| Rolle verlangen, um Bewerbungen zu bearbeiten? | Wenn aktiviert, können nur Nutzer mit bestimmten Rollen Bewerbungen in dieser Kategorie annehmen oder ablehnen.                                                                                                                                                       |
+| Rollen, die Bewerbungen bearbeiten können      | Nur Nutzer mit einer dieser Rollen können Bewerbungen annehmen oder ablehnen (gilt nur, wenn die obige Option aktiviert ist).                                                                                                                                         |
+| Rolle zum Bewerben verlangen?                  | Wenn aktiviert, benötigen Nutzer eine der konfigurierten Rollen, um sich in dieser Kategorie zu bewerben.                                                                                                                                                             |
+| Zum Bewerben notwendige Rollen                 | Nur Nutzer mit einer dieser Rollen können sich in dieser Kategorie bewerben (gilt nur, wenn die obige Option aktiviert ist).                                                                                                                                          |
+| "Notwendige Rolle fehlt" Nachricht             | Nachricht, die Nutzern angezeigt wird, die sich bewerben wollen, aber nicht die notwendigen Rollen haben.                                                                                                                                                             |
+| Emoji                                          | Emoji für diese Kategorie, das im Drop-Down-Menü der Informationsnachricht verwendet wird, falls aktiviert.                                                                                                                                                           |
+| Kategoriebeschreibung                          | Beschreibung für diese Kategorie, die im Drop-Down-Menü der Informationsnachricht verwendet wird, falls aktiviert.                                                                                                                                                    |
+
+### Bewerbungs-Panels {#configuration-panels}
+
+In dieser Konfigurationsdatei richtest du Panels ein, die eine Nachricht mit Drop-Down-Menü oder Buttons senden, über die sich Mitglieder bewerben. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=applications%7Cpanels).
+
+| Feld            | Beschreibung                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Panel-Name      | Interner Name des Panels, nur für Admins sichtbar.                                                                 |
+| Kanal           | Der Kanal, in den die Panel-Nachricht gesendet wird.                                                               |
+| Panel-Nachricht | Die Nachricht, die in den Kanal gesendet wird. Darunter werden ein Drop-Down-Menü oder Buttons eingefügt.          |
+| Stil            | Wähle, ob Nutzer eine Kategorie per Drop-Down-Menü oder mit einem Button pro Kategorie auswählen.                  |
+| Kategorien      | Die Kategorien, für die sich Nutzer über dieses Panel bewerben können. Leer lassen, um alle Kategorien anzubieten. |
+
+"Bewerbungsinfokanal" und "Informationsnachricht" aus der [Konfiguration](#configuration-config) funktionieren weiter und dienen als Standard-Panel. Ein Panel, dessen ausgewählte Kategorien alle gelöscht wurden, wird nicht gesendet. Wenn du ein Panel entfernst oder seinen Kanal änderst, bleibt die alte Nachricht im alten Kanal und kann manuell gelöscht werden.
 
 ### Konfiguration {#configuration-config}
 
@@ -80,6 +102,7 @@ In dieser Konfigurationsdatei kannst du Nachrichten und Einstellungen anpassen. 
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Frage-Nachricht                                  | Die Nachricht, die Nutzern mit der zu beantwortenden Frage gesendet wird. Unterstützt `%question%`, `%applicationName%`, `%currentQuestionNumber%` und `%amountOfTotalQuestions%`.                                                                                                                                                                                                                               |
 | Abgesendet-Nachricht                             | Die Bestätigungsnachricht, die Nutzern gesendet wird, nachdem sie ihre Bewerbung eingereicht haben. Unterstützt `%applicationName%` und `%applicationContentURL%`.                                                                                                                                                                                                                                               |
+| Formular-Abgesendet-Nachricht                    | Die Bestätigungsnachricht, die Nutzern angezeigt wird, nachdem sie ein Bewerbungsformular abgeschickt haben. Unterstützt `%applicationName%`.                                                                                                                                                                                                                                                                    |
 | Benachrichtigung-Nachricht                       | Die Nachricht, die in den Benachrichtigungs-Kanal gesendet wird, wenn eine Bewerbung eingeht. Unterstützt `%applicationName%`, `%userTag%`, `%userID%` und `%applicationContentURL%`. Sowohl das klassische Embed-Format als auch der [V4-Nachrichten-Editor](/docs/scnx/guilds/message-editor#v4) werden unterstützt.                                                                                           |
 | Team- Ablehnung / Annahme Grund zwingen          | Wenn aktiviert, müssen Teammitglieder beim Annehmen oder Ablehnen einer Bewerbung einen Grund angeben.                                                                                                                                                                                                                                                                                                           |
 | Verkürzten Bewerbungsinhalt in Discord anzeigen? | Wenn aktiviert, wird der Benachrichtigungsnachricht eine Vorschau des Bewerbungsinhalts angehängt. Bei der klassischen Embed-basierten Benachrichtigung wird sie als zusätzliches Embed hinzugefügt; bei einer [V4-Benachrichtigung](/docs/scnx/guilds/message-editor#v4) wird sie als Container mit einem Text-Display pro Frage angehängt (bis zu 10 Fragen). Lange Antworten werden in beiden Fällen gekürzt. |
@@ -98,6 +121,7 @@ In dieser Konfigurationsdatei kannst du Nachrichten und Einstellungen anpassen. 
 - **Annahme-/Ablehnungs-Knöpfe funktionieren nicht**: Wenn "Rolle verlangen, um Bewerbungen zu bearbeiten" aktiviert ist, stelle sicher, dass das Teammitglied eine der konfigurierten Rollen hat. Andernfalls kann jeder Nutzer mit Zugriff auf den Benachrichtigungs-Kanal Bewerbungen bearbeiten.
 - **Rollen werden bei Annahme nicht vergeben**: Stelle sicher, dass der Bot die Berechtigung "Rollen verwalten" hat und dass die höchste Rolle des Bots über den zu vergebenden Rollen steht.
 - **Die Nachricht im Informationskanal wird nicht angezeigt**: Stelle sicher, dass du den "Bewerbungsinfokanal" in der Konfiguration gesetzt hast und dass der Bot in diesem Kanal die Berechtigung hat, Nachrichten und Embeds zu senden. Lade die Bot-Konfiguration nach Änderungen neu.
+- **Eine Formular-Kategorie ist nicht verfügbar**: Wenn das Formular einer Kategorie unbrauchbar ist (z. B. doppelte oder nur aus Ziffern bestehende Bezeichnungen oder keine Eingabefelder), kann die Kategorie nicht für Bewerbungen genutzt werden und der Bot protokolliert das Problem nur. Prüfe die Bezeichnungen im Feld "Bewerbungsformular".
 
 ## Gespeicherte Daten {#data-usage}
 
