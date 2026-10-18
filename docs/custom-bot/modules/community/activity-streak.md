@@ -15,6 +15,8 @@ Reward users for being active every day, week, or month with an activity score t
 - Users can restore a lost streak once per loss (if enabled).
 - Longest streak is tracked separately and never resets.
 - Leaderboard showing the top 20 active streaks on your server.
+- Optional live leaderboard: a message in a channel of your choice that updates itself whenever streaks change.
+- Customizable streak emojis, including custom server emojis.
 - Users can opt out of displaying their streak in their nickname.
 
 ## Setup {#setup}
@@ -24,6 +26,8 @@ Reward users for being active every day, week, or month with an activity score t
 3. If you want to use streak role rewards, create the roles on your server and configure them in the "Streak Roles" field.
 4. If you want the streak count to appear in nicknames, enable the "Show streak in nickname" option. Make sure the bot has the `Manage Nicknames` permission.
 5. If you want to use staff-managed mode instead of automatic tracking, enable it and configure the staff roles.
+6. If you want to change the streak emojis, set "Active streak emoji" and "Broken streak emoji". See [Streak emojis](#emojis).
+7. If you want a live leaderboard, enable "Live leaderboard enabled?" and select a "Leaderboard channel". See [Live leaderboard](#live-leaderboard).
 
 ## Usage {#usage}
 
@@ -32,6 +36,22 @@ Reward users for being active every day, week, or month with an activity score t
 - Users can view their current and longest streak using [`/streak view`](#commands).
 - If streak restoration is enabled, users who lost their streak can use [`/streak restore`](#commands) to recover it once. You can optionally set a time limit (in days) after which a lost streak can no longer be restored. Restoring keeps the higher of the current and previous streak, so a member who already started a new streak never loses progress.
 - When a user reaches a streak count that matches a configured role reward, the role is automatically assigned.
+
+## Streak emojis {#emojis}
+
+The emoji shown next to streaks is configurable. "Active streak emoji" (default 🔥) is shown for active streaks, "Broken streak emoji" (default ❄️) is shown when a user has no active streak. Both are used in `/streak view`, the leaderboards, and the nickname suffix.
+
+You can enter a Unicode emoji or a custom server emoji in the format `<:name:123456789012345678>`. Discord cannot render custom emojis in nicknames, so the nickname suffix always uses 🔥 instead.
+
+## Live leaderboard {#live-leaderboard}
+
+When "Live leaderboard enabled?" is turned on, the bot keeps one message in the "Leaderboard channel" that updates itself. It is refreshed whenever a streak changes and about every 5 minutes. Each row shows the rank, the user, the current streak (with the streak emoji), and the longest streak.
+
+- Use "Leaderboard embed" to set the title, color, thumbnail, image, and description.
+- "Maximum entries" sets how many users are shown (1 to 25).
+- "User Display Mode" controls whether users are shown as tag, mention, or nickname.
+- "Use Components V2 Layout" renders the leaderboard with Discord's Components V2 instead of a classic embed.
+- "Clear User Messages" deletes messages from other users in the leaderboard channel on every refresh. This requires the bot to have the `Manage Messages` permission in that channel.
 
 ## Commands {#commands}
 
@@ -60,6 +80,8 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Field                                     | Description                                                                                                                                                                                       |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Streak Period                             | How often users must be active to maintain their streak: daily, weekly, or monthly.                                                                                                               |
+| Active streak emoji                       | Emoji shown for active streaks. Supports Unicode emojis and custom server emojis (e.g. `<:name:123456789012345678>`).                                                                             |
+| Broken streak emoji                       | Emoji shown when a user has no active streak. Supports Unicode emojis and custom server emojis (e.g. `<:name:123456789012345678>`).                                                               |
 | Staff Managed                             | If enabled, streaks are managed manually by staff instead of being tracked automatically from messages.                                                                                           |
 | Staff Roles                               | Roles that are allowed to manage streaks using the add and reset commands. Only applies when staff-managed mode is enabled.                                                                       |
 | Show streak in nickname                   | If enabled, the bot appends the user's current streak count to their nickname.                                                                                                                    |
@@ -72,6 +94,13 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Enable streak restore?                    | If enabled, users can restore a lost streak once per loss.                                                                                                                                        |
 | Roles allowed to restore streaks          | Roles that are allowed to use the restore command. If empty, all users can restore.                                                                                                               |
 | Restore time limit (days)                 | How many days after losing a streak users can still restore it with `/streak restore`. Set to `0` for no time limit. Only applies when "Enable streak restore?" is turned on.                     |
+| Live leaderboard enabled?                 | If enabled, a message that updates itself and shows the streak leaderboard is kept in the leaderboard channel.                                                                                    |
+| Leaderboard channel                       | Channel in which the live streak leaderboard is posted.                                                                                                                                           |
+| Leaderboard embed                         | Change the title, color, thumbnail, image, and description of the leaderboard embed.                                                                                                              |
+| Maximum entries                           | How many users are shown on the leaderboard (1 to 25).                                                                                                                                            |
+| User Display Mode                         | How users are displayed on the leaderboard: Tag (default) shows the username, Mention shows a clickable @mention, Nickname shows the server nickname.                                             |
+| Use Components V2 Layout                  | If enabled, the leaderboard is rendered using Discord's Components V2 system instead of a classic embed.                                                                                          |
+| Clear User Messages                       | If enabled, the bot deletes messages from other users in the leaderboard channel every time the leaderboard updates, to keep it clean. Requires the `Manage Messages` permission.                 |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -98,6 +127,15 @@ In this configuration file, you can configure the module. Open it in your [dashb
   <ul>
     <li>Verify the streak role rewards are correctly configured with the right streak count and role.</li>
     <li>Ensure the bot has the <code>Manage Roles</code> permission and its role is positioned above the reward roles.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>The live leaderboard is not appearing or updating</summary>
+  <ul>
+    <li>Make sure "Live leaderboard enabled?" is on and a "Leaderboard channel" is selected.</li>
+    <li>Ensure the bot can view the channel, send messages, embed links, and read message history. For "Clear User Messages" it also needs <code>Manage Messages</code>.</li>
+    <li>The leaderboard refreshes when streaks change and about every 5 minutes, so changes may take a moment to show.</li>
   </ul>
 </details>
 
