@@ -19,6 +19,7 @@ Einfach zu bedienendes Level-System mit vielen Anpassungsmöglichkeiten!
 - Füge [Multiplikator-Kanäle und -Rollen](#multiplicators) hinzu.
 - Zeige die aktuelle [Rangliste](#live-leaderboard) live in einem Discord-Kanal an.
 - Starte dein Level-System mit Level 0 und konfiguriere ein Maximallevel.
+- Lasse inaktive Mitglieder mit dem [Inaktivitätsverfall](#inactivity-decay) langsam XP verlieren (optional, standardmäßig deaktiviert).
 - [Verwalte XP und Level von Nutzern](#manage-levels) auf deinem Server.
 
 ## Einrichtung {#setup}
@@ -284,6 +285,46 @@ Multiplikatorfaktor von $0,5$
 hat, erhalten Nutzer dort nur halb so viele XP wie in anderen Kanälen. Du kannst auch Kanäle oder
 Kategorien [konfigurieren](#configuration), die vollständig vom Leveln ausgeschlossen werden sollen.
 
+### Inaktivitätsverfall {#inactivity-decay}
+
+Der Inaktivitätsverfall ist eine optionale Funktion, durch die Mitglieder, die nicht mehr aktiv sind, langsam XP und
+Level verlieren. So bleibt deine [Rangliste](#live-leaderboard) auf aktuelle Aktivität ausgerichtet und neuere
+Mitglieder können aufholen. Die Funktion ist standardmäßig deaktiviert und ändert nichts auf deinem Server, bis du sie
+in der Kategorie „Inaktivitätsverfall" deiner [Konfiguration](#configuration-config) aktivierst.
+
+Ein Mitglied gilt als inaktiv, wenn es kein XP gesammelt hat, weder durch Nachrichten noch in
+[Sprachkanälen](#voice-xp). Sobald ein Mitglied länger als die Schonfrist inaktiv ist, wendet der Bot pro Intervall
+einen Verfallsschritt an. Beispiel: Bei einer Schonfrist von 30 Tagen, einem Intervall von 7 Tagen und einem Verlust von
+5 Prozent verliert ein Mitglied, das nicht mehr schreibt, nach 30 Tagen 5 Prozent seiner XP und danach alle 7 Tage
+erneut.
+
+Du kannst festlegen, wie viele XP in jedem Schritt verloren gehen:
+
+| Art des Verfalls         | Auswirkung eines Verfallsschritts                                         |
+| ------------------------ | ------------------------------------------------------------------------- |
+| Prozent des aktuellen XP | Das Mitglied verliert den konfigurierten Prozentsatz seiner aktuellen XP. |
+| Fester XP-Betrag         | Das Mitglied verliert den konfigurierten XP-Betrag.                       |
+| Anzahl an Leveln         | Das Mitglied verliert die konfigurierte Anzahl an Leveln.                 |
+
+Gut zu wissen:
+
+- Der Verfall wird einmal pro Stunde geprüft, aber ein Mitglied verliert pro Intervall nie mehr als einen Schritt - auch
+  nicht, wenn der Bot eine Zeit lang offline war.
+- Sobald ein Mitglied wieder XP sammelt, endet der Verfall. Bereits verlorene XP werden nicht zurückgegeben.
+- Die XP fallen nie unter das konfigurierte „Niedrigstes Level". Dabei wird das angezeigte Level verwendet, die Option
+  „Von Level 0 starten?" wird also berücksichtigt.
+- Mitglieder mit einer der „Vom Verfall ausgenommenen Rollen" verlieren nie XP. Das Gleiche gilt für Mitglieder mit einer
+  der „Ausgeschlossenen Rollen" aus deiner [Konfiguration](#configuration-config).
+- [Levelbelohnungsrollen](#level-rewards) werden nach dem Verfall automatisch angepasst, sodass Mitglieder Rollen von
+  Leveln verlieren, die sie nicht mehr haben.
+- Mitglieder werden nicht benachrichtigt, wenn sie XP verlieren, und Mitglieder, die deinen Server verlassen haben,
+  werden übersprungen.
+- Mitglieder, deren XP mit einem [Administratorbefehl](#manage-levels) gesetzt wurden, die aber selbst nie XP gesammelt
+  haben, sind erst betroffen, wenn sie zum ersten Mal XP sammeln.
+- Mitglieder auf dem Maximallevel gelten als aktiv, wenn sie schreiben.
+- Bestehende Mitglieder gelten ab dem Tag, an dem die Funktion auf deinem Server verfügbar wird, als aktiv. Das
+  Aktivieren führt also nie dazu, dass alle auf einmal XP verlieren.
+
 ### Verwalten von Nutzer-XP und -Leveln auf deinem Server {#manage-levels}
 
 :::info Bevor du dies tun kannst
@@ -397,6 +438,13 @@ kannst [diese Datei in deinem Dashboard öffnen](https://scnx.app/de/glink?page=
 | Maximallevel                                                   | _Nur sichtbar, wenn „Maximallevel aktivieren?" aktiviert ist._<br/>Das höchste Level, das ein Nutzer erreichen kann. Nutzer steigen nach Erreichen dieses Levels nicht mehr auf (können aber weiterhin XP erhalten).                                                                                                                                                   |
 | Befehl /calculate-level aktivieren                             | Wenn aktiviert, können Servermitglieder den Befehl [`/calculate-level`](#commands-user) verwenden, um basierend auf der konfigurierten Levelkurve und dem XP-pro-Nachricht-Bereich die für ein bestimmtes Level erforderlichen XP und die Anzahl an Nachrichten (sowie Voice-Minuten, sofern zutreffend) zu berechnen.                                                 |
 | Cheats                                                         | Um [Level und XP manuell zu verwalten](#manage-levels), aktiviere diese Option. Dies macht dein Level-System unfair, wenn es von Admins missbraucht wird.                                                                                                                                                                                                              |
+| Inaktivitätsverfall aktivieren?                                | Wenn aktiviert, verlieren Mitglieder, die eine Weile kein XP gesammelt haben, langsam XP und Level. Level-Belohnungsrollen werden entsprechend angepasst. Bestehende Mitglieder gelten ab der Installation dieses Updates als aktiv. Mehr Informationen im Abschnitt [Inaktivitätsverfall](#inactivity-decay).                                                         |
+| Schonfrist (Tage)                                              | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Wie viele Tage ein Mitglied kein XP sammeln kann, bevor es beginnt, XP zu verlieren.                                                                                                                                                                                                         |
+| Tage zwischen Verfallsschritten                                | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Nach Ablauf der Schonfrist verlieren inaktive Mitglieder alle so viele Tage XP.                                                                                                                                                                                                              |
+| Art des Verfalls                                               | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Wie der folgende Betrag in jedem Verfallsschritt angewendet wird: „Prozent des aktuellen XP", „Fester XP-Betrag" oder „Anzahl an Leveln".                                                                                                                                                    |
+| Verfallsbetrag                                                 | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Prozent, XP oder Anzahl an Leveln, die pro Verfallsschritt verloren gehen, abhängig von der Art des Verfalls.                                                                                                                                                                                |
+| Niedrigstes Level                                              | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Der Verfall setzt ein Mitglied nie unter dieses Level. Es wird das angezeigte Level verwendet, die Einstellung „Von Level 0 starten?" wird also berücksichtigt.                                                                                                                              |
+| Vom Verfall ausgenommene Rollen                                | _Nur sichtbar, wenn „Inaktivitätsverfall aktivieren?" aktiviert ist._<br/>Mitglieder mit einer dieser Rollen verlieren nie XP durch Inaktivität.                                                                                                                                                                                                                       |
 
 ### Nachrichtenkonfiguration {#configuration-strings}
 
@@ -484,6 +532,18 @@ XP vergeben werden, da der Bot die Nachricht / den Sprachkanal nicht sehen kann.
 Die [Live-Rangliste](#live-leaderboard) kann nur gesendet werden, wenn der Bot die Berechtigungen "Kanal anzeigen", "
 Nachrichtenverlauf anzeigen"
 und "Nachrichten senden" im konfigurierten Ranglistenkanal hat. Stelle außerdem sicher, dass die Nachricht nicht mehr als 1024 Zeichen lang ist - setze ansonsten den Wert "Maximale Anzahl von Nutzern im Live Ranglistenkanal" in der [Konfiguration](#configuration) auf einen niedrigeren Wert.
+
+</details>
+
+<details>
+<summary>Mitglieder verlieren keine XP.</summary>
+
+Stelle sicher, dass „Inaktivitätsverfall aktivieren?" in der [Konfiguration](#configuration-config) eingeschaltet ist.
+Der Verfall beginnt erst, nachdem die Schonfrist ohne gesammelte XP des Mitglieds abgelaufen ist, und pro Intervall wird
+nur ein Schritt angewendet - es kann also eine Weile dauern, bis der erste Verlust eintritt. Mitglieder mit einer „Vom
+Verfall ausgenommenen Rolle" oder „Ausgeschlossenen Rolle", Mitglieder, die das „Niedrigstes Level" erreicht haben, und
+Mitglieder, die deinen Server verlassen haben, sind nie betroffen. Mehr dazu im Abschnitt
+[Inaktivitätsverfall](#inactivity-decay).
 
 </details>
 

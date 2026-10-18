@@ -7,6 +7,8 @@ Let users apply for staff positions, partnerships, and more - with customizable 
 ## Features {#features}
 
 - Create multiple application categories, each with its own set of questions, notification channel, and roles.
+- Set up several application panels, each with its own channel, message, style (drop-down menu or one button per category) and selection of categories.
+- Optionally let applicants fill out a Discord form instead of answering questions in DMs.
 - Users start the application process via the `/apply` command or through a drop-down menu in a configured info channel.
 - Questions are sent to the applicant via DM, and answers are collected sequentially.
 - Staff members can approve or deny applications directly from the notification channel using buttons.
@@ -21,12 +23,16 @@ Let users apply for staff positions, partnerships, and more - with customizable 
 1. [Enable the module](https://scnx.app/glink?page=bot/modules?query=applications) on your server.
 2. Open the [Application-Categories configuration](https://scnx.app/glink?page=bot/configuration?file=applications%7Ccategories) and create at least one application category. Set the category name, notification channel, questions, and any roles to assign on approval.
 3. Open the [Configuration](https://scnx.app/glink?page=bot/configuration?file=applications%7Cconfig) to customize messages, cooldown settings, and optionally set up an info channel with a drop-down menu for easy access.
-4. If you want to use the info channel feature, set the "Application Info Channel" to a text channel. The bot will send a message with a drop-down menu that allows users to select a category and apply.
-5. Make sure the bot has the **View Channel** and **Send Messages** permissions in the notification channels. For role assignment on approval, the bot needs **Manage Roles** with its highest role above the roles it needs to assign.
+4. To post application panels, open the [Application-Panels configuration](https://scnx.app/glink?page=bot/configuration?file=applications%7Cpanels) and add a panel with a channel, message, style and the categories it should offer. Leave the categories empty to offer all of them.
+5. If you want to use the info channel feature, set the "Application Info Channel" to a text channel. The bot will send a message with a drop-down menu that allows users to select a category and apply.
+6. Make sure the bot has the **View Channel** and **Send Messages** permissions in the notification channels. For role assignment on approval, the bot needs **Manage Roles** with its highest role above the roles it needs to assign.
 
 ## Usage {#usage}
 
 - Users can apply using `/apply` and selecting a category, or by using the drop-down menu in the info channel (if configured).
+- Users can also apply through an application panel: they pick a category from the drop-down menu or click the button of a category, depending on the panel's style.
+- For categories that use a Discord form, a form opens directly in Discord. The applicant fills it out and submits it, no DMs are needed. The answers appear in the notification channel together with the "Approve" and "Deny" buttons, and the applicant receives the confirmation message from the "Form-Submitted-Message" setting. Role requirements, the cooldown and the one-open-application rule apply to forms as well.
+- For all other categories, the DM chat works as described below.
 - The bot sends the first question to the user via DM. The user responds with a message, and the bot sends the next question. This continues until all questions are answered.
 - Users can cancel their application at any time by sending `!cancel` during the DM process.
 - An application session is only cleaned up after 30 minutes of inactivity. The timer resets with every answer, so long applications no longer time out mid-flow - only genuinely abandoned sessions are cleaned up. When a session does time out, the bot DMs the user to let them know the application timed out and that they can start over with `/apply`.
@@ -58,19 +64,35 @@ Context menu commands are turned off by default. See [Setting up context menu co
 
 In this configuration file, you set up application categories with their questions and settings. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=applications%7Ccategories).
 
-| Field                                | Description                                                                                                                           |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Application Category Name            | The name of the application category, displayed to users. Should be unique and not changed after applications have been received.     |
-| Notification Channel                 | Channel where submitted applications are sent for staff review. Staff can approve or deny applications here.                          |
-| Questions                            | The questions users will be asked, in order. Users answer each question via DM with up to 4000 characters (2000 for non-Nitro users). |
-| Roles                                | Roles that will be granted to users whose application is approved.                                                                    |
-| Require role to process application? | If enabled, only users with specific roles can approve or deny applications in this category.                                         |
-| Roles that can process applications  | Only users with one of these roles can approve or deny applications (only applies if the above option is enabled).                    |
-| Require role to apply?               | If enabled, users need one of the configured roles to apply in this category.                                                         |
-| Require role to apply                | Only users with one of these roles can apply in this category (only applies if the above option is enabled).                          |
-| "Missing required role" error        | Message shown to users who try to apply but do not have the required roles.                                                           |
-| Emoji                                | Emoji for this category, used in the info message drop-down if enabled.                                                               |
-| Category description                 | Description for this category, used in the info message drop-down if enabled.                                                         |
+| Field                                 | Description                                                                                                                                                                                                        |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Application Category Name             | The name of the application category, displayed to users. Should be unique and not changed after applications have been received.                                                                                  |
+| Notification Channel                  | Channel where submitted applications are sent for staff review. Staff can approve or deny applications here.                                                                                                       |
+| Questions                             | The questions users will be asked, in order. Users answer each question via DM with up to 4000 characters (2000 for non-Nitro users).                                                                              |
+| Use a Discord form instead of DM chat | If enabled, users fill out a Discord form (popup) instead of answering questions in their DMs. The "Questions" field is then replaced by the "Application form" field.                                             |
+| Application form                      | The inputs of the form, up to 5 text questions. Each can be a short or paragraph answer. Labels can be up to 45 characters, must be unique and cannot consist of digits only. Answers can be up to 700 characters. |
+| Roles                                 | Roles that will be granted to users whose application is approved.                                                                                                                                                 |
+| Require role to process application?  | If enabled, only users with specific roles can approve or deny applications in this category.                                                                                                                      |
+| Roles that can process applications   | Only users with one of these roles can approve or deny applications (only applies if the above option is enabled).                                                                                                 |
+| Require role to apply?                | If enabled, users need one of the configured roles to apply in this category.                                                                                                                                      |
+| Require role to apply                 | Only users with one of these roles can apply in this category (only applies if the above option is enabled).                                                                                                       |
+| "Missing required role" error         | Message shown to users who try to apply but do not have the required roles.                                                                                                                                        |
+| Emoji                                 | Emoji for this category, used in the info message drop-down if enabled.                                                                                                                                            |
+| Category description                  | Description for this category, used in the info message drop-down if enabled.                                                                                                                                      |
+
+### Application-Panels {#configuration-panels}
+
+In this configuration file, you set up panels that post a message with a drop-down menu or buttons so members can apply. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=applications%7Cpanels).
+
+| Field         | Description                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| Panel name    | Internal name of the panel, only shown to admins.                                           |
+| Channel       | The channel the panel message is sent to.                                                   |
+| Panel message | The message sent to the channel. A drop-down menu or buttons are added below it.            |
+| Style         | Choose whether users pick a category from a drop-down menu or with one button per category. |
+| Categories    | The categories users can apply for using this panel. Leave empty to offer all categories.   |
+
+The "Application Info Channel" and "Info message" from the [Configuration](#configuration-config) keep working and act as the default panel. A panel whose selected categories were all deleted is not posted. If you remove a panel or change its channel, the old message stays in the old channel and you can delete it manually.
 
 ### Configuration {#configuration-config}
 
@@ -80,6 +102,7 @@ In this configuration file, you can customize messages and settings. Open it in 
 | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Question-Message                                  | The message sent to users containing the question they need to answer. Supports `%question%`, `%applicationName%`, `%currentQuestionNumber%`, and `%amountOfTotalQuestions%`.                                                                                                                                                                                 |
 | Submitted-Message                                 | The confirmation message sent to users after they submit their application. Supports `%applicationName%` and `%applicationContentURL%`.                                                                                                                                                                                                                       |
+| Form-Submitted-Message                            | The confirmation message shown to users after they submit an application form. Supports `%applicationName%`.                                                                                                                                                                                                                                                  |
 | Notification-Message                              | The message sent to the notification channel when an application is received. Supports `%applicationName%`, `%userTag%`, `%userID%`, and `%applicationContentURL%`. Both the legacy embed format and the [V4 message editor](/docs/scnx/guilds/message-editor#v4) are supported.                                                                              |
 | Require Team- Approve / Deny reason               | If enabled, staff members must provide a reason when approving or denying an application.                                                                                                                                                                                                                                                                     |
 | Display truncated application content in Discord? | If enabled, a preview of the application content is appended to the notification message. With the legacy embed-based notification it is added as an extra embed; with a [V4 notification](/docs/scnx/guilds/message-editor#v4) it is appended as a Container with one Text Display per question (up to 10 questions). Long answers are truncated either way. |
@@ -98,6 +121,7 @@ In this configuration file, you can customize messages and settings. Open it in 
 - **Approval/denial buttons do not work**: If "Require role to process application" is enabled, make sure the staff member has one of the configured roles. Otherwise, any user with access to the notification channel can process applications.
 - **Roles are not assigned on approval**: Ensure the bot has the "Manage Roles" permission and that the bot's highest role is above the roles it needs to assign.
 - **The info channel message is not showing**: Make sure you set the "Application Info Channel" in the configuration and that the bot has permissions to send messages and embeds in that channel. Reload the bot configuration after making changes.
+- **A form category is not available**: If the form of a category is unusable (for example duplicate or digits-only labels, or no inputs), that category cannot be used for applications and the bot only logs the problem. Check the labels in the "Application form" field.
 
 ## Stored data {#data-usage}
 
