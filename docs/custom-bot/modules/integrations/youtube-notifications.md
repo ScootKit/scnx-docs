@@ -11,6 +11,7 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 - Optionally filter out YouTube Shorts from video notifications.
 - Optionally skip upcoming or scheduled premieres and livestreams in video notifications until they are published as a regular video.
 - Optionally assign a "Live" role to the YouTuber's Discord account while they are livestreaming, and remove it when they go offline.
+- Optionally create a Discord event for every announced video or livestream.
 - Monitor multiple YouTube channels simultaneously, each with its own notification channel and message format.
 - Customize notification messages with details such as channel name, title, description, URL and thumbnail.
 
@@ -20,7 +21,8 @@ Send a message to a channel when a YouTube channel publishes a new video or star
 2. Click on "Add new YouTube Channel" and configure it as described in the [configuration section](#configuration).
 3. Make sure the bot has "View channel", "Send messages" and "Embed links" permissions on the configured notification channel.
 4. If you plan to use the live role feature (livestream notifications only), make sure the bot has the "Manage roles" permission and that the bot's role is positioned higher than the configured live role.
-5. Reload your bot's configuration to apply the changes.
+5. If you plan to use the Discord event feature, make sure the bot has the "Create events" permission on your server.
+6. Reload your bot's configuration to apply the changes.
 
 ## Usage {#usage}
 
@@ -28,6 +30,16 @@ After [setting up](#setup) and [configuring](#configuration) this module, no add
 
 - When a new **video** is uploaded, the configured notification message will be sent to the specified Discord channel. Only videos published within the last 24 hours will trigger notifications.
 - When a channel starts a **livestream**, the configured notification message will be sent. If the live role feature is enabled, the configured role will be added to the YouTuber's Discord account when they go live and removed when the stream ends.
+- If **Create Discord event?** is enabled, the bot also creates a [Discord event](#discord-events) for the video or livestream.
+
+### Discord events {#discord-events}
+
+For every YouTube channel entry you can optionally let the bot create a Discord scheduled event together with the notification. The event uses the YouTube link as its location (type "External"), the thumbnail as cover image and the shortened description as event description.
+
+- **Livestreams:** The event starts immediately when the stream is announced. If **End event when stream ends?** is enabled, the event is ended once the stream is detected as offline. This takes up to about 3 minutes, as the bot waits for three consecutive checks without a livestream. Without this option, or if the stream is never detected as offline, the event ends automatically after 24 hours.
+- **Videos:** The event ends after the configured **Event duration (hours)** (24 hours by default, up to 720 hours).
+- Only one event is created per video or livestream on your server, even if multiple entries cover the same YouTube channel.
+- If the bot lacks the "Create events" permission or the event cannot be created, this is reported once in the log of your bot and the normal notification is still sent.
 
 ## Configuration {#configuration}
 
@@ -44,19 +56,25 @@ In this configuration file, you can set up YouTube channels to monitor for new v
 | Ignore shorts?                                 | If enabled, no notifications will be sent when a YouTube Short is uploaded. Normal videos will still trigger notifications.                                                                     |
 | Ignore upcoming/scheduled premieres & streams? | If enabled, scheduled premieres and livestreams will not trigger an upload notification while they are still upcoming or live. They notify normally once they are published as a regular video. |
 | Message                                        | The message sent to the configured channel when a new video is uploaded. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i>                                      |
+| Create Discord event?                          | If enabled, a Discord event is created for each new video announcement. The bot needs the "Create events" permission. Disabled by default.                                                      |
+| Event name                                     | Name of the Discord event (shortened to 100 characters). Only shown if events are enabled.<br/><i>Please review available parameters in your dashboard.</i>                                     |
+| Event duration (hours)                         | How long the event should last, from 1 to 720 hours (default: 24). Only shown if events are enabled.                                                                                            |
 
 ### Live Notification YouTube Channels {#configuration-live-channels}
 
 In this configuration file, you can set up YouTube channels to monitor for livestreams. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=youtube-notifications%7Clive-channels).
 
-| Field            | Description                                                                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Channel          | The Discord channel in which the notification should be sent.                                                                                                    |
-| YouTube @-Handle | The YouTube @-handle of the channel to monitor for livestreams.                                                                                                  |
-| Message          | The message sent to the configured channel when the YouTube channel goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i> |
-| Use Live-Role    | Whether the live role feature should be activated for this YouTube channel.                                                                                      |
-| Discord-User ID  | The Discord user ID of the YouTuber. Only required if the live role feature is enabled.                                                                          |
-| Live Role        | The role to assign to the YouTuber when they are live. Only required if the live role feature is enabled.                                                        |
+| Field                       | Description                                                                                                                                                          |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Channel                     | The Discord channel in which the notification should be sent.                                                                                                        |
+| YouTube @-Handle            | The YouTube @-handle of the channel to monitor for livestreams.                                                                                                      |
+| Message                     | The message sent to the configured channel when the YouTube channel goes live. Supports embeds.<br/><i>Please review available parameters in your dashboard.</i>     |
+| Use Live-Role               | Whether the live role feature should be activated for this YouTube channel.                                                                                          |
+| Discord-User ID             | The Discord user ID of the YouTuber. Only required if the live role feature is enabled.                                                                              |
+| Live Role                   | The role to assign to the YouTuber when they are live. Only required if the live role feature is enabled.                                                            |
+| Create Discord event?       | If enabled, a Discord event is created for each livestream announcement. The bot needs the "Create events" permission. Disabled by default.                          |
+| Event name                  | Name of the Discord event (shortened to 100 characters). Only shown if events are enabled.<br/><i>Please review available parameters in your dashboard.</i>          |
+| End event when stream ends? | If enabled (default), the event is ended as soon as the channel is no longer live. Otherwise it ends automatically after 24 hours. Only shown if events are enabled. |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -89,6 +107,15 @@ In this configuration file, you can set up YouTube channels to monitor for lives
     <li>Ensure the bot has the "Manage roles" permission and that the bot's role is positioned higher than the configured live role in the server settings.</li>
     <li>The YouTuber must be a member of your Discord server.</li>
     <li>Live roles are cleaned up on bot restart. If the role was not removed after a stream ended, restarting the bot will resolve this.</li>
+</ul>
+</details>
+
+<details>
+<summary>Discord events are not being created</summary>
+<ul>
+    <li>Make sure "Create Discord event?" is enabled for the YouTube channel entry.</li>
+    <li>Ensure the bot has the "Create events" permission on your server.</li>
+    <li>An event is only created together with a notification, and only once per video or livestream on your server.</li>
 </ul>
 </details>
 
