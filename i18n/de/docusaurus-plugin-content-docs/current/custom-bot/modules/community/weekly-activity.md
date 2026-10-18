@@ -67,6 +67,35 @@ In dieser Konfigurationsdatei kannst du das Modul einrichten. Öffne sie in dein
 | Größe der Bestenliste              | Wie viele Mitglieder in der Bestenliste angezeigt werden (1 bis 50).                                                                                            |
 | Belohnungsrolle                    | Rolle, die die aktivsten Mitglieder der Woche erhalten und die beim nächsten wöchentlichen Durchlauf wieder entfernt wird. Leer lassen, um sie zu deaktivieren. |
 | Mitglieder mit Belohnungsrolle     | Wie viele der besten Mitglieder die Belohnungsrolle erhalten (0 bis 50).                                                                                        |
+| Bestenlisten-Nachricht             | Die Nachricht, die jede Woche gepostet wird. Es wird niemand gepingt, unabhängig vom Inhalt.                                                                    |
+| Benutzeranzeigemodus               | Wie Mitglieder in der Bestenliste angezeigt werden: Tag, Erwähnung oder Nickname.                                                                               |
+| Zeilenformat                       | Die Zeile, die für jedes Mitglied in der Bestenliste angezeigt wird.                                                                                            |
+
+## Beitrag anpassen {#customizing}
+
+Die „Bestenlisten-Nachricht" ist ein normales Nachrichtenfeld, du kannst also Titel, Farbe und Bilder ändern oder ein anderes Layout wählen, genau wie in anderen Modulen. Standardmäßig wird die Bestenliste als orangefarbene Karte mit dem Titel „Wöchentliche Aktivitäts-Highlights" gepostet.
+
+Diese Platzhalter kannst du in der Nachricht verwenden:
+
+| Platzhalter     | Wird ersetzt durch                                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `%leaderboard%` | Die Rangliste der Mitglieder, eine Zeile pro Mitglied.                                                              |
+| `%week%`        | Die soeben beendete Woche als Zeitraum, zum Beispiel „11.10.2026 - 18.10.2026".                                     |
+| `%winners%`     | Erwähnungen der Mitglieder, die die Belohnungsrolle erhalten haben. Leer, wenn keine „Belohnungsrolle" gewählt ist. |
+
+Mit dem „Benutzeranzeigemodus" legst du fest, wie Mitglieder in der Liste erscheinen:
+
+- **Tag**: Der Benutzername, zum Beispiel `alex`. Empfohlen für große Server.
+- **Erwähnung**: Eine klickbare `@Erwähnung`. Das ist der Standard.
+- **Nickname**: Der Server-Spitzname. Mitglieder ohne Spitznamen werden mit ihrem Benutzernamen angezeigt.
+
+Das „Zeilenformat" bestimmt jede Zeile der Liste. Verwende `%rank%` für die Platzierung, `%user%` für das Mitglied und `%points%` für die Punkte. Der Standard ist `%rank%. %user% - %points% Punkte`.
+
+:::info
+Der Beitrag pingt nie jemanden, auch wenn deine Nachricht `@everyone`, eine Rolle oder eine Erwähnung enthält. Erwähnungen werden angezeigt, aber niemand erhält eine Benachrichtigung.
+:::
+
+Ist die Liste für eine Discord-Nachricht zu lang, wird sie gekürzt und die Mitglieder mit den besten Platzierungen bleiben erhalten. Entfernst du `%leaderboard%` aus der Nachricht, wird die Liste nicht gepostet.
 
 ## Fehlerbehebung {#troubleshooting}
 

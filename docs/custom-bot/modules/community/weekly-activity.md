@@ -67,6 +67,35 @@ In this configuration file, you can configure the module. Open it in your [dashb
 | Leaderboard size           | How many members are shown on the leaderboard (1 to 50).                                                                      |
 | Reward role                | Role given to the most active members of the week and removed again at the next weekly run. Leave empty to disable.           |
 | Reward role members        | How many of the top members receive the reward role (0 to 50).                                                                |
+| Leaderboard message        | The message that is posted every week. Nobody is pinged, regardless of the content.                                           |
+| User display mode          | How members are shown on the leaderboard: Tag, Mention or Nickname.                                                           |
+| Row format                 | The line shown for each member on the leaderboard.                                                                            |
+
+## Customizing the post {#customizing}
+
+The "Leaderboard message" is a normal message field, so you can change the title, color and images, or switch to a different layout, just like in other modules. By default, the leaderboard is posted as an orange card titled "Weekly Activity Highlights".
+
+You can use these placeholders in the message:
+
+| Placeholder     | Replaced with                                                                                      |
+| --------------- | -------------------------------------------------------------------------------------------------- |
+| `%leaderboard%` | The ranked list of members, one line per member.                                                   |
+| `%week%`        | The week that just ended as a date range, for example "Oct 11, 2026 - Oct 18, 2026".               |
+| `%winners%`     | Mentions of the members who received the reward role. Empty if you did not select a "Reward role". |
+
+Use "User display mode" to choose how members appear in the list:
+
+- **Tag**: The username, for example `alex`. Recommended for large servers.
+- **Mention**: A clickable `@mention`. This is the default.
+- **Nickname**: The server nickname. Members without a nickname are shown with their username.
+
+"Row format" controls each line of the list. Use `%rank%` for the position, `%user%` for the member and `%points%` for the points. The default is `%rank%. %user% - %points% points`.
+
+:::info
+The post never pings anyone, even if your message contains `@everyone`, a role or a mention. Mentions are shown, but nobody receives a notification.
+:::
+
+If the list is too long for a Discord message, it is shortened and the members with the best ranks are kept. If you remove `%leaderboard%` from the message, the list is not posted.
 
 ## Troubleshooting {#troubleshooting}
 
