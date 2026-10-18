@@ -18,6 +18,7 @@ Easy to use levelling system with a lot of customization!
 - Add [multiplicator channels and roles](#multiplicators).
 - Show the current [leaderboard](#live-leaderboard) live in a Discord channel.
 - Start your level system with Level 0 and configure a maximum level.
+- Let inactive members slowly lose XP with [inactivity decay](#inactivity-decay) (optional, off by default).
 - [Manage the XP and level of users](#manage-levels) on your server.
 
 ## Setup {#setup}
@@ -259,6 +260,44 @@ a multiplier, which will decrease the amount of XP given. For example, if a chan
 users will only receive half as much XP there as in other channels. You can also [configure](#configuration) channels or
 categories that should be excluded from leveling completely.
 
+### Inactivity decay {#inactivity-decay}
+
+Inactivity decay is an optional feature that makes members who stopped being active slowly lose XP and levels. This
+keeps your [leaderboard](#live-leaderboard) focused on recent activity, so newer members can catch up. It is disabled by
+default and does not change anything on your server until you enable it in the "Inactivity decay" category of
+your [configuration](#configuration-config).
+
+A member counts as inactive if they have not gained any XP, neither from messages nor from
+[voice channels](#voice-xp). Once a member has been inactive for longer than the grace period, the bot applies one decay
+step per interval. For example, with a grace period of 30 days, an interval of 7 days and a loss of 5 percent, a member
+who stops chatting loses 5 percent of their XP after 30 days, and again every 7 days after that.
+
+You can choose how much XP is lost in every step:
+
+| Type of decay             | Effect of one decay step                                        |
+| ------------------------- | --------------------------------------------------------------- |
+| Percent of the current XP | The member loses the configured percentage of their current XP. |
+| Fixed amount of XP        | The member loses the configured amount of XP.                   |
+| Number of levels          | The member drops the configured number of levels.               |
+
+Good to know:
+
+- Decay is checked once per hour, but a member never loses more than one step per interval - even if the bot was offline
+  for a while.
+- As soon as a member gains XP again, decay stops. XP that was already lost is not restored.
+- XP never drops below the "Lowest level" you configure. The level shown to members is used, so the "Start with Level
+  0?" option is respected.
+- Members with one of the "Roles exempt from decay" never lose XP. The same applies to members with a "Blacklisted
+  roles" role from your [configuration](#configuration-config).
+- [Level reward roles](#level-rewards) are updated automatically after decay, so members lose roles of levels they no
+  longer have.
+- Members are not notified when they lose XP, and members who left your server are skipped.
+- Members whose XP was set with an [administrator command](#manage-levels) but who never earned any XP themselves are
+  not affected until they earn XP for the first time.
+- Members at the maximum level count as active when they chat.
+- Existing members start counting as active on the day the feature becomes available on your server, so enabling it
+  never makes everyone lose XP at once.
+
 ### Manage user XP and levels on your server {#manage-levels}
 
 :::info before you can do this
@@ -362,6 +401,13 @@ can [open this file in your dashboard](https://scnx.app/glink?page=bot/configura
 | Maximum level                                                 | _Only visible if "Enable maximum level?" is enabled._<br/>The highest level a user can reach. Users will stop gaining levels (but may still gain XP) after reaching this level.                                                                                                                             |
 | Enable /calculate-level command                               | If enabled, server members can use the [`/calculate-level`](#commands-user) command to calculate the XP and number of messages (and voice minutes, if applicable) required to reach a specific level based on the configured level curve and XP-per-message range.                                          |
 | Cheats                                                        | To manage [levels and XP manually](#manage-levels), enable this option. This makes your level system unfair, if abused by admins.                                                                                                                                                                           |
+| Enable inactivity decay?                                      | If enabled, members who have not earned any XP for a while slowly lose XP and levels. Level reward roles are updated accordingly. Existing members count as active from the moment this update is installed. More information in the [Inactivity decay](#inactivity-decay) section.                         |
+| Grace period (days)                                           | _Only visible if "Enable inactivity decay?" is enabled._<br/>How many days a member can go without earning XP before they start losing XP.                                                                                                                                                                  |
+| Days between decay steps                                      | _Only visible if "Enable inactivity decay?" is enabled._<br/>Once the grace period is over, inactive members lose XP once every this many days.                                                                                                                                                             |
+| Type of decay                                                 | _Only visible if "Enable inactivity decay?" is enabled._<br/>How the amount below is applied in each decay step: "Percent of the current XP", "Fixed amount of XP" or "Number of levels".                                                                                                                   |
+| Decay amount                                                  | _Only visible if "Enable inactivity decay?" is enabled._<br/>Percent, XP or number of levels lost per decay step, depending on the type of decay.                                                                                                                                                           |
+| Lowest level                                                  | _Only visible if "Enable inactivity decay?" is enabled._<br/>Decay never takes a member below this level. Uses the displayed level, so it respects the "Start with Level 0?" setting.                                                                                                                       |
+| Roles exempt from decay                                       | _Only visible if "Enable inactivity decay?" is enabled._<br/>Members with any of these roles never lose XP due to inactivity.                                                                                                                                                                               |
 
 ### Message configuration {#configuration-strings}
 
@@ -438,6 +484,17 @@ XP can be given as the bot can't see the message / voice channel.
 
 The [live leaderboard](#live-leaderboard) can only be sent if the bot has the permissions "View channel",
 "View message history" and "Send messages" in the configured leaderboard channel. Also, make sure that the message is no longer than 1024 characters. Otherwise, set the value 'Maximum number of users in the live leaderboard channel' to a lower value in the [configuration](#configuration).
+
+</details>
+
+<details>
+<summary>Members are not losing XP.</summary>
+
+Make sure that "Enable inactivity decay?" is turned on in the [configuration](#configuration-config). Decay only starts
+after the grace period has passed without the member earning any XP, and only one step is applied per interval, so it
+can take a while until the first loss. Members with a "Roles exempt from decay" or "Blacklisted roles" role, members who
+reached the "Lowest level" and members who left your server are never affected. Read more in the
+[Inactivity decay](#inactivity-decay) section.
 
 </details>
 
