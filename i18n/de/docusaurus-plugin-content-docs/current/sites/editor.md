@@ -31,7 +31,7 @@ Auf kleineren Bildschirmen öffnen sich die Strukturliste und die Block-Optionen
 
 Der Seitenwechsler in der oberen Leiste zeigt die Adresse deiner Website und die Seite, die du gerade bearbeitest. Klick darauf, um alle Seiten mit ihren Adressen zu sehen und zu einer anderen zu springen.
 
-Um hier eine Seite hinzuzufügen, klick unten in der Liste auf **Neue Seite**, gib einen Titel und eine Adresse ein und klick auf **Seite erstellen**. Für die Adresse gilt dieselbe Regel wie für deine Website-Adresse: 3 bis 63 Buchstaben, Zahlen und Bindestriche, mit einem Buchstaben oder einer Zahl am Anfang und Ende. Wähle sie mit Bedacht, denn die Adresse einer Seite lässt sich später nicht mehr ändern. `blog` ist für deinen Blog reserviert, keine Seite kann diese Adresse nutzen.
+Um hier eine Seite hinzuzufügen, klick unten in der Liste auf **Neue Seite**, gib einen Titel und eine Adresse ein und klick auf **Seite erstellen**. Für die Adresse gilt dieselbe Regel wie für deine Website-Adresse: 3 bis 63 Buchstaben, Zahlen und Bindestriche, mit einem Buchstaben oder einer Zahl am Anfang und Ende. Wähle sie mit Bedacht, denn die Adresse einer Seite lässt sich später nicht mehr ändern. `blog` ist für deinen Blog und `embeds` für [verbundene Embeds](/docs/sites/small-features#embed-links) reserviert, keine Seite kann diese Adressen nutzen.
 
 Sobald du einen veröffentlichten Blog-Beitrag hast oder dein Menü auf deinen Blog verlinkt, zeigt der Wechsler auch **Blog**. Dort siehst du, wie dein Blog mit deinem aktuellen Design aussieht. Bearbeiten kannst du dort nichts, Beiträge schreibst du auf dem Blog-Bildschirm. Siehe [Blog & Ankündigungen](/docs/sites/blog).
 
