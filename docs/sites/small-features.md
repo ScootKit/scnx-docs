@@ -64,6 +64,7 @@ Each connected embed gets its own address, `https://your-site.example/embeds/<em
 - Discord shows your embed preview under your own domain. There is no redirect to another site.
 - Visitors see the embed as a card in your site's design, with your normal navigation and footer. Like every SCNX Site page, the footer has the **Report abuse** button, so anyone can report content they think breaks the rules.
 - These pages are not indexed by search engines.
+- Images are only shown on your site if they are uploaded to SCNX. Images from other web addresses are left out of the site page.
 - If an embed is deleted or taken down later, it shows **Unavailable** in the Embeds section and its address answers "page not found" on your site. Disconnect it or connect another one.
 
 :::note `/embeds` is reserved

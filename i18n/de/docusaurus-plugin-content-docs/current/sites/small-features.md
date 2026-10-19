@@ -64,6 +64,7 @@ Jedes verbundene Embed bekommt eine eigene Adresse, `https://deine-website.examp
 - Discord zeigt deine Embed-Vorschau unter deiner eigenen Domain. Es gibt keine Weiterleitung auf eine andere Website.
 - Besucher sehen das Embed als Karte im Design deiner Website, mit deiner normalen Navigation und deinem Footer. Wie jede SCNX-Website-Seite hat der Footer den Button **Missbrauch melden**, damit jeder Inhalte melden kann, die seiner Meinung nach gegen die Regeln verstoßen.
 - Diese Seiten werden nicht von Suchmaschinen indexiert.
+- Bilder erscheinen auf deiner Website nur, wenn sie bei SCNX hochgeladen sind. Bilder von anderen Webadressen werden auf der Website-Seite weggelassen.
 - Wird ein Embed später gelöscht oder entfernt, zeigt es im Bereich Embeds **Nicht verfügbar**, und seine Adresse antwortet auf deiner Website mit "Seite nicht gefunden". Trenne es oder verbinde ein anderes.
 
 :::note `/embeds` ist reserviert
