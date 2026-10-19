@@ -36,7 +36,7 @@ The `/search` page itself is kept out of search engines.
 ## What is searched {#scope}
 
 - Your **published pages**, from the version that is currently live. Drafts and unpublished edits are never searchable.
-- Your **published blog posts**. Posts that are still drafts are not searchable.
+- Your **published blog posts**, including their tags, author names and category name. Posts that are still drafts are not searchable.
 
 A new page, or a change to a page, becomes searchable after you [publish your site](/docs/sites/publishing). Blog posts are searchable as soon as you publish them. Search does not work while your site is unpublished or in [maintenance mode](/docs/sites/publishing#maintenance).
 

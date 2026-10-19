@@ -36,7 +36,7 @@ Die `/search`-Seite selbst wird von Suchmaschinen ferngehalten.
 ## Was durchsucht wird {#scope}
 
 - Deine **veröffentlichten Seiten**, und zwar die aktuell live geschaltete Version. Entwürfe und unveröffentlichte Änderungen sind nie durchsuchbar.
-- Deine **veröffentlichten Blogbeiträge**. Beiträge, die noch Entwürfe sind, werden nicht durchsucht.
+- Deine **veröffentlichten Blogbeiträge**, einschließlich ihrer Tags, Autorennamen und Kategorienamen. Beiträge, die noch Entwürfe sind, werden nicht durchsucht.
 
 Eine neue oder geänderte Seite ist nach dem [Veröffentlichen deiner Website](/docs/sites/publishing) durchsuchbar. Blogbeiträge sind sofort nach dem Veröffentlichen durchsuchbar. Solange deine Website nicht veröffentlicht ist oder im [Wartungsmodus](/docs/sites/publishing#maintenance) steht, funktioniert die Suche nicht.
 

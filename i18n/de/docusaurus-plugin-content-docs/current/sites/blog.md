@@ -16,15 +16,39 @@ Gib deiner Community einen Ort, um deine Neuigkeiten zu lesen. Der Blog ist eine
 
 ![Der Blog-Bereich mit einem Entwurf, einem geplanten und drei veröffentlichten Beiträgen](@site/docs/assets/sites/de/blog-list.png)
 
-Öffne **Blog** im Sites-Menü deines Dashboards. Hier läuft alles rund um deinen Blog zusammen:
+Öffne **Blog** im Sites-Menü deines Dashboards. Der Bereich hat fünf Tabs:
 
-- **Deine Beiträge** - alle Beiträge, die neuesten zuerst. Jeder zeigt seinen Link (`/blog/<slug>`) und ein Abzeichen: **Entwurf**, **Geplant** (mit der Zeit, zu der er erscheint) oder **Live**. Live-Beiträge haben ein kleines Symbol, das den Beitrag auf deiner Website öffnet.
-- **Neuer Beitrag** - beginnt einen neuen Beitrag.
-- **Neue Beiträge auf Discord ankündigen** - siehe [Discord-Ankündigungen](#announcements).
-- **Blog-Layout** - wie Beiträge auf deiner Blog-Seite angeordnet sind. Siehe [Layouts](#layouts).
-- **Zusätze auf der Beitragsseite** - schalte die Lesezeit und die Links zum vorherigen/nächsten Beitrag an oder aus. Siehe [Die Beitragsseite](#post-page).
+- **Beiträge** - alle deine Beiträge, mit Suche, Filtern und Sammelaktionen. Siehe [Der Tab Beiträge](#posts-tab).
+- **Autoren** - Profile für die Menschen, die für deinen Blog schreiben. Siehe [Autoren](#authors).
+- **Kategorien & Tags** - deine Kategorien und Werkzeuge zum Aufräumen von Tags. Siehe [Kategorien](#categories) und [Tags](#tags).
+- **Anzeige** - **Blog-Layout** und **Zusätze auf der Beitragsseite**. Siehe [Layouts](#layouts) und [Die Beitragsseite](#post-page).
+- **Ankündigungen** - **Neue Beiträge auf Discord ankündigen**. Siehe [Discord-Ankündigungen](#announcements).
 
-Klick auf einen Beitrag, um ihn im Beitragseditor zu öffnen.
+### Der Tab Beiträge {#posts-tab}
+
+Oben zeigt eine Zahlenreihe **Alle Beiträge**, **Live**, **Geplant**, **Entwürfe** und **Blog-Aufrufe, 30 Tage**. Darunter findest du Beiträge mit:
+
+- **Beiträge durchsuchen** - sucht in Titeln, Teasern und Tags.
+- Den Filtern **Status**, **Autor**, **Kategorie** und **Tag**. Bei Kategorien kannst du auch **Keine Kategorie** wählen. **Filter zurücksetzen** setzt sie zurück.
+- **Sortieren nach** - **Neueste zuerst**, **Älteste zuerst**, **Titel A-Z** oder **Meiste Aufrufe**.
+- Dem Umschalter **Ansicht** - **Karten** oder **Kompakte Liste**. Deine Wahl merken wir uns in deinem Browser.
+
+Jeder Beitrag zeigt Titelbild, Titel, ein Status-Abzeichen (**Live**, **Geplant** mit der Zeit, zu der er live geht, oder **Entwurf**), das Datum, die Avatare seiner Autoren, Kategorie und Tags, die Aufrufe der letzten 30 Tage und einen Hinweis, wenn er auf Discord angekündigt wurde. **Unveröffentlichte Änderungen** erscheint bei einem Live-Beitrag, bei dem Änderungen warten. Mit **Bearbeiten** öffnest du den Beitragseditor. Das Menü **⋯** eines Beitrags hat **Live ansehen**, **Jetzt veröffentlichen**, **Zu Entwürfen verschieben** und **Löschen**. **Jetzt veröffentlichen** postet nichts auf Discord. Hat die Website einen Ankündigungs-Webhook und wurde der Beitrag noch nicht angekündigt, gibt es im Menü zusätzlich **Veröffentlichen und auf Discord ankündigen**.
+
+Wenn du einen einzelnen Beitrag über dieses Menü veröffentlichst, wird er nie auf Discord angekündigt. Um einen Beitrag anzukündigen, nutze das Veröffentlichen-Fenster im Beitragseditor, siehe [Veröffentlichen und planen](#drafts).
+
+#### Sammelaktionen {#bulk}
+
+Setz ein Häkchen bei einem Beitrag oder wähl **Alle auf dieser Seite auswählen**, dann erscheint eine Leiste mit den Aktionen für deine Auswahl. Du kannst bis zu 50 Beiträge auf einmal auswählen.
+
+- **Veröffentlichen** - schaltet die ausgewählten Beiträge sofort live. Setz ein Häkchen bei **Auf Discord ankündigen**, um sie anzukündigen. Das ist standardmäßig aus, damit das Veröffentlichen von 30 Beiträgen nie deinen Kanal flutet. Das Kästchen ist deaktiviert, bis du [Ankündigungen eingerichtet](#announcements) hast.
+- **Zu Entwürfen verschieben** - macht die ausgewählten Beiträge wieder zu Entwürfen.
+- **Kategorie setzen** - wähl eine Kategorie und klick auf **Kategorie setzen**.
+- **Löschen** - entfernt die ausgewählten Beiträge endgültig, nachdem du bestätigt hast.
+
+Wenn einzelne Beiträge fehlschlagen, zum Beispiel weil einer von unserer Inhaltsprüfung markiert wurde, laufen die anderen trotzdem durch. Du siehst, wie viele geklappt haben, und zu jedem fehlgeschlagenen Beitrag einen Grund. Die fehlgeschlagenen Beiträge bleiben ausgewählt, damit du es noch einmal versuchen kannst.
+
+Mit **Neuer Beitrag** beginnst du einen neuen Beitrag.
 
 ## Einen Beitrag schreiben {#write}
 
@@ -68,7 +92,8 @@ Alles außer Titelbild, Titel und Text findest du unter **Beitragseinstellungen*
 - **URL-Name** - die Webadresse deines Beitrags. Die volle Adresse steht darunter. Bei einem neuen Beitrag folgt sie dem Titel, bis du sie selbst änderst, und **Auf Titel zurücksetzen** baut sie wieder aus dem Titel. Sie nutzt Kleinbuchstaben, Zahlen und Bindestriche. Jeder Beitrag braucht seinen eigenen URL-Namen.
 - **Auszug** - ein kurzer Anrisstext. Er erscheint unter dem Titel auf deiner Blog-Seite und im Block Neueste Beiträge, in deinem RSS-Feed und in Discord-Ankündigungen. Optional.
 - **Tags** - kurze Schlagwörter, angezeigt am Beitrag, auf seiner Karte und in deinem RSS-Feed. Drück nach jedem Tag die **Eingabetaste**. Tags, die du schon bei anderen Beiträgen genutzt hast, werden beim Tippen vorgeschlagen.
-- **Autor** - wird am Beitrag als Autorenzeile angezeigt. Das kann ein beliebiger Name sein, etwa "Das Mod-Team". Es muss kein Discord-Nutzer sein. Lass das Feld leer, wenn keine Autorenzeile erscheinen soll.
+- **Autoren** - wähl mit **Autor hinzufügen** einen oder mehrere deiner [Autorenprofile](#authors). Der erste ist der **Hauptautor**, mit den Pfeilen änderst du die Reihenfolge. Ein Beitrag kann bis zu 5 Autoren haben. Lass das Feld leer, wenn keine Autorenzeile erscheinen soll. **Autoren verwalten** führt dich in den Tab Autoren.
+- **Kategorie** - wähl eine deiner [Kategorien](#categories) oder **Keine Kategorie**. **Kategorien verwalten** führt dich in den Tab Kategorien & Tags.
 - **Suche & Teilen** - **Titel beim Teilen**, **Beschreibung beim Teilen** und **Bild beim Teilen** werden genutzt, wenn jemand den Beitrag teilt. Leer gelassen gelten stattdessen Beitragstitel, Auszug und Titelbild.
 - **Beitrag löschen** - entfernt den Beitrag endgültig, nachdem du bestätigt hast.
 
@@ -122,7 +147,7 @@ Der Blog nutzt das Theme, das Menü und den Fußbereich deiner Website, damit er
 
 ### Layouts {#layouts}
 
-Unter **Blog-Layout** im Blog-Bereich wählst du, wie Beiträge angeordnet werden. Klick danach auf **Speichern**.
+Unter **Blog-Layout** im Tab **Anzeige** wählst du, wie Beiträge angeordnet werden. Klick danach auf **Speichern**.
 
 | Layout            | So sieht es aus                                                                                              | Gut für                                       |
 | ----------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------- |
@@ -137,31 +162,66 @@ Das Layout ändert sich auf deiner Website sofort, ohne dass du deine Website ne
 Jede Beitragsseite beginnt mit einem Kopfbereich in den Farben deines Themes:
 
 - ein Link zurück zu allen Beiträgen,
-- Datum, Autor und Lesezeit,
+- Datum, Autoren und Lesezeit. Jeder Autor wird genannt und verlinkt auf seine Autorenseite,
+- die Kategorie als kleines Label, das auf die Kategorieseite verlinkt,
 - der Titel,
 - die Tags.
 
-Direkt nach dem Kopfbereich kommt das Titelbild, danach dein Text. Ganz unten führen Links zum vorherigen und nächsten Beitrag.
+Direkt nach dem Kopfbereich kommt das Titelbild, danach dein Text. Nach dem Text folgen:
 
-Unter **Zusätze auf der Beitragsseite** im Blog-Bereich kannst du **Geschätzte Lesezeit anzeigen** und **Links zum vorherigen/nächsten Beitrag anzeigen** ausschalten. Beides ist standardmäßig an, und Änderungen erscheinen auf deiner Website, sobald du auf **Speichern** klickst.
+- Eine Karte **Über den Autor** pro Autor, mit Bild, Name, Bio und Links.
+- **Ähnliche Beiträge**, bis zu 3. Beiträge aus derselben Kategorie kommen zuerst, danach Beiträge mit einem gemeinsamen Tag. Passt nichts, entfällt der Block.
+- Links zum vorherigen und nächsten Beitrag.
+
+Unter **Zusätze auf der Beitragsseite** im Tab **Anzeige** kannst du **Geschätzte Lesezeit anzeigen** und **Links zum vorherigen/nächsten Beitrag anzeigen** ausschalten. Beides ist standardmäßig an, und Änderungen erscheinen auf deiner Website, sobald du auf **Speichern** klickst.
 
 Teilt jemand einen Beitrag, nutzt die Link-Vorschau die Einstellungen unter **Suche & Teilen** des Beitrags, sonst seinen Titel, Auszug und sein Titelbild.
 
-## Tags und Autoren {#tags-authors}
+## Autoren {#authors}
 
-Gib einem Beitrag Tags und einen Autorennamen, damit deine Leser danach stöbern können:
+Autoren sind Profile, die du einmal anlegst und beliebig vielen Beiträgen zuordnest. Sie sind keine Discord-Mitglieder, daher wird nichts über dein Team angezeigt. Öffne den Tab **Autoren** und klick auf **Neuer Autor**:
 
-- Jeder **Tag** eines Beitrags verlinkt auf **`/blog/tag/<tag>`**, eine Seite mit allen veröffentlichten Beiträgen mit diesem Tag, neueste zuerst, im selben Layout wie deine Blog-Seite. "News", "news" und "News!" teilen sich eine Seite.
-- Der **Autorenname** eines Beitrags verlinkt auf **`/blog/author/<name>`**, eine Seite mit allen Beiträgen unter diesem Namen. Autoren sind frei eingegebene Namen, keine Discord-Mitglieder, daher wird nichts über dein Team angezeigt. Namen, die sich nur in Groß-/Kleinschreibung oder Satzzeichen unterscheiden, zählen als ein Autor.
-- Deine `/blog`-Seite zeigt eine Zeile **Nach Tag durchsuchen** mit deinen am häufigsten genutzten Tags.
+- **Name** - bis zu 60 Zeichen, etwa "Das Mod-Team".
+- **Link** - die Adresse der Autorenseite. Lass das Feld leer, dann erstellen wir sie aus dem Namen. Wenn du den Namen später änderst, bleibt der Link gleich.
+- **Bio** - ein kurzer Text, bis zu 500 Zeichen.
+- **Bild** - ein Bild aus der Bildbibliothek deines Servers.
+- **Links** - bis zu 5 Links, jeweils mit Bezeichnung und einer Adresse, die mit `https://` beginnt.
 
-Tag- und Autorenseiten gibt es nur, solange mindestens ein veröffentlichter Beitrag sie nutzt. Die Adresse nutzt eine vereinfachte Form des Namens: Kleinbuchstaben, Leerzeichen und Satzzeichen werden zu Bindestrichen ("Patch Notes!" wird zu `/blog/tag/patch-notes`). Namen, die zur selben Adresse vereinfacht werden, landen auf einer gemeinsamen Seite, sodass "C", "C++" und "C#" alle unter `/blog/tag/c` zu finden sind; die Überschrift nutzt die Schreibweise, die du am häufigsten verwendest. Ein Tag oder Autor, den kein veröffentlichter Beitrag nutzt, zeigt eine "Nicht gefunden"-Seite. Nur eine Seite hinter der letzten Seite einer Liste wird vor Suchmaschinen versteckt. Listen mit Beiträgen kommen automatisch in die Sitemap deiner Website.
+Du kannst bis zu 50 Autoren pro Website haben, und ein Beitrag kann bis zu 5 haben, wobei der erste der Hauptautor ist.
 
-Wie die Beiträge selbst sind diese Seiten live: Wenn du einen Beitrag mit Tags versiehst oder den Autor änderst, aktualisieren sie sich sofort.
+Jeder Autor bekommt eine Seite unter **`/blog/author/<slug>`** mit Bild, Bio, Links und allen seinen veröffentlichten Beiträgen. Die Liste aller Autoren findest du unter **`/blog/authors`**. Ein Autor erscheint dort, und seine Seite existiert, erst wenn mindestens ein veröffentlichter Beitrag ihn nennt. Ein Profil, das du vorab anlegst, bleibt bis dahin privat. Weil die Adresse `/blog/authors` von dieser Liste belegt ist, kann ein neuer Beitrag `authors` oder `tags` nicht als URL-Namen nutzen. Bestehende Beiträge mit diesen URL-Namen funktionieren weiter.
+
+Beiträge, die du vor den Autorenprofilen geschrieben hast, behielten ihre frei eingegebenen Autorennamen. Wir haben sie automatisch in Autorenprofile umgewandelt, sodass jede bestehende Autorenseite ihre Adresse behält.
+
+Wenn du einen Autor löschst, wird er aus seinen Beiträgen entfernt. Die Beiträge bleiben.
+
+## Kategorien {#categories}
+
+Eine Kategorie gruppiert Beiträge nach Thema, etwa "Patchnotes" oder "Events". Jeder Beitrag ist in höchstens einer Kategorie. Öffne den Tab **Kategorien & Tags** und klick auf **Neue Kategorie**, um einen **Namen** (bis zu 40 Zeichen), einen **Link** und optional eine **Beschreibung** (bis zu 300 Zeichen) festzulegen, die auf der Kategorieseite erscheint. Du kannst bis zu 30 Kategorien haben.
+
+Jede Kategorie bekommt eine Seite unter **`/blog/category/<slug>`** mit ihrer Beschreibung und allen veröffentlichten Beiträgen, sobald sie mindestens einen hat. Deine `/blog`-Seite zeigt eine Zeile **Nach Kategorie durchsuchen**. Die Kategorie eines Beitrags erscheint als Label auf seiner Karte und auf der Beitragsseite.
+
+Wenn du eine Kategorie löschst, bleiben ihre Beiträge erhalten. Sie haben danach nur keine Kategorie mehr.
+
+## Tags {#tags}
+
+Tags sind frei eingegebener Text, den du in den Einstellungen jedes Beitrags vergibst. Jeder Tag verlinkt auf **`/blog/tag/<tag>`**, eine Seite mit allen veröffentlichten Beiträgen mit diesem Tag, neueste zuerst. Alle deine Tags findest du unter **`/blog/tags`**, und deine `/blog`-Seite zeigt eine Zeile **Nach Tag durchsuchen** mit deinen am häufigsten genutzten.
+
+Die Adresse nutzt eine vereinfachte Form des Namens: Kleinbuchstaben, Leerzeichen und Satzzeichen werden zu Bindestrichen ("Patch Notes!" wird zu `/blog/tag/patch-notes`). Schreibvarianten wie "News", "news" und "News!" zählen als ein Tag und teilen sich eine Seite, die Überschrift nutzt die Schreibweise, die du am häufigsten verwendest. Namen, die zur selben Adresse vereinfacht werden, werden zusammengeführt, sodass "C", "C++" und "C#" alle unter `/blog/tag/c` zu finden sind. Ein Tag, den kein veröffentlichter Beitrag nutzt, zeigt eine "Nicht gefunden"-Seite. Nur eine Seite hinter der letzten Seite einer Liste wird vor Suchmaschinen versteckt. Listen mit Beiträgen kommen automatisch in die Sitemap deiner Website.
+
+### Tag-Werkzeuge {#tag-tools}
+
+Die Liste **Tags** im Tab **Kategorien & Tags** zeigt jeden Tag mit der Anzahl der Beiträge, die ihn nutzen (Entwürfe eingeschlossen), und den Schreibvarianten, die er abdeckt. Damit räumst du auf:
+
+- **Umbenennen** - gibt den Tag in jedem Beitrag einen neuen Namen.
+- **Zusammenführen** - wähl zwei oder mehr Tags aus, gib den Tag ein, zu dem sie werden sollen, und klick auf **Zusammenführen**.
+- **Löschen** - entfernt den Tag aus jedem Beitrag, nachdem du bestätigt hast. Die Beiträge bleiben.
+
+Diese Werkzeuge ändern alle Beiträge auf einmal, Entwürfe eingeschlossen, und die Änderungen sind sofort live. Steckt ein Tag in zu vielen Beiträgen, um ihn auf einmal zu ändern, wird nichts geändert.
 
 ## RSS-Feed {#rss}
 
-Dein Blog hat einen RSS-Feed unter **`/blog/rss.xml`**. Er listet deine neuesten Beiträge mit Titel, Auszug, Tags und einem Link zum ganzen Beitrag. Leser können ihn in einem RSS-Reader abonnieren, und du kannst ihn nutzen, um deine Beiträge in andere Tools einzuspeisen, die RSS lesen.
+Dein Blog hat einen RSS-Feed unter **`/blog/rss.xml`**. Er listet deine neuesten Beiträge mit Titel, Auszug, Tags, allen Autoren und einem Link zum ganzen Beitrag. Leser können ihn in einem RSS-Reader abonnieren, und du kannst ihn nutzen, um deine Beiträge in andere Tools einzuspeisen, die RSS lesen.
 
 ## Der Block Neueste Beiträge {#latest-posts}
 
@@ -175,7 +235,7 @@ Der Editor zeigt dann deine echte Blog-Seite mit deinem Design. Klick auf einen 
 
 ## Discord-Ankündigungen {#announcements}
 
-Dein Blog kann eine Nachricht in einem Discord-Kanal posten, sobald ein Beitrag online geht. Richte das unter **Neue Beiträge auf Discord ankündigen** im Blog-Bereich ein:
+Dein Blog kann eine Nachricht in einem Discord-Kanal posten, sobald ein Beitrag online geht. Richte das unter **Neue Beiträge auf Discord ankündigen** im Tab **Ankündigungen** ein:
 
 1. Öffne in Discord die Einstellungen des Kanals, in dem gepostet werden soll. Leg unter **Integrationen** einen Webhook an und kopier seine URL.
 2. Füg sie in **Discord-Webhook-URL** ein.
@@ -191,7 +251,7 @@ So verhalten sich Ankündigungen:
 
 - **Jeder Beitrag wird genau einmal angekündigt.** Bearbeiten, Aktualisieren oder Zurückziehen und erneutes Veröffentlichen schickt ihn nicht noch einmal.
 - **Geplante Beiträge** werden angekündigt, wenn sie online gehen, meist innerhalb einer Minute.
-- **Du kannst sie auslassen.** Nimm beim Veröffentlichen den Haken bei **In Discord ankündigen** raus, dann wird dieser Beitrag nie angekündigt.
+- **Du kannst sie auslassen.** Nimm beim Veröffentlichen den Haken bei **In Discord ankündigen** raus, dann wird dieser Beitrag nie angekündigt. Das Veröffentlichen im Tab Beiträge kündigt nur an, wenn du bei einer Sammelveröffentlichung **Auf Discord ankündigen** anhakst.
 - **Deine bisherigen Beiträge werden nicht angekündigt.** Wenn du Ankündigungen einrichtest, landen deine älteren Beiträge nicht in Discord. Nur ein Beitrag, der etwa in der letzten Stunde online gegangen ist, kann noch angekündigt werden, sobald du den Webhook speicherst.
 - **Deine Website muss live sein.** Solange deine Website nicht veröffentlicht ist oder im Wartungsmodus steckt, werden keine Ankündigungen verschickt.
 - Ist Discord in dem Moment nicht erreichbar, fällt die Ankündigung aus und wird nicht wiederholt.
@@ -201,6 +261,8 @@ Sind Ankündigungen eingerichtet, zeigt das Veröffentlichen-Fenster **In Discor
 ## Was sofort live ist und was du veröffentlichen musst {#live}
 
 Beiträge warten nicht darauf, dass du deine ganze Website veröffentlichst. Wenn du einen Beitrag veröffentlichst oder aktualisierst, erscheint er sofort auf deinem Blog. Das gilt auch für das Blog-Layout, die Zusätze auf der Beitragsseite und den Block Neueste Beiträge, der immer deine aktuellen Beiträge zeigt.
+
+Autoren, Kategorien und Tags sind live, sobald du sie speicherst, weil ihre Seiten sofort öffentlich sind. Beim Speichern werden sie von unserer Inhaltsprüfung geprüft. Wenn du die Autoren oder die Kategorie eines bereits veröffentlichten Beitrags änderst, läuft das wie jede andere Änderung: Sie wartet im Entwurf, bis du auf **Aktualisieren** klickst.
 
 Zwei Dinge solltest du wissen:
 

@@ -16,15 +16,39 @@ Give your community somewhere to read your news. The blog is a set of posts with
 
 ![The Blog screen with a draft, a scheduled post and three live posts](@site/docs/assets/sites/en/blog-list.png)
 
-Open **Blog** in the Sites menu of your dashboard. This is home base for your blog:
+Open **Blog** in the Sites menu of your dashboard. It is split into five tabs:
 
-- **Your posts** - every post, newest first. Each one shows its link (`/blog/<slug>`) and a badge: **Draft**, **Scheduled** (with the time it goes out) or **Live**. Live posts have a small icon that opens the post on your site.
-- **New post** - starts a new post.
-- **Announce new posts on Discord** - see [Discord announcements](#announcements).
-- **Blog layout** - how posts are arranged on your blog page. See [Layouts](#layouts).
-- **Post page extras** - turn the read time and the previous/next links on or off. See [The post page](#post-page).
+- **Posts** - all your posts, with search, filters and bulk actions. See [The Posts tab](#posts-tab).
+- **Authors** - profiles for the people who write for your blog. See [Authors](#authors).
+- **Categories & tags** - your categories, and tools to tidy up tags. See [Categories](#categories) and [Tags](#tags).
+- **Display** - **Blog layout** and **Post page extras**. See [Layouts](#layouts) and [The post page](#post-page).
+- **Announcements** - **Announce new posts on Discord**. See [Discord announcements](#announcements).
 
-Click a post to open it in the post editor.
+### The Posts tab {#posts-tab}
+
+At the top, a row of numbers shows **All posts**, **Live**, **Scheduled**, **Drafts** and **Blog views, 30 days**. Below it, find posts with:
+
+- **Search posts** - looks in titles, teasers and tags.
+- **Status**, **Author**, **Category** and **Tag** filters. For categories you can also pick **No category**. **Clear filters** resets them.
+- **Sort by** - **Newest first**, **Oldest first**, **Title A-Z** or **Most viewed**.
+- The **Layout** toggle - **Cards** or **Compact list**. We remember your choice in your browser.
+
+Each post shows its cover, title, a status badge (**Live**, **Scheduled** with the time it goes live, or **Draft**), the date, its author avatars, its category and tags, the views of the last 30 days, and a note when it was announced on Discord. **Unpublished changes** appears on a live post that has edits waiting. Click **Edit** to open the post editor. The **⋯** menu on a post has **View live**, **Publish now**, **Move to drafts** and **Delete**. **Publish now** does not post to Discord. If the site has an announcement webhook and the post was not announced yet, the menu also has **Publish and announce on Discord**.
+
+Publishing a single post from this menu never announces it on Discord. To announce a post, use the publish window in the post editor, see [Publishing and scheduling](#drafts).
+
+#### Bulk actions {#bulk}
+
+Tick the box on a post, or **Select all on this page**, and a bar appears with the actions for your selection. You can select up to 50 posts at once.
+
+- **Publish** - makes the selected posts live right away. Tick **Announce on Discord** to announce them. It is off by default, so publishing 30 posts never floods your channel. The checkbox is disabled until you [set up announcements](#announcements).
+- **Move to drafts** - turns the selected posts back into drafts.
+- **Set category** - pick a category and click **Set category**.
+- **Delete** - removes the selected posts for good, after you confirm.
+
+If some posts fail, for example because one was flagged by our content check, the others still go through. You see how many worked, and a reason for each post that did not. The failed posts stay selected so you can try again.
+
+Click **New post** to start a new post.
 
 ## Writing a post {#write}
 
@@ -68,7 +92,8 @@ Everything that is not the cover, title or text lives in **Post settings** in th
 - **URL slug** - the web address of your post. The full address is shown underneath. For a new post it follows the title until you change it yourself, and **Reset to title** builds it from the title again. It uses lowercase letters, numbers and dashes. Each post needs its own slug.
 - **Excerpt** - a short teaser. It shows under the title on your blog page and in the Latest posts block, in your RSS feed, and in Discord announcements. Optional.
 - **Tags** - short labels, shown on the post, on its card and in your RSS feed. Press **Enter** after each one. Tags you already used on other posts are suggested as you type.
-- **Author** - shown on the post as a byline. It can be any name, like "The Mod Team". It does not have to be a Discord user. Leave it empty for no byline.
+- **Authors** - pick one or more of your [author profiles](#authors) with **Add an author**. The first one is the **Main author**, and the arrows change the order. A post can have up to 5 authors. Leave it empty for no byline. **Manage authors** takes you to the Authors tab.
+- **Category** - pick one of your [categories](#categories), or **No category**. **Manage categories** takes you to the Categories & tags tab.
 - **Search & sharing** - the **Share title**, **Share description** and **Share image** used when someone shares the post. Each falls back to the post title, the excerpt and the cover image.
 - **Delete post** - removes the post for good, after you confirm.
 
@@ -122,7 +147,7 @@ The blog uses your site's theme, menu and footer, so it feels like the rest of y
 
 ### Layouts {#layouts}
 
-Choose how posts are arranged under **Blog layout** on the Blog screen, then click **Save**.
+Choose how posts are arranged under **Blog layout** in the **Display** tab of the Blog screen, then click **Save**.
 
 | Layout       | What it looks like                                                                       | Best for                                    |
 | ------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------- |
@@ -137,31 +162,66 @@ The layout changes on your site straight away, without publishing your site agai
 Every post page starts with a header in your theme's colours:
 
 - a **Back to all posts** link,
-- the date, the author and the read time,
+- the date, the authors and the read time. Every author is listed and links to their author page,
+- the category as a small chip, linking to the category page,
 - the title,
 - the tags.
 
-The cover image comes right after the header, followed by your text. At the bottom, links take readers to the previous and next post.
+The cover image comes right after the header, followed by your text. After the text:
 
-Under **Post page extras** on the Blog screen you can turn off **Show estimated read time** and **Show previous/next post links**. Both are on by default, and changes show up on your site right after you click **Save**.
+- An **About the author** card for each author, with their picture, name, bio and links.
+- **Related posts**, up to 3. Posts in the same category come first, then posts that share a tag. If nothing matches, the block is left out.
+- Links to the previous and next post.
+
+Under **Post page extras** in the **Display** tab you can turn off **Show estimated read time** and **Show previous/next post links**. Both are on by default, and changes show up on your site right after you click **Save**.
 
 When someone shares a post, the link preview uses the post's **Search & sharing** settings, falling back to its title, excerpt and cover image.
 
-## Tags and authors {#tags-authors}
+## Authors {#authors}
 
-Give a post tags and an author name and your readers can browse by them:
+Authors are profiles you create once and add to as many posts as you like. They are not Discord members, so nothing about your staff is shown. Open the **Authors** tab and click **New author**:
 
-- Every **tag** on a post links to **`/blog/tag/<tag>`**, a page that lists all your published posts with that tag, newest first, in the same layout as your blog page. "News", "news" and "News!" share one page.
-- The **author name** on a post links to **`/blog/author/<name>`**, a page with all posts written under that name. Authors are plain names you type, not Discord members, so nothing about your staff is shown. Names that differ only in capitalisation or punctuation count as one author.
-- Your `/blog` page shows a **Browse by tag** row with your most used tags.
+- **Name** - up to 60 characters, like "The Mod Team".
+- **Link** - the address of the author page. Leave it empty and we create it from the name. Changing the name later does not change the link.
+- **Bio** - a short text, up to 500 characters.
+- **Picture** - an image from your server's image library.
+- **Links** - up to 5 links, each with a label and an address starting with `https://`.
 
-Tag and author pages only exist while at least one published post uses them. The address uses a simplified version of the name: lowercase, with spaces and punctuation turned into dashes ("Patch Notes!" becomes `/blog/tag/patch-notes`). Names that simplify to the same address are merged into one page, so "C", "C++" and "C#" all land on `/blog/tag/c`; the page heading uses the spelling you use most. A tag or author that no published post uses returns a "not found" page. Only a page past the last page of a listing is hidden from search engines. Listings that have posts are added to your site's sitemap automatically.
+You can have up to 50 authors per site, and a post can have up to 5, with the first one as the main author.
 
-Like posts, these pages are live: tagging a post or changing its author updates them straight away.
+Every author gets a page at **`/blog/author/<slug>`** with their picture, bio, links and all their published posts. The list of all authors is at **`/blog/authors`**. An author only appears there, and their page only exists, once at least one published post lists them. A profile you created ahead of time stays private until then. Because the address `/blog/authors` is taken by this list, a new post cannot use `authors` or `tags` as its URL slug. Existing posts with those slugs keep working.
+
+Posts you wrote before authors existed kept their free-text author names. We converted them into author profiles automatically, so every existing author page keeps its address.
+
+Deleting an author removes them from their posts. The posts stay.
+
+## Categories {#categories}
+
+A category groups posts by topic, like "Patch notes" or "Events". Each post is in at most one category. Open the **Categories & tags** tab and click **New category** to give it a **Name** (up to 40 characters), a **Link** and an optional **Description** (up to 300 characters) that shows on the category page. You can have up to 30 categories.
+
+Each category gets a page at **`/blog/category/<slug>`** with its description and all its published posts, once it has at least one. Your `/blog` page shows a **Browse by category** row. A post's category shows as a chip on its card and on the post page.
+
+Deleting a category keeps its posts. They just have no category afterwards.
+
+## Tags {#tags}
+
+Tags are free text, added in the settings of each post. Every tag links to **`/blog/tag/<tag>`**, a page that lists all your published posts with that tag, newest first. All your tags are listed at **`/blog/tags`**, and your `/blog` page shows a **Browse by tag** row with your most used ones.
+
+The address uses a simplified version of the name: lowercase, with spaces and punctuation turned into dashes ("Patch Notes!" becomes `/blog/tag/patch-notes`). Spelling variants like "News", "news" and "News!" count as one tag and share one page, and the heading uses the spelling you use most. Names that simplify to the same address are merged, so "C", "C++" and "C#" all land on `/blog/tag/c`. A tag that no published post uses returns a "not found" page. Only a page past the last page of a listing is hidden from search engines. Listings that have posts are added to your site's sitemap automatically.
+
+### Tag tools {#tag-tools}
+
+The **Tags** list in the **Categories & tags** tab shows every tag with the number of posts that use it, drafts included, and the spelling variants it covers. Use it to tidy up:
+
+- **Rename** - gives the tag a new name on every post.
+- **Merge** - tick two or more tags, enter the tag they should become, and click **Merge**.
+- **Delete** - removes the tag from every post after you confirm. The posts stay.
+
+These tools change all posts at once, drafts included, and the changes are live right away. If a tag is on too many posts to change at once, nothing is changed.
 
 ## RSS feed {#rss}
 
-Your blog has an RSS feed at **`/blog/rss.xml`**. It lists your newest posts with their title, excerpt, tags and a link to the full post. Readers can subscribe to it in an RSS reader, and you can use it to plug your posts into other tools that read RSS.
+Your blog has an RSS feed at **`/blog/rss.xml`**. It lists your newest posts with their title, excerpt, tags, all of their authors and a link to the full post. Readers can subscribe to it in an RSS reader, and you can use it to plug your posts into other tools that read RSS.
 
 ## The Latest posts block {#latest-posts}
 
@@ -175,7 +235,7 @@ The editor then shows your real blog page with your design. Click a post to look
 
 ## Discord announcements {#announcements}
 
-Your blog can post a message in a Discord channel whenever a post goes live. Set it up under **Announce new posts on Discord** on the Blog screen:
+Your blog can post a message in a Discord channel whenever a post goes live. Set it up under **Announce new posts on Discord** in the **Announcements** tab of the Blog screen:
 
 1. In Discord, open the settings of the channel you want to post in. Under **Integrations**, create a webhook and copy its URL.
 2. Paste it into **Discord webhook URL**.
@@ -191,7 +251,7 @@ How announcements behave:
 
 - **Each post is announced once, ever.** Editing, updating, or unpublishing and publishing again does not send it again.
 - **Scheduled posts** are announced when they go live, usually within a minute.
-- **Skip it if you want.** Untick **Announce in Discord** when you publish, and that post is never announced.
+- **Skip it if you want.** Untick **Announce in Discord** when you publish, and that post is never announced. Publishing from the Posts tab only announces when you tick **Announce on Discord** for a bulk publish.
 - **Your existing posts are not announced.** Setting up announcements does not post your back catalogue to Discord. Only a post that went live in roughly the last hour may still be announced once you save the webhook.
 - **Your site needs to be live.** While your site is not published, or is in maintenance mode, no announcements are sent.
 - If Discord is unreachable at that moment, the announcement is skipped and not retried.
@@ -201,6 +261,8 @@ When announcements are set up, the publish window shows **Announce in Discord**.
 ## What is live and what needs publishing {#live}
 
 Posts don't wait for you to publish your whole site. When you publish or update a post, it shows up on your blog straight away. The same goes for the blog layout, the post page extras and the Latest posts block, which always shows your current posts.
+
+Authors, categories and tags are live the moment you save them, because their pages are public right away. They are checked by our content check when you save. Changing the authors or the category of a post that is already published works like any other edit: it waits in the draft until you click **Update**.
 
 Two things to keep in mind:
 
