@@ -39,22 +39,36 @@ Redirects live on the **Domains** page, below your domains. You need edit access
 
 - Click **Add redirect**.
 - Set **From (path on your site)**, for example `/old-rules` or `/discord`. Use lowercase letters, numbers, dashes and dots.
-- Set **To**: a full `https://` address, or another path on your site like `/rules`. To point at one of your own embeds instead, choose **My embed** (see below).
+- Set **To**: a full `https://` address, or another path on your site like `/rules`.
 - Click **Create**.
 
 You can edit or delete a redirect at any time. A site can have up to 50 redirects. Each one counts the visits it sends, so you can see how much a short link is used.
 
 :::note "Dormant" redirects
-If one of your pages lives at the same address as a redirect, the page wins and the redirect is marked **Dormant**: it never runs. Delete that page to bring the redirect back. A few addresses belong to your site itself and cannot be redirected: your home page, `/blog` (and everything below it), `/sitemap.xml` and `/robots.txt`.
+If one of your pages lives at the same address as a redirect, the page wins and the redirect is marked **Dormant**: it never runs. Delete that page to bring the redirect back. A few addresses belong to your site itself and cannot be redirected: your home page, `/blog` and `/embeds` (and everything below them), `/sitemap.xml` and `/robots.txt`.
 :::
 
-### Linking one of your embeds {#embed-links}
+### Showing your embeds on your site {#embed-links}
 
-Instead of typing a web address, switch the target from **Web address** to **My embed** and pick one of your own embeds from the list. This lets you share a link on **your own domain**, like `your-site.example/news`, that shows your custom embed preview. Discord follows the redirect and reads the preview from the embed, and visitors who click the link land on the embed. A redirect with an embed shows the **Linked embed** badge.
+You can show your own embeds on **your own domain**. When you paste the link in Discord, it shows your custom embed preview, and visitors who open it stay on your site.
 
-- The target resolves to the embed on `embeds.scnx.app`. You can only link your own embeds, not someone else's.
-- The redirect follows the embed. If you later delete the embed, or it is taken down, the redirect row shows an **Embed unavailable** warning, so you know to fix it. Pick another embed or switch the target back to a web address.
-- If you have no embeds yet, the picker links you to the page where you can create one.
+Connected embeds live in the **Embeds** section of the **Domains** page, below Redirects.
+
+- Click **Connect embed** and pick one of your own embeds. You can only connect embeds you created. If you have none yet, create one on your user embeds page first.
+- A site can have up to 25 connected embeds.
+- Connecting takes effect immediately. You do **not** have to publish your site again.
+- Click **Disconnect** to remove an embed from your site again.
+
+Each connected embed gets its own address, `https://your-site.example/embeds/<embed id>`. It works on your scnx.site address and on your custom domain. The section shows the address with a copy button.
+
+- Discord shows your embed preview under your own domain. There is no redirect to another site.
+- Visitors see the embed as a card in your site's design, with your normal navigation and footer. Like every SCNX Site page, the footer has the **Report abuse** button, so anyone can report content they think breaks the rules.
+- These pages are not indexed by search engines.
+- If an embed is deleted or taken down later, it shows **Unavailable** in the Embeds section and its address answers "page not found" on your site. Disconnect it or connect another one.
+
+:::note `/embeds` is reserved
+You cannot create a page called `embeds`, or a redirect from `/embeds` or `/embeds/...`. If your site already has such a page or redirect, it keeps working until you connect your first embed, and connecting is refused until you delete it.
+:::
 
 Redirects work right away. You do **not** have to publish your site again for them. They do not run while [maintenance mode](/docs/sites/publishing#maintenance) is on.
 

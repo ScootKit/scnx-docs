@@ -31,7 +31,7 @@ On smaller screens the structure list and the block options open as drawers, so 
 
 The page switcher in the top bar shows your site's address and the page you are editing. Click it to see every page with its address and jump to another one.
 
-To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address follows the same rule as your site address: 3 to 63 letters, numbers and dashes, starting and ending with a letter or number. Pick it carefully, because a page address can't be changed later. `blog` is reserved for your blog, so no page can use it.
+To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address follows the same rule as your site address: 3 to 63 letters, numbers and dashes, starting and ending with a letter or number. Pick it carefully, because a page address can't be changed later. `blog` is reserved for your blog and `embeds` for [connected embeds](/docs/sites/small-features#embed-links), so no page can use them.
 
 Once you have a published blog post, or your menu links to your blog, the switcher also lists **Blog**. It shows how your blog looks with your current design. You can't edit anything there; posts are written on the Blog screen. See [Blog & announcements](/docs/sites/blog).
 

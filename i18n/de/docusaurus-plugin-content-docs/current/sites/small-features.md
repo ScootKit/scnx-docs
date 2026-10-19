@@ -39,22 +39,36 @@ Weiterleitungen findest du auf der Seite **Domains**, unter deinen Domains. Zum 
 
 - Klick auf **Weiterleitung hinzufügen**.
 - Trag bei **Von (Pfad auf deiner Website)** etwas wie `/alte-regeln` oder `/discord` ein. Erlaubt sind Kleinbuchstaben, Zahlen, Bindestriche und Punkte.
-- Trag bei **Nach** eine vollständige `https://`-Adresse ein oder einen anderen Pfad deiner Website wie `/regeln`. Um stattdessen auf eines deiner eigenen Embeds zu zeigen, wähle **Mein Embed** (siehe unten).
+- Trag bei **Nach** eine vollständige `https://`-Adresse ein oder einen anderen Pfad deiner Website wie `/regeln`.
 - Klick auf **Erstellen**.
 
 Du kannst eine Weiterleitung jederzeit bearbeiten oder löschen. Eine Website kann bis zu 50 Weiterleitungen haben. Jede zählt die Aufrufe, die sie weiterleitet, so siehst du, wie oft ein kurzer Link genutzt wird.
 
 :::note "Inaktive" Weiterleitungen
-Liegt eine deiner Seiten unter derselben Adresse wie eine Weiterleitung, gewinnt die Seite und die Weiterleitung wird als **Inaktiv** markiert: Sie läuft nie. Lösche diese Seite, damit die Weiterleitung wieder greift. Ein paar Adressen gehören zu deiner Website selbst und können nicht weitergeleitet werden: deine Startseite, `/blog` (und alles darunter), `/sitemap.xml` und `/robots.txt`.
+Liegt eine deiner Seiten unter derselben Adresse wie eine Weiterleitung, gewinnt die Seite und die Weiterleitung wird als **Inaktiv** markiert: Sie läuft nie. Lösche diese Seite, damit die Weiterleitung wieder greift. Ein paar Adressen gehören zu deiner Website selbst und können nicht weitergeleitet werden: deine Startseite, `/blog` und `/embeds` (und alles darunter), `/sitemap.xml` und `/robots.txt`.
 :::
 
-### Eines deiner Embeds verknüpfen {#embed-links}
+### Deine Embeds auf deiner Website zeigen {#embed-links}
 
-Statt eine Webadresse einzutippen, stelle das Ziel von **Webadresse** auf **Mein Embed** um und such dir eines deiner eigenen Embeds aus der Liste aus. So kannst du einen Link auf **deiner eigenen Domain** teilen, etwa `deine-website.example/news`, der deine individuelle Embed-Vorschau zeigt. Discord folgt der Weiterleitung und liest die Vorschau aus dem Embed, und Besucher, die den Link anklicken, landen auf dem Embed. Eine Weiterleitung mit Embed zeigt das Badge **Verknüpftes Embed**.
+Du kannst deine eigenen Embeds auf **deiner eigenen Domain** zeigen. Wenn du den Link in Discord einfügst, erscheint deine individuelle Embed-Vorschau, und Besucher, die ihn öffnen, bleiben auf deiner Website.
 
-- Das Ziel führt zum Embed auf `embeds.scnx.app`. Du kannst nur deine eigenen Embeds verknüpfen, nicht die anderer.
-- Die Weiterleitung folgt dem Embed. Löschst du das Embed später oder wird es entfernt, zeigt die Zeile der Weiterleitung die Warnung **Embed nicht verfügbar**, damit du sie korrigieren kannst. Wähle ein anderes Embed oder stelle das Ziel wieder auf eine Webadresse.
-- Hast du noch keine Embeds, verlinkt die Auswahl auf die Seite, auf der du eines erstellen kannst.
+Verbundene Embeds findest du im Bereich **Embeds** auf der Seite **Domains**, unter den Weiterleitungen.
+
+- Klick auf **Embed verbinden** und wähle eines deiner eigenen Embeds. Du kannst nur Embeds verbinden, die du selbst erstellt hast. Hast du noch keines, erstelle zuerst eines auf deiner Embed-Seite im Benutzerbereich.
+- Eine Website kann bis zu 25 verbundene Embeds haben.
+- Das Verbinden wirkt sofort. Du musst deine Website dafür **nicht** neu veröffentlichen.
+- Mit **Trennen** entfernst du ein Embed wieder von deiner Website.
+
+Jedes verbundene Embed bekommt eine eigene Adresse, `https://deine-website.example/embeds/<Embed-ID>`. Sie funktioniert auf deiner scnx.site-Adresse und auf deiner eigenen Domain. Der Bereich zeigt die Adresse mit einem Kopieren-Button.
+
+- Discord zeigt deine Embed-Vorschau unter deiner eigenen Domain. Es gibt keine Weiterleitung auf eine andere Website.
+- Besucher sehen das Embed als Karte im Design deiner Website, mit deiner normalen Navigation und deinem Footer. Wie jede SCNX-Website-Seite hat der Footer den Button **Missbrauch melden**, damit jeder Inhalte melden kann, die seiner Meinung nach gegen die Regeln verstoßen.
+- Diese Seiten werden nicht von Suchmaschinen indexiert.
+- Wird ein Embed später gelöscht oder entfernt, zeigt es im Bereich Embeds **Nicht verfügbar**, und seine Adresse antwortet auf deiner Website mit "Seite nicht gefunden". Trenne es oder verbinde ein anderes.
+
+:::note `/embeds` ist reserviert
+Du kannst keine Seite namens `embeds` und keine Weiterleitung von `/embeds` oder `/embeds/...` erstellen. Hat deine Website bereits eine solche Seite oder Weiterleitung, funktioniert sie weiter, bis du dein erstes Embed verbindest. Bis du sie löschst, wird das Verbinden abgelehnt.
+:::
 
 Weiterleitungen wirken sofort. Du musst deine Website dafür **nicht** neu veröffentlichen. Solange der [Wartungsmodus](/docs/sites/publishing#maintenance) aktiv ist, laufen sie nicht.
 
