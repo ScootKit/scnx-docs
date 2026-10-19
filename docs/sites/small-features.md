@@ -55,9 +55,11 @@ You can show your own embeds on **your own domain**. When you paste the link in 
 Connected embeds live in the **Embeds** section of the **Domains** page, below Redirects.
 
 - Click **Connect embed** and pick one of your own embeds. You can only connect embeds you created. If you have none yet, create one on your user embeds page first.
-- A site can have up to 25 connected embeds.
+- There is no limit on how many embeds a site can connect. The section loads them in pages and has a search box for finding one by its title.
 - Connecting takes effect immediately. You do **not** have to publish your site again.
 - Click **Disconnect** to remove an embed from your site again.
+
+You can also connect an embed while you edit it. If you manage a site with a verified custom domain, the embed editor shows **Show this embed on your own domain**. Switch **Connect** on for the site you want, and the editor shows the address on your domain with a copy button. Save a new embed first, because only saved embeds can be connected. Sites without a verified custom domain are not listed there, but you can still connect them from the **Domains** page.
 
 Each connected embed gets its own address, `https://your-site.example/embeds/<embed id>`. It works on your scnx.site address and on your custom domain. The section shows the address with a copy button.
 
