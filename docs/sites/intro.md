@@ -46,7 +46,7 @@ Open **Sites** in your server's sidebar in the [SCNX dashboard](https://scnx.app
 1. **Name & address.** Give your site a name (you can change it later in the settings) and pick its address. We suggest an address based on the name until you type your own. The address has to be 3 to 63 letters, numbers and dashes, and it has to start and end with a letter or number. A few words are reserved, and the wizard tells you right away if you picked one. If someone else already uses the address, you find out when you click **Create site**, and the wizard sends you back to this step to pick another one. When more than one **Address ending** is offered, you also choose it here.
 2. **Template.** Start from a ready-made template, or from a **Blank** page and build it your way. See [Templates](#templates) below.
 3. **Language.** Pick the language your site's built-in text (buttons and labels) should use: English or German. You can still write your own content in any language.
-4. **Confirm.** Review the summary, tick **I have read and agree to the SCNX Terms of Service**, and click **Create site**.
+4. **Confirm.** Review the summary, tick **I have read and agree to the SCNX Terms of Service**, and click **Create site**. The first time you create a site, you also tick **I have read and agree to the Supplemental SCNX Sites Terms** ([read them here](https://scootk.it/scnx-sites-terms)). Your agreement is saved to your SCNX account and covers every site you create, so you only see this checkbox again when we publish a new version of these terms.
 
 We create your site as a **draft** and take you straight into the editor, so you can work on it before it goes live. Nothing is public until you publish.
 
