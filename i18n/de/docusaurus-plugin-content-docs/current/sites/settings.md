@@ -36,6 +36,7 @@ Diese Karte legt fest, wie deine Website in Suchergebnissen aussieht und wenn je
 - **Titel beim Teilen**: der Titel in Link-Vorschauen. Setzt du einen, gilt er für jede Seite. Lässt du ihn leer, nutzt jede Seite ihren eigenen Seitentitel. Blog-Beiträge nutzen immer ihren eigenen Titel.
 - **Beschreibung beim Teilen**: der Text unter dem Titel. Lässt du sie leer, wird die **Beschreibung** deiner Website genutzt.
 - **Bild beim Teilen**: das Vorschaubild. Wähle eins aus der Bildbibliothek deines Servers.
+- **Websuche aktivieren**: fügt deiner Navigation und deinem Blog ein Suchfeld und eine Seite `/search` hinzu, damit Besucher deine veröffentlichten Seiten und Beiträge durchsuchen können. Sie ist bei neuen Websites an und bei bereits bestehenden aus. Sie lässt sich nicht aktivieren, solange eine Seite oder Weiterleitung `/search` nutzt. Siehe [Websuche](/docs/sites/search).
 
 Unter diesen Feldern liegt ein Schalter für das **erzeugte Vorschaubild**. Ist er an und hast du kein **Bild beim Teilen** festgelegt, erstellen wir ein Vorschaubild für dich: eine breite Karte mit deinem Website-Namen, deiner Beschreibung und deinem Server-Icon, in den Farben und der Überschriften-Schrift deines Themes. Sie aktualisiert sich von selbst, wenn sich davon etwas ändert, du musst sie also nie neu erstellen.
 
@@ -64,4 +65,4 @@ Der **Wartungsmodus** ersetzt deine ganze Website vorübergehend durch einen kur
 
 Die Karte **Branding** zeigt dir, ob dein Footer die kleine SCNX-Zeile zeigt, also das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX". Dort steht **SCNX-Zeile sichtbar** oder **SCNX-Zeile ausgeblendet**. Hier gibt es nichts einzustellen: Das richtet sich automatisch nach dem Tarif deines Servers. Unser Professional-Tarif und unser Enterprise-Tarif blenden die Zeile aus. Ein Tarifwechsel erreicht deine Website innerhalb weniger Minuten, ohne Veröffentlichung.
 
-Die Links **Plattform-Impressum**, **Plattform-Datenschutz** und **Diese Seite melden** bleiben in jedem Tarif in deinem Footer. Siehe [Branding](/docs/sites/intro#branding).
+Der Button **Missbrauch melden** bleibt in jedem Tarif in deinem Footer. Siehe [Branding](/docs/sites/intro#branding).

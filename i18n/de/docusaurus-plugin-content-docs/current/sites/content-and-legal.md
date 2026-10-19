@@ -24,7 +24,7 @@ Du entscheidest, was auf deiner Website steht, und SCNX hostet sie. Das heißt:
 - **Du bist für die Daten verantwortlich, die du sammelst.** Wenn du Besucher über ein Formular nach Angaben fragst, entscheidest du, was du fragst und was mit den Antworten passiert. Mehr dazu unter [Formulare](/docs/sites/forms#privacy).
 - **Du bist für deine rechtlichen Seiten verantwortlich.** Wenn deine Website ein Impressum oder eine Datenschutzerklärung braucht, schreibst du sie selbst und verlinkst sie. Wir erstellen sie nicht für dich. Mehr dazu unter [Wann du ein Impressum und eine Datenschutzerklärung brauchst](#imprint-and-privacy).
 
-SCNX ist für den Betrieb der Plattform verantwortlich. Deshalb hat jede Website ganz unten im Footer eine kleine SCNX-Leiste mit Links zum **Plattform-Impressum**, zum **Plattform-Datenschutz** und zu **Diese Seite melden**. Diese Links sind immer da und lassen sich nicht entfernen. Sie betreffen SCNX als Host, nicht deine Website.
+SCNX ist für den Betrieb der Plattform verantwortlich. Deshalb hat jede Website ganz unten im Footer eine kleine SCNX-Leiste mit einem Button **Missbrauch melden**. Er ist immer da und lässt sich nicht entfernen. Er betrifft SCNX als Host, nicht deine Website.
 
 ## Was du nicht veröffentlichen darfst {#not-allowed}
 
@@ -46,7 +46,7 @@ Die automatische Prüfung ist ein Sicherheitsnetz, kein Gütesiegel. Auch Inhalt
 
 ## Meldungen von Besuchern {#reports}
 
-Jede Seite deiner Website hat im Footer einen Link **Diese Seite melden**. Darüber kann jeder SCNX auf Inhalte hinweisen, die seiner Meinung nach gegen die Regeln oder das Gesetz verstoßen. Der Link öffnet ein kurzes Meldeformular bei SCNX, in dem die Adresse deiner Website schon eingetragen ist.
+Jede Seite deiner Website hat im Footer einen Button **Missbrauch melden**. Darüber kann jeder SCNX auf Inhalte hinweisen, die seiner Meinung nach gegen die Regeln oder das Gesetz verstoßen. Er öffnet einen kurzen Dialog, der erklärt, was eine Meldung bewirkt, mit einem Link zum Meldeformular bei SCNX. Gedacht ist er für Missbrauch der Plattform, nicht um dich zu kontaktieren: Fragen zu deiner Website gehen weiterhin an dich.
 
 Wenn deine Website gegen die [Nutzungsbedingungen](https://scootk.it/scnx-tos) oder das Gesetz verstößt, kann SCNX sie offline nehmen.
 

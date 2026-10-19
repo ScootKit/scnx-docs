@@ -39,7 +39,7 @@ Weiterleitungen findest du auf der Seite **Domains**, unter deinen Domains. Zum 
 
 - Klick auf **Weiterleitung hinzufügen**.
 - Trag bei **Von (Pfad auf deiner Website)** etwas wie `/alte-regeln` oder `/discord` ein. Erlaubt sind Kleinbuchstaben, Zahlen, Bindestriche und Punkte.
-- Trag bei **Nach** eine vollständige `https://`-Adresse ein oder einen anderen Pfad deiner Website wie `/regeln`.
+- Trag bei **Nach** eine vollständige `https://`-Adresse ein oder einen anderen Pfad deiner Website wie `/regeln`. Um stattdessen auf eines deiner eigenen Embeds zu zeigen, wähle **Mein Embed** (siehe unten).
 - Klick auf **Erstellen**.
 
 Du kannst eine Weiterleitung jederzeit bearbeiten oder löschen. Eine Website kann bis zu 50 Weiterleitungen haben. Jede zählt die Aufrufe, die sie weiterleitet, so siehst du, wie oft ein kurzer Link genutzt wird.
@@ -47,6 +47,14 @@ Du kannst eine Weiterleitung jederzeit bearbeiten oder löschen. Eine Website ka
 :::note "Inaktive" Weiterleitungen
 Liegt eine deiner Seiten unter derselben Adresse wie eine Weiterleitung, gewinnt die Seite und die Weiterleitung wird als **Inaktiv** markiert: Sie läuft nie. Lösche diese Seite, damit die Weiterleitung wieder greift. Ein paar Adressen gehören zu deiner Website selbst und können nicht weitergeleitet werden: deine Startseite, `/blog` (und alles darunter), `/sitemap.xml` und `/robots.txt`.
 :::
+
+### Eines deiner Embeds verknüpfen {#embed-links}
+
+Statt eine Webadresse einzutippen, stelle das Ziel von **Webadresse** auf **Mein Embed** um und such dir eines deiner eigenen Embeds aus der Liste aus. So kannst du einen Link auf **deiner eigenen Domain** teilen, etwa `deine-website.example/news`, der deine individuelle Embed-Vorschau zeigt. Discord folgt der Weiterleitung und liest die Vorschau aus dem Embed, und Besucher, die den Link anklicken, landen auf dem Embed. Eine Weiterleitung mit Embed zeigt das Badge **Verknüpftes Embed**.
+
+- Das Ziel führt zum Embed auf `embeds.scnx.app`. Du kannst nur deine eigenen Embeds verknüpfen, nicht die anderer.
+- Die Weiterleitung folgt dem Embed. Löschst du das Embed später oder wird es entfernt, zeigt die Zeile der Weiterleitung die Warnung **Embed nicht verfügbar**, damit du sie korrigieren kannst. Wähle ein anderes Embed oder stelle das Ziel wieder auf eine Webadresse.
+- Hast du noch keine Embeds, verlinkt die Auswahl auf die Seite, auf der du eines erstellen kannst.
 
 Weiterleitungen wirken sofort. Du musst deine Website dafür **nicht** neu veröffentlichen. Solange der [Wartungsmodus](/docs/sites/publishing#maintenance) aktiv ist, laufen sie nicht.
 

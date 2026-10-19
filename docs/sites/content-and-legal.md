@@ -24,7 +24,7 @@ You decide what your site says, and SCNX hosts it. That means:
 - **You are responsible for the data you collect.** If you ask visitors for information through a form, you decide what to ask and what happens with the answers. See [Forms](/docs/sites/forms#privacy).
 - **You are responsible for your legal pages.** If your site needs an imprint or a privacy policy, you write them and link them. We don't write them for you. See [When you need an imprint and a privacy policy](#imprint-and-privacy).
 
-SCNX is responsible for running the platform. That's why every site has a small SCNX bar at the very bottom of the footer, with links to the **Platform Imprint**, the **Platform Privacy** policy and **Report this page**. These links are always there and can't be removed. They cover SCNX as the host, not your site.
+SCNX is responsible for running the platform. That's why every site has a small SCNX bar at the very bottom of the footer, with a **Report abuse** button. It is always there and can't be removed. It covers SCNX as the host, not your site.
 
 ## What you can't publish {#not-allowed}
 
@@ -46,7 +46,7 @@ The automatic check is a safety net, not a stamp of approval. Content that passe
 
 ## Reports from visitors {#reports}
 
-Every page of your site has a **Report this page** link in the footer. Anyone can use it to tell SCNX about content they think breaks the rules or the law. It opens a short report form on SCNX with your site's address already filled in.
+Every page of your site has a **Report abuse** button in the footer. Anyone can use it to tell SCNX about content they think breaks the rules or the law. It opens a short dialog that explains what a report does, with a link to the report form on SCNX. It is meant for misuse of the platform, not for contacting you: questions about your site still go to you.
 
 If your site breaks the [Terms of Service](https://scootk.it/scnx-tos) or the law, SCNX can take it offline.
 

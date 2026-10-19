@@ -36,6 +36,7 @@ This card controls how your site looks in search results and when someone shares
 - **Share title**: the title in link previews. If you set one, it is used for every page. Leave it empty and each page uses its own page title. Blog posts always use their own title.
 - **Share description**: the text under the title. Leave it empty and your site's **Description** is used.
 - **Share image**: the preview image. Pick one from your server's image library.
+- **Enable site search**: adds a search box to your navbar and blog and a `/search` page, so visitors can search your published pages and posts. It is on for new sites and off for sites that existed before. It cannot be turned on while a page or redirect uses `/search`. See [Site search](/docs/sites/search).
 
 Below these fields is a switch for the **generated share card**. When it is on and you have not set a **Share image**, we create a preview image for you: a wide card with your site name, description and server icon, in your theme's colours and heading font. It updates by itself when any of those change, so you never have to remake it.
 
@@ -64,4 +65,4 @@ The **Imprint** field is for a link to your imprint: a page that says who runs t
 
 The **Branding** card tells you whether your footer shows the small SCNX line, the SCNX logo with the words "This site runs on SCNX". It reads **SCNX line shown** or **SCNX line hidden**. There is nothing to set here: it follows your server's plan automatically. Our Professional plan and our Enterprise plan hide the line. A plan change reaches your site within a few minutes, without a publish.
 
-The **Platform Imprint**, **Platform Privacy** and **Report this page** links stay in your footer on every plan. See [Branding](/docs/sites/intro#branding).
+The **Report abuse** button stays in your footer on every plan. See [Branding](/docs/sites/intro#branding).

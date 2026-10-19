@@ -147,6 +147,18 @@ Unter **Zusätze auf der Beitragsseite** im Blog-Bereich kannst du **Geschätzte
 
 Teilt jemand einen Beitrag, nutzt die Link-Vorschau die Einstellungen unter **Suche & Teilen** des Beitrags, sonst seinen Titel, Auszug und sein Titelbild.
 
+## Tags und Autoren {#tags-authors}
+
+Gib einem Beitrag Tags und einen Autorennamen, damit deine Leser danach stöbern können:
+
+- Jeder **Tag** eines Beitrags verlinkt auf **`/blog/tag/<tag>`**, eine Seite mit allen veröffentlichten Beiträgen mit diesem Tag, neueste zuerst, im selben Layout wie deine Blog-Seite. "News", "news" und "News!" teilen sich eine Seite.
+- Der **Autorenname** eines Beitrags verlinkt auf **`/blog/author/<name>`**, eine Seite mit allen Beiträgen unter diesem Namen. Autoren sind frei eingegebene Namen, keine Discord-Mitglieder, daher wird nichts über dein Team angezeigt. Namen, die sich nur in Groß-/Kleinschreibung oder Satzzeichen unterscheiden, zählen als ein Autor.
+- Deine `/blog`-Seite zeigt eine Zeile **Nach Tag durchsuchen** mit deinen am häufigsten genutzten Tags.
+
+Tag- und Autorenseiten gibt es nur, solange mindestens ein veröffentlichter Beitrag sie nutzt. Die Adresse nutzt eine vereinfachte Form des Namens: Kleinbuchstaben, Leerzeichen und Satzzeichen werden zu Bindestrichen ("Patch Notes!" wird zu `/blog/tag/patch-notes`). Namen, die zur selben Adresse vereinfacht werden, landen auf einer gemeinsamen Seite, sodass "C", "C++" und "C#" alle unter `/blog/tag/c` zu finden sind; die Überschrift nutzt die Schreibweise, die du am häufigsten verwendest. Ein Tag oder Autor, den kein veröffentlichter Beitrag nutzt, zeigt eine "Nicht gefunden"-Seite. Nur eine Seite hinter der letzten Seite einer Liste wird vor Suchmaschinen versteckt. Listen mit Beiträgen kommen automatisch in die Sitemap deiner Website.
+
+Wie die Beiträge selbst sind diese Seiten live: Wenn du einen Beitrag mit Tags versiehst oder den Autor änderst, aktualisieren sie sich sofort.
+
 ## RSS-Feed {#rss}
 
 Dein Blog hat einen RSS-Feed unter **`/blog/rss.xml`**. Er listet deine neuesten Beiträge mit Titel, Auszug, Tags und einem Link zum ganzen Beitrag. Leser können ihn in einem RSS-Reader abonnieren, und du kannst ihn nutzen, um deine Beiträge in andere Tools einzuspeisen, die RSS lesen.

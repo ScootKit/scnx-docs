@@ -117,12 +117,11 @@ If you cannot do something, you probably need a higher access level. Ask a serve
 At the very bottom of every page, under your own footer, your site shows a small SCNX bar. It holds:
 
 - the SCNX logo with the words "This site runs on SCNX",
-- a **Platform Imprint** and a **Platform Privacy** link, with the legal details for SCNX itself,
-- a **Report this page** link, so visitors can tell us about content that breaks the rules. See [Content rules & legal](/docs/sites/content-and-legal) for what happens with a report.
+- a **Report abuse** button. It opens a short dialog that explains what a report does and links to the report form, so visitors can tell us about content that breaks the rules. See [Content rules & legal](/docs/sites/content-and-legal) for what happens with a report.
 
-If you have linked your own privacy policy or imprint under [**Settings** > **Legal information**](/docs/sites/settings#legal), they appear in this bar too, above the SCNX links.
+If you have linked your own privacy policy or imprint under [**Settings** > **Legal information**](/docs/sites/settings#legal), they appear in this bar too.
 
-The three SCNX links are on every site, on every plan. On our Professional plan and our Enterprise plan, the logo and the "This site runs on SCNX" note are hidden, so your footer carries no SCNX branding. The links stay.
+The **Report abuse** button is on every site, on every plan. On our Professional plan and our Enterprise plan, the logo and the "This site runs on SCNX" note are hidden, so your footer carries no SCNX branding. The button stays.
 
 This follows your server's plan automatically, so there is nothing to set and nothing to republish. A plan change reaches your site within a few minutes. You can check what your site currently shows under [**Settings** > **Branding**](/docs/sites/settings#branding).
 
@@ -135,5 +134,6 @@ This follows your server's plan automatically, so there is nothing to set and no
 - [Events](/docs/sites/events) - show your upcoming Discord events.
 - [Announcement bar, redirects & link-in-bio](/docs/sites/small-features) - smaller features for your site.
 - [Settings](/docs/sites/settings) - name, sharing, legal information, maintenance mode and branding.
-- [Analytics](/docs/sites/analytics) - page views, top pages, referrers and countries.
+- [Analytics](/docs/sites/analytics) - page views, traffic sources, campaigns and form conversion.
+- [Site search](/docs/sites/search) - let visitors search your pages and posts.
 - [Publishing & going live](/docs/sites/publishing) - drafts, versions and maintenance mode.

@@ -117,12 +117,11 @@ Wenn du etwas nicht tun kannst, brauchst du wahrscheinlich eine höhere Stufe. F
 Ganz unten auf jeder Seite, unter deinem eigenen Footer, zeigt deine Website eine kleine SCNX-Leiste. Darin stehen:
 
 - das SCNX-Logo mit den Worten "Diese Website läuft auf SCNX",
-- die Links **Plattform-Impressum** und **Plattform-Datenschutz** mit den rechtlichen Angaben zu SCNX selbst,
-- der Link **Diese Seite melden**, über den Besucher uns Inhalte melden können, die gegen die Regeln verstoßen. Was nach einer Meldung passiert, steht unter [Inhaltsregeln & Rechtliches](/docs/sites/content-and-legal).
+- ein Button **Missbrauch melden**. Er öffnet einen kurzen Dialog, der erklärt, was eine Meldung bewirkt, und auf das Meldeformular verlinkt, damit Besucher uns Inhalte melden können, die gegen die Regeln verstoßen. Was nach einer Meldung passiert, steht unter [Inhaltsregeln & Rechtliches](/docs/sites/content-and-legal).
 
-Hast du unter [**Einstellungen** > **Rechtliche Angaben**](/docs/sites/settings#legal) deine eigene Datenschutzerklärung oder dein Impressum verlinkt, erscheinen sie ebenfalls in dieser Leiste, über den SCNX-Links.
+Hast du unter [**Einstellungen** > **Rechtliche Angaben**](/docs/sites/settings#legal) deine eigene Datenschutzerklärung oder dein Impressum verlinkt, erscheinen sie ebenfalls in dieser Leiste.
 
-Die drei SCNX-Links stehen auf jeder Website, in jedem Tarif. In unserem Professional-Tarif und unserem Enterprise-Tarif sind das Logo und der Hinweis "Diese Website läuft auf SCNX" ausgeblendet, dein Footer trägt dann also kein SCNX-Branding. Die Links bleiben.
+Der Button **Missbrauch melden** steht auf jeder Website, in jedem Tarif. In unserem Professional-Tarif und unserem Enterprise-Tarif sind das Logo und der Hinweis "Diese Website läuft auf SCNX" ausgeblendet, dein Footer trägt dann also kein SCNX-Branding. Der Button bleibt.
 
 Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts einstellen und nichts neu veröffentlichen. Eine Tarifänderung kommt innerhalb weniger Minuten auf deiner Website an. Was deine Website gerade zeigt, siehst du unter [**Einstellungen** > **Branding**](/docs/sites/settings#branding).
 
@@ -135,5 +134,6 @@ Das richtet sich automatisch nach dem Tarif deines Servers. Du musst nichts eins
 - [Events](/docs/sites/events) - zeige deine kommenden Discord-Events.
 - [Ankündigungsleiste, Weiterleitungen & Link-in-Bio](/docs/sites/small-features) - kleinere Funktionen für deine Website.
 - [Einstellungen](/docs/sites/settings) - Name, Teilen, rechtliche Angaben, Wartungsmodus und Branding.
-- [Statistiken](/docs/sites/analytics) - Seitenaufrufe, Top-Seiten, Verweise und Länder.
+- [Statistiken](/docs/sites/analytics) - Seitenaufrufe, Traffic-Quellen, Kampagnen und Formular-Conversion.
+- [Websuche](/docs/sites/search) - lass Besucher deine Seiten und Beiträge durchsuchen.
 - [Veröffentlichen & Live gehen](/docs/sites/publishing) - Entwürfe, Versionen und Wartungsmodus.

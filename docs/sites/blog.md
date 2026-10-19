@@ -147,6 +147,18 @@ Under **Post page extras** on the Blog screen you can turn off **Show estimated 
 
 When someone shares a post, the link preview uses the post's **Search & sharing** settings, falling back to its title, excerpt and cover image.
 
+## Tags and authors {#tags-authors}
+
+Give a post tags and an author name and your readers can browse by them:
+
+- Every **tag** on a post links to **`/blog/tag/<tag>`**, a page that lists all your published posts with that tag, newest first, in the same layout as your blog page. "News", "news" and "News!" share one page.
+- The **author name** on a post links to **`/blog/author/<name>`**, a page with all posts written under that name. Authors are plain names you type, not Discord members, so nothing about your staff is shown. Names that differ only in capitalisation or punctuation count as one author.
+- Your `/blog` page shows a **Browse by tag** row with your most used tags.
+
+Tag and author pages only exist while at least one published post uses them. The address uses a simplified version of the name: lowercase, with spaces and punctuation turned into dashes ("Patch Notes!" becomes `/blog/tag/patch-notes`). Names that simplify to the same address are merged into one page, so "C", "C++" and "C#" all land on `/blog/tag/c`; the page heading uses the spelling you use most. A tag or author that no published post uses returns a "not found" page. Only a page past the last page of a listing is hidden from search engines. Listings that have posts are added to your site's sitemap automatically.
+
+Like posts, these pages are live: tagging a post or changing its author updates them straight away.
+
 ## RSS feed {#rss}
 
 Your blog has an RSS feed at **`/blog/rss.xml`**. It lists your newest posts with their title, excerpt, tags and a link to the full post. Readers can subscribe to it in an RSS reader, and you can use it to plug your posts into other tools that read RSS.
