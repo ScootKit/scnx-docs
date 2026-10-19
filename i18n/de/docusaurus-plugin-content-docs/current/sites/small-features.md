@@ -55,9 +55,11 @@ Du kannst deine eigenen Embeds auf **deiner eigenen Domain** zeigen. Wenn du den
 Verbundene Embeds findest du im Bereich **Embeds** auf der Seite **Domains**, unter den Weiterleitungen.
 
 - Klick auf **Embed verbinden** und wähle eines deiner eigenen Embeds. Du kannst nur Embeds verbinden, die du selbst erstellt hast. Hast du noch keines, erstelle zuerst eines auf deiner Embed-Seite im Benutzerbereich.
-- Eine Website kann bis zu 25 verbundene Embeds haben.
+- Wie viele Embeds eine Website verbinden kann, ist nicht begrenzt. Der Bereich lädt sie seitenweise und hat ein Suchfeld, um ein Embed über seinen Titel zu finden.
 - Das Verbinden wirkt sofort. Du musst deine Website dafür **nicht** neu veröffentlichen.
 - Mit **Trennen** entfernst du ein Embed wieder von deiner Website.
+
+Du kannst ein Embed auch direkt beim Bearbeiten verbinden. Verwaltest du eine Website mit bestätigter eigener Domain, zeigt der Embed-Editor den Bereich **Dieses Embed auf deiner eigenen Domain zeigen**. Schalte bei der gewünschten Website **Verbinden** ein, und der Editor zeigt dir die Adresse auf deiner Domain mit einem Kopieren-Button. Speichere ein neues Embed zuerst, denn nur gespeicherte Embeds lassen sich verbinden. Websites ohne bestätigte eigene Domain erscheinen dort nicht, du kannst sie aber weiterhin auf der Seite **Domains** verbinden.
 
 Jedes verbundene Embed bekommt eine eigene Adresse, `https://deine-website.example/embeds/<Embed-ID>`. Sie funktioniert auf deiner scnx.site-Adresse und auf deiner eigenen Domain. Der Bereich zeigt die Adresse mit einem Kopieren-Button.
 
