@@ -159,6 +159,11 @@ const sidebars = {
                     type: 'doc',
                     label: 'Slash commands & Permissions',
                     id: 'custom-bot/slash-commands'
+                },
+                {
+                    type: 'doc',
+                    label: 'Integrations',
+                    id: 'custom-bot/ccv3/integrations'
                 }
             ]
         },

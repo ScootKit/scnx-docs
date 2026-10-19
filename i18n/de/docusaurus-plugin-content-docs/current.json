@@ -207,6 +207,10 @@
     "message": "Slashcommands & Berechtigungen",
     "description": "The label for the doc item 'Slash commands & Permissions' in sidebar 'customBotSidebar', linking to the doc custom-bot/slash-commands"
   },
+  "sidebar.customBotSidebar.doc.Integrations": {
+    "message": "Integrationen",
+    "description": "The label for the doc item 'Integrations' in sidebar 'customBotSidebar', linking to the doc custom-bot/ccv3/integrations"
+  },
   "sidebar.startSidebar.category.Discord": {
     "message": "Discord",
     "description": "The label for category 'Discord' in sidebar 'startSidebar'"
