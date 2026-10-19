@@ -33,7 +33,7 @@ At the top, a row of numbers shows **All posts**, **Live**, **Scheduled**, **Dra
 - **Sort by** - **Newest first**, **Oldest first**, **Title A-Z** or **Most viewed**.
 - The **Layout** toggle - **Cards** or **Compact list**. We remember your choice in your browser.
 
-Each post shows its cover, title, a status badge (**Live**, **Scheduled** with the time it goes live, or **Draft**), the date, its author avatars, its category and tags, the views of the last 30 days, and a note when it was announced on Discord. **Unpublished changes** appears on a live post that has edits waiting. Click **Edit** to open the post editor. The **⋯** menu on a post has **View live**, **Publish now**, **Move to drafts** and **Delete**.
+Each post shows its cover, title, a status badge (**Live**, **Scheduled** with the time it goes live, or **Draft**), the date, its author avatars, its category and tags, the views of the last 30 days, and a note when it was announced on Discord. **Unpublished changes** appears on a live post that has edits waiting. Click **Edit** to open the post editor. The **⋯** menu on a post has **View live**, **Publish now**, **Move to drafts** and **Delete**. **Publish now** does not post to Discord. If the site has an announcement webhook and the post was not announced yet, the menu also has **Publish and announce on Discord**.
 
 Publishing a single post from this menu never announces it on Discord. To announce a post, use the publish window in the post editor, see [Publishing and scheduling](#drafts).
 
