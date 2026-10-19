@@ -12,12 +12,14 @@ SCNX Sites is in active beta, and we're changing a lot of things as we go. We'll
 
 Site search lets visitors find things on your site without clicking through the menu. It adds a search box to your navigation bar and your blog, plus a results page at **`/search`**.
 
-## Turning search on {#enable}
+## Turning search on or off {#enable}
+
+Search is **on** by default. To change it:
 
 1. Open **Settings** in the Sites menu.
-2. In the **Search & sharing** card, switch on **Enable site search**.
+2. In the **Search & sharing** card, use the **Enable site search** switch.
 
-Search is **on** for new sites. Sites that existed before this feature stay **off** until you turn it on yourself. The switch applies right away. You do **not** have to publish your site again.
+Sites that already used the `/search` address for a page or redirect were left **off**, because search would have hidden that content. The switch applies right away. You do **not** have to publish your site again.
 
 :::note `/search` must be free
 Site search owns the `/search` address. If one of your pages or redirects already uses `/search`, search cannot be turned on until you delete or rename it. You will see a message saying so. For the same reason, you cannot create a page or redirect at `/search` while search is on.
