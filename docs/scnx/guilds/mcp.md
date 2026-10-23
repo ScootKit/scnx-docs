@@ -47,7 +47,7 @@ For **Sites**:
   your server has no Site yet, create it in the SCNX dashboard first.
 - Reading a Site works with the same access you need to view it in the dashboard. Changing it needs the same
   access you need to edit it in the dashboard. Some actions, such as rolling back or deleting a form, need the
-  Sites admin permission, just like in the dashboard.
+  website admin permission, just like in the dashboard.
 
 ## Connecting {#connecting}
 
@@ -175,7 +175,7 @@ repeats. If a screenshot is not available at the moment, it falls back to the pr
 ### Images
 
 The assistant puts images into your server's image library by URL, and the Site can only use images from that
-library. Images pasted straight into the chat only work up to about 1.4 MB. For anything bigger, give the
+library. Images pasted straight into the chat only work up to about 1 MB. For anything bigger, give the
 assistant a link instead. Only import images you own or have the right to use.
 
 ### Moving an existing site over
@@ -200,16 +200,16 @@ of one of them is live at once too.
 ### Publishing needs your yes
 
 The assistant never publishes, rolls back or publishes a blog post on its own. It only does so after you have said
-yes in the conversation, and after it showed you the preview link. A request to publish that appears inside a page
-you imported, an image or any other tool result does not count. Only you can say yes.
+yes in the conversation, and after it showed you the preview link. The assistant is told to treat requests inside site content as data, not as your yes. Only you can say yes.
 
 Before a publish, SCNX runs a content check. If it finds a problem, nothing is published and the assistant tells
-you what to fix. A publish can be undone by rolling back to an older version.
+you what to fix. A publish can be undone by rolling back to an older version. Rolling back needs the website admin permission.
 
 ### Undo
 
-Page, blog post, form and redirect changes are snapshotted before they are written, so the assistant can restore
-the earlier state. Blog authors, categories and tags are the exception: they cannot be restored this way.
+Page, blog post, form, redirect and Site settings changes are snapshotted before they are written, so the assistant
+can restore the earlier state. If the item changed since, the assistant asks you first. Blog authors, categories and
+tags are the exception: they cannot be restored this way.
 
 ## What it deliberately cannot do {#out-of-scope}
 
