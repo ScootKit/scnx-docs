@@ -32,7 +32,7 @@ Für **Custom Commands**:
 Für **Sites**:
 
 - Der Server braucht Zugriff auf **SCNX Sites** und eine Site, die schon existiert. Der Assistent kann keine anlegen. Hat dein Server noch keine Site, erstelle sie zuerst im SCNX-Dashboard.
-- Zum Lesen brauchst du denselben Zugriff wie zum Ansehen im Dashboard. Zum Ändern brauchst du denselben Zugriff wie zum Bearbeiten im Dashboard. Manche Aktionen, etwa ein Rollback oder das Löschen eines Formulars, brauchen wie im Dashboard die Websites-Administrator-Berechtigung.
+- Zum Lesen brauchst du denselben Zugriff wie zum Ansehen im Dashboard. Zum Ändern brauchst du denselben Zugriff wie zum Bearbeiten im Dashboard. Manche Aktionen, etwa ein Rollback oder das Löschen eines Formulars, brauchen wie im Dashboard die Website-Admin-Berechtigung.
 
 ## Verbinden {#connecting}
 
@@ -142,7 +142,7 @@ Bevor der Assistent eines davon ändert, muss er dich fragen und auf dein Ja war
 
 Der Assistent veröffentlicht nie von sich aus, setzt nie zurück und veröffentlicht nie einen Blogbeitrag eigenmächtig. Er tut das erst, nachdem du im Gespräch Ja gesagt hast und nachdem er dir den Vorschau-Link gezeigt hat. Der Assistent ist angewiesen, Aufforderungen in Site-Inhalten als Daten zu behandeln, nicht als dein Ja. Nur du kannst Ja sagen.
 
-Vor einer Veröffentlichung führt SCNX eine Inhaltsprüfung durch. Findet sie ein Problem, wird nichts veröffentlicht und der Assistent sagt dir, was zu korrigieren ist. Eine Veröffentlichung lässt sich rückgängig machen, indem du auf eine ältere Version zurücksetzt. Ein Rollback braucht die Websites-Administrator-Berechtigung.
+Vor einer Veröffentlichung führt SCNX eine Inhaltsprüfung durch. Findet sie ein Problem, wird nichts veröffentlicht und der Assistent sagt dir, was zu korrigieren ist. Eine Veröffentlichung lässt sich rückgängig machen, indem du auf eine ältere Version zurücksetzt. Ein Rollback braucht die Website-Admin-Berechtigung.
 
 ### Rückgängig machen
 
