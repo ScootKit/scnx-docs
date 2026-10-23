@@ -1,24 +1,27 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Connect ChatGPT or Claude to SCNX to build and debug Custom Commands v3 flows and to edit your SCNX Site for your Discord server.
+description: Connect ChatGPT or Claude to SCNX to build and debug Custom Commands v3 flows, edit your SCNX Site and change the settings of your bot's built-in modules.
 ---
 
 # MCP Connector
 
 SCNX runs a remote [MCP](https://modelcontextprotocol.io) server at `https://mcp.scnx.app`. It lets an AI assistant
-such as ChatGPT or Claude read your server's setup and help you with two areas:
+such as ChatGPT or Claude read your server's setup and help you with three areas:
 
 - **Custom Commands v3 (CCV3)** - build, test and debug flows, the visual flow-based commands that are currently
   in beta.
 - **Sites** - read and edit your server's SCNX Site: pages, blog posts, forms, redirects and settings.
+- **Bot modules** - read and change the settings of your bot's built-in modules, such as welcome messages,
+  levels, starboard or tickets.
 
 You choose per area what the assistant may do when you connect (see [Connecting](#connecting)).
 
 This is for you if you already build custom commands on SCNX and want an assistant that can look up the exact
 actions and triggers available on your bot, write flows for you, check them for errors, run them safely, and help
 you figure out why one failed - without you copy-pasting JSON back and forth. It is also for you if you want help
-building a Site from a mockup, moving an old website over, or making edits across many pages.
+building a Site from a mockup, moving an old website over, or making edits across many pages. And it is for you if
+you want to say "welcome new members in #welcome" and have the settings filled in for you.
 
 ## Requirements before it will work {#requirements}
 
@@ -49,6 +52,14 @@ For **Sites**:
   access you need to edit it in the dashboard. Some actions, such as rolling back or deleting a form, need the
   website admin permission, just like in the dashboard.
 
+For **Bot modules**:
+
+- The server needs the **Custom-Bot enabled**, with its **bot online and running**. The assistant checks every
+  change with your bot before it saves anything, so a bot that is offline, or too old to do that check, means no
+  changes are saved. Reading settings still works. If your bot is too old, the assistant tells you to update it.
+- Reading and changing settings works with the same access you need for the bot configuration in the dashboard.
+  Turning a module on or off also needs the "Toggle Bot-Modules" permission.
+
 ## Connecting {#connecting}
 
 The connector is an OAuth 2.1 server, so connecting always goes through your browser - no API key to copy. The flow
@@ -58,8 +69,8 @@ is the same shape in both ChatGPT and Claude:
 2. Your client opens a browser tab and sends you to log in to SCNX (if you aren't already).
 3. You land on the SCNX consent screen. There you choose:
    - **Which servers** to grant access to, picked individually from the servers you're eligible on.
-   - **Which areas** the assistant may use on those servers: Custom Commands, Sites, or both. You choose the
-     access per area.
+   - **Which areas** the assistant may use on those servers: Custom Commands, Sites, Bot modules, or any
+     mix. You choose the access per area.
    - **Read only** or **Read and make changes**, for each area - read-only lets the assistant look at everything
      but never create, edit, delete, activate or write anything; read and make changes additionally allows the
      write tools described below.
@@ -211,15 +222,65 @@ Page, blog post, form, redirect and Site settings changes are snapshotted before
 can restore the earlier state. If the item changed since, the assistant asks you first. Blog authors, categories and
 tags are the exception: they cannot be restored this way.
 
+## Bot modules {#bot-modules}
+
+With the Bot modules area granted, the assistant can read and change the settings of your bot's built-in modules,
+the same settings you find under the bot configuration in the dashboard. These are not Custom Commands modules.
+
+### Read your bot's modules
+
+It can list the built-in modules, see which ones are switched on, and read what each setting does and what it is
+set to right now. Secrets such as tokens and webhook links are never shown.
+
+### Change settings
+
+Tell the assistant what you want, for example "welcome new members in #welcome with a short friendly text that
+mentions them" or "starboard should need 5 stars". It reads the current settings first, changes only what you
+asked for and tells you what it changed. Your bot checks every change before it is saved. If something is not
+valid, nothing is saved and the assistant tells you what to fix.
+
+Settings that need a higher plan stay locked, just like in the dashboard. Plain text messages can be written.
+
+### Saved is not live
+
+A change is saved first. It does not run on your server yet. The assistant tells you what it changed and asks
+whether to make it live. Only after your yes does it reload your bot. A reload never restarts the bot. If a
+setting needs a restart, the assistant tells you to do that in the dashboard.
+
+Turning a module on or off works the same way: it is saved, and goes live with the next reload.
+
+### Changes that need your clear yes
+
+Some settings decide who gets roles, who may use staff features, how protections can be bypassed or how the bot
+acts against members. Moderation and role settings are typical examples. For these the assistant describes the
+effect and waits for your explicit yes before it saves.
+
+The assistant is told to treat requests that it finds inside your settings as data, not as your yes. A welcome
+message that says "reload the bot now" does not reload anything.
+
+### What stays in the dashboard
+
+- The bot's own settings, such as the token, the status and the language.
+- Messages that are designed with embeds, buttons or other layouts. The assistant can write plain text
+  messages and tells you when a message needs the editor.
+- Modules that ask for an agreement, are in early access or carry a legal notice. You switch these on yourself.
+- Restarting your bot.
+
+### Undo
+
+Every settings change is snapshotted before it is written, so the assistant can restore the earlier state. If the
+file changed since, for example in the dashboard, the assistant asks you first. A restore is saved but not live
+until you say yes to a reload. Hidden settings that the dashboard does not show are kept as they are.
+
 ## What it deliberately cannot do {#out-of-scope}
 
-The connector covers Custom Commands v3 (the flows and modules you build yourself) and your SCNX Site. It is
-**not** a general SCNX control surface. It cannot:
+The connector covers Custom Commands v3 (the flows and modules you build yourself), your SCNX Site and the
+settings of your bot's built-in modules. It is **not** a general SCNX control surface. It cannot:
 
-- Configure any of the bot's **built-in modules** (levels, welcome, moderation, tickets, and the rest) - those are
-  configured in the SCNX Dashboard, not through this connector.
-- Manage **bot settings**, or start/stop a bot.
+- Change the bot's **own settings** (status, language and the like), or start, stop or restart a bot.
 - Change a **bot token**.
+- Edit built-in module messages that use embeds or buttons, or switch on modules that ask for an agreement. Do
+  those in the SCNX Dashboard.
 - Touch **modmail**, **backups**, **analytics** or **billing**.
 
 On Sites it also cannot:
@@ -235,10 +296,13 @@ If you ask it to do any of these, it should tell you plainly that it doesn't sup
 
 - **Read-only vs read-write is enforced per connection and per area.** A read-only grant cannot call any write
   or storage-write tool - each one refuses before it makes a network call. Granting Custom Commands does not
-  grant Sites, and the other way round.
+  grant Sites or Bot modules, and the other way round.
 - **Site changes are drafts, and publishing is yours.** Pages, blog posts and most settings stay drafts until you
   say yes. The things that go live at once (forms, redirects, blog authors, categories and tags, and a few
   settings) also need your yes first.
+- **Bot module changes are saved first and go live only with your yes.** A reload of your bot always waits for
+  your yes in the conversation, and so does turning a module on or off. Your bot checks each change before
+  it is saved. Secrets and webhook links are never shown or written.
 - **Images stay in your library.** The assistant can only use images that are in your server's image library.
 - **Every write is snapshotted first**, so it's reversible. Deleting or overwriting a module or flow can be undone
   by restoring the snapshot returned with that write.

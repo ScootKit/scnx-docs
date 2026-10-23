@@ -1,19 +1,20 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Verbinde ChatGPT oder Claude mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen und deine SCNX Site für deinen Discord-Server zu bearbeiten.
+description: Verbinde ChatGPT oder Claude mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen, deine SCNX Site zu bearbeiten und die Einstellungen der eingebauten Module deines Bots zu ändern.
 ---
 
 # MCP Connector
 
-SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie ChatGPT oder Claude die Einrichtung deines Servers lesen und dir in zwei Bereichen helfen:
+SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie ChatGPT oder Claude die Einrichtung deines Servers lesen und dir in drei Bereichen helfen:
 
 - **Custom Commands v3 (CCV3)** - Flows bauen, testen und debuggen, die visuellen, flowbasierten Befehle, die sich derzeit in der Beta befinden.
 - **Sites** - die SCNX Site deines Servers lesen und bearbeiten: Seiten, Blogbeiträge, Formulare, Weiterleitungen und Einstellungen.
+- **Bot-Module** - die Einstellungen der eingebauten Module deines Bots lesen und ändern, zum Beispiel Willkommensnachrichten, Levels, Starboard oder Tickets.
 
 Beim Verbinden legst du pro Bereich fest, was der Assistent darf (siehe [Verbinden](#connecting)).
 
-Das ist für dich gedacht, wenn du bereits Custom Commands auf SCNX baust und einen Assistenten möchtest, der die genauen Aktionen und Trigger deines Bots nachschlagen, Flows für dich schreiben, sie auf Fehler prüfen, sicher ausführen und dir helfen kann herauszufinden, warum einer fehlgeschlagen ist - ohne dass du JSON hin- und herkopieren musst. Er ist auch für dich gedacht, wenn du Hilfe dabei willst, eine Site nach einem Mockup zu bauen, eine alte Website umzuziehen oder viele Seiten auf einmal anzupassen.
+Das ist für dich gedacht, wenn du bereits Custom Commands auf SCNX baust und einen Assistenten möchtest, der die genauen Aktionen und Trigger deines Bots nachschlagen, Flows für dich schreiben, sie auf Fehler prüfen, sicher ausführen und dir helfen kann herauszufinden, warum einer fehlgeschlagen ist - ohne dass du JSON hin- und herkopieren musst. Er ist auch für dich gedacht, wenn du Hilfe dabei willst, eine Site nach einem Mockup zu bauen, eine alte Website umzuziehen oder viele Seiten auf einmal anzupassen. Und er ist für dich gedacht, wenn du einfach sagen willst "Begrüße neue Mitglieder in #willkommen" und die Einstellungen dann ausgefüllt haben möchtest.
 
 ## Voraussetzungen {#requirements}
 
@@ -34,6 +35,11 @@ Für **Sites**:
 - Der Server braucht Zugriff auf **SCNX Sites** und eine Site, die schon existiert. Der Assistent kann keine anlegen. Hat dein Server noch keine Site, erstelle sie zuerst im SCNX-Dashboard.
 - Zum Lesen brauchst du denselben Zugriff wie zum Ansehen im Dashboard. Zum Ändern brauchst du denselben Zugriff wie zum Bearbeiten im Dashboard. Manche Aktionen, etwa ein Rollback oder das Löschen eines Formulars, brauchen wie im Dashboard die Website-Admin-Berechtigung.
 
+Für **Bot-Module**:
+
+- Auf dem Server muss der **Custom-Bot aktiviert** sein und sein **Bot muss online sein und laufen**. Der Assistent lässt jede Änderung von deinem Bot prüfen, bevor etwas gespeichert wird. Ist der Bot offline oder zu alt für diese Prüfung, wird nichts gespeichert. Einstellungen lesen funktioniert weiterhin. Ist dein Bot zu alt, sagt dir der Assistent, dass du ihn aktualisieren sollst.
+- Zum Lesen und Ändern der Einstellungen brauchst du denselben Zugriff wie für die Bot-Konfiguration im Dashboard. Ein Modul an- oder auszuschalten braucht zusätzlich die Berechtigung "Bot-Module aktivieren und deaktivieren".
+
 ## Verbinden {#connecting}
 
 Der Connector ist ein OAuth-2.1-Server, die Verbindung läuft also immer über deinen Browser - es gibt keinen API-Schlüssel zu kopieren. Der Ablauf ist in ChatGPT und Claude derselbe:
@@ -42,7 +48,7 @@ Der Connector ist ein OAuth-2.1-Server, die Verbindung läuft also immer über d
 2. Dein Client öffnet einen Browser-Tab und leitet dich zum Login bei SCNX weiter (falls du nicht bereits eingeloggt bist).
 3. Du landest auf der SCNX-Zustimmungsseite. Dort wählst du:
    - **Auf welche Server** zugegriffen werden darf, einzeln ausgewählt aus den Servern, für die du berechtigt bist.
-   - **Welche Bereiche** der Assistent auf diesen Servern nutzen darf: Custom Commands, Sites oder beide. Den Zugriff wählst du pro Bereich.
+   - **Welche Bereiche** der Assistent auf diesen Servern nutzen darf: Custom Commands, Sites, Bot-Module oder eine beliebige Mischung. Den Zugriff wählst du pro Bereich.
    - **Nur lesen** oder **Lesen und ändern**, für jeden Bereich - bei "Nur lesen" kann der Assistent alles ansehen, aber niemals etwas erstellen, bearbeiten, löschen, aktivieren oder schreiben; "Lesen und ändern" erlaubt zusätzlich die unten beschriebenen Schreib-Tools.
    - **Wie lange der Zugriff gilt** - nach 30 Tagen, nach 90 Tagen, nach 1 Jahr oder nie (bis du ihn widerrufst).
 4. Bestätige mit **Zugriff erlauben**. Dein Client erhält seine Tokens und der Connector wird als verbunden angezeigt.
@@ -148,13 +154,50 @@ Vor einer Veröffentlichung führt SCNX eine Inhaltsprüfung durch. Findet sie e
 
 Änderungen an Seiten, Blogbeiträgen, Formularen, Weiterleitungen und Site-Einstellungen werden vor dem Schreiben gesichert, damit der Assistent den früheren Stand wiederherstellen kann. Hat sich das Element seitdem geändert, fragt der Assistent zuerst bei dir nach. Ausgenommen sind Blog-Autoren, -Kategorien und -Tags: Sie lassen sich so nicht wiederherstellen.
 
+## Bot-Module {#bot-modules}
+
+Mit dem Bereich Bot-Module kann der Assistent die Einstellungen der eingebauten Module deines Bots lesen und ändern, also dieselben Einstellungen, die du im Dashboard unter der Bot-Konfiguration findest. Das sind keine Custom-Commands-Module.
+
+### Die Module deines Bots lesen
+
+Er kann die eingebauten Module auflisten, sehen welche eingeschaltet sind und lesen, was jede Einstellung bewirkt und worauf sie gerade steht. Geheimnisse wie Tokens und Webhook-Links werden nie angezeigt.
+
+### Einstellungen ändern
+
+Sag dem Assistenten, was du willst, zum Beispiel "Begrüße neue Mitglieder in #willkommen mit einem kurzen, freundlichen Text, der sie erwähnt" oder "Starboard soll 5 Sterne brauchen". Er liest zuerst die aktuellen Einstellungen, ändert nur das, worum du gebeten hast, und sagt dir, was er geändert hat. Dein Bot prüft jede Änderung, bevor sie gespeichert wird. Ist etwas ungültig, wird nichts gespeichert und der Assistent sagt dir, was zu korrigieren ist.
+
+Einstellungen, die einen höheren Tarif brauchen, bleiben gesperrt, genau wie im Dashboard. Einfache Textnachrichten kann er schreiben.
+
+### Gespeichert heißt nicht live
+
+Eine Änderung wird zuerst gespeichert. Auf deinem Server läuft sie noch nicht. Der Assistent sagt dir, was er geändert hat, und fragt, ob er sie live schalten soll. Erst nach deinem Ja lädt er deinen Bot neu. Ein Neuladen startet den Bot nie neu. Braucht eine Einstellung einen Neustart, sagt dir der Assistent, dass du das im Dashboard machen sollst.
+
+Ein Modul an- oder auszuschalten funktioniert genauso: Es wird gespeichert und geht mit dem nächsten Neuladen live.
+
+### Änderungen, die dein klares Ja brauchen
+
+Manche Einstellungen bestimmen, wer Rollen bekommt, wer Team-Funktionen nutzen darf, wie sich Schutzfunktionen umgehen lassen oder wie der Bot gegen Mitglieder vorgeht. Typische Beispiele sind Moderations- und Rolleneinstellungen. Bei diesen beschreibt der Assistent die Wirkung und wartet auf dein ausdrückliches Ja, bevor er speichert.
+
+Der Assistent ist angewiesen, Aufforderungen, die er in deinen Einstellungen findet, als Daten zu behandeln und nicht als dein Ja. Eine Willkommensnachricht, in der "lade den Bot jetzt neu" steht, lädt nichts neu.
+
+### Was im Dashboard bleibt
+
+- Die eigenen Einstellungen des Bots, etwa Token, Status und Sprache.
+- Nachrichten, die mit Embeds, Buttons oder anderen Layouts gestaltet sind. Einfache Textnachrichten kann der Assistent schreiben und sagt dir, wenn eine Nachricht den Editor braucht.
+- Module, die eine Zustimmung verlangen, im frühen Zugriff sind oder einen rechtlichen Hinweis haben. Diese schaltest du selbst ein.
+- Den Bot neu starten.
+
+### Rückgängig machen
+
+Jede Änderung an den Einstellungen wird vor dem Schreiben gesichert, damit der Assistent den früheren Stand wiederherstellen kann. Hat sich die Datei seitdem geändert, zum Beispiel im Dashboard, fragt der Assistent zuerst bei dir nach. Eine Wiederherstellung ist gespeichert, aber erst nach deinem Ja zum Neuladen live. Versteckte Einstellungen, die das Dashboard nicht zeigt, bleiben unverändert.
+
 ## Was er bewusst nicht kann {#out-of-scope}
 
-Der Connector deckt Custom Commands v3 (die Flows und Module, die du selbst baust) und deine SCNX Site ab. Er ist **keine** allgemeine Steuerungsoberfläche für SCNX. Er kann nicht:
+Der Connector deckt Custom Commands v3 (die Flows und Module, die du selbst baust), deine SCNX Site und die Einstellungen der eingebauten Module deines Bots ab. Er ist **keine** allgemeine Steuerungsoberfläche für SCNX. Er kann nicht:
 
-- Eines der **eingebauten Module** des Bots konfigurieren (Levels, Willkommen, Moderation, Tickets und alle anderen) - diese werden im SCNX-Dashboard konfiguriert, nicht über diesen Connector.
-- **Bot-Einstellungen** verwalten oder einen Bot starten bzw. stoppen.
+- Die **eigenen Einstellungen** des Bots (Status, Sprache und Ähnliches) ändern oder einen Bot starten, stoppen bzw. neu starten.
 - Einen **Bot-Token** ändern.
+- Nachrichten eingebauter Module mit Embeds oder Buttons bearbeiten oder Module einschalten, die eine Zustimmung verlangen. Das machst du im SCNX-Dashboard.
 - **Modmail**, **Backups**, **Analytics** oder **Abrechnung** anfassen.
 
 Bei Sites kann er außerdem nicht:
@@ -167,8 +210,9 @@ Wenn du ihn um eines davon bittest, sollte er dir klar sagen, dass er das noch n
 
 ## Sicherheitsmodell {#safety}
 
-- **Nur lesen oder Lesen und ändern wird pro Verbindung und pro Bereich durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht. Die Freigabe von Custom Commands gibt keinen Zugriff auf Sites, und umgekehrt.
+- **Nur lesen oder Lesen und ändern wird pro Verbindung und pro Bereich durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht. Die Freigabe von Custom Commands gibt keinen Zugriff auf Sites oder Bot-Module, und umgekehrt.
 - **Änderungen an der Site sind Entwürfe, und das Veröffentlichen liegt bei dir.** Seiten, Blogbeiträge und die meisten Einstellungen bleiben Entwürfe, bis du Ja sagst. Auch das, was sofort live geht (Formulare, Weiterleitungen, Blog-Autoren, -Kategorien und -Tags sowie einige Einstellungen), braucht vorher dein Ja.
+- **Änderungen an Bot-Modulen werden zuerst gespeichert und gehen nur mit deinem Ja live.** Ein Neuladen deines Bots wartet immer auf dein Ja im Gespräch, ebenso das An- oder Ausschalten eines Moduls. Dein Bot prüft jede Änderung, bevor sie gespeichert wird. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
 - **Bilder bleiben in deiner Bibliothek.** Der Assistent kann nur Bilder verwenden, die in der Bildbibliothek deines Servers liegen.
 - **Jede Schreibaktion wird zuerst gesichert**, ist also umkehrbar. Das Löschen oder Überschreiben eines Moduls oder Flows lässt sich rückgängig machen, indem der mit dieser Aktion zurückgegebene Snapshot wiederhergestellt wird.
 - **Aktivierung ist freiwillig und kann abgelehnt werden.** Das Speichern oder Aktivieren eines Flows ist nur eine Anfrage. Ein Flow mit Validierungsfehlern, einem eindeutigen Missbrauchssignal oder einer Aktion der Kategorie "destruktiv" (ein Mitglied bannen, einen Kanal löschen, kicken, Mitglieder bereinigen und Ähnliches) wird stattdessen als **inaktiver Entwurf** gespeichert, anstatt live zu gehen, und muss von einem Menschen im Dashboard scharfgeschaltet werden.
