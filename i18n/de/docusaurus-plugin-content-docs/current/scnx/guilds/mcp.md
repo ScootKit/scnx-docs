@@ -1,12 +1,12 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Verbinde Claude oder ChatGPT mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen und deine SCNX Site für deinen Discord-Server zu bearbeiten.
+description: Verbinde ChatGPT oder Claude mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen und deine SCNX Site für deinen Discord-Server zu bearbeiten.
 ---
 
 # MCP Connector
 
-SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie Claude oder ChatGPT die Einrichtung deines Servers lesen und dir in zwei Bereichen helfen:
+SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie ChatGPT oder Claude die Einrichtung deines Servers lesen und dir in zwei Bereichen helfen:
 
 - **Custom Commands v3 (CCV3)** - Flows bauen, testen und debuggen, die visuellen, flowbasierten Befehle, die sich derzeit in der Beta befinden.
 - **Sites** - die SCNX Site deines Servers lesen und bearbeiten: Seiten, Blogbeiträge, Formulare, Weiterleitungen und Einstellungen.
@@ -36,7 +36,7 @@ Für **Sites**:
 
 ## Verbinden {#connecting}
 
-Der Connector ist ein OAuth-2.1-Server, die Verbindung läuft also immer über deinen Browser - es gibt keinen API-Schlüssel zu kopieren. Der Ablauf ist in Claude und ChatGPT derselbe:
+Der Connector ist ein OAuth-2.1-Server, die Verbindung läuft also immer über deinen Browser - es gibt keinen API-Schlüssel zu kopieren. Der Ablauf ist in ChatGPT und Claude derselbe:
 
 1. Füge einen benutzerdefinierten Connector hinzu und füge die Server-URL ein: **`https://mcp.scnx.app/mcp`**.
 2. Dein Client öffnet einen Browser-Tab und leitet dich zum Login bei SCNX weiter (falls du nicht bereits eingeloggt bist).
@@ -53,13 +53,13 @@ Hat ein Server [Enhanced Security](/de/docs/scnx/guilds/enhanced-security) aktiv
 
 Du kannst deine Entscheidung jederzeit ändern: Verbinde dich erneut, um mit anderen Servern, einer anderen Zugriffsart oder einem anderen Ablauf neu zu autorisieren, oder widerrufe den Zugriff in deinem SCNX-Account, um ihn sofort zu beenden.
 
-### In Claude
-
-Öffne **Settings → Connectors**, füge einen benutzerdefinierten Connector hinzu und füge `https://mcp.scnx.app/mcp` als Server-URL ein. Claude führt Discovery und Registrierung automatisch durch und öffnet dann den oben beschriebenen Zustimmungsablauf im Browser.
-
 ### In ChatGPT
 
 Öffne **Settings → Connectors**, füge einen benutzerdefinierten Connector hinzu (dafür muss eventuell zuerst der Entwickler-/erweiterte Modus für benutzerdefinierte Connectors aktiviert werden) und füge `https://mcp.scnx.app/mcp` als Server-URL ein. ChatGPT führt denselben Discovery- und Zustimmungsablauf durch.
+
+### In Claude
+
+Öffne **Settings → Connectors**, füge einen benutzerdefinierten Connector hinzu und füge `https://mcp.scnx.app/mcp` als Server-URL ein. Claude führt Discovery und Registrierung automatisch durch und öffnet dann den oben beschriebenen Zustimmungsablauf im Browser.
 
 ## Was er kann {#capabilities}
 

@@ -1,13 +1,13 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Connect Claude or ChatGPT to SCNX to build and debug Custom Commands v3 flows and to edit your SCNX Site for your Discord server.
+description: Connect ChatGPT or Claude to SCNX to build and debug Custom Commands v3 flows and to edit your SCNX Site for your Discord server.
 ---
 
 # MCP Connector
 
 SCNX runs a remote [MCP](https://modelcontextprotocol.io) server at `https://mcp.scnx.app`. It lets an AI assistant
-such as Claude or ChatGPT read your server's setup and help you with two areas:
+such as ChatGPT or Claude read your server's setup and help you with two areas:
 
 - **Custom Commands v3 (CCV3)** - build, test and debug flows, the visual flow-based commands that are currently
   in beta.
@@ -52,7 +52,7 @@ For **Sites**:
 ## Connecting {#connecting}
 
 The connector is an OAuth 2.1 server, so connecting always goes through your browser - no API key to copy. The flow
-is the same shape in both Claude and ChatGPT:
+is the same shape in both ChatGPT and Claude:
 
 1. Add a custom connector and paste the server URL: **`https://mcp.scnx.app/mcp`**.
 2. Your client opens a browser tab and sends you to log in to SCNX (if you aren't already).
@@ -74,16 +74,16 @@ before you can connect it. This happens at connect time.
 You can change your mind at any time: reconnect to re-authorize with different servers, access level or expiry, or
 revoke the grant from your SCNX account to cut it off immediately.
 
-### In Claude
-
-Open **Settings → Connectors**, add a custom connector, and paste `https://mcp.scnx.app/mcp` as the server URL.
-Claude performs discovery and registration automatically, then opens the browser consent flow above.
-
 ### In ChatGPT
 
 Open **Settings → Connectors**, add a custom connector (this may require enabling developer/advanced mode for
 custom connectors first), and paste `https://mcp.scnx.app/mcp` as the server URL. ChatGPT performs the same
 discovery and consent flow.
+
+### In Claude
+
+Open **Settings → Connectors**, add a custom connector, and paste `https://mcp.scnx.app/mcp` as the server URL.
+Claude performs discovery and registration automatically, then opens the browser consent flow above.
 
 ## What it can do {#capabilities}
 
