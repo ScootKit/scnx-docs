@@ -1,18 +1,24 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Connect Claude or ChatGPT to SCNX to author, validate, simulate and debug Custom Commands v3 flows for your Discord server.
+description: Connect Claude or ChatGPT to SCNX to build and debug Custom Commands v3 flows and to edit your SCNX Site for your Discord server.
 ---
 
 # MCP Connector
 
 SCNX runs a remote [MCP](https://modelcontextprotocol.io) server at `https://mcp.scnx.app`. It lets an AI assistant
-such as Claude or ChatGPT read your server's setup and help you build, test and debug **Custom Commands v3 (CCV3)**
-flows - the visual flow-based commands that are currently in beta.
+such as Claude or ChatGPT read your server's setup and help you with two areas:
+
+- **Custom Commands v3 (CCV3)** - build, test and debug flows, the visual flow-based commands that are currently
+  in beta.
+- **Sites** - read and edit your server's SCNX Site: pages, blog posts, forms, redirects and settings.
+
+You choose per area what the assistant may do when you connect (see [Connecting](#connecting)).
 
 This is for you if you already build custom commands on SCNX and want an assistant that can look up the exact
 actions and triggers available on your bot, write flows for you, check them for errors, run them safely, and help
-you figure out why one failed - without you copy-pasting JSON back and forth.
+you figure out why one failed - without you copy-pasting JSON back and forth. It is also for you if you want help
+building a Site from a mockup, moving an old website over, or making edits across many pages.
 
 ## Requirements before it will work {#requirements}
 
@@ -25,12 +31,23 @@ will refuse to do anything until they are.
   dashboard uses for bot configuration (Bot-Administrator, Co-Owner, or the "Change and Reload Configuration /
   Custom Command" permission - see [Trusted Admins](/docs/scnx/guilds/trusted-admins#permissions)). SCNX rechecks
   this on every single tool call, so losing access mid-session drops the server from the connection immediately.
-- The server needs the **Custom-Bot enabled** (see [Set up your Custom-Bot](/docs/custom-bot)), with its **bot
-  online and running**. Guild-scoped tools reach your server through your bot's own host process - if it's offline,
-  those calls fail.
 - You need a **logged-in SCNX account** (the same one used for [scnx.app](https://scnx.app)) to complete the
   authorization step below.
+
+For **Custom Commands**:
+
+- The server needs the **Custom-Bot enabled** (see [Set up your Custom-Bot](/docs/custom-bot)), with its **bot
+  online and running**. These tools reach your server through your bot's own host process - if it's offline,
+  those calls fail.
 - You need to be part of the Custom Commands V3 Beta Program.
+
+For **Sites**:
+
+- The server needs access to **SCNX Sites** and a Site that already exists. The assistant cannot create one. If
+  your server has no Site yet, create it in the SCNX dashboard first.
+- Reading a Site works with the same access you need to view it in the dashboard. Changing it needs the same
+  access you need to edit it in the dashboard. Some actions, such as rolling back or deleting a form, need the
+  Sites admin permission, just like in the dashboard.
 
 ## Connecting {#connecting}
 
@@ -41,11 +58,18 @@ is the same shape in both Claude and ChatGPT:
 2. Your client opens a browser tab and sends you to log in to SCNX (if you aren't already).
 3. You land on the SCNX consent screen. There you choose:
    - **Which servers** to grant access to, picked individually from the servers you're eligible on.
-   - **Read only** or **Read and make changes** - read-only lets the assistant look at everything but never
-     create, edit, delete, activate or write anything; read-write additionally allows the write and storage-write
-     tools described below.
+   - **Which areas** the assistant may use on those servers: Custom Commands, Sites, or both. You choose the
+     access per area.
+   - **Read only** or **Read and make changes**, for each area - read-only lets the assistant look at everything
+     but never create, edit, delete, activate or write anything; read and make changes additionally allows the
+     write tools described below.
    - **How long the grant lasts** - after 30 days, after 90 days, after 1 year, or never (until you revoke it).
 4. Approve. Your client receives its tokens and the connector shows as connected.
+
+:::note Servers with Enhanced Security
+If a server has [Enhanced Security](/docs/scnx/guilds/enhanced-security) turned on, SCNX asks you to log in again
+before you can connect it. This happens at connect time.
+:::
 
 You can change your mind at any time: reconnect to re-authorize with different servers, access level or expiry, or
 revoke the grant from your SCNX account to cut it off immediately.
@@ -63,8 +87,10 @@ discovery and consent flow.
 
 ## What it can do {#capabilities}
 
-Every tool is always visible to the assistant; write and storage-write tools simply refuse at call time on a
+The assistant only sees the tools for the areas you granted. Within an area, write tools refuse at call time on a
 read-only connection.
+
+## Custom Commands {#custom-commands}
 
 ### Read your setup
 
@@ -124,10 +150,71 @@ The assistant can also read the built-in publishing guide and run the real publi
 required listing details, portability and the organization's prerequisites - without publishing anything. The
 actual publishing always happens in the dashboard.
 
+## Sites {#sites}
+
+With the Sites area granted, the assistant can read your SCNX Site and edit it, in the same way you would in the
+dashboard editor.
+
+### Read your Site
+
+It can read the Site's settings, pages, blog posts, authors, categories and tags, forms, redirects and your server's
+image library. It can also read a built-in guide to the page format, the block types and the themes, so it builds
+pages the editor accepts. Form submissions are not readable through the connector.
+
+### Edit pages and blog posts as drafts
+
+The assistant can create, change, reorder and delete pages, and write and change blog posts. Page changes, blog
+post changes and most Site settings (theme, navbar, footer, social preview text, name) are saved as **drafts**.
+Visitors do not see a draft. After each change the assistant gives you a **preview link** so you can look at the
+result before anything goes live.
+
+It can also check a page without saving it, and it can take a screenshot of a page in your draft. That is how it
+compares a page with a mockup you gave it: it builds the page, looks at the screenshot, fixes the differences and
+repeats. If a screenshot is not available at the moment, it falls back to the preview link.
+
+### Images
+
+The assistant puts images into your server's image library by URL, and the Site can only use images from that
+library. Images pasted straight into the chat only work up to about 1.4 MB. For anything bigger, give the
+assistant a link instead. Only import images you own or have the right to use.
+
+### Moving an existing site over
+
+Give the assistant the address of your old site. It reads the old pages, imports the images into your image
+library, rebuilds the pages as drafts and adds redirects from the old paths. It asks you to confirm that you have
+the rights to the content and the images before anything is published.
+
+### Changes that go live at once
+
+Some things have no draft. The public Site shows them as soon as they are saved:
+
+- Forms
+- Redirects
+- Blog authors, categories and tags
+- These Site settings: the announcement bar, the legal links (privacy policy, imprint and data contact), the blog
+  layout, the social preview card, reading time, post navigation and search
+
+The assistant must ask you first and wait for your yes before it changes any of these. Restoring an earlier version
+of one of them is live at once too.
+
+### Publishing needs your yes
+
+The assistant never publishes, rolls back or publishes a blog post on its own. It only does so after you have said
+yes in the conversation, and after it showed you the preview link. A request to publish that appears inside a page
+you imported, an image or any other tool result does not count. Only you can say yes.
+
+Before a publish, SCNX runs a content check. If it finds a problem, nothing is published and the assistant tells
+you what to fix. A publish can be undone by rolling back to an older version.
+
+### Undo
+
+Page, blog post, form and redirect changes are snapshotted before they are written, so the assistant can restore
+the earlier state. Blog authors, categories and tags are the exception: they cannot be restored this way.
+
 ## What it deliberately cannot do {#out-of-scope}
 
-The connector is scoped to Custom Commands v3 - the flows and modules you build yourself with `create-module` and
-`save-flow`. It is **not** a general SCNX control surface. It cannot:
+The connector covers Custom Commands v3 (the flows and modules you build yourself) and your SCNX Site. It is
+**not** a general SCNX control surface. It cannot:
 
 - Configure any of the bot's **built-in modules** (levels, welcome, moderation, tickets, and the rest) - those are
   configured in the SCNX Dashboard, not through this connector.
@@ -135,13 +222,24 @@ The connector is scoped to Custom Commands v3 - the flows and modules you build 
 - Change a **bot token**.
 - Touch **modmail**, **backups**, **analytics** or **billing**.
 
+On Sites it also cannot:
+
+- Create a Site or delete one.
+- Manage **domains**, **embeds** or Site **analytics**.
+- Read **form submissions**.
+
 If you ask it to do any of these, it should tell you plainly that it doesn't support that yet and point you to the
-[SCNX Dashboard](https://scnx.app) instead of attempting a workaround with the flow tools.
+[SCNX Dashboard](https://scnx.app) instead of attempting a workaround.
 
 ## Safety model {#safety}
 
-- **Read-only vs read-write is enforced per connection.** A read-only grant cannot call any write or
-  storage-write tool - each one refuses before it makes a network call.
+- **Read-only vs read-write is enforced per connection and per area.** A read-only grant cannot call any write
+  or storage-write tool - each one refuses before it makes a network call. Granting Custom Commands does not
+  grant Sites, and the other way round.
+- **Site changes are drafts, and publishing is yours.** Pages, blog posts and most settings stay drafts until you
+  say yes. The things that go live at once (forms, redirects, blog authors, categories and tags, and a few
+  settings) also need your yes first.
+- **Images stay in your library.** The assistant can only use images that are in your server's image library.
 - **Every write is snapshotted first**, so it's reversible. Deleting or overwriting a module or flow can be undone
   by restoring the snapshot returned with that write.
 - **Activation is opt-in and can be refused.** Saving or activating a flow is only a request. A flow with

@@ -1,14 +1,19 @@
 ---
 sidebar_position: 8
 title: MCP Connector
-description: Verbinde Claude oder ChatGPT mit SCNX, um Custom-Commands-v3-Flows für deinen Discord-Server zu erstellen, zu validieren, zu simulieren und zu debuggen.
+description: Verbinde Claude oder ChatGPT mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen und deine SCNX Site für deinen Discord-Server zu bearbeiten.
 ---
 
 # MCP Connector
 
-SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie Claude oder ChatGPT die Einrichtung deines Servers lesen und dir helfen, **Custom Commands v3 (CCV3)**-Flows zu bauen, zu testen und zu debuggen - die visuellen, flowbasierten Befehle, die sich derzeit in der Beta befinden.
+SCNX betreibt einen Remote-[MCP](https://modelcontextprotocol.io)-Server unter `https://mcp.scnx.app`. Damit kann ein KI-Assistent wie Claude oder ChatGPT die Einrichtung deines Servers lesen und dir in zwei Bereichen helfen:
 
-Das ist für dich gedacht, wenn du bereits Custom Commands auf SCNX baust und einen Assistenten möchtest, der die genauen Aktionen und Trigger deines Bots nachschlagen, Flows für dich schreiben, sie auf Fehler prüfen, sicher ausführen und dir helfen kann herauszufinden, warum einer fehlgeschlagen ist - ohne dass du JSON hin- und herkopieren musst.
+- **Custom Commands v3 (CCV3)** - Flows bauen, testen und debuggen, die visuellen, flowbasierten Befehle, die sich derzeit in der Beta befinden.
+- **Sites** - die SCNX Site deines Servers lesen und bearbeiten: Seiten, Blogbeiträge, Formulare, Weiterleitungen und Einstellungen.
+
+Beim Verbinden legst du pro Bereich fest, was der Assistent darf (siehe [Verbinden](#connecting)).
+
+Das ist für dich gedacht, wenn du bereits Custom Commands auf SCNX baust und einen Assistenten möchtest, der die genauen Aktionen und Trigger deines Bots nachschlagen, Flows für dich schreiben, sie auf Fehler prüfen, sicher ausführen und dir helfen kann herauszufinden, warum einer fehlgeschlagen ist - ohne dass du JSON hin- und herkopieren musst. Er ist auch für dich gedacht, wenn du Hilfe dabei willst, eine Site nach einem Mockup zu bauen, eine alte Website umzuziehen oder viele Seiten auf einmal anzupassen.
 
 ## Voraussetzungen {#requirements}
 
@@ -17,9 +22,17 @@ Der Connector verbindet und autorisiert sich auch, wenn diese Voraussetzungen ni
 :::
 
 - Du musst der **Eigentümer des Discord-Servers** sein oder ein **Trusted Admin** mit Berechtigungen, die dieselbe Hürde nehmen wie die Bot-Konfiguration im Dashboard (Bot-Administrator, Co-Owner oder die Berechtigung "Konfigurationen & Eigene Befehle ändern und neu laden" - siehe [Trusted Admins](/de/docs/scnx/guilds/trusted-admins#permissions)). SCNX prüft das bei jedem einzelnen Tool-Aufruf erneut, sodass der Server sofort aus der Verbindung fällt, wenn du mitten in der Sitzung den Zugriff verlierst.
-- Auf dem Server muss der **Custom-Bot aktiviert** sein (siehe [Custom-Bot einrichten](/de/docs/custom-bot)) und sein **Bot muss online sein und laufen**. Serverbezogene Tools erreichen deinen Server über den Host-Prozess deines Bots - ist er offline, schlagen diese Aufrufe fehl.
 - Du brauchst einen **eingeloggten SCNX-Account** (denselben wie auf [scnx.app](https://scnx.app)), um den Autorisierungsschritt unten abzuschließen.
+
+Für **Custom Commands**:
+
+- Auf dem Server muss der **Custom-Bot aktiviert** sein (siehe [Custom-Bot einrichten](/de/docs/custom-bot)) und sein **Bot muss online sein und laufen**. Diese Tools erreichen deinen Server über den Host-Prozess deines Bots - ist er offline, schlagen diese Aufrufe fehl.
 - Du musst Teil des Custom Commands V3 Beta-Programms sein.
+
+Für **Sites**:
+
+- Der Server braucht Zugriff auf **SCNX Sites** und eine Site, die schon existiert. Der Assistent kann keine anlegen. Hat dein Server noch keine Site, erstelle sie zuerst im SCNX-Dashboard.
+- Zum Lesen brauchst du denselben Zugriff wie zum Ansehen im Dashboard. Zum Ändern brauchst du denselben Zugriff wie zum Bearbeiten im Dashboard. Manche Aktionen, etwa ein Rollback oder das Löschen eines Formulars, brauchen wie im Dashboard die Sites-Administrator-Berechtigung.
 
 ## Verbinden {#connecting}
 
@@ -29,9 +42,14 @@ Der Connector ist ein OAuth-2.1-Server, die Verbindung läuft also immer über d
 2. Dein Client öffnet einen Browser-Tab und leitet dich zum Login bei SCNX weiter (falls du nicht bereits eingeloggt bist).
 3. Du landest auf der SCNX-Zustimmungsseite. Dort wählst du:
    - **Auf welche Server** zugegriffen werden darf, einzeln ausgewählt aus den Servern, für die du berechtigt bist.
-   - **Nur lesen** oder **Lesen und ändern** - bei "Nur lesen" kann der Assistent alles ansehen, aber niemals etwas erstellen, bearbeiten, löschen, aktivieren oder schreiben; "Lesen und ändern" erlaubt zusätzlich die unten beschriebenen Schreib- und Speicher-Schreib-Tools.
+   - **Welche Bereiche** der Assistent auf diesen Servern nutzen darf: Custom Commands, Sites oder beide. Den Zugriff wählst du pro Bereich.
+   - **Nur lesen** oder **Lesen und ändern**, für jeden Bereich - bei "Nur lesen" kann der Assistent alles ansehen, aber niemals etwas erstellen, bearbeiten, löschen, aktivieren oder schreiben; "Lesen und ändern" erlaubt zusätzlich die unten beschriebenen Schreib-Tools.
    - **Wie lange der Zugriff gilt** - nach 30 Tagen, nach 90 Tagen, nach 1 Jahr oder nie (bis du ihn widerrufst).
 4. Bestätige mit **Zugriff erlauben**. Dein Client erhält seine Tokens und der Connector wird als verbunden angezeigt.
+
+:::note Server mit Enhanced Security
+Hat ein Server [Enhanced Security](/de/docs/scnx/guilds/enhanced-security) aktiviert, bittet SCNX dich, dich erneut einzuloggen, bevor du ihn verbinden kannst. Das passiert beim Verbinden.
+:::
 
 Du kannst deine Entscheidung jederzeit ändern: Verbinde dich erneut, um mit anderen Servern, einer anderen Zugriffsart oder einem anderen Ablauf neu zu autorisieren, oder widerrufe den Zugriff in deinem SCNX-Account, um ihn sofort zu beenden.
 
@@ -45,7 +63,9 @@ Du kannst deine Entscheidung jederzeit ändern: Verbinde dich erneut, um mit and
 
 ## Was er kann {#capabilities}
 
-Jedes Tool ist für den Assistenten immer sichtbar; Schreib- und Speicher-Schreib-Tools verweigern bei einer Nur-Lesen-Verbindung erst beim Aufruf die Arbeit.
+Der Assistent sieht nur die Tools der Bereiche, die du freigegeben hast. Innerhalb eines Bereichs verweigern Schreib-Tools bei einer Nur-Lesen-Verbindung erst beim Aufruf die Arbeit.
+
+## Custom Commands {#custom-commands}
 
 ### Deine Einrichtung lesen
 
@@ -85,20 +105,71 @@ Sieh nach, unter welchen Marketplace-Publisher-Organisationen dein Account verö
 
 Der Assistent kann außerdem den eingebauten Veröffentlichungs-Guide lesen und die echten Veröffentlichungsprüfungen für ein Modul durchführen - erforderliche Listing-Angaben, Portabilität und die Voraussetzungen der Organisation - ohne etwas zu veröffentlichen. Die eigentliche Veröffentlichung findet immer im Dashboard statt.
 
+## Sites {#sites}
+
+Ist der Bereich Sites freigegeben, kann der Assistent deine SCNX Site lesen und bearbeiten - ähnlich wie du es im Editor im Dashboard tust.
+
+### Deine Site lesen
+
+Er kann die Einstellungen der Site, Seiten, Blogbeiträge, Autoren, Kategorien und Tags, Formulare, Weiterleitungen und die Bildbibliothek deines Servers lesen. Außerdem kann er einen eingebauten Leitfaden zu Seitenformat, Blocktypen und Themes lesen, damit er Seiten baut, die der Editor akzeptiert. Formular-Einsendungen kann der Connector nicht lesen.
+
+### Seiten und Blogbeiträge als Entwurf bearbeiten
+
+Der Assistent kann Seiten erstellen, ändern, umsortieren und löschen sowie Blogbeiträge schreiben und ändern. Änderungen an Seiten, an Blogbeiträgen und an den meisten Einstellungen (Theme, Navigationsleiste, Fußzeile, Texte der Social-Vorschau, Name) werden als **Entwurf** gespeichert. Besucher sehen einen Entwurf nicht. Nach jeder Änderung gibt dir der Assistent einen **Vorschau-Link**, damit du das Ergebnis ansehen kannst, bevor etwas live geht.
+
+Er kann eine Seite auch prüfen, ohne sie zu speichern, und einen Screenshot einer Seite aus deinem Entwurf machen. So vergleicht er eine Seite mit einem Mockup, das du ihm gegeben hast: Er baut die Seite, sieht sich den Screenshot an, korrigiert die Unterschiede und wiederholt das. Ist ein Screenshot gerade nicht verfügbar, nutzt er stattdessen den Vorschau-Link.
+
+### Bilder
+
+Der Assistent legt Bilder per URL in die Bildbibliothek deines Servers, und die Site kann nur Bilder aus dieser Bibliothek verwenden. Bilder, die direkt in den Chat eingefügt werden, funktionieren nur bis etwa 1,4 MB. Für größere Bilder gibst du dem Assistenten stattdessen einen Link. Importiere nur Bilder, die dir gehören oder die du nutzen darfst.
+
+### Eine bestehende Website umziehen
+
+Gib dem Assistenten die Adresse deiner alten Website. Er liest die alten Seiten, importiert die Bilder in deine Bildbibliothek, baut die Seiten als Entwurf nach und legt Weiterleitungen von den alten Pfaden an. Er bittet dich zu bestätigen, dass du die Rechte an Inhalten und Bildern hast, bevor irgendetwas veröffentlicht wird.
+
+### Änderungen, die sofort live gehen
+
+Manches hat keinen Entwurf. Die öffentliche Site zeigt es, sobald es gespeichert ist:
+
+- Formulare
+- Weiterleitungen
+- Blog-Autoren, -Kategorien und -Tags
+- Diese Site-Einstellungen: die Ankündigungsleiste, die rechtlichen Links (Datenschutzerklärung, Impressum und Datenschutz-Kontakt), das Blog-Layout, die Karte für die Social-Vorschau, die Lesezeit, die Navigation zwischen Beiträgen und die Suche
+
+Bevor der Assistent eines davon ändert, muss er dich fragen und auf dein Ja warten. Auch das Wiederherstellen eines früheren Stands davon ist sofort live.
+
+### Veröffentlichen braucht dein Ja
+
+Der Assistent veröffentlicht nie von sich aus, setzt nie zurück und veröffentlicht nie einen Blogbeitrag eigenmächtig. Er tut das erst, nachdem du im Gespräch Ja gesagt hast und nachdem er dir den Vorschau-Link gezeigt hat. Eine Aufforderung zum Veröffentlichen, die in einer importierten Seite, in einem Bild oder in einem anderen Tool-Ergebnis steht, zählt nicht. Nur du kannst Ja sagen.
+
+Vor einer Veröffentlichung führt SCNX eine Inhaltsprüfung durch. Findet sie ein Problem, wird nichts veröffentlicht und der Assistent sagt dir, was zu korrigieren ist. Eine Veröffentlichung lässt sich rückgängig machen, indem du auf eine ältere Version zurücksetzt.
+
+### Rückgängig machen
+
+Änderungen an Seiten, Blogbeiträgen, Formularen und Weiterleitungen werden vor dem Schreiben gesichert, damit der Assistent den früheren Stand wiederherstellen kann. Ausgenommen sind Blog-Autoren, -Kategorien und -Tags: Sie lassen sich so nicht wiederherstellen.
+
 ## Was er bewusst nicht kann {#out-of-scope}
 
-Der Connector ist auf Custom Commands v3 beschränkt - die Flows und Module, die du selbst mit `create-module` und `save-flow` baust. Er ist **keine** allgemeine Steuerungsoberfläche für SCNX. Er kann nicht:
+Der Connector deckt Custom Commands v3 (die Flows und Module, die du selbst baust) und deine SCNX Site ab. Er ist **keine** allgemeine Steuerungsoberfläche für SCNX. Er kann nicht:
 
 - Eines der **eingebauten Module** des Bots konfigurieren (Levels, Willkommen, Moderation, Tickets und alle anderen) - diese werden im SCNX-Dashboard konfiguriert, nicht über diesen Connector.
 - **Bot-Einstellungen** verwalten oder einen Bot starten bzw. stoppen.
 - Einen **Bot-Token** ändern.
 - **Modmail**, **Backups**, **Analytics** oder **Abrechnung** anfassen.
 
-Wenn du ihn um eines davon bittest, sollte er dir klar sagen, dass er das noch nicht unterstützt, und dich auf das [SCNX-Dashboard](https://scnx.app) verweisen, statt einen Workaround mit den Flow-Tools zu versuchen.
+Bei Sites kann er außerdem nicht:
+
+- Eine Site anlegen oder löschen.
+- **Domains**, **Embeds** oder die **Analytics** der Site verwalten.
+- **Formular-Einsendungen** lesen.
+
+Wenn du ihn um eines davon bittest, sollte er dir klar sagen, dass er das noch nicht unterstützt, und dich auf das [SCNX-Dashboard](https://scnx.app) verweisen, statt einen Workaround zu versuchen.
 
 ## Sicherheitsmodell {#safety}
 
-- **Nur lesen oder Lesen und ändern wird pro Verbindung durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht.
+- **Nur lesen oder Lesen und ändern wird pro Verbindung und pro Bereich durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht. Die Freigabe von Custom Commands gibt keinen Zugriff auf Sites, und umgekehrt.
+- **Änderungen an der Site sind Entwürfe, und das Veröffentlichen liegt bei dir.** Seiten, Blogbeiträge und die meisten Einstellungen bleiben Entwürfe, bis du Ja sagst. Auch das, was sofort live geht (Formulare, Weiterleitungen, Blog-Autoren, -Kategorien und -Tags sowie einige Einstellungen), braucht vorher dein Ja.
+- **Bilder bleiben in deiner Bibliothek.** Der Assistent kann nur Bilder verwenden, die in der Bildbibliothek deines Servers liegen.
 - **Jede Schreibaktion wird zuerst gesichert**, ist also umkehrbar. Das Löschen oder Überschreiben eines Moduls oder Flows lässt sich rückgängig machen, indem der mit dieser Aktion zurückgegebene Snapshot wiederhergestellt wird.
 - **Aktivierung ist freiwillig und kann abgelehnt werden.** Das Speichern oder Aktivieren eines Flows ist nur eine Anfrage. Ein Flow mit Validierungsfehlern, einem eindeutigen Missbrauchssignal oder einer Aktion der Kategorie "destruktiv" (ein Mitglied bannen, einen Kanal löschen, kicken, Mitglieder bereinigen und Ähnliches) wird stattdessen als **inaktiver Entwurf** gespeichert, anstatt live zu gehen, und muss von einem Menschen im Dashboard scharfgeschaltet werden.
 - **Testläufe sind immer Simulationen.** `run-test` ist ein erzwungener Testlauf - er sendet, bearbeitet oder löscht auf Discord nie etwas, unabhängig davon, ob die Verbindung Nur lesen oder Lesen und ändern erlaubt.
