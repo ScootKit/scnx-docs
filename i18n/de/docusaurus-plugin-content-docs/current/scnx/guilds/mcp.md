@@ -193,6 +193,37 @@ Der Assistent ist angewiesen, Aufforderungen, die er in deinen Einstellungen fin
 
 Jede Änderung an den Einstellungen wird vor dem Schreiben gesichert, damit der Assistent den früheren Stand wiederherstellen kann. Hat sich die Datei seitdem geändert, zum Beispiel im Dashboard, fragt der Assistent zuerst bei dir nach. Eine Wiederherstellung ist gespeichert, aber erst nach deinem Ja zum Neuladen live. Versteckte Einstellungen, die das Dashboard nicht zeigt, bleiben unverändert.
 
+## Ideen zum Ausprobieren {#use-cases}
+
+Sag einfach in deinen eigenen Worten, was du willst. Das sind Beispiele dafür, was Leute fragen.
+
+### Eine neue Community einrichten
+
+- "Begrüße neue Mitglieder in #willkommen mit einem kurzen, freundlichen Text, der sie erwähnt."
+- "Gib neuen Mitgliedern beim Beitritt die Rolle Mitglied und schreib eine Verabschiedung, wenn jemand geht."
+- "Schalte das Geburtstags-Modul ein und gib Geburtstage in #allgemein bekannt."
+
+### Bestehendes anpassen
+
+- "Das Starboard soll 5 statt 3 Sterne brauchen."
+- "Welche meiner Module sind eingeschaltet und welche Einstellungen habe ich nie angefasst?"
+- "Mach die Willkommensnachricht lockerer und füge einen kurzen Satz zu unserem Regelkanal hinzu."
+
+### Aufräumen und prüfen
+
+- "Erkläre mir in einfachen Worten, was meine Moderations-Einstellungen gerade machen."
+- "Vergleiche meine Ticket-Einstellungen mit dem, was eine kleine Community meist braucht, und sag mir, was du ändern würdest. Ändere noch nichts."
+- "Ich habe es mir anders überlegt. Mach die letzte Änderung rückgängig."
+
+### Mit den anderen Bereichen kombinieren
+
+- "Mein Willkommens-Flow funktioniert seit gestern nicht mehr. Finde heraus, warum, und behebe die Moduleinstellung, falls sie der Grund ist."
+- "Schreib einen Startbeitrag für meine Site als Entwurf und zeig mir eine Vorschau."
+
+Der Assistent sagt dir vor dem Speichern, was er ändern will, und fragt bei allem, was gegen Mitglieder wirkt oder
+Rollen vergibt, nach deinem klaren Ja. Gespeicherte Einstellungen gehen erst live, nachdem du dem Neuladen des Bots
+zugestimmt hast, siehe [Gespeichert heißt nicht live](#bot-modules).
+
 ## Was er bewusst nicht kann {#out-of-scope}
 
 Der Connector deckt Custom Commands v3 (die Flows und Module, die du selbst baust), deine SCNX Site und die Einstellungen der eingebauten Module deines Bots ab. Er ist **keine** allgemeine Steuerungsoberfläche für SCNX. Er kann nicht:

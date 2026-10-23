@@ -277,6 +277,37 @@ Every settings change is snapshotted before it is written, so the assistant can 
 file changed since, for example in the dashboard, the assistant asks you first. A restore is saved but not live
 until you say yes to a reload. Hidden settings that the dashboard does not show are kept as they are.
 
+## Things to try {#use-cases}
+
+Say what you want in your own words. These are examples of what people ask for.
+
+### Set up a new community
+
+- "Welcome new members in #welcome with a short friendly text that mentions them."
+- "Give new members the Member role when they join, and post a goodbye message when someone leaves."
+- "Turn on the birthday module and announce birthdays in #general."
+
+### Tune what you already have
+
+- "Starboard should need 5 stars instead of 3."
+- "Which of my modules are switched on, and which settings did I never touch?"
+- "Make the welcome message less formal and add a short line about our rules channel."
+
+### Tidy up and review
+
+- "Show me everything my moderation settings do right now, in plain words."
+- "Compare my ticket settings with what a small community usually needs and tell me what you would change. Do not change anything yet."
+- "I changed my mind about the last change. Undo it."
+
+### Combine it with the other areas
+
+- "My welcome flow stopped working yesterday. Find out why, and fix the module setting if that is the cause."
+- "Write a launch post for my site as a draft and show me a preview."
+
+The assistant tells you what it is about to change before it saves, and asks for your clear yes for anything that
+acts against members or hands out roles. Saved settings only go live after your yes to reload the bot, see
+[Saved is not live](#bot-modules).
+
 ## What it deliberately cannot do {#out-of-scope}
 
 The connector covers Custom Commands v3 (the flows and modules you build yourself), your SCNX Site and the
