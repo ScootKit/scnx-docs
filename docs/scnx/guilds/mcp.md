@@ -31,8 +31,8 @@ will refuse to do anything until they are.
 :::
 
 - You must **own the Discord server**, or be a **trusted admin** with permissions that clear the same bar the
-  dashboard uses for bot configuration (Bot-Administrator, Co-Owner, or the "Change and Reload Configuration /
-  Custom Command" permission - see [Trusted Admins](/docs/scnx/guilds/trusted-admins#permissions)). SCNX rechecks
+  dashboard uses for bot configuration (Bot-Administrator, Co-Owner, or the "Change and Reload Configuration &
+  Custom-Commands" permission - see [Trusted Admins](/docs/scnx/guilds/trusted-admins#permissions)). SCNX rechecks
   this on every single tool call, so losing access mid-session drops the server from the connection immediately.
 - You need a **logged-in SCNX account** (the same one used for [scnx.app](https://scnx.app)) to complete the
   authorization step below.
@@ -243,9 +243,14 @@ Settings that need a higher plan stay locked, just like in the dashboard. Plain 
 
 ### Saved is not live
 
-A change is saved first. It does not run on your server yet. The assistant tells you what it changed and asks
-whether to make it live. Only after your yes does it reload your bot. A reload never restarts the bot. If a
-setting needs a restart, the assistant tells you to do that in the dashboard.
+A change is saved first. It does not run on your server yet. Saved settings go live on the next reload of your
+bot. The assistant tells you what it changed and asks whether to make it live. It only starts a reload after your
+yes. A reload never restarts the bot. If a setting needs a restart, the assistant tells you to do that in the
+dashboard.
+
+Other things reload your bot too, and then saved settings go live as well: saving in the dashboard, a Custom
+Commands change made in the dashboard or by a connection that cannot change bot module settings, and a restart of
+the bot.
 
 Turning a module on or off works the same way: it is saved, and goes live with the next reload.
 
@@ -300,9 +305,11 @@ If you ask it to do any of these, it should tell you plainly that it doesn't sup
 - **Site changes are drafts, and publishing is yours.** Pages, blog posts and most settings stay drafts until you
   say yes. The things that go live at once (forms, redirects, blog authors, categories and tags, and a few
   settings) also need your yes first.
-- **Bot module changes are saved first and go live only with your yes.** A reload of your bot always waits for
-  your yes in the conversation, and so does turning a module on or off. Your bot checks each change before
-  it is saved. Secrets and webhook links are never shown or written.
+- **Bot module changes are saved first.** Saved settings go live on the next reload of your bot. The assistant
+  only starts a reload after your yes in the conversation, and only turns a module on or off after your yes.
+  Other things also reload your bot: saving in the dashboard, a Custom Commands change made outside a
+  conversation that can change bot module settings, and a restart. Your bot checks each change before it is
+  saved. Secrets and webhook links are never shown or written.
 - **Images stay in your library.** The assistant can only use images that are in your server's image library.
 - **Every write is snapshotted first**, so it's reversible. Deleting or overwriting a module or flow can be undone
   by restoring the snapshot returned with that write.

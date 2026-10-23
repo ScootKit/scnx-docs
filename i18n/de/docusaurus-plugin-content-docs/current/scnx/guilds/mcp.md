@@ -170,7 +170,9 @@ Einstellungen, die einen höheren Tarif brauchen, bleiben gesperrt, genau wie im
 
 ### Gespeichert heißt nicht live
 
-Eine Änderung wird zuerst gespeichert. Auf deinem Server läuft sie noch nicht. Der Assistent sagt dir, was er geändert hat, und fragt, ob er sie live schalten soll. Erst nach deinem Ja lädt er deinen Bot neu. Ein Neuladen startet den Bot nie neu. Braucht eine Einstellung einen Neustart, sagt dir der Assistent, dass du das im Dashboard machen sollst.
+Eine Änderung wird zuerst gespeichert. Auf deinem Server läuft sie noch nicht. Gespeicherte Einstellungen gehen beim nächsten Neuladen deines Bots live. Der Assistent sagt dir, was er geändert hat, und fragt, ob er sie live schalten soll. Ein Neuladen startet er erst nach deinem Ja. Ein Neuladen startet den Bot nie neu. Braucht eine Einstellung einen Neustart, sagt dir der Assistent, dass du das im Dashboard machen sollst.
+
+Auch anderes lädt deinen Bot neu, und dann gehen gespeicherte Einstellungen ebenfalls live: Speichern im Dashboard, eine Änderung an Custom Commands im Dashboard oder über eine Verbindung, die keine Bot-Module-Einstellungen ändern kann, und ein Neustart des Bots.
 
 Ein Modul an- oder auszuschalten funktioniert genauso: Es wird gespeichert und geht mit dem nächsten Neuladen live.
 
@@ -212,7 +214,7 @@ Wenn du ihn um eines davon bittest, sollte er dir klar sagen, dass er das noch n
 
 - **Nur lesen oder Lesen und ändern wird pro Verbindung und pro Bereich durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht. Die Freigabe von Custom Commands gibt keinen Zugriff auf Sites oder Bot-Module, und umgekehrt.
 - **Änderungen an der Site sind Entwürfe, und das Veröffentlichen liegt bei dir.** Seiten, Blogbeiträge und die meisten Einstellungen bleiben Entwürfe, bis du Ja sagst. Auch das, was sofort live geht (Formulare, Weiterleitungen, Blog-Autoren, -Kategorien und -Tags sowie einige Einstellungen), braucht vorher dein Ja.
-- **Änderungen an Bot-Modulen werden zuerst gespeichert und gehen nur mit deinem Ja live.** Ein Neuladen deines Bots wartet immer auf dein Ja im Gespräch, ebenso das An- oder Ausschalten eines Moduls. Dein Bot prüft jede Änderung, bevor sie gespeichert wird. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
+- **Änderungen an Bot-Modulen werden zuerst gespeichert.** Gespeicherte Einstellungen gehen beim nächsten Neuladen deines Bots live. Der Assistent startet ein Neuladen nur nach deinem Ja im Gespräch und schaltet ein Modul nur nach deinem Ja an oder aus. Auch anderes lädt deinen Bot neu: Speichern im Dashboard, eine Änderung an Custom Commands außerhalb eines Gesprächs, das Bot-Module-Einstellungen ändern kann, und ein Neustart. Dein Bot prüft jede Änderung, bevor sie gespeichert wird. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
 - **Bilder bleiben in deiner Bibliothek.** Der Assistent kann nur Bilder verwenden, die in der Bildbibliothek deines Servers liegen.
 - **Jede Schreibaktion wird zuerst gesichert**, ist also umkehrbar. Das Löschen oder Überschreiben eines Moduls oder Flows lässt sich rückgängig machen, indem der mit dieser Aktion zurückgegebene Snapshot wiederhergestellt wird.
 - **Aktivierung ist freiwillig und kann abgelehnt werden.** Das Speichern oder Aktivieren eines Flows ist nur eine Anfrage. Ein Flow mit Validierungsfehlern, einem eindeutigen Missbrauchssignal oder einer Aktion der Kategorie "destruktiv" (ein Mitglied bannen, einen Kanal löschen, kicken, Mitglieder bereinigen und Ähnliches) wird stattdessen als **inaktiver Entwurf** gespeichert, anstatt live zu gehen, und muss von einem Menschen im Dashboard scharfgeschaltet werden.
