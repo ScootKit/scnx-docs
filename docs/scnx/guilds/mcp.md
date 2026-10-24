@@ -314,9 +314,13 @@ the same settings you find in the dashboard. They are not the built-in bot modul
 
 A change is saved first. It does not run on your server yet. Saved settings go live on the next reload of your
 support bot. The assistant tells you what it changed and asks whether to make it live. It only starts a reload
-after your yes. A reload can refresh panel messages that members can see. The connector never restarts or stops
-your bot. When it starts a reload, the answer only says that the reload was accepted. If anything looks unchanged,
-check the dashboard.
+after your yes. A reload updates your existing panel messages in place. It only posts a new panel message if the old
+one was deleted in Discord or its channel changed. The connector never restarts or stops your bot. When it starts
+a reload, the answer only says that the reload was accepted, not that it has finished. If anything looks
+unchanged, check the dashboard.
+
+A reload does not pick up changes to the Discord intents of your bot. Those need a restart, which you do in the
+dashboard. The assistant never restarts your bot.
 
 ### Changes that need your clear yes
 

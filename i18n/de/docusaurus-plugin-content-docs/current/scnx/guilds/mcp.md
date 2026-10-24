@@ -215,7 +215,9 @@ Mit dem Bereich Support-Bots kann der Assistent die Einstellungen von Modmail, T
 
 ### Gespeichert heißt nicht live
 
-Eine Änderung wird zuerst gespeichert. Auf deinem Server läuft sie noch nicht. Gespeicherte Einstellungen gehen beim nächsten Neuladen deines Support-Bots live. Der Assistent sagt dir, was er geändert hat, und fragt, ob er sie live schalten soll. Ein Neuladen startet er erst nach deinem Ja. Ein Neuladen kann Panel-Nachrichten auffrischen, die Mitglieder sehen. Der Connector startet deinen Bot nie neu und hält ihn nie an. Wenn er ein Neuladen startet, sagt die Antwort nur, dass es angenommen wurde. Sieht etwas unverändert aus, schau im Dashboard nach.
+Eine Änderung wird zuerst gespeichert. Auf deinem Server läuft sie noch nicht. Gespeicherte Einstellungen gehen beim nächsten Neuladen deines Support-Bots live. Der Assistent sagt dir, was er geändert hat, und fragt, ob er sie live schalten soll. Ein Neuladen startet er erst nach deinem Ja. Ein Neuladen aktualisiert deine bestehenden Panel-Nachrichten an Ort und Stelle. Nur wenn die alte Nachricht in Discord gelöscht wurde oder sich ihr Kanal geändert hat, postet er eine neue. Der Connector startet deinen Bot nie neu und hält ihn nie an. Wenn er ein Neuladen startet, sagt die Antwort nur, dass es angenommen wurde, nicht dass es fertig ist. Sieht etwas unverändert aus, schau im Dashboard nach.
+
+Ein Neuladen übernimmt keine Änderungen an den Discord-Intents deines Bots. Dafür brauchst du einen Neustart, den du im Dashboard machst. Der Assistent startet deinen Bot nie neu.
 
 ### Änderungen, die dein klares Ja brauchen
 
