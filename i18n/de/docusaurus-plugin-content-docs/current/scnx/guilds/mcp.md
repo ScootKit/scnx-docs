@@ -43,7 +43,7 @@ Für **Bot-Module**:
 
 Für **Support-Bots**:
 
-- Auf dem Server muss ein Support-Bot eingerichtet sein und **laufen**. Der Assistent lässt jede Änderung von deinem Support-Bot prüfen, bevor etwas gespeichert wird. Ist der Bot offline, wird nichts gespeichert. Auch zum Lesen der Einstellungen muss der Bot online sein.
+- Auf dem Server muss ein Support-Bot eingerichtet sein und **laufen**. Der Assistent lässt jede Änderung von deinem Support-Bot prüfen, bevor etwas gespeichert wird. Ist der Bot offline, wird nichts gespeichert, und eine gespeicherte Änderung live zu schalten braucht einen laufenden Bot. Einstellungen ansehen funktioniert auch bei gestopptem Bot.
 - Zum Lesen und Ändern der Einstellungen brauchst du denselben Zugriff wie für die Berechtigung "Ändere und lade die Konfiguration des Support-Bots neu" im Dashboard (siehe [Trusted Admins](/docs/scnx/guilds/trusted-admins#permissions)). Owner und Co-Owner haben sie sowieso.
 - Die KI-FAQ-Tools funktionieren nur, wenn die KI-FAQ auf deinem Server verfügbar ist.
 

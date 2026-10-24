@@ -65,8 +65,8 @@ For **Bot modules**:
 For **Support bots**:
 
 - The server needs a support bot set up and **online**. The assistant checks every change with your support bot
-  before it saves anything, so an offline bot means no changes are saved. Reading settings needs the bot to be online as
-  well.
+  before it saves anything, so an offline bot means no changes are saved, and making a saved change live needs the bot to be
+  running. Looking at settings still works when the bot is stopped.
 - Reading and changing settings needs the same access as the "Change and Reload Support Bot Configuration"
   permission in the dashboard (see [Trusted Admins](/docs/scnx/guilds/trusted-admins#permissions)). Owners and
   Co-Owners have it anyway.
