@@ -209,6 +209,7 @@ Mit dem Bereich Support-Bots kann der Assistent die Einstellungen von Modmail, T
 - Sehen, welche Support-Systeme eingeschaltet sind und ob der Bot online ist.
 - Lesen, was jede Einstellung bewirkt und worauf sie gerade steht. Geheimnisse wie Tokens und Webhook-Links werden nie angezeigt.
 - Einstellungen ändern, zum Beispiel "Füge zwei Ticket-Themen hinzu, Abrechnung und Fehlermeldung" oder "Schreib einen freundlicheren Willkommenstext für Abrechnung". Er liest zuerst die aktuellen Einstellungen, ändert nur das, worum du gebeten hast, und sagt dir, was er geändert hat. Dein Support-Bot prüft jede Änderung, bevor sie gespeichert wird. Ist etwas ungültig, wird nichts gespeichert und der Assistent sagt dir, was zu korrigieren ist.
+- Formulare, Panels (Ticket-Öffnen-Nachrichten), Info-Nachrichten und Öffnungszeiten-Ausnahmen hinzufügen und bearbeiten. Ids musst du nicht angeben, SCNX erzeugt sie. Ein Thema, das ein neues Formular nutzen soll, braucht ein zweites Speichern, nachdem das Formular existiert.
 - Antworten der KI-FAQ lesen, hinzufügen, ändern und entfernen.
 - Gespeicherte Änderungen live schalten, nach deinem Ja.
 
@@ -224,6 +225,7 @@ Der Assistent beschreibt die Wirkung und wartet auf dein ausdrückliches Ja, bev
 - Einstellungen, die bestimmen, wer Zugriff bekommt, zum Beispiel Ticket-Berechtigungen und Rollen.
 - Das Einschalten von KI-Antworten.
 - Einstellungen, bei denen der Bot von selbst handelt, etwa Tickets schließen oder löschen.
+- Ein neues Formular, Panel oder eine neue Info-Nachricht hinzufügen. Panels und Info-Nachrichten posten in Kanäle, und Formulare sammeln Daten von Mitgliedern.
 - Das Löschen einer KI-FAQ-Antwort.
 - Mehr als drei KI-FAQ-Antworten auf einmal ändern.
 
@@ -243,7 +245,6 @@ Tickets, Nachrichten, Transkripte, Feedback und Formular-Antworten. Der Connecto
 - Persönliche Benachrichtigungskontakte wie Pushover und Telegram. Schalter, Kanäle und Nachrichten für Benachrichtigungen kann der Assistent ändern.
 - Nachrichten mit Buttons oder anderen Komponenten. Den Text einer Nachricht kann der Assistent ändern und sagt dir, wenn eine Nachricht den Editor braucht.
 - Die Liste der Forum-Support-Kanäle und die Musiktitel des Voice-Supports. Der Assistent kann sie lesen, aber nicht ändern.
-- Neue Formulare, Panels und Ausnahme-Einträge hinzufügen. Bestehende kann der Assistent bearbeiten oder entfernen.
 - Alles, was den Bot neu startet oder anhält.
 
 ### Rückgängig machen

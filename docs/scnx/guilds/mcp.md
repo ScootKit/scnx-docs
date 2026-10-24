@@ -304,6 +304,9 @@ the same settings you find in the dashboard. They are not the built-in bot modul
   text for Billing". It reads the current settings first, changes only what you asked for and tells you what it
   changed. Your support bot checks every change before it is saved. If something is not valid, nothing is saved
   and the assistant tells you what to fix.
+- Add and edit forms, panels (ticket-open messages), info messages and opening-hours overrides. It does not
+  need ids from you, SCNX makes them. A topic that should use a new form needs a second save, after the form
+  exists.
 - Read, add, change and remove AI FAQ answers.
 - Make saved changes live, after your yes.
 
@@ -323,6 +326,8 @@ The assistant describes the effect and waits for your explicit yes before it sav
 - Settings that decide who gets access, for example ticket permissions and roles.
 - Switching on AI answers.
 - Settings where the bot acts on its own, such as closing or deleting tickets.
+- Adding a new form, panel or info message. Panels and info messages post into channels, and forms collect
+  member data.
 - Deleting an AI FAQ answer.
 - Changing more than three AI FAQ answers at once.
 
@@ -350,7 +355,6 @@ assistant cannot ask for them. If you ask for any of that, it points you to the 
   when a message needs the editor.
 - The list of forum support channels and the music tracks of voice support. The assistant can read them but not
   change them.
-- Adding new forms, panels and override entries. Existing ones can be edited or removed with the assistant.
 - Anything that restarts or stops the bot.
 
 ### Undo
