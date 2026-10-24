@@ -286,7 +286,7 @@ If the live preview is unavailable, the editor drops into a fallback mode. You s
 There is no Save button. The editor saves the current page on its own a couple of seconds after you stop typing. The chip in the top bar tells you where things stand:
 
 - **Saved** - everything is stored.
-- **Saving…** - a save is in progress.
+- **Saving...** - a save is in progress.
 - **Needs attention** - a save could not go through. Click the chip to see why.
 
 "Needs attention" happens when a block is missing required information, when your text did not pass our automatic content review, or when we could not reach the server. Autosave for that page pauses until it is sorted, but your changes stay safely in the editor in the meantime. Fill in what is missing or fix the flagged text and saving continues on its own. If the server could not be reached, the editor tries again by itself, or you can click **Try again now**.
