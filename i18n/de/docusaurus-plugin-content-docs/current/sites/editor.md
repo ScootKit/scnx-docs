@@ -286,7 +286,7 @@ Wenn die Live-Vorschau nicht verfügbar ist, wechselt der Editor in einen Ersatz
 Es gibt keinen Speichern-Button. Der Editor speichert die aktuelle Seite von selbst, ein paar Sekunden nachdem du aufgehört hast zu tippen. Das Abzeichen in der oberen Leiste zeigt dir den Stand:
 
 - **Gespeichert** - alles ist gespeichert.
-- **Speichert…** - gerade wird gespeichert.
+- **Speichert...** - gerade wird gespeichert.
 - **Bitte prüfen** - ein Speichervorgang hat nicht geklappt. Klick auf das Abzeichen, um zu sehen, warum.
 
 "Bitte prüfen" erscheint, wenn einem Block Pflichtangaben fehlen, wenn dein Text unsere automatische Inhaltsprüfung nicht bestanden hat oder wenn wir den Server nicht erreichen konnten. Autosave pausiert für diese Seite, bis das geklärt ist, aber deine Änderungen bleiben in der Zwischenzeit sicher im Editor. Ergänze, was fehlt, oder korrigiere den markierten Text, dann geht das Speichern von selbst weiter. Wenn der Server nicht erreichbar war, versucht es der Editor von selbst erneut, oder du klickst auf **Jetzt noch einmal versuchen**.
