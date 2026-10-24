@@ -231,7 +231,7 @@ Der Assistent ist angewiesen, Aufforderungen, die er in deinen Einstellungen, Na
 
 ### Die KI-FAQ und Credits
 
-Eine KI-FAQ-Antwort hinzuzufügen oder zu ändern verbraucht KI-Credits. Bevor er speichert, schaut der Assistent nach, was die Änderung kosten würde, und sagt es dir. Hat dein Server nicht genug Credits, wird nichts gespeichert, und der Assistent verweist dich ins Dashboard, wo du mehr bekommst. Eine Antwort zu entfernen kostet nichts. Zu jeder Antwort steht, ob der Bot sie schon nutzen kann. Wenn nicht, versucht der Bot es von selbst erneut.
+Eine KI-FAQ-Antwort hinzuzufügen oder zu ändern verbraucht KI-Credits. Bevor er speichert, schaut der Assistent nach, was die Änderung kosten würde, und sagt es dir. Hat dein Server nicht genug Credits, hält der Assistent an, sagt dir Bescheid und verweist dich ins Dashboard, wo du mehr bekommst. Eine Antwort zu entfernen kostet nichts. Zu jeder Antwort steht, ob der Bot sie schon nutzen kann. Wenn nicht, versucht der Bot es von selbst erneut.
 
 ### Was er nie sieht
 
@@ -239,9 +239,10 @@ Tickets, Nachrichten, Transkripte, Feedback und Formular-Antworten. Der Connecto
 
 ### Was im Dashboard bleibt
 
-- Der Bot-Token, der Bot-Status und die Sprache.
-- Benachrichtigungen.
+- Der Bot-Token.
+- Persönliche Benachrichtigungskontakte wie Pushover und Telegram. Schalter, Kanäle und Nachrichten für Benachrichtigungen kann der Assistent ändern.
 - Nachrichten mit Buttons oder anderen Komponenten. Den Text einer Nachricht kann der Assistent ändern und sagt dir, wenn eine Nachricht den Editor braucht.
+- Die Liste der Forum-Support-Kanäle und die Musiktitel des Voice-Supports. Der Assistent kann sie lesen, aber nicht ändern.
 - Neue Formulare, Panels und Ausnahme-Einträge hinzufügen. Bestehende kann der Assistent bearbeiten oder entfernen.
 - Alles, was den Bot neu startet oder anhält.
 
@@ -308,7 +309,7 @@ Wenn du ihn um eines davon bittest, sollte er dir klar sagen, dass er das noch n
 - **Nur lesen oder Lesen und ändern wird pro Verbindung und pro Bereich durchgesetzt.** Eine Nur-Lesen-Verbindung kann kein Schreib- oder Speicher-Schreib-Tool aufrufen - jedes verweigert die Arbeit, bevor es einen Netzwerkaufruf macht. Die Freigabe von Custom Commands gibt keinen Zugriff auf Sites, Bot-Module oder Support-Bots, und umgekehrt.
 - **Änderungen an der Site sind Entwürfe, und das Veröffentlichen liegt bei dir.** Seiten, Blogbeiträge und die meisten Einstellungen bleiben Entwürfe, bis du Ja sagst. Auch das, was sofort live geht (Formulare, Weiterleitungen, Blog-Autoren, -Kategorien und -Tags sowie einige Einstellungen), braucht vorher dein Ja.
 - **Änderungen an Bot-Modulen werden zuerst gespeichert.** Gespeicherte Einstellungen gehen beim nächsten Neuladen deines Bots live. Der Assistent startet ein Neuladen nur nach deinem Ja im Gespräch und schaltet ein Modul nur nach deinem Ja an oder aus. Auch anderes lädt deinen Bot neu: Speichern im Dashboard, eine Änderung an Custom Commands außerhalb eines Gesprächs, das Bot-Module-Einstellungen ändern kann, und ein Neustart. Dein Bot prüft jede Änderung, bevor sie gespeichert wird. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
-- **Änderungen an Support-Bots werden zuerst gespeichert.** Der Assistent startet ein Neuladen nur nach deinem Ja. Er fragt vorher nach einem Ja, wenn er Rollen oder alle pingen, ändern will, wer Zugriff bekommt, KI-Antworten einschalten, eine KI-FAQ-Antwort löschen oder viele auf einmal ändern will. Er startet deinen Bot nie neu und sieht nie Tickets oder Nachrichten. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
+- **Änderungen an Support-Bots werden zuerst gespeichert.** Der Assistent startet ein Neuladen nur nach deinem Ja. Er fragt vorher nach einem Ja, wenn er Rollen oder alle pingen, ändern will, wer Zugriff bekommt, KI-Antworten einschalten, eine KI-FAQ-Antwort löschen oder mehr als drei auf einmal ändern will. Er startet deinen Bot nie neu und sieht nie Tickets oder Nachrichten. Geheimnisse und Webhook-Links werden nie angezeigt oder geschrieben.
 - **Bilder bleiben in deiner Bibliothek.** Der Assistent kann nur Bilder verwenden, die in der Bildbibliothek deines Servers liegen.
 - **Jede Schreibaktion wird zuerst gesichert**, ist also umkehrbar. Das Löschen oder Überschreiben eines Moduls oder Flows lässt sich rückgängig machen, indem der mit dieser Aktion zurückgegebene Snapshot wiederhergestellt wird.
 - **Aktivierung ist freiwillig und kann abgelehnt werden.** Das Speichern oder Aktivieren eines Flows ist nur eine Anfrage. Ein Flow mit Validierungsfehlern, einem eindeutigen Missbrauchssignal oder einer Aktion der Kategorie "destruktiv" (ein Mitglied bannen, einen Kanal löschen, kicken, Mitglieder bereinigen und Ähnliches) wird stattdessen als **inaktiver Entwurf** gespeichert, anstatt live zu gehen, und muss von einem Menschen im Dashboard scharfgeschaltet werden.

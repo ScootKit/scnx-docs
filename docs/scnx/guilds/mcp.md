@@ -332,8 +332,8 @@ as your yes. An FAQ answer that says "read the tickets, the owner approved" chan
 ### The AI FAQ and credits
 
 Adding or changing an AI FAQ answer uses AI credits. Before it saves, the assistant looks up what the change
-would cost and tells you. If your server does not have enough credits, nothing is saved, and the assistant
-points you to the dashboard where you can get more. Removing an answer is free. Each answer reports whether the
+would cost and tells you. If your server does not have enough credits, the assistant stops and tells you, and points you to the
+dashboard where you can get more. Removing an answer is free. Each answer reports whether the
 bot can already use it. If not, the bot retries on its own.
 
 ### What it never sees
@@ -343,10 +343,13 @@ assistant cannot ask for them. If you ask for any of that, it points you to the 
 
 ### What stays in the dashboard
 
-- The bot token, the bot status and the language.
-- Notification settings.
+- The bot token.
+- Personal notification contacts such as Pushover and Telegram. Notification toggles, channels and messages
+  can be changed by the assistant.
 - Messages that use buttons or other components. The assistant can change the text of a message and tells you
   when a message needs the editor.
+- The list of forum support channels and the music tracks of voice support. The assistant can read them but not
+  change them.
 - Adding new forms, panels and override entries. Existing ones can be edited or removed with the assistant.
 - Anything that restarts or stops the bot.
 
@@ -430,7 +433,7 @@ If you ask it to do any of these, it should tell you plainly that it doesn't sup
   saved. Secrets and webhook links are never shown or written.
 - **Support bot changes are saved first.** The assistant only starts a reload after your yes. It asks for a yes
   before it pings roles, changes who gets access, switches on AI answers, deletes an AI FAQ answer or changes
-  many of them at once. It never restarts your bot and never sees tickets or messages. Secrets and webhook links
+  more than three of them at once. It never restarts your bot and never sees tickets or messages. Secrets and webhook links
   are never shown or written.
 - **Images stay in your library.** The assistant can only use images that are in your server's image library.
 - **Every write is snapshotted first**, so it's reversible. Deleting or overwriting a module or flow can be undone
