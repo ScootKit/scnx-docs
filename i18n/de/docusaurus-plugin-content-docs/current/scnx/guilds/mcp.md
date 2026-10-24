@@ -247,6 +247,10 @@ Tickets, Nachrichten, Transkripte, Feedback und Formular-Antworten. Der Connecto
 - Die Liste der Forum-Support-Kanäle und die Musiktitel des Voice-Supports. Der Assistent kann sie lesen, aber nicht ändern.
 - Alles, was den Bot neu startet oder anhält.
 
+### Einstellungen, die SCNX verwaltet
+
+Der Assistent ändert nur Einstellungen, die du auch im SCNX-Dashboard ändern kannst. Ein paar interne Einstellungen verwaltet SCNX. Weder du noch dein KI-Assistent könnt sie ändern. Der Assistent kann sie lesen und sagt dir, wenn er eine nicht ändern kann.
+
 ### Rückgängig machen
 
 Jede Änderung an den Einstellungen wird vor dem Schreiben gesichert. Der Assistent stellt den früheren Stand mit `restore-snapshot` wieder her. Hat sich die Datei seitdem geändert, fragt der Assistent zuerst bei dir nach. Eine entfernte KI-FAQ-Antwort wird archiviert und kann zurückgeholt werden. Das Zurückholen kann wieder KI-Credits verbrauchen. Eine Wiederherstellung ist gespeichert, geht aber nie von selbst live: Wie jede andere Änderung braucht sie dein Ja zum Neuladen.

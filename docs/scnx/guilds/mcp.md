@@ -357,6 +357,12 @@ assistant cannot ask for them. If you ask for any of that, it points you to the 
   change them.
 - Anything that restarts or stops the bot.
 
+### Settings managed by SCNX
+
+The assistant only changes settings that you can also change in the SCNX dashboard. A few internal settings are
+managed by SCNX. Neither you nor your AI assistant can change them. The assistant can read them and tells you
+when it cannot change one.
+
 ### Undo
 
 Every settings change is snapshotted before it is written. The assistant restores the earlier state with
