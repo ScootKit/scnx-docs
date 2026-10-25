@@ -31,7 +31,7 @@ On smaller screens the structure list and the block options open as drawers, so 
 
 The page switcher in the top bar shows your site's address and the page you are editing. Click it to see every page with its address and jump to another one.
 
-To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address uses lowercase letters, numbers and hyphens, and a `/` nests it, for example `staff/simon` (see [nested addresses](#nested-addresses)). Pick it carefully, because a page address can't be changed later. The first part of an address can't be `blog`, `search`, `embeds`, `api` or `cdn-cgi`, because your site uses those itself. `embeds` is for [connected embeds](/docs/sites/small-features#embed-links).
+To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address uses lowercase letters, numbers and hyphens, and a `/` nests it, for example `staff/simon` (see [nested addresses](#nested-addresses)). You can change the address later in the page settings on the [Pages](#pages) screen. The first part of an address can't be `blog`, `search`, `embeds`, `api` or `cdn-cgi`, because your site uses those itself. `embeds` is for [connected embeds](/docs/sites/small-features#embed-links).
 
 Once you have a published blog post, or your menu links to your blog, the switcher also lists **Blog**. It shows how your blog looks with your current design. You can't edit anything there; posts are written on the Blog screen. See [Blog & announcements](/docs/sites/blog).
 
@@ -43,9 +43,10 @@ Open **Pages** in the sidebar (or from the editor's top bar) to see every page o
 
 From here you can:
 
-- **Add page** - the same title-and-address form as in the editor.
+- **Add page** - a dialog with a title and an address. It also helps with [nested addresses](#nested-addresses).
 - **Open in editor** - jump straight into the editor on that page.
 - **Rename** - change the page title. The address stays the same.
+- **Settings** - open the page settings to change the page's **Address** (see [Changing an address](#change-address)).
 - **Page layout** - set the **Content width** to **Standard** or **Compact** (a narrow, centred column), and turn on **Hide navigation and footer** to remove the navigation bar, the footer and the announcement bar on that page only. The two settings are independent. This is how you build a [link-in-bio page](/docs/sites/small-features#link-in-bio).
 - **Delete page** - remove a page and its content. Your home page can't be deleted.
 
@@ -53,17 +54,25 @@ Your home page is always the page at `/`, the one visitors see when they open yo
 
 Drag a page, or use the arrows, to change the order. The order on this screen is the order your pages appear in your sitemap. It does not change your menu: you build that on the [Navigation](#navigation) screen.
 
-A page address is set when the page is created and can't be changed afterwards. To use a different address, create a new page and delete the old one.
+You can change a page's address later, see [Changing an address](#change-address) below.
 
 Page changes, including the layout settings, reach visitors with your next publish.
 
+### Changing an address {#change-address}
+
+Open **Settings** on a page in the Pages screen and click **Change address**. Type the new address and confirm. Your home page always stays at `/`, so its address can't be changed.
+
+- **Redirect.** If the page is already published, you are asked whether to add a redirect from the old address, so old links and bookmarks keep working. Without a redirect, the old address stops working after your next publish.
+- **Menu and footer.** Links to the old address in your navigation and footer are updated for you.
+- **Links in your content.** Links inside your pages and posts are not changed. The dialog lists the ones it finds, so you can open them and fix them.
+- **Going live.** The new address takes effect when you publish.
+
 ### Nested addresses {#nested-addresses}
 
-A page address can contain `/` to nest pages, for example `/staff/simon` or `/partner/acme/docs`. Write it without the first slash. Each part uses lowercase letters, numbers and hyphens, and starts and ends with a letter or number.
+A page address can contain `/` to nest pages, for example `/staff/simon` or `/partner/acme/docs`. You can leave out the first slash when you type it. Each part uses lowercase letters, numbers and hyphens, and starts and ends with a letter or number.
 
-- **No parent page needed.** `/staff/simon` works without a page at `/staff`. Visitors who open `/staff` see the normal "page not found" page, unless you create that page too.
-- **Suggestions.** While you type a new address, the dialog suggests the prefixes your existing pages already use, like `staff/`. If a folder matches the prefix, it suggests that folder too.
-- **Folders don't change addresses.** Folders only organise the page list in the editor. Moving a page into a folder never changes its address, and the address never depends on a folder.
+- **No parent page needed.** `/staff/simon` works without a page at `/staff`. That address only exists if you create that page too.
+- **Suggestions.** On the Pages screen, the **Add page** dialog suggests the prefixes your existing pages already use, like `staff/`. If a folder matches the prefix, it suggests that folder too. A folder only sorts your pages on this screen and visitors never see it, so folders never change an address. The quick **New page** form in the editor has no suggestions.
 - **Reserved first parts.** An address can't start with `blog`, `search`, `embeds`, `api` or `cdn-cgi`. That includes nested ones like `blog/news`.
 - **Subpages are separate pages.** Changing the address of a parent page does not change the addresses of the pages below it. Each one keeps its own address until you change it.
 

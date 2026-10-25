@@ -31,7 +31,7 @@ Auf kleineren Bildschirmen öffnen sich die Strukturliste und die Block-Optionen
 
 Der Seitenwechsler in der oberen Leiste zeigt die Adresse deiner Website und die Seite, die du gerade bearbeitest. Klick darauf, um alle Seiten mit ihren Adressen zu sehen und zu einer anderen zu springen.
 
-Um hier eine Seite hinzuzufügen, klick unten in der Liste auf **Neue Seite**, gib einen Titel und eine Adresse ein und klick auf **Seite erstellen**. Die Adresse besteht aus Kleinbuchstaben, Zahlen und Bindestrichen, und mit einem `/` verschachtelst du sie, zum Beispiel `staff/simon` (siehe [verschachtelte Adressen](#nested-addresses)). Wähle sie mit Bedacht, denn die Adresse einer Seite lässt sich später nicht mehr ändern. Der erste Teil einer Adresse darf nicht `blog`, `search`, `embeds`, `api` oder `cdn-cgi` sein, weil deine Website diese selbst nutzt. `embeds` ist für [verbundene Embeds](/docs/sites/small-features#embed-links).
+Um hier eine Seite hinzuzufügen, klick unten in der Liste auf **Neue Seite**, gib einen Titel und eine Adresse ein und klick auf **Seite erstellen**. Die Adresse besteht aus Kleinbuchstaben, Zahlen und Bindestrichen, und mit einem `/` verschachtelst du sie, zum Beispiel `staff/simon` (siehe [verschachtelte Adressen](#nested-addresses)). Die Adresse kannst du später in den Seiteneinstellungen auf dem Bildschirm [Seiten](#pages) ändern. Der erste Teil einer Adresse darf nicht `blog`, `search`, `embeds`, `api` oder `cdn-cgi` sein, weil deine Website diese selbst nutzt. `embeds` ist für [verbundene Embeds](/docs/sites/small-features#embed-links).
 
 Sobald du einen veröffentlichten Blog-Beitrag hast oder dein Menü auf deinen Blog verlinkt, zeigt der Wechsler auch **Blog**. Dort siehst du, wie dein Blog mit deinem aktuellen Design aussieht. Bearbeiten kannst du dort nichts, Beiträge schreibst du auf dem Blog-Bildschirm. Siehe [Blog & Ankündigungen](/docs/sites/blog).
 
@@ -43,9 +43,10 @@ Sobald du einen veröffentlichten Blog-Beitrag hast oder dein Menü auf deinen B
 
 Hier kannst du:
 
-- **Seite hinzufügen** - dasselbe Formular mit Titel und Adresse wie im Editor.
+- **Seite hinzufügen** - ein Fenster mit Titel und Adresse. Es hilft auch bei [verschachtelten Adressen](#nested-addresses).
 - **Im Editor öffnen** - direkt im Editor auf dieser Seite landen.
 - **Umbenennen** - den Seitentitel ändern. Die Adresse bleibt gleich.
+- **Einstellungen** - die Seiteneinstellungen öffnen, um die **Adresse** der Seite zu ändern (siehe [Adresse ändern](#change-address)).
 - **Seitenlayout** - die **Inhaltsbreite** auf **Standard** oder **Kompakt** (eine schmale, zentrierte Spalte) stellen und **Navigation und Footer ausblenden** einschalten, um Navigationsleiste, Fußbereich und Ankündigungsleiste nur auf dieser Seite zu entfernen. Beide Einstellungen sind unabhängig voneinander. So baust du eine [Link-in-Bio-Seite](/docs/sites/small-features#link-in-bio).
 - **Seite löschen** - eine Seite samt Inhalt entfernen. Deine Startseite kann nicht gelöscht werden.
 
@@ -53,17 +54,25 @@ Deine Startseite ist immer die Seite unter `/`, also die Seite, die Besucher seh
 
 Zieh eine Seite oder nutze die Pfeile, um die Reihenfolge zu ändern. Die Reihenfolge auf diesem Bildschirm ist die Reihenfolge deiner Seiten in der Sitemap. Dein Menü ändert sie nicht: das baust du auf dem Bildschirm [Navigation](#navigation).
 
-Die Adresse einer Seite wird beim Erstellen festgelegt und kann danach nicht mehr geändert werden. Wenn du eine andere Adresse willst, erstell eine neue Seite und lösche die alte.
+Die Adresse einer Seite kannst du später ändern, siehe [Adresse ändern](#change-address) weiter unten.
 
 Änderungen an Seiten, auch die Layout-Einstellungen, kommen mit deiner nächsten Veröffentlichung bei den Besuchern an.
 
+### Adresse ändern {#change-address}
+
+Öffne auf dem Bildschirm Seiten die **Einstellungen** einer Seite und klick auf **Adresse ändern**. Gib die neue Adresse ein und bestätige. Deine Startseite bleibt immer unter `/`, ihre Adresse lässt sich deshalb nicht ändern.
+
+- **Weiterleitung.** Ist die Seite schon veröffentlicht, wirst du gefragt, ob du eine Weiterleitung von der alten Adresse hinzufügen willst, damit alte Links und Lesezeichen weiter funktionieren. Ohne Weiterleitung funktioniert die alte Adresse nach deiner nächsten Veröffentlichung nicht mehr.
+- **Menü und Fußzeile.** Links auf die alte Adresse in deiner Navigation und Fußzeile werden für dich angepasst.
+- **Links in deinen Inhalten.** Links in deinen Seiten und Beiträgen ändern wir nicht. Das Fenster listet die gefundenen auf, damit du sie öffnen und anpassen kannst.
+- **Live gehen.** Die neue Adresse gilt, sobald du veröffentlichst.
+
 ### Verschachtelte Adressen {#nested-addresses}
 
-Eine Seitenadresse kann ein `/` enthalten, um Seiten zu verschachteln, zum Beispiel `/staff/simon` oder `/partner/acme/docs`. Schreib sie ohne den ersten Schrägstrich. Jeder Teil besteht aus Kleinbuchstaben, Zahlen und Bindestrichen und beginnt und endet mit einem Buchstaben oder einer Zahl.
+Eine Seitenadresse kann ein `/` enthalten, um Seiten zu verschachteln, zum Beispiel `/staff/simon` oder `/partner/acme/docs`. Den ersten Schrägstrich kannst du beim Tippen weglassen. Jeder Teil besteht aus Kleinbuchstaben, Zahlen und Bindestrichen und beginnt und endet mit einem Buchstaben oder einer Zahl.
 
-- **Keine übergeordnete Seite nötig.** `/staff/simon` funktioniert auch ohne eine Seite unter `/staff`. Besucher, die `/staff` öffnen, sehen die normale Seite "Seite nicht gefunden", außer du erstellst auch diese Seite.
-- **Vorschläge.** Beim Tippen einer neuen Adresse schlägt das Fenster die Präfixe vor, die deine bestehenden Seiten schon nutzen, etwa `staff/`. Passt ein Ordner zum Präfix, schlägt es auch diesen Ordner vor.
-- **Ordner ändern keine Adressen.** Ordner ordnen nur die Seitenliste im Editor. Eine Seite in einen Ordner zu schieben ändert ihre Adresse nie, und die Adresse hängt nie von einem Ordner ab.
+- **Keine übergeordnete Seite nötig.** `/staff/simon` funktioniert auch ohne eine Seite unter `/staff`. Diese Adresse gibt es nur, wenn du auch diese Seite erstellst.
+- **Vorschläge.** Auf dem Bildschirm Seiten schlägt das Fenster **Seite hinzufügen** die Präfixe vor, die deine bestehenden Seiten schon nutzen, etwa `staff/`. Passt ein Ordner zum Präfix, schlägt es auch diesen Ordner vor. Ein Ordner sortiert deine Seiten nur auf diesem Bildschirm und Besucher sehen ihn nie, deshalb ändern Ordner nie eine Adresse. Das schnelle Formular **Neue Seite** im Editor hat keine Vorschläge.
 - **Reservierte erste Teile.** Eine Adresse darf nicht mit `blog`, `search`, `embeds`, `api` oder `cdn-cgi` beginnen. Das gilt auch für verschachtelte wie `blog/news`.
 - **Unterseiten sind eigene Seiten.** Wenn du die Adresse einer übergeordneten Seite änderst, ändern sich die Adressen der Seiten darunter nicht. Jede behält ihre eigene Adresse, bis du sie änderst.
 
