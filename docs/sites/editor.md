@@ -31,7 +31,7 @@ On smaller screens the structure list and the block options open as drawers, so 
 
 The page switcher in the top bar shows your site's address and the page you are editing. Click it to see every page with its address and jump to another one.
 
-To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address follows the same rule as your site address: 3 to 63 letters, numbers and dashes, starting and ending with a letter or number. Pick it carefully, because a page address can't be changed later. `blog` is reserved for your blog and `embeds` for [connected embeds](/docs/sites/small-features#embed-links), so no page can use them.
+To add a page from here, click **New page** at the bottom of the list, enter a title and an address, and click **Create page**. The address uses lowercase letters, numbers and hyphens, and a `/` nests it, for example `staff/simon` (see [nested addresses](#nested-addresses)). Pick it carefully, because a page address can't be changed later. The first part of an address can't be `blog`, `search`, `embeds`, `api` or `cdn-cgi`, because your site uses those itself. `embeds` is for [connected embeds](/docs/sites/small-features#embed-links).
 
 Once you have a published blog post, or your menu links to your blog, the switcher also lists **Blog**. It shows how your blog looks with your current design. You can't edit anything there; posts are written on the Blog screen. See [Blog & announcements](/docs/sites/blog).
 
@@ -56,6 +56,16 @@ Drag a page, or use the arrows, to change the order. The order on this screen is
 A page address is set when the page is created and can't be changed afterwards. To use a different address, create a new page and delete the old one.
 
 Page changes, including the layout settings, reach visitors with your next publish.
+
+### Nested addresses {#nested-addresses}
+
+A page address can contain `/` to nest pages, for example `/staff/simon` or `/partner/acme/docs`. Write it without the first slash. Each part uses lowercase letters, numbers and hyphens, and starts and ends with a letter or number.
+
+- **No parent page needed.** `/staff/simon` works without a page at `/staff`. Visitors who open `/staff` see the normal "page not found" page, unless you create that page too.
+- **Suggestions.** While you type a new address, the dialog suggests the prefixes your existing pages already use, like `staff/`. If a folder matches the prefix, it suggests that folder too.
+- **Folders don't change addresses.** Folders only organise the page list in the editor. Moving a page into a folder never changes its address, and the address never depends on a folder.
+- **Reserved first parts.** An address can't start with `blog`, `search`, `embeds`, `api` or `cdn-cgi`. That includes nested ones like `blog/news`.
+- **Subpages are separate pages.** Changing the address of a parent page does not change the addresses of the pages below it. Each one keeps its own address until you change it.
 
 ### Pages missing from your menu {#orphan-pages}
 
