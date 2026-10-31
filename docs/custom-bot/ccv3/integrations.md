@@ -54,7 +54,7 @@ A hook with a preset that still waits for its secret does not accept any request
 
 - Fire-and-forget deliveries are queued for up to **24 hours**. If your bot is offline or temporarily busy, the delivery stays in the queue and is tried again later.
 - If your bot is busy, SCNX defers the delivery and tries again shortly. Respond hooks cannot wait, so the sender receives a "busy" answer (HTTP 503) and can retry on its own.
-- Stripe and top.gg retry failed deliveries themselves. A repeated delivery that was already handled is answered with HTTP 409 so your flows do not run twice.
+- Stripe and top.gg retry failed deliveries themselves. For Stripe, SCNX runs a flow once per event ID for 24 hours and skips a delivery of an event that was already handled. A replayed request with an old timestamp is still answered with HTTP 409. See [Sell with Stripe](/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
 - The delivery log of the hook shows the outcome of every request, for example delivered, deferred, replayed or refused.
 
 ## Allowed services {#allowed-services}
@@ -161,24 +161,25 @@ Ready-made services are prepared operations that appear in the flow editor next 
 
 Keyless services are called from SCNX's shared addresses, so the rate limits of the service apply to all servers together. If a service answers with a rate limit, the step fails with a catchable "rate limited" error.
 
-| Service              | What you can do                                                    | Credentials                                                                           |
-| -------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| Airtable             | Read rows from your bases                                          | Personal access token with scope `data.records:read`, from airtable.com/create/tokens |
-| CoinGecko            | Coin prices, coin details, top coins                               | Free Demo API key from the CoinGecko Developer Dashboard (Pro keys do not work)       |
-| GitHub               | Read repositories, issues, releases and users; open issues         | Fine-grained personal access token from your GitHub developer settings                |
-| Hacker News          | Top and newest stories, single stories or comments                 | No account needed                                                                     |
-| Hypixel              | Player stats and online status                                     | API key from developer.hypixel.net (development keys expire after a few days)         |
-| MyAnimeList (Jikan)  | Search anime and manga, details, top anime                         | No account needed                                                                     |
-| Minecraft accounts   | Username to UUID, profile and skin                                 | No account needed                                                                     |
-| Open-Meteo weather   | Find places, current weather, daily forecast                       | No account needed                                                                     |
-| Roblox (public data) | Groups and ranks of a user, avatar pictures, experience stats      | No account needed                                                                     |
-| Roblox Open Cloud    | Users, groups with roles and members, experiences                  | Open Cloud API key from create.roblox.com; set Accepted IP Addresses to `0.0.0.0/0`   |
-| Steam                | Profiles, what someone plays, owned games                          | Web API key from steamcommunity.com/dev/apikey                                        |
-| Steam store          | Price, description and release date of a game                      | No account needed                                                                     |
-| Stripe               | Read customers, charges, payments and balance (nothing is changed) | Restricted key (`rk_...`) with read access; do not use your secret key                |
-| Todoist              | List, add and complete tasks                                       | API token from Todoist settings under Integrations, Developer                         |
-| top.gg               | Check votes, read stats, run flows when someone votes              | API token from "Integrations & API" in your top.gg project (v1 API)                   |
-| Twitch               | Users, streams, channels, clips, subscriber count                  | Log in with Twitch when creating the connection                                       |
+| Service              | What you can do                                                                                                                 | Credentials                                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Airtable             | Read rows from your bases                                                                                                       | Personal access token with scope `data.records:read`, from airtable.com/create/tokens                                                               |
+| CoinGecko            | Coin prices, coin details, top coins                                                                                            | Free Demo API key from the CoinGecko Developer Dashboard (Pro keys do not work)                                                                     |
+| GitHub               | Read repositories, issues, releases and users; open issues                                                                      | Fine-grained personal access token from your GitHub developer settings                                                                              |
+| Hacker News          | Top and newest stories, single stories or comments                                                                              | No account needed                                                                                                                                   |
+| Hypixel              | Player stats and online status                                                                                                  | API key from developer.hypixel.net (development keys expire after a few days)                                                                       |
+| MyAnimeList (Jikan)  | Search anime and manga, details, top anime                                                                                      | No account needed                                                                                                                                   |
+| Minecraft accounts   | Username to UUID, profile and skin                                                                                              | No account needed                                                                                                                                   |
+| Open-Meteo weather   | Find places, current weather, daily forecast                                                                                    | No account needed                                                                                                                                   |
+| Roblox (public data) | Groups and ranks of a user, avatar pictures, experience stats                                                                   | No account needed                                                                                                                                   |
+| Roblox Open Cloud    | Users, groups with roles and members, experiences                                                                               | Open Cloud API key from create.roblox.com; set Accepted IP Addresses to `0.0.0.0/0`                                                                 |
+| Steam                | Profiles, what someone plays, owned games                                                                                       | Web API key from steamcommunity.com/dev/apikey                                                                                                      |
+| Steam store          | Price, description and release date of a game                                                                                   | No account needed                                                                                                                                   |
+| Stripe               | Read customers, charges, payments and balance; create Checkout sessions, payment links and refunds, and start flows on payments | Restricted key (`rk_...`) with the permissions you need; do not use your secret key. See [Sell with Stripe](/docs/custom-bot/ccv3/sell-with-stripe) |
+
+| Todoist | List, add and complete tasks | API token from Todoist settings under Integrations, Developer |
+| top.gg | Check votes, read stats, run flows when someone votes | API token from "Integrations & API" in your top.gg project (v1 API) |
+| Twitch | Users, streams, channels, clips, subscriber count | Log in with Twitch when creating the connection |
 
 ## Requesting a new service {#requesting-a-service}
 

@@ -211,6 +211,10 @@
     "message": "Integrationen",
     "description": "The label for the doc item 'Integrations' in sidebar 'customBotSidebar', linking to the doc custom-bot/ccv3/integrations"
   },
+  "sidebar.customBotSidebar.doc.Sell with Stripe": {
+    "message": "Mit Stripe verkaufen",
+    "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customBotSidebar', linking to the doc custom-bot/ccv3/sell-with-stripe"
+  },
   "sidebar.startSidebar.category.Discord": {
     "message": "Discord",
     "description": "The label for category 'Discord' in sidebar 'startSidebar'"
