@@ -20,10 +20,12 @@ In the Stripe Dashboard, open **Developers**, then **API keys**, and create a re
 | Get payments            | PaymentIntents    | Read  |
 | Get balance             | Balance           | Read  |
 | Create Checkout session | Checkout Sessions | Write |
-| Get Checkout session    | Checkout Sessions | Write |
+| Get Checkout session    | Checkout Sessions | Read  |
 | Expire Checkout session | Checkout Sessions | Write |
 | Create payment link     | Payment Links     | Write |
 | Create refund           | Refunds           | Write |
+
+Get Checkout session only reads, so Read on Checkout Sessions is enough for it. Create and expire need Write.
 
 :::warning
 Never use your secret key (`sk_...`). A key with write permissions can create payments and refunds on your Stripe account, so keep it to what the shop needs. Keep the shop key apart from any read-only key: create a second Stripe connection for the shop and give it a name that says so, for example "Stripe shop (write)". Your read-only flows then keep using the read key.
@@ -51,7 +53,7 @@ The **Stripe Shop** example module has six flows. This is the path of one order:
 3. The buyer pays on Stripe's page.
 4. `order-paid` starts on the **Checkout completed** trigger. It continues only when **Payment status** is `paid` and calls the shared `fulfil-order` flow.
 5. `order-paid-later` starts on the **Delayed payment succeeded** trigger and calls `fulfil-order` as well. This covers payment methods that confirm later.
-6. `fulfil-order` looks the order up by its order number, stops when it was already fulfilled, stores the payment ID (`pi_...`), opens a private ticket thread for the buyer and your team role and notifies the team.
+6. `fulfil-order` looks the order up by its order number, stops unless the event's Checkout session, amount and currency match the order, stops when it was already fulfilled, stores the payment ID (`pi_...`), opens a private ticket thread for the buyer and your team role and notifies the team.
 7. `mark-delivered` is a button in that thread. It marks the order completed and asks the buyer for a review.
 
 Things to know when you build your own:
@@ -67,18 +69,20 @@ Never deliver an order because the buyer reached your success link. Anyone can o
 - **Checkout completed** also arrives for payments that are not paid yet. Check **Payment status**: it is `paid` for cards and `unpaid` for delayed methods such as bank transfers.
 - A delayed payment that succeeds later arrives with **Delayed payment succeeded** (Stripe event type `checkout.session.async_payment_succeeded`). Fulfil there. **Delayed payment failed** arrives when it does not work out.
 - Check the stored order state, not the status of the session: stop when your order record says it was already fulfilled.
+- Always check that the event's **Session ID** equals the session stored on your order, and that the **Total** and **Currency** match the order. The order number (**Order number**, the client reference) can be set by a buyer: anyone can add it as a URL parameter to any payment link of your Stripe account, pay a cheap price and name an expensive order. The example `fulfil-order` flow makes these checks.
+- Payments made through a payment link created with the **Create payment link** action also fire **Checkout completed**. Such a payment has no session stored on any order, so the checks above stop it.
 
 ## Repeated events {#repeated-events}
 
-SCNX runs a flow once per Stripe event ID for 24 hours, for every Stripe webhook. Stripe retries a failed delivery with a fresh signature, and SCNX still recognizes the event ID. A "Resend" from the Stripe Dashboard within 24 hours is treated as a duplicate and ignored.
+SCNX runs a flow once per Stripe event ID for 24 hours, for every Stripe webhook. Stripe retries a failed delivery with a fresh signature, and SCNX still recognizes the event ID. A "Resend" from the Stripe Dashboard within 24 hours is treated as a duplicate and ignored, once the event was handled by a flow. An event that arrived while no flow was listening is not counted, so you can resend it after the flow is active.
 
 Still store the **Event ID** with the order and check the stored order state, so a repeated event never fulfils an order twice.
 
 ## Retries and double clicks {#idempotency}
 
-Send the same inputs to **Create Checkout session** or **Create refund** again within 24 hours and you get the same result: the same Checkout session, the same refund. A double click does not create two sessions or two refunds.
+Send the same inputs to **Create Checkout session** or **Create refund** again within 24 hours (for a Checkout session that includes the same order number) and you get the same result: the same Checkout session, the same refund.
 
-- For a new Checkout session, use a new order number.
+- For a new Checkout session, use a new order number. The example `buy` flow creates a new order number for every pick, so two picks make two orders and two payable sessions.
 - To refund the same amount twice on purpose, change one input, for example the **Reason** or a metadata value.
 
 ## Refunds and disputes {#refunds-disputes}
@@ -103,4 +107,5 @@ Metadata and the client reference ID of a Checkout session do not reach the char
 - **The error code `MISSING_PERMISSIONS`**: the key can read but not write. The error names the missing permission. Edit the restricted key in the Stripe Dashboard and grant it, see [Create a restricted key](#restricted-key).
 - **The webhook refuses every event**: the hook still waits for its signing secret. Paste the `whsec_...` secret of the endpoint into the hook.
 - **Events do not start flows**: check that the event type is selected on the endpoint and that the flow is active.
+- **An event arrived while no flow was listening**: resend it from the Stripe Dashboard once the flow is active. SCNX does not count such an event as handled. Events older than Stripe's retry window were not retried any more, so resend those too.
 - **The bot was offline**: Stripe retries, and SCNX keeps events for up to 24 hours. The flows run when the bot is back.

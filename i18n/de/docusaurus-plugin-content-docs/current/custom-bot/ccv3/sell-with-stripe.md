@@ -20,10 +20,12 @@ Diese Anleitung nutzt den [fertigen Stripe-Dienst](/de/docs/custom-bot/ccv3/inte
 | Zahlungsvorgänge abrufen   | PaymentIntents      | Lesen     |
 | Guthaben abrufen           | Balance             | Lesen     |
 | Checkout-Sitzung erstellen | Checkout Sessions   | Schreiben |
-| Checkout-Sitzung abrufen   | Checkout Sessions   | Schreiben |
+| Checkout-Sitzung abrufen   | Checkout Sessions   | Lesen     |
 | Checkout-Sitzung beenden   | Checkout Sessions   | Schreiben |
 | Zahlungslink erstellen     | Payment Links       | Schreiben |
 | Erstattung erstellen       | Refunds             | Schreiben |
+
+Checkout-Sitzung abrufen liest nur, dafür reicht Lesen bei Checkout Sessions. Erstellen und Beenden brauchen Schreiben.
 
 :::warning
 Nutze nie deinen geheimen Schlüssel (`sk_...`). Ein Schlüssel mit Schreibrechten kann Zahlungen und Erstattungen in deinem Stripe-Konto erstellen, vergib also nur, was der Shop braucht. Halte den Shop-Schlüssel getrennt von einem reinen Lese-Schlüssel: Erstelle eine zweite Stripe-Verbindung für den Shop und gib ihr einen Namen, der das sagt, zum Beispiel "Stripe Shop (Schreiben)". Deine reinen Lese-Abläufe nutzen dann weiter den Lese-Schlüssel.
@@ -51,7 +53,7 @@ Das Beispielmodul **Stripe Shop** hat sechs Abläufe. So läuft eine Bestellung:
 3. Der Käufer bezahlt auf der Seite von Stripe.
 4. `order-paid` startet mit dem Auslöser **Checkout abgeschlossen**. Er macht nur weiter, wenn der **Zahlungsstatus** `paid` ist, und ruft den gemeinsamen Ablauf `fulfil-order` auf.
 5. `order-paid-later` startet mit dem Auslöser **Verzögerte Zahlung erfolgreich** und ruft ebenfalls `fulfil-order` auf. Das deckt Zahlungsarten ab, die erst später bestätigt werden.
-6. `fulfil-order` sucht die Bestellung über ihre Bestellnummer, stoppt, wenn sie schon erfüllt wurde, speichert die Zahlungs-ID (`pi_...`), öffnet einen privaten Ticket-Thread für den Käufer und deine Team-Rolle und benachrichtigt das Team.
+6. `fulfil-order` sucht die Bestellung über ihre Bestellnummer, stoppt, wenn die Sitzung, der Betrag oder die Währung des Ereignisses nicht zur Bestellung passen oder sie schon erfüllt wurde, speichert die Zahlungsvorgang-ID (`pi_...`), öffnet einen privaten Ticket-Thread für den Käufer und deine Team-Rolle und benachrichtigt das Team.
 7. `mark-delivered` ist ein Button in diesem Thread. Er markiert die Bestellung als abgeschlossen und bittet den Käufer um eine Bewertung.
 
 Das solltest du beim Bauen eigener Abläufe wissen:
@@ -67,18 +69,20 @@ Liefere eine Bestellung nie, nur weil der Käufer deinen Erfolgslink erreicht ha
 - **Checkout abgeschlossen** kommt auch für Zahlungen, die noch nicht bezahlt sind. Prüfe den **Zahlungsstatus**: Er ist `paid` bei Karten und `unpaid` bei verzögerten Zahlungsarten wie Überweisungen.
 - Eine verzögerte Zahlung, die später erfolgreich ist, kommt mit **Verzögerte Zahlung erfolgreich** (Stripe-Ereignistyp `checkout.session.async_payment_succeeded`). Liefere dort. **Verzögerte Zahlung fehlgeschlagen** kommt, wenn sie nicht klappt.
 - Prüfe den gespeicherten Bestellstatus, nicht den Status der Sitzung: Stoppe, wenn dein Bestelldatensatz sagt, dass die Bestellung schon erfüllt wurde.
+- Prüfe immer, dass die **Sitzungs-ID** des Ereignisses der Sitzung entspricht, die bei deiner Bestellung gespeichert ist, und dass **Gesamtbetrag** und **Währung** zur Bestellung passen. Die Bestellnummer (die Client-Referenz) kann ein Käufer selbst setzen: Jeder kann sie als URL-Parameter an einen beliebigen Zahlungslink deines Stripe-Kontos hängen, einen günstigen Preis zahlen und eine teure Bestellung nennen. Der Ablauf `fulfil-order` im Beispiel macht diese Prüfungen.
+- Zahlungen über einen Zahlungslink, der mit der Aktion **Zahlungslink erstellen** angelegt wurde, lösen ebenfalls **Checkout abgeschlossen** aus. Zu so einer Zahlung ist bei keiner Bestellung eine Sitzung gespeichert, die Prüfungen oben stoppen sie also.
 
 ## Wiederholte Ereignisse {#repeated-events}
 
-SCNX führt einen Ablauf pro Stripe-Ereignis-ID 24 Stunden lang nur einmal aus, für jeden Stripe-Webhook. Stripe wiederholt eine fehlgeschlagene Zustellung mit einer neuen Signatur, und SCNX erkennt die Ereignis-ID trotzdem. Ein erneutes Senden ("Resend") aus dem Stripe-Dashboard innerhalb von 24 Stunden gilt als Duplikat und wird ignoriert.
+SCNX führt einen Ablauf pro Stripe-Ereignis-ID 24 Stunden lang nur einmal aus, für jeden Stripe-Webhook. Stripe wiederholt eine fehlgeschlagene Zustellung mit einer neuen Signatur, und SCNX erkennt die Ereignis-ID trotzdem. Ein erneutes Senden ("Resend") aus dem Stripe-Dashboard innerhalb von 24 Stunden gilt als Duplikat und wird ignoriert, sobald ein Ablauf das Ereignis verarbeitet hat. Ein Ereignis, das ankam, während kein Ablauf zuhörte, zählt nicht, du kannst es also erneut senden, sobald der Ablauf aktiv ist.
 
 Speichere trotzdem die **Ereignis-ID** bei der Bestellung und prüfe den gespeicherten Bestellstatus, damit ein wiederholtes Ereignis nie eine Bestellung doppelt erfüllt.
 
 ## Wiederholungen und Doppelklicks {#idempotency}
 
-Wenn du innerhalb von 24 Stunden dieselben Eingaben noch einmal an **Checkout-Sitzung erstellen** oder **Erstattung erstellen** sendest, bekommst du dasselbe Ergebnis: dieselbe Checkout-Sitzung, dieselbe Erstattung. Ein Doppelklick erzeugt nicht zwei Sitzungen oder zwei Erstattungen.
+Wenn du innerhalb von 24 Stunden dieselben Eingaben noch einmal an **Checkout-Sitzung erstellen** oder **Erstattung erstellen** sendest (bei einer Checkout-Sitzung gehört dieselbe Bestellnummer dazu), bekommst du dasselbe Ergebnis: dieselbe Checkout-Sitzung, dieselbe Erstattung.
 
-- Für eine neue Checkout-Sitzung nutze eine neue Bestellnummer.
+- Für eine neue Checkout-Sitzung nutze eine neue Bestellnummer. Der Ablauf `buy` im Beispiel erzeugt bei jeder Auswahl eine neue Bestellnummer, zwei Auswahlen ergeben also zwei Bestellungen und zwei bezahlbare Sitzungen.
 - Um denselben Betrag absichtlich zweimal zu erstatten, ändere eine Eingabe, zum Beispiel den **Grund** oder einen Metadaten-Wert.
 
 ## Erstattungen und Streitfälle {#refunds-disputes}
@@ -86,7 +90,7 @@ Wenn du innerhalb von 24 Stunden dieselben Eingaben noch einmal an **Checkout-Si
 Metadaten und die Client-Referenz-ID einer Checkout-Sitzung erreichen die Zahlung (Charge) nicht. Wenn eine Erstattung oder ein Streitfall ankommt, findest du die Bestellung nicht über ihre Bestellnummer. Deshalb:
 
 1. Speichere beim Abschluss der Zahlung die Zahlungsvorgang-ID (`pi_...`, aus **Zahlungsvorgang-ID**) bei der Bestellung. Das Beispiel macht das in `fulfil-order`.
-2. Erstatte mit **Erstattung erstellen** und dieser Zahlungs-ID.
+2. Erstatte mit **Erstattung erstellen** und dieser Zahlungsvorgang-ID.
 3. Suche die Bestellung bei **Zahlung erstattet** und **Streitfall eröffnet** über die **Zahlungsvorgang-ID**.
 
 **Zahlung erstattet** liefert den Betrag, den erstatteten Betrag und ob vollständig erstattet wurde, aber keinen Erstattungsgrund. Nur **Streitfall eröffnet** hat einen **Grund**.
@@ -103,4 +107,5 @@ Metadaten und die Client-Referenz-ID einer Checkout-Sitzung erreichen die Zahlun
 - **Der Fehlercode `MISSING_PERMISSIONS`**: Der Schlüssel kann lesen, aber nicht schreiben. Der Fehler nennt die fehlende Berechtigung. Bearbeite den eingeschränkten Schlüssel im Stripe-Dashboard und vergib sie, siehe [Eingeschränkten Schlüssel erstellen](#restricted-key).
 - **Der Webhook lehnt jedes Ereignis ab**: Der Hook wartet noch auf sein Signatur-Geheimnis. Füge das `whsec_...`-Geheimnis des Endpunkts in den Hook ein.
 - **Ereignisse starten keine Abläufe**: Prüfe, ob der Ereignistyp am Endpunkt ausgewählt ist und der Ablauf aktiv ist.
+- **Ein Ereignis kam an, während kein Ablauf zuhörte**: Sende es aus dem Stripe-Dashboard erneut, sobald der Ablauf aktiv ist. SCNX zählt so ein Ereignis nicht als verarbeitet. Ereignisse, die älter sind als Stripes Wiederholungszeitraum, wurden nicht mehr wiederholt, sende auch diese erneut.
 - **Der Bot war offline**: Stripe wiederholt, und SCNX hält Ereignisse bis zu 24 Stunden vor. Die Abläufe laufen, sobald der Bot wieder da ist.

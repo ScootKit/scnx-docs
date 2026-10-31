@@ -54,7 +54,7 @@ Ein Hook mit Voreinstellung, der noch auf sein Geheimnis wartet, nimmt keine Anf
 
 - Fire-and-forget-Zustellungen werden bis zu **24 Stunden** in einer Warteschlange gehalten. Ist dein Bot offline oder vorübergehend ausgelastet, bleibt die Zustellung in der Warteschlange und wird später erneut versucht.
 - Ist dein Bot ausgelastet, verschiebt SCNX die Zustellung und versucht es kurz darauf erneut. Hooks im Antwort-Modus können nicht warten, daher erhält der Absender die Antwort "busy" (HTTP 503) und kann selbst erneut senden.
-- Stripe und top.gg wiederholen fehlgeschlagene Zustellungen selbst. Bei Stripe führt SCNX einen Ablauf pro Ereignis-ID 24 Stunden lang nur einmal aus und überspringt die Zustellung eines Ereignisses, das schon verarbeitet wurde. Eine wiederholte Anfrage mit altem Zeitstempel wird weiterhin mit HTTP 409 beantwortet. Siehe [Mit Stripe verkaufen](/de/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
+- Stripe und top.gg wiederholen fehlgeschlagene Zustellungen selbst. Bei Stripe führt SCNX einen Ablauf pro Ereignis-ID 24 Stunden lang nur einmal aus und überspringt die Zustellung eines Ereignisses, das schon verarbeitet wurde. Eine identische Kopie einer schon verarbeiteten Anfrage wird innerhalb von 300 Sekunden nach ihrem Zeitstempel mit HTTP 409 beantwortet. Eine Kopie mit älterem Zeitstempel besteht die Signaturprüfung nicht und bekommt HTTP 401. Siehe [Mit Stripe verkaufen](/de/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
 - Das Zustellungsprotokoll des Hooks zeigt das Ergebnis jeder Anfrage, zum Beispiel zugestellt, verschoben, wiederholt oder abgelehnt.
 
 ## Erlaubte Dienste {#allowed-services}

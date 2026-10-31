@@ -54,7 +54,7 @@ A hook with a preset that still waits for its secret does not accept any request
 
 - Fire-and-forget deliveries are queued for up to **24 hours**. If your bot is offline or temporarily busy, the delivery stays in the queue and is tried again later.
 - If your bot is busy, SCNX defers the delivery and tries again shortly. Respond hooks cannot wait, so the sender receives a "busy" answer (HTTP 503) and can retry on its own.
-- Stripe and top.gg retry failed deliveries themselves. For Stripe, SCNX runs a flow once per event ID for 24 hours and skips a delivery of an event that was already handled. A replayed request with an old timestamp is still answered with HTTP 409. See [Sell with Stripe](/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
+- Stripe and top.gg retry failed deliveries themselves. For Stripe, SCNX runs a flow once per event ID for 24 hours and skips a delivery of an event that was already handled. An identical copy of a request that was already handled, within 300 seconds of its timestamp, is answered with HTTP 409. A copy with an older timestamp fails the signature check and gets HTTP 401. See [Sell with Stripe](/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
 - The delivery log of the hook shows the outcome of every request, for example delivered, deferred, replayed or refused.
 
 ## Allowed services {#allowed-services}
