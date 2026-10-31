@@ -176,10 +176,9 @@ Dienste ohne Schlüssel werden von gemeinsamen SCNX-Adressen aus aufgerufen, dah
 | Steam                      | Profile, was jemand spielt, besessene Spiele                                                                                                      | Web-API-Schlüssel von steamcommunity.com/dev/apikey                                                                                                                                     |
 | Steam-Store                | Preis, Beschreibung und Veröffentlichungsdatum eines Spiels                                                                                       | Kein Konto nötig                                                                                                                                                                        |
 | Stripe                     | Kunden, Zahlungen, Abbuchungen und Guthaben lesen; Checkout-Sitzungen, Zahlungslinks und Erstattungen erstellen und Abläufe bei Zahlungen starten | Eingeschränkter Schlüssel (`rk_...`) mit den nötigen Berechtigungen; nicht deinen geheimen Schlüssel verwenden. Siehe [Mit Stripe verkaufen](/de/docs/custom-bot/ccv3/sell-with-stripe) |
-
-| Todoist | Aufgaben auflisten, hinzufügen und abschließen | API-Token aus den Todoist-Einstellungen unter Integrationen, Entwickler |
-| top.gg | Votes prüfen, Statistiken lesen, Abläufe bei neuen Votes starten | API-Token unter "Integrations & API" in deinem top.gg-Projekt (v1-API) |
-| Twitch | Benutzer, Streams, Kanäle, Clips, Abonnentenzahl | Beim Anlegen der Verbindung mit Twitch anmelden |
+| Todoist                    | Aufgaben auflisten, hinzufügen und abschließen                                                                                                    | API-Token aus den Todoist-Einstellungen unter Integrationen, Entwickler                                                                                                                 |
+| top.gg                     | Votes prüfen, Statistiken lesen, Abläufe bei neuen Votes starten                                                                                  | API-Token unter "Integrations & API" in deinem top.gg-Projekt (v1-API)                                                                                                                  |
+| Twitch                     | Benutzer, Streams, Kanäle, Clips, Abonnentenzahl                                                                                                  | Beim Anlegen der Verbindung mit Twitch anmelden                                                                                                                                         |
 
 ## Neuen Dienst anfragen {#requesting-a-service}
 

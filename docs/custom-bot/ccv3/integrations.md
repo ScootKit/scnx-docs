@@ -176,10 +176,9 @@ Keyless services are called from SCNX's shared addresses, so the rate limits of 
 | Steam                | Profiles, what someone plays, owned games                                                                                       | Web API key from steamcommunity.com/dev/apikey                                                                                                      |
 | Steam store          | Price, description and release date of a game                                                                                   | No account needed                                                                                                                                   |
 | Stripe               | Read customers, charges, payments and balance; create Checkout sessions, payment links and refunds, and start flows on payments | Restricted key (`rk_...`) with the permissions you need; do not use your secret key. See [Sell with Stripe](/docs/custom-bot/ccv3/sell-with-stripe) |
-
-| Todoist | List, add and complete tasks | API token from Todoist settings under Integrations, Developer |
-| top.gg | Check votes, read stats, run flows when someone votes | API token from "Integrations & API" in your top.gg project (v1 API) |
-| Twitch | Users, streams, channels, clips, subscriber count | Log in with Twitch when creating the connection |
+| Todoist              | List, add and complete tasks                                                                                                    | API token from Todoist settings under Integrations, Developer                                                                                       |
+| top.gg               | Check votes, read stats, run flows when someone votes                                                                           | API token from "Integrations & API" in your top.gg project (v1 API)                                                                                 |
+| Twitch               | Users, streams, channels, clips, subscriber count                                                                               | Log in with Twitch when creating the connection                                                                                                     |
 
 ## Requesting a new service {#requesting-a-service}
 
