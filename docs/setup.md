@@ -43,7 +43,7 @@ can use SCNX and how we will process data (tl;dr: We only process data to provid
 ## 4. You are done {#step-4}
 
 Your server has been successfully added to SCNX :tada:
-You can now start by [creating your own bot](/docs/custom-bot) or [modmail-bot](/docs/modmail) or explore all features on your own -
+You can now start by [creating your own bot](/docs/custom-bot) or [modmail-bot](/docs/support-bot/modmail/intro) or explore all features on your own -
 our [documentation](/) & [staff](https://scnx.app/help) on our [Discord](https://scootk.it/dc) is always here to help.
 
 ![](@site/docs/assets/setup/setup-5.png)

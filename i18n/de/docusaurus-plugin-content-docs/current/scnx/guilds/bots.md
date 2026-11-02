@@ -5,8 +5,8 @@ sidebar_position: 1
 # Bots auf SCNX
 
 Diese Dokumente beinhalten anwendbare Hilfen für den [Eigenen Bot](/docs/custom-bot/intro) und den
-[Modmail Bot](/docs/modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
-[mit dem eigenen Bot loslegen](/docs/custom-bot) oder den [mit dem Modmail-Bot loslegen](/docs/modmail) Artikel.
+[Modmail Bot](/de/docs/support-bot/modmail/intro) - wenn du diese Bots einstellen willst, befolge bitte den
+[mit dem eigenen Bot loslegen](/docs/custom-bot) oder den [mit dem Modmail-Bot loslegen](/de/docs/support-bot/modmail/intro) Artikel.
 
 ## Fehlerbehebung {#troubleshooting}
 
