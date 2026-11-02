@@ -17,13 +17,13 @@ Benötigte Intents: `GuildModeration`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Aktionen | Liste von [Audit-Log-Ereignis](../../../value-types.md#AUDIT_LOG_EVENT) | Nein | Nur für diese Audit-Log-Aktionen auslösen (leer lassen für alle). |
+| Name     | Typ                                                                     | Pflicht | Details                                                           |
+| -------- | ----------------------------------------------------------------------- | ------- | ----------------------------------------------------------------- |
+| Aktionen | Liste von [Audit-Log-Ereignis](../../../value-types.md#AUDIT_LOG_EVENT) | Nein    | Nur für diese Audit-Log-Aktionen auslösen (leer lassen für alle). |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Eintrag | [Audit-Log-Eintrag](../../../value-types.md#AUDIT_LOG_ENTRY) | Der erstellte Audit-Log-Eintrag. |
-| Server | [Server](../../../value-types.md#GUILD) | Der Server, zu dem der Eintrag gehört. |
+| Name    | Typ                                                          | Details                                |
+| ------- | ------------------------------------------------------------ | -------------------------------------- |
+| Eintrag | [Audit-Log-Eintrag](../../../value-types.md#AUDIT_LOG_ENTRY) | Der erstellte Audit-Log-Eintrag.       |
+| Server  | [Server](../../../value-types.md#GUILD)                      | Der Server, zu dem der Eintrag gehört. |

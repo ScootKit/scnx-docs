@@ -17,8 +17,8 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                | Details                 |
+| ----- | --------------------------------------------------- | ----------------------- |
 | Emoji | [Server emoji](../../../value-types.md#GUILD_EMOJI) | Emoji that was created. |
 
 ### Emoji deleted {#emoji-deleted}
@@ -29,8 +29,8 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                | Details                 |
+| ----- | --------------------------------------------------- | ----------------------- |
 | Emoji | [Server emoji](../../../value-types.md#GUILD_EMOJI) | Emoji that was deleted. |
 
 ### Emoji updated {#emoji-updated}
@@ -41,10 +41,10 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                                | Details                        |
+| -------------- | --------------------------------------------------- | ------------------------------ |
 | Previous Emoji | [Server emoji](../../../value-types.md#GUILD_EMOJI) | Emoji state before the update. |
-| Current Emoji | [Server emoji](../../../value-types.md#GUILD_EMOJI) | Emoji state after the update. |
+| Current Emoji  | [Server emoji](../../../value-types.md#GUILD_EMOJI) | Emoji state after the update.  |
 
 ### Application emoji created {#application-emoji-created}
 
@@ -52,8 +52,8 @@ Triggered when an application-owned emoji is created by a flow. Emojis added in 
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                           | Details                              |
+| ----- | -------------------------------------------------------------- | ------------------------------------ |
 | Emoji | [Application emoji](../../../value-types.md#APPLICATION_EMOJI) | The newly created application emoji. |
 
 ### Application emoji updated {#application-emoji-updated}
@@ -62,10 +62,10 @@ Triggered when an application-owned emoji is updated (e.g. renamed) by a flow. C
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                                           | Details                                |
+| -------------- | -------------------------------------------------------------- | -------------------------------------- |
 | Previous Emoji | [Application emoji](../../../value-types.md#APPLICATION_EMOJI) | The emoji as it was before the update. |
-| Current Emoji | [Application emoji](../../../value-types.md#APPLICATION_EMOJI) | The emoji after the update. |
+| Current Emoji  | [Application emoji](../../../value-types.md#APPLICATION_EMOJI) | The emoji after the update.            |
 
 ### Application emoji deleted {#application-emoji-deleted}
 
@@ -73,6 +73,6 @@ Triggered when an application-owned emoji is deleted by a flow. Deletions in the
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                           | Details                        |
+| ----- | -------------------------------------------------------------- | ------------------------------ |
 | Emoji | [Application emoji](../../../value-types.md#APPLICATION_EMOJI) | The deleted application emoji. |

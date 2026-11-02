@@ -15,8 +15,8 @@ Wird ausgelöst, wenn eine Rolle erstellt wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name            | Typ                                         | Details              |
+| --------------- | ------------------------------------------- | -------------------- |
 | Erstellte Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Die erstellte Rolle. |
 
 ### Rolle gelöscht {#role-deleted}
@@ -25,8 +25,8 @@ Wird ausgelöst, wenn eine Rolle gelöscht wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name            | Typ                                         | Details              |
+| --------------- | ------------------------------------------- | -------------------- |
 | Gelöschte Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Die gelöschte Rolle. |
 
 ### Rolle aktualisiert {#role-updated}
@@ -35,7 +35,7 @@ Wird ausgelöst, wenn eine Rolle aktualisiert wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorherige Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Die Rolle vor der Aktualisierung. |
-| Aktuelle Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Die Rolle nach der Aktualisierung. |
+| Name            | Typ                                         | Details                            |
+| --------------- | ------------------------------------------- | ---------------------------------- |
+| Vorherige Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Die Rolle vor der Aktualisierung.  |
+| Aktuelle Rolle  | [Rolle](../../../value-types.md#GUILD_ROLE) | Die Rolle nach der Aktualisierung. |

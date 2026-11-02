@@ -18,17 +18,17 @@ Diese Seite hilft dir, einen Trigger auszuwählen, und erklärt die Einstellunge
 
 ## Welchen Trigger brauche ich? {#choose}
 
-| Der Flow soll laufen, wenn...                                     | Nutze                                                  |
-| ----------------------------------------------------------------- | ------------------------------------------------------ |
-| ein Mitglied einen Befehl eingibt                                 | **Slash-Befehl**                                       |
-| ein Mitglied mit Rechtsklick auf einen Benutzer oder eine Nachricht deinen Befehl wählt | **Benutzer-Kontextmenü verwendet** oder **Nachrichts-Kontextmenü verwendet** |
-| ein Mitglied einen Button klickt oder etwas in einem Auswahlmenü wählt, das dein Bot gepostet hat | **Button angeklickt** oder einer der Auswahlmenü-Trigger |
-| ein Mitglied ein Pop-up-Formular absendet                         | **Modal zeigen und auf Absenden warten** in dem Flow, der es anzeigt, oder **Modal eingereicht** |
-| etwas auf deinem Server passiert, zum Beispiel ein Beitritt oder eine neue Nachricht | Einer der Trigger für Server-Ereignisse |
-| zu festen Zeiten, zum Beispiel jeden Montag um 9:00               | **Zeitplan**                                           |
-| zu einem Zeitpunkt, den ein Flow ausrechnet, zum Beispiel "in 10 Minuten" | **Geplante Ausführung**, von einem anderen Flow eingeplant |
-| ein anderer Flow ihn als Baustein braucht                         | **Manueller Auslöser**                                 |
-| mehrere Flows auf dieselbe Sache reagieren sollen, die du ankündigst | **Benutzerdefiniertes Event empfangen**             |
+| Der Flow soll laufen, wenn...                                                                     | Nutze                                                                                            |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ein Mitglied einen Befehl eingibt                                                                 | **Slash-Befehl**                                                                                 |
+| ein Mitglied mit Rechtsklick auf einen Benutzer oder eine Nachricht deinen Befehl wählt           | **Benutzer-Kontextmenü verwendet** oder **Nachrichts-Kontextmenü verwendet**                     |
+| ein Mitglied einen Button klickt oder etwas in einem Auswahlmenü wählt, das dein Bot gepostet hat | **Button angeklickt** oder einer der Auswahlmenü-Trigger                                         |
+| ein Mitglied ein Pop-up-Formular absendet                                                         | **Modal zeigen und auf Absenden warten** in dem Flow, der es anzeigt, oder **Modal eingereicht** |
+| etwas auf deinem Server passiert, zum Beispiel ein Beitritt oder eine neue Nachricht              | Einer der Trigger für Server-Ereignisse                                                          |
+| zu festen Zeiten, zum Beispiel jeden Montag um 9:00                                               | **Zeitplan**                                                                                     |
+| zu einem Zeitpunkt, den ein Flow ausrechnet, zum Beispiel "in 10 Minuten"                         | **Geplante Ausführung**, von einem anderen Flow eingeplant                                       |
+| ein anderer Flow ihn als Baustein braucht                                                         | **Manueller Auslöser**                                                                           |
+| mehrere Flows auf dieselbe Sache reagieren sollen, die du ankündigst                              | **Benutzerdefiniertes Event empfangen**                                                          |
 
 Zwei Faustregeln: Wenn eine Person ihn absichtlich startet, ist es ein Befehl, ein Button, ein Auswahlmenü oder ein Modal. Wenn es von selbst passieren soll, ist es ein Server-Ereignis oder ein Zeitplan.
 
@@ -53,27 +53,27 @@ Manche Trigger zeigen ein Abzeichen:
 
 **Slash-Befehl** läuft, wenn jemand deinen Befehl benutzt. Siehe die Referenz [Slash-Befehle](/de/docs/custom-commands/reference/triggers/bot-interactions/bot-interactions-slash-commands).
 
-| Einstellung              | Was sie macht                                                                                           |
-| ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| **Befehlsname**          | Der Name nach dem `/`. Kleinbuchstaben, Zahlen, Binde- und Unterstriche, keine Leerzeichen.             |
-| **Beschreibung**         | Wird in Discords Befehlsliste unter dem Befehl angezeigt.                                               |
+| Einstellung                      | Was sie macht                                                                                                                                                                       |
+| -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Befehlsname**                  | Der Name nach dem `/`. Kleinbuchstaben, Zahlen, Binde- und Unterstriche, keine Leerzeichen.                                                                                         |
+| **Beschreibung**                 | Wird in Discords Befehlsliste unter dem Befehl angezeigt.                                                                                                                           |
 | **Erforderliche Berechtigungen** | Nur Mitglieder mit diesen Discord-Berechtigungen sehen den Befehl. Admins können das pro Rolle oder Kanal weiterhin in Discords Servereinstellungen unter **Integrationen** ändern. |
-| **In DMs erlauben**      | Standardmäßig aus. Schalte es ein, damit Leute den Befehl in einer DM mit deinem Bot benutzen können.   |
-| **Altersbeschränkt**     | Zeigt den Befehl nur in altersbeschränkten Kanälen an.                                                  |
-| **Optionen**             | Die Werte, die Leute ausfüllen, wenn sie den Befehl ausführen.                                          |
+| **In DMs erlauben**              | Standardmäßig aus. Schalte es ein, damit Leute den Befehl in einer DM mit deinem Bot benutzen können.                                                                               |
+| **Altersbeschränkt**             | Zeigt den Befehl nur in altersbeschränkten Kanälen an.                                                                                                                              |
+| **Optionen**                     | Die Werte, die Leute ausfüllen, wenn sie den Befehl ausführen.                                                                                                                      |
 
 Klicke für jeden Wert, den du möchtest, auf **Option hinzufügen**. Jede Option hat:
 
-| Feld                                    | Was es macht                                                                                     |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Name** und **Beschreibung**           | Werden in Discord angezeigt. Es gelten dieselben Namensregeln wie für den Befehlsnamen.          |
+| Feld                                    | Was es macht                                                                                                                                                                                     |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Name** und **Beschreibung**           | Werden in Discord angezeigt. Es gelten dieselben Namensregeln wie für den Befehlsnamen.                                                                                                          |
 | **Typ**                                 | Was Leute eingeben können: Text, eine ganze Zahl oder Dezimalzahl, Ja/Nein, einen Benutzer, ein Servermitglied, einen Kanal, eine Rolle, einen Benutzer oder eine Rolle, oder einen Dateianhang. |
-| **Erforderlich**                        | Leute müssen sie ausfüllen. Discord braucht alle erforderlichen Optionen vor den optionalen, und der Editor warnt dich, wenn die Reihenfolge falsch ist. |
-| **Auswahlmöglichkeiten**                | Eine feste Liste zum Auswählen, jeweils mit einem **Name der Auswahlmöglichkeit**, den Leute sehen, und einem **Wert der Auswahlmöglichkeit**, den dein Flow bekommt. |
-| **Autovervollständigung**               | Dein Bot schlägt Werte vor, während Leute tippen. Lässt sich nicht mit Auswahlmöglichkeiten kombinieren. |
-| **Minimaler Wert** / **Maximaler Wert** | Für Zahlen.                                                                                       |
-| **Minimale Länge** / **Maximale Länge** | Für Text.                                                                                         |
-| **Erlaubte Kanaltypen**                 | Für Kanal-Optionen, zum Beispiel nur Textkanäle.                                                 |
+| **Erforderlich**                        | Leute müssen sie ausfüllen. Discord braucht alle erforderlichen Optionen vor den optionalen, und der Editor warnt dich, wenn die Reihenfolge falsch ist.                                         |
+| **Auswahlmöglichkeiten**                | Eine feste Liste zum Auswählen, jeweils mit einem **Name der Auswahlmöglichkeit**, den Leute sehen, und einem **Wert der Auswahlmöglichkeit**, den dein Flow bekommt.                            |
+| **Autovervollständigung**               | Dein Bot schlägt Werte vor, während Leute tippen. Lässt sich nicht mit Auswahlmöglichkeiten kombinieren.                                                                                         |
+| **Minimaler Wert** / **Maximaler Wert** | Für Zahlen.                                                                                                                                                                                      |
+| **Minimale Länge** / **Maximale Länge** | Für Text.                                                                                                                                                                                        |
+| **Erlaubte Kanaltypen**                 | Für Kanal-Optionen, zum Beispiel nur Textkanäle.                                                                                                                                                 |
 
 **Unterbefehl hinzufügen** und **Gruppe hinzufügen** machen aus dem Befehl einen Befehl mit Unterbefehlen, wie `/ticket open` und `/ticket close`. Eine Ebene enthält entweder Unterbefehle oder Optionen, nicht beides. Nutze den Schritt **Nach Unterbefehl verzweigen**, um pro Unterbefehl andere Schritte auszuführen. Der Editor bietet dir an, ihn für dich hinzuzufügen.
 
@@ -126,23 +126,23 @@ Lies die Antworten mit **Modal-Feld auslesen** aus. Ein Modal kann nur als Antwo
 
 Die meisten Trigger reagieren auf etwas auf deinem Server, egal ob eine Person, ein Moderator oder ein anderer Bot es ausgelöst hat. Die meisten davon haben keine Einstellungen: Sie laufen bei jedem Ereignis ihrer Art, und du grenzt sie mit Schritten wie **Wenn** ein. Diese haben Einstellungen:
 
-| Trigger                                                    | Einstellungen                                                                              |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| **Nachricht erstellt**                                     | **Kanäle**, **Vergleichstyp** (**Jede Nachricht**, **Enthält**, **Gleich**, **Beginnt mit**, **Endet mit**, **Regex**), **Muster**, **Groß-/Kleinschreibung ignorieren**, **Bots ignorieren** |
-| **Reaktion hinzugefügt**, **Reaktion entfernt**            | **Kanäle**, **Bestimmtes Emoji**, **Bots ignorieren**                                      |
-| **Tippen gestartet**                                       | **Kanäle**, **Bots ignorieren**                                                            |
-| Andere Trigger für Nachrichten, Reaktionen, Anheftungen und Umfragen | **Kanäle**                                                                       |
-| **Audit-Log-Eintrag erstellt**                             | **Aktionen**, um nur auf bestimmte Arten von Audit-Log-Einträgen zu reagieren              |
+| Trigger                                                              | Einstellungen                                                                                                                                                                                 |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Nachricht erstellt**                                               | **Kanäle**, **Vergleichstyp** (**Jede Nachricht**, **Enthält**, **Gleich**, **Beginnt mit**, **Endet mit**, **Regex**), **Muster**, **Groß-/Kleinschreibung ignorieren**, **Bots ignorieren** |
+| **Reaktion hinzugefügt**, **Reaktion entfernt**                      | **Kanäle**, **Bestimmtes Emoji**, **Bots ignorieren**                                                                                                                                         |
+| **Tippen gestartet**                                                 | **Kanäle**, **Bots ignorieren**                                                                                                                                                               |
+| Andere Trigger für Nachrichten, Reaktionen, Anheftungen und Umfragen | **Kanäle**                                                                                                                                                                                    |
+| **Audit-Log-Eintrag erstellt**                                       | **Aktionen**, um nur auf bestimmte Arten von Audit-Log-Einträgen zu reagieren                                                                                                                 |
 
 Wenn du **Kanäle** leer lässt, gilt das für jeden Kanal, den dein Bot sehen kann.
 
 Manche Server-Ereignisse brauchen einen privilegierten Intent:
 
-| Intent              | Gebraucht von                                                                                  |
-| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Intent              | Gebraucht von                                                                                                                                                      |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Server Members**  | Alle [Mitglieder-Trigger](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-members), wie **Mitglied getreten** und **Mitglied verlassen** |
-| **Message Content** | **Nachricht erstellt**, **Nachricht aktualisiert**, **Nachricht gelöscht** und **Nachrichten in Massen gelöscht** |
-| **Presence**        | **Präsenz aktualisiert**                                                                       |
+| **Message Content** | **Nachricht erstellt**, **Nachricht aktualisiert**, **Nachricht gelöscht** und **Nachrichten in Massen gelöscht**                                                  |
+| **Presence**        | **Präsenz aktualisiert**                                                                                                                                           |
 
 Den Rest findest du nach Kategorie: [Server-Nachrichten](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-messages), [Rollen](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-roles), [Kanäle](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-channels), [Threads](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-threads), [Sprache](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-voice), [Discord-Events](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-events), [Banns](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-bans), [AutoMod](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-automod) und [Nachrichten-Umfragen](/de/docs/custom-commands/reference/triggers/discord-server/discord-server-message-polls). Trigger, die deinen Bot selbst betreffen, wie **Bot bereit** oder **Bot trat einem Server bei**, findest du unter [Bot-Benutzer](/de/docs/custom-commands/reference/triggers/bot-user).
 
@@ -167,11 +167,11 @@ An einem Zeitplan hängt keine Person. Schritte, die ein Mitglied oder einen Kan
 
 Mit diesen Triggern arbeiten Flows zusammen. Siehe die Referenz [Flows](/de/docs/custom-commands/reference/triggers/custom-commands/custom-commands-flows).
 
-| Trigger                   | Läuft, wenn                                                                  | Gut zu wissen                                                                                    |
-| ------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Manueller Auslöser**    | ein anderer Flow ihn mit **Anderen Flow ausführen** ausführt                 | Der aufrufende Flow wartet, bis er fertig ist. Im Verlauf zählt die Ausführung als Teil der Ausführung des aufrufenden Flows. Ein Flow kann sich nicht selbst aufrufen. |
-| **Geplante Ausführung**   | der Zeitpunkt gekommen ist, den ein anderer Flow mit **Flow-Ausführung planen** eingeplant hat | Geplante Ausführungen überstehen Bot-Neustarts. Ausführungen, die fällig wurden, während dein Bot offline war, laufen, sobald er wieder da ist. Jede erscheint als eigene Ausführung. |
-| **Benutzerdefiniertes Event empfangen** | ein anderer Flow mit **Benutzerdefiniertes Event auslösen** ein benutzerdefiniertes Event mit demselben **Event-Name** sendet | Jeder Flow, der auf diesen Namen hört, läuft, jeder als eigene Ausführung. |
+| Trigger                                 | Läuft, wenn                                                                                                                   | Gut zu wissen                                                                                                                                                                         |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manueller Auslöser**                  | ein anderer Flow ihn mit **Anderen Flow ausführen** ausführt                                                                  | Der aufrufende Flow wartet, bis er fertig ist. Im Verlauf zählt die Ausführung als Teil der Ausführung des aufrufenden Flows. Ein Flow kann sich nicht selbst aufrufen.               |
+| **Geplante Ausführung**                 | der Zeitpunkt gekommen ist, den ein anderer Flow mit **Flow-Ausführung planen** eingeplant hat                                | Geplante Ausführungen überstehen Bot-Neustarts. Ausführungen, die fällig wurden, während dein Bot offline war, laufen, sobald er wieder da ist. Jede erscheint als eigene Ausführung. |
+| **Benutzerdefiniertes Event empfangen** | ein anderer Flow mit **Benutzerdefiniertes Event auslösen** ein benutzerdefiniertes Event mit demselben **Event-Name** sendet | Jeder Flow, der auf diesen Namen hört, läuft, jeder als eigene Ausführung.                                                                                                            |
 
 **Manueller Auslöser** und **Geplante Ausführung** können **Parameter** festlegen, also typisierte Werte, die der aufrufende Flow übergibt:
 

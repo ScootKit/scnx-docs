@@ -15,8 +15,8 @@ Fires when a stage instance starts (a stage channel goes live).
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                     | Details                          |
+| ----- | -------------------------------------------------------- | -------------------------------- |
 | Stage | [Stage instance](../../../value-types.md#STAGE_INSTANCE) | Stage instance that was created. |
 
 ### Stage ended {#stage-instance-deleted}
@@ -25,8 +25,8 @@ Fires when a stage instance ends.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                     | Details                          |
+| ----- | -------------------------------------------------------- | -------------------------------- |
 | Stage | [Stage instance](../../../value-types.md#STAGE_INSTANCE) | Stage instance that was deleted. |
 
 ### Stage updated {#stage-instance-updated}
@@ -35,7 +35,7 @@ Fires when a stage instance is updated (topic or privacy level changes).
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                                     | Details                                      |
+| -------------- | -------------------------------------------------------- | -------------------------------------------- |
 | Previous Stage | [Stage instance](../../../value-types.md#STAGE_INSTANCE) | Stage state before the update. May be empty. |
-| Current Stage | [Stage instance](../../../value-types.md#STAGE_INSTANCE) | Stage state after the update. |
+| Current Stage  | [Stage instance](../../../value-types.md#STAGE_INSTANCE) | Stage state after the update.                |

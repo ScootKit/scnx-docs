@@ -17,17 +17,17 @@ Benötigte Intents: `GuildMessagePolls`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                      |
+| ------ | --------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Umfrage | [Umfrage](../../../value-types.md#MESSAGE_POLL) | Umfrage, die die Stimme erhalten hat. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der abgestimmt hat. |
-| Antwort-ID | [Ganzzahl](../../../value-types.md#INTEGER) | ID der Umfrage-Antwort, auf die gestimmt wurde. |
+| Name       | Typ                                              | Details                                         |
+| ---------- | ------------------------------------------------ | ----------------------------------------------- |
+| Umfrage    | [Umfrage](../../../value-types.md#MESSAGE_POLL)  | Umfrage, die die Stimme erhalten hat.           |
+| Benutzer   | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der abgestimmt hat.                   |
+| Antwort-ID | [Ganzzahl](../../../value-types.md#INTEGER)      | ID der Umfrage-Antwort, auf die gestimmt wurde. |
 
 ### Umfrage-Stimme entfernt {#poll-vote-removed}
 
@@ -37,14 +37,14 @@ Benötigte Intents: `GuildMessagePolls`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                      |
+| ------ | --------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Umfrage | [Umfrage](../../../value-types.md#MESSAGE_POLL) | Umfrage, von der die Stimme entfernt wurde. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der seine Stimme entfernt hat. |
-| Antwort-ID | [Ganzzahl](../../../value-types.md#INTEGER) | ID der Antwort, auf die der Benutzer gestimmt hat. |
+| Name       | Typ                                              | Details                                            |
+| ---------- | ------------------------------------------------ | -------------------------------------------------- |
+| Umfrage    | [Umfrage](../../../value-types.md#MESSAGE_POLL)  | Umfrage, von der die Stimme entfernt wurde.        |
+| Benutzer   | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der seine Stimme entfernt hat.           |
+| Antwort-ID | [Ganzzahl](../../../value-types.md#INTEGER)      | ID der Antwort, auf die der Benutzer gestimmt hat. |

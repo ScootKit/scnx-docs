@@ -15,17 +15,17 @@ Fires when a user runs a user context-menu command (right-click on a user).
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command name | [Text](../../../value-types.md#STRING) | Yes | Name shown under Apps when right-clicking a user (1-32 characters; spaces and mixed case allowed). Length: 1 to 32 characters. |
-| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG) | No | Permissions a member must have to use the command by default. |
-| Allow in DMs | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Whether the command is also available in direct messages. Default: No. |
-| Age-restricted | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Restrict the command to NSFW channels. Default: No. |
+| Name                 | Type                                                          | Required | Details                                                                                                                        |
+| -------------------- | ------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Command name         | [Text](../../../value-types.md#STRING)                        | Yes      | Name shown under Apps when right-clicking a user (1-32 characters; spaces and mixed case allowed). Length: 1 to 32 characters. |
+| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG) | No       | Permissions a member must have to use the command by default.                                                                  |
+| Allow in DMs         | [Yes/No](../../../value-types.md#BOOLEAN)                     | Yes      | Whether the command is also available in direct messages. Default: No.                                                         |
+| Age-restricted       | [Yes/No](../../../value-types.md#BOOLEAN)                     | Yes      | Restrict the command to NSFW channels. Default: No.                                                                            |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                                   | Details                                         |
+| ----------- | -------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Interaction | [User context menu interaction](../../../value-types.md#USER_CONTEXT_MENU_INTERACTION) | User context-menu interaction that was created. |
 
 ### Message context menu used {#message-context-menu-used}
@@ -34,15 +34,15 @@ Fires when a user runs a message context-menu command (right-click on a message)
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command name | [Text](../../../value-types.md#STRING) | Yes | Name shown under Apps when right-clicking a message (1-32 characters; spaces and mixed case allowed). Length: 1 to 32 characters. |
-| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG) | No | Permissions a member must have to use the command by default. |
-| Allow in DMs | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Whether the command is also available in direct messages. Default: No. |
-| Age-restricted | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Restrict the command to NSFW channels. Default: No. |
+| Name                 | Type                                                          | Required | Details                                                                                                                           |
+| -------------------- | ------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Command name         | [Text](../../../value-types.md#STRING)                        | Yes      | Name shown under Apps when right-clicking a message (1-32 characters; spaces and mixed case allowed). Length: 1 to 32 characters. |
+| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG) | No       | Permissions a member must have to use the command by default.                                                                     |
+| Allow in DMs         | [Yes/No](../../../value-types.md#BOOLEAN)                     | Yes      | Whether the command is also available in direct messages. Default: No.                                                            |
+| Age-restricted       | [Yes/No](../../../value-types.md#BOOLEAN)                     | Yes      | Restrict the command to NSFW channels. Default: No.                                                                               |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                                         | Details                                            |
+| ----------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | Interaction | [Message context menu interaction](../../../value-types.md#MESSAGE_CONTEXT_MENU_INTERACTION) | Message context-menu interaction that was created. |

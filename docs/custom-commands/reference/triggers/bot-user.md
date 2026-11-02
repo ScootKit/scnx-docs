@@ -15,8 +15,8 @@ Fires when the bot is added to a new server.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                     |
+| ------ | ------------------------------------ | --------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server the bot just joined. |
 
 ### Bot removed from a server {#bot-removed-from-guild}
@@ -25,8 +25,8 @@ Fires when the bot is kicked, banned or otherwise removed from a server.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                          |
+| ------ | ------------------------------------ | -------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server the bot was removed from. |
 
 ### Server updated {#guild-updated}
@@ -35,10 +35,10 @@ Fires when server settings (name, icon, features, ...) change.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                  | Type                                 | Details                         |
+| --------------------- | ------------------------------------ | ------------------------------- |
 | Previous Server State | [Server](../../value-types.md#GUILD) | Server state before the update. |
-| Current Server State | [Server](../../value-types.md#GUILD) | Server state after the update. |
+| Current Server State  | [Server](../../value-types.md#GUILD) | Server state after the update.  |
 
 ### Server became available {#guild-became-available}
 
@@ -46,8 +46,8 @@ Fires when a previously unavailable server (e.g. due to an outage) becomes avail
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                            |
+| ------ | ------------------------------------ | ---------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server that just became available. |
 
 ### Server became unavailable {#guild-became-unavailable}
@@ -56,8 +56,8 @@ Fires when a server becomes unavailable, usually because of a Discord outage.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                         |
+| ------ | ------------------------------------ | ------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server that became unavailable. |
 
 ### Server integrations updated {#guild-integrations-updated}
@@ -68,8 +68,8 @@ Required intents: `GuildIntegrations`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                                 |
+| ------ | ------------------------------------ | --------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server whose integrations were updated. |
 
 ### Entitlement created {#entitlement-created}
@@ -78,8 +78,8 @@ Fires when a user or server gains access to a premium SKU.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                       |
+| ----------- | ----------------------------------------------- | ----------------------------- |
 | Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Entitlement that was created. |
 
 ### Entitlement updated {#entitlement-updated}
@@ -88,10 +88,10 @@ Fires when an existing entitlement is updated (e.g. its end date changes or it g
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                 | Type                                            | Details                                            |
+| -------------------- | ----------------------------------------------- | -------------------------------------------------- |
 | Previous Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Entitlement state before the update. May be empty. |
-| Current Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Entitlement state after the update. |
+| Current Entitlement  | [Entitlement](../../value-types.md#ENTITLEMENT) | Entitlement state after the update.                |
 
 ### Entitlement deleted {#entitlement-deleted}
 
@@ -99,8 +99,8 @@ Fires when an entitlement is deleted (e.g. revoked by Discord).
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                       |
+| ----------- | ----------------------------------------------- | ----------------------------- |
 | Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Entitlement that was deleted. |
 
 ### Bot ready {#bot-ready}

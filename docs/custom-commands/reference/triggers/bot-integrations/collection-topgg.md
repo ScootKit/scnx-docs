@@ -15,21 +15,21 @@ Runs when someone votes for your project on top.gg. Paste this webhook's URL int
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Yes | The top.gg webhook that starts this flow. Create it right here in the trigger. Length: 1 to 64 characters. |
+| Name    | Type                                   | Required | Details                                                                                                    |
+| ------- | -------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Yes      | The top.gg webhook that starts this flow. Create it right here in the trigger. Length: 1 to 64 characters. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| User | [User](../../../value-types.md#DISCORD_USER) | The Discord user who voted. Empty when Discord no longer knows the user. May be empty. |
-| User ID | [Discord ID](../../../value-types.md#SNOWFLAKE) | The Discord ID of the user who voted. May be empty. |
-| Username | [Text](../../../value-types.md#STRING) | The Discord username of the user who voted. May be empty. |
-| Weight | [Whole number](../../../value-types.md#INTEGER) | How much the vote counts: 2 for weekend votes, otherwise 1. Empty for test events. May be empty. |
-| Voted at | [Date and time](../../../value-types.md#DATETIME) | When the user voted. Empty for test events. May be empty. |
-| Expires at | [Date and time](../../../value-types.md#DATETIME) | When the vote stops counting. Empty for test events. May be empty. |
-| Vote link parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The query parameters added to the vote link, for example ?source=discord. May be empty. |
-| Event | [top.gg vote event](../../../value-types.md#topgg-VoteEvent) | Everything the service sent about this event. May be empty. |
-| Is a test | [Yes/No](../../../value-types.md#BOOLEAN) | Whether top.gg sent a test event instead of a real one. |
-| Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
+| Name                 | Type                                                                                             | Details                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| User                 | [User](../../../value-types.md#DISCORD_USER)                                                     | The Discord user who voted. Empty when Discord no longer knows the user. May be empty.           |
+| User ID              | [Discord ID](../../../value-types.md#SNOWFLAKE)                                                  | The Discord ID of the user who voted. May be empty.                                              |
+| Username             | [Text](../../../value-types.md#STRING)                                                           | The Discord username of the user who voted. May be empty.                                        |
+| Weight               | [Whole number](../../../value-types.md#INTEGER)                                                  | How much the vote counts: 2 for weekend votes, otherwise 1. Empty for test events. May be empty. |
+| Voted at             | [Date and time](../../../value-types.md#DATETIME)                                                | When the user voted. Empty for test events. May be empty.                                        |
+| Expires at           | [Date and time](../../../value-types.md#DATETIME)                                                | When the vote stops counting. Empty for test events. May be empty.                               |
+| Vote link parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The query parameters added to the vote link, for example ?source=discord. May be empty.          |
+| Event                | [top.gg vote event](../../../value-types.md#topgg-VoteEvent)                                     | Everything the service sent about this event. May be empty.                                      |
+| Is a test            | [Yes/No](../../../value-types.md#BOOLEAN)                                                        | Whether top.gg sent a test event instead of a real one.                                          |
+| Delivery ID          | [Text](../../../value-types.md#STRING)                                                           | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats.       |

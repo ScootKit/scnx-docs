@@ -15,22 +15,22 @@ Liest eine Seite Zeilen einer Tabelle, optional aus einer Ansicht oder passend z
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die Airtable-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Base-ID | [Text](../../../value-types.md#STRING) | Ja | Die ID der Base, beginnt mit app. Sie steht in der Adresse der Base. Maximale Länge: 30 Zeichen. |
-| Tabelle | [Text](../../../value-types.md#STRING) | Ja | Der Name oder die ID (beginnt mit tbl) der Tabelle. Maximale Länge: 100 Zeichen. |
-| Ansicht | [Text](../../../value-types.md#STRING) | Nein | Der Name oder die ID einer Ansicht. Ihre Filter und Sortierung gelten. Maximale Länge: 100 Zeichen. |
-| Formel | [Text](../../../value-types.md#STRING) | Nein | Eine Airtable-Formel, die Zeilen erfüllen müssen, zum Beispiel „\{Status\} = 'Open'“. Maximale Länge: 2000 Zeichen. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Zeilen pro Seite, 1 bis 100. Leer: 20. Wert: 1 bis 100. Standard: `20`. |
-| Nächste Seite | [Text](../../../value-types.md#STRING) | Nein | Die Ausgabe „Nächste Seite“ des vorigen Aufrufs. Leer: die erste Seite. Maximale Länge: 200 Zeichen. |
+| Name          | Typ                                         | Pflicht | Details                                                                                                             |
+| ------------- | ------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Verbindung    | [Text](../../../value-types.md#STRING)      | Nein    | Die Airtable-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.            |
+| Base-ID       | [Text](../../../value-types.md#STRING)      | Ja      | Die ID der Base, beginnt mit app. Sie steht in der Adresse der Base. Maximale Länge: 30 Zeichen.                    |
+| Tabelle       | [Text](../../../value-types.md#STRING)      | Ja      | Der Name oder die ID (beginnt mit tbl) der Tabelle. Maximale Länge: 100 Zeichen.                                    |
+| Ansicht       | [Text](../../../value-types.md#STRING)      | Nein    | Der Name oder die ID einer Ansicht. Ihre Filter und Sortierung gelten. Maximale Länge: 100 Zeichen.                 |
+| Formel        | [Text](../../../value-types.md#STRING)      | Nein    | Eine Airtable-Formel, die Zeilen erfüllen müssen, zum Beispiel „\{Status\} = 'Open'". Maximale Länge: 2000 Zeichen. |
+| Anzahl        | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Wie viele Zeilen pro Seite, 1 bis 100. Leer: 20. Wert: 1 bis 100. Standard: `20`.                                   |
+| Nächste Seite | [Text](../../../value-types.md#STRING)      | Nein    | Die Ausgabe „Nächste Seite" des vorigen Aufrufs. Leer: die erste Seite. Maximale Länge: 200 Zeichen.                |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Zeilen | Liste von [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeilen dieser Seite. |
-| Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
+| Name          | Typ                                                              | Details                                                                                                              |
+| ------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Zeilen        | Liste von [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeilen dieser Seite.                                                                                             |
+| Nächste Seite | [Text](../../../value-types.md#STRING)                           | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
 ### Zeile abrufen {#airtable-get-row}
 
@@ -38,16 +38,16 @@ Liest eine Zeile über ihre ID.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die Airtable-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Base-ID | [Text](../../../value-types.md#STRING) | Ja | Die ID der Base, beginnt mit app. Sie steht in der Adresse der Base. Maximale Länge: 30 Zeichen. |
-| Tabelle | [Text](../../../value-types.md#STRING) | Ja | Der Name oder die ID (beginnt mit tbl) der Tabelle. Maximale Länge: 100 Zeichen. |
-| Zeilen-ID | [Text](../../../value-types.md#STRING) | Ja | Die ID der Zeile, beginnt mit rec. Maximale Länge: 30 Zeichen. |
+| Name       | Typ                                    | Pflicht | Details                                                                                                  |
+| ---------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| Verbindung | [Text](../../../value-types.md#STRING) | Nein    | Die Airtable-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
+| Base-ID    | [Text](../../../value-types.md#STRING) | Ja      | Die ID der Base, beginnt mit app. Sie steht in der Adresse der Base. Maximale Länge: 30 Zeichen.         |
+| Tabelle    | [Text](../../../value-types.md#STRING) | Ja      | Der Name oder die ID (beginnt mit tbl) der Tabelle. Maximale Länge: 100 Zeichen.                         |
+| Zeilen-ID  | [Text](../../../value-types.md#STRING) | Ja      | Die ID der Zeile, beginnt mit rec. Maximale Länge: 30 Zeichen.                                           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob die Zeile existiert. Wenn nicht, ist die Zeile leer. |
-| Zeile | [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeile. Kann leer sein. |
+| Name     | Typ                                                    | Details                                                 |
+| -------- | ------------------------------------------------------ | ------------------------------------------------------- |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN)             | Ob die Zeile existiert. Wenn nicht, ist die Zeile leer. |
+| Zeile    | [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeile. Kann leer sein.                              |

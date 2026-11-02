@@ -16,13 +16,13 @@ Schritte arbeiten mit Werten: einem Mitglied, einem Kanal, einer Zahl, einem St�
 
 Wenn du bei einer Eingabe auf **Wert verwenden** klickst, listet der Tab **Daten** im Bereich jeden Wert auf, den du an dieser Stelle verwenden kannst, gruppiert nach seiner Herkunft:
 
-| Gruppe              | Was sie enthält                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Auslöser**        | Die Werte, die dein Trigger liefert, zum Beispiel das neue Mitglied, die Nachricht oder die Interaktion. Auch die Optionen eines Slash-Commands findest du hier. |
-| **Schritte**        | Die Werte, die frühere Schritte zurückgegeben haben, zum Beispiel "Gesendete Nachricht" eines Schritts **Nachricht senden**, beschriftet mit ihrer Schrittnummer. |
-| **Flow-Eingaben**   | Die Parameter, die ein anderer Flow übergibt, bei Flows mit einem **Manueller Auslöser** oder einer **Geplante Ausführung**. |
-| **Moduleinstellungen** | Die Einstellungen des Moduls, zu dem dieser Flow gehört. Nur in [Modulen](/de/docs/custom-commands/modules).     |
-| **Speicher**        | Deine [Speicherfelder](/de/docs/custom-commands/storage). Wenn du eines auswählst, wird vor diesem Schritt ein Schritt eingefügt, der es ausliest. |
+| Gruppe                 | Was sie enthält                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Auslöser**           | Die Werte, die dein Trigger liefert, zum Beispiel das neue Mitglied, die Nachricht oder die Interaktion. Auch die Optionen eines Slash-Commands findest du hier.  |
+| **Schritte**           | Die Werte, die frühere Schritte zurückgegeben haben, zum Beispiel "Gesendete Nachricht" eines Schritts **Nachricht senden**, beschriftet mit ihrer Schrittnummer. |
+| **Flow-Eingaben**      | Die Parameter, die ein anderer Flow übergibt, bei Flows mit einem **Manueller Auslöser** oder einer **Geplante Ausführung**.                                      |
+| **Moduleinstellungen** | Die Einstellungen des Moduls, zu dem dieser Flow gehört. Nur in [Modulen](/de/docs/custom-commands/modules).                                                      |
+| **Speicher**           | Deine [Speicherfelder](/de/docs/custom-commands/storage). Wenn du eines auswählst, wird vor diesem Schritt ein Schritt eingefügt, der es ausliest.                |
 
 Statt eines Werts aus dem Flow kann eine Eingabe auch einen **Fester Wert** haben: einen Kanal, den du auswählst, eine Zahl oder einen Text, den du eintippst, eine Farbe, eine Dauer. Ein fester Wert ist bei jeder Ausführung gleich. Siehe [Feste Werte](#fixed).
 
@@ -60,11 +60,11 @@ Manche Werte sind Listen, zum Beispiel die Rollen eines Mitglieds. Wenn du eine 
 
 Manche Werte sind mit **kann leer sein** markiert, zum Beispiel das Mitglied einer Interaktion, die in einer DM passiert ist, oder eine Option eines Slash-Commands, die nicht erforderlich ist. Wenn du so einen Wert in einer Eingabe verwendest, die einen Wert braucht, zeigt der Editor **Kann leer sein** und bietet dir drei Möglichkeiten an, damit umzugehen:
 
-| Auswahl                                                        | Was sie macht                                                                                      |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Ersatzwert verwenden**                                       | Fügt einen Schritt **Ersatzwert verwenden, wenn leer** hinzu, in dem du festlegst, was stattdessen verwendet wird. |
-| **Diesen und die folgenden Schritte nur ausführen, wenn der Wert gesetzt ist** | Packt den Schritt und alles darunter in **Wenn ein Wert da ist**.                  |
-| **Ignorieren, ein leerer Wert ist hier in Ordnung**            | Lässt alles, wie es ist. Nutze das, wenn du weißt, dass der Wert immer gesetzt ist, zum Beispiel ein Mitglied in einem Befehl, der in DMs nicht erlaubt ist. Ignorierte Warnungen findest du im Tab **Probleme** unter **Ignoriert** wieder. |
+| Auswahl                                                                        | Was sie macht                                                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Ersatzwert verwenden**                                                       | Fügt einen Schritt **Ersatzwert verwenden, wenn leer** hinzu, in dem du festlegst, was stattdessen verwendet wird.                                                                                                                           |
+| **Diesen und die folgenden Schritte nur ausführen, wenn der Wert gesetzt ist** | Packt den Schritt und alles darunter in **Wenn ein Wert da ist**.                                                                                                                                                                            |
+| **Ignorieren, ein leerer Wert ist hier in Ordnung**                            | Lässt alles, wie es ist. Nutze das, wenn du weißt, dass der Wert immer gesetzt ist, zum Beispiel ein Mitglied in einem Befehl, der in DMs nicht erlaubt ist. Ignorierte Warnungen findest du im Tab **Probleme** unter **Ignoriert** wieder. |
 
 Wenn du die Warnung ignorierst und der Wert doch leer ist, schlägt der Schritt fehl, wenn der Flow läuft.
 
@@ -76,19 +76,19 @@ Jeder Werttyp und seine Felder sind unter [Werttypen](/de/docs/custom-commands/v
 
 Klicke bei einer leeren Eingabe auf **Fester Wert** oder in ihrem Menü auf **Stattdessen festen Wert verwenden**. Was du dann bekommst, hängt von der Eingabe ab:
 
-| Eingabetyp             | So füllst du sie aus                                                                               |
-| ---------------------- | -------------------------------------------------------------------------------------------------- |
-| Text                   | Tippe ihn ein. Drücke Enter für einen echten Zeilenumbruch.                                       |
-| Zahlen                 | Tippe eine Zahl ein. Manche Eingaben zeigen ein **Min** und **Max**.                              |
-| Ja/Nein                | Wähle **Ja / aktiviert** oder **Nein / deaktiviert**.                                             |
-| Kanal, Rolle, Mitglied | Wähle ihn von deinem Server aus. Wenn die Liste nicht lädt, kannst du stattdessen eine Discord-ID einfügen. Auch das Einfügen einer Erwähnung oder eines Links funktioniert: "Wir haben die ID aus dem Eingefügten herausgelesen." |
-| Dauer                  | Eine Zahl und eine Einheit: **Sekunden**, **Minuten**, **Stunden** oder **Tage**.                  |
-| Datum & Uhrzeit        | Wähle es aus. Es verwendet deine lokale Zeitzone.                                                  |
-| Farbe                  | Wähle sie aus oder tippe sechs Hex-Ziffern wie `#5865f2` ein.                                      |
-| Auswahl aus einer Liste | Wähle einen der Werte.                                                                            |
-| Liste oder Zuordnung   | Klicke für jeden Eintrag auf **Eintrag hinzufügen**. Eine Zuordnung braucht außerdem einen **Schlüssel** pro Eintrag. |
-| Nachricht              | Öffnet den Nachrichten-Editor. Siehe [Werte in Nachrichten](#messages).                            |
-| Modal                  | Öffnet den Modal-Editor mit einem **Modal-Titel** und **Modal-Felder**.                            |
+| Eingabetyp              | So füllst du sie aus                                                                                                                                                                                                               |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text                    | Tippe ihn ein. Drücke Enter für einen echten Zeilenumbruch.                                                                                                                                                                        |
+| Zahlen                  | Tippe eine Zahl ein. Manche Eingaben zeigen ein **Min** und **Max**.                                                                                                                                                               |
+| Ja/Nein                 | Wähle **Ja / aktiviert** oder **Nein / deaktiviert**.                                                                                                                                                                              |
+| Kanal, Rolle, Mitglied  | Wähle ihn von deinem Server aus. Wenn die Liste nicht lädt, kannst du stattdessen eine Discord-ID einfügen. Auch das Einfügen einer Erwähnung oder eines Links funktioniert: "Wir haben die ID aus dem Eingefügten herausgelesen." |
+| Dauer                   | Eine Zahl und eine Einheit: **Sekunden**, **Minuten**, **Stunden** oder **Tage**.                                                                                                                                                  |
+| Datum & Uhrzeit         | Wähle es aus. Es verwendet deine lokale Zeitzone.                                                                                                                                                                                  |
+| Farbe                   | Wähle sie aus oder tippe sechs Hex-Ziffern wie `#5865f2` ein.                                                                                                                                                                      |
+| Auswahl aus einer Liste | Wähle einen der Werte.                                                                                                                                                                                                             |
+| Liste oder Zuordnung    | Klicke für jeden Eintrag auf **Eintrag hinzufügen**. Eine Zuordnung braucht außerdem einen **Schlüssel** pro Eintrag.                                                                                                              |
+| Nachricht               | Öffnet den Nachrichten-Editor. Siehe [Werte in Nachrichten](#messages).                                                                                                                                                            |
+| Modal                   | Öffnet den Modal-Editor mit einem **Modal-Titel** und **Modal-Felder**.                                                                                                                                                            |
 
 Manche Eingaben nehmen nur einen Wert aus dem Flow an und sagen "Dieser Eingabewert nimmt nur einen Wert an, der in einem früheren Schritt entsteht." Wenn ein Kanal oder eine Rolle, die du ausgewählt hast, auf Discord gelöscht wurde, zeigt die Eingabe "passt zu nichts auf diesem Server". Wähle ihn erneut aus.
 
@@ -172,10 +172,10 @@ Häufige Probleme mit diesem Flow:
 
 ## Häufige Fehler {#mistakes}
 
-| Was passiert                                              | Warum, und wie du es behebst                                                                                        |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Die Nachricht zeigt `{var:...}` statt eines Werts         | Der Platzhalter wurde in eine einfache Text-Eingabe getippt, nicht in eine Nachricht. Nutze dort eine Text-Vorlage mit **Wert einfügen**. |
-| Ein Mitglied erscheint als Zahl oder gar nicht            | Du hast das falsche Feld eingefügt. Öffne das Mitglied und wähle **Erwähnung** oder **Anzeigename**.                |
-| Du findest einen Wert im Tab **Daten** nicht              | Er passt nicht zur Eingabe, oder er kommt aus einem Schritt unter diesem oder aus einem anderen Zweig. Schalte **Unpassende Werte ausblenden** aus, oder verschiebe den Schritt. |
-| **Falscher Typ** bei einer Eingabe                        | Der Wert ist von einer anderen Art, als die Eingabe braucht. Wähle eines seiner Felder, oder nutze die Umwandlung, die der Tab **Daten** anbietet. |
-| `%name%` bleibt in der Nachricht stehen                   | Am sendenden Schritt ist kein Nachrichten-Parameter mit diesem Namen gesetzt, und es ist auch kein [globaler Parameter](/de/docs/custom-bot/global-parameters). Füge ihn unter **Nachrichten-Parameter** hinzu. |
+| Was passiert                                      | Warum, und wie du es behebst                                                                                                                                                                                    |
+| ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Die Nachricht zeigt `{var:...}` statt eines Werts | Der Platzhalter wurde in eine einfache Text-Eingabe getippt, nicht in eine Nachricht. Nutze dort eine Text-Vorlage mit **Wert einfügen**.                                                                       |
+| Ein Mitglied erscheint als Zahl oder gar nicht    | Du hast das falsche Feld eingefügt. Öffne das Mitglied und wähle **Erwähnung** oder **Anzeigename**.                                                                                                            |
+| Du findest einen Wert im Tab **Daten** nicht      | Er passt nicht zur Eingabe, oder er kommt aus einem Schritt unter diesem oder aus einem anderen Zweig. Schalte **Unpassende Werte ausblenden** aus, oder verschiebe den Schritt.                                |
+| **Falscher Typ** bei einer Eingabe                | Der Wert ist von einer anderen Art, als die Eingabe braucht. Wähle eines seiner Felder, oder nutze die Umwandlung, die der Tab **Daten** anbietet.                                                              |
+| `%name%` bleibt in der Nachricht stehen           | Am sendenden Schritt ist kein Nachrichten-Parameter mit diesem Namen gesetzt, und es ist auch kein [globaler Parameter](/de/docs/custom-bot/global-parameters). Füge ihn unter **Nachrichten-Parameter** hinzu. |

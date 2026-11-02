@@ -15,10 +15,10 @@ Fires when a thread is created or unarchived in a channel the bot can see.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread that was created. |
-| Newly Created | [Yes/No](../../../value-types.md#BOOLEAN) | True if the thread was just created, false if an archived thread was unarchived. |
+| Name          | Type                                             | Details                                                                          |
+| ------------- | ------------------------------------------------ | -------------------------------------------------------------------------------- |
+| Thread        | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread that was created.                                                         |
+| Newly Created | [Yes/No](../../../value-types.md#BOOLEAN)        | True if the thread was just created, false if an archived thread was unarchived. |
 
 ### Thread deleted {#thread-deleted}
 
@@ -26,8 +26,8 @@ Fires when a thread is deleted.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                             | Details                  |
+| ------ | ------------------------------------------------ | ------------------------ |
 | Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread that was deleted. |
 
 ### Thread updated {#thread-updated}
@@ -36,10 +36,10 @@ Fires when a thread is updated (renamed, archived, locked, slowmode changed, ...
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                             | Details                         |
+| --------------- | ------------------------------------------------ | ------------------------------- |
 | Previous Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread state before the update. |
-| Current Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread state after the update. |
+| Current Thread  | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread state after the update.  |
 
 ### Thread list synced {#thread-list-synced}
 
@@ -47,10 +47,10 @@ Fires when the bot regains access to a channel and Discord syncs the list of act
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | Server the threads belong to. |
-| Threads | List of [Thread](../../../value-types.md#THREAD_CHANNEL) | Threads that were synced. |
+| Name    | Type                                                          | Details                              |
+| ------- | ------------------------------------------------------------- | ------------------------------------ |
+| Server  | [Server](../../../value-types.md#GUILD)                       | Server the threads belong to.        |
+| Threads | List of [Thread](../../../value-types.md#THREAD_CHANNEL)      | Threads that were synced.            |
 | Members | List of [Server member](../../../value-types.md#GUILD_MEMBER) | Thread memberships that were synced. |
 
 ### Thread members updated {#thread-members-updated}
@@ -59,11 +59,11 @@ Fires when members are added to or removed from a thread.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread whose member list changed. |
-| Added Members | List of [Server member](../../../value-types.md#GUILD_MEMBER) | Members that were added to the thread. |
-| Removed Member IDs | List of [Discord ID](../../../value-types.md#SNOWFLAKE) | IDs of members that were removed from the thread. |
+| Name               | Type                                                          | Details                                           |
+| ------------------ | ------------------------------------------------------------- | ------------------------------------------------- |
+| Thread             | [Thread](../../../value-types.md#THREAD_CHANNEL)              | Thread whose member list changed.                 |
+| Added Members      | List of [Server member](../../../value-types.md#GUILD_MEMBER) | Members that were added to the thread.            |
+| Removed Member IDs | List of [Discord ID](../../../value-types.md#SNOWFLAKE)       | IDs of members that were removed from the thread. |
 
 ### Thread member updated {#thread-member-updated}
 
@@ -71,7 +71,7 @@ Fires when the bot's own thread membership is updated (e.g. flags change).
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                   | Type                                                  | Details                                |
+| ---------------------- | ----------------------------------------------------- | -------------------------------------- |
 | Previous Thread Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Thread member state before the update. |
-| Current Thread Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Thread member state after the update. |
+| Current Thread Member  | [Server member](../../../value-types.md#GUILD_MEMBER) | Thread member state after the update.  |

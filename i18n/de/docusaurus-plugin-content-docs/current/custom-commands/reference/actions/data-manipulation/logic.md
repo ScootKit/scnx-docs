@@ -15,15 +15,15 @@ Prüft, ob zwei Werte gleich sind.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Text](../../../value-types.md#STRING) | Ja | Erster Wert. |
-| B | [Text](../../../value-types.md#STRING) | Ja | Zweiter Wert. |
+| Name | Typ                                    | Pflicht | Details       |
+| ---- | -------------------------------------- | ------- | ------------- |
+| A    | [Text](../../../value-types.md#STRING) | Ja      | Erster Wert.  |
+| B    | [Text](../../../value-types.md#STRING) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                    |
+| -------- | ------------------------------------------ | -------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a gleich b ist. |
 
 ### Gleich (Zahl) {#logic-equals-number}
@@ -32,15 +32,15 @@ Prüft, ob zwei Zahlen gleich sind (numerischer Vergleich, anders als Gleich, da
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erste Zahl. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweite Zahl. |
+| Name | Typ                                          | Pflicht | Details      |
+| ---- | -------------------------------------------- | ------- | ------------ |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erste Zahl.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweite Zahl. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                              |
+| -------- | ------------------------------------------ | ------------------------------------ |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a numerisch gleich b ist. |
 
 ### Nicht gleich {#logic-not-equals}
@@ -49,15 +49,15 @@ Prüft, ob sich zwei Werte unterscheiden.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Text](../../../value-types.md#STRING) | Ja | Erster Wert. |
-| B | [Text](../../../value-types.md#STRING) | Ja | Zweiter Wert. |
+| Name | Typ                                    | Pflicht | Details       |
+| ---- | -------------------------------------- | ------- | ------------- |
+| A    | [Text](../../../value-types.md#STRING) | Ja      | Erster Wert.  |
+| B    | [Text](../../../value-types.md#STRING) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                          |
+| -------- | ------------------------------------------ | -------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a nicht gleich b ist. |
 
 ### Größer als {#logic-greater-than}
@@ -66,15 +66,15 @@ Prüft, ob a größer als b ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Wert. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Wert. |
+| Name | Typ                                          | Pflicht | Details       |
+| ---- | -------------------------------------------- | ------- | ------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Wert.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details              |
+| -------- | ------------------------------------------ | -------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a &gt; b. |
 
 ### Kleiner als {#logic-less-than}
@@ -83,15 +83,15 @@ Prüft, ob a kleiner als b ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Wert. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Wert. |
+| Name | Typ                                          | Pflicht | Details       |
+| ---- | -------------------------------------------- | ------- | ------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Wert.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details              |
+| -------- | ------------------------------------------ | -------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a &lt; b. |
 
 ### Größer oder gleich {#logic-greater-or-equal}
@@ -100,15 +100,15 @@ Prüft, ob a größer als oder gleich b ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Wert. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Wert. |
+| Name | Typ                                          | Pflicht | Details       |
+| ---- | -------------------------------------------- | ------- | ------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Wert.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details               |
+| -------- | ------------------------------------------ | --------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a &gt;= b. |
 
 ### Kleiner oder gleich {#logic-less-or-equal}
@@ -117,15 +117,15 @@ Prüft, ob a kleiner als oder gleich b ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Wert. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Wert. |
+| Name | Typ                                          | Pflicht | Details       |
+| ---- | -------------------------------------------- | ------- | ------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Wert.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Wert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details               |
+| -------- | ------------------------------------------ | --------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn a &lt;= b. |
 
 ### Logisches UND {#logic-and}
@@ -134,14 +134,14 @@ Gibt nur wahr zurück, wenn jeder Wert wahr ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ja/Nein-Werte, die verknüpft werden. |
+| Name  | Typ                                                  | Pflicht | Details                              |
+| ----- | ---------------------------------------------------- | ------- | ------------------------------------ |
+| Werte | Liste von [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja      | Ja/Nein-Werte, die verknüpft werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                          |
+| -------- | ------------------------------------------ | -------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn alle Werte wahr sind. |
 
 ### Logisches ODER {#logic-or}
@@ -150,14 +150,14 @@ Gibt wahr zurück, wenn mindestens ein Wert wahr ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ja/Nein-Werte, die verknüpft werden. |
+| Name  | Typ                                                  | Pflicht | Details                              |
+| ----- | ---------------------------------------------------- | ------- | ------------------------------------ |
+| Werte | Liste von [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja      | Ja/Nein-Werte, die verknüpft werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                  |
+| -------- | ------------------------------------------ | ---------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn ein beliebiger Wert wahr ist. |
 
 ### Logisches NICHT {#logic-not}
@@ -166,14 +166,14 @@ Invertiert einen Ja/Nein-Wert.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ja/Nein-Wert, der invertiert wird. |
+| Name | Typ                                        | Pflicht | Details                            |
+| ---- | ------------------------------------------ | ------- | ---------------------------------- |
+| Wert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja      | Ja/Nein-Wert, der invertiert wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                       |
+| -------- | ------------------------------------------ | ----------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Der invertierte Ja/Nein-Wert. |
 
 ### Wenn/sonst-Wert {#logic-if}
@@ -182,17 +182,17 @@ Gibt einen von zwei Werten abhängig von einer Bedingung zurück (ternär).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Bedingung | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ja/Nein-Bedingung, die ausgewertet wird. |
-| Werttyp | [Art des Werts](../../../value-types.md#DATA_TYPE) | Nein | Optionaler Datentyp für die beiden Werte und das Ergebnis (Standard ist Text, wenn nicht festgelegt). |
-| Wert falls wahr | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Ja | Wird zurückgegeben, wenn die Bedingung wahr ist. |
-| Wert falls falsch | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Ja | Wird zurückgegeben, wenn die Bedingung falsch ist. |
+| Name              | Typ                                                     | Pflicht | Details                                                                                               |
+| ----------------- | ------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------- |
+| Bedingung         | [Ja/Nein](../../../value-types.md#BOOLEAN)              | Ja      | Ja/Nein-Bedingung, die ausgewertet wird.                                                              |
+| Werttyp           | [Art des Werts](../../../value-types.md#DATA_TYPE)      | Nein    | Optionaler Datentyp für die beiden Werte und das Ergebnis (Standard ist Text, wenn nicht festgelegt). |
+| Wert falls wahr   | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Ja      | Wird zurückgegeben, wenn die Bedingung wahr ist.                                                      |
+| Wert falls falsch | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Ja      | Wird zurückgegeben, wenn die Bedingung falsch ist.                                                    |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                                        |
+| -------- | ------------------------------------------------------- | ---------------------------------------------- |
 | Ergebnis | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Entweder Wert-wenn-wahr oder Wert-wenn-falsch. |
 
 ### Wert zuordnen {#logic-match}
@@ -201,19 +201,19 @@ Schlägt einen Wert in einer Liste von Fällen nach und gibt das Ergebnis dieses
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zu prüfender Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der Wert, der nachgeschlagen wird. Zahlen und Ja/Nein-Werte werden über ihre Textform verglichen; ein Benutzer, eine Rolle oder ein Kanal über die ID. |
-| Werttyp | [Art des Werts](../../../value-types.md#DATA_TYPE) | Nein | Optionaler Datentyp des zurückgegebenen Werts (Standard ist Text, wenn nicht festgelegt). |
-| Fälle | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Ja | Die Zuordnungstabelle: Der Schlüssel jedes Eintrags ist ein zu prüfender Wert, der Wert des Eintrags das Ergebnis dafür. |
-| Rückfallwert | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Nein | Wird zurückgegeben, wenn kein Fall passt. Leer gelassen wird nichts zurückgegeben. |
+| Name              | Typ                                                                                                      | Pflicht | Details                                                                                                                                                |
+| ----------------- | -------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Zu prüfender Wert | [Beliebig](../../../value-types.md#ANY)                                                                  | Ja      | Der Wert, der nachgeschlagen wird. Zahlen und Ja/Nein-Werte werden über ihre Textform verglichen; ein Benutzer, eine Rolle oder ein Kanal über die ID. |
+| Werttyp           | [Art des Werts](../../../value-types.md#DATA_TYPE)                                                       | Nein    | Optionaler Datentyp des zurückgegebenen Werts (Standard ist Text, wenn nicht festgelegt).                                                              |
+| Fälle             | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Ja      | Die Zuordnungstabelle: Der Schlüssel jedes Eintrags ist ein zu prüfender Wert, der Wert des Eintrags das Ergebnis dafür.                               |
+| Rückfallwert      | [Passender Wert](../../../value-types.md#SELECTED_TYPE)                                                  | Nein    | Wird zurückgegeben, wenn kein Fall passt. Leer gelassen wird nichts zurückgegeben.                                                                     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ergebnis | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Der Wert des passenden Falls oder der Rückfallwert. Kann leer sein. |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn ein Fall gepasst hat; falsch, wenn der Rückfallwert verwendet wurde. |
+| Name     | Typ                                                     | Details                                                                         |
+| -------- | ------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Ergebnis | [Passender Wert](../../../value-types.md#SELECTED_TYPE) | Der Wert des passenden Falls oder der Rückfallwert. Kann leer sein.             |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN)              | Wahr, wenn ein Fall gepasst hat; falsch, wenn der Rückfallwert verwendet wurde. |
 
 ### Ist leer {#logic-is-null}
 
@@ -221,14 +221,14 @@ Prüft, ob ein Wert leer ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Wert, der geprüft wird. |
+| Name | Typ                                     | Pflicht | Details                 |
+| ---- | --------------------------------------- | ------- | ----------------------- |
+| Wert | [Beliebig](../../../value-types.md#ANY) | Ja      | Wert, der geprüft wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                       |
+| -------- | ------------------------------------------ | ----------------------------- |
 | Ist leer | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn der Wert leer ist. |
 
 ### Ersatzwert verwenden, wenn leer {#coalesce}
@@ -237,15 +237,15 @@ Gibt den Wert weiter, oder den Ersatzwert, wenn der Wert leer ist (ein leerer Te
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der Wert, der verwendet wird, wenn er gesetzt ist. |
-| Ersatzwert | [Beliebig](../../../value-types.md#ANY) | Ja | Wird stattdessen verwendet, wenn der Wert leer ist (ein leerer Text oder eine leere Liste gilt weiterhin als gesetzt). Muss dieselbe Art von Wert sein. |
+| Name       | Typ                                     | Pflicht | Details                                                                                                                                                 |
+| ---------- | --------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wert       | [Beliebig](../../../value-types.md#ANY) | Ja      | Der Wert, der verwendet wird, wenn er gesetzt ist.                                                                                                      |
+| Ersatzwert | [Beliebig](../../../value-types.md#ANY) | Ja      | Wird stattdessen verwendet, wenn der Wert leer ist (ein leerer Text oder eine leere Liste gilt weiterhin als gesetzt). Muss dieselbe Art von Wert sein. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                     | Details                                                |
+| -------- | --------------------------------------- | ------------------------------------------------------ |
 | Ergebnis | [Beliebig](../../../value-types.md#ANY) | Der Wert, oder der Ersatzwert, wenn der Wert leer war. |
 
 ### Text in eine Auswahl umwandeln {#text-to-enum}
@@ -254,18 +254,18 @@ Findet den Wert einer Auswahlliste, den ein Text benennt, zum Beispiel eine geti
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der in der Auswahlliste gesucht wird. |
-| Auswahlliste | [Auswahlliste](../../../value-types.md#ENUM_TYPE) | Ja | Die Auswahlliste, mit deren Werten der Text verglichen wird. |
-| Ersatzwert | [Auswahl](../../../value-types.md#ENUM_VALUE) | Nein | Die Auswahl, die verwendet wird, wenn der Text zu keinem Wert passt. Lass ihn leer, um dann keinen Wert zu bekommen. |
+| Name         | Typ                                               | Pflicht | Details                                                                                                              |
+| ------------ | ------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| Text         | [Text](../../../value-types.md#STRING)            | Ja      | Der Text, der in der Auswahlliste gesucht wird.                                                                      |
+| Auswahlliste | [Auswahlliste](../../../value-types.md#ENUM_TYPE) | Ja      | Die Auswahlliste, mit deren Werten der Text verglichen wird.                                                         |
+| Ersatzwert   | [Auswahl](../../../value-types.md#ENUM_VALUE)     | Nein    | Die Auswahl, die verwendet wird, wenn der Text zu keinem Wert passt. Lass ihn leer, um dann keinen Wert zu bekommen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Auswahl | [Auswahl](../../../value-types.md#ENUM_VALUE) | Der passende Wert der Auswahlliste oder der Ersatzwert. Leer, wenn nichts passt und kein Ersatzwert gesetzt ist. Kann leer sein. |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja, wenn der Text zu einem Wert der Auswahlliste gepasst hat. |
+| Name     | Typ                                           | Details                                                                                                                          |
+| -------- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Auswahl  | [Auswahl](../../../value-types.md#ENUM_VALUE) | Der passende Wert der Auswahlliste oder der Ersatzwert. Leer, wenn nichts passt und kein Ersatzwert gesetzt ist. Kann leer sein. |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN)    | Ja, wenn der Text zu einem Wert der Auswahlliste gepasst hat.                                                                    |
 
 ### Hat einen Wert {#logic-has-value}
 
@@ -273,14 +273,14 @@ Prüft, ob ein Wert vorhanden ist. Gibt wahr zurück, wenn der verbundene Wert z
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Wert, der geprüft wird. |
+| Name | Typ                                     | Pflicht | Details                 |
+| ---- | --------------------------------------- | ------- | ----------------------- |
+| Wert | [Beliebig](../../../value-types.md#ANY) | Ja      | Wert, der geprüft wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name           | Typ                                        | Details                                                                         |
+| -------------- | ------------------------------------------ | ------------------------------------------------------------------------------- |
 | Hat einen Wert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn der Wert weder fehlt noch ein leerer Text oder eine leere Liste ist. |
 
 ### Ist einer dieser Werte {#logic-is-one-of}
@@ -289,15 +289,15 @@ Prüft, ob ein Wert einem der aufgelisteten Werte entspricht. So lassen sich auc
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Eintrag](../../../value-types.md#ELEMENT) | Ja | Der zu prüfende Wert. Verbinde hier zuerst etwas: Die Liste darunter bietet dann genau die Werte an, die sein Typ zulässt. |
-| Einer von | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Werte, die als Treffer gelten. Eine leere Liste ergibt nie einen Treffer. |
+| Name      | Typ                                               | Pflicht | Details                                                                                                                    |
+| --------- | ------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Wert      | [Eintrag](../../../value-types.md#ELEMENT)        | Ja      | Der zu prüfende Wert. Verbinde hier zuerst etwas: Die Liste darunter bietet dann genau die Werte an, die sein Typ zulässt. |
+| Einer von | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die Werte, die als Treffer gelten. Eine leere Liste ergibt nie einen Treffer.                                              |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                                |
+| -------- | ------------------------------------------ | ------------------------------------------------------ |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | True, wenn der Wert einer der aufgelisteten Werte ist. |
 
 ### Text in Ja/Nein umwandeln {#parse-boolean}
@@ -306,12 +306,12 @@ Liest einen Ja/Nein-Wert aus einem Text. Gibt einen leeren Wert zurück, wenn er
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der gelesen wird (z. B. true/false, ja/nein). |
+| Name | Typ                                    | Pflicht | Details                                                 |
+| ---- | -------------------------------------- | ------- | ------------------------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der gelesen wird (z. B. true/false, ja/nein). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                     |
+| -------- | ------------------------------------------ | ------------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Der Ja/Nein-Wert oder leer. Kann leer sein. |

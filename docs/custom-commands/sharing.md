@@ -33,23 +33,23 @@ If the app is already on your server, the import page tells you which version yo
 
 What the rows under **Before you add this** mean:
 
-| Row                   | What it tells you                                                                                                   |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Bot permissions**   | Discord permissions your bot needs for the app's steps. Without them, those steps fail with `MISSING_PERMISSIONS`. |
-| **Gateway intents**   | Extra Discord access the app's triggers need. Some must be switched on in the Discord Developer Portal.             |
-| **Commands it adds**  | The slash commands the app registers. A name your bot already uses means that command won't be added.               |
-| **External requests** | The outside services the app sends data to. "External services" means it builds the address while running.        |
+| Row                   | What it tells you                                                                                                                                     |
+| --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bot permissions**   | Discord permissions your bot needs for the app's steps. Without them, those steps fail with `MISSING_PERMISSIONS`.                                    |
+| **Gateway intents**   | Extra Discord access the app's triggers need. Some must be switched on in the Discord Developer Portal.                                               |
+| **Commands it adds**  | The slash commands the app registers. A name your bot already uses means that command won't be added.                                                 |
+| **External requests** | The outside services the app sends data to. "External services" means it builds the address while running.                                            |
 | **Resource weight**   | How much activity the app is likely to use. A heavy app uses more of your [activity budget](/docs/custom-commands/limits-and-safety#activity-budget). |
 
 ### When installing fails {#install-errors}
 
-| Message                                                       | Fix                                                                                                    |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| "Custom Commands V3 not enabled" next to a server             | [Turn on V3](/docs/custom-commands/migrating-from-v2#enable) for that server first.                     |
-| "This app is already installed on this server"                | Update it on the **App updates** page, or click **Import as a new copy**.                               |
-| "This server already has ... apps installed, the maximum"     | Uninstall an app you no longer use, then try again.                                                    |
-| "Your bot needs an update before it can install this app"     | Restart your bot so it runs the newest version, then try again.                                        |
-| "This shared Custom-Command could not be found"               | The link is wrong, or the listing was removed.                                                         |
+| Message                                                   | Fix                                                                                 |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| "Custom Commands V3 not enabled" next to a server         | [Turn on V3](/docs/custom-commands/migrating-from-v2#enable) for that server first. |
+| "This app is already installed on this server"            | Update it on the **App updates** page, or click **Import as a new copy**.           |
+| "This server already has ... apps installed, the maximum" | Uninstall an app you no longer use, then try again.                                 |
+| "Your bot needs an update before it can install this app" | Restart your bot so it runs the newest version, then try again.                     |
+| "This shared Custom-Command could not be found"           | The link is wrong, or the listing was removed.                                      |
 
 ### After installing {#after-install}
 
@@ -62,14 +62,14 @@ Open an app from the overview to see its **Overview**, **Settings**, **Help** an
 
 The **Overview** tab tells you the app's state:
 
-| Message                                                         | What to do                                                                                  |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| "Everything's set up and running."                              | Nothing.                                                                                    |
-| "Almost there. Set ... to finish setup."                        | Click **Finish setup** and fill in the missing setting.                                     |
-| "The bot is missing the ... permission it needs to run this app." | Give your bot that permission on your server.                                             |
-| "This app ran into an error."                                   | Check its [run history](/docs/custom-commands/executions), and contact the app's developer. |
-| "This app is stopped by the server-wide emergency stop."        | Turn custom commands back on from the overview.                                             |
-| "SCNX disabled this app for policy reasons."                    | The app can't be turned on unless that restriction is lifted.                               |
+| Message                                                           | What to do                                                                                  |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| "Everything's set up and running."                                | Nothing.                                                                                    |
+| "Almost there. Set ... to finish setup."                          | Click **Finish setup** and fill in the missing setting.                                     |
+| "The bot is missing the ... permission it needs to run this app." | Give your bot that permission on your server.                                               |
+| "This app ran into an error."                                     | Check its [run history](/docs/custom-commands/executions), and contact the app's developer. |
+| "This app is stopped by the server-wide emergency stop."          | Turn custom commands back on from the overview.                                             |
+| "SCNX disabled this app for policy reasons."                      | The app can't be turned on unless that restriction is lifted.                               |
 
 To remove an app, click **Uninstall app** on the **Advanced** tab and type the app's name to confirm. This removes the app, all of its flows and, after a while, its stored data. It can't be undone from the dashboard.
 
@@ -146,14 +146,14 @@ To show up when people browse the marketplace, apply for **Listed** in your publ
 
 Once your app is public, our team also takes one more look at every update before it ships. Your current version keeps running for every server that has it until the new one is approved, and you get an email when a decision is made. If you disagree with a decision, use **Appeal this decision (opens a support ticket)**.
 
-| Status                | What it means                                                                                 |
-| --------------------- | --------------------------------------------------------------------------------------------- |
-| **Unlisted**          | Live, but only reachable through its share link.                                              |
-| **Curation requested**| You applied for a public listing and our team is reviewing it.                                |
-| **Listed**            | Public. People can find it when they browse the marketplace.                                  |
-| **Featured**          | Public and highlighted in the marketplace.                                                    |
-| **Changes requested** | Our team asked you to change something before it can be listed.                               |
-| **Removed by SCNX**   | The listing was taken down. Its public page and share link no longer work.                    |
+| Status                 | What it means                                                              |
+| ---------------------- | -------------------------------------------------------------------------- |
+| **Unlisted**           | Live, but only reachable through its share link.                           |
+| **Curation requested** | You applied for a public listing and our team is reviewing it.             |
+| **Listed**             | Public. People can find it when they browse the marketplace.               |
+| **Featured**           | Public and highlighted in the marketplace.                                 |
+| **Changes requested**  | Our team asked you to change something before it can be listed.            |
+| **Removed by SCNX**    | The listing was taken down. Its public page and share link no longer work. |
 
 ### Publish an update {#publish-update}
 

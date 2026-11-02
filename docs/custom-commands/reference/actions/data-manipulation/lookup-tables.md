@@ -15,8 +15,8 @@ Creates a new, empty lookup table. Add entries with "Lookup table: set value", w
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                                                             | Details                     |
+| ------------ | ------------------------------------------------------------------------------------------------ | --------------------------- |
 | Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The new empty lookup table. |
 
 ### Lookup table: get value {#map-get}
@@ -25,15 +25,15 @@ Returns the value stored under a key in the lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | Yes | Lookup table to read from. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | Key to look up. |
+| Name         | Type                                                                                         | Required | Details                    |
+| ------------ | -------------------------------------------------------------------------------------------- | -------- | -------------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | Yes      | Lookup table to read from. |
+| Key          | [Text](../../../value-types.md#STRING)                                                       | Yes      | Key to look up.            |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                    | Details                                                                     |
+| ----- | --------------------------------------- | --------------------------------------------------------------------------- |
 | Value | [Item](../../../value-types.md#ELEMENT) | Value stored under the key, or empty when the key is missing. May be empty. |
 
 ### Lookup table: set value {#map-set}
@@ -42,16 +42,16 @@ Hands back a new lookup table with the key set to the value and leaves the looku
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes | The original lookup table. It is not changed. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | Key to set. |
-| Value | [Text](../../../value-types.md#STRING) | Yes | Value to store under the key. |
+| Name         | Type                                                                                             | Required | Details                                       |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes      | The original lookup table. It is not changed. |
+| Key          | [Text](../../../value-types.md#STRING)                                                           | Yes      | Key to set.                                   |
+| Value        | [Text](../../../value-types.md#STRING)                                                           | Yes      | Value to store under the key.                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                                                             | Details                                 |
+| ------ | ------------------------------------------------------------------------------------------------ | --------------------------------------- |
 | Result | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The new lookup table, with the key set. |
 
 ### Lookup table: has key {#map-has}
@@ -60,15 +60,15 @@ Checks whether the lookup table contains the key.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes | Lookup table to check. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | Key to look for. |
+| Name         | Type                                                                                             | Required | Details                |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | ---------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes      | Lookup table to check. |
+| Key          | [Text](../../../value-types.md#STRING)                                                           | Yes      | Key to look for.       |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                   |
+| ------ | ----------------------------------------- | ------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True when the key exists. |
 
 ### Lookup table: keys {#map-keys}
@@ -77,14 +77,14 @@ Returns all keys of the lookup table as a list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes | Lookup table to read the keys from. |
+| Name         | Type                                                                                             | Required | Details                             |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | ----------------------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes      | Lookup table to read the keys from. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                           | Details           |
+| ---- | ---------------------------------------------- | ----------------- |
 | Keys | List of [Text](../../../value-types.md#STRING) | List of all keys. |
 
 ### Lookup table: remove key {#map-remove}
@@ -93,15 +93,15 @@ Hands back a new lookup table without the given key and leaves the lookup table 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes | The original lookup table. It is not changed. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | Key to remove. |
+| Name         | Type                                                                                             | Required | Details                                       |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | --------------------------------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes      | The original lookup table. It is not changed. |
+| Key          | [Text](../../../value-types.md#STRING)                                                           | Yes      | Key to remove.                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                                                             | Details                                 |
+| ------ | ------------------------------------------------------------------------------------------------ | --------------------------------------- |
 | Result | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The new lookup table, without that key. |
 
 ### Lookup table: size {#map-size}
@@ -110,14 +110,14 @@ Returns the number of entries in the lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes | Lookup table to count the entries of. |
+| Name         | Type                                                                                             | Required | Details                               |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | ------------------------------------- |
+| Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | Yes      | Lookup table to count the entries of. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                            | Details            |
+| ---- | ----------------------------------------------- | ------------------ |
 | Size | [Whole number](../../../value-types.md#INTEGER) | Number of entries. |
 
 ### Lookup table from entries {#map-from-entries}
@@ -126,12 +126,12 @@ Builds a lookup table from key and value entries or storage leaderboard entries.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Entries | List of [Lookup table entry](../../../value-types.md#MAP_ENTRY) | Yes | The lookup table entries or storage entries to build the lookup table from. |
+| Name    | Type                                                            | Required | Details                                                                     |
+| ------- | --------------------------------------------------------------- | -------- | --------------------------------------------------------------------------- |
+| Entries | List of [Lookup table entry](../../../value-types.md#MAP_ENTRY) | Yes      | The lookup table entries or storage entries to build the lookup table from. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                                                             | Details                     |
+| ------------ | ------------------------------------------------------------------------------------------------ | --------------------------- |
 | Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The resulting lookup table. |

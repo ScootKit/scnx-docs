@@ -15,21 +15,21 @@ Wird ausgeführt, wenn jemand auf top.gg für dein Projekt abstimmt. Füge die U
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der top.gg-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der top.gg-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Der Discord-Benutzer, der abgestimmt hat. Leer, wenn Discord die Person nicht mehr kennt. Kann leer sein. |
-| Benutzer-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Discord-ID der Person, die abgestimmt hat. Kann leer sein. |
-| Benutzername | [Text](../../../value-types.md#STRING) | Der Discord-Benutzername der Person, die abgestimmt hat. Kann leer sein. |
-| Gewicht | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. Leer bei Testereignissen. Kann leer sein. |
-| Abgestimmt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Person abgestimmt hat. Leer bei Testereignissen. Kann leer sein. |
-| Läuft ab am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein. |
-| Parameter des Abstimmungslinks | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Abfrageparameter am Abstimmungslink, zum Beispiel ?source=discord. Kann leer sein. |
-| Ereignis | [top.gg-Abstimmungsereignis](../../../value-types.md#topgg-VoteEvent) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Ist ein Test | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob top.gg ein Testereignis statt eines echten gesendet hat. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name                           | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Benutzer                       | [Benutzer](../../../value-types.md#DISCORD_USER)                                                        | Der Discord-Benutzer, der abgestimmt hat. Leer, wenn Discord die Person nicht mehr kennt. Kann leer sein.                         |
+| Benutzer-ID                    | [Discord-ID](../../../value-types.md#SNOWFLAKE)                                                         | Die Discord-ID der Person, die abgestimmt hat. Kann leer sein.                                                                    |
+| Benutzername                   | [Text](../../../value-types.md#STRING)                                                                  | Der Discord-Benutzername der Person, die abgestimmt hat. Kann leer sein.                                                          |
+| Gewicht                        | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. Leer bei Testereignissen. Kann leer sein.                             |
+| Abgestimmt am                  | [Datum und Uhrzeit](../../../value-types.md#DATETIME)                                                   | Wann die Person abgestimmt hat. Leer bei Testereignissen. Kann leer sein.                                                         |
+| Läuft ab am                    | [Datum und Uhrzeit](../../../value-types.md#DATETIME)                                                   | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein.                                                       |
+| Parameter des Abstimmungslinks | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Abfrageparameter am Abstimmungslink, zum Beispiel ?source=discord. Kann leer sein.                                            |
+| Ereignis                       | [top.gg-Abstimmungsereignis](../../../value-types.md#topgg-VoteEvent)                                   | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Ist ein Test                   | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Ob top.gg ein Testereignis statt eines echten gesendet hat.                                                                       |
+| Zustellungs-ID                 | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |

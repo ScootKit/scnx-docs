@@ -15,10 +15,10 @@ Wird ausgelöst, wenn ein Thread in einem Kanal erstellt oder dearchiviert wird,
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread, der erstellt wurde. |
-| Neu erstellt | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn der Thread gerade erstellt wurde, falsch, wenn ein archivierter Thread dearchiviert wurde. |
+| Name         | Typ                                              | Details                                                                                               |
+| ------------ | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Thread       | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread, der erstellt wurde.                                                                           |
+| Neu erstellt | [Ja/Nein](../../../value-types.md#BOOLEAN)       | Wahr, wenn der Thread gerade erstellt wurde, falsch, wenn ein archivierter Thread dearchiviert wurde. |
 
 ### Thread gelöscht {#thread-deleted}
 
@@ -26,8 +26,8 @@ Wird ausgelöst, wenn ein Thread gelöscht wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                              | Details                     |
+| ------ | ------------------------------------------------ | --------------------------- |
 | Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread, der gelöscht wurde. |
 
 ### Thread aktualisiert {#thread-updated}
@@ -36,10 +36,10 @@ Wird ausgelöst, wenn ein Thread aktualisiert wird (umbenannt, archiviert, gespe
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread-Status vor der Aktualisierung. |
-| Aktueller Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread-Status nach der Aktualisierung. |
+| Name              | Typ                                              | Details                                |
+| ----------------- | ------------------------------------------------ | -------------------------------------- |
+| Vorheriger Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread-Status vor der Aktualisierung.  |
+| Aktueller Thread  | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread-Status nach der Aktualisierung. |
 
 ### Thread-Liste synchronisiert {#thread-list-synced}
 
@@ -47,10 +47,10 @@ Wird ausgelöst, wenn der Bot wieder Zugriff auf einen Kanal hat und Discord die
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | Server, zu dem die Threads gehören. |
-| Threads | Liste von [Thread](../../../value-types.md#THREAD_CHANNEL) | Synchronisierte Threads. |
+| Name       | Typ                                                               | Details                                  |
+| ---------- | ----------------------------------------------------------------- | ---------------------------------------- |
+| Server     | [Server](../../../value-types.md#GUILD)                           | Server, zu dem die Threads gehören.      |
+| Threads    | Liste von [Thread](../../../value-types.md#THREAD_CHANNEL)        | Synchronisierte Threads.                 |
 | Mitglieder | Liste von [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Synchronisierte Thread-Mitgliedschaften. |
 
 ### Thread-Mitglieder aktualisiert {#thread-members-updated}
@@ -59,11 +59,11 @@ Wird ausgelöst, wenn Mitglieder einem Thread hinzugefügt oder daraus entfernt 
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Thread | [Thread](../../../value-types.md#THREAD_CHANNEL) | Thread, dessen Mitgliederliste sich geändert hat. |
-| Hinzugefügte Mitglieder | Liste von [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglieder, die dem Thread hinzugefügt wurden. |
-| Entfernte Mitglied-IDs | Liste von [Discord-ID](../../../value-types.md#SNOWFLAKE) | IDs von Mitgliedern, die aus dem Thread entfernt wurden. |
+| Name                    | Typ                                                               | Details                                                  |
+| ----------------------- | ----------------------------------------------------------------- | -------------------------------------------------------- |
+| Thread                  | [Thread](../../../value-types.md#THREAD_CHANNEL)                  | Thread, dessen Mitgliederliste sich geändert hat.        |
+| Hinzugefügte Mitglieder | Liste von [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglieder, die dem Thread hinzugefügt wurden.           |
+| Entfernte Mitglied-IDs  | Liste von [Discord-ID](../../../value-types.md#SNOWFLAKE)         | IDs von Mitgliedern, die aus dem Thread entfernt wurden. |
 
 ### Thread-Mitglied aktualisiert {#thread-member-updated}
 
@@ -71,7 +71,7 @@ Wird ausgelöst, wenn die Mitgliedschaft des Bots im Thread aktualisiert wird (z
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriges Thread-Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Thread-Mitgliedstatus vor der Aktualisierung. |
-| Aktuelles Thread-Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Thread-Mitgliedstatus nach der Aktualisierung. |
+| Name                       | Typ                                                     | Details                                        |
+| -------------------------- | ------------------------------------------------------- | ---------------------------------------------- |
+| Vorheriges Thread-Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Thread-Mitgliedstatus vor der Aktualisierung.  |
+| Aktuelles Thread-Mitglied  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Thread-Mitgliedstatus nach der Aktualisierung. |

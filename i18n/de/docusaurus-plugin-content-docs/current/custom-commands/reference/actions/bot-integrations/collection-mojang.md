@@ -15,17 +15,17 @@ Sucht die UUID eines Minecraft-Java-Kontos über den Benutzernamen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzername | [Text](../../../value-types.md#STRING) | Ja | Der Minecraft-Benutzername, zum Beispiel Notch. Maximale Länge: 16 Zeichen. |
+| Name         | Typ                                    | Pflicht | Details                                                                     |
+| ------------ | -------------------------------------- | ------- | --------------------------------------------------------------------------- |
+| Benutzername | [Text](../../../value-types.md#STRING) | Ja      | Der Minecraft-Benutzername, zum Beispiel Notch. Maximale Länge: 16 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Konto existiert. Wenn nicht, ist alles andere leer. |
-| UUID | [Text](../../../value-types.md#STRING) | Die UUID ohne Bindestriche. Kann leer sein. |
-| Benutzername | [Text](../../../value-types.md#STRING) | Der Benutzername mit genauer Groß- und Kleinschreibung. Kann leer sein. |
+| Name         | Typ                                        | Details                                                                 |
+| ------------ | ------------------------------------------ | ----------------------------------------------------------------------- |
+| Gefunden     | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Konto existiert. Wenn nicht, ist alles andere leer.              |
+| UUID         | [Text](../../../value-types.md#STRING)     | Die UUID ohne Bindestriche. Kann leer sein.                             |
+| Benutzername | [Text](../../../value-types.md#STRING)     | Der Benutzername mit genauer Groß- und Kleinschreibung. Kann leer sein. |
 
 ### Minecraft-Profil abrufen {#mojang-get-profile}
 
@@ -33,17 +33,17 @@ Liest Benutzername und Skin eines Minecraft-Java-Kontos über die UUID.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| UUID | [Text](../../../value-types.md#STRING) | Ja | Die UUID des Kontos, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen“. Maximale Länge: 36 Zeichen. |
+| Name | Typ                                    | Pflicht | Details                                                                                                                    |
+| ---- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| UUID | [Text](../../../value-types.md#STRING) | Ja      | Die UUID des Kontos, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen". Maximale Länge: 36 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Konto existiert. Wenn nicht, ist alles andere leer. |
-| UUID | [Text](../../../value-types.md#STRING) | Die UUID ohne Bindestriche. Kann leer sein. |
-| Benutzername | [Text](../../../value-types.md#STRING) | Der aktuelle Benutzername. Kann leer sein. |
-| Skin | [URL](../../../value-types.md#URL) | Das Skin-Bild. Leer beim Standard-Skin. Kann leer sein. |
+| Name         | Typ                                        | Details                                                                        |
+| ------------ | ------------------------------------------ | ------------------------------------------------------------------------------ |
+| Gefunden     | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Konto existiert. Wenn nicht, ist alles andere leer.                     |
+| UUID         | [Text](../../../value-types.md#STRING)     | Die UUID ohne Bindestriche. Kann leer sein.                                    |
+| Benutzername | [Text](../../../value-types.md#STRING)     | Der aktuelle Benutzername. Kann leer sein.                                     |
+| Skin         | [URL](../../../value-types.md#URL)         | Das Skin-Bild. Leer beim Standard-Skin. Kann leer sein.                        |
 | Schmale Arme | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Skin das schmale Modell nutzt. Leer beim Standard-Skin. Kann leer sein. |
-| Umhang | [URL](../../../value-types.md#URL) | Das Umhang-Bild. Leer ohne Umhang. Kann leer sein. |
+| Umhang       | [URL](../../../value-types.md#URL)         | Das Umhang-Bild. Leer ohne Umhang. Kann leer sein.                             |

@@ -15,22 +15,22 @@ Reads a Roblox user by their user ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Roblox user ID | [ID](../../../value-types.md#ID) | Yes | The number in the user's Roblox profile address. |
+| Name           | Type                                   | Required | Details                                                                                                           |
+| -------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Connection     | [Text](../../../value-types.md#STRING) | No       | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Roblox user ID | [ID](../../../value-types.md#ID)       | Yes      | The number in the user's Roblox profile address.                                                                  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the user exists. When not, everything else is empty. |
-| Username | [Text](../../../value-types.md#STRING) | The username. May be empty. |
-| Display name | [Text](../../../value-types.md#STRING) | The name Roblox shows. May be empty. |
-| About | [Text](../../../value-types.md#STRING) | The profile text. May be empty. |
-| Created at | [Date and time](../../../value-types.md#DATETIME) | When the account was created. May be empty. |
-| Premium | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the user has Premium. Empty unless the key has the user.advanced:read permission. May be empty. |
-| ID verified | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the user verified their ID. Empty unless the key has the user.advanced:read permission. May be empty. |
+| Name         | Type                                              | Details                                                                                                       |
+| ------------ | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Found        | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the user exists. When not, everything else is empty.                                                  |
+| Username     | [Text](../../../value-types.md#STRING)            | The username. May be empty.                                                                                   |
+| Display name | [Text](../../../value-types.md#STRING)            | The name Roblox shows. May be empty.                                                                          |
+| About        | [Text](../../../value-types.md#STRING)            | The profile text. May be empty.                                                                               |
+| Created at   | [Date and time](../../../value-types.md#DATETIME) | When the account was created. May be empty.                                                                   |
+| Premium      | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the user has Premium. Empty unless the key has the user.advanced:read permission. May be empty.       |
+| ID verified  | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the user verified their ID. Empty unless the key has the user.advanced:read permission. May be empty. |
 
 ### Get Roblox group {#roblox-get-group}
 
@@ -38,24 +38,24 @@ Reads a Roblox group: name, owner and member count.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Group ID | [ID](../../../value-types.md#ID) | Yes | The number in the group's Roblox address. |
+| Name       | Type                                   | Required | Details                                                                                                           |
+| ---------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Group ID   | [ID](../../../value-types.md#ID)       | Yes      | The number in the group's Roblox address.                                                                         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the group exists. When not, everything else is empty. |
-| Name | [Text](../../../value-types.md#STRING) | The name of the group. May be empty. |
-| Description | [Text](../../../value-types.md#STRING) | The description of the group. May be empty. |
-| Owner user ID | [ID](../../../value-types.md#ID) | The Roblox user ID of the owner. Empty without an owner. May be empty. |
-| Members | [Whole number](../../../value-types.md#INTEGER) | How many members the group has. May be empty. |
-| Anyone can join | [Yes/No](../../../value-types.md#BOOLEAN) | Whether anyone can join without a request. May be empty. |
-| Locked | [Yes/No](../../../value-types.md#BOOLEAN) | Whether Roblox locked the group. May be empty. |
-| Verified | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the group has the verified badge. May be empty. |
-| Created at | [Date and time](../../../value-types.md#DATETIME) | When the group was created. May be empty. |
+| Name            | Type                                              | Details                                                                |
+| --------------- | ------------------------------------------------- | ---------------------------------------------------------------------- |
+| Found           | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the group exists. When not, everything else is empty.          |
+| Name            | [Text](../../../value-types.md#STRING)            | The name of the group. May be empty.                                   |
+| Description     | [Text](../../../value-types.md#STRING)            | The description of the group. May be empty.                            |
+| Owner user ID   | [ID](../../../value-types.md#ID)                  | The Roblox user ID of the owner. Empty without an owner. May be empty. |
+| Members         | [Whole number](../../../value-types.md#INTEGER)   | How many members the group has. May be empty.                          |
+| Anyone can join | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether anyone can join without a request. May be empty.               |
+| Locked          | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether Roblox locked the group. May be empty.                         |
+| Verified        | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the group has the verified badge. May be empty.                |
+| Created at      | [Date and time](../../../value-types.md#DATETIME) | When the group was created. May be empty.                              |
 
 ### Get group roles {#roblox-list-group-roles}
 
@@ -63,19 +63,19 @@ Lists the roles (ranks) of a Roblox group, lowest rank first.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Group ID | [ID](../../../value-types.md#ID) | Yes | The number in the group's Roblox address. |
-| How many | [Whole number](../../../value-types.md#INTEGER) | No | How many roles per page, 1 to 20. Empty: 20. Value: 1 to 20. Default: `20`. |
-| Next page | [Text](../../../value-types.md#STRING) | No | The "Next page" output of the previous call. Empty: the first page. Maximum length: 1000 characters. |
+| Name       | Type                                            | Required | Details                                                                                                           |
+| ---------- | ----------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING)          | No       | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Group ID   | [ID](../../../value-types.md#ID)                | Yes      | The number in the group's Roblox address.                                                                         |
+| How many   | [Whole number](../../../value-types.md#INTEGER) | No       | How many roles per page, 1 to 20. Empty: 20. Value: 1 to 20. Default: `20`.                                       |
+| Next page  | [Text](../../../value-types.md#STRING)          | No       | The "Next page" output of the previous call. Empty: the first page. Maximum length: 1000 characters.              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Roles | List of [Roblox group role](../../../value-types.md#roblox-Role) | The roles, lowest rank first. |
-| Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
+| Name      | Type                                                             | Details                                                                                |
+| --------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Roles     | List of [Roblox group role](../../../value-types.md#roblox-Role) | The roles, lowest rank first.                                                          |
+| Next page | [Text](../../../value-types.md#STRING)                           | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
 ### Get group members {#roblox-list-group-members}
 
@@ -83,19 +83,19 @@ Lists one page of the members of a Roblox group with their role.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Group ID | [ID](../../../value-types.md#ID) | Yes | The number in the group's Roblox address. |
-| How many | [Whole number](../../../value-types.md#INTEGER) | No | How many members per page, 1 to 100. Empty: 25. Value: 1 to 100. Default: `25`. |
-| Next page | [Text](../../../value-types.md#STRING) | No | The "Next page" output of the previous call. Empty: the first page. Maximum length: 1000 characters. |
+| Name       | Type                                            | Required | Details                                                                                                           |
+| ---------- | ----------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING)          | No       | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Group ID   | [ID](../../../value-types.md#ID)                | Yes      | The number in the group's Roblox address.                                                                         |
+| How many   | [Whole number](../../../value-types.md#INTEGER) | No       | How many members per page, 1 to 100. Empty: 25. Value: 1 to 100. Default: `25`.                                   |
+| Next page  | [Text](../../../value-types.md#STRING)          | No       | The "Next page" output of the previous call. Empty: the first page. Maximum length: 1000 characters.              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Members | List of [Roblox group member](../../../value-types.md#roblox-Membership) | The members of this page. |
-| Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
+| Name      | Type                                                                     | Details                                                                                |
+| --------- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| Members   | List of [Roblox group member](../../../value-types.md#roblox-Membership) | The members of this page.                                                              |
+| Next page | [Text](../../../value-types.md#STRING)                                   | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
 ### Get experience {#roblox-get-universe}
 
@@ -103,22 +103,22 @@ Reads a Roblox experience (universe) by its universe ID. Get the universe ID of 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Universe ID | [ID](../../../value-types.md#ID) | Yes | The universe ID of the experience. |
+| Name        | Type                                   | Required | Details                                                                                                           |
+| ----------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Connection  | [Text](../../../value-types.md#STRING) | No       | The Roblox Open Cloud connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Universe ID | [ID](../../../value-types.md#ID)       | Yes      | The universe ID of the experience.                                                                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the experience exists. When not, everything else is empty. |
-| Name | [Text](../../../value-types.md#STRING) | The name of the experience. May be empty. |
-| Description | [Text](../../../value-types.md#STRING) | The description of the experience. May be empty. |
-| Visibility | [Text](../../../value-types.md#STRING) | PUBLIC or PRIVATE. May be empty. |
-| Owner user ID | [ID](../../../value-types.md#ID) | The owner when a user owns it. May be empty. |
-| Owner group ID | [ID](../../../value-types.md#ID) | The owner when a group owns it. May be empty. |
-| Voice chat | [Yes/No](../../../value-types.md#BOOLEAN) | Whether voice chat is on. May be empty. |
-| Private server price | [Whole number](../../../value-types.md#INTEGER) | The price of a private server in Robux. Empty when private servers are off. May be empty. |
-| Created at | [Date and time](../../../value-types.md#DATETIME) | When the experience was created. May be empty. |
-| Updated at | [Date and time](../../../value-types.md#DATETIME) | When the experience was last changed. May be empty. |
+| Name                 | Type                                              | Details                                                                                   |
+| -------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Found                | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the experience exists. When not, everything else is empty.                        |
+| Name                 | [Text](../../../value-types.md#STRING)            | The name of the experience. May be empty.                                                 |
+| Description          | [Text](../../../value-types.md#STRING)            | The description of the experience. May be empty.                                          |
+| Visibility           | [Text](../../../value-types.md#STRING)            | PUBLIC or PRIVATE. May be empty.                                                          |
+| Owner user ID        | [ID](../../../value-types.md#ID)                  | The owner when a user owns it. May be empty.                                              |
+| Owner group ID       | [ID](../../../value-types.md#ID)                  | The owner when a group owns it. May be empty.                                             |
+| Voice chat           | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether voice chat is on. May be empty.                                                   |
+| Private server price | [Whole number](../../../value-types.md#INTEGER)   | The price of a private server in Robux. Empty when private servers are off. May be empty. |
+| Created at           | [Date and time](../../../value-types.md#DATETIME) | When the experience was created. May be empty.                                            |
+| Updated at           | [Date and time](../../../value-types.md#DATETIME) | When the experience was last changed. May be empty.                                       |

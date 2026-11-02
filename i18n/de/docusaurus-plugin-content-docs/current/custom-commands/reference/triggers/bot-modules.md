@@ -15,15 +15,15 @@ Wird nach einem wiederkehrenden Zeitplan (Cron) in der Zeitzone des Bots ausgel�
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Cron-Ausdruck | [Text](../../value-types.md#STRING) | Ja | Standard-Cron-Ausdruck (5 Felder, z. B. "0 9 * * 1"). Ein Zeitplan darf höchstens alle 5 Minuten laufen. Länge: 9 bis 100 Zeichen. Standard: `0 9 * * 1`. |
-| Zeitzone | [Text](../../value-types.md#STRING) | Nein | Wird nicht mehr verwendet: Zeitpläne laufen immer in der Zeitzone des Bots. |
+| Name          | Typ                                 | Pflicht | Details                                                                                                                                                   |
+| ------------- | ----------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cron-Ausdruck | [Text](../../value-types.md#STRING) | Ja      | Standard-Cron-Ausdruck (5 Felder, z. B. "0 9 * * 1"). Ein Zeitplan darf höchstens alle 5 Minuten laufen. Länge: 9 bis 100 Zeichen. Standard: `0 9 * * 1`. |
+| Zeitzone      | [Text](../../value-types.md#STRING) | Nein    | Wird nicht mehr verwendet: Zeitpläne laufen immer in der Zeitzone des Bots.                                                                               |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                | Details                                         |
+| ------------ | -------------------------------------------------- | ----------------------------------------------- |
 | Ausgelöst um | [Datum und Uhrzeit](../../value-types.md#DATETIME) | Zeitpunkt, zu dem der Zeitplan ausgelöst wurde. |
 
 ### Abonnement erstellt {#subscription-created}
@@ -32,8 +32,8 @@ Wird ausgelöst, wenn ein Benutzer ein neues Abonnement für eine der Anwendungs
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                             | Details                       |
+| ---------- | ----------------------------------------------- | ----------------------------- |
 | Abonnement | [Abonnement](../../value-types.md#SUBSCRIPTION) | Das neu erstellte Abonnement. |
 
 ### Abonnement aktualisiert {#subscription-updated}
@@ -42,10 +42,10 @@ Wird ausgelöst, wenn sich ein Abonnement ändert (z. B. Status, Zeitraum, Erneu
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                  | Typ                                             | Details                                                                 |
+| --------------------- | ----------------------------------------------- | ----------------------------------------------------------------------- |
 | Vorheriges Abonnement | [Abonnement](../../value-types.md#SUBSCRIPTION) | Abonnement, bevor die Aktualisierung stattgefunden hat. Kann leer sein. |
-| Aktuelles Abonnement | [Abonnement](../../value-types.md#SUBSCRIPTION) | Abonnement nach der Aktualisierung. |
+| Aktuelles Abonnement  | [Abonnement](../../value-types.md#SUBSCRIPTION) | Abonnement nach der Aktualisierung.                                     |
 
 ### Abonnement gelöscht {#subscription-deleted}
 
@@ -53,6 +53,6 @@ Wird ausgelöst, wenn ein Abonnement gelöscht wird.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                             | Details                   |
+| ---------- | ----------------------------------------------- | ------------------------- |
 | Abonnement | [Abonnement](../../value-types.md#SUBSCRIPTION) | Das gelöschte Abonnement. |

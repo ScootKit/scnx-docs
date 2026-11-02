@@ -15,25 +15,25 @@ Reads the store details of one Steam game by its app ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| App ID | [Whole number](../../../value-types.md#INTEGER) | Yes | The number in the game's store address, for example 730. Minimum: 1. |
-| Country | [Text](../../../value-types.md#STRING) | No | Two-letter country code for the price and currency, for example de. Empty: us. Maximum length: 2 characters. Default: `us`. |
-| Language | [Text](../../../value-types.md#STRING) | No | The language of the texts, for example german. Empty: english. Maximum length: 20 characters. Default: `english`. |
+| Name     | Type                                            | Required | Details                                                                                                                     |
+| -------- | ----------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| App ID   | [Whole number](../../../value-types.md#INTEGER) | Yes      | The number in the game's store address, for example 730. Minimum: 1.                                                        |
+| Country  | [Text](../../../value-types.md#STRING)          | No       | Two-letter country code for the price and currency, for example de. Empty: us. Maximum length: 2 characters. Default: `us`. |
+| Language | [Text](../../../value-types.md#STRING)          | No       | The language of the texts, for example german. Empty: english. Maximum length: 20 characters. Default: `english`.           |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the store has this app. When not, everything else is empty. |
-| Name | [Text](../../../value-types.md#STRING) | The name of the game. May be empty. |
-| Type | [Text](../../../value-types.md#STRING) | game, dlc, demo, music or another kind. May be empty. |
-| Short description | [Text](../../../value-types.md#STRING) | The short store description. May be empty. |
-| Header image | [URL](../../../value-types.md#URL) | The store header image. May be empty. |
-| Free to play | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the game is free. May be empty. |
-| Price | [Text](../../../value-types.md#STRING) | The current price as shown, for example 19,99€. Empty for free or unreleased games. May be empty. |
-| Discount in % | [Whole number](../../../value-types.md#INTEGER) | The current discount, in percent. May be empty. |
-| Release date | [Text](../../../value-types.md#STRING) | The release date as the store shows it, for example 21 Aug, 2012. May be empty. |
-| Coming soon | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the game is not out yet. May be empty. |
-| Developers | List of [Text](../../../value-types.md#STRING) | The developers. May be empty. |
-| Store link | [URL](../../../value-types.md#URL) | The store page. May be empty. |
+| Name              | Type                                            | Details                                                                                           |
+| ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Found             | [Yes/No](../../../value-types.md#BOOLEAN)       | Whether the store has this app. When not, everything else is empty.                               |
+| Name              | [Text](../../../value-types.md#STRING)          | The name of the game. May be empty.                                                               |
+| Type              | [Text](../../../value-types.md#STRING)          | game, dlc, demo, music or another kind. May be empty.                                             |
+| Short description | [Text](../../../value-types.md#STRING)          | The short store description. May be empty.                                                        |
+| Header image      | [URL](../../../value-types.md#URL)              | The store header image. May be empty.                                                             |
+| Free to play      | [Yes/No](../../../value-types.md#BOOLEAN)       | Whether the game is free. May be empty.                                                           |
+| Price             | [Text](../../../value-types.md#STRING)          | The current price as shown, for example 19,99€. Empty for free or unreleased games. May be empty. |
+| Discount in %     | [Whole number](../../../value-types.md#INTEGER) | The current discount, in percent. May be empty.                                                   |
+| Release date      | [Text](../../../value-types.md#STRING)          | The release date as the store shows it, for example 21 Aug, 2012. May be empty.                   |
+| Coming soon       | [Yes/No](../../../value-types.md#BOOLEAN)       | Whether the game is not out yet. May be empty.                                                    |
+| Developers        | List of [Text](../../../value-types.md#STRING)  | The developers. May be empty.                                                                     |
+| Store link        | [URL](../../../value-types.md#URL)              | The store page. May be empty.                                                                     |

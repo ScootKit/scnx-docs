@@ -15,14 +15,14 @@ Behandelt einen Discord-Benutzer als Mitglied dieses Servers. Gibt nichts zurüc
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Ja | Benutzer, der als Mitglied aufgelöst wird. |
+| Name     | Typ                                              | Pflicht | Details                                    |
+| -------- | ------------------------------------------------ | ------- | ------------------------------------------ |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Ja      | Benutzer, der als Mitglied aufgelöst wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                                                                             |
+| -------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Das Server-Mitglied oder leer, falls nicht Mitglied dieses Servers. Kann leer sein. |
 
 ### Interaktion als Button-Klick behandeln {#cast-interaction-as-button}
@@ -31,14 +31,14 @@ Grenzt eine generische Interaktion auf einen Button-Klick ein. Gibt nichts zurü
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Interaktion, deren Typ eingegrenzt wird. |
+| Name        | Typ                                                | Pflicht | Details                                  |
+| ----------- | -------------------------------------------------- | ------- | ---------------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Interaktion, deren Typ eingegrenzt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name               | Typ                                                        | Details                                                                                      |
+| ------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
 | Button-Interaktion | [Button-Klick](../../../value-types.md#BUTTON_INTERACTION) | Eingegrenzte Button-Interaktion oder leer, falls nicht vom Typ Button-Klick. Kann leer sein. |
 
 ### Interaktion als Auswahlmenü behandeln {#cast-interaction-as-string-select}
@@ -47,14 +47,14 @@ Grenzt eine generische Interaktion auf eine Auswahlmenü-Einreichung ein. Gibt n
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Interaktion, deren Typ eingegrenzt wird. |
+| Name        | Typ                                                | Pflicht | Details                                  |
+| ----------- | -------------------------------------------------- | ------- | ---------------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Interaktion, deren Typ eingegrenzt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                    | Typ                                                                               | Details                                                                                        |
+| ----------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | Auswahlmenü-Interaktion | [Auswahlmenü-Interaktion](../../../value-types.md#STRING_SELECT_MENU_INTERACTION) | Eingegrenzte Auswahlmenü-Einreichung oder leer, falls es kein Auswahlmenü war. Kann leer sein. |
 
 ### Interaktion als Benutzer-Auswahlmenü behandeln {#cast-interaction-as-user-select}
@@ -63,14 +63,14 @@ Grenzt eine allgemeine Interaktion auf eine Mitglieder-Auswahlmenü-Antwort ein.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die einzugrenzende Interaktion. |
+| Name        | Typ                                                | Pflicht | Details                         |
+| ----------- | -------------------------------------------------- | ------- | ------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Die einzugrenzende Interaktion. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                             | Typ                                                                                      | Details                                                                                                                                                   |
+| -------------------------------- | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Benutzer-Auswahlmenü-Interaktion | [Benutzer-Auswahlmenü-Interaktion](../../../value-types.md#USER_SELECT_MENU_INTERACTION) | Die eingegrenzte Mitglieder-Auswahl, oder leer, wenn es keine ist. Die gewählten Werte kommen als echte Mitglieder zurück, nicht als IDs. Kann leer sein. |
 
 ### Interaktion als Rollen-Auswahlmenü behandeln {#cast-interaction-as-role-select}
@@ -79,14 +79,14 @@ Grenzt eine allgemeine Interaktion auf eine Rollen-Auswahlmenü-Antwort ein. Gib
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die einzugrenzende Interaktion. |
+| Name        | Typ                                                | Pflicht | Details                         |
+| ----------- | -------------------------------------------------- | ------- | ------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Die einzugrenzende Interaktion. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                           | Typ                                                                                    | Details                                                                                                                                           |
+| ------------------------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Rollen-Auswahlmenü-Interaktion | [Rollen-Auswahlmenü-Interaktion](../../../value-types.md#ROLE_SELECT_MENU_INTERACTION) | Die eingegrenzte Rollen-Auswahl, oder leer, wenn es keine ist. Die gewählten Werte kommen als echte Rollen zurück, nicht als IDs. Kann leer sein. |
 
 ### Interaktion als Kanal-Auswahlmenü behandeln {#cast-interaction-as-channel-select}
@@ -95,14 +95,14 @@ Grenzt eine allgemeine Interaktion auf eine Kanal-Auswahlmenü-Antwort ein. Gibt
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die einzugrenzende Interaktion. |
+| Name        | Typ                                                | Pflicht | Details                         |
+| ----------- | -------------------------------------------------- | ------- | ------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Die einzugrenzende Interaktion. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                          | Typ                                                                                      | Details                                                                                                                                          |
+| ----------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Kanal-Auswahlmenü-Interaktion | [Kanal-Auswahlmenü-Interaktion](../../../value-types.md#CHANNEL_SELECT_MENU_INTERACTION) | Die eingegrenzte Kanal-Auswahl, oder leer, wenn es keine ist. Die gewählten Werte kommen als echte Kanäle zurück, nicht als IDs. Kann leer sein. |
 
 ### Interaktion als Auswahlmenü für Benutzer oder Rollen behandeln {#cast-interaction-as-mentionable-select}
@@ -111,14 +111,14 @@ Grenzt eine allgemeine Interaktion auf eine Mitglieder-oder-Rollen-Auswahlmenü-
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die einzugrenzende Interaktion. |
+| Name        | Typ                                                | Pflicht | Details                         |
+| ----------- | -------------------------------------------------- | ------- | ------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Die einzugrenzende Interaktion. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                                                 | Typ                                                                                                                 | Details                                                                                                                                                                  |
+| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Interaktion mit Auswahlmenü für Benutzer oder Rollen | [Interaktion mit Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU_INTERACTION) | Die eingegrenzte Mitglieder-oder-Rollen-Auswahl, oder leer, wenn es keine ist. Gewählte Mitglieder und gewählte Rollen liegen in zwei getrennten Listen. Kann leer sein. |
 
 ### Interaktion als Modal-Einreichung behandeln {#cast-interaction-as-modal-submit}
@@ -127,14 +127,14 @@ Grenzt eine generische Interaktion auf eine Modal-Einreichung ein. Gibt nichts z
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Interaktion, deren Typ eingegrenzt wird. |
+| Name        | Typ                                                | Pflicht | Details                                  |
+| ----------- | -------------------------------------------------- | ------- | ---------------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Interaktion, deren Typ eingegrenzt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                           | Typ                                                                | Details                                                                                          |
+| ------------------------------ | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
 | Modal-Einreichungs-Interaktion | [Modal absenden](../../../value-types.md#MODAL_SUBMIT_INTERACTION) | Eingegrenzte Modal-Einreichung oder leer, falls nicht vom Typ Modal-Einreichung. Kann leer sein. |
 
 ### Interaktion als Slash-Befehl behandeln {#cast-interaction-as-slash-command}
@@ -143,12 +143,12 @@ Grenzt eine generische Interaktion auf einen Slash-Befehl ein. Gibt nichts zurü
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Interaktion, deren Typ eingegrenzt wird. |
+| Name        | Typ                                                | Pflicht | Details                                  |
+| ----------- | -------------------------------------------------- | ------- | ---------------------------------------- |
+| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja      | Interaktion, deren Typ eingegrenzt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                     | Typ                                                               | Details                                                                                 |
+| ------------------------ | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | Slash-Befehl-Interaktion | [Slash-Befehl](../../../value-types.md#SLASH_COMMAND_INTERACTION) | Eingegrenzter Slash-Befehl oder leer, falls nicht vom Typ Slash-Befehl. Kann leer sein. |

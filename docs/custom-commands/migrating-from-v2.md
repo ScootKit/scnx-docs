@@ -35,14 +35,14 @@ Only the server owner and co-owners can turn on V3. It's a server-wide decision,
 
 ### If something goes wrong {#enable-problems}
 
-| What you see                                                              | Cause and fix                                                                                                                         |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| "Only the server owner or co-owners can enable this"                      | You're not the owner or a co-owner. Ask one of them to open the page.                                                                 |
-| The **Enable Custom Commands V3** button is greyed out                    | Tick both boxes under **Before you enable**.                                                                                          |
-| "We couldn't enable Custom Commands V3"                                   | Try again in a moment.                                                                                                                |
-| "Too many Custom Commands V3 changes for this server"                     | You turned V3 on and off several times in a row. Wait a while, then try again.                                                        |
-| "This bot was just restarted" after **Restart bot now**                   | V3 is already turned on, but your bot can't restart again so soon. Wait until the time shown, then restart it from your bot's dashboard. |
-| Your V3 flows don't run at all                                            | Your bot hasn't restarted since you turned V3 on. Restart it.                                                                         |
+| What you see                                            | Cause and fix                                                                                                                            |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| "Only the server owner or co-owners can enable this"    | You're not the owner or a co-owner. Ask one of them to open the page.                                                                    |
+| The **Enable Custom Commands V3** button is greyed out  | Tick both boxes under **Before you enable**.                                                                                             |
+| "We couldn't enable Custom Commands V3"                 | Try again in a moment.                                                                                                                   |
+| "Too many Custom Commands V3 changes for this server"   | You turned V3 on and off several times in a row. Wait a while, then try again.                                                           |
+| "This bot was just restarted" after **Restart bot now** | V3 is already turned on, but your bot can't restart again so soon. Wait until the time shown, then restart it from your bot's dashboard. |
+| Your V3 flows don't run at all                          | Your bot hasn't restarted since you turned V3 on. Restart it.                                                                            |
 
 :::caution Check who can edit custom commands first
 Once V3 is on, anyone who can edit custom commands can build flows that use your bot's permissions. That includes [trusted admins](/docs/scnx/guilds/trusted-admins#permissions) with the **Custom-Bot**: Change and Reload Configuration / Custom Command permission. Through a flow, they could assign roles or ban members even if they couldn't do that themselves. Review your trusted admins before you turn V3 on.
@@ -62,15 +62,15 @@ Discord allows each command name only once per server. If a V3 flow uses a slash
 
 ## What changes for you {#what-changes}
 
-| In V2                                                         | In V3                                                                                                                                                                  |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A command has a trigger and a list of action blocks.          | A [flow](/docs/custom-commands/flows) has one trigger and a chain of steps, with branches, loops and conditions.                                                       |
-| Triggers are slash commands, buttons, messages and modals.    | Flows also react to [server events](/docs/custom-commands/triggers) like members joining, reactions and schedules.                                                     |
-| There's no built-in way to store data.                        | Flows can keep data in [storage](/docs/custom-commands/storage).                                                                                                      |
-| Commands are a flat list.                                     | Flows can be grouped into folders and [modules](/docs/custom-commands/modules) with their own settings.                                                               |
-| There's no history of single command runs.                    | Every run is logged in the [run history](/docs/custom-commands/executions), and you can do a test run before going live.                                             |
-| Share links copy a single command.                            | You share whole modules, and can install apps from the [marketplace](/docs/custom-commands/sharing).                                                                  |
-| Your plan limits how many commands are turned on.             | Your plan sets an [activity budget](/docs/custom-commands/limits-and-safety#activity-budget) for how much your flows can do.                                          |
+| In V2                                                      | In V3                                                                                                                        |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| A command has a trigger and a list of action blocks.       | A [flow](/docs/custom-commands/flows) has one trigger and a chain of steps, with branches, loops and conditions.             |
+| Triggers are slash commands, buttons, messages and modals. | Flows also react to [server events](/docs/custom-commands/triggers) like members joining, reactions and schedules.           |
+| There's no built-in way to store data.                     | Flows can keep data in [storage](/docs/custom-commands/storage).                                                             |
+| Commands are a flat list.                                  | Flows can be grouped into folders and [modules](/docs/custom-commands/modules) with their own settings.                      |
+| There's no history of single command runs.                 | Every run is logged in the [run history](/docs/custom-commands/executions), and you can do a test run before going live.     |
+| Share links copy a single command.                         | You share whole modules, and can install apps from the [marketplace](/docs/custom-commands/sharing).                         |
+| Your plan limits how many commands are turned on.          | Your plan sets an [activity budget](/docs/custom-commands/limits-and-safety#activity-budget) for how much your flows can do. |
 
 Flows also start as a draft. A new flow does nothing until you switch it from **Draft** to **Active** and save.
 

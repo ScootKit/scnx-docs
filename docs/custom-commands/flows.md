@@ -92,21 +92,21 @@ To keep going after a step that may fail, wrap it in **Try**. Steps inside **Try
 
 These steps from the [Control flow](/docs/custom-commands/reference/actions/control-flow) category shape how your flow runs:
 
-| Step                                 | What it does                                                                                       |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| **If**                               | Runs **If true** when the condition is true, otherwise the **Otherwise** branch (which is optional). |
-| **If it has a value**                | Runs one branch when a value is set and another when it's empty.                                   |
-| **Switch**                           | Runs the branch whose value matches. Add a default case for everything else.                        |
-| **Switch on kind**                   | Runs a different branch for each kind of value, for values that can be one of several kinds.       |
-| **Branch on subcommand**             | Runs one branch per subcommand of your slash command.                                               |
-| **Random branch**                    | Picks a branch at random, using the weights you set in percent.                                    |
-| **Try**                              | Runs its steps, and if one fails, runs **If a step fails** instead of failing the whole flow.      |
-| **For each item**                    | Runs its steps once for every item in a list.                                                      |
-| **For each lookup table entry**      | Runs its steps once for every entry in a lookup table.                                             |
-| **Repeat**                           | Runs its steps a fixed number of times.                                                            |
-| **Wait**                             | Pauses the flow for a while.                                                                       |
-| **Stop flow**                        | Ends the flow right there. Steps after it can never run and show as **Unreachable**.               |
-| **Note**                             | A sticky note for you and your team. It does nothing when the flow runs.                           |
+| Step                            | What it does                                                                                         |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **If**                          | Runs **If true** when the condition is true, otherwise the **Otherwise** branch (which is optional). |
+| **If it has a value**           | Runs one branch when a value is set and another when it's empty.                                     |
+| **Switch**                      | Runs the branch whose value matches. Add a default case for everything else.                         |
+| **Switch on kind**              | Runs a different branch for each kind of value, for values that can be one of several kinds.         |
+| **Branch on subcommand**        | Runs one branch per subcommand of your slash command.                                                |
+| **Random branch**               | Picks a branch at random, using the weights you set in percent.                                      |
+| **Try**                         | Runs its steps, and if one fails, runs **If a step fails** instead of failing the whole flow.        |
+| **For each item**               | Runs its steps once for every item in a list.                                                        |
+| **For each lookup table entry** | Runs its steps once for every entry in a lookup table.                                               |
+| **Repeat**                      | Runs its steps a fixed number of times.                                                              |
+| **Wait**                        | Pauses the flow for a while.                                                                         |
+| **Stop flow**                   | Ends the flow right there. Steps after it can never run and show as **Unreachable**.                 |
+| **Note**                        | A sticky note for you and your team. It does nothing when the flow runs.                             |
 
 Use **Add branch** on steps like **Switch** and **Random branch** to add more branches. On **Random branch**, the weights may add up to less than 100%: the rest is the chance that no branch runs. **Break loop** and **Continue loop** leave a loop early or skip to its next round. They only work inside a loop.
 
@@ -163,24 +163,24 @@ If you try to turn on a flow with blocking issues, you see "This flow can't be a
 
 Some steps carry a badge of their own:
 
-| Badge                | What it means                                                                                         |
-| -------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Incomplete**       | A required input isn't set, or a fixed value is invalid.                                              |
-| **Broken connection** | An input uses a value that no longer exists.                                                         |
-| **Unreachable**      | A step above it, like **Stop flow**, always ends the flow first.                                      |
-| **Deprecated**       | The action still works but may be removed later. Replace it when you can.                             |
-| **Check value**      | A fixed value doesn't fit its type. It still runs for now, but will be refused later.                 |
-| "Unknown action"     | Your bot's version doesn't know this action, for example in a flow from a newer app. It's kept as it is, and you can move or delete it. Restart your bot to update it. |
+| Badge                 | What it means                                                                                                                                                          |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Incomplete**        | A required input isn't set, or a fixed value is invalid.                                                                                                               |
+| **Broken connection** | An input uses a value that no longer exists.                                                                                                                           |
+| **Unreachable**       | A step above it, like **Stop flow**, always ends the flow first.                                                                                                       |
+| **Deprecated**        | The action still works but may be removed later. Replace it when you can.                                                                                              |
+| **Check value**       | A fixed value doesn't fit its type. It still runs for now, but will be refused later.                                                                                  |
+| "Unknown action"      | Your bot's version doesn't know this action, for example in a flow from a newer app. It's kept as it is, and you can move or delete it. Restart your bot to update it. |
 
 ## Common mistakes {#mistakes}
 
-| What happens                                                  | Why, and how to fix it                                                                                                     |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| The flow never runs                                           | It's still a **Draft**, or its module is **Disabled**. Check the toolbar toggle and the module.                           |
-| A button says "This interaction failed" in Discord            | The flow behind it isn't active, was deleted, or never answered. Check its run history.                                    |
-| The run fails with a missing permission                       | Your bot lacks a Discord permission, or its role is below the role or member it acts on. Move your bot's role up.        |
-| An input lost its value after you moved or deleted a step     | Values are only available below the step that makes them. Move the step back, or pick a new value.                       |
-| The flow runs twice for the same thing                        | Two active flows, or a module and its duplicate, react to the same trigger. Turn one off.                                 |
+| What happens                                              | Why, and how to fix it                                                                                            |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| The flow never runs                                       | It's still a **Draft**, or its module is **Disabled**. Check the toolbar toggle and the module.                   |
+| A button says "This interaction failed" in Discord        | The flow behind it isn't active, was deleted, or never answered. Check its run history.                           |
+| The run fails with a missing permission                   | Your bot lacks a Discord permission, or its role is below the role or member it acts on. Move your bot's role up. |
+| An input lost its value after you moved or deleted a step | Values are only available below the step that makes them. Move the step back, or pick a new value.                |
+| The flow runs twice for the same thing                    | Two active flows, or a module and its duplicate, react to the same trigger. Turn one off.                         |
 
 ## Cooldowns {#cooldowns}
 

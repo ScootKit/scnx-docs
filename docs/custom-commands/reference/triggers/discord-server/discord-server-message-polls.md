@@ -17,16 +17,16 @@ Required intents: `GuildMessagePolls`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                    |
+| -------- | --------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Poll | [Poll](../../../value-types.md#MESSAGE_POLL) | Poll that received the vote. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that voted. |
+| Name      | Type                                            | Details                                   |
+| --------- | ----------------------------------------------- | ----------------------------------------- |
+| Poll      | [Poll](../../../value-types.md#MESSAGE_POLL)    | Poll that received the vote.              |
+| User      | [User](../../../value-types.md#DISCORD_USER)    | User that voted.                          |
 | Answer ID | [Whole number](../../../value-types.md#INTEGER) | ID of the poll answer that was voted for. |
 
 ### Poll vote removed {#poll-vote-removed}
@@ -37,14 +37,14 @@ Required intents: `GuildMessagePolls`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                    |
+| -------- | --------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Poll | [Poll](../../../value-types.md#MESSAGE_POLL) | Poll the vote was removed from. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that removed their vote. |
+| Name      | Type                                            | Details                              |
+| --------- | ----------------------------------------------- | ------------------------------------ |
+| Poll      | [Poll](../../../value-types.md#MESSAGE_POLL)    | Poll the vote was removed from.      |
+| User      | [User](../../../value-types.md#DISCORD_USER)    | User that removed their vote.        |
 | Answer ID | [Whole number](../../../value-types.md#INTEGER) | ID of the answer the user voted for. |

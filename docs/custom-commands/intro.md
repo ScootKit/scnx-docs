@@ -29,14 +29,14 @@ Steps can make decisions, repeat for every item in a list, wait for an answer, c
 
 If you used our older Custom Commands, here is what changes for you:
 
-| Custom Commands V2                                                         | Custom Commands V3                                                                                        |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| A few triggers: slash command, message, button, modal or no trigger.       | Many more triggers, including server events, schedules and flows that start other flows.                  |
-| Actions run in action blocks, all at once or one at random.                | Steps run in order, with real conditions, loops, error handling and waits.                                |
-| Values come from fixed `%parameters%`.                                     | Every step can use any value an earlier step or the trigger produced.                                     |
-| No memory between runs.                                                    | Flows can store and read data, per member, per server or under your own key.                             |
-| Each command stands alone.                                                 | Flows can be grouped into modules with their own settings, storage and folders.                           |
-| No history of what happened.                                               | Every run is logged, and you can test a flow without it changing anything on your server.                |
+| Custom Commands V2                                                   | Custom Commands V3                                                                        |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| A few triggers: slash command, message, button, modal or no trigger. | Many more triggers, including server events, schedules and flows that start other flows.  |
+| Actions run in action blocks, all at once or one at random.          | Steps run in order, with real conditions, loops, error handling and waits.                |
+| Values come from fixed `%parameters%`.                               | Every step can use any value an earlier step or the trigger produced.                     |
+| No memory between runs.                                              | Flows can store and read data, per member, per server or under your own key.              |
+| Each command stands alone.                                           | Flows can be grouped into modules with their own settings, storage and folders.           |
+| No history of what happened.                                         | Every run is logged, and you can test a flow without it changing anything on your server. |
 
 Turning on V3 doesn't touch your V2 commands. They keep running and stay editable next to your new flows. If you want to move a command over, see [Moving from V2](/docs/custom-commands/migrating-from-v2).
 
@@ -49,11 +49,11 @@ Turning on V3 doesn't touch your V2 commands. They keep running and stay editabl
 
 ## Who can do what {#permissions}
 
-| Task                                              | Who                                                                                                   |
-| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Turn V3 on, or switch back to V2                  | The server owner and co-owners                                                                        |
+| Task                                              | Who                                                                                                                                               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Turn V3 on, or switch back to V2                  | The server owner and co-owners                                                                                                                    |
 | Build, edit, turn on and delete flows and modules | Everyone who can edit your bot's configuration, including trusted admins with the **Change and Reload Configuration / Custom Command** permission |
-| Use the commands and buttons your flows create    | Your members, limited by the **Required permissions** you set on each command                         |
+| Use the commands and buttons your flows create    | Your members, limited by the **Required permissions** you set on each command                                                                     |
 
 ## Get access {#access}
 
@@ -108,12 +108,12 @@ Once V3 is on, the sidebar entry reads **Custom Commands V3**. It opens the over
 
 The main area lists what you have built:
 
-| Section          | What it holds                                                                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Apps**         | Apps you installed from the marketplace. See [Sharing & the marketplace](/docs/custom-commands/sharing).                    |
-| **Modules**      | Modules you built yourself. Each card shows its icon, name, number of flows and whether it is enabled. See [Modules & templates](/docs/custom-commands/modules). |
-| **Uncategorized** | Flows that don't belong to a module or folder.                                                                            |
-| Your folders     | One section per folder you created for your flows.                                                                         |
+| Section           | What it holds                                                                                                                                                    |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Apps**          | Apps you installed from the marketplace. See [Sharing & the marketplace](/docs/custom-commands/sharing).                                                         |
+| **Modules**       | Modules you built yourself. Each card shows its icon, name, number of flows and whether it is enabled. See [Modules & templates](/docs/custom-commands/modules). |
+| **Uncategorized** | Flows that don't belong to a module or folder.                                                                                                                   |
+| Your folders      | One section per folder you created for your flows.                                                                                                               |
 
 Each flow card shows whether the flow is **Active** or a **Draft**. Click a card to open it in the [editor](/docs/custom-commands/flows).
 

@@ -20,13 +20,13 @@ Usage is tracked over three windows: **This hour**, **Today** and **This week**.
 
 The card has a state at the top:
 
-| State             | What it means                                                                       |
-| ----------------- | ----------------------------------------------------------------------------------- |
-| **Healthy**       | Plenty of room.                                                                     |
-| **Getting busy**  | Your flows are approaching the budget. Nothing is paused yet.                       |
-| **At the limit**  | Some actions are being refused right now.                                           |
-| **Paused**        | Your server is well over its budget, and new runs are skipped until it recovers.    |
-| **No reading**    | The budget couldn't be read, for example because your bot is offline.               |
+| State            | What it means                                                                    |
+| ---------------- | -------------------------------------------------------------------------------- |
+| **Healthy**      | Plenty of room.                                                                  |
+| **Getting busy** | Your flows are approaching the budget. Nothing is paused yet.                    |
+| **At the limit** | Some actions are being refused right now.                                        |
+| **Paused**       | Your server is well over its budget, and new runs are skipped until it recovers. |
+| **No reading**   | The budget couldn't be read, for example because your bot is offline.            |
 
 Some kinds of actions have their own, separate limits, because they matter more:
 
@@ -76,15 +76,15 @@ Want more headroom? Click **Upgrade** on the card, or open the pricing page of y
 
 Each run also has limits of its own. They catch mistakes like a loop that never ends:
 
-| Limit                          | What happens                                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| Too many steps in one run      | The run ends with **Limit exceeded**. Loops count every pass, and called flows count too.                          |
-| A run takes too long           | The run ends with **Limit exceeded**.                                                                               |
-| A loop repeats too often       | The loop step fails with `LIMIT_EXCEEDED`.                                                                          |
-| Flows call each other too deep | The **Call another flow** step fails with `LIMIT_EXCEEDED`.                                                        |
-| Too many runs in a short time  | Extra runs are **Skipped** with the reason "server rate limit".                                                    |
-| Too many waits or scheduled runs at once | The step that would add another one fails with `LIMIT_EXCEEDED`.                                         |
-| Storage is full                | Steps that store new data fail. See [Data storage](/docs/custom-commands/storage#usage).                          |
+| Limit                                    | What happens                                                                              |
+| ---------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Too many steps in one run                | The run ends with **Limit exceeded**. Loops count every pass, and called flows count too. |
+| A run takes too long                     | The run ends with **Limit exceeded**.                                                     |
+| A loop repeats too often                 | The loop step fails with `LIMIT_EXCEEDED`.                                                |
+| Flows call each other too deep           | The **Call another flow** step fails with `LIMIT_EXCEEDED`.                               |
+| Too many runs in a short time            | Extra runs are **Skipped** with the reason "server rate limit".                           |
+| Too many waits or scheduled runs at once | The step that would add another one fails with `LIMIT_EXCEEDED`.                          |
+| Storage is full                          | Steps that store new data fail. See [Data storage](/docs/custom-commands/storage#usage).  |
 
 There are also limits on how big a flow can be. A flow with too many steps, or with branches nested too deep, can be saved as a draft but can't be activated. The editor tells you what to change, usually to move part of the flow into a second flow and call it.
 
@@ -96,12 +96,12 @@ On top of the limits, SCNX looks out for flows that could harm your server or yo
 
   These are the checks that block activation:
 
-  | The editor says                                                                 | What to change                                                                  |
-  | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-  | "This loop sends a DM to the entire membership fetched from the server"         | DM only the members who need it, like those with a certain role or who opted in. |
-  | "This loop deletes channels or roles fetched from the entire server"            | Loop over a list of channels or roles you chose.                               |
-  | "This loop bans or kicks the entire membership fetched from the server"         | Act on specific members, not everyone.                                          |
-  | "This loop repeatedly DMs the same single recipient"                            | Send one message with everything in it.                                         |
+  | The editor says                                                         | What to change                                                                   |
+  | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+  | "This loop sends a DM to the entire membership fetched from the server" | DM only the members who need it, like those with a certain role or who opted in. |
+  | "This loop deletes channels or roles fetched from the entire server"    | Loop over a list of channels or roles you chose.                                 |
+  | "This loop bans or kicks the entire membership fetched from the server" | Act on specific members, not everyone.                                           |
+  | "This loop repeatedly DMs the same single recipient"                    | Send one message with everything in it.                                          |
 
 - **Risky patterns get a warning.** For example a destructive action inside a loop, a schedule that runs very often, or a flow that schedules itself again. You can still save these, but check that they can't run away.
 - **Destructive actions and DMs are capped while running.** Each run, and each server over time, can only delete, ban, kick or DM so much. The limits grow with the size of your server. A run that goes over is stopped with `DESTRUCTIVE_LIMIT_EXCEEDED` or `LIMIT_EXCEEDED`.
@@ -132,12 +132,12 @@ Flows act as your bot, so they can only do what your bot is allowed to do.
 
 ## Who can change custom commands {#permissions}
 
-| What                                                         | Who                                                                                                                                                                                                                  |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What                                                                          | Who                                                                                                                                                                                                        |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Build and edit flows and modules, view and change stored data and run history | The server owner, co-owners, and [trusted admins](/docs/scnx/guilds/trusted-admins#permissions) with **Custom-Bot**: Bot-Administrator or **Custom-Bot**: Change and Reload Configuration / Custom Command |
-| Emergency stop                                               | The server owner, co-owners, and trusted admins with **Custom-Bot**: Bot-Administrator or **Custom-Bot**: Manage Bot                                                                                                  |
-| Turn V3 on, or switch back to V2                             | The server owner and co-owners                                                                                                                                                                                      |
-| Publish a module to the marketplace                          | Members of the publishing organization with the Manage Content permission                                                                                                                                           |
+| Emergency stop                                                                | The server owner, co-owners, and trusted admins with **Custom-Bot**: Bot-Administrator or **Custom-Bot**: Manage Bot                                                                                       |
+| Turn V3 on, or switch back to V2                                              | The server owner and co-owners                                                                                                                                                                             |
+| Publish a module to the marketplace                                           | Members of the publishing organization with the Manage Content permission                                                                                                                                  |
 
 :::caution Editing flows means using the bot's permissions
 Anyone who can edit custom commands can build a flow that uses all of your bot's permissions. Through a flow, a trusted admin could assign roles or ban members even if their own permissions don't allow it. Only give custom-command access to people you'd trust with your bot.

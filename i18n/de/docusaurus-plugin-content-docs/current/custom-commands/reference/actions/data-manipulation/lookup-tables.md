@@ -15,8 +15,8 @@ Erstellt eine neue, leere Zuordnung. Einträge werden mit "Zuordnung: Wert setze
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                                                     | Details                   |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------------------------- |
 | Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die neue leere Zuordnung. |
 
 ### Zuordnung: Wert lesen {#map-get}
@@ -25,15 +25,15 @@ Gibt den Wert zurück, der unter einem Schlüssel in der Zuordnung gespeichert i
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Ja | Zuordnung, aus der gelesen wird. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Schlüssel, der nachgeschlagen wird. |
+| Name      | Typ                                                                                                      | Pflicht | Details                             |
+| --------- | -------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------- |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Ja      | Zuordnung, aus der gelesen wird.    |
+| Schlüssel | [Text](../../../value-types.md#STRING)                                                                   | Ja      | Schlüssel, der nachgeschlagen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                        | Details                                                                                     |
+| ---- | ------------------------------------------ | ------------------------------------------------------------------------------------------- |
 | Wert | [Eintrag](../../../value-types.md#ELEMENT) | Unter dem Schlüssel gespeicherter Wert oder leer, wenn der Schlüssel fehlt. Kann leer sein. |
 
 ### Zuordnung: Wert setzen {#map-set}
@@ -42,16 +42,16 @@ Gibt eine neue Zuordnung zurück, in der der Schlüssel auf den Wert gesetzt ist
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Die ursprüngliche Zuordnung. Sie wird nicht verändert. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Schlüssel, der gesetzt wird. |
-| Wert | [Text](../../../value-types.md#STRING) | Ja | Wert, der unter dem Schlüssel gespeichert wird. |
+| Name      | Typ                                                                                                     | Pflicht | Details                                                |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------ |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Die ursprüngliche Zuordnung. Sie wird nicht verändert. |
+| Schlüssel | [Text](../../../value-types.md#STRING)                                                                  | Ja      | Schlüssel, der gesetzt wird.                           |
+| Wert      | [Text](../../../value-types.md#STRING)                                                                  | Ja      | Wert, der unter dem Schlüssel gespeichert wird.        |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                                                     | Details                                         |
+| -------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | Ergebnis | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die neue Zuordnung mit dem gesetzten Schlüssel. |
 
 ### Zuordnung: Schlüssel vorhanden {#map-has}
@@ -60,15 +60,15 @@ Prüft, ob die Zuordnung den Schlüssel enthält.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Zuordnung, die geprüft wird. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Schlüssel, nach dem gesucht wird. |
+| Name      | Typ                                                                                                     | Pflicht | Details                           |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------- | --------------------------------- |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Zuordnung, die geprüft wird.      |
+| Schlüssel | [Text](../../../value-types.md#STRING)                                                                  | Ja      | Schlüssel, nach dem gesucht wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                             |
+| -------- | ------------------------------------------ | ----------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | True, wenn der Schlüssel existiert. |
 
 ### Zuordnung: Schlüssel auflisten {#map-keys}
@@ -77,14 +77,14 @@ Gibt alle Schlüssel der Zuordnung als Liste zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Zuordnung, deren Schlüssel gelesen werden. |
+| Name      | Typ                                                                                                     | Pflicht | Details                                    |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------ |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Zuordnung, deren Schlüssel gelesen werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                              | Details                |
+| --------- | ------------------------------------------------ | ---------------------- |
 | Schlüssel | Liste von [Text](../../../value-types.md#STRING) | Liste aller Schlüssel. |
 
 ### Zuordnung: Schlüssel entfernen {#map-remove}
@@ -93,15 +93,15 @@ Gibt eine neue Zuordnung ohne den angegebenen Schlüssel zurück und lässt die 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Die ursprüngliche Zuordnung. Sie wird nicht verändert. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Schlüssel, der entfernt wird. |
+| Name      | Typ                                                                                                     | Pflicht | Details                                                |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------ |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Die ursprüngliche Zuordnung. Sie wird nicht verändert. |
+| Schlüssel | [Text](../../../value-types.md#STRING)                                                                  | Ja      | Schlüssel, der entfernt wird.                          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                                                     | Details                                   |
+| -------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | Ergebnis | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die neue Zuordnung ohne diesen Schlüssel. |
 
 ### Zuordnung: Größe {#map-size}
@@ -110,14 +110,14 @@ Gibt die Anzahl der Einträge in der Zuordnung zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Zuordnung, deren Einträge gezählt werden. |
+| Name      | Typ                                                                                                     | Pflicht | Details                                   |
+| --------- | ------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------------- |
+| Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Zuordnung, deren Einträge gezählt werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details              |
+| ----- | ------------------------------------------- | -------------------- |
 | Größe | [Ganzzahl](../../../value-types.md#INTEGER) | Anzahl der Einträge. |
 
 ### Zuordnung aus Einträgen {#map-from-entries}
@@ -126,12 +126,12 @@ Baut eine Zuordnung aus Einträgen mit Schlüssel und Wert oder Speicher-Ranglis
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Einträge | Liste von [Eintrag der Zuordnung](../../../value-types.md#MAP_ENTRY) | Ja | Die Einträge einer Zuordnung oder Speichereinträge, aus denen die Zuordnung gebaut wird. |
+| Name     | Typ                                                                  | Pflicht | Details                                                                                  |
+| -------- | -------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------- |
+| Einträge | Liste von [Eintrag der Zuordnung](../../../value-types.md#MAP_ENTRY) | Ja      | Die Einträge einer Zuordnung oder Speichereinträge, aus denen die Zuordnung gebaut wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                                                     | Details                    |
+| --------- | ------------------------------------------------------------------------------------------------------- | -------------------------- |
 | Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die entstandene Zuordnung. |

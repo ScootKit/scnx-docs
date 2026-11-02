@@ -15,14 +15,14 @@ Lists the Roblox groups a user is in with their role and rank in each. Find one 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Roblox user ID | [ID](../../../value-types.md#ID) | Yes | The number in the user's Roblox profile address. |
+| Name           | Type                             | Required | Details                                          |
+| -------------- | -------------------------------- | -------- | ------------------------------------------------ |
+| Roblox user ID | [ID](../../../value-types.md#ID) | Yes      | The number in the user's Roblox profile address. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                                               | Details                                  |
+| ------ | ---------------------------------------------------------------------------------- | ---------------------------------------- |
 | Groups | List of [Roblox group membership](../../../value-types.md#roblox-public-GroupRole) | The groups with the user's role in each. |
 
 ### Get avatar picture {#roblox-public-get-avatar}
@@ -31,16 +31,16 @@ Gets the head picture of a Roblox user's avatar.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Roblox user ID | [ID](../../../value-types.md#ID) | Yes | The number in the user's Roblox profile address. |
+| Name           | Type                             | Required | Details                                          |
+| -------------- | -------------------------------- | -------- | ------------------------------------------------ |
+| Roblox user ID | [ID](../../../value-types.md#ID) | Yes      | The number in the user's Roblox profile address. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the picture is ready. When not, the picture is empty. |
-| Picture | [URL](../../../value-types.md#URL) | The avatar head picture, 420 by 420 pixels. May be empty. |
+| Name    | Type                                      | Details                                                       |
+| ------- | ----------------------------------------- | ------------------------------------------------------------- |
+| Found   | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the picture is ready. When not, the picture is empty. |
+| Picture | [URL](../../../value-types.md#URL)        | The avatar head picture, 420 by 420 pixels. May be empty.     |
 
 ### Get universe ID {#roblox-public-get-universe-id}
 
@@ -48,16 +48,16 @@ Turns a place ID (the number in a game's address) into the universe ID that expe
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Place ID | [ID](../../../value-types.md#ID) | Yes | The number in the game's Roblox address. |
+| Name     | Type                             | Required | Details                                  |
+| -------- | -------------------------------- | -------- | ---------------------------------------- |
+| Place ID | [ID](../../../value-types.md#ID) | Yes      | The number in the game's Roblox address. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the place exists. When not, the universe ID is empty. |
-| Universe ID | [ID](../../../value-types.md#ID) | The universe ID of the experience. May be empty. |
+| Name        | Type                                      | Details                                                       |
+| ----------- | ----------------------------------------- | ------------------------------------------------------------- |
+| Found       | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the place exists. When not, the universe ID is empty. |
+| Universe ID | [ID](../../../value-types.md#ID)          | The universe ID of the experience. May be empty.              |
 
 ### Get experience stats {#roblox-public-get-game-stats}
 
@@ -65,20 +65,20 @@ Reads how many people play an experience right now, its visits and favorites.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Universe ID | [ID](../../../value-types.md#ID) | Yes | The universe ID of the experience. Get it with "Get universe ID". |
+| Name        | Type                             | Required | Details                                                           |
+| ----------- | -------------------------------- | -------- | ----------------------------------------------------------------- |
+| Universe ID | [ID](../../../value-types.md#ID) | Yes      | The universe ID of the experience. Get it with "Get universe ID". |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the experience exists. When not, everything else is empty. |
-| Name | [Text](../../../value-types.md#STRING) | The name of the experience. May be empty. |
-| Playing now | [Whole number](../../../value-types.md#INTEGER) | How many people play right now. May be empty. |
-| Visits | [Whole number](../../../value-types.md#INTEGER) | All visits ever. May be empty. |
-| Favorites | [Whole number](../../../value-types.md#INTEGER) | How many people made it a favorite. May be empty. |
-| Players per server | [Whole number](../../../value-types.md#INTEGER) | How many players fit on one server. May be empty. |
-| Creator | [Text](../../../value-types.md#STRING) | The user or group that made it. May be empty. |
-| Start place ID | [ID](../../../value-types.md#ID) | The place players join first. May be empty. |
-| Updated at | [Date and time](../../../value-types.md#DATETIME) | When the experience was last changed. May be empty. |
+| Name               | Type                                              | Details                                                            |
+| ------------------ | ------------------------------------------------- | ------------------------------------------------------------------ |
+| Found              | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the experience exists. When not, everything else is empty. |
+| Name               | [Text](../../../value-types.md#STRING)            | The name of the experience. May be empty.                          |
+| Playing now        | [Whole number](../../../value-types.md#INTEGER)   | How many people play right now. May be empty.                      |
+| Visits             | [Whole number](../../../value-types.md#INTEGER)   | All visits ever. May be empty.                                     |
+| Favorites          | [Whole number](../../../value-types.md#INTEGER)   | How many people made it a favorite. May be empty.                  |
+| Players per server | [Whole number](../../../value-types.md#INTEGER)   | How many players fit on one server. May be empty.                  |
+| Creator            | [Text](../../../value-types.md#STRING)            | The user or group that made it. May be empty.                      |
+| Start place ID     | [ID](../../../value-types.md#ID)                  | The place players join first. May be empty.                        |
+| Updated at         | [Date and time](../../../value-types.md#DATETIME) | When the experience was last changed. May be empty.                |

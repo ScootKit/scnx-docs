@@ -17,8 +17,8 @@ Benötigte Intents: `GuildScheduledEvents`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                           | Details                              |
+| ----- | ------------------------------------------------------------- | ------------------------------------ |
 | Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, das erstellt wurde. |
 
 ### Geplantes Event gelöscht {#scheduled-event-deleted}
@@ -29,8 +29,8 @@ Benötigte Intents: `GuildScheduledEvents`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                           | Details                              |
+| ----- | ------------------------------------------------------------- | ------------------------------------ |
 | Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, das gelöscht wurde. |
 
 ### Geplantes Event aktualisiert {#scheduled-event-updated}
@@ -41,10 +41,10 @@ Benötigte Intents: `GuildScheduledEvents`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                           | Details                                              |
+| ---------------- | ------------------------------------------------------------- | ---------------------------------------------------- |
 | Vorheriges Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Event-Status vor der Aktualisierung. Kann leer sein. |
-| Aktuelles Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Event-Status nach der Aktualisierung. |
+| Aktuelles Event  | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Event-Status nach der Aktualisierung.                |
 
 ### Benutzer interessiert sich für geplantes Event {#scheduled-event-user-added}
 
@@ -54,10 +54,10 @@ Benötigte Intents: `GuildScheduledEvents`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, an dem sich der Benutzer interessiert. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der das Event abonniert hat. |
+| Name     | Typ                                                           | Details                                                 |
+| -------- | ------------------------------------------------------------- | ------------------------------------------------------- |
+| Event    | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, an dem sich der Benutzer interessiert. |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER)              | Benutzer, der das Event abonniert hat.                  |
 
 ### Benutzer interessiert sich nicht mehr für geplantes Event {#scheduled-event-user-removed}
 
@@ -67,7 +67,7 @@ Benötigte Intents: `GuildScheduledEvents`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Event | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, von dem sich der Benutzer abgemeldet hat. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der das Event abgemeldet hat. |
+| Name     | Typ                                                           | Details                                                    |
+| -------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
+| Event    | [Geplantes Ereignis](../../../value-types.md#SCHEDULED_EVENT) | Geplantes Event, von dem sich der Benutzer abgemeldet hat. |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER)              | Benutzer, der das Event abgemeldet hat.                    |

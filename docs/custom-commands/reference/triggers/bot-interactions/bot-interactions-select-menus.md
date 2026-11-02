@@ -15,14 +15,14 @@ Fires when a user submits a dropdown.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
+| Name              | Type                                   | Required | Details                                                                                   |
+| ----------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                           | Details                                |
+| ----------- | ------------------------------------------------------------------------------ | -------------------------------------- |
 | Interaction | [Dropdown interaction](../../../value-types.md#STRING_SELECT_MENU_INTERACTION) | Dropdown interaction that was created. |
 
 ### User dropdown submitted {#user-select-submitted}
@@ -31,14 +31,14 @@ Fires when a user submits a user dropdown.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
+| Name              | Type                                   | Required | Details                                                                                   |
+| ----------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                              | Details                                     |
+| ----------- | --------------------------------------------------------------------------------- | ------------------------------------------- |
 | Interaction | [User dropdown interaction](../../../value-types.md#USER_SELECT_MENU_INTERACTION) | User dropdown interaction that was created. |
 
 ### Role dropdown submitted {#role-select-submitted}
@@ -47,14 +47,14 @@ Fires when a user submits a role dropdown.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
+| Name              | Type                                   | Required | Details                                                                                   |
+| ----------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                              | Details                                     |
+| ----------- | --------------------------------------------------------------------------------- | ------------------------------------------- |
 | Interaction | [Role dropdown interaction](../../../value-types.md#ROLE_SELECT_MENU_INTERACTION) | Role dropdown interaction that was created. |
 
 ### Channel dropdown submitted {#channel-select-submitted}
@@ -63,14 +63,14 @@ Fires when a user submits a channel dropdown.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
+| Name              | Type                                   | Required | Details                                                                                   |
+| ----------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                                    | Details                                        |
+| ----------- | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Interaction | [Channel dropdown interaction](../../../value-types.md#CHANNEL_SELECT_MENU_INTERACTION) | Channel dropdown interaction that was created. |
 
 ### User-or-role dropdown submitted {#mentionable-select-submitted}
@@ -79,12 +79,12 @@ Fires when a user submits a user-or-role dropdown (users and roles).
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
+| Name              | Type                                   | Required | Details                                                                                   |
+| ----------------- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the menu's custom ID matches this pattern. Leave empty to match all menus. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                                             | Details                                             |
+| ----------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------- |
 | Interaction | [User-or-role dropdown interaction](../../../value-types.md#MENTIONABLE_SELECT_MENU_INTERACTION) | User-or-role dropdown interaction that was created. |

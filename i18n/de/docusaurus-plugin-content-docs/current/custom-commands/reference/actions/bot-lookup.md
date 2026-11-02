@@ -15,14 +15,14 @@ Ruft einen Discord-Benutzer nach seiner ID über den Bot-Cache oder die REST-API
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Discord-ID des Benutzers, der abgerufen wird. |
+| Name        | Typ                                          | Pflicht | Details                                       |
+| ----------- | -------------------------------------------- | ------- | --------------------------------------------- |
+| Benutzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Discord-ID des Benutzers, der abgerufen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                           | Details                                                 |
+| -------- | --------------------------------------------- | ------------------------------------------------------- |
 | Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Der abgerufene Benutzer oder leer, wenn nicht gefunden. |
 
 ### Server nach ID abrufen {#fetch-guild-by-id}
@@ -31,14 +31,14 @@ Ruft einen Server ab, in dem der Bot Mitglied ist, nach seiner ID. Gibt einen le
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Server-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Discord-ID des abzurufenden Servers. |
+| Name      | Typ                                          | Pflicht | Details                              |
+| --------- | -------------------------------------------- | ------- | ------------------------------------ |
+| Server-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Discord-ID des abzurufenden Servers. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                                                               |
+| ------ | ------------------------------------ | --------------------------------------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Der abgerufene Server oder leer, wenn nicht gefunden. Kann leer sein. |
 
 ### Nachricht nach Kanal und ID abrufen {#fetch-message-by-channel-and-id}
@@ -47,31 +47,31 @@ Ruft eine einzelne Nachricht nach ihrer Kanal-ID und Nachrichts-ID ab. Gibt eine
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanal-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Discord-ID des Kanals, der die Nachricht enthält. |
-| Nachrichten-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Discord-ID der Nachricht, die abgerufen wird. |
+| Name           | Typ                                          | Pflicht | Details                                           |
+| -------------- | -------------------------------------------- | ------- | ------------------------------------------------- |
+| Kanal-ID       | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Discord-ID des Kanals, der die Nachricht enthält. |
+| Nachrichten-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Discord-ID der Nachricht, die abgerufen wird.     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                       | Details                                                                  |
+| --------- | ----------------------------------------- | ------------------------------------------------------------------------ |
 | Nachricht | [Nachricht](../../value-types.md#MESSAGE) | Die abgerufene Nachricht oder leer, wenn nicht gefunden. Kann leer sein. |
 
 ### Nachricht nach Link abrufen {#fetch-message-by-link}
 
-Ruft eine einzelne Nachricht anhand ihres Discord-Nachrichten-Links ab und kombiniert dabei „Nachrichten-Link auslesen“ und „Nachricht nach Kanal und ID abrufen“. Gibt einen leeren Wert zurück, wenn der Link kein gültiger Nachrichten-Link ist oder die Nachricht nicht gefunden oder aufgerufen werden kann.
+Ruft eine einzelne Nachricht anhand ihres Discord-Nachrichten-Links ab und kombiniert dabei „Nachrichten-Link auslesen" und „Nachricht nach Kanal und ID abrufen". Gibt einen leeren Wert zurück, wenn der Link kein gültiger Nachrichten-Link ist oder die Nachricht nicht gefunden oder aufgerufen werden kann.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Nachrichten-Link | [Text](../../value-types.md#STRING) | Ja | Der Discord-Nachrichten-Link (https://discord.com/channels/&lt;server&gt;/&lt;kanal&gt;/&lt;nachricht&gt;). |
+| Name             | Typ                                 | Pflicht | Details                                                                                                     |
+| ---------------- | ----------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| Nachrichten-Link | [Text](../../value-types.md#STRING) | Ja      | Der Discord-Nachrichten-Link (https://discord.com/channels/&lt;server&gt;/&lt;kanal&gt;/&lt;nachricht&gt;). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                       | Details                                                                                                                       |
+| --------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | Nachricht | [Nachricht](../../value-types.md#MESSAGE) | Die abgerufene Nachricht oder leer, wenn der Link ungültig ist oder die Nachricht nicht gefunden werden kann. Kann leer sein. |
 
 ### Server des Bots abrufen {#fetch-current-bot-guilds}
@@ -80,12 +80,12 @@ Gibt bis zu `limit` Server zurück, in denen sich der Bot derzeit befindet.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Limit | [Ganzzahl](../../value-types.md#INTEGER) | Ja | Maximale Anzahl an Servern, die zurückgegeben werden (Standard 100). Standard: `100`. |
+| Name  | Typ                                      | Pflicht | Details                                                                               |
+| ----- | ---------------------------------------- | ------- | ------------------------------------------------------------------------------------- |
+| Limit | [Ganzzahl](../../value-types.md#INTEGER) | Ja      | Maximale Anzahl an Servern, die zurückgegeben werden (Standard 100). Standard: `100`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                            | Details                                |
+| ------ | ---------------------------------------------- | -------------------------------------- |
 | Server | Liste von [Server](../../value-types.md#GUILD) | Server, in denen der Bot Mitglied ist. |

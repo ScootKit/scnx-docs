@@ -15,12 +15,12 @@ Fires when a user submits a modal dialog.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the modal's custom ID matches this pattern. Leave empty to match all modals. |
+| Name              | Type                                   | Required | Details                                                                                     |
+| ----------------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the modal's custom ID matches this pattern. Leave empty to match all modals. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                             | Details                                    |
+| ----------- | ---------------------------------------------------------------- | ------------------------------------------ |
 | Interaction | [Modal submit](../../../value-types.md#MODAL_SUBMIT_INTERACTION) | Modal submit interaction that was created. |

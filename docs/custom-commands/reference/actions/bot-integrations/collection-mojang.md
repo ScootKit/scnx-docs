@@ -15,17 +15,17 @@ Looks up the UUID of a Minecraft Java account by its username.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Username | [Text](../../../value-types.md#STRING) | Yes | The Minecraft username, for example Notch. Maximum length: 16 characters. |
+| Name     | Type                                   | Required | Details                                                                   |
+| -------- | -------------------------------------- | -------- | ------------------------------------------------------------------------- |
+| Username | [Text](../../../value-types.md#STRING) | Yes      | The Minecraft username, for example Notch. Maximum length: 16 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the account exists. When not, everything else is empty. |
-| UUID | [Text](../../../value-types.md#STRING) | The UUID without dashes. May be empty. |
-| Username | [Text](../../../value-types.md#STRING) | The username with its exact capitalization. May be empty. |
+| Name     | Type                                      | Details                                                         |
+| -------- | ----------------------------------------- | --------------------------------------------------------------- |
+| Found    | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the account exists. When not, everything else is empty. |
+| UUID     | [Text](../../../value-types.md#STRING)    | The UUID without dashes. May be empty.                          |
+| Username | [Text](../../../value-types.md#STRING)    | The username with its exact capitalization. May be empty.       |
 
 ### Get Minecraft profile {#mojang-get-profile}
 
@@ -33,17 +33,17 @@ Reads the username and skin of a Minecraft Java account by its UUID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| UUID | [Text](../../../value-types.md#STRING) | Yes | The UUID of the account, with or without dashes. Get it with "Get Minecraft UUID". Maximum length: 36 characters. |
+| Name | Type                                   | Required | Details                                                                                                           |
+| ---- | -------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| UUID | [Text](../../../value-types.md#STRING) | Yes      | The UUID of the account, with or without dashes. Get it with "Get Minecraft UUID". Maximum length: 36 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the account exists. When not, everything else is empty. |
-| UUID | [Text](../../../value-types.md#STRING) | The UUID without dashes. May be empty. |
-| Username | [Text](../../../value-types.md#STRING) | The current username. May be empty. |
-| Skin | [URL](../../../value-types.md#URL) | The skin image. Empty for the default skin. May be empty. |
+| Name      | Type                                      | Details                                                                         |
+| --------- | ----------------------------------------- | ------------------------------------------------------------------------------- |
+| Found     | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the account exists. When not, everything else is empty.                 |
+| UUID      | [Text](../../../value-types.md#STRING)    | The UUID without dashes. May be empty.                                          |
+| Username  | [Text](../../../value-types.md#STRING)    | The current username. May be empty.                                             |
+| Skin      | [URL](../../../value-types.md#URL)        | The skin image. Empty for the default skin. May be empty.                       |
 | Slim arms | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the skin uses the slim model. Empty for the default skin. May be empty. |
-| Cape | [URL](../../../value-types.md#URL) | The cape image. Empty without a cape. May be empty. |
+| Cape      | [URL](../../../value-types.md#URL)        | The cape image. Empty without a cape. May be empty.                             |

@@ -15,16 +15,16 @@ Macht diesen Flow über "Anderen Flow ausführen" aus anderen Flows aufrufbar. D
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Parameter | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja | Typisierte Parameter, die Aufrufer übergeben müssen. Jeder definierte Parameter ist im Flow verfügbar. Höchstens 25 Einträge. Standard: `[]`. |
-| Rückgabewerte | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja | Typisierte Werte, die dieser Flow über "Aus Flow zurückkehren" an seinen Aufrufer zurückgibt. Jeder Rückgabewert kann leer sein - ein Flow kann ohne Rückgabe enden. Höchstens 25 Einträge. Standard: `[]`. |
+| Name          | Typ                                                                | Pflicht | Details                                                                                                                                                                                                     |
+| ------------- | ------------------------------------------------------------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameter     | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja      | Typisierte Parameter, die Aufrufer übergeben müssen. Jeder definierte Parameter ist im Flow verfügbar. Höchstens 25 Einträge. Standard: `[]`.                                                               |
+| Rückgabewerte | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja      | Typisierte Werte, die dieser Flow über "Aus Flow zurückkehren" an seinen Aufrufer zurückgibt. Jeder Rückgabewert kann leer sein - ein Flow kann ohne Rückgabe enden. Höchstens 25 Einträge. Standard: `[]`. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Aufrufer-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Flow, der diesen aufgerufen hat (falls vorhanden). Kann leer sein. |
+| Name                 | Typ                                                | Details                                                                                          |
+| -------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Aufrufer-Flow        | [Flow](../../../value-types.md#FLOW_REFERENCE)     | Flow, der diesen aufgerufen hat (falls vorhanden). Kann leer sein.                               |
 | Aufrufer-Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Interaktion, die diesen Flow ausgelöst hat (Button-Klick, Modal-Absendung, ...). Kann leer sein. |
 
 ### Benutzerdefiniertes Event empfangen {#custom-event-received}
@@ -33,16 +33,16 @@ Läuft, wenn ein benutzerdefiniertes Event mit passendem Namen auf diesem Server
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Event-Name | [Text](../../../value-types.md#STRING) | Ja | Nur ausführen, wenn ein benutzerdefiniertes Event mit genau diesem Namen ausgelöst wird. Länge: 1 bis 100 Zeichen. |
+| Name       | Typ                                    | Pflicht | Details                                                                                                            |
+| ---------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| Event-Name | [Text](../../../value-types.md#STRING) | Ja      | Nur ausführen, wenn ein benutzerdefiniertes Event mit genau diesem Namen ausgelöst wird. Länge: 1 bis 100 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Event-Name | [Text](../../../value-types.md#STRING) | Name des ausgelösten Events. |
-| Nutzdaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Daten des auslösenden Flows. Typisiert, wenn dieser Server oder dieses Modul einen Nutzdaten-Typ für den Eventnamen festlegt, sonst Text-Schlüssel/Wert-Paare. Ein Trigger, dessen Eventname aus einer Konfigurationsoption stammt, erhält immer Text-Schlüssel/Wert-Paare, nie einen festgelegten Typ. |
+| Name       | Typ                                                                                                     | Details                                                                                                                                                                                                                                                                                                     |
+| ---------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Event-Name | [Text](../../../value-types.md#STRING)                                                                  | Name des ausgelösten Events.                                                                                                                                                                                                                                                                                |
+| Nutzdaten  | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Daten des auslösenden Flows. Typisiert, wenn dieser Server oder dieses Modul einen Nutzdaten-Typ für den Eventnamen festlegt, sonst Text-Schlüssel/Wert-Paare. Ein Trigger, dessen Eventname aus einer Konfigurationsoption stammt, erhält immer Text-Schlüssel/Wert-Paare, nie einen festgelegten Typ. |
 
 ### Geplante Ausführung {#scheduled-run}
 
@@ -50,12 +50,12 @@ Wird ausgeführt, wenn eine über "Flow-Ausführung planen" geplante Ausführung
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Parameter | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja | Typisierte Parameter, die der planende Flow übergeben muss. Jeder definierte Parameter ist beim Auslösen im Flow verfügbar. Höchstens 25 Einträge. Standard: `[]`. |
+| Name      | Typ                                                                | Pflicht | Details                                                                                                                                                            |
+| --------- | ------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Parameter | Liste von [Flow-Parameter](../../../value-types.md#FLOW_PARAMETER) | Ja      | Typisierte Parameter, die der planende Flow übergeben muss. Jeder definierte Parameter ist beim Auslösen im Flow verfügbar. Höchstens 25 Einträge. Standard: `[]`. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                   | Details                                       |
+| ------------ | ----------------------------------------------------- | --------------------------------------------- |
 | Ausgelöst am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die geplante Ausführung ausgelöst wurde. |

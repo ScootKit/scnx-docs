@@ -15,12 +15,12 @@ Fires when a user clicks a message button created by the bot.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No | Only fire when the button's custom ID matches this pattern. Leave empty to match all buttons. |
+| Name              | Type                                   | Required | Details                                                                                       |
+| ----------------- | -------------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| Custom ID Pattern | [Text](../../../value-types.md#STRING) | No       | Only fire when the button's custom ID matches this pattern. Leave empty to match all buttons. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                       | Details                              |
+| ----------- | ---------------------------------------------------------- | ------------------------------------ |
 | Interaction | [Button click](../../../value-types.md#BUTTON_INTERACTION) | Button interaction that was created. |

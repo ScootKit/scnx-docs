@@ -15,15 +15,15 @@ Runs on a recurring schedule (cron), in the bot's timezone.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Cron expression | [Text](../../value-types.md#STRING) | Yes | Standard cron expression (5 fields, e.g. "0 9 * * 1"). A schedule may not run more often than every 5 minutes. Length: 9 to 100 characters. Default: `0 9 * * 1`. |
-| Timezone | [Text](../../value-types.md#STRING) | No | No longer used: schedules always run in the bot's timezone. |
+| Name            | Type                                | Required | Details                                                                                                                                                           |
+| --------------- | ----------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Cron expression | [Text](../../value-types.md#STRING) | Yes      | Standard cron expression (5 fields, e.g. "0 9 * * 1"). A schedule may not run more often than every 5 minutes. Length: 9 to 100 characters. Default: `0 9 * * 1`. |
+| Timezone        | [Text](../../value-types.md#STRING) | No       | No longer used: schedules always run in the bot's timezone.                                                                                                       |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                           | Details                  |
+| -------- | ---------------------------------------------- | ------------------------ |
 | Fired at | [Date and time](../../value-types.md#DATETIME) | When the schedule fired. |
 
 ### Subscription created {#subscription-created}
@@ -32,8 +32,8 @@ Triggered when a user starts a new subscription to one of the application's SKUs
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                              | Details                         |
+| ------------ | ------------------------------------------------- | ------------------------------- |
 | Subscription | [Subscription](../../value-types.md#SUBSCRIPTION) | The newly created subscription. |
 
 ### Subscription updated {#subscription-updated}
@@ -42,10 +42,10 @@ Triggered when a subscription changes (e.g. status, period, renewal SKUs).
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                  | Type                                              | Details                                                     |
+| --------------------- | ------------------------------------------------- | ----------------------------------------------------------- |
 | Previous Subscription | [Subscription](../../value-types.md#SUBSCRIPTION) | The subscription as it was before the update. May be empty. |
-| Current Subscription | [Subscription](../../value-types.md#SUBSCRIPTION) | The subscription after the update. |
+| Current Subscription  | [Subscription](../../value-types.md#SUBSCRIPTION) | The subscription after the update.                          |
 
 ### Subscription deleted {#subscription-deleted}
 
@@ -53,6 +53,6 @@ Triggered when a subscription is deleted.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                              | Details                   |
+| ------------ | ------------------------------------------------- | ------------------------- |
 | Subscription | [Subscription](../../value-types.md#SUBSCRIPTION) | The deleted subscription. |

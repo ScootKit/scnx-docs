@@ -15,15 +15,15 @@ Wandelt JSON-Text in einen Strukturwert um, der einer der Strukturen dieses Modu
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| JSON-Text | [Text](../../../value-types.md#STRING) | Ja | Der JSON-Text, der eingelesen werden soll. Er muss ein einzelnes Objekt beschreiben, keine Liste. |
-| Struktur | [Struktur](../../../value-types.md#RECORD_TYPE) | Ja | Zu welcher Struktur der Text passen muss. Sie legt fest, welche Felder vorhanden sein müssen und welche Art von Wert jedes davon enthält. |
+| Name      | Typ                                             | Pflicht | Details                                                                                                                                   |
+| --------- | ----------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| JSON-Text | [Text](../../../value-types.md#STRING)          | Ja      | Der JSON-Text, der eingelesen werden soll. Er muss ein einzelnes Objekt beschreiben, keine Liste.                                         |
+| Struktur  | [Struktur](../../../value-types.md#RECORD_TYPE) | Ja      | Zu welcher Struktur der Text passen muss. Sie legt fest, welche Felder vorhanden sein müssen und welche Art von Wert jedes davon enthält. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                  | Details                                    |
+| ------------ | ---------------------------------------------------- | ------------------------------------------ |
 | Strukturwert | [Strukturwert](../../../value-types.md#RECORD_VALUE) | Der aus dem Text eingelesene Strukturwert. |
 
 ### JSON als Liste von Strukturwerten lesen {#json-parse-record-list}
@@ -32,15 +32,15 @@ Wandelt JSON-Text mit einer Liste in Strukturwerte einer festgelegten Struktur u
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| JSON-Text | [Text](../../../value-types.md#STRING) | Ja | Der JSON-Text, der eingelesen werden soll. Er muss eine Liste von Objekten beschreiben. |
-| Struktur | [Struktur](../../../value-types.md#RECORD_TYPE) | Ja | Zu welcher Struktur jeder Eintrag passen muss. |
+| Name      | Typ                                             | Pflicht | Details                                                                                 |
+| --------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
+| JSON-Text | [Text](../../../value-types.md#STRING)          | Ja      | Der JSON-Text, der eingelesen werden soll. Er muss eine Liste von Objekten beschreiben. |
+| Struktur  | [Struktur](../../../value-types.md#RECORD_TYPE) | Ja      | Zu welcher Struktur jeder Eintrag passen muss.                                          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name          | Typ                                                            | Details                                                                    |
+| ------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | Strukturwerte | Liste von [Strukturwert](../../../value-types.md#RECORD_VALUE) | Die aus dem Text eingelesenen Strukturwerte, in der Reihenfolge der Liste. |
 
 ### Wert als JSON schreiben {#json-stringify}
@@ -49,15 +49,15 @@ Wandelt einen Wert in JSON-Text um, damit du ihn an einer Stelle speichern oder 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der Wert, der geschrieben werden soll. Strukturwerte, Listen, Zuordnungen, Texte, Zahlen und Ja/Nein-Werte funktionieren alle. |
-| Gut lesbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Verteilt den Text mit Einrückungen auf mehrere Zeilen. Angenehm, wenn ein Mensch ihn liest, länger beim Speichern. |
+| Name       | Typ                                        | Pflicht | Details                                                                                                                        |
+| ---------- | ------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Wert       | [Beliebig](../../../value-types.md#ANY)    | Ja      | Der Wert, der geschrieben werden soll. Strukturwerte, Listen, Zuordnungen, Texte, Zahlen und Ja/Nein-Werte funktionieren alle. |
+| Gut lesbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein    | Verteilt den Text mit Einrückungen auf mehrere Zeilen. Angenehm, wenn ein Mensch ihn liest, länger beim Speichern.             |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                    | Details                 |
+| --------- | -------------------------------------- | ----------------------- |
 | JSON-Text | [Text](../../../value-types.md#STRING) | Der Wert als JSON-Text. |
 
 ### Farbe aus Hex {#color-from-hex}
@@ -66,14 +66,14 @@ Erstellt eine Farbe aus einem Hex-Code (z. B. #5865F2).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Hex | [Text](../../../value-types.md#STRING) | Ja | Sechsstelliger Hex-Farbwert, optional mit vorangestelltem #. Muss zu `^#?[0-9a-fA-F]{6}$` passen. |
+| Name | Typ                                    | Pflicht | Details                                                                                           |
+| ---- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------- |
+| Hex  | [Text](../../../value-types.md#STRING) | Ja      | Sechsstelliger Hex-Farbwert, optional mit vorangestelltem #. Muss zu `^#?[0-9a-fA-F]{6}$` passen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                    | Details                  |
+| ----- | -------------------------------------- | ------------------------ |
 | Farbe | [Farbe](../../../value-types.md#COLOR) | Die resultierende Farbe. |
 
 ### Farbe zu Hex {#color-to-hex}
@@ -82,15 +82,15 @@ Gibt die Hex-Zeichenfolge für eine Farbe zurück (z. B. #5865F2).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Farbe | [Farbe](../../../value-types.md#COLOR) | Ja | Farbe, die umgewandelt wird. |
+| Name  | Typ                                    | Pflicht | Details                      |
+| ----- | -------------------------------------- | ------- | ---------------------------- |
+| Farbe | [Farbe](../../../value-types.md#COLOR) | Ja      | Farbe, die umgewandelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Hex | [Text](../../../value-types.md#STRING) | Hex-Text mit führendem #. |
+| Name | Typ                                    | Details                   |
+| ---- | -------------------------------------- | ------------------------- |
+| Hex  | [Text](../../../value-types.md#STRING) | Hex-Text mit führendem #. |
 
 ### Farbe aus RGB {#color-from-rgb}
 
@@ -98,16 +98,16 @@ Erstellt eine Farbe aus Rot-, Grün- und Blaukomponenten (0-255).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Rot | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Rot-Anteil (0-255). Wert: 0 bis 255. |
-| Grün | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Grün-Anteil (0-255). Wert: 0 bis 255. |
-| Blau | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Blau-Anteil (0-255). Wert: 0 bis 255. |
+| Name | Typ                                         | Pflicht | Details                               |
+| ---- | ------------------------------------------- | ------- | ------------------------------------- |
+| Rot  | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Rot-Anteil (0-255). Wert: 0 bis 255.  |
+| Grün | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Grün-Anteil (0-255). Wert: 0 bis 255. |
+| Blau | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Blau-Anteil (0-255). Wert: 0 bis 255. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                    | Details                  |
+| ----- | -------------------------------------- | ------------------------ |
 | Farbe | [Farbe](../../../value-types.md#COLOR) | Die resultierende Farbe. |
 
 ### Farbe zu RGB {#color-to-rgb}
@@ -116,15 +116,15 @@ Zerlegt eine Farbe in ihre Rot-, Grün- und Blau-Anteile (0-255). Die Umkehrung 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Farbe | [Farbe](../../../value-types.md#COLOR) | Ja | Die zu zerlegende Farbe. |
+| Name  | Typ                                    | Pflicht | Details                  |
+| ----- | -------------------------------------- | ------- | ------------------------ |
+| Farbe | [Farbe](../../../value-types.md#COLOR) | Ja      | Die zu zerlegende Farbe. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Rot | [Ganzzahl](../../../value-types.md#INTEGER) | Rot-Anteil (0-255). |
+| Name | Typ                                         | Details              |
+| ---- | ------------------------------------------- | -------------------- |
+| Rot  | [Ganzzahl](../../../value-types.md#INTEGER) | Rot-Anteil (0-255).  |
 | Grün | [Ganzzahl](../../../value-types.md#INTEGER) | Grün-Anteil (0-255). |
 | Blau | [Ganzzahl](../../../value-types.md#INTEGER) | Blau-Anteil (0-255). |
 
@@ -134,20 +134,20 @@ Zerlegt eine URL in ihre Bestandteile (Protokoll, Host, Port, Pfad, Query, Fragm
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Ja | Die zu zerlegende URL. |
+| Name | Typ                                | Pflicht | Details                |
+| ---- | ---------------------------------- | ------- | ---------------------- |
+| URL  | [URL](../../../value-types.md#URL) | Ja      | Die zu zerlegende URL. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Protokoll | [Text](../../../value-types.md#STRING) | Das Schema ohne den abschließenden Doppelpunkt, z. B. "https". |
-| Host | [Text](../../../value-types.md#STRING) | Der Hostname ohne Port, in Kleinbuchstaben, z. B. "example.com". |
-| Port | [Text](../../../value-types.md#STRING) | Der Port als Text oder leer, wenn die URL den Standard-Port des Schemas verwendet. |
-| Pfad | [Text](../../../value-types.md#STRING) | Der Pfad, z. B. "/a/b"; "/" wenn die URL keinen Pfad hat. |
-| Query | [Text](../../../value-types.md#STRING) | Die rohe Query-Zeichenkette ohne das führende "?"; leer, wenn keine vorhanden ist. |
-| Fragment | [Text](../../../value-types.md#STRING) | Das Fragment ohne das führende "#"; leer, wenn keines vorhanden ist. |
+| Name      | Typ                                    | Details                                                                            |
+| --------- | -------------------------------------- | ---------------------------------------------------------------------------------- |
+| Protokoll | [Text](../../../value-types.md#STRING) | Das Schema ohne den abschließenden Doppelpunkt, z. B. "https".                     |
+| Host      | [Text](../../../value-types.md#STRING) | Der Hostname ohne Port, in Kleinbuchstaben, z. B. "example.com".                   |
+| Port      | [Text](../../../value-types.md#STRING) | Der Port als Text oder leer, wenn die URL den Standard-Port des Schemas verwendet. |
+| Pfad      | [Text](../../../value-types.md#STRING) | Der Pfad, z. B. "/a/b"; "/" wenn die URL keinen Pfad hat.                          |
+| Query     | [Text](../../../value-types.md#STRING) | Die rohe Query-Zeichenkette ohne das führende "?"; leer, wenn keine vorhanden ist. |
+| Fragment  | [Text](../../../value-types.md#STRING) | Das Fragment ohne das führende "#"; leer, wenn keines vorhanden ist.               |
 
 ### URL-Query-Parameter lesen {#url-get-query-param}
 
@@ -155,15 +155,15 @@ Liest einen einzelnen Query-Parameter aus einer URL. Gibt einen leeren Wert zur�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Ja | Die URL, aus der der Parameter gelesen wird. |
-| Parameter | [Text](../../../value-types.md#STRING) | Ja | Der Name des Query-Parameters. Bei wiederholten Parametern wird der erste Wert zurückgegeben. |
+| Name      | Typ                                    | Pflicht | Details                                                                                       |
+| --------- | -------------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| URL       | [URL](../../../value-types.md#URL)     | Ja      | Die URL, aus der der Parameter gelesen wird.                                                  |
+| Parameter | [Text](../../../value-types.md#STRING) | Ja      | Der Name des Query-Parameters. Bei wiederholten Parametern wird der erste Wert zurückgegeben. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                                         |
+| ---- | -------------------------------------- | ------------------------------------------------------------------------------- |
 | Wert | [Text](../../../value-types.md#STRING) | Der Wert des Parameters oder leer, wenn er nicht vorhanden ist. Kann leer sein. |
 
 ### URL-kodieren {#url-encode}
@@ -172,14 +172,14 @@ Kodiert Text mit Prozentzeichen, damit er sicher in einer URL-Komponente verwend
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu kodierende Text. |
+| Name | Typ                                    | Pflicht | Details                 |
+| ---- | -------------------------------------- | ------- | ----------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der zu kodierende Text. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                   |
+| -------- | -------------------------------------- | ------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der prozentkodierte Text. |
 
 ### URL-dekodieren {#url-decode}
@@ -188,12 +188,12 @@ Dekodiert prozentkodierten Text. Schlägt fehl, wenn die Eingabe eine ungültige
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu dekodierende prozentkodierte Text. |
+| Name | Typ                                    | Pflicht | Details                                   |
+| ---- | -------------------------------------- | ------- | ----------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der zu dekodierende prozentkodierte Text. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details              |
+| -------- | -------------------------------------- | -------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der dekodierte Text. |

@@ -17,19 +17,19 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Ja | Befehlsname in Kleinbuchstaben (1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen. |
-| Beschreibung | [Text](../../value-types.md#STRING) | Ja | Beschreibung des Befehls (1-100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Optionen | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein | Parameter des Befehls. Höchstens 25 Einträge. |
-| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
-| DM-Berechtigung | [Ja/Nein](../../value-types.md#BOOLEAN) | Nein | Ob der Befehl in Direktnachrichten verwendet werden kann. Standard: Ja. |
-| NSFW | [Ja/Nein](../../value-types.md#BOOLEAN) | Nein | Ob der Befehl altersbeschränkt ist. Standard: Nein. |
+| Name                    | Typ                                                                        | Pflicht | Details                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| Name                    | [Text](../../value-types.md#STRING)                                        | Ja      | Befehlsname in Kleinbuchstaben (1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen. |
+| Beschreibung            | [Text](../../value-types.md#STRING)                                        | Ja      | Beschreibung des Befehls (1-100 Zeichen). Länge: 1 bis 100 Zeichen.                                     |
+| Optionen                | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein    | Parameter des Befehls. Höchstens 25 Einträge.                                                           |
+| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG)             | Nein    | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind.                            |
+| DM-Berechtigung         | [Ja/Nein](../../value-types.md#BOOLEAN)                                    | Nein    | Ob der Befehl in Direktnachrichten verwendet werden kann. Standard: Ja.                                 |
+| NSFW                    | [Ja/Nein](../../value-types.md#BOOLEAN)                                    | Nein    | Ob der Befehl altersbeschränkt ist. Standard: Nein.                                                     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                            |
+| ------ | ------------------------------------------------------------ | ---------------------------------- |
 | Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Der registrierte Anwendungsbefehl. |
 
 ### Benutzer-Kontextmenü erstellen (Server) {#create-guild-user-context-menu}
@@ -40,15 +40,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Ja | Anzeigename des Kontextmenü-Eintrags. Länge: 1 bis 32 Zeichen. |
-| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
+| Name                    | Typ                                                            | Pflicht | Details                                                                      |
+| ----------------------- | -------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------- |
+| Name                    | [Text](../../value-types.md#STRING)                            | Ja      | Anzeigename des Kontextmenü-Eintrags. Länge: 1 bis 32 Zeichen.               |
+| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein    | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                              |
+| ------ | ------------------------------------------------------------ | ------------------------------------ |
 | Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Der registrierte Kontextmenü-Befehl. |
 
 ### Nachricht-Kontextmenü erstellen (Server) {#create-guild-message-context-menu}
@@ -59,15 +59,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Ja | Anzeigename des Kontextmenü-Eintrags. Länge: 1 bis 32 Zeichen. |
-| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
+| Name                    | Typ                                                            | Pflicht | Details                                                                      |
+| ----------------------- | -------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------- |
+| Name                    | [Text](../../value-types.md#STRING)                            | Ja      | Anzeigename des Kontextmenü-Eintrags. Länge: 1 bis 32 Zeichen.               |
+| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein    | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                              |
+| ------ | ------------------------------------------------------------ | ------------------------------------ |
 | Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Der registrierte Kontextmenü-Befehl. |
 
 ### Globalen Slash-Befehl erstellen {#create-global-slash-command}
@@ -76,19 +76,19 @@ Registriert einen neuen Slash-Befehl global über alle Server hinweg.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Ja | Kleingeschriebener Befehlsname (1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen. |
-| Beschreibung | [Text](../../value-types.md#STRING) | Ja | Beschreibung des Befehls (1-100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Optionen | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein | Parameter des Befehls. Höchstens 25 Einträge. |
-| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind. |
-| DM-Berechtigung | [Ja/Nein](../../value-types.md#BOOLEAN) | Nein | Ob der Befehl in Direktnachrichten genutzt werden kann. Standard: Ja. |
-| NSFW | [Ja/Nein](../../value-types.md#BOOLEAN) | Nein | Ob der Befehl altersbeschränkt ist. Standard: Nein. |
+| Name                    | Typ                                                                        | Pflicht | Details                                                                                                 |
+| ----------------------- | -------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| Name                    | [Text](../../value-types.md#STRING)                                        | Ja      | Kleingeschriebener Befehlsname (1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen. |
+| Beschreibung            | [Text](../../value-types.md#STRING)                                        | Ja      | Beschreibung des Befehls (1-100 Zeichen). Länge: 1 bis 100 Zeichen.                                     |
+| Optionen                | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein    | Parameter des Befehls. Höchstens 25 Einträge.                                                           |
+| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG)             | Nein    | Berechtigungen, die standardmäßig zur Nutzung des Befehls erforderlich sind.                            |
+| DM-Berechtigung         | [Ja/Nein](../../value-types.md#BOOLEAN)                                    | Nein    | Ob der Befehl in Direktnachrichten genutzt werden kann. Standard: Ja.                                   |
+| NSFW                    | [Ja/Nein](../../value-types.md#BOOLEAN)                                    | Nein    | Ob der Befehl altersbeschränkt ist. Standard: Nein.                                                     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                            |
+| ------ | ------------------------------------------------------------ | ---------------------------------- |
 | Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Der registrierte Anwendungsbefehl. |
 
 ### Anwendungsbefehl aktualisieren {#update-application-command}
@@ -99,19 +99,19 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Ja | Befehl, der aktualisiert wird. |
-| Name | [Text](../../value-types.md#STRING) | Nein | Neuer Name für den Befehl. Länge: 1 bis 32 Zeichen. |
-| Beschreibung | [Text](../../value-types.md#STRING) | Nein | Neue Beschreibung für den Befehl. Maximale Länge: 100 Zeichen. |
-| Optionen | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein | Neue Optionen für den Befehl. Höchstens 25 Einträge. |
-| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG) | Nein | Neue Standard-Berechtigungen für Mitglieder. |
-| NSFW | [Ja/Nein](../../value-types.md#BOOLEAN) | Nein | Ob der Befehl altersbeschränkt sein soll. |
+| Name                    | Typ                                                                        | Pflicht | Details                                                        |
+| ----------------------- | -------------------------------------------------------------------------- | ------- | -------------------------------------------------------------- |
+| Befehl                  | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND)               | Ja      | Befehl, der aktualisiert wird.                                 |
+| Name                    | [Text](../../value-types.md#STRING)                                        | Nein    | Neuer Name für den Befehl. Länge: 1 bis 32 Zeichen.            |
+| Beschreibung            | [Text](../../value-types.md#STRING)                                        | Nein    | Neue Beschreibung für den Befehl. Maximale Länge: 100 Zeichen. |
+| Optionen                | Liste von [Befehlsoption](../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein    | Neue Optionen für den Befehl. Höchstens 25 Einträge.           |
+| Standard-Berechtigungen | Liste von [Berechtigung](../../value-types.md#PERMISSION_FLAG)             | Nein    | Neue Standard-Berechtigungen für Mitglieder.                   |
+| NSFW                    | [Ja/Nein](../../value-types.md#BOOLEAN)                                    | Nein    | Ob der Befehl altersbeschränkt sein soll.                      |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                             |
+| ------ | ------------------------------------------------------------ | ----------------------------------- |
 | Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Der aktualisierte Anwendungsbefehl. |
 
 ### Anwendungsbefehl löschen {#delete-application-command}
@@ -122,9 +122,9 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Ja | Der Befehl, der gelöscht wird. |
+| Name   | Typ                                                          | Pflicht | Details                        |
+| ------ | ------------------------------------------------------------ | ------- | ------------------------------ |
+| Befehl | [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Ja      | Der Befehl, der gelöscht wird. |
 
 ### Server-Befehle gesammelt festlegen {#bulk-set-guild-application-commands}
 
@@ -134,14 +134,14 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehle | Liste von [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Ja | Vollständige Liste der Befehle, die auf dem Server registriert werden. |
+| Name    | Typ                                                                    | Pflicht | Details                                                                |
+| ------- | ---------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
+| Befehle | Liste von [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Ja      | Vollständige Liste der Befehle, die auf dem Server registriert werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                    | Details                                   |
+| ------- | ---------------------------------------------------------------------- | ----------------------------------------- |
 | Befehle | Liste von [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Die resultierenden registrierten Befehle. |
 
 ### Server-Befehle abrufen {#fetch-guild-application-commands}
@@ -150,8 +150,8 @@ Ruft jeden Anwendungsbefehl ab, der in einem Server registriert ist.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                    | Details                       |
+| ------- | ---------------------------------------------------------------------- | ----------------------------- |
 | Befehle | Liste von [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Die Liste der Server-Befehle. |
 
 ### Globale Befehle abrufen {#fetch-global-application-commands}
@@ -160,6 +160,6 @@ Ruft jeden Anwendungsbefehl ab, der global registriert ist.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                    | Details                         |
+| ------- | ---------------------------------------------------------------------- | ------------------------------- |
 | Befehle | Liste von [Anwendungsbefehl](../../value-types.md#APPLICATION_COMMAND) | Die Liste der globalen Befehle. |

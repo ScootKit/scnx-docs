@@ -15,8 +15,8 @@ Reads the IDs of the stories on the Hacker News front page, top first.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name      | Type                                     | Details                                                                      |
+| --------- | ---------------------------------------- | ---------------------------------------------------------------------------- |
 | Story IDs | List of [ID](../../../value-types.md#ID) | Up to 500 story IDs in list order. Read a story with "Get story or comment". |
 
 ### Get newest stories {#hacker-news-get-new-stories}
@@ -25,8 +25,8 @@ Reads the IDs of the newest Hacker News stories, newest first.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name      | Type                                     | Details                                                                      |
+| --------- | ---------------------------------------- | ---------------------------------------------------------------------------- |
 | Story IDs | List of [ID](../../../value-types.md#ID) | Up to 500 story IDs in list order. Read a story with "Get story or comment". |
 
 ### Get story or comment {#hacker-news-get-item}
@@ -35,21 +35,21 @@ Reads one Hacker News story, comment, job or poll by its ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Item ID | [Whole number](../../../value-types.md#INTEGER) | Yes | The number after id= in the Hacker News address. Minimum: 1. |
+| Name    | Type                                            | Required | Details                                                      |
+| ------- | ----------------------------------------------- | -------- | ------------------------------------------------------------ |
+| Item ID | [Whole number](../../../value-types.md#INTEGER) | Yes      | The number after id= in the Hacker News address. Minimum: 1. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the item exists. When not, everything else is empty. |
-| Type | [Text](../../../value-types.md#STRING) | story, comment, job, poll or pollopt. May be empty. |
-| Title | [Text](../../../value-types.md#STRING) | The title. Empty for comments. May be empty. |
-| Link | [URL](../../../value-types.md#URL) | The page the story links to. Empty for text posts. May be empty. |
-| Text | [Text](../../../value-types.md#STRING) | The text of a comment or text post, as HTML. May be empty. |
-| Author | [Text](../../../value-types.md#STRING) | The username of the author. May be empty. |
-| Points | [Whole number](../../../value-types.md#INTEGER) | The points of a story. May be empty. |
-| Comments | [Whole number](../../../value-types.md#INTEGER) | How many comments a story has. May be empty. |
-| Posted at | [Date and time](../../../value-types.md#DATETIME) | When it was posted. May be empty. |
-| Hacker News link | [URL](../../../value-types.md#URL) | The discussion page on Hacker News. May be empty. |
+| Name             | Type                                              | Details                                                          |
+| ---------------- | ------------------------------------------------- | ---------------------------------------------------------------- |
+| Found            | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the item exists. When not, everything else is empty.     |
+| Type             | [Text](../../../value-types.md#STRING)            | story, comment, job, poll or pollopt. May be empty.              |
+| Title            | [Text](../../../value-types.md#STRING)            | The title. Empty for comments. May be empty.                     |
+| Link             | [URL](../../../value-types.md#URL)                | The page the story links to. Empty for text posts. May be empty. |
+| Text             | [Text](../../../value-types.md#STRING)            | The text of a comment or text post, as HTML. May be empty.       |
+| Author           | [Text](../../../value-types.md#STRING)            | The username of the author. May be empty.                        |
+| Points           | [Whole number](../../../value-types.md#INTEGER)   | The points of a story. May be empty.                             |
+| Comments         | [Whole number](../../../value-types.md#INTEGER)   | How many comments a story has. May be empty.                     |
+| Posted at        | [Date and time](../../../value-types.md#DATETIME) | When it was posted. May be empty.                                |
+| Hacker News link | [URL](../../../value-types.md#URL)                | The discussion page on Hacker News. May be empty.                |

@@ -15,8 +15,8 @@ Ruft alle SKUs für die Bot-Anwendung ab.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                       | Details                  |
+| ---- | ----------------------------------------- | ------------------------ |
 | SKUs | Liste von [SKU](../../value-types.md#SKU) | Alle SKUs der Anwendung. |
 
 ### SKU nach ID abrufen {#fetch-sku-by-id}
@@ -25,15 +25,15 @@ Ruft eine einzelne SKU nach ID ab.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Die Discord-ID der SKU. |
+| Name | Typ                                          | Pflicht | Details                 |
+| ---- | -------------------------------------------- | ------- | ----------------------- |
+| ID   | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Die Discord-ID der SKU. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| SKU | [SKU](../../value-types.md#SKU) | Die SKU oder leer, wenn nicht gefunden. Kann leer sein. |
+| Name | Typ                             | Details                                                 |
+| ---- | ------------------------------- | ------------------------------------------------------- |
+| SKU  | [SKU](../../value-types.md#SKU) | Die SKU oder leer, wenn nicht gefunden. Kann leer sein. |
 
 ### Anwendungs-Lizenzen abrufen {#fetch-application-entitlements}
 
@@ -41,19 +41,19 @@ Ruft Lizenzen für die Anwendung ab, optional gefiltert nach Benutzer, SKU oder 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt nur Entitlements dieses Benutzers zurück. |
-| SKU-IDs | Liste von [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt nur Entitlements für diese SKUs zurück. |
-| Server-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt nur Entitlements dieses Servers zurück. |
-| Beendete ausschließen | [Ja/Nein](../../value-types.md#BOOLEAN) | Ja | Ob bereits beendete Entitlements ausgelassen werden. Standard: Nein. |
-| Gelöschte ausschließen | [Ja/Nein](../../value-types.md#BOOLEAN) | Ja | Ob gelöschte Entitlements ausgelassen werden. Standard: Ja. |
-| Limit | [Ganzzahl](../../value-types.md#INTEGER) | Ja | Maximale Anzahl zurückgegebener Entitlements (1-100). Wert: 1 bis 100. Standard: `100`. |
+| Name                   | Typ                                                    | Pflicht | Details                                                                                 |
+| ---------------------- | ------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------- |
+| Benutzer-ID            | [Discord-ID](../../value-types.md#SNOWFLAKE)           | Nein    | Gibt nur Entitlements dieses Benutzers zurück.                                          |
+| SKU-IDs                | Liste von [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein    | Gibt nur Entitlements für diese SKUs zurück.                                            |
+| Server-ID              | [Discord-ID](../../value-types.md#SNOWFLAKE)           | Nein    | Gibt nur Entitlements dieses Servers zurück.                                            |
+| Beendete ausschließen  | [Ja/Nein](../../value-types.md#BOOLEAN)                | Ja      | Ob bereits beendete Entitlements ausgelassen werden. Standard: Nein.                    |
+| Gelöschte ausschließen | [Ja/Nein](../../value-types.md#BOOLEAN)                | Ja      | Ob gelöschte Entitlements ausgelassen werden. Standard: Ja.                             |
+| Limit                  | [Ganzzahl](../../value-types.md#INTEGER)               | Ja      | Maximale Anzahl zurückgegebener Entitlements (1-100). Wert: 1 bis 100. Standard: `100`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                         |
+| -------- | ---------------------------------------------------- | ------------------------------- |
 | Lizenzen | Liste von [Lizenz](../../value-types.md#ENTITLEMENT) | Die übereinstimmenden Lizenzen. |
 
 ### Lizenz nach ID abrufen {#fetch-entitlement-by-id}
@@ -62,14 +62,14 @@ Ruft eine einzelne Lizenz nach ihrer Discord-ID ab.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | ID des Entitlements, das abgerufen wird. |
+| Name | Typ                                          | Pflicht | Details                                  |
+| ---- | -------------------------------------------- | ------- | ---------------------------------------- |
+| ID   | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | ID des Entitlements, das abgerufen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                        | Details                                                    |
+| ------ | ------------------------------------------ | ---------------------------------------------------------- |
 | Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Die Lizenz oder leer, wenn nicht gefunden. Kann leer sein. |
 
 ### Test-Lizenz erstellen {#create-test-entitlement}
@@ -78,16 +78,16 @@ Erstellt eine Test-Lizenz für eine SKU, nützlich beim Testen von Premium-Funkt
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| SKU-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | ID der SKU, für die das Entitlement gewährt wird. |
-| Besitzertyp | [Lizenz-Besitzertyp](../../value-types.md#ENTITLEMENT_OWNER_TYPE) | Ja | Ob das Entitlement einem Benutzer oder einem Server gehört. |
-| Besitzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | ID des besitzenden Benutzers oder Servers. |
+| Name        | Typ                                                               | Pflicht | Details                                                     |
+| ----------- | ----------------------------------------------------------------- | ------- | ----------------------------------------------------------- |
+| SKU-ID      | [Discord-ID](../../value-types.md#SNOWFLAKE)                      | Ja      | ID der SKU, für die das Entitlement gewährt wird.           |
+| Besitzertyp | [Lizenz-Besitzertyp](../../value-types.md#ENTITLEMENT_OWNER_TYPE) | Ja      | Ob das Entitlement einem Benutzer oder einem Server gehört. |
+| Besitzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE)                      | Ja      | ID des besitzenden Benutzers oder Servers.                  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                        | Details                        |
+| ------ | ------------------------------------------ | ------------------------------ |
 | Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Die neu erstellte Test-Lizenz. |
 
 ### Test-Lizenz löschen {#delete-test-entitlement}
@@ -96,9 +96,9 @@ Löscht eine Test-Lizenz, die zuvor über den Test-Endpunkt erstellt wurde.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Entitlement | [Lizenz](../../value-types.md#ENTITLEMENT) | Ja | Test-Entitlement, das gelöscht wird. |
+| Name        | Typ                                        | Pflicht | Details                              |
+| ----------- | ------------------------------------------ | ------- | ------------------------------------ |
+| Entitlement | [Lizenz](../../value-types.md#ENTITLEMENT) | Ja      | Test-Entitlement, das gelöscht wird. |
 
 ### Lizenz einlösen {#consume-entitlement}
 
@@ -106,9 +106,9 @@ Markiert eine einmalig nutzbare Lizenz als genutzt.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Entitlement | [Lizenz](../../value-types.md#ENTITLEMENT) | Ja | Das verbrauchbare Entitlement, das eingelöst wird. |
+| Name        | Typ                                        | Pflicht | Details                                            |
+| ----------- | ------------------------------------------ | ------- | -------------------------------------------------- |
+| Entitlement | [Lizenz](../../value-types.md#ENTITLEMENT) | Ja      | Das verbrauchbare Entitlement, das eingelöst wird. |
 
 ### SKU-Abonnements abrufen {#fetch-sku-subscriptions}
 
@@ -116,18 +116,18 @@ Ruft Abonnements für eine SKU ab, optional gefiltert nach Benutzer und paginier
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| SKU-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Die SKU, deren Abonnements abgerufen werden sollen. |
-| Benutzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt nur Abonnements dieses Benutzers zurück. |
-| Vor | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt Abonnements zurück, deren IDs vor dieser Discord-ID liegen. |
-| Nach | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein | Gibt Abonnements zurück, deren IDs nach dieser Discord-ID liegen. |
-| Limit | [Ganzzahl](../../value-types.md#INTEGER) | Ja | Maximale Anzahl zurückgegebener Abonnements (1-100). Wert: 1 bis 100. Standard: `50`. |
+| Name        | Typ                                          | Pflicht | Details                                                                               |
+| ----------- | -------------------------------------------- | ------- | ------------------------------------------------------------------------------------- |
+| SKU-ID      | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Die SKU, deren Abonnements abgerufen werden sollen.                                   |
+| Benutzer-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein    | Gibt nur Abonnements dieses Benutzers zurück.                                         |
+| Vor         | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein    | Gibt Abonnements zurück, deren IDs vor dieser Discord-ID liegen.                      |
+| Nach        | [Discord-ID](../../value-types.md#SNOWFLAKE) | Nein    | Gibt Abonnements zurück, deren IDs nach dieser Discord-ID liegen.                     |
+| Limit       | [Ganzzahl](../../value-types.md#INTEGER)     | Ja      | Maximale Anzahl zurückgegebener Abonnements (1-100). Wert: 1 bis 100. Standard: `50`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                       | Details                            |
+| ----------- | --------------------------------------------------------- | ---------------------------------- |
 | Abonnements | Liste von [Abonnement](../../value-types.md#SUBSCRIPTION) | Die übereinstimmenden Abonnements. |
 
 ### SKU-Abonnement nach ID abrufen {#fetch-sku-subscription-by-id}
@@ -136,13 +136,13 @@ Ruft ein einzelnes Abonnement für eine SKU nach ihrer ID ab.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| SKU-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Die SKU, zu der das Abonnement gehört. |
-| Abonnement-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja | Die ID des Abonnements. |
+| Name          | Typ                                          | Pflicht | Details                                |
+| ------------- | -------------------------------------------- | ------- | -------------------------------------- |
+| SKU-ID        | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Die SKU, zu der das Abonnement gehört. |
+| Abonnement-ID | [Discord-ID](../../value-types.md#SNOWFLAKE) | Ja      | Die ID des Abonnements.                |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                             | Details                                                        |
+| ---------- | ----------------------------------------------- | -------------------------------------------------------------- |
 | Abonnement | [Abonnement](../../value-types.md#SUBSCRIPTION) | Das Abonnement oder leer, wenn nicht gefunden. Kann leer sein. |

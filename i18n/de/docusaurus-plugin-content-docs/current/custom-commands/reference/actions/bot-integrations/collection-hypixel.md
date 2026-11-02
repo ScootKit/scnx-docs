@@ -15,23 +15,23 @@ Liest Rang, Level und Loginzeiten eines Spielers auf Hypixel.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die Hypixel-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Minecraft-UUID | [Text](../../../value-types.md#STRING) | Ja | Die UUID des Spielers, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen“. Maximale Länge: 36 Zeichen. |
+| Name           | Typ                                    | Pflicht | Details                                                                                                                      |
+| -------------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Verbindung     | [Text](../../../value-types.md#STRING) | Nein    | Die Hypixel-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.                      |
+| Minecraft-UUID | [Text](../../../value-types.md#STRING) | Ja      | Die UUID des Spielers, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen". Maximale Länge: 36 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Spieler jemals auf Hypixel war. Wenn nicht, ist alles andere leer. |
-| Name | [Text](../../../value-types.md#STRING) | Der Minecraft-Name, den Hypixel kennt. Kann leer sein. |
-| Rang | [Text](../../../value-types.md#STRING) | Der Rangcode, zum Beispiel „VIP“, „VIP_PLUS“, „MVP“, „MVP_PLUS“, „MVP_PLUS_PLUS“ oder ein Teamrang. Leer ohne Rang. Kann leer sein. |
-| Netzwerklevel | [Dezimalzahl](../../../value-types.md#FLOAT) | Das Netzwerklevel mit Fortschritt, zum Beispiel 152.37. Kann leer sein. |
-| Karma | [Ganzzahl](../../../value-types.md#INTEGER) | Das Karma des Spielers. Kann leer sein. |
-| Erfolgspunkte | [Ganzzahl](../../../value-types.md#INTEGER) | Die Erfolgspunkte des Spielers. Kann leer sein. |
-| Erster Login | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zum ersten Mal da war. Kann leer sein. |
-| Letzter Login | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zuletzt da war. Leer, wenn der Spieler das verbirgt. Kann leer sein. |
+| Name          | Typ                                                   | Details                                                                                                                             |
+| ------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Gefunden      | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ob der Spieler jemals auf Hypixel war. Wenn nicht, ist alles andere leer.                                                           |
+| Name          | [Text](../../../value-types.md#STRING)                | Der Minecraft-Name, den Hypixel kennt. Kann leer sein.                                                                              |
+| Rang          | [Text](../../../value-types.md#STRING)                | Der Rangcode, zum Beispiel „VIP", „VIP_PLUS", „MVP", „MVP_PLUS", „MVP_PLUS_PLUS" oder ein Teamrang. Leer ohne Rang. Kann leer sein. |
+| Netzwerklevel | [Dezimalzahl](../../../value-types.md#FLOAT)          | Das Netzwerklevel mit Fortschritt, zum Beispiel 152.37. Kann leer sein.                                                             |
+| Karma         | [Ganzzahl](../../../value-types.md#INTEGER)           | Das Karma des Spielers. Kann leer sein.                                                                                             |
+| Erfolgspunkte | [Ganzzahl](../../../value-types.md#INTEGER)           | Die Erfolgspunkte des Spielers. Kann leer sein.                                                                                     |
+| Erster Login  | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zum ersten Mal da war. Kann leer sein.                                                                             |
+| Letzter Login | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zuletzt da war. Leer, wenn der Spieler das verbirgt. Kann leer sein.                                               |
 
 ### Onlinestatus abrufen {#hypixel-get-status}
 
@@ -39,16 +39,16 @@ Prüft, ob ein Spieler gerade auf Hypixel ist und was er spielt.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die Hypixel-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Minecraft-UUID | [Text](../../../value-types.md#STRING) | Ja | Die UUID des Spielers, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen“. Maximale Länge: 36 Zeichen. |
+| Name           | Typ                                    | Pflicht | Details                                                                                                                      |
+| -------------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Verbindung     | [Text](../../../value-types.md#STRING) | Nein    | Die Hypixel-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.                      |
+| Minecraft-UUID | [Text](../../../value-types.md#STRING) | Ja      | Die UUID des Spielers, mit oder ohne Bindestriche. Du bekommst sie mit „Minecraft-UUID abrufen". Maximale Länge: 36 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                        | Details                                                               |
+| ---------- | ------------------------------------------ | --------------------------------------------------------------------- |
 | Ist online | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Spieler online ist. Auch false, wenn der Spieler das verbirgt. |
-| Spiel | [Text](../../../value-types.md#STRING) | Das Spiel, zum Beispiel BEDWARS. Kann leer sein. |
-| Modus | [Text](../../../value-types.md#STRING) | Der Modus, zum Beispiel LOBBY. Kann leer sein. |
-| Arena | [Text](../../../value-types.md#STRING) | Die gespielte Arena oder Welt, wenn es eine gibt. Kann leer sein. |
+| Spiel      | [Text](../../../value-types.md#STRING)     | Das Spiel, zum Beispiel BEDWARS. Kann leer sein.                      |
+| Modus      | [Text](../../../value-types.md#STRING)     | Der Modus, zum Beispiel LOBBY. Kann leer sein.                        |
+| Arena      | [Text](../../../value-types.md#STRING)     | Die gespielte Arena oder Welt, wenn es eine gibt. Kann leer sein.     |

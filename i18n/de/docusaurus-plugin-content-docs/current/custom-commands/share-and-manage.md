@@ -28,12 +28,12 @@ Wenn eine App, die du installiert hast, eine neue Version bekommt, zeigt die Üb
 
 ## Wer was darf {#who}
 
-| Aufgabe                                                            | Wer                                                                                              |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| V3 einschalten oder zurück zu V2 wechseln                          | Server-Owner und Co-Owner                                                                        |
-| Flows bauen, Module und Apps bearbeiten, Daten und Ausführungen ansehen | Owner, Co-Owner und Trusted Admins mit Zugriff auf eigene Befehle                           |
-| Notaus                                                             | Owner, Co-Owner und Trusted Admins, die den Bot verwalten dürfen                                 |
-| Ein Modul veröffentlichen                                          | Mitglieder der veröffentlichenden Organisation mit der Berechtigung "Inhalte verwalten"             |
+| Aufgabe                                                                 | Wer                                                                                     |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| V3 einschalten oder zurück zu V2 wechseln                               | Server-Owner und Co-Owner                                                               |
+| Flows bauen, Module und Apps bearbeiten, Daten und Ausführungen ansehen | Owner, Co-Owner und Trusted Admins mit Zugriff auf eigene Befehle                       |
+| Notaus                                                                  | Owner, Co-Owner und Trusted Admins, die den Bot verwalten dürfen                        |
+| Ein Modul veröffentlichen                                               | Mitglieder der veröffentlichenden Organisation mit der Berechtigung "Inhalte verwalten" |
 
 Jeder, der Flows bearbeiten darf, kann deinen Bot alles tun lassen, was seine Discord-Berechtigungen erlauben. Gib diesen Zugriff deshalb nur Leuten, denen du auch den Bot selbst anvertrauen würdest.
 

@@ -15,12 +15,12 @@ Wird ausgelöst, wenn ein Benutzer einen von dem Bot erstellten Nachrichts-Butto
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Nur auslösen, wenn die Custom-ID des Buttons diesem Muster entspricht. Leer lassen, um alle Buttons zu erfassen. |
+| Name             | Typ                                    | Pflicht | Details                                                                                                          |
+| ---------------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Nur auslösen, wenn die Custom-ID des Buttons diesem Muster entspricht. Leer lassen, um alle Buttons zu erfassen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                        | Details                                 |
+| ----------- | ---------------------------------------------------------- | --------------------------------------- |
 | Interaktion | [Button-Klick](../../../value-types.md#BUTTON_INTERACTION) | Button-Interaktion, die erstellt wurde. |

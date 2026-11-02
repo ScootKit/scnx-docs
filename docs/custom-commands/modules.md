@@ -46,14 +46,14 @@ The header shows the module's icon, name and description, and these controls:
 
 The navigation next to it leads to the module's parts:
 
-| Entry             | What you do there                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Flows**         | The module's flows and folders. **New custom command flow** and **New folder** work just like on the overview.     |
-| **Configuration** | The module's settings page, and the layout of that page. See [Module settings](#settings).                          |
+| Entry             | What you do there                                                                                                          |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Flows**         | The module's flows and folders. **New custom command flow** and **New folder** work just like on the overview.             |
+| **Configuration** | The module's settings page, and the layout of that page. See [Module settings](#settings).                                 |
 | **App**           | The page people see when you publish the module as an app. See [Sharing & the marketplace](/docs/custom-commands/sharing). |
-| **Storage**       | The module's storage fields and the data its flows stored. See [Data storage](/docs/custom-commands/storage).        |
-| **Executions**    | Every run of the module's flows. See [Run history & debugging](/docs/custom-commands/executions).                     |
-| **Graph**         | A map of how the module's flows fit together. See [The module graph](#graph).                                       |
+| **Storage**       | The module's storage fields and the data its flows stored. See [Data storage](/docs/custom-commands/storage).              |
+| **Executions**    | Every run of the module's flows. See [Run history & debugging](/docs/custom-commands/executions).                          |
+| **Graph**         | A map of how the module's flows fit together. See [The module graph](#graph).                                              |
 
 ## Turn a module on and off {#enable}
 
@@ -146,13 +146,13 @@ If an admin removes a parameter's `%name%` from the message, nothing breaks: the
 
 When you create a flow, **Start from a template** offers ready-made flows. Each one is created as a draft, so you can look at it and adjust it before you turn it on.
 
-| Template                  | What it does                                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Blank flow**            | Starts from scratch with an empty flow.                                                                            |
-| **Greeting responder**    | Replies in the same channel when someone sends "!hello".                                                           |
-| **Welcome new members**   | Greets new members with a personal message in a channel of your choice.                                            |
-| **/warn command**         | Warns a member with a user and a reason, counts their warnings in storage and DMs them, with a fallback if DMs are closed. |
-| **/remind command**       | Lets members schedule a reminder. A second flow, "Deliver reminder (scheduled)", is created with it and sends the DM when it's due. |
+| Template                | What it does                                                                                                                        |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Blank flow**          | Starts from scratch with an empty flow.                                                                                             |
+| **Greeting responder**  | Replies in the same channel when someone sends "!hello".                                                                            |
+| **Welcome new members** | Greets new members with a personal message in a channel of your choice.                                                             |
+| **/warn command**       | Warns a member with a user and a reason, counts their warnings in storage and DMs them, with a fallback if DMs are closed.          |
+| **/remind command**     | Lets members schedule a reminder. A second flow, "Deliver reminder (scheduled)", is created with it and sends the DM when it's due. |
 
 Templates work the same on the overview and inside a module. Some of them use channels or storage fields you still have to pick or create. The **Issues** tab tells you what's missing.
 
@@ -182,10 +182,10 @@ Within your own server, you can copy single steps between flows with `Ctrl+C` an
 
 ## Common mistakes {#mistakes}
 
-| What happens                                                  | Why, and how to fix it                                                                                              |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| A module setting doesn't show up in the value picker          | The flow isn't in this module, or the setting's type doesn't fit the input. Loose flows can't use module settings. |
-| **Use module setting** says "only inside a module"            | The flow is a loose flow. Create it inside a module instead.                                                         |
-| A changed schedule or setting has no effect                   | It's only read while your bot starts up. Click **Reload configuration**.                                             |
-| Commands react twice after duplicating                        | The original and the copy are both enabled. Disable one of them.                                                     |
-| A button in a module setting's message can't find your flow   | Module flows can only be linked from that module's own messages and steps.                                          |
+| What happens                                                | Why, and how to fix it                                                                                             |
+| ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| A module setting doesn't show up in the value picker        | The flow isn't in this module, or the setting's type doesn't fit the input. Loose flows can't use module settings. |
+| **Use module setting** says "only inside a module"          | The flow is a loose flow. Create it inside a module instead.                                                       |
+| A changed schedule or setting has no effect                 | It's only read while your bot starts up. Click **Reload configuration**.                                           |
+| Commands react twice after duplicating                      | The original and the copy are both enabled. Disable one of them.                                                   |
+| A button in a module setting's message can't find your flow | Module flows can only be linked from that module's own messages and steps.                                         |

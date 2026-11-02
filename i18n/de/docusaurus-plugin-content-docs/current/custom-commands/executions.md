@@ -39,14 +39,14 @@ Grenze die Liste mit den Filtern **Flow** und **Status** ein. Um herauszufinden,
 
 ## Status {#statuses}
 
-| Status                  | Was er bedeutet                                                                                                                                                     |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Erfolgreich**         | Der Flow ist bis zum Ende gelaufen.                                                                                                                                 |
-| **Fehlgeschlagen**      | Ein Schritt ist auf einen Fehler gestoßen und der Flow hat dort angehalten. Öffne die Ausführung, um zu sehen, welcher Schritt und warum.                            |
-| **Gestoppt**            | Der Flow wurde absichtlich früher beendet, mit einem Schritt **Flow stoppen** oder **Aus Flow zurückkehren**. Das ist kein Fehler.                                  |
-| **Limit überschritten** | Die Ausführung hat ein Sicherheitslimit erreicht, zum Beispiel hat sie zu lange gedauert oder zu viele Schritte ausgeführt, und wurde beendet. Siehe [Tarife, Limits & Sicherheit](/de/docs/custom-commands/limits-and-safety). |
+| Status                  | Was er bedeutet                                                                                                                                                                                                                       |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Erfolgreich**         | Der Flow ist bis zum Ende gelaufen.                                                                                                                                                                                                   |
+| **Fehlgeschlagen**      | Ein Schritt ist auf einen Fehler gestoßen und der Flow hat dort angehalten. Öffne die Ausführung, um zu sehen, welcher Schritt und warum.                                                                                             |
+| **Gestoppt**            | Der Flow wurde absichtlich früher beendet, mit einem Schritt **Flow stoppen** oder **Aus Flow zurückkehren**. Das ist kein Fehler.                                                                                                    |
+| **Limit überschritten** | Die Ausführung hat ein Sicherheitslimit erreicht, zum Beispiel hat sie zu lange gedauert oder zu viele Schritte ausgeführt, und wurde beendet. Siehe [Tarife, Limits & Sicherheit](/de/docs/custom-commands/limits-and-safety).       |
 | **Übersprungen**        | Der Trigger hat ausgelöst, aber der Flow ist nicht gestartet. Die Ausführung zeigt den Grund, zum Beispiel einen Cooldown, einen ausgeschalteten Flow, zu viele Ausführungen in kurzer Zeit oder das Aktivitätsbudget deines Servers. |
-| **Unterbrochen**        | Die Ausführung wurde abgebrochen, bevor sie fertig war, meist weil dein Bot während der Ausführung neu gestartet ist.                                               |
+| **Unterbrochen**        | Die Ausführung wurde abgebrochen, bevor sie fertig war, meist weil dein Bot während der Ausführung neu gestartet ist.                                                                                                                 |
 
 Ein paar weitere Dinge, die dir begegnen können:
 
@@ -82,30 +82,30 @@ Hat der Flow mehrere Schritte derselben Art und du kannst nicht erkennen, welche
 
 Manche Fehler werden nicht von deinem Server verursacht, sondern vom Flow selbst. Für diese zeigt die Ausführung statt des allgemeinen Satzes einen bestimmten:
 
-| Was die Ausführung sagt                                             | Lösung                                                                                                             |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| "Auf diese Interaktion wurde bereits geantwortet oder sie wurde bereits aufgeschoben" | Nutze **Auf Interaktion folgen**, um eine weitere Nachricht zu senden, oder **Interaktionsantwort bearbeiten**, um die erste zu ändern. |
+| Was die Ausführung sagt                                                                    | Lösung                                                                                                                                                             |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "Auf diese Interaktion wurde bereits geantwortet oder sie wurde bereits aufgeschoben"      | Nutze **Auf Interaktion folgen**, um eine weitere Nachricht zu senden, oder **Interaktionsantwort bearbeiten**, um die erste zu ändern.                            |
 | "Auf diese Interaktion wurde noch nicht geantwortet und sie wurde noch nicht aufgeschoben" | Füge **Auf Interaktion antworten** oder **Interaktionsantwort aufschieben** hinzu, bevor du eine Folgenachricht sendest oder die Antwort bearbeitest oder löschst. |
-| "Die Interaktion ist abgelaufen, bevor der Bot geantwortet hat"     | Antworte oder schiebe die Antwort als ersten Schritt auf, vor allem, was lange dauert.                              |
-| "Diese Interaktion kann nicht mehr beantwortet werden"              | Der Flow hat bei einem Warten pausiert und ist zu spät weitergelaufen, um noch zu antworten. Sende nach einem Warten stattdessen eine Kanalnachricht. |
-| Ein Warte-Schritt "kann nicht innerhalb einer Schleife pausieren"   | Verschiebe den Warte-Schritt aus der Schleife heraus.                                                              |
-| "Beim Ausführen dieser Aktion fehlte ein benötigter Wert"           | Einer der Werte des Schritts war leer, gelöscht oder noch nicht gesetzt. Füge einen Ersatzwert hinzu oder prüfe vorher, ob er gesetzt ist. |
+| "Die Interaktion ist abgelaufen, bevor der Bot geantwortet hat"                            | Antworte oder schiebe die Antwort als ersten Schritt auf, vor allem, was lange dauert.                                                                             |
+| "Diese Interaktion kann nicht mehr beantwortet werden"                                     | Der Flow hat bei einem Warten pausiert und ist zu spät weitergelaufen, um noch zu antworten. Sende nach einem Warten stattdessen eine Kanalnachricht.              |
+| Ein Warte-Schritt "kann nicht innerhalb einer Schleife pausieren"                          | Verschiebe den Warte-Schritt aus der Schleife heraus.                                                                                                              |
+| "Beim Ausführen dieser Aktion fehlte ein benötigter Wert"                                  | Einer der Werte des Schritts war leer, gelöscht oder noch nicht gesetzt. Füge einen Ersatzwert hinzu oder prüfe vorher, ob er gesetzt ist.                         |
 
 ## Häufige Fehler {#errors}
 
-| Code                           | Was passiert ist                                                                                  | Was du tun kannst                                                                                                       |
-| ------------------------------ | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `MISSING_PERMISSIONS`          | Deinem Bot fehlte für diesen Schritt eine Discord-Berechtigung.                                    | Gib deinem Bot die Berechtigung in diesem Kanal oder auf dem Server. Bei Rollenänderungen schiebe die Rolle deines Bots über die betroffene Rolle. |
-| `NOT_FOUND`                    | Etwas, auf das der Schritt verweist, gibt es nicht mehr, etwa einen gelöschten Kanal, eine Rolle oder Nachricht. | Wähle den Kanal oder die Rolle im Schritt oder in den Einstellungen des Moduls neu aus.                     |
-| `INTERACTION_EXPIRED`          | Dein Flow hat zu lange gebraucht, um auf einen Befehl oder Button zu antworten, und Discord hat aufgegeben. | Antworte früh oder füge vor langsamen Schritten **Interaktionsantwort aufschieben** hinzu.                    |
-| `INVALID_INPUT`                | Ein Wert, der an den Schritt übergeben wurde, war dafür nicht gültig.                             | Prüfe die Werte, die der Schritt nutzt. Einer ist vielleicht leer oder von der falschen Art.                            |
-| `STORAGE_ERROR`                | Das Lesen oder Schreiben gespeicherter Daten ist fehlgeschlagen.                                  | Prüfe, ob der [Datenspeicher](/de/docs/custom-commands/storage#usage) deines Servers voll ist.                          |
-| `LIMIT_EXCEEDED`               | Der Flow hat ein Limit erreicht, etwa das Aktivitätsbudget deines Servers oder eine Schleife, die zu oft lief. | Siehe [Tarife, Limits & Sicherheit](/de/docs/custom-commands/limits-and-safety).                            |
-| `DESTRUCTIVE_LIMIT_EXCEEDED`   | Der Flow hat in kurzer Zeit mehr gelöscht, gebannt oder gekickt, als er darf.                     | Prüfe, ob der Flow nur das trifft, was du gemeint hast.                                                                 |
-| `AI_CREDITS_EXHAUSTED`         | Dein Server hat keine KI-Coins mehr, deshalb ist der KI-Schritt nicht gelaufen.                    | Lade deine KI-Coins auf.                                                                                                |
-| `DISCORD_API_ERROR`            | Discord hat die Anfrage abgelehnt.                                                                | Lies die Fehlermeldung. Meist steht dort, was Discord nicht akzeptiert hat, etwa eine zu lange Nachricht.               |
-| `TIMEOUT`                      | Der Schritt hat zu lange gedauert.                                                                | Versuche es später noch einmal. Passiert das immer wieder, verschiebe langsame Arbeit in einen eigenen Flow.            |
-| `UNKNOWN`                      | Etwas Unerwartetes ist schiefgelaufen.                                                            | Führe den Flow noch einmal aus. Schlägt er weiter fehl, teile die Ausführungsnummer in den Beta-Kanälen auf unserem Discord. |
+| Code                         | Was passiert ist                                                                                                 | Was du tun kannst                                                                                                                                  |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MISSING_PERMISSIONS`        | Deinem Bot fehlte für diesen Schritt eine Discord-Berechtigung.                                                  | Gib deinem Bot die Berechtigung in diesem Kanal oder auf dem Server. Bei Rollenänderungen schiebe die Rolle deines Bots über die betroffene Rolle. |
+| `NOT_FOUND`                  | Etwas, auf das der Schritt verweist, gibt es nicht mehr, etwa einen gelöschten Kanal, eine Rolle oder Nachricht. | Wähle den Kanal oder die Rolle im Schritt oder in den Einstellungen des Moduls neu aus.                                                            |
+| `INTERACTION_EXPIRED`        | Dein Flow hat zu lange gebraucht, um auf einen Befehl oder Button zu antworten, und Discord hat aufgegeben.      | Antworte früh oder füge vor langsamen Schritten **Interaktionsantwort aufschieben** hinzu.                                                         |
+| `INVALID_INPUT`              | Ein Wert, der an den Schritt übergeben wurde, war dafür nicht gültig.                                            | Prüfe die Werte, die der Schritt nutzt. Einer ist vielleicht leer oder von der falschen Art.                                                       |
+| `STORAGE_ERROR`              | Das Lesen oder Schreiben gespeicherter Daten ist fehlgeschlagen.                                                 | Prüfe, ob der [Datenspeicher](/de/docs/custom-commands/storage#usage) deines Servers voll ist.                                                     |
+| `LIMIT_EXCEEDED`             | Der Flow hat ein Limit erreicht, etwa das Aktivitätsbudget deines Servers oder eine Schleife, die zu oft lief.   | Siehe [Tarife, Limits & Sicherheit](/de/docs/custom-commands/limits-and-safety).                                                                   |
+| `DESTRUCTIVE_LIMIT_EXCEEDED` | Der Flow hat in kurzer Zeit mehr gelöscht, gebannt oder gekickt, als er darf.                                    | Prüfe, ob der Flow nur das trifft, was du gemeint hast.                                                                                            |
+| `AI_CREDITS_EXHAUSTED`       | Dein Server hat keine KI-Coins mehr, deshalb ist der KI-Schritt nicht gelaufen.                                  | Lade deine KI-Coins auf.                                                                                                                           |
+| `DISCORD_API_ERROR`          | Discord hat die Anfrage abgelehnt.                                                                               | Lies die Fehlermeldung. Meist steht dort, was Discord nicht akzeptiert hat, etwa eine zu lange Nachricht.                                          |
+| `TIMEOUT`                    | Der Schritt hat zu lange gedauert.                                                                               | Versuche es später noch einmal. Passiert das immer wieder, verschiebe langsame Arbeit in einen eigenen Flow.                                       |
+| `UNKNOWN`                    | Etwas Unerwartetes ist schiefgelaufen.                                                                           | Führe den Flow noch einmal aus. Schlägt er weiter fehl, teile die Ausführungsnummer in den Beta-Kanälen auf unserem Discord.                       |
 
 Du kannst Fehler auch innerhalb eines Flows abfangen. Packe die Schritte in einen Block **Versuchen**. Schlägt einer davon fehl, läuft statt des Fehlschlags des ganzen Flows der Zweig **Bei Fehler**, und er bekommt den Fehlercode und die Meldung. Siehe die [Kontrollfluss-Referenz](/de/docs/custom-commands/reference/actions/control-flow).
 
@@ -131,29 +131,29 @@ Ein paar Dinge, die du wissen solltest:
 
 ### Wenn ein Testlauf nicht starten kann {#test-run-errors}
 
-| Meldung                                            | Lösung                                                                                           |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Behebe die Validierungsfehler des Flows, bevor du ihn testest" | Öffne den Tab **Probleme** und behebe die blockierenden Probleme.                   |
-| "Speichere den Flow, bevor du ihn testest."        | Speichere den Flow einmal und teste dann.                                                        |
-| "Bot offline"                                      | Starte deinen Bot und versuche es erneut.                                                        |
-| "Testläufe sind auf dieser Bot-Version noch nicht verfügbar." | Starte deinen Bot neu, damit er die neueste Version installiert.                      |
-| "Unterbefehl zum Testen auswählen"                 | Wähle den **Unterbefehl** aus, der laufen soll.                                                  |
-| "Ziel zum Testen auswählen"                        | Wähle bei einem Kontextmenü-Befehl den Benutzer oder die Nachricht, auf die er angewendet wird.  |
+| Meldung                                                         | Lösung                                                                                          |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| "Behebe die Validierungsfehler des Flows, bevor du ihn testest" | Öffne den Tab **Probleme** und behebe die blockierenden Probleme.                               |
+| "Speichere den Flow, bevor du ihn testest."                     | Speichere den Flow einmal und teste dann.                                                       |
+| "Bot offline"                                                   | Starte deinen Bot und versuche es erneut.                                                       |
+| "Testläufe sind auf dieser Bot-Version noch nicht verfügbar."   | Starte deinen Bot neu, damit er die neueste Version installiert.                                |
+| "Unterbefehl zum Testen auswählen"                              | Wähle den **Unterbefehl** aus, der laufen soll.                                                 |
+| "Ziel zum Testen auswählen"                                     | Wähle bei einem Kontextmenü-Befehl den Benutzer oder die Nachricht, auf die er angewendet wird. |
 
 ### Warnungen beim Testlauf {#test-run-warnings}
 
 Warnungen zeigen Dinge, die eine echte Ausführung anders machen würde, als du es gebaut hast:
 
-| Warnung                                                     | Was sie bedeutet                                                                                               |
-| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| "Ein in einer Nachricht verwendeter Wert fehlte"            | Eine Nachricht nutzt einen Wert, der an dieser Stelle nicht verfügbar war, also wäre dieser Teil leer.          |
-| "Ein simulierter Wert fehlt"                                | Der Test konnte etwas nicht ausfüllen, das eine echte Ausführung liefert. Meist gibt es nichts zu beheben.      |
-| "Einige Komponenten wurden aus einer Nachricht entfernt"    | Manche Buttons oder Menüs konnten in dieser Art von Nachricht nicht genutzt werden und wurden nicht gesendet.   |
-| "Eine Nachricht hatte zu viele Komponentenzeilen"           | Discord begrenzt die Zeilen mit Buttons und Menüs pro Nachricht, deshalb wurden die überzähligen Zeilen entfernt. |
+| Warnung                                                                | Was sie bedeutet                                                                                                                              |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Ein in einer Nachricht verwendeter Wert fehlte"                       | Eine Nachricht nutzt einen Wert, der an dieser Stelle nicht verfügbar war, also wäre dieser Teil leer.                                        |
+| "Ein simulierter Wert fehlt"                                           | Der Test konnte etwas nicht ausfüllen, das eine echte Ausführung liefert. Meist gibt es nichts zu beheben.                                    |
+| "Einige Komponenten wurden aus einer Nachricht entfernt"               | Manche Buttons oder Menüs konnten in dieser Art von Nachricht nicht genutzt werden und wurden nicht gesendet.                                 |
+| "Eine Nachricht hatte zu viele Komponentenzeilen"                      | Discord begrenzt die Zeilen mit Buttons und Menüs pro Nachricht, deshalb wurden die überzähligen Zeilen entfernt.                             |
 | "Eine Components-V2-Nachricht wurde als klassische Nachricht gesendet" | Ein Schritt hat Text oder Embeds hinzugefügt, was Discord bei diesem Layout nicht erlaubt. Container, Abschnitte und Trenner gingen verloren. |
-| "Nachrichtentext gekürzt"                                   | Der Text war länger, als Discord erlaubt, und wurde abgeschnitten.                                             |
-| "Embed-Fußzeile entfernt"                                   | Dein Tarif enthält keine Embed-Fußzeilen, deshalb wurde die Fußzeile weggelassen.                              |
-| "Globale Parameter waren nicht verfügbar"                   | Platzhalter für Bot- und Serverdetails blieben in diesem Test so stehen, wie sie geschrieben waren.            |
+| "Nachrichtentext gekürzt"                                              | Der Text war länger, als Discord erlaubt, und wurde abgeschnitten.                                                                            |
+| "Embed-Fußzeile entfernt"                                              | Dein Tarif enthält keine Embed-Fußzeilen, deshalb wurde die Fußzeile weggelassen.                                                             |
+| "Globale Parameter waren nicht verfügbar"                              | Platzhalter für Bot- und Serverdetails blieben in diesem Test so stehen, wie sie geschrieben waren.                                           |
 
 ## Wie lange Ausführungen gespeichert bleiben {#retention}
 

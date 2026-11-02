@@ -17,9 +17,9 @@ Required intents: `GuildModeration`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Ban | [Ban](../../../value-types.md#GUILD_BAN) | The ban that was created. |
+| Name | Type                                     | Details                   |
+| ---- | ---------------------------------------- | ------------------------- |
+| Ban  | [Ban](../../../value-types.md#GUILD_BAN) | The ban that was created. |
 
 ### Member unbanned {#member-unbanned}
 
@@ -29,7 +29,7 @@ Required intents: `GuildModeration`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| User | [User](../../../value-types.md#DISCORD_USER) | The user that was unbanned. |
-| Server | [Server](../../../value-types.md#GUILD) | The server the unban applies to. |
+| Name   | Type                                         | Details                          |
+| ------ | -------------------------------------------- | -------------------------------- |
+| User   | [User](../../../value-types.md#DISCORD_USER) | The user that was unbanned.      |
+| Server | [Server](../../../value-types.md#GUILD)      | The server the unban applies to. |

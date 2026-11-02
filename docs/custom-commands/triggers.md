@@ -18,17 +18,17 @@ This page helps you choose a trigger and explains the settings of each kind. Eve
 
 ## Which trigger do I need? {#choose}
 
-| You want the flow to run when...                                  | Use                                                    |
-| ----------------------------------------------------------------- | ------------------------------------------------------ |
-| a member types a command                                          | **Slash command**                                      |
-| a member right-clicks a user or a message and picks your command  | **User context menu used** or **Message context menu used** |
-| a member clicks a button or picks from a dropdown your bot posted | **Button clicked** or one of the dropdown triggers     |
+| You want the flow to run when...                                  | Use                                                                                   |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| a member types a command                                          | **Slash command**                                                                     |
+| a member right-clicks a user or a message and picks your command  | **User context menu used** or **Message context menu used**                           |
+| a member clicks a button or picks from a dropdown your bot posted | **Button clicked** or one of the dropdown triggers                                    |
 | a member sends a pop-up form                                      | **Show modal and await submit** inside the flow that shows it, or **Modal submitted** |
-| something happens on your server, like a join or a new message    | One of the server event triggers                       |
-| at fixed times, like every Monday at 9:00                          | **Schedule**                                           |
-| at one moment that a flow works out, like "in 10 minutes"        | **Scheduled run**, booked by another flow              |
-| another flow needs it as a building block                         | **Manual trigger**                                     |
-| several flows should react to the same thing you announce         | **Custom event received**                              |
+| something happens on your server, like a join or a new message    | One of the server event triggers                                                      |
+| at fixed times, like every Monday at 9:00                         | **Schedule**                                                                          |
+| at one moment that a flow works out, like "in 10 minutes"         | **Scheduled run**, booked by another flow                                             |
+| another flow needs it as a building block                         | **Manual trigger**                                                                    |
+| several flows should react to the same thing you announce         | **Custom event received**                                                             |
 
 Two rules of thumb. If a person starts it on purpose, it is a command, a button, a dropdown or a modal. If it should happen on its own, it is a server event or a schedule.
 
@@ -53,27 +53,27 @@ Some triggers show a badge:
 
 **Slash command** runs when someone uses your command. See the [Slash commands](/docs/custom-commands/reference/triggers/bot-interactions/bot-interactions-slash-commands) reference.
 
-| Setting                  | What it does                                                                                            |
-| ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| **Command name**         | The name after the `/`. Lowercase letters, numbers, dashes and underscores, no spaces.                  |
-| **Description**          | Shown under the command in Discord's command list.                                                      |
+| Setting                  | What it does                                                                                                                                                       |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Command name**         | The name after the `/`. Lowercase letters, numbers, dashes and underscores, no spaces.                                                                             |
+| **Description**          | Shown under the command in Discord's command list.                                                                                                                 |
 | **Required permissions** | Only members with these Discord permissions see the command. Admins can still change this per role or channel in Discord's server settings under **Integrations**. |
-| **Allow in DMs**         | Off by default. Turn it on to let people use the command in a DM with your bot.                         |
-| **Age-restricted**       | Only shows the command in age-restricted channels.                                                      |
-| **Options**              | The values people fill in when they run the command.                                                    |
+| **Allow in DMs**         | Off by default. Turn it on to let people use the command in a DM with your bot.                                                                                    |
+| **Age-restricted**       | Only shows the command in age-restricted channels.                                                                                                                 |
+| **Options**              | The values people fill in when they run the command.                                                                                                               |
 
 Click **Add option** for each value you want. Each option has:
 
-| Field                                   | What it does                                                                                     |
-| --------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Name** and **Description**            | Shown in Discord. Same naming rules as the command name.                                         |
+| Field                                   | What it does                                                                                                                                      |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name** and **Description**            | Shown in Discord. Same naming rules as the command name.                                                                                          |
 | **Type**                                | What people can enter: text, a whole or decimal number, yes/no, a user, a server member, a channel, a role, a user or role, or a file attachment. |
-| **Required**                            | People must fill it in. Discord needs all required options before the optional ones, and the editor warns you if the order is wrong. |
-| **Choices**                             | A fixed list to pick from, each with a **Choice name** people see and a **Choice value** your flow gets. |
-| **Autocomplete**                        | Your bot suggests values while people type. Can't be combined with choices.                       |
-| **Minimum value** / **Maximum value**   | For numbers.                                                                                      |
-| **Minimum length** / **Maximum length** | For text.                                                                                         |
-| **Allowed channel types**               | For channel options, for example only text channels.                                             |
+| **Required**                            | People must fill it in. Discord needs all required options before the optional ones, and the editor warns you if the order is wrong.              |
+| **Choices**                             | A fixed list to pick from, each with a **Choice name** people see and a **Choice value** your flow gets.                                          |
+| **Autocomplete**                        | Your bot suggests values while people type. Can't be combined with choices.                                                                       |
+| **Minimum value** / **Maximum value**   | For numbers.                                                                                                                                      |
+| **Minimum length** / **Maximum length** | For text.                                                                                                                                         |
+| **Allowed channel types**               | For channel options, for example only text channels.                                                                                              |
 
 **Add subcommand** and **Add group** turn the command into one with subcommands, like `/ticket open` and `/ticket close`. A level holds either subcommands or options, not both. Use the **Branch on subcommand** step to run different steps per subcommand. The editor offers to add it for you.
 
@@ -126,23 +126,23 @@ Read the answers with **Get modal field**. A modal can only be shown in answer t
 
 Most triggers react to something on your server, whether a person, a moderator or another bot caused it. Most of them have no settings: they run for every event of their kind, and you narrow them down with steps like **If**. These have settings:
 
-| Trigger                                                    | Settings                                                                                   |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| **Message created**                                        | **Channels**, **Match type** (**Any message**, **Contains**, **Equals**, **Starts with**, **Ends with**, **Regex**), **Pattern**, **Ignore casing**, **Ignore bots** |
-| **Reaction added**, **Reaction removed**                   | **Channels**, **Specific Emoji**, **Ignore Bots**                                          |
-| **Typing started**                                         | **Channels**, **Ignore Bots**                                                              |
-| Other message, reaction, pin and poll triggers             | **Channels**                                                                               |
-| **Audit log entry created**                                | **Actions**, to only react to some kinds of audit log entries                             |
+| Trigger                                        | Settings                                                                                                                                                             |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Message created**                            | **Channels**, **Match type** (**Any message**, **Contains**, **Equals**, **Starts with**, **Ends with**, **Regex**), **Pattern**, **Ignore casing**, **Ignore bots** |
+| **Reaction added**, **Reaction removed**       | **Channels**, **Specific Emoji**, **Ignore Bots**                                                                                                                    |
+| **Typing started**                             | **Channels**, **Ignore Bots**                                                                                                                                        |
+| Other message, reaction, pin and poll triggers | **Channels**                                                                                                                                                         |
+| **Audit log entry created**                    | **Actions**, to only react to some kinds of audit log entries                                                                                                        |
 
 Leaving **Channels** empty means every channel your bot can see.
 
 Some server events need a privileged intent:
 
-| Intent              | Needed by                                                                                      |
-| ------------------- | ---------------------------------------------------------------------------------------------- |
+| Intent              | Needed by                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Server Members**  | All [member triggers](/docs/custom-commands/reference/triggers/discord-server/discord-server-members), like **Member joined** and **Member left** |
-| **Message Content** | **Message created**, **Message updated**, **Message deleted** and **Messages bulk deleted**    |
-| **Presence**        | **Presence updated**                                                                           |
+| **Message Content** | **Message created**, **Message updated**, **Message deleted** and **Messages bulk deleted**                                                       |
+| **Presence**        | **Presence updated**                                                                                                                              |
 
 Browse the rest by category: [Server messages](/docs/custom-commands/reference/triggers/discord-server/discord-server-messages), [Roles](/docs/custom-commands/reference/triggers/discord-server/discord-server-roles), [Channels](/docs/custom-commands/reference/triggers/discord-server/discord-server-channels), [Threads](/docs/custom-commands/reference/triggers/discord-server/discord-server-threads), [Voice](/docs/custom-commands/reference/triggers/discord-server/discord-server-voice), [Discord events](/docs/custom-commands/reference/triggers/discord-server/discord-server-events), [Bans](/docs/custom-commands/reference/triggers/discord-server/discord-server-bans), [AutoMod](/docs/custom-commands/reference/triggers/discord-server/discord-server-automod) and [Message polls](/docs/custom-commands/reference/triggers/discord-server/discord-server-message-polls). Triggers about your bot itself, like **Bot ready** or **Bot joined a server**, are under [Bot user](/docs/custom-commands/reference/triggers/bot-user).
 
@@ -167,11 +167,11 @@ A schedule has no person attached to it. Steps that need a member or a channel m
 
 These triggers let flows work together. See the [Flows](/docs/custom-commands/reference/triggers/custom-commands/custom-commands-flows) reference.
 
-| Trigger                   | Runs when                                                                    | Good to know                                                                                     |
-| ------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| **Manual trigger**        | another flow runs it with **Call another flow**                              | The calling flow waits until it is done. The run counts as part of the calling flow's run in the history. A flow can't call itself. |
-| **Scheduled run**         | the time another flow booked with **Schedule flow run** has come             | Booked runs survive bot restarts. Runs that came due while your bot was offline run when it is back. Each one shows up as its own run. |
-| **Custom event received** | another flow sends a custom event with the same **Event name** using **Emit custom event** | Every flow listening for that name runs, each as its own run.                         |
+| Trigger                   | Runs when                                                                                  | Good to know                                                                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Manual trigger**        | another flow runs it with **Call another flow**                                            | The calling flow waits until it is done. The run counts as part of the calling flow's run in the history. A flow can't call itself.    |
+| **Scheduled run**         | the time another flow booked with **Schedule flow run** has come                           | Booked runs survive bot restarts. Runs that came due while your bot was offline run when it is back. Each one shows up as its own run. |
+| **Custom event received** | another flow sends a custom event with the same **Event name** using **Emit custom event** | Every flow listening for that name runs, each as its own run.                                                                          |
 
 **Manual trigger** and **Scheduled run** can declare **Parameters**, typed values the calling flow passes in:
 
