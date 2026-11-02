@@ -15,17 +15,17 @@ Wird ausgelöst, wenn ein Benutzer einen Benutzer-Kontextmenü-Befehl ausführt 
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehlsname | [Text](../../../value-types.md#STRING) | Ja | Name, der unter „Apps“ beim Rechtsklick auf einen Benutzer angezeigt wird (1-32 Zeichen; Leerzeichen und Groß-/Kleinschreibung erlaubt). Länge: 1 bis 32 Zeichen. |
-| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt. |
-| In DMs erlauben | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein. |
-| Altersbeschränkt | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein. |
+| Name                         | Typ                                                               | Pflicht | Details                                                                                                                                                           |
+| ---------------------------- | ----------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Befehlsname                  | [Text](../../../value-types.md#STRING)                            | Ja      | Name, der unter „Apps" beim Rechtsklick auf einen Benutzer angezeigt wird (1-32 Zeichen; Leerzeichen und Groß-/Kleinschreibung erlaubt). Länge: 1 bis 32 Zeichen. |
+| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG) | Nein    | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt.                                                                                  |
+| In DMs erlauben              | [Ja/Nein](../../../value-types.md#BOOLEAN)                        | Ja      | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein.                                                                                            |
+| Altersbeschränkt             | [Ja/Nein](../../../value-types.md#BOOLEAN)                        | Ja      | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein.                                                                                                            |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                       | Details                                               |
+| ----------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | Interaktion | [Benutzer-Kontextmenü-Interaktion](../../../value-types.md#USER_CONTEXT_MENU_INTERACTION) | Benutzer-Kontextmenü-Interaktion, die erstellt wurde. |
 
 ### Nachrichts-Kontextmenü verwendet {#message-context-menu-used}
@@ -34,15 +34,15 @@ Wird ausgelöst, wenn ein Benutzer einen Nachrichts-Kontextmenü-Befehl ausführ
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehlsname | [Text](../../../value-types.md#STRING) | Ja | Name, der unter „Apps“ beim Rechtsklick auf eine Nachricht angezeigt wird (1-32 Zeichen; Leerzeichen und Groß-/Kleinschreibung erlaubt). Länge: 1 bis 32 Zeichen. |
-| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt. |
-| In DMs erlauben | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein. |
-| Altersbeschränkt | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein. |
+| Name                         | Typ                                                               | Pflicht | Details                                                                                                                                                           |
+| ---------------------------- | ----------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Befehlsname                  | [Text](../../../value-types.md#STRING)                            | Ja      | Name, der unter „Apps" beim Rechtsklick auf eine Nachricht angezeigt wird (1-32 Zeichen; Leerzeichen und Groß-/Kleinschreibung erlaubt). Länge: 1 bis 32 Zeichen. |
+| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG) | Nein    | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt.                                                                                  |
+| In DMs erlauben              | [Ja/Nein](../../../value-types.md#BOOLEAN)                        | Ja      | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein.                                                                                            |
+| Altersbeschränkt             | [Ja/Nein](../../../value-types.md#BOOLEAN)                        | Ja      | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein.                                                                                                            |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                           | Details                                                 |
+| ----------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Interaktion | [Nachricht-Kontextmenü-Interaktion](../../../value-types.md#MESSAGE_CONTEXT_MENU_INTERACTION) | Nachrichts-Kontextmenü-Interaktion, die erstellt wurde. |

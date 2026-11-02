@@ -33,23 +33,23 @@ Ist die App schon auf deinem Server, sagt dir die Importseite, welche Version du
 
 Was die Zeilen unter **Bevor du diese App hinzufügst** bedeuten:
 
-| Zeile                          | Was sie dir sagt                                                                                                    |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| **Bot-Berechtigungen**         | Discord-Berechtigungen, die dein Bot für die Schritte der App braucht. Ohne sie schlagen diese Schritte mit `MISSING_PERMISSIONS` fehl. |
-| **Gateway-Intents**            | Zusätzlicher Discord-Zugriff, den die Trigger der App brauchen. Manche müssen im Discord Developer Portal eingeschaltet werden. |
-| **Befehle, die es hinzufügt**  | Die Slash-Commands, die die App registriert. Nutzt dein Bot einen Namen schon, wird dieser Befehl nicht hinzugefügt. |
-| **Externe Anfragen**           | Die externen Dienste, an die die App Daten sendet. "Externe Dienste" bedeutet, dass sie die Adresse erst während der Ausführung zusammenbaut. |
-| **Ressourcenlast**             | Wie viel Aktivität die App wahrscheinlich verbraucht. Eine schwere App nutzt mehr von deinem [Aktivitätsbudget](/de/docs/custom-commands/limits-and-safety#activity-budget). |
+| Zeile                         | Was sie dir sagt                                                                                                                                                             |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Bot-Berechtigungen**        | Discord-Berechtigungen, die dein Bot für die Schritte der App braucht. Ohne sie schlagen diese Schritte mit `MISSING_PERMISSIONS` fehl.                                      |
+| **Gateway-Intents**           | Zusätzlicher Discord-Zugriff, den die Trigger der App brauchen. Manche müssen im Discord Developer Portal eingeschaltet werden.                                              |
+| **Befehle, die es hinzufügt** | Die Slash-Commands, die die App registriert. Nutzt dein Bot einen Namen schon, wird dieser Befehl nicht hinzugefügt.                                                         |
+| **Externe Anfragen**          | Die externen Dienste, an die die App Daten sendet. "Externe Dienste" bedeutet, dass sie die Adresse erst während der Ausführung zusammenbaut.                                |
+| **Ressourcenlast**            | Wie viel Aktivität die App wahrscheinlich verbraucht. Eine schwere App nutzt mehr von deinem [Aktivitätsbudget](/de/docs/custom-commands/limits-and-safety#activity-budget). |
 
 ### Wenn die Installation fehlschlägt {#install-errors}
 
-| Meldung                                                       | Lösung                                                                                                 |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| "Custom Commands V3 nicht aktiviert" neben einem Server       | [Schalte V3](/de/docs/custom-commands/migrating-from-v2#enable) für diesen Server zuerst ein.           |
-| "Diese App ist auf diesem Server bereits installiert"         | Aktualisiere sie auf der Seite **App-Updates** oder klicke auf **Als neue Kopie importieren**.          |
-| "Auf diesem Server sind bereits ... Apps installiert"         | Deinstalliere eine App, die du nicht mehr nutzt, und versuche es dann erneut.                          |
-| "Dein Bot braucht ein Update, bevor er diese App installieren kann" | Starte deinen Bot neu, damit er die neueste Version nutzt, und versuche es dann erneut.          |
-| "Dieser geteilte Eigene Befehl konnte nicht gefunden werden"  | Der Link ist falsch oder der Eintrag wurde entfernt.                                                   |
+| Meldung                                                             | Lösung                                                                                         |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| "Custom Commands V3 nicht aktiviert" neben einem Server             | [Schalte V3](/de/docs/custom-commands/migrating-from-v2#enable) für diesen Server zuerst ein.  |
+| "Diese App ist auf diesem Server bereits installiert"               | Aktualisiere sie auf der Seite **App-Updates** oder klicke auf **Als neue Kopie importieren**. |
+| "Auf diesem Server sind bereits ... Apps installiert"               | Deinstalliere eine App, die du nicht mehr nutzt, und versuche es dann erneut.                  |
+| "Dein Bot braucht ein Update, bevor er diese App installieren kann" | Starte deinen Bot neu, damit er die neueste Version nutzt, und versuche es dann erneut.        |
+| "Dieser geteilte Eigene Befehl konnte nicht gefunden werden"        | Der Link ist falsch oder der Eintrag wurde entfernt.                                           |
 
 ### Nach der Installation {#after-install}
 
@@ -62,14 +62,14 @@ Was die Zeilen unter **Bevor du diese App hinzufügst** bedeuten:
 
 Der Tab **Übersicht** zeigt dir den Zustand der App:
 
-| Meldung                                                         | Was du tun solltest                                                                         |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| "Alles eingerichtet und einsatzbereit."                         | Nichts.                                                                                     |
-| "Fast geschafft: Lege ... fest, um die Einrichtung abzuschließen." | Klicke auf **Einrichtung abschließen** und fülle die fehlende Einstellung aus.           |
-| "Dem Bot fehlt die Berechtigung ..., die er braucht, um diese App auszuführen." | Gib deinem Bot diese Berechtigung auf deinem Server.                        |
-| "Diese App ist auf einen Fehler gestoßen."                      | Prüfe ihren [Ausführungsverlauf](/de/docs/custom-commands/executions) und wende dich an den Entwickler der App. |
-| "Diese App wurde durch den serverweiten Not-Aus gestoppt."      | Schalte Custom Commands in der Übersicht wieder ein.                                        |
-| "SCNX hat diese App aus Richtliniengründen deaktiviert."        | Die App kann erst wieder eingeschaltet werden, wenn diese Einschränkung aufgehoben wird.    |
+| Meldung                                                                         | Was du tun solltest                                                                                             |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| "Alles eingerichtet und einsatzbereit."                                         | Nichts.                                                                                                         |
+| "Fast geschafft: Lege ... fest, um die Einrichtung abzuschließen."              | Klicke auf **Einrichtung abschließen** und fülle die fehlende Einstellung aus.                                  |
+| "Dem Bot fehlt die Berechtigung ..., die er braucht, um diese App auszuführen." | Gib deinem Bot diese Berechtigung auf deinem Server.                                                            |
+| "Diese App ist auf einen Fehler gestoßen."                                      | Prüfe ihren [Ausführungsverlauf](/de/docs/custom-commands/executions) und wende dich an den Entwickler der App. |
+| "Diese App wurde durch den serverweiten Not-Aus gestoppt."                      | Schalte Custom Commands in der Übersicht wieder ein.                                                            |
+| "SCNX hat diese App aus Richtliniengründen deaktiviert."                        | Die App kann erst wieder eingeschaltet werden, wenn diese Einschränkung aufgehoben wird.                        |
 
 Um eine App zu entfernen, klicke im Tab **Erweitert** auf **App deinstallieren** und gib zur Bestätigung den Namen der App ein. Damit werden die App, alle ihre Flows und nach einiger Zeit auch ihre gespeicherten Daten entfernt. Das lässt sich im Dashboard nicht rückgängig machen.
 
@@ -146,14 +146,14 @@ Damit deine App auftaucht, wenn Leute den Marktplatz durchstöbern, beantrage im
 
 Ist deine App öffentlich, schaut sich unser Team außerdem jedes Update noch einmal an, bevor es ausgeliefert wird. Deine aktuelle Version läuft auf jedem Server, der sie hat, weiter, bis die neue freigegeben ist, und du bekommst eine E-Mail, sobald eine Entscheidung gefallen ist. Bist du mit einer Entscheidung nicht einverstanden, nutze **Gegen diese Entscheidung Einspruch einlegen (öffnet ein Support-Ticket)**.
 
-| Status                       | Was er bedeutet                                                                               |
-| ---------------------------- | --------------------------------------------------------------------------------------------- |
-| **Nicht gelistet**           | Live, aber nur über den Teilen-Link erreichbar.                                               |
-| **Kuratierung angefragt**    | Du hast einen öffentlichen Eintrag beantragt und unser Team prüft ihn.                        |
-| **Gelistet**                 | Öffentlich. Leute finden die App, wenn sie den Marktplatz durchstöbern.                       |
-| **Empfohlen**                | Öffentlich und im Marktplatz hervorgehoben.                                                   |
-| **Änderungen angefordert**   | Unser Team hat dich gebeten, etwas zu ändern, bevor die App gelistet werden kann.             |
-| **Von SCNX entfernt**        | Der Eintrag wurde entfernt. Seine öffentliche Seite und sein Teilen-Link funktionieren nicht mehr. |
+| Status                     | Was er bedeutet                                                                                    |
+| -------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Nicht gelistet**         | Live, aber nur über den Teilen-Link erreichbar.                                                    |
+| **Kuratierung angefragt**  | Du hast einen öffentlichen Eintrag beantragt und unser Team prüft ihn.                             |
+| **Gelistet**               | Öffentlich. Leute finden die App, wenn sie den Marktplatz durchstöbern.                            |
+| **Empfohlen**              | Öffentlich und im Marktplatz hervorgehoben.                                                        |
+| **Änderungen angefordert** | Unser Team hat dich gebeten, etwas zu ändern, bevor die App gelistet werden kann.                  |
+| **Von SCNX entfernt**      | Der Eintrag wurde entfernt. Seine öffentliche Seite und sein Teilen-Link funktionieren nicht mehr. |
 
 ### Ein Update veröffentlichen {#publish-update}
 

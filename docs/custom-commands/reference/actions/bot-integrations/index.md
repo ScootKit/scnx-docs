@@ -15,16 +15,16 @@ Translates text into another language using AI. Each translation costs one AI Co
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to translate (up to 2000 characters). Discord formatting, mentions and emoji are kept as they are. Length: 1 to 2000 characters. |
-| Target language | [Text](../../../value-types.md#STRING) | Yes | The language to translate into. Anything the AI understands works, e.g. "English", "German", "de" or "pt-BR". You can also use a slash-command option here to let users pick. Length: 2 to 40 characters. |
-| Source language | [Text](../../../value-types.md#STRING) | No | Optional: the language the text is written in. Leave empty to let the AI detect it automatically. Maximum length: 40 characters. |
+| Name            | Type                                   | Required | Details                                                                                                                                                                                                   |
+| --------------- | -------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text            | [Text](../../../value-types.md#STRING) | Yes      | The text to translate (up to 2000 characters). Discord formatting, mentions and emoji are kept as they are. Length: 1 to 2000 characters.                                                                 |
+| Target language | [Text](../../../value-types.md#STRING) | Yes      | The language to translate into. Anything the AI understands works, e.g. "English", "German", "de" or "pt-BR". You can also use a slash-command option here to let users pick. Length: 2 to 40 characters. |
+| Source language | [Text](../../../value-types.md#STRING) | No       | Optional: the language the text is written in. Leave empty to let the AI detect it automatically. Maximum length: 40 characters.                                                                          |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                   | Details              |
+| --------------- | -------------------------------------- | -------------------- |
 | Translated text | [Text](../../../value-types.md#STRING) | The translated text. |
 
 ### Send HTTP request {#http-request}
@@ -33,32 +33,32 @@ Calls a web API over HTTPS and gives you the answer. Each request uses part of t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Web address | [Text](../../../value-types.md#STRING) | No | The full address to call, starting with https://. Maximum length: 2048 characters. Use only one of these: Connection. |
-| Connection | [Text](../../../value-types.md#STRING) | No | A saved connection from the Integrations page. Its secret is added for you and only ever sent to the connection's own address. Maximum length: 64 characters. Use only one of these: Web address. |
-| Path | [Text](../../../value-types.md#STRING) | No | The path after the connection's base address, starting with /. Maximum length: 2048 characters. |
-| Method | [HTTP method](../../../value-types.md#HTTP_METHOD) | Yes | The HTTP method. GET reads, the others send or change something. Default: GET. |
-| Query parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No | Names and values added to the address after the ?. |
-| Headers | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No | Extra request headers as names and values. Put API keys into a connection instead of typing them here. |
-| Body | [Body](../../../value-types.md#HTTP_BODY_MODE) | Yes | What the request sends along: nothing, JSON, form fields or plain text. Default: None. |
-| JSON content | [Any](../../../value-types.md#ANY) | No | The value to send as JSON, for example a shape value or a lookup table. Shown when Body is JSON. |
-| Form fields | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No | Names and values sent as a URL-encoded form. Shown when Body is Form. |
-| Text content | [Text](../../../value-types.md#STRING) | No | The text to send exactly as written. Maximum length: 65536 characters. Shown when Body is Text. |
-| Content type | [Text](../../../value-types.md#STRING) | No | The type of the text content, for example text/plain or application/xml. Defaults to text/plain. Maximum length: 255 characters. Shown when Body is Text. |
-| Response shape | [Shape](../../../value-types.md#RECORD_TYPE) | No | Optional: a shape the JSON answer is read into. The result appears in "Response as shape value". |
-| Timeout | [Duration](../../../value-types.md#DURATION) | No | How long to wait for an answer, at most 20 seconds. Value: 1000 to 20000. |
+| Name             | Type                                                                                             | Required | Details                                                                                                                                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Web address      | [Text](../../../value-types.md#STRING)                                                           | No       | The full address to call, starting with https://. Maximum length: 2048 characters. Use only one of these: Connection.                                                                             |
+| Connection       | [Text](../../../value-types.md#STRING)                                                           | No       | A saved connection from the Integrations page. Its secret is added for you and only ever sent to the connection's own address. Maximum length: 64 characters. Use only one of these: Web address. |
+| Path             | [Text](../../../value-types.md#STRING)                                                           | No       | The path after the connection's base address, starting with /. Maximum length: 2048 characters.                                                                                                   |
+| Method           | [HTTP method](../../../value-types.md#HTTP_METHOD)                                               | Yes      | The HTTP method. GET reads, the others send or change something. Default: GET.                                                                                                                    |
+| Query parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No       | Names and values added to the address after the ?.                                                                                                                                                |
+| Headers          | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No       | Extra request headers as names and values. Put API keys into a connection instead of typing them here.                                                                                            |
+| Body             | [Body](../../../value-types.md#HTTP_BODY_MODE)                                                   | Yes      | What the request sends along: nothing, JSON, form fields or plain text. Default: None.                                                                                                            |
+| JSON content     | [Any](../../../value-types.md#ANY)                                                               | No       | The value to send as JSON, for example a shape value or a lookup table. Shown when Body is JSON.                                                                                                  |
+| Form fields      | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No       | Names and values sent as a URL-encoded form. Shown when Body is Form.                                                                                                                             |
+| Text content     | [Text](../../../value-types.md#STRING)                                                           | No       | The text to send exactly as written. Maximum length: 65536 characters. Shown when Body is Text.                                                                                                   |
+| Content type     | [Text](../../../value-types.md#STRING)                                                           | No       | The type of the text content, for example text/plain or application/xml. Defaults to text/plain. Maximum length: 255 characters. Shown when Body is Text.                                         |
+| Response shape   | [Shape](../../../value-types.md#RECORD_TYPE)                                                     | No       | Optional: a shape the JSON answer is read into. The result appears in "Response as shape value".                                                                                                  |
+| Timeout          | [Duration](../../../value-types.md#DURATION)                                                     | No       | How long to wait for an answer, at most 20 seconds. Value: 1000 to 20000.                                                                                                                         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Status | [Whole number](../../../value-types.md#INTEGER) | The HTTP status code, for example 200 or 404. |
-| Successful | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the status is between 200 and 299. |
-| Response text | [Text](../../../value-types.md#STRING) | The response body as text. |
-| Response headers | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The response headers with lowercase names. Cookies are removed. |
-| Response as shape value | [Shape value](../../../value-types.md#RECORD_VALUE) | The answer read into the response shape. Empty when no shape is set or the answer does not fit it. May be empty. |
-| Shape problem | [Text](../../../value-types.md#STRING) | Why the answer did not fit the response shape. Empty when it fit or no shape is set. May be empty. |
+| Name                    | Type                                                                                             | Details                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| Status                  | [Whole number](../../../value-types.md#INTEGER)                                                  | The HTTP status code, for example 200 or 404.                                                                    |
+| Successful              | [Yes/No](../../../value-types.md#BOOLEAN)                                                        | Whether the status is between 200 and 299.                                                                       |
+| Response text           | [Text](../../../value-types.md#STRING)                                                           | The response body as text.                                                                                       |
+| Response headers        | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The response headers with lowercase names. Cookies are removed.                                                  |
+| Response as shape value | [Shape value](../../../value-types.md#RECORD_VALUE)                                              | The answer read into the response shape. Empty when no shape is set or the answer does not fit it. May be empty. |
+| Shape problem           | [Text](../../../value-types.md#STRING)                                                           | Why the answer did not fit the response shape. Empty when it fit or no shape is set. May be empty.               |
 
 ### Answer webhook {#respond-to-webhook}
 
@@ -66,19 +66,19 @@ Sends the answer to the webhook request that started this flow. Only works in fl
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Status | [Whole number](../../../value-types.md#INTEGER) | Yes | The HTTP status code, from 200 to 599. Defaults to 200. Value: 200 to 599. Default: `200`. |
-| Headers | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No | Extra answer headers as names and values. Cookies and headers the platform sets cannot be used. |
-| Answer body | [Body](../../../value-types.md#HTTP_BODY_MODE) | Yes | What the answer body contains: nothing, JSON, form fields or plain text. Default: None. |
-| JSON body | [Any](../../../value-types.md#ANY) | No | The value to send as the answer body, as JSON. Shown when Answer body is JSON. |
-| Form body | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No | Names and values sent as the answer body, as a URL-encoded form. Shown when Answer body is Form. |
-| Text body | [Text](../../../value-types.md#STRING) | No | The text to send as the answer body, exactly as written. At most 64 KB. Maximum length: 65536 characters. Shown when Answer body is Text. |
-| Content type | [Text](../../../value-types.md#STRING) | No | The type of the text body, for example text/plain or text/html. Defaults to text/plain. Maximum length: 255 characters. Shown when Answer body is Text. |
+| Name         | Type                                                                                             | Required | Details                                                                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status       | [Whole number](../../../value-types.md#INTEGER)                                                  | Yes      | The HTTP status code, from 200 to 599. Defaults to 200. Value: 200 to 599. Default: `200`.                                                              |
+| Headers      | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No       | Extra answer headers as names and values. Cookies and headers the platform sets cannot be used.                                                         |
+| Answer body  | [Body](../../../value-types.md#HTTP_BODY_MODE)                                                   | Yes      | What the answer body contains: nothing, JSON, form fields or plain text. Default: None.                                                                 |
+| JSON body    | [Any](../../../value-types.md#ANY)                                                               | No       | The value to send as the answer body, as JSON. Shown when Answer body is JSON.                                                                          |
+| Form body    | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | No       | Names and values sent as the answer body, as a URL-encoded form. Shown when Answer body is Form.                                                        |
+| Text body    | [Text](../../../value-types.md#STRING)                                                           | No       | The text to send as the answer body, exactly as written. At most 64 KB. Maximum length: 65536 characters. Shown when Answer body is Text.               |
+| Content type | [Text](../../../value-types.md#STRING)                                                           | No       | The type of the text body, for example text/plain or text/html. Defaults to text/plain. Maximum length: 255 characters. Shown when Answer body is Text. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Sent | [Yes/No](../../../value-types.md#BOOLEAN) | Whether this answer went to the sender. |
-| Why not sent | [Text](../../../value-types.md#STRING) | Empty when the answer was sent. Otherwise already-answered (another answer came first), too-late (the 25 seconds had passed), fire-and-forget (the webhook does not wait for answers) or test-run. May be empty. |
+| Name         | Type                                      | Details                                                                                                                                                                                                          |
+| ------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sent         | [Yes/No](../../../value-types.md#BOOLEAN) | Whether this answer went to the sender.                                                                                                                                                                          |
+| Why not sent | [Text](../../../value-types.md#STRING)    | Empty when the answer was sent. Otherwise already-answered (another answer came first), too-late (the 25 seconds had passed), fire-and-forget (the webhook does not wait for answers) or test-run. May be empty. |

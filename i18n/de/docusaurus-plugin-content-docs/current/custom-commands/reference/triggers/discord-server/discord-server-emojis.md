@@ -17,8 +17,8 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                 | Details                    |
+| ----- | --------------------------------------------------- | -------------------------- |
 | Emoji | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji, das erstellt wurde. |
 
 ### Emoji gelöscht {#emoji-deleted}
@@ -29,8 +29,8 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                 | Details                    |
+| ----- | --------------------------------------------------- | -------------------------- |
 | Emoji | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji, das gelöscht wurde. |
 
 ### Emoji aktualisiert {#emoji-updated}
@@ -41,10 +41,10 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriges Emoji | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji-Status vor der Aktualisierung. |
-| Aktuelles Emoji | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji-Status nach der Aktualisierung. |
+| Name             | Typ                                                 | Details                               |
+| ---------------- | --------------------------------------------------- | ------------------------------------- |
+| Vorheriges Emoji | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji-Status vor der Aktualisierung.  |
+| Aktuelles Emoji  | [Server-Emoji](../../../value-types.md#GUILD_EMOJI) | Emoji-Status nach der Aktualisierung. |
 
 ### Anwendungs-Emoji erstellt {#application-emoji-created}
 
@@ -52,8 +52,8 @@ Wird ausgelöst, wenn ein Anwendungs-Emoji durch einen Flow erstellt wird. Im Di
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                           | Details                             |
+| ----- | ------------------------------------------------------------- | ----------------------------------- |
 | Emoji | [Anwendungs-Emoji](../../../value-types.md#APPLICATION_EMOJI) | Das neu erstellte Anwendungs-Emoji. |
 
 ### Anwendungs-Emoji aktualisiert {#application-emoji-updated}
@@ -62,10 +62,10 @@ Wird ausgelöst, wenn ein Anwendungs-Emoji durch einen Flow aktualisiert wird (z
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                           | Details                                            |
+| ---------------- | ------------------------------------------------------------- | -------------------------------------------------- |
 | Vorheriges Emoji | [Anwendungs-Emoji](../../../value-types.md#APPLICATION_EMOJI) | Emoji, bevor die Aktualisierung stattgefunden hat. |
-| Aktuelles Emoji | [Anwendungs-Emoji](../../../value-types.md#APPLICATION_EMOJI) | Emoji nach der Aktualisierung. |
+| Aktuelles Emoji  | [Anwendungs-Emoji](../../../value-types.md#APPLICATION_EMOJI) | Emoji nach der Aktualisierung.                     |
 
 ### Anwendungs-Emoji gelöscht {#application-emoji-deleted}
 
@@ -73,6 +73,6 @@ Wird ausgelöst, wenn ein Anwendungs-Emoji durch einen Flow gelöscht wird. Lös
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                           | Details                         |
+| ----- | ------------------------------------------------------------- | ------------------------------- |
 | Emoji | [Anwendungs-Emoji](../../../value-types.md#APPLICATION_EMOJI) | Das gelöschte Anwendungs-Emoji. |

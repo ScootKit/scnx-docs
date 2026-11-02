@@ -15,8 +15,8 @@ Runs when a new channel is created on your server.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                                    | Details                       |
+| --------------- | ------------------------------------------------------- | ----------------------------- |
 | Created channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | The channel that was created. |
 
 ### Channel deleted {#channel-deleted}
@@ -25,8 +25,8 @@ Runs when a channel is deleted on your server.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                                    | Details                       |
+| --------------- | ------------------------------------------------------- | ----------------------------- |
 | Deleted channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | The channel that was deleted. |
 
 ### Channel updated {#channel-updated}
@@ -35,10 +35,10 @@ Runs when a channel is updated on your server.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name             | Type                                                    | Details                                  |
+| ---------------- | ------------------------------------------------------- | ---------------------------------------- |
 | Previous channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | The channel as it was before the update. |
-| Current channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | The channel as it is after the update. |
+| Current channel  | [Server channel](../../../value-types.md#GUILD_CHANNEL) | The channel as it is after the update.   |
 
 ### Channel pins updated {#channel-pins-updated}
 
@@ -46,13 +46,13 @@ Fires when the pins of a channel change (a message was pinned or unpinned).
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire for these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                     |
+| -------- | --------------------------------------------------------------- | -------- | ----------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire for these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | Channel whose pins were updated. |
-| Pinned At | [Date and time](../../../value-types.md#DATETIME) | Timestamp of the most recent pin in the channel, or empty if no pins remain. |
+| Name      | Type                                                    | Details                                                                      |
+| --------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Channel   | [Server channel](../../../value-types.md#GUILD_CHANNEL) | Channel whose pins were updated.                                             |
+| Pinned At | [Date and time](../../../value-types.md#DATETIME)       | Timestamp of the most recent pin in the channel, or empty if no pins remain. |

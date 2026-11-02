@@ -15,15 +15,15 @@ Erstellt einen Datei-Anhang aus Textinhalt (z. B. Transkripte, Exporte oder Logs
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Dateiname | [Text](../../../value-types.md#STRING) | Ja | Name der Datei inklusive Endung (z. B. "transkript.txt"). Maximale Länge: 100 Zeichen. |
-| Inhalt | [Text](../../../value-types.md#STRING) | Ja | Textinhalt der Datei. Maximale Länge: 100000 Zeichen. |
+| Name      | Typ                                    | Pflicht | Details                                                                                |
+| --------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| Dateiname | [Text](../../../value-types.md#STRING) | Ja      | Name der Datei inklusive Endung (z. B. "transkript.txt"). Maximale Länge: 100 Zeichen. |
+| Inhalt    | [Text](../../../value-types.md#STRING) | Ja      | Textinhalt der Datei. Maximale Länge: 100000 Zeichen.                                  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                          | Details               |
+| ------ | -------------------------------------------- | --------------------- |
 | Anhang | [Anhang](../../../value-types.md#ATTACHMENT) | Der erstellte Anhang. |
 
 ### Medieneintrag erstellen {#create-unfurled-media-item}
@@ -32,15 +32,15 @@ Erstellt einen Medieneintrag, der in Thumbnails, Datei-Komponenten oder Medienga
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Ja | Quell-URL oder attachment://dateiname-Verweis. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen. |
+| Name         | Typ                                    | Pflicht | Details                                                              |
+| ------------ | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| URL          | [URL](../../../value-types.md#URL)     | Ja      | Quell-URL oder attachment://dateiname-Verweis.                       |
+| Beschreibung | [Text](../../../value-types.md#STRING) | Nein    | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                          | Details                 |
+| ------ | ------------------------------------------------------------ | ----------------------- |
 | Medien | [Medieneintrag](../../../value-types.md#UNFURLED_MEDIA_ITEM) | Der neue Medieneintrag. |
 
 ### Text-Anzeige erstellen {#create-text-display}
@@ -49,14 +49,14 @@ Erstellt einen Components-V2-Text-Anzeigeblock aus Markdown-Inhalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Inhalt | [Text](../../../value-types.md#STRING) | Ja | Markdown-Text mit bis zu 4000 Zeichen. Maximale Länge: 4000 Zeichen. |
+| Name   | Typ                                    | Pflicht | Details                                                              |
+| ------ | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Inhalt | [Text](../../../value-types.md#STRING) | Ja      | Markdown-Text mit bis zu 4000 Zeichen. Maximale Länge: 4000 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                                      | Details                          |
+| ------------ | ------------------------------------------------------------------------ | -------------------------------- |
 | Text-Anzeige | [Textanzeige-Komponente](../../../value-types.md#TEXT_DISPLAY_COMPONENT) | Die neue Text-Anzeigekomponente. |
 
 ### Thumbnail erstellen {#create-thumbnail-component}
@@ -65,16 +65,16 @@ Erstellt eine Thumbnail-Komponente zur Verwendung als Accessoire eines Abschnitt
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Ja | URL oder Anhang-Referenz für das Vorschaubild. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen. |
-| Spoiler | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Vorschaubild hinter einem Spoiler verborgen wird. Standard: Nein. |
+| Name         | Typ                                        | Pflicht | Details                                                                  |
+| ------------ | ------------------------------------------ | ------- | ------------------------------------------------------------------------ |
+| URL          | [URL](../../../value-types.md#URL)         | Ja      | URL oder Anhang-Referenz für das Vorschaubild.                           |
+| Beschreibung | [Text](../../../value-types.md#STRING)     | Nein    | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen.     |
+| Spoiler      | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja      | Ob das Vorschaubild hinter einem Spoiler verborgen wird. Standard: Nein. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                    | Details                        |
+| --------- | ---------------------------------------------------------------------- | ------------------------------ |
 | Thumbnail | [Miniaturbild-Komponente](../../../value-types.md#THUMBNAIL_COMPONENT) | Die neue Thumbnail-Komponente. |
 
 ### Mediengalerie-Eintrag erstellen {#create-media-gallery-item}
@@ -83,16 +83,16 @@ Erstellt einen einzelnen Eintrag zum Hinzufügen zu einer Mediengalerie.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Ja | URL oder Anhang-Referenz für den Eintrag. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen. |
-| Spoiler | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob der Eintrag hinter einem Spoiler verborgen wird. Standard: Nein. |
+| Name         | Typ                                        | Pflicht | Details                                                              |
+| ------------ | ------------------------------------------ | ------- | -------------------------------------------------------------------- |
+| URL          | [URL](../../../value-types.md#URL)         | Ja      | URL oder Anhang-Referenz für den Eintrag.                            |
+| Beschreibung | [Text](../../../value-types.md#STRING)     | Nein    | Optionaler Alternativtext (max. 1024). Maximale Länge: 1024 Zeichen. |
+| Spoiler      | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja      | Ob der Eintrag hinter einem Spoiler verborgen wird. Standard: Nein.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                 | Details                         |
+| ------- | ------------------------------------------------------------------- | ------------------------------- |
 | Eintrag | [Mediengalerie-Eintrag](../../../value-types.md#MEDIA_GALLERY_ITEM) | Der neue Mediengalerie-Eintrag. |
 
 ### Mediengalerie erstellen {#create-media-gallery}
@@ -101,14 +101,14 @@ Erstellt eine Mediengalerie mit 1-10 Medieneinträgen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Einträge | Liste von [Mediengalerie-Eintrag](../../../value-types.md#MEDIA_GALLERY_ITEM) | Ja | Die Einträge der Galerie (1-10). Einträge: 1 bis 10. |
+| Name     | Typ                                                                           | Pflicht | Details                                              |
+| -------- | ----------------------------------------------------------------------------- | ------- | ---------------------------------------------------- |
+| Einträge | Liste von [Mediengalerie-Eintrag](../../../value-types.md#MEDIA_GALLERY_ITEM) | Ja      | Die Einträge der Galerie (1-10). Einträge: 1 bis 10. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                         | Details                 |
+| ------- | --------------------------------------------------------------------------- | ----------------------- |
 | Galerie | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Die neue Mediengalerie. |
 
 ### Eintrag zur Mediengalerie hinzufügen {#add-media-gallery-item}
@@ -117,15 +117,15 @@ Fügt einer bestehenden Mediengalerie einen Eintrag hinzu und gibt die aktualisi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Galerie | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Ja | Die Galerie, die erweitert wird. |
-| Eintrag | [Mediengalerie-Eintrag](../../../value-types.md#MEDIA_GALLERY_ITEM) | Ja | Der Eintrag, der angehängt wird. |
+| Name    | Typ                                                                         | Pflicht | Details                          |
+| ------- | --------------------------------------------------------------------------- | ------- | -------------------------------- |
+| Galerie | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Ja      | Die Galerie, die erweitert wird. |
+| Eintrag | [Mediengalerie-Eintrag](../../../value-types.md#MEDIA_GALLERY_ITEM)         | Ja      | Der Eintrag, der angehängt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                         | Details                    |
+| ------- | --------------------------------------------------------------------------- | -------------------------- |
 | Galerie | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Die aktualisierte Galerie. |
 
 ### Fortschrittsbalken rendern {#render-progress-bar}
@@ -134,19 +134,19 @@ Rendert einen Text-Fortschrittsbalken für einen Wert im Verhältnis zu einem Ma
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der aktuelle Wert (auf den Bereich 0 bis Maximum begrenzt). |
-| Maximum | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Wert, der einem vollen Balken entspricht. Muss größer als 0 sein. |
-| Breite | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Zeichen breit der Balken ist (Standard 20). Wert: 1 bis 100. Standard: `20`. |
-| Füllzeichen | [Text](../../../value-types.md#STRING) | Nein | Zeichen für den gefüllten Teil (Standard █). Länge: 1 bis 8 Zeichen. |
-| Leerzeichen | [Text](../../../value-types.md#STRING) | Nein | Zeichen für den leeren Teil (Standard ░). Länge: 1 bis 8 Zeichen. |
-| Prozent anzeigen | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Den gerundeten Prozentwert hinter dem Balken anhängen. Standard: Nein. |
+| Name             | Typ                                          | Pflicht | Details                                                                                |
+| ---------------- | -------------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| Wert             | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der aktuelle Wert (auf den Bereich 0 bis Maximum begrenzt).                            |
+| Maximum          | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Wert, der einem vollen Balken entspricht. Muss größer als 0 sein.                  |
+| Breite           | [Ganzzahl](../../../value-types.md#INTEGER)  | Nein    | Wie viele Zeichen breit der Balken ist (Standard 20). Wert: 1 bis 100. Standard: `20`. |
+| Füllzeichen      | [Text](../../../value-types.md#STRING)       | Nein    | Zeichen für den gefüllten Teil (Standard █). Länge: 1 bis 8 Zeichen.                   |
+| Leerzeichen      | [Text](../../../value-types.md#STRING)       | Nein    | Zeichen für den leeren Teil (Standard ░). Länge: 1 bis 8 Zeichen.                      |
+| Prozent anzeigen | [Ja/Nein](../../../value-types.md#BOOLEAN)   | Nein    | Den gerundeten Prozentwert hinter dem Balken anhängen. Standard: Nein.                 |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                            |
+| ---- | -------------------------------------- | ---------------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | Der gerenderte Fortschrittsbalken. |
 
 ### Balkendiagramm rendern {#render-bar-chart}
@@ -155,16 +155,16 @@ Rendert ein horizontales ASCII-Balkendiagramm aus Beschriftungen und Werten, ska
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Beschriftungen | Liste von [Text](../../../value-types.md#STRING) | Ja | Eine Beschriftung pro Balken. Muss dieselbe Länge wie die Werte haben. Höchstens 25 Einträge. |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Ein Wert pro Balken. Muss dieselbe Länge wie die Beschriftungen haben. Höchstens 25 Einträge. |
-| Breite | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Zeichen breit der längste Balken ist (Standard 20). Wert: 1 bis 100. Standard: `20`. |
+| Name           | Typ                                                    | Pflicht | Details                                                                                        |
+| -------------- | ------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------------------- |
+| Beschriftungen | Liste von [Text](../../../value-types.md#STRING)       | Ja      | Eine Beschriftung pro Balken. Muss dieselbe Länge wie die Werte haben. Höchstens 25 Einträge.  |
+| Werte          | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Ein Wert pro Balken. Muss dieselbe Länge wie die Beschriftungen haben. Höchstens 25 Einträge.  |
+| Breite         | [Ganzzahl](../../../value-types.md#INTEGER)            | Nein    | Wie viele Zeichen breit der längste Balken ist (Standard 20). Wert: 1 bis 100. Standard: `20`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                      |
+| ---- | -------------------------------------- | ------------------------------------------------------------ |
 | Text | [Text](../../../value-types.md#STRING) | Das gerenderte Balkendiagramm (eine Zeile pro Beschriftung). |
 
 ### Sparkline rendern {#render-sparkline}
@@ -173,24 +173,24 @@ Rendert eine kompakte einzeilige Trendgrafik aus einer Zahlenreihe mit der Rampe
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die Zahlenreihe, die als Sparkline dargestellt wird. Höchstens 400 Einträge. |
+| Name  | Typ                                                    | Pflicht | Details                                                                      |
+| ----- | ------------------------------------------------------ | ------- | ---------------------------------------------------------------------------- |
+| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die Zahlenreihe, die als Sparkline dargestellt wird. Höchstens 400 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                   |
+| ---- | -------------------------------------- | ------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | Die gerenderte Sparkline. |
 
 ### Nachrichtenseiten erstellen {#create-message-pages}
 
-Erstellt eine leere Seitenliste, die du mit „Nachrichtenseite hinzufügen“ füllst und dann an einen paginierten Sender übergibst.
+Erstellt eine leere Seitenliste, die du mit „Nachrichtenseite hinzufügen" füllst und dann an einen paginierten Sender übergibst.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                                    | Details                              |
+| ------ | ---------------------------------------------------------------------- | ------------------------------------ |
 | Seiten | Liste von [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Die neu erstellte leere Seitenliste. |
 
 ### Nachrichtenseite hinzufügen {#add-message-page}
@@ -199,15 +199,15 @@ Hängt eine Nachricht an eine Seitenliste an und gibt die aktualisierte Liste zu
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Seiten | Liste von [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die Seitenliste, die erweitert wird. Höchstens 100 Einträge. |
-| Seite | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Der Nachrichteninhalt, der als neue Seite angehängt wird. |
+| Name   | Typ                                                                    | Pflicht | Details                                                      |
+| ------ | ---------------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Seiten | Liste von [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja      | Die Seitenliste, die erweitert wird. Höchstens 100 Einträge. |
+| Seite  | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)           | Ja      | Der Nachrichteninhalt, der als neue Seite angehängt wird.    |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                                    | Details                        |
+| ------ | ---------------------------------------------------------------------- | ------------------------------ |
 | Seiten | Liste von [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Die aktualisierte Seitenliste. |
 
 ### Trennzeichen erstellen {#create-separator}
@@ -216,15 +216,15 @@ Erstellt eine Trennzeichen-Komponente zum Hinzufügen von Platz zwischen V2-Komp
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Trennlinie | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob die Trennlinie angezeigt wird. Standard: Ja. |
-| Abstand | [Trennzeichen-Abstand](../../../value-types.md#SEPARATOR_SPACING) | Ja | Größe des vertikalen Abstands. Standard: Klein. |
+| Name       | Typ                                                               | Pflicht | Details                                         |
+| ---------- | ----------------------------------------------------------------- | ------- | ----------------------------------------------- |
+| Trennlinie | [Ja/Nein](../../../value-types.md#BOOLEAN)                        | Ja      | Ob die Trennlinie angezeigt wird. Standard: Ja. |
+| Abstand    | [Trennzeichen-Abstand](../../../value-types.md#SEPARATOR_SPACING) | Ja      | Größe des vertikalen Abstands. Standard: Klein. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                                    | Details                |
+| ------------ | ---------------------------------------------------------------------- | ---------------------- |
 | Trennzeichen | [Trennzeichen-Komponente](../../../value-types.md#SEPARATOR_COMPONENT) | Das neue Trennzeichen. |
 
 ### Datei-Komponente erstellen {#create-file-component}
@@ -233,15 +233,15 @@ Erstellt eine Components-V2-Datei-Komponente, die einen Anhang referenziert.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datei | [Medieneintrag](../../../value-types.md#UNFURLED_MEDIA_ITEM) | Ja | Medieneintrag, der auf den Anhang verweist. |
-| Spoiler | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob die Datei hinter einem Spoiler verborgen wird. Standard: Nein. |
+| Name    | Typ                                                          | Pflicht | Details                                                           |
+| ------- | ------------------------------------------------------------ | ------- | ----------------------------------------------------------------- |
+| Datei   | [Medieneintrag](../../../value-types.md#UNFURLED_MEDIA_ITEM) | Ja      | Medieneintrag, der auf den Anhang verweist.                       |
+| Spoiler | [Ja/Nein](../../../value-types.md#BOOLEAN)                   | Ja      | Ob die Datei hinter einem Spoiler verborgen wird. Standard: Nein. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                        | Details                    |
+| ---------------- | ---------------------------------------------------------- | -------------------------- |
 | Datei-Komponente | [Datei-Komponente](../../../value-types.md#FILE_COMPONENT) | Die neue Datei-Komponente. |
 
 ### Abschnitt erstellen {#create-section}
@@ -250,16 +250,16 @@ Erstellt einen Abschnitt aus 1-3 Text-Anzeigen plus Thumbnail oder Button-Access
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Textanzeigen | Liste von [Textanzeige-Komponente](../../../value-types.md#TEXT_DISPLAY_COMPONENT) | Ja | 1-3 untergeordnete Textanzeigen. Einträge: 1 bis 3. |
-| Accessory (Thumbnail) | [Miniaturbild-Komponente](../../../value-types.md#THUMBNAIL_COMPONENT) | Nein | Thumbnail-Accessory. Gib dieses ODER einen Button an. Nur eines davon verwenden: Accessory (Button) |
-| Accessory (Button) | [Button](../../../value-types.md#BUTTON) | Nein | Button-Accessory. Gib dieses ODER ein Thumbnail an. Nur eines davon verwenden: Accessory (Thumbnail) |
+| Name                  | Typ                                                                                | Pflicht | Details                                                                                              |
+| --------------------- | ---------------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| Textanzeigen          | Liste von [Textanzeige-Komponente](../../../value-types.md#TEXT_DISPLAY_COMPONENT) | Ja      | 1-3 untergeordnete Textanzeigen. Einträge: 1 bis 3.                                                  |
+| Accessory (Thumbnail) | [Miniaturbild-Komponente](../../../value-types.md#THUMBNAIL_COMPONENT)             | Nein    | Thumbnail-Accessory. Gib dieses ODER einen Button an. Nur eines davon verwenden: Accessory (Button)  |
+| Accessory (Button)    | [Button](../../../value-types.md#BUTTON)                                           | Nein    | Button-Accessory. Gib dieses ODER ein Thumbnail an. Nur eines davon verwenden: Accessory (Thumbnail) |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                               | Details                         |
+| --------- | ----------------------------------------------------------------- | ------------------------------- |
 | Abschnitt | [Abschnitt-Komponente](../../../value-types.md#SECTION_COMPONENT) | Die neue Abschnitts-Komponente. |
 
 ### Leeren Container erstellen {#create-empty-container}
@@ -268,8 +268,8 @@ Erstellt einen leeren Container, den du mit den Aktionen zum Hinzufügen zu Cont
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                            |
+| --------- | ------------------------------------------------------------------ | ---------------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der neu erstellte leere Container. |
 
 ### Container-Akzentfarbe festlegen {#set-container-accent-color}
@@ -278,15 +278,15 @@ Aktualisiert die Akzentfarbe, die am linken Rand eines Containers angezeigt wird
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Der Container, der geändert wird. |
-| Akzentfarbe | [Farbe](../../../value-types.md#COLOR) | Ja | Neue Akzentfarbe, oder leer zum Entfernen. |
+| Name        | Typ                                                                | Pflicht | Details                                    |
+| ----------- | ------------------------------------------------------------------ | ------- | ------------------------------------------ |
+| Container   | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja      | Der Container, der geändert wird.          |
+| Akzentfarbe | [Farbe](../../../value-types.md#COLOR)                             | Ja      | Neue Akzentfarbe, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Container-Spoiler festlegen {#set-container-spoiler}
@@ -295,15 +295,15 @@ Schaltet um, ob der gesamte Container hinter einem Spoiler verborgen ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Container, der bearbeitet wird. |
-| Spoiler | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob der Container ein Spoiler ist. |
+| Name      | Typ                                                                | Pflicht | Details                           |
+| --------- | ------------------------------------------------------------------ | ------- | --------------------------------- |
+| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja      | Container, der bearbeitet wird.   |
+| Spoiler   | [Ja/Nein](../../../value-types.md#BOOLEAN)                         | Ja      | Ob der Container ein Spoiler ist. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Text-Anzeige zu Container hinzufügen {#add-text-display-to-container}
@@ -312,15 +312,15 @@ Fügt einem Container eine Text-Anzeige hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Container, der geändert wird. |
-| Textanzeige | [Textanzeige-Komponente](../../../value-types.md#TEXT_DISPLAY_COMPONENT) | Ja | Textanzeige, die angehängt wird. |
+| Name        | Typ                                                                      | Pflicht | Details                          |
+| ----------- | ------------------------------------------------------------------------ | ------- | -------------------------------- |
+| Container   | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT)       | Ja      | Container, der geändert wird.    |
+| Textanzeige | [Textanzeige-Komponente](../../../value-types.md#TEXT_DISPLAY_COMPONENT) | Ja      | Textanzeige, die angehängt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Abschnitt zu Container hinzufügen {#add-section-to-container}
@@ -329,15 +329,15 @@ Fügt einem Container einen Abschnitt hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Der Container, der geändert wird. |
-| Abschnitt | [Abschnitt-Komponente](../../../value-types.md#SECTION_COMPONENT) | Ja | Der Abschnitt, der angehängt wird. |
+| Name      | Typ                                                                | Pflicht | Details                            |
+| --------- | ------------------------------------------------------------------ | ------- | ---------------------------------- |
+| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja      | Der Container, der geändert wird.  |
+| Abschnitt | [Abschnitt-Komponente](../../../value-types.md#SECTION_COMPONENT)  | Ja      | Der Abschnitt, der angehängt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Mediengalerie zu Container hinzufügen {#add-media-gallery-to-container}
@@ -346,15 +346,15 @@ Fügt einem Container eine Mediengalerie hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Container, der bearbeitet wird. |
-| Galerie | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Ja | Galerie, die angehängt wird. |
+| Name      | Typ                                                                         | Pflicht | Details                         |
+| --------- | --------------------------------------------------------------------------- | ------- | ------------------------------- |
+| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT)          | Ja      | Container, der bearbeitet wird. |
+| Galerie   | [Mediengalerie-Komponente](../../../value-types.md#MEDIA_GALLERY_COMPONENT) | Ja      | Galerie, die angehängt wird.    |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Trennzeichen zu Container hinzufügen {#add-separator-to-container}
@@ -363,15 +363,15 @@ Fügt einem Container ein Trennzeichen hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Container, der geändert wird. |
-| Trenner | [Trennzeichen-Komponente](../../../value-types.md#SEPARATOR_COMPONENT) | Ja | Trenner, der angehängt wird. |
+| Name      | Typ                                                                    | Pflicht | Details                       |
+| --------- | ---------------------------------------------------------------------- | ------- | ----------------------------- |
+| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT)     | Ja      | Container, der geändert wird. |
+| Trenner   | [Trennzeichen-Komponente](../../../value-types.md#SEPARATOR_COMPONENT) | Ja      | Trenner, der angehängt wird.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Datei zu Container hinzufügen {#add-file-to-container}
@@ -380,15 +380,15 @@ Fügt einem Container eine Datei hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Der Container, der geändert wird. |
-| Datei-Komponente | [Datei-Komponente](../../../value-types.md#FILE_COMPONENT) | Ja | Die Datei-Komponente, die angehängt wird. |
+| Name             | Typ                                                                | Pflicht | Details                                   |
+| ---------------- | ------------------------------------------------------------------ | ------- | ----------------------------------------- |
+| Container        | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja      | Der Container, der geändert wird.         |
+| Datei-Komponente | [Datei-Komponente](../../../value-types.md#FILE_COMPONENT)         | Ja      | Die Datei-Komponente, die angehängt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Aktionsreihe zu Container hinzufügen {#add-action-row-to-container}
@@ -397,15 +397,15 @@ Fügt einem Container eine Aktionsreihe hinzu.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Ja | Container, der bearbeitet wird. |
-| Action Row | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Ja | Action Row, die angehängt wird. |
+| Name       | Typ                                                                      | Pflicht | Details                         |
+| ---------- | ------------------------------------------------------------------------ | ------- | ------------------------------- |
+| Container  | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT)       | Ja      | Container, der bearbeitet wird. |
+| Action Row | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Ja      | Action Row, die angehängt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                | Details                      |
+| --------- | ------------------------------------------------------------------ | ---------------------------- |
 | Container | [Behälter-Komponente](../../../value-types.md#CONTAINER_COMPONENT) | Der aktualisierte Container. |
 
 ### Aktionsreihe (Buttons) erstellen {#create-action-row-with-buttons}
@@ -414,14 +414,14 @@ Erstellt eine Aktionsreihe mit bis zu 5 Buttons.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Buttons | Liste von [Button](../../../value-types.md#BUTTON) | Ja | 1-5 Buttons, die in der Zeile platziert werden. Einträge: 1 bis 5. |
+| Name    | Typ                                                | Pflicht | Details                                                            |
+| ------- | -------------------------------------------------- | ------- | ------------------------------------------------------------------ |
+| Buttons | Liste von [Button](../../../value-types.md#BUTTON) | Ja      | 1-5 Buttons, die in der Zeile platziert werden. Einträge: 1 bis 5. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                                      | Details                |
+| ------------ | ------------------------------------------------------------------------ | ---------------------- |
 | Aktionsreihe | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Die neue Aktionsreihe. |
 
 ### Button zu Aktionsreihe hinzufügen {#add-button-to-action-row}
@@ -430,13 +430,13 @@ Fügt einer Aktionsreihe einen Button hinzu und gibt die aktualisierte Reihe zur
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Aktionsreihe | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Ja | Die zu erweiternde Aktionsreihe. |
-| Button | [Button](../../../value-types.md#BUTTON) | Ja | Der anzuhängende Button. |
+| Name         | Typ                                                                      | Pflicht | Details                          |
+| ------------ | ------------------------------------------------------------------------ | ------- | -------------------------------- |
+| Aktionsreihe | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Ja      | Die zu erweiternde Aktionsreihe. |
+| Button       | [Button](../../../value-types.md#BUTTON)                                 | Ja      | Der anzuhängende Button.         |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                                      | Details                         |
+| ------------ | ------------------------------------------------------------------------ | ------------------------------- |
 | Aktionsreihe | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Die aktualisierte Aktionsreihe. |

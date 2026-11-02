@@ -20,13 +20,13 @@ Die Nutzung wird über drei Zeitfenster erfasst: **Diese Stunde**, **Heute** und
 
 Oben auf der Karte steht ein Zustand:
 
-| Zustand           | Was er bedeutet                                                                     |
-| ----------------- | ----------------------------------------------------------------------------------- |
-| **Gesund**        | Reichlich Spielraum.                                                                |
-| **Wird voll**     | Deine Flows nähern sich dem Budget. Noch ist nichts pausiert.                       |
-| **Am Limit**      | Manche Aktionen werden gerade abgelehnt.                                            |
+| Zustand           | Was er bedeutet                                                                                                   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Gesund**        | Reichlich Spielraum.                                                                                              |
+| **Wird voll**     | Deine Flows nähern sich dem Budget. Noch ist nichts pausiert.                                                     |
+| **Am Limit**      | Manche Aktionen werden gerade abgelehnt.                                                                          |
 | **Pausiert**      | Dein Server liegt deutlich über seinem Budget, und neue Ausführungen werden übersprungen, bis es sich erholt hat. |
-| **Keine Messung** | Das Budget konnte nicht gelesen werden, zum Beispiel weil dein Bot offline ist.     |
+| **Keine Messung** | Das Budget konnte nicht gelesen werden, zum Beispiel weil dein Bot offline ist.                                   |
 
 Manche Arten von Aktionen haben ihre eigenen, separaten Limits, weil sie mehr Gewicht haben:
 
@@ -76,15 +76,15 @@ Du willst mehr Spielraum? Klicke auf der Karte auf **Upgrade** oder öffne die P
 
 Jede Ausführung hat außerdem eigene Limits. Sie fangen Fehler ab, etwa eine Schleife, die nie endet:
 
-| Limit                                    | Was passiert                                                                                                       |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Zu viele Schritte in einer Ausführung    | Die Ausführung endet mit **Limit überschritten**. Schleifen zählen jeden Durchlauf, und aufgerufene Flows zählen auch mit. |
-| Eine Ausführung dauert zu lange          | Die Ausführung endet mit **Limit überschritten**.                                                                   |
-| Eine Schleife wiederholt sich zu oft     | Der Schleifen-Schritt schlägt mit `LIMIT_EXCEEDED` fehl.                                                            |
-| Flows rufen sich zu tief gegenseitig auf | Der Schritt **Anderen Flow ausführen** schlägt mit `LIMIT_EXCEEDED` fehl.                                           |
-| Zu viele Ausführungen in kurzer Zeit     | Weitere Ausführungen werden mit dem Grund "Server-Ratenlimit" **Übersprungen**.                                     |
-| Zu viele Wartepunkte oder geplante Ausführungen gleichzeitig | Der Schritt, der einen weiteren hinzufügen würde, schlägt mit `LIMIT_EXCEEDED` fehl.            |
-| Speicher ist voll                        | Schritte, die neue Daten speichern, schlagen fehl. Siehe [Datenspeicher](/de/docs/custom-commands/storage#usage).   |
+| Limit                                                        | Was passiert                                                                                                               |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Zu viele Schritte in einer Ausführung                        | Die Ausführung endet mit **Limit überschritten**. Schleifen zählen jeden Durchlauf, und aufgerufene Flows zählen auch mit. |
+| Eine Ausführung dauert zu lange                              | Die Ausführung endet mit **Limit überschritten**.                                                                          |
+| Eine Schleife wiederholt sich zu oft                         | Der Schleifen-Schritt schlägt mit `LIMIT_EXCEEDED` fehl.                                                                   |
+| Flows rufen sich zu tief gegenseitig auf                     | Der Schritt **Anderen Flow ausführen** schlägt mit `LIMIT_EXCEEDED` fehl.                                                  |
+| Zu viele Ausführungen in kurzer Zeit                         | Weitere Ausführungen werden mit dem Grund "Server-Ratenlimit" **Übersprungen**.                                            |
+| Zu viele Wartepunkte oder geplante Ausführungen gleichzeitig | Der Schritt, der einen weiteren hinzufügen würde, schlägt mit `LIMIT_EXCEEDED` fehl.                                       |
+| Speicher ist voll                                            | Schritte, die neue Daten speichern, schlagen fehl. Siehe [Datenspeicher](/de/docs/custom-commands/storage#usage).          |
 
 Es gibt auch Limits dafür, wie groß ein Flow sein darf. Ein Flow mit zu vielen Schritten oder zu tief verschachtelten Zweigen kann als Entwurf gespeichert, aber nicht aktiviert werden. Der Editor sagt dir, was du ändern musst, meist einen Teil des Flows in einen zweiten Flow auszulagern und diesen aufzurufen.
 
@@ -96,12 +96,12 @@ Zusätzlich zu den Limits achtet SCNX auf Flows, die deinem Server oder deinen M
 
   Das sind die Prüfungen, die das Aktivieren blockieren:
 
-  | Der Editor sagt                                                                 | Was du ändern solltest                                                          |
-  | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+  | Der Editor sagt                                                                      | Was du ändern solltest                                                                                                             |
+  | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
   | "Diese Schleife sendet eine DM an die gesamte vom Server abgerufene Mitgliederliste" | Schick DMs nur an die Mitglieder, die sie brauchen, etwa an die mit einer bestimmten Rolle oder an die, die sich angemeldet haben. |
-  | "Diese Schleife löscht Kanäle oder Rollen, die vom gesamten Server abgerufen wurden" | Durchlaufe eine Liste von Kanälen oder Rollen, die du ausgewählt hast.      |
-  | "Diese Schleife bannt oder kickt die gesamte vom Server abgerufene Mitgliederliste" | Handle bei bestimmten Mitgliedern, nicht bei allen.                          |
-  | "Diese Schleife sendet wiederholt DMs an denselben einzelnen Empfänger"         | Schick eine Nachricht mit allem darin.                                          |
+  | "Diese Schleife löscht Kanäle oder Rollen, die vom gesamten Server abgerufen wurden" | Durchlaufe eine Liste von Kanälen oder Rollen, die du ausgewählt hast.                                                             |
+  | "Diese Schleife bannt oder kickt die gesamte vom Server abgerufene Mitgliederliste"  | Handle bei bestimmten Mitgliedern, nicht bei allen.                                                                                |
+  | "Diese Schleife sendet wiederholt DMs an denselben einzelnen Empfänger"              | Schick eine Nachricht mit allem darin.                                                                                             |
 
 - **Riskante Muster bekommen eine Warnung.** Zum Beispiel eine destruktive Aktion in einer Schleife, ein Zeitplan, der sehr oft läuft, oder ein Flow, der sich selbst erneut einplant. Du kannst sie trotzdem speichern, aber prüfe, dass sie nicht außer Kontrolle geraten können.
 - **Destruktive Aktionen und DMs sind während der Ausführung begrenzt.** Jede Ausführung und jeder Server über die Zeit kann nur eine bestimmte Menge löschen, bannen, kicken oder per DM anschreiben. Die Limits wachsen mit der Größe deines Servers. Eine Ausführung, die darüber hinausgeht, wird mit `DESTRUCTIVE_LIMIT_EXCEEDED` oder `LIMIT_EXCEEDED` gestoppt.
@@ -132,12 +132,12 @@ Flows handeln als dein Bot, also können sie nur tun, was dein Bot darf.
 
 ## Wer Custom Commands ändern darf {#permissions}
 
-| Was                                                          | Wer                                                                                                                                                                                                                  |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Was                                                                                                     | Wer                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Flows und Module bauen und bearbeiten, gespeicherte Daten und den Ausführungsverlauf ansehen und ändern | Der Server-Eigentümer, Co-Owner und [Trusted Admins](/de/docs/scnx/guilds/trusted-admins#permissions) mit **Eigener Bot**: Bot-Administrator oder **Eigener Bot**: Konfigurationen & Eigene Befehle ändern und neu laden |
-| Notaus                                                       | Der Server-Eigentümer, Co-Owner und Trusted Admins mit **Eigener Bot**: Bot-Administrator oder **Eigener Bot**: Bot verwalten                                                                                        |
-| V3 einschalten oder zu V2 zurückwechseln                     | Der Server-Eigentümer und Co-Owner                                                                                                                                                                                  |
-| Ein Modul im Marktplatz veröffentlichen                      | Mitglieder der veröffentlichenden Organisation mit der Berechtigung "Inhalte verwalten"                                                                                                                              |
+| Notaus                                                                                                  | Der Server-Eigentümer, Co-Owner und Trusted Admins mit **Eigener Bot**: Bot-Administrator oder **Eigener Bot**: Bot verwalten                                                                                            |
+| V3 einschalten oder zu V2 zurückwechseln                                                                | Der Server-Eigentümer und Co-Owner                                                                                                                                                                                       |
+| Ein Modul im Marktplatz veröffentlichen                                                                 | Mitglieder der veröffentlichenden Organisation mit der Berechtigung "Inhalte verwalten"                                                                                                                                  |
 
 :::caution Flows bearbeiten heißt, die Berechtigungen des Bots zu nutzen
 Wer Custom Commands bearbeiten kann, kann einen Flow bauen, der alle Berechtigungen deines Bots nutzt. Über einen Flow könnte ein Trusted Admin Rollen vergeben oder Mitglieder bannen, selbst wenn seine eigenen Berechtigungen das nicht erlauben. Gib Zugriff auf Custom Commands nur Leuten, denen du auch deinen Bot anvertrauen würdest.

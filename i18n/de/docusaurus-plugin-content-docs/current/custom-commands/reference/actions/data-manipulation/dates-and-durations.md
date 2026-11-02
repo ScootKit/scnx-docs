@@ -15,8 +15,8 @@ Gibt das aktuelle Datum und die Uhrzeit zurück.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details              |
+| ----- | ----------------------------------------------------- | -------------------- |
 | Jetzt | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Der aktuelle Moment. |
 
 ### Text in Datum umwandeln {#date-from-string}
@@ -25,15 +25,15 @@ Liest ein Datum aus einem Text, optional mit einem Format. Uhrzeiten ohne Zeitzo
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Textdarstellung des Datums. |
-| Format | [Text](../../../value-types.md#STRING) | Nein | Optionales Formatmuster. |
+| Name   | Typ                                    | Pflicht | Details                     |
+| ------ | -------------------------------------- | ------- | --------------------------- |
+| Text   | [Text](../../../value-types.md#STRING) | Ja      | Textdarstellung des Datums. |
+| Format | [Text](../../../value-types.md#STRING) | Nein    | Optionales Formatmuster.    |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                                                                                   |
+| ----- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Das Datum oder leer, wenn der Text nicht als Datum gelesen werden konnte. Kann leer sein. |
 
 ### Zu Datum hinzufügen {#date-add}
@@ -42,15 +42,15 @@ Addiert eine Dauer zu einem Datum und gibt das neue Datum zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das Ausgangsdatum. |
-| Dauer | [Dauer](../../../value-types.md#DURATION) | Ja | Wie viel addiert wird. |
+| Name  | Typ                                                   | Pflicht | Details                |
+| ----- | ----------------------------------------------------- | ------- | ---------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das Ausgangsdatum.     |
+| Dauer | [Dauer](../../../value-types.md#DURATION)             | Ja      | Wie viel addiert wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                   | Details                  |
+| -------- | ----------------------------------------------------- | ------------------------ |
 | Ergebnis | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Das resultierende Datum. |
 
 ### Vom Datum subtrahieren {#date-subtract}
@@ -59,15 +59,15 @@ Subtrahiert eine Dauer von einem Datum und gibt das neue Datum zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das Ausgangsdatum. |
-| Dauer | [Dauer](../../../value-types.md#DURATION) | Ja | Wie viel abgezogen wird. |
+| Name  | Typ                                                   | Pflicht | Details                  |
+| ----- | ----------------------------------------------------- | ------- | ------------------------ |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das Ausgangsdatum.       |
+| Dauer | [Dauer](../../../value-types.md#DURATION)             | Ja      | Wie viel abgezogen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                   | Details                  |
+| -------- | ----------------------------------------------------- | ------------------------ |
 | Ergebnis | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Das resultierende Datum. |
 
 ### Datumsunterschied {#date-difference}
@@ -76,15 +76,15 @@ Gibt die Dauer zwischen zwei Daten zurück (a - b).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Erstes Datum. |
-| B | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Zweites Datum. |
+| Name | Typ                                                   | Pflicht | Details        |
+| ---- | ----------------------------------------------------- | ------- | -------------- |
+| A    | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Erstes Datum.  |
+| B    | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Zweites Datum. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                       | Details                       |
+| ----- | ----------------------------------------- | ----------------------------- |
 | Dauer | [Dauer](../../../value-types.md#DURATION) | Die Dauer zwischen den Daten. |
 
 ### Datum formatieren {#date-format}
@@ -93,16 +93,16 @@ Formatiert ein Datum als Text mit einem Formatmuster, in der Zeitzone des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das zu formatierende Datum. |
-| Format | [Text](../../../value-types.md#STRING) | Ja | Formatmuster (z. B. YYYY-MM-DD). |
-| Locale | [Text](../../../value-types.md#STRING) | Nein | Optionale Locale (z. B. de-DE). |
+| Name   | Typ                                                   | Pflicht | Details                          |
+| ------ | ----------------------------------------------------- | ------- | -------------------------------- |
+| Datum  | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das zu formatierende Datum.      |
+| Format | [Text](../../../value-types.md#STRING)                | Ja      | Formatmuster (z. B. YYYY-MM-DD). |
+| Locale | [Text](../../../value-types.md#STRING)                | Nein    | Optionale Locale (z. B. de-DE).  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der formatierte Text. |
 
 ### Jahr extrahieren {#date-extract-year}
@@ -111,14 +111,14 @@ Gibt den Jahrsteil eines Datums in der Zeitzone des Bots zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Datum, das ausgelesen wird. |
+| Name  | Typ                                                   | Pflicht | Details                     |
+| ----- | ----------------------------------------------------- | ------- | --------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Datum, das ausgelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                         | Details                |
+| ---- | ------------------------------------------- | ---------------------- |
 | Jahr | [Ganzzahl](../../../value-types.md#INTEGER) | Das Jahr (z. B. 2026). |
 
 ### Monat extrahieren {#date-extract-month}
@@ -127,14 +127,14 @@ Gibt den Monatsteil eines Datums in der Zeitzone des Bots zurück (1-12).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Datum, das ausgewertet wird. |
+| Name  | Typ                                                   | Pflicht | Details                      |
+| ----- | ----------------------------------------------------- | ------- | ---------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Datum, das ausgewertet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details           |
+| ----- | ------------------------------------------- | ----------------- |
 | Monat | [Ganzzahl](../../../value-types.md#INTEGER) | Monatnummer 1-12. |
 
 ### Tag extrahieren {#date-extract-day}
@@ -143,15 +143,15 @@ Gibt den Tag-des-Monats-Teil eines Datums in der Zeitzone des Bots zurück (1-31
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das Datum, das ausgelesen wird. |
+| Name  | Typ                                                   | Pflicht | Details                         |
+| ----- | ----------------------------------------------------- | ------- | ------------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das Datum, das ausgelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Tag | [Ganzzahl](../../../value-types.md#INTEGER) | Tag-des-Monats 1-31. |
+| Name | Typ                                         | Details              |
+| ---- | ------------------------------------------- | -------------------- |
+| Tag  | [Ganzzahl](../../../value-types.md#INTEGER) | Tag-des-Monats 1-31. |
 
 ### Stunde extrahieren {#date-extract-hour}
 
@@ -159,14 +159,14 @@ Gibt den Stunden-des-Tages-Teil eines Datums in der Zeitzone des Bots zurück (0
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Datum, das ausgelesen wird. |
+| Name  | Typ                                                   | Pflicht | Details                     |
+| ----- | ----------------------------------------------------- | ------- | --------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Datum, das ausgelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                         | Details      |
+| ------ | ------------------------------------------- | ------------ |
 | Stunde | [Ganzzahl](../../../value-types.md#INTEGER) | Stunde 0-23. |
 
 ### Wochentag extrahieren {#date-extract-weekday}
@@ -175,14 +175,14 @@ Gibt den Wochentag-Index in der Zeitzone des Bots zurück (0 = Sonntag, 6 = Sams
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Datum, das ausgewertet wird. |
+| Name  | Typ                                                   | Pflicht | Details                      |
+| ----- | ----------------------------------------------------- | ------- | ---------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Datum, das ausgewertet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                         | Details                |
+| --------- | ------------------------------------------- | ---------------------- |
 | Wochentag | [Ganzzahl](../../../value-types.md#INTEGER) | Wochentag-Index (0-6). |
 
 ### Dauer aus ms {#duration-from-ms}
@@ -191,14 +191,14 @@ Erstellt eine Dauer aus einer Anzahl von Millisekunden.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Millisekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Anzahl der Millisekunden. Minimum: 0. |
+| Name          | Typ                                         | Pflicht | Details                               |
+| ------------- | ------------------------------------------- | ------- | ------------------------------------- |
+| Millisekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Anzahl der Millisekunden. Minimum: 0. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                       | Details                  |
+| ----- | ----------------------------------------- | ------------------------ |
 | Dauer | [Dauer](../../../value-types.md#DURATION) | Die resultierende Dauer. |
 
 ### Dauer zu ms {#duration-to-ms}
@@ -207,14 +207,14 @@ Konvertiert eine Dauer zu ihrer Gesamtanzahl von Millisekunden.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Dauer | [Dauer](../../../value-types.md#DURATION) | Ja | Dauer, die umgerechnet wird. |
+| Name  | Typ                                       | Pflicht | Details                      |
+| ----- | ----------------------------------------- | ------- | ---------------------------- |
+| Dauer | [Dauer](../../../value-types.md#DURATION) | Ja      | Dauer, die umgerechnet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name          | Typ                                         | Details              |
+| ------------- | ------------------------------------------- | -------------------- |
 | Millisekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Gesamtmillisekunden. |
 
 ### Dauer aus Teilen {#duration-from-parts}
@@ -223,17 +223,17 @@ Erstellt eine Dauer aus Tagen, Stunden, Minuten und Sekunden.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Tage | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Anzahl der Tage. Standard: `0`. |
-| Stunden | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Anzahl der Stunden. Standard: `0`. |
-| Minuten | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Anzahl der Minuten. Standard: `0`. |
-| Sekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Anzahl der Sekunden. Standard: `0`. |
+| Name     | Typ                                         | Pflicht | Details                             |
+| -------- | ------------------------------------------- | ------- | ----------------------------------- |
+| Tage     | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Anzahl der Tage. Standard: `0`.     |
+| Stunden  | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Anzahl der Stunden. Standard: `0`.  |
+| Minuten  | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Anzahl der Minuten. Standard: `0`.  |
+| Sekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Anzahl der Sekunden. Standard: `0`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                       | Details                  |
+| ----- | ----------------------------------------- | ------------------------ |
 | Dauer | [Dauer](../../../value-types.md#DURATION) | Die resultierende Dauer. |
 
 ### Text in Dauer umwandeln {#parse-duration}
@@ -242,15 +242,15 @@ Liest eine lesbare Dauer wie "10m", "2h30m", "3d" oder "1w2d" aus einem Text. Ei
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Dauer-Text, z. B. "10m", "2h30m", "3d", "1w2d", "90s". |
-| Ersatzwert | [Dauer](../../../value-types.md#DURATION) | Nein | Wird zurückgegeben, statt fehlzuschlagen, wenn der Text nicht als Dauer gelesen werden kann. Leer lassen, um bei ungültiger Eingabe einen abfangbaren Fehler auszulösen. |
+| Name       | Typ                                       | Pflicht | Details                                                                                                                                                                  |
+| ---------- | ----------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Text       | [Text](../../../value-types.md#STRING)    | Ja      | Der Dauer-Text, z. B. "10m", "2h30m", "3d", "1w2d", "90s".                                                                                                               |
+| Ersatzwert | [Dauer](../../../value-types.md#DURATION) | Nein    | Wird zurückgegeben, statt fehlzuschlagen, wenn der Text nicht als Dauer gelesen werden kann. Leer lassen, um bei ungültiger Eingabe einen abfangbaren Fehler auszulösen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                       | Details                                                                                 |
+| ----- | ----------------------------------------- | --------------------------------------------------------------------------------------- |
 | Dauer | [Dauer](../../../value-types.md#DURATION) | Die Dauer oder der Ersatzwert, wenn der Text nicht gelesen werden kann. Kann leer sein. |
 
 ### Dauer formatieren {#format-duration}
@@ -259,15 +259,15 @@ Formatiert eine Dauer als lesbaren Text.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Dauer | [Dauer](../../../value-types.md#DURATION) | Ja | Die zu formatierende Dauer. |
-| Stil | [Dauer-Stil](../../../value-types.md#DURATION_STYLE) | Ja | Wie die Dauer dargestellt wird: kompakt ("2h 30m"), lang ("2 hours 30 minutes") oder nur die größte Einheit ("3 hours"). Standard: Kompakt. |
+| Name  | Typ                                                  | Pflicht | Details                                                                                                                                     |
+| ----- | ---------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dauer | [Dauer](../../../value-types.md#DURATION)            | Ja      | Die zu formatierende Dauer.                                                                                                                 |
+| Stil  | [Dauer-Stil](../../../value-types.md#DURATION_STYLE) | Ja      | Wie die Dauer dargestellt wird: kompakt ("2h 30m"), lang ("2 hours 30 minutes") oder nur die größte Einheit ("3 hours"). Standard: Kompakt. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                    |
+| ---- | -------------------------------------- | -------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | Der formatierte Dauertext. |
 
 ### Text in Datum umwandeln (Alltagssprache) {#parse-natural-date}
@@ -276,17 +276,17 @@ Liest gängige relative und absolute Datums- und Zeitangaben als Datum. Relativ:
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Datums- und Zeittext, z. B. "in 3 Tagen", "in 5 Minuten", "morgen 20:00", "nächsten Montag", "2024-03-05", "05.03.2024". |
-| Referenzzeit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein | Das "Jetzt" für relative Formen wie "morgen" oder "in 3 days". Standard ist die aktuelle Zeit. |
-| Zeitzone | [Text](../../../value-types.md#STRING) | Nein | IANA-Zeitzone (z. B. "Europe/Berlin") zur Auslegung von Uhrzeiten wie "morgen 20:00". Standard ist die Zeitzone des Bots. |
-| Ersatzwert | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein | Wird statt eines Fehlers zurückgegeben, wenn der Text nicht als Datum gelesen werden kann. Leer lassen, um bei ungültiger Eingabe einen abfangbaren Fehler auszulösen. |
+| Name         | Typ                                                   | Pflicht | Details                                                                                                                                                                |
+| ------------ | ----------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text         | [Text](../../../value-types.md#STRING)                | Ja      | Der Datums- und Zeittext, z. B. "in 3 Tagen", "in 5 Minuten", "morgen 20:00", "nächsten Montag", "2024-03-05", "05.03.2024".                                           |
+| Referenzzeit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein    | Das "Jetzt" für relative Formen wie "morgen" oder "in 3 days". Standard ist die aktuelle Zeit.                                                                         |
+| Zeitzone     | [Text](../../../value-types.md#STRING)                | Nein    | IANA-Zeitzone (z. B. "Europe/Berlin") zur Auslegung von Uhrzeiten wie "morgen 20:00". Standard ist die Zeitzone des Bots.                                              |
+| Ersatzwert   | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein    | Wird statt eines Fehlers zurückgegeben, wenn der Text nicht als Datum gelesen werden kann. Leer lassen, um bei ungültiger Eingabe einen abfangbaren Fehler auszulösen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                                                                                                 |
+| ----- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Das Datum und die Uhrzeit oder der Ersatzwert, wenn der Text nicht gelesen werden kann. Kann leer sein. |
 
 ### Zeit bis {#time-until}
@@ -295,15 +295,15 @@ Misst den Abstand von der Referenzzeit zu einem Zieldatum. Die Millisekunden sin
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zieldatum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das Datum und die Uhrzeit, bis zu der gemessen wird. |
-| Referenzzeit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein | Die Zeit, ab der gemessen wird. Standard ist die aktuelle Zeit. |
+| Name         | Typ                                                   | Pflicht | Details                                                         |
+| ------------ | ----------------------------------------------------- | ------- | --------------------------------------------------------------- |
+| Zieldatum    | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das Datum und die Uhrzeit, bis zu der gemessen wird.            |
+| Referenzzeit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Nein    | Die Zeit, ab der gemessen wird. Standard ist die aktuelle Zeit. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Millisekunden | [Ganzzahl](../../../value-types.md#INTEGER) | Signierte Millisekunden von der Referenz zum Ziel (negativ, wenn sich das Ziel in der Vergangenheit befindet). |
-| Liegt in der Vergangenheit | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn sich das Ziel vor der Referenzzeit befindet. |
-| Humanisiert | [Text](../../../value-types.md#STRING) | Eine menschenlesbarer Ausdruck wie "in 2 Stunden 30 Minuten", "vor 2 Tagen" oder "jetzt". |
+| Name                       | Typ                                         | Details                                                                                                        |
+| -------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Millisekunden              | [Ganzzahl](../../../value-types.md#INTEGER) | Signierte Millisekunden von der Referenz zum Ziel (negativ, wenn sich das Ziel in der Vergangenheit befindet). |
+| Liegt in der Vergangenheit | [Ja/Nein](../../../value-types.md#BOOLEAN)  | Wahr, wenn sich das Ziel vor der Referenzzeit befindet.                                                        |
+| Humanisiert                | [Text](../../../value-types.md#STRING)      | Eine menschenlesbarer Ausdruck wie "in 2 Stunden 30 Minuten", "vor 2 Tagen" oder "jetzt".                      |

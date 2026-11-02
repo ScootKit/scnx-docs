@@ -15,14 +15,14 @@ Returns the number of items in a list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | List to measure. |
+| Name | Type                                       | Required | Details          |
+| ---- | ------------------------------------------ | -------- | ---------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | List to measure. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details              |
+| ------ | ----------------------------------------------- | -------------------- |
 | Length | [Whole number](../../../value-types.md#INTEGER) | The number of items. |
 
 ### Item at index {#array-at}
@@ -31,15 +31,15 @@ Returns the item at a given index (counted from 0), or empty if out of range.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to access. |
-| Position (starting at 0) | [Whole number](../../../value-types.md#INTEGER) | Yes | Position of the item, counted from 0. Negative values count from the end. |
+| Name                     | Type                                            | Required | Details                                                                   |
+| ------------------------ | ----------------------------------------------- | -------- | ------------------------------------------------------------------------- |
+| List                     | List of [Any](../../../value-types.md#ANY)      | Yes      | The list to access.                                                       |
+| Position (starting at 0) | [Whole number](../../../value-types.md#INTEGER) | Yes      | Position of the item, counted from 0. Negative values count from the end. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                    | Details                               |
+| ----- | --------------------------------------- | ------------------------------------- |
 | Value | [Item](../../../value-types.md#ELEMENT) | The item at that index. May be empty. |
 
 ### First item {#array-first}
@@ -48,14 +48,14 @@ Returns the first item of the list, or empty if the list is empty.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to read. |
+| Name | Type                                       | Required | Details           |
+| ---- | ------------------------------------------ | -------- | ----------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                    | Details                                 |
+| ----- | --------------------------------------- | --------------------------------------- |
 | Value | [Item](../../../value-types.md#ELEMENT) | The first item, or empty. May be empty. |
 
 ### Last item {#array-last}
@@ -64,14 +64,14 @@ Returns the last item of the list, or empty if the list is empty.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to read. |
+| Name | Type                                       | Required | Details           |
+| ---- | ------------------------------------------ | -------- | ----------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                    | Details                                |
+| ----- | --------------------------------------- | -------------------------------------- |
 | Value | [Item](../../../value-types.md#ELEMENT) | The last item, or empty. May be empty. |
 
 ### List contains {#array-contains}
@@ -80,15 +80,15 @@ Checks whether a list contains a value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to search. |
-| Needle | [Item](../../../value-types.md#ELEMENT) | Yes | The value to look for. |
+| Name   | Type                                       | Required | Details                |
+| ------ | ------------------------------------------ | -------- | ---------------------- |
+| List   | List of [Any](../../../value-types.md#ANY) | Yes      | The list to search.    |
+| Needle | [Item](../../../value-types.md#ELEMENT)    | Yes      | The value to look for. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                       |
+| ------ | ----------------------------------------- | ----------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if the value is present. |
 
 ### Add item to list {#array-push}
@@ -97,15 +97,15 @@ Hands back a new list with the value added at the end and leaves the list you ga
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The original list. It is not changed. |
-| Value | [Item](../../../value-types.md#ELEMENT) | Yes | The value to append. |
+| Name  | Type                                       | Required | Details                               |
+| ----- | ------------------------------------------ | -------- | ------------------------------------- |
+| List  | List of [Any](../../../value-types.md#ANY) | Yes      | The original list. It is not changed. |
+| Value | [Item](../../../value-types.md#ELEMENT)    | Yes      | The value to append.                  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                                  |
+| ------ | ----------------------------------------------- | ---------------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The new list, with the value on the end. |
 
 ### Remove from list {#array-remove}
@@ -114,15 +114,15 @@ Hands back a new list with all occurrences of a value removed and leaves the lis
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The original list. It is not changed. |
-| Value | [Item](../../../value-types.md#ELEMENT) | Yes | The value to remove. |
+| Name  | Type                                       | Required | Details                               |
+| ----- | ------------------------------------------ | -------- | ------------------------------------- |
+| List  | List of [Any](../../../value-types.md#ANY) | Yes      | The original list. It is not changed. |
+| Value | [Item](../../../value-types.md#ELEMENT)    | Yes      | The value to remove.                  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                           |
+| ------ | ----------------------------------------------- | --------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The new list, without that value. |
 
 ### Join list {#array-join}
@@ -131,15 +131,15 @@ Joins a list of texts into one text with a separator.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Text](../../../value-types.md#STRING) | Yes | List of texts. |
-| Separator | [Text](../../../value-types.md#STRING) | Yes | Text inserted between items. Default: `, `. |
+| Name      | Type                                           | Required | Details                                     |
+| --------- | ---------------------------------------------- | -------- | ------------------------------------------- |
+| List      | List of [Text](../../../value-types.md#STRING) | Yes      | List of texts.                              |
+| Separator | [Text](../../../value-types.md#STRING)         | Yes      | Text inserted between items. Default: `, `. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details          |
+| ------ | -------------------------------------- | ---------------- |
 | Result | [Text](../../../value-types.md#STRING) | The joined text. |
 
 ### List from text {#array-from-string}
@@ -148,15 +148,15 @@ Splits a text into a list using a separator. Leave the separator empty to split 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to split. |
-| Separator | [Text](../../../value-types.md#STRING) | No | Optional separator. Leave empty to split the text into individual characters. Default: ``. |
+| Name      | Type                                   | Required | Details                                                                                    |
+| --------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Text      | [Text](../../../value-types.md#STRING) | Yes      | The text to split.                                                                         |
+| Separator | [Text](../../../value-types.md#STRING) | No       | Optional separator. Leave empty to split the text into individual characters. Default: ``. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                           | Details             |
+| ------ | ---------------------------------------------- | ------------------- |
 | Result | List of [Text](../../../value-types.md#STRING) | The resulting list. |
 
 ### Number list from text (whole numbers) {#array-from-string-integers}
@@ -165,15 +165,15 @@ Splits a text into a list of whole numbers, so the numbers can be compared and c
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to split, for example "1, 3, 5, 7". |
-| Separator | [Text](../../../value-types.md#STRING) | No | What separates the numbers. Defaults to a comma. Default: `,`. |
+| Name      | Type                                   | Required | Details                                                        |
+| --------- | -------------------------------------- | -------- | -------------------------------------------------------------- |
+| Text      | [Text](../../../value-types.md#STRING) | Yes      | The text to split, for example "1, 3, 5, 7".                   |
+| Separator | [Text](../../../value-types.md#STRING) | No       | What separates the numbers. Defaults to a comma. Default: `,`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                    | Details                    |
+| ------- | ------------------------------------------------------- | -------------------------- |
 | Numbers | List of [Whole number](../../../value-types.md#INTEGER) | The list of whole numbers. |
 
 ### Number list from text (decimals) {#array-from-string-floats}
@@ -182,15 +182,15 @@ Splits a text into a list of numbers that may have decimals. Spaces around each 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to split, for example "0.5, 1.5, 2". |
-| Separator | [Text](../../../value-types.md#STRING) | No | What separates the numbers. Defaults to a comma. Default: `,`. |
+| Name      | Type                                   | Required | Details                                                        |
+| --------- | -------------------------------------- | -------- | -------------------------------------------------------------- |
+| Text      | [Text](../../../value-types.md#STRING) | Yes      | The text to split, for example "0.5, 1.5, 2".                  |
+| Separator | [Text](../../../value-types.md#STRING) | No       | What separates the numbers. Defaults to a comma. Default: `,`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                    | Details              |
+| ------- | ------------------------------------------------------- | -------------------- |
 | Numbers | List of [Decimal number](../../../value-types.md#FLOAT) | The list of numbers. |
 
 ### Random item from list {#array-random-element}
@@ -199,14 +199,14 @@ Picks a random item from a list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | Non-empty list. Minimum items: 1. |
+| Name | Type                                       | Required | Details                           |
+| ---- | ------------------------------------------ | -------- | --------------------------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | Non-empty list. Minimum items: 1. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                    | Details                      |
+| ----- | --------------------------------------- | ---------------------------- |
 | Value | [Item](../../../value-types.md#ELEMENT) | A random item. May be empty. |
 
 ### Shuffle list {#array-shuffle}
@@ -215,14 +215,14 @@ Returns a new list with the items in random order. The list you gave it is left 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to shuffle. |
+| Name | Type                                       | Required | Details              |
+| ---- | ------------------------------------------ | -------- | -------------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to shuffle. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The shuffled list. |
 
 ### Sort list (ascending) {#array-sort-asc}
@@ -231,14 +231,14 @@ Returns a new list sorted in ascending order. The list you gave it is left uncha
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to sort. |
+| Name | Type                                       | Required | Details           |
+| ---- | ------------------------------------------ | -------- | ----------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to sort. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details          |
+| ------ | ----------------------------------------------- | ---------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The sorted list. |
 
 ### Sort list (descending) {#array-sort-desc}
@@ -247,14 +247,14 @@ Returns a new list sorted in descending order. The list you gave it is left unch
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to sort. |
+| Name | Type                                       | Required | Details           |
+| ---- | ------------------------------------------ | -------- | ----------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to sort. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details          |
+| ------ | ----------------------------------------------- | ---------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The sorted list. |
 
 ### Reverse list {#array-reverse}
@@ -263,14 +263,14 @@ Returns a new list with the items in reverse order. The list you gave it is left
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to reverse. |
+| Name | Type                                       | Required | Details              |
+| ---- | ------------------------------------------ | -------- | -------------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to reverse. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The reversed list. |
 
 ### Unique list {#array-unique}
@@ -279,14 +279,14 @@ Returns a new list with duplicate items removed, keeping the first occurrence of
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to deduplicate. |
+| Name | Type                                       | Required | Details                  |
+| ---- | ------------------------------------------ | -------- | ------------------------ |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list to deduplicate. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                      |
+| ------ | ----------------------------------------------- | ---------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The list without duplicates. |
 
 ### Combine lists {#array-concat}
@@ -295,15 +295,15 @@ Merges two lists into one new list (the first list followed by the second).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| First list | List of [Any](../../../value-types.md#ANY) | Yes | Items placed at the start. |
-| Second list | List of [Any](../../../value-types.md#ANY) | Yes | Items appended after the first. |
+| Name        | Type                                       | Required | Details                         |
+| ----------- | ------------------------------------------ | -------- | ------------------------------- |
+| First list  | List of [Any](../../../value-types.md#ANY) | Yes      | Items placed at the start.      |
+| Second list | List of [Any](../../../value-types.md#ANY) | Yes      | Items appended after the first. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details          |
+| ------ | ----------------------------------------------- | ---------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The merged list. |
 
 ### Items in both lists {#array-intersection}
@@ -312,15 +312,15 @@ Returns a new list with the items present in both lists, duplicates removed, fir
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| First list | List of [Any](../../../value-types.md#ANY) | Yes | The first list. |
-| Second list | List of [Any](../../../value-types.md#ANY) | Yes | The list to intersect with. |
+| Name        | Type                                       | Required | Details                     |
+| ----------- | ------------------------------------------ | -------- | --------------------------- |
+| First list  | List of [Any](../../../value-types.md#ANY) | Yes      | The first list.             |
+| Second list | List of [Any](../../../value-types.md#ANY) | Yes      | The list to intersect with. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                          |
+| ------ | ----------------------------------------------- | -------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The items present in both lists. |
 
 ### Items only in the first list {#array-difference}
@@ -329,15 +329,15 @@ Returns a new list with the items of the first list that are NOT in the second l
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| First list | List of [Any](../../../value-types.md#ANY) | Yes | The list to take items from. |
-| Second list | List of [Any](../../../value-types.md#ANY) | Yes | Items to exclude. |
+| Name        | Type                                       | Required | Details                      |
+| ----------- | ------------------------------------------ | -------- | ---------------------------- |
+| First list  | List of [Any](../../../value-types.md#ANY) | Yes      | The list to take items from. |
+| Second list | List of [Any](../../../value-types.md#ANY) | Yes      | Items to exclude.            |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                                                 |
+| ------ | ----------------------------------------------- | ------------------------------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The items of the first list that are not in the second. |
 
 ### Items in only one list {#array-symmetric-difference}
@@ -346,15 +346,15 @@ Returns a new list with the items that are in exactly one of the two lists, dupl
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| First list | List of [Any](../../../value-types.md#ANY) | Yes | The first list. |
-| Second list | List of [Any](../../../value-types.md#ANY) | Yes | The second list. |
+| Name        | Type                                       | Required | Details          |
+| ----------- | ------------------------------------------ | -------- | ---------------- |
+| First list  | List of [Any](../../../value-types.md#ANY) | Yes      | The first list.  |
+| Second list | List of [Any](../../../value-types.md#ANY) | Yes      | The second list. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                                            |
+| ------ | ----------------------------------------------- | -------------------------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The items present in exactly one of the two lists. |
 
 ### Slice list {#array-slice}
@@ -363,16 +363,16 @@ Returns a part of the list from start (inclusive) to end (exclusive), both count
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to slice. |
-| Start | [Whole number](../../../value-types.md#INTEGER) | Yes | Start position (inclusive), counted from 0. Negative counts from the end. |
-| End | [Whole number](../../../value-types.md#INTEGER) | No | End position (exclusive), counted from 0. Omit to slice to the end. Negative counts from the end. |
+| Name  | Type                                            | Required | Details                                                                                           |
+| ----- | ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------- |
+| List  | List of [Any](../../../value-types.md#ANY)      | Yes      | The list to slice.                                                                                |
+| Start | [Whole number](../../../value-types.md#INTEGER) | Yes      | Start position (inclusive), counted from 0. Negative counts from the end.                         |
+| End   | [Whole number](../../../value-types.md#INTEGER) | No       | End position (exclusive), counted from 0. Omit to slice to the end. Negative counts from the end. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                         |
+| ------ | ----------------------------------------------- | ------------------------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The extracted part of the list. |
 
 ### Create list {#create-array}
@@ -381,21 +381,21 @@ Builds a list from up to eight values. Values you leave empty are skipped, so th
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Item 1 | [Any](../../../value-types.md#ANY) | No | First item. |
-| Item 2 | [Any](../../../value-types.md#ANY) | No | Second item. |
-| Item 3 | [Any](../../../value-types.md#ANY) | No | Third item. |
-| Item 4 | [Any](../../../value-types.md#ANY) | No | Fourth item. |
-| Item 5 | [Any](../../../value-types.md#ANY) | No | Fifth item. |
-| Item 6 | [Any](../../../value-types.md#ANY) | No | Sixth item. |
-| Item 7 | [Any](../../../value-types.md#ANY) | No | Seventh item. |
-| Item 8 | [Any](../../../value-types.md#ANY) | No | Eighth item. |
+| Name   | Type                               | Required | Details       |
+| ------ | ---------------------------------- | -------- | ------------- |
+| Item 1 | [Any](../../../value-types.md#ANY) | No       | First item.   |
+| Item 2 | [Any](../../../value-types.md#ANY) | No       | Second item.  |
+| Item 3 | [Any](../../../value-types.md#ANY) | No       | Third item.   |
+| Item 4 | [Any](../../../value-types.md#ANY) | No       | Fourth item.  |
+| Item 5 | [Any](../../../value-types.md#ANY) | No       | Fifth item.   |
+| Item 6 | [Any](../../../value-types.md#ANY) | No       | Sixth item.   |
+| Item 7 | [Any](../../../value-types.md#ANY) | No       | Seventh item. |
+| Item 8 | [Any](../../../value-types.md#ANY) | No       | Eighth item.  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                       | Details                     |
+| ---- | ------------------------------------------ | --------------------------- |
 | List | List of [Any](../../../value-types.md#ANY) | The list of provided items. |
 
 ### List index of {#array-index-of}
@@ -404,15 +404,15 @@ Returns the position of the first matching item in the list (counted from 0), or
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to search. |
-| Value | [Item](../../../value-types.md#ELEMENT) | Yes | The value to look for. |
+| Name  | Type                                       | Required | Details                |
+| ----- | ------------------------------------------ | -------- | ---------------------- |
+| List  | List of [Any](../../../value-types.md#ANY) | Yes      | The list to search.    |
+| Value | [Item](../../../value-types.md#ELEMENT)    | Yes      | The value to look for. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                            | Details                                                    |
+| ----- | ----------------------------------------------- | ---------------------------------------------------------- |
 | Index | [Whole number](../../../value-types.md#INTEGER) | Zero-based position of the first match, or -1 when absent. |
 
 ### Split list into groups {#array-chunk}
@@ -421,15 +421,15 @@ Splits the list into consecutive groups of the given size. The last group may be
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to split. |
-| Group size | [Whole number](../../../value-types.md#INTEGER) | Yes | Maximum number of items per group. Value: 1 to 100000. |
+| Name       | Type                                            | Required | Details                                                |
+| ---------- | ----------------------------------------------- | -------- | ------------------------------------------------------ |
+| List       | List of [Any](../../../value-types.md#ANY)      | Yes      | The list to split.                                     |
+| Group size | [Whole number](../../../value-types.md#INTEGER) | Yes      | Maximum number of items per group. Value: 1 to 100000. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                       | Details                                    |
+| ------ | ------------------------------------------ | ------------------------------------------ |
 | Groups | List of [Any](../../../value-types.md#ANY) | The list of groups (each group is a list). |
 
 ### Merge nested lists {#array-flatten}
@@ -438,14 +438,14 @@ Merges nested lists by one level: items that are themselves lists are merged in,
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list whose nested lists are merged. |
+| Name | Type                                       | Required | Details                                 |
+| ---- | ------------------------------------------ | -------- | --------------------------------------- |
+| List | List of [Any](../../../value-types.md#ANY) | Yes      | The list whose nested lists are merged. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                       | Details                                         |
+| ------ | ------------------------------------------ | ----------------------------------------------- |
 | Result | List of [Any](../../../value-types.md#ANY) | The list with nested lists merged by one level. |
 
 ### Sort list by field {#array-sort-by}
@@ -454,16 +454,16 @@ Returns a new list sorted by the value found at a field path on each item (for e
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to sort. |
-| Field to sort by | [Text](../../../value-types.md#STRING) | Yes | Dot-separated field path to sort by (e.g. "value" or "member.username"). Maximum length: 200 characters. |
-| Direction | [Sort direction](../../../value-types.md#SORT_DIRECTION) | Yes | Sort ascending or descending. Default: Ascending. |
+| Name             | Type                                                     | Required | Details                                                                                                  |
+| ---------------- | -------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------- |
+| List             | List of [Any](../../../value-types.md#ANY)               | Yes      | The list to sort.                                                                                        |
+| Field to sort by | [Text](../../../value-types.md#STRING)                   | Yes      | Dot-separated field path to sort by (e.g. "value" or "member.username"). Maximum length: 200 characters. |
+| Direction        | [Sort direction](../../../value-types.md#SORT_DIRECTION) | Yes      | Sort ascending or descending. Default: Ascending.                                                        |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details          |
+| ------ | ----------------------------------------------- | ---------------- |
 | Result | List of [Item](../../../value-types.md#ELEMENT) | The sorted list. |
 
 ### Find in list {#array-find-by-field}
@@ -472,15 +472,15 @@ Finds the first item of a list whose field equals a value, without a loop. IDs a
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | Yes | The list to search. |
-| Field | [Item field](../../../value-types.md#ITEM_FIELD) | Yes | The field of each item to compare. Maximum length: 64 characters. |
-| Value | [Any](../../../value-types.md#ANY) | Yes | The value the field must have. Always set it; use an empty value to find an item whose field is empty. |
+| Name  | Type                                             | Required | Details                                                                                                |
+| ----- | ------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------ |
+| List  | List of [Any](../../../value-types.md#ANY)       | Yes      | The list to search.                                                                                    |
+| Field | [Item field](../../../value-types.md#ITEM_FIELD) | Yes      | The field of each item to compare. Maximum length: 64 characters.                                      |
+| Value | [Any](../../../value-types.md#ANY)               | Yes      | The value the field must have. Always set it; use an empty value to find an item whose field is empty. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Item | [Item](../../../value-types.md#ELEMENT) | The first matching item. Empty when no item matches. May be empty. |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Yes when an item matched. |
+| Name  | Type                                      | Details                                                            |
+| ----- | ----------------------------------------- | ------------------------------------------------------------------ |
+| Item  | [Item](../../../value-types.md#ELEMENT)   | The first matching item. Empty when no item matches. May be empty. |
+| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Yes when an item matched.                                          |

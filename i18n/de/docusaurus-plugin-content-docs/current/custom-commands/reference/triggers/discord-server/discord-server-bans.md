@@ -17,8 +17,8 @@ Benötigte Intents: `GuildModeration`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                       | Details             |
+| ---- | ----------------------------------------- | ------------------- |
 | Bann | [Bann](../../../value-types.md#GUILD_BAN) | Der erstellte Bann. |
 
 ### Mitglied entbannt {#member-unbanned}
@@ -29,7 +29,7 @@ Benötigte Intents: `GuildModeration`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Der Benutzer, der entbannt wurde. |
-| Server | [Server](../../../value-types.md#GUILD) | Der Server, auf den sich der Bann bezieht. |
+| Name     | Typ                                              | Details                                    |
+| -------- | ------------------------------------------------ | ------------------------------------------ |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Der Benutzer, der entbannt wurde.          |
+| Server   | [Server](../../../value-types.md#GUILD)          | Der Server, auf den sich der Bann bezieht. |

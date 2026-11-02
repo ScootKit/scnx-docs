@@ -17,10 +17,10 @@ Benötigte Intents: `GuildVoiceStates`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Zustand | [Sprachstatus](../../../value-types.md#VOICE_STATE) | Sprachzustand vor der Änderung. |
-| Aktueller Zustand | [Sprachstatus](../../../value-types.md#VOICE_STATE) | Sprachzustand nach der Änderung. |
+| Name               | Typ                                                 | Details                          |
+| ------------------ | --------------------------------------------------- | -------------------------------- |
+| Vorheriger Zustand | [Sprachstatus](../../../value-types.md#VOICE_STATE) | Sprachzustand vor der Änderung.  |
+| Aktueller Zustand  | [Sprachstatus](../../../value-types.md#VOICE_STATE) | Sprachzustand nach der Änderung. |
 
 ### Soundboard-Sound erstellt {#soundboard-sound-created}
 
@@ -30,9 +30,9 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| `sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| Name    | Typ                                                          | Details |
+| ------- | ------------------------------------------------------------ | ------- |
+| `sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |         |
 
 ### Soundboard-Sound aktualisiert {#soundboard-sound-updated}
 
@@ -42,10 +42,10 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                          | Details         |
+| ---------------- | ------------------------------------------------------------ | --------------- |
 | `previous-sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Kann leer sein. |
-| `current-sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| `current-sound`  | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |                 |
 
 ### Soundboard-Sound gelöscht {#soundboard-sound-deleted}
 
@@ -55,6 +55,6 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| `sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| Name    | Typ                                                          | Details |
+| ------- | ------------------------------------------------------------ | ------- |
+| `sound` | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) |         |

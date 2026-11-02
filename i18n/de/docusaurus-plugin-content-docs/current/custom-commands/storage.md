@@ -29,11 +29,11 @@ So können Apps aus dem Marktplatz nicht gegenseitig ihre Daten lesen, und ein F
 
 Der Geltungsbereich legt fest, wie viele Werte ein Feld enthält.
 
-| Geltungsbereich             | Was gespeichert wird                                                                    | Beispiel                                    |
-| --------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------- |
-| **Pro Benutzer**            | Ein Wert pro Discord-Benutzer.                                                          | XP, Verwarnungen, ein Münz-Guthaben         |
-| **Gesamter Server**         | Ein einziger Wert für den ganzen Server.                                                | Ein An/Aus-Schalter für ein Event, ein Zähler |
-| **Nach eigenem Schlüssel**  | Ein Wert pro Schlüssel, den du wählst, etwa eine Nachrichten-ID, eine Kanal-ID oder beliebiger Text. | Stimmen pro Vorschlag, Giveaway-Daten |
+| Geltungsbereich            | Was gespeichert wird                                                                                 | Beispiel                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Pro Benutzer**           | Ein Wert pro Discord-Benutzer.                                                                       | XP, Verwarnungen, ein Münz-Guthaben           |
+| **Gesamter Server**        | Ein einziger Wert für den ganzen Server.                                                             | Ein An/Aus-Schalter für ein Event, ein Zähler |
+| **Nach eigenem Schlüssel** | Ein Wert pro Schlüssel, den du wählst, etwa eine Nachrichten-ID, eine Kanal-ID oder beliebiger Text. | Stimmen pro Vorschlag, Giveaway-Daten         |
 
 Wenn ein Schritt ein Feld mit **Pro Benutzer** liest oder schreibt, gibst du an, um welchen Benutzer es geht. Bei einem Feld mit **Nach eigenem Schlüssel** gibst du den Schlüssel an. Ein Feld mit **Gesamter Server** braucht nichts davon.
 
@@ -47,14 +47,14 @@ Du kannst ein Feld an drei Stellen erstellen:
 
 Jedes Feld hat diese Einstellungen:
 
-| Einstellung        | Was sie bewirkt                                                                                    |
-| ------------------ | -------------------------------------------------------------------------------------------------- |
-| **Name**           | Wie du und deine Flows das Feld nennen.                                                            |
-| **ID**             | Wird aus dem Namen erzeugt. Sie lässt sich später nicht mehr ändern.                               |
-| **Typ**            | Welche Art von Wert das Feld enthält. Siehe [Werttypen](/de/docs/custom-commands/value-types).     |
-| **Geltungsbereich** | **Pro Benutzer**, **Gesamter Server** oder **Nach eigenem Schlüssel**.                            |
-| **Beschreibung**   | Eine optionale Notiz für dich und dein Team.                                                       |
-| **Standardwert**   | Was ein Flow zurückbekommt, wenn noch nichts gespeichert wurde, bei Typen, die das unterstützen.   |
+| Einstellung         | Was sie bewirkt                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| **Name**            | Wie du und deine Flows das Feld nennen.                                                          |
+| **ID**              | Wird aus dem Namen erzeugt. Sie lässt sich später nicht mehr ändern.                             |
+| **Typ**             | Welche Art von Wert das Feld enthält. Siehe [Werttypen](/de/docs/custom-commands/value-types).   |
+| **Geltungsbereich** | **Pro Benutzer**, **Gesamter Server** oder **Nach eigenem Schlüssel**.                           |
+| **Beschreibung**    | Eine optionale Notiz für dich und dein Team.                                                     |
+| **Standardwert**    | Was ein Flow zurückbekommt, wenn noch nichts gespeichert wurde, bei Typen, die das unterstützen. |
 
 Die Ansicht **Schema** enthält außerdem zwei Hilfen für strukturierte Daten:
 
@@ -73,21 +73,21 @@ Gespeicherte Werte kommen nur über einen Schritt, der sie liest, in einen Flow.
 
 Die Speicher-Schritte, die du am häufigsten brauchst:
 
-| Schritt                                | Was er macht                                                                                     | Funktioniert mit            |
-| -------------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------- |
-| **Gespeicherten Wert lesen**           | Liest den Wert. Er ist leer, wenn noch nichts gespeichert wurde.                                 | Jedem Feld                  |
-| **Wert speichern**                     | Schreibt einen Wert und ersetzt, was vorher dort stand.                                          | Jedem Feld                  |
-| **Gespeicherte Zahl erhöhen**          | Addiert in einem sicheren Schritt zu einer Zahl. Er kann auch abziehen, das nutzt **verringern** in der Auswahl. | Zahlenfeldern, Zahlenfeldern in einer Struktur |
-| **Gespeicherten Wert löschen**         | Entfernt den Wert für einen Benutzer oder Schlüssel.                                             | Jedem Feld                  |
-| **Gespeicherter Wert vorhanden?**      | Prüft, ob es einen Wert gibt, ohne ihn zu lesen.                                                 | Jedem Feld                  |
-| **Speichereinträge auflisten**         | Gibt die obersten Einträge sortiert nach Wert zurück, für Ranglisten.                            | Zahlenfeldern               |
-| **Rang eines gespeicherten Werts abrufen** | Gibt die Platzierung von jemandem zurück, etwa "#42 in der Rangliste".                       | Zahlenfeldern               |
-| **Rangliste formatieren**              | Baut aus den obersten Einträgen einen fertigen Ranglisten-Text zum Senden.                       | Zahlenfeldern               |
-| **Eintrag zur gespeicherten Liste hinzufügen** / **Eintrag aus gespeicherter Liste entfernen** | Ändert eine gespeicherte Liste in einem sicheren Schritt. | Listenfeldern  |
-| **Schlüssel in gespeicherter Zuordnung setzen** / **Schlüssel aus gespeicherter Zuordnung lesen** | Arbeitet mit einem Schlüssel einer gespeicherten Zuordnungstabelle. | Zuordnungsfeldern |
-| **Erhöhen wenn (atomar)** / **Gespeicherten Wert setzen wenn (atomar)** | Ändert einen Wert nur, wenn sein aktueller Wert eine Bedingung erfüllt, etwa "Münzen nur ausgeben, wenn das Guthaben reicht". | Jedem Feld |
-| **Cooldown prüfen und setzen**         | Prüft, ob jemand einen Cooldown hat, und startet in einem Schritt einen neuen.                   | Jedem Feld                  |
-| **Speicherfeld leeren**                | Löscht jeden Wert eines Felds oder nur den eines Benutzers oder Schlüssels.                      | Jedem Feld                  |
+| Schritt                                                                                           | Was er macht                                                                                                                  | Funktioniert mit                               |
+| ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| **Gespeicherten Wert lesen**                                                                      | Liest den Wert. Er ist leer, wenn noch nichts gespeichert wurde.                                                              | Jedem Feld                                     |
+| **Wert speichern**                                                                                | Schreibt einen Wert und ersetzt, was vorher dort stand.                                                                       | Jedem Feld                                     |
+| **Gespeicherte Zahl erhöhen**                                                                     | Addiert in einem sicheren Schritt zu einer Zahl. Er kann auch abziehen, das nutzt **verringern** in der Auswahl.              | Zahlenfeldern, Zahlenfeldern in einer Struktur |
+| **Gespeicherten Wert löschen**                                                                    | Entfernt den Wert für einen Benutzer oder Schlüssel.                                                                          | Jedem Feld                                     |
+| **Gespeicherter Wert vorhanden?**                                                                 | Prüft, ob es einen Wert gibt, ohne ihn zu lesen.                                                                              | Jedem Feld                                     |
+| **Speichereinträge auflisten**                                                                    | Gibt die obersten Einträge sortiert nach Wert zurück, für Ranglisten.                                                         | Zahlenfeldern                                  |
+| **Rang eines gespeicherten Werts abrufen**                                                        | Gibt die Platzierung von jemandem zurück, etwa "#42 in der Rangliste".                                                        | Zahlenfeldern                                  |
+| **Rangliste formatieren**                                                                         | Baut aus den obersten Einträgen einen fertigen Ranglisten-Text zum Senden.                                                    | Zahlenfeldern                                  |
+| **Eintrag zur gespeicherten Liste hinzufügen** / **Eintrag aus gespeicherter Liste entfernen**    | Ändert eine gespeicherte Liste in einem sicheren Schritt.                                                                     | Listenfeldern                                  |
+| **Schlüssel in gespeicherter Zuordnung setzen** / **Schlüssel aus gespeicherter Zuordnung lesen** | Arbeitet mit einem Schlüssel einer gespeicherten Zuordnungstabelle.                                                           | Zuordnungsfeldern                              |
+| **Erhöhen wenn (atomar)** / **Gespeicherten Wert setzen wenn (atomar)**                           | Ändert einen Wert nur, wenn sein aktueller Wert eine Bedingung erfüllt, etwa "Münzen nur ausgeben, wenn das Guthaben reicht". | Jedem Feld                                     |
+| **Cooldown prüfen und setzen**                                                                    | Prüft, ob jemand einen Cooldown hat, und startet in einem Schritt einen neuen.                                                | Jedem Feld                                     |
+| **Speicherfeld leeren**                                                                           | Löscht jeden Wert eines Felds oder nur den eines Benutzers oder Schlüssels.                                                   | Jedem Feld                                     |
 
 Die vollständige Liste mit jeder Eingabe und Ausgabe findest du in der [Aktionsreferenz für den Datenspeicher](/de/docs/custom-commands/reference/actions/data-storage).
 
@@ -154,17 +154,17 @@ Ein paar Dinge zur Tabelle:
 
 ### Wenn eine Änderung abgelehnt wird {#edit-errors}
 
-| Meldung                                                                 | Ursache                                                                                 | Lösung                                                                                               |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| "Dieser Wert ist für den Feldtyp ungültig."                             | Der Wert passt nicht zum Feld, etwa Text in einem Zahlenfeld.                           | Gib einen Wert vom Typ des Felds ein.                                                                |
-| "Kurze Test-IDs lassen sich nicht über das Dashboard speichern."        | Ein Benutzer-, Kanal- oder Rollenfeld braucht eine vollständige Discord-ID.             | Kopiere die echte ID aus Discord. Siehe [Discord-IDs](/de/docs/discord-ids).                         |
-| "Setze lange Zahlen wie Discord-IDs in Anführungszeichen"               | In JSON verlieren lange Zahlen ihre letzten Ziffern.                                    | Schreibe IDs als Text in Anführungszeichen, etwa `"123456789012345678"`.                             |
-| "Dieser Wert ist zu groß zum Speichern"                                 | Der Wert ist größer, als ein einzelner Eintrag sein darf.                                | Speichere weniger in einem Eintrag oder verteile es auf mehrere Schlüssel.                           |
-| "Dieses Feld hat sein Eintragslimit erreicht."                          | Das Feld ist voll.                                                                      | Lösche Einträge, die du nicht mehr brauchst.                                                         |
-| "Dieses Speicher-Feld steht nicht im gespeicherten Speicherschema"      | Das Feld wurde entfernt, seit du die Seite geöffnet hast.                               | Lade die Seite neu.                                                                                  |
-| "Dein Bot lädt gerade noch seine Flows"                                 | Dein Bot ist gerade erst gestartet.                                                     | Warte einen Moment und versuche es erneut. Passiert das immer wieder, lade deinen Bot neu.           |
-| "Dieses Feld wurde gerade als verschlüsselt markiert"                   | Dein Bot beginnt mit dem Verschlüsseln, wenn er seine Flows neu lädt.                   | Warte einen Moment und versuche es erneut.                                                           |
-| "Dieser verschlüsselte Wert lässt sich nicht entschlüsseln"             | Der Wert wurde mit einem Schlüssel verschlüsselt, den dein Bot nicht mehr hat.          | Du kannst ihn nur löschen.                                                                           |
+| Meldung                                                            | Ursache                                                                        | Lösung                                                                                     |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| "Dieser Wert ist für den Feldtyp ungültig."                        | Der Wert passt nicht zum Feld, etwa Text in einem Zahlenfeld.                  | Gib einen Wert vom Typ des Felds ein.                                                      |
+| "Kurze Test-IDs lassen sich nicht über das Dashboard speichern."   | Ein Benutzer-, Kanal- oder Rollenfeld braucht eine vollständige Discord-ID.    | Kopiere die echte ID aus Discord. Siehe [Discord-IDs](/de/docs/discord-ids).               |
+| "Setze lange Zahlen wie Discord-IDs in Anführungszeichen"          | In JSON verlieren lange Zahlen ihre letzten Ziffern.                           | Schreibe IDs als Text in Anführungszeichen, etwa `"123456789012345678"`.                   |
+| "Dieser Wert ist zu groß zum Speichern"                            | Der Wert ist größer, als ein einzelner Eintrag sein darf.                      | Speichere weniger in einem Eintrag oder verteile es auf mehrere Schlüssel.                 |
+| "Dieses Feld hat sein Eintragslimit erreicht."                     | Das Feld ist voll.                                                             | Lösche Einträge, die du nicht mehr brauchst.                                               |
+| "Dieses Speicher-Feld steht nicht im gespeicherten Speicherschema" | Das Feld wurde entfernt, seit du die Seite geöffnet hast.                      | Lade die Seite neu.                                                                        |
+| "Dein Bot lädt gerade noch seine Flows"                            | Dein Bot ist gerade erst gestartet.                                            | Warte einen Moment und versuche es erneut. Passiert das immer wieder, lade deinen Bot neu. |
+| "Dieses Feld wurde gerade als verschlüsselt markiert"              | Dein Bot beginnt mit dem Verschlüsseln, wenn er seine Flows neu lädt.          | Warte einen Moment und versuche es erneut.                                                 |
+| "Dieser verschlüsselte Wert lässt sich nicht entschlüsseln"        | Der Wert wurde mit einem Schlüssel verschlüsselt, den dein Bot nicht mehr hat. | Du kannst ihn nur löschen.                                                                 |
 
 :::caution Löschen lässt sich nicht rückgängig machen
 Gelöschte Einträge und geleerte Felder sind endgültig weg. Wenn du nur etwas ausprobieren willst, teste mit einem Feld, das du nicht brauchst.
@@ -176,13 +176,13 @@ Die Karte **Server-Speicher** zeigt, wie viel vom Speicher deines Servers belegt
 
 Die Karte zeigt einen dieser Zustände:
 
-| Zustand                                     | Was du tun solltest                                               |
-| ------------------------------------------- | ----------------------------------------------------------------- |
-| **Reichlich Platz**                         | Nichts.                                                           |
-| **Wird knapper** / **Fast voll**            | Schau unter **Wo der Platz hingeht** nach und räume den größten Posten auf. |
-| **Voll: neue Daten werden nicht mehr gespeichert** | Schaffe jetzt Platz. Flows können schon keine Daten mehr speichern. |
-| "Die Belegung wird nach dem Leeren neu gezählt" | Warte einen Moment. Die Zahl kommt von selbst zurück.         |
-| "Die Belegung konnte nicht ermittelt werden: der Bot läuft nicht" | Starte deinen Bot.                              |
+| Zustand                                                           | Was du tun solltest                                                         |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **Reichlich Platz**                                               | Nichts.                                                                     |
+| **Wird knapper** / **Fast voll**                                  | Schau unter **Wo der Platz hingeht** nach und räume den größten Posten auf. |
+| **Voll: neue Daten werden nicht mehr gespeichert**                | Schaffe jetzt Platz. Flows können schon keine Daten mehr speichern.         |
+| "Die Belegung wird nach dem Leeren neu gezählt"                   | Warte einen Moment. Die Zahl kommt von selbst zurück.                       |
+| "Die Belegung konnte nicht ermittelt werden: der Bot läuft nicht" | Starte deinen Bot.                                                          |
 
 Sobald der Speicher voll ist, können deine Flows keine neuen Daten mehr speichern, bis Platz frei wird. Diese Schritte schlagen mit einem Speicherfehler im [Ausführungsverlauf](/de/docs/custom-commands/executions) fehl. Lösche Einträge, die du nicht mehr brauchst, oder leere ein Feld, das du nicht mehr nutzt. Höhere Tarife enthalten mehr Speicher, siehe [Tarife, Limits & Sicherheit](/de/docs/custom-commands/limits-and-safety).
 
@@ -208,14 +208,14 @@ Statt ein Feld zu löschen, kannst du es auch mit **In eine Struktur verschieben
 
 ## Was mit gespeicherten Daten passiert {#lifecycle}
 
-| Wenn du...                                     | Gespeicherte Daten                                                                                                                               |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Eine App** aus dem Marktplatz **aktualisierst** | Bleiben erhalten. Die neue Version nutzt denselben Speicher.                                                                                  |
-| **Ein Modul duplizierst**                      | Werden nicht kopiert. Die Kopie bekommt dieselben Felder, startet aber leer.                                                                     |
-| **Ein Modul löschst oder eine App deinstallierst** | Werden einige Zeit nach dem Entfernen des Moduls endgültig gelöscht. Du kannst sie nicht über das Dashboard zurückholen.                     |
-| **Den Notaus nutzt**                           | Bleiben erhalten. Nichts läuft, aber nichts wird gelöscht.                                                                                       |
-| **Zu Custom Commands V2 zurückwechselst**      | Bleiben auf deinem Bot erhalten. Deine Flows laufen nicht mehr, also liest oder schreibt niemand sie, bis du V3 wieder einschaltest.             |
-| **Einen Test ausführst**                       | Werden nicht verändert. Testläufe lesen deine echten Daten, schreiben aber nie hinein. Siehe [Testläufe](/de/docs/custom-commands/executions#test-runs). |
+| Wenn du...                                         | Gespeicherte Daten                                                                                                                                       |
+| -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Eine App** aus dem Marktplatz **aktualisierst**  | Bleiben erhalten. Die neue Version nutzt denselben Speicher.                                                                                             |
+| **Ein Modul duplizierst**                          | Werden nicht kopiert. Die Kopie bekommt dieselben Felder, startet aber leer.                                                                             |
+| **Ein Modul löschst oder eine App deinstallierst** | Werden einige Zeit nach dem Entfernen des Moduls endgültig gelöscht. Du kannst sie nicht über das Dashboard zurückholen.                                 |
+| **Den Notaus nutzt**                               | Bleiben erhalten. Nichts läuft, aber nichts wird gelöscht.                                                                                               |
+| **Zu Custom Commands V2 zurückwechselst**          | Bleiben auf deinem Bot erhalten. Deine Flows laufen nicht mehr, also liest oder schreibt niemand sie, bis du V3 wieder einschaltest.                     |
+| **Einen Test ausführst**                           | Werden nicht verändert. Testläufe lesen deine echten Daten, schreiben aber nie hinein. Siehe [Testläufe](/de/docs/custom-commands/executions#test-runs). |
 
 ## Wer gespeicherte Daten sehen kann {#permissions}
 

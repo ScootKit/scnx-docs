@@ -17,8 +17,8 @@ Benötigte Intents: `GuildInvites`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                               | Details                        |
+| --------- | ------------------------------------------------- | ------------------------------ |
 | Einladung | [Einladung](../../../value-types.md#GUILD_INVITE) | Einladung, die erstellt wurde. |
 
 ### Einladung gelöscht {#invite-deleted}
@@ -29,6 +29,6 @@ Benötigte Intents: `GuildInvites`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                               | Details                                                                                                              |
+| --------- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | Einladung | [Einladung](../../../value-types.md#GUILD_INVITE) | Gelöschte Einladung. Einige Felder können leer sein, da gelöschte Einladungen nur begrenzte Informationen enthalten. |

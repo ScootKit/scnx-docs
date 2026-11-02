@@ -15,15 +15,15 @@ Turns JSON text into one shape value following one of the shapes this module or 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| JSON text | [Text](../../../value-types.md#STRING) | Yes | The JSON text to read. It must describe a single object, not a list. |
-| Shape | [Shape](../../../value-types.md#RECORD_TYPE) | Yes | Which shape the text has to match. It decides which fields must be present and what kind of value each one holds. |
+| Name      | Type                                         | Required | Details                                                                                                           |
+| --------- | -------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| JSON text | [Text](../../../value-types.md#STRING)       | Yes      | The JSON text to read. It must describe a single object, not a list.                                              |
+| Shape     | [Shape](../../../value-types.md#RECORD_TYPE) | Yes      | Which shape the text has to match. It decides which fields must be present and what kind of value each one holds. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                | Details                             |
+| ----------- | --------------------------------------------------- | ----------------------------------- |
 | Shape value | [Shape value](../../../value-types.md#RECORD_VALUE) | The shape value read from the text. |
 
 ### Read JSON as a list of shape values {#json-parse-record-list}
@@ -32,15 +32,15 @@ Turns JSON text that holds a list into shape values of one declared shape, check
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| JSON text | [Text](../../../value-types.md#STRING) | Yes | The JSON text to read. It must describe a list of objects. |
-| Shape | [Shape](../../../value-types.md#RECORD_TYPE) | Yes | Which shape every item has to match. |
+| Name      | Type                                         | Required | Details                                                    |
+| --------- | -------------------------------------------- | -------- | ---------------------------------------------------------- |
+| JSON text | [Text](../../../value-types.md#STRING)       | Yes      | The JSON text to read. It must describe a list of objects. |
+| Shape     | [Shape](../../../value-types.md#RECORD_TYPE) | Yes      | Which shape every item has to match.                       |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                        | Details                                             |
+| ------------ | ----------------------------------------------------------- | --------------------------------------------------- |
 | Shape values | List of [Shape value](../../../value-types.md#RECORD_VALUE) | The shape values read from the text, in list order. |
 
 ### Write value as JSON {#json-stringify}
@@ -49,15 +49,15 @@ Turns a value into JSON text, so you can store it in one place or send it somewh
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../../value-types.md#ANY) | Yes | The value to write out. Shape values, lists, lookup tables, texts, numbers and yes/no values all work. |
-| Easy to read | [Yes/No](../../../value-types.md#BOOLEAN) | No | Spread the text over several lines with indentation. Nice when a person reads it, longer when it is stored. |
+| Name         | Type                                      | Required | Details                                                                                                     |
+| ------------ | ----------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
+| Value        | [Any](../../../value-types.md#ANY)        | Yes      | The value to write out. Shape values, lists, lookup tables, texts, numbers and yes/no values all work.      |
+| Easy to read | [Yes/No](../../../value-types.md#BOOLEAN) | No       | Spread the text over several lines with indentation. Nice when a person reads it, longer when it is stored. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name      | Type                                   | Details                 |
+| --------- | -------------------------------------- | ----------------------- |
 | JSON text | [Text](../../../value-types.md#STRING) | The value as JSON text. |
 
 ### Color from hex {#color-from-hex}
@@ -66,14 +66,14 @@ Builds a color from a hex code (e.g. #5865F2).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Hex | [Text](../../../value-types.md#STRING) | Yes | Six-digit hex color, optionally prefixed with #. Must match `^#?[0-9a-fA-F]{6}$`. |
+| Name | Type                                   | Required | Details                                                                           |
+| ---- | -------------------------------------- | -------- | --------------------------------------------------------------------------------- |
+| Hex  | [Text](../../../value-types.md#STRING) | Yes      | Six-digit hex color, optionally prefixed with #. Must match `^#?[0-9a-fA-F]{6}$`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                   | Details              |
+| ----- | -------------------------------------- | -------------------- |
 | Color | [Color](../../../value-types.md#COLOR) | The resulting color. |
 
 ### Color to hex {#color-to-hex}
@@ -82,15 +82,15 @@ Returns the hex text for a color (e.g. #5865F2).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Color | [Color](../../../value-types.md#COLOR) | Yes | The color to convert. |
+| Name  | Type                                   | Required | Details               |
+| ----- | -------------------------------------- | -------- | --------------------- |
+| Color | [Color](../../../value-types.md#COLOR) | Yes      | The color to convert. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Hex | [Text](../../../value-types.md#STRING) | Hex text with leading #. |
+| Name | Type                                   | Details                  |
+| ---- | -------------------------------------- | ------------------------ |
+| Hex  | [Text](../../../value-types.md#STRING) | Hex text with leading #. |
 
 ### Color from RGB {#color-from-rgb}
 
@@ -98,16 +98,16 @@ Builds a color from red, green, and blue components (0-255).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Red | [Whole number](../../../value-types.md#INTEGER) | Yes | Red component (0-255). Value: 0 to 255. |
-| Green | [Whole number](../../../value-types.md#INTEGER) | Yes | Green component (0-255). Value: 0 to 255. |
-| Blue | [Whole number](../../../value-types.md#INTEGER) | Yes | Blue component (0-255). Value: 0 to 255. |
+| Name  | Type                                            | Required | Details                                   |
+| ----- | ----------------------------------------------- | -------- | ----------------------------------------- |
+| Red   | [Whole number](../../../value-types.md#INTEGER) | Yes      | Red component (0-255). Value: 0 to 255.   |
+| Green | [Whole number](../../../value-types.md#INTEGER) | Yes      | Green component (0-255). Value: 0 to 255. |
+| Blue  | [Whole number](../../../value-types.md#INTEGER) | Yes      | Blue component (0-255). Value: 0 to 255.  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                   | Details              |
+| ----- | -------------------------------------- | -------------------- |
 | Color | [Color](../../../value-types.md#COLOR) | The resulting color. |
 
 ### Color to RGB {#color-to-rgb}
@@ -116,17 +116,17 @@ Splits a color into its red, green, and blue components (0-255). The inverse of 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Color | [Color](../../../value-types.md#COLOR) | Yes | The color to split. |
+| Name  | Type                                   | Required | Details             |
+| ----- | -------------------------------------- | -------- | ------------------- |
+| Color | [Color](../../../value-types.md#COLOR) | Yes      | The color to split. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Red | [Whole number](../../../value-types.md#INTEGER) | Red component (0-255). |
+| Name  | Type                                            | Details                  |
+| ----- | ----------------------------------------------- | ------------------------ |
+| Red   | [Whole number](../../../value-types.md#INTEGER) | Red component (0-255).   |
 | Green | [Whole number](../../../value-types.md#INTEGER) | Green component (0-255). |
-| Blue | [Whole number](../../../value-types.md#INTEGER) | Blue component (0-255). |
+| Blue  | [Whole number](../../../value-types.md#INTEGER) | Blue component (0-255).  |
 
 ### Split URL into parts {#parse-url}
 
@@ -134,20 +134,20 @@ Splits a URL into its parts (protocol, host, port, path, query, fragment). Fails
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Yes | The URL to split. |
+| Name | Type                               | Required | Details           |
+| ---- | ---------------------------------- | -------- | ----------------- |
+| URL  | [URL](../../../value-types.md#URL) | Yes      | The URL to split. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Protocol | [Text](../../../value-types.md#STRING) | The scheme without the trailing colon, e.g. "https". |
-| Host | [Text](../../../value-types.md#STRING) | The hostname without port, lowercased, e.g. "example.com". |
-| Port | [Text](../../../value-types.md#STRING) | The port as text, or empty when the URL uses the scheme's default port. |
-| Path | [Text](../../../value-types.md#STRING) | The path, e.g. "/a/b"; "/" when the URL has no path. |
-| Query | [Text](../../../value-types.md#STRING) | The raw query without the leading "?"; empty when there is none. |
-| Fragment | [Text](../../../value-types.md#STRING) | The fragment without the leading "#"; empty when there is none. |
+| Name     | Type                                   | Details                                                                 |
+| -------- | -------------------------------------- | ----------------------------------------------------------------------- |
+| Protocol | [Text](../../../value-types.md#STRING) | The scheme without the trailing colon, e.g. "https".                    |
+| Host     | [Text](../../../value-types.md#STRING) | The hostname without port, lowercased, e.g. "example.com".              |
+| Port     | [Text](../../../value-types.md#STRING) | The port as text, or empty when the URL uses the scheme's default port. |
+| Path     | [Text](../../../value-types.md#STRING) | The path, e.g. "/a/b"; "/" when the URL has no path.                    |
+| Query    | [Text](../../../value-types.md#STRING) | The raw query without the leading "?"; empty when there is none.        |
+| Fragment | [Text](../../../value-types.md#STRING) | The fragment without the leading "#"; empty when there is none.         |
 
 ### Get URL query parameter {#url-get-query-param}
 
@@ -155,15 +155,15 @@ Reads a single query parameter from a URL. Returns an empty value when the param
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | Yes | The URL to read the parameter from. |
-| Parameter | [Text](../../../value-types.md#STRING) | Yes | The name of the query parameter. Repeated parameters return the first value. |
+| Name      | Type                                   | Required | Details                                                                      |
+| --------- | -------------------------------------- | -------- | ---------------------------------------------------------------------------- |
+| URL       | [URL](../../../value-types.md#URL)     | Yes      | The URL to read the parameter from.                                          |
+| Parameter | [Text](../../../value-types.md#STRING) | Yes      | The name of the query parameter. Repeated parameters return the first value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                   | Details                                                             |
+| ----- | -------------------------------------- | ------------------------------------------------------------------- |
 | Value | [Text](../../../value-types.md#STRING) | The parameter's value, or empty if it is not present. May be empty. |
 
 ### URL-encode {#url-encode}
@@ -172,14 +172,14 @@ Percent-encodes text so it is safe to use inside a URL component.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to encode. |
+| Name | Type                                   | Required | Details             |
+| ---- | -------------------------------------- | -------- | ------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Yes      | The text to encode. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details                   |
+| ------ | -------------------------------------- | ------------------------- |
 | Result | [Text](../../../value-types.md#STRING) | The percent-encoded text. |
 
 ### URL-decode {#url-decode}
@@ -188,12 +188,12 @@ Decodes percent-encoded text. Fails if the input contains a malformed escape.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The percent-encoded text to decode. |
+| Name | Type                                   | Required | Details                             |
+| ---- | -------------------------------------- | -------- | ----------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Yes      | The percent-encoded text to decode. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details           |
+| ------ | -------------------------------------- | ----------------- |
 | Result | [Text](../../../value-types.md#STRING) | The decoded text. |

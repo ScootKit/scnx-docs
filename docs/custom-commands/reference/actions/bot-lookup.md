@@ -15,14 +15,14 @@ Fetches a Discord user by their ID via the bot's user cache or REST API. Returns
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| User ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | Discord ID of the user to fetch. |
+| Name    | Type                                         | Required | Details                          |
+| ------- | -------------------------------------------- | -------- | -------------------------------- |
+| User ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | Discord ID of the user to fetch. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                      | Details                                  |
+| ---- | ----------------------------------------- | ---------------------------------------- |
 | User | [User](../../value-types.md#DISCORD_USER) | The fetched user, or empty if not found. |
 
 ### Fetch server by ID {#fetch-guild-by-id}
@@ -31,14 +31,14 @@ Fetches a server the bot is in by its ID. Returns an empty value if the bot is n
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Server ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | Discord ID of the server to fetch. |
+| Name      | Type                                         | Required | Details                            |
+| --------- | -------------------------------------------- | -------- | ---------------------------------- |
+| Server ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | Discord ID of the server to fetch. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                 | Details                                                  |
+| ------ | ------------------------------------ | -------------------------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | The fetched server, or empty if not found. May be empty. |
 
 ### Fetch message by channel and ID {#fetch-message-by-channel-and-id}
@@ -47,15 +47,15 @@ Fetches a single message by its channel ID and message ID. Returns an empty valu
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channel ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | Discord ID of the channel containing the message. |
-| Message ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | Discord ID of the message to fetch. |
+| Name       | Type                                         | Required | Details                                           |
+| ---------- | -------------------------------------------- | -------- | ------------------------------------------------- |
+| Channel ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | Discord ID of the channel containing the message. |
+| Message ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | Discord ID of the message to fetch.               |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                    | Details                                                   |
+| ------- | --------------------------------------- | --------------------------------------------------------- |
 | Message | [Message](../../value-types.md#MESSAGE) | The fetched message, or empty if not found. May be empty. |
 
 ### Fetch message by link {#fetch-message-by-link}
@@ -64,14 +64,14 @@ Fetches a single message from its Discord message link, combining Read message l
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Message link | [Text](../../value-types.md#STRING) | Yes | The Discord message link (https://discord.com/channels/&lt;server&gt;/&lt;channel&gt;/&lt;message&gt;). |
+| Name         | Type                                | Required | Details                                                                                                 |
+| ------------ | ----------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| Message link | [Text](../../value-types.md#STRING) | Yes      | The Discord message link (https://discord.com/channels/&lt;server&gt;/&lt;channel&gt;/&lt;message&gt;). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                    | Details                                                                                            |
+| ------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Message | [Message](../../value-types.md#MESSAGE) | The fetched message, or empty if the link is invalid or the message cannot be found. May be empty. |
 
 ### Fetch bot servers {#fetch-current-bot-guilds}
@@ -80,12 +80,12 @@ Returns up to `limit` servers the bot is currently in.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of servers to return (default 100). Default: `100`. |
+| Name  | Type                                         | Required | Details                                                            |
+| ----- | -------------------------------------------- | -------- | ------------------------------------------------------------------ |
+| Limit | [Whole number](../../value-types.md#INTEGER) | Yes      | Maximum number of servers to return (default 100). Default: `100`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                         | Details                |
+| ------- | -------------------------------------------- | ---------------------- |
 | Servers | List of [Server](../../value-types.md#GUILD) | Servers the bot is in. |

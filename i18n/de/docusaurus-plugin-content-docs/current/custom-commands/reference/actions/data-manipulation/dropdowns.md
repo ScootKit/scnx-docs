@@ -15,18 +15,18 @@ Erstellt eine Aktionsreihe mit genau einem Auswahlmenü beliebiger Art.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Auswahlmenü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Nein | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
-| Benutzer-Auswahlmenü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Nein | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
-| Rollen-Auswahlmenü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Nein | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
-| Kanal-Auswahlmenü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Nein | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
-| Auswahlmenü für Benutzer oder Rollen | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Nein | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü. |
+| Name                                 | Typ                                                                                     | Pflicht | Details                                                                                                                                                                  |
+| ------------------------------------ | --------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Auswahlmenü                          | [Auswahlmenü](../../../value-types.md#SELECT_MENU)                                      | Nein    | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
+| Benutzer-Auswahlmenü                 | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU)                        | Nein    | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen.          |
+| Rollen-Auswahlmenü                   | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU)                          | Nein    | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen.        |
+| Kanal-Auswahlmenü                    | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU)                        | Nein    | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen.       |
+| Auswahlmenü für Benutzer oder Rollen | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Nein    | Gib genau eines der Auswahlmenü-Felder an. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü.                          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                                      | Details                |
+| ------------ | ------------------------------------------------------------------------ | ---------------------- |
 | Aktionsreihe | [Aktionsreihen-Komponente](../../../value-types.md#ACTION_ROW_COMPONENT) | Die neue Aktionsreihe. |
 
 ### Auswahlmenü erstellen {#create-string-select-menu}
@@ -35,19 +35,19 @@ Erstellt ein Auswahlmenü (mit Textoptionen) für eine Aktionsreihe. Optionen mi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID | [Text](../../../value-types.md#STRING) | Nein | Custom-ID zur Weiterleitung der Auswahl (auch von Auswahlmenü-Triggern erkannt). Länge: 1 bis 100 Zeichen. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Flow, der bei einer Auswahl gestartet wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Platzhaltertext, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
-| Min. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Optionen (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Optionen (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert dargestellt wird. Standard: Nein. |
+| Name        | Typ                                            | Pflicht | Details                                                                                                    |
+| ----------- | ---------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Custom-ID   | [Text](../../../value-types.md#STRING)         | Nein    | Custom-ID zur Weiterleitung der Auswahl (auch von Auswahlmenü-Triggern erkannt). Länge: 1 bis 100 Zeichen. |
+| Ziel-Flow   | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein    | Flow, der bei einer Auswahl gestartet wird.                                                                |
+| Platzhalter | [Text](../../../value-types.md#STRING)         | Nein    | Platzhaltertext, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen.                       |
+| Min. Werte  | [Ganzzahl](../../../value-types.md#INTEGER)    | Ja      | Minimale Anzahl auswählbarer Optionen (0-25). Wert: 0 bis 25. Standard: `1`.                               |
+| Max. Werte  | [Ganzzahl](../../../value-types.md#INTEGER)    | Ja      | Maximale Anzahl auswählbarer Optionen (1-25). Wert: 1 bis 25. Standard: `1`.                               |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)     | Ja      | Ob das Menü deaktiviert dargestellt wird. Standard: Nein.                                                  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das neu erstellte Menü. |
 
 ### Platzhalter des Auswahlmenüs festlegen {#set-string-select-menu-placeholder}
@@ -56,15 +56,15 @@ Aktualisiert den Platzhaltertext eines Auswahlmenüs.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu ändernde Menü. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Ja | Neuer Platzhalter oder leer zum Leeren. Maximale Länge: 150 Zeichen. |
+| Name        | Typ                                                | Pflicht | Details                                                              |
+| ----------- | -------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Menü        | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu ändernde Menü.                                                |
+| Platzhalter | [Text](../../../value-types.md#STRING)             | Ja      | Neuer Platzhalter oder leer zum Leeren. Maximale Länge: 150 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Mindestanzahl der Auswahl im Auswahlmenü festlegen {#set-string-select-menu-min-values}
@@ -73,15 +73,15 @@ Aktualisiert die Mindestanzahl der wählbaren Optionen eines Auswahlmenüs.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu ändernde Menü. |
-| Min. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Optionen (0-25). Wert: 0 bis 25. |
+| Name       | Typ                                                | Pflicht | Details                                                       |
+| ---------- | -------------------------------------------------- | ------- | ------------------------------------------------------------- |
+| Menü       | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu ändernde Menü.                                         |
+| Min. Werte | [Ganzzahl](../../../value-types.md#INTEGER)        | Ja      | Minimale Anzahl auswählbarer Optionen (0-25). Wert: 0 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Höchstanzahl der Auswahl im Auswahlmenü festlegen {#set-string-select-menu-max-values}
@@ -90,15 +90,15 @@ Aktualisiert die maximale Anzahl der wählbaren Optionen eines Auswahlmenüs.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu ändernde Menü. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Optionen (1-25). Wert: 1 bis 25. |
+| Name       | Typ                                                | Pflicht | Details                                                       |
+| ---------- | -------------------------------------------------- | ------- | ------------------------------------------------------------- |
+| Menü       | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu ändernde Menü.                                         |
+| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER)        | Ja      | Maximale Anzahl auswählbarer Optionen (1-25). Wert: 1 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Auswahlmenü deaktiviert festlegen {#set-string-select-menu-disabled}
@@ -107,15 +107,15 @@ Aktiviert oder deaktiviert ein Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu ändernde Menü. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert dargestellt wird. |
+| Name        | Typ                                                | Pflicht | Details                                   |
+| ----------- | -------------------------------------------------- | ------- | ----------------------------------------- |
+| Menü        | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu ändernde Menü.                     |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)         | Ja      | Ob das Menü deaktiviert dargestellt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ziel-Flow des Auswahlmenüs festlegen {#set-string-select-menu-target-flow}
@@ -124,15 +124,15 @@ Setzt oder löscht den Flow, der aufgerufen wird, wenn eine Auswahl getroffen wi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu ändernde Menü. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Ja | Flow, der bei einer Auswahl gestartet wird, oder leer zum Leeren. |
+| Name      | Typ                                                | Pflicht | Details                                                           |
+| --------- | -------------------------------------------------- | ------- | ----------------------------------------------------------------- |
+| Menü      | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu ändernde Menü.                                             |
+| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)     | Ja      | Flow, der bei einer Auswahl gestartet wird, oder leer zum Leeren. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Option zum Auswahlmenü hinzufügen {#add-option-to-string-select}
@@ -141,20 +141,20 @@ Fügt einem Auswahlmenü eine Option hinzu und gibt das aktualisierte Menü zur�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu erweiternde Auswahlmenü. |
-| Bezeichnung | [Text](../../../value-types.md#STRING) | Ja | Angezeigte Bezeichnung der Option (1-100). Länge: 1 bis 100 Zeichen. |
-| Wert | [Text](../../../value-types.md#STRING) | Ja | Zurückgegebener Wert bei Auswahl dieser Option (1-100). Länge: 1 bis 100 Zeichen. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Optionaler Zusatztext unter der Bezeichnung. Maximale Länge: 100 Zeichen. |
-| Emoji | [Text](../../../value-types.md#STRING) | Nein | Optionales Emoji neben der Option. |
-| Standard | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Ob diese Option standardmäßig ausgewählt ist. Standard: Nein. |
-| Auszuführender Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Der Flow, der ausgeführt wird, wenn jemand diese Option auswählt. Leer lassen, um den Flow des Menüs zu verwenden. |
+| Name                | Typ                                                | Pflicht | Details                                                                                                            |
+| ------------------- | -------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| Menü                | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu erweiternde Auswahlmenü.                                                                                    |
+| Bezeichnung         | [Text](../../../value-types.md#STRING)             | Ja      | Angezeigte Bezeichnung der Option (1-100). Länge: 1 bis 100 Zeichen.                                               |
+| Wert                | [Text](../../../value-types.md#STRING)             | Ja      | Zurückgegebener Wert bei Auswahl dieser Option (1-100). Länge: 1 bis 100 Zeichen.                                  |
+| Beschreibung        | [Text](../../../value-types.md#STRING)             | Nein    | Optionaler Zusatztext unter der Bezeichnung. Maximale Länge: 100 Zeichen.                                          |
+| Emoji               | [Text](../../../value-types.md#STRING)             | Nein    | Optionales Emoji neben der Option.                                                                                 |
+| Standard            | [Ja/Nein](../../../value-types.md#BOOLEAN)         | Nein    | Ob diese Option standardmäßig ausgewählt ist. Standard: Nein.                                                      |
+| Auszuführender Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)     | Nein    | Der Flow, der ausgeführt wird, wenn jemand diese Option auswählt. Leer lassen, um den Flow des Menüs zu verwenden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                 |
+| ---- | -------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ausgewählte Werte im Auswahlmenü festlegen {#set-string-select-selected-values}
@@ -163,15 +163,15 @@ Gibt eine Kopie eines Auswahlmenüs zurück, bei der die angegebenen Werte als a
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja | Das zu aktualisierende Auswahlmenü. |
-| Werte | Liste von [Text](../../../value-types.md#STRING) | Ja | Die Optionswerte, die vorausgewählt erscheinen sollen. Höchstens 25 Einträge. |
+| Name  | Typ                                                | Pflicht | Details                                                                       |
+| ----- | -------------------------------------------------- | ------- | ----------------------------------------------------------------------------- |
+| Menü  | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Ja      | Das zu aktualisierende Auswahlmenü.                                           |
+| Werte | Liste von [Text](../../../value-types.md#STRING)   | Ja      | Die Optionswerte, die vorausgewählt erscheinen sollen. Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                | Details                                                           |
+| ---- | -------------------------------------------------- | ----------------------------------------------------------------- |
 | Menü | [Auswahlmenü](../../../value-types.md#SELECT_MENU) | Das aktualisierte Menü mit gesetzten Standard-Flags der Optionen. |
 
 ### Benutzer-Auswahlmenü erstellen {#create-user-select-menu}
@@ -180,19 +180,19 @@ Erstellt ein Benutzer-Auswahlmenü, bereit zur Einbettung in eine Aktionsreihe.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Flow, der bei einer Auswahl ausgeführt wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
-| Min. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü als deaktiviert dargestellt wird. Standard: Nein. |
-| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Vorausgewählte Benutzer. Höchstens 25 Einträge. |
+| Name              | Typ                                                        | Pflicht | Details                                                                                                  |
+| ----------------- | ---------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| Ziel-Flow         | [Flow](../../../value-types.md#FLOW_REFERENCE)             | Nein    | Flow, der bei einer Auswahl ausgeführt wird.                                                             |
+| Platzhalter       | [Text](../../../value-types.md#STRING)                     | Nein    | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
+| Min. Werte        | [Ganzzahl](../../../value-types.md#INTEGER)                | Ja      | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`.                             |
+| Max. Werte        | [Ganzzahl](../../../value-types.md#INTEGER)                | Ja      | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`.                             |
+| Deaktiviert       | [Ja/Nein](../../../value-types.md#BOOLEAN)                 | Ja      | Ob das Menü als deaktiviert dargestellt wird. Standard: Nein.                                            |
+| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Nein    | Vorausgewählte Benutzer. Höchstens 25 Einträge.                                                          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das neu erstellte Menü. |
 
 ### Platzhalter des Benutzer-Auswahlmenüs festlegen {#set-user-select-menu-placeholder}
@@ -201,15 +201,15 @@ Aktualisiert den Platzhaltertext auf einem Benutzer-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Ja | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
+| Name        | Typ                                                              | Pflicht | Details                                                                  |
+| ----------- | ---------------------------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Menü        | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Menü, das geändert wird.                                                 |
+| Platzhalter | [Text](../../../value-types.md#STRING)                           | Ja      | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Mindestanzahl der Auswahl im Benutzer-Auswahlmenü festlegen {#set-user-select-menu-min-values}
@@ -218,15 +218,15 @@ Aktualisiert die Mindestanzahl der auswählbaren Einträge auf einem Benutzer-Au
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Minimum (0-25). Wert: 0 bis 25. |
+| Name         | Typ                                                              | Pflicht | Details                               |
+| ------------ | ---------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü         | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Das Menü, das geändert wird.          |
+| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER)                      | Ja      | Neues Minimum (0-25). Wert: 0 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Höchstanzahl der Auswahl im Benutzer-Auswahlmenü festlegen {#set-user-select-menu-max-values}
@@ -235,15 +235,15 @@ Aktualisiert die maximale Anzahl der auswählbaren Einträge auf einem Benutzer-
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Maximum (1-25). Wert: 1 bis 25. |
+| Name       | Typ                                                              | Pflicht | Details                               |
+| ---------- | ---------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü       | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.            |
+| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER)                      | Ja      | Neues Maximum (1-25). Wert: 1 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Benutzer-Auswahlmenü deaktiviert festlegen {#set-user-select-menu-disabled}
@@ -252,15 +252,15 @@ Schaltet den deaktivierten Status eines Benutzer-Auswahlmenüs um.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert ist. |
+| Name        | Typ                                                              | Pflicht | Details                      |
+| ----------- | ---------------------------------------------------------------- | ------- | ---------------------------- |
+| Menü        | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Menü, das geändert wird.     |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)                       | Ja      | Ob das Menü deaktiviert ist. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ziel-Flow des Benutzer-Auswahlmenüs festlegen {#set-user-select-menu-target-flow}
@@ -269,15 +269,15 @@ Aktualisiert, welcher Flow ausgeführt wird, wenn mit einem Benutzer-Auswahlmen�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Ja | Flow, der ausgeführt wird, oder leer zum Entfernen. |
+| Name      | Typ                                                              | Pflicht | Details                                             |
+| --------- | ---------------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Menü      | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Das Menü, das geändert wird.                        |
+| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)                   | Ja      | Flow, der ausgeführt wird, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Vorauswahl des Benutzer-Auswahlmenüs festlegen {#set-user-select-menu-defaults}
@@ -286,15 +286,15 @@ Aktualisiert die vorausgewählten Einträge auf einem Benutzer-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Ja | Neue Standard-Benutzer (max. 25). Höchstens 25 Einträge. |
+| Name              | Typ                                                              | Pflicht | Details                                                  |
+| ----------------- | ---------------------------------------------------------------- | ------- | -------------------------------------------------------- |
+| Menü              | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.                               |
+| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER)       | Ja      | Neue Standard-Benutzer (max. 25). Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Benutzer-Auswahlmenü](../../../value-types.md#USER_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Rollen-Auswahlmenü erstellen {#create-role-select-menu}
@@ -303,19 +303,19 @@ Erstellt ein Rollen-Auswahlmenü, bereit zur Einbettung in eine Aktionsreihe.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Flow, der bei einer Auswahl ausgeführt wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Max. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü als deaktiviert angezeigt wird. Standard: Nein. |
-| Standard-Rollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE) | Nein | Vorausgewählte Rollen. Höchstens 25 Einträge. |
+| Name            | Typ                                                   | Pflicht | Details                                                                                                  |
+| --------------- | ----------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| Ziel-Flow       | [Flow](../../../value-types.md#FLOW_REFERENCE)        | Nein    | Flow, der bei einer Auswahl ausgeführt wird.                                                             |
+| Platzhalter     | [Text](../../../value-types.md#STRING)                | Nein    | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
+| Min. Auswahl    | [Ganzzahl](../../../value-types.md#INTEGER)           | Ja      | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`.                             |
+| Max. Auswahl    | [Ganzzahl](../../../value-types.md#INTEGER)           | Ja      | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`.                             |
+| Deaktiviert     | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ja      | Ob das Menü als deaktiviert angezeigt wird. Standard: Nein.                                              |
+| Standard-Rollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE) | Nein    | Vorausgewählte Rollen. Höchstens 25 Einträge.                                                            |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das neu erstellte Menü. |
 
 ### Platzhalter des Rollen-Auswahlmenüs festlegen {#set-role-select-menu-placeholder}
@@ -324,15 +324,15 @@ Aktualisiert den Platzhaltertext auf einem Rollen-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Ja | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
+| Name        | Typ                                                            | Pflicht | Details                                                                  |
+| ----------- | -------------------------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Menü        | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Menü, das geändert wird.                                                 |
+| Platzhalter | [Text](../../../value-types.md#STRING)                         | Ja      | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Mindestanzahl der Auswahl im Rollen-Auswahlmenü festlegen {#set-role-select-menu-min-values}
@@ -341,15 +341,15 @@ Aktualisiert die Mindestanzahl der auswählbaren Einträge auf einem Rollen-Ausw
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Minimum (0-25). Wert: 0 bis 25. |
+| Name         | Typ                                                            | Pflicht | Details                               |
+| ------------ | -------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü         | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Das Menü, das geändert wird.          |
+| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER)                    | Ja      | Neues Minimum (0-25). Wert: 0 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Höchstanzahl der Auswahl im Rollen-Auswahlmenü festlegen {#set-role-select-menu-max-values}
@@ -358,15 +358,15 @@ Aktualisiert die maximale Anzahl der auswählbaren Einträge auf einem Rollen-Au
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Maximum (1-25). Wert: 1 bis 25. |
+| Name       | Typ                                                            | Pflicht | Details                               |
+| ---------- | -------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü       | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.            |
+| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER)                    | Ja      | Neues Maximum (1-25). Wert: 1 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Rollen-Auswahlmenü deaktiviert festlegen {#set-role-select-menu-disabled}
@@ -375,15 +375,15 @@ Schaltet den deaktivierten Status eines Rollen-Auswahlmenüs um.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert ist. |
+| Name        | Typ                                                            | Pflicht | Details                      |
+| ----------- | -------------------------------------------------------------- | ------- | ---------------------------- |
+| Menü        | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Menü, das geändert wird.     |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)                     | Ja      | Ob das Menü deaktiviert ist. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ziel-Flow des Rollen-Auswahlmenüs festlegen {#set-role-select-menu-target-flow}
@@ -392,15 +392,15 @@ Aktualisiert, welcher Flow ausgeführt wird, wenn mit einem Rollen-Auswahlmenü 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Ja | Flow, der ausgeführt wird, oder leer zum Entfernen. |
+| Name      | Typ                                                            | Pflicht | Details                                             |
+| --------- | -------------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Menü      | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Das Menü, das geändert wird.                        |
+| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)                 | Ja      | Flow, der ausgeführt wird, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Vorauswahl des Rollen-Auswahlmenüs festlegen {#set-role-select-menu-defaults}
@@ -409,15 +409,15 @@ Aktualisiert die vorausgewählten Einträge auf einem Rollen-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Standard-Rollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE) | Ja | Neue Standard-Rollen (max. 25). Höchstens 25 Einträge. |
+| Name            | Typ                                                            | Pflicht | Details                                                |
+| --------------- | -------------------------------------------------------------- | ------- | ------------------------------------------------------ |
+| Menü            | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.                             |
+| Standard-Rollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE)          | Ja      | Neue Standard-Rollen (max. 25). Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                            | Details                 |
+| ---- | -------------------------------------------------------------- | ----------------------- |
 | Menü | [Rollen-Auswahlmenü](../../../value-types.md#ROLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Kanal-Auswahlmenü erstellen {#create-channel-select-menu}
@@ -426,20 +426,20 @@ Erstellt ein Kanal-Auswahlmenü, bereit zur Einbettung in eine Aktionsreihe.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Flow, der bei einer Auswahl ausgeführt wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
-| Min. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü als deaktiviert dargestellt wird. Standard: Nein. |
-| Standard-Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Vorausgewählte Kanäle. Höchstens 25 Einträge. |
-| Kanaltypen | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE) | Nein | Beschränkt die auswählbaren Kanäle auf diese Typen. |
+| Name            | Typ                                                             | Pflicht | Details                                                                                                  |
+| --------------- | --------------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| Ziel-Flow       | [Flow](../../../value-types.md#FLOW_REFERENCE)                  | Nein    | Flow, der bei einer Auswahl ausgeführt wird.                                                             |
+| Platzhalter     | [Text](../../../value-types.md#STRING)                          | Nein    | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
+| Min. Werte      | [Ganzzahl](../../../value-types.md#INTEGER)                     | Ja      | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`.                             |
+| Max. Werte      | [Ganzzahl](../../../value-types.md#INTEGER)                     | Ja      | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`.                             |
+| Deaktiviert     | [Ja/Nein](../../../value-types.md#BOOLEAN)                      | Ja      | Ob das Menü als deaktiviert dargestellt wird. Standard: Nein.                                            |
+| Standard-Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Vorausgewählte Kanäle. Höchstens 25 Einträge.                                                            |
+| Kanaltypen      | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE)      | Nein    | Beschränkt die auswählbaren Kanäle auf diese Typen.                                                      |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das neu erstellte Menü. |
 
 ### Platzhalter des Kanal-Auswahlmenüs festlegen {#set-channel-select-menu-placeholder}
@@ -448,15 +448,15 @@ Aktualisiert den Platzhaltertext auf einem Kanal-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Ja | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
+| Name        | Typ                                                              | Pflicht | Details                                                                  |
+| ----------- | ---------------------------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Menü        | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Menü, das geändert wird.                                                 |
+| Platzhalter | [Text](../../../value-types.md#STRING)                           | Ja      | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Mindestanzahl der Auswahl im Kanal-Auswahlmenü festlegen {#set-channel-select-menu-min-values}
@@ -465,15 +465,15 @@ Aktualisiert die Mindestanzahl der auswählbaren Einträge auf einem Kanal-Auswa
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Minimum (0-25). Wert: 0 bis 25. |
+| Name         | Typ                                                              | Pflicht | Details                               |
+| ------------ | ---------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü         | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Das Menü, das geändert wird.          |
+| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER)                      | Ja      | Neues Minimum (0-25). Wert: 0 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Höchstanzahl der Auswahl im Kanal-Auswahlmenü festlegen {#set-channel-select-menu-max-values}
@@ -482,15 +482,15 @@ Aktualisiert die maximale Anzahl der auswählbaren Einträge auf einem Kanal-Aus
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Maximum (1-25). Wert: 1 bis 25. |
+| Name       | Typ                                                              | Pflicht | Details                               |
+| ---------- | ---------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü       | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.            |
+| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER)                      | Ja      | Neues Maximum (1-25). Wert: 1 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Kanal-Auswahlmenü deaktiviert festlegen {#set-channel-select-menu-disabled}
@@ -499,15 +499,15 @@ Schaltet den deaktivierten Status eines Kanal-Auswahlmenüs um.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert ist. |
+| Name        | Typ                                                              | Pflicht | Details                      |
+| ----------- | ---------------------------------------------------------------- | ------- | ---------------------------- |
+| Menü        | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Menü, das geändert wird.     |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)                       | Ja      | Ob das Menü deaktiviert ist. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ziel-Flow des Kanal-Auswahlmenüs festlegen {#set-channel-select-menu-target-flow}
@@ -516,15 +516,15 @@ Aktualisiert, welcher Flow ausgeführt wird, wenn mit einem Kanal-Auswahlmenü i
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Ja | Flow, der ausgeführt wird, oder leer zum Entfernen. |
+| Name      | Typ                                                              | Pflicht | Details                                             |
+| --------- | ---------------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Menü      | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Das Menü, das geändert wird.                        |
+| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)                   | Ja      | Flow, der ausgeführt wird, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Vorauswahl des Kanal-Auswahlmenüs festlegen {#set-channel-select-menu-defaults}
@@ -533,15 +533,15 @@ Aktualisiert die vorausgewählten Einträge auf einem Kanal-Auswahlmenü.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Standard-Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Ja | Neue Standard-Kanäle (max. 25). Höchstens 25 Einträge. |
+| Name            | Typ                                                              | Pflicht | Details                                                |
+| --------------- | ---------------------------------------------------------------- | ------- | ------------------------------------------------------ |
+| Menü            | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.                             |
+| Standard-Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL)  | Ja      | Neue Standard-Kanäle (max. 25). Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Auswahlmenü für Benutzer oder Rollen erstellen {#create-mentionable-select-menu}
@@ -550,20 +550,20 @@ Erstellt ein Auswahlmenü für Benutzer oder Rollen, bereit zur Einbettung in ei
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Nein | Flow, der bei einer Auswahl ausgeführt wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Max. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü als deaktiviert angezeigt wird. Standard: Nein. |
-| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Vorausgewählte Benutzer (max. 25). Höchstens 25 Einträge. |
-| Standard-Rollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE) | Nein | Vorausgewählte Rollen (max. 25). Höchstens 25 Einträge. |
+| Name              | Typ                                                        | Pflicht | Details                                                                                                  |
+| ----------------- | ---------------------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| Ziel-Flow         | [Flow](../../../value-types.md#FLOW_REFERENCE)             | Nein    | Flow, der bei einer Auswahl ausgeführt wird.                                                             |
+| Platzhalter       | [Text](../../../value-types.md#STRING)                     | Nein    | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. |
+| Min. Auswahl      | [Ganzzahl](../../../value-types.md#INTEGER)                | Ja      | Minimale Anzahl auswählbarer Einträge (0-25). Wert: 0 bis 25. Standard: `1`.                             |
+| Max. Auswahl      | [Ganzzahl](../../../value-types.md#INTEGER)                | Ja      | Maximale Anzahl auswählbarer Einträge (1-25). Wert: 1 bis 25. Standard: `1`.                             |
+| Deaktiviert       | [Ja/Nein](../../../value-types.md#BOOLEAN)                 | Ja      | Ob das Menü als deaktiviert angezeigt wird. Standard: Nein.                                              |
+| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Nein    | Vorausgewählte Benutzer (max. 25). Höchstens 25 Einträge.                                                |
+| Standard-Rollen   | Liste von [Rolle](../../../value-types.md#GUILD_ROLE)      | Nein    | Vorausgewählte Rollen (max. 25). Höchstens 25 Einträge.                                                  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das neu erstellte Menü. |
 
 ### Platzhalter des Auswahlmenüs für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-placeholder}
@@ -572,15 +572,15 @@ Aktualisiert den Platzhaltertext auf einem Auswahlmenü für Benutzer oder Rolle
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Ja | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
+| Name        | Typ                                                                                     | Pflicht | Details                                                                  |
+| ----------- | --------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Menü        | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Menü, das geändert wird.                                                 |
+| Platzhalter | [Text](../../../value-types.md#STRING)                                                  | Ja      | Neuer Platzhalter, oder leer zum Entfernen. Maximale Länge: 150 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Mindestanzahl der Auswahl im Auswahlmenü für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-min-values}
@@ -589,15 +589,15 @@ Aktualisiert die Mindestanzahl der auswählbaren Einträge auf einem Auswahlmen�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Minimum (0-25). Wert: 0 bis 25. |
+| Name         | Typ                                                                                     | Pflicht | Details                               |
+| ------------ | --------------------------------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü         | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Das Menü, das geändert wird.          |
+| Min. Auswahl | [Ganzzahl](../../../value-types.md#INTEGER)                                             | Ja      | Neues Minimum (0-25). Wert: 0 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Höchstanzahl der Auswahl im Auswahlmenü für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-max-values}
@@ -606,15 +606,15 @@ Aktualisiert die maximale Anzahl der auswählbaren Einträge auf einem Auswahlme
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Neues Maximum (1-25). Wert: 1 bis 25. |
+| Name       | Typ                                                                                     | Pflicht | Details                               |
+| ---------- | --------------------------------------------------------------------------------------- | ------- | ------------------------------------- |
+| Menü       | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.            |
+| Max. Werte | [Ganzzahl](../../../value-types.md#INTEGER)                                             | Ja      | Neues Maximum (1-25). Wert: 1 bis 25. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Auswahlmenü für Benutzer oder Rollen deaktiviert festlegen {#set-mentionable-select-menu-disabled}
@@ -623,15 +623,15 @@ Schaltet den deaktivierten Status eines Auswahlmenüs für Benutzer oder Rollen 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Menü deaktiviert ist. |
+| Name        | Typ                                                                                     | Pflicht | Details                      |
+| ----------- | --------------------------------------------------------------------------------------- | ------- | ---------------------------- |
+| Menü        | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Menü, das geändert wird.     |
+| Deaktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)                                              | Ja      | Ob das Menü deaktiviert ist. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Ziel-Flow des Auswahlmenüs für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-target-flow}
@@ -640,15 +640,15 @@ Aktualisiert, welcher Flow ausgeführt wird, wenn mit einem Auswahlmenü für Be
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Das Menü, das geändert wird. |
-| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Ja | Flow, der ausgeführt wird, oder leer zum Entfernen. |
+| Name      | Typ                                                                                     | Pflicht | Details                                             |
+| --------- | --------------------------------------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Menü      | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Das Menü, das geändert wird.                        |
+| Ziel-Flow | [Flow](../../../value-types.md#FLOW_REFERENCE)                                          | Ja      | Flow, der ausgeführt wird, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Vorausgewählte Benutzer im Auswahlmenü für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-default-users}
@@ -657,15 +657,15 @@ Aktualisiert die vorausgewählten Benutzer auf einem Auswahlmenü für Benutzer 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Menü, das bearbeitet wird. |
-| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER) | Ja | Neue Standard-Benutzer (max. 25). Höchstens 25 Einträge. |
+| Name              | Typ                                                                                     | Pflicht | Details                                                  |
+| ----------------- | --------------------------------------------------------------------------------------- | ------- | -------------------------------------------------------- |
+| Menü              | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Menü, das bearbeitet wird.                               |
+| Standard-Benutzer | Liste von [Benutzer](../../../value-types.md#DISCORD_USER)                              | Ja      | Neue Standard-Benutzer (max. 25). Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Vorausgewählte Rollen im Auswahlmenü für Benutzer oder Rollen festlegen {#set-mentionable-select-menu-default-roles}
@@ -674,15 +674,15 @@ Aktualisiert die vorausgewählten Rollen auf einem Auswahlmenü für Benutzer od
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja | Menü, das geändert wird. |
-| Standardrollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE) | Ja | Neue Standardrollen (max. 25). Höchstens 25 Einträge. |
+| Name           | Typ                                                                                     | Pflicht | Details                                               |
+| -------------- | --------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------- |
+| Menü           | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Ja      | Menü, das geändert wird.                              |
+| Standardrollen | Liste von [Rolle](../../../value-types.md#GUILD_ROLE)                                   | Ja      | Neue Standardrollen (max. 25). Höchstens 25 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                                                     | Details                 |
+| ---- | --------------------------------------------------------------------------------------- | ----------------------- |
 | Menü | [Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU) | Das aktualisierte Menü. |
 
 ### Kanaltypen des Kanal-Auswahlmenüs festlegen {#set-channel-select-menu-channel-types}
@@ -691,13 +691,13 @@ Beschränkt, welche Kanaltypen in einem Kanal-Auswahlmenü ausgewählt werden k�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja | Das Kanal-Auswahlmenü, das geändert wird. |
-| Kanaltypen | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE) | Ja | Erlaubte Kanaltypen. |
+| Name       | Typ                                                              | Pflicht | Details                                   |
+| ---------- | ---------------------------------------------------------------- | ------- | ----------------------------------------- |
+| Menü       | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Ja      | Das Kanal-Auswahlmenü, das geändert wird. |
+| Kanaltypen | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE)       | Ja      | Erlaubte Kanaltypen.                      |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                                              | Details                 |
+| ---- | ---------------------------------------------------------------- | ----------------------- |
 | Menü | [Kanal-Auswahlmenü](../../../value-types.md#CHANNEL_SELECT_MENU) | Das aktualisierte Menü. |

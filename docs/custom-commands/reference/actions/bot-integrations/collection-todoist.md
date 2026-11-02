@@ -15,19 +15,19 @@ Reads one page of open tasks, of all projects or one project.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Project ID | [ID](../../../value-types.md#ID) | No | Only tasks of this project. Empty: all projects. |
-| How many | [Whole number](../../../value-types.md#INTEGER) | No | How many tasks per page, 1 to 200. Empty: 50. Value: 1 to 200. Default: `50`. |
-| Next page | [Text](../../../value-types.md#STRING) | No | The "Next page" output of the previous call. Empty: the first page. Maximum length: 200 characters. |
+| Name       | Type                                            | Required | Details                                                                                                 |
+| ---------- | ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING)          | No       | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Project ID | [ID](../../../value-types.md#ID)                | No       | Only tasks of this project. Empty: all projects.                                                        |
+| How many   | [Whole number](../../../value-types.md#INTEGER) | No       | How many tasks per page, 1 to 200. Empty: 50. Value: 1 to 200. Default: `50`.                           |
+| Next page  | [Text](../../../value-types.md#STRING)          | No       | The "Next page" output of the previous call. Empty: the first page. Maximum length: 200 characters.     |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Tasks | List of [Todoist task](../../../value-types.md#todoist-Task) | The open tasks of this page. |
-| Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
+| Name      | Type                                                         | Details                                                                                |
+| --------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| Tasks     | List of [Todoist task](../../../value-types.md#todoist-Task) | The open tasks of this page.                                                           |
+| Next page | [Text](../../../value-types.md#STRING)                       | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
 ### Find tasks by filter {#todoist-filter-tasks}
 
@@ -35,19 +35,19 @@ Reads one page of open tasks that match a Todoist filter.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Filter | [Text](../../../value-types.md#STRING) | Yes | A Todoist filter, for example today \| overdue or #Work & p1. Maximum length: 1000 characters. |
-| How many | [Whole number](../../../value-types.md#INTEGER) | No | How many tasks per page, 1 to 200. Empty: 50. Value: 1 to 200. Default: `50`. |
-| Next page | [Text](../../../value-types.md#STRING) | No | The "Next page" output of the previous call. Empty: the first page. Maximum length: 200 characters. |
+| Name       | Type                                            | Required | Details                                                                                                 |
+| ---------- | ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING)          | No       | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Filter     | [Text](../../../value-types.md#STRING)          | Yes      | A Todoist filter, for example today \| overdue or #Work & p1. Maximum length: 1000 characters.          |
+| How many   | [Whole number](../../../value-types.md#INTEGER) | No       | How many tasks per page, 1 to 200. Empty: 50. Value: 1 to 200. Default: `50`.                           |
+| Next page  | [Text](../../../value-types.md#STRING)          | No       | The "Next page" output of the previous call. Empty: the first page. Maximum length: 200 characters.     |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Tasks | List of [Todoist task](../../../value-types.md#todoist-Task) | The matching tasks of this page. |
-| Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
+| Name      | Type                                                         | Details                                                                                |
+| --------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| Tasks     | List of [Todoist task](../../../value-types.md#todoist-Task) | The matching tasks of this page.                                                       |
+| Next page | [Text](../../../value-types.md#STRING)                       | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
 ### Add task {#todoist-create-task}
 
@@ -55,19 +55,19 @@ Adds a task to Todoist.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Task | [Text](../../../value-types.md#STRING) | Yes | The task text. Maximum length: 500 characters. |
-| Description | [Text](../../../value-types.md#STRING) | No | More details. Maximum length: 16000 characters. |
-| Project ID | [ID](../../../value-types.md#ID) | No | The project to add it to. Empty: the inbox. |
-| Due | [Text](../../../value-types.md#STRING) | No | When it is due, in plain words, for example tomorrow at 5pm or every friday. Maximum length: 150 characters. |
-| Priority | [Whole number](../../../value-types.md#INTEGER) | No | 1 (normal) to 4 (urgent). Todoist shows 4 as P1. Value: 1 to 4. |
+| Name        | Type                                            | Required | Details                                                                                                      |
+| ----------- | ----------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
+| Connection  | [Text](../../../value-types.md#STRING)          | No       | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters.      |
+| Task        | [Text](../../../value-types.md#STRING)          | Yes      | The task text. Maximum length: 500 characters.                                                               |
+| Description | [Text](../../../value-types.md#STRING)          | No       | More details. Maximum length: 16000 characters.                                                              |
+| Project ID  | [ID](../../../value-types.md#ID)                | No       | The project to add it to. Empty: the inbox.                                                                  |
+| Due         | [Text](../../../value-types.md#STRING)          | No       | When it is due, in plain words, for example tomorrow at 5pm or every friday. Maximum length: 150 characters. |
+| Priority    | [Whole number](../../../value-types.md#INTEGER) | No       | 1 (normal) to 4 (urgent). Todoist shows 4 as P1. Value: 1 to 4.                                              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                                 | Details       |
+| ---- | ---------------------------------------------------- | ------------- |
 | Task | [Todoist task](../../../value-types.md#todoist-Task) | The new task. |
 
 ### Complete task {#todoist-close-task}
@@ -76,13 +76,13 @@ Marks a task as done. A repeating task moves to its next date.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Task ID | [ID](../../../value-types.md#ID) | Yes | The ID of the task. |
+| Name       | Type                                   | Required | Details                                                                                                 |
+| ---------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Todoist connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Task ID    | [ID](../../../value-types.md#ID)       | Yes      | The ID of the task.                                                                                     |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name      | Type                                      | Details                                  |
+| --------- | ----------------------------------------- | ---------------------------------------- |
 | Completed | [Yes/No](../../../value-types.md#BOOLEAN) | Whether Todoist marked the task as done. |

@@ -29,13 +29,13 @@ Schritte können Entscheidungen treffen, sich für jeden Eintrag einer Liste wie
 
 Wenn du unsere älteren Custom Commands genutzt hast, ändert sich für dich Folgendes:
 
-| Custom Commands V2                                                         | Custom Commands V3                                                                                        |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| Wenige Trigger: Slash-Command, Nachricht, Button, Modal oder kein Trigger. | Viel mehr Trigger, darunter Server-Ereignisse, Zeitpläne und Flows, die andere Flows starten.             |
-| Aktionen laufen in Aktionsblöcken, alle auf einmal oder eine zufällige.    | Schritte laufen der Reihe nach, mit echten Bedingungen, Schleifen, Fehlerbehandlung und Wartezeiten.      |
-| Werte kommen aus festen `%parameters%`.                                    | Jeder Schritt kann jeden Wert nutzen, den ein früherer Schritt oder der Trigger geliefert hat.            |
-| Kein Gedächtnis zwischen den Ausführungen.                                 | Flows können Daten speichern und lesen, pro Mitglied, pro Server oder unter einem eigenen Schlüssel.      |
-| Jeder Befehl steht für sich allein.                                        | Flows lassen sich zu Modulen mit eigenen Einstellungen, eigenem Datenspeicher und Ordnern zusammenfassen. |
+| Custom Commands V2                                                         | Custom Commands V3                                                                                                |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Wenige Trigger: Slash-Command, Nachricht, Button, Modal oder kein Trigger. | Viel mehr Trigger, darunter Server-Ereignisse, Zeitpläne und Flows, die andere Flows starten.                     |
+| Aktionen laufen in Aktionsblöcken, alle auf einmal oder eine zufällige.    | Schritte laufen der Reihe nach, mit echten Bedingungen, Schleifen, Fehlerbehandlung und Wartezeiten.              |
+| Werte kommen aus festen `%parameters%`.                                    | Jeder Schritt kann jeden Wert nutzen, den ein früherer Schritt oder der Trigger geliefert hat.                    |
+| Kein Gedächtnis zwischen den Ausführungen.                                 | Flows können Daten speichern und lesen, pro Mitglied, pro Server oder unter einem eigenen Schlüssel.              |
+| Jeder Befehl steht für sich allein.                                        | Flows lassen sich zu Modulen mit eigenen Einstellungen, eigenem Datenspeicher und Ordnern zusammenfassen.         |
 | Kein Verlauf darüber, was passiert ist.                                    | Jede Ausführung wird protokolliert, und du kannst einen Flow testen, ohne dass er etwas auf deinem Server ändert. |
 
 Das Einschalten von V3 lässt deine V2-Befehle unberührt. Sie laufen weiter und bleiben neben deinen neuen Flows bearbeitbar. Wenn du einen Befehl umziehen möchtest, sieh dir [Umstieg von V2](/de/docs/custom-commands/migrating-from-v2) an.
@@ -49,11 +49,11 @@ Das Einschalten von V3 lässt deine V2-Befehle unberührt. Sie laufen weiter und
 
 ## Wer was darf {#permissions}
 
-| Aufgabe                                                      | Wer                                                                                                   |
-| ------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| V3 einschalten oder zurück zu V2 wechseln                    | Der Server-Owner und die Co-Owner                                                                     |
-| Flows und Module bauen, bearbeiten, einschalten und löschen  | Alle, die die Konfiguration deines Bots bearbeiten dürfen, einschließlich Trusted Admins mit der Berechtigung **Konfigurationen & Eigene Befehle ändern und neu laden** |
-| Die Befehle und Buttons nutzen, die deine Flows erstellen    | Deine Mitglieder, eingeschränkt durch das, was du bei jedem Befehl unter **Erforderliche Berechtigungen** festlegst |
+| Aufgabe                                                     | Wer                                                                                                                                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| V3 einschalten oder zurück zu V2 wechseln                   | Der Server-Owner und die Co-Owner                                                                                                                                       |
+| Flows und Module bauen, bearbeiten, einschalten und löschen | Alle, die die Konfiguration deines Bots bearbeiten dürfen, einschließlich Trusted Admins mit der Berechtigung **Konfigurationen & Eigene Befehle ändern und neu laden** |
+| Die Befehle und Buttons nutzen, die deine Flows erstellen   | Deine Mitglieder, eingeschränkt durch das, was du bei jedem Befehl unter **Erforderliche Berechtigungen** festlegst                                                     |
 
 ## Zugang bekommen {#access}
 
@@ -108,12 +108,12 @@ Sobald V3 eingeschaltet ist, heißt der Eintrag in der Seitenleiste **Eigene Bef
 
 Der Hauptbereich listet auf, was du gebaut hast:
 
-| Bereich                 | Was er enthält                                                                                                             |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| **Apps**                | Apps, die du aus dem Marktplatz installiert hast. Siehe [Teilen & der Marktplatz](/de/docs/custom-commands/sharing).        |
+| Bereich                 | Was er enthält                                                                                                                                                                             |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Apps**                | Apps, die du aus dem Marktplatz installiert hast. Siehe [Teilen & der Marktplatz](/de/docs/custom-commands/sharing).                                                                       |
 | **Module**              | Module, die du selbst gebaut hast. Jede Karte zeigt das Icon, den Namen, die Anzahl der Flows und ob das Modul aktiviert ist. Siehe [Module & Vorlagen](/de/docs/custom-commands/modules). |
-| **Nicht kategorisiert** | Flows, die zu keinem Modul und keinem Ordner gehören.                                                                       |
-| Deine Ordner            | Ein Bereich pro Ordner, den du für deine Flows angelegt hast.                                                              |
+| **Nicht kategorisiert** | Flows, die zu keinem Modul und keinem Ordner gehören.                                                                                                                                      |
+| Deine Ordner            | Ein Bereich pro Ordner, den du für deine Flows angelegt hast.                                                                                                                              |
 
 Jede Flow-Karte zeigt, ob der Flow **Aktiv** oder ein **Entwurf** ist. Klicke auf eine Karte, um den Flow im [Editor](/de/docs/custom-commands/flows) zu öffnen.
 

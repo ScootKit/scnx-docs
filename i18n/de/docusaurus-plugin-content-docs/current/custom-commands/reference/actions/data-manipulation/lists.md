@@ -15,14 +15,14 @@ Gibt die Anzahl der Einträge in einer Liste zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, deren Länge ermittelt wird. |
+| Name  | Typ                                               | Pflicht | Details                            |
+| ----- | ------------------------------------------------- | ------- | ---------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, deren Länge ermittelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details                  |
+| ----- | ------------------------------------------- | ------------------------ |
 | Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Einträge. |
 
 ### Eintrag bei Index {#array-at}
@@ -31,15 +31,15 @@ Gibt den Eintrag bei einem bestimmten Index (gezählt ab 0) zurück oder leer, w
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, auf die zugegriffen wird. |
-| Position (ab 0) | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Position des Eintrags, gezählt ab 0. Negative Werte zählen vom Ende. |
+| Name            | Typ                                               | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Liste           | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, auf die zugegriffen wird.                                     |
+| Position (ab 0) | [Ganzzahl](../../../value-types.md#INTEGER)       | Ja      | Position des Eintrags, gezählt ab 0. Negative Werte zählen vom Ende. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                        | Details                                       |
+| ---- | ------------------------------------------ | --------------------------------------------- |
 | Wert | [Eintrag](../../../value-types.md#ELEMENT) | Der Eintrag bei diesem Index. Kann leer sein. |
 
 ### Erster Eintrag {#array-first}
@@ -48,14 +48,14 @@ Gibt den ersten Eintrag der Liste zurück oder leer, wenn die Liste leer ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die gelesen wird. |
+| Name  | Typ                                               | Pflicht | Details                  |
+| ----- | ------------------------------------------------- | ------- | ------------------------ |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die gelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                        | Details                                      |
+| ---- | ------------------------------------------ | -------------------------------------------- |
 | Wert | [Eintrag](../../../value-types.md#ELEMENT) | Der erste Eintrag oder leer. Kann leer sein. |
 
 ### Letzter Eintrag {#array-last}
@@ -64,14 +64,14 @@ Gibt den letzten Eintrag der Liste zurück oder leer, wenn die Liste leer ist.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die gelesen wird. |
+| Name  | Typ                                               | Pflicht | Details                  |
+| ----- | ------------------------------------------------- | ------- | ------------------------ |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die gelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                        | Details                                       |
+| ---- | ------------------------------------------ | --------------------------------------------- |
 | Wert | [Eintrag](../../../value-types.md#ELEMENT) | Der letzte Eintrag oder leer. Kann leer sein. |
 
 ### Liste enthält {#array-contains}
@@ -80,15 +80,15 @@ Prüft, ob eine Liste einen Wert enthält.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die zu durchsuchende Liste. |
-| Suchwert | [Eintrag](../../../value-types.md#ELEMENT) | Ja | Der gesuchte Wert. |
+| Name     | Typ                                               | Pflicht | Details                     |
+| -------- | ------------------------------------------------- | ------- | --------------------------- |
+| Liste    | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die zu durchsuchende Liste. |
+| Suchwert | [Eintrag](../../../value-types.md#ELEMENT)        | Ja      | Der gesuchte Wert.          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                            |
+| -------- | ------------------------------------------ | ---------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn der Wert vorhanden ist. |
 
 ### Eintrag zur Liste hinzufügen {#array-push}
@@ -97,15 +97,15 @@ Gibt eine neue Liste mit dem Wert am Ende zurück und lässt die übergebene Lis
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die ursprüngliche Liste. Sie wird nicht verändert. |
-| Wert | [Eintrag](../../../value-types.md#ELEMENT) | Ja | Wert, der angehängt wird. |
+| Name  | Typ                                               | Pflicht | Details                                            |
+| ----- | ------------------------------------------------- | ------- | -------------------------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die ursprüngliche Liste. Sie wird nicht verändert. |
+| Wert  | [Eintrag](../../../value-types.md#ELEMENT)        | Ja      | Wert, der angehängt wird.                          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                              |
+| -------- | ---------------------------------------------------- | ------------------------------------ |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die neue Liste mit dem Wert am Ende. |
 
 ### Aus Liste entfernen {#array-remove}
@@ -114,15 +114,15 @@ Gibt eine neue Liste zurück, in der alle Vorkommen eines Wertes entfernt sind, 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die ursprüngliche Liste. Sie wird nicht verändert. |
-| Wert | [Eintrag](../../../value-types.md#ELEMENT) | Ja | Wert, der entfernt wird. |
+| Name  | Typ                                               | Pflicht | Details                                            |
+| ----- | ------------------------------------------------- | ------- | -------------------------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die ursprüngliche Liste. Sie wird nicht verändert. |
+| Wert  | [Eintrag](../../../value-types.md#ELEMENT)        | Ja      | Wert, der entfernt wird.                           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                          |
+| -------- | ---------------------------------------------------- | -------------------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die neue Liste ohne diesen Wert. |
 
 ### Liste verbinden {#array-join}
@@ -131,15 +131,15 @@ Verbindet eine Liste von Texten mit einem Trennzeichen zu einem Text.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Text](../../../value-types.md#STRING) | Ja | Liste aus Texten. |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Ja | Text, der zwischen den Einträgen eingefügt wird. Standard: `, `. |
+| Name         | Typ                                              | Pflicht | Details                                                          |
+| ------------ | ------------------------------------------------ | ------- | ---------------------------------------------------------------- |
+| Liste        | Liste von [Text](../../../value-types.md#STRING) | Ja      | Liste aus Texten.                                                |
+| Trennzeichen | [Text](../../../value-types.md#STRING)           | Ja      | Text, der zwischen den Einträgen eingefügt wird. Standard: `, `. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details              |
+| -------- | -------------------------------------- | -------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der verbundene Text. |
 
 ### Liste aus Text {#array-from-string}
@@ -148,15 +148,15 @@ Teilt einen Text mit einem Trennzeichen in eine Liste auf. Ohne Trennzeichen wir
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der geteilt wird. |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein | Optionales Trennzeichen. Leer lassen, um den Text in einzelne Zeichen aufzuteilen. Standard: ``. |
+| Name         | Typ                                    | Pflicht | Details                                                                                          |
+| ------------ | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| Text         | [Text](../../../value-types.md#STRING) | Ja      | Text, der geteilt wird.                                                                          |
+| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein    | Optionales Trennzeichen. Leer lassen, um den Text in einzelne Zeichen aufzuteilen. Standard: ``. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                              | Details                  |
+| -------- | ------------------------------------------------ | ------------------------ |
 | Ergebnis | Liste von [Text](../../../value-types.md#STRING) | Die resultierende Liste. |
 
 ### Zahlenliste aus Text (ganze Zahlen) {#array-from-string-integers}
@@ -165,15 +165,15 @@ Teilt einen Text in eine Liste ganzer Zahlen auf, mit denen direkt gerechnet und
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der geteilt wird, z. B. "1, 3, 5, 7". |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein | Was die Zahlen trennt. Standard ist ein Komma. Standard: `,`. |
+| Name         | Typ                                    | Pflicht | Details                                                       |
+| ------------ | -------------------------------------- | ------- | ------------------------------------------------------------- |
+| Text         | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der geteilt wird, z. B. "1, 3, 5, 7".               |
+| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein    | Was die Zahlen trennt. Standard ist ein Komma. Standard: `,`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                   | Details                      |
+| ------ | ----------------------------------------------------- | ---------------------------- |
 | Zahlen | Liste von [Ganzzahl](../../../value-types.md#INTEGER) | Die Liste der ganzen Zahlen. |
 
 ### Zahlenliste aus Text (Dezimalzahlen) {#array-from-string-floats}
@@ -182,15 +182,15 @@ Teilt einen Text in eine Liste von Zahlen auf, die Dezimalstellen haben dürfen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der geteilt wird, z. B. "0.5, 1.5, 2". |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein | Was die Zahlen trennt. Standard ist ein Komma. Standard: `,`. |
+| Name         | Typ                                    | Pflicht | Details                                                       |
+| ------------ | -------------------------------------- | ------- | ------------------------------------------------------------- |
+| Text         | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der geteilt wird, z. B. "0.5, 1.5, 2".              |
+| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein    | Was die Zahlen trennt. Standard ist ein Komma. Standard: `,`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                    | Details               |
+| ------ | ------------------------------------------------------ | --------------------- |
 | Zahlen | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Die Liste der Zahlen. |
 
 ### Zufälliger Eintrag aus Liste {#array-random-element}
@@ -199,14 +199,14 @@ Wählt einen zufälligen Eintrag aus einer Liste aus.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Nicht-leere Liste. Mindestens 1 Einträge. |
+| Name  | Typ                                               | Pflicht | Details                                   |
+| ----- | ------------------------------------------------- | ------- | ----------------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Nicht-leere Liste. Mindestens 1 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                        | Details                                 |
+| ---- | ------------------------------------------ | --------------------------------------- |
 | Wert | [Eintrag](../../../value-types.md#ELEMENT) | Ein zufälliger Eintrag. Kann leer sein. |
 
 ### Liste mischen {#array-shuffle}
@@ -215,14 +215,14 @@ Gibt eine neue Liste mit den Einträgen in zufälliger Reihenfolge zurück. Die 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die gemischt wird. |
+| Name  | Typ                                               | Pflicht | Details                   |
+| ----- | ------------------------------------------------- | ------- | ------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die gemischt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details              |
+| -------- | ---------------------------------------------------- | -------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die gemischte Liste. |
 
 ### Liste sortieren (aufsteigend) {#array-sort-asc}
@@ -231,14 +231,14 @@ Gibt eine neue Liste sortiert in aufsteigender Reihenfolge zurück. Die übergeb
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die sortiert wird. |
+| Name  | Typ                                               | Pflicht | Details                   |
+| ----- | ------------------------------------------------- | ------- | ------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die sortiert wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details              |
+| -------- | ---------------------------------------------------- | -------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die sortierte Liste. |
 
 ### Liste sortieren (absteigend) {#array-sort-desc}
@@ -247,14 +247,14 @@ Gibt eine neue Liste sortiert in absteigender Reihenfolge zurück. Die übergebe
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die sortiert wird. |
+| Name  | Typ                                               | Pflicht | Details                   |
+| ----- | ------------------------------------------------- | ------- | ------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die sortiert wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details              |
+| -------- | ---------------------------------------------------- | -------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die sortierte Liste. |
 
 ### Liste umkehren {#array-reverse}
@@ -263,14 +263,14 @@ Gibt eine neue Liste mit den Einträgen in umgekehrter Reihenfolge zurück. Die 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Liste, die umgekehrt wird. |
+| Name  | Typ                                               | Pflicht | Details                        |
+| ----- | ------------------------------------------------- | ------- | ------------------------------ |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die Liste, die umgekehrt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details               |
+| -------- | ---------------------------------------------------- | --------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die umgekehrte Liste. |
 
 ### Eindeutige Liste {#array-unique}
@@ -279,14 +279,14 @@ Gibt eine neue Liste mit entfernten doppelten Einträgen zurück und behält das
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die entdoppelt wird. |
+| Name  | Typ                                               | Pflicht | Details                     |
+| ----- | ------------------------------------------------- | ------- | --------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die entdoppelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                   |
+| -------- | ---------------------------------------------------- | ------------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die Liste ohne Duplikate. |
 
 ### Listen zusammenfügen {#array-concat}
@@ -295,15 +295,15 @@ Führt zwei Listen zu einer neuen Liste zusammen (die erste Liste gefolgt von de
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Erste Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Einträge, die am Anfang stehen. |
-| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Einträge, die nach der ersten Liste angehängt werden. |
+| Name         | Typ                                               | Pflicht | Details                                               |
+| ------------ | ------------------------------------------------- | ------- | ----------------------------------------------------- |
+| Erste Liste  | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Einträge, die am Anfang stehen.                       |
+| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Einträge, die nach der ersten Liste angehängt werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                     |
+| -------- | ---------------------------------------------------- | --------------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die zusammengeführte Liste. |
 
 ### Einträge in beiden Listen {#array-intersection}
@@ -312,15 +312,15 @@ Gibt eine neue Liste mit den in beiden Listen vorhandenen Einträgen zurück, do
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Erste Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die erste Liste. |
-| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Liste, mit der die Schnittmenge gebildet wird. |
+| Name         | Typ                                               | Pflicht | Details                                            |
+| ------------ | ------------------------------------------------- | ------- | -------------------------------------------------- |
+| Erste Liste  | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die erste Liste.                                   |
+| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die Liste, mit der die Schnittmenge gebildet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                                    |
+| -------- | ---------------------------------------------------- | ------------------------------------------ |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die in beiden Listen vorhandenen Einträge. |
 
 ### Einträge nur in der ersten Liste {#array-difference}
@@ -329,15 +329,15 @@ Gibt eine neue Liste mit den Einträgen der ersten Liste zurück, die NICHT in d
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Erste Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Liste, aus der Einträge entnommen werden. |
-| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Auszuschließende Einträge. |
+| Name         | Typ                                               | Pflicht | Details                                       |
+| ------------ | ------------------------------------------------- | ------- | --------------------------------------------- |
+| Erste Liste  | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die Liste, aus der Einträge entnommen werden. |
+| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Auszuschließende Einträge.                    |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                                                                 |
+| -------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die Einträge der ersten Liste, die nicht in der zweiten enthalten sind. |
 
 ### Einträge in genau einer Liste {#array-symmetric-difference}
@@ -346,15 +346,15 @@ Gibt eine neue Liste mit den Einträgen zurück, die in genau einer der beiden L
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Erste Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die erste Liste. |
-| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die zweite Liste. |
+| Name         | Typ                                               | Pflicht | Details           |
+| ------------ | ------------------------------------------------- | ------- | ----------------- |
+| Erste Liste  | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die erste Liste.  |
+| Zweite Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die zweite Liste. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                                                            |
+| -------- | ---------------------------------------------------- | ------------------------------------------------------------------ |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die Einträge, die in genau einer der beiden Listen vorhanden sind. |
 
 ### Liste zuschneiden {#array-slice}
@@ -363,16 +363,16 @@ Gibt einen Teil der Liste von Start (einschließlich) bis Ende (ausschließlich)
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Liste, die geteilt wird. |
-| Start | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Startposition (inklusive), gezählt ab 0. Negativ zählt vom Ende. |
-| Ende | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Endposition (exklusive), gezählt ab 0. Weglassen, um bis zum Ende zu schneiden. Negativ zählt vom Ende. |
+| Name  | Typ                                               | Pflicht | Details                                                                                                 |
+| ----- | ------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Liste, die geteilt wird.                                                                                |
+| Start | [Ganzzahl](../../../value-types.md#INTEGER)       | Ja      | Startposition (inklusive), gezählt ab 0. Negativ zählt vom Ende.                                        |
+| Ende  | [Ganzzahl](../../../value-types.md#INTEGER)       | Nein    | Endposition (exklusive), gezählt ab 0. Weglassen, um bis zum Ende zu schneiden. Negativ zählt vom Ende. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details                                |
+| -------- | ---------------------------------------------------- | -------------------------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Der herausgeschnittene Teil der Liste. |
 
 ### Liste erstellen {#create-array}
@@ -381,21 +381,21 @@ Baut eine Liste aus bis zu acht Werten. Leere Werte werden übersprungen, das Er
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Eintrag 1 | [Beliebig](../../../value-types.md#ANY) | Nein | Erster Eintrag. |
-| Eintrag 2 | [Beliebig](../../../value-types.md#ANY) | Nein | Zweiter Eintrag. |
-| Eintrag 3 | [Beliebig](../../../value-types.md#ANY) | Nein | Dritter Eintrag. |
-| Eintrag 4 | [Beliebig](../../../value-types.md#ANY) | Nein | Vierter Eintrag. |
-| Eintrag 5 | [Beliebig](../../../value-types.md#ANY) | Nein | Fünfter Eintrag. |
-| Eintrag 6 | [Beliebig](../../../value-types.md#ANY) | Nein | Sechster Eintrag. |
-| Eintrag 7 | [Beliebig](../../../value-types.md#ANY) | Nein | Siebter Eintrag. |
-| Eintrag 8 | [Beliebig](../../../value-types.md#ANY) | Nein | Achter Eintrag. |
+| Name      | Typ                                     | Pflicht | Details           |
+| --------- | --------------------------------------- | ------- | ----------------- |
+| Eintrag 1 | [Beliebig](../../../value-types.md#ANY) | Nein    | Erster Eintrag.   |
+| Eintrag 2 | [Beliebig](../../../value-types.md#ANY) | Nein    | Zweiter Eintrag.  |
+| Eintrag 3 | [Beliebig](../../../value-types.md#ANY) | Nein    | Dritter Eintrag.  |
+| Eintrag 4 | [Beliebig](../../../value-types.md#ANY) | Nein    | Vierter Eintrag.  |
+| Eintrag 5 | [Beliebig](../../../value-types.md#ANY) | Nein    | Fünfter Eintrag.  |
+| Eintrag 6 | [Beliebig](../../../value-types.md#ANY) | Nein    | Sechster Eintrag. |
+| Eintrag 7 | [Beliebig](../../../value-types.md#ANY) | Nein    | Siebter Eintrag.  |
+| Eintrag 8 | [Beliebig](../../../value-types.md#ANY) | Nein    | Achter Eintrag.   |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                               | Details                             |
+| ----- | ------------------------------------------------- | ----------------------------------- |
 | Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Die Liste der angegebenen Einträge. |
 
 ### Position in Liste {#array-index-of}
@@ -404,15 +404,15 @@ Gibt die Position des ersten passenden Eintrags in der Liste zurück (gezählt a
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die zu durchsuchende Liste. |
-| Wert | [Eintrag](../../../value-types.md#ELEMENT) | Ja | Der gesuchte Wert. |
+| Name  | Typ                                               | Pflicht | Details                     |
+| ----- | ------------------------------------------------- | ------- | --------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die zu durchsuchende Liste. |
+| Wert  | [Eintrag](../../../value-types.md#ELEMENT)        | Ja      | Der gesuchte Wert.          |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                                              |
+| -------- | ------------------------------------------- | ---------------------------------------------------- |
 | Position | [Ganzzahl](../../../value-types.md#INTEGER) | Nullbasierte Position des ersten Treffers, sonst -1. |
 
 ### Liste in Gruppen teilen {#array-chunk}
@@ -421,15 +421,15 @@ Teilt die Liste in aufeinanderfolgende Gruppen der angegebenen Größe. Die letz
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die aufzuteilende Liste. |
-| Gruppengröße | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Höchstzahl der Einträge pro Gruppe. Wert: 1 bis 100000. |
+| Name         | Typ                                               | Pflicht | Details                                                 |
+| ------------ | ------------------------------------------------- | ------- | ------------------------------------------------------- |
+| Liste        | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die aufzuteilende Liste.                                |
+| Gruppengröße | [Ganzzahl](../../../value-types.md#INTEGER)       | Ja      | Höchstzahl der Einträge pro Gruppe. Wert: 1 bis 100000. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                               | Details                                             |
+| ------- | ------------------------------------------------- | --------------------------------------------------- |
 | Gruppen | Liste von [Beliebig](../../../value-types.md#ANY) | Die Liste der Gruppen (jede Gruppe ist eine Liste). |
 
 ### Verschachtelte Listen zusammenführen {#array-flatten}
@@ -438,14 +438,14 @@ Führt verschachtelte Listen um eine Ebene zusammen: Einträge, die selbst Liste
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Liste, deren verschachtelte Listen zusammengeführt werden. |
+| Name  | Typ                                               | Pflicht | Details                                                        |
+| ----- | ------------------------------------------------- | ------- | -------------------------------------------------------------- |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die Liste, deren verschachtelte Listen zusammengeführt werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                               | Details                                               |
+| -------- | ------------------------------------------------- | ----------------------------------------------------- |
 | Ergebnis | Liste von [Beliebig](../../../value-types.md#ANY) | Die Liste mit um eine Ebene zusammengeführten Listen. |
 
 ### Liste nach Feld sortieren {#array-sort-by}
@@ -454,16 +454,16 @@ Gibt eine neue Liste zurück, sortiert nach dem Wert unter einem Feldpfad jedes 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die zu sortierende Liste. |
-| Feld zum Sortieren | [Text](../../../value-types.md#STRING) | Ja | Punktgetrennter Feldpfad zum Sortieren (z. B. "value" oder "member.username"). Maximale Länge: 200 Zeichen. |
-| Richtung | [Sortierrichtung](../../../value-types.md#SORT_DIRECTION) | Ja | Aufsteigend oder absteigend sortieren. Standard: Aufsteigend. |
+| Name               | Typ                                                       | Pflicht | Details                                                                                                     |
+| ------------------ | --------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| Liste              | Liste von [Beliebig](../../../value-types.md#ANY)         | Ja      | Die zu sortierende Liste.                                                                                   |
+| Feld zum Sortieren | [Text](../../../value-types.md#STRING)                    | Ja      | Punktgetrennter Feldpfad zum Sortieren (z. B. "value" oder "member.username"). Maximale Länge: 200 Zeichen. |
+| Richtung           | [Sortierrichtung](../../../value-types.md#SORT_DIRECTION) | Ja      | Aufsteigend oder absteigend sortieren. Standard: Aufsteigend.                                               |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                  | Details              |
+| -------- | ---------------------------------------------------- | -------------------- |
 | Ergebnis | Liste von [Eintrag](../../../value-types.md#ELEMENT) | Die sortierte Liste. |
 
 ### In Liste suchen {#array-find-by-field}
@@ -472,15 +472,15 @@ Findet ohne Schleife den ersten Eintrag einer Liste, dessen Feld einem Wert ents
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die Liste, die durchsucht wird. |
-| Feld | [Feld eines Eintrags](../../../value-types.md#ITEM_FIELD) | Ja | Das Feld jedes Eintrags, das verglichen wird. Maximale Länge: 64 Zeichen. |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der Wert, den das Feld haben muss. Setze ihn immer; nutze einen leeren Wert, um einen Eintrag mit leerem Feld zu finden. |
+| Name  | Typ                                                       | Pflicht | Details                                                                                                                  |
+| ----- | --------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Liste | Liste von [Beliebig](../../../value-types.md#ANY)         | Ja      | Die Liste, die durchsucht wird.                                                                                          |
+| Feld  | [Feld eines Eintrags](../../../value-types.md#ITEM_FIELD) | Ja      | Das Feld jedes Eintrags, das verglichen wird. Maximale Länge: 64 Zeichen.                                                |
+| Wert  | [Beliebig](../../../value-types.md#ANY)                   | Ja      | Der Wert, den das Feld haben muss. Setze ihn immer; nutze einen leeren Wert, um einen Eintrag mit leerem Feld zu finden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Eintrag | [Eintrag](../../../value-types.md#ELEMENT) | Der erste passende Eintrag. Leer, wenn kein Eintrag passt. Kann leer sein. |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja, wenn ein Eintrag gepasst hat. |
+| Name     | Typ                                        | Details                                                                    |
+| -------- | ------------------------------------------ | -------------------------------------------------------------------------- |
+| Eintrag  | [Eintrag](../../../value-types.md#ELEMENT) | Der erste passende Eintrag. Leer, wenn kein Eintrag passt. Kann leer sein. |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja, wenn ein Eintrag gepasst hat.                                          |

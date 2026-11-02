@@ -17,14 +17,14 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../../value-types.md#STRING) | Nein | Neuer Servername. Länge: 2 bis 100 Zeichen. |
-| Verifizierungslevel | [Verifizierungsstufe](../../../value-types.md#VERIFICATION_LEVEL) | Nein | Erforderliches Verifizierungslevel für neue Mitglieder. |
-| Inhaltsfilter | [Filter für explizite Inhalte](../../../value-types.md#EXPLICIT_CONTENT_FILTER) | Nein | Einstellung des Filters für anstößige Inhalte. |
-| Standard-Benachrichtigungen | [Standardbenachrichtigungen](../../../value-types.md#DEFAULT_MESSAGE_NOTIFICATIONS) | Nein | Standard-Benachrichtigungseinstellung. |
-| Bevorzugte Sprache | [Text](../../../value-types.md#STRING) | Nein | Bevorzugte Sprache des Servers. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log vermerkt wird. Maximale Länge: 512 Zeichen. |
+| Name                        | Typ                                                                                 | Pflicht | Details                                                             |
+| --------------------------- | ----------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------- |
+| Name                        | [Text](../../../value-types.md#STRING)                                              | Nein    | Neuer Servername. Länge: 2 bis 100 Zeichen.                         |
+| Verifizierungslevel         | [Verifizierungsstufe](../../../value-types.md#VERIFICATION_LEVEL)                   | Nein    | Erforderliches Verifizierungslevel für neue Mitglieder.             |
+| Inhaltsfilter               | [Filter für explizite Inhalte](../../../value-types.md#EXPLICIT_CONTENT_FILTER)     | Nein    | Einstellung des Filters für anstößige Inhalte.                      |
+| Standard-Benachrichtigungen | [Standardbenachrichtigungen](../../../value-types.md#DEFAULT_MESSAGE_NOTIFICATIONS) | Nein    | Standard-Benachrichtigungseinstellung.                              |
+| Bevorzugte Sprache          | [Text](../../../value-types.md#STRING)                                              | Nein    | Bevorzugte Sprache des Servers.                                     |
+| Audit-Log-Grund             | [Text](../../../value-types.md#STRING)                                              | Nein    | Grund, der im Audit-Log vermerkt wird. Maximale Länge: 512 Zeichen. |
 
 ### Audit-Log-Einträge abrufen {#fetch-audit-log-entries}
 
@@ -34,16 +34,16 @@ Benötigte Berechtigungen: Audit-Log anzeigen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Limit | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximale Anzahl abgerufener Einträge (1-100). Wert: 1 bis 100. Standard: `50`. |
-| Aktion | [Audit-Log-Ereignis](../../../value-types.md#AUDIT_LOG_EVENT) | Nein | Gibt nur Einträge mit dieser Aktion zurück. |
-| Ausführender | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Gibt nur Einträge zurück, die von diesem Benutzer ausgeführt wurden. |
+| Name         | Typ                                                           | Pflicht | Details                                                                        |
+| ------------ | ------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------ |
+| Limit        | [Ganzzahl](../../../value-types.md#INTEGER)                   | Ja      | Maximale Anzahl abgerufener Einträge (1-100). Wert: 1 bis 100. Standard: `50`. |
+| Aktion       | [Audit-Log-Ereignis](../../../value-types.md#AUDIT_LOG_EVENT) | Nein    | Gibt nur Einträge mit dieser Aktion zurück.                                    |
+| Ausführender | [Benutzer](../../../value-types.md#DISCORD_USER)              | Nein    | Gibt nur Einträge zurück, die von diesem Benutzer ausgeführt wurden.           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                    | Details                                         |
+| -------- | ---------------------------------------------------------------------- | ----------------------------------------------- |
 | Einträge | Liste von [Audit-Log-Eintrag](../../../value-types.md#AUDIT_LOG_ENTRY) | Audit-Log-Einträge, die dem Filter entsprechen. |
 
 ### Server-Name setzen {#set-guild-name}
@@ -54,15 +54,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../../value-types.md#STRING) | Ja | Der neue Servername (2-100 Zeichen). Länge: 2 bis 100 Zeichen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                              |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Name            | [Text](../../../value-types.md#STRING) | Ja      | Der neue Servername (2-100 Zeichen). Länge: 2 bis 100 Zeichen.       |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Server-Symbol setzen {#set-guild-icon}
@@ -73,15 +73,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Icon-URL | [URL](../../../value-types.md#URL) | Ja | URL zum neuen Icon, oder leer zum Entfernen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                              |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Icon-URL        | [URL](../../../value-types.md#URL)     | Ja      | URL zum neuen Icon, oder leer zum Entfernen.                         |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Server-Banner setzen {#set-guild-banner}
@@ -92,15 +92,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Banner-URL | [URL](../../../value-types.md#URL) | Ja | URL des neuen Bannerbilds, oder leer zum Entfernen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                              |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Banner-URL      | [URL](../../../value-types.md#URL)     | Ja      | URL des neuen Bannerbilds, oder leer zum Entfernen.                  |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Einladungs-Splash setzen {#set-guild-splash}
@@ -111,15 +111,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Splash-URL | [URL](../../../value-types.md#URL) | Ja | URL zum neuen Splash-Bild, oder leer lassen zum Entfernen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                              |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Splash-URL      | [URL](../../../value-types.md#URL)     | Ja      | URL zum neuen Splash-Bild, oder leer lassen zum Entfernen.           |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Discovery-Splash setzen {#set-guild-discovery-splash}
@@ -130,15 +130,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Discovery-Splash-URL | [URL](../../../value-types.md#URL) | Ja | URL zum neuen Discovery-Splash-Bild, oder leer zum Entfernen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name                 | Typ                                    | Pflicht | Details                                                              |
+| -------------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Discovery-Splash-URL | [URL](../../../value-types.md#URL)     | Ja      | URL zum neuen Discovery-Splash-Bild, oder leer zum Entfernen.        |
+| Audit-Log-Grund      | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### System-Kanal setzen {#set-guild-system-channel}
@@ -149,15 +149,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Systemkanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja | Textkanal für Systemnachrichten, oder leer zum Deaktivieren. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                     | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Systemkanal     | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja      | Textkanal für Systemnachrichten, oder leer zum Deaktivieren.         |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                  | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### System-Kanal-Flags setzen {#set-guild-system-channel-flags}
@@ -168,15 +168,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Flags | Liste von [System-Kanal-Flag](../../../value-types.md#GUILD_SYSTEM_CHANNEL_FLAG) | Ja | Flags, die festlegen, welche Systemnachrichten unterdrückt werden. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                                              | Pflicht | Details                                                              |
+| --------------- | -------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Flags           | Liste von [System-Kanal-Flag](../../../value-types.md#GUILD_SYSTEM_CHANNEL_FLAG) | Ja      | Flags, die festlegen, welche Systemnachrichten unterdrückt werden.   |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                                           | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### AFK-Kanal setzen {#set-guild-afk-channel}
@@ -187,15 +187,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| AFK-Kanal | [Sprachkanal](../../../value-types.md#GUILD_VOICE_CHANNEL) | Ja | Sprachkanal für inaktive Mitglieder, oder leer zum Deaktivieren. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                        | Pflicht | Details                                                              |
+| --------------- | ---------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| AFK-Kanal       | [Sprachkanal](../../../value-types.md#GUILD_VOICE_CHANNEL) | Ja      | Sprachkanal für inaktive Mitglieder, oder leer zum Deaktivieren.     |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                     | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### AFK-Timeout setzen {#set-guild-afk-timeout}
@@ -206,15 +206,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Timeout | [Dauer](../../../value-types.md#DURATION) | Ja | Das AFK-Timeout (60s, 5m, 15m, 30m oder 1h). Erlaubte Werte: `60`, `300`, `900`, `1800`, `3600`. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                       | Pflicht | Details                                                                                          |
+| --------------- | ----------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| Timeout         | [Dauer](../../../value-types.md#DURATION) | Ja      | Das AFK-Timeout (60s, 5m, 15m, 30m oder 1h). Erlaubte Werte: `60`, `300`, `900`, `1800`, `3600`. |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)    | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen.                             |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Regelkanal setzen {#set-guild-rules-channel}
@@ -225,15 +225,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Regelkanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja | Der Textkanal, der die Regeln enthält. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                     | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Regelkanal      | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja      | Der Textkanal, der die Regeln enthält.                               |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                  | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Kanal für öffentliche Updates setzen {#set-guild-public-updates-channel}
@@ -244,15 +244,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanal für öffentliche Updates | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja | Textkanal für Community-Updates von Discord. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name                          | Typ                                                     | Pflicht | Details                                                              |
+| ----------------------------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Kanal für öffentliche Updates | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja      | Textkanal für Community-Updates von Discord.                         |
+| Audit-Log-Grund               | [Text](../../../value-types.md#STRING)                  | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Sicherheitswarnungs-Kanal setzen {#set-guild-safety-alerts-channel}
@@ -263,15 +263,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Sicherheitshinweise-Kanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja | Textkanal für Sicherheitshinweise. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name                      | Typ                                                     | Pflicht | Details                                                              |
+| ------------------------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Sicherheitshinweise-Kanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja      | Textkanal für Sicherheitshinweise.                                   |
+| Audit-Log-Grund           | [Text](../../../value-types.md#STRING)                  | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Verifizierungsstufe setzen {#set-guild-verification-level}
@@ -282,15 +282,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verifizierungslevel | [Verifizierungsstufe](../../../value-types.md#VERIFICATION_LEVEL) | Ja | Das neue Verifizierungslevel. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name                | Typ                                                               | Pflicht | Details                                                              |
+| ------------------- | ----------------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Verifizierungslevel | [Verifizierungsstufe](../../../value-types.md#VERIFICATION_LEVEL) | Ja      | Das neue Verifizierungslevel.                                        |
+| Audit-Log-Grund     | [Text](../../../value-types.md#STRING)                            | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Filter für explizite Inhalte setzen {#set-guild-explicit-content-filter}
@@ -301,15 +301,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Filter | [Filter für explizite Inhalte](../../../value-types.md#EXPLICIT_CONTENT_FILTER) | Ja | Stufe des Filters für anstößige Inhalte. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                                             | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Filter          | [Filter für explizite Inhalte](../../../value-types.md#EXPLICIT_CONTENT_FILTER) | Ja      | Stufe des Filters für anstößige Inhalte.                             |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                                          | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Standardbenachrichtigungen festlegen {#set-guild-default-message-notifications}
@@ -320,15 +320,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benachrichtigungsstufe | [Standardbenachrichtigungen](../../../value-types.md#DEFAULT_MESSAGE_NOTIFICATIONS) | Ja | Die neue Standard-Benachrichtigungsstufe. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name                   | Typ                                                                                 | Pflicht | Details                                                              |
+| ---------------------- | ----------------------------------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Benachrichtigungsstufe | [Standardbenachrichtigungen](../../../value-types.md#DEFAULT_MESSAGE_NOTIFICATIONS) | Ja      | Die neue Standard-Benachrichtigungsstufe.                            |
+| Audit-Log-Grund        | [Text](../../../value-types.md#STRING)                                              | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### MFA-Stufe festlegen {#set-guild-mfa-level}
@@ -339,15 +339,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| MFA-Level | [Zwei-Faktor-Anforderung](../../../value-types.md#MFA_LEVEL) | Ja | Die neue MFA-Anforderung. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                          | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------------ | ------- | -------------------------------------------------------------------- |
+| MFA-Level       | [Zwei-Faktor-Anforderung](../../../value-types.md#MFA_LEVEL) | Ja      | Die neue MFA-Anforderung.                                            |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                       | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Benutzerdefinierte URL festlegen {#set-guild-vanity-code}
@@ -358,15 +358,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vanity-Code | [Text](../../../value-types.md#STRING) | Ja | Der neue Vanity-Code (2-32 Zeichen), oder leer zum Entfernen. Länge: 2 bis 32 Zeichen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                                                |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| Vanity-Code     | [Text](../../../value-types.md#STRING) | Ja      | Der neue Vanity-Code (2-32 Zeichen), oder leer zum Entfernen. Länge: 2 bis 32 Zeichen. |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen.                   |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Bevorzugte Sprache festlegen {#set-guild-preferred-locale}
@@ -377,15 +377,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Sprache | [Text](../../../value-types.md#STRING) | Ja | Eine ISO-Sprachkennung wie en-US. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                    | Pflicht | Details                                                              |
+| --------------- | -------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Sprache         | [Text](../../../value-types.md#STRING) | Ja      | Eine ISO-Sprachkennung wie en-US.                                    |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Server-Eigentümerschaft übertragen {#set-guild-owner}
@@ -394,15 +394,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Neuer Besitzer | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Ja | Das Mitglied, das neuer Besitzer wird. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                     | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Neuer Besitzer  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Ja      | Das Mitglied, das neuer Besitzer wird.                               |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                  | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details                   |
+| ------ | --------------------------------------- | ------------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktualisierte Server. |
 
 ### Server verlassen {#leave-guild}
@@ -415,8 +415,8 @@ Ruft eine öffentliche Vorschau eines auffindbar gemachten Servers ab.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                      | Details                                        |
+| -------- | -------------------------------------------------------- | ---------------------------------------------- |
 | Vorschau | [Server-Vorschau](../../../value-types.md#GUILD_PREVIEW) | Die Vorschau des auffindbar gemachten Servers. |
 
 ### Widget-Einstellungen abrufen {#fetch-widget-settings}
@@ -427,10 +427,10 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Gibt an, ob das Widget aktiviert ist. |
-| Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal, auf den das Widget-Invite verweist. Kann leer sein. |
+| Name      | Typ                                                   | Details                                                        |
+| --------- | ----------------------------------------------------- | -------------------------------------------------------------- |
+| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Gibt an, ob das Widget aktiviert ist.                          |
+| Kanal     | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal, auf den das Widget-Invite verweist. Kann leer sein. |
 
 ### Widget-Einstellungen aktualisieren {#update-widget-settings}
 
@@ -440,18 +440,18 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Widget aktiviert ist. |
-| Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Der Kanal, auf den die Widget-Einladung verweisen soll. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                   | Pflicht | Details                                                              |
+| --------------- | ----------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Aktiviert       | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ja      | Ob das Widget aktiviert ist.                                         |
+| Kanal           | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Der Kanal, auf den die Widget-Einladung verweisen soll.              |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Gibt an, ob das Widget jetzt aktiviert ist. |
-| Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der neue Widget-Invite-Kanal. Kann leer sein. |
+| Name      | Typ                                                   | Details                                       |
+| --------- | ----------------------------------------------------- | --------------------------------------------- |
+| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Gibt an, ob das Widget jetzt aktiviert ist.   |
+| Kanal     | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der neue Widget-Invite-Kanal. Kann leer sein. |
 
 ### Server-Vorlagen abrufen {#fetch-guild-templates}
 
@@ -461,8 +461,8 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                | Details                    |
+| -------- | ------------------------------------------------------------------ | -------------------------- |
 | Vorlagen | Liste von [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Alle Vorlagen des Servers. |
 
 ### Server-Vorlage erstellen {#create-guild-template}
@@ -473,15 +473,15 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../../value-types.md#STRING) | Ja | Name der Vorlage. Länge: 1 bis 100 Zeichen. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Kurze Beschreibung der Vorlage. Maximale Länge: 120 Zeichen. |
+| Name         | Typ                                    | Pflicht | Details                                                      |
+| ------------ | -------------------------------------- | ------- | ------------------------------------------------------------ |
+| Name         | [Text](../../../value-types.md#STRING) | Ja      | Name der Vorlage. Länge: 1 bis 100 Zeichen.                  |
+| Beschreibung | [Text](../../../value-types.md#STRING) | Nein    | Kurze Beschreibung der Vorlage. Maximale Länge: 120 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                      | Details                |
+| ------- | -------------------------------------------------------- | ---------------------- |
 | Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Die erstellte Vorlage. |
 
 ### Server-Vorlage aktualisieren {#update-guild-template}
@@ -492,16 +492,16 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja | Vorlage, die aktualisiert wird. |
-| Name | [Text](../../../value-types.md#STRING) | Nein | Der neue Name. Länge: 1 bis 100 Zeichen. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Die neue Beschreibung. Maximale Länge: 120 Zeichen. |
+| Name         | Typ                                                      | Pflicht | Details                                             |
+| ------------ | -------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Vorlage      | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja      | Vorlage, die aktualisiert wird.                     |
+| Name         | [Text](../../../value-types.md#STRING)                   | Nein    | Der neue Name. Länge: 1 bis 100 Zeichen.            |
+| Beschreibung | [Text](../../../value-types.md#STRING)                   | Nein    | Die neue Beschreibung. Maximale Länge: 120 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                      | Details                    |
+| ------- | -------------------------------------------------------- | -------------------------- |
 | Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Die aktualisierte Vorlage. |
 
 ### Server-Vorlage löschen {#delete-guild-template}
@@ -512,14 +512,14 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja | Vorlage, die gelöscht wird. |
+| Name    | Typ                                                      | Pflicht | Details                     |
+| ------- | -------------------------------------------------------- | ------- | --------------------------- |
+| Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja      | Vorlage, die gelöscht wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                      | Details                |
+| ------- | -------------------------------------------------------- | ---------------------- |
 | Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Die gelöschte Vorlage. |
 
 ### Server-Vorlage synchronisieren {#sync-guild-template}
@@ -530,14 +530,14 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja | Die Vorlage, die synchronisiert wird. |
+| Name    | Typ                                                      | Pflicht | Details                               |
+| ------- | -------------------------------------------------------- | ------- | ------------------------------------- |
+| Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Ja      | Die Vorlage, die synchronisiert wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                      | Details                      |
+| ------- | -------------------------------------------------------- | ---------------------------- |
 | Vorlage | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Die synchronisierte Vorlage. |
 
 ### Integrationen abrufen {#fetch-guild-integrations}
@@ -548,8 +548,8 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name          | Typ                                                                       | Details                       |
+| ------------- | ------------------------------------------------------------------------- | ----------------------------- |
 | Integrationen | Liste von [Server-Integration](../../../value-types.md#GUILD_INTEGRATION) | Alle Integrationen im Server. |
 
 ### Integration löschen {#delete-guild-integration}
@@ -560,10 +560,10 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Integration | [Server-Integration](../../../value-types.md#GUILD_INTEGRATION) | Ja | Integration, die entfernt wird. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                             | Pflicht | Details                                                              |
+| --------------- | --------------------------------------------------------------- | ------- | -------------------------------------------------------------------- |
+| Integration     | [Server-Integration](../../../value-types.md#GUILD_INTEGRATION) | Ja      | Integration, die entfernt wird.                                      |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                          | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 ### Soundboard-Sound erstellen {#create-guild-soundboard-sound}
 
@@ -573,18 +573,18 @@ Benötigte Berechtigungen: Ausdrücke verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../../value-types.md#STRING) | Ja | Name des Sounds (2-32 Zeichen). Länge: 2 bis 32 Zeichen. |
-| Sounddatei-URL | [URL](../../../value-types.md#URL) | Ja | URL der Audiodatei (MP3 oder OGG; max. 512 KB, bis zu 5,2 Sekunden). |
-| Lautstärke | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein | Wiedergabelautstärke zwischen 0.0 und 1.0. Wert: 0 bis 1. Standard: `1`. |
-| Emoji-Name | [Text](../../../value-types.md#STRING) | Nein | Unicode-Emoji, das neben dem Sound angezeigt wird. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                          | Pflicht | Details                                                                  |
+| --------------- | -------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Name            | [Text](../../../value-types.md#STRING)       | Ja      | Name des Sounds (2-32 Zeichen). Länge: 2 bis 32 Zeichen.                 |
+| Sounddatei-URL  | [URL](../../../value-types.md#URL)           | Ja      | URL der Audiodatei (MP3 oder OGG; max. 512 KB, bis zu 5,2 Sekunden).     |
+| Lautstärke      | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein    | Wiedergabelautstärke zwischen 0.0 und 1.0. Wert: 0 bis 1. Standard: `1`. |
+| Emoji-Name      | [Text](../../../value-types.md#STRING)       | Nein    | Unicode-Emoji, das neben dem Sound angezeigt wird.                       |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)       | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen.     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                          | Details                         |
+| ----- | ------------------------------------------------------------ | ------------------------------- |
 | Sound | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Der erstellte Soundboard-Sound. |
 
 ### Soundboard-Sound aktualisieren {#update-guild-soundboard-sound}
@@ -595,18 +595,18 @@ Benötigte Berechtigungen: Ausdrücke verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Sound | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja | Sound, der aktualisiert wird. |
-| Name | [Text](../../../value-types.md#STRING) | Nein | Der neue Name des Sounds. Länge: 2 bis 32 Zeichen. |
-| Lautstärke | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein | Die neue Wiedergabelautstärke. Wert: 0 bis 1. |
-| Emoji | [Text](../../../value-types.md#STRING) | Nein | Das neue zugehörige Emoji. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                          | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------------ | ------- | -------------------------------------------------------------------- |
+| Sound           | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja      | Sound, der aktualisiert wird.                                        |
+| Name            | [Text](../../../value-types.md#STRING)                       | Nein    | Der neue Name des Sounds. Länge: 2 bis 32 Zeichen.                   |
+| Lautstärke      | [Dezimalzahl](../../../value-types.md#FLOAT)                 | Nein    | Die neue Wiedergabelautstärke. Wert: 0 bis 1.                        |
+| Emoji           | [Text](../../../value-types.md#STRING)                       | Nein    | Das neue zugehörige Emoji.                                           |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                       | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                          | Details                  |
+| ----- | ------------------------------------------------------------ | ------------------------ |
 | Sound | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Der aktualisierte Sound. |
 
 ### Soundboard-Sound löschen {#delete-guild-soundboard-sound}
@@ -617,10 +617,10 @@ Benötigte Berechtigungen: Ausdrücke verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Sound | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja | Sound, der gelöscht wird. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
+| Name            | Typ                                                          | Pflicht | Details                                                              |
+| --------------- | ------------------------------------------------------------ | ------- | -------------------------------------------------------------------- |
+| Sound           | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja      | Sound, der gelöscht wird.                                            |
+| Audit-Log-Grund | [Text](../../../value-types.md#STRING)                       | Nein    | Grund, der im Audit-Log angezeigt wird. Maximale Länge: 512 Zeichen. |
 
 ### Soundboard-Sound abspielen {#send-soundboard-sound-to-channel}
 
@@ -628,10 +628,10 @@ Spielt einen Soundboard-Sound in einem Sprachkanal ab, dem der Bot beigetreten i
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Sprachkanal | [Sprachkanal](../../../value-types.md#GUILD_VOICE_CHANNEL) | Ja | Der Sprachkanal, in dem der Sound abgespielt wird. |
-| Sound | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja | Der Soundboard-Sound, der abgespielt wird. |
+| Name        | Typ                                                          | Pflicht | Details                                            |
+| ----------- | ------------------------------------------------------------ | ------- | -------------------------------------------------- |
+| Sprachkanal | [Sprachkanal](../../../value-types.md#GUILD_VOICE_CHANNEL)   | Ja      | Der Sprachkanal, in dem der Sound abgespielt wird. |
+| Sound       | [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Ja      | Der Soundboard-Sound, der abgespielt wird.         |
 
 ### Soundboard-Sounds abrufen {#fetch-guild-soundboard-sounds}
 
@@ -639,8 +639,8 @@ Ruft eine Liste aller Soundboard-Sounds in einem Server ab.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                                    | Details                           |
+| ------ | ---------------------------------------------------------------------- | --------------------------------- |
 | Sounds | Liste von [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Alle Soundboard-Sounds im Server. |
 
 ### Standard-Soundboard-Sounds abrufen {#fetch-default-soundboard-sounds}
@@ -649,8 +649,8 @@ Ruft Discords Standard-Soundboard-Sounds ab, die überall verfügbar sind.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                                    | Details                              |
+| ------ | ---------------------------------------------------------------------- | ------------------------------------ |
 | Sounds | Liste von [Soundboard-Sound](../../../value-types.md#SOUNDBOARD_SOUND) | Discords Standard-Soundboard-Sounds. |
 
 ### Willkommensbildschirm abrufen {#fetch-welcome-screen}
@@ -659,8 +659,8 @@ Lädt die Willkommensbildschirm-Konfiguration eines Servers.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                  | Typ                                                              | Details                               |
+| --------------------- | ---------------------------------------------------------------- | ------------------------------------- |
 | Willkommensbildschirm | [Willkommens-Bildschirm](../../../value-types.md#WELCOME_SCREEN) | Der abgerufene Willkommensbildschirm. |
 
 ### Willkommensbildschirm aktualisieren {#update-welcome-screen}
@@ -671,17 +671,17 @@ Benötigte Berechtigungen: Server verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Ob der Willkommensbildschirm aktiviert sein soll. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Nein | Neue Beschreibung des Willkommensbildschirms (max. 140 Zeichen). Maximale Länge: 140 Zeichen. |
-| Willkommenskanäle | Liste von [Willkommens-Bildschirm-Kanal](../../../value-types.md#WELCOME_SCREEN_CHANNEL) | Nein | Bis zu fünf hervorgehobene Kanäle. Höchstens 5 Einträge. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log vermerkt wird (max. 512 Zeichen). Maximale Länge: 512 Zeichen. |
+| Name              | Typ                                                                                      | Pflicht | Details                                                                                       |
+| ----------------- | ---------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| Aktiviert         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                               | Nein    | Ob der Willkommensbildschirm aktiviert sein soll.                                             |
+| Beschreibung      | [Text](../../../value-types.md#STRING)                                                   | Nein    | Neue Beschreibung des Willkommensbildschirms (max. 140 Zeichen). Maximale Länge: 140 Zeichen. |
+| Willkommenskanäle | Liste von [Willkommens-Bildschirm-Kanal](../../../value-types.md#WELCOME_SCREEN_CHANNEL) | Nein    | Bis zu fünf hervorgehobene Kanäle. Höchstens 5 Einträge.                                      |
+| Audit-Log-Grund   | [Text](../../../value-types.md#STRING)                                                   | Nein    | Grund, der im Audit-Log vermerkt wird (max. 512 Zeichen). Maximale Länge: 512 Zeichen.        |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                  | Typ                                                              | Details                                  |
+| --------------------- | ---------------------------------------------------------------- | ---------------------------------------- |
 | Willkommensbildschirm | [Willkommens-Bildschirm](../../../value-types.md#WELCOME_SCREEN) | Der aktualisierte Willkommensbildschirm. |
 
 ### Server-Onboarding abrufen {#fetch-guild-onboarding}
@@ -690,8 +690,8 @@ Lädt die Onboarding-Konfiguration eines Servers.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                                           | Details                                  |
+| ---------- | ------------------------------------------------------------- | ---------------------------------------- |
 | Onboarding | [Server-Onboarding](../../../value-types.md#GUILD_ONBOARDING) | Die abgerufene Onboarding-Konfiguration. |
 
 ### Server-Onboarding aktualisieren {#update-guild-onboarding}
@@ -702,18 +702,18 @@ Benötigte Berechtigungen: Server verwalten, Rollen verwalten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Prompts | Liste von [Onboarding-Prompt](../../../value-types.md#ONBOARDING_PROMPT) | Ja | Onboarding-Prompts, die neuen Mitgliedern angezeigt werden. |
-| Standard-Kanal-IDs | Liste von [Discord-ID](../../../value-types.md#SNOWFLAKE) | Ja | Kanäle, die standardmäßig für alle Mitglieder sichtbar sind. |
-| Aktiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob das Onboarding aktiviert sein soll. |
-| Modus | [Onboarding-Modus](../../../value-types.md#ONBOARDING_MODE) | Ja | Ob nur Standard-Kanäle oder auch Prompt-Kanäle für die Onboarding-Anforderungen zählen. |
-| Audit-Log-Grund | [Text](../../../value-types.md#STRING) | Nein | Grund, der im Audit-Log vermerkt wird (max. 512 Zeichen). Maximale Länge: 512 Zeichen. |
+| Name               | Typ                                                                      | Pflicht | Details                                                                                 |
+| ------------------ | ------------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------- |
+| Prompts            | Liste von [Onboarding-Prompt](../../../value-types.md#ONBOARDING_PROMPT) | Ja      | Onboarding-Prompts, die neuen Mitgliedern angezeigt werden.                             |
+| Standard-Kanal-IDs | Liste von [Discord-ID](../../../value-types.md#SNOWFLAKE)                | Ja      | Kanäle, die standardmäßig für alle Mitglieder sichtbar sind.                            |
+| Aktiviert          | [Ja/Nein](../../../value-types.md#BOOLEAN)                               | Ja      | Ob das Onboarding aktiviert sein soll.                                                  |
+| Modus              | [Onboarding-Modus](../../../value-types.md#ONBOARDING_MODE)              | Ja      | Ob nur Standard-Kanäle oder auch Prompt-Kanäle für die Onboarding-Anforderungen zählen. |
+| Audit-Log-Grund    | [Text](../../../value-types.md#STRING)                                   | Nein    | Grund, der im Audit-Log vermerkt wird (max. 512 Zeichen). Maximale Länge: 512 Zeichen.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                                           | Details                                     |
+| ---------- | ------------------------------------------------------------- | ------------------------------------------- |
 | Onboarding | [Server-Onboarding](../../../value-types.md#GUILD_ONBOARDING) | Die aktualisierte Onboarding-Konfiguration. |
 
 ### Widget-Bild-URL abrufen {#fetch-widget-image-url}
@@ -722,15 +722,15 @@ Gibt die URL des Server-Widget-Bilds im angeforderten Stil zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Stil | [Widget-Bild-Stil](../../../value-types.md#WIDGET_IMAGE_STYLE) | Ja | Wie das Widget-Bild aussieht. Standard: Abzeichen. |
+| Name | Typ                                                            | Pflicht | Details                                            |
+| ---- | -------------------------------------------------------------- | ------- | -------------------------------------------------- |
+| Stil | [Widget-Bild-Stil](../../../value-types.md#WIDGET_IMAGE_STYLE) | Ja      | Wie das Widget-Bild aussieht. Standard: Abzeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| URL | [URL](../../../value-types.md#URL) | URL, die auf das gerenderte Widget-Bild verweist. |
+| Name | Typ                                | Details                                           |
+| ---- | ---------------------------------- | ------------------------------------------------- |
+| URL  | [URL](../../../value-types.md#URL) | URL, die auf das gerenderte Widget-Bild verweist. |
 
 ### Server-Template nach Code abrufen {#fetch-guild-template-by-code}
 
@@ -738,14 +738,14 @@ Ruft ein Server-Template nach seinem öffentlichen Code ab.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vorlagen-Code | [Text](../../../value-types.md#STRING) | Ja | Öffentlicher Vorlagen-Code (der Teil nach discord.new/). Länge: 1 bis 32 Zeichen. |
+| Name          | Typ                                    | Pflicht | Details                                                                           |
+| ------------- | -------------------------------------- | ------- | --------------------------------------------------------------------------------- |
+| Vorlagen-Code | [Text](../../../value-types.md#STRING) | Ja      | Öffentlicher Vorlagen-Code (der Teil nach discord.new/). Länge: 1 bis 32 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                      | Details                                            |
+| -------- | -------------------------------------------------------- | -------------------------------------------------- |
 | Template | [Server-Vorlage](../../../value-types.md#GUILD_TEMPLATE) | Das abgerufene Template oder leer. Kann leer sein. |
 
 ### Server abrufen {#get-server}
@@ -754,6 +754,6 @@ Liest die Daten des aktuellen Servers.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                     | Details              |
+| ------ | --------------------------------------- | -------------------- |
 | Server | [Server](../../../value-types.md#GUILD) | Der aktuelle Server. |

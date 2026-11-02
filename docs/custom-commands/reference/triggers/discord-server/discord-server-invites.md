@@ -17,8 +17,8 @@ Required intents: `GuildInvites`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                           | Details                  |
+| ------ | ---------------------------------------------- | ------------------------ |
 | Invite | [Invite](../../../value-types.md#GUILD_INVITE) | Invite that was created. |
 
 ### Invite deleted {#invite-deleted}
@@ -29,6 +29,6 @@ Required intents: `GuildInvites`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                           | Details                                                                                            |
+| ------ | ---------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | Invite | [Invite](../../../value-types.md#GUILD_INVITE) | Invite that was deleted. Some fields may be empty since deleted invites carry limited information. |

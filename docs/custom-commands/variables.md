@@ -16,13 +16,13 @@ Steps work with values: a member, a channel, a number, a piece of text, a messag
 
 When you click **Use value** on an input, the **Data** tab of the panel lists every value you can use at that point, grouped by where it comes from:
 
-| Group               | What it holds                                                                                                       |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Group               | What it holds                                                                                                           |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | **Trigger**         | The values your trigger gives, like the new member, the message or the interaction. Slash command options are here too. |
-| **Steps**           | The values earlier steps gave back, like "Sent message" of a **Send message** step, labelled with their step number. |
-| **Flow inputs**     | The parameters another flow passes in, for flows with a **Manual trigger** or **Scheduled run**.                    |
-| **Module settings** | The settings of the module this flow belongs to. Only in [modules](/docs/custom-commands/modules).                  |
-| **Storage**         | Your [storage fields](/docs/custom-commands/storage). Picking one adds a step before this one that reads it.        |
+| **Steps**           | The values earlier steps gave back, like "Sent message" of a **Send message** step, labelled with their step number.    |
+| **Flow inputs**     | The parameters another flow passes in, for flows with a **Manual trigger** or **Scheduled run**.                        |
+| **Module settings** | The settings of the module this flow belongs to. Only in [modules](/docs/custom-commands/modules).                      |
+| **Storage**         | Your [storage fields](/docs/custom-commands/storage). Picking one adds a step before this one that reads it.            |
 
 Instead of a value from the flow, an input can also have a **Fixed value**: a channel you pick, a number or text you type, a color, a duration. A fixed value is the same on every run. See [Fixed values](#fixed).
 
@@ -60,11 +60,11 @@ Some values are lists, like the roles of a member. When you open a list, you can
 
 Some values are marked **may be empty**, for example the member of an interaction that happened in a DM, or a slash command option that isn't required. When you use one in an input that needs a value, the editor shows **May be empty** and offers three ways to handle it:
 
-| Choice                                                         | What it does                                                                                       |
-| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| **Use a fallback value**                                       | Adds a **Use a fallback when empty** step, where you set what to use instead.                      |
-| **Only run this and the following steps if the value is set**  | Wraps the step and everything below it in **If it has a value**.                                   |
-| **Ignore - an empty value is fine here**                       | Keeps it as it is. Use this when you know the value is always set, for example a member in a command that isn't allowed in DMs. You find ignored warnings again under **Ignored** in the **Issues** tab. |
+| Choice                                                        | What it does                                                                                                                                                                                             |
+| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Use a fallback value**                                      | Adds a **Use a fallback when empty** step, where you set what to use instead.                                                                                                                            |
+| **Only run this and the following steps if the value is set** | Wraps the step and everything below it in **If it has a value**.                                                                                                                                         |
+| **Ignore - an empty value is fine here**                      | Keeps it as it is. Use this when you know the value is always set, for example a member in a command that isn't allowed in DMs. You find ignored warnings again under **Ignored** in the **Issues** tab. |
 
 If you ignore it and the value is empty after all, the step fails when the flow runs.
 
@@ -76,19 +76,19 @@ Every type of value and its fields are listed on [Value types](/docs/custom-comm
 
 Click **Fixed value** on an empty input, or **Use a fixed value instead** in its menu. What you get depends on the input:
 
-| Input type             | How you fill it                                                                                    |
-| ---------------------- | -------------------------------------------------------------------------------------------------- |
-| Text                   | Type it. Press Enter for a real line break.                                                       |
-| Numbers                | Type a number. Some inputs show a **Min** and **Max**.                                            |
-| Yes/No                 | Choose **Yes / enabled** or **No / disabled**.                                                    |
-| Channel, role, member  | Pick it from your server. If the list doesn't load, you can paste a Discord ID instead. Pasting a mention or link works too: "We read the ID out of what you pasted." |
-| Duration               | A number and a unit: **Seconds**, **Minutes**, **Hours** or **Days**.                              |
-| Date & time            | Pick it. It uses your local timezone.                                                              |
-| Color                  | Pick it, or type six hex digits like `#5865f2`.                                                    |
-| Choice from a list     | Pick one of the values.                                                                            |
-| List or lookup table   | Click **Add entry** for each item. A lookup table also needs a **Key** per entry.                 |
-| Message                | Opens the message editor. See [Values in messages](#messages).                                    |
-| Modal                  | Opens the modal editor with a **Modal title** and **Modal fields**.                               |
+| Input type            | How you fill it                                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text                  | Type it. Press Enter for a real line break.                                                                                                                           |
+| Numbers               | Type a number. Some inputs show a **Min** and **Max**.                                                                                                                |
+| Yes/No                | Choose **Yes / enabled** or **No / disabled**.                                                                                                                        |
+| Channel, role, member | Pick it from your server. If the list doesn't load, you can paste a Discord ID instead. Pasting a mention or link works too: "We read the ID out of what you pasted." |
+| Duration              | A number and a unit: **Seconds**, **Minutes**, **Hours** or **Days**.                                                                                                 |
+| Date & time           | Pick it. It uses your local timezone.                                                                                                                                 |
+| Color                 | Pick it, or type six hex digits like `#5865f2`.                                                                                                                       |
+| Choice from a list    | Pick one of the values.                                                                                                                                               |
+| List or lookup table  | Click **Add entry** for each item. A lookup table also needs a **Key** per entry.                                                                                     |
+| Message               | Opens the message editor. See [Values in messages](#messages).                                                                                                        |
+| Modal                 | Opens the modal editor with a **Modal title** and **Modal fields**.                                                                                                   |
 
 Some inputs only take a value from the flow, and say "This input only takes a value that an earlier step produced." If a channel or role you picked was deleted on Discord, the input shows "doesn't match anything on this server". Pick it again.
 
@@ -172,10 +172,10 @@ Common problems with this flow:
 
 ## Common mistakes {#mistakes}
 
-| What happens                                              | Why, and how to fix it                                                                                              |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| The message shows `{var:...}` instead of a value          | The placeholder was typed into a plain text input, not a message. Use a text template with **Insert a value** there. |
-| A member appears as a number or not at all                | You inserted the wrong field. Open the member and pick **Mention** or **Display name**.                             |
-| You can't find a value in the **Data** tab                | It doesn't fit the input, or it comes from a step below this one or inside another branch. Turn off **Hide values that don't fit**, or move the step. |
-| **Wrong type** on an input                                | The value is of another kind than the input needs. Pick a field of it, or use the conversion the **Data** tab offers. |
-| `%name%` stays in the message                             | No message parameter with that name is set on the sending step, and it isn't a [global parameter](/docs/custom-bot/global-parameters). Add it under **Message parameters**. |
+| What happens                                     | Why, and how to fix it                                                                                                                                                      |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| The message shows `{var:...}` instead of a value | The placeholder was typed into a plain text input, not a message. Use a text template with **Insert a value** there.                                                        |
+| A member appears as a number or not at all       | You inserted the wrong field. Open the member and pick **Mention** or **Display name**.                                                                                     |
+| You can't find a value in the **Data** tab       | It doesn't fit the input, or it comes from a step below this one or inside another branch. Turn off **Hide values that don't fit**, or move the step.                       |
+| **Wrong type** on an input                       | The value is of another kind than the input needs. Pick a field of it, or use the conversion the **Data** tab offers.                                                       |
+| `%name%` stays in the message                    | No message parameter with that name is set on the sending step, and it isn't a [global parameter](/docs/custom-bot/global-parameters). Add it under **Message parameters**. |

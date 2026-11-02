@@ -17,8 +17,8 @@ Benötigte Intents: `AutoModerationConfiguration`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                            |
+| ----- | ----------------------------------------------------- | ---------------------------------- |
 | Regel | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel, die erstellt wurde. |
 
 ### AutoMod-Regel aktualisiert {#automod-rule-updated}
@@ -29,10 +29,10 @@ Benötigte Intents: `AutoModerationConfiguration`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name            | Typ                                                   | Details                                                      |
+| --------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
 | Vorherige Regel | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel-Status vor der Aktualisierung. Kann leer sein. |
-| Aktuelle Regel | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel-Status nach der Aktualisierung. |
+| Aktuelle Regel  | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel-Status nach der Aktualisierung.                |
 
 ### AutoMod-Regel gelöscht {#automod-rule-deleted}
 
@@ -42,8 +42,8 @@ Benötigte Intents: `AutoModerationConfiguration`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                            |
+| ----- | ----------------------------------------------------- | ---------------------------------- |
 | Regel | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel, die gelöscht wurde. |
 
 ### AutoMod-Aktion ausgeführt {#automod-action-executed}
@@ -54,14 +54,14 @@ Benötigte Intents: `AutoModerationExecution`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Regel | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel, die ausgelöst wurde. |
-| Server | [Server](../../../value-types.md#GUILD) | Server, in dem die Aktion stattgefunden hat. |
-| Kanal | [Kanal](../../../value-types.md#CHANNEL) | Kanal, in dem der anstößige Inhalt gesendet wurde, falls zutreffend. Kann leer sein. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der die Regel ausgelöst hat. |
-| Mitglied-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | ID des Mitglieds, das die Regel ausgelöst hat. |
-| Übereinstimmendes Schlüsselwort | [Text](../../../value-types.md#STRING) | Schlüsselwort, das die Regel erfüllt, falls vorhanden. Kann leer sein. |
-| Übereinstimmender Inhalt | [Text](../../../value-types.md#STRING) | Teilstring des Inhalts, der die Regel erfüllt, falls vorhanden. Kann leer sein. |
-| Warnnachrichts-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | ID der Systemwarnmeldung, die im Warnkanal gepostet wurde, falls vorhanden. Kann leer sein. |
-| Inhalt | [Text](../../../value-types.md#STRING) | Vollständiger Inhalt, der die Regel ausgelöst hat. |
+| Name                            | Typ                                                   | Details                                                                                     |
+| ------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Regel                           | [AutoMod-Regel](../../../value-types.md#AUTOMOD_RULE) | AutoMod-Regel, die ausgelöst wurde.                                                         |
+| Server                          | [Server](../../../value-types.md#GUILD)               | Server, in dem die Aktion stattgefunden hat.                                                |
+| Kanal                           | [Kanal](../../../value-types.md#CHANNEL)              | Kanal, in dem der anstößige Inhalt gesendet wurde, falls zutreffend. Kann leer sein.        |
+| Benutzer                        | [Benutzer](../../../value-types.md#DISCORD_USER)      | Benutzer, der die Regel ausgelöst hat.                                                      |
+| Mitglied-ID                     | [Discord-ID](../../../value-types.md#SNOWFLAKE)       | ID des Mitglieds, das die Regel ausgelöst hat.                                              |
+| Übereinstimmendes Schlüsselwort | [Text](../../../value-types.md#STRING)                | Schlüsselwort, das die Regel erfüllt, falls vorhanden. Kann leer sein.                      |
+| Übereinstimmender Inhalt        | [Text](../../../value-types.md#STRING)                | Teilstring des Inhalts, der die Regel erfüllt, falls vorhanden. Kann leer sein.             |
+| Warnnachrichts-ID               | [Discord-ID](../../../value-types.md#SNOWFLAKE)       | ID der Systemwarnmeldung, die im Warnkanal gepostet wurde, falls vorhanden. Kann leer sein. |
+| Inhalt                          | [Text](../../../value-types.md#STRING)                | Vollständiger Inhalt, der die Regel ausgelöst hat.                                          |

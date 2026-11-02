@@ -92,21 +92,21 @@ Um nach einem Schritt, der fehlschlagen kann, weiterzumachen, packe ihn in **Ver
 
 Diese Schritte aus der Kategorie [Ablaufsteuerung](/de/docs/custom-commands/reference/actions/control-flow) bestimmen, wie dein Flow abläuft:
 
-| Schritt                              | Was er macht                                                                                       |
-| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
-| **Wenn**                             | Führt **Wenn wahr** aus, wenn die Bedingung wahr ist, sonst den Zweig **Sonst** (der optional ist). |
-| **Wenn ein Wert da ist**             | Führt einen Zweig aus, wenn ein Wert gesetzt ist, und einen anderen, wenn er leer ist.             |
-| **Switch**                           | Führt den Zweig aus, dessen Wert passt. Füge einen Standardfall für alles andere hinzu.            |
-| **Nach Art verzweigen**              | Führt für jede Art von Wert einen anderen Zweig aus, für Werte, die eine von mehreren Arten sein können. |
-| **Nach Unterbefehl verzweigen**      | Führt einen Zweig pro Unterbefehl deines Slash-Commands aus.                                       |
-| **Zufälliger Zweig**                 | Wählt zufällig einen Zweig aus, anhand der Gewichtungen in Prozent, die du festlegst.              |
-| **Versuchen**                        | Führt seine Schritte aus und, wenn einer fehlschlägt, **Wenn ein Schritt fehlschlägt**, statt den ganzen Flow scheitern zu lassen. |
-| **Für jeden Eintrag**                | Führt seine Schritte für jeden Eintrag einer Liste einmal aus.                                     |
-| **Für jeden Eintrag der Zuordnung**  | Führt seine Schritte für jeden Eintrag einer Zuordnung einmal aus.                                 |
-| **Wiederholen**                      | Führt seine Schritte eine feste Anzahl von Malen aus.                                              |
-| **Warten**                           | Pausiert den Flow für eine Weile.                                                                  |
-| **Flow stoppen**                     | Beendet den Flow genau an dieser Stelle. Schritte danach können nie laufen und werden als **Nicht erreichbar** angezeigt. |
-| **Anmerkung**                        | Eine Haftnotiz für dich und dein Team. Sie macht nichts, wenn der Flow läuft.                      |
+| Schritt                             | Was er macht                                                                                                                       |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Wenn**                            | Führt **Wenn wahr** aus, wenn die Bedingung wahr ist, sonst den Zweig **Sonst** (der optional ist).                                |
+| **Wenn ein Wert da ist**            | Führt einen Zweig aus, wenn ein Wert gesetzt ist, und einen anderen, wenn er leer ist.                                             |
+| **Switch**                          | Führt den Zweig aus, dessen Wert passt. Füge einen Standardfall für alles andere hinzu.                                            |
+| **Nach Art verzweigen**             | Führt für jede Art von Wert einen anderen Zweig aus, für Werte, die eine von mehreren Arten sein können.                           |
+| **Nach Unterbefehl verzweigen**     | Führt einen Zweig pro Unterbefehl deines Slash-Commands aus.                                                                       |
+| **Zufälliger Zweig**                | Wählt zufällig einen Zweig aus, anhand der Gewichtungen in Prozent, die du festlegst.                                              |
+| **Versuchen**                       | Führt seine Schritte aus und, wenn einer fehlschlägt, **Wenn ein Schritt fehlschlägt**, statt den ganzen Flow scheitern zu lassen. |
+| **Für jeden Eintrag**               | Führt seine Schritte für jeden Eintrag einer Liste einmal aus.                                                                     |
+| **Für jeden Eintrag der Zuordnung** | Führt seine Schritte für jeden Eintrag einer Zuordnung einmal aus.                                                                 |
+| **Wiederholen**                     | Führt seine Schritte eine feste Anzahl von Malen aus.                                                                              |
+| **Warten**                          | Pausiert den Flow für eine Weile.                                                                                                  |
+| **Flow stoppen**                    | Beendet den Flow genau an dieser Stelle. Schritte danach können nie laufen und werden als **Nicht erreichbar** angezeigt.          |
+| **Anmerkung**                       | Eine Haftnotiz für dich und dein Team. Sie macht nichts, wenn der Flow läuft.                                                      |
 
 Mit **Verzweigung hinzufügen** fügst du bei Schritten wie **Switch** und **Zufälliger Zweig** weitere Zweige hinzu. Bei **Zufälliger Zweig** dürfen die Gewichtungen zusammen weniger als 100 % ergeben: Der Rest ist die Wahrscheinlichkeit, dass kein Zweig läuft. **Schleife abbrechen** und **Schleife fortsetzen** verlassen eine Schleife vorzeitig oder springen zu ihrer nächsten Runde. Sie funktionieren nur innerhalb einer Schleife.
 
@@ -163,24 +163,24 @@ Wenn du versuchst, einen Flow mit blockierenden Problemen einzuschalten, siehst 
 
 Manche Schritte tragen ein eigenes Abzeichen:
 
-| Abzeichen            | Was es bedeutet                                                                                       |
-| -------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Unvollständig**    | Eine erforderliche Eingabe ist nicht gesetzt, oder ein fester Wert ist ungültig.                      |
-| **Verbindung verloren** | Eine Eingabe verwendet einen Wert, den es nicht mehr gibt.                                         |
-| **Nicht erreichbar** | Ein Schritt darüber, zum Beispiel **Flow stoppen**, beendet den Flow immer vorher.                    |
-| **Veraltet**         | Die Aktion funktioniert noch, wird aber eventuell später entfernt. Ersetze sie, wenn du kannst.       |
-| **Wert prüfen**      | Ein fester Wert passt nicht zu seinem Typ. Er läuft vorerst noch, wird aber später abgelehnt.         |
-| "Unbekannte Aktion"  | Die Version deines Bots kennt diese Aktion nicht, zum Beispiel in einem Flow aus einer neueren App. Sie bleibt, wie sie ist, und du kannst sie verschieben oder löschen. Starte deinen Bot neu, um ihn zu aktualisieren. |
+| Abzeichen               | Was es bedeutet                                                                                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Unvollständig**       | Eine erforderliche Eingabe ist nicht gesetzt, oder ein fester Wert ist ungültig.                                                                                                                                         |
+| **Verbindung verloren** | Eine Eingabe verwendet einen Wert, den es nicht mehr gibt.                                                                                                                                                               |
+| **Nicht erreichbar**    | Ein Schritt darüber, zum Beispiel **Flow stoppen**, beendet den Flow immer vorher.                                                                                                                                       |
+| **Veraltet**            | Die Aktion funktioniert noch, wird aber eventuell später entfernt. Ersetze sie, wenn du kannst.                                                                                                                          |
+| **Wert prüfen**         | Ein fester Wert passt nicht zu seinem Typ. Er läuft vorerst noch, wird aber später abgelehnt.                                                                                                                            |
+| "Unbekannte Aktion"     | Die Version deines Bots kennt diese Aktion nicht, zum Beispiel in einem Flow aus einer neueren App. Sie bleibt, wie sie ist, und du kannst sie verschieben oder löschen. Starte deinen Bot neu, um ihn zu aktualisieren. |
 
 ## Häufige Fehler {#mistakes}
 
-| Was passiert                                                  | Warum, und wie du es behebst                                                                                               |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| Der Flow läuft nie                                            | Er ist noch ein **Entwurf**, oder sein Modul ist **Deaktiviert**. Prüfe den Schalter in der Toolbar und das Modul.         |
-| Ein Button zeigt in Discord "Diese Interaktion ist fehlgeschlagen" | Der Flow dahinter ist nicht aktiv, wurde gelöscht oder hat nie geantwortet. Prüfe seinen Ausführungsverlauf.          |
-| Die Ausführung schlägt wegen einer fehlenden Berechtigung fehl | Deinem Bot fehlt eine Discord-Berechtigung, oder seine Rolle steht unter der Rolle oder dem Mitglied, auf das er einwirkt. Schiebe die Rolle deines Bots nach oben. |
-| Eine Eingabe hat ihren Wert verloren, nachdem du einen Schritt verschoben oder gelöscht hast | Werte sind nur unterhalb des Schritts verfügbar, der sie erzeugt. Schiebe den Schritt zurück oder wähle einen neuen Wert. |
-| Der Flow läuft für dieselbe Sache zweimal                     | Zwei aktive Flows, oder ein Modul und sein Duplikat, reagieren auf denselben Trigger. Schalte einen davon aus.             |
+| Was passiert                                                                                 | Warum, und wie du es behebst                                                                                                                                        |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Der Flow läuft nie                                                                           | Er ist noch ein **Entwurf**, oder sein Modul ist **Deaktiviert**. Prüfe den Schalter in der Toolbar und das Modul.                                                  |
+| Ein Button zeigt in Discord "Diese Interaktion ist fehlgeschlagen"                           | Der Flow dahinter ist nicht aktiv, wurde gelöscht oder hat nie geantwortet. Prüfe seinen Ausführungsverlauf.                                                        |
+| Die Ausführung schlägt wegen einer fehlenden Berechtigung fehl                               | Deinem Bot fehlt eine Discord-Berechtigung, oder seine Rolle steht unter der Rolle oder dem Mitglied, auf das er einwirkt. Schiebe die Rolle deines Bots nach oben. |
+| Eine Eingabe hat ihren Wert verloren, nachdem du einen Schritt verschoben oder gelöscht hast | Werte sind nur unterhalb des Schritts verfügbar, der sie erzeugt. Schiebe den Schritt zurück oder wähle einen neuen Wert.                                           |
+| Der Flow läuft für dieselbe Sache zweimal                                                    | Zwei aktive Flows, oder ein Modul und sein Duplikat, reagieren auf denselben Trigger. Schalte einen davon aus.                                                      |
 
 ## Cooldowns {#cooldowns}
 

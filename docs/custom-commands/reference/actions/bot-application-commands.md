@@ -17,19 +17,19 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Yes | Lowercase command name (1-32 chars). Length: 1 to 32 characters. Must match `^[-_a-z0-9]+$`. |
-| Description | [Text](../../value-types.md#STRING) | Yes | Command description (1-100 chars). Length: 1 to 100 characters. |
-| Options | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No | Parameters for the command. Maximum items: 25. |
-| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No | Permissions required by default to use the command. |
-| DM permission | [Yes/No](../../value-types.md#BOOLEAN) | No | Whether the command can be used in DMs. Default: Yes. |
-| NSFW | [Yes/No](../../value-types.md#BOOLEAN) | No | Whether the command is age-restricted. Default: No. |
+| Name                | Type                                                                      | Required | Details                                                                                      |
+| ------------------- | ------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
+| Name                | [Text](../../value-types.md#STRING)                                       | Yes      | Lowercase command name (1-32 chars). Length: 1 to 32 characters. Must match `^[-_a-z0-9]+$`. |
+| Description         | [Text](../../value-types.md#STRING)                                       | Yes      | Command description (1-100 chars). Length: 1 to 100 characters.                              |
+| Options             | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No       | Parameters for the command. Maximum items: 25.                                               |
+| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG)                | No       | Permissions required by default to use the command.                                          |
+| DM permission       | [Yes/No](../../value-types.md#BOOLEAN)                                    | No       | Whether the command can be used in DMs. Default: Yes.                                        |
+| NSFW                | [Yes/No](../../value-types.md#BOOLEAN)                                    | No       | Whether the command is age-restricted. Default: No.                                          |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                            | Details                             |
+| ------- | --------------------------------------------------------------- | ----------------------------------- |
 | Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | The registered application command. |
 
 ### Create user context menu (server) {#create-guild-user-context-menu}
@@ -40,15 +40,15 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Yes | Display name of the context menu entry. Length: 1 to 32 characters. |
-| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No | Permissions required by default to use the command. |
+| Name                | Type                                                       | Required | Details                                                             |
+| ------------------- | ---------------------------------------------------------- | -------- | ------------------------------------------------------------------- |
+| Name                | [Text](../../value-types.md#STRING)                        | Yes      | Display name of the context menu entry. Length: 1 to 32 characters. |
+| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No       | Permissions required by default to use the command.                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                            | Details                              |
+| ------- | --------------------------------------------------------------- | ------------------------------------ |
 | Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | The registered context menu command. |
 
 ### Create message context menu (server) {#create-guild-message-context-menu}
@@ -59,15 +59,15 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Yes | Display name of the context menu entry. Length: 1 to 32 characters. |
-| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No | Permissions required by default to use the command. |
+| Name                | Type                                                       | Required | Details                                                             |
+| ------------------- | ---------------------------------------------------------- | -------- | ------------------------------------------------------------------- |
+| Name                | [Text](../../value-types.md#STRING)                        | Yes      | Display name of the context menu entry. Length: 1 to 32 characters. |
+| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No       | Permissions required by default to use the command.                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                            | Details                              |
+| ------- | --------------------------------------------------------------- | ------------------------------------ |
 | Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | The registered context menu command. |
 
 ### Create global slash command {#create-global-slash-command}
@@ -76,19 +76,19 @@ Registers a new slash command globally across all servers.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Name | [Text](../../value-types.md#STRING) | Yes | Lowercase command name (1-32 chars). Length: 1 to 32 characters. Must match `^[-_a-z0-9]+$`. |
-| Description | [Text](../../value-types.md#STRING) | Yes | Command description (1-100 chars). Length: 1 to 100 characters. |
-| Options | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No | Parameters for the command. Maximum items: 25. |
-| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No | Permissions required by default to use the command. |
-| DM permission | [Yes/No](../../value-types.md#BOOLEAN) | No | Whether the command can be used in DMs. Default: Yes. |
-| NSFW | [Yes/No](../../value-types.md#BOOLEAN) | No | Whether the command is age-restricted. Default: No. |
+| Name                | Type                                                                      | Required | Details                                                                                      |
+| ------------------- | ------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------- |
+| Name                | [Text](../../value-types.md#STRING)                                       | Yes      | Lowercase command name (1-32 chars). Length: 1 to 32 characters. Must match `^[-_a-z0-9]+$`. |
+| Description         | [Text](../../value-types.md#STRING)                                       | Yes      | Command description (1-100 chars). Length: 1 to 100 characters.                              |
+| Options             | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No       | Parameters for the command. Maximum items: 25.                                               |
+| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG)                | No       | Permissions required by default to use the command.                                          |
+| DM permission       | [Yes/No](../../value-types.md#BOOLEAN)                                    | No       | Whether the command can be used in DMs. Default: Yes.                                        |
+| NSFW                | [Yes/No](../../value-types.md#BOOLEAN)                                    | No       | Whether the command is age-restricted. Default: No.                                          |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                            | Details                             |
+| ------- | --------------------------------------------------------------- | ----------------------------------- |
 | Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | The registered application command. |
 
 ### Update application command {#update-application-command}
@@ -99,19 +99,19 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | Yes | The command to update. |
-| Name | [Text](../../value-types.md#STRING) | No | New name for the command. Length: 1 to 32 characters. |
-| Description | [Text](../../value-types.md#STRING) | No | New description for the command. Maximum length: 100 characters. |
-| Options | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No | New options for the command. Maximum items: 25. |
-| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG) | No | New default member permissions. |
-| NSFW | [Yes/No](../../value-types.md#BOOLEAN) | No | Whether the command should be age-restricted. |
+| Name                | Type                                                                      | Required | Details                                                          |
+| ------------------- | ------------------------------------------------------------------------- | -------- | ---------------------------------------------------------------- |
+| Command             | [Application command](../../value-types.md#APPLICATION_COMMAND)           | Yes      | The command to update.                                           |
+| Name                | [Text](../../value-types.md#STRING)                                       | No       | New name for the command. Length: 1 to 32 characters.            |
+| Description         | [Text](../../value-types.md#STRING)                                       | No       | New description for the command. Maximum length: 100 characters. |
+| Options             | List of [Command option](../../value-types.md#APPLICATION_COMMAND_OPTION) | No       | New options for the command. Maximum items: 25.                  |
+| Default permissions | List of [Permission](../../value-types.md#PERMISSION_FLAG)                | No       | New default member permissions.                                  |
+| NSFW                | [Yes/No](../../value-types.md#BOOLEAN)                                    | No       | Whether the command should be age-restricted.                    |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                            | Details                          |
+| ------- | --------------------------------------------------------------- | -------------------------------- |
 | Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | The updated application command. |
 
 ### Delete application command {#delete-application-command}
@@ -122,9 +122,9 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | Yes | The command to delete. |
+| Name    | Type                                                            | Required | Details                |
+| ------- | --------------------------------------------------------------- | -------- | ---------------------- |
+| Command | [Application command](../../value-types.md#APPLICATION_COMMAND) | Yes      | The command to delete. |
 
 ### Bulk set server commands {#bulk-set-guild-application-commands}
 
@@ -134,14 +134,14 @@ Required permissions: Manage server.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Commands | List of [Application command](../../value-types.md#APPLICATION_COMMAND) | Yes | Full list of commands to register in the server. |
+| Name     | Type                                                                    | Required | Details                                          |
+| -------- | ----------------------------------------------------------------------- | -------- | ------------------------------------------------ |
+| Commands | List of [Application command](../../value-types.md#APPLICATION_COMMAND) | Yes      | Full list of commands to register in the server. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                                                    | Details                            |
+| -------- | ----------------------------------------------------------------------- | ---------------------------------- |
 | Commands | List of [Application command](../../value-types.md#APPLICATION_COMMAND) | The resulting registered commands. |
 
 ### Fetch server commands {#fetch-guild-application-commands}
@@ -150,8 +150,8 @@ Fetches every application command registered in a server.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                                                    | Details                      |
+| -------- | ----------------------------------------------------------------------- | ---------------------------- |
 | Commands | List of [Application command](../../value-types.md#APPLICATION_COMMAND) | The list of server commands. |
 
 ### Fetch global commands {#fetch-global-application-commands}
@@ -160,6 +160,6 @@ Fetches every application command registered globally.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                                                    | Details                      |
+| -------- | ----------------------------------------------------------------------- | ---------------------------- |
 | Commands | List of [Application command](../../value-types.md#APPLICATION_COMMAND) | The list of global commands. |

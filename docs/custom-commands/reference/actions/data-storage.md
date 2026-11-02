@@ -15,15 +15,15 @@ Builds a shape value with named, typed fields, following one of the shapes decla
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Shape | [Shape](../../value-types.md#RECORD_TYPE) | Yes | Which shape the new shape value follows. It decides which fields it has and what type each of them is. |
-| Contents | [Shape value](../../value-types.md#RECORD_VALUE) | Yes | One value per field of the selected shape. Optional fields may be left empty and then read back as empty. |
+| Name     | Type                                             | Required | Details                                                                                                   |
+| -------- | ------------------------------------------------ | -------- | --------------------------------------------------------------------------------------------------------- |
+| Shape    | [Shape](../../value-types.md#RECORD_TYPE)        | Yes      | Which shape the new shape value follows. It decides which fields it has and what type each of them is.    |
+| Contents | [Shape value](../../value-types.md#RECORD_VALUE) | Yes      | One value per field of the selected shape. Optional fields may be left empty and then read back as empty. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                             | Details              |
+| ----------- | ------------------------------------------------ | -------------------- |
 | Shape value | [Shape value](../../value-types.md#RECORD_VALUE) | The new shape value. |
 
 ### Get a field of a shape value {#record-get}
@@ -32,15 +32,15 @@ Reads one field of a shape value. The value has the type declared for that field
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Shape value | [Shape value](../../value-types.md#RECORD) | Yes | The shape value to read from. |
-| Field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | Yes | Which field to read. Maximum length: 64 characters. |
+| Name        | Type                                                        | Required | Details                                             |
+| ----------- | ----------------------------------------------------------- | -------- | --------------------------------------------------- |
+| Shape value | [Shape value](../../value-types.md#RECORD)                  | Yes      | The shape value to read from.                       |
+| Field       | [Field of a shape value](../../value-types.md#RECORD_FIELD) | Yes      | Which field to read. Maximum length: 64 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                   | Details                                                                                   |
+| ----- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
 | Value | [Field value](../../value-types.md#RECORD_FIELD_VALUE) | The field's value, or empty when the shape value does not carry that field. May be empty. |
 
 ### Update fields of a shape value {#record-update}
@@ -49,16 +49,16 @@ Makes a copy of a shape value with only the fields you choose changed. Every oth
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Shape value | [Shape value](../../value-types.md#RECORD) | Yes | The value to change. It is not changed itself: the step gives back an updated copy. |
-| Shape | [Shape](../../value-types.md#RECORD_TYPE) | No | The shape of the value. When set, the new values are checked against it when the flow runs, and fields the value is missing because they were added to the shape later get their defaults. |
-| Changes | [Field changes](../../value-types.md#RECORD_PATCH) | Yes | The fields to change and their new values. Leave a field out to keep it. An empty value is only allowed for fields that may be empty. |
+| Name        | Type                                               | Required | Details                                                                                                                                                                                    |
+| ----------- | -------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Shape value | [Shape value](../../value-types.md#RECORD)         | Yes      | The value to change. It is not changed itself: the step gives back an updated copy.                                                                                                        |
+| Shape       | [Shape](../../value-types.md#RECORD_TYPE)          | No       | The shape of the value. When set, the new values are checked against it when the flow runs, and fields the value is missing because they were added to the shape later get their defaults. |
+| Changes     | [Field changes](../../value-types.md#RECORD_PATCH) | Yes      | The fields to change and their new values. Leave a field out to keep it. An empty value is only allowed for fields that may be empty.                                                      |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name          | Type                                             | Details                                           |
+| ------------- | ------------------------------------------------ | ------------------------------------------------- |
 | Updated value | [Shape value](../../value-types.md#RECORD_VALUE) | The copy with your changes. Save it to keep them. |
 
 ### Read a stored value {#get-storage-value}
@@ -67,17 +67,17 @@ Reads a value from a storage field.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Default | [Stored value](../../value-types.md#STORAGE_VALUE) | No | Value returned when nothing is stored (must match the field type). |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Default       | [Stored value](../../value-types.md#STORAGE_VALUE)  | No       | Value returned when nothing is stored (must match the field type).                         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                               | Details                                                      |
+| ----- | -------------------------------------------------- | ------------------------------------------------------------ |
 | Value | [Stored value](../../value-types.md#STORAGE_VALUE) | Stored value, or empty when nothing is stored. May be empty. |
 
 ### Store a value {#set-storage-value}
@@ -86,17 +86,17 @@ Writes a value to a storage field.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Value | [Stored value](../../value-types.md#STORAGE_VALUE) | Yes | Value to store. Must match the type declared on the field. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Value         | [Stored value](../../value-types.md#STORAGE_VALUE)  | Yes      | Value to store. Must match the type declared on the field.                                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                   | Details                                                               |
+| -------- | -------------------------------------- | --------------------------------------------------------------------- |
 | Replaced | [Yes/No](../../value-types.md#BOOLEAN) | Whether a value was already stored here and has now been overwritten. |
 
 ### Increase a stored number {#increment-storage-value}
@@ -105,19 +105,19 @@ Adds a number to a numeric storage field, or to a number field inside a stored s
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Field in the shape | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the whole number or decimal number field to change. Leave it empty for a plain number field. Maximum length: 64 characters. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| By | [Decimal number](../../value-types.md#FLOAT) | Yes | Amount to add (can be negative). Turn on Subtract to take it away. Default: `1`. |
-| Subtract | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Takes the amount away instead of adding it. Default: No. |
+| Name               | Type                                                        | Required | Details                                                                                                                                               |
+| ------------------ | ----------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage field      | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                                                          |
+| Field in the shape | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the whole number or decimal number field to change. Leave it empty for a plain number field. Maximum length: 64 characters. |
+| Subject            | [User](../../value-types.md#DISCORD_USER)                   | No       | User the value belongs to (required for user-scoped fields).                                                                                          |
+| Key                | [Text](../../value-types.md#STRING)                         | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters.                                                            |
+| By                 | [Decimal number](../../value-types.md#FLOAT)                | Yes      | Amount to add (can be negative). Turn on Subtract to take it away. Default: `1`.                                                                      |
+| Subtract           | [Yes/No](../../value-types.md#BOOLEAN)                      | Yes      | Takes the amount away instead of adding it. Default: No.                                                                                              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name      | Type                                               | Details                 |
+| --------- | -------------------------------------------------- | ----------------------- |
 | New value | [Stored value](../../value-types.md#STORAGE_VALUE) | Value after the change. |
 
 ### Delete a stored value {#delete-storage-value}
@@ -126,11 +126,11 @@ Deletes a stored value from a storage field.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
 
 ### List storage entries {#list-storage-entries}
 
@@ -138,17 +138,17 @@ Returns the top entries of a storage field sorted by value (e.g. for leaderboard
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the number field to order the entries by. Leave it empty to list every entry. Maximum length: 64 characters. |
-| Direction | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes | Sort direction (descending returns the highest values first). Default: Descending. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of entries to return (1-100). Value: 1 to 100. Default: `10`. |
+| Name          | Type                                                        | Required | Details                                                                                                                                |
+| ------------- | ----------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                                           |
+| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the number field to order the entries by. Leave it empty to list every entry. Maximum length: 64 characters. |
+| Direction     | [Sort direction](../../value-types.md#SORT_DIRECTION)       | Yes      | Sort direction (descending returns the highest values first). Default: Descending.                                                     |
+| Limit         | [Whole number](../../value-types.md#INTEGER)                | Yes      | Maximum number of entries to return (1-100). Value: 1 to 100. Default: `10`.                                                           |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                        | Details                                          |
+| ------- | ----------------------------------------------------------- | ------------------------------------------------ |
 | Entries | List of [Storage entry](../../value-types.md#STORAGE_ENTRY) | Sorted entries, each with its subject and value. |
 
 ### List storage entries (paginated) {#list-storage-entries-paginated}
@@ -157,24 +157,24 @@ Returns one page of storage entries sorted by value, with total/page metadata. U
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the number field to order the entries by. Leave it empty to list every entry. Maximum length: 64 characters. |
-| Direction | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes | Sort direction (descending returns the highest values first). Default: Descending. |
-| Entries per page | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum entries per page (1-100). Value: 1 to 100. Default: `10`. |
-| Page | [Whole number](../../value-types.md#INTEGER) | Yes | One-based page number to return. Value: 1 to 1000000. Default: `1`. |
+| Name             | Type                                                        | Required | Details                                                                                                                                |
+| ---------------- | ----------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage field    | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                                           |
+| Rank by field    | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the number field to order the entries by. Leave it empty to list every entry. Maximum length: 64 characters. |
+| Direction        | [Sort direction](../../value-types.md#SORT_DIRECTION)       | Yes      | Sort direction (descending returns the highest values first). Default: Descending.                                                     |
+| Entries per page | [Whole number](../../value-types.md#INTEGER)                | Yes      | Maximum entries per page (1-100). Value: 1 to 100. Default: `10`.                                                                      |
+| Page             | [Whole number](../../value-types.md#INTEGER)                | Yes      | One-based page number to return. Value: 1 to 1000000. Default: `1`.                                                                    |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Entries | List of [Storage entry](../../value-types.md#STORAGE_ENTRY) | Entries on this page. The value is already the selected field's stored value; user fields expose a resolved user. |
-| Total entries | [Whole number](../../value-types.md#INTEGER) | Total entries across all pages. |
-| Page | [Whole number](../../value-types.md#INTEGER) | The requested page number. |
-| Page count | [Whole number](../../value-types.md#INTEGER) | Total available pages. |
-| Has next page | [Yes/No](../../value-types.md#BOOLEAN) | Whether another page follows. |
-| Has previous page | [Yes/No](../../value-types.md#BOOLEAN) | Whether a previous page exists. |
+| Name              | Type                                                        | Details                                                                                                           |
+| ----------------- | ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Entries           | List of [Storage entry](../../value-types.md#STORAGE_ENTRY) | Entries on this page. The value is already the selected field's stored value; user fields expose a resolved user. |
+| Total entries     | [Whole number](../../value-types.md#INTEGER)                | Total entries across all pages.                                                                                   |
+| Page              | [Whole number](../../value-types.md#INTEGER)                | The requested page number.                                                                                        |
+| Page count        | [Whole number](../../value-types.md#INTEGER)                | Total available pages.                                                                                            |
+| Has next page     | [Yes/No](../../value-types.md#BOOLEAN)                      | Whether another page follows.                                                                                     |
+| Has previous page | [Yes/No](../../value-types.md#BOOLEAN)                      | Whether a previous page exists.                                                                                   |
 
 ### Get rank of a stored value {#get-storage-rank}
 
@@ -182,17 +182,17 @@ Returns the position of a subject inside a storage field when sorted by value (e
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the whole number or decimal number field to rank by. Maximum length: 64 characters. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Name          | Type                                                        | Required | Details                                                                                                       |
+| ------------- | ----------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                  |
+| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the whole number or decimal number field to rank by. Maximum length: 64 characters. |
+| Subject       | [User](../../value-types.md#DISCORD_USER)                   | No       | User the value belongs to (required for user-scoped fields).                                                  |
+| Key           | [Text](../../value-types.md#STRING)                         | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters.                    |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                         | Details                                                                                  |
+| ---- | -------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | Rank | [Whole number](../../value-types.md#INTEGER) | Position sorted by value (starting at 1), or empty when nothing is stored. May be empty. |
 
 ### Add item to stored list {#array-push-storage}
@@ -201,17 +201,17 @@ Safely adds an item to the end of a stored list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Item | [Any](../../value-types.md#ANY) | Yes | Item to append. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Item          | [Any](../../value-types.md#ANY)                     | Yes      | Item to append.                                                                            |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name       | Type                                         | Details                                                                                                                                                           |
+| ---------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | New length | [Whole number](../../value-types.md#INTEGER) | Number of items in the list after this add. It is 1 when this add created the list, which is the safe way to check "am I the first one?" without a separate read. |
 
 ### Remove from stored list {#array-remove-storage}
@@ -220,19 +220,19 @@ Safely removes the item at the given position from a stored list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Index | [Whole number](../../value-types.md#INTEGER) | Yes | Position of the item to remove (starting at 0). |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Index         | [Whole number](../../value-types.md#INTEGER)        | Yes      | Position of the item to remove (starting at 0).                                            |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Removed | [Yes/No](../../value-types.md#BOOLEAN) | Whether an item was actually removed. False when there was no item at that position. |
-| New length | [Whole number](../../value-types.md#INTEGER) | Number of items in the list afterwards. |
+| Name       | Type                                         | Details                                                                              |
+| ---------- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Removed    | [Yes/No](../../value-types.md#BOOLEAN)       | Whether an item was actually removed. False when there was no item at that position. |
+| New length | [Whole number](../../value-types.md#INTEGER) | Number of items in the list afterwards.                                              |
 
 ### Set key in stored lookup table {#map-set-storage}
 
@@ -240,20 +240,20 @@ Safely sets a key in a stored lookup table to a value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Key | [Text](../../value-types.md#STRING) | Yes | Key inside the stored lookup table. |
-| Value | [Any](../../value-types.md#ANY) | Yes | Value to store under the key. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Key           | [Text](../../value-types.md#STRING)                 | Yes      | Key inside the stored lookup table.                                                        |
+| Value         | [Any](../../value-types.md#ANY)                     | Yes      | Value to store under the key.                                                              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Replaced | [Yes/No](../../value-types.md#BOOLEAN) | Whether that key already existed and has now been overwritten. |
-| New key count | [Whole number](../../value-types.md#INTEGER) | Number of keys in the lookup table afterwards. |
+| Name          | Type                                         | Details                                                        |
+| ------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| Replaced      | [Yes/No](../../value-types.md#BOOLEAN)       | Whether that key already existed and has now been overwritten. |
+| New key count | [Whole number](../../value-types.md#INTEGER) | Number of keys in the lookup table afterwards.                 |
 
 ### Remove key from stored lookup table {#map-remove-storage}
 
@@ -261,19 +261,19 @@ Safely removes a key from a stored lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Key | [Text](../../value-types.md#STRING) | Yes | Key to remove from the stored lookup table. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Key           | [Text](../../value-types.md#STRING)                 | Yes      | Key to remove from the stored lookup table.                                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Removed | [Yes/No](../../value-types.md#BOOLEAN) | Whether the key was actually there and has now been removed. |
-| New key count | [Whole number](../../value-types.md#INTEGER) | Number of keys in the lookup table afterwards. |
+| Name          | Type                                         | Details                                                      |
+| ------------- | -------------------------------------------- | ------------------------------------------------------------ |
+| Removed       | [Yes/No](../../value-types.md#BOOLEAN)       | Whether the key was actually there and has now been removed. |
+| New key count | [Whole number](../../value-types.md#INTEGER) | Number of keys in the lookup table afterwards.               |
 
 ### Is a value stored? {#has-storage-value}
 
@@ -281,16 +281,16 @@ Checks whether a storage field currently has a value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details                                       |
+| ------ | -------------------------------------- | --------------------------------------------- |
 | Exists | [Yes/No](../../value-types.md#BOOLEAN) | True when a value is stored, otherwise false. |
 
 ### Remove item from stored list {#array-remove-item-storage}
@@ -299,21 +299,21 @@ Removes matching item(s) by value from a stored list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Item | [Any](../../value-types.md#ANY) | Yes | Value to remove from the list. |
-| Remove all | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Remove every matching item instead of only the first. Default: No. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Item          | [Any](../../value-types.md#ANY)                     | Yes      | Value to remove from the list.                                                             |
+| Remove all    | [Yes/No](../../value-types.md#BOOLEAN)              | Yes      | Remove every matching item instead of only the first. Default: No.                         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Removed | [Yes/No](../../value-types.md#BOOLEAN) | Whether at least one matching item was removed. |
+| Name          | Type                                         | Details                                                           |
+| ------------- | -------------------------------------------- | ----------------------------------------------------------------- |
+| Removed       | [Yes/No](../../value-types.md#BOOLEAN)       | Whether at least one matching item was removed.                   |
 | Removed count | [Whole number](../../value-types.md#INTEGER) | How many items were removed. At most 1 unless "Remove all" is on. |
-| New length | [Whole number](../../value-types.md#INTEGER) | Number of items in the list afterwards. |
+| New length    | [Whole number](../../value-types.md#INTEGER) | Number of items in the list afterwards.                           |
 
 ### Stored list contains item? {#array-contains-storage}
 
@@ -321,17 +321,17 @@ Checks whether a stored list contains a value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Item | [Any](../../value-types.md#ANY) | Yes | Value to look for in the list. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Item          | [Any](../../value-types.md#ANY)                     | Yes      | Value to look for in the list.                                                             |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                   | Details                              |
+| -------- | -------------------------------------- | ------------------------------------ |
 | Contains | [Yes/No](../../value-types.md#BOOLEAN) | Yes when the list contains the item. |
 
 ### Get key from stored lookup table {#map-get-storage}
@@ -340,18 +340,18 @@ Reads a single key from a stored lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Key | [Text](../../value-types.md#STRING) | Yes | Key inside the stored lookup table. |
-| Default | [Any](../../value-types.md#ANY) | No | Value returned when the key is not present. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Key           | [Text](../../value-types.md#STRING)                 | Yes      | Key inside the stored lookup table.                                                        |
+| Default       | [Any](../../value-types.md#ANY)                     | No       | Value returned when the key is not present.                                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                            | Details                                                                          |
+| ----- | ------------------------------- | -------------------------------------------------------------------------------- |
 | Value | [Any](../../value-types.md#ANY) | Value stored under the key, or the default (or empty) when absent. May be empty. |
 
 ### Stored lookup table has key? {#map-has-storage}
@@ -360,17 +360,17 @@ Checks whether a stored lookup table contains a key.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Key | [Text](../../value-types.md#STRING) | Yes | Key inside the stored lookup table. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Key           | [Text](../../value-types.md#STRING)                 | Yes      | Key inside the stored lookup table.                                                        |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details                                |
+| ------ | -------------------------------------- | -------------------------------------- |
 | Exists | [Yes/No](../../value-types.md#BOOLEAN) | Yes when the lookup table has the key. |
 
 ### List stored lookup table entries {#map-entries-storage}
@@ -379,16 +379,16 @@ Returns every key and value of a stored lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                         | Details                                          |
+| ------- | ------------------------------------------------------------ | ------------------------------------------------ |
 | Entries | List of [Lookup table entry](../../value-types.md#MAP_ENTRY) | Each lookup table entry, with its key and value. |
 
 ### List storage keys {#list-storage-keys}
@@ -397,14 +397,14 @@ Returns the keys (subject ids) that currently have a stored value for the field.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
+| Name          | Type                                                | Required | Details                      |
+| ------------- | --------------------------------------------------- | -------- | ---------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                        | Details                        |
+| ---- | ------------------------------------------- | ------------------------------ |
 | Keys | List of [Text](../../value-types.md#STRING) | The stored keys / subject ids. |
 
 ### Search storage keys {#search-storage-keys}
@@ -413,16 +413,16 @@ Filters the field's keys (subject ids) by a query, ranked prefix-first then cont
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Query | [Text](../../value-types.md#STRING) | No | Text to match keys against (prefix-first, then contains). Leave blank to return all keys. Maximum length: 100 characters. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of keys to return (1-100). Value: 1 to 100. Default: `25`. |
+| Name          | Type                                                | Required | Details                                                                                                                   |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                                                              |
+| Query         | [Text](../../value-types.md#STRING)                 | No       | Text to match keys against (prefix-first, then contains). Leave blank to return all keys. Maximum length: 100 characters. |
+| Limit         | [Whole number](../../value-types.md#INTEGER)        | Yes      | Maximum number of keys to return (1-100). Value: 1 to 100. Default: `25`.                                                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                        | Details                                              |
+| ---- | ------------------------------------------- | ---------------------------------------------------- |
 | Keys | List of [Text](../../value-types.md#STRING) | The matching keys / subject ids, best matches first. |
 
 ### Search storage entries {#search-storage-entries}
@@ -431,18 +431,18 @@ Returns the field's entries within a numeric value range, each with its overall 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Minimum value | [Decimal number](../../value-types.md#FLOAT) | No | Only include entries whose value is at least this (leave blank for no lower bound). |
-| Maximum value | [Decimal number](../../value-types.md#FLOAT) | No | Only include entries whose value is at most this (leave blank for no upper bound). |
-| Direction | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes | Sort direction used for ranking (descending ranks the highest value #1). Default: Descending. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of matching entries to return (1-100). Value: 1 to 100. Default: `10`. |
+| Name          | Type                                                  | Required | Details                                                                                       |
+| ------------- | ----------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)   | Yes      | Storage field to operate on.                                                                  |
+| Minimum value | [Decimal number](../../value-types.md#FLOAT)          | No       | Only include entries whose value is at least this (leave blank for no lower bound).           |
+| Maximum value | [Decimal number](../../value-types.md#FLOAT)          | No       | Only include entries whose value is at most this (leave blank for no upper bound).            |
+| Direction     | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes      | Sort direction used for ranking (descending ranks the highest value #1). Default: Descending. |
+| Limit         | [Whole number](../../value-types.md#INTEGER)          | Yes      | Maximum number of matching entries to return (1-100). Value: 1 to 100. Default: `10`.         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                        | Details                                                          |
+| ------- | ----------------------------------------------------------- | ---------------------------------------------------------------- |
 | Entries | List of [Storage entry](../../value-types.md#STORAGE_ENTRY) | Matching entries, each with its subject, value and overall rank. |
 
 ### Aggregate storage field {#aggregate-storage}
@@ -451,19 +451,19 @@ Computes a single number over a field's entries - sum, average, count, minimum, 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Operation | [Aggregate operation](../../value-types.md#STORAGE_AGGREGATE_OP) | Yes | Which aggregate to compute over the field's values. Default: Sum. |
-| Minimum value | [Decimal number](../../value-types.md#FLOAT) | No | Only include entries whose value is at least this (leave blank for no lower bound). |
-| Maximum value | [Decimal number](../../value-types.md#FLOAT) | No | Only include entries whose value is at most this (leave blank for no upper bound). |
+| Name          | Type                                                             | Required | Details                                                                             |
+| ------------- | ---------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)              | Yes      | Storage field to operate on.                                                        |
+| Operation     | [Aggregate operation](../../value-types.md#STORAGE_AGGREGATE_OP) | Yes      | Which aggregate to compute over the field's values. Default: Sum.                   |
+| Minimum value | [Decimal number](../../value-types.md#FLOAT)                     | No       | Only include entries whose value is at least this (leave blank for no lower bound). |
+| Maximum value | [Decimal number](../../value-types.md#FLOAT)                     | No       | Only include entries whose value is at most this (leave blank for no upper bound).  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                         | Details                                                                                                                                                                                                                                    |
+| ------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Result | [Decimal number](../../value-types.md#FLOAT) | The computed number. Empty when there is nothing to aggregate (count returns 0). For a large whole number field it is an exact whole number of any size, and the average and median are rounded to the nearest whole number. May be empty. |
-| Count | [Whole number](../../value-types.md#INTEGER) | How many entries contributed to the result. |
+| Count  | [Whole number](../../value-types.md#INTEGER) | How many entries contributed to the result.                                                                                                                                                                                                |
 
 ### Random pick from storage {#random-pick-storage}
 
@@ -471,16 +471,16 @@ Draws random entries from a field - uniformly, or weighted by each entry's value
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Count | [Whole number](../../value-types.md#INTEGER) | Yes | How many entries to draw (1-100). Clamped to the number of eligible entries. Value: 1 to 100. Default: `1`. |
-| Weight by | [Pick weighting](../../value-types.md#STORAGE_PICK_WEIGHT) | Yes | How likely each entry is to be drawn: uniform over keys, or weighted by its value. Default: Uniform. |
+| Name          | Type                                                       | Required | Details                                                                                                     |
+| ------------- | ---------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)        | Yes      | Storage field to operate on.                                                                                |
+| Count         | [Whole number](../../value-types.md#INTEGER)               | Yes      | How many entries to draw (1-100). Clamped to the number of eligible entries. Value: 1 to 100. Default: `1`. |
+| Weight by     | [Pick weighting](../../value-types.md#STORAGE_PICK_WEIGHT) | Yes      | How likely each entry is to be drawn: uniform over keys, or weighted by its value. Default: Uniform.        |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                        | Details                                                           |
+| ----- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
 | Picks | List of [Storage entry](../../value-types.md#STORAGE_ENTRY) | The drawn entries, each with its subject, value and overall rank. |
 
 ### Increment if (atomic) {#atomic-increment-if}
@@ -489,20 +489,20 @@ Increases a stored number only when its current value meets a condition. The saf
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (for keyed fields). Maximum length: 100 characters. |
-| Condition | [Comparison](../../value-types.md#STORAGE_COMPARE_OP) | Yes | How the current value is compared to the threshold before applying. Default: At least (≥) |
-| Threshold | [Decimal number](../../value-types.md#FLOAT) | Yes | Value the current value is compared against. Default: `0`. |
-| Amount | [Decimal number](../../value-types.md#FLOAT) | Yes | How much to add when the condition holds (use a negative amount to subtract). Default: `1`. |
+| Name          | Type                                                  | Required | Details                                                                                     |
+| ------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------- |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD)   | Yes      | Storage field to operate on.                                                                |
+| Subject       | [User](../../value-types.md#DISCORD_USER)             | No       | User the value belongs to (for user-scoped fields).                                         |
+| Key           | [Text](../../value-types.md#STRING)                   | No       | Key the value is stored under (for keyed fields). Maximum length: 100 characters.           |
+| Condition     | [Comparison](../../value-types.md#STORAGE_COMPARE_OP) | Yes      | How the current value is compared to the threshold before applying. Default: At least (≥)   |
+| Threshold     | [Decimal number](../../value-types.md#FLOAT)          | Yes      | Value the current value is compared against. Default: `0`.                                  |
+| Amount        | [Decimal number](../../value-types.md#FLOAT)          | Yes      | How much to add when the condition holds (use a negative amount to subtract). Default: `1`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Applied | [Yes/No](../../value-types.md#BOOLEAN) | Whether the condition held and the value was changed. |
+| Name      | Type                                         | Details                                                                 |
+| --------- | -------------------------------------------- | ----------------------------------------------------------------------- |
+| Applied   | [Yes/No](../../value-types.md#BOOLEAN)       | Whether the condition held and the value was changed.                   |
 | New value | [Decimal number](../../value-types.md#FLOAT) | The resulting stored value (unchanged when the condition did not hold). |
 
 ### Set stored value if (atomic) {#atomic-set-if}
@@ -511,20 +511,20 @@ Writes a value to a storage field only when the value stored there right now mee
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
-| Condition | [Condition](../../value-types.md#STORAGE_SET_CONDITION) | Yes | What must be true of the currently stored value for the new value to be written. Default: Only if nothing is stored. |
-| Expected value | [Stored value](../../value-types.md#STORAGE_VALUE) | No | Value the stored value is compared against. Only used by the "equals" and "does not equal" conditions. |
-| Value | [Stored value](../../value-types.md#STORAGE_VALUE) | Yes | Value to store when the condition holds. Must match the type declared on the field. |
+| Name           | Type                                                    | Required | Details                                                                                                              |
+| -------------- | ------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------- |
+| Storage field  | [Storage field](../../value-types.md#STORAGE_FIELD)     | Yes      | Storage field to operate on.                                                                                         |
+| Subject        | [User](../../value-types.md#DISCORD_USER)               | No       | User the value belongs to (required for user-scoped fields).                                                         |
+| Key            | [Text](../../value-types.md#STRING)                     | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters.                           |
+| Condition      | [Condition](../../value-types.md#STORAGE_SET_CONDITION) | Yes      | What must be true of the currently stored value for the new value to be written. Default: Only if nothing is stored. |
+| Expected value | [Stored value](../../value-types.md#STORAGE_VALUE)      | No       | Value the stored value is compared against. Only used by the "equals" and "does not equal" conditions.               |
+| Value          | [Stored value](../../value-types.md#STORAGE_VALUE)      | Yes      | Value to store when the condition holds. Must match the type declared on the field.                                  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Applied | [Yes/No](../../value-types.md#BOOLEAN) | Whether the condition held and the value was written. With "only if nothing is stored" this is your lock: true means this run got it. |
+| Name      | Type                                               | Details                                                                                                                                                                                       |
+| --------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Applied   | [Yes/No](../../value-types.md#BOOLEAN)             | Whether the condition held and the value was written. With "only if nothing is stored" this is your lock: true means this run got it.                                                         |
 | New value | [Stored value](../../value-types.md#STORAGE_VALUE) | The value stored afterwards: the new value when it was written, otherwise the value that is already there (so you can see who holds the lock, or retry with the current value). May be empty. |
 
 ### Clear storage field {#clear-storage-field}
@@ -533,11 +533,11 @@ Deletes every stored value for a field - or just one subject's/key's when a subj
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the value belongs to (required for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
+| Name          | Type                                                | Required | Details                                                                                    |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field to operate on.                                                               |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the value belongs to (required for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the value is stored under (required for keyed fields). Maximum length: 100 characters. |
 
 ### Format leaderboard {#format-storage-leaderboard}
 
@@ -545,20 +545,20 @@ Builds a ready-to-send leaderboard text from a field's top entries. Row-template
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the whole number or decimal number field to rank by. Each row shows that number. Maximum length: 64 characters. |
-| Direction | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes | Sort direction (descending lists the highest values first). Default: Descending. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of rows to render (1-100). Value: 1 to 100. Default: `10`. |
-| Row template | [Text](../../value-types.md#STRING) | Yes | Template for each row. Tokens: %rank%, %mention%, %key%, %value%. Maximum length: 500 characters. Default: `**#%rank%** %mention% - %value%`. |
-| Empty text | [Text](../../value-types.md#STRING) | No | Text used when the field has no entries. Maximum length: 2000 characters. |
-| Format numbers | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Add thousands separators to a numeric %value%. Default: No. |
+| Name           | Type                                                        | Required | Details                                                                                                                                       |
+| -------------- | ----------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage field  | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                                                  |
+| Rank by field  | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the whole number or decimal number field to rank by. Each row shows that number. Maximum length: 64 characters.     |
+| Direction      | [Sort direction](../../value-types.md#SORT_DIRECTION)       | Yes      | Sort direction (descending lists the highest values first). Default: Descending.                                                              |
+| Limit          | [Whole number](../../value-types.md#INTEGER)                | Yes      | Maximum number of rows to render (1-100). Value: 1 to 100. Default: `10`.                                                                     |
+| Row template   | [Text](../../value-types.md#STRING)                         | Yes      | Template for each row. Tokens: %rank%, %mention%, %key%, %value%. Maximum length: 500 characters. Default: `**#%rank%** %mention% - %value%`. |
+| Empty text     | [Text](../../value-types.md#STRING)                         | No       | Text used when the field has no entries. Maximum length: 2000 characters.                                                                     |
+| Format numbers | [Yes/No](../../value-types.md#BOOLEAN)                      | Yes      | Add thousands separators to a numeric %value%. Default: No.                                                                                   |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                | Details                        |
+| ---- | ----------------------------------- | ------------------------------ |
 | Text | [Text](../../value-types.md#STRING) | The rendered leaderboard text. |
 
 ### Format leaderboard pages {#format-storage-leaderboard-pages}
@@ -567,23 +567,23 @@ Builds Discord-safe leaderboard pages for Send paginated message. Tokens: %rank%
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field to operate on. |
-| Rank by field | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No | For a stored shape value: the whole number or decimal number field to rank by. Each row shows that number. Maximum length: 64 characters. |
-| Direction | [Sort direction](../../value-types.md#SORT_DIRECTION) | Yes | Sort direction (descending lists the highest values first). Default: Descending. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum rows to render (1-100). Value: 1 to 100. Default: `10`. |
-| Row template | [Text](../../value-types.md#STRING) | Yes | Template for each row. Tokens: %rank%, %mention%, %key%, %value%. Maximum length: 500 characters. Default: `**#%rank%** %mention% - %value%`. |
-| Empty text | [Text](../../value-types.md#STRING) | No | Text used when the field has no entries. Maximum length: 2000 characters. |
-| Format numbers | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Add thousands separators to numeric values. Default: No. |
-| Rows per page | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum rows per Discord page (1-100); Discord's message limit may split earlier. Value: 1 to 100. Default: `10`. |
+| Name           | Type                                                        | Required | Details                                                                                                                                       |
+| -------------- | ----------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Storage field  | [Storage field](../../value-types.md#STORAGE_FIELD)         | Yes      | Storage field to operate on.                                                                                                                  |
+| Rank by field  | [Field of a shape value](../../value-types.md#RECORD_FIELD) | No       | For a stored shape value: the whole number or decimal number field to rank by. Each row shows that number. Maximum length: 64 characters.     |
+| Direction      | [Sort direction](../../value-types.md#SORT_DIRECTION)       | Yes      | Sort direction (descending lists the highest values first). Default: Descending.                                                              |
+| Limit          | [Whole number](../../value-types.md#INTEGER)                | Yes      | Maximum rows to render (1-100). Value: 1 to 100. Default: `10`.                                                                               |
+| Row template   | [Text](../../value-types.md#STRING)                         | Yes      | Template for each row. Tokens: %rank%, %mention%, %key%, %value%. Maximum length: 500 characters. Default: `**#%rank%** %mention% - %value%`. |
+| Empty text     | [Text](../../value-types.md#STRING)                         | No       | Text used when the field has no entries. Maximum length: 2000 characters.                                                                     |
+| Format numbers | [Yes/No](../../value-types.md#BOOLEAN)                      | Yes      | Add thousands separators to numeric values. Default: No.                                                                                      |
+| Rows per page  | [Whole number](../../value-types.md#INTEGER)                | Yes      | Maximum rows per Discord page (1-100); Discord's message limit may split earlier. Value: 1 to 100. Default: `10`.                             |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Pages | List of [Message content](../../value-types.md#MESSAGE_CONTENT) | Pages that connect directly to Send paginated message. |
-| Page count | [Whole number](../../value-types.md#INTEGER) | Number of generated pages. |
+| Name       | Type                                                            | Details                                                |
+| ---------- | --------------------------------------------------------------- | ------------------------------------------------------ |
+| Pages      | List of [Message content](../../value-types.md#MESSAGE_CONTENT) | Pages that connect directly to Send paginated message. |
+| Page count | [Whole number](../../value-types.md#INTEGER)                    | Number of generated pages.                             |
 
 ### Check and set cooldown {#check-and-set-cooldown}
 
@@ -591,16 +591,16 @@ Checks whether a subject is on cooldown and, if not, starts a new cooldown, all 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes | Storage field that holds the cooldown timestamps. |
-| Subject | [User](../../value-types.md#DISCORD_USER) | No | User the cooldown belongs to (for user-scoped fields). |
-| Key | [Text](../../value-types.md#STRING) | No | Key the cooldown is stored under (for keyed fields). Maximum length: 100 characters. |
-| Duration | [Duration](../../value-types.md#DURATION) | Yes | How long the cooldown lasts once started. Value: 1000 to 2592000000. |
+| Name          | Type                                                | Required | Details                                                                              |
+| ------------- | --------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ |
+| Storage field | [Storage field](../../value-types.md#STORAGE_FIELD) | Yes      | Storage field that holds the cooldown timestamps.                                    |
+| Subject       | [User](../../value-types.md#DISCORD_USER)           | No       | User the cooldown belongs to (for user-scoped fields).                               |
+| Key           | [Text](../../value-types.md#STRING)                 | No       | Key the cooldown is stored under (for keyed fields). Maximum length: 100 characters. |
+| Duration      | [Duration](../../value-types.md#DURATION)           | Yes      | How long the cooldown lasts once started. Value: 1000 to 2592000000.                 |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| On cooldown | [Yes/No](../../value-types.md#BOOLEAN) | True when the subject was still on cooldown (nothing was changed). |
+| Name        | Type                                      | Details                                                                             |
+| ----------- | ----------------------------------------- | ----------------------------------------------------------------------------------- |
+| On cooldown | [Yes/No](../../value-types.md#BOOLEAN)    | True when the subject was still on cooldown (nothing was changed).                  |
 | Retry after | [Duration](../../value-types.md#DURATION) | Time remaining until the cooldown ends (zero when a new cooldown was just started). |

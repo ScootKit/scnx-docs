@@ -17,8 +17,8 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                    | Details                   |
+| ------- | ------------------------------------------------------- | ------------------------- |
 | Sticker | [Server sticker](../../../value-types.md#GUILD_STICKER) | Sticker that was created. |
 
 ### Sticker deleted {#sticker-deleted}
@@ -29,8 +29,8 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                    | Details                   |
+| ------- | ------------------------------------------------------- | ------------------------- |
 | Sticker | [Server sticker](../../../value-types.md#GUILD_STICKER) | Sticker that was deleted. |
 
 ### Sticker updated {#sticker-updated}
@@ -41,7 +41,7 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name             | Type                                                    | Details                          |
+| ---------------- | ------------------------------------------------------- | -------------------------------- |
 | Previous Sticker | [Server sticker](../../../value-types.md#GUILD_STICKER) | Sticker state before the update. |
-| Current Sticker | [Server sticker](../../../value-types.md#GUILD_STICKER) | Sticker state after the update. |
+| Current Sticker  | [Server sticker](../../../value-types.md#GUILD_STICKER) | Sticker state after the update.  |

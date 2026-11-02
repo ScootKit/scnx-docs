@@ -15,23 +15,23 @@ Looks up a Twitch account by its login name.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Login name | [Text](../../../value-types.md#STRING) | Yes | The name in the channel address, for example twitchdev for twitch.tv/twitchdev. Maximum length: 25 characters. |
+| Name       | Type                                   | Required | Details                                                                                                        |
+| ---------- | -------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters.         |
+| Login name | [Text](../../../value-types.md#STRING) | Yes      | The name in the channel address, for example twitchdev for twitch.tv/twitchdev. Maximum length: 25 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the account exists. When it does not, everything else is empty. |
-| Twitch ID | [ID](../../../value-types.md#ID) | The Twitch ID of the account. May be empty. |
-| Login name | [Text](../../../value-types.md#STRING) | The login name in lowercase. May be empty. |
-| Display name | [Text](../../../value-types.md#STRING) | The name Twitch shows. May be empty. |
-| About | [Text](../../../value-types.md#STRING) | The channel description. May be empty. |
-| Profile picture | [URL](../../../value-types.md#URL) | The profile picture of the account. May be empty. |
-| Partner status | [Text](../../../value-types.md#STRING) | partner, affiliate, or empty text for other channels. May be empty. |
-| Created at | [Date and time](../../../value-types.md#DATETIME) | When the account was created. May be empty. |
+| Name            | Type                                              | Details                                                                 |
+| --------------- | ------------------------------------------------- | ----------------------------------------------------------------------- |
+| Found           | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the account exists. When it does not, everything else is empty. |
+| Twitch ID       | [ID](../../../value-types.md#ID)                  | The Twitch ID of the account. May be empty.                             |
+| Login name      | [Text](../../../value-types.md#STRING)            | The login name in lowercase. May be empty.                              |
+| Display name    | [Text](../../../value-types.md#STRING)            | The name Twitch shows. May be empty.                                    |
+| About           | [Text](../../../value-types.md#STRING)            | The channel description. May be empty.                                  |
+| Profile picture | [URL](../../../value-types.md#URL)                | The profile picture of the account. May be empty.                       |
+| Partner status  | [Text](../../../value-types.md#STRING)            | partner, affiliate, or empty text for other channels. May be empty.     |
+| Created at      | [Date and time](../../../value-types.md#DATETIME) | When the account was created. May be empty.                             |
 
 ### Get stream {#twitch-get-stream}
 
@@ -39,21 +39,21 @@ Checks whether a channel is live and reads its stream. When the channel is not l
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Login name | [Text](../../../value-types.md#STRING) | Yes | The login name of the channel, for example twitchdev. Maximum length: 25 characters. |
+| Name       | Type                                   | Required | Details                                                                                                |
+| ---------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Login name | [Text](../../../value-types.md#STRING) | Yes      | The login name of the channel, for example twitchdev. Maximum length: 25 characters.                   |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Is live | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the channel is live right now. |
-| Title | [Text](../../../value-types.md#STRING) | The title of the stream. May be empty. |
-| Game | [Text](../../../value-types.md#STRING) | The game or category being streamed. May be empty. |
-| Viewers | [Whole number](../../../value-types.md#INTEGER) | How many people are watching. May be empty. |
-| Live since | [Date and time](../../../value-types.md#DATETIME) | When the stream started. May be empty. |
-| Language | [Text](../../../value-types.md#STRING) | The language of the stream, for example en. May be empty. |
+| Name       | Type                                              | Details                                                   |
+| ---------- | ------------------------------------------------- | --------------------------------------------------------- |
+| Is live    | [Yes/No](../../../value-types.md#BOOLEAN)         | Whether the channel is live right now.                    |
+| Title      | [Text](../../../value-types.md#STRING)            | The title of the stream. May be empty.                    |
+| Game       | [Text](../../../value-types.md#STRING)            | The game or category being streamed. May be empty.        |
+| Viewers    | [Whole number](../../../value-types.md#INTEGER)   | How many people are watching. May be empty.               |
+| Live since | [Date and time](../../../value-types.md#DATETIME) | When the stream started. May be empty.                    |
+| Language   | [Text](../../../value-types.md#STRING)            | The language of the stream, for example en. May be empty. |
 
 ### Get channel info {#twitch-get-channel-info}
 
@@ -61,22 +61,22 @@ Reads the title, game and tags of a channel by its Twitch ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Twitch ID | [ID](../../../value-types.md#ID) | No | The Twitch ID of the channel. Get it with "Get Twitch user". Leave empty to use the connected Twitch account. |
+| Name       | Type                                   | Required | Details                                                                                                       |
+| ---------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters.        |
+| Twitch ID  | [ID](../../../value-types.md#ID)       | No       | The Twitch ID of the channel. Get it with "Get Twitch user". Leave empty to use the connected Twitch account. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the channel exists. When it does not, everything else is empty. |
-| Display name | [Text](../../../value-types.md#STRING) | The name Twitch shows. May be empty. |
-| Login name | [Text](../../../value-types.md#STRING) | The login name of the channel. May be empty. |
-| Language | [Text](../../../value-types.md#STRING) | The language of the channel, for example en. May be empty. |
-| Game | [Text](../../../value-types.md#STRING) | The game or category of the current or last stream. May be empty. |
-| Title | [Text](../../../value-types.md#STRING) | The title of the current or last stream. May be empty. |
-| Tags | List of [Text](../../../value-types.md#STRING) | The tags of the channel. May be empty. |
+| Name         | Type                                           | Details                                                                 |
+| ------------ | ---------------------------------------------- | ----------------------------------------------------------------------- |
+| Found        | [Yes/No](../../../value-types.md#BOOLEAN)      | Whether the channel exists. When it does not, everything else is empty. |
+| Display name | [Text](../../../value-types.md#STRING)         | The name Twitch shows. May be empty.                                    |
+| Login name   | [Text](../../../value-types.md#STRING)         | The login name of the channel. May be empty.                            |
+| Language     | [Text](../../../value-types.md#STRING)         | The language of the channel, for example en. May be empty.              |
+| Game         | [Text](../../../value-types.md#STRING)         | The game or category of the current or last stream. May be empty.       |
+| Title        | [Text](../../../value-types.md#STRING)         | The title of the current or last stream. May be empty.                  |
+| Tags         | List of [Text](../../../value-types.md#STRING) | The tags of the channel. May be empty.                                  |
 
 ### Get latest clips {#twitch-get-latest-clips}
 
@@ -84,17 +84,17 @@ Gets the clips of a channel made in the week after a time, most viewed first. Se
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Twitch ID | [ID](../../../value-types.md#ID) | No | The Twitch ID of the channel. Get it with "Get Twitch user". Leave empty to use the connected Twitch account. |
-| Made after | [Date and time](../../../value-types.md#DATETIME) | No | Start of the week to read clips from. Empty: the most viewed clips of all time. |
-| How many | [Whole number](../../../value-types.md#INTEGER) | No | How many clips to get, 1 to 100. Value: 1 to 100. Default: `5`. |
+| Name       | Type                                              | Required | Details                                                                                                       |
+| ---------- | ------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| Connection | [Text](../../../value-types.md#STRING)            | No       | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters.        |
+| Twitch ID  | [ID](../../../value-types.md#ID)                  | No       | The Twitch ID of the channel. Get it with "Get Twitch user". Leave empty to use the connected Twitch account. |
+| Made after | [Date and time](../../../value-types.md#DATETIME) | No       | Start of the week to read clips from. Empty: the most viewed clips of all time.                               |
+| How many   | [Whole number](../../../value-types.md#INTEGER)   | No       | How many clips to get, 1 to 100. Value: 1 to 100. Default: `5`.                                               |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                       | Details                       |
+| ----- | ---------------------------------------------------------- | ----------------------------- |
 | Clips | List of [Twitch clip](../../../value-types.md#twitch-Clip) | The clips, most viewed first. |
 
 ### Get subscriber count {#twitch-get-subscriber-count}
@@ -103,14 +103,14 @@ Reads how many people subscribe to your channel. Only works for the channel whos
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Connection | [Text](../../../value-types.md#STRING) | No | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
-| Twitch ID | [ID](../../../value-types.md#ID) | No | The Twitch ID of your channel. Leave empty to use the connected Twitch account. |
+| Name       | Type                                   | Required | Details                                                                                                |
+| ---------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| Connection | [Text](../../../value-types.md#STRING) | No       | The Twitch connection from the Integrations page that this action uses. Maximum length: 64 characters. |
+| Twitch ID  | [ID](../../../value-types.md#ID)       | No       | The Twitch ID of your channel. Leave empty to use the connected Twitch account.                        |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Subscribers | [Whole number](../../../value-types.md#INTEGER) | How many people subscribe. |
+| Name              | Type                                            | Details                                                                           |
+| ----------------- | ----------------------------------------------- | --------------------------------------------------------------------------------- |
+| Subscribers       | [Whole number](../../../value-types.md#INTEGER) | How many people subscribe.                                                        |
 | Subscriber points | [Whole number](../../../value-types.md#INTEGER) | Points from all subscriptions: tier 1 counts 1, tier 2 counts 2, tier 3 counts 6. |

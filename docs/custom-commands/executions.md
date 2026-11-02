@@ -39,14 +39,14 @@ Narrow the list down with the **Flow** and **Status** filters. To find out why s
 
 ## Statuses {#statuses}
 
-| Status             | What it means                                                                                                                                                       |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Success**        | The flow ran to the end.                                                                                                                                            |
-| **Failed**         | A step ran into an error and the flow stopped there. Open the run to see which step and why.                                                                        |
-| **Stopped**        | The flow ended early on purpose, with a **Stop flow** or **Return from flow** step. This is not an error.                                                          |
-| **Limit exceeded** | The run hit a safety limit, for example it took too long or ran too many steps, and was ended. See [Plans, limits & safety](/docs/custom-commands/limits-and-safety). |
+| Status             | What it means                                                                                                                                                                               |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Success**        | The flow ran to the end.                                                                                                                                                                    |
+| **Failed**         | A step ran into an error and the flow stopped there. Open the run to see which step and why.                                                                                                |
+| **Stopped**        | The flow ended early on purpose, with a **Stop flow** or **Return from flow** step. This is not an error.                                                                                   |
+| **Limit exceeded** | The run hit a safety limit, for example it took too long or ran too many steps, and was ended. See [Plans, limits & safety](/docs/custom-commands/limits-and-safety).                       |
 | **Skipped**        | The trigger fired, but the flow didn't start. The run shows the reason, for example a cooldown, the flow being turned off, too many runs in a short time, or your server's activity budget. |
-| **Interrupted**    | The run was cut off before it finished, usually because your bot restarted while it was running.                                                                    |
+| **Interrupted**    | The run was cut off before it finished, usually because your bot restarted while it was running.                                                                                            |
 
 A few more things you may see:
 
@@ -82,30 +82,30 @@ If the flow has several steps of the same kind and you can't tell which one fail
 
 Some failures aren't caused by your server but by the flow itself. For these, the run shows a specific sentence instead of the general one:
 
-| What the run says                                                   | Fix                                                                                                                |
-| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| "This interaction was already replied to or deferred"               | Use **Follow up to interaction** to send another message, or **Edit interaction reply** to change the first one.   |
-| "This interaction has not been replied to or deferred yet"          | Add **Reply to interaction** or **Defer interaction reply** before following up, editing or deleting the reply.    |
-| "The interaction expired before the bot responded"                  | Reply or defer as the first step, before anything slow.                                                            |
-| "This interaction can no longer be answered"                        | The flow paused on a wait and continued too late to answer. After a wait, send a channel message instead.          |
-| A wait step "cannot pause inside a loop"                            | Move the wait step outside the loop.                                                                               |
-| "A required value was missing while this action ran"                | One of the step's values was empty, deleted or not set yet. Add a fallback, or check that it's set first.          |
+| What the run says                                          | Fix                                                                                                              |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| "This interaction was already replied to or deferred"      | Use **Follow up to interaction** to send another message, or **Edit interaction reply** to change the first one. |
+| "This interaction has not been replied to or deferred yet" | Add **Reply to interaction** or **Defer interaction reply** before following up, editing or deleting the reply.  |
+| "The interaction expired before the bot responded"         | Reply or defer as the first step, before anything slow.                                                          |
+| "This interaction can no longer be answered"               | The flow paused on a wait and continued too late to answer. After a wait, send a channel message instead.        |
+| A wait step "cannot pause inside a loop"                   | Move the wait step outside the loop.                                                                             |
+| "A required value was missing while this action ran"       | One of the step's values was empty, deleted or not set yet. Add a fallback, or check that it's set first.        |
 
 ## Common errors {#errors}
 
-| Code                           | What happened                                                                                     | What to do                                                                                                              |
-| ------------------------------ | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `MISSING_PERMISSIONS`          | Your bot was missing a Discord permission for this step.                                          | Give your bot the permission in that channel or server. For role changes, move your bot's role above the role.          |
-| `NOT_FOUND`                    | Something the step pointed at no longer exists, like a deleted channel, role or message.          | Pick the channel or role again in the step or in the module's settings.                                                 |
-| `INTERACTION_EXPIRED`          | Your flow took too long before answering a command or button, and Discord gave up on it.          | Reply early, or add **Defer interaction reply** before slow steps.                                                      |
-| `INVALID_INPUT`                | A value passed into the step was not valid for it.                                                | Check the values the step uses. One may be empty or of the wrong kind.                                                  |
-| `STORAGE_ERROR`                | Reading or writing stored data failed.                                                            | Check that your server's [storage](/docs/custom-commands/storage#usage) isn't full.                                     |
-| `LIMIT_EXCEEDED`               | The flow hit a limit, such as your server's activity budget or a loop that ran too often.        | See [Plans, limits & safety](/docs/custom-commands/limits-and-safety).                                                  |
-| `DESTRUCTIVE_LIMIT_EXCEEDED`   | The flow deleted, banned or kicked more than it's allowed to in a short time.                     | Check that the flow only targets what you meant it to.                                                                  |
-| `AI_CREDITS_EXHAUSTED`         | Your server has no AI Coins left, so the AI step didn't run.                                      | Top up your AI Coins.                                                                                                   |
-| `DISCORD_API_ERROR`            | Discord refused the request.                                                                      | Read the error message. It usually says what Discord didn't accept, like a message that is too long.                    |
-| `TIMEOUT`                      | The step took too long.                                                                           | Try again later. If it keeps happening, move slow work into its own flow.                                               |
-| `UNKNOWN`                      | Something unexpected went wrong.                                                                  | Run the flow again. If it keeps failing, share the run number in the beta channels on our Discord.                     |
+| Code                         | What happened                                                                             | What to do                                                                                                     |
+| ---------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `MISSING_PERMISSIONS`        | Your bot was missing a Discord permission for this step.                                  | Give your bot the permission in that channel or server. For role changes, move your bot's role above the role. |
+| `NOT_FOUND`                  | Something the step pointed at no longer exists, like a deleted channel, role or message.  | Pick the channel or role again in the step or in the module's settings.                                        |
+| `INTERACTION_EXPIRED`        | Your flow took too long before answering a command or button, and Discord gave up on it.  | Reply early, or add **Defer interaction reply** before slow steps.                                             |
+| `INVALID_INPUT`              | A value passed into the step was not valid for it.                                        | Check the values the step uses. One may be empty or of the wrong kind.                                         |
+| `STORAGE_ERROR`              | Reading or writing stored data failed.                                                    | Check that your server's [storage](/docs/custom-commands/storage#usage) isn't full.                            |
+| `LIMIT_EXCEEDED`             | The flow hit a limit, such as your server's activity budget or a loop that ran too often. | See [Plans, limits & safety](/docs/custom-commands/limits-and-safety).                                         |
+| `DESTRUCTIVE_LIMIT_EXCEEDED` | The flow deleted, banned or kicked more than it's allowed to in a short time.             | Check that the flow only targets what you meant it to.                                                         |
+| `AI_CREDITS_EXHAUSTED`       | Your server has no AI Coins left, so the AI step didn't run.                              | Top up your AI Coins.                                                                                          |
+| `DISCORD_API_ERROR`          | Discord refused the request.                                                              | Read the error message. It usually says what Discord didn't accept, like a message that is too long.           |
+| `TIMEOUT`                    | The step took too long.                                                                   | Try again later. If it keeps happening, move slow work into its own flow.                                      |
+| `UNKNOWN`                    | Something unexpected went wrong.                                                          | Run the flow again. If it keeps failing, share the run number in the beta channels on our Discord.             |
 
 You can also catch errors inside a flow. Put the steps in a **Try** block. When one of them fails, the **On error** branch runs instead of failing the whole flow, and it gets the error code and message. See the [Control flow reference](/docs/custom-commands/reference/actions/control-flow).
 
@@ -131,29 +131,29 @@ A few things to know:
 
 ### When a test run can't start {#test-run-errors}
 
-| Message                                            | Fix                                                                                              |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| "Fix the flow's validation errors before testing"  | Open the **Issues** tab and fix the blocking issues.                                             |
-| "Save the flow before testing it."                 | Save the flow once, then test.                                                                   |
-| "Bot offline"                                      | Start your bot and try again.                                                                    |
-| "Test runs aren't available on this bot version yet." | Restart your bot so it installs the latest version.                                           |
-| "Pick a subcommand to test"                        | Choose the **Subcommand** to run.                                                                |
-| "Pick a target to test"                            | For a context-menu command, choose the user or message to run it on.                             |
+| Message                                               | Fix                                                                  |
+| ----------------------------------------------------- | -------------------------------------------------------------------- |
+| "Fix the flow's validation errors before testing"     | Open the **Issues** tab and fix the blocking issues.                 |
+| "Save the flow before testing it."                    | Save the flow once, then test.                                       |
+| "Bot offline"                                         | Start your bot and try again.                                        |
+| "Test runs aren't available on this bot version yet." | Restart your bot so it installs the latest version.                  |
+| "Pick a subcommand to test"                           | Choose the **Subcommand** to run.                                    |
+| "Pick a target to test"                               | For a context-menu command, choose the user or message to run it on. |
 
 ### Test run warnings {#test-run-warnings}
 
 Warnings show things a real run would do differently from what you built:
 
-| Warning                                                     | What it means                                                                                                  |
-| ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| "A value used in a message was missing"                     | A message uses a value that wasn't available at that point, so that part would be empty.                       |
-| "A simulated value is missing"                              | The test couldn't fill in something a real run provides. Usually nothing to fix.                               |
-| "Some components were left out of a message"                | Some buttons or menus couldn't be used in this kind of message and weren't sent.                               |
-| "A message had too many component rows"                     | Discord limits the rows of buttons and menus per message, so the extra rows were removed.                      |
-| "A Components V2 message was sent as a classic message"     | A step added text or embeds, which Discord doesn't allow with that layout. Containers, sections and separators were lost. |
-| "Message text shortened"                                    | The text was longer than Discord allows and was cut.                                                           |
-| "Embed footer removed"                                      | Your plan doesn't include embed footers, so the footer was left out.                                           |
-| "Global parameters weren't available"                       | Placeholders for bot and server details were left as written in this test.                                     |
+| Warning                                                 | What it means                                                                                                             |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| "A value used in a message was missing"                 | A message uses a value that wasn't available at that point, so that part would be empty.                                  |
+| "A simulated value is missing"                          | The test couldn't fill in something a real run provides. Usually nothing to fix.                                          |
+| "Some components were left out of a message"            | Some buttons or menus couldn't be used in this kind of message and weren't sent.                                          |
+| "A message had too many component rows"                 | Discord limits the rows of buttons and menus per message, so the extra rows were removed.                                 |
+| "A Components V2 message was sent as a classic message" | A step added text or embeds, which Discord doesn't allow with that layout. Containers, sections and separators were lost. |
+| "Message text shortened"                                | The text was longer than Discord allows and was cut.                                                                      |
+| "Embed footer removed"                                  | Your plan doesn't include embed footers, so the footer was left out.                                                      |
+| "Global parameters weren't available"                   | Placeholders for bot and server details were left as written in this test.                                                |
 
 ## How long runs are kept {#retention}
 

@@ -15,8 +15,8 @@ Wird ausgelöst, wenn der Bot einem neuen Server hinzugefügt wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                                     |
+| ------ | ------------------------------------ | ------------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server, dem der Bot gerade beigetreten ist. |
 
 ### Bot aus einem Server entfernt {#bot-removed-from-guild}
@@ -25,8 +25,8 @@ Wird ausgelöst, wenn der Bot aus einem Server entfernt, gekickt oder gebannt wi
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                                 |
+| ------ | ------------------------------------ | --------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server, aus dem der Bot entfernt wurde. |
 
 ### Server aktualisiert {#guild-updated}
@@ -35,10 +35,10 @@ Wird ausgelöst, wenn sich Servereinstellungen (Name, Symbol, Features, ...) än
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Server-Status | [Server](../../value-types.md#GUILD) | Server-Status vor der Aktualisierung. |
-| Aktueller Server-Status | [Server](../../value-types.md#GUILD) | Server-Status nach der Aktualisierung. |
+| Name                     | Typ                                  | Details                                |
+| ------------------------ | ------------------------------------ | -------------------------------------- |
+| Vorheriger Server-Status | [Server](../../value-types.md#GUILD) | Server-Status vor der Aktualisierung.  |
+| Aktueller Server-Status  | [Server](../../value-types.md#GUILD) | Server-Status nach der Aktualisierung. |
 
 ### Server wurde verfügbar {#guild-became-available}
 
@@ -46,8 +46,8 @@ Wird ausgelöst, wenn ein zuvor nicht verfügbarer Server (z.B. aufgrund eines A
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                             |
+| ------ | ------------------------------------ | ----------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server, der gerade verfügbar wurde. |
 
 ### Server wurde nicht verfügbar {#guild-became-unavailable}
@@ -56,8 +56,8 @@ Wird ausgelöst, wenn ein Server nicht verfügbar wird, normalerweise aufgrund e
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                            |
+| ------ | ------------------------------------ | ---------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server, der nicht verfügbar wurde. |
 
 ### Server-Integrationen aktualisiert {#guild-integrations-updated}
@@ -68,8 +68,8 @@ Benötigte Intents: `GuildIntegrations`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                  | Details                                           |
+| ------ | ------------------------------------ | ------------------------------------------------- |
 | Server | [Server](../../value-types.md#GUILD) | Server, dessen Integrationen aktualisiert wurden. |
 
 ### Lizenz erstellt {#entitlement-created}
@@ -78,8 +78,8 @@ Wird ausgelöst, wenn ein Benutzer oder Server Zugriff auf eine Premium-SKU erh�
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                        | Details                     |
+| ------ | ------------------------------------------ | --------------------------- |
 | Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Lizenz, die erstellt wurde. |
 
 ### Lizenz aktualisiert {#entitlement-updated}
@@ -88,10 +88,10 @@ Wird ausgelöst, wenn eine vorhandene Lizenz aktualisiert wird (z. B. Enddatum �
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                        | Details                                              |
+| ---------------- | ------------------------------------------ | ---------------------------------------------------- |
 | Vorherige Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Lizenzstatus vor der Aktualisierung. Kann leer sein. |
-| Aktuelle Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Lizenzstatus nach der Aktualisierung. |
+| Aktuelle Lizenz  | [Lizenz](../../value-types.md#ENTITLEMENT) | Lizenzstatus nach der Aktualisierung.                |
 
 ### Lizenz gelöscht {#entitlement-deleted}
 
@@ -99,8 +99,8 @@ Wird ausgelöst, wenn eine Lizenz gelöscht wird (z. B. von Discord widerrufen).
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                        | Details                     |
+| ------ | ------------------------------------------ | --------------------------- |
 | Lizenz | [Lizenz](../../value-types.md#ENTITLEMENT) | Lizenz, die gelöscht wurde. |
 
 ### Bot bereit {#bot-ready}

@@ -17,6 +17,6 @@ Required intents: `GuildWebhooks`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                    | Details                         |
+| ------- | ------------------------------------------------------- | ------------------------------- |
 | Channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | Channel whose webhooks changed. |

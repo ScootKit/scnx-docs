@@ -17,8 +17,8 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                            |
+| -------- | ------------------------------------------------------- | ---------------------------------- |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Das Mitglied, das beigetreten ist. |
 
 ### Mitglied verlassen {#member-left}
@@ -29,8 +29,8 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                          |
+| -------- | ------------------------------------------------------- | -------------------------------- |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Das Mitglied, das verlassen hat. |
 
 ### Mitglied aktualisiert {#member-updated}
@@ -41,10 +41,10 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriges Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitgliedstatus vor der Aktualisierung. |
-| Aktuelles Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitgliedstatus nach der Aktualisierung. |
+| Name                | Typ                                                     | Details                                 |
+| ------------------- | ------------------------------------------------------- | --------------------------------------- |
+| Vorheriges Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitgliedstatus vor der Aktualisierung.  |
+| Aktuelles Mitglied  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitgliedstatus nach der Aktualisierung. |
 
 ### Mitglieder-Paket erhalten {#members-chunk-received}
 
@@ -54,12 +54,12 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | Server, zu dem die Mitglieder gehören. |
-| Mitglieder | Liste von [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | In diesem Paket enthaltene Mitglieder. |
-| Paketnummer | [Ganzzahl](../../../value-types.md#INTEGER) | Nummer dieses Pakets. Kann leer sein. |
-| Pakete insgesamt | [Ganzzahl](../../../value-types.md#INTEGER) | Gesamtzahl der Pakete. Kann leer sein. |
+| Name             | Typ                                                               | Details                                |
+| ---------------- | ----------------------------------------------------------------- | -------------------------------------- |
+| Server           | [Server](../../../value-types.md#GUILD)                           | Server, zu dem die Mitglieder gehören. |
+| Mitglieder       | Liste von [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | In diesem Paket enthaltene Mitglieder. |
+| Paketnummer      | [Ganzzahl](../../../value-types.md#INTEGER)                       | Nummer dieses Pakets. Kann leer sein.  |
+| Pakete insgesamt | [Ganzzahl](../../../value-types.md#INTEGER)                       | Gesamtzahl der Pakete. Kann leer sein. |
 
 ### Mitglied wurde verfügbar {#member-became-available}
 
@@ -69,8 +69,8 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                               |
+| -------- | ------------------------------------------------------- | ------------------------------------- |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglied, das gerade verfügbar wurde. |
 
 ### Benutzer aktualisiert {#user-updated}
@@ -81,10 +81,10 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer-Status vor der Aktualisierung. |
-| Aktueller Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer-Status nach der Aktualisierung. |
+| Name                | Typ                                              | Details                                  |
+| ------------------- | ------------------------------------------------ | ---------------------------------------- |
+| Vorheriger Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer-Status vor der Aktualisierung.  |
+| Aktueller Benutzer  | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer-Status nach der Aktualisierung. |
 
 ### Präsenz aktualisiert {#presence-updated}
 
@@ -94,13 +94,13 @@ Benötigte Intents: `GuildPresences`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorherige Präsenz | [Präsenz](../../../value-types.md#PRESENCE) | Präsenz-Status vor der Aktualisierung, falls bekannt. Kann leer sein. |
-| Aktuelle Präsenz | [Präsenz](../../../value-types.md#PRESENCE) | Präsenz-Status nach der Aktualisierung. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, dessen Präsenz sich geändert hat. |
-| Status | [Präsenzstatus](../../../value-types.md#PRESENCE_STATUS) | Aktueller Online-Status. |
-| Aktivitäten | Liste von [Aktivität](../../../value-types.md#ACTIVITY) | Aktuelle Liste der Aktivitäten. |
+| Name              | Typ                                                      | Details                                                               |
+| ----------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
+| Vorherige Präsenz | [Präsenz](../../../value-types.md#PRESENCE)              | Präsenz-Status vor der Aktualisierung, falls bekannt. Kann leer sein. |
+| Aktuelle Präsenz  | [Präsenz](../../../value-types.md#PRESENCE)              | Präsenz-Status nach der Aktualisierung.                               |
+| Benutzer          | [Benutzer](../../../value-types.md#DISCORD_USER)         | Benutzer, dessen Präsenz sich geändert hat.                           |
+| Status            | [Präsenzstatus](../../../value-types.md#PRESENCE_STATUS) | Aktueller Online-Status.                                              |
+| Aktivitäten       | Liste von [Aktivität](../../../value-types.md#ACTIVITY)  | Aktuelle Liste der Aktivitäten.                                       |
 
 ### Mitglied hat Überprüfung abgeschlossen {#member-completed-screening}
 
@@ -110,8 +110,8 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                                          |
+| -------- | ------------------------------------------------------- | ------------------------------------------------ |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglied, das die Überprüfung abgeschlossen hat. |
 
 ### Mitglied hat Server geboostet {#member-boosted}
@@ -122,8 +122,8 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                                |
+| -------- | ------------------------------------------------------- | -------------------------------------- |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglied, das zu boosten begonnen hat. |
 
 ### Mitglied hat Boost beendet {#member-unboosted}
@@ -134,6 +134,6 @@ Benötigte Intents: `GuildMembers`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                     | Details                              |
+| -------- | ------------------------------------------------------- | ------------------------------------ |
 | Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Mitglied, das den Boost beendet hat. |

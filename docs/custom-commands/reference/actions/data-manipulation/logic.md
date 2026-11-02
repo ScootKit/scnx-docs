@@ -15,15 +15,15 @@ Checks whether two values are equal.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Text](../../../value-types.md#STRING) | Yes | First value. |
-| B | [Text](../../../value-types.md#STRING) | Yes | Second value. |
+| Name | Type                                   | Required | Details       |
+| ---- | -------------------------------------- | -------- | ------------- |
+| A    | [Text](../../../value-types.md#STRING) | Yes      | First value.  |
+| B    | [Text](../../../value-types.md#STRING) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details             |
+| ------ | ----------------------------------------- | ------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a equals b. |
 
 ### Equals (number) {#logic-equals-number}
@@ -32,15 +32,15 @@ Checks whether two numbers are equal (numeric comparison, unlike Equals which co
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First number. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second number. |
+| Name | Type                                            | Required | Details        |
+| ---- | ----------------------------------------------- | -------- | -------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First number.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second number. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                         |
+| ------ | ----------------------------------------- | ------------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a equals b numerically. |
 
 ### Not equals {#logic-not-equals}
@@ -49,15 +49,15 @@ Checks whether two values differ.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Text](../../../value-types.md#STRING) | Yes | First value. |
-| B | [Text](../../../value-types.md#STRING) | Yes | Second value. |
+| Name | Type                                   | Required | Details       |
+| ---- | -------------------------------------- | -------- | ------------- |
+| A    | [Text](../../../value-types.md#STRING) | Yes      | First value.  |
+| B    | [Text](../../../value-types.md#STRING) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                     |
+| ------ | ----------------------------------------- | --------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a does not equal b. |
 
 ### Greater than {#logic-greater-than}
@@ -66,15 +66,15 @@ Checks whether a is greater than b.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First value. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second value. |
+| Name | Type                                            | Required | Details       |
+| ---- | ----------------------------------------------- | -------- | ------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First value.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details           |
+| ------ | ----------------------------------------- | ----------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a &gt; b. |
 
 ### Less than {#logic-less-than}
@@ -83,15 +83,15 @@ Checks whether a is less than b.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First value. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second value. |
+| Name | Type                                            | Required | Details       |
+| ---- | ----------------------------------------------- | -------- | ------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First value.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details           |
+| ------ | ----------------------------------------- | ----------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a &lt; b. |
 
 ### Greater or equal {#logic-greater-or-equal}
@@ -100,15 +100,15 @@ Checks whether a is greater than or equal to b.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First value. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second value. |
+| Name | Type                                            | Required | Details       |
+| ---- | ----------------------------------------------- | -------- | ------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First value.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details            |
+| ------ | ----------------------------------------- | ------------------ |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a &gt;= b. |
 
 ### Less or equal {#logic-less-or-equal}
@@ -117,15 +117,15 @@ Checks whether a is less than or equal to b.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First value. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second value. |
+| Name | Type                                            | Required | Details       |
+| ---- | ----------------------------------------------- | -------- | ------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First value.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details            |
+| ------ | ----------------------------------------- | ------------------ |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if a &lt;= b. |
 
 ### Logical AND {#logic-and}
@@ -134,14 +134,14 @@ Returns true only if every value is true.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Yes/No values to combine. |
+| Name   | Type                                              | Required | Details                   |
+| ------ | ------------------------------------------------- | -------- | ------------------------- |
+| Values | List of [Yes/No](../../../value-types.md#BOOLEAN) | Yes      | Yes/No values to combine. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                      |
+| ------ | ----------------------------------------- | ---------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if all values are true. |
 
 ### Logical OR {#logic-or}
@@ -150,14 +150,14 @@ Returns true if at least one value is true.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Yes/No values to combine. |
+| Name   | Type                                              | Required | Details                   |
+| ------ | ------------------------------------------------- | -------- | ------------------------- |
+| Values | List of [Yes/No](../../../value-types.md#BOOLEAN) | Yes      | Yes/No values to combine. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                    |
+| ------ | ----------------------------------------- | -------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True if any value is true. |
 
 ### Logical NOT {#logic-not}
@@ -166,14 +166,14 @@ Inverts a yes/no value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Yes/No value to invert. |
+| Name  | Type                                      | Required | Details                 |
+| ----- | ----------------------------------------- | -------- | ----------------------- |
+| Value | [Yes/No](../../../value-types.md#BOOLEAN) | Yes      | Yes/No value to invert. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                    |
+| ------ | ----------------------------------------- | -------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | The inverted yes/no value. |
 
 ### If/else value {#logic-if}
@@ -182,17 +182,17 @@ Returns one of two values depending on a condition (ternary).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Condition | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Yes/No condition to evaluate. |
-| Value type | [Kind of value](../../../value-types.md#DATA_TYPE) | No | Optional data type for the two values and the result (defaults to text when left empty). |
-| Value if true | [Matching value](../../../value-types.md#SELECTED_TYPE) | Yes | Returned when the condition is true. |
-| Value if false | [Matching value](../../../value-types.md#SELECTED_TYPE) | Yes | Returned when the condition is false. |
+| Name           | Type                                                    | Required | Details                                                                                  |
+| -------------- | ------------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------- |
+| Condition      | [Yes/No](../../../value-types.md#BOOLEAN)               | Yes      | Yes/No condition to evaluate.                                                            |
+| Value type     | [Kind of value](../../../value-types.md#DATA_TYPE)      | No       | Optional data type for the two values and the result (defaults to text when left empty). |
+| Value if true  | [Matching value](../../../value-types.md#SELECTED_TYPE) | Yes      | Returned when the condition is true.                                                     |
+| Value if false | [Matching value](../../../value-types.md#SELECTED_TYPE) | Yes      | Returned when the condition is false.                                                    |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                    | Details                                 |
+| ------ | ------------------------------------------------------- | --------------------------------------- |
 | Result | [Matching value](../../../value-types.md#SELECTED_TYPE) | Either value-if-true or value-if-false. |
 
 ### Match value {#logic-match}
@@ -201,19 +201,19 @@ Looks a value up in a list of cases and returns the result that case stands for,
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value to match | [Any](../../../value-types.md#ANY) | Yes | The value to look up. Numbers and yes/no values are matched by their text form; a user, role or channel is matched by its id. |
-| Value type | [Kind of value](../../../value-types.md#DATA_TYPE) | No | Optional data type of the returned value (defaults to text when left empty). |
-| Cases | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | Yes | The lookup table: each entry's key is a value to match, each entry's value is what to return for it. |
-| Fallback | [Matching value](../../../value-types.md#SELECTED_TYPE) | No | Returned when no case matches. Left empty this returns nothing. |
+| Name           | Type                                                                                         | Required | Details                                                                                                                       |
+| -------------- | -------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Value to match | [Any](../../../value-types.md#ANY)                                                           | Yes      | The value to look up. Numbers and yes/no values are matched by their text form; a user, role or channel is matched by its id. |
+| Value type     | [Kind of value](../../../value-types.md#DATA_TYPE)                                           | No       | Optional data type of the returned value (defaults to text when left empty).                                                  |
+| Cases          | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | Yes      | The lookup table: each entry's key is a value to match, each entry's value is what to return for it.                          |
+| Fallback       | [Matching value](../../../value-types.md#SELECTED_TYPE)                                      | No       | Returned when no case matches. Left empty this returns nothing.                                                               |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Result | [Matching value](../../../value-types.md#SELECTED_TYPE) | The matching case's value, or the fallback. May be empty. |
-| Matched | [Yes/No](../../../value-types.md#BOOLEAN) | True when a case matched, false when the fallback was used. |
+| Name    | Type                                                    | Details                                                     |
+| ------- | ------------------------------------------------------- | ----------------------------------------------------------- |
+| Result  | [Matching value](../../../value-types.md#SELECTED_TYPE) | The matching case's value, or the fallback. May be empty.   |
+| Matched | [Yes/No](../../../value-types.md#BOOLEAN)               | True when a case matched, false when the fallback was used. |
 
 ### Is empty {#logic-is-null}
 
@@ -221,14 +221,14 @@ Checks whether a value is empty.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../../value-types.md#ANY) | Yes | Value to check. |
+| Name  | Type                               | Required | Details         |
+| ----- | ---------------------------------- | -------- | --------------- |
+| Value | [Any](../../../value-types.md#ANY) | Yes      | Value to check. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details                       |
+| -------- | ----------------------------------------- | ----------------------------- |
 | Is empty | [Yes/No](../../../value-types.md#BOOLEAN) | True when the value is empty. |
 
 ### Use a fallback when empty {#coalesce}
@@ -237,15 +237,15 @@ Passes the value on, or the fallback when the value is empty (an empty text or l
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../../value-types.md#ANY) | Yes | The value to use when it is set. |
-| Fallback | [Any](../../../value-types.md#ANY) | Yes | Used instead when the value is empty (an empty text or list still counts as set). Must be the same kind of value. |
+| Name     | Type                               | Required | Details                                                                                                           |
+| -------- | ---------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Value    | [Any](../../../value-types.md#ANY) | Yes      | The value to use when it is set.                                                                                  |
+| Fallback | [Any](../../../value-types.md#ANY) | Yes      | Used instead when the value is empty (an empty text or list still counts as set). Must be the same kind of value. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                               | Details                                              |
+| ------ | ---------------------------------- | ---------------------------------------------------- |
 | Result | [Any](../../../value-types.md#ANY) | The value, or the fallback when the value was empty. |
 
 ### Turn text into a choice {#text-to-enum}
@@ -254,18 +254,18 @@ Finds the value of a choice list that a text names, for example a typed answer o
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to look up in the choice list. |
-| Choice list | [Choice list](../../../value-types.md#ENUM_TYPE) | Yes | The choice list whose values the text is matched against. |
-| Fallback | [Choice](../../../value-types.md#ENUM_VALUE) | No | The choice to use when the text matches no value. Leave it empty to get no value instead. |
+| Name        | Type                                             | Required | Details                                                                                   |
+| ----------- | ------------------------------------------------ | -------- | ----------------------------------------------------------------------------------------- |
+| Text        | [Text](../../../value-types.md#STRING)           | Yes      | The text to look up in the choice list.                                                   |
+| Choice list | [Choice list](../../../value-types.md#ENUM_TYPE) | Yes      | The choice list whose values the text is matched against.                                 |
+| Fallback    | [Choice](../../../value-types.md#ENUM_VALUE)     | No       | The choice to use when the text matches no value. Leave it empty to get no value instead. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Choice | [Choice](../../../value-types.md#ENUM_VALUE) | The matching value of the choice list, or the fallback. Empty when nothing matches and there is no fallback. May be empty. |
-| Matched | [Yes/No](../../../value-types.md#BOOLEAN) | Yes when the text matched a value of the choice list. |
+| Name    | Type                                         | Details                                                                                                                    |
+| ------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Choice  | [Choice](../../../value-types.md#ENUM_VALUE) | The matching value of the choice list, or the fallback. Empty when nothing matches and there is no fallback. May be empty. |
+| Matched | [Yes/No](../../../value-types.md#BOOLEAN)    | Yes when the text matched a value of the choice list.                                                                      |
 
 ### Has a value {#logic-has-value}
 
@@ -273,14 +273,14 @@ Checks whether a value is present. Returns true when the value resolves to somet
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../../value-types.md#ANY) | Yes | Value to check. |
+| Name  | Type                               | Required | Details         |
+| ----- | ---------------------------------- | -------- | --------------- |
+| Value | [Any](../../../value-types.md#ANY) | Yes      | Value to check. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                      | Details                                                           |
+| ----------- | ----------------------------------------- | ----------------------------------------------------------------- |
 | Has a value | [Yes/No](../../../value-types.md#BOOLEAN) | True when the value is neither missing nor an empty text or list. |
 
 ### Is one of {#logic-is-one-of}
@@ -289,15 +289,15 @@ Checks whether a value is one of the values you list out. This is how you test a
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Item](../../../value-types.md#ELEMENT) | Yes | The value to test. Connect something here first: the list below then offers exactly the values its type allows. |
-| One of | List of [Any](../../../value-types.md#ANY) | Yes | The values that count as a match. An empty list matches nothing. |
+| Name   | Type                                       | Required | Details                                                                                                         |
+| ------ | ------------------------------------------ | -------- | --------------------------------------------------------------------------------------------------------------- |
+| Value  | [Item](../../../value-types.md#ELEMENT)    | Yes      | The value to test. Connect something here first: the list below then offers exactly the values its type allows. |
+| One of | List of [Any](../../../value-types.md#ANY) | Yes      | The values that count as a match. An empty list matches nothing.                                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                                          |
+| ------ | ----------------------------------------- | ------------------------------------------------ |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | True when the value is one of the listed values. |
 
 ### Text to yes/no {#parse-boolean}
@@ -306,12 +306,12 @@ Reads a yes/no value from text. Returns an empty value if not recognized.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to read (e.g. true/false, yes/no). |
+| Name | Type                                   | Required | Details                                     |
+| ---- | -------------------------------------- | -------- | ------------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Yes      | The text to read (e.g. true/false, yes/no). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                      | Details                                   |
+| ------ | ----------------------------------------- | ----------------------------------------- |
 | Result | [Yes/No](../../../value-types.md#BOOLEAN) | The yes/no value, or empty. May be empty. |

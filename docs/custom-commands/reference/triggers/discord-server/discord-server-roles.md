@@ -15,8 +15,8 @@ Runs when a role is created.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                       | Details                    |
+| ------------ | ------------------------------------------ | -------------------------- |
 | Created role | [Role](../../../value-types.md#GUILD_ROLE) | The role that was created. |
 
 ### Role deleted {#role-deleted}
@@ -25,8 +25,8 @@ Runs when a role is deleted.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                       | Details                    |
+| ------------ | ------------------------------------------ | -------------------------- |
 | Deleted role | [Role](../../../value-types.md#GUILD_ROLE) | The role that was deleted. |
 
 ### Role updated {#role-updated}
@@ -35,7 +35,7 @@ Runs when a role is updated.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name          | Type                                       | Details                     |
+| ------------- | ------------------------------------------ | --------------------------- |
 | Previous role | [Role](../../../value-types.md#GUILD_ROLE) | The role before the update. |
-| Current role | [Role](../../../value-types.md#GUILD_ROLE) | The role after the update. |
+| Current role  | [Role](../../../value-types.md#GUILD_ROLE) | The role after the update.  |

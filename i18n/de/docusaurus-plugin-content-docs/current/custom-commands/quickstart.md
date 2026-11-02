@@ -39,12 +39,12 @@ Beide starten als **Entwurf**, in Discord passiert also noch nichts. Du findest 
 
 Das Diagramm beginnt mit dem Trigger, dem Kasten, der festlegt, wann der Flow läuft. Klicke darauf, um seine **Trigger-Einstellungen** zu öffnen:
 
-| Einstellung        | Wert in dieser Vorlage                                                   | Was sie bewirkt                                                       |
-| ------------------ | ------------------------------------------------------------------------ | --------------------------------------------------------------------- |
-| **Befehlsname**    | `remind`                                                                 | Der Name, den Mitglieder nach dem `/` eintippen.                      |
-| **Beschreibung**   | "DM me a reminder after the given number of minutes"                     | Wird in Discord unter dem Befehl angezeigt.                           |
-| **Optionen**       | `minutes` (**Ganze Zahl**, Pflicht) und `text` (**Text**, Pflicht)       | Die Werte, die Mitglieder ausfüllen, wenn sie den Befehl ausführen.   |
-| **Cooldown**       | An, pro **User**                                                         | Verhindert, dass ein Mitglied den Befehl viele Male hintereinander ausführt. |
+| Einstellung      | Wert in dieser Vorlage                                             | Was sie bewirkt                                                              |
+| ---------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------- |
+| **Befehlsname**  | `remind`                                                           | Der Name, den Mitglieder nach dem `/` eintippen.                             |
+| **Beschreibung** | "DM me a reminder after the given number of minutes"               | Wird in Discord unter dem Befehl angezeigt.                                  |
+| **Optionen**     | `minutes` (**Ganze Zahl**, Pflicht) und `text` (**Text**, Pflicht) | Die Werte, die Mitglieder ausfüllen, wenn sie den Befehl ausführen.          |
+| **Cooldown**     | An, pro **User**                                                   | Verhindert, dass ein Mitglied den Befehl viele Male hintereinander ausführt. |
 
 Über den Optionen zeigt eine Live-Vorschau den Befehl so, wie Discord ihn darstellt. Du kannst alles so lassen, wie es ist. Slash-Commands brauchen keinen privilegierten Intent, im Discord Developer Portal musst du also nichts einschalten.
 
@@ -105,11 +105,11 @@ Tippe auf deinem Server `/remind` ein, setze `minutes` auf 1 und `text` auf irge
 
 Wenn etwas nicht funktioniert:
 
-| Was du siehst                                  | Was du tun kannst                                                                                                                                                                                                                           |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Was du siehst                                  | Was du tun kannst                                                                                                                                                                                                                                                                                 |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/remind` taucht in Discord nicht auf          | Prüfe, ob der Flow **Aktiv** ist. Prüfe dann die Problemliste deines Bots auf "Ein Custom-Commands-Befehl kollidiert mit einem vorhandenen Befehl" und benenne den Befehl bei Bedarf um. Siehe auch [Slash-Befehle werden nicht angezeigt](/de/docs/custom-bot/troubleshooting#missing-commands). |
-| Discord sagt "The application did not respond" | Öffne den Ausführungsverlauf (siehe unten). Die Ausführung ist fehlgeschlagen oder hat vor dem Antwort-Schritt zu lange gedauert.                                                                                                           |
-| Die Antwort kommt, die DM nicht                | Prüfe, ob **Erinnerung zustellen (geplant)** **Aktiv** ist. Wenn ja, nimmt das Mitglied wahrscheinlich keine DMs von Servermitgliedern an. Der Ausführungsverlauf zeigt die fehlgeschlagene Ausführung.                                     |
+| Discord sagt "The application did not respond" | Öffne den Ausführungsverlauf (siehe unten). Die Ausführung ist fehlgeschlagen oder hat vor dem Antwort-Schritt zu lange gedauert.                                                                                                                                                                 |
+| Die Antwort kommt, die DM nicht                | Prüfe, ob **Erinnerung zustellen (geplant)** **Aktiv** ist. Wenn ja, nimmt das Mitglied wahrscheinlich keine DMs von Servermitgliedern an. Der Ausführungsverlauf zeigt die fehlgeschlagene Ausführung.                                                                                           |
 
 ## 8. Im Ausführungsverlauf nachsehen {#history}
 

@@ -17,8 +17,8 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                     | Details                      |
+| ------- | ------------------------------------------------------- | ---------------------------- |
 | Sticker | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker, der erstellt wurde. |
 
 ### Sticker gelöscht {#sticker-deleted}
@@ -29,8 +29,8 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                     | Details                      |
+| ------- | ------------------------------------------------------- | ---------------------------- |
 | Sticker | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker, der gelöscht wurde. |
 
 ### Sticker aktualisiert {#sticker-updated}
@@ -41,7 +41,7 @@ Benötigte Intents: `GuildExpressions`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Sticker | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker-Status vor der Aktualisierung. |
-| Aktueller Sticker | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker-Status nach der Aktualisierung. |
+| Name               | Typ                                                     | Details                                 |
+| ------------------ | ------------------------------------------------------- | --------------------------------------- |
+| Vorheriger Sticker | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker-Status vor der Aktualisierung.  |
+| Aktueller Sticker  | [Server-Sticker](../../../value-types.md#GUILD_STICKER) | Sticker-Status nach der Aktualisierung. |

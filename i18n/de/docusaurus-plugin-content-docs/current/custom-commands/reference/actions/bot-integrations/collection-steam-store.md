@@ -15,25 +15,25 @@ Liest die Shopdetails eines Steam-Spiels über die App-ID.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| App-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die Zahl in der Shopadresse des Spiels, zum Beispiel 730. Minimum: 1. |
-| Land | [Text](../../../value-types.md#STRING) | Nein | Zweistelliger Ländercode für Preis und Währung, zum Beispiel de. Leer: us. Maximale Länge: 2 Zeichen. Standard: `us`. |
-| Sprache | [Text](../../../value-types.md#STRING) | Nein | Die Sprache der Texte, zum Beispiel german. Leer: english. Maximale Länge: 20 Zeichen. Standard: `english`. |
+| Name    | Typ                                         | Pflicht | Details                                                                                                               |
+| ------- | ------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| App-ID  | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die Zahl in der Shopadresse des Spiels, zum Beispiel 730. Minimum: 1.                                                 |
+| Land    | [Text](../../../value-types.md#STRING)      | Nein    | Zweistelliger Ländercode für Preis und Währung, zum Beispiel de. Leer: us. Maximale Länge: 2 Zeichen. Standard: `us`. |
+| Sprache | [Text](../../../value-types.md#STRING)      | Nein    | Die Sprache der Texte, zum Beispiel german. Leer: english. Maximale Länge: 20 Zeichen. Standard: `english`.           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Shop diese App hat. Wenn nicht, ist alles andere leer. |
-| Name | [Text](../../../value-types.md#STRING) | Der Name des Spiels. Kann leer sein. |
-| Art | [Text](../../../value-types.md#STRING) | game, dlc, demo, music oder eine andere Art. Kann leer sein. |
-| Kurzbeschreibung | [Text](../../../value-types.md#STRING) | Die kurze Shopbeschreibung. Kann leer sein. |
-| Titelbild | [URL](../../../value-types.md#URL) | Das Titelbild im Shop. Kann leer sein. |
-| Kostenlos | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Spiel kostenlos ist. Kann leer sein. |
-| Preis | [Text](../../../value-types.md#STRING) | Der aktuelle Preis wie angezeigt, zum Beispiel 19,99€. Leer bei kostenlosen oder unveröffentlichten Spielen. Kann leer sein. |
-| Rabatt in % | [Ganzzahl](../../../value-types.md#INTEGER) | Der aktuelle Rabatt, in Prozent. Kann leer sein. |
-| Erscheinungsdatum | [Text](../../../value-types.md#STRING) | Das Erscheinungsdatum, wie der Shop es zeigt, zum Beispiel 21 Aug, 2012. Kann leer sein. |
-| Erscheint bald | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Spiel noch nicht erschienen ist. Kann leer sein. |
-| Entwickler | Liste von [Text](../../../value-types.md#STRING) | Die Entwickler. Kann leer sein. |
-| Shoplink | [URL](../../../value-types.md#URL) | Die Shopseite. Kann leer sein. |
+| Name              | Typ                                              | Details                                                                                                                      |
+| ----------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| Gefunden          | [Ja/Nein](../../../value-types.md#BOOLEAN)       | Ob der Shop diese App hat. Wenn nicht, ist alles andere leer.                                                                |
+| Name              | [Text](../../../value-types.md#STRING)           | Der Name des Spiels. Kann leer sein.                                                                                         |
+| Art               | [Text](../../../value-types.md#STRING)           | game, dlc, demo, music oder eine andere Art. Kann leer sein.                                                                 |
+| Kurzbeschreibung  | [Text](../../../value-types.md#STRING)           | Die kurze Shopbeschreibung. Kann leer sein.                                                                                  |
+| Titelbild         | [URL](../../../value-types.md#URL)               | Das Titelbild im Shop. Kann leer sein.                                                                                       |
+| Kostenlos         | [Ja/Nein](../../../value-types.md#BOOLEAN)       | Ob das Spiel kostenlos ist. Kann leer sein.                                                                                  |
+| Preis             | [Text](../../../value-types.md#STRING)           | Der aktuelle Preis wie angezeigt, zum Beispiel 19,99€. Leer bei kostenlosen oder unveröffentlichten Spielen. Kann leer sein. |
+| Rabatt in %       | [Ganzzahl](../../../value-types.md#INTEGER)      | Der aktuelle Rabatt, in Prozent. Kann leer sein.                                                                             |
+| Erscheinungsdatum | [Text](../../../value-types.md#STRING)           | Das Erscheinungsdatum, wie der Shop es zeigt, zum Beispiel 21 Aug, 2012. Kann leer sein.                                     |
+| Erscheint bald    | [Ja/Nein](../../../value-types.md#BOOLEAN)       | Ob das Spiel noch nicht erschienen ist. Kann leer sein.                                                                      |
+| Entwickler        | Liste von [Text](../../../value-types.md#STRING) | Die Entwickler. Kann leer sein.                                                                                              |
+| Shoplink          | [URL](../../../value-types.md#URL)               | Die Shopseite. Kann leer sein.                                                                                               |
