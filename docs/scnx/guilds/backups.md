@@ -86,8 +86,8 @@ Each backup in your list shows when it was taken, its size, how it is encrypted,
 
 Automatic backups are off by default. To turn them on, open the [backup page](https://scnx.app/glink?page=backups), switch on **Create backups automatically** and save. Under **Also include in every backup** you choose the optional parts for your automatic backups.
 
-- **When they run:** SCNX spreads the backups across the day. How many backups your bot creates per day depends on your plan. You can't choose the times. The first one runs within 24 hours.
-- **Where they are kept:** each automatic backup uses a slot. When all slots are full, new automatic backups are skipped. No existing backups are deleted. Automatic backups continue once you delete a backup.
+- **When they run:** SCNX spreads the backups across the day. You choose how many backups your bot creates per day, up to the maximum of your plan. You can't choose the times. The first one runs within 24 hours.
+- **Where they are kept:** each automatic backup uses a slot. When all slots are full, the new automatic backup replaces the oldest automatic backup. Your manual backups are never replaced. If manual backups fill every slot, automatic backups pause until you delete one. The more backups you take per day, the sooner older ones are replaced.
 - **If your bot is offline:** that backup is skipped and isn't made up later.
 - **Encryption:** automatic backups always use your server's key, never a password.
 

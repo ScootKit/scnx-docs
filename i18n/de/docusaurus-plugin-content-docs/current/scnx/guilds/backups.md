@@ -86,8 +86,8 @@ Jedes Backup in deiner Liste zeigt, wann es erstellt wurde, wie groß es ist, wi
 
 Automatische Backups sind standardmäßig aus. Um sie einzuschalten, öffne die [Backup-Seite](https://scnx.app/de/glink?page=backups), aktiviere **Backups automatisch erstellen** und speichere. Unter **Zusätzlich in jedem Backup** wählst du die optionalen Teile für deine automatischen Backups.
 
-- **Wann sie laufen:** SCNX verteilt die Backups über den Tag. Wie viele Backups dein Bot pro Tag erstellt, hängt von deinem Plan ab. Die Uhrzeiten kannst du nicht festlegen. Das erste Backup läuft innerhalb von 24 Stunden.
-- **Wo sie liegen:** Jedes automatische Backup belegt einen Platz. Sind alle Plätze voll, werden neue automatische Backups übersprungen. Bestehende Backups werden dabei nicht gelöscht. Sobald du ein Backup löschst, geht es mit den automatischen Backups weiter.
+- **Wann sie laufen:** SCNX verteilt die Backups über den Tag. Du wählst, wie viele Backups dein Bot pro Tag erstellt, bis zum Maximum deines Plans. Die Uhrzeiten kannst du nicht festlegen. Das erste Backup läuft innerhalb von 24 Stunden.
+- **Wo sie liegen:** Jedes automatische Backup belegt einen Platz. Sind alle Plätze voll, ersetzt das neue automatische Backup das älteste automatische Backup. Deine manuellen Backups werden nie ersetzt. Belegen manuelle Backups alle Plätze, pausieren automatische Backups, bis du eines löschst. Je mehr Backups du pro Tag erstellst, desto schneller werden ältere ersetzt.
 - **Wenn dein Bot offline ist:** Dieses Backup wird übersprungen und nicht nachgeholt.
 - **Verschlüsselung:** Automatische Backups verwenden immer den Schlüssel deines Servers, nie ein Passwort.
 

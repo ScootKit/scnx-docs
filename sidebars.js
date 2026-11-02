@@ -159,6 +159,16 @@ const sidebars = {
                     type: 'doc',
                     label: 'Slash commands & Permissions',
                     id: 'custom-bot/slash-commands'
+                },
+                {
+                    type: 'doc',
+                    label: 'Integrations',
+                    id: 'custom-bot/ccv3/integrations'
+                },
+                {
+                    type: 'doc',
+                    label: 'Sell with Stripe',
+                    id: 'custom-bot/ccv3/sell-with-stripe'
                 }
             ]
         },
@@ -455,6 +465,21 @@ const sidebars = {
                     type: 'doc',
                     label: 'Announcement bar, redirects & link-in-bio',
                     id: 'sites/small-features'
+                },
+                {
+                    type: 'doc',
+                    label: 'Settings',
+                    id: 'sites/settings'
+                },
+                {
+                    type: 'doc',
+                    label: 'Analytics',
+                    id: 'sites/analytics'
+                },
+                {
+                    type: 'doc',
+                    label: 'Content rules & legal',
+                    id: 'sites/content-and-legal'
                 },
                 {
                     type: 'doc',
