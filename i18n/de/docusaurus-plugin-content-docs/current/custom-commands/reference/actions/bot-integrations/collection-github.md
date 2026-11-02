@@ -9,7 +9,7 @@ description: "Lies GitHub-Repositorys, Issues, Releases und Benutzer, und eröff
 
 Lies GitHub-Repositorys, Issues, Releases und Benutzer, und eröffne Issues.
 
-### Repository abrufen {#github.get-repo}
+### Repository abrufen {#github-get-repo}
 
 Liest ein Repository: Beschreibung, Sterne, Forks und offene Issues.
 
@@ -37,7 +37,7 @@ Liest ein Repository: Beschreibung, Sterne, Forks und offene Issues.
 | Archiviert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Repository archiviert ist. Kann leer sein. |
 | Letzter Push | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann zuletzt Code gepusht wurde. Kann leer sein. |
 
-### Issues abrufen {#github.list-issues}
+### Issues abrufen {#github-list-issues}
 
 Listet Issues eines Repositorys, die neuesten zuerst. Pull Requests sind auch in der Liste; sie haben einen Pull-Request-Link.
 
@@ -56,9 +56,9 @@ Listet Issues eines Repositorys, die neuesten zuerst. Pull Requests sind auch in
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Issues | Liste von [GitHub-Issue](../../../value-types.md#github:Issue) | Die Issues, die neuesten zuerst. |
+| Issues | Liste von [GitHub-Issue](../../../value-types.md#github-Issue) | Die Issues, die neuesten zuerst. |
 
-### Releases abrufen {#github.list-releases}
+### Releases abrufen {#github-list-releases}
 
 Listet Releases eines Repositorys, die neuesten zuerst.
 
@@ -76,9 +76,9 @@ Listet Releases eines Repositorys, die neuesten zuerst.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Releases | Liste von [GitHub-Release](../../../value-types.md#github:Release) | Die Releases, die neuesten zuerst. |
+| Releases | Liste von [GitHub-Release](../../../value-types.md#github-Release) | Die Releases, die neuesten zuerst. |
 
-### Neuestes Release abrufen {#github.get-latest-release}
+### Neuestes Release abrufen {#github-get-latest-release}
 
 Liest das neueste veröffentlichte Release, das keine Vorabversion und kein Entwurf ist.
 
@@ -95,9 +95,9 @@ Liest das neueste veröffentlichte Release, das keine Vorabversion und kein Entw
 | Name | Typ | Details |
 | --- | --- | --- |
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob es so ein Release gibt. Wenn nicht, ist das Release leer. |
-| Release | [GitHub-Release](../../../value-types.md#github:Release) | Das Release. Kann leer sein. |
+| Release | [GitHub-Release](../../../value-types.md#github-Release) | Das Release. Kann leer sein. |
 
-### Issue eröffnen {#github.create-issue}
+### Issue eröffnen {#github-create-issue}
 
 Eröffnet ein neues Issue in einem Repository. Der Token braucht Schreibzugriff auf Issues.
 
@@ -118,7 +118,7 @@ Eröffnet ein neues Issue in einem Repository. Der Token braucht Schreibzugriff 
 | Nummer | [Ganzzahl](../../../value-types.md#INTEGER) | Die Nummer des neuen Issues. |
 | Link | [URL](../../../value-types.md#URL) | Das neue Issue auf GitHub. |
 
-### GitHub-Benutzer abrufen {#github.get-user}
+### GitHub-Benutzer abrufen {#github-get-user}
 
 Liest einen GitHub-Benutzer oder eine Organisation über den Benutzernamen.
 

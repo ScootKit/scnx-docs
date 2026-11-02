@@ -9,7 +9,7 @@ description: "Liste, erstelle und erledige Aufgaben in Todoist."
 
 Liste, erstelle und erledige Aufgaben in Todoist.
 
-### Offene Aufgaben abrufen {#todoist.list-tasks}
+### Offene Aufgaben abrufen {#todoist-list-tasks}
 
 Liest eine Seite offener Aufgaben, aus allen Projekten oder einem Projekt.
 
@@ -26,10 +26,10 @@ Liest eine Seite offener Aufgaben, aus allen Projekten oder einem Projekt.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Aufgaben | Liste von [Todoist-Aufgabe](../../../value-types.md#todoist:Task) | Die offenen Aufgaben dieser Seite. |
+| Aufgaben | Liste von [Todoist-Aufgabe](../../../value-types.md#todoist-Task) | Die offenen Aufgaben dieser Seite. |
 | Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
-### Aufgaben per Filter finden {#todoist.filter-tasks}
+### Aufgaben per Filter finden {#todoist-filter-tasks}
 
 Liest eine Seite offener Aufgaben, die zu einem Todoist-Filter passen.
 
@@ -46,10 +46,10 @@ Liest eine Seite offener Aufgaben, die zu einem Todoist-Filter passen.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Aufgaben | Liste von [Todoist-Aufgabe](../../../value-types.md#todoist:Task) | Die passenden Aufgaben dieser Seite. |
+| Aufgaben | Liste von [Todoist-Aufgabe](../../../value-types.md#todoist-Task) | Die passenden Aufgaben dieser Seite. |
 | Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
-### Aufgabe hinzufügen {#todoist.create-task}
+### Aufgabe hinzufügen {#todoist-create-task}
 
 Fügt eine Aufgabe zu Todoist hinzu.
 
@@ -68,9 +68,9 @@ Fügt eine Aufgabe zu Todoist hinzu.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Aufgabe | [Todoist-Aufgabe](../../../value-types.md#todoist:Task) | Die neue Aufgabe. |
+| Aufgabe | [Todoist-Aufgabe](../../../value-types.md#todoist-Task) | Die neue Aufgabe. |
 
-### Aufgabe erledigen {#todoist.close-task}
+### Aufgabe erledigen {#todoist-close-task}
 
 Markiert eine Aufgabe als erledigt. Eine wiederkehrende Aufgabe springt zum nächsten Termin.
 

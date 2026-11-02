@@ -9,7 +9,7 @@ description: "Search anime and manga on MyAnimeList and read their details and t
 
 Search anime and manga on MyAnimeList and read their details and the top list, through the free Jikan API. No account needed.
 
-### Search anime {#jikan.search-anime}
+### Search anime {#jikan-search-anime}
 
 Searches anime by title, best matches first. Adult entries are left out.
 
@@ -24,9 +24,9 @@ Searches anime by title, best matches first. Adult entries are left out.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Anime | List of [Anime](../../../value-types.md#jikan:Anime) | The anime found, best matches first. |
+| Anime | List of [Anime](../../../value-types.md#jikan-Anime) | The anime found, best matches first. |
 
-### Get anime {#jikan.get-anime}
+### Get anime {#jikan-get-anime}
 
 Reads one anime by its MyAnimeList ID.
 
@@ -41,9 +41,9 @@ Reads one anime by its MyAnimeList ID.
 | Name | Type | Details |
 | --- | --- | --- |
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the entry exists. When not, the entry is empty. |
-| Anime | [Anime](../../../value-types.md#jikan:Anime) | The anime. May be empty. |
+| Anime | [Anime](../../../value-types.md#jikan-Anime) | The anime. May be empty. |
 
-### Search manga {#jikan.search-manga}
+### Search manga {#jikan-search-manga}
 
 Searches manga by title, best matches first. Adult entries are left out.
 
@@ -58,9 +58,9 @@ Searches manga by title, best matches first. Adult entries are left out.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Manga | List of [Manga](../../../value-types.md#jikan:Manga) | The manga found, best matches first. |
+| Manga | List of [Manga](../../../value-types.md#jikan-Manga) | The manga found, best matches first. |
 
-### Get manga {#jikan.get-manga}
+### Get manga {#jikan-get-manga}
 
 Reads one manga by its MyAnimeList ID.
 
@@ -75,9 +75,9 @@ Reads one manga by its MyAnimeList ID.
 | Name | Type | Details |
 | --- | --- | --- |
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the entry exists. When not, the entry is empty. |
-| Manga | [Manga](../../../value-types.md#jikan:Manga) | The manga. May be empty. |
+| Manga | [Manga](../../../value-types.md#jikan-Manga) | The manga. May be empty. |
 
-### Get top anime {#jikan.get-top-anime}
+### Get top anime {#jikan-get-top-anime}
 
 Reads the MyAnimeList top anime list, first place first.
 
@@ -92,4 +92,4 @@ Reads the MyAnimeList top anime list, first place first.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Anime | List of [Anime](../../../value-types.md#jikan:Anime) | The anime, first place first. |
+| Anime | List of [Anime](../../../value-types.md#jikan-Anime) | The anime, first place first. |

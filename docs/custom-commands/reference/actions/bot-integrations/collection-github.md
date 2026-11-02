@@ -9,7 +9,7 @@ description: "Read GitHub repositories, issues, releases and users, and open iss
 
 Read GitHub repositories, issues, releases and users, and open issues.
 
-### Get repository {#github.get-repo}
+### Get repository {#github-get-repo}
 
 Reads a repository: description, stars, forks and open issues.
 
@@ -37,7 +37,7 @@ Reads a repository: description, stars, forks and open issues.
 | Archived | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the repository is archived. May be empty. |
 | Last push | [Date and time](../../../value-types.md#DATETIME) | When code was last pushed. May be empty. |
 
-### Get issues {#github.list-issues}
+### Get issues {#github-list-issues}
 
 Lists issues of a repository, newest first. Pull requests are in the list too; they have a pull request link.
 
@@ -56,9 +56,9 @@ Lists issues of a repository, newest first. Pull requests are in the list too; t
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Issues | List of [GitHub issue](../../../value-types.md#github:Issue) | The issues, newest first. |
+| Issues | List of [GitHub issue](../../../value-types.md#github-Issue) | The issues, newest first. |
 
-### Get releases {#github.list-releases}
+### Get releases {#github-list-releases}
 
 Lists releases of a repository, newest first.
 
@@ -76,9 +76,9 @@ Lists releases of a repository, newest first.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Releases | List of [GitHub release](../../../value-types.md#github:Release) | The releases, newest first. |
+| Releases | List of [GitHub release](../../../value-types.md#github-Release) | The releases, newest first. |
 
-### Get latest release {#github.get-latest-release}
+### Get latest release {#github-get-latest-release}
 
 Reads the newest published release that is not a pre-release or draft.
 
@@ -95,9 +95,9 @@ Reads the newest published release that is not a pre-release or draft.
 | Name | Type | Details |
 | --- | --- | --- |
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether there is such a release. When not, the release is empty. |
-| Release | [GitHub release](../../../value-types.md#github:Release) | The release. May be empty. |
+| Release | [GitHub release](../../../value-types.md#github-Release) | The release. May be empty. |
 
-### Open issue {#github.create-issue}
+### Open issue {#github-create-issue}
 
 Opens a new issue in a repository. The token needs write access to Issues.
 
@@ -118,7 +118,7 @@ Opens a new issue in a repository. The token needs write access to Issues.
 | Number | [Whole number](../../../value-types.md#INTEGER) | The number of the new issue. |
 | Link | [URL](../../../value-types.md#URL) | The new issue on GitHub. |
 
-### Get GitHub user {#github.get-user}
+### Get GitHub user {#github-get-user}
 
 Reads a GitHub user or organization by its username.
 

@@ -9,7 +9,7 @@ description: "Read Roblox users, groups with their roles and members, and experi
 
 Read Roblox users, groups with their roles and members, and experiences with an Open Cloud API key.
 
-### Get Roblox user {#roblox.get-user}
+### Get Roblox user {#roblox-get-user}
 
 Reads a Roblox user by their user ID.
 
@@ -32,7 +32,7 @@ Reads a Roblox user by their user ID.
 | Premium | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the user has Premium. Empty unless the key has the user.advanced:read permission. May be empty. |
 | ID verified | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the user verified their ID. Empty unless the key has the user.advanced:read permission. May be empty. |
 
-### Get Roblox group {#roblox.get-group}
+### Get Roblox group {#roblox-get-group}
 
 Reads a Roblox group: name, owner and member count.
 
@@ -57,7 +57,7 @@ Reads a Roblox group: name, owner and member count.
 | Verified | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the group has the verified badge. May be empty. |
 | Created at | [Date and time](../../../value-types.md#DATETIME) | When the group was created. May be empty. |
 
-### Get group roles {#roblox.list-group-roles}
+### Get group roles {#roblox-list-group-roles}
 
 Lists the roles (ranks) of a Roblox group, lowest rank first.
 
@@ -74,10 +74,10 @@ Lists the roles (ranks) of a Roblox group, lowest rank first.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Roles | List of [Roblox group role](../../../value-types.md#roblox:Role) | The roles, lowest rank first. |
+| Roles | List of [Roblox group role](../../../value-types.md#roblox-Role) | The roles, lowest rank first. |
 | Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
-### Get group members {#roblox.list-group-members}
+### Get group members {#roblox-list-group-members}
 
 Lists one page of the members of a Roblox group with their role.
 
@@ -94,10 +94,10 @@ Lists one page of the members of a Roblox group with their role.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Members | List of [Roblox group member](../../../value-types.md#roblox:Membership) | The members of this page. |
+| Members | List of [Roblox group member](../../../value-types.md#roblox-Membership) | The members of this page. |
 | Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
-### Get experience {#roblox.get-universe}
+### Get experience {#roblox-get-universe}
 
 Reads a Roblox experience (universe) by its universe ID. Get the universe ID of a place with "Get universe ID" of Roblox (public data).
 

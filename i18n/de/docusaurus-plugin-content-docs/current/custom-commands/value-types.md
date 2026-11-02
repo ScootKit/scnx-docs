@@ -2572,7 +2572,7 @@ Beispiel: `Team Rot: 120`.
 | Schlüssel | [Text](#STRING) | Der Schlüssel, unter dem dieses Paar gespeichert ist. Beispiel: `Team Rot`. |
 | Wert | [Gespeicherter Wert](#STORAGE_VALUE) | Der unter diesem Schlüssel gespeicherte Wert. Beispiel: `120`. |
 
-### top.gg-Stimme {#topgg:Vote}
+### top.gg-Stimme {#topgg-Vote}
 
 Eine Stimme für dein Projekt auf top.gg.
 
@@ -2584,7 +2584,7 @@ Eine Stimme für dein Projekt auf top.gg.
 | Abgestimmt am | [Datum und Uhrzeit](#DATETIME) | Wann die Person abgestimmt hat. |
 | Läuft ab am | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt, 12 Stunden nach der Abgabe. |
 
-### top.gg-Abstimmungsereignis {#topgg:VoteEvent}
+### top.gg-Abstimmungsereignis {#topgg-VoteEvent}
 
 Alles, was top.gg zu einer Stimme gesendet hat.
 
@@ -2599,7 +2599,7 @@ Alles, was top.gg zu einer Stimme gesendet hat.
 | Läuft ab am | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein. |
 | Bot- oder Server-ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID des Bots oder Servers, der die Stimme bekommen hat. |
 
-### Twitch-Clip {#twitch:Clip}
+### Twitch-Clip {#twitch-Clip}
 
 Ein Clip eines Twitch-Kanals.
 
@@ -2614,7 +2614,7 @@ Ein Clip eines Twitch-Kanals.
 | Länge in Sekunden | [Dezimalzahl](#FLOAT) | Wie lang der Clip ist, in Sekunden. |
 | Vorschaubild | [URL](#URL) | Das Vorschaubild des Clips. Kann leer sein. |
 
-### Vorhersagetag {#open-meteo:Day}
+### Vorhersagetag {#open-meteo-Day}
 
 Die Wettervorhersage für einen Tag.
 
@@ -2630,7 +2630,7 @@ Die Wettervorhersage für einen Tag.
 | Sonnenaufgang | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne aufgeht. Kann leer sein. |
 | Sonnenuntergang | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne untergeht. Kann leer sein. |
 
-### CoinGecko-Münze {#coingecko:Coin}
+### CoinGecko-Münze {#coingecko-Coin}
 
 Eine Münze in der Marktliste.
 
@@ -2645,7 +2645,7 @@ Eine Münze in der Marktliste.
 | Rang | [Ganzzahl](#INTEGER) | Der Platz nach Marktkapitalisierung. Kann leer sein. |
 | Änderung in 24 Stunden in % | [Dezimalzahl](#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
 
-### Anime {#jikan:Anime}
+### Anime {#jikan-Anime}
 
 Ein Anime auf MyAnimeList.
 
@@ -2664,7 +2664,7 @@ Ein Anime auf MyAnimeList.
 | Folgen | [Ganzzahl](#INTEGER) | Wie viele Folgen er hat, wenn bekannt. Kann leer sein. |
 | Jahr | [Ganzzahl](#INTEGER) | Das Jahr, in dem er anlief, wenn bekannt. Kann leer sein. |
 
-### Manga {#jikan:Manga}
+### Manga {#jikan-Manga}
 
 Ein Manga auf MyAnimeList.
 
@@ -2683,7 +2683,7 @@ Ein Manga auf MyAnimeList.
 | Kapitel | [Ganzzahl](#INTEGER) | Wie viele Kapitel er hat, wenn bekannt. Kann leer sein. |
 | Bände | [Ganzzahl](#INTEGER) | Wie viele Bände er hat, wenn bekannt. Kann leer sein. |
 
-### GitHub-Issue {#github:Issue}
+### GitHub-Issue {#github-Issue}
 
 Ein Issue oder Pull Request eines Repositorys.
 
@@ -2698,7 +2698,7 @@ Ein Issue oder Pull Request eines Repositorys.
 | Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann es eröffnet wurde. |
 | Pull-Request-Link | [URL](#URL) | Der Pull Request auf GitHub. Leer bei Issues, damit kannst du sie unterscheiden. Kann leer sein. |
 
-### GitHub-Release {#github:Release}
+### GitHub-Release {#github-Release}
 
 Ein Release eines Repositorys.
 
@@ -2712,7 +2712,7 @@ Ein Release eines Repositorys.
 | Vorabversion | [Ja/Nein](#BOOLEAN) | Ob es als Vorabversion markiert ist. |
 | Entwurf | [Ja/Nein](#BOOLEAN) | Ob es ein Entwurf ist. |
 
-### Roblox-Gruppenrolle {#roblox:Role}
+### Roblox-Gruppenrolle {#roblox-Role}
 
 Eine Rolle (Rang) einer Roblox-Gruppe.
 
@@ -2724,7 +2724,7 @@ Eine Rolle (Rang) einer Roblox-Gruppe.
 | Mitglieder | [Ganzzahl](#INTEGER) | Wie viele Mitglieder die Rolle haben, wenn der Schlüssel das sehen darf. Kann leer sein. |
 | Beschreibung | [Text](#STRING) | Die Beschreibung der Rolle. Kann leer sein. |
 
-### Roblox-Gruppenmitglied {#roblox:Membership}
+### Roblox-Gruppenmitglied {#roblox-Membership}
 
 Ein Mitglied einer Roblox-Gruppe und seine Rolle.
 
@@ -2734,7 +2734,7 @@ Ein Mitglied einer Roblox-Gruppe und seine Rolle.
 | Rollen-ID | [ID](#ID) | Die ID der Rolle des Mitglieds. |
 | Beigetreten am | [Datum und Uhrzeit](#DATETIME) | Wann das Mitglied beigetreten ist. Kann leer sein. |
 
-### Roblox-Gruppenmitgliedschaft {#roblox-public:GroupRole}
+### Roblox-Gruppenmitgliedschaft {#roblox-public-GroupRole}
 
 Eine Gruppe, in der ein Benutzer ist, und seine Rolle dort.
 
@@ -2746,7 +2746,7 @@ Eine Gruppe, in der ein Benutzer ist, und seine Rolle dort.
 | Rollenname | [Text](#STRING) | Der Name der Rolle des Benutzers. |
 | Rang | [Ganzzahl](#INTEGER) | Die Rangnummer der Rolle, 1 bis 255. |
 
-### Airtable-Zeile {#airtable:Row}
+### Airtable-Zeile {#airtable-Row}
 
 Eine Zeile einer Airtable-Tabelle.
 
@@ -2756,7 +2756,7 @@ Eine Zeile einer Airtable-Tabelle.
 | Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Zeile erstellt wurde. |
 | Felder | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Die Feldwerte nach Feldname, als Text. Leere Felder und Listen-, Anhang- und Mitarbeiterfelder werden ausgelassen. |
 
-### Todoist-Aufgabe {#todoist:Task}
+### Todoist-Aufgabe {#todoist-Task}
 
 Eine Todoist-Aufgabe.
 
@@ -2772,7 +2772,7 @@ Eine Todoist-Aufgabe.
 | Labels | Liste von [Text](#STRING) | Die Label-Namen. Kann leer sein. |
 | Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Aufgabe hinzugefügt wurde. Kann leer sein. |
 
-### Steam-Spiel {#steam:Game}
+### Steam-Spiel {#steam-Game}
 
 Ein Spiel, das ein Steam-Benutzer besitzt.
 
@@ -2784,7 +2784,7 @@ Ein Spiel, das ein Steam-Benutzer besitzt.
 | Letzte zwei Wochen in Minuten | [Ganzzahl](#INTEGER) | Spielzeit der letzten zwei Wochen, in Minuten. Leer, wenn nicht gespielt. Kann leer sein. |
 | Zuletzt gespielt | [Datum und Uhrzeit](#DATETIME) | Wann es zuletzt gespielt wurde. Kann leer sein. |
 
-### Stripe-Zahlung {#stripe:Charge}
+### Stripe-Zahlung {#stripe-Charge}
 
 Eine Zahlung.
 
@@ -2803,7 +2803,7 @@ Eine Zahlung.
 | E-Mail | [Text](#STRING) | Die Rechnungs-E-Mail, wenn angegeben. Kann leer sein. |
 | Beleg | [URL](#URL) | Die Belegseite. Kann leer sein. |
 
-### Stripe-Zahlungsvorgang {#stripe:PaymentIntent}
+### Stripe-Zahlungsvorgang {#stripe-PaymentIntent}
 
 Ein Zahlungsvorgang (PaymentIntent).
 
@@ -2818,7 +2818,7 @@ Ein Zahlungsvorgang (PaymentIntent).
 | Kunden-ID | [ID](#ID) | Der Kunde, wenn es einen gibt. Kann leer sein. |
 | Erhaltener Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
 
-### Stripe-Checkout-Sitzung {#stripe:CheckoutSession}
+### Stripe-Checkout-Sitzung {#stripe-CheckoutSession}
 
 Eine Checkout-Sitzung.
 
@@ -2833,7 +2833,7 @@ Eine Checkout-Sitzung.
 | Referenz | [Text](#STRING) | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein. |
 | Zahlungsvorgang-ID | [ID](#ID) | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein. |
 
-### Stripe-Betrag {#stripe:Amount}
+### Stripe-Betrag {#stripe-Amount}
 
 Ein Betrag in einer Währung.
 
@@ -2842,7 +2842,7 @@ Ein Betrag in einer Währung.
 | Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. |
 | Währung | [Text](#STRING) | Die Währung, zum Beispiel eur. |
 
-### Stripe-Ereignis {#stripe:Event}
+### Stripe-Ereignis {#stripe-Event}
 
 Alles, was Stripe zu einem Ereignis gesendet hat.
 

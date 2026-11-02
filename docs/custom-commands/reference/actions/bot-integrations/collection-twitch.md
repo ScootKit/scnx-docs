@@ -9,7 +9,7 @@ description: "Read Twitch users, streams, channels, clips and the subscriber cou
 
 Read Twitch users, streams, channels, clips and the subscriber count of your channel.
 
-### Get Twitch user {#twitch.get-user}
+### Get Twitch user {#twitch-get-user}
 
 Looks up a Twitch account by its login name.
 
@@ -33,7 +33,7 @@ Looks up a Twitch account by its login name.
 | Partner status | [Text](../../../value-types.md#STRING) | partner, affiliate, or empty text for other channels. May be empty. |
 | Created at | [Date and time](../../../value-types.md#DATETIME) | When the account was created. May be empty. |
 
-### Get stream {#twitch.get-stream}
+### Get stream {#twitch-get-stream}
 
 Checks whether a channel is live and reads its stream. When the channel is not live, everything but "Is live" is empty.
 
@@ -55,7 +55,7 @@ Checks whether a channel is live and reads its stream. When the channel is not l
 | Live since | [Date and time](../../../value-types.md#DATETIME) | When the stream started. May be empty. |
 | Language | [Text](../../../value-types.md#STRING) | The language of the stream, for example en. May be empty. |
 
-### Get channel info {#twitch.get-channel-info}
+### Get channel info {#twitch-get-channel-info}
 
 Reads the title, game and tags of a channel by its Twitch ID.
 
@@ -78,7 +78,7 @@ Reads the title, game and tags of a channel by its Twitch ID.
 | Title | [Text](../../../value-types.md#STRING) | The title of the current or last stream. May be empty. |
 | Tags | List of [Text](../../../value-types.md#STRING) | The tags of the channel. May be empty. |
 
-### Get latest clips {#twitch.get-latest-clips}
+### Get latest clips {#twitch-get-latest-clips}
 
 Gets the clips of a channel made in the week after a time, most viewed first. Set the time to 7 days ago for this week's clips.
 
@@ -95,9 +95,9 @@ Gets the clips of a channel made in the week after a time, most viewed first. Se
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Clips | List of [Twitch clip](../../../value-types.md#twitch:Clip) | The clips, most viewed first. |
+| Clips | List of [Twitch clip](../../../value-types.md#twitch-Clip) | The clips, most viewed first. |
 
-### Get subscriber count {#twitch.get-subscriber-count}
+### Get subscriber count {#twitch-get-subscriber-count}
 
 Reads how many people subscribe to your channel. Only works for the channel whose Twitch account is connected.
 

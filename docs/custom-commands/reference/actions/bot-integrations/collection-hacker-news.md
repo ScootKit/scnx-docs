@@ -9,7 +9,7 @@ description: "Read the top and newest Hacker News stories and single stories or 
 
 Read the top and newest Hacker News stories and single stories or comments. No account needed.
 
-### Get top stories {#hacker-news.get-top-stories}
+### Get top stories {#hacker-news-get-top-stories}
 
 Reads the IDs of the stories on the Hacker News front page, top first.
 
@@ -19,7 +19,7 @@ Reads the IDs of the stories on the Hacker News front page, top first.
 | --- | --- | --- |
 | Story IDs | List of [ID](../../../value-types.md#ID) | Up to 500 story IDs in list order. Read a story with "Get story or comment". |
 
-### Get newest stories {#hacker-news.get-new-stories}
+### Get newest stories {#hacker-news-get-new-stories}
 
 Reads the IDs of the newest Hacker News stories, newest first.
 
@@ -29,7 +29,7 @@ Reads the IDs of the newest Hacker News stories, newest first.
 | --- | --- | --- |
 | Story IDs | List of [ID](../../../value-types.md#ID) | Up to 500 story IDs in list order. Read a story with "Get story or comment". |
 
-### Get story or comment {#hacker-news.get-item}
+### Get story or comment {#hacker-news-get-item}
 
 Reads one Hacker News story, comment, job or poll by its ID.
 

@@ -9,7 +9,7 @@ description: "Find places and read the current weather and the daily forecast. N
 
 Find places and read the current weather and the daily forecast. No account needed.
 
-### Find a place {#open-meteo.find-place}
+### Find a place {#open-meteo-find-place}
 
 Looks up a city or place by name and gives its coordinates for the weather actions. Uses the best match.
 
@@ -34,7 +34,7 @@ Looks up a city or place by name and gives its coordinates for the weather actio
 | Time zone | [Text](../../../value-types.md#STRING) | The time zone, for example Europe/Berlin. May be empty. |
 | Population | [Whole number](../../../value-types.md#INTEGER) | How many people live there, when known. May be empty. |
 
-### Get current weather {#open-meteo.get-current-weather}
+### Get current weather {#open-meteo-get-current-weather}
 
 Reads the weather right now at a place.
 
@@ -61,7 +61,7 @@ Reads the weather right now at a place.
 | Is daytime | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the sun is up at the place. |
 | Measured at | [Date and time](../../../value-types.md#DATETIME) | When these values are from. May be empty. |
 
-### Get weather forecast {#open-meteo.get-forecast}
+### Get weather forecast {#open-meteo-get-forecast}
 
 Reads the daily forecast for a place, today first.
 
@@ -79,6 +79,6 @@ Reads the daily forecast for a place, today first.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Days | List of [Forecast day](../../../value-types.md#open-meteo:Day) | The forecast, one entry per day, today first. |
+| Days | List of [Forecast day](../../../value-types.md#open-meteo-Day) | The forecast, one entry per day, today first. |
 | Time zone | [Text](../../../value-types.md#STRING) | The time zone of the place, for example Europe/Berlin. May be empty. |
 | Temperature unit | [Text](../../../value-types.md#STRING) | The unit sign, for example °C. May be empty. |

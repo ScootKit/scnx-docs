@@ -9,7 +9,7 @@ description: "Aktionen in der Kategorie \"top.gg\"."
 
 Aktionen in der Kategorie "top.gg".
 
-### Prüfen, ob jemand abgestimmt hat {#topgg.check-vote}
+### Prüfen, ob jemand abgestimmt hat {#topgg-check-vote}
 
 Fragt top.gg, ob ein Discord-Benutzer eine Stimme für dein Projekt hat, die noch zählt. Eine Stimme zählt 12 Stunden.
 
@@ -29,7 +29,7 @@ Fragt top.gg, ob ein Discord-Benutzer eine Stimme für dein Projekt hat, die noc
 | Läuft ab am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Stimme nicht mehr zählt. Leer ohne zählende Stimme. Kann leer sein. |
 | Gewicht | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. Kann leer sein. |
 
-### Projektstatistik abrufen {#topgg.get-project-stats}
+### Projektstatistik abrufen {#topgg-get-project-stats}
 
 Liest die Stimmen und Bewertungen deines Projekts auf top.gg.
 
@@ -49,7 +49,7 @@ Liest die Stimmen und Bewertungen deines Projekts auf top.gg.
 | Bewertung | [Dezimalzahl](../../../value-types.md#FLOAT) | Die durchschnittliche Bewertung. Leer ohne Bewertungen. Kann leer sein. |
 | Bewertungen | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Bewertungen dein Projekt hat. Kann leer sein. |
 
-### Stimmen seit einem Datum abrufen {#topgg.get-recent-votes}
+### Stimmen seit einem Datum abrufen {#topgg-get-recent-votes}
 
 Holt die Stimmen für dein Projekt seit einem Zeitpunkt, die ältesten zuerst. Du bekommst eine Seite Stimmen, so wie top.gg sie sendet.
 
@@ -64,4 +64,4 @@ Holt die Stimmen für dein Projekt seit einem Zeitpunkt, die ältesten zuerst. D
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Stimmen | Liste von [top.gg-Stimme](../../../value-types.md#topgg:Vote) | Die Stimmen seit diesem Zeitpunkt, die ältesten zuerst. |
+| Stimmen | Liste von [top.gg-Stimme](../../../value-types.md#topgg-Vote) | Die Stimmen seit diesem Zeitpunkt, die ältesten zuerst. |

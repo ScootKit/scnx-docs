@@ -9,7 +9,7 @@ description: "Lies die Gruppen und Ränge eines Roblox-Benutzers, Avatarbilder u
 
 Lies die Gruppen und Ränge eines Roblox-Benutzers, Avatarbilder und aktuelle Spielerzahlen von Erlebnissen. Kein Schlüssel nötig.
 
-### Gruppen und Ränge eines Benutzers abrufen {#roblox-public.get-user-groups}
+### Gruppen und Ränge eines Benutzers abrufen {#roblox-public-get-user-groups}
 
 Listet die Roblox-Gruppen, in denen ein Benutzer ist, mit Rolle und Rang in jeder. Suche eine Gruppe in der Liste, um einen Rang zu prüfen.
 
@@ -23,9 +23,9 @@ Listet die Roblox-Gruppen, in denen ein Benutzer ist, mit Rolle und Rang in jede
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Gruppen | Liste von [Roblox-Gruppenmitgliedschaft](../../../value-types.md#roblox-public:GroupRole) | Die Gruppen mit der Rolle des Benutzers in jeder. |
+| Gruppen | Liste von [Roblox-Gruppenmitgliedschaft](../../../value-types.md#roblox-public-GroupRole) | Die Gruppen mit der Rolle des Benutzers in jeder. |
 
-### Avatarbild abrufen {#roblox-public.get-avatar}
+### Avatarbild abrufen {#roblox-public-get-avatar}
 
 Holt das Kopfbild des Avatars eines Roblox-Benutzers.
 
@@ -42,7 +42,7 @@ Holt das Kopfbild des Avatars eines Roblox-Benutzers.
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Bild fertig ist. Wenn nicht, ist das Bild leer. |
 | Bild | [URL](../../../value-types.md#URL) | Das Kopfbild des Avatars, 420 mal 420 Pixel. Kann leer sein. |
 
-### Universum-ID abrufen {#roblox-public.get-universe-id}
+### Universum-ID abrufen {#roblox-public-get-universe-id}
 
 Wandelt eine Orts-ID (die Zahl in der Adresse eines Spiels) in die Universum-ID um, die Erlebnis-Aktionen brauchen.
 
@@ -59,7 +59,7 @@ Wandelt eine Orts-ID (die Zahl in der Adresse eines Spiels) in die Universum-ID 
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Ort existiert. Wenn nicht, ist die Universum-ID leer. |
 | Universum-ID | [ID](../../../value-types.md#ID) | Die Universum-ID des Erlebnisses. Kann leer sein. |
 
-### Erlebnis-Statistik abrufen {#roblox-public.get-game-stats}
+### Erlebnis-Statistik abrufen {#roblox-public-get-game-stats}
 
 Liest, wie viele Leute ein Erlebnis gerade spielen, seine Besuche und Favoriten.
 

@@ -2572,7 +2572,7 @@ Example: `Red team: 120`.
 | Key | [Text](#STRING) | The key this pair is stored under. Example: `Red team`. |
 | Value | [Stored value](#STORAGE_VALUE) | The value stored under that key. Example: `120`. |
 
-### top.gg vote {#topgg:Vote}
+### top.gg vote {#topgg-Vote}
 
 One vote for your project on top.gg.
 
@@ -2584,7 +2584,7 @@ One vote for your project on top.gg.
 | Voted at | [Date and time](#DATETIME) | When the user voted. |
 | Expires at | [Date and time](#DATETIME) | When the vote stops counting, 12 hours after it was cast. |
 
-### top.gg vote event {#topgg:VoteEvent}
+### top.gg vote event {#topgg-VoteEvent}
 
 Everything top.gg sent about one vote.
 
@@ -2599,7 +2599,7 @@ Everything top.gg sent about one vote.
 | Expires at | [Date and time](#DATETIME) | When the vote stops counting. Empty for test events. May be empty. |
 | Bot or server ID | [Discord ID](#SNOWFLAKE) | The Discord ID of the bot or server that got the vote. |
 
-### Twitch clip {#twitch:Clip}
+### Twitch clip {#twitch-Clip}
 
 One clip of a Twitch channel.
 
@@ -2614,7 +2614,7 @@ One clip of a Twitch channel.
 | Length in seconds | [Decimal number](#FLOAT) | How long the clip is, in seconds. |
 | Preview image | [URL](#URL) | The preview image of the clip. May be empty. |
 
-### Forecast day {#open-meteo:Day}
+### Forecast day {#open-meteo-Day}
 
 The weather forecast for one day.
 
@@ -2630,7 +2630,7 @@ The weather forecast for one day.
 | Sunrise | [Date and time](#DATETIME) | When the sun rises. May be empty. |
 | Sunset | [Date and time](#DATETIME) | When the sun sets. May be empty. |
 
-### CoinGecko coin {#coingecko:Coin}
+### CoinGecko coin {#coingecko-Coin}
 
 One coin in the market list.
 
@@ -2645,7 +2645,7 @@ One coin in the market list.
 | Rank | [Whole number](#INTEGER) | The place by market cap. May be empty. |
 | Change in 24 hours in % | [Decimal number](#FLOAT) | How much the price changed in the last 24 hours, in percent. May be empty. |
 
-### Anime {#jikan:Anime}
+### Anime {#jikan-Anime}
 
 One anime on MyAnimeList.
 
@@ -2664,7 +2664,7 @@ One anime on MyAnimeList.
 | Episodes | [Whole number](#INTEGER) | How many episodes it has, when known. May be empty. |
 | Year | [Whole number](#INTEGER) | The year it started airing, when known. May be empty. |
 
-### Manga {#jikan:Manga}
+### Manga {#jikan-Manga}
 
 One manga on MyAnimeList.
 
@@ -2683,7 +2683,7 @@ One manga on MyAnimeList.
 | Chapters | [Whole number](#INTEGER) | How many chapters it has, when known. May be empty. |
 | Volumes | [Whole number](#INTEGER) | How many volumes it has, when known. May be empty. |
 
-### GitHub issue {#github:Issue}
+### GitHub issue {#github-Issue}
 
 One issue or pull request of a repository.
 
@@ -2698,7 +2698,7 @@ One issue or pull request of a repository.
 | Created at | [Date and time](#DATETIME) | When it was opened. |
 | Pull request link | [URL](#URL) | The pull request on GitHub. Empty for issues, so use it to tell them apart. May be empty. |
 
-### GitHub release {#github:Release}
+### GitHub release {#github-Release}
 
 One release of a repository.
 
@@ -2712,7 +2712,7 @@ One release of a repository.
 | Pre-release | [Yes/No](#BOOLEAN) | Whether it is marked as a pre-release. |
 | Draft | [Yes/No](#BOOLEAN) | Whether it is a draft. |
 
-### Roblox group role {#roblox:Role}
+### Roblox group role {#roblox-Role}
 
 One role (rank) of a Roblox group.
 
@@ -2724,7 +2724,7 @@ One role (rank) of a Roblox group.
 | Members | [Whole number](#INTEGER) | How many members have the role, when the key may see it. May be empty. |
 | Description | [Text](#STRING) | The description of the role. May be empty. |
 
-### Roblox group member {#roblox:Membership}
+### Roblox group member {#roblox-Membership}
 
 One member of a Roblox group and their role.
 
@@ -2734,7 +2734,7 @@ One member of a Roblox group and their role.
 | Role ID | [ID](#ID) | The ID of the member's role. |
 | Joined at | [Date and time](#DATETIME) | When the member joined. May be empty. |
 
-### Roblox group membership {#roblox-public:GroupRole}
+### Roblox group membership {#roblox-public-GroupRole}
 
 A group a user is in and their role there.
 
@@ -2746,7 +2746,7 @@ A group a user is in and their role there.
 | Role name | [Text](#STRING) | The name of the user's role. |
 | Rank | [Whole number](#INTEGER) | The rank number of the role, 1 to 255. |
 
-### Airtable row {#airtable:Row}
+### Airtable row {#airtable-Row}
 
 One row of an Airtable table.
 
@@ -2756,7 +2756,7 @@ One row of an Airtable table.
 | Created at | [Date and time](#DATETIME) | When the row was created. |
 | Fields | Lookup table of [Text](#STRING) to [Text](#STRING) | The field values by field name, as text. Empty fields and list, attachment and collaborator fields are left out. |
 
-### Todoist task {#todoist:Task}
+### Todoist task {#todoist-Task}
 
 One Todoist task.
 
@@ -2772,7 +2772,7 @@ One Todoist task.
 | Labels | List of [Text](#STRING) | The label names. May be empty. |
 | Created at | [Date and time](#DATETIME) | When the task was added. May be empty. |
 
-### Steam game {#steam:Game}
+### Steam game {#steam-Game}
 
 A game a Steam user owns.
 
@@ -2784,7 +2784,7 @@ A game a Steam user owns.
 | Last two weeks in minutes | [Whole number](#INTEGER) | Playtime in the last two weeks, in minutes. Empty when not played. May be empty. |
 | Last played | [Date and time](#DATETIME) | When it was last played. May be empty. |
 
-### Stripe charge {#stripe:Charge}
+### Stripe charge {#stripe-Charge}
 
 One charge.
 
@@ -2803,7 +2803,7 @@ One charge.
 | Email | [Text](#STRING) | The billing email, when given. May be empty. |
 | Receipt | [URL](#URL) | The receipt page. May be empty. |
 
-### Stripe payment {#stripe:PaymentIntent}
+### Stripe payment {#stripe-PaymentIntent}
 
 One payment intent.
 
@@ -2818,7 +2818,7 @@ One payment intent.
 | Customer ID | [ID](#ID) | The customer, when there is one. May be empty. |
 | Received amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. May be empty. |
 
-### Stripe checkout session {#stripe:CheckoutSession}
+### Stripe checkout session {#stripe-CheckoutSession}
 
 One Checkout session.
 
@@ -2833,7 +2833,7 @@ One Checkout session.
 | Reference | [Text](#STRING) | The reference you gave when creating the session. May be empty. |
 | Payment ID | [ID](#ID) | The payment (pi_...), once the customer started paying. May be empty. |
 
-### Stripe amount {#stripe:Amount}
+### Stripe amount {#stripe-Amount}
 
 An amount in one currency.
 
@@ -2842,7 +2842,7 @@ An amount in one currency.
 | Amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. |
 | Currency | [Text](#STRING) | The currency, for example eur. |
 
-### Stripe event {#stripe:Event}
+### Stripe event {#stripe-Event}
 
 Everything Stripe sent about one event.
 

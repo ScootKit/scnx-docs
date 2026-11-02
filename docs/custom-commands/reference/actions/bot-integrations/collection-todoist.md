@@ -9,7 +9,7 @@ description: "List, add and complete tasks in Todoist."
 
 List, add and complete tasks in Todoist.
 
-### Get open tasks {#todoist.list-tasks}
+### Get open tasks {#todoist-list-tasks}
 
 Reads one page of open tasks, of all projects or one project.
 
@@ -26,10 +26,10 @@ Reads one page of open tasks, of all projects or one project.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Tasks | List of [Todoist task](../../../value-types.md#todoist:Task) | The open tasks of this page. |
+| Tasks | List of [Todoist task](../../../value-types.md#todoist-Task) | The open tasks of this page. |
 | Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
-### Find tasks by filter {#todoist.filter-tasks}
+### Find tasks by filter {#todoist-filter-tasks}
 
 Reads one page of open tasks that match a Todoist filter.
 
@@ -46,10 +46,10 @@ Reads one page of open tasks that match a Todoist filter.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Tasks | List of [Todoist task](../../../value-types.md#todoist:Task) | The matching tasks of this page. |
+| Tasks | List of [Todoist task](../../../value-types.md#todoist-Task) | The matching tasks of this page. |
 | Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
-### Add task {#todoist.create-task}
+### Add task {#todoist-create-task}
 
 Adds a task to Todoist.
 
@@ -68,9 +68,9 @@ Adds a task to Todoist.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Task | [Todoist task](../../../value-types.md#todoist:Task) | The new task. |
+| Task | [Todoist task](../../../value-types.md#todoist-Task) | The new task. |
 
-### Complete task {#todoist.close-task}
+### Complete task {#todoist-close-task}
 
 Marks a task as done. A repeating task moves to its next date.
 

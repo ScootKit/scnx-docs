@@ -9,7 +9,7 @@ description: "Read rows from the tables of your Airtable bases."
 
 Read rows from the tables of your Airtable bases.
 
-### Get rows {#airtable.list-rows}
+### Get rows {#airtable-list-rows}
 
 Reads one page of rows of a table, optionally of a view or matching a formula.
 
@@ -29,10 +29,10 @@ Reads one page of rows of a table, optionally of a view or matching a formula.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Rows | List of [Airtable row](../../../value-types.md#airtable:Row) | The rows of this page. |
+| Rows | List of [Airtable row](../../../value-types.md#airtable-Row) | The rows of this page. |
 | Next page | [Text](../../../value-types.md#STRING) | Pass this to the next call to get the next page. Empty on the last page. May be empty. |
 
-### Get row {#airtable.get-row}
+### Get row {#airtable-get-row}
 
 Reads one row by its ID.
 
@@ -50,4 +50,4 @@ Reads one row by its ID.
 | Name | Type | Details |
 | --- | --- | --- |
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the row exists. When not, the row is empty. |
-| Row | [Airtable row](../../../value-types.md#airtable:Row) | The row. May be empty. |
+| Row | [Airtable row](../../../value-types.md#airtable-Row) | The row. May be empty. |

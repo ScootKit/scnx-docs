@@ -9,7 +9,7 @@ description: "Lies Roblox-Benutzer, Gruppen mit ihren Rollen und Mitgliedern, un
 
 Lies Roblox-Benutzer, Gruppen mit ihren Rollen und Mitgliedern, und Erlebnisse mit einem Open-Cloud-API-Schlüssel.
 
-### Roblox-Benutzer abrufen {#roblox.get-user}
+### Roblox-Benutzer abrufen {#roblox-get-user}
 
 Liest einen Roblox-Benutzer über die Benutzer-ID.
 
@@ -32,7 +32,7 @@ Liest einen Roblox-Benutzer über die Benutzer-ID.
 | Premium | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Benutzer Premium hat. Leer, außer der Schlüssel hat die Berechtigung user.advanced:read. Kann leer sein. |
 | Ausweis bestätigt | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Benutzer seinen Ausweis bestätigt hat. Leer, außer der Schlüssel hat die Berechtigung user.advanced:read. Kann leer sein. |
 
-### Roblox-Gruppe abrufen {#roblox.get-group}
+### Roblox-Gruppe abrufen {#roblox-get-group}
 
 Liest eine Roblox-Gruppe: Name, Besitzer und Mitgliederzahl.
 
@@ -57,7 +57,7 @@ Liest eine Roblox-Gruppe: Name, Besitzer und Mitgliederzahl.
 | Verifiziert | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob die Gruppe das Verifiziert-Abzeichen hat. Kann leer sein. |
 | Erstellt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Gruppe erstellt wurde. Kann leer sein. |
 
-### Gruppenrollen abrufen {#roblox.list-group-roles}
+### Gruppenrollen abrufen {#roblox-list-group-roles}
 
 Listet die Rollen (Ränge) einer Roblox-Gruppe, niedrigster Rang zuerst.
 
@@ -74,10 +74,10 @@ Listet die Rollen (Ränge) einer Roblox-Gruppe, niedrigster Rang zuerst.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Rollen | Liste von [Roblox-Gruppenrolle](../../../value-types.md#roblox:Role) | Die Rollen, niedrigster Rang zuerst. |
+| Rollen | Liste von [Roblox-Gruppenrolle](../../../value-types.md#roblox-Role) | Die Rollen, niedrigster Rang zuerst. |
 | Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
-### Gruppenmitglieder abrufen {#roblox.list-group-members}
+### Gruppenmitglieder abrufen {#roblox-list-group-members}
 
 Listet eine Seite der Mitglieder einer Roblox-Gruppe mit ihrer Rolle.
 
@@ -94,10 +94,10 @@ Listet eine Seite der Mitglieder einer Roblox-Gruppe mit ihrer Rolle.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Mitglieder | Liste von [Roblox-Gruppenmitglied](../../../value-types.md#roblox:Membership) | Die Mitglieder dieser Seite. |
+| Mitglieder | Liste von [Roblox-Gruppenmitglied](../../../value-types.md#roblox-Membership) | Die Mitglieder dieser Seite. |
 | Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
-### Erlebnis abrufen {#roblox.get-universe}
+### Erlebnis abrufen {#roblox-get-universe}
 
 Liest ein Roblox-Erlebnis (Universum) über die Universum-ID. Die Universum-ID eines Ortes bekommst du mit „Universum-ID abrufen“ von Roblox (öffentliche Daten).
 

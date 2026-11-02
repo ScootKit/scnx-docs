@@ -9,7 +9,7 @@ description: "Prüfe Stimmen und lies Statistiken deines Bot- oder Servereintrag
 
 Prüfe Stimmen und lies Statistiken deines Bot- oder Servereintrags auf top.gg, und starte Flows, wenn jemand abstimmt.
 
-### Stimme erhalten {#topgg.vote-received}
+### Stimme erhalten {#topgg-vote-received}
 
 Wird ausgeführt, wenn jemand auf top.gg für dein Projekt abstimmt. Füge die URL dieses Webhooks in deine top.gg-Webhook-Einstellungen ein und danach das Geheimnis, das top.gg anzeigt, in SCNX.
 
@@ -30,6 +30,6 @@ Wird ausgeführt, wenn jemand auf top.gg für dein Projekt abstimmt. Füge die U
 | Abgestimmt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Person abgestimmt hat. Leer bei Testereignissen. Kann leer sein. |
 | Läuft ab am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein. |
 | Parameter des Abstimmungslinks | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Abfrageparameter am Abstimmungslink, zum Beispiel ?source=discord. Kann leer sein. |
-| Ereignis | [top.gg-Abstimmungsereignis](../../../value-types.md#topgg:VoteEvent) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [top.gg-Abstimmungsereignis](../../../value-types.md#topgg-VoteEvent) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Ist ein Test | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob top.gg ein Testereignis statt eines echten gesendet hat. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |

@@ -9,7 +9,7 @@ description: "Check votes and read stats of your bot or server listing on top.gg
 
 Check votes and read stats of your bot or server listing on top.gg, and run flows when someone votes.
 
-### Vote received {#topgg.vote-received}
+### Vote received {#topgg-vote-received}
 
 Runs when someone votes for your project on top.gg. Paste this webhook's URL into your top.gg webhook settings, then paste the secret top.gg shows into SCNX.
 
@@ -30,6 +30,6 @@ Runs when someone votes for your project on top.gg. Paste this webhook's URL int
 | Voted at | [Date and time](../../../value-types.md#DATETIME) | When the user voted. Empty for test events. May be empty. |
 | Expires at | [Date and time](../../../value-types.md#DATETIME) | When the vote stops counting. Empty for test events. May be empty. |
 | Vote link parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The query parameters added to the vote link, for example ?source=discord. May be empty. |
-| Event | [top.gg vote event](../../../value-types.md#topgg:VoteEvent) | Everything the service sent about this event. May be empty. |
+| Event | [top.gg vote event](../../../value-types.md#topgg-VoteEvent) | Everything the service sent about this event. May be empty. |
 | Is a test | [Yes/No](../../../value-types.md#BOOLEAN) | Whether top.gg sent a test event instead of a real one. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |

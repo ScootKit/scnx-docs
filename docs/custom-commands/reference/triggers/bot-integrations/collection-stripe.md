@@ -9,7 +9,7 @@ description: "Read Stripe customers, charges, payments and your balance, and cre
 
 Read Stripe customers, charges, payments and your balance, and create Checkout sessions, payment links and refunds.
 
-### Checkout completed {#stripe.checkout-completed}
+### Checkout completed {#stripe-checkout-completed}
 
 Runs when a customer finishes a Stripe Checkout session. Select the event checkout.session.completed on the Stripe endpoint. Check Payment status: it is paid for cards, and unpaid for bank transfers that confirm later with checkout.session.async_payment_succeeded.
 
@@ -34,10 +34,10 @@ Runs when a customer finishes a Stripe Checkout session. Select the event checko
 | Payment ID | [ID](../../../value-types.md#ID) | The ID of the payment, starting with pi_. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
 
-### Delayed payment succeeded {#stripe.checkout-async-succeeded}
+### Delayed payment succeeded {#stripe-checkout-async-succeeded}
 
 Runs when a delayed payment, such as a bank transfer, arrives. Select the event checkout.session.async_payment_succeeded on the Stripe endpoint.
 
@@ -62,10 +62,10 @@ Runs when a delayed payment, such as a bank transfer, arrives. Select the event 
 | Payment ID | [ID](../../../value-types.md#ID) | The ID of the payment, starting with pi_. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
 
-### Delayed payment failed {#stripe.checkout-async-failed}
+### Delayed payment failed {#stripe-checkout-async-failed}
 
 Runs when a delayed payment, such as a bank transfer, fails. Select the event checkout.session.async_payment_failed on the Stripe endpoint.
 
@@ -90,10 +90,10 @@ Runs when a delayed payment, such as a bank transfer, fails. Select the event ch
 | Payment ID | [ID](../../../value-types.md#ID) | The ID of the payment, starting with pi_. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
 
-### Checkout expired {#stripe.checkout-expired}
+### Checkout expired {#stripe-checkout-expired}
 
 Runs when a Checkout session ends without a payment. Select the event checkout.session.expired on the Stripe endpoint.
 
@@ -118,10 +118,10 @@ Runs when a Checkout session ends without a payment. Select the event checkout.s
 | Payment ID | [ID](../../../value-types.md#ID) | The ID of the payment, starting with pi_. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
 
-### Charge refunded {#stripe.charge-refunded}
+### Charge refunded {#stripe-charge-refunded}
 
 Runs when a payment is refunded, fully or partly. Select the event charge.refunded on the Stripe endpoint.
 
@@ -146,10 +146,10 @@ Runs when a payment is refunded, fully or partly. Select the event charge.refund
 | Currency | [Text](../../../value-types.md#STRING) | The lowercase currency code, for example usd. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
 
-### Dispute opened {#stripe.dispute-created}
+### Dispute opened {#stripe-dispute-created}
 
 Runs when a customer disputes a payment with their bank. Select the event charge.dispute.created on the Stripe endpoint.
 
@@ -173,5 +173,5 @@ Runs when a customer disputes a payment with their bank. Select the event charge
 | Status | [Text](../../../value-types.md#STRING) | The dispute status, for example needs_response. May be empty. |
 | Metadata | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The metadata you set on the Stripe object. May be empty. |
 | Live mode | [Yes/No](../../../value-types.md#BOOLEAN) | True for real payments, false for test mode. May be empty. |
-| Event | [Stripe event](../../../value-types.md#stripe:Event) | Everything the service sent about this event. May be empty. |
+| Event | [Stripe event](../../../value-types.md#stripe-Event) | Everything the service sent about this event. May be empty. |
 | Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |

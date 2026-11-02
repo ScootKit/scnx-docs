@@ -9,7 +9,7 @@ description: "Actions in the category \"Stripe\"."
 
 Actions in the category "Stripe".
 
-### Get customer {#stripe.get-customer}
+### Get customer {#stripe-get-customer}
 
 Reads a Stripe customer by ID.
 
@@ -33,7 +33,7 @@ Reads a Stripe customer by ID.
 | Payment overdue | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the last invoice payment failed. May be empty. |
 | Created at | [Date and time](../../../value-types.md#DATETIME) | When the customer was created. May be empty. |
 
-### Get charges {#stripe.list-charges}
+### Get charges {#stripe-list-charges}
 
 Lists charges, newest first, of all customers or one.
 
@@ -50,10 +50,10 @@ Lists charges, newest first, of all customers or one.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Charges | List of [Stripe charge](../../../value-types.md#stripe:Charge) | The charges, newest first. |
+| Charges | List of [Stripe charge](../../../value-types.md#stripe-Charge) | The charges, newest first. |
 | Has more | [Yes/No](../../../value-types.md#BOOLEAN) | Whether there are more after this page. |
 
-### Get payments {#stripe.list-payment-intents}
+### Get payments {#stripe-list-payment-intents}
 
 Lists payment intents, newest first, of all customers or one.
 
@@ -70,10 +70,10 @@ Lists payment intents, newest first, of all customers or one.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Payments | List of [Stripe payment](../../../value-types.md#stripe:PaymentIntent) | The payments, newest first. |
+| Payments | List of [Stripe payment](../../../value-types.md#stripe-PaymentIntent) | The payments, newest first. |
 | Has more | [Yes/No](../../../value-types.md#BOOLEAN) | Whether there are more after this page. |
 
-### Get balance {#stripe.get-balance}
+### Get balance {#stripe-get-balance}
 
 Reads the balance of your Stripe account, per currency.
 
@@ -87,10 +87,10 @@ Reads the balance of your Stripe account, per currency.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Available | List of [Stripe amount](../../../value-types.md#stripe:Amount) | Money you can pay out now. |
-| Pending | List of [Stripe amount](../../../value-types.md#stripe:Amount) | Money that is not available yet. |
+| Available | List of [Stripe amount](../../../value-types.md#stripe-Amount) | Money you can pay out now. |
+| Pending | List of [Stripe amount](../../../value-types.md#stripe-Amount) | Money that is not available yet. |
 
-### Create Checkout session {#stripe.create-checkout-session}
+### Create Checkout session {#stripe-create-checkout-session}
 
 Creates a Stripe page where one customer pays for one item. Sending the same inputs again returns the same session.
 
@@ -124,7 +124,7 @@ Creates a Stripe page where one customer pays for one item. Sending the same inp
 | Reference | [Text](../../../value-types.md#STRING) | The reference you gave when creating the session. May be empty. |
 | Payment ID | [ID](../../../value-types.md#ID) | The payment (pi_...), once the customer started paying. May be empty. |
 
-### Get Checkout session {#stripe.get-checkout-session}
+### Get Checkout session {#stripe-get-checkout-session}
 
 Reads a Checkout session by ID.
 
@@ -150,7 +150,7 @@ Reads a Checkout session by ID.
 | Reference | [Text](../../../value-types.md#STRING) | The reference you gave when creating the session. May be empty. |
 | Payment ID | [ID](../../../value-types.md#ID) | The payment (pi_...), once the customer started paying. May be empty. |
 
-### Expire Checkout session {#stripe.expire-checkout-session}
+### Expire Checkout session {#stripe-expire-checkout-session}
 
 Closes an open Checkout session so nobody can pay with it anymore.
 
@@ -175,7 +175,7 @@ Closes an open Checkout session so nobody can pay with it anymore.
 | Reference | [Text](../../../value-types.md#STRING) | The reference you gave when creating the session. May be empty. |
 | Payment ID | [ID](../../../value-types.md#ID) | The payment (pi_...), once the customer started paying. May be empty. |
 
-### Create payment link {#stripe.create-payment-link}
+### Create payment link {#stripe-create-payment-link}
 
 Creates a link where anyone can pay for one item. Stripe shows its own confirmation page afterwards. Payments through this link also fire the Checkout completed trigger.
 
@@ -198,7 +198,7 @@ Creates a link where anyone can pay for one item. Stripe shows its own confirmat
 | Link | [URL](../../../value-types.md#URL) | The link to pay. |
 | Active | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the link can be used. |
 
-### Create refund {#stripe.create-refund}
+### Create refund {#stripe-create-refund}
 
 Refunds a payment, in full or in part. Give the payment ID or the charge ID. Sending the same refund again right away returns the first refund and refunds nothing more. To refund the same amount twice on purpose, change an input.
 

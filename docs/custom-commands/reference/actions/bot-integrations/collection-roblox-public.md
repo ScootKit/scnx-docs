@@ -9,7 +9,7 @@ description: "Read the groups and ranks of a Roblox user, avatar pictures and li
 
 Read the groups and ranks of a Roblox user, avatar pictures and live player counts of experiences. No key needed.
 
-### Get groups and ranks of a user {#roblox-public.get-user-groups}
+### Get groups and ranks of a user {#roblox-public-get-user-groups}
 
 Lists the Roblox groups a user is in with their role and rank in each. Find one group in the list to check a rank.
 
@@ -23,9 +23,9 @@ Lists the Roblox groups a user is in with their role and rank in each. Find one 
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Groups | List of [Roblox group membership](../../../value-types.md#roblox-public:GroupRole) | The groups with the user's role in each. |
+| Groups | List of [Roblox group membership](../../../value-types.md#roblox-public-GroupRole) | The groups with the user's role in each. |
 
-### Get avatar picture {#roblox-public.get-avatar}
+### Get avatar picture {#roblox-public-get-avatar}
 
 Gets the head picture of a Roblox user's avatar.
 
@@ -42,7 +42,7 @@ Gets the head picture of a Roblox user's avatar.
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the picture is ready. When not, the picture is empty. |
 | Picture | [URL](../../../value-types.md#URL) | The avatar head picture, 420 by 420 pixels. May be empty. |
 
-### Get universe ID {#roblox-public.get-universe-id}
+### Get universe ID {#roblox-public-get-universe-id}
 
 Turns a place ID (the number in a game's address) into the universe ID that experience actions need.
 
@@ -59,7 +59,7 @@ Turns a place ID (the number in a game's address) into the universe ID that expe
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the place exists. When not, the universe ID is empty. |
 | Universe ID | [ID](../../../value-types.md#ID) | The universe ID of the experience. May be empty. |
 
-### Get experience stats {#roblox-public.get-game-stats}
+### Get experience stats {#roblox-public-get-game-stats}
 
 Reads how many people play an experience right now, its visits and favorites.
 

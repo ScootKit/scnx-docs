@@ -9,7 +9,7 @@ description: "Read Steam profiles, what someone is playing and their games."
 
 Read Steam profiles, what someone is playing and their games.
 
-### Get Steam profile {#steam.get-player}
+### Get Steam profile {#steam-get-player}
 
 Reads a Steam profile, its online status and the game being played.
 
@@ -36,7 +36,7 @@ Reads a Steam profile, its online status and the game being played.
 | Created at | [Date and time](../../../value-types.md#DATETIME) | When the account was created, when shown. May be empty. |
 | Last online | [Date and time](../../../value-types.md#DATETIME) | When the user was last online, when shown. May be empty. |
 
-### Find Steam ID {#steam.find-steam-id}
+### Find Steam ID {#steam-find-steam-id}
 
 Turns a custom profile name (the part after steamcommunity.com/id/) into the Steam ID.
 
@@ -54,7 +54,7 @@ Turns a custom profile name (the part after steamcommunity.com/id/) into the Ste
 | Found | [Yes/No](../../../value-types.md#BOOLEAN) | Whether a profile has this name. When not, the Steam ID is empty. |
 | Steam ID | [ID](../../../value-types.md#ID) | The 17-digit Steam ID. May be empty. |
 
-### Get owned games {#steam.get-owned-games}
+### Get owned games {#steam-get-owned-games}
 
 Lists the games of a Steam user, most played first. Only works for public game details.
 
@@ -71,4 +71,4 @@ Lists the games of a Steam user, most played first. Only works for public game d
 | --- | --- | --- |
 | Visible | [Yes/No](../../../value-types.md#BOOLEAN) | Whether the game list could be read. False for private profiles; then the rest is empty. |
 | Games | [Whole number](../../../value-types.md#INTEGER) | How many games the user owns. May be empty. |
-| Game list | List of [Steam game](../../../value-types.md#steam:Game) | The games, most played first. May be empty. |
+| Game list | List of [Steam game](../../../value-types.md#steam-Game) | The games, most played first. May be empty. |

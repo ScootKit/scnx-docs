@@ -9,7 +9,7 @@ description: "Wandle Minecraft-Benutzernamen in UUIDs um und lies das Profil und
 
 Wandle Minecraft-Benutzernamen in UUIDs um und lies das Profil und den Skin eines Kontos. Kein Konto nötig.
 
-### Minecraft-UUID abrufen {#mojang.get-uuid}
+### Minecraft-UUID abrufen {#mojang-get-uuid}
 
 Sucht die UUID eines Minecraft-Java-Kontos über den Benutzernamen.
 
@@ -27,7 +27,7 @@ Sucht die UUID eines Minecraft-Java-Kontos über den Benutzernamen.
 | UUID | [Text](../../../value-types.md#STRING) | Die UUID ohne Bindestriche. Kann leer sein. |
 | Benutzername | [Text](../../../value-types.md#STRING) | Der Benutzername mit genauer Groß- und Kleinschreibung. Kann leer sein. |
 
-### Minecraft-Profil abrufen {#mojang.get-profile}
+### Minecraft-Profil abrufen {#mojang-get-profile}
 
 Liest Benutzername und Skin eines Minecraft-Java-Kontos über die UUID.
 

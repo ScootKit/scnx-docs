@@ -9,7 +9,7 @@ description: "Lies Twitch-Benutzer, Streams, Kanäle, Clips und die Abonnentenza
 
 Lies Twitch-Benutzer, Streams, Kanäle, Clips und die Abonnentenzahl deines Kanals.
 
-### Twitch-Benutzer abrufen {#twitch.get-user}
+### Twitch-Benutzer abrufen {#twitch-get-user}
 
 Sucht ein Twitch-Konto über seinen Login-Namen.
 
@@ -33,7 +33,7 @@ Sucht ein Twitch-Konto über seinen Login-Namen.
 | Partnerstatus | [Text](../../../value-types.md#STRING) | partner, affiliate oder leerer Text bei anderen Kanälen. Kann leer sein. |
 | Erstellt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann das Konto erstellt wurde. Kann leer sein. |
 
-### Stream abrufen {#twitch.get-stream}
+### Stream abrufen {#twitch-get-stream}
 
 Prüft, ob ein Kanal live ist, und liest seinen Stream. Wenn der Kanal nicht live ist, ist alles außer „Ist live“ leer.
 
@@ -55,7 +55,7 @@ Prüft, ob ein Kanal live ist, und liest seinen Stream. Wenn der Kanal nicht liv
 | Live seit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Stream begonnen hat. Kann leer sein. |
 | Sprache | [Text](../../../value-types.md#STRING) | Die Sprache des Streams, zum Beispiel de. Kann leer sein. |
 
-### Kanalinfos abrufen {#twitch.get-channel-info}
+### Kanalinfos abrufen {#twitch-get-channel-info}
 
 Liest Titel, Spiel und Tags eines Kanals über seine Twitch-ID.
 
@@ -78,7 +78,7 @@ Liest Titel, Spiel und Tags eines Kanals über seine Twitch-ID.
 | Titel | [Text](../../../value-types.md#STRING) | Der Titel des aktuellen oder letzten Streams. Kann leer sein. |
 | Tags | Liste von [Text](../../../value-types.md#STRING) | Die Tags des Kanals. Kann leer sein. |
 
-### Neueste Clips abrufen {#twitch.get-latest-clips}
+### Neueste Clips abrufen {#twitch-get-latest-clips}
 
 Holt die Clips eines Kanals aus der Woche nach einem Zeitpunkt, die meistgesehenen zuerst. Setze den Zeitpunkt auf vor 7 Tagen für die Clips dieser Woche.
 
@@ -95,9 +95,9 @@ Holt die Clips eines Kanals aus der Woche nach einem Zeitpunkt, die meistgesehen
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Clips | Liste von [Twitch-Clip](../../../value-types.md#twitch:Clip) | Die Clips, die meistgesehenen zuerst. |
+| Clips | Liste von [Twitch-Clip](../../../value-types.md#twitch-Clip) | Die Clips, die meistgesehenen zuerst. |
 
-### Abonnentenzahl abrufen {#twitch.get-subscriber-count}
+### Abonnentenzahl abrufen {#twitch-get-subscriber-count}
 
 Liest, wie viele Leute deinen Kanal abonniert haben. Klappt nur für den Kanal, dessen Twitch-Konto verbunden ist.
 

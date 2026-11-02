@@ -9,7 +9,7 @@ description: "Turn Minecraft usernames into UUIDs and read the profile and skin 
 
 Turn Minecraft usernames into UUIDs and read the profile and skin of an account. No account needed.
 
-### Get Minecraft UUID {#mojang.get-uuid}
+### Get Minecraft UUID {#mojang-get-uuid}
 
 Looks up the UUID of a Minecraft Java account by its username.
 
@@ -27,7 +27,7 @@ Looks up the UUID of a Minecraft Java account by its username.
 | UUID | [Text](../../../value-types.md#STRING) | The UUID without dashes. May be empty. |
 | Username | [Text](../../../value-types.md#STRING) | The username with its exact capitalization. May be empty. |
 
-### Get Minecraft profile {#mojang.get-profile}
+### Get Minecraft profile {#mojang-get-profile}
 
 Reads the username and skin of a Minecraft Java account by its UUID.
 

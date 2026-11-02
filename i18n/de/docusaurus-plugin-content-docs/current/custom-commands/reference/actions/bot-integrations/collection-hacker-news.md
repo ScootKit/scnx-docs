@@ -9,7 +9,7 @@ description: "Lies die Top- und neuesten Hacker-News-Storys und einzelne Storys 
 
 Lies die Top- und neuesten Hacker-News-Storys und einzelne Storys oder Kommentare. Kein Konto nötig.
 
-### Top-Storys abrufen {#hacker-news.get-top-stories}
+### Top-Storys abrufen {#hacker-news-get-top-stories}
 
 Liest die IDs der Storys auf der Hacker-News-Startseite, die oberste zuerst.
 
@@ -19,7 +19,7 @@ Liest die IDs der Storys auf der Hacker-News-Startseite, die oberste zuerst.
 | --- | --- | --- |
 | Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen“. |
 
-### Neueste Storys abrufen {#hacker-news.get-new-stories}
+### Neueste Storys abrufen {#hacker-news-get-new-stories}
 
 Liest die IDs der neuesten Hacker-News-Storys, die neueste zuerst.
 
@@ -29,7 +29,7 @@ Liest die IDs der neuesten Hacker-News-Storys, die neueste zuerst.
 | --- | --- | --- |
 | Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen“. |
 
-### Story oder Kommentar abrufen {#hacker-news.get-item}
+### Story oder Kommentar abrufen {#hacker-news-get-item}
 
 Liest eine Hacker-News-Story, einen Kommentar, einen Job oder eine Umfrage über die ID.
 

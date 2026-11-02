@@ -9,7 +9,7 @@ description: "Lies Zeilen aus den Tabellen deiner Airtable-Bases."
 
 Lies Zeilen aus den Tabellen deiner Airtable-Bases.
 
-### Zeilen abrufen {#airtable.list-rows}
+### Zeilen abrufen {#airtable-list-rows}
 
 Liest eine Seite Zeilen einer Tabelle, optional aus einer Ansicht oder passend zu einer Formel.
 
@@ -29,10 +29,10 @@ Liest eine Seite Zeilen einer Tabelle, optional aus einer Ansicht oder passend z
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Zeilen | Liste von [Airtable-Zeile](../../../value-types.md#airtable:Row) | Die Zeilen dieser Seite. |
+| Zeilen | Liste von [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeilen dieser Seite. |
 | Nächste Seite | [Text](../../../value-types.md#STRING) | Gib das an den nächsten Aufruf weiter, um die nächste Seite zu bekommen. Leer auf der letzten Seite. Kann leer sein. |
 
-### Zeile abrufen {#airtable.get-row}
+### Zeile abrufen {#airtable-get-row}
 
 Liest eine Zeile über ihre ID.
 
@@ -50,4 +50,4 @@ Liest eine Zeile über ihre ID.
 | Name | Typ | Details |
 | --- | --- | --- |
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob die Zeile existiert. Wenn nicht, ist die Zeile leer. |
-| Zeile | [Airtable-Zeile](../../../value-types.md#airtable:Row) | Die Zeile. Kann leer sein. |
+| Zeile | [Airtable-Zeile](../../../value-types.md#airtable-Row) | Die Zeile. Kann leer sein. |

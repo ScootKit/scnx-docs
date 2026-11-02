@@ -9,7 +9,7 @@ description: "Actions in the category \"top.gg\"."
 
 Actions in the category "top.gg".
 
-### Check if a user voted {#topgg.check-vote}
+### Check if a user voted {#topgg-check-vote}
 
 Asks top.gg whether a Discord user has a vote for your project that still counts. A vote counts for 12 hours.
 
@@ -29,7 +29,7 @@ Asks top.gg whether a Discord user has a vote for your project that still counts
 | Expires at | [Date and time](../../../value-types.md#DATETIME) | When the vote stops counting. Empty without a vote that counts. May be empty. |
 | Weight | [Whole number](../../../value-types.md#INTEGER) | How much the vote counts: 2 for weekend votes, otherwise 1. May be empty. |
 
-### Get project stats {#topgg.get-project-stats}
+### Get project stats {#topgg-get-project-stats}
 
 Reads the votes and reviews of your project on top.gg.
 
@@ -49,7 +49,7 @@ Reads the votes and reviews of your project on top.gg.
 | Review score | [Decimal number](../../../value-types.md#FLOAT) | The average review score. Empty without reviews. May be empty. |
 | Reviews | [Whole number](../../../value-types.md#INTEGER) | How many reviews your project has. May be empty. |
 
-### Get votes since a date {#topgg.get-recent-votes}
+### Get votes since a date {#topgg-get-recent-votes}
 
 Gets the votes for your project since a time, oldest first. You get one page of votes as top.gg sends it.
 
@@ -64,4 +64,4 @@ Gets the votes for your project since a time, oldest first. You get one page of 
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Votes | List of [top.gg vote](../../../value-types.md#topgg:Vote) | The votes since that time, oldest first. |
+| Votes | List of [top.gg vote](../../../value-types.md#topgg-Vote) | The votes since that time, oldest first. |

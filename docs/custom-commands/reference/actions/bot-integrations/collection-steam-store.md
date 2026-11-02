@@ -9,7 +9,7 @@ description: "Read the store page of a Steam game: price, description and releas
 
 Read the store page of a Steam game: price, description and release date. No key needed.
 
-### Get Steam game {#steam-store.get-app}
+### Get Steam game {#steam-store-get-app}
 
 Reads the store details of one Steam game by its app ID.
 

@@ -9,7 +9,7 @@ description: "Suche Orte und lies das aktuelle Wetter und die Tagesvorhersage. K
 
 Suche Orte und lies das aktuelle Wetter und die Tagesvorhersage. Kein Konto nötig.
 
-### Ort suchen {#open-meteo.find-place}
+### Ort suchen {#open-meteo-find-place}
 
 Sucht eine Stadt oder einen Ort über den Namen und gibt die Koordinaten für die Wetteraktionen. Nutzt den besten Treffer.
 
@@ -34,7 +34,7 @@ Sucht eine Stadt oder einen Ort über den Namen und gibt die Koordinaten für di
 | Zeitzone | [Text](../../../value-types.md#STRING) | Die Zeitzone, zum Beispiel Europe/Berlin. Kann leer sein. |
 | Einwohner | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Menschen dort leben, wenn bekannt. Kann leer sein. |
 
-### Aktuelles Wetter abrufen {#open-meteo.get-current-weather}
+### Aktuelles Wetter abrufen {#open-meteo-get-current-weather}
 
 Liest das Wetter gerade an einem Ort.
 
@@ -61,7 +61,7 @@ Liest das Wetter gerade an einem Ort.
 | Ist Tag | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob am Ort die Sonne scheint. |
 | Gemessen um | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Von wann diese Werte sind. Kann leer sein. |
 
-### Wettervorhersage abrufen {#open-meteo.get-forecast}
+### Wettervorhersage abrufen {#open-meteo-get-forecast}
 
 Liest die Tagesvorhersage für einen Ort, heute zuerst.
 
@@ -79,6 +79,6 @@ Liest die Tagesvorhersage für einen Ort, heute zuerst.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Tage | Liste von [Vorhersagetag](../../../value-types.md#open-meteo:Day) | Die Vorhersage, ein Eintrag pro Tag, heute zuerst. |
+| Tage | Liste von [Vorhersagetag](../../../value-types.md#open-meteo-Day) | Die Vorhersage, ein Eintrag pro Tag, heute zuerst. |
 | Zeitzone | [Text](../../../value-types.md#STRING) | Die Zeitzone des Orts, zum Beispiel Europe/Berlin. Kann leer sein. |
 | Temperatureinheit | [Text](../../../value-types.md#STRING) | Das Einheitenzeichen, zum Beispiel °C. Kann leer sein. |

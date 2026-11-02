@@ -9,7 +9,7 @@ description: "Suche Animes und Mangas auf MyAnimeList und lies ihre Details und 
 
 Suche Animes und Mangas auf MyAnimeList und lies ihre Details und die Topliste, über die kostenlose Jikan-API. Kein Konto nötig.
 
-### Animes suchen {#jikan.search-anime}
+### Animes suchen {#jikan-search-anime}
 
 Sucht Animes über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werden ausgelassen.
 
@@ -24,9 +24,9 @@ Sucht Animes über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werd
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Animes | Liste von [Anime](../../../value-types.md#jikan:Anime) | Die gefundenen Animes, beste Treffer zuerst. |
+| Animes | Liste von [Anime](../../../value-types.md#jikan-Anime) | Die gefundenen Animes, beste Treffer zuerst. |
 
-### Anime abrufen {#jikan.get-anime}
+### Anime abrufen {#jikan-get-anime}
 
 Liest einen Anime über seine MyAnimeList-ID.
 
@@ -41,9 +41,9 @@ Liest einen Anime über seine MyAnimeList-ID.
 | Name | Typ | Details |
 | --- | --- | --- |
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
-| Anime | [Anime](../../../value-types.md#jikan:Anime) | Der Anime. Kann leer sein. |
+| Anime | [Anime](../../../value-types.md#jikan-Anime) | Der Anime. Kann leer sein. |
 
-### Mangas suchen {#jikan.search-manga}
+### Mangas suchen {#jikan-search-manga}
 
 Sucht Mangas über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werden ausgelassen.
 
@@ -58,9 +58,9 @@ Sucht Mangas über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werd
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Mangas | Liste von [Manga](../../../value-types.md#jikan:Manga) | Die gefundenen Mangas, beste Treffer zuerst. |
+| Mangas | Liste von [Manga](../../../value-types.md#jikan-Manga) | Die gefundenen Mangas, beste Treffer zuerst. |
 
-### Manga abrufen {#jikan.get-manga}
+### Manga abrufen {#jikan-get-manga}
 
 Liest einen Manga über seine MyAnimeList-ID.
 
@@ -75,9 +75,9 @@ Liest einen Manga über seine MyAnimeList-ID.
 | Name | Typ | Details |
 | --- | --- | --- |
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
-| Manga | [Manga](../../../value-types.md#jikan:Manga) | Der Manga. Kann leer sein. |
+| Manga | [Manga](../../../value-types.md#jikan-Manga) | Der Manga. Kann leer sein. |
 
-### Top-Animes abrufen {#jikan.get-top-anime}
+### Top-Animes abrufen {#jikan-get-top-anime}
 
 Liest die Top-Anime-Liste von MyAnimeList, erster Platz zuerst.
 
@@ -92,4 +92,4 @@ Liest die Top-Anime-Liste von MyAnimeList, erster Platz zuerst.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Animes | Liste von [Anime](../../../value-types.md#jikan:Anime) | Die Animes, erster Platz zuerst. |
+| Animes | Liste von [Anime](../../../value-types.md#jikan-Anime) | Die Animes, erster Platz zuerst. |

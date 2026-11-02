@@ -9,7 +9,7 @@ description: "Aktionen in der Kategorie \"Stripe\"."
 
 Aktionen in der Kategorie "Stripe".
 
-### Kunden abrufen {#stripe.get-customer}
+### Kunden abrufen {#stripe-get-customer}
 
 Liest einen Stripe-Kunden über die ID.
 
@@ -33,7 +33,7 @@ Liest einen Stripe-Kunden über die ID.
 | Zahlung überfällig | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob die letzte Rechnungszahlung fehlgeschlagen ist. Kann leer sein. |
 | Erstellt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Kunde erstellt wurde. Kann leer sein. |
 
-### Zahlungen abrufen {#stripe.list-charges}
+### Zahlungen abrufen {#stripe-list-charges}
 
 Listet Zahlungen, die neuesten zuerst, aller Kunden oder eines Kunden.
 
@@ -50,10 +50,10 @@ Listet Zahlungen, die neuesten zuerst, aller Kunden oder eines Kunden.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Zahlungen | Liste von [Stripe-Zahlung](../../../value-types.md#stripe:Charge) | Die Zahlungen, die neuesten zuerst. |
+| Zahlungen | Liste von [Stripe-Zahlung](../../../value-types.md#stripe-Charge) | Die Zahlungen, die neuesten zuerst. |
 | Gibt mehr | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob es nach dieser Seite noch mehr gibt. |
 
-### Zahlungsvorgänge abrufen {#stripe.list-payment-intents}
+### Zahlungsvorgänge abrufen {#stripe-list-payment-intents}
 
 Listet Zahlungsvorgänge (PaymentIntents), die neuesten zuerst, aller Kunden oder eines Kunden.
 
@@ -70,10 +70,10 @@ Listet Zahlungsvorgänge (PaymentIntents), die neuesten zuerst, aller Kunden ode
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Zahlungsvorgänge | Liste von [Stripe-Zahlungsvorgang](../../../value-types.md#stripe:PaymentIntent) | Die Zahlungsvorgänge, die neuesten zuerst. |
+| Zahlungsvorgänge | Liste von [Stripe-Zahlungsvorgang](../../../value-types.md#stripe-PaymentIntent) | Die Zahlungsvorgänge, die neuesten zuerst. |
 | Gibt mehr | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob es nach dieser Seite noch mehr gibt. |
 
-### Guthaben abrufen {#stripe.get-balance}
+### Guthaben abrufen {#stripe-get-balance}
 
 Liest das Guthaben deines Stripe-Kontos, pro Währung.
 
@@ -87,10 +87,10 @@ Liest das Guthaben deines Stripe-Kontos, pro Währung.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Verfügbar | Liste von [Stripe-Betrag](../../../value-types.md#stripe:Amount) | Geld, das du jetzt auszahlen kannst. |
-| Ausstehend | Liste von [Stripe-Betrag](../../../value-types.md#stripe:Amount) | Geld, das noch nicht verfügbar ist. |
+| Verfügbar | Liste von [Stripe-Betrag](../../../value-types.md#stripe-Amount) | Geld, das du jetzt auszahlen kannst. |
+| Ausstehend | Liste von [Stripe-Betrag](../../../value-types.md#stripe-Amount) | Geld, das noch nicht verfügbar ist. |
 
-### Checkout-Sitzung erstellen {#stripe.create-checkout-session}
+### Checkout-Sitzung erstellen {#stripe-create-checkout-session}
 
 Erstellt eine Stripe-Seite, auf der ein Kunde einen Artikel bezahlt. Dieselben Eingaben noch einmal zu senden liefert dieselbe Sitzung.
 
@@ -124,7 +124,7 @@ Erstellt eine Stripe-Seite, auf der ein Kunde einen Artikel bezahlt. Dieselben E
 | Referenz | [Text](../../../value-types.md#STRING) | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein. |
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein. |
 
-### Checkout-Sitzung abrufen {#stripe.get-checkout-session}
+### Checkout-Sitzung abrufen {#stripe-get-checkout-session}
 
 Liest eine Checkout-Sitzung über die ID.
 
@@ -150,7 +150,7 @@ Liest eine Checkout-Sitzung über die ID.
 | Referenz | [Text](../../../value-types.md#STRING) | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein. |
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein. |
 
-### Checkout-Sitzung beenden {#stripe.expire-checkout-session}
+### Checkout-Sitzung beenden {#stripe-expire-checkout-session}
 
 Schließt eine offene Checkout-Sitzung, sodass niemand mehr damit bezahlen kann.
 
@@ -175,7 +175,7 @@ Schließt eine offene Checkout-Sitzung, sodass niemand mehr damit bezahlen kann.
 | Referenz | [Text](../../../value-types.md#STRING) | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein. |
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein. |
 
-### Zahlungslink erstellen {#stripe.create-payment-link}
+### Zahlungslink erstellen {#stripe-create-payment-link}
 
 Erstellt einen Link, über den jeder einen Artikel bezahlen kann. Danach zeigt Stripe seine eigene Bestätigungsseite. Zahlungen über diesen Link lösen auch den Auslöser Checkout abgeschlossen aus.
 
@@ -198,7 +198,7 @@ Erstellt einen Link, über den jeder einen Artikel bezahlen kann. Danach zeigt S
 | Link | [URL](../../../value-types.md#URL) | Der Link zum Bezahlen. |
 | Aktiv | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Link genutzt werden kann. |
 
-### Erstattung erstellen {#stripe.create-refund}
+### Erstattung erstellen {#stripe-create-refund}
 
 Erstattet eine Zahlung, ganz oder teilweise. Gib die Zahlungsvorgang-ID oder die Belastungs-ID an. Dieselbe Erstattung gleich noch einmal zu senden liefert die erste Erstattung zurück und erstattet nichts weiter. Um denselben Betrag absichtlich zweimal zu erstatten, ändere eine Eingabe.
 

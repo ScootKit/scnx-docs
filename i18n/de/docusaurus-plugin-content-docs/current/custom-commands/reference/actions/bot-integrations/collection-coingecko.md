@@ -9,7 +9,7 @@ description: "Lies Kryptowährungspreise, Münzdetails und Marktranglisten von C
 
 Lies Kryptowährungspreise, Münzdetails und Marktranglisten von CoinGecko.
 
-### Münzpreis abrufen {#coingecko.get-price}
+### Münzpreis abrufen {#coingecko-get-price}
 
 Liest den aktuellen Preis einer Münze in einer Währung.
 
@@ -31,7 +31,7 @@ Liest den aktuellen Preis einer Münze in einer Währung.
 | Änderung in 24 Stunden in % | [Dezimalzahl](../../../value-types.md#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
 | Aktualisiert am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann CoinGecko den Preis zuletzt aktualisiert hat. Kann leer sein. |
 
-### Münzdetails abrufen {#coingecko.get-coin}
+### Münzdetails abrufen {#coingecko-get-coin}
 
 Liest Name, Logo, Links und die Preise in US-Dollar und Euro einer Münze.
 
@@ -59,7 +59,7 @@ Liest Name, Logo, Links und die Preise in US-Dollar und Euro einer Münze.
 | Änderung in 24 Stunden in % | [Dezimalzahl](../../../value-types.md#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
 | Allzeithoch in USD | [Dezimalzahl](../../../value-types.md#FLOAT) | Der höchste Preis aller Zeiten, in US-Dollar. Kann leer sein. |
 
-### Top-Münzen abrufen {#coingecko.list-markets}
+### Top-Münzen abrufen {#coingecko-list-markets}
 
 Listet die Münzen mit der höchsten Marktkapitalisierung, die größte zuerst.
 
@@ -76,4 +76,4 @@ Listet die Münzen mit der höchsten Marktkapitalisierung, die größte zuerst.
 
 | Name | Typ | Details |
 | --- | --- | --- |
-| Münzen | Liste von [CoinGecko-Münze](../../../value-types.md#coingecko:Coin) | Die Münzen, die größte zuerst. |
+| Münzen | Liste von [CoinGecko-Münze](../../../value-types.md#coingecko-Coin) | Die Münzen, die größte zuerst. |

@@ -9,7 +9,7 @@ description: "Read cryptocurrency prices, coin details and market rankings from 
 
 Read cryptocurrency prices, coin details and market rankings from CoinGecko.
 
-### Get coin price {#coingecko.get-price}
+### Get coin price {#coingecko-get-price}
 
 Reads the current price of one coin in one currency.
 
@@ -31,7 +31,7 @@ Reads the current price of one coin in one currency.
 | Change in 24 hours in % | [Decimal number](../../../value-types.md#FLOAT) | How much the price changed in the last 24 hours, in percent. May be empty. |
 | Updated at | [Date and time](../../../value-types.md#DATETIME) | When CoinGecko last updated the price. May be empty. |
 
-### Get coin details {#coingecko.get-coin}
+### Get coin details {#coingecko-get-coin}
 
 Reads the name, logo, links and prices in US dollars and euros of one coin.
 
@@ -59,7 +59,7 @@ Reads the name, logo, links and prices in US dollars and euros of one coin.
 | Change in 24 hours in % | [Decimal number](../../../value-types.md#FLOAT) | How much the price changed in the last 24 hours, in percent. May be empty. |
 | All-time high in USD | [Decimal number](../../../value-types.md#FLOAT) | The highest price ever, in US dollars. May be empty. |
 
-### Get top coins {#coingecko.list-markets}
+### Get top coins {#coingecko-list-markets}
 
 Lists the coins with the highest market cap, the largest first.
 
@@ -76,4 +76,4 @@ Lists the coins with the highest market cap, the largest first.
 
 | Name | Type | Details |
 | --- | --- | --- |
-| Coins | List of [CoinGecko coin](../../../value-types.md#coingecko:Coin) | The coins, the largest first. |
+| Coins | List of [CoinGecko coin](../../../value-types.md#coingecko-Coin) | The coins, the largest first. |

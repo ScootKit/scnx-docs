@@ -9,7 +9,7 @@ description: "Lies die Shopseite eines Steam-Spiels: Preis, Beschreibung und Ers
 
 Lies die Shopseite eines Steam-Spiels: Preis, Beschreibung und Erscheinungsdatum. Kein Schlüssel nötig.
 
-### Steam-Spiel abrufen {#steam-store.get-app}
+### Steam-Spiel abrufen {#steam-store-get-app}
 
 Liest die Shopdetails eines Steam-Spiels über die App-ID.
 

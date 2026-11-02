@@ -9,7 +9,7 @@ description: "Lies Steam-Profile, was jemand gerade spielt und seine Spiele."
 
 Lies Steam-Profile, was jemand gerade spielt und seine Spiele.
 
-### Steam-Profil abrufen {#steam.get-player}
+### Steam-Profil abrufen {#steam-get-player}
 
 Liest ein Steam-Profil, den Onlinestatus und das gerade gespielte Spiel.
 
@@ -36,7 +36,7 @@ Liest ein Steam-Profil, den Onlinestatus und das gerade gespielte Spiel.
 | Erstellt am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann das Konto erstellt wurde, wenn angezeigt. Kann leer sein. |
 | Zuletzt online | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Benutzer zuletzt online war, wenn angezeigt. Kann leer sein. |
 
-### Steam-ID finden {#steam.find-steam-id}
+### Steam-ID finden {#steam-find-steam-id}
 
 Wandelt einen eigenen Profilnamen (den Teil nach steamcommunity.com/id/) in die Steam-ID um.
 
@@ -54,7 +54,7 @@ Wandelt einen eigenen Profilnamen (den Teil nach steamcommunity.com/id/) in die 
 | Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob ein Profil diesen Namen hat. Wenn nicht, ist die Steam-ID leer. |
 | Steam-ID | [ID](../../../value-types.md#ID) | Die 17-stellige Steam-ID. Kann leer sein. |
 
-### Eigene Spiele abrufen {#steam.get-owned-games}
+### Eigene Spiele abrufen {#steam-get-owned-games}
 
 Listet die Spiele eines Steam-Benutzers, die meistgespielten zuerst. Klappt nur bei öffentlichen Spieldetails.
 
@@ -71,4 +71,4 @@ Listet die Spiele eines Steam-Benutzers, die meistgespielten zuerst. Klappt nur 
 | --- | --- | --- |
 | Sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob die Spieleliste gelesen werden konnte. False bei privaten Profilen; dann ist der Rest leer. |
 | Spiele | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Spiele der Benutzer besitzt. Kann leer sein. |
-| Spieleliste | Liste von [Steam-Spiel](../../../value-types.md#steam:Game) | Die Spiele, die meistgespielten zuerst. Kann leer sein. |
+| Spieleliste | Liste von [Steam-Spiel](../../../value-types.md#steam-Game) | Die Spiele, die meistgespielten zuerst. Kann leer sein. |

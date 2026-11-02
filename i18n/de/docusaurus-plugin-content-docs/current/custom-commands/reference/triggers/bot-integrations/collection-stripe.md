@@ -9,7 +9,7 @@ description: "Lies Stripe-Kunden, Zahlungen, Zahlungsvorgänge und dein Guthaben
 
 Lies Stripe-Kunden, Zahlungen, Zahlungsvorgänge und dein Guthaben und erstelle Checkout-Sitzungen, Zahlungslinks und Erstattungen.
 
-### Checkout abgeschlossen {#stripe.checkout-completed}
+### Checkout abgeschlossen {#stripe-checkout-completed}
 
 Wird ausgeführt, wenn ein Kunde eine Stripe-Checkout-Sitzung abschließt. Wähle am Stripe-Endpunkt das Ereignis checkout.session.completed aus. Prüfe den Zahlungsstatus: Er ist paid bei Karten und unpaid bei Überweisungen, die später mit checkout.session.async_payment_succeeded bestätigt werden.
 
@@ -34,10 +34,10 @@ Wird ausgeführt, wenn ein Kunde eine Stripe-Checkout-Sitzung abschließt. Wähl
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
-### Verzögerte Zahlung erfolgreich {#stripe.checkout-async-succeeded}
+### Verzögerte Zahlung erfolgreich {#stripe-checkout-async-succeeded}
 
 Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung, eintrifft. Wähle am Stripe-Endpunkt das Ereignis checkout.session.async_payment_succeeded aus.
 
@@ -62,10 +62,10 @@ Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung,
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
-### Verzögerte Zahlung fehlgeschlagen {#stripe.checkout-async-failed}
+### Verzögerte Zahlung fehlgeschlagen {#stripe-checkout-async-failed}
 
 Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung, fehlschlägt. Wähle am Stripe-Endpunkt das Ereignis checkout.session.async_payment_failed aus.
 
@@ -90,10 +90,10 @@ Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung,
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
-### Checkout abgelaufen {#stripe.checkout-expired}
+### Checkout abgelaufen {#stripe-checkout-expired}
 
 Wird ausgeführt, wenn eine Checkout-Sitzung ohne Zahlung endet. Wähle am Stripe-Endpunkt das Ereignis checkout.session.expired aus.
 
@@ -118,10 +118,10 @@ Wird ausgeführt, wenn eine Checkout-Sitzung ohne Zahlung endet. Wähle am Strip
 | Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
-### Zahlung erstattet {#stripe.charge-refunded}
+### Zahlung erstattet {#stripe-charge-refunded}
 
 Wird ausgeführt, wenn eine Zahlung ganz oder teilweise erstattet wird. Wähle am Stripe-Endpunkt das Ereignis charge.refunded aus.
 
@@ -146,10 +146,10 @@ Wird ausgeführt, wenn eine Zahlung ganz oder teilweise erstattet wird. Wähle a
 | Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
-### Streitfall eröffnet {#stripe.dispute-created}
+### Streitfall eröffnet {#stripe-dispute-created}
 
 Wird ausgeführt, wenn ein Kunde eine Zahlung bei seiner Bank anficht. Wähle am Stripe-Endpunkt das Ereignis charge.dispute.created aus.
 
@@ -173,5 +173,5 @@ Wird ausgeführt, wenn ein Kunde eine Zahlung bei seiner Bank anficht. Wähle am
 | Status | [Text](../../../value-types.md#STRING) | Der Status des Streitfalls, zum Beispiel needs_response. Kann leer sein. |
 | Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
 | Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe:Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
+| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
 | Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |

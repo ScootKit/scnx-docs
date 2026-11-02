@@ -9,7 +9,7 @@ description: "Lies Hypixel-Spielerdaten und ob ein Spieler online ist."
 
 Lies Hypixel-Spielerdaten und ob ein Spieler online ist.
 
-### Hypixel-Spieler abrufen {#hypixel.get-player}
+### Hypixel-Spieler abrufen {#hypixel-get-player}
 
 Liest Rang, Level und Loginzeiten eines Spielers auf Hypixel.
 
@@ -33,7 +33,7 @@ Liest Rang, Level und Loginzeiten eines Spielers auf Hypixel.
 | Erster Login | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zum ersten Mal da war. Kann leer sein. |
 | Letzter Login | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann der Spieler zuletzt da war. Leer, wenn der Spieler das verbirgt. Kann leer sein. |
 
-### Onlinestatus abrufen {#hypixel.get-status}
+### Onlinestatus abrufen {#hypixel-get-status}
 
 Prüft, ob ein Spieler gerade auf Hypixel ist und was er spielt.
 

@@ -9,7 +9,7 @@ description: "Read Hypixel player stats and whether a player is online."
 
 Read Hypixel player stats and whether a player is online.
 
-### Get Hypixel player {#hypixel.get-player}
+### Get Hypixel player {#hypixel-get-player}
 
 Reads the rank, level and login times of a player on Hypixel.
 
@@ -33,7 +33,7 @@ Reads the rank, level and login times of a player on Hypixel.
 | First login | [Date and time](../../../value-types.md#DATETIME) | When the player first joined. May be empty. |
 | Last login | [Date and time](../../../value-types.md#DATETIME) | When the player last joined. Empty when the player hides it. May be empty. |
 
-### Get online status {#hypixel.get-status}
+### Get online status {#hypixel-get-status}
 
 Checks whether a player is on Hypixel right now and what they play.
 
