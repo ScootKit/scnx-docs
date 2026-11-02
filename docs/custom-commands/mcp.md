@@ -44,7 +44,7 @@ For **Custom Commands**:
 - The server needs the **Custom-Bot enabled** (see [Set up your Custom-Bot](/docs/custom-bot)), with its **bot
   online and running**. These tools reach your server through your bot's own host process - if it's offline,
   those calls fail.
-- You need to be part of the Custom Commands V3 Beta Program.
+- Custom Commands V3 needs to be turned on for the server. Join the beta from your server's Custom Commands page in the dashboard, see [Get access](/docs/custom-commands/intro#access).
 
 For **Sites**:
 

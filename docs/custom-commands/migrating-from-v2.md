@@ -12,10 +12,11 @@ This page explains how to turn V3 on, what changes for you, and what does and do
 
 ## Can my server use V3? {#eligibility}
 
-V3 is in beta and is opening up server by server. Open the [Custom Commands page](https://scnx.app/glink?page=bot/custom-commands) of your server:
+V3 is in beta, and you join it yourself from the dashboard. Open the [Custom Commands page](https://scnx.app/glink?page=bot/custom-commands) of your server:
 
-- **If your server can use V3**, you'll see the card "Custom Commands V3 is available for your server" above your V2 commands, with an **Explore V3** button.
-- **If it can't yet**, you'll see "Custom Commands V3 isn't available yet". When we're taking beta applications, you can click **Apply for the beta** there, or **See what V3 can do** to learn more first.
+- **If V3 isn't on yet**, you'll see the card "Custom Commands V3 is in beta". Click **Join the beta** to open the opt-in page, or **See what V3 can do** to learn more first.
+- **If your server was already unlocked**, you'll see the card "Custom Commands V3 is available for your server" above your V2 commands, with an **Explore V3** button.
+- **If we have paused joining**, you'll see "Custom Commands V3 isn't available yet". Your V2 commands keep working.
 
 If someone sent you an invite link for Custom Commands V3, open it and pick your server. That makes the server eligible. You still turn V3 on yourself afterwards.
 

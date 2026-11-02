@@ -1,13 +1,19 @@
+---
+sidebar_position: 6
+title: "Sell with Stripe"
+description: "Sell things on your Discord server with Stripe Checkout: a member pays on Stripe, and your flow delivers the order."
+---
+
 # Sell with Stripe
 
 Sell things on your Discord server with Stripe Checkout: a member picks a product, pays on Stripe's own page, and your flow delivers the order when Stripe confirms the payment. Payments happen on Stripe's page, so nothing in SCNX ever sees card data.
 
-This guide uses the [Stripe ready-made service](/docs/custom-bot/ccv3/integrations#ready-made-services) and a Stripe webhook. The example module **Stripe Shop** contains a complete working shop you can install and adapt.
+This guide uses the [Stripe ready-made service](/docs/custom-commands/integrations#ready-made-services) and a Stripe webhook. The example module **Stripe Shop** contains a complete working shop you can install and adapt.
 
 ## Before you start {#before-you-start}
 
 - You need a Stripe account. Stripe has a test mode with fake cards and fake money: build and test everything in test mode first, with a test-mode key, and switch to a live key only when the whole shop works.
-- You need the [Integrations](/docs/custom-bot/ccv3/integrations) basics: connections store your key, hooks receive Stripe's events.
+- You need the [Integrations](/docs/custom-commands/integrations) basics: connections store your key, hooks receive Stripe's events.
 
 ## Create a restricted key {#restricted-key}
 

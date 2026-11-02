@@ -1,3 +1,9 @@
+---
+sidebar_position: 5
+title: "Integrationen"
+description: "Lass deine Flows mit anderen Diensten sprechen - HTTP-Requests, Webhooks, gespeicherte Verbindungen und vorgefertigte Dienste wie Twitch oder GitHub."
+---
+
 # Integrationen
 
 Mit Integrationen können deine eigenen Commands und Abläufe mit anderen Diensten im Internet sprechen: eine API aufrufen, einen Webhook empfangen oder einen vorgefertigten Dienst wie Twitch oder GitHub nutzen.
@@ -54,7 +60,7 @@ Ein Hook mit Voreinstellung, der noch auf sein Geheimnis wartet, nimmt keine Anf
 
 - Fire-and-forget-Zustellungen werden bis zu **24 Stunden** in einer Warteschlange gehalten. Ist dein Bot offline oder vorübergehend ausgelastet, bleibt die Zustellung in der Warteschlange und wird später erneut versucht.
 - Ist dein Bot ausgelastet, verschiebt SCNX die Zustellung und versucht es kurz darauf erneut. Hooks im Antwort-Modus können nicht warten, daher erhält der Absender die Antwort "busy" (HTTP 503) und kann selbst erneut senden.
-- Stripe und top.gg wiederholen fehlgeschlagene Zustellungen selbst. Bei Stripe führt SCNX einen Ablauf pro Ereignis-ID 24 Stunden lang nur einmal aus und überspringt die Zustellung eines Ereignisses, das schon verarbeitet wurde. Eine identische Kopie einer schon verarbeiteten Anfrage wird innerhalb von 300 Sekunden nach ihrem Zeitstempel mit HTTP 409 beantwortet. Eine Kopie mit älterem Zeitstempel besteht die Signaturprüfung nicht und bekommt HTTP 401. Siehe [Mit Stripe verkaufen](/de/docs/custom-bot/ccv3/sell-with-stripe#repeated-events).
+- Stripe und top.gg wiederholen fehlgeschlagene Zustellungen selbst. Bei Stripe führt SCNX einen Ablauf pro Ereignis-ID 24 Stunden lang nur einmal aus und überspringt die Zustellung eines Ereignisses, das schon verarbeitet wurde. Eine identische Kopie einer schon verarbeiteten Anfrage wird innerhalb von 300 Sekunden nach ihrem Zeitstempel mit HTTP 409 beantwortet. Eine Kopie mit älterem Zeitstempel besteht die Signaturprüfung nicht und bekommt HTTP 401. Siehe [Mit Stripe verkaufen](/de/docs/custom-commands/sell-with-stripe#repeated-events).
 - Das Zustellungsprotokoll des Hooks zeigt das Ergebnis jeder Anfrage, zum Beispiel zugestellt, verschoben, wiederholt oder abgelehnt.
 
 ## Erlaubte Dienste {#allowed-services}
@@ -159,6 +165,8 @@ Die Liste wächst mit der Zeit. Sie gilt für den HTTP-Request-Schritt und für 
 
 Vorgefertigte Dienste sind vorbereitete Operationen, die im Ablauf-Editor neben dem HTTP-Request-Schritt erscheinen. Du wählst die Operation und füllst ihre Eingaben aus; SCNX baut die Anfrage, fügt deine Zugangsdaten hinzu und liefert das Ergebnis. Dienste mit "Kein Konto nötig" funktionieren ohne Schlüssel. Alle anderen brauchen eine Verbindung, die du einmal im Dashboard anlegst.
 
+Jeder vorgefertigte Dienst hat eine eigene Referenzseite mit allen Aktionen und Triggern: siehe [Dienst-Aktionen](/docs/custom-commands/reference/actions/bot-integrations) und [Dienst-Trigger](/docs/custom-commands/reference/triggers/bot-integrations).
+
 Dienste ohne Schlüssel werden von gemeinsamen SCNX-Adressen aus aufgerufen, daher gelten die Rate-Limits des Dienstes für alle Server zusammen. Antwortet ein Dienst mit einem Rate-Limit, schlägt der Schritt mit einem abfangbaren Fehler "Rate-Limit erreicht" fehl.
 
 | Dienst                     | Was du tun kannst                                                                                                                                 | Zugangsdaten                                                                                                                                                                            |
@@ -175,7 +183,7 @@ Dienste ohne Schlüssel werden von gemeinsamen SCNX-Adressen aus aufgerufen, dah
 | Roblox Open Cloud          | Benutzer, Gruppen mit Rollen und Mitgliedern, Experiences                                                                                         | Open-Cloud-API-Schlüssel von create.roblox.com; Accepted IP Addresses auf `0.0.0.0/0` setzen                                                                                            |
 | Steam                      | Profile, was jemand spielt, besessene Spiele                                                                                                      | Web-API-Schlüssel von steamcommunity.com/dev/apikey                                                                                                                                     |
 | Steam-Store                | Preis, Beschreibung und Veröffentlichungsdatum eines Spiels                                                                                       | Kein Konto nötig                                                                                                                                                                        |
-| Stripe                     | Kunden, Zahlungen, Abbuchungen und Guthaben lesen; Checkout-Sitzungen, Zahlungslinks und Erstattungen erstellen und Abläufe bei Zahlungen starten | Eingeschränkter Schlüssel (`rk_...`) mit den nötigen Berechtigungen; nicht deinen geheimen Schlüssel verwenden. Siehe [Mit Stripe verkaufen](/de/docs/custom-bot/ccv3/sell-with-stripe) |
+| Stripe                     | Kunden, Zahlungen, Abbuchungen und Guthaben lesen; Checkout-Sitzungen, Zahlungslinks und Erstattungen erstellen und Abläufe bei Zahlungen starten | Eingeschränkter Schlüssel (`rk_...`) mit den nötigen Berechtigungen; nicht deinen geheimen Schlüssel verwenden. Siehe [Mit Stripe verkaufen](/de/docs/custom-commands/sell-with-stripe) |
 | Todoist                    | Aufgaben auflisten, hinzufügen und abschließen                                                                                                    | API-Token aus den Todoist-Einstellungen unter Integrationen, Entwickler                                                                                                                 |
 | top.gg                     | Votes prüfen, Statistiken lesen, Abläufe bei neuen Votes starten                                                                                  | API-Token unter "Integrations & API" in deinem top.gg-Projekt (v1-API)                                                                                                                  |
 | Twitch                     | Benutzer, Streams, Kanäle, Clips, Abonnentenzahl                                                                                                  | Beim Anlegen der Verbindung mit Twitch anmelden                                                                                                                                         |

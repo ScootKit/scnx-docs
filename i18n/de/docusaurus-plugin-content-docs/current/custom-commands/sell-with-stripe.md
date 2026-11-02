@@ -1,13 +1,19 @@
+---
+sidebar_position: 6
+title: "Mit Stripe verkaufen"
+description: "Verkaufe auf deinem Discord-Server mit Stripe Checkout: Ein Mitglied bezahlt bei Stripe, und dein Flow liefert die Bestellung aus."
+---
+
 # Mit Stripe verkaufen
 
 Verkaufe Dinge auf deinem Discord-Server mit Stripe Checkout: Ein Mitglied wählt ein Produkt, bezahlt auf der Seite von Stripe, und dein Ablauf liefert die Bestellung, sobald Stripe die Zahlung bestätigt. Bezahlt wird auf der Seite von Stripe, deshalb sieht SCNX nie Kartendaten.
 
-Diese Anleitung nutzt den [fertigen Stripe-Dienst](/de/docs/custom-bot/ccv3/integrations#ready-made-services) und einen Stripe-Webhook. Das Beispielmodul **Stripe Shop** enthält einen vollständigen, funktionierenden Shop, den du installieren und anpassen kannst.
+Diese Anleitung nutzt den [fertigen Stripe-Dienst](/de/docs/custom-commands/integrations#ready-made-services) und einen Stripe-Webhook. Das Beispielmodul **Stripe Shop** enthält einen vollständigen, funktionierenden Shop, den du installieren und anpassen kannst.
 
 ## Bevor du startest {#before-you-start}
 
 - Du brauchst ein Stripe-Konto. Stripe hat einen Testmodus mit Testkarten und Spielgeld: Baue und teste zuerst alles im Testmodus mit einem Testmodus-Schlüssel und wechsle erst zu einem Live-Schlüssel, wenn der ganze Shop funktioniert.
-- Du solltest die Grundlagen der [Integrationen](/de/docs/custom-bot/ccv3/integrations) kennen: Verbindungen speichern deinen Schlüssel, Hooks empfangen die Ereignisse von Stripe.
+- Du solltest die Grundlagen der [Integrationen](/de/docs/custom-commands/integrations) kennen: Verbindungen speichern deinen Schlüssel, Hooks empfangen die Ereignisse von Stripe.
 
 ## Eingeschränkten Schlüssel erstellen {#restricted-key}
 

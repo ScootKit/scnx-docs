@@ -159,16 +159,6 @@ const sidebars = {
                     type: 'doc',
                     label: 'Slash commands & Permissions',
                     id: 'custom-bot/slash-commands'
-                },
-                {
-                    type: 'doc',
-                    label: 'Integrations',
-                    id: 'custom-bot/ccv3/integrations'
-                },
-                {
-                    type: 'doc',
-                    label: 'Sell with Stripe',
-                    id: 'custom-bot/ccv3/sell-with-stripe'
                 }
             ]
         },
@@ -441,6 +431,8 @@ const sidebars = {
                         {type: 'doc', id: 'custom-commands/triggers', label: 'Triggers'},
                         {type: 'doc', id: 'custom-commands/variables', label: 'Values, variables & messages'},
                         {type: 'doc', id: 'custom-commands/modules', label: 'Modules & templates'},
+                        {type: 'doc', id: 'custom-commands/integrations', label: 'Integrations'},
+                        {type: 'doc', id: 'custom-commands/sell-with-stripe', label: 'Sell with Stripe'},
                         {type: 'doc', id: 'custom-commands/mcp', label: 'Build with AI (MCP)'}
                     ]
                 },

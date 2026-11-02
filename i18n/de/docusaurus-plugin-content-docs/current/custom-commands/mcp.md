@@ -29,7 +29,7 @@ Der Connector verbindet und autorisiert sich auch, wenn diese Voraussetzungen ni
 Für **Custom Commands**:
 
 - Auf dem Server muss der **Custom-Bot aktiviert** sein (siehe [Custom-Bot einrichten](/de/docs/custom-bot)) und sein **Bot muss online sein und laufen**. Diese Tools erreichen deinen Server über den Host-Prozess deines Bots - ist er offline, schlagen diese Aufrufe fehl.
-- Du musst Teil des Custom Commands V3 Beta-Programms sein.
+- Custom Commands V3 muss für den Server eingeschaltet sein. Tritt der Beta über die Custom-Commands-Seite deines Servers im Dashboard bei, siehe [Zugang](/docs/custom-commands/intro#access).
 
 Für **Sites**:
 

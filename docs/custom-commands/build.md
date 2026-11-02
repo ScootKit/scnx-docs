@@ -18,7 +18,8 @@ Every automation you build is a flow: one trigger, then steps that run from top 
 2. [Triggers](/docs/custom-commands/triggers) - every way a flow can start, and how to pick the right one.
 3. [Values, variables & messages](/docs/custom-commands/variables) - passing values from one step to the next and into your messages.
 4. [Modules & templates](/docs/custom-commands/modules) - grouping flows that belong together, with a settings page for admins.
-5. [Build with AI (MCP)](/docs/custom-commands/mcp) - let Claude or ChatGPT write, check and debug flows for you.
+5. [Integrations](/docs/custom-commands/integrations) - call other services, receive webhooks and use ready-made services like Twitch or GitHub. To take payments, follow [Sell with Stripe](/docs/custom-commands/sell-with-stripe).
+6. [Build with AI (MCP)](/docs/custom-commands/mcp) - let Claude or ChatGPT write, check and debug flows for you.
 
 New here? Do the [first flow tutorial](/docs/custom-commands/quickstart) before you read on.
 

@@ -57,14 +57,14 @@ Turning on V3 doesn't touch your V2 commands. They keep running and stay editabl
 
 ## Get access {#access}
 
-Custom Commands V3 is in beta, so it isn't available on every server yet. Open **Custom Commands** in your bot's section of the [SCNX dashboard](https://scnx.app). What you see depends on your server:
+Custom Commands V3 is in beta and you join it yourself, with no application. Open **Custom Commands** in your bot's section of the [SCNX dashboard](https://scnx.app). What you see depends on your server:
 
-- **"Custom Commands V3 is in beta"** means your server isn't part of the beta yet. Click **Apply for the beta** to send us an application, or **See what V3 can do** to read more first.
+- **"Custom Commands V3 is in beta"** means V3 isn't on for your server yet. Click **Join the beta** to open the opt-in page, or **See what V3 can do** to read more first.
 - **"Custom Commands V3 is available for your server"** means your server can turn it on. Click **Explore V3** to continue.
 
-A server can also become eligible through an early access invite link that a marketplace publisher sent you.
+Only the server owner and co-owners can turn V3 on. A server can also have been unlocked earlier through an early access invite link that a marketplace publisher sent you.
 
-If you open the V3 page on a server that isn't eligible, you see "Custom Commands V3 isn't available yet". Your existing commands keep working as usual.
+If we have paused joining, you see "Custom Commands V3 isn't available yet" instead. Your existing commands keep working as usual either way.
 
 ### Turn on Custom Commands V3 {#enable}
 
