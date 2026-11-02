@@ -1,0 +1,9 @@
+{
+  "label": "Benutzerdefinierte Befehle",
+  "key": "ccv3-reference-triggers-custom-commands",
+  "position": 5,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}

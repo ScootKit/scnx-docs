@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 5
 title: MCP Connector
 description: Verbinde ChatGPT oder Claude mit SCNX, um Custom-Commands-v3-Flows zu bauen und zu debuggen, deine SCNX Site zu bearbeiten, die Einstellungen der eingebauten Module deines Bots zu ändern und deine Support-Bots einzurichten.
 ---

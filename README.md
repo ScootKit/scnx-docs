@@ -71,6 +71,7 @@ Execute scripts from the `bin/` directory:
 - `node generate-progress.js [orgID]` - View module translation progress (optionally filter by org)
 - `node generate-docs-file.js <moduleName>` - Generate a docs template for a Custom Bot module
 - `node generate-missing-files.js` - Generate placeholder files for undocumented modules
+- `npm run generate:ccv3-reference [-- --source <dir|url>] [-- --locale de]` - Generate the Custom Commands v3 reference (triggers, actions, value types) from the CCV3 schema (`CCV3_SCHEMA_SOURCE` also sets the source)
 
 ## Contributing
 

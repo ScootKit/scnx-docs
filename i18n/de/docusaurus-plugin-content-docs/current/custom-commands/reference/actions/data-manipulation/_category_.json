@@ -1,0 +1,9 @@
+{
+  "label": "Daten-Tools",
+  "key": "ccv3-reference-actions-data-manipulation",
+  "position": 10,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}

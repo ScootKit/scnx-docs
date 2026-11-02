@@ -1,0 +1,9 @@
+{
+  "label": "Your Discord Server",
+  "key": "ccv3-reference-actions-discord-server",
+  "position": 2,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}
