@@ -1,0 +1,9 @@
+{
+  "label": "Integrations",
+  "key": "ccv3-reference-triggers-bot-integrations",
+  "position": 4,
+  "collapsed": true,
+  "customProps": {
+    "generated": "ccv3-reference"
+  }
+}

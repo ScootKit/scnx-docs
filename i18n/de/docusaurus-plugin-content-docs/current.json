@@ -207,14 +207,6 @@
     "message": "Slashcommands & Berechtigungen",
     "description": "The label for the doc item 'Slash commands & Permissions' in sidebar 'customBotSidebar', linking to the doc custom-bot/slash-commands"
   },
-  "sidebar.customBotSidebar.doc.Integrations": {
-    "message": "Integrationen",
-    "description": "The label for the doc item 'Integrations' in sidebar 'customBotSidebar', linking to the doc custom-bot/ccv3/integrations"
-  },
-  "sidebar.customBotSidebar.doc.Sell with Stripe": {
-    "message": "Mit Stripe verkaufen",
-    "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customBotSidebar', linking to the doc custom-bot/ccv3/sell-with-stripe"
-  },
   "sidebar.startSidebar.category.Discord": {
     "message": "Discord",
     "description": "The label for category 'Discord' in sidebar 'startSidebar'"
@@ -346,5 +338,97 @@
   "sidebar.customBotSidebar.doc.Analytics: what is collected": {
     "message": "Analytics: Was erfasst wird",
     "description": "The label for the doc item custom-bot/analytics-data in sidebar customBotSidebar, linking to the doc custom-bot/analytics-data"
+  },
+  "sidebar.customCommandsSidebar.category.Custom Commands (CCV3)": {
+    "message": "Custom Commands (CCV3)",
+    "description": "The label for category 'Custom Commands (CCV3)' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Build": {
+    "message": "Bauen",
+    "description": "The label for category 'Build' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Run": {
+    "message": "Betrieb",
+    "description": "The label for category 'Run' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Share & manage": {
+    "message": "Teilen & verwalten",
+    "description": "The label for category 'Share & manage' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Reference": {
+    "message": "Referenz",
+    "description": "The label for category 'Reference' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Triggers": {
+    "message": "Trigger",
+    "description": "The label for category 'Triggers' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.category.Actions": {
+    "message": "Aktionen",
+    "description": "The label for category 'Actions' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Overview": {
+    "message": "Übersicht",
+    "description": "The label for the doc item 'Overview' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Build your first flow": {
+    "message": "Deinen ersten Flow bauen",
+    "description": "The label for the doc item 'Build your first flow' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Flows & the editor": {
+    "message": "Flows & der Editor",
+    "description": "The label for the doc item 'Flows & the editor' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Triggers": {
+    "message": "Trigger",
+    "description": "The label for the doc item 'Triggers' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Values, variables & messages": {
+    "message": "Werte, Variablen & Nachrichten",
+    "description": "The label for the doc item 'Values, variables & messages' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Modules & templates": {
+    "message": "Module & Vorlagen",
+    "description": "The label for the doc item 'Modules & templates' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Integrations": {
+    "message": "Integrationen",
+    "description": "The label for the doc item 'Integrations' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Sell with Stripe": {
+    "message": "Mit Stripe verkaufen",
+    "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Build with AI (MCP)": {
+    "message": "Mit KI bauen (MCP)",
+    "description": "The label for the doc item 'Build with AI (MCP)' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Data storage": {
+    "message": "Datenspeicher",
+    "description": "The label for the doc item 'Data storage' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Run history & debugging": {
+    "message": "Ausführungsverlauf & Fehlersuche",
+    "description": "The label for the doc item 'Run history & debugging' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Sharing & the marketplace": {
+    "message": "Teilen & der Marktplatz",
+    "description": "The label for the doc item 'Sharing & the marketplace' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Moving from V2": {
+    "message": "Umstieg von V2",
+    "description": "The label for the doc item 'Moving from V2' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Plans, limits & safety": {
+    "message": "Tarife, Limits & Sicherheit",
+    "description": "The label for the doc item 'Plans, limits & safety' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Value types": {
+    "message": "Werttypen",
+    "description": "The label for the doc item 'Value types' in sidebar 'customCommandsSidebar'"
+  },
+  "sidebar.customCommandsSidebar.doc.Troubleshooting & FAQ": {
+    "message": "Fehlerbehebung & FAQ",
+    "description": "The label for the doc item 'Troubleshooting & FAQ' in sidebar 'customCommandsSidebar'"
   }
 }
