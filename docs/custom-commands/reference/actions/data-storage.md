@@ -393,7 +393,7 @@ Returns every key and value of a stored lookup table.
 
 ### List storage keys {#list-storage-keys}
 
-Returns every key (subject id) that currently has a stored value for the field.
+Returns the keys (subject ids) that currently have a stored value for the field. Works on fields with up to 10,000 keys; a bigger field fails with a limit error you can catch.
 
 **Inputs**
 
@@ -409,7 +409,7 @@ Returns every key (subject id) that currently has a stored value for the field.
 
 ### Search storage keys {#search-storage-keys}
 
-Filters the field's keys (subject ids) by a query, ranked prefix-first then contains - like autocomplete. A blank query returns every key up to the limit.
+Filters the field's keys (subject ids) by a query, ranked prefix-first then contains - like autocomplete. A blank query returns keys up to the limit. Works on fields with up to 10,000 keys; a bigger field fails with a limit error you can catch.
 
 **Inputs**
 

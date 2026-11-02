@@ -301,7 +301,7 @@ Pads a text on the right until it reaches the desired length.
 
 ### Repeat text {#string-repeat}
 
-Repeats a text a given number of times. The result is capped at 1000 characters.
+Repeats a text a given number of times. The result is capped at 4096 characters.
 
 **Inputs**
 

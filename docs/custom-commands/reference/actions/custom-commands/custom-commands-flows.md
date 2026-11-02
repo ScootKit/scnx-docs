@@ -61,7 +61,7 @@ Returns the runs scheduled by this module or server that have not happened yet, 
 | Name | Type | Required | Details |
 | --- | --- | --- | --- |
 | Target flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | No | Only list runs of this flow. Leave empty to list every scheduled run. |
-| Limit | [Whole number](../../../value-types.md#INTEGER) | Yes | Maximum number of scheduled runs to return (soonest first). Value: 1 to 500. Default: `25`. |
+| Limit | [Whole number](../../../value-types.md#INTEGER) | Yes | Maximum number of scheduled runs to return (soonest first). Value: 1 to 5000. Default: `25`. |
 
 **Outputs**
 

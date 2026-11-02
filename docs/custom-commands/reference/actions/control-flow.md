@@ -134,7 +134,7 @@ Pauses the flow for the given duration.
 
 | Name | Type | Required | Details |
 | --- | --- | --- | --- |
-| Duration | [Duration](../../value-types.md#DURATION) | Yes | How long to wait (max 10 minutes). Value: 0 to 600000. Default: `1000`. |
+| Duration | [Duration](../../value-types.md#DURATION) | Yes | How long to wait, up to 30 days. A wait of 5 seconds or more pauses the flow and picks it up again later, even after a restart. Inside a loop, only a few seconds are possible. Value: 0 to 2592000000. Default: `1000`. |
 
 ### Stop flow {#stop-flow}
 
@@ -158,7 +158,7 @@ Runs the body a fixed number of times.
 
 | Name | Type | Required | Details |
 | --- | --- | --- | --- |
-| Times | [Whole number](../../value-types.md#INTEGER) | Yes | How often the body runs (1-1000). Value: 1 to 1000. |
+| Times | [Whole number](../../value-types.md#INTEGER) | Yes | How often the body runs (1-10000). Value: 1 to 10000. |
 
 **Branches**
 

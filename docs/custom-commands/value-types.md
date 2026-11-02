@@ -859,6 +859,34 @@ Machine-readable code describing why an action failed.
 | `UNKNOWN` | Unknown | An unexpected error occurred. |
 | `INTERACTION_EXPIRED` | Interaction expired | The interaction expired before the bot responded (roughly a 3-second window). Defer or reply sooner, or use the defer guard. |
 | `AI_CREDITS_EXHAUSTED` | Out of AI Coins | This server has no AI Coins left, so the AI action did not run. Nothing was charged. Catch this code to fall back, or top up your AI Coins. |
+| `HTTP_TIMEOUT` | HTTP timeout | The web API did not answer in time. |
+| `HTTP_UNREACHABLE` | HTTP unreachable | The web API could not be reached: the address does not exist, refused the connection or has a broken certificate. |
+| `HTTP_RESPONSE_TOO_LARGE` | HTTP response too large | The answer was larger than 1 MB. |
+| `HTTP_RATE_LIMITED` | HTTP rate limited | Too many requests in a short time. Try again later. |
+| `HTTP_UNAVAILABLE` | HTTP unavailable | Outgoing requests are not available right now. |
+
+### HTTP method {#HTTP_METHOD}
+
+How an HTTP request treats the address.
+
+| Value | Name | Details |
+| --- | --- | --- |
+| `GET` | GET | Read data. |
+| `POST` | POST | Send new data. |
+| `PUT` | PUT | Replace data. |
+| `PATCH` | PATCH | Change part of the data. |
+| `DELETE` | DELETE | Delete data. |
+
+### Body {#HTTP_BODY_MODE}
+
+What an HTTP request or webhook answer sends along.
+
+| Value | Name | Details |
+| --- | --- | --- |
+| `NONE` | None | Send no body. |
+| `JSON` | JSON | Send a value as JSON. |
+| `FORM` | Form | Send names and values as a URL-encoded form. |
+| `RAW` | Text | Send text exactly as written. |
 
 ### Kind of value {#DATA_TYPE}
 
@@ -2543,6 +2571,288 @@ Example: `Red team: 120`.
 | --- | --- | --- |
 | Key | [Text](#STRING) | The key this pair is stored under. Example: `Red team`. |
 | Value | [Stored value](#STORAGE_VALUE) | The value stored under that key. Example: `120`. |
+
+### top.gg vote {#topgg:Vote}
+
+One vote for your project on top.gg.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| User ID | [Discord ID](#SNOWFLAKE) | The Discord ID of the user who voted. |
+| top.gg user ID | [ID](#ID) | The ID of the user on top.gg. |
+| Weight | [Whole number](#INTEGER) | How much the vote counts: 2 for weekend votes, otherwise 1. |
+| Voted at | [Date and time](#DATETIME) | When the user voted. |
+| Expires at | [Date and time](#DATETIME) | When the vote stops counting, 12 hours after it was cast. |
+
+### top.gg vote event {#topgg:VoteEvent}
+
+Everything top.gg sent about one vote.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Vote ID | [ID](#ID) | The ID of this vote on top.gg. Empty for test events. May be empty. |
+| User ID | [Discord ID](#SNOWFLAKE) | The Discord ID of the user who voted. |
+| Username | [Text](#STRING) | The Discord username of the user who voted. May be empty. |
+| Avatar URL | [URL](#URL) | The avatar image of the user who voted. May be empty. |
+| Weight | [Whole number](#INTEGER) | How much the vote counts: 2 for weekend votes, otherwise 1. Empty for test events. May be empty. |
+| Voted at | [Date and time](#DATETIME) | When the user voted. Empty for test events. May be empty. |
+| Expires at | [Date and time](#DATETIME) | When the vote stops counting. Empty for test events. May be empty. |
+| Bot or server ID | [Discord ID](#SNOWFLAKE) | The Discord ID of the bot or server that got the vote. |
+
+### Twitch clip {#twitch:Clip}
+
+One clip of a Twitch channel.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Clip ID | [ID](#ID) | The ID of the clip. |
+| Link | [URL](#URL) | The address of the clip. |
+| Title | [Text](#STRING) | The title of the clip. |
+| Clipped by | [Text](#STRING) | The name of the user who made the clip. |
+| Views | [Whole number](#INTEGER) | How often the clip was watched. |
+| Created at | [Date and time](#DATETIME) | When the clip was made. |
+| Length in seconds | [Decimal number](#FLOAT) | How long the clip is, in seconds. |
+| Preview image | [URL](#URL) | The preview image of the clip. May be empty. |
+
+### Forecast day {#open-meteo:Day}
+
+The weather forecast for one day.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Day | [Date and time](#DATETIME) | Midnight at the start of the day, in the place's time zone. |
+| Weather code | [Whole number](#INTEGER) | The WMO weather code: 0 clear, 1 to 3 partly cloudy to overcast, 45 and 48 fog, 51 to 67 drizzle and rain, 71 to 77 snow, 80 to 82 rain showers, 85 and 86 snow showers, 95 to 99 thunderstorm. May be empty. |
+| Highest temperature | [Decimal number](#FLOAT) | The highest temperature of the day. May be empty. |
+| Lowest temperature | [Decimal number](#FLOAT) | The lowest temperature of the day. May be empty. |
+| Precipitation in mm | [Decimal number](#FLOAT) | Rain, showers and snow of the day together, in millimeters. May be empty. |
+| Chance of rain in % | [Whole number](#INTEGER) | The highest chance of precipitation during the day, in percent. May be empty. |
+| Strongest wind | [Decimal number](#FLOAT) | The highest wind speed of the day, in the chosen unit. May be empty. |
+| Sunrise | [Date and time](#DATETIME) | When the sun rises. May be empty. |
+| Sunset | [Date and time](#DATETIME) | When the sun sets. May be empty. |
+
+### CoinGecko coin {#coingecko:Coin}
+
+One coin in the market list.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Coin ID | [ID](#ID) | The CoinGecko API ID, for example bitcoin. |
+| Symbol | [Text](#STRING) | The ticker symbol, for example btc. |
+| Name | [Text](#STRING) | The name of the coin. |
+| Logo | [URL](#URL) | The logo of the coin. Empty when it has none. May be empty. |
+| Price | [Decimal number](#FLOAT) | The price in the chosen currency. May be empty. |
+| Market cap | [Decimal number](#FLOAT) | The market cap in the chosen currency. May be empty. |
+| Rank | [Whole number](#INTEGER) | The place by market cap. May be empty. |
+| Change in 24 hours in % | [Decimal number](#FLOAT) | How much the price changed in the last 24 hours, in percent. May be empty. |
+
+### Anime {#jikan:Anime}
+
+One anime on MyAnimeList.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| MyAnimeList ID | [ID](#ID) | The ID of the anime on MyAnimeList. |
+| Link | [URL](#URL) | The MyAnimeList page. |
+| Title | [Text](#STRING) | The main title. |
+| English title | [Text](#STRING) | The English title, when there is one. May be empty. |
+| Type | [Text](#STRING) | TV, Movie, OVA, ONA, Special or Music. May be empty. |
+| Status | [Text](#STRING) | Finished Airing, Currently Airing or Not yet aired. May be empty. |
+| Score | [Decimal number](#FLOAT) | The average score from 1 to 10. May be empty. |
+| Rank | [Whole number](#INTEGER) | The place by score on MyAnimeList. May be empty. |
+| Synopsis | [Text](#STRING) | The English summary. May be empty. |
+| Cover image | [URL](#URL) | The cover image. May be empty. |
+| Episodes | [Whole number](#INTEGER) | How many episodes it has, when known. May be empty. |
+| Year | [Whole number](#INTEGER) | The year it started airing, when known. May be empty. |
+
+### Manga {#jikan:Manga}
+
+One manga on MyAnimeList.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| MyAnimeList ID | [ID](#ID) | The ID of the manga on MyAnimeList. |
+| Link | [URL](#URL) | The MyAnimeList page. |
+| Title | [Text](#STRING) | The main title. |
+| English title | [Text](#STRING) | The English title, when there is one. May be empty. |
+| Type | [Text](#STRING) | Manga, Novel, Light Novel, One-shot, Doujinshi, Manhwa or Manhua. May be empty. |
+| Status | [Text](#STRING) | Finished, Publishing, On Hiatus, Discontinued or Not yet published. May be empty. |
+| Score | [Decimal number](#FLOAT) | The average score from 1 to 10. May be empty. |
+| Rank | [Whole number](#INTEGER) | The place by score on MyAnimeList. May be empty. |
+| Synopsis | [Text](#STRING) | The English summary. May be empty. |
+| Cover image | [URL](#URL) | The cover image. May be empty. |
+| Chapters | [Whole number](#INTEGER) | How many chapters it has, when known. May be empty. |
+| Volumes | [Whole number](#INTEGER) | How many volumes it has, when known. May be empty. |
+
+### GitHub issue {#github:Issue}
+
+One issue or pull request of a repository.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Number | [Whole number](#INTEGER) | The issue number, for example 1347. |
+| Title | [Text](#STRING) | The title. |
+| Link | [URL](#URL) | The issue on GitHub. |
+| State | [Text](#STRING) | open or closed. |
+| Author | [Text](#STRING) | The username of the author. May be empty. |
+| Comments | [Whole number](#INTEGER) | How many comments it has. May be empty. |
+| Created at | [Date and time](#DATETIME) | When it was opened. |
+| Pull request link | [URL](#URL) | The pull request on GitHub. Empty for issues, so use it to tell them apart. May be empty. |
+
+### GitHub release {#github:Release}
+
+One release of a repository.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Tag | [Text](#STRING) | The tag of the release, for example v1.0.0. |
+| Name | [Text](#STRING) | The name of the release. May be empty. |
+| Link | [URL](#URL) | The release on GitHub. |
+| Release notes | [Text](#STRING) | The release notes, as Markdown. May be empty. |
+| Published at | [Date and time](#DATETIME) | When it was published. Empty for drafts. May be empty. |
+| Pre-release | [Yes/No](#BOOLEAN) | Whether it is marked as a pre-release. |
+| Draft | [Yes/No](#BOOLEAN) | Whether it is a draft. |
+
+### Roblox group role {#roblox:Role}
+
+One role (rank) of a Roblox group.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Role ID | [ID](#ID) | The ID of the role. |
+| Name | [Text](#STRING) | The name of the role. |
+| Rank | [Whole number](#INTEGER) | The rank number, 0 to 255. The owner has 255. |
+| Members | [Whole number](#INTEGER) | How many members have the role, when the key may see it. May be empty. |
+| Description | [Text](#STRING) | The description of the role. May be empty. |
+
+### Roblox group member {#roblox:Membership}
+
+One member of a Roblox group and their role.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Roblox user ID | [ID](#ID) | The Roblox user ID of the member. |
+| Role ID | [ID](#ID) | The ID of the member's role. |
+| Joined at | [Date and time](#DATETIME) | When the member joined. May be empty. |
+
+### Roblox group membership {#roblox-public:GroupRole}
+
+A group a user is in and their role there.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Group ID | [ID](#ID) | The ID of the group. |
+| Group name | [Text](#STRING) | The name of the group. |
+| Role ID | [ID](#ID) | The ID of the user's role. |
+| Role name | [Text](#STRING) | The name of the user's role. |
+| Rank | [Whole number](#INTEGER) | The rank number of the role, 1 to 255. |
+
+### Airtable row {#airtable:Row}
+
+One row of an Airtable table.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Row ID | [ID](#ID) | The ID of the row, starting with rec. |
+| Created at | [Date and time](#DATETIME) | When the row was created. |
+| Fields | Lookup table of [Text](#STRING) to [Text](#STRING) | The field values by field name, as text. Empty fields and list, attachment and collaborator fields are left out. |
+
+### Todoist task {#todoist:Task}
+
+One Todoist task.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Task ID | [ID](#ID) | The ID of the task. |
+| Task | [Text](#STRING) | The task text. |
+| Description | [Text](#STRING) | The description. May be empty. |
+| Project ID | [ID](#ID) | The project the task is in. May be empty. |
+| Priority | [Whole number](#INTEGER) | 1 (normal) to 4 (urgent). Todoist shows 4 as P1. May be empty. |
+| Due date | [Text](#STRING) | The due date like 2026-10-20, or a date and time. Empty without a due date. May be empty. |
+| Due text | [Text](#STRING) | The due date as written, for example every monday. May be empty. |
+| Labels | List of [Text](#STRING) | The label names. May be empty. |
+| Created at | [Date and time](#DATETIME) | When the task was added. May be empty. |
+
+### Steam game {#steam:Game}
+
+A game a Steam user owns.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| App ID | [ID](#ID) | The Steam app ID of the game. |
+| Name | [Text](#STRING) | The name of the game. May be empty. |
+| Playtime in minutes | [Whole number](#INTEGER) | All playtime, in minutes. |
+| Last two weeks in minutes | [Whole number](#INTEGER) | Playtime in the last two weeks, in minutes. Empty when not played. May be empty. |
+| Last played | [Date and time](#DATETIME) | When it was last played. May be empty. |
+
+### Stripe charge {#stripe:Charge}
+
+One charge.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| ID | [ID](#ID) | The ID, starting with ch_. |
+| Amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. |
+| Currency | [Text](#STRING) | The currency, for example eur. |
+| Status | [Text](#STRING) | succeeded, pending or failed. |
+| Created at | [Date and time](#DATETIME) | When it was created. |
+| Description | [Text](#STRING) | The description, when set. May be empty. |
+| Customer ID | [ID](#ID) | The customer, when there is one. May be empty. |
+| Paid | [Yes/No](#BOOLEAN) | Whether the charge went through. |
+| Fully refunded | [Yes/No](#BOOLEAN) | Whether all of it was refunded. |
+| Refunded amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. May be empty. |
+| Email | [Text](#STRING) | The billing email, when given. May be empty. |
+| Receipt | [URL](#URL) | The receipt page. May be empty. |
+
+### Stripe payment {#stripe:PaymentIntent}
+
+One payment intent.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| ID | [ID](#ID) | The ID, starting with pi_. |
+| Amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. |
+| Currency | [Text](#STRING) | The currency, for example eur. |
+| Status | [Text](#STRING) | succeeded, processing, requires_payment_method, requires_action, canceled or another step. |
+| Created at | [Date and time](#DATETIME) | When it was created. |
+| Description | [Text](#STRING) | The description, when set. May be empty. |
+| Customer ID | [ID](#ID) | The customer, when there is one. May be empty. |
+| Received amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. May be empty. |
+
+### Stripe checkout session {#stripe:CheckoutSession}
+
+One Checkout session.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| ID | [ID](#ID) | The ID, starting with cs_. |
+| Payment page | [URL](#URL) | The Stripe page where the customer pays. Empty once the session expired. May be empty. |
+| Status | [Text](#STRING) | open, complete or expired. |
+| Payment status | [Text](#STRING) | paid, unpaid or no_payment_required. |
+| Total | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. May be empty. |
+| Currency | [Text](#STRING) | The currency, for example eur. May be empty. |
+| Reference | [Text](#STRING) | The reference you gave when creating the session. May be empty. |
+| Payment ID | [ID](#ID) | The payment (pi_...), once the customer started paying. May be empty. |
+
+### Stripe amount {#stripe:Amount}
+
+An amount in one currency.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Amount | [Whole number](#INTEGER) | The amount in the smallest unit of the currency, for example cents: 1000 is 10.00. |
+| Currency | [Text](#STRING) | The currency, for example eur. |
+
+### Stripe event {#stripe:Event}
+
+Everything Stripe sent about one event.
+
+| Property | Type | Details |
+| --- | --- | --- |
+| Event ID | [ID](#ID) | The ID of this event, starting with evt_. May be empty. |
+| Event type | [Text](#STRING) | The Stripe event type, for example checkout.session.completed. May be empty. |
+| Live mode | [Yes/No](#BOOLEAN) | True for real payments, false for test mode. May be empty. |
+| API version | [Text](#STRING) | The Stripe API version of the event. May be empty. |
+| Object ID | [ID](#ID) | The ID of the session, charge or dispute the event is about. May be empty. |
 
 ## Special types {#special-types}
 

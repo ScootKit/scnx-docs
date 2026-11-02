@@ -9,7 +9,7 @@ description: "Look up and manage the bot's SKUs, entitlements and subscriptions.
 
 Look up and manage the bot's SKUs, entitlements and subscriptions.
 
-### Fetch application sKUs {#fetch-application-skus}
+### Fetch application SKUs {#fetch-application-skus}
 
 Fetches all SKUs for the bot's application.
 

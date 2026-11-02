@@ -17,8 +17,8 @@ Makes this flow callable from other flows via "Call another flow". Declared para
 
 | Name | Type | Required | Details |
 | --- | --- | --- | --- |
-| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters callers must pass. Each declared parameter can be used inside the flow. Maximum items: 10. Default: `[]`. |
-| Return values | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed values this flow hands back to its caller via "Return from flow". Every return value may be empty - a flow can end without returning. Maximum items: 10. Default: `[]`. |
+| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters callers must pass. Each declared parameter can be used inside the flow. Maximum items: 25. Default: `[]`. |
+| Return values | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed values this flow hands back to its caller via "Return from flow". Every return value may be empty - a flow can end without returning. Maximum items: 25. Default: `[]`. |
 
 **Provided values**
 
@@ -52,7 +52,7 @@ Runs when a run scheduled via "Schedule flow run" is due. Declared parameters ar
 
 | Name | Type | Required | Details |
 | --- | --- | --- | --- |
-| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters the scheduling flow must pass. Each declared parameter can be used inside the flow when the run fires. Maximum items: 10. Default: `[]`. |
+| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters the scheduling flow must pass. Each declared parameter can be used inside the flow when the run fires. Maximum items: 25. Default: `[]`. |
 
 **Provided values**
 

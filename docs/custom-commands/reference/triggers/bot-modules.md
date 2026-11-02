@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 title: "Schedule and subscriptions"
 sidebar_label: "Schedule and subscriptions"
 description: "Run flows on a recurring schedule, or when a subscription to your application is created, changed or deleted."
