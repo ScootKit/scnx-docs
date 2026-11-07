@@ -15,14 +15,14 @@ Wird ausgelöst, wenn ein Benutzer ein Auswahlmenü einreicht.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
+| Name             | Typ                                    | Pflicht | Details                                                                                                      |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                               | Details                                      |
+| ----------- | --------------------------------------------------------------------------------- | -------------------------------------------- |
 | Interaktion | [Auswahlmenü-Interaktion](../../../value-types.md#STRING_SELECT_MENU_INTERACTION) | Auswahlmenü-Interaktion, die erstellt wurde. |
 
 ### Benutzer-Auswahlmenü eingereicht {#user-select-submitted}
@@ -31,14 +31,14 @@ Wird ausgelöst, wenn ein Benutzer ein Benutzer-Auswahlmenü einreicht.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Löst nur aus, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen für alle Menüs. |
+| Name             | Typ                                    | Pflicht | Details                                                                                          |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Löst nur aus, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen für alle Menüs. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                      | Details                                               |
+| ----------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | Interaktion | [Benutzer-Auswahlmenü-Interaktion](../../../value-types.md#USER_SELECT_MENU_INTERACTION) | Benutzer-Auswahlmenü-Interaktion, die erstellt wurde. |
 
 ### Rollen-Auswahlmenü eingereicht {#role-select-submitted}
@@ -47,14 +47,14 @@ Wird ausgelöst, wenn ein Benutzer ein Rollen-Auswahlmenü einreicht.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
+| Name             | Typ                                    | Pflicht | Details                                                                                                      |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                    | Details                                             |
+| ----------- | -------------------------------------------------------------------------------------- | --------------------------------------------------- |
 | Interaktion | [Rollen-Auswahlmenü-Interaktion](../../../value-types.md#ROLE_SELECT_MENU_INTERACTION) | Rollen-Auswahlmenü-Interaktion, die erstellt wurde. |
 
 ### Kanal-Auswahlmenü eingereicht {#channel-select-submitted}
@@ -63,14 +63,14 @@ Wird ausgelöst, wenn ein Benutzer ein Kanal-Auswahlmenü einreicht.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
+| Name             | Typ                                    | Pflicht | Details                                                                                                      |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Nur auslösen, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen, um alle Menüs zu erfassen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                      | Details                                            |
+| ----------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | Interaktion | [Kanal-Auswahlmenü-Interaktion](../../../value-types.md#CHANNEL_SELECT_MENU_INTERACTION) | Kanal-Auswahlmenü-Interaktion, die erstellt wurde. |
 
 ### Auswahlmenü für Benutzer oder Rollen eingereicht {#mentionable-select-submitted}
@@ -79,12 +79,12 @@ Wird ausgelöst, wenn ein Benutzer ein Auswahlmenü für Benutzer oder Rollen ei
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Löst nur aus, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen für alle Menüs. |
+| Name             | Typ                                    | Pflicht | Details                                                                                          |
+| ---------------- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Löst nur aus, wenn die Custom-ID des Menüs diesem Muster entspricht. Leer lassen für alle Menüs. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                                                 | Details                                                                   |
+| ----------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | Interaktion | [Interaktion mit Auswahlmenü für Benutzer oder Rollen](../../../value-types.md#MENTIONABLE_SELECT_MENU_INTERACTION) | Interaktion mit Auswahlmenü für Benutzer oder Rollen, die erstellt wurde. |

@@ -17,8 +17,8 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                 |
+| ------ | ----------------------------------------------------- | ----------------------- |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | The member that joined. |
 
 ### Member left {#member-left}
@@ -29,8 +29,8 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details               |
+| ------ | ----------------------------------------------------- | --------------------- |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | The member that left. |
 
 ### Member updated {#member-updated}
@@ -41,10 +41,10 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                                  | Details                         |
+| --------------- | ----------------------------------------------------- | ------------------------------- |
 | Previous member | [Server member](../../../value-types.md#GUILD_MEMBER) | Member state before the update. |
-| Current member | [Server member](../../../value-types.md#GUILD_MEMBER) | Member state after the update. |
+| Current member  | [Server member](../../../value-types.md#GUILD_MEMBER) | Member state after the update.  |
 
 ### Batch of members received {#members-chunk-received}
 
@@ -54,12 +54,12 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | Server the members belong to. |
-| Members | List of [Server member](../../../value-types.md#GUILD_MEMBER) | Members contained in this batch. |
-| Batch number | [Whole number](../../../value-types.md#INTEGER) | Number of this batch. May be empty. |
-| Total batches | [Whole number](../../../value-types.md#INTEGER) | Total number of batches. May be empty. |
+| Name          | Type                                                          | Details                                |
+| ------------- | ------------------------------------------------------------- | -------------------------------------- |
+| Server        | [Server](../../../value-types.md#GUILD)                       | Server the members belong to.          |
+| Members       | List of [Server member](../../../value-types.md#GUILD_MEMBER) | Members contained in this batch.       |
+| Batch number  | [Whole number](../../../value-types.md#INTEGER)               | Number of this batch. May be empty.    |
+| Total batches | [Whole number](../../../value-types.md#INTEGER)               | Total number of batches. May be empty. |
 
 ### Member became available {#member-became-available}
 
@@ -69,8 +69,8 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                            |
+| ------ | ----------------------------------------------------- | ---------------------------------- |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Member that just became available. |
 
 ### User updated {#user-updated}
@@ -81,10 +81,10 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name          | Type                                         | Details                       |
+| ------------- | -------------------------------------------- | ----------------------------- |
 | Previous User | [User](../../../value-types.md#DISCORD_USER) | User state before the update. |
-| Current User | [User](../../../value-types.md#DISCORD_USER) | User state after the update. |
+| Current User  | [User](../../../value-types.md#DISCORD_USER) | User state after the update.  |
 
 ### Presence updated {#presence-updated}
 
@@ -94,13 +94,13 @@ Required intents: `GuildPresences`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Previous Presence | [Presence](../../../value-types.md#PRESENCE) | Presence state before the update, if any was known. May be empty. |
-| Current Presence | [Presence](../../../value-types.md#PRESENCE) | Presence state after the update. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User whose presence changed. |
-| Status | [Presence status](../../../value-types.md#PRESENCE_STATUS) | Current online status. |
-| Activities | List of [Activity](../../../value-types.md#ACTIVITY) | Current list of activities. |
+| Name              | Type                                                       | Details                                                           |
+| ----------------- | ---------------------------------------------------------- | ----------------------------------------------------------------- |
+| Previous Presence | [Presence](../../../value-types.md#PRESENCE)               | Presence state before the update, if any was known. May be empty. |
+| Current Presence  | [Presence](../../../value-types.md#PRESENCE)               | Presence state after the update.                                  |
+| User              | [User](../../../value-types.md#DISCORD_USER)               | User whose presence changed.                                      |
+| Status            | [Presence status](../../../value-types.md#PRESENCE_STATUS) | Current online status.                                            |
+| Activities        | List of [Activity](../../../value-types.md#ACTIVITY)       | Current list of activities.                                       |
 
 ### Member completed screening {#member-completed-screening}
 
@@ -110,8 +110,8 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                              |
+| ------ | ----------------------------------------------------- | ------------------------------------ |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | The member that completed screening. |
 
 ### Member boosted server {#member-boosted}
@@ -122,8 +122,8 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                           |
+| ------ | ----------------------------------------------------- | --------------------------------- |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | The member that started boosting. |
 
 ### Member stopped boosting {#member-unboosted}
@@ -134,6 +134,6 @@ Required intents: `GuildMembers`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                           |
+| ------ | ----------------------------------------------------- | --------------------------------- |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | The member that stopped boosting. |

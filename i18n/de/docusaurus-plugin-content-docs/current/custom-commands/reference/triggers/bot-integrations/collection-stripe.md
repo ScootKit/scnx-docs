@@ -15,27 +15,27 @@ Wird ausgeführt, wenn ein Kunde eine Stripe-Checkout-Sitzung abschließt. Wähl
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Sitzungs-ID | [ID](../../../value-types.md#ID) | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein. |
-| Bestellnummer | [Text](../../../value-types.md#STRING) | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein. |
-| Zahlungsstatus | [Text](../../../value-types.md#STRING) | paid, unpaid oder no_payment_required. Kann leer sein. |
-| Gesamtbetrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| E-Mail des Kunden | [Text](../../../value-types.md#STRING) | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein. |
-| Kunden-ID | [ID](../../../value-types.md#ID) | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Sitzungs-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein.                                                                     |
+| Bestellnummer      | [Text](../../../value-types.md#STRING)                                                                  | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein.                               |
+| Zahlungsstatus     | [Text](../../../value-types.md#STRING)                                                                  | paid, unpaid oder no_payment_required. Kann leer sein.                                                                            |
+| Gesamtbetrag       | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| E-Mail des Kunden  | [Text](../../../value-types.md#STRING)                                                                  | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein.                                         |
+| Kunden-ID          | [ID](../../../value-types.md#ID)                                                                        | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein.                                                         |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
 ### Verzögerte Zahlung erfolgreich {#stripe-checkout-async-succeeded}
 
@@ -43,27 +43,27 @@ Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung,
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Sitzungs-ID | [ID](../../../value-types.md#ID) | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein. |
-| Bestellnummer | [Text](../../../value-types.md#STRING) | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein. |
-| Zahlungsstatus | [Text](../../../value-types.md#STRING) | paid, unpaid oder no_payment_required. Kann leer sein. |
-| Gesamtbetrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| E-Mail des Kunden | [Text](../../../value-types.md#STRING) | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein. |
-| Kunden-ID | [ID](../../../value-types.md#ID) | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Sitzungs-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein.                                                                     |
+| Bestellnummer      | [Text](../../../value-types.md#STRING)                                                                  | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein.                               |
+| Zahlungsstatus     | [Text](../../../value-types.md#STRING)                                                                  | paid, unpaid oder no_payment_required. Kann leer sein.                                                                            |
+| Gesamtbetrag       | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| E-Mail des Kunden  | [Text](../../../value-types.md#STRING)                                                                  | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein.                                         |
+| Kunden-ID          | [ID](../../../value-types.md#ID)                                                                        | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein.                                                         |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
 ### Verzögerte Zahlung fehlgeschlagen {#stripe-checkout-async-failed}
 
@@ -71,27 +71,27 @@ Wird ausgeführt, wenn eine verzögerte Zahlung, zum Beispiel eine Überweisung,
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Sitzungs-ID | [ID](../../../value-types.md#ID) | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein. |
-| Bestellnummer | [Text](../../../value-types.md#STRING) | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein. |
-| Zahlungsstatus | [Text](../../../value-types.md#STRING) | paid, unpaid oder no_payment_required. Kann leer sein. |
-| Gesamtbetrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| E-Mail des Kunden | [Text](../../../value-types.md#STRING) | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein. |
-| Kunden-ID | [ID](../../../value-types.md#ID) | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Sitzungs-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein.                                                                     |
+| Bestellnummer      | [Text](../../../value-types.md#STRING)                                                                  | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein.                               |
+| Zahlungsstatus     | [Text](../../../value-types.md#STRING)                                                                  | paid, unpaid oder no_payment_required. Kann leer sein.                                                                            |
+| Gesamtbetrag       | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| E-Mail des Kunden  | [Text](../../../value-types.md#STRING)                                                                  | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein.                                         |
+| Kunden-ID          | [ID](../../../value-types.md#ID)                                                                        | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein.                                                         |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
 ### Checkout abgelaufen {#stripe-checkout-expired}
 
@@ -99,27 +99,27 @@ Wird ausgeführt, wenn eine Checkout-Sitzung ohne Zahlung endet. Wähle am Strip
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Sitzungs-ID | [ID](../../../value-types.md#ID) | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein. |
-| Bestellnummer | [Text](../../../value-types.md#STRING) | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein. |
-| Zahlungsstatus | [Text](../../../value-types.md#STRING) | paid, unpaid oder no_payment_required. Kann leer sein. |
-| Gesamtbetrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| E-Mail des Kunden | [Text](../../../value-types.md#STRING) | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein. |
-| Kunden-ID | [ID](../../../value-types.md#ID) | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Sitzungs-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID der Checkout-Sitzung, beginnt mit cs_. Kann leer sein.                                                                     |
+| Bestellnummer      | [Text](../../../value-types.md#STRING)                                                                  | Die Bestellnummer, die du der Sitzung gegeben hast. Leer bei Sitzungen ohne Nummer. Kann leer sein.                               |
+| Zahlungsstatus     | [Text](../../../value-types.md#STRING)                                                                  | paid, unpaid oder no_payment_required. Kann leer sein.                                                                            |
+| Gesamtbetrag       | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| E-Mail des Kunden  | [Text](../../../value-types.md#STRING)                                                                  | Die E-Mail, die der Kunde eingegeben hat. Leer, wenn keine erfasst wurde. Kann leer sein.                                         |
+| Kunden-ID          | [ID](../../../value-types.md#ID)                                                                        | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein.                                                         |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
 ### Zahlung erstattet {#stripe-charge-refunded}
 
@@ -127,27 +127,27 @@ Wird ausgeführt, wenn eine Zahlung ganz oder teilweise erstattet wird. Wähle a
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Belastungs-ID | [ID](../../../value-types.md#ID) | Die ID der erstatteten Belastung, beginnt mit ch_. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Kunden-ID | [ID](../../../value-types.md#ID) | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein. |
-| Rechnungs-E-Mail | [Text](../../../value-types.md#STRING) | Die Rechnungs-E-Mail, wenn angegeben. Kann leer sein. |
-| Betrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Erstatteter Betrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Voll erstattet | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn alles erstattet wurde. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Belastungs-ID      | [ID](../../../value-types.md#ID)                                                                        | Die ID der erstatteten Belastung, beginnt mit ch_. Kann leer sein.                                                                |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Kunden-ID          | [ID](../../../value-types.md#ID)                                                                        | Die Stripe-Kunden-ID, beginnt mit cus_. Leer ohne Kunden. Kann leer sein.                                                         |
+| Rechnungs-E-Mail   | [Text](../../../value-types.md#STRING)                                                                  | Die Rechnungs-E-Mail, wenn angegeben. Kann leer sein.                                                                             |
+| Betrag             | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Erstatteter Betrag | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Voll erstattet     | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr, wenn alles erstattet wurde. Kann leer sein.                                                                                 |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
 
 ### Streitfall eröffnet {#stripe-dispute-created}
 
@@ -155,23 +155,23 @@ Wird ausgeführt, wenn ein Kunde eine Zahlung bei seiner Bank anficht. Wähle am
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Ja | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
+| Name    | Typ                                    | Pflicht | Details                                                                                                    |
+| ------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
+| Webhook | [Text](../../../value-types.md#STRING) | Ja      | Der Stripe-Webhook, der diesen Flow startet. Lege ihn direkt hier im Auslöser an. Länge: 1 bis 64 Zeichen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](../../../value-types.md#ID) | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Streitfall-ID | [ID](../../../value-types.md#ID) | Die ID des Streitfalls, beginnt mit du_. Kann leer sein. |
-| Belastungs-ID | [ID](../../../value-types.md#ID) | Die ID der angefochtenen Belastung, beginnt mit ch_. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID) | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein. |
-| Betrag | [Ganzzahl](../../../value-types.md#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](../../../value-types.md#STRING) | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein. |
-| Grund | [Text](../../../value-types.md#STRING) | Der Grund des Karteninhabers, zum Beispiel fraudulent oder product_not_received. Kann leer sein. |
-| Status | [Text](../../../value-types.md#STRING) | Der Status des Streitfalls, zum Beispiel needs_response. Kann leer sein. |
-| Metadaten | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein. |
-| Live-Modus | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| Ereignis | [Stripe-Ereignis](../../../value-types.md#stripe-Event) | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein. |
-| Zustellungs-ID | [Text](../../../value-types.md#STRING) | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |
+| Name               | Typ                                                                                                     | Details                                                                                                                           |
+| ------------------ | ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Ereignis-ID        | [ID](../../../value-types.md#ID)                                                                        | Die ID dieses Stripe-Ereignisses, beginnt mit evt_. Kann leer sein.                                                               |
+| Streitfall-ID      | [ID](../../../value-types.md#ID)                                                                        | Die ID des Streitfalls, beginnt mit du_. Kann leer sein.                                                                          |
+| Belastungs-ID      | [ID](../../../value-types.md#ID)                                                                        | Die ID der angefochtenen Belastung, beginnt mit ch_. Kann leer sein.                                                              |
+| Zahlungsvorgang-ID | [ID](../../../value-types.md#ID)                                                                        | Die ID des Zahlungsvorgangs, beginnt mit pi_. Kann leer sein.                                                                     |
+| Betrag             | [Ganzzahl](../../../value-types.md#INTEGER)                                                             | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein.                              |
+| Währung            | [Text](../../../value-types.md#STRING)                                                                  | Der Währungscode in Kleinbuchstaben, zum Beispiel usd. Kann leer sein.                                                            |
+| Grund              | [Text](../../../value-types.md#STRING)                                                                  | Der Grund des Karteninhabers, zum Beispiel fraudulent oder product_not_received. Kann leer sein.                                  |
+| Status             | [Text](../../../value-types.md#STRING)                                                                  | Der Status des Streitfalls, zum Beispiel needs_response. Kann leer sein.                                                          |
+| Metadaten          | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Die Metadaten, die du am Stripe-Objekt gesetzt hast. Kann leer sein.                                                              |
+| Live-Modus         | [Ja/Nein](../../../value-types.md#BOOLEAN)                                                              | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                                                                   |
+| Ereignis           | [Stripe-Ereignis](../../../value-types.md#stripe-Event)                                                 | Alles, was der Dienst zu diesem Ereignis gesendet hat. Kann leer sein.                                                            |
+| Zustellungs-ID     | [Text](../../../value-types.md#STRING)                                                                  | Eine eindeutige ID dieser Zustellung. Eine Zustellung kann doppelt ankommen; speichere die ID, um Wiederholungen zu überspringen. |

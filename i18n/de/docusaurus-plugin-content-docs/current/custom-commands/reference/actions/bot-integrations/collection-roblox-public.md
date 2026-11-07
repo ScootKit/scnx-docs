@@ -15,14 +15,14 @@ Listet die Roblox-Gruppen, in denen ein Benutzer ist, mit Rolle und Rang in jede
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Roblox-Benutzer-ID | [ID](../../../value-types.md#ID) | Ja | Die Zahl in der Roblox-Profiladresse des Benutzers. |
+| Name               | Typ                              | Pflicht | Details                                             |
+| ------------------ | -------------------------------- | ------- | --------------------------------------------------- |
+| Roblox-Benutzer-ID | [ID](../../../value-types.md#ID) | Ja      | Die Zahl in der Roblox-Profiladresse des Benutzers. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                                                                       | Details                                           |
+| ------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------- |
 | Gruppen | Liste von [Roblox-Gruppenmitgliedschaft](../../../value-types.md#roblox-public-GroupRole) | Die Gruppen mit der Rolle des Benutzers in jeder. |
 
 ### Avatarbild abrufen {#roblox-public-get-avatar}
@@ -31,16 +31,16 @@ Holt das Kopfbild des Avatars eines Roblox-Benutzers.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Roblox-Benutzer-ID | [ID](../../../value-types.md#ID) | Ja | Die Zahl in der Roblox-Profiladresse des Benutzers. |
+| Name               | Typ                              | Pflicht | Details                                             |
+| ------------------ | -------------------------------- | ------- | --------------------------------------------------- |
+| Roblox-Benutzer-ID | [ID](../../../value-types.md#ID) | Ja      | Die Zahl in der Roblox-Profiladresse des Benutzers. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Bild fertig ist. Wenn nicht, ist das Bild leer. |
-| Bild | [URL](../../../value-types.md#URL) | Das Kopfbild des Avatars, 420 mal 420 Pixel. Kann leer sein. |
+| Name     | Typ                                        | Details                                                      |
+| -------- | ------------------------------------------ | ------------------------------------------------------------ |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Bild fertig ist. Wenn nicht, ist das Bild leer.       |
+| Bild     | [URL](../../../value-types.md#URL)         | Das Kopfbild des Avatars, 420 mal 420 Pixel. Kann leer sein. |
 
 ### Universum-ID abrufen {#roblox-public-get-universe-id}
 
@@ -48,16 +48,16 @@ Wandelt eine Orts-ID (die Zahl in der Adresse eines Spiels) in die Universum-ID 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Orts-ID | [ID](../../../value-types.md#ID) | Ja | Die Zahl in der Roblox-Adresse des Spiels. |
+| Name    | Typ                              | Pflicht | Details                                    |
+| ------- | -------------------------------- | ------- | ------------------------------------------ |
+| Orts-ID | [ID](../../../value-types.md#ID) | Ja      | Die Zahl in der Roblox-Adresse des Spiels. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Ort existiert. Wenn nicht, ist die Universum-ID leer. |
-| Universum-ID | [ID](../../../value-types.md#ID) | Die Universum-ID des Erlebnisses. Kann leer sein. |
+| Name         | Typ                                        | Details                                                      |
+| ------------ | ------------------------------------------ | ------------------------------------------------------------ |
+| Gefunden     | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Ort existiert. Wenn nicht, ist die Universum-ID leer. |
+| Universum-ID | [ID](../../../value-types.md#ID)           | Die Universum-ID des Erlebnisses. Kann leer sein.            |
 
 ### Erlebnis-Statistik abrufen {#roblox-public-get-game-stats}
 
@@ -65,20 +65,20 @@ Liest, wie viele Leute ein Erlebnis gerade spielen, seine Besuche und Favoriten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Universum-ID | [ID](../../../value-types.md#ID) | Ja | Die Universum-ID des Erlebnisses. Du bekommst sie mit „Universum-ID abrufen“. |
+| Name         | Typ                              | Pflicht | Details                                                                       |
+| ------------ | -------------------------------- | ------- | ----------------------------------------------------------------------------- |
+| Universum-ID | [ID](../../../value-types.md#ID) | Ja      | Die Universum-ID des Erlebnisses. Du bekommst sie mit „Universum-ID abrufen". |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob das Erlebnis existiert. Wenn nicht, ist alles andere leer. |
-| Name | [Text](../../../value-types.md#STRING) | Der Name des Erlebnisses. Kann leer sein. |
-| Spielen gerade | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Leute gerade spielen. Kann leer sein. |
-| Besuche | [Ganzzahl](../../../value-types.md#INTEGER) | Alle Besuche insgesamt. Kann leer sein. |
-| Favoriten | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Leute es als Favorit markiert haben. Kann leer sein. |
-| Spieler pro Server | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Spieler auf einen Server passen. Kann leer sein. |
-| Ersteller | [Text](../../../value-types.md#STRING) | Der Benutzer oder die Gruppe, die es gemacht hat. Kann leer sein. |
-| Startort-ID | [ID](../../../value-types.md#ID) | Der Ort, den Spieler zuerst betreten. Kann leer sein. |
-| Aktualisiert am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann das Erlebnis zuletzt geändert wurde. Kann leer sein. |
+| Name               | Typ                                                   | Details                                                           |
+| ------------------ | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| Gefunden           | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ob das Erlebnis existiert. Wenn nicht, ist alles andere leer.     |
+| Name               | [Text](../../../value-types.md#STRING)                | Der Name des Erlebnisses. Kann leer sein.                         |
+| Spielen gerade     | [Ganzzahl](../../../value-types.md#INTEGER)           | Wie viele Leute gerade spielen. Kann leer sein.                   |
+| Besuche            | [Ganzzahl](../../../value-types.md#INTEGER)           | Alle Besuche insgesamt. Kann leer sein.                           |
+| Favoriten          | [Ganzzahl](../../../value-types.md#INTEGER)           | Wie viele Leute es als Favorit markiert haben. Kann leer sein.    |
+| Spieler pro Server | [Ganzzahl](../../../value-types.md#INTEGER)           | Wie viele Spieler auf einen Server passen. Kann leer sein.        |
+| Ersteller          | [Text](../../../value-types.md#STRING)                | Der Benutzer oder die Gruppe, die es gemacht hat. Kann leer sein. |
+| Startort-ID        | [ID](../../../value-types.md#ID)                      | Der Ort, den Spieler zuerst betreten. Kann leer sein.             |
+| Aktualisiert am    | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann das Erlebnis zuletzt geändert wurde. Kann leer sein.         |

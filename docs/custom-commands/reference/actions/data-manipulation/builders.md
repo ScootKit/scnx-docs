@@ -15,14 +15,14 @@ Creates a text builder: text that later steps append to in place, so anything ap
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Initial text | [Text](../../../value-types.md#STRING) | No | Optional text to start the builder with (empty if not set). |
+| Name         | Type                                   | Required | Details                                                     |
+| ------------ | -------------------------------------- | -------- | ----------------------------------------------------------- |
+| Initial text | [Text](../../../value-types.md#STRING) | No       | Optional text to start the builder with (empty if not set). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                | Details                                                         |
+| ------------ | --------------------------------------------------- | --------------------------------------------------------------- |
 | Text builder | [Text builder](../../../value-types.md#TEXT_BUFFER) | The new text builder. Use it in the other "Text builder" steps. |
 
 ### Text builder: append text {#append-to-buffer}
@@ -31,11 +31,11 @@ Appends text to a text builder. This changes the builder itself, so there is not
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text builder | [Text builder](../../../value-types.md#TEXT_BUFFER) | Yes | The text builder to append to. |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to append. |
-| Separator | [Text](../../../value-types.md#STRING) | No | Optional separator inserted before the text when the builder is not empty (e.g. ", " or a newline). |
+| Name         | Type                                                | Required | Details                                                                                             |
+| ------------ | --------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| Text builder | [Text builder](../../../value-types.md#TEXT_BUFFER) | Yes      | The text builder to append to.                                                                      |
+| Text         | [Text](../../../value-types.md#STRING)              | Yes      | The text to append.                                                                                 |
+| Separator    | [Text](../../../value-types.md#STRING)              | No       | Optional separator inserted before the text when the builder is not empty (e.g. ", " or a newline). |
 
 ### Text builder: read the text {#buffer-to-string}
 
@@ -43,15 +43,15 @@ Reads a text builder out as an ordinary text you can pass to the other text step
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text builder | [Text builder](../../../value-types.md#TEXT_BUFFER) | Yes | The text builder to read. |
+| Name         | Type                                                | Required | Details                   |
+| ------------ | --------------------------------------------------- | -------- | ------------------------- |
+| Text builder | [Text builder](../../../value-types.md#TEXT_BUFFER) | Yes      | The text builder to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | The builder's full contents as a text. |
+| Name   | Type                                            | Details                                  |
+| ------ | ----------------------------------------------- | ---------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING)          | The builder's full contents as a text.   |
 | Length | [Whole number](../../../value-types.md#INTEGER) | The number of characters in the builder. |
 
 ### Create lookup table builder {#create-map-builder}
@@ -60,14 +60,14 @@ Creates a lookup table builder: a lookup table that later steps change in place,
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Starting lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | No | Optional lookup table to start from (empty if not set). It is copied, so the original is never changed. |
+| Name                  | Type                                                                                         | Required | Details                                                                                                 |
+| --------------------- | -------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------- |
+| Starting lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | No       | Optional lookup table to start from (empty if not set). It is copied, so the original is never changed. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                 | Type                                                        | Details                                                                         |
+| -------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | The new lookup table builder. Use it in the other "Lookup table builder" steps. |
 
 ### Lookup table builder: set value {#map-builder-set}
@@ -76,11 +76,11 @@ Sets a key on a lookup table builder. This changes the builder itself, so there 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes | The lookup table builder to change. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | The key to set. |
-| Value | [Any](../../../value-types.md#ANY) | Yes | The value to store under that key. Any type, not just text. |
+| Name                 | Type                                                        | Required | Details                                                     |
+| -------------------- | ----------------------------------------------------------- | -------- | ----------------------------------------------------------- |
+| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes      | The lookup table builder to change.                         |
+| Key                  | [Text](../../../value-types.md#STRING)                      | Yes      | The key to set.                                             |
+| Value                | [Any](../../../value-types.md#ANY)                          | Yes      | The value to store under that key. Any type, not just text. |
 
 ### Lookup table builder: remove key {#map-builder-remove}
 
@@ -88,10 +88,10 @@ Removes a key from a lookup table builder. This changes the builder itself, so t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes | The lookup table builder to change. |
-| Key | [Text](../../../value-types.md#STRING) | Yes | The key to remove. |
+| Name                 | Type                                                        | Required | Details                             |
+| -------------------- | ----------------------------------------------------------- | -------- | ----------------------------------- |
+| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes      | The lookup table builder to change. |
+| Key                  | [Text](../../../value-types.md#STRING)                      | Yes      | The key to remove.                  |
 
 ### Lookup table builder: size {#map-builder-size}
 
@@ -99,14 +99,14 @@ How many entries a lookup table builder holds right now. Use this while you are 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes | The lookup table builder to count. |
+| Name                 | Type                                                        | Required | Details                            |
+| -------------------- | ----------------------------------------------------------- | -------- | ---------------------------------- |
+| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes      | The lookup table builder to count. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                            | Details                               |
+| ---- | ----------------------------------------------- | ------------------------------------- |
 | Size | [Whole number](../../../value-types.md#INTEGER) | The number of entries in the builder. |
 
 ### Lookup table builder: read the lookup table {#map-builder-to-map}
@@ -115,16 +115,16 @@ Reads a lookup table builder out as an ordinary lookup table you can pass to the
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes | The lookup table builder to read. |
+| Name                 | Type                                                        | Required | Details                           |
+| -------------------- | ----------------------------------------------------------- | -------- | --------------------------------- |
+| Lookup table builder | [Lookup table builder](../../../value-types.md#MAP_BUILDER) | Yes      | The lookup table builder to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                                                         | Details                                            |
+| ------------ | -------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | Lookup table | Lookup table of [Text](../../../value-types.md#STRING) to [Any](../../../value-types.md#ANY) | The builder's entries as an ordinary lookup table. |
-| Size | [Whole number](../../../value-types.md#INTEGER) | The number of entries in the lookup table. |
+| Size         | [Whole number](../../../value-types.md#INTEGER)                                              | The number of entries in the lookup table.         |
 
 ### Create list builder {#create-array-builder}
 
@@ -132,14 +132,14 @@ Creates a list builder: a list that later steps add to in place, so items added 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Starting list | List of [Any](../../../value-types.md#ANY) | No | Optional list to start from (empty if not set). It is copied, so the original is never changed. |
+| Name          | Type                                       | Required | Details                                                                                         |
+| ------------- | ------------------------------------------ | -------- | ----------------------------------------------------------------------------------------------- |
+| Starting list | List of [Any](../../../value-types.md#ANY) | No       | Optional list to start from (empty if not set). It is copied, so the original is never changed. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                  | Details                                                         |
+| ------------ | ----------------------------------------------------- | --------------------------------------------------------------- |
 | List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | The new list builder. Use it in the other "List builder" steps. |
 
 ### List builder: add item {#array-builder-push}
@@ -148,10 +148,10 @@ Adds a value to the end of a list builder. This changes the builder itself, so t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes | The list builder to add to. |
-| Value | [Any](../../../value-types.md#ANY) | Yes | The value to add. Any type, not just text. |
+| Name         | Type                                                  | Required | Details                                    |
+| ------------ | ----------------------------------------------------- | -------- | ------------------------------------------ |
+| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes      | The list builder to add to.                |
+| Value        | [Any](../../../value-types.md#ANY)                    | Yes      | The value to add. Any type, not just text. |
 
 ### List builder: size {#array-builder-size}
 
@@ -159,14 +159,14 @@ How many items a list builder holds right now. Use this while you are still buil
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes | The list builder to count. |
+| Name         | Type                                                  | Required | Details                    |
+| ------------ | ----------------------------------------------------- | -------- | -------------------------- |
+| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes      | The list builder to count. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                            | Details                             |
+| ---- | ----------------------------------------------- | ----------------------------------- |
 | Size | [Whole number](../../../value-types.md#INTEGER) | The number of items in the builder. |
 
 ### List builder: read the list {#array-builder-to-array}
@@ -175,16 +175,16 @@ Reads a list builder out as an ordinary list you can pass to the other list step
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes | The list builder to read. |
+| Name         | Type                                                  | Required | Details                   |
+| ------------ | ----------------------------------------------------- | -------- | ------------------------- |
+| List builder | [List builder](../../../value-types.md#ARRAY_BUILDER) | Yes      | The list builder to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| List | List of [Any](../../../value-types.md#ANY) | The builder's items as an ordinary list. |
-| Size | [Whole number](../../../value-types.md#INTEGER) | The number of items in the list. |
+| Name | Type                                            | Details                                  |
+| ---- | ----------------------------------------------- | ---------------------------------------- |
+| List | List of [Any](../../../value-types.md#ANY)      | The builder's items as an ordinary list. |
+| Size | [Whole number](../../../value-types.md#INTEGER) | The number of items in the list.         |
 
 ### Create number builder {#create-number-builder}
 
@@ -192,14 +192,14 @@ Creates a number builder: a running total that later steps add to in place, so a
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Starting number | [Decimal number](../../../value-types.md#FLOAT) | No | Optional number to start the total at (0 if not set). |
+| Name            | Type                                            | Required | Details                                               |
+| --------------- | ----------------------------------------------- | -------- | ----------------------------------------------------- |
+| Starting number | [Decimal number](../../../value-types.md#FLOAT) | No       | Optional number to start the total at (0 if not set). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                                     | Details                                                             |
+| -------------- | -------------------------------------------------------- | ------------------------------------------------------------------- |
 | Number builder | [Number builder](../../../value-types.md#NUMBER_BUILDER) | The new number builder. Use it in the other "Number builder" steps. |
 
 ### Number builder: add amount {#number-builder-add}
@@ -208,10 +208,10 @@ Adds an amount to a number builder. This changes the builder itself, so there is
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Number builder | [Number builder](../../../value-types.md#NUMBER_BUILDER) | Yes | The number builder to add to. |
-| Amount | [Decimal number](../../../value-types.md#FLOAT) | Yes | The amount to add. A negative amount subtracts. |
+| Name           | Type                                                     | Required | Details                                         |
+| -------------- | -------------------------------------------------------- | -------- | ----------------------------------------------- |
+| Number builder | [Number builder](../../../value-types.md#NUMBER_BUILDER) | Yes      | The number builder to add to.                   |
+| Amount         | [Decimal number](../../../value-types.md#FLOAT)          | Yes      | The amount to add. A negative amount subtracts. |
 
 ### Number builder: read the total {#number-builder-to-number}
 
@@ -219,13 +219,13 @@ Reads the running total of a number builder, together with how many times someth
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Number builder | [Number builder](../../../value-types.md#NUMBER_BUILDER) | Yes | The number builder to read. |
+| Name           | Type                                                     | Required | Details                     |
+| -------------- | -------------------------------------------------------- | -------- | --------------------------- |
+| Number builder | [Number builder](../../../value-types.md#NUMBER_BUILDER) | Yes      | The number builder to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Total | [Decimal number](../../../value-types.md#FLOAT) | The running total. |
+| Name  | Type                                            | Details                             |
+| ----- | ----------------------------------------------- | ----------------------------------- |
+| Total | [Decimal number](../../../value-types.md#FLOAT) | The running total.                  |
 | Count | [Whole number](../../../value-types.md#INTEGER) | How many times an amount was added. |

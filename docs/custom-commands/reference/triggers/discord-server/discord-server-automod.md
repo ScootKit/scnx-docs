@@ -17,8 +17,8 @@ Required intents: `AutoModerationConfiguration`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                                 | Details                        |
+| ---- | ---------------------------------------------------- | ------------------------------ |
 | Rule | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule that was created. |
 
 ### AutoMod rule updated {#automod-rule-updated}
@@ -29,10 +29,10 @@ Required intents: `AutoModerationConfiguration`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name          | Type                                                 | Details                                             |
+| ------------- | ---------------------------------------------------- | --------------------------------------------------- |
 | Previous Rule | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule state before the update. May be empty. |
-| Current Rule | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule state after the update. |
+| Current Rule  | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule state after the update.                |
 
 ### AutoMod rule deleted {#automod-rule-deleted}
 
@@ -42,8 +42,8 @@ Required intents: `AutoModerationConfiguration`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                                 | Details                        |
+| ---- | ---------------------------------------------------- | ------------------------------ |
 | Rule | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule that was deleted. |
 
 ### AutoMod action executed {#automod-action-executed}
@@ -54,14 +54,14 @@ Required intents: `AutoModerationExecution`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Rule | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule that triggered. |
-| Server | [Server](../../../value-types.md#GUILD) | Server the action happened in. |
-| Channel | [Channel](../../../value-types.md#CHANNEL) | Channel the offending content was sent in, if applicable. May be empty. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that triggered the rule. |
-| Member ID | [Discord ID](../../../value-types.md#SNOWFLAKE) | ID of the member that triggered the rule. |
-| Matched Keyword | [Text](../../../value-types.md#STRING) | Keyword that matched the rule, if any. May be empty. |
-| Matched Content | [Text](../../../value-types.md#STRING) | The part of the content that matched the rule, if any. May be empty. |
-| Alert Message ID | [Discord ID](../../../value-types.md#SNOWFLAKE) | ID of the system alert message posted to the alert channel, if any. May be empty. |
-| Content | [Text](../../../value-types.md#STRING) | Full content that triggered the rule. |
+| Name             | Type                                                 | Details                                                                           |
+| ---------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Rule             | [AutoMod rule](../../../value-types.md#AUTOMOD_RULE) | AutoMod rule that triggered.                                                      |
+| Server           | [Server](../../../value-types.md#GUILD)              | Server the action happened in.                                                    |
+| Channel          | [Channel](../../../value-types.md#CHANNEL)           | Channel the offending content was sent in, if applicable. May be empty.           |
+| User             | [User](../../../value-types.md#DISCORD_USER)         | User that triggered the rule.                                                     |
+| Member ID        | [Discord ID](../../../value-types.md#SNOWFLAKE)      | ID of the member that triggered the rule.                                         |
+| Matched Keyword  | [Text](../../../value-types.md#STRING)               | Keyword that matched the rule, if any. May be empty.                              |
+| Matched Content  | [Text](../../../value-types.md#STRING)               | The part of the content that matched the rule, if any. May be empty.              |
+| Alert Message ID | [Discord ID](../../../value-types.md#SNOWFLAKE)      | ID of the system alert message posted to the alert channel, if any. May be empty. |
+| Content          | [Text](../../../value-types.md#STRING)               | Full content that triggered the rule.                                             |

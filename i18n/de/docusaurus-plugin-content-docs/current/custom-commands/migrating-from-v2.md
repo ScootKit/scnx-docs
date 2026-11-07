@@ -35,14 +35,14 @@ Nur der Server-Owner und die Co-Owner können V3 einschalten. Das ist eine Entsc
 
 ### Wenn etwas schiefgeht {#enable-problems}
 
-| Was du siehst                                                             | Ursache und Lösung                                                                                                                    |
-| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| "Nur der Server-Owner oder Co-Owner können das aktivieren"                | Du bist weder Owner noch Co-Owner. Bitte einen von ihnen, die Seite zu öffnen.                                                        |
-| Der Button **Custom Commands V3 aktivieren** ist ausgegraut               | Hake beide Kästchen unter **Bevor du aktivierst** an.                                                                                 |
-| "Wir konnten Custom Commands V3 nicht aktivieren"                         | Versuche es gleich noch einmal.                                                                                                       |
-| "Too many Custom Commands V3 changes for this server"                     | Du hast V3 mehrmals hintereinander ein- und ausgeschaltet. Warte eine Weile und versuche es dann erneut.                               |
+| Was du siehst                                                               | Ursache und Lösung                                                                                                                                                                    |
+| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Nur der Server-Owner oder Co-Owner können das aktivieren"                  | Du bist weder Owner noch Co-Owner. Bitte einen von ihnen, die Seite zu öffnen.                                                                                                        |
+| Der Button **Custom Commands V3 aktivieren** ist ausgegraut                 | Hake beide Kästchen unter **Bevor du aktivierst** an.                                                                                                                                 |
+| "Wir konnten Custom Commands V3 nicht aktivieren"                           | Versuche es gleich noch einmal.                                                                                                                                                       |
+| "Too many Custom Commands V3 changes for this server"                       | Du hast V3 mehrmals hintereinander ein- und ausgeschaltet. Warte eine Weile und versuche es dann erneut.                                                                              |
 | "Dieser Bot wurde gerade erst neu gestartet" nach **Bot jetzt neu starten** | V3 ist bereits eingeschaltet, aber dein Bot kann so kurz danach nicht noch einmal neu starten. Warte bis zur angezeigten Zeit und starte ihn dann über das Dashboard deines Bots neu. |
-| Deine V3-Flows laufen überhaupt nicht                                     | Dein Bot wurde seit dem Einschalten von V3 nicht neu gestartet. Starte ihn neu.                                                        |
+| Deine V3-Flows laufen überhaupt nicht                                       | Dein Bot wurde seit dem Einschalten von V3 nicht neu gestartet. Starte ihn neu.                                                                                                       |
 
 :::caution Prüfe zuerst, wer eigene Befehle bearbeiten darf
 Sobald V3 eingeschaltet ist, kann jeder, der eigene Befehle bearbeiten darf, Flows bauen, die die Berechtigungen deines Bots nutzen. Das gilt auch für [Trusted Admins](/de/docs/scnx/guilds/trusted-admins#permissions) mit der Berechtigung **Custom-Bot**: Konfigurationen & Eigene Befehle ändern und neu laden. Über einen Flow könnten sie Rollen vergeben oder Mitglieder bannen, auch wenn sie das selbst nicht dürften. Überprüfe deine Trusted Admins, bevor du V3 einschaltest.
@@ -62,15 +62,15 @@ Discord erlaubt jeden Befehlsnamen nur einmal pro Server. Wenn ein V3-Flow einen
 
 ## Was sich für dich ändert {#what-changes}
 
-| In V2                                                         | In V3                                                                                                                                                                  |
-| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ein Befehl hat einen Trigger und eine Liste von Aktionsblöcken. | Ein [Flow](/de/docs/custom-commands/flows) hat einen Trigger und eine Kette von Schritten, mit Verzweigungen, Schleifen und Bedingungen.                             |
-| Trigger sind Slash-Commands, Buttons, Nachrichten und Modals. | Flows reagieren außerdem auf [Server-Ereignisse](/de/docs/custom-commands/triggers), zum Beispiel beitretende Mitglieder, Reaktionen und Zeitpläne.                  |
-| Es gibt keinen eingebauten Weg, Daten zu speichern.           | Flows können Daten im [Datenspeicher](/de/docs/custom-commands/storage) ablegen.                                                                                      |
-| Befehle sind eine flache Liste.                               | Flows lassen sich in Ordnern und [Modulen](/de/docs/custom-commands/modules) mit eigenen Einstellungen gruppieren.                                                    |
-| Es gibt keinen Verlauf einzelner Befehlsausführungen.         | Jede Ausführung wird im [Ausführungsverlauf](/de/docs/custom-commands/executions) protokolliert, und du kannst vor dem Livegang einen Testlauf machen.                |
-| Teilen-Links kopieren einen einzelnen Befehl.                 | Du teilst ganze Module und kannst Apps aus dem [Marktplatz](/de/docs/custom-commands/sharing) installieren.                                                          |
-| Dein Tarif begrenzt, wie viele Befehle eingeschaltet sind.    | Dein Tarif legt ein [Aktivitätsbudget](/de/docs/custom-commands/limits-and-safety#activity-budget) dafür fest, wie viel deine Flows tun können.                       |
+| In V2                                                           | In V3                                                                                                                                                  |
+| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Ein Befehl hat einen Trigger und eine Liste von Aktionsblöcken. | Ein [Flow](/de/docs/custom-commands/flows) hat einen Trigger und eine Kette von Schritten, mit Verzweigungen, Schleifen und Bedingungen.               |
+| Trigger sind Slash-Commands, Buttons, Nachrichten und Modals.   | Flows reagieren außerdem auf [Server-Ereignisse](/de/docs/custom-commands/triggers), zum Beispiel beitretende Mitglieder, Reaktionen und Zeitpläne.    |
+| Es gibt keinen eingebauten Weg, Daten zu speichern.             | Flows können Daten im [Datenspeicher](/de/docs/custom-commands/storage) ablegen.                                                                       |
+| Befehle sind eine flache Liste.                                 | Flows lassen sich in Ordnern und [Modulen](/de/docs/custom-commands/modules) mit eigenen Einstellungen gruppieren.                                     |
+| Es gibt keinen Verlauf einzelner Befehlsausführungen.           | Jede Ausführung wird im [Ausführungsverlauf](/de/docs/custom-commands/executions) protokolliert, und du kannst vor dem Livegang einen Testlauf machen. |
+| Teilen-Links kopieren einen einzelnen Befehl.                   | Du teilst ganze Module und kannst Apps aus dem [Marktplatz](/de/docs/custom-commands/sharing) installieren.                                            |
+| Dein Tarif begrenzt, wie viele Befehle eingeschaltet sind.      | Dein Tarif legt ein [Aktivitätsbudget](/de/docs/custom-commands/limits-and-safety#activity-budget) dafür fest, wie viel deine Flows tun können.        |
 
 Flows starten außerdem als Entwurf. Ein neuer Flow tut nichts, bis du ihn von **Entwurf** auf **Aktiv** stellst und speicherst.
 

@@ -17,8 +17,8 @@ Required intents: `GuildScheduledEvents`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                       | Details                           |
+| ----- | ---------------------------------------------------------- | --------------------------------- |
 | Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Scheduled event that was created. |
 
 ### Scheduled event deleted {#scheduled-event-deleted}
@@ -29,8 +29,8 @@ Required intents: `GuildScheduledEvents`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                       | Details                           |
+| ----- | ---------------------------------------------------------- | --------------------------------- |
 | Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Scheduled event that was deleted. |
 
 ### Scheduled event updated {#scheduled-event-updated}
@@ -41,10 +41,10 @@ Required intents: `GuildScheduledEvents`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                                       | Details                                      |
+| -------------- | ---------------------------------------------------------- | -------------------------------------------- |
 | Previous Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Event state before the update. May be empty. |
-| Current Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Event state after the update. |
+| Current Event  | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Event state after the update.                |
 
 ### User interested in scheduled event {#scheduled-event-user-added}
 
@@ -54,10 +54,10 @@ Required intents: `GuildScheduledEvents`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                       | Details                                    |
+| ----- | ---------------------------------------------------------- | ------------------------------------------ |
 | Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Scheduled event the user is interested in. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that subscribed to the event. |
+| User  | [User](../../../value-types.md#DISCORD_USER)               | User that subscribed to the event.         |
 
 ### User no longer interested in scheduled event {#scheduled-event-user-removed}
 
@@ -67,7 +67,7 @@ Required intents: `GuildScheduledEvents`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                                       | Details                                     |
+| ----- | ---------------------------------------------------------- | ------------------------------------------- |
 | Event | [Scheduled event](../../../value-types.md#SCHEDULED_EVENT) | Scheduled event the user unsubscribed from. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that unsubscribed from the event. |
+| User  | [User](../../../value-types.md#DISCORD_USER)               | User that unsubscribed from the event.      |

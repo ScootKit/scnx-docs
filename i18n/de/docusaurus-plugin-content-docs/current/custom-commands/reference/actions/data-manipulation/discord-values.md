@@ -15,14 +15,14 @@ Erstellt eine Discord-Erwähnung für einen Benutzer.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Ja | Benutzer, der erwähnt wird. |
+| Name     | Typ                                              | Pflicht | Details                     |
+| -------- | ------------------------------------------------ | ------- | --------------------------- |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Ja      | Benutzer, der erwähnt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                    | Details                             |
+| --------- | -------------------------------------- | ----------------------------------- |
 | Erwähnung | [Text](../../../value-types.md#STRING) | Erwähnungs-Markup wie &lt;@123&gt;. |
 
 ### Rollen-Erwähnung formatieren {#string-format-mention-role}
@@ -31,14 +31,14 @@ Erstellt eine Discord-Erwähnung für eine Rolle.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Ja | Rolle, die erwähnt wird. |
+| Name  | Typ                                         | Pflicht | Details                  |
+| ----- | ------------------------------------------- | ------- | ------------------------ |
+| Rolle | [Rolle](../../../value-types.md#GUILD_ROLE) | Ja      | Rolle, die erwähnt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                    | Details                              |
+| --------- | -------------------------------------- | ------------------------------------ |
 | Erwähnung | [Text](../../../value-types.md#STRING) | Erwähnungs-Markup wie &lt;@&123&gt;. |
 
 ### Kanal-Erwähnung formatieren {#string-format-mention-channel}
@@ -47,14 +47,14 @@ Erstellt einen Discord-Kanal-Link für einen Kanal.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanal | [Kanal](../../../value-types.md#CHANNEL) | Ja | Der Kanal, der verlinkt wird. |
+| Name  | Typ                                      | Pflicht | Details                       |
+| ----- | ---------------------------------------- | ------- | ----------------------------- |
+| Kanal | [Kanal](../../../value-types.md#CHANNEL) | Ja      | Der Kanal, der verlinkt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                    | Details                        |
+| --------- | -------------------------------------- | ------------------------------ |
 | Erwähnung | [Text](../../../value-types.md#STRING) | Kanal-Markup wie &lt;#123&gt;. |
 
 ### Erwähnung aus ID erstellen {#format-mention}
@@ -63,15 +63,15 @@ Erstellt das Erwähnungs-Markup für eine ID, die du schon hast - ohne den Benut
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| ID | [Text](../../../value-types.md#STRING) | Ja | Die Discord-ID, die erwähnt werden soll (17-20 Ziffern). Maximale Länge: 20 Zeichen. |
-| Erwähnungstyp | [Erwähnungstyp](../../../value-types.md#MENTION_TYPE) | Ja | Worauf die ID zeigt: auf einen Benutzer, eine Rolle oder einen Kanal. Standard: Benutzer. |
+| Name          | Typ                                                   | Pflicht | Details                                                                                   |
+| ------------- | ----------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------- |
+| ID            | [Text](../../../value-types.md#STRING)                | Ja      | Die Discord-ID, die erwähnt werden soll (17-20 Ziffern). Maximale Länge: 20 Zeichen.      |
+| Erwähnungstyp | [Erwähnungstyp](../../../value-types.md#MENTION_TYPE) | Ja      | Worauf die ID zeigt: auf einen Benutzer, eine Rolle oder einen Kanal. Standard: Benutzer. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                    | Details                                                              |
+| --------- | -------------------------------------- | -------------------------------------------------------------------- |
 | Erwähnung | [Text](../../../value-types.md#STRING) | Erwähnungs-Markup wie &lt;@123&gt;, &lt;@&123&gt; oder &lt;#123&gt;. |
 
 ### Discord-Timestamp formatieren {#string-format-discord-timestamp}
@@ -80,15 +80,15 @@ Formatiert ein Datum als Discord-Dynamic-Timestamp-Tag.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Datum und Uhrzeit, die formatiert werden. |
-| Stil | [Zeitstempel-Stil](../../../value-types.md#TIMESTAMP_STYLE) | Ja | Wie Discord das Datum anzeigt. Jede Person sieht es in ihrer eigenen Zeitzone und Sprache. Standard: Kurzes Datum mit Uhrzeit. |
+| Name  | Typ                                                         | Pflicht | Details                                                                                                                        |
+| ----- | ----------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME)       | Ja      | Datum und Uhrzeit, die formatiert werden.                                                                                      |
+| Stil  | [Zeitstempel-Stil](../../../value-types.md#TIMESTAMP_STYLE) | Ja      | Wie Discord das Datum anzeigt. Jede Person sieht es in ihrer eigenen Zeitzone und Sprache. Standard: Kurzes Datum mit Uhrzeit. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                                              |
+| -------- | -------------------------------------- | ---------------------------------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Discord-Timestamp-Markup wie &lt;t:1234567890:R&gt;. |
 
 ### Autocomplete-Vorschläge erstellen {#build-autocomplete-choices}
@@ -97,18 +97,18 @@ Wandelt eine Liste von Laufzeitwerten (z. B. gespeicherte Schlüssel) in Autocom
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Einträge | Liste von [Beliebig](../../../value-types.md#ANY) | Ja | Die anzubietenden Werte. Texte werden direkt verwendet; Einträge einer Zuordnung nutzen ihren Schlüssel; Speicher-Einträge ihr Subjekt. |
-| Pfad zur Beschriftung | [Text](../../../value-types.md#STRING) | Nein | Welches Feld jedes Eintrags angezeigt wird, z. B. "name". Leer lassen, um den Eintrag selbst zu verwenden. Maximale Länge: 100 Zeichen. |
-| Pfad zum Wert | [Text](../../../value-types.md#STRING) | Nein | Welches Feld jedes Eintrags zurückgegeben wird, z. B. "id". Standard ist die Beschriftung. Maximale Länge: 100 Zeichen. |
-| Filter | [Text](../../../value-types.md#STRING) | Nein | Optional. Behält nur Einträge, die zu diesem Text passen (Groß-/Kleinschreibung egal, Präfix-Treffer zuerst). Verbinde hier den getippten Optionswert für Live-Filterung. |
-| Limit | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Optional. Maximale Anzahl der zurückgegebenen Vorschläge (1 - 25, Standard 25). Wert: 1 bis 25. Standard: `25`. |
+| Name                  | Typ                                               | Pflicht | Details                                                                                                                                                                   |
+| --------------------- | ------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Einträge              | Liste von [Beliebig](../../../value-types.md#ANY) | Ja      | Die anzubietenden Werte. Texte werden direkt verwendet; Einträge einer Zuordnung nutzen ihren Schlüssel; Speicher-Einträge ihr Subjekt.                                   |
+| Pfad zur Beschriftung | [Text](../../../value-types.md#STRING)            | Nein    | Welches Feld jedes Eintrags angezeigt wird, z. B. "name". Leer lassen, um den Eintrag selbst zu verwenden. Maximale Länge: 100 Zeichen.                                   |
+| Pfad zum Wert         | [Text](../../../value-types.md#STRING)            | Nein    | Welches Feld jedes Eintrags zurückgegeben wird, z. B. "id". Standard ist die Beschriftung. Maximale Länge: 100 Zeichen.                                                   |
+| Filter                | [Text](../../../value-types.md#STRING)            | Nein    | Optional. Behält nur Einträge, die zu diesem Text passen (Groß-/Kleinschreibung egal, Präfix-Treffer zuerst). Verbinde hier den getippten Optionswert für Live-Filterung. |
+| Limit                 | [Ganzzahl](../../../value-types.md#INTEGER)       | Nein    | Optional. Maximale Anzahl der zurückgegebenen Vorschläge (1 - 25, Standard 25). Wert: 1 bis 25. Standard: `25`.                                                           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                                                                    | Details                                                                           |
+| ---------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Vorschläge | Liste von [Options-Auswahl](../../../value-types.md#APPLICATION_COMMAND_OPTION_CHOICE) | Die erstellten Autocomplete-Vorschläge, bereit für "Autocomplete-Antwort senden". |
 
 ### Discord-Relativzeitstempel {#discord-relative-timestamp}
@@ -117,14 +117,14 @@ Formatiert ein Datum als relativen Discord-Zeitstempel ("in 3 hours", "2 days ag
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja | Das zu formatierende Datum und die Uhrzeit. |
+| Name  | Typ                                                   | Pflicht | Details                                     |
+| ----- | ----------------------------------------------------- | ------- | ------------------------------------------- |
+| Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Ja      | Das zu formatierende Datum und die Uhrzeit. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                                                       |
+| -------- | -------------------------------------- | ------------------------------------------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Discord-Relativzeitstempel-Markup wie &lt;t:1234567890:R&gt;. |
 
 ### In ID umwandeln {#to-id}
@@ -133,16 +133,16 @@ Wandelt Text oder eine ganze Zahl in eine ID um. Eine ID behält ihre Zeichen ex
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Nein | Der Text, der als ID verwendet wird. Nutze dies oder Zahl. Nur eines davon verwenden: Zahl. |
-| Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Eine ganze Zahl, die als ID verwendet wird. Nutze dies oder Text. Nur eines davon verwenden: Text. |
+| Name | Typ                                         | Pflicht | Details                                                                                            |
+| ---- | ------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING)      | Nein    | Der Text, der als ID verwendet wird. Nutze dies oder Zahl. Nur eines davon verwenden: Zahl.        |
+| Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Eine ganze Zahl, die als ID verwendet wird. Nutze dies oder Text. Nur eines davon verwenden: Text. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| ID | [ID](../../../value-types.md#ID) | Die ID. |
+| Name | Typ                              | Details |
+| ---- | -------------------------------- | ------- |
+| ID   | [ID](../../../value-types.md#ID) | Die ID. |
 
 ### Nachrichten-Link auslesen {#parse-message-link}
 
@@ -150,17 +150,17 @@ Liest Server-, Kanal- und Nachrichten-ID aus einem Discord-Nachrichten-Link. All
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Nachrichten-Link | [Text](../../../value-types.md#STRING) | Ja | Der Discord-Nachrichten-Link (https://discord.com/channels/&lt;server&gt;/&lt;kanal&gt;/&lt;nachricht&gt;). |
+| Name             | Typ                                    | Pflicht | Details                                                                                                     |
+| ---------------- | -------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
+| Nachrichten-Link | [Text](../../../value-types.md#STRING) | Ja      | Der Discord-Nachrichten-Link (https://discord.com/channels/&lt;server&gt;/&lt;kanal&gt;/&lt;nachricht&gt;). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Server-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Server-ID, oder leer bei einem Direktnachrichten-Link oder ohne Treffer. Kann leer sein. |
-| Kanal-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Kanal-ID, oder leer, wenn die Eingabe kein Nachrichten-Link ist. Kann leer sein. |
-| Nachrichten-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Nachrichten-ID, oder leer, wenn die Eingabe kein Nachrichten-Link ist. Kann leer sein. |
+| Name           | Typ                                             | Details                                                                                      |
+| -------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Server-ID      | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Server-ID, oder leer bei einem Direktnachrichten-Link oder ohne Treffer. Kann leer sein. |
+| Kanal-ID       | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Kanal-ID, oder leer, wenn die Eingabe kein Nachrichten-Link ist. Kann leer sein.         |
+| Nachrichten-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Nachrichten-ID, oder leer, wenn die Eingabe kein Nachrichten-Link ist. Kann leer sein.   |
 
 ### Nachrichten-Link erstellen {#build-message-link}
 
@@ -168,17 +168,17 @@ Erstellt einen Discord-Nachrichten-Link (Sprung-Link), entweder aus einem Nachri
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Nein | Die Nachricht, zu der verlinkt werden soll. Hat Vorrang vor den IDs unten. Nur eines davon verwenden: Kanal-ID. |
-| Server-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein | Die Server-ID, oder leer bei einem Direktnachrichten-Link. Wird verwendet, wenn keine Nachricht angegeben ist. |
-| Kanal-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein | Die Kanal-ID. Wird verwendet, wenn keine Nachricht angegeben ist. Nur eines davon verwenden: Nachricht. |
-| Nachrichten-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein | Die Nachrichten-ID. Wird verwendet, wenn keine Nachricht angegeben ist. |
+| Name           | Typ                                             | Pflicht | Details                                                                                                         |
+| -------------- | ----------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| Nachricht      | [Nachricht](../../../value-types.md#MESSAGE)    | Nein    | Die Nachricht, zu der verlinkt werden soll. Hat Vorrang vor den IDs unten. Nur eines davon verwenden: Kanal-ID. |
+| Server-ID      | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein    | Die Server-ID, oder leer bei einem Direktnachrichten-Link. Wird verwendet, wenn keine Nachricht angegeben ist.  |
+| Kanal-ID       | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein    | Die Kanal-ID. Wird verwendet, wenn keine Nachricht angegeben ist. Nur eines davon verwenden: Nachricht.         |
+| Nachrichten-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Nein    | Die Nachrichten-ID. Wird verwendet, wenn keine Nachricht angegeben ist.                                         |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                | Details                                               |
+| ---------------- | ---------------------------------- | ----------------------------------------------------- |
 | Nachrichten-Link | [URL](../../../value-types.md#URL) | Der erstellte Discord-Nachrichten-Link (Sprung-Link). |
 
 ### Erwähnung auslesen {#parse-mention}
@@ -187,16 +187,16 @@ Liest ID und Art der ersten Erwähnung (Benutzer, Rolle oder Kanal) im Text aus.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der eine Erwähnung wie &lt;@123&gt;, &lt;@&123&gt; oder &lt;#123&gt; ist oder enthält. |
+| Name | Typ                                    | Pflicht | Details                                                                                      |
+| ---- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Text, der eine Erwähnung wie &lt;@123&gt;, &lt;@&123&gt; oder &lt;#123&gt; ist oder enthält. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die erwähnte ID, oder leer, wenn keine Erwähnung gefunden wird. Kann leer sein. |
-| Art | [Erwähnungsart](../../../value-types.md#MENTION_KIND) | Ob die Erwähnung ein Benutzer, eine Rolle oder ein Kanal ist; leer, wenn keine Erwähnung gefunden wird. Kann leer sein. |
+| Name | Typ                                                   | Details                                                                                                                 |
+| ---- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| ID   | [Discord-ID](../../../value-types.md#SNOWFLAKE)       | Die erwähnte ID, oder leer, wenn keine Erwähnung gefunden wird. Kann leer sein.                                         |
+| Art  | [Erwähnungsart](../../../value-types.md#MENTION_KIND) | Ob die Erwähnung ein Benutzer, eine Rolle oder ein Kanal ist; leer, wenn keine Erwähnung gefunden wird. Kann leer sein. |
 
 ### Discord-ID zu Zeitstempel {#snowflake-to-timestamp}
 
@@ -204,14 +204,14 @@ Extrahiert das in einer Discord-ID codierte Erstellungsdatum.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Discord-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Ja | Die Discord-ID. |
+| Name       | Typ                                             | Pflicht | Details         |
+| ---------- | ----------------------------------------------- | ------- | --------------- |
+| Discord-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Ja      | Die Discord-ID. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                     |
+| ----- | ----------------------------------------------------- | --------------------------- |
 | Datum | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Der Erstellungszeitstempel. |
 
 ### Discord-ID aus Text {#snowflake-from-string}
@@ -220,14 +220,14 @@ Liest eine Discord-ID aus einem Text. Gibt einen leeren Wert zurück, wenn ungü
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der die Discord-ID enthält. |
+| Name | Typ                                    | Pflicht | Details                           |
+| ---- | -------------------------------------- | ------- | --------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Text, der die Discord-ID enthält. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                             | Details                                   |
+| ---------- | ----------------------------------------------- | ----------------------------------------- |
 | Discord-ID | [Discord-ID](../../../value-types.md#SNOWFLAKE) | Die Discord-ID oder leer. Kann leer sein. |
 
 ### ID erzeugen {#generate-id}
@@ -236,6 +236,6 @@ Erzeugt eine zufällige eindeutige Kennung (UUID).
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| ID | [Text](../../../value-types.md#STRING) | Die erzeugte eindeutige Kennung. |
+| Name | Typ                                    | Details                          |
+| ---- | -------------------------------------- | -------------------------------- |
+| ID   | [Text](../../../value-types.md#STRING) | Die erzeugte eindeutige Kennung. |

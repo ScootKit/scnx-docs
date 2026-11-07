@@ -17,10 +17,10 @@ Required intents: `GuildVoiceStates`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name           | Type                                               | Details                        |
+| -------------- | -------------------------------------------------- | ------------------------------ |
 | Previous state | [Voice state](../../../value-types.md#VOICE_STATE) | Voice state before the change. |
-| Current state | [Voice state](../../../value-types.md#VOICE_STATE) | Voice state after the change. |
+| Current state  | [Voice state](../../../value-types.md#VOICE_STATE) | Voice state after the change.  |
 
 ### Soundboard sound created {#soundboard-sound-created}
 
@@ -30,9 +30,9 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| `sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| Name    | Type                                                         | Details |
+| ------- | ------------------------------------------------------------ | ------- |
+| `sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |         |
 
 ### Soundboard sound updated {#soundboard-sound-updated}
 
@@ -42,10 +42,10 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name             | Type                                                         | Details       |
+| ---------------- | ------------------------------------------------------------ | ------------- |
 | `previous-sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) | May be empty. |
-| `current-sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| `current-sound`  | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |               |
 
 ### Soundboard sound deleted {#soundboard-sound-deleted}
 
@@ -55,6 +55,6 @@ Required intents: `GuildExpressions`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| `sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |  |
+| Name    | Type                                                         | Details |
+| ------- | ------------------------------------------------------------ | ------- |
+| `sound` | [Soundboard sound](../../../value-types.md#SOUNDBOARD_SOUND) |         |

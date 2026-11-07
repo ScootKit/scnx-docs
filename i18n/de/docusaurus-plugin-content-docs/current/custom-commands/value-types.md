@@ -9,13 +9,13 @@ description: "Alle Werttypen, die Eingaben, Ausgaben und bereitgestellte Werte i
 
 Jede Eingabe, Ausgabe und jeder bereitgestellte Wert eines Triggers oder einer Aktion hat einen Typ. Der Typ legt fest, welche Werte du verbinden kannst und welche Werte akzeptiert werden. Jeder Typname in den Referenztabellen verweist auf seinen Eintrag auf dieser Seite.
 
-| Name | Details |
-| --- | --- |
-| [Basistypen](#basic-types) | Einfache Werte wie Text, Zahlen, Ja/Nein-Werte und Zeiten. |
+| Name                                                       | Details                                                                                                                                                                  |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Basistypen](#basic-types)                                 | Einfache Werte wie Text, Zahlen, Ja/Nein-Werte und Zeiten.                                                                                                               |
 | [Listen und Nachschlagetabellen](#lists-and-lookup-tables) | Listen und Nachschlagetabellen enthalten mehrere Werte. In den Referenztabellen werden sie zusammen mit dem Typ ihrer Einträge angezeigt, zum Beispiel "Liste von Text". |
-| [Auswahllisten](#choice-lists) | Werte, die aus einer festen Liste von Möglichkeiten gewählt werden. |
-| [Objekte](#objects) | Dinge wie Kanäle, Mitglieder oder Nachrichten. Jedes hat Felder, die du in deinem Flow lesen kannst. |
-| [Spezielle Typen](#special-types) | Typen, deren genaue Form davon abhängt, wie und wo sie verwendet werden. |
+| [Auswahllisten](#choice-lists)                             | Werte, die aus einer festen Liste von Möglichkeiten gewählt werden.                                                                                                      |
+| [Objekte](#objects)                                        | Dinge wie Kanäle, Mitglieder oder Nachrichten. Jedes hat Felder, die du in deinem Flow lesen kannst.                                                                     |
+| [Spezielle Typen](#special-types)                          | Typen, deren genaue Form davon abhängt, wie und wo sie verwendet werden.                                                                                                 |
 
 ## Basistypen {#basic-types}
 
@@ -85,866 +85,866 @@ Werte, die aus einer festen Liste von Möglichkeiten gewählt werden.
 
 Die Art eines Discord-Kanals.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GUILD_TEXT` | Textkanal | Ein regulärer Textkanal auf deinem Server. |
-| `GUILD_ANNOUNCEMENT` | Ankündigungskanal | Ein Ankündigungskanal, den Mitglieder abonnieren können. |
-| `GUILD_VOICE` | Sprachkanal | Ein Sprachkanal auf deinem Server. |
-| `GUILD_STAGE_VOICE` | Stage-Kanal | Ein Stage-Kanal für moderierte Audioereignisse. |
-| `GUILD_CATEGORY` | Kategorie | Eine Kategorie, die andere Kanäle gruppiert. |
-| `GUILD_DIRECTORY` | Verzeichnis | Ein Verzeichniskanal, den es nur in Student-Hub-Servern gibt. |
-| `GUILD_FORUM` | Forum-Kanal | Ein Forum-Kanal mit Posts als Threads. |
-| `GUILD_MEDIA` | Medien-Kanal | Ein Medien-Kanal ähnlich einem Forum. |
-| `ANNOUNCEMENT_THREAD` | Ankündigungs-Thread | Ein Thread in einem Ankündigungskanal. |
-| `PUBLIC_THREAD` | Öffentlicher Thread | Ein öffentlicher Thread in einem Text- oder Forum-Kanal. |
-| `PRIVATE_THREAD` | Privater Thread | Ein privater, nur auf Einladung zugänglicher Thread. |
-| `DM` | Direktnachricht | Ein 1:1-Direktnachrichtenkanal. |
-| `GROUP_DM` | Gruppen-DM | Ein Gruppen-Direktnachrichtenkanal. |
+| Wert                  | Name                | Details                                                       |
+| --------------------- | ------------------- | ------------------------------------------------------------- |
+| `GUILD_TEXT`          | Textkanal           | Ein regulärer Textkanal auf deinem Server.                    |
+| `GUILD_ANNOUNCEMENT`  | Ankündigungskanal   | Ein Ankündigungskanal, den Mitglieder abonnieren können.      |
+| `GUILD_VOICE`         | Sprachkanal         | Ein Sprachkanal auf deinem Server.                            |
+| `GUILD_STAGE_VOICE`   | Stage-Kanal         | Ein Stage-Kanal für moderierte Audioereignisse.               |
+| `GUILD_CATEGORY`      | Kategorie           | Eine Kategorie, die andere Kanäle gruppiert.                  |
+| `GUILD_DIRECTORY`     | Verzeichnis         | Ein Verzeichniskanal, den es nur in Student-Hub-Servern gibt. |
+| `GUILD_FORUM`         | Forum-Kanal         | Ein Forum-Kanal mit Posts als Threads.                        |
+| `GUILD_MEDIA`         | Medien-Kanal        | Ein Medien-Kanal ähnlich einem Forum.                         |
+| `ANNOUNCEMENT_THREAD` | Ankündigungs-Thread | Ein Thread in einem Ankündigungskanal.                        |
+| `PUBLIC_THREAD`       | Öffentlicher Thread | Ein öffentlicher Thread in einem Text- oder Forum-Kanal.      |
+| `PRIVATE_THREAD`      | Privater Thread     | Ein privater, nur auf Einladung zugänglicher Thread.          |
+| `DM`                  | Direktnachricht     | Ein 1:1-Direktnachrichtenkanal.                               |
+| `GROUP_DM`            | Gruppen-DM          | Ein Gruppen-Direktnachrichtenkanal.                           |
 
 ### Berechtigung {#PERMISSION_FLAG}
 
 Ein Discord-Berechtigungsflag.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `VIEW_CHANNEL` | Kanal anzeigen | Erlaubt, einen Kanal anzuzeigen. |
-| `MANAGE_CHANNELS` | Kanäle verwalten | Erlaubt, Kanäle zu erstellen, zu bearbeiten und zu löschen. |
-| `MANAGE_ROLES` | Rollen verwalten | Erlaubt, Rollen zu erstellen, zu bearbeiten und zu löschen. |
-| `MANAGE_GUILD` | Server verwalten | Erlaubt, Server-Einstellungen zu ändern. |
-| `ADMINISTRATOR` | Administrator | Gewährt alle Berechtigungen und umgeht Kanal-Overrides. |
-| `VIEW_AUDIT_LOG` | Audit-Log anzeigen | Erlaubt, das Audit-Log zu lesen. |
-| `VIEW_GUILD_INSIGHTS` | Server-Einblicke anzeigen | Erlaubt, Server-Einblicke anzuzeigen. |
-| `MANAGE_WEBHOOKS` | Webhooks verwalten | Erlaubt, Webhooks zu erstellen, zu bearbeiten und zu löschen. |
-| `MANAGE_GUILD_EXPRESSIONS` | Ausdrücke verwalten | Erlaubt, Emojis, Sticker und Soundboards zu verwalten. |
-| `MANAGE_EVENTS` | Ereignisse verwalten | Erlaubt, geplante Ereignisse zu erstellen, zu bearbeiten und zu beenden. |
-| `CREATE_INSTANT_INVITE` | Einladung erstellen | Erlaubt, Einladungen zum Server zu erstellen. |
-| `CREATE_EVENTS` | Events erstellen | Erlaubt, geplante Events zu erstellen und eigene zu bearbeiten oder zu löschen. |
-| `CREATE_GUILD_EXPRESSIONS` | Ausdrücke erstellen | Erlaubt, Emojis, Sticker und Soundboard-Sounds zu erstellen und eigene zu bearbeiten oder zu löschen. |
-| `MANAGE_EMOJIS_AND_STICKERS` | Emojis und Sticker verwalten (alter Name) | Der ältere Name von 'Ausdrücke verwalten'. Discord meldet beide für dieselbe Berechtigung. |
-| `VIEW_CREATOR_MONETIZATION_ANALYTICS` | Creator-Monetarisierungsanalysen ansehen | Erlaubt, die Auswertungen der Rollen-Abonnements des Servers anzusehen. |
-| `KICK_MEMBERS` | Mitglieder hinauswerfen | Erlaubt, Mitglieder vom Server hinausizuwerfen. |
-| `BAN_MEMBERS` | Mitglieder bannen | Erlaubt, Mitglieder vom Server zu bannen. |
-| `MODERATE_MEMBERS` | Mitglieder stummschalten | Erlaubt, Mitglieder stummzuschalten. |
-| `MANAGE_NICKNAMES` | Spitznamen verwalten | Erlaubt, Spitznamen anderer Mitglieder zu ändern. |
-| `CHANGE_NICKNAME` | Eigenen Spitznamen ändern | Erlaubt, den eigenen Spitznamen des Bots zu ändern. |
-| `SEND_MESSAGES` | Nachrichten senden | Erlaubt, Nachrichten in Textkanälen zu senden. |
-| `SEND_MESSAGES_IN_THREADS` | Nachrichten in Threads senden | Erlaubt, Nachrichten in Threads zu posten. |
-| `EMBED_LINKS` | Links einbetten | Erlaubt, eingebettete Links in Nachrichten zu verwenden. |
-| `ATTACH_FILES` | Dateien anhängen | Erlaubt, Dateien in Nachrichten hochzuladen. |
-| `ADD_REACTIONS` | Reaktionen hinzufügen | Erlaubt, auf Nachrichten mit Emojis zu reagieren. |
-| `MENTION_EVERYONE` | Alle erwähnen | Erlaubt, @everyone, @here und Rollenerwähnungen zu verwenden. |
-| `USE_EXTERNAL_EMOJIS` | Externe Emojis verwenden | Erlaubt, Emojis von anderen Servern zu verwenden. |
-| `USE_EXTERNAL_STICKERS` | Externe Sticker verwenden | Erlaubt, Sticker von anderen Servern zu verwenden. |
-| `READ_MESSAGE_HISTORY` | Nachrichtenverlauf lesen | Erlaubt, ältere Nachrichten in einem Kanal zu lesen. |
-| `MANAGE_MESSAGES` | Nachrichten verwalten | Erlaubt, Nachrichten zu löschen und anzupinnen. |
-| `MANAGE_THREADS` | Threads verwalten | Erlaubt, Threads zu archivieren, zu sperren und zu löschen. |
-| `CREATE_PUBLIC_THREADS` | Öffentliche Threads erstellen | Erlaubt, öffentliche Threads zu erstellen. |
-| `CREATE_PRIVATE_THREADS` | Private Threads erstellen | Erlaubt, private Threads zu erstellen. |
-| `SEND_TTS_MESSAGES` | TTS-Nachrichten senden | Erlaubt, Text-zu-Sprache-Nachrichten zu senden. |
-| `SEND_VOICE_MESSAGES` | Sprachnachrichten senden | Erlaubt, Sprachnachrichten zu senden. |
-| `SEND_POLLS` | Umfragen erstellen | Erlaubt, Nachrichten-Umfragen zu erstellen. |
-| `PIN_MESSAGES` | Nachrichten anheften | Erlaubt, Nachrichten anzuheften und wieder zu lösen. |
-| `BYPASS_SLOWMODE` | Slowmode umgehen | Erlaubt, Nachrichten ohne die Wartezeit des Slowmodes im Kanal zu senden. |
-| `CONNECT` | Verbinden | Erlaubt, Sprachkanälen beizutreten. |
-| `SPEAK` | Sprechen | Erlaubt, in Sprachkanälen zu sprechen. |
-| `STREAM` | Video | Erlaubt, Videos zu streamen und den Bildschirm freizugeben. |
-| `USE_VAD` | Spracherkennung verwenden | Erlaubt, zu sprechen, ohne Push-to-Talk zu verwenden. |
-| `MUTE_MEMBERS` | Mitglieder stummschalten | Erlaubt, andere Mitglieder in Sprachkanälen stummzuschalten. |
-| `DEAFEN_MEMBERS` | Mitglieder taub machen | Erlaubt, andere Mitglieder in Sprachkanälen tauben. |
-| `MOVE_MEMBERS` | Mitglieder verschieben | Erlaubt, Mitglieder zwischen Sprachkanälen zu verschieben. |
-| `PRIORITY_SPEAKER` | Prioritätssprecher | Erlaubt, den Prioritätssprechermodus zu verwenden. |
-| `REQUEST_TO_SPEAK` | Anfrage zum Sprechen | Erlaubt, das Sprechen in Stage-Kanälen anzufordern. |
-| `USE_SOUNDBOARD` | Soundboard verwenden | Erlaubt, das Soundboard in Sprachkanälen zu verwenden. |
-| `USE_EXTERNAL_SOUNDS` | Externe Sounds verwenden | Erlaubt, Sounds von anderen Servern zu verwenden. |
-| `USE_APPLICATION_COMMANDS` | Anwendungsbefehle verwenden | Erlaubt, Slash-Befehle und Kontextmenüs auszuführen. |
-| `USE_EMBEDDED_ACTIVITIES` | Aktivitäten verwenden | Erlaubt, eingebettete Sprach-Aktivitäten zu starten. |
-| `USE_EXTERNAL_APPS` | Externe Apps verwenden | Erlaubt, mit Apps von anderen Servern zu interagieren. |
+| Wert                                  | Name                                      | Details                                                                                               |
+| ------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `VIEW_CHANNEL`                        | Kanal anzeigen                            | Erlaubt, einen Kanal anzuzeigen.                                                                      |
+| `MANAGE_CHANNELS`                     | Kanäle verwalten                          | Erlaubt, Kanäle zu erstellen, zu bearbeiten und zu löschen.                                           |
+| `MANAGE_ROLES`                        | Rollen verwalten                          | Erlaubt, Rollen zu erstellen, zu bearbeiten und zu löschen.                                           |
+| `MANAGE_GUILD`                        | Server verwalten                          | Erlaubt, Server-Einstellungen zu ändern.                                                              |
+| `ADMINISTRATOR`                       | Administrator                             | Gewährt alle Berechtigungen und umgeht Kanal-Overrides.                                               |
+| `VIEW_AUDIT_LOG`                      | Audit-Log anzeigen                        | Erlaubt, das Audit-Log zu lesen.                                                                      |
+| `VIEW_GUILD_INSIGHTS`                 | Server-Einblicke anzeigen                 | Erlaubt, Server-Einblicke anzuzeigen.                                                                 |
+| `MANAGE_WEBHOOKS`                     | Webhooks verwalten                        | Erlaubt, Webhooks zu erstellen, zu bearbeiten und zu löschen.                                         |
+| `MANAGE_GUILD_EXPRESSIONS`            | Ausdrücke verwalten                       | Erlaubt, Emojis, Sticker und Soundboards zu verwalten.                                                |
+| `MANAGE_EVENTS`                       | Ereignisse verwalten                      | Erlaubt, geplante Ereignisse zu erstellen, zu bearbeiten und zu beenden.                              |
+| `CREATE_INSTANT_INVITE`               | Einladung erstellen                       | Erlaubt, Einladungen zum Server zu erstellen.                                                         |
+| `CREATE_EVENTS`                       | Events erstellen                          | Erlaubt, geplante Events zu erstellen und eigene zu bearbeiten oder zu löschen.                       |
+| `CREATE_GUILD_EXPRESSIONS`            | Ausdrücke erstellen                       | Erlaubt, Emojis, Sticker und Soundboard-Sounds zu erstellen und eigene zu bearbeiten oder zu löschen. |
+| `MANAGE_EMOJIS_AND_STICKERS`          | Emojis und Sticker verwalten (alter Name) | Der ältere Name von 'Ausdrücke verwalten'. Discord meldet beide für dieselbe Berechtigung.            |
+| `VIEW_CREATOR_MONETIZATION_ANALYTICS` | Creator-Monetarisierungsanalysen ansehen  | Erlaubt, die Auswertungen der Rollen-Abonnements des Servers anzusehen.                               |
+| `KICK_MEMBERS`                        | Mitglieder hinauswerfen                   | Erlaubt, Mitglieder vom Server hinausizuwerfen.                                                       |
+| `BAN_MEMBERS`                         | Mitglieder bannen                         | Erlaubt, Mitglieder vom Server zu bannen.                                                             |
+| `MODERATE_MEMBERS`                    | Mitglieder stummschalten                  | Erlaubt, Mitglieder stummzuschalten.                                                                  |
+| `MANAGE_NICKNAMES`                    | Spitznamen verwalten                      | Erlaubt, Spitznamen anderer Mitglieder zu ändern.                                                     |
+| `CHANGE_NICKNAME`                     | Eigenen Spitznamen ändern                 | Erlaubt, den eigenen Spitznamen des Bots zu ändern.                                                   |
+| `SEND_MESSAGES`                       | Nachrichten senden                        | Erlaubt, Nachrichten in Textkanälen zu senden.                                                        |
+| `SEND_MESSAGES_IN_THREADS`            | Nachrichten in Threads senden             | Erlaubt, Nachrichten in Threads zu posten.                                                            |
+| `EMBED_LINKS`                         | Links einbetten                           | Erlaubt, eingebettete Links in Nachrichten zu verwenden.                                              |
+| `ATTACH_FILES`                        | Dateien anhängen                          | Erlaubt, Dateien in Nachrichten hochzuladen.                                                          |
+| `ADD_REACTIONS`                       | Reaktionen hinzufügen                     | Erlaubt, auf Nachrichten mit Emojis zu reagieren.                                                     |
+| `MENTION_EVERYONE`                    | Alle erwähnen                             | Erlaubt, @everyone, @here und Rollenerwähnungen zu verwenden.                                         |
+| `USE_EXTERNAL_EMOJIS`                 | Externe Emojis verwenden                  | Erlaubt, Emojis von anderen Servern zu verwenden.                                                     |
+| `USE_EXTERNAL_STICKERS`               | Externe Sticker verwenden                 | Erlaubt, Sticker von anderen Servern zu verwenden.                                                    |
+| `READ_MESSAGE_HISTORY`                | Nachrichtenverlauf lesen                  | Erlaubt, ältere Nachrichten in einem Kanal zu lesen.                                                  |
+| `MANAGE_MESSAGES`                     | Nachrichten verwalten                     | Erlaubt, Nachrichten zu löschen und anzupinnen.                                                       |
+| `MANAGE_THREADS`                      | Threads verwalten                         | Erlaubt, Threads zu archivieren, zu sperren und zu löschen.                                           |
+| `CREATE_PUBLIC_THREADS`               | Öffentliche Threads erstellen             | Erlaubt, öffentliche Threads zu erstellen.                                                            |
+| `CREATE_PRIVATE_THREADS`              | Private Threads erstellen                 | Erlaubt, private Threads zu erstellen.                                                                |
+| `SEND_TTS_MESSAGES`                   | TTS-Nachrichten senden                    | Erlaubt, Text-zu-Sprache-Nachrichten zu senden.                                                       |
+| `SEND_VOICE_MESSAGES`                 | Sprachnachrichten senden                  | Erlaubt, Sprachnachrichten zu senden.                                                                 |
+| `SEND_POLLS`                          | Umfragen erstellen                        | Erlaubt, Nachrichten-Umfragen zu erstellen.                                                           |
+| `PIN_MESSAGES`                        | Nachrichten anheften                      | Erlaubt, Nachrichten anzuheften und wieder zu lösen.                                                  |
+| `BYPASS_SLOWMODE`                     | Slowmode umgehen                          | Erlaubt, Nachrichten ohne die Wartezeit des Slowmodes im Kanal zu senden.                             |
+| `CONNECT`                             | Verbinden                                 | Erlaubt, Sprachkanälen beizutreten.                                                                   |
+| `SPEAK`                               | Sprechen                                  | Erlaubt, in Sprachkanälen zu sprechen.                                                                |
+| `STREAM`                              | Video                                     | Erlaubt, Videos zu streamen und den Bildschirm freizugeben.                                           |
+| `USE_VAD`                             | Spracherkennung verwenden                 | Erlaubt, zu sprechen, ohne Push-to-Talk zu verwenden.                                                 |
+| `MUTE_MEMBERS`                        | Mitglieder stummschalten                  | Erlaubt, andere Mitglieder in Sprachkanälen stummzuschalten.                                          |
+| `DEAFEN_MEMBERS`                      | Mitglieder taub machen                    | Erlaubt, andere Mitglieder in Sprachkanälen tauben.                                                   |
+| `MOVE_MEMBERS`                        | Mitglieder verschieben                    | Erlaubt, Mitglieder zwischen Sprachkanälen zu verschieben.                                            |
+| `PRIORITY_SPEAKER`                    | Prioritätssprecher                        | Erlaubt, den Prioritätssprechermodus zu verwenden.                                                    |
+| `REQUEST_TO_SPEAK`                    | Anfrage zum Sprechen                      | Erlaubt, das Sprechen in Stage-Kanälen anzufordern.                                                   |
+| `USE_SOUNDBOARD`                      | Soundboard verwenden                      | Erlaubt, das Soundboard in Sprachkanälen zu verwenden.                                                |
+| `USE_EXTERNAL_SOUNDS`                 | Externe Sounds verwenden                  | Erlaubt, Sounds von anderen Servern zu verwenden.                                                     |
+| `USE_APPLICATION_COMMANDS`            | Anwendungsbefehle verwenden               | Erlaubt, Slash-Befehle und Kontextmenüs auszuführen.                                                  |
+| `USE_EMBEDDED_ACTIVITIES`             | Aktivitäten verwenden                     | Erlaubt, eingebettete Sprach-Aktivitäten zu starten.                                                  |
+| `USE_EXTERNAL_APPS`                   | Externe Apps verwenden                    | Erlaubt, mit Apps von anderen Servern zu interagieren.                                                |
 
 ### Button-Stil {#BUTTON_STYLE}
 
 Visueller Stil eines Discord-Buttons.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PRIMARY` | Primär (Blau) | Hervorgehobener blauer Button. |
-| `SECONDARY` | Sekundär (Grau) | Gedämpfter grauer Button. |
-| `SUCCESS` | Erfolg (Grün) | Grüner Button für Bestätigungen. |
-| `DANGER` | Gefahr (Rot) | Roter Button für destruktive Aktionen. |
-| `LINK` | Link | Button, der eine externe URL öffnet. |
-| `PREMIUM` | Premium | Button, der mit einer Premium-SKU verlinkt. |
+| Wert        | Name            | Details                                     |
+| ----------- | --------------- | ------------------------------------------- |
+| `PRIMARY`   | Primär (Blau)   | Hervorgehobener blauer Button.              |
+| `SECONDARY` | Sekundär (Grau) | Gedämpfter grauer Button.                   |
+| `SUCCESS`   | Erfolg (Grün)   | Grüner Button für Bestätigungen.            |
+| `DANGER`    | Gefahr (Rot)    | Roter Button für destruktive Aktionen.      |
+| `LINK`      | Link            | Button, der eine externe URL öffnet.        |
+| `PREMIUM`   | Premium         | Button, der mit einer Premium-SKU verlinkt. |
 
 ### Texteingabe-Stil {#TEXT_INPUT_STYLE}
 
 Anzeigestil einer Modal-Texteingabe.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `SHORT` | Kurz | Einzeilige Texteingabe. |
+| Wert        | Name   | Details                  |
+| ----------- | ------ | ------------------------ |
+| `SHORT`     | Kurz   | Einzeilige Texteingabe.  |
 | `PARAGRAPH` | Absatz | Mehrzeilige Texteingabe. |
 
 ### Verifizierungsstufe {#VERIFICATION_LEVEL}
 
 Verifizierungsstufe des Servers für neue Mitglieder.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `NONE` | Keine | Keine Verifizierung erforderlich. |
-| `LOW` | Niedrig | Mitglied muss eine verifizierte E-Mail haben. |
-| `MEDIUM` | Mittel | Mitglied muss mindestens 5 Minuten auf Discord sein. |
-| `HIGH` | Hoch | Mitglied muss mindestens 10 Minuten auf dem Server sein. |
-| `VERY_HIGH` | Sehr hoch | Mitglied muss eine verifizierte Telefonnummer haben. |
+| Wert        | Name      | Details                                                  |
+| ----------- | --------- | -------------------------------------------------------- |
+| `NONE`      | Keine     | Keine Verifizierung erforderlich.                        |
+| `LOW`       | Niedrig   | Mitglied muss eine verifizierte E-Mail haben.            |
+| `MEDIUM`    | Mittel    | Mitglied muss mindestens 5 Minuten auf Discord sein.     |
+| `HIGH`      | Hoch      | Mitglied muss mindestens 10 Minuten auf dem Server sein. |
+| `VERY_HIGH` | Sehr hoch | Mitglied muss eine verifizierte Telefonnummer haben.     |
 
 ### Filter für explizite Inhalte {#EXPLICIT_CONTENT_FILTER}
 
 Wie Discord Nachrichten auf explizite Inhalte überprüft.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `DISABLED` | Deaktiviert | Gar keine Überprüfung. |
+| Wert                    | Name                   | Details                                           |
+| ----------------------- | ---------------------- | ------------------------------------------------- |
+| `DISABLED`              | Deaktiviert            | Gar keine Überprüfung.                            |
 | `MEMBERS_WITHOUT_ROLES` | Mitglieder ohne Rollen | Überprüfe Nachrichten von Mitgliedern ohne Rolle. |
-| `ALL_MEMBERS` | Alle Mitglieder | Überprüfe Nachrichten von jedem Mitglied. |
+| `ALL_MEMBERS`           | Alle Mitglieder        | Überprüfe Nachrichten von jedem Mitglied.         |
 
 ### Zwei-Faktor-Anforderung {#MFA_LEVEL}
 
 Ob Moderationsaktionen 2FA benötigen.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `NONE` | Nicht erforderlich | Moderatoren können handeln, ohne 2FA zu haben. |
-| `ELEVATED` | Erforderlich | Moderatoren müssen 2FA aktiviert haben. |
+| Wert       | Name               | Details                                        |
+| ---------- | ------------------ | ---------------------------------------------- |
+| `NONE`     | Nicht erforderlich | Moderatoren können handeln, ohne 2FA zu haben. |
+| `ELEVATED` | Erforderlich       | Moderatoren müssen 2FA aktiviert haben.        |
 
 ### Standardbenachrichtigungen {#DEFAULT_MESSAGE_NOTIFICATIONS}
 
 Wie Mitglieder standardmäßig über Nachrichten benachrichtigt werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ALL_MESSAGES` | Alle Nachrichten | Benachrichtige bei jeder neuen Nachricht. |
-| `ONLY_MENTIONS` | Nur Nennungen | Benachrichtige nur bei Nennungen. |
+| Wert            | Name             | Details                                   |
+| --------------- | ---------------- | ----------------------------------------- |
+| `ALL_MESSAGES`  | Alle Nachrichten | Benachrichtige bei jeder neuen Nachricht. |
+| `ONLY_MENTIONS` | Nur Nennungen    | Benachrichtige nur bei Nennungen.         |
 
 ### Aktivitätstyp {#ACTIVITY_TYPE}
 
 Art der Bot-Status-Aktivität, die angezeigt werden soll.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PLAYING` | Spielend | "Spielt X". |
-| `STREAMING` | Streaming | "Streamt X" mit einer Twitch-/YouTube-URL. |
-| `LISTENING` | Hört | "Hört X". |
-| `WATCHING` | Schaut | "Schaut X". |
-| `CUSTOM` | Benutzerdefinierter Status | Benutzerdefinierter Status in freier Form. |
-| `COMPETING` | Wettkampf | "Nimmt an X teil". |
+| Wert        | Name                       | Details                                    |
+| ----------- | -------------------------- | ------------------------------------------ |
+| `PLAYING`   | Spielend                   | "Spielt X".                                |
+| `STREAMING` | Streaming                  | "Streamt X" mit einer Twitch-/YouTube-URL. |
+| `LISTENING` | Hört                       | "Hört X".                                  |
+| `WATCHING`  | Schaut                     | "Schaut X".                                |
+| `CUSTOM`    | Benutzerdefinierter Status | Benutzerdefinierter Status in freier Form. |
+| `COMPETING` | Wettkampf                  | "Nimmt an X teil".                         |
 
 ### Präsenzstatus {#PRESENCE_STATUS}
 
 Online-Status des Bots.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ONLINE` | Online | Wird als online angezeigt. |
-| `IDLE` | Inaktiv | Wird als inaktiv angezeigt (weg). |
-| `DND` | Bitte nicht stören | Wird als bitte nicht stören angezeigt. |
-| `INVISIBLE` | Unsichtbar | Erscheint für andere Benutzer als offline. |
-| `OFFLINE` | Offline | Der Benutzer ist offline. |
+| Wert        | Name               | Details                                    |
+| ----------- | ------------------ | ------------------------------------------ |
+| `ONLINE`    | Online             | Wird als online angezeigt.                 |
+| `IDLE`      | Inaktiv            | Wird als inaktiv angezeigt (weg).          |
+| `DND`       | Bitte nicht stören | Wird als bitte nicht stören angezeigt.     |
+| `INVISIBLE` | Unsichtbar         | Erscheint für andere Benutzer als offline. |
+| `OFFLINE`   | Offline            | Der Benutzer ist offline.                  |
 
 ### Ereignis-Datenschutz {#SCHEDULED_EVENT_PRIVACY_LEVEL}
 
 Wer kann ein geplantes Ereignis sehen.
 
-| Wert | Name | Details |
-| --- | --- | --- |
+| Wert         | Name       | Details                             |
+| ------------ | ---------- | ----------------------------------- |
 | `GUILD_ONLY` | Nur Server | Sichtbar nur für Server-Mitglieder. |
 
 ### Ereignis-Ortstyp {#SCHEDULED_EVENT_ENTITY_TYPE}
 
 Wo ein geplantes Ereignis stattfindet.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `STAGE_INSTANCE` | Stage | In einem Stage-Kanal. |
-| `VOICE` | Sprachkanal | In einem Sprachkanal. |
-| `EXTERNAL` | Extern | An einem benutzerdefinierten externen Ort. |
+| Wert             | Name        | Details                                    |
+| ---------------- | ----------- | ------------------------------------------ |
+| `STAGE_INSTANCE` | Stage       | In einem Stage-Kanal.                      |
+| `VOICE`          | Sprachkanal | In einem Sprachkanal.                      |
+| `EXTERNAL`       | Extern      | An einem benutzerdefinierten externen Ort. |
 
 ### Ereignis-Status {#SCHEDULED_EVENT_STATUS}
 
 Aktueller Status eines geplanten Ereignisses.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `SCHEDULED` | Geplant | Das Ereignis hat noch nicht begonnen. |
-| `ACTIVE` | Aktiv | Das Ereignis läuft derzeit. |
-| `COMPLETED` | Abgeschlossen | Das Ereignis ist beendet. |
-| `CANCELED` | Abgebrochen | Das Ereignis wurde abgebrochen. |
+| Wert        | Name          | Details                               |
+| ----------- | ------------- | ------------------------------------- |
+| `SCHEDULED` | Geplant       | Das Ereignis hat noch nicht begonnen. |
+| `ACTIVE`    | Aktiv         | Das Ereignis läuft derzeit.           |
+| `COMPLETED` | Abgeschlossen | Das Ereignis ist beendet.             |
+| `CANCELED`  | Abgebrochen   | Das Ereignis wurde abgebrochen.       |
 
 ### AutoMod-Ereignis {#AUTOMOD_RULE_EVENT_TYPE}
 
 Welches Ereignis eine AutoMod-Regel abhört.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `MESSAGE_SEND` | Nachricht senden | Wird ausgelöst, wenn eine Nachricht gesendet wird. |
+| Wert            | Name                    | Details                                                      |
+| --------------- | ----------------------- | ------------------------------------------------------------ |
+| `MESSAGE_SEND`  | Nachricht senden        | Wird ausgelöst, wenn eine Nachricht gesendet wird.           |
 | `MEMBER_UPDATE` | Mitglied-Aktualisierung | Wird ausgelöst, wenn ein Mitgliederprofil aktualisiert wird. |
 
 ### AutoMod-Trigger {#AUTOMOD_RULE_TRIGGER_TYPE}
 
 Wie eine AutoMod-Regel entscheidet, ob sie auslöst.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `KEYWORD` | Schlüsselwort | Entspricht einer Liste von Schlüsselwörtern. |
-| `SPAM` | Spam | Discords eingebaute Spam-Erkennung. |
-| `KEYWORD_PRESET` | Schlüsselwort-Voreinstellung | Entspricht Discord-Schlüsselwort-Voreinstellungen. |
-| `MENTION_SPAM` | Nennung-Spam | Löst aus bei zu vielen Nennungen in einer Nachricht. |
-| `MEMBER_PROFILE` | Mitgliederprofil | Entspricht Mitgliederprofilinhalten. |
+| Wert             | Name                         | Details                                              |
+| ---------------- | ---------------------------- | ---------------------------------------------------- |
+| `KEYWORD`        | Schlüsselwort                | Entspricht einer Liste von Schlüsselwörtern.         |
+| `SPAM`           | Spam                         | Discords eingebaute Spam-Erkennung.                  |
+| `KEYWORD_PRESET` | Schlüsselwort-Voreinstellung | Entspricht Discord-Schlüsselwort-Voreinstellungen.   |
+| `MENTION_SPAM`   | Nennung-Spam                 | Löst aus bei zu vielen Nennungen in einer Nachricht. |
+| `MEMBER_PROFILE` | Mitgliederprofil             | Entspricht Mitgliederprofilinhalten.                 |
 
 ### Stage-Datenschutz {#STAGE_PRIVACY_LEVEL}
 
 Wer kann einer Stage-Instanz beitreten.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PUBLIC` | Öffentlich | Offen für alle (von Discord veraltet). |
-| `GUILD_ONLY` | Nur Server | Nur für Server-Mitglieder zugänglich. |
+| Wert         | Name       | Details                                |
+| ------------ | ---------- | -------------------------------------- |
+| `PUBLIC`     | Öffentlich | Offen für alle (von Discord veraltet). |
+| `GUILD_ONLY` | Nur Server | Nur für Server-Mitglieder zugänglich.  |
 
 ### Nachricht-Übereinstimmung {#MESSAGE_MATCH_TYPE}
 
 Wie der Nachrichtenerstellungs-Trigger eine Nachricht abgleicht.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ANY` | Jede Nachricht | Löst bei jeder Nachricht aus. |
-| `CONTAINS` | Enthält | Löst aus, wenn die Nachricht das Muster enthält. |
-| `EQUALS` | Gleich | Löst aus, wenn die Nachricht genau dem Muster entspricht. |
-| `STARTS_WITH` | Beginnt mit | Löst aus, wenn die Nachricht mit dem Muster beginnt. |
-| `ENDS_WITH` | Endet mit | Löst aus, wenn die Nachricht mit dem Muster endet. |
-| `REGEX` | Regex | Löst aus, wenn die Nachricht dem Regex entspricht. |
+| Wert          | Name           | Details                                                   |
+| ------------- | -------------- | --------------------------------------------------------- |
+| `ANY`         | Jede Nachricht | Löst bei jeder Nachricht aus.                             |
+| `CONTAINS`    | Enthält        | Löst aus, wenn die Nachricht das Muster enthält.          |
+| `EQUALS`      | Gleich         | Löst aus, wenn die Nachricht genau dem Muster entspricht. |
+| `STARTS_WITH` | Beginnt mit    | Löst aus, wenn die Nachricht mit dem Muster beginnt.      |
+| `ENDS_WITH`   | Endet mit      | Löst aus, wenn die Nachricht mit dem Muster endet.        |
+| `REGEX`       | Regex          | Löst aus, wenn die Nachricht dem Regex entspricht.        |
 
 ### Audit-Log-Ereignis {#AUDIT_LOG_EVENT}
 
 Eine spezifische Art von Audit-Log-Eintrag.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GUILD_UPDATE` | Server aktualisiert | Server-Einstellungen wurden geändert. |
-| `CHANNEL_CREATE` | Kanal erstellt | Ein Kanal wurde erstellt. |
-| `CHANNEL_UPDATE` | Kanal aktualisiert | Ein Kanal wurde aktualisiert. |
-| `CHANNEL_DELETE` | Kanal gelöscht | Ein Kanal wurde gelöscht. |
-| `CHANNEL_OVERWRITE_CREATE` | Berechtigungsüberschreibung erstellt | Eine Berechtigungsüberschreibung für einen Kanal wurde hinzugefügt. |
-| `CHANNEL_OVERWRITE_UPDATE` | Berechtigungsüberschreibung aktualisiert | Eine Berechtigungsüberschreibung für einen Kanal wurde aktualisiert. |
-| `CHANNEL_OVERWRITE_DELETE` | Berechtigungsüberschreibung gelöscht | Eine Berechtigungsüberschreibung für einen Kanal wurde entfernt. |
-| `MEMBER_KICK` | Mitglied gekickt | Ein Mitglied wurde gekickt. |
-| `MEMBER_PRUNE` | Mitglieder entfernt | Inaktive Mitglieder wurden entfernt. |
-| `MEMBER_BAN_ADD` | Mitglied gebannt | Ein Mitglied wurde gebannt. |
-| `MEMBER_BAN_REMOVE` | Mitglied entbannt | Ein Mitglied wurde entbannt. |
-| `MEMBER_UPDATE` | Mitglied aktualisiert | Ein Mitgliederprofil wurde aktualisiert. |
-| `MEMBER_ROLE_UPDATE` | Mitgliedsrollen aktualisiert | Die Rollen eines Mitglieds wurden geändert. |
-| `MEMBER_MOVE` | Mitglied verschoben | Ein Mitglied wurde zwischen Sprachkanälen verschoben. |
-| `MEMBER_DISCONNECT` | Mitglied getrennt | Ein Mitglied wurde von Voice getrennt. |
-| `BOT_ADD` | Bot hinzugefügt | Ein Bot wurde zum Server hinzugefügt. |
-| `ROLE_CREATE` | Rolle erstellt | Eine Rolle wurde erstellt. |
-| `ROLE_UPDATE` | Rolle aktualisiert | Eine Rolle wurde aktualisiert. |
-| `ROLE_DELETE` | Rolle gelöscht | Eine Rolle wurde gelöscht. |
-| `INVITE_CREATE` | Einladung erstellt | Eine Einladung wurde erstellt. |
-| `INVITE_UPDATE` | Einladung aktualisiert | Eine Einladung wurde aktualisiert. |
-| `INVITE_DELETE` | Einladung gelöscht | Eine Einladung wurde gelöscht. |
-| `WEBHOOK_CREATE` | Webhook erstellt | Ein Webhook wurde erstellt. |
-| `WEBHOOK_UPDATE` | Webhook aktualisiert | Ein Webhook wurde aktualisiert. |
-| `WEBHOOK_DELETE` | Webhook gelöscht | Ein Webhook wurde gelöscht. |
-| `EMOJI_CREATE` | Emoji erstellt | Ein Emoji wurde hochgeladen. |
-| `EMOJI_UPDATE` | Emoji aktualisiert | Ein Emoji wurde umbenannt. |
-| `EMOJI_DELETE` | Emoji gelöscht | Ein Emoji wurde gelöscht. |
-| `MESSAGE_DELETE` | Nachricht gelöscht | Eine Nachricht wurde von einem Moderator gelöscht. |
-| `MESSAGE_BULK_DELETE` | Nachrichten massenhaft gelöscht | Nachrichten wurden massenhaft gelöscht. |
-| `MESSAGE_PIN` | Nachricht angeheftet | Eine Nachricht wurde angeheftet. |
-| `MESSAGE_UNPIN` | Nachricht losgeheftet | Eine Nachricht wurde losgeheftet. |
-| `INTEGRATION_CREATE` | Integration erstellt | Eine Integration wurde hinzugefügt. |
-| `INTEGRATION_UPDATE` | Integration aktualisiert | Eine Integration wurde aktualisiert. |
-| `INTEGRATION_DELETE` | Integration gelöscht | Eine Integration wurde entfernt. |
-| `STAGE_INSTANCE_CREATE` | Stage gestartet | Eine Stage-Instanz wurde gestartet. |
-| `STAGE_INSTANCE_UPDATE` | Stage aktualisiert | Eine Stage-Instanz wurde aktualisiert. |
-| `STAGE_INSTANCE_DELETE` | Stage beendet | Eine Stage-Instanz wurde beendet. |
-| `STICKER_CREATE` | Sticker erstellt | Ein Sticker wurde hochgeladen. |
-| `STICKER_UPDATE` | Sticker aktualisiert | Ein Sticker wurde aktualisiert. |
-| `STICKER_DELETE` | Sticker gelöscht | Ein Sticker wurde gelöscht. |
-| `GUILD_SCHEDULED_EVENT_CREATE` | Ereignis erstellt | Ein geplantes Ereignis wurde erstellt. |
-| `GUILD_SCHEDULED_EVENT_UPDATE` | Ereignis aktualisiert | Ein geplantes Ereignis wurde aktualisiert. |
-| `GUILD_SCHEDULED_EVENT_DELETE` | Ereignis gelöscht | Ein geplantes Ereignis wurde gelöscht. |
-| `THREAD_CREATE` | Thread erstellt | Ein Thread wurde erstellt. |
-| `THREAD_UPDATE` | Thread aktualisiert | Ein Thread wurde aktualisiert. |
-| `THREAD_DELETE` | Thread gelöscht | Ein Thread wurde gelöscht. |
-| `AUTO_MODERATION_RULE_CREATE` | AutoMod-Regel erstellt | Eine AutoMod-Regel wurde erstellt. |
-| `AUTO_MODERATION_RULE_UPDATE` | AutoMod-Regel aktualisiert | Eine AutoMod-Regel wurde aktualisiert. |
-| `AUTO_MODERATION_RULE_DELETE` | AutoMod-Regel gelöscht | Eine AutoMod-Regel wurde gelöscht. |
-| `AUTO_MODERATION_BLOCK_MESSAGE` | AutoMod blockierte Nachricht | AutoMod blockierte eine Nachricht. |
-| `AUTO_MODERATION_FLAG_TO_CHANNEL` | AutoMod meldete Nachricht | AutoMod meldete eine Nachricht an den Meldekanal. |
-| `AUTO_MODERATION_USER_COMMUNICATION_DISABLED` | AutoMod hat Mitglied in Auszeit versetzt | AutoMod versetzte ein Mitglied in einen Timeout. |
-| `AUTO_MODERATION_QUARANTINE_USER` | AutoMod stellte Mitglied unter Quarantäne | AutoMod stellte ein Mitglied unter Quarantäne. |
-| `APPLICATION_COMMAND_PERMISSION_UPDATE` | Befehlsberechtigungen geändert | Jemand änderte, wer einen Anwendungsbefehl nutzen darf. |
-| `SOUNDBOARD_SOUND_CREATE` | Soundboard-Sound erstellt | Jemand fügte einen Soundboard-Sound hinzu. |
-| `SOUNDBOARD_SOUND_UPDATE` | Soundboard-Sound geändert | Jemand änderte einen Soundboard-Sound. |
-| `SOUNDBOARD_SOUND_DELETE` | Soundboard-Sound gelöscht | Jemand entfernte einen Soundboard-Sound. |
-| `CREATOR_MONETIZATION_REQUEST_CREATED` | Monetarisierung beantragt | Jemand beantragte die Creator-Monetarisierung. |
-| `CREATOR_MONETIZATION_TERMS_ACCEPTED` | Monetarisierungsbedingungen akzeptiert | Jemand akzeptierte die Bedingungen der Creator-Monetarisierung. |
-| `ONBOARDING_PROMPT_CREATE` | Onboarding-Frage erstellt | Jemand fügte dem Onboarding eine Frage hinzu. |
-| `ONBOARDING_PROMPT_UPDATE` | Onboarding-Frage geändert | Jemand änderte eine Onboarding-Frage. |
-| `ONBOARDING_PROMPT_DELETE` | Onboarding-Frage gelöscht | Jemand entfernte eine Onboarding-Frage. |
-| `ONBOARDING_CREATE` | Onboarding eingerichtet | Jemand richtete das Onboarding für den Server ein. |
-| `ONBOARDING_UPDATE` | Onboarding geändert | Jemand änderte die Onboarding-Einstellungen des Servers. |
-| `HOME_SETTINGS_CREATE` | Server-Guide eingerichtet | Jemand richtete den Server-Guide ein. |
-| `HOME_SETTINGS_UPDATE` | Server-Guide geändert | Jemand änderte den Server-Guide. |
+| Wert                                          | Name                                      | Details                                                              |
+| --------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------- |
+| `GUILD_UPDATE`                                | Server aktualisiert                       | Server-Einstellungen wurden geändert.                                |
+| `CHANNEL_CREATE`                              | Kanal erstellt                            | Ein Kanal wurde erstellt.                                            |
+| `CHANNEL_UPDATE`                              | Kanal aktualisiert                        | Ein Kanal wurde aktualisiert.                                        |
+| `CHANNEL_DELETE`                              | Kanal gelöscht                            | Ein Kanal wurde gelöscht.                                            |
+| `CHANNEL_OVERWRITE_CREATE`                    | Berechtigungsüberschreibung erstellt      | Eine Berechtigungsüberschreibung für einen Kanal wurde hinzugefügt.  |
+| `CHANNEL_OVERWRITE_UPDATE`                    | Berechtigungsüberschreibung aktualisiert  | Eine Berechtigungsüberschreibung für einen Kanal wurde aktualisiert. |
+| `CHANNEL_OVERWRITE_DELETE`                    | Berechtigungsüberschreibung gelöscht      | Eine Berechtigungsüberschreibung für einen Kanal wurde entfernt.     |
+| `MEMBER_KICK`                                 | Mitglied gekickt                          | Ein Mitglied wurde gekickt.                                          |
+| `MEMBER_PRUNE`                                | Mitglieder entfernt                       | Inaktive Mitglieder wurden entfernt.                                 |
+| `MEMBER_BAN_ADD`                              | Mitglied gebannt                          | Ein Mitglied wurde gebannt.                                          |
+| `MEMBER_BAN_REMOVE`                           | Mitglied entbannt                         | Ein Mitglied wurde entbannt.                                         |
+| `MEMBER_UPDATE`                               | Mitglied aktualisiert                     | Ein Mitgliederprofil wurde aktualisiert.                             |
+| `MEMBER_ROLE_UPDATE`                          | Mitgliedsrollen aktualisiert              | Die Rollen eines Mitglieds wurden geändert.                          |
+| `MEMBER_MOVE`                                 | Mitglied verschoben                       | Ein Mitglied wurde zwischen Sprachkanälen verschoben.                |
+| `MEMBER_DISCONNECT`                           | Mitglied getrennt                         | Ein Mitglied wurde von Voice getrennt.                               |
+| `BOT_ADD`                                     | Bot hinzugefügt                           | Ein Bot wurde zum Server hinzugefügt.                                |
+| `ROLE_CREATE`                                 | Rolle erstellt                            | Eine Rolle wurde erstellt.                                           |
+| `ROLE_UPDATE`                                 | Rolle aktualisiert                        | Eine Rolle wurde aktualisiert.                                       |
+| `ROLE_DELETE`                                 | Rolle gelöscht                            | Eine Rolle wurde gelöscht.                                           |
+| `INVITE_CREATE`                               | Einladung erstellt                        | Eine Einladung wurde erstellt.                                       |
+| `INVITE_UPDATE`                               | Einladung aktualisiert                    | Eine Einladung wurde aktualisiert.                                   |
+| `INVITE_DELETE`                               | Einladung gelöscht                        | Eine Einladung wurde gelöscht.                                       |
+| `WEBHOOK_CREATE`                              | Webhook erstellt                          | Ein Webhook wurde erstellt.                                          |
+| `WEBHOOK_UPDATE`                              | Webhook aktualisiert                      | Ein Webhook wurde aktualisiert.                                      |
+| `WEBHOOK_DELETE`                              | Webhook gelöscht                          | Ein Webhook wurde gelöscht.                                          |
+| `EMOJI_CREATE`                                | Emoji erstellt                            | Ein Emoji wurde hochgeladen.                                         |
+| `EMOJI_UPDATE`                                | Emoji aktualisiert                        | Ein Emoji wurde umbenannt.                                           |
+| `EMOJI_DELETE`                                | Emoji gelöscht                            | Ein Emoji wurde gelöscht.                                            |
+| `MESSAGE_DELETE`                              | Nachricht gelöscht                        | Eine Nachricht wurde von einem Moderator gelöscht.                   |
+| `MESSAGE_BULK_DELETE`                         | Nachrichten massenhaft gelöscht           | Nachrichten wurden massenhaft gelöscht.                              |
+| `MESSAGE_PIN`                                 | Nachricht angeheftet                      | Eine Nachricht wurde angeheftet.                                     |
+| `MESSAGE_UNPIN`                               | Nachricht losgeheftet                     | Eine Nachricht wurde losgeheftet.                                    |
+| `INTEGRATION_CREATE`                          | Integration erstellt                      | Eine Integration wurde hinzugefügt.                                  |
+| `INTEGRATION_UPDATE`                          | Integration aktualisiert                  | Eine Integration wurde aktualisiert.                                 |
+| `INTEGRATION_DELETE`                          | Integration gelöscht                      | Eine Integration wurde entfernt.                                     |
+| `STAGE_INSTANCE_CREATE`                       | Stage gestartet                           | Eine Stage-Instanz wurde gestartet.                                  |
+| `STAGE_INSTANCE_UPDATE`                       | Stage aktualisiert                        | Eine Stage-Instanz wurde aktualisiert.                               |
+| `STAGE_INSTANCE_DELETE`                       | Stage beendet                             | Eine Stage-Instanz wurde beendet.                                    |
+| `STICKER_CREATE`                              | Sticker erstellt                          | Ein Sticker wurde hochgeladen.                                       |
+| `STICKER_UPDATE`                              | Sticker aktualisiert                      | Ein Sticker wurde aktualisiert.                                      |
+| `STICKER_DELETE`                              | Sticker gelöscht                          | Ein Sticker wurde gelöscht.                                          |
+| `GUILD_SCHEDULED_EVENT_CREATE`                | Ereignis erstellt                         | Ein geplantes Ereignis wurde erstellt.                               |
+| `GUILD_SCHEDULED_EVENT_UPDATE`                | Ereignis aktualisiert                     | Ein geplantes Ereignis wurde aktualisiert.                           |
+| `GUILD_SCHEDULED_EVENT_DELETE`                | Ereignis gelöscht                         | Ein geplantes Ereignis wurde gelöscht.                               |
+| `THREAD_CREATE`                               | Thread erstellt                           | Ein Thread wurde erstellt.                                           |
+| `THREAD_UPDATE`                               | Thread aktualisiert                       | Ein Thread wurde aktualisiert.                                       |
+| `THREAD_DELETE`                               | Thread gelöscht                           | Ein Thread wurde gelöscht.                                           |
+| `AUTO_MODERATION_RULE_CREATE`                 | AutoMod-Regel erstellt                    | Eine AutoMod-Regel wurde erstellt.                                   |
+| `AUTO_MODERATION_RULE_UPDATE`                 | AutoMod-Regel aktualisiert                | Eine AutoMod-Regel wurde aktualisiert.                               |
+| `AUTO_MODERATION_RULE_DELETE`                 | AutoMod-Regel gelöscht                    | Eine AutoMod-Regel wurde gelöscht.                                   |
+| `AUTO_MODERATION_BLOCK_MESSAGE`               | AutoMod blockierte Nachricht              | AutoMod blockierte eine Nachricht.                                   |
+| `AUTO_MODERATION_FLAG_TO_CHANNEL`             | AutoMod meldete Nachricht                 | AutoMod meldete eine Nachricht an den Meldekanal.                    |
+| `AUTO_MODERATION_USER_COMMUNICATION_DISABLED` | AutoMod hat Mitglied in Auszeit versetzt  | AutoMod versetzte ein Mitglied in einen Timeout.                     |
+| `AUTO_MODERATION_QUARANTINE_USER`             | AutoMod stellte Mitglied unter Quarantäne | AutoMod stellte ein Mitglied unter Quarantäne.                       |
+| `APPLICATION_COMMAND_PERMISSION_UPDATE`       | Befehlsberechtigungen geändert            | Jemand änderte, wer einen Anwendungsbefehl nutzen darf.              |
+| `SOUNDBOARD_SOUND_CREATE`                     | Soundboard-Sound erstellt                 | Jemand fügte einen Soundboard-Sound hinzu.                           |
+| `SOUNDBOARD_SOUND_UPDATE`                     | Soundboard-Sound geändert                 | Jemand änderte einen Soundboard-Sound.                               |
+| `SOUNDBOARD_SOUND_DELETE`                     | Soundboard-Sound gelöscht                 | Jemand entfernte einen Soundboard-Sound.                             |
+| `CREATOR_MONETIZATION_REQUEST_CREATED`        | Monetarisierung beantragt                 | Jemand beantragte die Creator-Monetarisierung.                       |
+| `CREATOR_MONETIZATION_TERMS_ACCEPTED`         | Monetarisierungsbedingungen akzeptiert    | Jemand akzeptierte die Bedingungen der Creator-Monetarisierung.      |
+| `ONBOARDING_PROMPT_CREATE`                    | Onboarding-Frage erstellt                 | Jemand fügte dem Onboarding eine Frage hinzu.                        |
+| `ONBOARDING_PROMPT_UPDATE`                    | Onboarding-Frage geändert                 | Jemand änderte eine Onboarding-Frage.                                |
+| `ONBOARDING_PROMPT_DELETE`                    | Onboarding-Frage gelöscht                 | Jemand entfernte eine Onboarding-Frage.                              |
+| `ONBOARDING_CREATE`                           | Onboarding eingerichtet                   | Jemand richtete das Onboarding für den Server ein.                   |
+| `ONBOARDING_UPDATE`                           | Onboarding geändert                       | Jemand änderte die Onboarding-Einstellungen des Servers.             |
+| `HOME_SETTINGS_CREATE`                        | Server-Guide eingerichtet                 | Jemand richtete den Server-Guide ein.                                |
+| `HOME_SETTINGS_UPDATE`                        | Server-Guide geändert                     | Jemand änderte den Server-Guide.                                     |
 
 ### Zieltyp der Überschreibung {#OVERWRITE_TYPE}
 
 Ob eine Berechtigungsüberschreibung auf eine Rolle oder ein bestimmtes Server-Mitglied angewendet wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ROLE` | Rolle | Die Überschreibung gilt für eine Rolle. |
+| Wert     | Name     | Details                                                    |
+| -------- | -------- | ---------------------------------------------------------- |
+| `ROLE`   | Rolle    | Die Überschreibung gilt für eine Rolle.                    |
 | `MEMBER` | Mitglied | Die Überschreibung gilt für ein einzelnes Server-Mitglied. |
 
 ### Erwähnungsart {#MENTION_KIND}
 
 Ob eine Discord-Erwähnung einen Benutzer, eine Rolle oder einen Kanal betrifft.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `USER` | Benutzer | Eine Benutzererwähnung (&lt;@id&gt; oder &lt;@!id&gt;). |
-| `ROLE` | Rolle | Eine Rollenerwhnung (&lt;@&id&gt;). |
-| `CHANNEL` | Kanal | Eine Kanalerwhnung (&lt;#id&gt;). |
+| Wert      | Name     | Details                                                 |
+| --------- | -------- | ------------------------------------------------------- |
+| `USER`    | Benutzer | Eine Benutzererwähnung (&lt;@id&gt; oder &lt;@!id&gt;). |
+| `ROLE`    | Rolle    | Eine Rollenerwhnung (&lt;@&id&gt;).                     |
+| `CHANNEL` | Kanal    | Eine Kanalerwhnung (&lt;#id&gt;).                       |
 
 ### Videoqualitätsmodus {#VIDEO_QUALITY_MODE}
 
 Kameravideoqualiätsmodus für einen Sprachkanal.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `AUTO` | Automatisch | Discord wählt die optimale Videoqualität automatisch aus. |
-| `FULL` | Vollständig (720p) | Erzwinge eine konstante Videoqualität von 720p. |
+| Wert   | Name               | Details                                                   |
+| ------ | ------------------ | --------------------------------------------------------- |
+| `AUTO` | Automatisch        | Discord wählt die optimale Videoqualität automatisch aus. |
+| `FULL` | Vollständig (720p) | Erzwinge eine konstante Videoqualität von 720p.           |
 
 ### Sortierreihenfolge {#SORT_ORDER_TYPE}
 
 Standardsortierung für Beiträge in einem Forum- oder Medienkanal.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `LATEST_ACTIVITY` | Letzte Aktivität | Sortiere Beiträge nach der letzten Aktivität. |
-| `CREATION_DATE` | Erstellungsdatum | Sortiere Beiträge nach ihrem Erstellungsdatum. |
+| Wert              | Name             | Details                                        |
+| ----------------- | ---------------- | ---------------------------------------------- |
+| `LATEST_ACTIVITY` | Letzte Aktivität | Sortiere Beiträge nach der letzten Aktivität.  |
+| `CREATION_DATE`   | Erstellungsdatum | Sortiere Beiträge nach ihrem Erstellungsdatum. |
 
 ### Forum-Layout {#FORUM_LAYOUT_TYPE}
 
 Standard-Layout für die Anzeige von Beiträgen in einem Forumkanal.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `NOT_SET` | Nicht festgelegt | Lass Discord das Standard-Layout wählen. |
-| `LIST_VIEW` | Listenansicht | Zeige Beiträge als kompakte Liste an. |
-| `GALLERY_VIEW` | Galerieansicht | Zeige Beiträge als Gitter von Medienkacheln an. |
+| Wert           | Name             | Details                                         |
+| -------------- | ---------------- | ----------------------------------------------- |
+| `NOT_SET`      | Nicht festgelegt | Lass Discord das Standard-Layout wählen.        |
+| `LIST_VIEW`    | Listenansicht    | Zeige Beiträge als kompakte Liste an.           |
+| `GALLERY_VIEW` | Galerieansicht   | Zeige Beiträge als Gitter von Medienkacheln an. |
 
 ### Automatische Archivierungsdauer {#AUTO_ARCHIVE_DURATION}
 
 Wie lange ohne Aktivität Threads automatisch archiviert werden (in Minuten).
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `60` | 1 Stunde | Archiviere Threads nach einer Stunde Inaktivität. |
-| `1440` | 1 Tag | Archiviere Threads nach 24 Stunden Inaktivität. |
-| `4320` | 3 Tage | Archiviere Threads nach 3 Tagen Inaktivität. |
-| `10080` | 1 Woche | Archiviere Threads nach 7 Tagen Inaktivität. |
+| Wert    | Name     | Details                                           |
+| ------- | -------- | ------------------------------------------------- |
+| `60`    | 1 Stunde | Archiviere Threads nach einer Stunde Inaktivität. |
+| `1440`  | 1 Tag    | Archiviere Threads nach 24 Stunden Inaktivität.   |
+| `4320`  | 3 Tage   | Archiviere Threads nach 3 Tagen Inaktivität.      |
+| `10080` | 1 Woche  | Archiviere Threads nach 7 Tagen Inaktivität.      |
 
 ### Kanal-Flag {#CHANNEL_FLAG}
 
 Bit-Flags, die einzelne Kanalfunktionen umschalten.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PINNED` | Angeheftet | Der Thread ist oben in seinem übergeordneten Forum angeheftet. |
-| `REQUIRE_TAG` | Tag erforderlich | Beiträge in diesem Forum müssen mindestens ein Tag enthalten. |
-| `HIDE_MEDIA_DOWNLOAD_OPTIONS` | Download-Optionen ausblenden | Blende Download-Optionen für Embeds in diesem Kanal aus. |
+| Wert                          | Name                         | Details                                                        |
+| ----------------------------- | ---------------------------- | -------------------------------------------------------------- |
+| `PINNED`                      | Angeheftet                   | Der Thread ist oben in seinem übergeordneten Forum angeheftet. |
+| `REQUIRE_TAG`                 | Tag erforderlich             | Beiträge in diesem Forum müssen mindestens ein Tag enthalten.  |
+| `HIDE_MEDIA_DOWNLOAD_OPTIONS` | Download-Optionen ausblenden | Blende Download-Optionen für Embeds in diesem Kanal aus.       |
 
 ### System-Kanal-Flag {#GUILD_SYSTEM_CHANNEL_FLAG}
 
 Ein Flag, das kontrolliert, welche Systemnachrichten im System-Kanal eines Servers unterdrückt werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `SUPPRESS_JOIN_NOTIFICATIONS` | Beitrittsmitteilungen unterdrücken | Blende Mitgliedsbeitrittsmeldungen im System-Kanal aus. |
-| `SUPPRESS_PREMIUM_SUBSCRIPTIONS` | Premium-Abos unterdrücken | Blende Server-Boost-Meldungen im System-Kanal aus. |
-| `SUPPRESS_GUILD_REMINDER_NOTIFICATIONS` | Server-Erinnerungen unterdrücken | Blende Server-Setup-Tipps im System-Kanal aus. |
-| `SUPPRESS_JOIN_NOTIFICATION_REPLIES` | Beitrittsmitteilungs-Sticker unterdrücken | Blende die Wink-Sticker-Antwort in Beitrittsmeldungen aus. |
-| `SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS` | Rollenkauf-Mitteilungen unterdrücken | Blende Benachrichtigungen über Rollenkäufe im System-Kanal aus. |
-| `SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES` | Rollenkauf-Antworten unterdrücken | Blende Antworteingabeaufforderungen bei Rollenkauf-Benachrichtigungen aus. |
+| Wert                                                       | Name                                      | Details                                                                    |
+| ---------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------------------- |
+| `SUPPRESS_JOIN_NOTIFICATIONS`                              | Beitrittsmitteilungen unterdrücken        | Blende Mitgliedsbeitrittsmeldungen im System-Kanal aus.                    |
+| `SUPPRESS_PREMIUM_SUBSCRIPTIONS`                           | Premium-Abos unterdrücken                 | Blende Server-Boost-Meldungen im System-Kanal aus.                         |
+| `SUPPRESS_GUILD_REMINDER_NOTIFICATIONS`                    | Server-Erinnerungen unterdrücken          | Blende Server-Setup-Tipps im System-Kanal aus.                             |
+| `SUPPRESS_JOIN_NOTIFICATION_REPLIES`                       | Beitrittsmitteilungs-Sticker unterdrücken | Blende die Wink-Sticker-Antwort in Beitrittsmeldungen aus.                 |
+| `SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS`        | Rollenkauf-Mitteilungen unterdrücken      | Blende Benachrichtigungen über Rollenkäufe im System-Kanal aus.            |
+| `SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES` | Rollenkauf-Antworten unterdrücken         | Blende Antworteingabeaufforderungen bei Rollenkauf-Benachrichtigungen aus. |
 
 ### AutoMod-Aktionstyp {#AUTOMOD_ACTION_TYPE}
 
 Die Art der Aktion, die AutoMod ausführt, wenn eine Regel ausgelöst wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `BLOCK_MESSAGE` | Nachricht blockieren | Blockiere die problematische Nachricht und zeige dem Autor optional eine benutzerdefinierte Nachricht an. |
-| `SEND_ALERT_MESSAGE` | Alert-Nachricht senden | Sende eine Warnung über den Trigger an einen angegebenen Kanal. |
-| `TIMEOUT` | Mitglied Timeout | Zeit das Mitglied für eine angegebene Dauer aus. |
-| `BLOCK_MEMBER_INTERACTION` | Mitglied-Interaktion blockieren | Verhindere, dass das Mitglied mit anderen interagiert, bis es die Nachricht bearbeitet oder löscht. |
+| Wert                       | Name                            | Details                                                                                                   |
+| -------------------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `BLOCK_MESSAGE`            | Nachricht blockieren            | Blockiere die problematische Nachricht und zeige dem Autor optional eine benutzerdefinierte Nachricht an. |
+| `SEND_ALERT_MESSAGE`       | Alert-Nachricht senden          | Sende eine Warnung über den Trigger an einen angegebenen Kanal.                                           |
+| `TIMEOUT`                  | Mitglied Timeout                | Zeit das Mitglied für eine angegebene Dauer aus.                                                          |
+| `BLOCK_MEMBER_INTERACTION` | Mitglied-Interaktion blockieren | Verhindere, dass das Mitglied mit anderen interagiert, bis es die Nachricht bearbeitet oder löscht.       |
 
 ### AutoMod-Schlüsselwortvoreinstellung {#AUTOMOD_KEYWORD_PRESET_TYPE}
 
 Discord verwaltete Wortlisten, die von Schlüsselwortvoreinstellungs-Triggern verwendet werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PROFANITY` | Fluchwörter | Wörter, die als Fluchen oder Schimpfwörter gelten. |
-| `SEXUAL_CONTENT` | Sexuelle Inhalte | Wörter, die sich auf sexuell eindeutige Verhaltensweisen oder Aktivitäten beziehen. |
-| `SLURS` | Beleidigungen | Persönliche Beleidigungen oder Wörter, die als diskriminierende Beleidigungen verwendet werden. |
+| Wert             | Name             | Details                                                                                         |
+| ---------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+| `PROFANITY`      | Fluchwörter      | Wörter, die als Fluchen oder Schimpfwörter gelten.                                              |
+| `SEXUAL_CONTENT` | Sexuelle Inhalte | Wörter, die sich auf sexuell eindeutige Verhaltensweisen oder Aktivitäten beziehen.             |
+| `SLURS`          | Beleidigungen    | Persönliche Beleidigungen oder Wörter, die als diskriminierende Beleidigungen verwendet werden. |
 
 ### Anwendungsbefehlstyp {#APPLICATION_COMMAND_TYPE}
 
 Der Typ eines Anwendungsbefehls (Slash, Benutzer-Kontext, Nachricht-Kontext oder primärer Einstiegspunkt).
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `CHAT_INPUT` | Slash-Befehl | Ein Standard-Chat-Input Slash-Befehl. |
-| `USER` | Benutzer-Kontextmenü | Ein Kontextmenü-Befehl für Benutzer. |
-| `MESSAGE` | Nachricht-Kontextmenü | Ein Nachricht-zielgerichtetes Kontextmenü-Befehl. |
+| Wert                  | Name                    | Details                                               |
+| --------------------- | ----------------------- | ----------------------------------------------------- |
+| `CHAT_INPUT`          | Slash-Befehl            | Ein Standard-Chat-Input Slash-Befehl.                 |
+| `USER`                | Benutzer-Kontextmenü    | Ein Kontextmenü-Befehl für Benutzer.                  |
+| `MESSAGE`             | Nachricht-Kontextmenü   | Ein Nachricht-zielgerichtetes Kontextmenü-Befehl.     |
 | `PRIMARY_ENTRY_POINT` | Primärer Einstiegspunkt | Der primäre Launch-Einstiegspunkt für eine Aktivität. |
 
 ### Slash-Befehl-Optionstyp {#APPLICATION_COMMAND_OPTION_TYPE}
 
 Der Datentyp einer Slash-Befehl-Option.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `SUB_COMMAND` | Unterbefehl | Ein verschachtelter Unterbefehl. |
-| `SUB_COMMAND_GROUP` | Unterbefehlsgruppe | Eine Gruppe von Unterbefehlen. |
-| `STRING` | Text | Texteingabe. |
-| `INTEGER` | Ganze Zahl | Eingabe einer ganzen Zahl. |
-| `BOOLEAN` | Ja/Nein | Ja/Nein-Eingabe. |
-| `USER` | Benutzer | Ein Discord-Benutzer. |
-| `MEMBER` | Server-Mitglied | Ein Servermitglied. Wird bei Discord als Benutzer-Option registriert, aber der Flow erhält immer ein geladenes Servermitglied (der Befehl schlägt fehl, wenn der gewählte Benutzer nicht auf dem Server ist). |
-| `CHANNEL` | Kanal | Ein Server-Kanal. |
-| `ROLE` | Rolle | Eine Server-Rolle. |
-| `MENTIONABLE` | Entweder Benutzer oder Rolle | Ein Benutzer oder eine Rolle. |
-| `NUMBER` | Dezimalzahl | Dezimalzahleingabe. |
-| `ATTACHMENT` | Dateianhang | Ein Dateianhang. |
+| Wert                | Name                         | Details                                                                                                                                                                                                       |
+| ------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `SUB_COMMAND`       | Unterbefehl                  | Ein verschachtelter Unterbefehl.                                                                                                                                                                              |
+| `SUB_COMMAND_GROUP` | Unterbefehlsgruppe           | Eine Gruppe von Unterbefehlen.                                                                                                                                                                                |
+| `STRING`            | Text                         | Texteingabe.                                                                                                                                                                                                  |
+| `INTEGER`           | Ganze Zahl                   | Eingabe einer ganzen Zahl.                                                                                                                                                                                    |
+| `BOOLEAN`           | Ja/Nein                      | Ja/Nein-Eingabe.                                                                                                                                                                                              |
+| `USER`              | Benutzer                     | Ein Discord-Benutzer.                                                                                                                                                                                         |
+| `MEMBER`            | Server-Mitglied              | Ein Servermitglied. Wird bei Discord als Benutzer-Option registriert, aber der Flow erhält immer ein geladenes Servermitglied (der Befehl schlägt fehl, wenn der gewählte Benutzer nicht auf dem Server ist). |
+| `CHANNEL`           | Kanal                        | Ein Server-Kanal.                                                                                                                                                                                             |
+| `ROLE`              | Rolle                        | Eine Server-Rolle.                                                                                                                                                                                            |
+| `MENTIONABLE`       | Entweder Benutzer oder Rolle | Ein Benutzer oder eine Rolle.                                                                                                                                                                                 |
+| `NUMBER`            | Dezimalzahl                  | Dezimalzahleingabe.                                                                                                                                                                                           |
+| `ATTACHMENT`        | Dateianhang                  | Ein Dateianhang.                                                                                                                                                                                              |
 
 ### Auswahlmenü-Typ {#SELECT_MENU_TYPE}
 
 Die Art der Auswahlmenü-Komponente.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `STRING` | Auswahlmenü | Ein Auswahlmenü mit benutzerdefinierten Optionen. |
-| `USER` | Benutzer-Auswahlmenü | Ein Auswahlmenü von Benutzern. |
-| `ROLE` | Rollen-Auswahlmenü | Ein Auswahlmenü von Rollen. |
-| `CHANNEL` | Kanal-Auswahlmenü | Ein Auswahlmenü für Kanäle. |
-| `MENTIONABLE` | Auswahlmenü für Benutzer oder Rollen | Ein Auswahlmenü für Benutzer und Rollen. |
+| Wert          | Name                                 | Details                                           |
+| ------------- | ------------------------------------ | ------------------------------------------------- |
+| `STRING`      | Auswahlmenü                          | Ein Auswahlmenü mit benutzerdefinierten Optionen. |
+| `USER`        | Benutzer-Auswahlmenü                 | Ein Auswahlmenü von Benutzern.                    |
+| `ROLE`        | Rollen-Auswahlmenü                   | Ein Auswahlmenü von Rollen.                       |
+| `CHANNEL`     | Kanal-Auswahlmenü                    | Ein Auswahlmenü für Kanäle.                       |
+| `MENTIONABLE` | Auswahlmenü für Benutzer oder Rollen | Ein Auswahlmenü für Benutzer und Rollen.          |
 
 ### Formularfeld-Typ {#MODAL_COMPONENT_TYPE}
 
 Die Art von Feld, die ein Pop-up-Formular (Modal) dem Mitglied anzeigt.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `TEXT_INPUT` | Texteingabe | Ein einzelnes Textfeld, in das das Mitglied schreibt. |
-| `STRING_SELECT` | Auswahlmenü | Ein Dropdown, aus dem das Mitglied aus von dir festgelegten Optionen wählt. |
-| `USER_SELECT` | Benutzer-Auswahlmenü | Ein Dropdown, aus dem das Mitglied ein oder mehrere Mitglieder wählt. |
-| `ROLE_SELECT` | Rollen-Auswahlmenü | Ein Dropdown, aus dem das Mitglied eine oder mehrere Rollen wählt. |
-| `CHANNEL_SELECT` | Kanal-Auswahlmenü | Ein Dropdown, aus dem das Mitglied einen oder mehrere Kanäle wählt. |
-| `MENTIONABLE_SELECT` | Auswahlmenü für Benutzer oder Rollen | Ein Dropdown, aus dem das Mitglied Mitglieder oder Rollen wählt. |
-| `CHECKBOX` | Checkbox | Ein einzelnes Ja/Nein-Kästchen, zum Beispiel um den Regeln zuzustimmen. |
-| `CHECKBOX_GROUP` | Checkbox-Gruppe | Eine Liste von Kästchen, aus der eine oder mehrere Optionen gewählt werden können. |
-| `RADIO_GROUP` | Optionsfeld-Gruppe | Eine Liste, aus der genau eine Option gewählt werden kann. |
-| `FILE_UPLOAD` | Datei-Upload | Lässt das Mitglied eine oder mehrere Dateien anhängen. |
-| `TEXT_DISPLAY` | Textanzeige | Nur-Text-Anzeige im Formular. Sie erfasst keine Antwort. |
+| Wert                 | Name                                 | Details                                                                            |
+| -------------------- | ------------------------------------ | ---------------------------------------------------------------------------------- |
+| `TEXT_INPUT`         | Texteingabe                          | Ein einzelnes Textfeld, in das das Mitglied schreibt.                              |
+| `STRING_SELECT`      | Auswahlmenü                          | Ein Dropdown, aus dem das Mitglied aus von dir festgelegten Optionen wählt.        |
+| `USER_SELECT`        | Benutzer-Auswahlmenü                 | Ein Dropdown, aus dem das Mitglied ein oder mehrere Mitglieder wählt.              |
+| `ROLE_SELECT`        | Rollen-Auswahlmenü                   | Ein Dropdown, aus dem das Mitglied eine oder mehrere Rollen wählt.                 |
+| `CHANNEL_SELECT`     | Kanal-Auswahlmenü                    | Ein Dropdown, aus dem das Mitglied einen oder mehrere Kanäle wählt.                |
+| `MENTIONABLE_SELECT` | Auswahlmenü für Benutzer oder Rollen | Ein Dropdown, aus dem das Mitglied Mitglieder oder Rollen wählt.                   |
+| `CHECKBOX`           | Checkbox                             | Ein einzelnes Ja/Nein-Kästchen, zum Beispiel um den Regeln zuzustimmen.            |
+| `CHECKBOX_GROUP`     | Checkbox-Gruppe                      | Eine Liste von Kästchen, aus der eine oder mehrere Optionen gewählt werden können. |
+| `RADIO_GROUP`        | Optionsfeld-Gruppe                   | Eine Liste, aus der genau eine Option gewählt werden kann.                         |
+| `FILE_UPLOAD`        | Datei-Upload                         | Lässt das Mitglied eine oder mehrere Dateien anhängen.                             |
+| `TEXT_DISPLAY`       | Textanzeige                          | Nur-Text-Anzeige im Formular. Sie erfasst keine Antwort.                           |
 
 ### Lizenztyp {#ENTITLEMENT_TYPE}
 
 Der Typ einer Lizenz (Premium-SKU-Kauf, Geschenk, Abonnement, usw.).
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `APPLICATION_SUBSCRIPTION` | App-Abo | Ein laufendes Abo für diesen Bot, das Discord abrechnet. |
-| `PURCHASE` | Einmalkauf | Das Mitglied hat diesen Artikel einmal gekauft und behält ihn. |
-| `PREMIUM_SUBSCRIPTION` | Nitro-Abo | Das Mitglied hat es, weil es Discord Nitro abonniert hat. |
-| `DEVELOPER_GIFT` | Geschenk vom Entwickler | Kostenlos von den Machern des Bots vergeben. |
-| `TEST_MODE_PURCHASE` | Testkauf | Zum Testen erstellt. Es wurde kein echtes Geld bezahlt. |
-| `FREE_PURCHASE` | Kostenloser Artikel | Das Mitglied hat den Artikel erhalten, während er nichts gekostet hat. |
-| `USER_GIFT` | Geschenk von einem Mitglied | Jemand anderes hat den Artikel gekauft und dem Mitglied geschenkt. |
-| `PREMIUM_PURCHASE` | Gratis für Nitro-Mitglieder | Das Mitglied hat den Artikel als Discord-Nitro-Abonnent kostenlos erhalten. |
+| Wert                       | Name                        | Details                                                                     |
+| -------------------------- | --------------------------- | --------------------------------------------------------------------------- |
+| `APPLICATION_SUBSCRIPTION` | App-Abo                     | Ein laufendes Abo für diesen Bot, das Discord abrechnet.                    |
+| `PURCHASE`                 | Einmalkauf                  | Das Mitglied hat diesen Artikel einmal gekauft und behält ihn.              |
+| `PREMIUM_SUBSCRIPTION`     | Nitro-Abo                   | Das Mitglied hat es, weil es Discord Nitro abonniert hat.                   |
+| `DEVELOPER_GIFT`           | Geschenk vom Entwickler     | Kostenlos von den Machern des Bots vergeben.                                |
+| `TEST_MODE_PURCHASE`       | Testkauf                    | Zum Testen erstellt. Es wurde kein echtes Geld bezahlt.                     |
+| `FREE_PURCHASE`            | Kostenloser Artikel         | Das Mitglied hat den Artikel erhalten, während er nichts gekostet hat.      |
+| `USER_GIFT`                | Geschenk von einem Mitglied | Jemand anderes hat den Artikel gekauft und dem Mitglied geschenkt.          |
+| `PREMIUM_PURCHASE`         | Gratis für Nitro-Mitglieder | Das Mitglied hat den Artikel als Discord-Nitro-Abonnent kostenlos erhalten. |
 
 ### Flow-Parameter-Typ {#FLOW_PARAMETER_TYPE}
 
 Typ eines definierten Flow-Parameters oder Rückgabewerts. Nur serialisierbare Wert-Typen sind erlaubt - geplante Ausführungen speichern Argumente und lösen Server-Objekte beim Auslösen neu auf.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `STRING` | Text | Beliebiger Text, zum Beispiel ein Name, ein Grund oder eine ganze Nachricht. |
-| `INTEGER` | Ganze Zahl | Eine ganze Zahl ohne Nachkommastellen, zum Beispiel 5 oder -12. |
-| `FLOAT` | Zahl | Eine Zahl, die Nachkommastellen haben darf, zum Beispiel 2,5. |
-| `BOOLEAN` | Ja/Nein | Ein einfacher Ja-oder-Nein-Wert. |
-| `SNOWFLAKE` | Discord-ID | Die lange Zahl, mit der Discord einen Benutzer, Kanal, eine Rolle oder Nachricht identifiziert. |
-| `URL` | URL | Eine Web-Adresse, die mit http:// oder https:// beginnt. |
-| `COLOR` | Farbe | Eine Farbe, geschrieben als Hex-Code wie #5865F2. |
-| `DATETIME` | Datum & Uhrzeit | Ein bestimmter Zeitpunkt, mit Datum und Uhrzeit. |
-| `DURATION` | Dauer | Eine Zeitspanne, zum Beispiel 10 Minuten oder 2 Tage. |
-| `DISCORD_USER` | Discord-Benutzer | Ein Discord-Konto. Funktioniert auch bei Personen, die nicht auf deinem Server sind. |
-| `GUILD_MEMBER` | Server-Mitglied | Jemand, der auf deinem Server ist, inklusive Nickname und Rollen. |
-| `GUILD_CHANNEL` | Server-Kanal | Ein Kanal auf deinem Server. |
-| `GUILD_ROLE` | Server-Rolle | Eine Rolle auf deinem Server. |
-| `ID` | ID | Eine Kennung, die genau so bleibt, wie sie geschrieben ist, zum Beispiel eine Discord-ID oder eine ID aus einem anderen Dienst. |
-| `BIGINT` | Große ganze Zahl | Eine ganze Zahl beliebiger Größe, die exakt bleibt. |
-| `ARRAY` | Liste | Eine Liste von Werten. Lege unter Inhaltstyp fest, was jeden Eintrag ist. |
-| `MAP` | Zuordnung | Werte, die über Text-Schlüssel nachgeschlagen werden. Lege unter Inhaltstyp fest, was jeder Wert ist. |
+| Wert            | Name             | Details                                                                                                                         |
+| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `STRING`        | Text             | Beliebiger Text, zum Beispiel ein Name, ein Grund oder eine ganze Nachricht.                                                    |
+| `INTEGER`       | Ganze Zahl       | Eine ganze Zahl ohne Nachkommastellen, zum Beispiel 5 oder -12.                                                                 |
+| `FLOAT`         | Zahl             | Eine Zahl, die Nachkommastellen haben darf, zum Beispiel 2,5.                                                                   |
+| `BOOLEAN`       | Ja/Nein          | Ein einfacher Ja-oder-Nein-Wert.                                                                                                |
+| `SNOWFLAKE`     | Discord-ID       | Die lange Zahl, mit der Discord einen Benutzer, Kanal, eine Rolle oder Nachricht identifiziert.                                 |
+| `URL`           | URL              | Eine Web-Adresse, die mit http:// oder https:// beginnt.                                                                        |
+| `COLOR`         | Farbe            | Eine Farbe, geschrieben als Hex-Code wie #5865F2.                                                                               |
+| `DATETIME`      | Datum & Uhrzeit  | Ein bestimmter Zeitpunkt, mit Datum und Uhrzeit.                                                                                |
+| `DURATION`      | Dauer            | Eine Zeitspanne, zum Beispiel 10 Minuten oder 2 Tage.                                                                           |
+| `DISCORD_USER`  | Discord-Benutzer | Ein Discord-Konto. Funktioniert auch bei Personen, die nicht auf deinem Server sind.                                            |
+| `GUILD_MEMBER`  | Server-Mitglied  | Jemand, der auf deinem Server ist, inklusive Nickname und Rollen.                                                               |
+| `GUILD_CHANNEL` | Server-Kanal     | Ein Kanal auf deinem Server.                                                                                                    |
+| `GUILD_ROLE`    | Server-Rolle     | Eine Rolle auf deinem Server.                                                                                                   |
+| `ID`            | ID               | Eine Kennung, die genau so bleibt, wie sie geschrieben ist, zum Beispiel eine Discord-ID oder eine ID aus einem anderen Dienst. |
+| `BIGINT`        | Große ganze Zahl | Eine ganze Zahl beliebiger Größe, die exakt bleibt.                                                                             |
+| `ARRAY`         | Liste            | Eine Liste von Werten. Lege unter Inhaltstyp fest, was jeden Eintrag ist.                                                       |
+| `MAP`           | Zuordnung        | Werte, die über Text-Schlüssel nachgeschlagen werden. Lege unter Inhaltstyp fest, was jeder Wert ist.                           |
 
 ### Komponententyp {#COMPONENT_TYPE}
 
 Identifiziert die Art der Discord-Nachrichtenkomponente (Components V2).
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ACTION_ROW` | Aktionsreihe | Ein Reihen-Container für Buttons oder ein einzelnes Auswahlmenü. |
-| `BUTTON` | Button | Eine anklickbare Button-Komponente. |
-| `STRING_SELECT` | Auswahlmenü | Ein Auswahlmenü mit vordefinierten Optionen. |
-| `TEXT_INPUT` | Texteingabe | Ein Texteingabefeld für die Verwendung in Modalen. |
-| `USER_SELECT` | Benutzer-Auswahlmenü | Ein Auswahlmenü, das mit Benutzern gefüllt ist. |
-| `ROLE_SELECT` | Rollen-Auswahlmenü | Ein Auswahlmenü, das mit Rollen gefüllt ist. |
-| `MENTIONABLE_SELECT` | Auswahlmenü für Benutzer oder Rollen | Ein Auswahlmenü, das mit Benutzern und Rollen gefüllt ist. |
-| `CHANNEL_SELECT` | Kanal-Auswahlmenü | Ein Auswahlmenü, das mit Kanälen gefüllt ist. |
-| `SECTION` | Abschnitt | Ein V2-Abschnitt mit Text und einem Zubehörteil. |
-| `TEXT_DISPLAY` | Textanzeige | Eine V2-Textanzeigekomponente. |
-| `THUMBNAIL` | Miniaturbild | Eine V2-Miniaturbild-Komponente, die als Abschnitts-Zubehörteil verwendet wird. |
-| `MEDIA_GALLERY` | Mediengalerie | Eine V2-Galerie von bis zu 10 Medieneinträgen. |
-| `FILE` | Datei | Eine V2-Dateianhang-Komponente. |
-| `SEPARATOR` | Trennzeichen | Ein V2-Abstands-Trennzeichen mit optionaler Trennlinie. |
-| `CONTAINER` | Behälter | Ein V2-Behälter, der andere Komponenten mit einer Akzentfarbe gruppiert. |
+| Wert                 | Name                                 | Details                                                                         |
+| -------------------- | ------------------------------------ | ------------------------------------------------------------------------------- |
+| `ACTION_ROW`         | Aktionsreihe                         | Ein Reihen-Container für Buttons oder ein einzelnes Auswahlmenü.                |
+| `BUTTON`             | Button                               | Eine anklickbare Button-Komponente.                                             |
+| `STRING_SELECT`      | Auswahlmenü                          | Ein Auswahlmenü mit vordefinierten Optionen.                                    |
+| `TEXT_INPUT`         | Texteingabe                          | Ein Texteingabefeld für die Verwendung in Modalen.                              |
+| `USER_SELECT`        | Benutzer-Auswahlmenü                 | Ein Auswahlmenü, das mit Benutzern gefüllt ist.                                 |
+| `ROLE_SELECT`        | Rollen-Auswahlmenü                   | Ein Auswahlmenü, das mit Rollen gefüllt ist.                                    |
+| `MENTIONABLE_SELECT` | Auswahlmenü für Benutzer oder Rollen | Ein Auswahlmenü, das mit Benutzern und Rollen gefüllt ist.                      |
+| `CHANNEL_SELECT`     | Kanal-Auswahlmenü                    | Ein Auswahlmenü, das mit Kanälen gefüllt ist.                                   |
+| `SECTION`            | Abschnitt                            | Ein V2-Abschnitt mit Text und einem Zubehörteil.                                |
+| `TEXT_DISPLAY`       | Textanzeige                          | Eine V2-Textanzeigekomponente.                                                  |
+| `THUMBNAIL`          | Miniaturbild                         | Eine V2-Miniaturbild-Komponente, die als Abschnitts-Zubehörteil verwendet wird. |
+| `MEDIA_GALLERY`      | Mediengalerie                        | Eine V2-Galerie von bis zu 10 Medieneinträgen.                                  |
+| `FILE`               | Datei                                | Eine V2-Dateianhang-Komponente.                                                 |
+| `SEPARATOR`          | Trennzeichen                         | Ein V2-Abstands-Trennzeichen mit optionaler Trennlinie.                         |
+| `CONTAINER`          | Behälter                             | Ein V2-Behälter, der andere Komponenten mit einer Akzentfarbe gruppiert.        |
 
 ### Trennzeichen-Abstand {#SEPARATOR_SPACING}
 
 Steuert den vertikalen Abstand, der von einer Trennzeichen-Komponente angewendet wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
+| Wert    | Name  | Details                                         |
+| ------- | ----- | ----------------------------------------------- |
 | `SMALL` | Klein | Kleine Lücke zwischen benachbarten Komponenten. |
-| `LARGE` | Groß | Große Lücke zwischen benachbarten Komponenten. |
+| `LARGE` | Groß  | Große Lücke zwischen benachbarten Komponenten.  |
 
 ### Anwendungs-Flag {#APPLICATION_FLAG}
 
 Ein öffentliches Flag, das Fähigkeiten oder Einstellungen einer Discord-Anwendung beschreibt.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `EMBEDDED` | Eingebettet | Die Anwendung ist in den Discord-Client eingebettet (Activity). |
-| `GATEWAY_PRESENCE` | Gateway-Präsenz | Genehmigt, Präsenz-Updates über das Gateway zu erhalten. |
-| `GATEWAY_PRESENCE_LIMITED` | Gateway-Präsenz (Limited) | Auf Genehmigung warten, um Präsenz-Updates über das Gateway zu erhalten. |
-| `GATEWAY_GUILD_MEMBERS` | Gateway-Server-Mitglieder | Genehmigt, Server-Mitglieder-Events über das Gateway zu erhalten. |
-| `GATEWAY_GUILD_MEMBERS_LIMITED` | Gateway-Server-Mitglieder (Limited) | Auf Genehmigung warten, um Server-Mitglieder-Events über das Gateway zu erhalten. |
-| `VERIFICATION_PENDING_GUILD_LIMIT` | Verifikation ausstehend - Server-Limit | Erfüllt die ungewöhnlichen Wachstumskriterien, die Verifikation verhindern. |
-| `EMBEDDED_FIRST_PARTY` | Eingebettet - First Party | Die eingebettete Anwendung ist von Discord selbst gebaut. |
-| `GATEWAY_MESSAGE_CONTENT` | Gateway-Nachrichteninhalt | Genehmigt, Nachrichteninhalt über das Gateway zu erhalten. |
-| `GATEWAY_MESSAGE_CONTENT_LIMITED` | Gateway-Nachrichteninhalt (Limited) | Auf Genehmigung warten, um Nachrichteninhalt über das Gateway zu erhalten. |
-| `APPLICATION_COMMAND_BADGE` | Slash-Befehl-Badge | Die Anwendung hat globale Slash-Befehle registriert. |
-| `ACTIVE_DEVELOPER` | Aktiver Entwickler | Der Anwendungsbesitzer hat das Badge für aktive Entwickler. |
-| `EMBEDDED_RELEASED` | Eingebettet (veröffentlicht) | Die Activity der Anwendung ist für alle veröffentlicht. |
-| `MANAGED_EMOJI` | Verwaltete Emojis | Discord kennzeichnet die Anwendung als berechtigt, verwaltete Emojis zu nutzen. |
-| `EMBEDDED_IAP` | Eingebettete In-App-Käufe | Die Activity der Anwendung kann In-App-Käufe anbieten. |
-| `GROUP_DM_CREATE` | Gruppen-DMs erstellen | Die Anwendung kann Gruppen-Direktnachrichten erstellen. |
-| `APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE` | AutoMod-Abzeichen | Die Anwendung hat genug AutoMod-Regeln erstellt, um das AutoMod-Abzeichen zu zeigen. |
-| `RPC_HAS_CONNECTED` | RPC genutzt | Die Anwendung hat sich über RPC mit dem Discord-Client verbunden. |
+| Wert                                            | Name                                   | Details                                                                              |
+| ----------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------ |
+| `EMBEDDED`                                      | Eingebettet                            | Die Anwendung ist in den Discord-Client eingebettet (Activity).                      |
+| `GATEWAY_PRESENCE`                              | Gateway-Präsenz                        | Genehmigt, Präsenz-Updates über das Gateway zu erhalten.                             |
+| `GATEWAY_PRESENCE_LIMITED`                      | Gateway-Präsenz (Limited)              | Auf Genehmigung warten, um Präsenz-Updates über das Gateway zu erhalten.             |
+| `GATEWAY_GUILD_MEMBERS`                         | Gateway-Server-Mitglieder              | Genehmigt, Server-Mitglieder-Events über das Gateway zu erhalten.                    |
+| `GATEWAY_GUILD_MEMBERS_LIMITED`                 | Gateway-Server-Mitglieder (Limited)    | Auf Genehmigung warten, um Server-Mitglieder-Events über das Gateway zu erhalten.    |
+| `VERIFICATION_PENDING_GUILD_LIMIT`              | Verifikation ausstehend - Server-Limit | Erfüllt die ungewöhnlichen Wachstumskriterien, die Verifikation verhindern.          |
+| `EMBEDDED_FIRST_PARTY`                          | Eingebettet - First Party              | Die eingebettete Anwendung ist von Discord selbst gebaut.                            |
+| `GATEWAY_MESSAGE_CONTENT`                       | Gateway-Nachrichteninhalt              | Genehmigt, Nachrichteninhalt über das Gateway zu erhalten.                           |
+| `GATEWAY_MESSAGE_CONTENT_LIMITED`               | Gateway-Nachrichteninhalt (Limited)    | Auf Genehmigung warten, um Nachrichteninhalt über das Gateway zu erhalten.           |
+| `APPLICATION_COMMAND_BADGE`                     | Slash-Befehl-Badge                     | Die Anwendung hat globale Slash-Befehle registriert.                                 |
+| `ACTIVE_DEVELOPER`                              | Aktiver Entwickler                     | Der Anwendungsbesitzer hat das Badge für aktive Entwickler.                          |
+| `EMBEDDED_RELEASED`                             | Eingebettet (veröffentlicht)           | Die Activity der Anwendung ist für alle veröffentlicht.                              |
+| `MANAGED_EMOJI`                                 | Verwaltete Emojis                      | Discord kennzeichnet die Anwendung als berechtigt, verwaltete Emojis zu nutzen.      |
+| `EMBEDDED_IAP`                                  | Eingebettete In-App-Käufe              | Die Activity der Anwendung kann In-App-Käufe anbieten.                               |
+| `GROUP_DM_CREATE`                               | Gruppen-DMs erstellen                  | Die Anwendung kann Gruppen-Direktnachrichten erstellen.                              |
+| `APPLICATION_AUTO_MODERATION_RULE_CREATE_BADGE` | AutoMod-Abzeichen                      | Die Anwendung hat genug AutoMod-Regeln erstellt, um das AutoMod-Abzeichen zu zeigen. |
+| `RPC_HAS_CONNECTED`                             | RPC genutzt                            | Die Anwendung hat sich über RPC mit dem Discord-Client verbunden.                    |
 
 ### SKU-Typ {#SKU_TYPE}
 
 Die Kategorie einer Discord-SKU.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `DURABLE` | Haltbar | Ein Einmalkauf, der nicht verbraucht wird. |
-| `CONSUMABLE` | Verbrauchbar | Ein Einmalkauf, der von der Anwendung verbraucht wird. |
-| `SUBSCRIPTION` | Abonnement | Ein wiederkehrend gebührenflichtiges Abonnement. |
+| Wert                 | Name              | Details                                                           |
+| -------------------- | ----------------- | ----------------------------------------------------------------- |
+| `DURABLE`            | Haltbar           | Ein Einmalkauf, der nicht verbraucht wird.                        |
+| `CONSUMABLE`         | Verbrauchbar      | Ein Einmalkauf, der von der Anwendung verbraucht wird.            |
+| `SUBSCRIPTION`       | Abonnement        | Ein wiederkehrend gebührenflichtiges Abonnement.                  |
 | `SUBSCRIPTION_GROUP` | Abonnement-Gruppe | Eine vom System generierte Gruppe mit verwandten Abonnement-SKUs. |
 
 ### Abonnement-Status {#SUBSCRIPTION_STATUS}
 
 Der aktuelle Status eines Discord-Abonnements.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ACTIVE` | Aktiv | Das Abonnement ist aktiv und wird erneuert. |
-| `ENDING` | Endet | Das Abonnement ist bis zum Ende des aktuellen Zeitraums aktiv. |
-| `INACTIVE` | Inaktiv | Das Abonnement ist nicht mehr aktiv. |
+| Wert       | Name    | Details                                                        |
+| ---------- | ------- | -------------------------------------------------------------- |
+| `ACTIVE`   | Aktiv   | Das Abonnement ist aktiv und wird erneuert.                    |
+| `ENDING`   | Endet   | Das Abonnement ist bis zum Ende des aktuellen Zeitraums aktiv. |
+| `INACTIVE` | Inaktiv | Das Abonnement ist nicht mehr aktiv.                           |
 
 ### Rollenverbindungs-Metadaten-Typ {#ROLE_CONNECTION_METADATA_TYPE}
 
 Vergleichsoperator, den Discord verwendet, um Rollenverbindungs-Metadaten gegen Rollenanforderungen auszuwerten.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `INTEGER_LESS_THAN_OR_EQUAL` | Ganze Zahl &lt;= Server-Wert | Metadaten-Wert (ganze Zahl) ist kleiner oder gleich dem vom Server konfigurierten Wert. |
-| `INTEGER_GREATER_THAN_OR_EQUAL` | Ganze Zahl &gt;= Server-Wert | Metadaten-Wert (ganze Zahl) ist größer oder gleich dem vom Server konfigurierten Wert. |
-| `INTEGER_EQUAL` | Ganze Zahl = Server-Wert | Metadaten-Wert (ganze Zahl) ist gleich dem vom Server konfigurierten Wert. |
-| `INTEGER_NOT_EQUAL` | Ganze Zahl != Server-Wert | Metadaten-Wert (ganze Zahl) ist nicht gleich dem vom Server konfigurierten Wert. |
-| `DATETIME_LESS_THAN_OR_EQUAL` | DateTime &lt;= Server-Wert | Metadaten-Wert (DateTime) ist kleiner oder gleich dem vom Server konfigurierten Wert, in Tagen. |
-| `DATETIME_GREATER_THAN_OR_EQUAL` | DateTime &gt;= Server-Wert | Metadaten-Wert (DateTime) ist größer oder gleich dem vom Server konfigurierten Wert, in Tagen. |
-| `BOOLEAN_EQUAL` | Ja/Nein = Server-Wert | Metadaten-Wert (Ja/Nein) ist gleich dem vom Server konfigurierten Wert. |
-| `BOOLEAN_NOT_EQUAL` | Ja/Nein != Server-Wert | Metadaten-Wert (Ja/Nein) ist nicht gleich dem vom Server konfigurierten Wert. |
+| Wert                             | Name                         | Details                                                                                         |
+| -------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------- |
+| `INTEGER_LESS_THAN_OR_EQUAL`     | Ganze Zahl &lt;= Server-Wert | Metadaten-Wert (ganze Zahl) ist kleiner oder gleich dem vom Server konfigurierten Wert.         |
+| `INTEGER_GREATER_THAN_OR_EQUAL`  | Ganze Zahl &gt;= Server-Wert | Metadaten-Wert (ganze Zahl) ist größer oder gleich dem vom Server konfigurierten Wert.          |
+| `INTEGER_EQUAL`                  | Ganze Zahl = Server-Wert     | Metadaten-Wert (ganze Zahl) ist gleich dem vom Server konfigurierten Wert.                      |
+| `INTEGER_NOT_EQUAL`              | Ganze Zahl != Server-Wert    | Metadaten-Wert (ganze Zahl) ist nicht gleich dem vom Server konfigurierten Wert.                |
+| `DATETIME_LESS_THAN_OR_EQUAL`    | DateTime &lt;= Server-Wert   | Metadaten-Wert (DateTime) ist kleiner oder gleich dem vom Server konfigurierten Wert, in Tagen. |
+| `DATETIME_GREATER_THAN_OR_EQUAL` | DateTime &gt;= Server-Wert   | Metadaten-Wert (DateTime) ist größer oder gleich dem vom Server konfigurierten Wert, in Tagen.  |
+| `BOOLEAN_EQUAL`                  | Ja/Nein = Server-Wert        | Metadaten-Wert (Ja/Nein) ist gleich dem vom Server konfigurierten Wert.                         |
+| `BOOLEAN_NOT_EQUAL`              | Ja/Nein != Server-Wert       | Metadaten-Wert (Ja/Nein) ist nicht gleich dem vom Server konfigurierten Wert.                   |
 
 ### Lizenz-Besitzertyp {#ENTITLEMENT_OWNER_TYPE}
 
 Gibt an, ob eine Test-Lizenz von einem Server oder einem Benutzer besessen wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GUILD` | Server | Die Lizenz wird von einem Server besessen (server-weit). |
-| `USER` | Benutzer | Die Lizenz wird von einem einzelnen Benutzer besessen. |
+| Wert    | Name     | Details                                                  |
+| ------- | -------- | -------------------------------------------------------- |
+| `GUILD` | Server   | Die Lizenz wird von einem Server besessen (server-weit). |
+| `USER`  | Benutzer | Die Lizenz wird von einem einzelnen Benutzer besessen.   |
 
 ### Onboarding-Prompt-Typ {#ONBOARDING_PROMPT_TYPE}
 
 Der Interaktionsstil, der von einem Onboarding-Prompt verwendet wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
+| Wert              | Name            | Details                                                            |
+| ----------------- | --------------- | ------------------------------------------------------------------ |
 | `MULTIPLE_CHOICE` | Mehrfachauswahl | Prompt gerendert als eine Reihe von wählbaren Buttons oder Karten. |
-| `DROPDOWN` | Auswahlmenü | Prompt gerendert als Dropdown-Liste. |
+| `DROPDOWN`        | Auswahlmenü     | Prompt gerendert als Dropdown-Liste.                               |
 
 ### Onboarding-Modus {#ONBOARDING_MODE}
 
 Steuert, welche Kanäle und Rollen zu Discords Onboarding-Anforderungen zählen.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ONBOARDING_DEFAULT` | Standard | Zählt nur Standard-Kanäle für Onboarding-Einschränkungen. |
+| Wert                  | Name      | Details                                                                                   |
+| --------------------- | --------- | ----------------------------------------------------------------------------------------- |
+| `ONBOARDING_DEFAULT`  | Standard  | Zählt nur Standard-Kanäle für Onboarding-Einschränkungen.                                 |
 | `ONBOARDING_ADVANCED` | Erweitert | Zählt Standard-Kanäle und in Prompts referenzierte Kanäle für Onboarding-Einschränkungen. |
 
 ### Slash-Befehl-Berechtigung-Typ {#APPLICATION_COMMAND_PERMISSION_TYPE}
 
 Bestimmt, welche Art von Entität eine Slash-Befehl-Berechtigung-Überschreibung anvisiert.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ROLE` | Rolle | Berechtigung zielt auf eine bestimmte Rolle ab. |
-| `USER` | Benutzer | Berechtigung zielt auf einen bestimmten Benutzer ab. |
-| `CHANNEL` | Kanal | Berechtigung zielt auf einen bestimmten Kanal (oder alle Kanäle über den @everyone-Kanal-Sentinel) ab. |
+| Wert      | Name     | Details                                                                                                |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| `ROLE`    | Rolle    | Berechtigung zielt auf eine bestimmte Rolle ab.                                                        |
+| `USER`    | Benutzer | Berechtigung zielt auf einen bestimmten Benutzer ab.                                                   |
+| `CHANNEL` | Kanal    | Berechtigung zielt auf einen bestimmten Kanal (oder alle Kanäle über den @everyone-Kanal-Sentinel) ab. |
 
 ### Sortierrichtung {#SORT_DIRECTION}
 
 Richtung, in der Einträge sortiert werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ASC` | Aufsteigend | Kleinste Werte zuerst. |
-| `DESC` | Absteigend | Größte Werte zuerst. |
+| Wert   | Name        | Details                |
+| ------ | ----------- | ---------------------- |
+| `ASC`  | Aufsteigend | Kleinste Werte zuerst. |
+| `DESC` | Absteigend  | Größte Werte zuerst.   |
 
 ### Aggregat-Operation {#STORAGE_AGGREGATE_OP}
 
 Welche Aggregation über die Werte eines Felds berechnet wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `SUM` | Summe | Summe aller numerischen Werte. |
-| `AVG` | Durchschnitt | Mittelwert aller numerischen Werte. |
-| `COUNT` | Anzahl | Anzahl der Einträge. |
-| `MIN` | Minimum | Kleinster numerischer Wert. |
-| `MAX` | Maximum | Größter numerischer Wert. |
-| `MEDIAN` | Median | Mittlerer numerischer Wert. |
+| Wert     | Name         | Details                             |
+| -------- | ------------ | ----------------------------------- |
+| `SUM`    | Summe        | Summe aller numerischen Werte.      |
+| `AVG`    | Durchschnitt | Mittelwert aller numerischen Werte. |
+| `COUNT`  | Anzahl       | Anzahl der Einträge.                |
+| `MIN`    | Minimum      | Kleinster numerischer Wert.         |
+| `MAX`    | Maximum      | Größter numerischer Wert.           |
+| `MEDIAN` | Median       | Mittlerer numerischer Wert.         |
 
 ### Ziehungsgewichtung {#STORAGE_PICK_WEIGHT}
 
 Wie Einträge beim zufälligen Ziehen gewichtet werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `NONE` | Gleichverteilt | Jeder Schlüssel ist gleich wahrscheinlich. |
-| `VALUE` | Nach Wert | Wahrscheinlicher, je höher der Wert des Eintrags (eine Verlosung nach Losanzahl). |
+| Wert    | Name           | Details                                                                           |
+| ------- | -------------- | --------------------------------------------------------------------------------- |
+| `NONE`  | Gleichverteilt | Jeder Schlüssel ist gleich wahrscheinlich.                                        |
+| `VALUE` | Nach Wert      | Wahrscheinlicher, je höher der Wert des Eintrags (eine Verlosung nach Losanzahl). |
 
 ### Vergleich {#STORAGE_COMPARE_OP}
 
 Wie der aktuelle Wert mit einem Schwellenwert verglichen wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GTE` | Mindestens (≥) | Aktueller Wert ist größer als oder gleich dem Schwellenwert. |
-| `GT` | Größer als (&gt;) | Aktueller Wert ist strikt größer als der Schwellenwert. |
-| `LTE` | Höchstens (≤) | Aktueller Wert ist kleiner als oder gleich dem Schwellenwert. |
-| `LT` | Kleiner als (&lt;) | Aktueller Wert ist strikt kleiner als der Schwellenwert. |
-| `EQ` | Gleich (=) | Aktueller Wert ist gleich dem Schwellenwert. |
+| Wert  | Name               | Details                                                       |
+| ----- | ------------------ | ------------------------------------------------------------- |
+| `GTE` | Mindestens (≥)     | Aktueller Wert ist größer als oder gleich dem Schwellenwert.  |
+| `GT`  | Größer als (&gt;)  | Aktueller Wert ist strikt größer als der Schwellenwert.       |
+| `LTE` | Höchstens (≤)      | Aktueller Wert ist kleiner als oder gleich dem Schwellenwert. |
+| `LT`  | Kleiner als (&lt;) | Aktueller Wert ist strikt kleiner als der Schwellenwert.      |
+| `EQ`  | Gleich (=)         | Aktueller Wert ist gleich dem Schwellenwert.                  |
 
 ### Bedingung {#STORAGE_SET_CONDITION}
 
 Was auf den aktuell gespeicherten Wert zutreffen muss, damit der neue Wert geschrieben wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ABSENT` | Nur wenn nichts gespeichert ist | Schreibt nur, wenn das Feld für dieses Subjekt bzw. diesen Schlüssel noch leer ist. So baust du eine Sperre: Der erste Durchlauf erhält "Angewendet" = wahr, alle danach falsch. |
-| `PRESENT` | Nur wenn etwas gespeichert ist | Schreibt nur, wenn schon ein Wert vorhanden ist. Damit aktualisierst du einen bestehenden Eintrag, ohne jemals einen neuen anzulegen. |
-| `EQUALS` | Nur wenn er gleich ist | Schreibt nur, wenn der gespeicherte Wert genau dem erwarteten Wert entspricht. So änderst du einen Wert sicher, den du kurz zuvor gelesen hast: Hat jemand anderes ihn zwischendurch geändert, wird nichts geschrieben. |
-| `NOT_EQUALS` | Nur wenn er ungleich ist | Schreibt nur, wenn der gespeicherte Wert vom erwarteten Wert abweicht. Ein Eintrag, der das bereits enthält, bleibt unangetastet. |
+| Wert         | Name                            | Details                                                                                                                                                                                                                 |
+| ------------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ABSENT`     | Nur wenn nichts gespeichert ist | Schreibt nur, wenn das Feld für dieses Subjekt bzw. diesen Schlüssel noch leer ist. So baust du eine Sperre: Der erste Durchlauf erhält "Angewendet" = wahr, alle danach falsch.                                        |
+| `PRESENT`    | Nur wenn etwas gespeichert ist  | Schreibt nur, wenn schon ein Wert vorhanden ist. Damit aktualisierst du einen bestehenden Eintrag, ohne jemals einen neuen anzulegen.                                                                                   |
+| `EQUALS`     | Nur wenn er gleich ist          | Schreibt nur, wenn der gespeicherte Wert genau dem erwarteten Wert entspricht. So änderst du einen Wert sicher, den du kurz zuvor gelesen hast: Hat jemand anderes ihn zwischendurch geändert, wird nichts geschrieben. |
+| `NOT_EQUALS` | Nur wenn er ungleich ist        | Schreibt nur, wenn der gespeicherte Wert vom erwarteten Wert abweicht. Ein Eintrag, der das bereits enthält, bleibt unangetastet.                                                                                       |
 
 ### Dauer-Stil {#DURATION_STYLE}
 
 Wie eine Dauer als Text dargestellt wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `COMPACT` | Kompakt | Kurze Buchstaben-Einheiten, z. B. "2h 30m". |
-| `LONG` | Lang | Ausgeschriebene Einheiten, z. B. "2 hours 30 minutes". |
-| `LARGEST_UNIT` | Größte Einheit | Nur die größte Einheit, z. B. "3 hours". |
+| Wert           | Name           | Details                                                |
+| -------------- | -------------- | ------------------------------------------------------ |
+| `COMPACT`      | Kompakt        | Kurze Buchstaben-Einheiten, z. B. "2h 30m".            |
+| `LONG`         | Lang           | Ausgeschriebene Einheiten, z. B. "2 hours 30 minutes". |
+| `LARGEST_UNIT` | Größte Einheit | Nur die größte Einheit, z. B. "3 hours".               |
 
 ### Zahlen-Stil {#NUMBER_FORMAT_STYLE}
 
 Wie eine Zahl als Text dargestellt wird.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GROUPED` | Gruppiert | Tausendertrennzeichen, z. B. "4.000.000". |
-| `COMPACT` | Kompakt | Abgekürzte Einheiten, z. B. "4 Mio.". |
+| Wert           | Name           | Details                                         |
+| -------------- | -------------- | ----------------------------------------------- |
+| `GROUPED`      | Gruppiert      | Tausendertrennzeichen, z. B. "4.000.000".       |
+| `COMPACT`      | Kompakt        | Abgekürzte Einheiten, z. B. "4 Mio.".           |
 | `COMPACT_LONG` | Kompakt (lang) | Ausgeschriebene Einheiten, z. B. "4 Millionen". |
 
 ### Zeitstempel-Stil {#TIMESTAMP_STYLE}
 
 Wie Discord Datum und Uhrzeit anzeigt. Jede Person sieht sie in ihrer eigenen Zeitzone und Sprache.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `t` | Kurze Uhrzeit | Nur die Uhrzeit, z. B. "16:20". |
-| `T` | Lange Uhrzeit | Die Uhrzeit mit Sekunden, z. B. "16:20:30". |
-| `d` | Kurzes Datum | Das Datum in Ziffern, z. B. "20.04.2021". |
-| `D` | Langes Datum | Das Datum mit ausgeschriebenem Monat, z. B. "20. April 2021". |
-| `f` | Kurzes Datum mit Uhrzeit | Datum und Uhrzeit, z. B. "20. April 2021 16:20". |
-| `F` | Langes Datum mit Uhrzeit | Wochentag, Datum und Uhrzeit, z. B. "Dienstag, 20. April 2021 16:20". |
-| `R` | Relativ | Wie lange her oder wie weit voraus, z. B. "in 2 Stunden" oder "vor 3 Tagen". Zählt live mit. |
+| Wert | Name                     | Details                                                                                      |
+| ---- | ------------------------ | -------------------------------------------------------------------------------------------- |
+| `t`  | Kurze Uhrzeit            | Nur die Uhrzeit, z. B. "16:20".                                                              |
+| `T`  | Lange Uhrzeit            | Die Uhrzeit mit Sekunden, z. B. "16:20:30".                                                  |
+| `d`  | Kurzes Datum             | Das Datum in Ziffern, z. B. "20.04.2021".                                                    |
+| `D`  | Langes Datum             | Das Datum mit ausgeschriebenem Monat, z. B. "20. April 2021".                                |
+| `f`  | Kurzes Datum mit Uhrzeit | Datum und Uhrzeit, z. B. "20. April 2021 16:20".                                             |
+| `F`  | Langes Datum mit Uhrzeit | Wochentag, Datum und Uhrzeit, z. B. "Dienstag, 20. April 2021 16:20".                        |
+| `R`  | Relativ                  | Wie lange her oder wie weit voraus, z. B. "in 2 Stunden" oder "vor 3 Tagen". Zählt live mit. |
 
 ### Widget-Bild-Stil {#WIDGET_IMAGE_STYLE}
 
 Wie das Server-Widget-Bild aussieht.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `shield` | Abzeichen | Ein kleines Abzeichen mit dem Discord-Logo und der Zahl der Mitglieder online. |
-| `banner1` | Banner 1 | Ein großes Banner mit Server-Icon, Name und Mitgliedern online, unten "Powered by Discord". |
-| `banner2` | Banner 2 | Ein kleineres Banner mit Server-Icon, Name und Mitgliedern online, rechts das Discord-Logo. |
-| `banner3` | Banner 3 | Ein großes Banner mit Server-Icon, Name und Mitgliedern online, unten ein "Chat now"-Link. |
-| `banner4` | Banner 4 | Ein großes Banner mit dem Discord-Logo oben, Server-Icon, Name, Mitgliedern online und einem "Join my server"-Button. |
+| Wert      | Name      | Details                                                                                                               |
+| --------- | --------- | --------------------------------------------------------------------------------------------------------------------- |
+| `shield`  | Abzeichen | Ein kleines Abzeichen mit dem Discord-Logo und der Zahl der Mitglieder online.                                        |
+| `banner1` | Banner 1  | Ein großes Banner mit Server-Icon, Name und Mitgliedern online, unten "Powered by Discord".                           |
+| `banner2` | Banner 2  | Ein kleineres Banner mit Server-Icon, Name und Mitgliedern online, rechts das Discord-Logo.                           |
+| `banner3` | Banner 3  | Ein großes Banner mit Server-Icon, Name und Mitgliedern online, unten ein "Chat now"-Link.                            |
+| `banner4` | Banner 4  | Ein großes Banner mit dem Discord-Logo oben, Server-Icon, Name, Mitgliedern online und einem "Join my server"-Button. |
 
 ### Erwähnungstyp {#MENTION_TYPE}
 
 Worauf eine ID zeigt - das entscheidet über das Erwähnungs-Markup.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `USER` | Benutzer | Ein Mitglied oder Benutzer, erwähnt als &lt;@123&gt;. |
-| `ROLE` | Rolle | Eine Server-Rolle, erwähnt als &lt;@&123&gt;. |
-| `CHANNEL` | Kanal | Ein Kanal, verlinkt als &lt;#123&gt;. |
+| Wert      | Name     | Details                                               |
+| --------- | -------- | ----------------------------------------------------- |
+| `USER`    | Benutzer | Ein Mitglied oder Benutzer, erwähnt als &lt;@123&gt;. |
+| `ROLE`    | Rolle    | Eine Server-Rolle, erwähnt als &lt;@&123&gt;.         |
+| `CHANNEL` | Kanal    | Ein Kanal, verlinkt als &lt;#123&gt;.                 |
 
 ### Komponenten-Aufräumverhalten {#COMPONENT_CLEANUP}
 
 Was mit den beobachteten Buttons/Auswahlmenüs passiert, sobald ein Warten beendet ist.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `DISABLE` | Deaktivieren | Komponenten bleiben sichtbar, sind aber ausgegraut. |
-| `REMOVE` | Entfernen | Komponenten werden aus der Nachricht entfernt. |
-| `KEEP` | Behalten | Komponenten bleiben unverändert. |
-| `RESET` | Zurücksetzen | Setzt die Auswahl eines Auswahlmenüs zurück, sodass wieder der Platzhalter angezeigt wird und erneut ausgewählt werden kann. |
+| Wert      | Name         | Details                                                                                                                      |
+| --------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `DISABLE` | Deaktivieren | Komponenten bleiben sichtbar, sind aber ausgegraut.                                                                          |
+| `REMOVE`  | Entfernen    | Komponenten werden aus der Nachricht entfernt.                                                                               |
+| `KEEP`    | Behalten     | Komponenten bleiben unverändert.                                                                                             |
+| `RESET`   | Zurücksetzen | Setzt die Auswahl eines Auswahlmenüs zurück, sodass wieder der Platzhalter angezeigt wird und erneut ausgewählt werden kann. |
 
 ### Fehlercode {#ERROR_CODE}
 
 Maschinenlesbarer Code, der beschreibt, warum eine Aktion fehlgeschlagen ist.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `MISSING_PERMISSIONS` | Fehlende Berechtigungen | Dem Bot fehlen die erforderlichen Berechtigungen. |
-| `DISCORD_API_ERROR` | Discord-API-Fehler | Discord hat die Anfrage abgelehnt. |
-| `INVALID_INPUT` | Ungültige Eingabe | Eine Eingabe hatte einen ungültigen Wert. |
-| `NOT_FOUND` | Nicht gefunden | Die angeforderte Ressource existiert nicht. |
-| `STORAGE_ERROR` | Speicherfehler | Ein Speichervorgang ist fehlgeschlagen. |
-| `LIMIT_EXCEEDED` | Limit überschritten | Ein Ausführungslimit wurde überschritten. |
-| `TIMEOUT` | Zeitüberschreitung | Der Vorgang hat zu lange gedauert. |
-| `UNKNOWN` | Unbekannt | Ein unerwarteter Fehler ist aufgetreten. |
-| `INTERACTION_EXPIRED` | Interaktion abgelaufen | Die Interaktion ist abgelaufen, bevor der Bot geantwortet hat (etwa 3 Sekunden). Antworte oder defer früher, oder nutze den Defer-Schutz. |
-| `AI_CREDITS_EXHAUSTED` | Keine AI Coins mehr | Auf diesem Server sind keine AI Coins mehr übrig, deshalb wurde die KI-Aktion nicht ausgeführt. Es wurde nichts abgebucht. Fange diesen Code ab, um eine Alternative zu nutzen, oder lade deine AI Coins auf. |
-| `HTTP_TIMEOUT` | HTTP-Zeitüberschreitung | Die Web-API hat nicht rechtzeitig geantwortet. |
-| `HTTP_UNREACHABLE` | HTTP nicht erreichbar | Die Web-API war nicht erreichbar: Die Adresse existiert nicht, hat die Verbindung abgelehnt oder hat ein fehlerhaftes Zertifikat. |
-| `HTTP_RESPONSE_TOO_LARGE` | HTTP-Antwort zu groß | Die Antwort war größer als 1 MB. |
-| `HTTP_RATE_LIMITED` | HTTP-Anfragelimit erreicht | Zu viele Anfragen in kurzer Zeit. Versuche es später erneut. |
-| `HTTP_UNAVAILABLE` | HTTP nicht verfügbar | Ausgehende Anfragen sind gerade nicht verfügbar. |
+| Wert                      | Name                       | Details                                                                                                                                                                                                       |
+| ------------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `MISSING_PERMISSIONS`     | Fehlende Berechtigungen    | Dem Bot fehlen die erforderlichen Berechtigungen.                                                                                                                                                             |
+| `DISCORD_API_ERROR`       | Discord-API-Fehler         | Discord hat die Anfrage abgelehnt.                                                                                                                                                                            |
+| `INVALID_INPUT`           | Ungültige Eingabe          | Eine Eingabe hatte einen ungültigen Wert.                                                                                                                                                                     |
+| `NOT_FOUND`               | Nicht gefunden             | Die angeforderte Ressource existiert nicht.                                                                                                                                                                   |
+| `STORAGE_ERROR`           | Speicherfehler             | Ein Speichervorgang ist fehlgeschlagen.                                                                                                                                                                       |
+| `LIMIT_EXCEEDED`          | Limit überschritten        | Ein Ausführungslimit wurde überschritten.                                                                                                                                                                     |
+| `TIMEOUT`                 | Zeitüberschreitung         | Der Vorgang hat zu lange gedauert.                                                                                                                                                                            |
+| `UNKNOWN`                 | Unbekannt                  | Ein unerwarteter Fehler ist aufgetreten.                                                                                                                                                                      |
+| `INTERACTION_EXPIRED`     | Interaktion abgelaufen     | Die Interaktion ist abgelaufen, bevor der Bot geantwortet hat (etwa 3 Sekunden). Antworte oder defer früher, oder nutze den Defer-Schutz.                                                                     |
+| `AI_CREDITS_EXHAUSTED`    | Keine AI Coins mehr        | Auf diesem Server sind keine AI Coins mehr übrig, deshalb wurde die KI-Aktion nicht ausgeführt. Es wurde nichts abgebucht. Fange diesen Code ab, um eine Alternative zu nutzen, oder lade deine AI Coins auf. |
+| `HTTP_TIMEOUT`            | HTTP-Zeitüberschreitung    | Die Web-API hat nicht rechtzeitig geantwortet.                                                                                                                                                                |
+| `HTTP_UNREACHABLE`        | HTTP nicht erreichbar      | Die Web-API war nicht erreichbar: Die Adresse existiert nicht, hat die Verbindung abgelehnt oder hat ein fehlerhaftes Zertifikat.                                                                             |
+| `HTTP_RESPONSE_TOO_LARGE` | HTTP-Antwort zu groß       | Die Antwort war größer als 1 MB.                                                                                                                                                                              |
+| `HTTP_RATE_LIMITED`       | HTTP-Anfragelimit erreicht | Zu viele Anfragen in kurzer Zeit. Versuche es später erneut.                                                                                                                                                  |
+| `HTTP_UNAVAILABLE`        | HTTP nicht verfügbar       | Ausgehende Anfragen sind gerade nicht verfügbar.                                                                                                                                                              |
 
 ### HTTP-Methode {#HTTP_METHOD}
 
 Wie eine HTTP-Anfrage die Adresse behandelt.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `GET` | GET | Daten lesen. |
-| `POST` | POST | Neue Daten senden. |
-| `PUT` | PUT | Daten ersetzen. |
-| `PATCH` | PATCH | Einen Teil der Daten ändern. |
-| `DELETE` | DELETE | Daten löschen. |
+| Wert     | Name   | Details                      |
+| -------- | ------ | ---------------------------- |
+| `GET`    | GET    | Daten lesen.                 |
+| `POST`   | POST   | Neue Daten senden.           |
+| `PUT`    | PUT    | Daten ersetzen.              |
+| `PATCH`  | PATCH  | Einen Teil der Daten ändern. |
+| `DELETE` | DELETE | Daten löschen.               |
 
 ### Inhalt {#HTTP_BODY_MODE}
 
 Was eine HTTP-Anfrage oder Webhook-Antwort mitsendet.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `NONE` | Keiner | Keinen Inhalt senden. |
-| `JSON` | JSON | Einen Wert als JSON senden. |
+| Wert   | Name     | Details                                            |
+| ------ | -------- | -------------------------------------------------- |
+| `NONE` | Keiner   | Keinen Inhalt senden.                              |
+| `JSON` | JSON     | Einen Wert als JSON senden.                        |
 | `FORM` | Formular | Namen und Werte als URL-kodiertes Formular senden. |
-| `RAW` | Text | Text genau so senden. |
+| `RAW`  | Text     | Text genau so senden.                              |
 
 ### Art des Werts {#DATA_TYPE}
 
 Mit welcher Art von Wert eine Aktion arbeitet, damit der Flow-Editor weiß, was du anschließen kannst und was wieder herauskommt.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `STRING` | Text | Beliebiger Text, zum Beispiel ein Name, ein Grund oder eine ganze Nachricht. |
-| `FLOAT` | Zahl | Eine Zahl, mit oder ohne Nachkommastellen. |
-| `BOOLEAN` | Ja/Nein | Ein einfacher Ja-oder-Nein-Wert. |
-| `DISCORD_USER` | Discord-Benutzer | Ein Discord-Konto. Funktioniert auch bei Personen, die nicht auf deinem Server sind. |
-| `GUILD_MEMBER` | Server-Mitglied | Jemand, der auf deinem Server ist, inklusive Nickname und Rollen. |
-| `GUILD_ROLE` | Server-Rolle | Eine Rolle auf deinem Server. |
-| `GUILD_CHANNEL` | Server-Kanal | Ein Kanal auf deinem Server. |
-| `ID` | ID | Eine Kennung, die genau so bleibt, wie sie geschrieben ist, zum Beispiel eine Discord-ID oder eine ID aus einem anderen Dienst. |
-| `BIGINT` | Große ganze Zahl | Eine ganze Zahl beliebiger Größe, die exakt bleibt. Rechne damit über die Aktionen für große Zahlen. |
+| Wert            | Name             | Details                                                                                                                         |
+| --------------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| `STRING`        | Text             | Beliebiger Text, zum Beispiel ein Name, ein Grund oder eine ganze Nachricht.                                                    |
+| `FLOAT`         | Zahl             | Eine Zahl, mit oder ohne Nachkommastellen.                                                                                      |
+| `BOOLEAN`       | Ja/Nein          | Ein einfacher Ja-oder-Nein-Wert.                                                                                                |
+| `DISCORD_USER`  | Discord-Benutzer | Ein Discord-Konto. Funktioniert auch bei Personen, die nicht auf deinem Server sind.                                            |
+| `GUILD_MEMBER`  | Server-Mitglied  | Jemand, der auf deinem Server ist, inklusive Nickname und Rollen.                                                               |
+| `GUILD_ROLE`    | Server-Rolle     | Eine Rolle auf deinem Server.                                                                                                   |
+| `GUILD_CHANNEL` | Server-Kanal     | Ein Kanal auf deinem Server.                                                                                                    |
+| `ID`            | ID               | Eine Kennung, die genau so bleibt, wie sie geschrieben ist, zum Beispiel eine Discord-ID oder eine ID aus einem anderen Dienst. |
+| `BIGINT`        | Große ganze Zahl | Eine ganze Zahl beliebiger Größe, die exakt bleibt. Rechne damit über die Aktionen für große Zahlen.                            |
 
 ### Rechenart für große ganze Zahlen {#BIGINT_OPERATION}
 
 Was mit zwei großen ganzen Zahlen geschehen soll.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ADD` | Addieren | a plus b. |
-| `SUBTRACT` | Subtrahieren | a minus b. |
-| `MULTIPLY` | Multiplizieren | a mal b. |
-| `DIVIDE` | Dividieren | a geteilt durch b, in Richtung 0 gerundet. Eine Division durch 0 schlägt fehl. |
-| `MODULO` | Rest | Was nach dem Teilen von a durch b übrig bleibt; der Rest hat das Vorzeichen von a. Eine Division durch 0 schlägt fehl. |
+| Wert       | Name           | Details                                                                                                                |
+| ---------- | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `ADD`      | Addieren       | a plus b.                                                                                                              |
+| `SUBTRACT` | Subtrahieren   | a minus b.                                                                                                             |
+| `MULTIPLY` | Multiplizieren | a mal b.                                                                                                               |
+| `DIVIDE`   | Dividieren     | a geteilt durch b, in Richtung 0 gerundet. Eine Division durch 0 schlägt fehl.                                         |
+| `MODULO`   | Rest           | Was nach dem Teilen von a durch b übrig bleibt; der Rest hat das Vorzeichen von a. Eine Division durch 0 schlägt fehl. |
 
 ### Zeitfenster {#EXECUTION_WINDOW}
 
 Ein zurückliegendes Zeitfenster zum Zählen von Flow-Ausführungen.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `ALL` | Gesamter Zeitraum | Jede aufgezeichnete Ausführung zählen (im Rahmen der Aufbewahrung). |
-| `DAY` | Letzte 24 Stunden | Ausführungen der letzten 24 Stunden zählen. |
-| `WEEK` | Letzte 7 Tage | Ausführungen der letzten 7 Tage zählen. |
+| Wert   | Name              | Details                                                             |
+| ------ | ----------------- | ------------------------------------------------------------------- |
+| `ALL`  | Gesamter Zeitraum | Jede aufgezeichnete Ausführung zählen (im Rahmen der Aufbewahrung). |
+| `DAY`  | Letzte 24 Stunden | Ausführungen der letzten 24 Stunden zählen.                         |
+| `WEEK` | Letzte 7 Tage     | Ausführungen der letzten 7 Tage zählen.                             |
 
 ### Zeichensatz {#RANDOM_CHARSET}
 
 Welche Zeichen ein zufälliger Text enthalten darf.
 
-| Wert | Name | Details |
-| --- | --- | --- |
+| Wert           | Name                   | Details           |
+| -------------- | ---------------------- | ----------------- |
 | `ALPHANUMERIC` | Buchstaben und Ziffern | A-Z, a-z und 0-9. |
-| `ALPHABETIC` | Nur Buchstaben | A-Z und a-z. |
-| `NUMERIC` | Nur Ziffern | 0-9. |
-| `HEXADECIMAL` | Hexadezimal | 0-9 und a-f. |
+| `ALPHABETIC`   | Nur Buchstaben         | A-Z und a-z.      |
+| `NUMERIC`      | Nur Ziffern            | 0-9.              |
+| `HEXADECIMAL`  | Hexadezimal            | 0-9 und a-f.      |
 
 ### Thread-Sichtbarkeit {#ARCHIVED_THREAD_PRIVACY}
 
 Ob öffentliche oder private archivierte Threads geladen werden.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `PUBLIC` | Öffentlich | Öffentliche archivierte Threads. |
-| `PRIVATE` | Privat | Private archivierte Threads. |
+| Wert      | Name       | Details                          |
+| --------- | ---------- | -------------------------------- |
+| `PUBLIC`  | Öffentlich | Öffentliche archivierte Threads. |
+| `PRIVATE` | Privat     | Private archivierte Threads.     |
 
 ## Objekte {#objects}
 
@@ -956,13 +956,13 @@ Ein Discord-Kanal.
 
 Beispiel: `#allgemein`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID des Kanals. Beispiel: `345678901234567890`. |
-| Name | [Text](#STRING) | Der Name des Kanals. Kann leer sein. Beispiel: `allgemein`. |
-| Typ | [Kanaltyp](#CHANNEL_TYPE) | Die Art des Kanals. |
-| URL | [URL](#URL) | Sprung-zu-URL des Kanals. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Kanal erstellt wurde. Kann leer sein. |
+| Eigenschaft | Typ                            | Details                                                     |
+| ----------- | ------------------------------ | ----------------------------------------------------------- |
+| ID          | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID des Kanals. Beispiel: `345678901234567890`.  |
+| Name        | [Text](#STRING)                | Der Name des Kanals. Kann leer sein. Beispiel: `allgemein`. |
+| Typ         | [Kanaltyp](#CHANNEL_TYPE)      | Die Art des Kanals.                                         |
+| URL         | [URL](#URL)                    | Sprung-zu-URL des Kanals.                                   |
+| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Kanal erstellt wurde. Kann leer sein.              |
 
 ### Server-Kanal {#GUILD_CHANNEL}
 
@@ -970,15 +970,15 @@ Ein Kanal, der auf einem Server lebt.
 
 Beispiel: `#allgemein`. Baut auf auf: [Kanal](#CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Server | [Server](#GUILD) | Der Server, zu dem dieser Kanal gehört. |
-| Kategorie | [Kategorie](#CATEGORY_CHANNEL) | Die Kategorie, in der sich dieser Kanal befindet. Kann leer sein. |
-| Position | [Ganzzahl](#INTEGER) | Position des Kanals in der Kanalliste. |
-| Berechtigungen synchronisiert | [Ja/Nein](#BOOLEAN) | Ob Berechtigungen mit der übergeordneten Kategorie synchronisiert sind. Kann leer sein. |
-| Verwaltbar | [Ja/Nein](#BOOLEAN) | Ob der Bot diesen Kanal verwalten kann. |
-| Sichtbar | [Ja/Nein](#BOOLEAN) | Ob der Bot diesen Kanal sehen kann. |
-| Löschbar | [Ja/Nein](#BOOLEAN) | Ob der Bot diesen Kanal löschen kann. |
+| Eigenschaft                   | Typ                            | Details                                                                                 |
+| ----------------------------- | ------------------------------ | --------------------------------------------------------------------------------------- |
+| Server                        | [Server](#GUILD)               | Der Server, zu dem dieser Kanal gehört.                                                 |
+| Kategorie                     | [Kategorie](#CATEGORY_CHANNEL) | Die Kategorie, in der sich dieser Kanal befindet. Kann leer sein.                       |
+| Position                      | [Ganzzahl](#INTEGER)           | Position des Kanals in der Kanalliste.                                                  |
+| Berechtigungen synchronisiert | [Ja/Nein](#BOOLEAN)            | Ob Berechtigungen mit der übergeordneten Kategorie synchronisiert sind. Kann leer sein. |
+| Verwaltbar                    | [Ja/Nein](#BOOLEAN)            | Ob der Bot diesen Kanal verwalten kann.                                                 |
+| Sichtbar                      | [Ja/Nein](#BOOLEAN)            | Ob der Bot diesen Kanal sehen kann.                                                     |
+| Löschbar                      | [Ja/Nein](#BOOLEAN)            | Ob der Bot diesen Kanal löschen kann.                                                   |
 
 ### Kategorie {#CATEGORY_CHANNEL}
 
@@ -986,9 +986,9 @@ Eine Kategorie, die Kanäle gruppiert.
 
 Baut auf auf: [Server-Kanal](#GUILD_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Kanäle in dieser Kategorie. |
+| Eigenschaft | Typ                                      | Details                     |
+| ----------- | ---------------------------------------- | --------------------------- |
+| Kanäle      | Liste von [Server-Kanal](#GUILD_CHANNEL) | Kanäle in dieser Kategorie. |
 
 ### Textkanal {#GUILD_TEXT_CHANNEL}
 
@@ -996,14 +996,14 @@ Ein Textkanal auf deinem Server.
 
 Baut auf auf: [Server-Kanal](#GUILD_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Thema | [Text](#STRING) | Das Kanalthema. Maximale Länge: 1024 Zeichen. Kann leer sein. |
-| NSFW | [Ja/Nein](#BOOLEAN) | Ob dieser Kanal als altersbesch rānkt markiert ist. |
-| Slowmode | [Dauer](#DURATION) | Ratenlimit pro Benutzer. |
-| Standard-Autoarchiv | [Dauer](#DURATION) | Standard-Autoarchiv-Dauer für neue Threads. Kann leer sein. |
-| Standard-Thread-Slowmode | [Dauer](#DURATION) | Standard-Slowmode für neue Threads in diesem Kanal. Kann leer sein. |
-| Letzte Nachricht | [Nachricht](#MESSAGE) | Die zuletzt gesendete Nachricht in diesem Kanal. Kann leer sein. |
+| Eigenschaft              | Typ                   | Details                                                             |
+| ------------------------ | --------------------- | ------------------------------------------------------------------- |
+| Thema                    | [Text](#STRING)       | Das Kanalthema. Maximale Länge: 1024 Zeichen. Kann leer sein.       |
+| NSFW                     | [Ja/Nein](#BOOLEAN)   | Ob dieser Kanal als altersbesch rānkt markiert ist.                 |
+| Slowmode                 | [Dauer](#DURATION)    | Ratenlimit pro Benutzer.                                            |
+| Standard-Autoarchiv      | [Dauer](#DURATION)    | Standard-Autoarchiv-Dauer für neue Threads. Kann leer sein.         |
+| Standard-Thread-Slowmode | [Dauer](#DURATION)    | Standard-Slowmode für neue Threads in diesem Kanal. Kann leer sein. |
+| Letzte Nachricht         | [Nachricht](#MESSAGE) | Die zuletzt gesendete Nachricht in diesem Kanal. Kann leer sein.    |
 
 ### Ankündigungskanal {#ANNOUNCEMENT_CHANNEL}
 
@@ -1017,15 +1017,15 @@ Ein Sprachkanal auf deinem Server.
 
 Baut auf auf: [Server-Kanal](#GUILD_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Bitrate | [Ganzzahl](#INTEGER) | Audio-Bitrate (8000 - 384000). Wert: 8000 bis 384000. |
-| Benutzerlimit | [Ganzzahl](#INTEGER) | Maximale Anzahl der Benutzer (0 = unbegrenzt). Wert: 0 bis 99. |
-| RTC-Region | [Text](#STRING) | Sprach-Regionalüberschreibung. Kann leer sein. |
+| Eigenschaft               | Typ                                        | Details                                                        |
+| ------------------------- | ------------------------------------------ | -------------------------------------------------------------- |
+| Bitrate                   | [Ganzzahl](#INTEGER)                       | Audio-Bitrate (8000 - 384000). Wert: 8000 bis 384000.          |
+| Benutzerlimit             | [Ganzzahl](#INTEGER)                       | Maximale Anzahl der Benutzer (0 = unbegrenzt). Wert: 0 bis 99. |
+| RTC-Region                | [Text](#STRING)                            | Sprach-Regionalüberschreibung. Kann leer sein.                 |
 | Mitglieder im Sprachkanal | Liste von [Server-Mitglied](#GUILD_MEMBER) | Mitglieder, die derzeit mit diesem Sprachkanal verbunden sind. |
-| Voll | [Ja/Nein](#BOOLEAN) | Ob das Benutzerlimit erreicht ist. |
-| Betrebar | [Ja/Nein](#BOOLEAN) | Ob der Bot diesem Kanal beitreten kann. |
-| Sprechbar | [Ja/Nein](#BOOLEAN) | Ob der Bot in diesem Kanal sprechen kann. |
+| Voll                      | [Ja/Nein](#BOOLEAN)                        | Ob das Benutzerlimit erreicht ist.                             |
+| Betrebar                  | [Ja/Nein](#BOOLEAN)                        | Ob der Bot diesem Kanal beitreten kann.                        |
+| Sprechbar                 | [Ja/Nein](#BOOLEAN)                        | Ob der Bot in diesem Kanal sprechen kann.                      |
 
 ### Stage-Kanal {#STAGE_CHANNEL}
 
@@ -1033,21 +1033,21 @@ Ein Stage-Kanal für moderierte Audio-Events.
 
 Baut auf auf: [Sprachkanal](#GUILD_VOICE_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
+| Eigenschaft  | Typ                              | Details                                                              |
+| ------------ | -------------------------------- | -------------------------------------------------------------------- |
 | Aktive Stage | [Stage-Instanz](#STAGE_INSTANCE) | Die derzeit laufende Stage-Instanz, falls vorhanden. Kann leer sein. |
-| Thema | [Text](#STRING) | Thema des Kanals. Kann leer sein. |
+| Thema        | [Text](#STRING)                  | Thema des Kanals. Kann leer sein.                                    |
 
 ### Forum-Tag {#FORUM_TAG}
 
 Ein Tag, der auf Forum-Beiträge angewendet werden kann.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | ID des Tags. |
-| Name | [Text](#STRING) | Angezeigter Name des Tags. Maximale Länge: 20 Zeichen. |
-| Nur für Moderatoren | [Ja/Nein](#BOOLEAN) | Ob nur Moderatoren diesen Tag anwenden können. |
-| Emoji | [Text](#STRING) | Emoji neben dem Tag angezeigt. Kann leer sein. |
+| Eigenschaft         | Typ                      | Details                                                |
+| ------------------- | ------------------------ | ------------------------------------------------------ |
+| ID                  | [Discord-ID](#SNOWFLAKE) | ID des Tags.                                           |
+| Name                | [Text](#STRING)          | Angezeigter Name des Tags. Maximale Länge: 20 Zeichen. |
+| Nur für Moderatoren | [Ja/Nein](#BOOLEAN)      | Ob nur Moderatoren diesen Tag anwenden können.         |
+| Emoji               | [Text](#STRING)          | Emoji neben dem Tag angezeigt. Kann leer sein.         |
 
 ### Forum-Kanal {#FORUM_CHANNEL}
 
@@ -1055,13 +1055,13 @@ Ein Forum-Kanal mit Beiträgen als Threads.
 
 Baut auf auf: [Server-Kanal](#GUILD_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Thema | [Text](#STRING) | Kanalthema. Maximale Länge: 4096 Zeichen. Kann leer sein. |
-| NSFW | [Ja/Nein](#BOOLEAN) | Ob dieses Forum altersbesch rānkt ist. |
-| Verfügbare Tags | Liste von [Forum-Tag](#FORUM_TAG) | Tags, die auf Beiträge angewendet werden können. Höchstens 20 Einträge. |
-| Standard-Autoarchiv | [Dauer](#DURATION) | Standard-Autoarchiv-Dauer für neue Beiträge. Kann leer sein. |
-| Standard-Beitrag-Slowmode | [Dauer](#DURATION) | Standard-Slowmode für neue Beiträge. Kann leer sein. |
+| Eigenschaft               | Typ                               | Details                                                                 |
+| ------------------------- | --------------------------------- | ----------------------------------------------------------------------- |
+| Thema                     | [Text](#STRING)                   | Kanalthema. Maximale Länge: 4096 Zeichen. Kann leer sein.               |
+| NSFW                      | [Ja/Nein](#BOOLEAN)               | Ob dieses Forum altersbesch rānkt ist.                                  |
+| Verfügbare Tags           | Liste von [Forum-Tag](#FORUM_TAG) | Tags, die auf Beiträge angewendet werden können. Höchstens 20 Einträge. |
+| Standard-Autoarchiv       | [Dauer](#DURATION)                | Standard-Autoarchiv-Dauer für neue Beiträge. Kann leer sein.            |
+| Standard-Beitrag-Slowmode | [Dauer](#DURATION)                | Standard-Slowmode für neue Beiträge. Kann leer sein.                    |
 
 ### Medien-Kanal {#MEDIA_CHANNEL}
 
@@ -1075,19 +1075,19 @@ Ein Thread in einem Text- oder Forum-Kanal.
 
 Baut auf auf: [Server-Kanal](#GUILD_CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Eigentümer | [Server-Mitglied](#GUILD_MEMBER) | Mitglied, das den Thread gestartet hat. Kann leer sein. |
-| Übergeordneter Kanal | [Server-Kanal](#GUILD_CHANNEL) | Der Kanal, in dem sich dieser Thread befindet. Kann leer sein. |
-| Archiviert | [Ja/Nein](#BOOLEAN) | Ob der Thread archiviert ist. Kann leer sein. |
-| Gesperrt | [Ja/Nein](#BOOLEAN) | Ob der Thread gesperrt ist. Kann leer sein. |
-| Autoarchiv | [Dauer](#DURATION) | Wann der Thread automatisch archiviert wird. Kann leer sein. |
-| Archiviert um | [Datum und Uhrzeit](#DATETIME) | Wann der Thread zuletzt archiviert wurde. Kann leer sein. |
-| Einladbar | [Ja/Nein](#BOOLEAN) | Ob Nicht-Moderatoren einen privaten Thread einladen können. Kann leer sein. |
-| Beigetreten | [Ja/Nein](#BOOLEAN) | Ob der Bot diesem Thread beigetreten ist. |
-| Mitgliederanzahl | [Ganzzahl](#INTEGER) | Anzahl der Mitglieder im Thread. Kann leer sein. |
-| Nachrichtenanzahl | [Ganzzahl](#INTEGER) | Ungefähre Anzahl der Nachrichten im Thread. Kann leer sein. |
-| Angewendete Tags | Liste von [Forum-Tag](#FORUM_TAG) | Forum-Tags, die auf diesen Beitrag angewendet wurden. |
+| Eigenschaft          | Typ                               | Details                                                                     |
+| -------------------- | --------------------------------- | --------------------------------------------------------------------------- |
+| Eigentümer           | [Server-Mitglied](#GUILD_MEMBER)  | Mitglied, das den Thread gestartet hat. Kann leer sein.                     |
+| Übergeordneter Kanal | [Server-Kanal](#GUILD_CHANNEL)    | Der Kanal, in dem sich dieser Thread befindet. Kann leer sein.              |
+| Archiviert           | [Ja/Nein](#BOOLEAN)               | Ob der Thread archiviert ist. Kann leer sein.                               |
+| Gesperrt             | [Ja/Nein](#BOOLEAN)               | Ob der Thread gesperrt ist. Kann leer sein.                                 |
+| Autoarchiv           | [Dauer](#DURATION)                | Wann der Thread automatisch archiviert wird. Kann leer sein.                |
+| Archiviert um        | [Datum und Uhrzeit](#DATETIME)    | Wann der Thread zuletzt archiviert wurde. Kann leer sein.                   |
+| Einladbar            | [Ja/Nein](#BOOLEAN)               | Ob Nicht-Moderatoren einen privaten Thread einladen können. Kann leer sein. |
+| Beigetreten          | [Ja/Nein](#BOOLEAN)               | Ob der Bot diesem Thread beigetreten ist.                                   |
+| Mitgliederanzahl     | [Ganzzahl](#INTEGER)              | Anzahl der Mitglieder im Thread. Kann leer sein.                            |
+| Nachrichtenanzahl    | [Ganzzahl](#INTEGER)              | Ungefähre Anzahl der Nachrichten im Thread. Kann leer sein.                 |
+| Angewendete Tags     | Liste von [Forum-Tag](#FORUM_TAG) | Forum-Tags, die auf diesen Beitrag angewendet wurden.                       |
 
 ### Direktnachricht {#DM_CHANNEL}
 
@@ -1095,9 +1095,9 @@ Ein Direktnachrichten-Kanal.
 
 Baut auf auf: [Kanal](#CHANNEL).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Empfänger | [Benutzer](#DISCORD_USER) | Benutzer, mit dem der Bot kommuniziert. Kann leer sein. |
+| Eigenschaft | Typ                       | Details                                                 |
+| ----------- | ------------------------- | ------------------------------------------------------- |
+| Empfänger   | [Benutzer](#DISCORD_USER) | Benutzer, mit dem der Bot kommuniziert. Kann leer sein. |
 
 ### Benutzer {#DISCORD_USER}
 
@@ -1105,21 +1105,21 @@ Ein Discord-Benutzerkonto.
 
 Beispiel: `Alex (@alex)`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des Benutzers. Beispiel: `123456789012345678`. |
-| Benutzername | [Text](#STRING) | Anmelde-Benutzername. Beispiel: `alex`. |
-| Globaler Name | [Text](#STRING) | Discord-Anzeigename (möglicherweise nicht gesetzt). Kann leer sein. |
-| Anzeigename | [Text](#STRING) | Der Anzeigename des Benutzers (globaler Name oder ersatzweise der Benutzername). Beispiel: `Alex`. |
-| Discriminator | [Text](#STRING) | Legacy-Discriminator ("0" für migrierte Benutzer). |
-| Avatar-URL | [URL](#URL) | URL des Avatars des Benutzers. Kann leer sein. |
-| Banner-URL | [URL](#URL) | URL des Banners des Benutzers. Kann leer sein. |
-| Akzentfarbe | [Farbe](#COLOR) | Profilakzentfarbe. Kann leer sein. |
-| Ist Bot | [Ja/Nein](#BOOLEAN) | Ob der Benutzer ein Bot ist. |
-| Ist Discord-System | [Ja/Nein](#BOOLEAN) | Ob der Benutzer ein Discord-Systemkonto ist. |
-| Tag | [Text](#STRING) | Benutzername mit Discriminator (Legacy-Format). |
-| Erwähnung | [Text](#STRING) | Erwähnungstext zur Verwendung in Nachrichten. Beispiel: `@Alex`. |
-| Erstellt um | [Datum und Uhrzeit](#DATETIME) | Wann das Konto erstellt wurde. |
+| Eigenschaft        | Typ                            | Details                                                                                            |
+| ------------------ | ------------------------------ | -------------------------------------------------------------------------------------------------- |
+| ID                 | [Discord-ID](#SNOWFLAKE)       | Discord-ID des Benutzers. Beispiel: `123456789012345678`.                                          |
+| Benutzername       | [Text](#STRING)                | Anmelde-Benutzername. Beispiel: `alex`.                                                            |
+| Globaler Name      | [Text](#STRING)                | Discord-Anzeigename (möglicherweise nicht gesetzt). Kann leer sein.                                |
+| Anzeigename        | [Text](#STRING)                | Der Anzeigename des Benutzers (globaler Name oder ersatzweise der Benutzername). Beispiel: `Alex`. |
+| Discriminator      | [Text](#STRING)                | Legacy-Discriminator ("0" für migrierte Benutzer).                                                 |
+| Avatar-URL         | [URL](#URL)                    | URL des Avatars des Benutzers. Kann leer sein.                                                     |
+| Banner-URL         | [URL](#URL)                    | URL des Banners des Benutzers. Kann leer sein.                                                     |
+| Akzentfarbe        | [Farbe](#COLOR)                | Profilakzentfarbe. Kann leer sein.                                                                 |
+| Ist Bot            | [Ja/Nein](#BOOLEAN)            | Ob der Benutzer ein Bot ist.                                                                       |
+| Ist Discord-System | [Ja/Nein](#BOOLEAN)            | Ob der Benutzer ein Discord-Systemkonto ist.                                                       |
+| Tag                | [Text](#STRING)                | Benutzername mit Discriminator (Legacy-Format).                                                    |
+| Erwähnung          | [Text](#STRING)                | Erwähnungstext zur Verwendung in Nachrichten. Beispiel: `@Alex`.                                   |
+| Erstellt um        | [Datum und Uhrzeit](#DATETIME) | Wann das Konto erstellt wurde.                                                                     |
 
 ### Server-Mitglied {#GUILD_MEMBER}
 
@@ -1127,25 +1127,25 @@ Ein Benutzer im Kontext eines bestimmten Servers.
 
 Beispiel: `Alex auf diesem Server`. Baut auf auf: [Benutzer](#DISCORD_USER).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Server | [Server](#GUILD) | Server, dem dieses Mitglied angehört. |
-| Spitzname | [Text](#STRING) | Server-Spitzname (möglicherweise nicht gesetzt). Maximale Länge: 32 Zeichen. Kann leer sein. Beispiel: `Lexi`. |
-| Anzeigename | [Text](#STRING) | Bester Anzeigename (Spitzname &gt; Global &gt; Benutzername). Beispiel: `Alex`. |
-| Anzeige-Avatar | [URL](#URL) | Beste Anzeige-Avatar-URL. |
-| Anzeigefarbe | [Farbe](#COLOR) | Farbe aus der höchsten farbigen Rolle. |
-| Beigetreten am | [Datum und Uhrzeit](#DATETIME) | Wann das Mitglied dem Server beigetreten ist. Kann leer sein. |
-| Boosting seit | [Datum und Uhrzeit](#DATETIME) | Wann das Mitglied den Server zu boosten begann. Kann leer sein. |
-| Timeout bis | [Datum und Uhrzeit](#DATETIME) | Wann das Timeout des Mitglieds endet. Kann leer sein. |
-| Überprüfung ausstehend | [Ja/Nein](#BOOLEAN) | Ob das Mitglied noch die Mitgliedschaftsprüfung bestehen muss. |
-| Rollen | Liste von [Rolle](#GUILD_ROLE) | Dem Mitglied zugewiesene Rollen. Beispiel: `@Moderatoren, @Mitglieder`. |
-| Höchste Rolle | [Rolle](#GUILD_ROLE) | Die höchste Rolle des Mitglieds nach Position (mindestens @everyone). |
-| Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Effektive Berechtigungen des Mitglieds. |
-| Hinauswerfbar | [Ja/Nein](#BOOLEAN) | Ob der Bot dieses Mitglied hinauswerfen kann. |
-| Bannbar | [Ja/Nein](#BOOLEAN) | Ob der Bot dieses Mitglied bannen kann. |
-| Moderierbar | [Ja/Nein](#BOOLEAN) | Ob der Bot dieses Mitglied mit Timeout belegen kann. |
-| Verwaltbar | [Ja/Nein](#BOOLEAN) | Ob der Bot dieses Mitglied verwalten kann. |
-| Sprachstatus | [Sprachstatus](#VOICE_STATE) | Aktueller Sprachstatus, falls verbunden. |
+| Eigenschaft            | Typ                                        | Details                                                                                                        |
+| ---------------------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| Server                 | [Server](#GUILD)                           | Server, dem dieses Mitglied angehört.                                                                          |
+| Spitzname              | [Text](#STRING)                            | Server-Spitzname (möglicherweise nicht gesetzt). Maximale Länge: 32 Zeichen. Kann leer sein. Beispiel: `Lexi`. |
+| Anzeigename            | [Text](#STRING)                            | Bester Anzeigename (Spitzname &gt; Global &gt; Benutzername). Beispiel: `Alex`.                                |
+| Anzeige-Avatar         | [URL](#URL)                                | Beste Anzeige-Avatar-URL.                                                                                      |
+| Anzeigefarbe           | [Farbe](#COLOR)                            | Farbe aus der höchsten farbigen Rolle.                                                                         |
+| Beigetreten am         | [Datum und Uhrzeit](#DATETIME)             | Wann das Mitglied dem Server beigetreten ist. Kann leer sein.                                                  |
+| Boosting seit          | [Datum und Uhrzeit](#DATETIME)             | Wann das Mitglied den Server zu boosten begann. Kann leer sein.                                                |
+| Timeout bis            | [Datum und Uhrzeit](#DATETIME)             | Wann das Timeout des Mitglieds endet. Kann leer sein.                                                          |
+| Überprüfung ausstehend | [Ja/Nein](#BOOLEAN)                        | Ob das Mitglied noch die Mitgliedschaftsprüfung bestehen muss.                                                 |
+| Rollen                 | Liste von [Rolle](#GUILD_ROLE)             | Dem Mitglied zugewiesene Rollen. Beispiel: `@Moderatoren, @Mitglieder`.                                        |
+| Höchste Rolle          | [Rolle](#GUILD_ROLE)                       | Die höchste Rolle des Mitglieds nach Position (mindestens @everyone).                                          |
+| Berechtigungen         | Liste von [Berechtigung](#PERMISSION_FLAG) | Effektive Berechtigungen des Mitglieds.                                                                        |
+| Hinauswerfbar          | [Ja/Nein](#BOOLEAN)                        | Ob der Bot dieses Mitglied hinauswerfen kann.                                                                  |
+| Bannbar                | [Ja/Nein](#BOOLEAN)                        | Ob der Bot dieses Mitglied bannen kann.                                                                        |
+| Moderierbar            | [Ja/Nein](#BOOLEAN)                        | Ob der Bot dieses Mitglied mit Timeout belegen kann.                                                           |
+| Verwaltbar             | [Ja/Nein](#BOOLEAN)                        | Ob der Bot dieses Mitglied verwalten kann.                                                                     |
+| Sprachstatus           | [Sprachstatus](#VOICE_STATE)               | Aktueller Sprachstatus, falls verbunden.                                                                       |
 
 ### Rolle {#GUILD_ROLE}
 
@@ -1153,162 +1153,162 @@ Eine Rolle auf deinem Server.
 
 Beispiel: `@Moderatoren`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Rollen-ID. Beispiel: `234567890123456789`. |
-| Name | [Text](#STRING) | Anzeigename der Rolle. Maximale Länge: 100 Zeichen. Beispiel: `Moderatoren`. |
-| Farbe | [Farbe](#COLOR) | Rollenfarbe. |
-| Position | [Ganzzahl](#INTEGER) | Position in der Rollenliste. |
-| Getrennt anzeigen | [Ja/Nein](#BOOLEAN) | Ob Mitglieder mit der Rolle separat angezeigt werden. |
-| Alle dürfen erwähnen | [Ja/Nein](#BOOLEAN) | Ob die Rolle @erwähnt werden kann. |
-| Verwaltet | [Ja/Nein](#BOOLEAN) | Ob die Rolle von einer Integration verwaltet wird. |
-| Symbol-URL | [URL](#URL) | URL des Rollensymbols. Kann leer sein. |
-| Unicode-Emoji | [Text](#STRING) | Unicode-Emoji als Rollensymbol. Kann leer sein. |
-| Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Von der Rolle gewährte Berechtigungen. |
-| Mitglieder | Liste von [Server-Mitglied](#GUILD_MEMBER) | Mitglieder, die diese Rolle haben. Beispiel: `Alex, Sam`. |
-| Erwähnung | [Text](#STRING) | Erwähnungstext zur Verwendung in Nachrichten. |
-| Erstellt um | [Datum und Uhrzeit](#DATETIME) | Wann die Rolle erstellt wurde. |
+| Eigenschaft          | Typ                                        | Details                                                                      |
+| -------------------- | ------------------------------------------ | ---------------------------------------------------------------------------- |
+| ID                   | [Discord-ID](#SNOWFLAKE)                   | Rollen-ID. Beispiel: `234567890123456789`.                                   |
+| Name                 | [Text](#STRING)                            | Anzeigename der Rolle. Maximale Länge: 100 Zeichen. Beispiel: `Moderatoren`. |
+| Farbe                | [Farbe](#COLOR)                            | Rollenfarbe.                                                                 |
+| Position             | [Ganzzahl](#INTEGER)                       | Position in der Rollenliste.                                                 |
+| Getrennt anzeigen    | [Ja/Nein](#BOOLEAN)                        | Ob Mitglieder mit der Rolle separat angezeigt werden.                        |
+| Alle dürfen erwähnen | [Ja/Nein](#BOOLEAN)                        | Ob die Rolle @erwähnt werden kann.                                           |
+| Verwaltet            | [Ja/Nein](#BOOLEAN)                        | Ob die Rolle von einer Integration verwaltet wird.                           |
+| Symbol-URL           | [URL](#URL)                                | URL des Rollensymbols. Kann leer sein.                                       |
+| Unicode-Emoji        | [Text](#STRING)                            | Unicode-Emoji als Rollensymbol. Kann leer sein.                              |
+| Berechtigungen       | Liste von [Berechtigung](#PERMISSION_FLAG) | Von der Rolle gewährte Berechtigungen.                                       |
+| Mitglieder           | Liste von [Server-Mitglied](#GUILD_MEMBER) | Mitglieder, die diese Rolle haben. Beispiel: `Alex, Sam`.                    |
+| Erwähnung            | [Text](#STRING)                            | Erwähnungstext zur Verwendung in Nachrichten.                                |
+| Erstellt um          | [Datum und Uhrzeit](#DATETIME)             | Wann die Rolle erstellt wurde.                                               |
 
 ### Server {#GUILD}
 
 Ein Discord-Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Server-ID. |
-| Name | [Text](#STRING) | Servername. Maximale Länge: 100 Zeichen. |
-| Beschreibung | [Text](#STRING) | Serverbeschreibung. Kann leer sein. |
-| Symbol-URL | [URL](#URL) | URL des Serversymbols. Kann leer sein. |
-| Banner-URL | [URL](#URL) | URL des Serverbanners. Kann leer sein. |
-| Splash-URL | [URL](#URL) | URL des Einladungs-Splash-Bildes. Kann leer sein. |
-| Eigentümer | [Server-Mitglied](#GUILD_MEMBER) | Servereigentümer. Kann leer sein. |
-| Mitgliederanzahl | [Ganzzahl](#INTEGER) | Gesamtzahl der Mitglieder. |
-| Boost-Stufe | [Ganzzahl](#INTEGER) | Die Boost-Stufe des Servers (0-3). |
-| Boost-Anzahl | [Ganzzahl](#INTEGER) | Anzahl der aktiven Boosts oder leer, wenn unbekannt. Kann leer sein. |
-| Bevorzugte Sprache | [Text](#STRING) | Von dem Server bevorzugte Sprache. |
-| Überprüfungsstufe | [Verifizierungsstufe](#VERIFICATION_LEVEL) | Erforderliche Überprüfungsstufe für neue Mitglieder. |
-| Inhaltsfilter | [Filter für explizite Inhalte](#EXPLICIT_CONTENT_FILTER) | Einstellung des Inhaltsfilters für anstößige Inhalte. |
-| Standard-Benachrichtigungen | [Standardbenachrichtigungen](#DEFAULT_MESSAGE_NOTIFICATIONS) | Standard-Benachrichtigungseinstellung. |
-| 2FA-Anforderung | [Zwei-Faktor-Anforderung](#MFA_LEVEL) | Ob die Moderation 2FA benötigt. |
-| Eitelkeitscode | [Text](#STRING) | Eitelkeits-Einladungscode des Servers. Kann leer sein. |
-| AFK-Kanal | [Sprachkanal](#GUILD_VOICE_CHANNEL) | Kanal, zu dem Mitglieder verschoben werden, wenn sie untätig sind. Kann leer sein. |
-| AFK-Timeout | [Dauer](#DURATION) | Untätigkeitszeit vor dem Verschieben zum AFK-Kanal. Kann leer sein. |
-| Systemkanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, der Discord-Systemnachrichten empfängt. Kann leer sein. |
-| Regelkanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal mit Serverregeln. Kann leer sein. |
-| Kanal für öffentliche Updates | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, der öffentliche Discord-Updates empfängt. Kann leer sein. |
-| Sicherheitswarnungs-Kanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, der Sicherheitswarnungen empfängt. Kann leer sein. |
-| Rollen | Liste von [Rolle](#GUILD_ROLE) | Alle Rollen auf dem Server. |
-| Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Alle Kanäle auf dem Server. |
-| Mitglieder nach ID | Nachschlagetabelle von [Discord-ID](#SNOWFLAKE) zu [Server-Mitglied](#GUILD_MEMBER) | Zuordnung von Mitglieds-ID zu Mitglied. |
-| Erstellt um | [Datum und Uhrzeit](#DATETIME) | Wann der Server erstellt wurde. |
-| Alle-Rolle | [Rolle](#GUILD_ROLE) | Die Standard-@everyone-Rolle des Servers. |
+| Eigenschaft                   | Typ                                                                                 | Details                                                                            |
+| ----------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ID                            | [Discord-ID](#SNOWFLAKE)                                                            | Server-ID.                                                                         |
+| Name                          | [Text](#STRING)                                                                     | Servername. Maximale Länge: 100 Zeichen.                                           |
+| Beschreibung                  | [Text](#STRING)                                                                     | Serverbeschreibung. Kann leer sein.                                                |
+| Symbol-URL                    | [URL](#URL)                                                                         | URL des Serversymbols. Kann leer sein.                                             |
+| Banner-URL                    | [URL](#URL)                                                                         | URL des Serverbanners. Kann leer sein.                                             |
+| Splash-URL                    | [URL](#URL)                                                                         | URL des Einladungs-Splash-Bildes. Kann leer sein.                                  |
+| Eigentümer                    | [Server-Mitglied](#GUILD_MEMBER)                                                    | Servereigentümer. Kann leer sein.                                                  |
+| Mitgliederanzahl              | [Ganzzahl](#INTEGER)                                                                | Gesamtzahl der Mitglieder.                                                         |
+| Boost-Stufe                   | [Ganzzahl](#INTEGER)                                                                | Die Boost-Stufe des Servers (0-3).                                                 |
+| Boost-Anzahl                  | [Ganzzahl](#INTEGER)                                                                | Anzahl der aktiven Boosts oder leer, wenn unbekannt. Kann leer sein.               |
+| Bevorzugte Sprache            | [Text](#STRING)                                                                     | Von dem Server bevorzugte Sprache.                                                 |
+| Überprüfungsstufe             | [Verifizierungsstufe](#VERIFICATION_LEVEL)                                          | Erforderliche Überprüfungsstufe für neue Mitglieder.                               |
+| Inhaltsfilter                 | [Filter für explizite Inhalte](#EXPLICIT_CONTENT_FILTER)                            | Einstellung des Inhaltsfilters für anstößige Inhalte.                              |
+| Standard-Benachrichtigungen   | [Standardbenachrichtigungen](#DEFAULT_MESSAGE_NOTIFICATIONS)                        | Standard-Benachrichtigungseinstellung.                                             |
+| 2FA-Anforderung               | [Zwei-Faktor-Anforderung](#MFA_LEVEL)                                               | Ob die Moderation 2FA benötigt.                                                    |
+| Eitelkeitscode                | [Text](#STRING)                                                                     | Eitelkeits-Einladungscode des Servers. Kann leer sein.                             |
+| AFK-Kanal                     | [Sprachkanal](#GUILD_VOICE_CHANNEL)                                                 | Kanal, zu dem Mitglieder verschoben werden, wenn sie untätig sind. Kann leer sein. |
+| AFK-Timeout                   | [Dauer](#DURATION)                                                                  | Untätigkeitszeit vor dem Verschieben zum AFK-Kanal. Kann leer sein.                |
+| Systemkanal                   | [Textkanal](#GUILD_TEXT_CHANNEL)                                                    | Kanal, der Discord-Systemnachrichten empfängt. Kann leer sein.                     |
+| Regelkanal                    | [Textkanal](#GUILD_TEXT_CHANNEL)                                                    | Kanal mit Serverregeln. Kann leer sein.                                            |
+| Kanal für öffentliche Updates | [Textkanal](#GUILD_TEXT_CHANNEL)                                                    | Kanal, der öffentliche Discord-Updates empfängt. Kann leer sein.                   |
+| Sicherheitswarnungs-Kanal     | [Textkanal](#GUILD_TEXT_CHANNEL)                                                    | Kanal, der Sicherheitswarnungen empfängt. Kann leer sein.                          |
+| Rollen                        | Liste von [Rolle](#GUILD_ROLE)                                                      | Alle Rollen auf dem Server.                                                        |
+| Kanäle                        | Liste von [Server-Kanal](#GUILD_CHANNEL)                                            | Alle Kanäle auf dem Server.                                                        |
+| Mitglieder nach ID            | Nachschlagetabelle von [Discord-ID](#SNOWFLAKE) zu [Server-Mitglied](#GUILD_MEMBER) | Zuordnung von Mitglieds-ID zu Mitglied.                                            |
+| Erstellt um                   | [Datum und Uhrzeit](#DATETIME)                                                      | Wann der Server erstellt wurde.                                                    |
+| Alle-Rolle                    | [Rolle](#GUILD_ROLE)                                                                | Die Standard-@everyone-Rolle des Servers.                                          |
 
 ### Anhang {#ATTACHMENT}
 
 Eine an eine Nachricht angefügte Datei.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Anhang-ID. |
-| Dateiname | [Text](#STRING) | Dateiname wie hochgeladen. |
-| Beschreibung | [Text](#STRING) | Alt-Text oder Beschreibung. Maximale Länge: 1024 Zeichen. Kann leer sein. |
-| Inhaltstyp | [Text](#STRING) | MIME-Inhaltstyp. Kann leer sein. |
-| Größe | [Ganzzahl](#INTEGER) | Dateigröße in Bytes. |
-| URL | [URL](#URL) | URL des Anhangs. |
-| Proxy-URL | [URL](#URL) | Discord-Proxy-URL. |
-| Höhe | [Ganzzahl](#INTEGER) | Bildhöhe in Pixeln (falls zutreffend). Kann leer sein. |
-| Breite | [Ganzzahl](#INTEGER) | Bildbreite in Pixeln (falls zutreffend). Kann leer sein. |
-| Flüchtig | [Ja/Nein](#BOOLEAN) | Ob der Anhang Teil einer flüchtigen Nachricht ist. |
-| Dauer | [Dauer](#DURATION) | Dauer des Audios (für Sprachnachrichten). Kann leer sein. |
+| Eigenschaft  | Typ                      | Details                                                                   |
+| ------------ | ------------------------ | ------------------------------------------------------------------------- |
+| ID           | [Discord-ID](#SNOWFLAKE) | Anhang-ID.                                                                |
+| Dateiname    | [Text](#STRING)          | Dateiname wie hochgeladen.                                                |
+| Beschreibung | [Text](#STRING)          | Alt-Text oder Beschreibung. Maximale Länge: 1024 Zeichen. Kann leer sein. |
+| Inhaltstyp   | [Text](#STRING)          | MIME-Inhaltstyp. Kann leer sein.                                          |
+| Größe        | [Ganzzahl](#INTEGER)     | Dateigröße in Bytes.                                                      |
+| URL          | [URL](#URL)              | URL des Anhangs.                                                          |
+| Proxy-URL    | [URL](#URL)              | Discord-Proxy-URL.                                                        |
+| Höhe         | [Ganzzahl](#INTEGER)     | Bildhöhe in Pixeln (falls zutreffend). Kann leer sein.                    |
+| Breite       | [Ganzzahl](#INTEGER)     | Bildbreite in Pixeln (falls zutreffend). Kann leer sein.                  |
+| Flüchtig     | [Ja/Nein](#BOOLEAN)      | Ob der Anhang Teil einer flüchtigen Nachricht ist.                        |
+| Dauer        | [Dauer](#DURATION)       | Dauer des Audios (für Sprachnachrichten). Kann leer sein.                 |
 
 ### Embed-Feld {#EMBED_FIELD}
 
 Ein Name/Wert-Feld in einem Embed.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Feldname | [Text](#STRING) | Fetter Feldtitel (max. 256 Zeichen). Länge: 1 bis 256 Zeichen. |
-| Feldwert | [Text](#STRING) | Feldtext (max. 1024 Zeichen). Länge: 1 bis 1024 Zeichen. |
-| Inline | [Ja/Nein](#BOOLEAN) | Ob das Feld nebeneinander angezeigt wird. Standard: Nein. |
+| Eigenschaft | Typ                 | Details                                                        |
+| ----------- | ------------------- | -------------------------------------------------------------- |
+| Feldname    | [Text](#STRING)     | Fetter Feldtitel (max. 256 Zeichen). Länge: 1 bis 256 Zeichen. |
+| Feldwert    | [Text](#STRING)     | Feldtext (max. 1024 Zeichen). Länge: 1 bis 1024 Zeichen.       |
+| Inline      | [Ja/Nein](#BOOLEAN) | Ob das Feld nebeneinander angezeigt wird. Standard: Nein.      |
 
 ### Embed-Fußzeile {#EMBED_FOOTER}
 
 Fußzeile eines Embeds.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Fußzeilentext | [Text](#STRING) | Fußzeilentext. Länge: 1 bis 2048 Zeichen. |
-| Fußzeilensymbol-URL | [URL](#URL) | Kleines Symbol neben der Fußzeile angezeigt. Kann leer sein. |
+| Eigenschaft         | Typ             | Details                                                      |
+| ------------------- | --------------- | ------------------------------------------------------------ |
+| Fußzeilentext       | [Text](#STRING) | Fußzeilentext. Länge: 1 bis 2048 Zeichen.                    |
+| Fußzeilensymbol-URL | [URL](#URL)     | Kleines Symbol neben der Fußzeile angezeigt. Kann leer sein. |
 
 ### Embed-Autor {#EMBED_AUTHOR}
 
 Autorenblock eines Embeds.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Autorenname | [Text](#STRING) | Anzeigename des Autors. Länge: 1 bis 256 Zeichen. |
-| Autoren-URL | [URL](#URL) | URL, zu der der Name verlinkt. Kann leer sein. |
-| Autoren-Symbol-URL | [URL](#URL) | Kleines Symbol neben dem Autor angezeigt. Kann leer sein. |
+| Eigenschaft        | Typ             | Details                                                   |
+| ------------------ | --------------- | --------------------------------------------------------- |
+| Autorenname        | [Text](#STRING) | Anzeigename des Autors. Länge: 1 bis 256 Zeichen.         |
+| Autoren-URL        | [URL](#URL)     | URL, zu der der Name verlinkt. Kann leer sein.            |
+| Autoren-Symbol-URL | [URL](#URL)     | Kleines Symbol neben dem Autor angezeigt. Kann leer sein. |
 
 ### Embed {#EMBED}
 
 Ein Rich Embed an eine Nachricht angefügt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Titel | [Text](#STRING) | Embed-Titel (max. 256 Zeichen). Maximale Länge: 256 Zeichen. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Embed-Beschreibung (max. 4096 Zeichen). Maximale Länge: 4096 Zeichen. Kann leer sein. |
-| URL | [URL](#URL) | URL, zu der der Titel verlinkt. Kann leer sein. |
-| Farbe | [Farbe](#COLOR) | Seitenleistenfarbe des Embeds. Kann leer sein. |
-| Zeitstempel | [Datum und Uhrzeit](#DATETIME) | Fußzeilen-Zeitstempel. Kann leer sein. |
-| Bild-URL | [URL](#URL) | Großes Bild im Embed angezeigt. Kann leer sein. |
-| Miniaturansicht-URL | [URL](#URL) | Kleine Miniaturansicht oben rechts. Kann leer sein. |
-| Fußzeile | [Embed-Fußzeile](#EMBED_FOOTER) | Fußzeile des Embeds. Kann leer sein. |
-| Autor | [Embed-Autor](#EMBED_AUTHOR) | Autorenblock des Embeds. Kann leer sein. |
-| Felder | Liste von [Embed-Feld](#EMBED_FIELD) | Bis zu 25 Name/Wert-Felder. Höchstens 25 Einträge. Standard: `[]`. |
+| Eigenschaft         | Typ                                  | Details                                                                               |
+| ------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
+| Titel               | [Text](#STRING)                      | Embed-Titel (max. 256 Zeichen). Maximale Länge: 256 Zeichen. Kann leer sein.          |
+| Beschreibung        | [Text](#STRING)                      | Embed-Beschreibung (max. 4096 Zeichen). Maximale Länge: 4096 Zeichen. Kann leer sein. |
+| URL                 | [URL](#URL)                          | URL, zu der der Titel verlinkt. Kann leer sein.                                       |
+| Farbe               | [Farbe](#COLOR)                      | Seitenleistenfarbe des Embeds. Kann leer sein.                                        |
+| Zeitstempel         | [Datum und Uhrzeit](#DATETIME)       | Fußzeilen-Zeitstempel. Kann leer sein.                                                |
+| Bild-URL            | [URL](#URL)                          | Großes Bild im Embed angezeigt. Kann leer sein.                                       |
+| Miniaturansicht-URL | [URL](#URL)                          | Kleine Miniaturansicht oben rechts. Kann leer sein.                                   |
+| Fußzeile            | [Embed-Fußzeile](#EMBED_FOOTER)      | Fußzeile des Embeds. Kann leer sein.                                                  |
+| Autor               | [Embed-Autor](#EMBED_AUTHOR)         | Autorenblock des Embeds. Kann leer sein.                                              |
+| Felder              | Liste von [Embed-Feld](#EMBED_FIELD) | Bis zu 25 Name/Wert-Felder. Höchstens 25 Einträge. Standard: `[]`.                    |
 
 ### Button {#BUTTON}
 
 Ein Button an eine Nachricht angefügt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Beschriftung | [Text](#STRING) | Text auf dem Button angezeigt (max. 80 Zeichen). Maximale Länge: 80 Zeichen. Kann leer sein. |
-| Emoji | [Text](#STRING) | Emoji auf dem Button angezeigt. Kann leer sein. |
-| Stil | [Button-Stil](#BUTTON_STYLE) | Visueller Stil. Standard: Primär (Blau) |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Ob der Button ausgegraut ist. Standard: Nein. |
-| Custom-ID | [Text](#STRING) | Optionale Kennung, die beim Klick mitgesendet wird (max. 80 Zeichen). Mit Ziel-Flow wird sie dort als Status der Interaktion verfügbar; ohne Ziel-Flow wird sie zur rohen Custom-ID des Buttons. Maximale Länge: 80 Zeichen. Kann leer sein. |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Flow, der ausgeführt wird, wenn dieser Button geklickt wird. Nur eines davon verwenden: URL. Kann leer sein. |
-| URL | [URL](#URL) | URL, die geöffnet wird, wenn der Button geklickt wird (nur Link-Buttons). Wird angezeigt, wenn Stil  ist. Nur eines davon verwenden: Ziel-Flow. Kann leer sein. |
+| Eigenschaft  | Typ                          | Details                                                                                                                                                                                                                                      |
+| ------------ | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Beschriftung | [Text](#STRING)              | Text auf dem Button angezeigt (max. 80 Zeichen). Maximale Länge: 80 Zeichen. Kann leer sein.                                                                                                                                                 |
+| Emoji        | [Text](#STRING)              | Emoji auf dem Button angezeigt. Kann leer sein.                                                                                                                                                                                              |
+| Stil         | [Button-Stil](#BUTTON_STYLE) | Visueller Stil. Standard: Primär (Blau)                                                                                                                                                                                                      |
+| Deaktiviert  | [Ja/Nein](#BOOLEAN)          | Ob der Button ausgegraut ist. Standard: Nein.                                                                                                                                                                                                |
+| Custom-ID    | [Text](#STRING)              | Optionale Kennung, die beim Klick mitgesendet wird (max. 80 Zeichen). Mit Ziel-Flow wird sie dort als Status der Interaktion verfügbar; ohne Ziel-Flow wird sie zur rohen Custom-ID des Buttons. Maximale Länge: 80 Zeichen. Kann leer sein. |
+| Ziel-Flow    | [Flow](#FLOW_REFERENCE)      | Flow, der ausgeführt wird, wenn dieser Button geklickt wird. Nur eines davon verwenden: URL. Kann leer sein.                                                                                                                                 |
+| URL          | [URL](#URL)                  | URL, die geöffnet wird, wenn der Button geklickt wird (nur Link-Buttons). Wird angezeigt, wenn Stil ist. Nur eines davon verwenden: Ziel-Flow. Kann leer sein.                                                                               |
 
 ### Erlaubte Erwähnungen {#ALLOWED_MENTIONS}
 
 Kontrolliert, welche Erwähnungen in einer Nachricht Benutzer tatsächlich benachrichtigen.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Erlaube @everyone | [Ja/Nein](#BOOLEAN) | Ob @everyone und @here benachrichtigen dürfen. Standard: Nein. |
-| Erlaube Rollenerwähnungen | [Ja/Nein](#BOOLEAN) | Ob Rollenerwähnungen benachrichtigen dürfen. Standard: Ja. |
-| Erlaube Benutzererwähnungen | [Ja/Nein](#BOOLEAN) | Ob Benutzererwähnungen benachrichtigen dürfen. Standard: Ja. |
-| Benachrichtigbare Benutzer | Liste von [Benutzer](#DISCORD_USER) | Bestimmte Benutzer, die benachrichtigt werden können (überschreibt "Erlaube Benutzererwähnungen"). Höchstens 100 Einträge. |
-| Benachrichtigbare Rollen | Liste von [Rolle](#GUILD_ROLE) | Bestimmte Rollen, die benachrichtigt werden können (überschreibt "Erlaube Rollenerwähnungen"). Höchstens 100 Einträge. |
-| Benutzer erwähnen, auf den geantwortet wird | [Ja/Nein](#BOOLEAN) | Ob das Antworten auf eine Nachricht den Originalautor benachrichtigt. Standard: Ja. |
+| Eigenschaft                                 | Typ                                 | Details                                                                                                                    |
+| ------------------------------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Erlaube @everyone                           | [Ja/Nein](#BOOLEAN)                 | Ob @everyone und @here benachrichtigen dürfen. Standard: Nein.                                                             |
+| Erlaube Rollenerwähnungen                   | [Ja/Nein](#BOOLEAN)                 | Ob Rollenerwähnungen benachrichtigen dürfen. Standard: Ja.                                                                 |
+| Erlaube Benutzererwähnungen                 | [Ja/Nein](#BOOLEAN)                 | Ob Benutzererwähnungen benachrichtigen dürfen. Standard: Ja.                                                               |
+| Benachrichtigbare Benutzer                  | Liste von [Benutzer](#DISCORD_USER) | Bestimmte Benutzer, die benachrichtigt werden können (überschreibt "Erlaube Benutzererwähnungen"). Höchstens 100 Einträge. |
+| Benachrichtigbare Rollen                    | Liste von [Rolle](#GUILD_ROLE)      | Bestimmte Rollen, die benachrichtigt werden können (überschreibt "Erlaube Rollenerwähnungen"). Höchstens 100 Einträge.     |
+| Benutzer erwähnen, auf den geantwortet wird | [Ja/Nein](#BOOLEAN)                 | Ob das Antworten auf eine Nachricht den Originalautor benachrichtigt. Standard: Ja.                                        |
 
 ### Nachrichteninhalt {#MESSAGE_CONTENT}
 
 Die vollständige Nachrichtennutzlast: Text, Embeds, Buttons und Dateien.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Text | [Text](#STRING) | Reiner Textinhalt der Nachricht (max. 2000 Zeichen). Maximale Länge: 2000 Zeichen. Kann leer sein. |
-| Embeds | Liste von [Embed](#EMBED) | Bis zu 10 Rich Embeds. Höchstens 10 Einträge. Standard: `[]`. |
-| Buttons | Liste von [Button](#BUTTON) | Buttons an der Nachricht angefügt. Höchstens 25 Einträge. Standard: `[]`. |
-| Dateien | Liste von [Anhang](#ATTACHMENT) | Dateien zur Nachricht anzufügen. Höchstens 10 Einträge. Standard: `[]`. |
-| Text-zu-Sprache | [Ja/Nein](#BOOLEAN) | Ob die Nachricht vorgelesen werden soll. Standard: Nein. |
-| Flüchtig | [Ja/Nein](#BOOLEAN) | Nur der Empfänger sieht die Nachricht (nur Interaktionen). Standard: Nein. |
-| Embeds unterdrücken | [Ja/Nein](#BOOLEAN) | Embeds von Links ausblenden. Standard: Nein. |
-| Stille Nachricht | [Ja/Nein](#BOOLEAN) | Versenden ohne Push-Benachrichtigungen. Standard: Nein. |
-| Erlaubte Erwähnungen | [Erlaubte Erwähnungen](#ALLOWED_MENTIONS) | Beschränke, welche Erwähnungen tatsächlich benachrichtigen. Kann leer sein. |
+| Eigenschaft          | Typ                                       | Details                                                                                            |
+| -------------------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Text                 | [Text](#STRING)                           | Reiner Textinhalt der Nachricht (max. 2000 Zeichen). Maximale Länge: 2000 Zeichen. Kann leer sein. |
+| Embeds               | Liste von [Embed](#EMBED)                 | Bis zu 10 Rich Embeds. Höchstens 10 Einträge. Standard: `[]`.                                      |
+| Buttons              | Liste von [Button](#BUTTON)               | Buttons an der Nachricht angefügt. Höchstens 25 Einträge. Standard: `[]`.                          |
+| Dateien              | Liste von [Anhang](#ATTACHMENT)           | Dateien zur Nachricht anzufügen. Höchstens 10 Einträge. Standard: `[]`.                            |
+| Text-zu-Sprache      | [Ja/Nein](#BOOLEAN)                       | Ob die Nachricht vorgelesen werden soll. Standard: Nein.                                           |
+| Flüchtig             | [Ja/Nein](#BOOLEAN)                       | Nur der Empfänger sieht die Nachricht (nur Interaktionen). Standard: Nein.                         |
+| Embeds unterdrücken  | [Ja/Nein](#BOOLEAN)                       | Embeds von Links ausblenden. Standard: Nein.                                                       |
+| Stille Nachricht     | [Ja/Nein](#BOOLEAN)                       | Versenden ohne Push-Benachrichtigungen. Standard: Nein.                                            |
+| Erlaubte Erwähnungen | [Erlaubte Erwähnungen](#ALLOWED_MENTIONS) | Beschränke, welche Erwähnungen tatsächlich benachrichtigen. Kann leer sein.                        |
 
 ### Nachricht {#MESSAGE}
 
@@ -1316,132 +1316,132 @@ Eine Nachricht in einem Kanal.
 
 Beispiel: `Hallo zusammen, gesendet von Alex`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Nachrichten-ID. |
-| Text | [Text](#STRING) | Roher Nachrichteninhalt. Beispiel: `Hallo zusammen`. |
-| Bereinigter Text | [Text](#STRING) | Inhalt mit aufgelösten Erwähnungen für Anzeigenamen. |
-| Kanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, in dem die Nachricht gesendet wurde. |
-| Server | [Server](#GUILD) | Server, auf dem die Nachricht gesendet wurde (keine für DMs). Kann leer sein. |
-| Autor | [Benutzer](#DISCORD_USER) | Benutzer, der die Nachricht gesendet hat. Beispiel: `Alex (@alex)`. |
-| Autor (als Mitglied) | [Server-Mitglied](#GUILD_MEMBER) | Autor, in einen Server-Mitglied aufgelöst, falls zutreffend. Kann leer sein. |
-| Anhänge | Liste von [Anhang](#ATTACHMENT) | An die Nachricht angefügte Dateien. |
-| Embeds | Liste von [Embed](#EMBED) | Embeds in der Nachricht. |
-| Erwähnte Benutzer | Liste von [Benutzer](#DISCORD_USER) | In der Nachricht erwähnte Benutzer. |
-| Erwähnte Rollen | Liste von [Rolle](#GUILD_ROLE) | In der Nachricht erwähnte Rollen. |
-| Erwähnte Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | In der Nachricht erwähnte Kanäle. |
-| Erwähnt alle | [Ja/Nein](#BOOLEAN) | Ob die Nachricht @everyone oder @here enthält. |
-| Angeheftet | [Ja/Nein](#BOOLEAN) | Ob die Nachricht angeheftet ist. |
-| Text-zu-Sprache | [Ja/Nein](#BOOLEAN) | Ob die Nachricht als TTS gesendet wurde. |
-| Systemnachricht | [Ja/Nein](#BOOLEAN) | Ob dies eine Discord-Systemnachricht ist. |
-| Ist Components V2 | [Ja/Nein](#BOOLEAN) | Ob die Nachricht als Components-V2-Nachricht gesendet wurde. Solche Nachrichten können nur mit Components-V2-Inhalt bearbeitet werden. |
-| Bearbeitet um | [Datum und Uhrzeit](#DATETIME) | Wann die Nachricht zuletzt bearbeitet wurde. Kann leer sein. |
-| Erstellt um | [Datum und Uhrzeit](#DATETIME) | Wann die Nachricht gesendet wurde. |
-| URL | [URL](#URL) | Jump-to-URL der Nachricht. |
-| Thread | [Thread](#THREAD_CHANNEL) | Thread, der aus dieser Nachricht gestartet wurde. Kann leer sein. |
-| Antwort-Nachricht | [Nachricht](#MESSAGE) | Nachricht, auf die dies antwortet. Kann leer sein. |
-| Als Nachrichteninhalt | [Nachrichteninhalt](#MESSAGE_CONTENT) | Nachrichteninhalt/Embeds/Komponenten/Anhänge, umgepackt als Nachrichteninhalt, um sie zu bearbeiten, weiterzuleiten oder erneut zu versenden. |
+| Eigenschaft           | Typ                                      | Details                                                                                                                                       |
+| --------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| ID                    | [Discord-ID](#SNOWFLAKE)                 | Nachrichten-ID.                                                                                                                               |
+| Text                  | [Text](#STRING)                          | Roher Nachrichteninhalt. Beispiel: `Hallo zusammen`.                                                                                          |
+| Bereinigter Text      | [Text](#STRING)                          | Inhalt mit aufgelösten Erwähnungen für Anzeigenamen.                                                                                          |
+| Kanal                 | [Textkanal](#GUILD_TEXT_CHANNEL)         | Kanal, in dem die Nachricht gesendet wurde.                                                                                                   |
+| Server                | [Server](#GUILD)                         | Server, auf dem die Nachricht gesendet wurde (keine für DMs). Kann leer sein.                                                                 |
+| Autor                 | [Benutzer](#DISCORD_USER)                | Benutzer, der die Nachricht gesendet hat. Beispiel: `Alex (@alex)`.                                                                           |
+| Autor (als Mitglied)  | [Server-Mitglied](#GUILD_MEMBER)         | Autor, in einen Server-Mitglied aufgelöst, falls zutreffend. Kann leer sein.                                                                  |
+| Anhänge               | Liste von [Anhang](#ATTACHMENT)          | An die Nachricht angefügte Dateien.                                                                                                           |
+| Embeds                | Liste von [Embed](#EMBED)                | Embeds in der Nachricht.                                                                                                                      |
+| Erwähnte Benutzer     | Liste von [Benutzer](#DISCORD_USER)      | In der Nachricht erwähnte Benutzer.                                                                                                           |
+| Erwähnte Rollen       | Liste von [Rolle](#GUILD_ROLE)           | In der Nachricht erwähnte Rollen.                                                                                                             |
+| Erwähnte Kanäle       | Liste von [Server-Kanal](#GUILD_CHANNEL) | In der Nachricht erwähnte Kanäle.                                                                                                             |
+| Erwähnt alle          | [Ja/Nein](#BOOLEAN)                      | Ob die Nachricht @everyone oder @here enthält.                                                                                                |
+| Angeheftet            | [Ja/Nein](#BOOLEAN)                      | Ob die Nachricht angeheftet ist.                                                                                                              |
+| Text-zu-Sprache       | [Ja/Nein](#BOOLEAN)                      | Ob die Nachricht als TTS gesendet wurde.                                                                                                      |
+| Systemnachricht       | [Ja/Nein](#BOOLEAN)                      | Ob dies eine Discord-Systemnachricht ist.                                                                                                     |
+| Ist Components V2     | [Ja/Nein](#BOOLEAN)                      | Ob die Nachricht als Components-V2-Nachricht gesendet wurde. Solche Nachrichten können nur mit Components-V2-Inhalt bearbeitet werden.        |
+| Bearbeitet um         | [Datum und Uhrzeit](#DATETIME)           | Wann die Nachricht zuletzt bearbeitet wurde. Kann leer sein.                                                                                  |
+| Erstellt um           | [Datum und Uhrzeit](#DATETIME)           | Wann die Nachricht gesendet wurde.                                                                                                            |
+| URL                   | [URL](#URL)                              | Jump-to-URL der Nachricht.                                                                                                                    |
+| Thread                | [Thread](#THREAD_CHANNEL)                | Thread, der aus dieser Nachricht gestartet wurde. Kann leer sein.                                                                             |
+| Antwort-Nachricht     | [Nachricht](#MESSAGE)                    | Nachricht, auf die dies antwortet. Kann leer sein.                                                                                            |
+| Als Nachrichteninhalt | [Nachrichteninhalt](#MESSAGE_CONTENT)    | Nachrichteninhalt/Embeds/Komponenten/Anhänge, umgepackt als Nachrichteninhalt, um sie zu bearbeiten, weiterzuleiten oder erneut zu versenden. |
 
 ### Sprachstatus {#VOICE_STATE}
 
 Der aktuelle Sprachverbindungsstatus eines Mitglieds.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Mitglied | [Server-Mitglied](#GUILD_MEMBER) | Das Mitglied, dem dieser Sprachstatus angehört. Kann leer sein. |
-| Kanal | [Sprachkanal](#GUILD_VOICE_CHANNEL) | Sprachkanal, mit dem das Mitglied verbunden ist. Kann leer sein. |
-| Sitzungs-ID | [Text](#STRING) | Sprachsitzungsidentifikator. Kann leer sein. |
-| Server stummgeschaltet | [Ja/Nein](#BOOLEAN) | Ob von einem Moderator stummgeschaltet. Kann leer sein. |
-| Server stummgeschaltet | [Ja/Nein](#BOOLEAN) | Ob von einem Moderator stummgeschaltet. Kann leer sein. |
-| Selbst stummgeschaltet | [Ja/Nein](#BOOLEAN) | Ob der Benutzer sich selbst stummgeschaltet hat. Kann leer sein. |
-| Selbst stummgeschaltet | [Ja/Nein](#BOOLEAN) | Ob der Benutzer sich selbst stummgeschaltet hat. Kann leer sein. |
-| Kamera an | [Ja/Nein](#BOOLEAN) | Ob der Benutzer die Kamera anhat. Kann leer sein. |
-| Streaming | [Ja/Nein](#BOOLEAN) | Ob der Benutzer seinen Bildschirm teilt. Kann leer sein. |
-| Unterdrückt | [Ja/Nein](#BOOLEAN) | Ob der Benutzer unterdrückt wird (kann auf Stage nicht sprechen). Kann leer sein. |
-| Sprechzusage um | [Datum und Uhrzeit](#DATETIME) | Wann der Benutzer auf der Stage seine Hand hob. Kann leer sein. |
+| Eigenschaft            | Typ                                 | Details                                                                           |
+| ---------------------- | ----------------------------------- | --------------------------------------------------------------------------------- |
+| Mitglied               | [Server-Mitglied](#GUILD_MEMBER)    | Das Mitglied, dem dieser Sprachstatus angehört. Kann leer sein.                   |
+| Kanal                  | [Sprachkanal](#GUILD_VOICE_CHANNEL) | Sprachkanal, mit dem das Mitglied verbunden ist. Kann leer sein.                  |
+| Sitzungs-ID            | [Text](#STRING)                     | Sprachsitzungsidentifikator. Kann leer sein.                                      |
+| Server stummgeschaltet | [Ja/Nein](#BOOLEAN)                 | Ob von einem Moderator stummgeschaltet. Kann leer sein.                           |
+| Server stummgeschaltet | [Ja/Nein](#BOOLEAN)                 | Ob von einem Moderator stummgeschaltet. Kann leer sein.                           |
+| Selbst stummgeschaltet | [Ja/Nein](#BOOLEAN)                 | Ob der Benutzer sich selbst stummgeschaltet hat. Kann leer sein.                  |
+| Selbst stummgeschaltet | [Ja/Nein](#BOOLEAN)                 | Ob der Benutzer sich selbst stummgeschaltet hat. Kann leer sein.                  |
+| Kamera an              | [Ja/Nein](#BOOLEAN)                 | Ob der Benutzer die Kamera anhat. Kann leer sein.                                 |
+| Streaming              | [Ja/Nein](#BOOLEAN)                 | Ob der Benutzer seinen Bildschirm teilt. Kann leer sein.                          |
+| Unterdrückt            | [Ja/Nein](#BOOLEAN)                 | Ob der Benutzer unterdrückt wird (kann auf Stage nicht sprechen). Kann leer sein. |
+| Sprechzusage um        | [Datum und Uhrzeit](#DATETIME)      | Wann der Benutzer auf der Stage seine Hand hob. Kann leer sein.                   |
 
 ### Stage-Instanz {#STAGE_INSTANCE}
 
 Ein Live-Stage-Event in einem Stage-Kanal.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Stage-Instanz-ID. |
-| Server | [Server](#GUILD) | Server, auf dem die Stage läuft. Kann leer sein. |
-| Stage-Kanal | [Stage-Kanal](#STAGE_CHANNEL) | Stage-Kanal, der das Event austrägt. Kann leer sein. |
-| Thema | [Text](#STRING) | Thema der Stage. Maximale Länge: 120 Zeichen. |
-| Datenschutz | [Stage-Datenschutz](#STAGE_PRIVACY_LEVEL) | Datenschutzebene der Stage. |
-| Entdeckung deaktiviert | [Ja/Nein](#BOOLEAN) | Ob die Stage aus der Erkennung verborgen ist. Kann leer sein. |
+| Eigenschaft            | Typ                                       | Details                                                       |
+| ---------------------- | ----------------------------------------- | ------------------------------------------------------------- |
+| ID                     | [Discord-ID](#SNOWFLAKE)                  | Stage-Instanz-ID.                                             |
+| Server                 | [Server](#GUILD)                          | Server, auf dem die Stage läuft. Kann leer sein.              |
+| Stage-Kanal            | [Stage-Kanal](#STAGE_CHANNEL)             | Stage-Kanal, der das Event austrägt. Kann leer sein.          |
+| Thema                  | [Text](#STRING)                           | Thema der Stage. Maximale Länge: 120 Zeichen.                 |
+| Datenschutz            | [Stage-Datenschutz](#STAGE_PRIVACY_LEVEL) | Datenschutzebene der Stage.                                   |
+| Entdeckung deaktiviert | [Ja/Nein](#BOOLEAN)                       | Ob die Stage aus der Erkennung verborgen ist. Kann leer sein. |
 
 ### Server-Emoji {#GUILD_EMOJI}
 
 Ein benutzerdefiniertes Emoji auf deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Emoji-ID. |
-| Name | [Text](#STRING) | Emoji-Name. |
-| Animiert | [Ja/Nein](#BOOLEAN) | Ob das Emoji animiert ist. |
-| Verwaltet | [Ja/Nein](#BOOLEAN) | Ob das Emoji von einer Integration verwaltet wird. |
-| Verfügbar | [Ja/Nein](#BOOLEAN) | Ob das Emoji derzeit verwendet werden kann. Kann leer sein. |
-| URL | [URL](#URL) | URL des Emoji-Bildes. |
-| Autor | [Benutzer](#DISCORD_USER) | Benutzer, der das Emoji hochgeladen hat. Kann leer sein. |
-| Erlaubte Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die das Emoji verwenden dürfen (leer = alle). |
-| Erstellt um | [Datum und Uhrzeit](#DATETIME) | Wann das Emoji hochgeladen wurde. |
+| Eigenschaft     | Typ                            | Details                                                     |
+| --------------- | ------------------------------ | ----------------------------------------------------------- |
+| ID              | [Discord-ID](#SNOWFLAKE)       | Emoji-ID.                                                   |
+| Name            | [Text](#STRING)                | Emoji-Name.                                                 |
+| Animiert        | [Ja/Nein](#BOOLEAN)            | Ob das Emoji animiert ist.                                  |
+| Verwaltet       | [Ja/Nein](#BOOLEAN)            | Ob das Emoji von einer Integration verwaltet wird.          |
+| Verfügbar       | [Ja/Nein](#BOOLEAN)            | Ob das Emoji derzeit verwendet werden kann. Kann leer sein. |
+| URL             | [URL](#URL)                    | URL des Emoji-Bildes.                                       |
+| Autor           | [Benutzer](#DISCORD_USER)      | Benutzer, der das Emoji hochgeladen hat. Kann leer sein.    |
+| Erlaubte Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die das Emoji verwenden dürfen (leer = alle).       |
+| Erstellt um     | [Datum und Uhrzeit](#DATETIME) | Wann das Emoji hochgeladen wurde.                           |
 
 ### Server-Sticker {#GUILD_STICKER}
 
 Ein benutzerdefinierter Sticker auf deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Sticker-ID. |
-| Name | [Text](#STRING) | Sticker-Name. Maximale Länge: 30 Zeichen. |
-| Beschreibung | [Text](#STRING) | Sticker-Beschreibung. Maximale Länge: 100 Zeichen. Kann leer sein. |
-| Tags | [Text](#STRING) | Durch Komma getrennte Schlüsselwortliste, die von der Autovervollständigung verwendet wird. Kann leer sein. |
-| Verfügbar | [Ja/Nein](#BOOLEAN) | Ob der Sticker derzeit verwendet werden kann. Kann leer sein. |
-| URL | [URL](#URL) | URL des Sticker-Bildes. |
+| Eigenschaft  | Typ                      | Details                                                                                                     |
+| ------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| ID           | [Discord-ID](#SNOWFLAKE) | Sticker-ID.                                                                                                 |
+| Name         | [Text](#STRING)          | Sticker-Name. Maximale Länge: 30 Zeichen.                                                                   |
+| Beschreibung | [Text](#STRING)          | Sticker-Beschreibung. Maximale Länge: 100 Zeichen. Kann leer sein.                                          |
+| Tags         | [Text](#STRING)          | Durch Komma getrennte Schlüsselwortliste, die von der Autovervollständigung verwendet wird. Kann leer sein. |
+| Verfügbar    | [Ja/Nein](#BOOLEAN)      | Ob der Sticker derzeit verwendet werden kann. Kann leer sein.                                               |
+| URL          | [URL](#URL)              | URL des Sticker-Bildes.                                                                                     |
 
 ### Einladung {#GUILD_INVITE}
 
 Eine Einladungslink zu deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Code | [Text](#STRING) | Einladungscode. |
-| URL | [URL](#URL) | Vollständige Einladungs-URL. |
-| Kanal | [Server-Kanal](#GUILD_CHANNEL) | Kanal, zu dem die Einladung führt. Kann leer sein. |
-| Server | [Server](#GUILD) | Der Server, auf den die Einladung zeigt, oder leer, wenn unbekannt. Kann leer sein. |
-| Einladender | [Benutzer](#DISCORD_USER) | Benutzer, der die Einladung erstellt hat. Kann leer sein. |
-| Verwendungen | [Ganzzahl](#INTEGER) | Wie oft die Einladung verwendet wurde. Kann leer sein. |
-| Max. Verwendungen | [Ganzzahl](#INTEGER) | Maximale zulässige Verwendungen (0 = unbegrenzt). Kann leer sein. |
-| Max. Alter | [Dauer](#DURATION) | Wie lange die Einladung gültig ist. Kann leer sein. |
-| Temporär | [Ja/Nein](#BOOLEAN) | Ob Mitglieder gekickt werden, wenn sie Sprach-Chat verlassen und keine Rolle haben. Kann leer sein. |
-| Verfällt um | [Datum und Uhrzeit](#DATETIME) | Wann die Einladung abläuft. Kann leer sein. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Einladung erstellt wurde. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                                                                             |
+| ----------------- | ------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Code              | [Text](#STRING)                | Einladungscode.                                                                                     |
+| URL               | [URL](#URL)                    | Vollständige Einladungs-URL.                                                                        |
+| Kanal             | [Server-Kanal](#GUILD_CHANNEL) | Kanal, zu dem die Einladung führt. Kann leer sein.                                                  |
+| Server            | [Server](#GUILD)               | Der Server, auf den die Einladung zeigt, oder leer, wenn unbekannt. Kann leer sein.                 |
+| Einladender       | [Benutzer](#DISCORD_USER)      | Benutzer, der die Einladung erstellt hat. Kann leer sein.                                           |
+| Verwendungen      | [Ganzzahl](#INTEGER)           | Wie oft die Einladung verwendet wurde. Kann leer sein.                                              |
+| Max. Verwendungen | [Ganzzahl](#INTEGER)           | Maximale zulässige Verwendungen (0 = unbegrenzt). Kann leer sein.                                   |
+| Max. Alter        | [Dauer](#DURATION)             | Wie lange die Einladung gültig ist. Kann leer sein.                                                 |
+| Temporär          | [Ja/Nein](#BOOLEAN)            | Ob Mitglieder gekickt werden, wenn sie Sprach-Chat verlassen und keine Rolle haben. Kann leer sein. |
+| Verfällt um       | [Datum und Uhrzeit](#DATETIME) | Wann die Einladung abläuft. Kann leer sein.                                                         |
+| Erstellt am       | [Datum und Uhrzeit](#DATETIME) | Wann die Einladung erstellt wurde. Kann leer sein.                                                  |
 
 ### Webhook {#WEBHOOK}
 
 Einen Discord Webhook, der an einen Kanal angehängt ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Webhook-ID. |
-| Name | [Text](#STRING) | Standardname für Nachrichten. |
-| Kanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, in dem der Webhook Nachrichten sendet. Kann leer sein. |
-| Server | [Server](#GUILD) | Server, zu dem der Webhook gehört. Kann leer sein. |
-| Besitzer | [Benutzer](#DISCORD_USER) | Benutzer, der den Webhook erstellt hat. Kann leer sein. |
-| Avatar-URL | [URL](#URL) | Standard-Avatar für Nachrichten. Kann leer sein. |
+| Eigenschaft | Typ                              | Details                                                       |
+| ----------- | -------------------------------- | ------------------------------------------------------------- |
+| ID          | [Discord-ID](#SNOWFLAKE)         | Webhook-ID.                                                   |
+| Name        | [Text](#STRING)                  | Standardname für Nachrichten.                                 |
+| Kanal       | [Textkanal](#GUILD_TEXT_CHANNEL) | Kanal, in dem der Webhook Nachrichten sendet. Kann leer sein. |
+| Server      | [Server](#GUILD)                 | Server, zu dem der Webhook gehört. Kann leer sein.            |
+| Besitzer    | [Benutzer](#DISCORD_USER)        | Benutzer, der den Webhook erstellt hat. Kann leer sein.       |
+| Avatar-URL  | [URL](#URL)                      | Standard-Avatar für Nachrichten. Kann leer sein.              |
 
 ### Bann {#GUILD_BAN}
 
 Ein Bann auf deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Benutzer | [Benutzer](#DISCORD_USER) | Verbannter Benutzer. |
-| Server | [Server](#GUILD) | Server, auf den sich der Bann bezieht. |
-| Grund | [Text](#STRING) | Grund für den Bann. Kann leer sein. |
+| Eigenschaft | Typ                       | Details                                |
+| ----------- | ------------------------- | -------------------------------------- |
+| Benutzer    | [Benutzer](#DISCORD_USER) | Verbannter Benutzer.                   |
+| Server      | [Server](#GUILD)          | Server, auf den sich der Bann bezieht. |
+| Grund       | [Text](#STRING)           | Grund für den Bann. Kann leer sein.    |
 
 ### Audit-Log-Eintrag {#AUDIT_LOG_ENTRY}
 
@@ -1449,106 +1449,106 @@ Einen einzelnen Eintrag aus dem Audit-Log deines Servers.
 
 Beispiel: `Alex hat Sam gebannt`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | ID des Audit-Log-Eintrags. |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Was passiert ist. Beispiel: `Mitglied gebannt`. |
-| Ausführer | [Benutzer](#DISCORD_USER) | Wer die Aktion durchgeführt hat. Kann leer sein. Beispiel: `Alex (@alex)`. |
-| Ziel-ID | [Discord-ID](#SNOWFLAKE) | ID des betroffenen Objekts. Kann leer sein. |
-| Grund | [Text](#STRING) | Grund für die Aktion. Kann leer sein. Beispiel: `Links gespammt`. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Eintrag protokolliert wurde. |
-| Zieltyp | [Text](#STRING) | Der Typ des Objekts, das von diesem Audit-Log-Eintrag betroffen ist (z.B. Benutzer, Kanal, Rolle). |
-| Änderungen | Liste von [Audit-Log-Änderung](#AUDIT_LOG_CHANGE) | Eine Liste einzelner Feldänderungen, die in diesem Audit-Log-Eintrag aufgezeichnet sind. |
-| Zusätzliche Daten | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Zusätzliche Metadaten für diesen Audit-Log-Eintrag, kodiert als Schlüssel/Wert-Paare. |
-| Details | [Audit-Log-Details](#AUDIT_LOG_DETAILS) | Typisierte Zusatzdaten dieses Eintrags; welche Felder es gibt, hängt von der Aktion ab. Leer, wenn die Aktion keine hat oder Discord nicht angibt, wen oder was der Eintrag betrifft; dann führt ein Zweig nach Art darauf keinen Zweig aus, auch nicht "Andere Arten". Kann leer sein. |
+| Eigenschaft       | Typ                                                       | Details                                                                                                                                                                                                                                                                                 |
+| ----------------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ID                | [Discord-ID](#SNOWFLAKE)                                  | ID des Audit-Log-Eintrags.                                                                                                                                                                                                                                                              |
+| Aktion            | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT)                    | Was passiert ist. Beispiel: `Mitglied gebannt`.                                                                                                                                                                                                                                         |
+| Ausführer         | [Benutzer](#DISCORD_USER)                                 | Wer die Aktion durchgeführt hat. Kann leer sein. Beispiel: `Alex (@alex)`.                                                                                                                                                                                                              |
+| Ziel-ID           | [Discord-ID](#SNOWFLAKE)                                  | ID des betroffenen Objekts. Kann leer sein.                                                                                                                                                                                                                                             |
+| Grund             | [Text](#STRING)                                           | Grund für die Aktion. Kann leer sein. Beispiel: `Links gespammt`.                                                                                                                                                                                                                       |
+| Erstellt am       | [Datum und Uhrzeit](#DATETIME)                            | Wann der Eintrag protokolliert wurde.                                                                                                                                                                                                                                                   |
+| Zieltyp           | [Text](#STRING)                                           | Der Typ des Objekts, das von diesem Audit-Log-Eintrag betroffen ist (z.B. Benutzer, Kanal, Rolle).                                                                                                                                                                                      |
+| Änderungen        | Liste von [Audit-Log-Änderung](#AUDIT_LOG_CHANGE)         | Eine Liste einzelner Feldänderungen, die in diesem Audit-Log-Eintrag aufgezeichnet sind.                                                                                                                                                                                                |
+| Zusätzliche Daten | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Zusätzliche Metadaten für diesen Audit-Log-Eintrag, kodiert als Schlüssel/Wert-Paare.                                                                                                                                                                                                   |
+| Details           | [Audit-Log-Details](#AUDIT_LOG_DETAILS)                   | Typisierte Zusatzdaten dieses Eintrags; welche Felder es gibt, hängt von der Aktion ab. Leer, wenn die Aktion keine hat oder Discord nicht angibt, wen oder was der Eintrag betrifft; dann führt ein Zweig nach Art darauf keinen Zweig aus, auch nicht "Andere Arten". Kann leer sein. |
 
 ### Bereinigungsdetails {#AUDIT_LOG_DETAILS_PRUNE}
 
 Details einer Mitgliederbereinigung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Entfernte Mitglieder | [Ganzzahl](#INTEGER) | Wie viele Mitglieder entfernt wurden. |
-| Inaktive Tage | [Ganzzahl](#INTEGER) | Wie viele Tage Inaktivität gezählt wurden. |
+| Eigenschaft          | Typ                                    | Details                                             |
+| -------------------- | -------------------------------------- | --------------------------------------------------- |
+| Aktion               | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
+| Entfernte Mitglieder | [Ganzzahl](#INTEGER)                   | Wie viele Mitglieder entfernt wurden.               |
+| Inaktive Tage        | [Ganzzahl](#INTEGER)                   | Wie viele Tage Inaktivität gezählt wurden.          |
 
 ### Kanal- und Anzahldetails {#AUDIT_LOG_DETAILS_CHANNEL_COUNT}
 
 Details eines Mitgliederverschiebens oder einer Nachrichtenlöschung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Kanal-ID | [Discord-ID](#SNOWFLAKE) | Der Kanal, in dem die Aktion stattfand. Kann leer sein. |
-| Anzahl | [Ganzzahl](#INTEGER) | Wie viele Mitglieder oder Nachrichten betroffen waren. |
+| Eigenschaft | Typ                                    | Details                                                 |
+| ----------- | -------------------------------------- | ------------------------------------------------------- |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.     |
+| Kanal-ID    | [Discord-ID](#SNOWFLAKE)               | Der Kanal, in dem die Aktion stattfand. Kann leer sein. |
+| Anzahl      | [Ganzzahl](#INTEGER)                   | Wie viele Mitglieder oder Nachrichten betroffen waren.  |
 
 ### Anzahldetails {#AUDIT_LOG_DETAILS_COUNT}
 
 Details einer Massenlöschung von Nachrichten oder einer Sprachkanal-Trennung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Anzahl | [Ganzzahl](#INTEGER) | Wie viele Nachrichten oder Mitglieder betroffen waren. Beispiel: `12`. |
+| Eigenschaft | Typ                                    | Details                                                                |
+| ----------- | -------------------------------------- | ---------------------------------------------------------------------- |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                    |
+| Anzahl      | [Ganzzahl](#INTEGER)                   | Wie viele Nachrichten oder Mitglieder betroffen waren. Beispiel: `12`. |
 
 ### Anheftdetails {#AUDIT_LOG_DETAILS_PIN}
 
 Details zum Anheften oder Lösen einer Nachricht.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Kanal-ID | [Discord-ID](#SNOWFLAKE) | Der Kanal der Nachricht. Kann leer sein. |
-| Nachrichten-ID | [Discord-ID](#SNOWFLAKE) | Die angeheftete oder gelöste Nachricht. |
+| Eigenschaft    | Typ                                    | Details                                             |
+| -------------- | -------------------------------------- | --------------------------------------------------- |
+| Aktion         | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
+| Kanal-ID       | [Discord-ID](#SNOWFLAKE)               | Der Kanal der Nachricht. Kann leer sein.            |
+| Nachrichten-ID | [Discord-ID](#SNOWFLAKE)               | Die angeheftete oder gelöste Nachricht.             |
 
 ### Berechtigungsüberschreibungsdetails {#AUDIT_LOG_DETAILS_OVERWRITE}
 
 Details einer Änderung an einer Kanal-Berechtigungsüberschreibung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Ziel-ID | [Discord-ID](#SNOWFLAKE) | Die Rolle oder das Mitglied, für das die Überschreibung gilt. |
-| Zielart | [Text](#STRING) | ROLE oder MEMBER. |
-| Rollenname | [Text](#STRING) | Der Name der Rolle, wenn die Überschreibung für eine Rolle gilt. Kann leer sein. Beispiel: `Moderatoren`. |
+| Eigenschaft | Typ                                    | Details                                                                                                   |
+| ----------- | -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                       |
+| Ziel-ID     | [Discord-ID](#SNOWFLAKE)               | Die Rolle oder das Mitglied, für das die Überschreibung gilt.                                             |
+| Zielart     | [Text](#STRING)                        | ROLE oder MEMBER.                                                                                         |
+| Rollenname  | [Text](#STRING)                        | Der Name der Rolle, wenn die Überschreibung für eine Rolle gilt. Kann leer sein. Beispiel: `Moderatoren`. |
 
 ### Stage-Details {#AUDIT_LOG_DETAILS_STAGE}
 
 Details einer Änderung an einer Stage-Instanz.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Kanal-ID | [Discord-ID](#SNOWFLAKE) | Der Stage-Kanal. Kann leer sein. |
+| Eigenschaft | Typ                                    | Details                                             |
+| ----------- | -------------------------------------- | --------------------------------------------------- |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
+| Kanal-ID    | [Discord-ID](#SNOWFLAKE)               | Der Stage-Kanal. Kann leer sein.                    |
 
 ### Befehlsberechtigungsdetails {#AUDIT_LOG_DETAILS_COMMAND_PERMISSIONS}
 
 Details einer Änderung an Anwendungsbefehlsberechtigungen.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | Die Anwendung, deren Befehlsberechtigungen geändert wurden. |
+| Eigenschaft   | Typ                                    | Details                                                     |
+| ------------- | -------------------------------------- | ----------------------------------------------------------- |
+| Aktion        | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.         |
+| Anwendungs-ID | [Discord-ID](#SNOWFLAKE)               | Die Anwendung, deren Befehlsberechtigungen geändert wurden. |
 
 ### AutoMod-Details {#AUDIT_LOG_DETAILS_AUTOMOD}
 
 Details einer AutoMod-Aktion.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Regelname | [Text](#STRING) | Die AutoMod-Regel, die gehandelt hat. |
-| Auslösertyp der Regel | [Ganzzahl](#INTEGER) | Der Auslösertyp der Regel als Discord-Nummer. Kann leer sein. |
-| Kanal-ID | [Discord-ID](#SNOWFLAKE) | Der Kanal, in dem die Aktion stattfand. Kann leer sein. |
+| Eigenschaft           | Typ                                    | Details                                                       |
+| --------------------- | -------------------------------------- | ------------------------------------------------------------- |
+| Aktion                | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.           |
+| Regelname             | [Text](#STRING)                        | Die AutoMod-Regel, die gehandelt hat.                         |
+| Auslösertyp der Regel | [Ganzzahl](#INTEGER)                   | Der Auslösertyp der Regel als Discord-Nummer. Kann leer sein. |
+| Kanal-ID              | [Discord-ID](#SNOWFLAKE)               | Der Kanal, in dem die Aktion stattfand. Kann leer sein.       |
 
 ### Integrationsdetails {#AUDIT_LOG_DETAILS_INTEGRATION}
 
 Details eines Kicks oder einer Rollenänderung durch eine Integration.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Integrationstyp | [Text](#STRING) | Der Typ der Integration, die die Änderung vorgenommen hat. |
+| Eigenschaft     | Typ                                    | Details                                                    |
+| --------------- | -------------------------------------- | ---------------------------------------------------------- |
+| Aktion          | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.        |
+| Integrationstyp | [Text](#STRING)                        | Der Typ der Integration, die die Änderung vorgenommen hat. |
 
 ### Bann-Details {#AUDIT_LOG_DETAILS_BAN}
 
@@ -1556,128 +1556,128 @@ Details eines Banns oder einer Entbannung.
 
 Beispiel: `Sam wurde gebannt`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die ID des Benutzers, der gebannt oder entbannt wurde. Beispiel: `456789012345678901`. |
-| Benutzername | [Text](#STRING) | Der Name des Benutzers. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein. Beispiel: `sam`. |
+| Eigenschaft  | Typ                                    | Details                                                                                               |
+| ------------ | -------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Aktion       | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                   |
+| Benutzer-ID  | [Discord-ID](#SNOWFLAKE)               | Die ID des Benutzers, der gebannt oder entbannt wurde. Beispiel: `456789012345678901`.                |
+| Benutzername | [Text](#STRING)                        | Der Name des Benutzers. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein. Beispiel: `sam`. |
 
 ### Kick-Details {#AUDIT_LOG_DETAILS_KICK}
 
 Details eines Kicks.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die ID des Benutzers, der gekickt wurde. |
-| Benutzername | [Text](#STRING) | Der Name des Benutzers. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein. |
-| Integrationstyp | [Text](#STRING) | Der Typ der Integration, die den Benutzer gekickt hat. Leer, wenn es eine Person war. Kann leer sein. |
+| Eigenschaft     | Typ                                    | Details                                                                                               |
+| --------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Aktion          | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                   |
+| Benutzer-ID     | [Discord-ID](#SNOWFLAKE)               | Die ID des Benutzers, der gekickt wurde.                                                              |
+| Benutzername    | [Text](#STRING)                        | Der Name des Benutzers. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein.                  |
+| Integrationstyp | [Text](#STRING)                        | Der Typ der Integration, die den Benutzer gekickt hat. Leer, wenn es eine Person war. Kann leer sein. |
 
 ### Details zur Rollenänderung {#AUDIT_LOG_DETAILS_MEMBER_ROLES}
 
 Details zu Rollen, die einem Mitglied hinzugefügt oder entfernt wurden.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die ID des Mitglieds, dessen Rollen sich geändert haben. |
-| Benutzername | [Text](#STRING) | Der Name des Mitglieds. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein. |
-| IDs der hinzugefügten Rollen | Liste von [Discord-ID](#SNOWFLAKE) | Die IDs der hinzugefügten Rollen. |
-| Namen der hinzugefügten Rollen | Liste von [Text](#STRING) | Die Namen der hinzugefügten Rollen, in derselben Reihenfolge. |
-| IDs der entfernten Rollen | Liste von [Discord-ID](#SNOWFLAKE) | Die IDs der entfernten Rollen. |
-| Namen der entfernten Rollen | Liste von [Text](#STRING) | Die Namen der entfernten Rollen, in derselben Reihenfolge. |
-| Integrationstyp | [Text](#STRING) | Der Typ der Integration, die die Rollen geändert hat. Leer, wenn es eine Person war. Kann leer sein. |
+| Eigenschaft                    | Typ                                    | Details                                                                                              |
+| ------------------------------ | -------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Aktion                         | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                  |
+| Benutzer-ID                    | [Discord-ID](#SNOWFLAKE)               | Die ID des Mitglieds, dessen Rollen sich geändert haben.                                             |
+| Benutzername                   | [Text](#STRING)                        | Der Name des Mitglieds. Leer, wenn der Bot den Benutzer nicht kennt. Kann leer sein.                 |
+| IDs der hinzugefügten Rollen   | Liste von [Discord-ID](#SNOWFLAKE)     | Die IDs der hinzugefügten Rollen.                                                                    |
+| Namen der hinzugefügten Rollen | Liste von [Text](#STRING)              | Die Namen der hinzugefügten Rollen, in derselben Reihenfolge.                                        |
+| IDs der entfernten Rollen      | Liste von [Discord-ID](#SNOWFLAKE)     | Die IDs der entfernten Rollen.                                                                       |
+| Namen der entfernten Rollen    | Liste von [Text](#STRING)              | Die Namen der entfernten Rollen, in derselben Reihenfolge.                                           |
+| Integrationstyp                | [Text](#STRING)                        | Der Typ der Integration, die die Rollen geändert hat. Leer, wenn es eine Person war. Kann leer sein. |
 
 ### Details zur Mitgliedsänderung {#AUDIT_LOG_DETAILS_MEMBER_UPDATE}
 
 Details einer Änderung an einem Mitglied, etwa ein neuer Spitzname oder ein Timeout.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die ID des geänderten Mitglieds. |
-| Spitzname vorher | [Text](#STRING) | Der Spitzname vor der Änderung. Leer, wenn er sich nicht geändert hat oder es keinen gab. Kann leer sein. |
-| Spitzname nachher | [Text](#STRING) | Der Spitzname nach der Änderung. Leer, wenn er sich nicht geändert hat oder entfernt wurde. Kann leer sein. |
-| Timeout bis | [Datum und Uhrzeit](#DATETIME) | Wann der Timeout des Mitglieds endet. Leer, wenn diese Änderung keinen Timeout gesetzt oder ihn entfernt hat. Kann leer sein. |
+| Eigenschaft       | Typ                                    | Details                                                                                                                       |
+| ----------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Aktion            | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                                           |
+| Benutzer-ID       | [Discord-ID](#SNOWFLAKE)               | Die ID des geänderten Mitglieds.                                                                                              |
+| Spitzname vorher  | [Text](#STRING)                        | Der Spitzname vor der Änderung. Leer, wenn er sich nicht geändert hat oder es keinen gab. Kann leer sein.                     |
+| Spitzname nachher | [Text](#STRING)                        | Der Spitzname nach der Änderung. Leer, wenn er sich nicht geändert hat oder entfernt wurde. Kann leer sein.                   |
+| Timeout bis       | [Datum und Uhrzeit](#DATETIME)         | Wann der Timeout des Mitglieds endet. Leer, wenn diese Änderung keinen Timeout gesetzt oder ihn entfernt hat. Kann leer sein. |
 
 ### Rollen-Details {#AUDIT_LOG_DETAILS_ROLE}
 
 Details einer Rolle, die erstellt, geändert oder gelöscht wurde.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Rollen-ID | [Discord-ID](#SNOWFLAKE) | Die ID der Rolle. |
-| Rollenname | [Text](#STRING) | Der Name der Rolle. Leer, wenn sich der Name nicht geändert hat und der Bot die Rolle nicht kennt. Kann leer sein. |
+| Eigenschaft | Typ                                    | Details                                                                                                            |
+| ----------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                                |
+| Rollen-ID   | [Discord-ID](#SNOWFLAKE)               | Die ID der Rolle.                                                                                                  |
+| Rollenname  | [Text](#STRING)                        | Der Name der Rolle. Leer, wenn sich der Name nicht geändert hat und der Bot die Rolle nicht kennt. Kann leer sein. |
 
 ### Kanal-Details {#AUDIT_LOG_DETAILS_CHANNEL}
 
 Details eines Kanals, der erstellt, geändert oder gelöscht wurde.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aktion | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören. |
-| Kanal-ID | [Discord-ID](#SNOWFLAKE) | Die ID des Kanals. |
-| Kanalname | [Text](#STRING) | Der Name des Kanals. Leer, wenn sich der Name nicht geändert hat und der Bot den Kanal nicht kennt. Kann leer sein. |
+| Eigenschaft | Typ                                    | Details                                                                                                             |
+| ----------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Aktion      | [Audit-Log-Ereignis](#AUDIT_LOG_EVENT) | Die Audit-Log-Aktion, zu der diese Details gehören.                                                                 |
+| Kanal-ID    | [Discord-ID](#SNOWFLAKE)               | Die ID des Kanals.                                                                                                  |
+| Kanalname   | [Text](#STRING)                        | Der Name des Kanals. Leer, wenn sich der Name nicht geändert hat und der Bot den Kanal nicht kennt. Kann leer sein. |
 
 ### Geplantes Ereignis {#SCHEDULED_EVENT}
 
 Ein geplantes Ereignis auf deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Ereignis-ID. |
-| Name | [Text](#STRING) | Name des Ereignisses. Maximale Länge: 100 Zeichen. |
-| Beschreibung | [Text](#STRING) | Beschreibung des Ereignisses. Maximale Länge: 1000 Zeichen. Kann leer sein. |
-| Kanal | [Sprachkanal](#GUILD_VOICE_CHANNEL) | Sprach- oder Stage-Kanal, in dem das Ereignis stattfindet. Kann leer sein. |
-| Ersteller | [Benutzer](#DISCORD_USER) | Benutzer, der das Ereignis erstellt hat. Kann leer sein. |
-| Ortstyp | [Ereignis-Ortstyp](#SCHEDULED_EVENT_ENTITY_TYPE) | Wo das Ereignis stattfindet. |
-| Datenschutz | [Ereignis-Datenschutz](#SCHEDULED_EVENT_PRIVACY_LEVEL) | Wer das Ereignis sehen kann. |
-| Status | [Ereignis-Status](#SCHEDULED_EVENT_STATUS) | Aktueller Status des Ereignisses. |
-| Beginnt um | [Datum und Uhrzeit](#DATETIME) | Geplante Startzeit. Kann leer sein. |
-| Endet um | [Datum und Uhrzeit](#DATETIME) | Geplante Endzeit. Kann leer sein. |
-| Bild-URL | [URL](#URL) | Cover-Bild des Ereignisses. Kann leer sein. |
-| Interessierte Benutzer | [Ganzzahl](#INTEGER) | Wie viele Benutzer sich für das Ereignis interessieren. Kann leer sein. |
-| URL | [URL](#URL) | Direkter Link zum Ereignis. |
+| Eigenschaft            | Typ                                                    | Details                                                                     |
+| ---------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------- |
+| ID                     | [Discord-ID](#SNOWFLAKE)                               | Ereignis-ID.                                                                |
+| Name                   | [Text](#STRING)                                        | Name des Ereignisses. Maximale Länge: 100 Zeichen.                          |
+| Beschreibung           | [Text](#STRING)                                        | Beschreibung des Ereignisses. Maximale Länge: 1000 Zeichen. Kann leer sein. |
+| Kanal                  | [Sprachkanal](#GUILD_VOICE_CHANNEL)                    | Sprach- oder Stage-Kanal, in dem das Ereignis stattfindet. Kann leer sein.  |
+| Ersteller              | [Benutzer](#DISCORD_USER)                              | Benutzer, der das Ereignis erstellt hat. Kann leer sein.                    |
+| Ortstyp                | [Ereignis-Ortstyp](#SCHEDULED_EVENT_ENTITY_TYPE)       | Wo das Ereignis stattfindet.                                                |
+| Datenschutz            | [Ereignis-Datenschutz](#SCHEDULED_EVENT_PRIVACY_LEVEL) | Wer das Ereignis sehen kann.                                                |
+| Status                 | [Ereignis-Status](#SCHEDULED_EVENT_STATUS)             | Aktueller Status des Ereignisses.                                           |
+| Beginnt um             | [Datum und Uhrzeit](#DATETIME)                         | Geplante Startzeit. Kann leer sein.                                         |
+| Endet um               | [Datum und Uhrzeit](#DATETIME)                         | Geplante Endzeit. Kann leer sein.                                           |
+| Bild-URL               | [URL](#URL)                                            | Cover-Bild des Ereignisses. Kann leer sein.                                 |
+| Interessierte Benutzer | [Ganzzahl](#INTEGER)                                   | Wie viele Benutzer sich für das Ereignis interessieren. Kann leer sein.     |
+| URL                    | [URL](#URL)                                            | Direkter Link zum Ereignis.                                                 |
 
 ### AutoMod-Regel {#AUTOMOD_RULE}
 
 Eine AutoMod-Regel auf deinem Server.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Regel-ID. |
-| Name | [Text](#STRING) | Name der Regel. |
-| Ersteller | [Benutzer](#DISCORD_USER) | Benutzer, der die Regel erstellt hat. Kann leer sein. |
-| Ereignis | [AutoMod-Ereignis](#AUTOMOD_RULE_EVENT_TYPE) | Welches Ereignis die Regel überwacht. |
-| Trigger | [AutoMod-Trigger](#AUTOMOD_RULE_TRIGGER_TYPE) | Wie die Regel entscheidet zu aktivieren. |
-| Aktiviert | [Ja/Nein](#BOOLEAN) | Ob die Regel derzeit aktiv ist. |
-| Ausgenommene Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die die Regel umgehen. |
-| Ausgenommene Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Kanäle, in denen die Regel nicht durchgesetzt wird. |
+| Eigenschaft         | Typ                                           | Details                                               |
+| ------------------- | --------------------------------------------- | ----------------------------------------------------- |
+| ID                  | [Discord-ID](#SNOWFLAKE)                      | Regel-ID.                                             |
+| Name                | [Text](#STRING)                               | Name der Regel.                                       |
+| Ersteller           | [Benutzer](#DISCORD_USER)                     | Benutzer, der die Regel erstellt hat. Kann leer sein. |
+| Ereignis            | [AutoMod-Ereignis](#AUTOMOD_RULE_EVENT_TYPE)  | Welches Ereignis die Regel überwacht.                 |
+| Trigger             | [AutoMod-Trigger](#AUTOMOD_RULE_TRIGGER_TYPE) | Wie die Regel entscheidet zu aktivieren.              |
+| Aktiviert           | [Ja/Nein](#BOOLEAN)                           | Ob die Regel derzeit aktiv ist.                       |
+| Ausgenommene Rollen | Liste von [Rolle](#GUILD_ROLE)                | Rollen, die die Regel umgehen.                        |
+| Ausgenommene Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL)      | Kanäle, in denen die Regel nicht durchgesetzt wird.   |
 
 ### Umfrage-Antwort {#MESSAGE_POLL_ANSWER}
 
 Eine Antwortoption einer Nachrichtenumfrage.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Ganzzahl](#INTEGER) | Antwort-ID. |
-| Text | [Text](#STRING) | Antworttext (max. 55 Zeichen). Maximale Länge: 55 Zeichen. Kann leer sein. |
-| Emoji | [Text](#STRING) | Optionales Emoji neben der Antwort. Kann leer sein. |
-| Abstimmungsanzahl | [Ganzzahl](#INTEGER) | Anzahl der Abstimmungen für diese Antwort. |
+| Eigenschaft       | Typ                  | Details                                                                    |
+| ----------------- | -------------------- | -------------------------------------------------------------------------- |
+| ID                | [Ganzzahl](#INTEGER) | Antwort-ID.                                                                |
+| Text              | [Text](#STRING)      | Antworttext (max. 55 Zeichen). Maximale Länge: 55 Zeichen. Kann leer sein. |
+| Emoji             | [Text](#STRING)      | Optionales Emoji neben der Antwort. Kann leer sein.                        |
+| Abstimmungsanzahl | [Ganzzahl](#INTEGER) | Anzahl der Abstimmungen für diese Antwort.                                 |
 
 ### Umfrage {#MESSAGE_POLL}
 
 Eine Umfrage an eine Nachricht angehängt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Frage | [Text](#STRING) | Frage der Umfrage (max. 300 Zeichen). Maximale Länge: 300 Zeichen. |
-| Antworten | Liste von [Umfrage-Antwort](#MESSAGE_POLL_ANSWER) | Verfügbare Antwortvarianten. Einträge: 1 bis 10. |
-| Verfällt um | [Datum und Uhrzeit](#DATETIME) | Wann die Abstimmung endet. Kann leer sein. |
-| Mehrfachauswahl | [Ja/Nein](#BOOLEAN) | Ob Wähler mehr als eine Antwort wählen können. |
-| Ergebnisse final | [Ja/Nein](#BOOLEAN) | Ob die Umfrage beendet ist und die Ergebnisse endgültig sind. |
-| Gesamtabstimmungen | [Ganzzahl](#INTEGER) | Gesamtzahl der Abstimmungen über alle Antworten. |
+| Eigenschaft        | Typ                                               | Details                                                            |
+| ------------------ | ------------------------------------------------- | ------------------------------------------------------------------ |
+| Frage              | [Text](#STRING)                                   | Frage der Umfrage (max. 300 Zeichen). Maximale Länge: 300 Zeichen. |
+| Antworten          | Liste von [Umfrage-Antwort](#MESSAGE_POLL_ANSWER) | Verfügbare Antwortvarianten. Einträge: 1 bis 10.                   |
+| Verfällt um        | [Datum und Uhrzeit](#DATETIME)                    | Wann die Abstimmung endet. Kann leer sein.                         |
+| Mehrfachauswahl    | [Ja/Nein](#BOOLEAN)                               | Ob Wähler mehr als eine Antwort wählen können.                     |
+| Ergebnisse final   | [Ja/Nein](#BOOLEAN)                               | Ob die Umfrage beendet ist und die Ergebnisse endgültig sind.      |
+| Gesamtabstimmungen | [Ganzzahl](#INTEGER)                              | Gesamtzahl der Abstimmungen über alle Antworten.                   |
 
 ### Reaktion {#MESSAGE_REACTION}
 
@@ -1687,17 +1687,17 @@ Eine Reaktion auf eine Nachricht (Emoji, Anzahl der Reaktionen und ob der Bot re
 
 Eine Discord-Interaktion (Slash-Befehl, Button-Klick, usw.).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Interaktions-ID. |
-| Benutzer | [Benutzer](#DISCORD_USER) | Benutzer, der die Interaktion ausgelöst hat. Beispiel: `Alex (@alex)`. |
-| Mitglied | [Server-Mitglied](#GUILD_MEMBER) | Benutzer als Server-Mitglied, falls zutreffend. Kann leer sein. |
-| Server | [Server](#GUILD) | Server, von dem die Interaktion kam. Kann leer sein. |
-| Kanal | [Server-Kanal](#GUILD_CHANNEL) | Kanal, von dem die Interaktion kam. Kann leer sein. |
-| Benutzer-Sprache | [Text](#STRING) | Discord-Sprache des Benutzers. |
-| Server-Sprache | [Text](#STRING) | Bevorzugte Sprache des Servers. Kann leer sein. |
+| Eigenschaft        | Typ                                        | Details                                                                  |
+| ------------------ | ------------------------------------------ | ------------------------------------------------------------------------ |
+| ID                 | [Discord-ID](#SNOWFLAKE)                   | Interaktions-ID.                                                         |
+| Benutzer           | [Benutzer](#DISCORD_USER)                  | Benutzer, der die Interaktion ausgelöst hat. Beispiel: `Alex (@alex)`.   |
+| Mitglied           | [Server-Mitglied](#GUILD_MEMBER)           | Benutzer als Server-Mitglied, falls zutreffend. Kann leer sein.          |
+| Server             | [Server](#GUILD)                           | Server, von dem die Interaktion kam. Kann leer sein.                     |
+| Kanal              | [Server-Kanal](#GUILD_CHANNEL)             | Kanal, von dem die Interaktion kam. Kann leer sein.                      |
+| Benutzer-Sprache   | [Text](#STRING)                            | Discord-Sprache des Benutzers.                                           |
+| Server-Sprache     | [Text](#STRING)                            | Bevorzugte Sprache des Servers. Kann leer sein.                          |
 | Bot-Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Die Berechtigungen des Bots im Kanal dieser Interaktion. Kann leer sein. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Interaktion erstellt wurde. |
+| Erstellt am        | [Datum und Uhrzeit](#DATETIME)             | Wann die Interaktion erstellt wurde.                                     |
 
 ### Button-Klick {#BUTTON_INTERACTION}
 
@@ -1705,12 +1705,12 @@ Eine Interaktion durch einen Button-Klick auf eine Nachricht.
 
 Baut auf auf: [Interaktion](#INTERACTION).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID des angeklickten Buttons. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die der Button angehängt ist. |
-| Button-Beschriftung | [Text](#STRING) | Beschriftung des angeklickten Buttons. Kann leer sein. |
-| Status | [Text](#STRING) | Status-Wert, den der angeklickte Button mitgeführt hat (die auf einem Flow-Button gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Eigenschaft         | Typ                   | Details                                                                                                                                 |
+| ------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID           | [Text](#STRING)       | Custom-ID des angeklickten Buttons.                                                                                                     |
+| Nachricht           | [Nachricht](#MESSAGE) | Nachricht, an die der Button angehängt ist.                                                                                             |
+| Button-Beschriftung | [Text](#STRING)       | Beschriftung des angeklickten Buttons. Kann leer sein.                                                                                  |
+| Status              | [Text](#STRING)       | Status-Wert, den der angeklickte Button mitgeführt hat (die auf einem Flow-Button gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
 
 ### Auswahlmenü-Interaktion {#STRING_SELECT_MENU_INTERACTION}
 
@@ -1718,12 +1718,12 @@ Eine Interaktion durch ein Auswahlmenü.
 
 Baut auf auf: [Interaktion](#INTERACTION).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID der Auswahlmenü-Komponente. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die das Menü angehängt ist. |
-| Status | [Text](#STRING) | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
-| Ausgewählte Werte | Liste von [Text](#STRING) | Werte, die der Benutzer ausgewählt hat. |
+| Eigenschaft       | Typ                       | Details                                                                                                                 |
+| ----------------- | ------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID         | [Text](#STRING)           | Custom-ID der Auswahlmenü-Komponente.                                                                                   |
+| Nachricht         | [Nachricht](#MESSAGE)     | Nachricht, an die das Menü angehängt ist.                                                                               |
+| Status            | [Text](#STRING)           | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Ausgewählte Werte | Liste von [Text](#STRING) | Werte, die der Benutzer ausgewählt hat.                                                                                 |
 
 ### Modal absenden {#MODAL_SUBMIT_INTERACTION}
 
@@ -1731,10 +1731,10 @@ Eine Interaktion durch das Absenden eines Modalformulars.
 
 Baut auf auf: [Interaktion](#INTERACTION).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID des abgesendeten Modals. |
-| Felder | Nachschlagetabelle von [Text](#STRING) zu [Beliebig](#ANY) | Zuordnung von Feld-Custom-ID zur jeweiligen Antwort. Der Wert entspricht dem Feldtyp: Text, eine Liste bei Auswahlmenüs und Checkbox-Gruppen, true oder false bei einer einzelnen Checkbox, und die ausgewählten Einträge bei Benutzer-, Rollen-, Kanal- oder Datei-Feldern. Zum Auslesen "Modal-Feld auslesen" verwenden. |
+| Eigenschaft | Typ                                                        | Details                                                                                                                                                                                                                                                                                                                    |
+| ----------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID   | [Text](#STRING)                                            | Custom-ID des abgesendeten Modals.                                                                                                                                                                                                                                                                                         |
+| Felder      | Nachschlagetabelle von [Text](#STRING) zu [Beliebig](#ANY) | Zuordnung von Feld-Custom-ID zur jeweiligen Antwort. Der Wert entspricht dem Feldtyp: Text, eine Liste bei Auswahlmenüs und Checkbox-Gruppen, true oder false bei einer einzelnen Checkbox, und die ausgewählten Einträge bei Benutzer-, Rollen-, Kanal- oder Datei-Feldern. Zum Auslesen "Modal-Feld auslesen" verwenden. |
 
 ### Slash-Befehl {#SLASH_COMMAND_INTERACTION}
 
@@ -1742,824 +1742,824 @@ Eine Interaktion durch die Ausführung eines Slash-Befehls.
 
 Baut auf auf: [Interaktion](#INTERACTION).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Befehlsname | [Text](#STRING) | Name des ausgeführten Befehls. |
-| Unterbefehl | [Text](#STRING) | Name des aufgerufenen Unterbefehls oder leer, wenn keiner verwendet wurde. Kann leer sein. |
-| Unterbefehlsgruppe | [Text](#STRING) | Name der aufgerufenen Unterbefehlsgruppe oder leer, wenn keine verwendet wurde. Kann leer sein. |
-| Optionen | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Zuordnung von Options-ID zu Wert (als Text). |
+| Eigenschaft        | Typ                                                       | Details                                                                                         |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Befehlsname        | [Text](#STRING)                                           | Name des ausgeführten Befehls.                                                                  |
+| Unterbefehl        | [Text](#STRING)                                           | Name des aufgerufenen Unterbefehls oder leer, wenn keiner verwendet wurde. Kann leer sein.      |
+| Unterbefehlsgruppe | [Text](#STRING)                                           | Name der aufgerufenen Unterbefehlsgruppe oder leer, wenn keine verwendet wurde. Kann leer sein. |
+| Optionen           | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Zuordnung von Options-ID zu Wert (als Text).                                                    |
 
 ### Flow {#FLOW_REFERENCE}
 
 Ein Verweis auf einen anderen Flow.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Flow-ID. |
-| Name | [Text](#STRING) | Anzeigename des Flows. |
+| Eigenschaft | Typ                      | Details                |
+| ----------- | ------------------------ | ---------------------- |
+| ID          | [Discord-ID](#SNOWFLAKE) | Flow-ID.               |
+| Name        | [Text](#STRING)          | Anzeigename des Flows. |
 
 ### Standard-Reaktion {#DEFAULT_REACTION}
 
 Standard-Emoji für Reaktionen auf Beiträge in einem Forum- oder Medienkanal.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Emoji-ID | [Discord-ID](#SNOWFLAKE) | ID eines benutzerdefinierten Server-Emojis als Standard-Reaktion. Kann leer sein. |
-| Emoji-Name | [Text](#STRING) | Unicode-Emoji-Zeichen oder Name eines benutzerdefinierten Emojis. Maximale Länge: 64 Zeichen. Kann leer sein. |
+| Eigenschaft | Typ                      | Details                                                                                                       |
+| ----------- | ------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| Emoji-ID    | [Discord-ID](#SNOWFLAKE) | ID eines benutzerdefinierten Server-Emojis als Standard-Reaktion. Kann leer sein.                             |
+| Emoji-Name  | [Text](#STRING)          | Unicode-Emoji-Zeichen oder Name eines benutzerdefinierten Emojis. Maximale Länge: 64 Zeichen. Kann leer sein. |
 
 ### Berechtigungsüberschreibung {#PERMISSION_OVERWRITE}
 
 Eine Berechtigungsüberschreibung, die spezifische Berechtigungen für eine Rolle oder ein Mitglied auf einem Kanal gewährt oder entzieht.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-ID | [Discord-ID](#SNOWFLAKE) | ID der Rolle oder des Mitglieds, auf das sich diese Überschreibung bezieht. |
-| Zieltyp | [Zieltyp der Überschreibung](#OVERWRITE_TYPE) | Ob das Ziel eine Rolle oder ein Mitglied ist. |
-| Zulässige Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Berechtigungen, die dem Ziel auf diesem Kanal ausdrücklich gewährt werden. |
-| Verweigerte Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Berechtigungen, die dem Ziel auf diesem Kanal ausdrücklich entzogen werden. |
+| Eigenschaft                | Typ                                           | Details                                                                     |
+| -------------------------- | --------------------------------------------- | --------------------------------------------------------------------------- |
+| Ziel-ID                    | [Discord-ID](#SNOWFLAKE)                      | ID der Rolle oder des Mitglieds, auf das sich diese Überschreibung bezieht. |
+| Zieltyp                    | [Zieltyp der Überschreibung](#OVERWRITE_TYPE) | Ob das Ziel eine Rolle oder ein Mitglied ist.                               |
+| Zulässige Berechtigungen   | Liste von [Berechtigung](#PERMISSION_FLAG)    | Berechtigungen, die dem Ziel auf diesem Kanal ausdrücklich gewährt werden.  |
+| Verweigerte Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG)    | Berechtigungen, die dem Ziel auf diesem Kanal ausdrücklich entzogen werden. |
 
 ### Umfrage-Antwort {#POLL_ANSWER_INPUT}
 
 Eine einzelne Antwortoption für eine Umfrage mit optionalem Emoji.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Text | [Text](#STRING) | Der Antworttext, der Wählern angezeigt wird (max. 55 Zeichen). Länge: 1 bis 55 Zeichen. |
-| Emoji | [Text](#STRING) | Optionales Emoji, das neben dem Antworttext angezeigt wird. Kann leer sein. |
+| Eigenschaft | Typ             | Details                                                                                 |
+| ----------- | --------------- | --------------------------------------------------------------------------------------- |
+| Text        | [Text](#STRING) | Der Antworttext, der Wählern angezeigt wird (max. 55 Zeichen). Länge: 1 bis 55 Zeichen. |
+| Emoji       | [Text](#STRING) | Optionales Emoji, das neben dem Antworttext angezeigt wird. Kann leer sein.             |
 
 ### Server-Vorschau {#GUILD_PREVIEW}
 
 Eine schreibgeschützte Vorschau eines erkennbaren Servers, einschließlich Emojis, Sticker, Funktionen und ungefähre Mitgliederzahlen.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID des Servers. |
-| Name | [Text](#STRING) | Der Anzeigename des Servers. |
-| Symbol-URL | [URL](#URL) | Die Symbol-URL des Servers, falls gesetzt. Kann leer sein. |
-| Splash-URL | [URL](#URL) | Die Einladungs-Splash-URL, falls gesetzt. Kann leer sein. |
-| Entdeckungs-Splash-URL | [URL](#URL) | Die Entdeckungs-Splash-URL im Entdeckungsverzeichnis, falls gesetzt. Kann leer sein. |
-| Emojis | Liste von [Server-Emoji](#GUILD_EMOJI) | Alle benutzerdefinierten Emojis, die im Server verfügbar sind. |
-| Sticker | Liste von [Server-Sticker](#GUILD_STICKER) | Alle benutzerdefinierten Sticker, die im Server verfügbar sind. |
-| Funktionen | Liste von [Text](#STRING) | Identifizierer der Funktionen, die der Server aktiviert hat. |
-| Ungefähre Mitgliederzahl | [Ganzzahl](#INTEGER) | Eine ungefähre Anzahl der Mitglieder im Server. |
-| Ungefähre Präsenzanzahl | [Ganzzahl](#INTEGER) | Eine ungefähre Anzahl der Online-Mitglieder im Server. |
-| Beschreibung | [Text](#STRING) | Die Entdeckungsbeschreibung für den Server. Kann leer sein. |
+| Eigenschaft              | Typ                                        | Details                                                                              |
+| ------------------------ | ------------------------------------------ | ------------------------------------------------------------------------------------ |
+| ID                       | [Discord-ID](#SNOWFLAKE)                   | Die Discord-ID des Servers.                                                          |
+| Name                     | [Text](#STRING)                            | Der Anzeigename des Servers.                                                         |
+| Symbol-URL               | [URL](#URL)                                | Die Symbol-URL des Servers, falls gesetzt. Kann leer sein.                           |
+| Splash-URL               | [URL](#URL)                                | Die Einladungs-Splash-URL, falls gesetzt. Kann leer sein.                            |
+| Entdeckungs-Splash-URL   | [URL](#URL)                                | Die Entdeckungs-Splash-URL im Entdeckungsverzeichnis, falls gesetzt. Kann leer sein. |
+| Emojis                   | Liste von [Server-Emoji](#GUILD_EMOJI)     | Alle benutzerdefinierten Emojis, die im Server verfügbar sind.                       |
+| Sticker                  | Liste von [Server-Sticker](#GUILD_STICKER) | Alle benutzerdefinierten Sticker, die im Server verfügbar sind.                      |
+| Funktionen               | Liste von [Text](#STRING)                  | Identifizierer der Funktionen, die der Server aktiviert hat.                         |
+| Ungefähre Mitgliederzahl | [Ganzzahl](#INTEGER)                       | Eine ungefähre Anzahl der Mitglieder im Server.                                      |
+| Ungefähre Präsenzanzahl  | [Ganzzahl](#INTEGER)                       | Eine ungefähre Anzahl der Online-Mitglieder im Server.                               |
+| Beschreibung             | [Text](#STRING)                            | Die Entdeckungsbeschreibung für den Server. Kann leer sein.                          |
 
 ### Server-Vorlage {#GUILD_TEMPLATE}
 
 Ein Snapshot der Serverstruktur (Kanäle, Rollen, Einstellungen), der zum Erstellen neuer Server verwendet werden kann.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Code | [Text](#STRING) | Der eindeutige Vorlagencode, der in Einladungs-URLs verwendet wird. |
-| Name | [Text](#STRING) | Der Anzeigename der Vorlage. |
-| Beschreibung | [Text](#STRING) | Die vom Benutzer bereitgestellte Beschreibung der Vorlage. Kann leer sein. |
-| Nutzungsanzahl | [Ganzzahl](#INTEGER) | Wie oft diese Vorlage verwendet wurde. |
-| Ersteller | [Benutzer](#DISCORD_USER) | Der Benutzer, der die Vorlage erstellt hat. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Vorlage zuerst erstellt wurde. |
-| Aktualisiert am | [Datum und Uhrzeit](#DATETIME) | Wann die Vorlage zuletzt mit ihrem Quell-Server synchronisiert wurde. |
-| Quell-Server | [Server](#GUILD) | Der Server, von dem diese Vorlage erstellt wurde. Kann leer sein. |
-| Serialisierter Quell-Server | [Text](#STRING) | Der serialisierte JSON-Snapshot der Serverstruktur. Kann leer sein. |
-| Ist modifiziert | [Ja/Nein](#BOOLEAN) | Ob die Vorlage Änderungen hat, die nicht mit dem Quell-Server synchronisiert wurden. Kann leer sein. |
+| Eigenschaft                 | Typ                            | Details                                                                                              |
+| --------------------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| Code                        | [Text](#STRING)                | Der eindeutige Vorlagencode, der in Einladungs-URLs verwendet wird.                                  |
+| Name                        | [Text](#STRING)                | Der Anzeigename der Vorlage.                                                                         |
+| Beschreibung                | [Text](#STRING)                | Die vom Benutzer bereitgestellte Beschreibung der Vorlage. Kann leer sein.                           |
+| Nutzungsanzahl              | [Ganzzahl](#INTEGER)           | Wie oft diese Vorlage verwendet wurde.                                                               |
+| Ersteller                   | [Benutzer](#DISCORD_USER)      | Der Benutzer, der die Vorlage erstellt hat.                                                          |
+| Erstellt am                 | [Datum und Uhrzeit](#DATETIME) | Wann die Vorlage zuerst erstellt wurde.                                                              |
+| Aktualisiert am             | [Datum und Uhrzeit](#DATETIME) | Wann die Vorlage zuletzt mit ihrem Quell-Server synchronisiert wurde.                                |
+| Quell-Server                | [Server](#GUILD)               | Der Server, von dem diese Vorlage erstellt wurde. Kann leer sein.                                    |
+| Serialisierter Quell-Server | [Text](#STRING)                | Der serialisierte JSON-Snapshot der Serverstruktur. Kann leer sein.                                  |
+| Ist modifiziert             | [Ja/Nein](#BOOLEAN)            | Ob die Vorlage Änderungen hat, die nicht mit dem Quell-Server synchronisiert wurden. Kann leer sein. |
 
 ### Server-Integration {#GUILD_INTEGRATION}
 
 Eine Integration in einem Server installiert, wie Twitch-Abonnement-Link, YouTube-Creator-Link oder Bot-Anwendung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID der Integration. |
-| Name | [Text](#STRING) | Der Anzeigename der Integration. |
-| Typ | [Text](#STRING) | Die Art der Integration (z.B. twitch, youtube, discord). |
-| Aktiviert | [Ja/Nein](#BOOLEAN) | Ob die Integration derzeit aktiviert ist. Kann leer sein. |
-| Konto-ID | [Text](#STRING) | Die externe Konto-ID, die durch diese Integration verknüpft ist. Kann leer sein. |
-| Kontoname | [Text](#STRING) | Der externe Anzeigename des Kontos. Kann leer sein. |
-| Synchronisierung | [Ja/Nein](#BOOLEAN) | Ob die Integration gerade synchronisiert wird. Kann leer sein. |
-| Abonnenten-Rolle | [Rolle](#GUILD_ROLE) | Die Rolle, die Abonnenten gewährt wird, falls zutreffend. Kann leer sein. |
-| Ablauf-Verhalten | [Ganzzahl](#INTEGER) | Was passiert, wenn die Abonnenten-Vorteile ablaufen (0 = Rolle entfernen, 1 = Mitglied kicken). Kann leer sein. |
-| Ablauf-Schonfrist | [Ganzzahl](#INTEGER) | Tage, um zu warten, bevor das Ablauf-Verhalten angewendet wird. Kann leer sein. |
-| Benutzer | [Benutzer](#DISCORD_USER) | Der Benutzer, der die Integration hinzugefügt hat. Kann leer sein. |
-| Synchronisiert am | [Datum und Uhrzeit](#DATETIME) | Wann die Integration zuletzt synchronisiert wurde. Kann leer sein. |
-| Abonnenten-Anzahl | [Ganzzahl](#INTEGER) | Anzahl der Abonnenten, die mit dieser Integration verknüpft sind. Kann leer sein. |
-| Widerrufen | [Ja/Nein](#BOOLEAN) | Ob die Integration widerrufen wurde. Kann leer sein. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | Die Discord-Anwendungs-ID für Bot-Integrationen. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                                                                                         |
+| ----------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| ID                | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID der Integration.                                                                                 |
+| Name              | [Text](#STRING)                | Der Anzeigename der Integration.                                                                                |
+| Typ               | [Text](#STRING)                | Die Art der Integration (z.B. twitch, youtube, discord).                                                        |
+| Aktiviert         | [Ja/Nein](#BOOLEAN)            | Ob die Integration derzeit aktiviert ist. Kann leer sein.                                                       |
+| Konto-ID          | [Text](#STRING)                | Die externe Konto-ID, die durch diese Integration verknüpft ist. Kann leer sein.                                |
+| Kontoname         | [Text](#STRING)                | Der externe Anzeigename des Kontos. Kann leer sein.                                                             |
+| Synchronisierung  | [Ja/Nein](#BOOLEAN)            | Ob die Integration gerade synchronisiert wird. Kann leer sein.                                                  |
+| Abonnenten-Rolle  | [Rolle](#GUILD_ROLE)           | Die Rolle, die Abonnenten gewährt wird, falls zutreffend. Kann leer sein.                                       |
+| Ablauf-Verhalten  | [Ganzzahl](#INTEGER)           | Was passiert, wenn die Abonnenten-Vorteile ablaufen (0 = Rolle entfernen, 1 = Mitglied kicken). Kann leer sein. |
+| Ablauf-Schonfrist | [Ganzzahl](#INTEGER)           | Tage, um zu warten, bevor das Ablauf-Verhalten angewendet wird. Kann leer sein.                                 |
+| Benutzer          | [Benutzer](#DISCORD_USER)      | Der Benutzer, der die Integration hinzugefügt hat. Kann leer sein.                                              |
+| Synchronisiert am | [Datum und Uhrzeit](#DATETIME) | Wann die Integration zuletzt synchronisiert wurde. Kann leer sein.                                              |
+| Abonnenten-Anzahl | [Ganzzahl](#INTEGER)           | Anzahl der Abonnenten, die mit dieser Integration verknüpft sind. Kann leer sein.                               |
+| Widerrufen        | [Ja/Nein](#BOOLEAN)            | Ob die Integration widerrufen wurde. Kann leer sein.                                                            |
+| Anwendungs-ID     | [Discord-ID](#SNOWFLAKE)       | Die Discord-Anwendungs-ID für Bot-Integrationen. Kann leer sein.                                                |
 
 ### Soundboard-Sound {#SOUNDBOARD_SOUND}
 
 Ein benutzerdefinierter Soundboard-Sound, der in Sprachkanälen abgespielt werden kann.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID des Sounds. |
-| Name | [Text](#STRING) | Der Anzeigename des Sounds. |
-| Lautstärke | [Dezimalzahl](#FLOAT) | Wiedergabelautstärke zwischen 0,0 und 1,0. |
-| Emoji-ID | [Discord-ID](#SNOWFLAKE) | Die benutzerdefinierte Emoji-ID, die dem Sound zugeordnet ist (falls vorhanden). Kann leer sein. |
-| Emoji-Name | [Text](#STRING) | Das Unicode-Emoji oder der benutzerdefinierte Emoji-Name neben dem Sound. Kann leer sein. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | Der Server, zu dem dieser Sound gehört (leer für Standard-Sounds). Kann leer sein. |
-| Verfügbar | [Ja/Nein](#BOOLEAN) | Ob der Sound derzeit im Server nutzbar ist. |
-| Benutzer | [Benutzer](#DISCORD_USER) | Der Benutzer, der den Sound hochgeladen hat. Kann leer sein. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Sound hochgeladen wurde. |
+| Eigenschaft | Typ                            | Details                                                                                          |
+| ----------- | ------------------------------ | ------------------------------------------------------------------------------------------------ |
+| ID          | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID des Sounds.                                                                       |
+| Name        | [Text](#STRING)                | Der Anzeigename des Sounds.                                                                      |
+| Lautstärke  | [Dezimalzahl](#FLOAT)          | Wiedergabelautstärke zwischen 0,0 und 1,0.                                                       |
+| Emoji-ID    | [Discord-ID](#SNOWFLAKE)       | Die benutzerdefinierte Emoji-ID, die dem Sound zugeordnet ist (falls vorhanden). Kann leer sein. |
+| Emoji-Name  | [Text](#STRING)                | Das Unicode-Emoji oder der benutzerdefinierte Emoji-Name neben dem Sound. Kann leer sein.        |
+| Server-ID   | [Discord-ID](#SNOWFLAKE)       | Der Server, zu dem dieser Sound gehört (leer für Standard-Sounds). Kann leer sein.               |
+| Verfügbar   | [Ja/Nein](#BOOLEAN)            | Ob der Sound derzeit im Server nutzbar ist.                                                      |
+| Benutzer    | [Benutzer](#DISCORD_USER)      | Der Benutzer, der den Sound hochgeladen hat. Kann leer sein.                                     |
+| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Sound hochgeladen wurde.                                                                |
 
 ### AutoMod-Aktion {#AUTOMOD_ACTION}
 
 Eine Aktion, die AutoMod ausführt, wenn eine Regel ausgelöst wird.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Typ | [AutoMod-Aktionstyp](#AUTOMOD_ACTION_TYPE) | Die Art der Aktion, die durchgeführt werden soll. |
-| Benutzerdefinierte Nachricht | [Text](#STRING) | Benutzerdefinierte Erklärung, die dem Benutzer angezeigt wird, wenn seine Nachricht blockiert wird (nur BLOCK_MESSAGE). Maximale Länge: 150 Zeichen. |
-| Alert-Kanal | [Textkanal](#GUILD_TEXT_CHANNEL) | Der Kanal zum Senden von Warnmeldungen (nur SEND_ALERT_MESSAGE). Kann leer sein. |
-| Timeout-Dauer | [Dauer](#DURATION) | Wie lange das Mitglied aus dem Verkehr gezogen werden soll (nur TIMEOUT). Kann leer sein. |
+| Eigenschaft                  | Typ                                        | Details                                                                                                                                              |
+| ---------------------------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Typ                          | [AutoMod-Aktionstyp](#AUTOMOD_ACTION_TYPE) | Die Art der Aktion, die durchgeführt werden soll.                                                                                                    |
+| Benutzerdefinierte Nachricht | [Text](#STRING)                            | Benutzerdefinierte Erklärung, die dem Benutzer angezeigt wird, wenn seine Nachricht blockiert wird (nur BLOCK_MESSAGE). Maximale Länge: 150 Zeichen. |
+| Alert-Kanal                  | [Textkanal](#GUILD_TEXT_CHANNEL)           | Der Kanal zum Senden von Warnmeldungen (nur SEND_ALERT_MESSAGE). Kann leer sein.                                                                     |
+| Timeout-Dauer                | [Dauer](#DURATION)                         | Wie lange das Mitglied aus dem Verkehr gezogen werden soll (nur TIMEOUT). Kann leer sein.                                                            |
 
 ### AutoMod-Trigger-Metadaten {#AUTOMOD_TRIGGER_METADATA}
 
 Konfigurationswerte für den Trigger einer AutoMod-Regel, variierend je nach Trigger-Typ.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Schlüsselwortfilter | Liste von [Text](#STRING) | Teilstrings oder Wildcard-Muster, die die Regel auslösen. |
-| Regex-Muster | Liste von [Text](#STRING) | Rust-Regex-Muster, die die Regel auslösen. |
-| Schlüsselwortvoreinstellungen | Liste von [AutoMod-Schlüsselwortvoreinstellung](#AUTOMOD_KEYWORD_PRESET_TYPE) | Von Discord kuratierte Schlüsselwortvoreinstellungslisten zum Aktivieren. |
-| Whitelist | Liste von [Text](#STRING) | Teilstrings, die vom Filtern ausgenommen sind. |
-| Erwähnungs-Gesamtlimit | [Ganzzahl](#INTEGER) | Die maximale Anzahl eindeutiger Rollen- und Benutzer-Erwähnungen in einer einzelnen Nachricht. Wert: 1 bis 50. Kann leer sein. |
-| Erwähnungs-Raid-Schutz | [Ja/Nein](#BOOLEAN) | Ob Discords Erwähnungs-Raid-Schutz-Heuristiken verwendet werden sollen. |
+| Eigenschaft                   | Typ                                                                           | Details                                                                                                                        |
+| ----------------------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Schlüsselwortfilter           | Liste von [Text](#STRING)                                                     | Teilstrings oder Wildcard-Muster, die die Regel auslösen.                                                                      |
+| Regex-Muster                  | Liste von [Text](#STRING)                                                     | Rust-Regex-Muster, die die Regel auslösen.                                                                                     |
+| Schlüsselwortvoreinstellungen | Liste von [AutoMod-Schlüsselwortvoreinstellung](#AUTOMOD_KEYWORD_PRESET_TYPE) | Von Discord kuratierte Schlüsselwortvoreinstellungslisten zum Aktivieren.                                                      |
+| Whitelist                     | Liste von [Text](#STRING)                                                     | Teilstrings, die vom Filtern ausgenommen sind.                                                                                 |
+| Erwähnungs-Gesamtlimit        | [Ganzzahl](#INTEGER)                                                          | Die maximale Anzahl eindeutiger Rollen- und Benutzer-Erwähnungen in einer einzelnen Nachricht. Wert: 1 bis 50. Kann leer sein. |
+| Erwähnungs-Raid-Schutz        | [Ja/Nein](#BOOLEAN)                                                           | Ob Discords Erwähnungs-Raid-Schutz-Heuristiken verwendet werden sollen.                                                        |
 
 ### Options-Auswahl {#APPLICATION_COMMAND_OPTION_CHOICE}
 
 Eine vordefinierte Auswahlmöglichkeit für eine Slash-Befehl-Option.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Name | [Text](#STRING) | Die Bezeichnung, die Benutzern angezeigt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Wert | [Text](#STRING) | Der Wert, den dein Bot erhält, wenn diese Auswahl getroffen wird. Länge: 1 bis 100 Zeichen. |
+| Eigenschaft | Typ             | Details                                                                                     |
+| ----------- | --------------- | ------------------------------------------------------------------------------------------- |
+| Name        | [Text](#STRING) | Die Bezeichnung, die Benutzern angezeigt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
+| Wert        | [Text](#STRING) | Der Wert, den dein Bot erhält, wenn diese Auswahl getroffen wird. Länge: 1 bis 100 Zeichen. |
 
 ### Befehlsoption {#APPLICATION_COMMAND_OPTION}
 
 Eine einzelne Option (Parameter) eines Slash-Befehls.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Name | [Text](#STRING) | Interner Name der Option (Kleinbuchstaben, 1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen. |
-| Beschreibung | [Text](#STRING) | Beschreibung, die Benutzern angezeigt wird (1-100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Typ | [Slash-Befehl-Optionstyp](#APPLICATION_COMMAND_OPTION_TYPE) | Der Datentyp, den diese Option akzeptiert. |
-| Erforderlich | [Ja/Nein](#BOOLEAN) | Ob Benutzer diese Option angeben müssen. Standard: Nein. |
-| Auswahlmöglichkeiten | Liste von [Options-Auswahl](#APPLICATION_COMMAND_OPTION_CHOICE) | Vordefinierte Auswahlmöglichkeiten, aus denen Benutzer wählen können (max. 25). Höchstens 25 Einträge. |
-| Kanaltypen | Liste von [Kanaltyp](#CHANNEL_TYPE) | Beschränkt Kanal-Optionen auf bestimmte Kanaltypen. |
-| Mindestwert | [Dezimalzahl](#FLOAT) | Kleinster erlaubter Zahlenwert. Kann leer sein. |
-| Höchstwert | [Dezimalzahl](#FLOAT) | Größter erlaubter Zahlenwert. Kann leer sein. |
-| Mindestlänge | [Ganzzahl](#INTEGER) | Kleinste erlaubte Textlänge. Wert: 0 bis 6000. Kann leer sein. |
-| Maximallänge | [Ganzzahl](#INTEGER) | Größte erlaubte Textlänge. Wert: 1 bis 6000. Kann leer sein. |
-| Autovervollständigung | [Ja/Nein](#BOOLEAN) | Aktiviert dynamische Autovervollständigungs-Vorschläge für diese Option. Standard: Nein. Kann leer sein. |
-| Statische Vorschläge | Liste von [Text](#STRING) | Vorschläge, die während der Eingabe automatisch angeboten werden - ohne Flow (max. 100, erfordert Autovervollständigung). Höchstens 100 Einträge. |
-| Unterbefehle / verschachtelte Optionen | Liste von [Befehlsoption](#APPLICATION_COMMAND_OPTION) | Verschachtelte Optionen für Unterbefehle und Unterbefehlsgruppen (max. 25). Höchstens 25 Einträge. |
+| Eigenschaft                            | Typ                                                             | Details                                                                                                                                           |
+| -------------------------------------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Name                                   | [Text](#STRING)                                                 | Interner Name der Option (Kleinbuchstaben, 1-32 Zeichen). Länge: 1 bis 32 Zeichen. Muss zu `^[-_a-z0-9]+$` passen.                                |
+| Beschreibung                           | [Text](#STRING)                                                 | Beschreibung, die Benutzern angezeigt wird (1-100 Zeichen). Länge: 1 bis 100 Zeichen.                                                             |
+| Typ                                    | [Slash-Befehl-Optionstyp](#APPLICATION_COMMAND_OPTION_TYPE)     | Der Datentyp, den diese Option akzeptiert.                                                                                                        |
+| Erforderlich                           | [Ja/Nein](#BOOLEAN)                                             | Ob Benutzer diese Option angeben müssen. Standard: Nein.                                                                                          |
+| Auswahlmöglichkeiten                   | Liste von [Options-Auswahl](#APPLICATION_COMMAND_OPTION_CHOICE) | Vordefinierte Auswahlmöglichkeiten, aus denen Benutzer wählen können (max. 25). Höchstens 25 Einträge.                                            |
+| Kanaltypen                             | Liste von [Kanaltyp](#CHANNEL_TYPE)                             | Beschränkt Kanal-Optionen auf bestimmte Kanaltypen.                                                                                               |
+| Mindestwert                            | [Dezimalzahl](#FLOAT)                                           | Kleinster erlaubter Zahlenwert. Kann leer sein.                                                                                                   |
+| Höchstwert                             | [Dezimalzahl](#FLOAT)                                           | Größter erlaubter Zahlenwert. Kann leer sein.                                                                                                     |
+| Mindestlänge                           | [Ganzzahl](#INTEGER)                                            | Kleinste erlaubte Textlänge. Wert: 0 bis 6000. Kann leer sein.                                                                                    |
+| Maximallänge                           | [Ganzzahl](#INTEGER)                                            | Größte erlaubte Textlänge. Wert: 1 bis 6000. Kann leer sein.                                                                                      |
+| Autovervollständigung                  | [Ja/Nein](#BOOLEAN)                                             | Aktiviert dynamische Autovervollständigungs-Vorschläge für diese Option. Standard: Nein. Kann leer sein.                                          |
+| Statische Vorschläge                   | Liste von [Text](#STRING)                                       | Vorschläge, die während der Eingabe automatisch angeboten werden - ohne Flow (max. 100, erfordert Autovervollständigung). Höchstens 100 Einträge. |
+| Unterbefehle / verschachtelte Optionen | Liste von [Befehlsoption](#APPLICATION_COMMAND_OPTION)          | Verschachtelte Optionen für Unterbefehle und Unterbefehlsgruppen (max. 25). Höchstens 25 Einträge.                                                |
 
 ### Anwendungsbefehl {#APPLICATION_COMMAND}
 
 Ein registrierter Slash-, Benutzer- oder Nachrichtenbefehl auf Discord.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des Befehls. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | ID der Anwendung, der dieser Befehl gehört. |
-| Typ | [Anwendungsbefehlstyp](#APPLICATION_COMMAND_TYPE) | Die Art des Anwendungsbefehls. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | ID des Servers, auf dem dieser Befehl registriert ist (falls vorhanden). Kann leer sein. |
-| Name | [Text](#STRING) | Name des Befehls (1-32 Zeichen). Länge: 1 bis 32 Zeichen. |
-| Beschreibung | [Text](#STRING) | Beschreibung des Befehls (max. 100 Zeichen). Maximale Länge: 100 Zeichen. |
-| Optionen | Liste von [Befehlsoption](#APPLICATION_COMMAND_OPTION) | Die Optionen/Parameter dieses Befehls. Höchstens 25 Einträge. |
-| Standardberechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Erforderliche Server-Mitglied-Berechtigungen zur standardmäßigen Nutzung dieses Befehls. |
-| DM-Berechtigung | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Befehl in DMs nutzbar ist. Standard: Ja. Kann leer sein. |
-| NSFW | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Befehl altersbedingt eingeschränkt ist. Standard: Nein. |
-| Version | [Discord-ID](#SNOWFLAKE) | Automatisch inkrementierte Versions-ID des Befehls. |
+| Eigenschaft            | Typ                                                    | Details                                                                                  |
+| ---------------------- | ------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| ID                     | [Discord-ID](#SNOWFLAKE)                               | Discord-ID des Befehls.                                                                  |
+| Anwendungs-ID          | [Discord-ID](#SNOWFLAKE)                               | ID der Anwendung, der dieser Befehl gehört.                                              |
+| Typ                    | [Anwendungsbefehlstyp](#APPLICATION_COMMAND_TYPE)      | Die Art des Anwendungsbefehls.                                                           |
+| Server-ID              | [Discord-ID](#SNOWFLAKE)                               | ID des Servers, auf dem dieser Befehl registriert ist (falls vorhanden). Kann leer sein. |
+| Name                   | [Text](#STRING)                                        | Name des Befehls (1-32 Zeichen). Länge: 1 bis 32 Zeichen.                                |
+| Beschreibung           | [Text](#STRING)                                        | Beschreibung des Befehls (max. 100 Zeichen). Maximale Länge: 100 Zeichen.                |
+| Optionen               | Liste von [Befehlsoption](#APPLICATION_COMMAND_OPTION) | Die Optionen/Parameter dieses Befehls. Höchstens 25 Einträge.                            |
+| Standardberechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG)             | Erforderliche Server-Mitglied-Berechtigungen zur standardmäßigen Nutzung dieses Befehls. |
+| DM-Berechtigung        | [Ja/Nein](#BOOLEAN)                                    | Gibt an, ob der Befehl in DMs nutzbar ist. Standard: Ja. Kann leer sein.                 |
+| NSFW                   | [Ja/Nein](#BOOLEAN)                                    | Gibt an, ob der Befehl altersbedingt eingeschränkt ist. Standard: Nein.                  |
+| Version                | [Discord-ID](#SNOWFLAKE)                               | Automatisch inkrementierte Versions-ID des Befehls.                                      |
 
 ### Texteingabe {#TEXT_INPUT}
 
 Ein Texteingabefeld für die Verwendung in einem Modal.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Kennung, die zurückgesendet wird, wenn das Modal abgesendet wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Beschriftung | [Text](#STRING) | Beschriftung, die über dem Feld angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen. |
-| Stil | [Texteingabe-Stil](#TEXT_INPUT_STYLE) | Gibt an, ob die Eingabe eine einzelne Zeile oder ein Absatz ist. |
-| Mindestlänge | [Ganzzahl](#INTEGER) | Zulässige Mindestlänge der Eingabe (0-4000). Wert: 0 bis 4000. Kann leer sein. |
-| Maximale Länge | [Ganzzahl](#INTEGER) | Zulässige maximale Länge der Eingabe (1-4000). Wert: 1 bis 4000. Kann leer sein. |
-| Erforderlich | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Benutzer dieses Feld ausfüllen muss. Standard: Ja. Kann leer sein. |
-| Standardwert | [Text](#STRING) | Vorausgefüllter Wert des Feldes (max. 4000 Zeichen). Maximale Länge: 4000 Zeichen. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Hinweistext, der angezeigt wird, wenn das Feld leer ist (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
+| Eigenschaft    | Typ                                   | Details                                                                                                                  |
+| -------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Custom-ID      | [Text](#STRING)                       | Kennung, die zurückgesendet wird, wenn das Modal abgesendet wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.           |
+| Beschriftung   | [Text](#STRING)                       | Beschriftung, die über dem Feld angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen.                               |
+| Stil           | [Texteingabe-Stil](#TEXT_INPUT_STYLE) | Gibt an, ob die Eingabe eine einzelne Zeile oder ein Absatz ist.                                                         |
+| Mindestlänge   | [Ganzzahl](#INTEGER)                  | Zulässige Mindestlänge der Eingabe (0-4000). Wert: 0 bis 4000. Kann leer sein.                                           |
+| Maximale Länge | [Ganzzahl](#INTEGER)                  | Zulässige maximale Länge der Eingabe (1-4000). Wert: 1 bis 4000. Kann leer sein.                                         |
+| Erforderlich   | [Ja/Nein](#BOOLEAN)                   | Gibt an, ob der Benutzer dieses Feld ausfüllen muss. Standard: Ja. Kann leer sein.                                       |
+| Standardwert   | [Text](#STRING)                       | Vorausgefüllter Wert des Feldes (max. 4000 Zeichen). Maximale Länge: 4000 Zeichen. Kann leer sein.                       |
+| Platzhalter    | [Text](#STRING)                       | Hinweistext, der angezeigt wird, wenn das Feld leer ist (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
 
 ### Modal {#MODAL}
 
 Ein Popup-Formular mit Texteingaben, das der Benutzer absenden kann.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Kennung, die zurückgesendet wird, wenn das Modal abgesendet wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Titel | [Text](#STRING) | Titel, der oben im Modal angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen. |
-| Komponenten | Liste von [Formularfeld](#MODAL_COMPONENT) | Die Texteingaben im Modal (1-5 Einträge). Einträge: 1 bis 5. |
+| Eigenschaft | Typ                                        | Details                                                                                                        |
+| ----------- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
+| Custom-ID   | [Text](#STRING)                            | Kennung, die zurückgesendet wird, wenn das Modal abgesendet wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
+| Titel       | [Text](#STRING)                            | Titel, der oben im Modal angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen.                            |
+| Komponenten | Liste von [Formularfeld](#MODAL_COMPONENT) | Die Texteingaben im Modal (1-5 Einträge). Einträge: 1 bis 5.                                                   |
 
 ### Auswahloption {#STRING_SELECT_OPTION}
 
 Eine einzelne Option in einem Auswahlmenü.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Beschriftung | [Text](#STRING) | Beschriftung für den Benutzer (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Wert | [Text](#STRING) | Wert, der zurückgesendet wird, wenn diese Option gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Beschreibung | [Text](#STRING) | Optionale Beschreibung unter der Beschriftung. Maximale Länge: 100 Zeichen. Kann leer sein. |
-| Emoji | [Text](#STRING) | Optionales Emoji neben der Beschriftung. Kann leer sein. |
-| Standard | [Ja/Nein](#BOOLEAN) | Gibt an, ob diese Option standardmäßig ausgewählt ist. Standard: Nein. Kann leer sein. |
+| Eigenschaft         | Typ                     | Details                                                                                                                            |
+| ------------------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Beschriftung        | [Text](#STRING)         | Beschriftung für den Benutzer (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.                                                        |
+| Wert                | [Text](#STRING)         | Wert, der zurückgesendet wird, wenn diese Option gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.                        |
+| Beschreibung        | [Text](#STRING)         | Optionale Beschreibung unter der Beschriftung. Maximale Länge: 100 Zeichen. Kann leer sein.                                        |
+| Emoji               | [Text](#STRING)         | Optionales Emoji neben der Beschriftung. Kann leer sein.                                                                           |
+| Standard            | [Ja/Nein](#BOOLEAN)     | Gibt an, ob diese Option standardmäßig ausgewählt ist. Standard: Nein. Kann leer sein.                                             |
 | Auszuführender Flow | [Flow](#FLOW_REFERENCE) | Der Flow, der ausgeführt wird, wenn jemand diese Option auswählt. Leer lassen, um den Flow des Menüs zu verwenden. Kann leer sein. |
 
 ### Formularfeld-Option {#MODAL_OPTION}
 
 Eine Auswahlmöglichkeit in einem Dropdown, einer Checkbox-Gruppe oder einer Optionsfeld-Gruppe eines Pop-up-Formulars (Modal).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Beschriftung | [Text](#STRING) | Text, den das Mitglied für diese Auswahlmöglichkeit sieht (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Wert | [Text](#STRING) | Wert, der zurückgemeldet wird, wenn diese Auswahlmöglichkeit gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Beschreibung | [Text](#STRING) | Zusätzliche Zeile, die unter der Beschriftung angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
-| Standardmäßig ausgewählt | [Ja/Nein](#BOOLEAN) | Ob diese Auswahlmöglichkeit beim Öffnen des Modals bereits gewählt ist. Standard: Nein. Kann leer sein. |
+| Eigenschaft              | Typ                 | Details                                                                                                                       |
+| ------------------------ | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Beschriftung             | [Text](#STRING)     | Text, den das Mitglied für diese Auswahlmöglichkeit sieht (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.                       |
+| Wert                     | [Text](#STRING)     | Wert, der zurückgemeldet wird, wenn diese Auswahlmöglichkeit gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.       |
+| Beschreibung             | [Text](#STRING)     | Zusätzliche Zeile, die unter der Beschriftung angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
+| Standardmäßig ausgewählt | [Ja/Nein](#BOOLEAN) | Ob diese Auswahlmöglichkeit beim Öffnen des Modals bereits gewählt ist. Standard: Nein. Kann leer sein.                       |
 
 ### Formularfeld {#MODAL_COMPONENT}
 
 Ein einzelnes Feld eines Pop-up-Formulars (Modal). Welche Einstellungen gelten, hängt vom Feldtyp ab.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Feldtyp | [Formularfeld-Typ](#MODAL_COMPONENT_TYPE) | Die Art von Feld, die angezeigt wird. Für eine Texteingabe leer lassen. Kann leer sein. |
-| Custom-ID | [Text](#STRING) | Kennung, unter der die Antwort dieses Feldes ausgelesen wird (max. 100 Zeichen). Bei einer Textanzeige nicht nötig. Länge: 1 bis 100 Zeichen. Kann leer sein. |
-| Beschriftung | [Text](#STRING) | Beschriftung, die über dem Feld angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Hilfetext, der unter der Beschriftung angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
-| Pflichtfeld | [Ja/Nein](#BOOLEAN) | Ob das Mitglied dieses Feld vor dem Absenden ausfüllen muss. Standard: Ja. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Ausgegrauter Hinweis, der angezeigt wird, solange das Feld leer ist (max. 150 Zeichen). Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Stil | [Texteingabe-Stil](#TEXT_INPUT_STYLE) | Ob eine Texteingabe einzeilig oder ein mehrzeiliges Feld ist. Kann leer sein. |
-| Mindestlänge | [Ganzzahl](#INTEGER) | Wie wenige Zeichen eine Texteingabe mindestens akzeptiert. Wert: 0 bis 4000. Kann leer sein. |
-| Maximallänge | [Ganzzahl](#INTEGER) | Wie viele Zeichen eine Texteingabe höchstens akzeptiert. Wert: 1 bis 4000. Kann leer sein. |
-| Vorbelegter Wert | [Text](#STRING) | Text, den das Feld beim Öffnen des Modals bereits enthält (max. 4000 Zeichen). Maximale Länge: 4000 Zeichen. Kann leer sein. |
-| Optionen | Liste von [Formularfeld-Option](#MODAL_OPTION) | Die Auswahlmöglichkeiten eines Dropdowns, einer Checkbox-Gruppe oder einer Optionsfeld-Gruppe (max. 25 Einträge). Höchstens 25 Einträge. |
-| Mindestauswahl | [Ganzzahl](#INTEGER) | Wie wenige Optionen das Mitglied mindestens wählen muss. Wert: 0 bis 25. Kann leer sein. |
-| Maximalauswahl | [Ganzzahl](#INTEGER) | Wie viele Optionen das Mitglied höchstens wählen darf. Wert: 1 bis 25. Kann leer sein. |
-| Kanaltypen | Liste von [Kanaltyp](#CHANNEL_TYPE) | Beschränkt eine Kanal-Auswahl auf diese Kanalarten. Leer erlaubt alle. |
-| Mindestanzahl Dateien | [Ganzzahl](#INTEGER) | Wie wenige Dateien das Mitglied mindestens hochladen muss. Wert: 1 bis 10. Kann leer sein. |
-| Maximalanzahl Dateien | [Ganzzahl](#INTEGER) | Wie viele Dateien das Mitglied höchstens hochladen darf. Wert: 1 bis 10. Kann leer sein. |
-| Standardmäßig angehakt | [Ja/Nein](#BOOLEAN) | Ob eine einzelne Checkbox bereits angehakt ist. Standard: Nein. Kann leer sein. |
-| Text | [Text](#STRING) | Der Text, den eine reine Textanzeige zeigt (max. 4000 Zeichen). Kein Feld, das das Mitglied ausfüllt. Maximale Länge: 4000 Zeichen. Kann leer sein. |
+| Eigenschaft            | Typ                                            | Details                                                                                                                                                       |
+| ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Feldtyp                | [Formularfeld-Typ](#MODAL_COMPONENT_TYPE)      | Die Art von Feld, die angezeigt wird. Für eine Texteingabe leer lassen. Kann leer sein.                                                                       |
+| Custom-ID              | [Text](#STRING)                                | Kennung, unter der die Antwort dieses Feldes ausgelesen wird (max. 100 Zeichen). Bei einer Textanzeige nicht nötig. Länge: 1 bis 100 Zeichen. Kann leer sein. |
+| Beschriftung           | [Text](#STRING)                                | Beschriftung, die über dem Feld angezeigt wird (max. 45 Zeichen). Länge: 1 bis 45 Zeichen. Kann leer sein.                                                    |
+| Beschreibung           | [Text](#STRING)                                | Hilfetext, der unter der Beschriftung angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein.                                         |
+| Pflichtfeld            | [Ja/Nein](#BOOLEAN)                            | Ob das Mitglied dieses Feld vor dem Absenden ausfüllen muss. Standard: Ja. Kann leer sein.                                                                    |
+| Platzhalter            | [Text](#STRING)                                | Ausgegrauter Hinweis, der angezeigt wird, solange das Feld leer ist (max. 150 Zeichen). Maximale Länge: 150 Zeichen. Kann leer sein.                          |
+| Stil                   | [Texteingabe-Stil](#TEXT_INPUT_STYLE)          | Ob eine Texteingabe einzeilig oder ein mehrzeiliges Feld ist. Kann leer sein.                                                                                 |
+| Mindestlänge           | [Ganzzahl](#INTEGER)                           | Wie wenige Zeichen eine Texteingabe mindestens akzeptiert. Wert: 0 bis 4000. Kann leer sein.                                                                  |
+| Maximallänge           | [Ganzzahl](#INTEGER)                           | Wie viele Zeichen eine Texteingabe höchstens akzeptiert. Wert: 1 bis 4000. Kann leer sein.                                                                    |
+| Vorbelegter Wert       | [Text](#STRING)                                | Text, den das Feld beim Öffnen des Modals bereits enthält (max. 4000 Zeichen). Maximale Länge: 4000 Zeichen. Kann leer sein.                                  |
+| Optionen               | Liste von [Formularfeld-Option](#MODAL_OPTION) | Die Auswahlmöglichkeiten eines Dropdowns, einer Checkbox-Gruppe oder einer Optionsfeld-Gruppe (max. 25 Einträge). Höchstens 25 Einträge.                      |
+| Mindestauswahl         | [Ganzzahl](#INTEGER)                           | Wie wenige Optionen das Mitglied mindestens wählen muss. Wert: 0 bis 25. Kann leer sein.                                                                      |
+| Maximalauswahl         | [Ganzzahl](#INTEGER)                           | Wie viele Optionen das Mitglied höchstens wählen darf. Wert: 1 bis 25. Kann leer sein.                                                                        |
+| Kanaltypen             | Liste von [Kanaltyp](#CHANNEL_TYPE)            | Beschränkt eine Kanal-Auswahl auf diese Kanalarten. Leer erlaubt alle.                                                                                        |
+| Mindestanzahl Dateien  | [Ganzzahl](#INTEGER)                           | Wie wenige Dateien das Mitglied mindestens hochladen muss. Wert: 1 bis 10. Kann leer sein.                                                                    |
+| Maximalanzahl Dateien  | [Ganzzahl](#INTEGER)                           | Wie viele Dateien das Mitglied höchstens hochladen darf. Wert: 1 bis 10. Kann leer sein.                                                                      |
+| Standardmäßig angehakt | [Ja/Nein](#BOOLEAN)                            | Ob eine einzelne Checkbox bereits angehakt ist. Standard: Nein. Kann leer sein.                                                                               |
+| Text                   | [Text](#STRING)                                | Der Text, den eine reine Textanzeige zeigt (max. 4000 Zeichen). Kein Feld, das das Mitglied ausfüllt. Maximale Länge: 4000 Zeichen. Kann leer sein.           |
 
 ### Auswahlmenü {#SELECT_MENU}
 
 Eine Auswahlmenü-Komponente (mit Textoptionen oder für Benutzer, Rollen, Kanäle bzw. Benutzer und Rollen).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Kennung, die zurückgesendet wird, wenn eine Option gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen. |
-| Typ | [Auswahlmenü-Typ](#SELECT_MENU_TYPE) | Die Art des Auswahlmenüs. Standard: Auswahlmenü. |
-| Platzhalter | [Text](#STRING) | Hinweistext, der angezeigt wird, wenn nichts ausgewählt ist. Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Mindestwerte | [Ganzzahl](#INTEGER) | Mindestanzahl der Auswahlmöglichkeiten, die der Benutzer auswählen muss (0-25). Wert: 0 bis 25. Standard: `1`. Kann leer sein. |
-| Maximalwerte | [Ganzzahl](#INTEGER) | Höchstanzahl der Auswahlmöglichkeiten, die der Benutzer auswählen kann (1-25). Wert: 1 bis 25. Standard: `1`. Kann leer sein. |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Menü deaktiviert ist. Standard: Nein. Kann leer sein. |
-| Optionen | Liste von [Auswahloption](#STRING_SELECT_OPTION) | Die Optionen für ein Auswahlmenü (max. 25). Höchstens 25 Einträge. |
-| Kanaltypen | Liste von [Kanaltyp](#CHANNEL_TYPE) | Beschränkt ein Kanal-Auswahlmenü auf bestimmte Kanaltypen. |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Optionaler Flow, der aufgerufen wird, wenn dieses Menü verwendet wird. Kann leer sein. |
+| Eigenschaft  | Typ                                              | Details                                                                                                                        |
+| ------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Custom-ID    | [Text](#STRING)                                  | Kennung, die zurückgesendet wird, wenn eine Option gewählt wird (max. 100 Zeichen). Länge: 1 bis 100 Zeichen.                  |
+| Typ          | [Auswahlmenü-Typ](#SELECT_MENU_TYPE)             | Die Art des Auswahlmenüs. Standard: Auswahlmenü.                                                                               |
+| Platzhalter  | [Text](#STRING)                                  | Hinweistext, der angezeigt wird, wenn nichts ausgewählt ist. Maximale Länge: 150 Zeichen. Kann leer sein.                      |
+| Mindestwerte | [Ganzzahl](#INTEGER)                             | Mindestanzahl der Auswahlmöglichkeiten, die der Benutzer auswählen muss (0-25). Wert: 0 bis 25. Standard: `1`. Kann leer sein. |
+| Maximalwerte | [Ganzzahl](#INTEGER)                             | Höchstanzahl der Auswahlmöglichkeiten, die der Benutzer auswählen kann (1-25). Wert: 1 bis 25. Standard: `1`. Kann leer sein.  |
+| Deaktiviert  | [Ja/Nein](#BOOLEAN)                              | Gibt an, ob das Menü deaktiviert ist. Standard: Nein. Kann leer sein.                                                          |
+| Optionen     | Liste von [Auswahloption](#STRING_SELECT_OPTION) | Die Optionen für ein Auswahlmenü (max. 25). Höchstens 25 Einträge.                                                             |
+| Kanaltypen   | Liste von [Kanaltyp](#CHANNEL_TYPE)              | Beschränkt ein Kanal-Auswahlmenü auf bestimmte Kanaltypen.                                                                     |
+| Ziel-Flow    | [Flow](#FLOW_REFERENCE)                          | Optionaler Flow, der aufgerufen wird, wenn dieses Menü verwendet wird. Kann leer sein.                                         |
 
 ### Lizenz {#ENTITLEMENT}
 
 Der Zugriff eines Benutzers oder Servers auf eine Premium-SKU einer Anwendung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Eindeutige ID der Lizenz. |
-| SKU-ID | [Discord-ID](#SNOWFLAKE) | ID der SKU, auf die diese Lizenz Zugriff gewährt. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | ID der Anwendung, der die SKU gehört. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | ID des Benutzers, dem diese Lizenz gewährt wurde, falls vorhanden. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | ID des Servers, dem diese Lizenz gewährt wurde, falls vorhanden. Kann leer sein. |
-| Typ | [Lizenztyp](#ENTITLEMENT_TYPE) | Typ der Lizenz. |
-| Gelöscht | [Ja/Nein](#BOOLEAN) | Gibt an, ob diese Lizenz gelöscht wurde. |
-| Beginnt bei | [Datum und Uhrzeit](#DATETIME) | Zeitpunkt, an dem die Lizenzperiode begann, falls zutreffend. Kann leer sein. |
-| Endet bei | [Datum und Uhrzeit](#DATETIME) | Zeitpunkt, an dem die Lizenzperiode endet, falls zutreffend. Kann leer sein. |
+| Eigenschaft   | Typ                            | Details                                                                          |
+| ------------- | ------------------------------ | -------------------------------------------------------------------------------- |
+| ID            | [Discord-ID](#SNOWFLAKE)       | Eindeutige ID der Lizenz.                                                        |
+| SKU-ID        | [Discord-ID](#SNOWFLAKE)       | ID der SKU, auf die diese Lizenz Zugriff gewährt.                                |
+| Anwendungs-ID | [Discord-ID](#SNOWFLAKE)       | ID der Anwendung, der die SKU gehört.                                            |
+| Benutzer-ID   | [Discord-ID](#SNOWFLAKE)       | ID des Benutzers, dem diese Lizenz gewährt wurde, falls vorhanden.               |
+| Server-ID     | [Discord-ID](#SNOWFLAKE)       | ID des Servers, dem diese Lizenz gewährt wurde, falls vorhanden. Kann leer sein. |
+| Typ           | [Lizenztyp](#ENTITLEMENT_TYPE) | Typ der Lizenz.                                                                  |
+| Gelöscht      | [Ja/Nein](#BOOLEAN)            | Gibt an, ob diese Lizenz gelöscht wurde.                                         |
+| Beginnt bei   | [Datum und Uhrzeit](#DATETIME) | Zeitpunkt, an dem die Lizenzperiode begann, falls zutreffend. Kann leer sein.    |
+| Endet bei     | [Datum und Uhrzeit](#DATETIME) | Zeitpunkt, an dem die Lizenzperiode endet, falls zutreffend. Kann leer sein.     |
 
 ### Aktivität {#ACTIVITY}
 
 Ein einzelner Aktivitätseintrag aus der Präsenz eines Benutzers (Spiel, Anhören, benutzerdefinierter Status, usw.).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Name | [Text](#STRING) | Name der Aktivität (z.B. Spieltitel, Liedtitel). |
-| Typ | [Aktivitätstyp](#ACTIVITY_TYPE) | Welche Art von Aktivität dies ist (Spielen, Streaming, Anhören, ...). |
-| URL | [URL](#URL) | Stream-URL, nur bei Streaming-Aktivitäten vorhanden. Kann leer sein. |
-| Details | [Text](#STRING) | Was der Benutzer gerade in der Aktivität tut. Kann leer sein. |
-| Status | [Text](#STRING) | Benutzerdefinierter Status, z.B. der Text eines benutzerdefinierten Status. Kann leer sein. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | ID der Anwendung, zu der diese Aktivität gehört, falls vorhanden. Kann leer sein. |
-| Erstellt bei | [Datum und Uhrzeit](#DATETIME) | Zeitstempel für den Start dieser Aktivität. |
+| Eigenschaft   | Typ                             | Details                                                                                     |
+| ------------- | ------------------------------- | ------------------------------------------------------------------------------------------- |
+| Name          | [Text](#STRING)                 | Name der Aktivität (z.B. Spieltitel, Liedtitel).                                            |
+| Typ           | [Aktivitätstyp](#ACTIVITY_TYPE) | Welche Art von Aktivität dies ist (Spielen, Streaming, Anhören, ...).                       |
+| URL           | [URL](#URL)                     | Stream-URL, nur bei Streaming-Aktivitäten vorhanden. Kann leer sein.                        |
+| Details       | [Text](#STRING)                 | Was der Benutzer gerade in der Aktivität tut. Kann leer sein.                               |
+| Status        | [Text](#STRING)                 | Benutzerdefinierter Status, z.B. der Text eines benutzerdefinierten Status. Kann leer sein. |
+| Anwendungs-ID | [Discord-ID](#SNOWFLAKE)        | ID der Anwendung, zu der diese Aktivität gehört, falls vorhanden. Kann leer sein.           |
+| Erstellt bei  | [Datum und Uhrzeit](#DATETIME)  | Zeitstempel für den Start dieser Aktivität.                                                 |
 
 ### Präsenz {#PRESENCE}
 
 Die Präsenz eines Benutzers in einem Server: Online-Status, Aktivitäten und Pro-Client-Status.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | ID des Benutzers, zu dem diese Präsenz gehört. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | ID des Servers, von dem diese Präsenz stammt. Kann leer sein. |
-| Status | [Präsenzstatus](#PRESENCE_STATUS) | Gesamter Online-Status (online, untätig, bitte nicht stören, offline, unsichtbar). |
-| Aktivitäten | Liste von [Aktivität](#ACTIVITY) | Liste der Aktivitäten, die der Benutzer derzeit hat. |
-| Desktop-Status | [Präsenzstatus](#PRESENCE_STATUS) | Status des Desktop-Clients, falls verbunden. Kann leer sein. |
-| Mobiler Status | [Präsenzstatus](#PRESENCE_STATUS) | Status des mobilen Clients, falls verbunden. Kann leer sein. |
-| Web-Status | [Präsenzstatus](#PRESENCE_STATUS) | Status des Web-Clients, falls verbunden. Kann leer sein. |
+| Eigenschaft    | Typ                               | Details                                                                            |
+| -------------- | --------------------------------- | ---------------------------------------------------------------------------------- |
+| Benutzer-ID    | [Discord-ID](#SNOWFLAKE)          | ID des Benutzers, zu dem diese Präsenz gehört.                                     |
+| Server-ID      | [Discord-ID](#SNOWFLAKE)          | ID des Servers, von dem diese Präsenz stammt. Kann leer sein.                      |
+| Status         | [Präsenzstatus](#PRESENCE_STATUS) | Gesamter Online-Status (online, untätig, bitte nicht stören, offline, unsichtbar). |
+| Aktivitäten    | Liste von [Aktivität](#ACTIVITY)  | Liste der Aktivitäten, die der Benutzer derzeit hat.                               |
+| Desktop-Status | [Präsenzstatus](#PRESENCE_STATUS) | Status des Desktop-Clients, falls verbunden. Kann leer sein.                       |
+| Mobiler Status | [Präsenzstatus](#PRESENCE_STATUS) | Status des mobilen Clients, falls verbunden. Kann leer sein.                       |
+| Web-Status     | [Präsenzstatus](#PRESENCE_STATUS) | Status des Web-Clients, falls verbunden. Kann leer sein.                           |
 
 ### Benutzer-Auswahlmenü-Interaktion {#USER_SELECT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer ein Benutzer-Auswahlmenü absendet.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID der Auswahlmenü-Komponente. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die das Menü angehängt ist. |
-| Status | [Text](#STRING) | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
-| Ausgewählte Benutzer | Liste von [Benutzer](#DISCORD_USER) | Benutzer, die ausgewählt wurden. |
-| Ausgewählte Server-Mitglieder | Liste von [Server-Mitglied](#GUILD_MEMBER) | Server-Mitglieder, die den ausgewählten Benutzern entsprechen, falls vorhanden. |
+| Eigenschaft                   | Typ                                        | Details                                                                                                                 |
+| ----------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID                     | [Text](#STRING)                            | Custom-ID der Auswahlmenü-Komponente.                                                                                   |
+| Nachricht                     | [Nachricht](#MESSAGE)                      | Nachricht, an die das Menü angehängt ist.                                                                               |
+| Status                        | [Text](#STRING)                            | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Ausgewählte Benutzer          | Liste von [Benutzer](#DISCORD_USER)        | Benutzer, die ausgewählt wurden.                                                                                        |
+| Ausgewählte Server-Mitglieder | Liste von [Server-Mitglied](#GUILD_MEMBER) | Server-Mitglieder, die den ausgewählten Benutzern entsprechen, falls vorhanden.                                         |
 
 ### Rollen-Auswahlmenü-Interaktion {#ROLE_SELECT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer ein Rollen-Auswahlmenü absendet.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID der Auswahlmenü-Komponente. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die das Menü angehängt ist. |
-| Status | [Text](#STRING) | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
-| Ausgewählte Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die ausgewählt wurden. |
+| Eigenschaft        | Typ                            | Details                                                                                                                 |
+| ------------------ | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID          | [Text](#STRING)                | Custom-ID der Auswahlmenü-Komponente.                                                                                   |
+| Nachricht          | [Nachricht](#MESSAGE)          | Nachricht, an die das Menü angehängt ist.                                                                               |
+| Status             | [Text](#STRING)                | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Ausgewählte Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die ausgewählt wurden.                                                                                          |
 
 ### Kanal-Auswahlmenü-Interaktion {#CHANNEL_SELECT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer ein Kanal-Auswahlmenü absendet.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID der Auswahlmenü-Komponente. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die das Menü angehängt ist. |
-| Status | [Text](#STRING) | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
-| Ausgewählte Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Kanäle, die ausgewählt wurden. |
+| Eigenschaft        | Typ                                      | Details                                                                                                                 |
+| ------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID          | [Text](#STRING)                          | Custom-ID der Auswahlmenü-Komponente.                                                                                   |
+| Nachricht          | [Nachricht](#MESSAGE)                    | Nachricht, an die das Menü angehängt ist.                                                                               |
+| Status             | [Text](#STRING)                          | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Ausgewählte Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Kanäle, die ausgewählt wurden.                                                                                          |
 
 ### Interaktion mit Auswahlmenü für Benutzer oder Rollen {#MENTIONABLE_SELECT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer ein Auswahlmenü für Benutzer oder Rollen absendet (Benutzer und Rollen).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Custom-ID | [Text](#STRING) | Custom-ID der Auswahlmenü-Komponente. |
-| Nachricht | [Nachricht](#MESSAGE) | Nachricht, an die das Menü angehängt ist. |
-| Status | [Text](#STRING) | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
-| Ausgewählte Benutzer | Liste von [Benutzer](#DISCORD_USER) | Benutzer, die im Menü ausgewählt wurden. |
-| Ausgewählte Rollen | Liste von [Rolle](#GUILD_ROLE) | Rollen, die im Menü ausgewählt wurden. |
+| Eigenschaft          | Typ                                 | Details                                                                                                                 |
+| -------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Custom-ID            | [Text](#STRING)                     | Custom-ID der Auswahlmenü-Komponente.                                                                                   |
+| Nachricht            | [Nachricht](#MESSAGE)               | Nachricht, an die das Menü angehängt ist.                                                                               |
+| Status               | [Text](#STRING)                     | Status-Wert, den das Menü mitgeführt hat (die auf einem Flow-Menü gesetzte Custom-ID), falls vorhanden. Kann leer sein. |
+| Ausgewählte Benutzer | Liste von [Benutzer](#DISCORD_USER) | Benutzer, die im Menü ausgewählt wurden.                                                                                |
+| Ausgewählte Rollen   | Liste von [Rolle](#GUILD_ROLE)      | Rollen, die im Menü ausgewählt wurden.                                                                                  |
 
 ### Benutzer-Kontextmenü-Interaktion {#USER_CONTEXT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer einen Benutzer-Kontextmenü-Befehl ausführt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Befehlsname | [Text](#STRING) | Name des Kontextmenü-Befehls, der verwendet wurde. |
-| Zielbenutzer | [Benutzer](#DISCORD_USER) | Benutzer, auf den der Befehl angewandt wurde. |
+| Eigenschaft          | Typ                              | Details                                                                                        |
+| -------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Befehlsname          | [Text](#STRING)                  | Name des Kontextmenü-Befehls, der verwendet wurde.                                             |
+| Zielbenutzer         | [Benutzer](#DISCORD_USER)        | Benutzer, auf den der Befehl angewandt wurde.                                                  |
 | Ziel-Server-Mitglied | [Server-Mitglied](#GUILD_MEMBER) | Server-Mitglied-Darstellung des Zielbenutzers, wenn in einem Server verwendet. Kann leer sein. |
 
 ### Nachricht-Kontextmenü-Interaktion {#MESSAGE_CONTEXT_MENU_INTERACTION}
 
 Eine Interaktion, die entsteht, wenn ein Benutzer einen Nachricht-Kontextmenü-Befehl ausführt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Befehlsname | [Text](#STRING) | Name des Kontextmenü-Befehls, der verwendet wurde. |
-| Zielnachricht | [Nachricht](#MESSAGE) | Nachricht, auf die der Befehl angewandt wurde. |
+| Eigenschaft   | Typ                   | Details                                            |
+| ------------- | --------------------- | -------------------------------------------------- |
+| Befehlsname   | [Text](#STRING)       | Name des Kontextmenü-Befehls, der verwendet wurde. |
+| Zielnachricht | [Nachricht](#MESSAGE) | Nachricht, auf die der Befehl angewandt wurde.     |
 
 ### Autovervollständigungs-Interaktion {#AUTOCOMPLETE_INTERACTION}
 
 Eine Interaktion, die eine Autovervollständigungsanfrage für eine Slash-Befehl-Option darstellt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Befehlsname | [Text](#STRING) | Name des Slash-Befehls, der die Autovervollständigung auslöste. |
-| Name der fokussierten Option | [Text](#STRING) | Name der Option, in die der Benutzer gerade schreibt. Kann leer sein. |
-| Wert der fokussierten Option | [Text](#STRING) | Aktueller partieller Wert, den der Benutzer eingegeben hat. Kann leer sein. |
-| Unterbefehl | [Text](#STRING) | Name des Unterbefehls, in dem der Benutzer gerade schreibt, oder leer, wenn der Befehl keinen hat. Kann leer sein. |
-| Unterbefehlsgruppe | [Text](#STRING) | Name der Unterbefehlsgruppe, in der der Benutzer gerade schreibt, oder leer, wenn keine verwendet wird. Kann leer sein. |
+| Eigenschaft                  | Typ             | Details                                                                                                                 |
+| ---------------------------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Befehlsname                  | [Text](#STRING) | Name des Slash-Befehls, der die Autovervollständigung auslöste.                                                         |
+| Name der fokussierten Option | [Text](#STRING) | Name der Option, in die der Benutzer gerade schreibt. Kann leer sein.                                                   |
+| Wert der fokussierten Option | [Text](#STRING) | Aktueller partieller Wert, den der Benutzer eingegeben hat. Kann leer sein.                                             |
+| Unterbefehl                  | [Text](#STRING) | Name des Unterbefehls, in dem der Benutzer gerade schreibt, oder leer, wenn der Befehl keinen hat. Kann leer sein.      |
+| Unterbefehlsgruppe           | [Text](#STRING) | Name der Unterbefehlsgruppe, in der der Benutzer gerade schreibt, oder leer, wenn keine verwendet wird. Kann leer sein. |
 
 ### Flow-Parameter {#FLOW_PARAMETER}
 
 Definiert einen typisierten Parameter (oder Rückgabewert) eines Flows. Die ID ist die öffentliche Identität, unter der Aufrufer Argumente übergeben; der Typ bestimmt, welche Werte akzeptiert werden.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Text](#STRING) | Stabile ID (Kebab-Case, Kleinbuchstaben/Ziffern/Bindestriche). Aufrufer übergeben Argumente unter dieser ID; im Flow liest du sie unter dieser ID. Länge: 1 bis 32 Zeichen. Muss zu `^[a-z0-9-]+$` passen. |
-| Typ | [Flow-Parameter-Typ](#FLOW_PARAMETER_TYPE) | Typ des Werts. Aufrufer müssen einen kompatiblen Wert übergeben. |
-| Inhaltstyp | [Typ](#TYPE_DESCRIPTOR) | Bei einer Liste oder Zuordnung: der Typ jedes Eintrags. Listen und Zuordnungen dürfen verschachtelt sein. |
-| Optional | [Ja/Nein](#BOOLEAN) | Ob Aufrufer diesen Parameter weglassen dürfen. Standard: Nein. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Hinweis für Aufrufer, was übergeben werden soll. Maximale Länge: 200 Zeichen. Kann leer sein. |
+| Eigenschaft  | Typ                                        | Details                                                                                                                                                                                                    |
+| ------------ | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ID           | [Text](#STRING)                            | Stabile ID (Kebab-Case, Kleinbuchstaben/Ziffern/Bindestriche). Aufrufer übergeben Argumente unter dieser ID; im Flow liest du sie unter dieser ID. Länge: 1 bis 32 Zeichen. Muss zu `^[a-z0-9-]+$` passen. |
+| Typ          | [Flow-Parameter-Typ](#FLOW_PARAMETER_TYPE) | Typ des Werts. Aufrufer müssen einen kompatiblen Wert übergeben.                                                                                                                                           |
+| Inhaltstyp   | [Typ](#TYPE_DESCRIPTOR)                    | Bei einer Liste oder Zuordnung: der Typ jedes Eintrags. Listen und Zuordnungen dürfen verschachtelt sein.                                                                                                  |
+| Optional     | [Ja/Nein](#BOOLEAN)                        | Ob Aufrufer diesen Parameter weglassen dürfen. Standard: Nein. Kann leer sein.                                                                                                                             |
+| Beschreibung | [Text](#STRING)                            | Hinweis für Aufrufer, was übergeben werden soll. Maximale Länge: 200 Zeichen. Kann leer sein.                                                                                                              |
 
 ### Medieneintrag {#UNFURLED_MEDIA_ITEM}
 
 Ein Verweis auf ein Bild, Video oder eine Datei für Components V2 Media-Container.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| URL | [URL](#URL) | Die Quell-URL des Mediums, kann eine Anlage via attachment://filename referenzieren. |
-| Höhe | [Ganzzahl](#INTEGER) | Pixelhöhe des Mediums (von Discord bei Antworten gefüllt). Kann leer sein. |
-| Breite | [Ganzzahl](#INTEGER) | Pixelbreite des Mediums (von Discord bei Antworten gefüllt). Kann leer sein. |
-| Inhaltstyp | [Text](#STRING) | MIME-Typ des Mediums (von Discord bei Antworten gefüllt). Kann leer sein. |
-| Anlagen-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID der angehängten Datei, falls durch einen Upload gestützt. Kann leer sein. |
-| Proxy-URL | [URL](#URL) | Discords Proxy-URL für das Medium (bei Antworten gefüllt). Kann leer sein. |
+| Eigenschaft | Typ                      | Details                                                                              |
+| ----------- | ------------------------ | ------------------------------------------------------------------------------------ |
+| URL         | [URL](#URL)              | Die Quell-URL des Mediums, kann eine Anlage via attachment://filename referenzieren. |
+| Höhe        | [Ganzzahl](#INTEGER)     | Pixelhöhe des Mediums (von Discord bei Antworten gefüllt). Kann leer sein.           |
+| Breite      | [Ganzzahl](#INTEGER)     | Pixelbreite des Mediums (von Discord bei Antworten gefüllt). Kann leer sein.         |
+| Inhaltstyp  | [Text](#STRING)          | MIME-Typ des Mediums (von Discord bei Antworten gefüllt). Kann leer sein.            |
+| Anlagen-ID  | [Discord-ID](#SNOWFLAKE) | Discord-ID der angehängten Datei, falls durch einen Upload gestützt. Kann leer sein. |
+| Proxy-URL   | [URL](#URL)              | Discords Proxy-URL für das Medium (bei Antworten gefüllt). Kann leer sein.           |
 
 ### Mediengalerie-Eintrag {#MEDIA_GALLERY_ITEM}
 
 Ein einzelner Bild- oder Video-Eintrag in einer Mediengalerie-Komponente.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Medium | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Der zugrunde liegende Medieneintrag (URL oder Anlage-Verweis). |
-| Beschreibung | [Text](#STRING) | Alternativtext für Barrierefreiheit (max. 1024 Zeichen). Maximale Länge: 1024 Zeichen. Kann leer sein. |
-| Spoiler | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Eintrag als Spoiler gekennzeichnet sein soll. Standard: Nein. |
+| Eigenschaft  | Typ                                   | Details                                                                                                |
+| ------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Medium       | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Der zugrunde liegende Medieneintrag (URL oder Anlage-Verweis).                                         |
+| Beschreibung | [Text](#STRING)                       | Alternativtext für Barrierefreiheit (max. 1024 Zeichen). Maximale Länge: 1024 Zeichen. Kann leer sein. |
+| Spoiler      | [Ja/Nein](#BOOLEAN)                   | Gibt an, ob der Eintrag als Spoiler gekennzeichnet sein soll. Standard: Nein.                          |
 
 ### Miniaturbild-Komponente {#THUMBNAIL_COMPONENT}
 
 Ein kleines Medien-Zubehörteil, das neben einem Abschnitts-Text angezeigt wird.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Medium | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Das Bild oder Video, das als Miniaturbild angezeigt wird. |
-| Beschreibung | [Text](#STRING) | Alternativtext für Barrierefreiheit (max. 1024 Zeichen). Maximale Länge: 1024 Zeichen. Kann leer sein. |
-| Spoiler | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Miniaturbild als Spoiler gekennzeichnet sein soll. Standard: Nein. |
+| Eigenschaft  | Typ                                   | Details                                                                                                |
+| ------------ | ------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Medium       | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Das Bild oder Video, das als Miniaturbild angezeigt wird.                                              |
+| Beschreibung | [Text](#STRING)                       | Alternativtext für Barrierefreiheit (max. 1024 Zeichen). Maximale Länge: 1024 Zeichen. Kann leer sein. |
+| Spoiler      | [Ja/Nein](#BOOLEAN)                   | Gibt an, ob das Miniaturbild als Spoiler gekennzeichnet sein soll. Standard: Nein.                     |
 
 ### Datei-Komponente {#FILE_COMPONENT}
 
 Ein Components V2 Dateiblock, der eine angehängte Datei inline anzeigt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Datei | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Der anzuzeigende Medieneintrag (typischerweise eine attachment:// Referenz). |
-| Spoiler | [Ja/Nein](#BOOLEAN) | Gibt an, ob die Datei als Spoiler gekennzeichnet sein soll. Standard: Nein. |
-| Name | [Text](#STRING) | Anzeigename (von Discord bei Antworten gefüllt). Kann leer sein. |
-| Größe | [Ganzzahl](#INTEGER) | Dateigröße in Bytes (von Discord bei Antworten gefüllt). Kann leer sein. |
+| Eigenschaft | Typ                                   | Details                                                                      |
+| ----------- | ------------------------------------- | ---------------------------------------------------------------------------- |
+| Datei       | [Medieneintrag](#UNFURLED_MEDIA_ITEM) | Der anzuzeigende Medieneintrag (typischerweise eine attachment:// Referenz). |
+| Spoiler     | [Ja/Nein](#BOOLEAN)                   | Gibt an, ob die Datei als Spoiler gekennzeichnet sein soll. Standard: Nein.  |
+| Name        | [Text](#STRING)                       | Anzeigename (von Discord bei Antworten gefüllt). Kann leer sein.             |
+| Größe       | [Ganzzahl](#INTEGER)                  | Dateigröße in Bytes (von Discord bei Antworten gefüllt). Kann leer sein.     |
 
 ### Trennzeichen-Komponente {#SEPARATOR_COMPONENT}
 
 Ein vertikaler Abstandshalter mit optionaler Trennlinie.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Trennlinie | [Ja/Nein](#BOOLEAN) | Gibt an, ob eine dünne horizontale Linie gerendert wird. Standard: Ja. |
-| Abstand | [Trennzeichen-Abstand](#SEPARATOR_SPACING) | Wie viel vertikaler Platz das Trennzeichen einnimmt. Standard: Klein. |
+| Eigenschaft | Typ                                        | Details                                                                |
+| ----------- | ------------------------------------------ | ---------------------------------------------------------------------- |
+| Trennlinie  | [Ja/Nein](#BOOLEAN)                        | Gibt an, ob eine dünne horizontale Linie gerendert wird. Standard: Ja. |
+| Abstand     | [Trennzeichen-Abstand](#SEPARATOR_SPACING) | Wie viel vertikaler Platz das Trennzeichen einnimmt. Standard: Klein.  |
 
 ### Textanzeige-Komponente {#TEXT_DISPLAY_COMPONENT}
 
 Ein Components V2 Textblock mit Markdown-Unterstützung (max. 4000 Zeichen).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Inhalt | [Text](#STRING) | Markdown-Text, der vom Client gerendert wird. Maximale Länge: 4000 Zeichen. |
+| Eigenschaft | Typ             | Details                                                                     |
+| ----------- | --------------- | --------------------------------------------------------------------------- |
+| Inhalt      | [Text](#STRING) | Markdown-Text, der vom Client gerendert wird. Maximale Länge: 4000 Zeichen. |
 
 ### Abschnitt-Komponente {#SECTION_COMPONENT}
 
 Gruppiert ein bis drei Text-Anzeige-Kinder mit einem Zubehörteil (Miniaturbild oder Button).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Textanzeigen | Liste von [Textanzeige-Komponente](#TEXT_DISPLAY_COMPONENT) | 1-3 Textanzeige-Kinder, die als Abschnittskörper gerendert werden. Einträge: 1 bis 3. |
-| Zubehör (Miniaturbild) | [Miniaturbild-Komponente](#THUMBNAIL_COMPONENT) | Verwendet ein Miniaturbild als Zubehörteil des Abschnitts. Entweder dieses oder ein Button muss angegeben werden. Nur eines davon verwenden: Zubehör (Button) Kann leer sein. |
-| Zubehör (Button) | [Button](#BUTTON) | Verwendet einen Button als Zubehörteil des Abschnitts. Entweder dieser oder ein Miniaturbild muss angegeben werden. Nur eines davon verwenden: Zubehör (Miniaturbild) Kann leer sein. |
+| Eigenschaft            | Typ                                                         | Details                                                                                                                                                                               |
+| ---------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Textanzeigen           | Liste von [Textanzeige-Komponente](#TEXT_DISPLAY_COMPONENT) | 1-3 Textanzeige-Kinder, die als Abschnittskörper gerendert werden. Einträge: 1 bis 3.                                                                                                 |
+| Zubehör (Miniaturbild) | [Miniaturbild-Komponente](#THUMBNAIL_COMPONENT)             | Verwendet ein Miniaturbild als Zubehörteil des Abschnitts. Entweder dieses oder ein Button muss angegeben werden. Nur eines davon verwenden: Zubehör (Button) Kann leer sein.         |
+| Zubehör (Button)       | [Button](#BUTTON)                                           | Verwendet einen Button als Zubehörteil des Abschnitts. Entweder dieser oder ein Miniaturbild muss angegeben werden. Nur eines davon verwenden: Zubehör (Miniaturbild) Kann leer sein. |
 
 ### Mediengalerie-Komponente {#MEDIA_GALLERY_COMPONENT}
 
 Ein Raster von 1-10 Bildern oder Videos.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Einträge | Liste von [Mediengalerie-Eintrag](#MEDIA_GALLERY_ITEM) | Die Medieneinträge der Galerie (1-10 Einträge). Einträge: 1 bis 10. |
+| Eigenschaft | Typ                                                    | Details                                                             |
+| ----------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
+| Einträge    | Liste von [Mediengalerie-Eintrag](#MEDIA_GALLERY_ITEM) | Die Medieneinträge der Galerie (1-10 Einträge). Einträge: 1 bis 10. |
 
 ### Aktionsreihen-Komponente {#ACTION_ROW_COMPONENT}
 
 Enthält entweder bis zu fünf Buttons ODER genau ein Auswahlmenü eines beliebigen Typs.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Buttons | Liste von [Button](#BUTTON) | Bis zu 5 Buttons, sich gegenseitig ausschließende Optionen mit Auswahlmenüs. Höchstens 5 Einträge. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
-| Auswahlmenü | [Auswahlmenü](#SELECT_MENU) | Ein Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein. |
-| Benutzer-Auswahlmenü | [Benutzer-Auswahlmenü](#USER_SELECT_MENU) | Ein Benutzer-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein. |
-| Rollen-Auswahlmenü | [Rollen-Auswahlmenü](#ROLE_SELECT_MENU) | Ein Rollen-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein. |
-| Kanal-Auswahlmenü | [Kanal-Auswahlmenü](#CHANNEL_SELECT_MENU) | Ein Kanal-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein. |
-| Auswahlmenü für Benutzer oder Rollen | [Auswahlmenü für Benutzer oder Rollen](#MENTIONABLE_SELECT_MENU) | Ein Auswahlmenü für Benutzer oder Rollen, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü. Kann leer sein. |
+| Eigenschaft                          | Typ                                                              | Details                                                                                                                                                                                                                                       |
+| ------------------------------------ | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Buttons                              | Liste von [Button](#BUTTON)                                      | Bis zu 5 Buttons, sich gegenseitig ausschließende Optionen mit Auswahlmenüs. Höchstens 5 Einträge. Nur eines davon verwenden: Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. |
+| Auswahlmenü                          | [Auswahlmenü](#SELECT_MENU)                                      | Ein Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein.                  |
+| Benutzer-Auswahlmenü                 | [Benutzer-Auswahlmenü](#USER_SELECT_MENU)                        | Ein Benutzer-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein.                  |
+| Rollen-Auswahlmenü                   | [Rollen-Auswahlmenü](#ROLE_SELECT_MENU)                          | Ein Rollen-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Kanal-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein.                  |
+| Kanal-Auswahlmenü                    | [Kanal-Auswahlmenü](#CHANNEL_SELECT_MENU)                        | Ein Kanal-Auswahlmenü, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Auswahlmenü für Benutzer oder Rollen. Kann leer sein.                  |
+| Auswahlmenü für Benutzer oder Rollen | [Auswahlmenü für Benutzer oder Rollen](#MENTIONABLE_SELECT_MENU) | Ein Auswahlmenü für Benutzer oder Rollen, sich gegenseitig ausschließend mit anderen Inhalten. Nur eines davon verwenden: Buttons, Auswahlmenü, Benutzer-Auswahlmenü, Rollen-Auswahlmenü, Kanal-Auswahlmenü. Kann leer sein.                  |
 
 ### Behälter-Komponente {#CONTAINER_COMPONENT}
 
 Ein Components-V2-Container, der andere Komponenten mit einem Akzentstreifen und optionalem Spoiler gruppiert. Jede Art von Komponente hat ein eigenes Feld.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Akzentfarbe | [Farbe](#COLOR) | Farbe, die als linker Rand des Behälters angezeigt wird. Kann leer sein. |
-| Spoiler | [Ja/Nein](#BOOLEAN) | Gibt an, ob der gesamte Behälter hinter einem Spoiler verborgen ist. Standard: Nein. |
-| Textanzeigen | Liste von [Textanzeige-Komponente](#TEXT_DISPLAY_COMPONENT) | Textanzeige-Kinder im Behälter. Standard: `[]`. |
-| Abschnitte | Liste von [Abschnitt-Komponente](#SECTION_COMPONENT) | Abschnitts-Kinder im Behälter. Standard: `[]`. |
-| Mediengalerien | Liste von [Mediengalerie-Komponente](#MEDIA_GALLERY_COMPONENT) | Mediengalerie-Kinder im Behälter. Standard: `[]`. |
-| Trennzeichen | Liste von [Trennzeichen-Komponente](#SEPARATOR_COMPONENT) | Trennzeichen-Kinder im Behälter. Standard: `[]`. |
-| Dateien | Liste von [Datei-Komponente](#FILE_COMPONENT) | Datei-Kinder im Behälter. Standard: `[]`. |
-| Aktionsreihen | Liste von [Aktionsreihen-Komponente](#ACTION_ROW_COMPONENT) | Aktionsreihen-Kinder im Behälter. Standard: `[]`. |
+| Eigenschaft    | Typ                                                            | Details                                                                              |
+| -------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Akzentfarbe    | [Farbe](#COLOR)                                                | Farbe, die als linker Rand des Behälters angezeigt wird. Kann leer sein.             |
+| Spoiler        | [Ja/Nein](#BOOLEAN)                                            | Gibt an, ob der gesamte Behälter hinter einem Spoiler verborgen ist. Standard: Nein. |
+| Textanzeigen   | Liste von [Textanzeige-Komponente](#TEXT_DISPLAY_COMPONENT)    | Textanzeige-Kinder im Behälter. Standard: `[]`.                                      |
+| Abschnitte     | Liste von [Abschnitt-Komponente](#SECTION_COMPONENT)           | Abschnitts-Kinder im Behälter. Standard: `[]`.                                       |
+| Mediengalerien | Liste von [Mediengalerie-Komponente](#MEDIA_GALLERY_COMPONENT) | Mediengalerie-Kinder im Behälter. Standard: `[]`.                                    |
+| Trennzeichen   | Liste von [Trennzeichen-Komponente](#SEPARATOR_COMPONENT)      | Trennzeichen-Kinder im Behälter. Standard: `[]`.                                     |
+| Dateien        | Liste von [Datei-Komponente](#FILE_COMPONENT)                  | Datei-Kinder im Behälter. Standard: `[]`.                                            |
+| Aktionsreihen  | Liste von [Aktionsreihen-Komponente](#ACTION_ROW_COMPONENT)    | Aktionsreihen-Kinder im Behälter. Standard: `[]`.                                    |
 
 ### Benutzer-Auswahlmenü {#USER_SELECT_MENU}
 
 Ein Auswahlmenü, das automatisch mit Benutzern aus dem Server gefüllt ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Mindestwerte | [Ganzzahl](#INTEGER) | Mindestanzahl wählbarer Benutzer (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Maximalwerte | [Ganzzahl](#INTEGER) | Maximalanzahl wählbarer Benutzer (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein. |
-| Standard-Benutzer | Liste von [Benutzer](#DISCORD_USER) | Bis zu 25 Benutzer, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge. |
+| Eigenschaft       | Typ                                 | Details                                                                                                                  |
+| ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Ziel-Flow         | [Flow](#FLOW_REFERENCE)             | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein.                                             |
+| Platzhalter       | [Text](#STRING)                     | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
+| Mindestwerte      | [Ganzzahl](#INTEGER)                | Mindestanzahl wählbarer Benutzer (0-25). Wert: 0 bis 25. Standard: `1`.                                                  |
+| Maximalwerte      | [Ganzzahl](#INTEGER)                | Maximalanzahl wählbarer Benutzer (1-25). Wert: 1 bis 25. Standard: `1`.                                                  |
+| Deaktiviert       | [Ja/Nein](#BOOLEAN)                 | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein.                                                     |
+| Standard-Benutzer | Liste von [Benutzer](#DISCORD_USER) | Bis zu 25 Benutzer, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge.                      |
 
 ### Rollen-Auswahlmenü {#ROLE_SELECT_MENU}
 
 Ein Auswahlmenü, das automatisch mit Rollen aus dem Server gefüllt ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Mindestwerte | [Ganzzahl](#INTEGER) | Mindestanzahl wählbarer Rollen (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Maximalwerte | [Ganzzahl](#INTEGER) | Maximalanzahl wählbarer Rollen (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein. |
-| Standard-Rollen | Liste von [Rolle](#GUILD_ROLE) | Bis zu 25 Rollen, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge. |
+| Eigenschaft     | Typ                            | Details                                                                                                                  |
+| --------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Ziel-Flow       | [Flow](#FLOW_REFERENCE)        | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein.                                             |
+| Platzhalter     | [Text](#STRING)                | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
+| Mindestwerte    | [Ganzzahl](#INTEGER)           | Mindestanzahl wählbarer Rollen (0-25). Wert: 0 bis 25. Standard: `1`.                                                    |
+| Maximalwerte    | [Ganzzahl](#INTEGER)           | Maximalanzahl wählbarer Rollen (1-25). Wert: 1 bis 25. Standard: `1`.                                                    |
+| Deaktiviert     | [Ja/Nein](#BOOLEAN)            | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein.                                                     |
+| Standard-Rollen | Liste von [Rolle](#GUILD_ROLE) | Bis zu 25 Rollen, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge.                        |
 
 ### Kanal-Auswahlmenü {#CHANNEL_SELECT_MENU}
 
 Ein Auswahlmenü, das automatisch mit Kanälen aus dem Server gefüllt ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Mindestwerte | [Ganzzahl](#INTEGER) | Mindestanzahl wählbarer Kanäle (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Maximalwerte | [Ganzzahl](#INTEGER) | Maximalanzahl wählbarer Kanäle (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein. |
-| Standard-Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Bis zu 25 Kanäle, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge. |
-| Kanaltypen | Liste von [Kanaltyp](#CHANNEL_TYPE) | Beschränkt wählbare Kanäle auf diese Typen. |
+| Eigenschaft     | Typ                                      | Details                                                                                                                  |
+| --------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Ziel-Flow       | [Flow](#FLOW_REFERENCE)                  | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein.                                             |
+| Platzhalter     | [Text](#STRING)                          | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
+| Mindestwerte    | [Ganzzahl](#INTEGER)                     | Mindestanzahl wählbarer Kanäle (0-25). Wert: 0 bis 25. Standard: `1`.                                                    |
+| Maximalwerte    | [Ganzzahl](#INTEGER)                     | Maximalanzahl wählbarer Kanäle (1-25). Wert: 1 bis 25. Standard: `1`.                                                    |
+| Deaktiviert     | [Ja/Nein](#BOOLEAN)                      | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein.                                                     |
+| Standard-Kanäle | Liste von [Server-Kanal](#GUILD_CHANNEL) | Bis zu 25 Kanäle, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge.                        |
+| Kanaltypen      | Liste von [Kanaltyp](#CHANNEL_TYPE)      | Beschränkt wählbare Kanäle auf diese Typen.                                                                              |
 
 ### Auswahlmenü für Benutzer oder Rollen {#MENTIONABLE_SELECT_MENU}
 
 Ein Auswahlmenü, das automatisch mit Benutzern und Rollen gefüllt ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-Flow | [Flow](#FLOW_REFERENCE) | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein. |
-| Platzhalter | [Text](#STRING) | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
-| Mindestwerte | [Ganzzahl](#INTEGER) | Mindestanzahl wählbarer Benutzer oder Rollen (0-25). Wert: 0 bis 25. Standard: `1`. |
-| Maximalwerte | [Ganzzahl](#INTEGER) | Höchstanzahl wählbarer Benutzer oder Rollen (1-25). Wert: 1 bis 25. Standard: `1`. |
-| Deaktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein. |
-| Standard-Benutzer | Liste von [Benutzer](#DISCORD_USER) | Bis zu 25 Benutzer, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge. |
-| Standard-Rollen | Liste von [Rolle](#GUILD_ROLE) | Bis zu 25 Rollen, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge. |
+| Eigenschaft       | Typ                                 | Details                                                                                                                  |
+| ----------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Ziel-Flow         | [Flow](#FLOW_REFERENCE)             | Flow, der aufgerufen wird, wenn eine Auswahl getroffen wird. Kann leer sein.                                             |
+| Platzhalter       | [Text](#STRING)                     | Platzhaltertext, der angezeigt wird, wenn nichts ausgewählt ist (max. 150). Maximale Länge: 150 Zeichen. Kann leer sein. |
+| Mindestwerte      | [Ganzzahl](#INTEGER)                | Mindestanzahl wählbarer Benutzer oder Rollen (0-25). Wert: 0 bis 25. Standard: `1`.                                      |
+| Maximalwerte      | [Ganzzahl](#INTEGER)                | Höchstanzahl wählbarer Benutzer oder Rollen (1-25). Wert: 1 bis 25. Standard: `1`.                                       |
+| Deaktiviert       | [Ja/Nein](#BOOLEAN)                 | Gibt an, ob das Menü als deaktiviert gerendert wird. Standard: Nein.                                                     |
+| Standard-Benutzer | Liste von [Benutzer](#DISCORD_USER) | Bis zu 25 Benutzer, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge.                      |
+| Standard-Rollen   | Liste von [Rolle](#GUILD_ROLE)      | Bis zu 25 Rollen, die beim ersten Erscheinen des Menüs vorausgewählt sind. Höchstens 25 Einträge.                        |
 
 ### Anwendungs-Installationsparameter {#APPLICATION_INSTALL_PARAMS}
 
 OAuth2-Installationsparameter, die von Discords In-App-Autorisierungslink für die Anwendung verwendet werden.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Scopes | Liste von [Text](#STRING) | OAuth2-Scopes, die bei der Installation der Anwendung angefordert werden. |
-| Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Berechtigungen, die für den Bot bei der Installation angefordert werden. |
+| Eigenschaft    | Typ                                        | Details                                                                   |
+| -------------- | ------------------------------------------ | ------------------------------------------------------------------------- |
+| Scopes         | Liste von [Text](#STRING)                  | OAuth2-Scopes, die bei der Installation der Anwendung angefordert werden. |
+| Berechtigungen | Liste von [Berechtigung](#PERMISSION_FLAG) | Berechtigungen, die für den Bot bei der Installation angefordert werden.  |
 
 ### Anwendung {#APPLICATION}
 
 Die Discord-Anwendung, zu der dieser Bot gehört, einschließlich aller öffentlichen Metadaten.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die eindeutige Discord-ID der Anwendung. |
-| Name | [Text](#STRING) | Der Anzeigename der Anwendung. |
-| Symbol-URL | [URL](#URL) | Die URL zum Symbild der Anwendung. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Die Beschreibung, die im Profil der Anwendung angezeigt wird. |
-| RPC-Ursprünge | Liste von [Text](#STRING) | Liste erlaubter RPC-Ursprungs-URLs. |
-| Bot öffentlich | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Bot von jemandem hinzugefügt werden kann oder nur vom Besitzer. Kann leer sein. |
-| Bot erfordert Code-Gewährung | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Bot den OAuth2-Code-Grant-Flow zum Hinzufügen benötigt. Kann leer sein. |
-| Nutzungsbedingungen-URL | [URL](#URL) | Die URL der Nutzungsbedingungen der Anwendung. Kann leer sein. |
-| Datenschutzrichtlinien-URL | [URL](#URL) | Die URL der Datenschutzrichtlinien der Anwendung. Kann leer sein. |
-| Besitzer | [Benutzer](#DISCORD_USER) | Der Benutzer, der die Anwendung besitzt, falls einzeln besessen. Kann leer sein. |
-| Verifizierungsschlüssel | [Text](#STRING) | Hex-kodierter Schlüssel zur Verifikation in Interaktionen und GameSDK. |
-| Team-Name | [Text](#STRING) | Name des Teams, das die Anwendung besitzt, falls vorhanden. Kann leer sein. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | Server, der mit der Anwendung verknüpft ist (z.B. Support-Server). Kann leer sein. |
-| Primäre SKU-ID | [Discord-ID](#SNOWFLAKE) | Die ID der primären SKU eines auf Discord verkauften Spiels, falls vorhanden. Kann leer sein. |
-| Slug | [Text](#STRING) | URL-Slug, der von der Shop-Seite der Anwendung verwendet wird. Kann leer sein. |
-| Titelbild-URL | [URL](#URL) | Die URL des Standard-Rich-Presence-Titelbilds der Anwendung. Kann leer sein. |
-| Flags | Liste von [Anwendungs-Flag](#APPLICATION_FLAG) | Öffentliche Flags, die Fähigkeiten und Einstellungen der Anwendung beschreiben. |
-| Ungefähre Server-Anzahl | [Ganzzahl](#INTEGER) | Ungefähre Anzahl der Server, denen die Anwendung hinzugefügt wurde. Kann leer sein. |
-| Ungefähre Benutzer-Installationsanzahl | [Ganzzahl](#INTEGER) | Ungefähre Anzahl der Benutzer, die die Anwendung installiert haben. Kann leer sein. |
-| Installationsparameter | [Anwendungs-Installationsparameter](#APPLICATION_INSTALL_PARAMS) | Standard-In-App-Autorisierungsparameter. Kann leer sein. |
-| URL der benutzerdefinierten Installationsseite | [URL](#URL) | Benutzerdefinierte URL, zu der Discord Benutzer zur Installation der App leitet. Kann leer sein. |
-| Rollenverbindungs-Verifikations-URL | [URL](#URL) | URL, die Discord öffnet, um Rollenverbindungen zu verifikation. Kann leer sein. |
-| Tags | Liste von [Text](#STRING) | Bis zu fünf Tags, die die Anwendung beschreiben. |
+| Eigenschaft                                    | Typ                                                              | Details                                                                                          |
+| ---------------------------------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ID                                             | [Discord-ID](#SNOWFLAKE)                                         | Die eindeutige Discord-ID der Anwendung.                                                         |
+| Name                                           | [Text](#STRING)                                                  | Der Anzeigename der Anwendung.                                                                   |
+| Symbol-URL                                     | [URL](#URL)                                                      | Die URL zum Symbild der Anwendung. Kann leer sein.                                               |
+| Beschreibung                                   | [Text](#STRING)                                                  | Die Beschreibung, die im Profil der Anwendung angezeigt wird.                                    |
+| RPC-Ursprünge                                  | Liste von [Text](#STRING)                                        | Liste erlaubter RPC-Ursprungs-URLs.                                                              |
+| Bot öffentlich                                 | [Ja/Nein](#BOOLEAN)                                              | Gibt an, ob der Bot von jemandem hinzugefügt werden kann oder nur vom Besitzer. Kann leer sein.  |
+| Bot erfordert Code-Gewährung                   | [Ja/Nein](#BOOLEAN)                                              | Gibt an, ob der Bot den OAuth2-Code-Grant-Flow zum Hinzufügen benötigt. Kann leer sein.          |
+| Nutzungsbedingungen-URL                        | [URL](#URL)                                                      | Die URL der Nutzungsbedingungen der Anwendung. Kann leer sein.                                   |
+| Datenschutzrichtlinien-URL                     | [URL](#URL)                                                      | Die URL der Datenschutzrichtlinien der Anwendung. Kann leer sein.                                |
+| Besitzer                                       | [Benutzer](#DISCORD_USER)                                        | Der Benutzer, der die Anwendung besitzt, falls einzeln besessen. Kann leer sein.                 |
+| Verifizierungsschlüssel                        | [Text](#STRING)                                                  | Hex-kodierter Schlüssel zur Verifikation in Interaktionen und GameSDK.                           |
+| Team-Name                                      | [Text](#STRING)                                                  | Name des Teams, das die Anwendung besitzt, falls vorhanden. Kann leer sein.                      |
+| Server-ID                                      | [Discord-ID](#SNOWFLAKE)                                         | Server, der mit der Anwendung verknüpft ist (z.B. Support-Server). Kann leer sein.               |
+| Primäre SKU-ID                                 | [Discord-ID](#SNOWFLAKE)                                         | Die ID der primären SKU eines auf Discord verkauften Spiels, falls vorhanden. Kann leer sein.    |
+| Slug                                           | [Text](#STRING)                                                  | URL-Slug, der von der Shop-Seite der Anwendung verwendet wird. Kann leer sein.                   |
+| Titelbild-URL                                  | [URL](#URL)                                                      | Die URL des Standard-Rich-Presence-Titelbilds der Anwendung. Kann leer sein.                     |
+| Flags                                          | Liste von [Anwendungs-Flag](#APPLICATION_FLAG)                   | Öffentliche Flags, die Fähigkeiten und Einstellungen der Anwendung beschreiben.                  |
+| Ungefähre Server-Anzahl                        | [Ganzzahl](#INTEGER)                                             | Ungefähre Anzahl der Server, denen die Anwendung hinzugefügt wurde. Kann leer sein.              |
+| Ungefähre Benutzer-Installationsanzahl         | [Ganzzahl](#INTEGER)                                             | Ungefähre Anzahl der Benutzer, die die Anwendung installiert haben. Kann leer sein.              |
+| Installationsparameter                         | [Anwendungs-Installationsparameter](#APPLICATION_INSTALL_PARAMS) | Standard-In-App-Autorisierungsparameter. Kann leer sein.                                         |
+| URL der benutzerdefinierten Installationsseite | [URL](#URL)                                                      | Benutzerdefinierte URL, zu der Discord Benutzer zur Installation der App leitet. Kann leer sein. |
+| Rollenverbindungs-Verifikations-URL            | [URL](#URL)                                                      | URL, die Discord öffnet, um Rollenverbindungen zu verifikation. Kann leer sein.                  |
+| Tags                                           | Liste von [Text](#STRING)                                        | Bis zu fünf Tags, die die Anwendung beschreiben.                                                 |
 
 ### Rollenverbindungs-Metadaten {#ROLE_CONNECTION_METADATA}
 
 Ein einzelnes Metadaten-Feld, das die Anwendung Discord zur Verwendung in Rollenverbindungs-Anforderungen bereitstellt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Typ | [Rollenverbindungs-Metadaten-Typ](#ROLE_CONNECTION_METADATA_TYPE) | Vergleichsoperator zur Auswertung dieses Feldes. |
-| Schlüssel | [Text](#STRING) | Interner Wörterbuch-Schlüssel (a-z, 0-9, Unterstrich, max. 50 Zeichen). Maximale Länge: 50 Zeichen. Muss zu `^[a-z0-9_]+$` passen. |
-| Name | [Text](#STRING) | Benutzerfreundlicher Name, der Benutzern angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen. |
-| Beschreibung | [Text](#STRING) | Benutzerfreundliche Beschreibung, die Benutzern angezeigt wird (max. 200 Zeichen). Maximale Länge: 200 Zeichen. |
+| Eigenschaft  | Typ                                                               | Details                                                                                                                            |
+| ------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Typ          | [Rollenverbindungs-Metadaten-Typ](#ROLE_CONNECTION_METADATA_TYPE) | Vergleichsoperator zur Auswertung dieses Feldes.                                                                                   |
+| Schlüssel    | [Text](#STRING)                                                   | Interner Wörterbuch-Schlüssel (a-z, 0-9, Unterstrich, max. 50 Zeichen). Maximale Länge: 50 Zeichen. Muss zu `^[a-z0-9_]+$` passen. |
+| Name         | [Text](#STRING)                                                   | Benutzerfreundlicher Name, der Benutzern angezeigt wird (max. 100 Zeichen). Maximale Länge: 100 Zeichen.                           |
+| Beschreibung | [Text](#STRING)                                                   | Benutzerfreundliche Beschreibung, die Benutzern angezeigt wird (max. 200 Zeichen). Maximale Länge: 200 Zeichen.                    |
 
 ### SKU {#SKU}
 
 Ein Premium-Angebot (SKU), das Benutzer via Discord abonnieren oder kaufen können.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die eindeutige Discord-ID der SKU. |
-| Typ | [SKU-Typ](#SKU_TYPE) | Die Kategorie der SKU (haltbar, verbrauchbar, Abonnement, ...). |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | Die ID der übergeordneten Anwendung. |
-| Name | [Text](#STRING) | Kundenorientierter Name der SKU. |
-| Slug | [Text](#STRING) | URL-freundliche Kennung für die SKU. |
-| Flags | Liste von [Text](#STRING) | Auf die SKU angewendete Flags. |
+| Eigenschaft   | Typ                       | Details                                                         |
+| ------------- | ------------------------- | --------------------------------------------------------------- |
+| ID            | [Discord-ID](#SNOWFLAKE)  | Die eindeutige Discord-ID der SKU.                              |
+| Typ           | [SKU-Typ](#SKU_TYPE)      | Die Kategorie der SKU (haltbar, verbrauchbar, Abonnement, ...). |
+| Anwendungs-ID | [Discord-ID](#SNOWFLAKE)  | Die ID der übergeordneten Anwendung.                            |
+| Name          | [Text](#STRING)           | Kundenorientierter Name der SKU.                                |
+| Slug          | [Text](#STRING)           | URL-freundliche Kennung für die SKU.                            |
+| Flags         | Liste von [Text](#STRING) | Auf die SKU angewendete Flags.                                  |
 
 ### Abonnement {#SUBSCRIPTION}
 
 Ein Abonnement eines Benutzers für eine oder mehrere SKUs dieser Anwendung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die eindeutige Discord-ID des Abonnements. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | ID des Benutzers, der abonniert. |
-| SKU-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Liste der SKUs, auf die der Benutzer derzeit abonniert ist. |
-| Lizenz-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Liste der durch dieses Abonnement gewährten Lizenzen. |
-| Aktueller Zeitraum Start | [Datum und Uhrzeit](#DATETIME) | Wenn der aktuelle Abrechnungszeitraum begonnen hat. |
-| Aktueller Zeitraum Ende | [Datum und Uhrzeit](#DATETIME) | Wenn der aktuelle Abrechnungszeitraum endet. |
-| Status | [Abonnement-Status](#SUBSCRIPTION_STATUS) | Der aktuelle Status des Abonnements. |
-| Storniert am | [Datum und Uhrzeit](#DATETIME) | Wenn das Abonnement storniert wurde, falls zutreffend. Kann leer sein. |
-| Land | [Text](#STRING) | ISO3166-1 Alpha-2-Ländercode der Zahlungsquelle. Nur vorhanden, wenn als abonnierter Benutzer abgerufen. Kann leer sein. |
-| Erneuerungs-SKU-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Liste der SKUs, die die aktuellen bei der nächsten Erneuerung ersetzen. |
+| Eigenschaft              | Typ                                       | Details                                                                                                                  |
+| ------------------------ | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ID                       | [Discord-ID](#SNOWFLAKE)                  | Die eindeutige Discord-ID des Abonnements.                                                                               |
+| Benutzer-ID              | [Discord-ID](#SNOWFLAKE)                  | ID des Benutzers, der abonniert.                                                                                         |
+| SKU-IDs                  | Liste von [Discord-ID](#SNOWFLAKE)        | Liste der SKUs, auf die der Benutzer derzeit abonniert ist.                                                              |
+| Lizenz-IDs               | Liste von [Discord-ID](#SNOWFLAKE)        | Liste der durch dieses Abonnement gewährten Lizenzen.                                                                    |
+| Aktueller Zeitraum Start | [Datum und Uhrzeit](#DATETIME)            | Wenn der aktuelle Abrechnungszeitraum begonnen hat.                                                                      |
+| Aktueller Zeitraum Ende  | [Datum und Uhrzeit](#DATETIME)            | Wenn der aktuelle Abrechnungszeitraum endet.                                                                             |
+| Status                   | [Abonnement-Status](#SUBSCRIPTION_STATUS) | Der aktuelle Status des Abonnements.                                                                                     |
+| Storniert am             | [Datum und Uhrzeit](#DATETIME)            | Wenn das Abonnement storniert wurde, falls zutreffend. Kann leer sein.                                                   |
+| Land                     | [Text](#STRING)                           | ISO3166-1 Alpha-2-Ländercode der Zahlungsquelle. Nur vorhanden, wenn als abonnierter Benutzer abgerufen. Kann leer sein. |
+| Erneuerungs-SKU-IDs      | Liste von [Discord-ID](#SNOWFLAKE)        | Liste der SKUs, die die aktuellen bei der nächsten Erneuerung ersetzen.                                                  |
 
 ### Anwendungs-Emoji {#APPLICATION_EMOJI}
 
 Ein benutzerdefiniertes Emoji im Besitz der Anwendung (nicht von einem bestimmten Server).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Discord-ID](#SNOWFLAKE) | Die eindeutige Discord-ID des Emojis. |
-| Name | [Text](#STRING) | Der Name des Emojis. |
-| Animiert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Emoji animiert ist. |
-| Verfügbar | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Emoji derzeit nutzbar ist. |
-| URL | [URL](#URL) | Direkte URL zum Bild des Emojis. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wenn das Emoji erstellt wurde. |
-| Autor | [Benutzer](#DISCORD_USER) | Der Benutzer, der das Emoji hochgeladen hat, falls bekannt. |
+| Eigenschaft | Typ                            | Details                                                     |
+| ----------- | ------------------------------ | ----------------------------------------------------------- |
+| ID          | [Discord-ID](#SNOWFLAKE)       | Die eindeutige Discord-ID des Emojis.                       |
+| Name        | [Text](#STRING)                | Der Name des Emojis.                                        |
+| Animiert    | [Ja/Nein](#BOOLEAN)            | Gibt an, ob das Emoji animiert ist.                         |
+| Verfügbar   | [Ja/Nein](#BOOLEAN)            | Gibt an, ob das Emoji derzeit nutzbar ist.                  |
+| URL         | [URL](#URL)                    | Direkte URL zum Bild des Emojis.                            |
+| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wenn das Emoji erstellt wurde.                              |
+| Autor       | [Benutzer](#DISCORD_USER)      | Der Benutzer, der das Emoji hochgeladen hat, falls bekannt. |
 
 ### Audit-Log-Änderung {#AUDIT_LOG_CHANGE}
 
 Eine einzelne Feldänderung, die als Teil eines Audit-Log-Eintrags aufgezeichnet wird. Alte und neue Werte sind als Text gespeichert, da Audit-Log-Änderungswerte unterschiedlicher Art sind.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Schlüssel | [Text](#STRING) | Der Name des Feldes, das sich geändert hat (z.B. "name", "permissions"). |
-| Alter Wert | [Text](#STRING) | Der vorherige Wert des Feldes, als Text gespeichert, kann leer sein, wenn das Feld neu gesetzt wurde. Kann leer sein. |
-| Neuer Wert | [Text](#STRING) | Der neue Wert des Feldes, als Text gespeichert, kann leer sein, wenn das Feld gelöscht wurde. Kann leer sein. |
+| Eigenschaft | Typ             | Details                                                                                                               |
+| ----------- | --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Schlüssel   | [Text](#STRING) | Der Name des Feldes, das sich geändert hat (z.B. "name", "permissions").                                              |
+| Alter Wert  | [Text](#STRING) | Der vorherige Wert des Feldes, als Text gespeichert, kann leer sein, wenn das Feld neu gesetzt wurde. Kann leer sein. |
+| Neuer Wert  | [Text](#STRING) | Der neue Wert des Feldes, als Text gespeichert, kann leer sein, wenn das Feld gelöscht wurde. Kann leer sein.         |
 
 ### Willkommens-Bildschirm-Kanal {#WELCOME_SCREEN_CHANNEL}
 
 Ein einzelner Kanaleintrag auf dem Willkommens-Bildschirm eines Servers mit kurzer Beschreibung und optionalem Emoji.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Kanal | [Server-Kanal](#GUILD_CHANNEL) | Der Kanal, der auf dem Willkommens-Bildschirm hervorgehoben wird. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Kurze Beschreibung neben dem Kanal (max. 50 Zeichen). Maximale Länge: 50 Zeichen. |
-| Emoji-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID eines benutzerdefinierten Emojis neben dem Kanal, oder leer bei Verwendung eines Unicode-Emoji. Kann leer sein. |
-| Emoji-Name | [Text](#STRING) | Name eines benutzerdefinierten Emoji oder das wörtliche Unicode-Emoji neben dem Kanal. Kann leer sein. |
+| Eigenschaft  | Typ                            | Details                                                                                                                    |
+| ------------ | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
+| Kanal        | [Server-Kanal](#GUILD_CHANNEL) | Der Kanal, der auf dem Willkommens-Bildschirm hervorgehoben wird. Kann leer sein.                                          |
+| Beschreibung | [Text](#STRING)                | Kurze Beschreibung neben dem Kanal (max. 50 Zeichen). Maximale Länge: 50 Zeichen.                                          |
+| Emoji-ID     | [Discord-ID](#SNOWFLAKE)       | Discord-ID eines benutzerdefinierten Emojis neben dem Kanal, oder leer bei Verwendung eines Unicode-Emoji. Kann leer sein. |
+| Emoji-Name   | [Text](#STRING)                | Name eines benutzerdefinierten Emoji oder das wörtliche Unicode-Emoji neben dem Kanal. Kann leer sein.                     |
 
 ### Willkommens-Bildschirm {#WELCOME_SCREEN}
 
 Der Willkommens-Bildschirm eines Servers, angezeigt für neue Mitglieder in Community-Servern, enthält eine Gesamtbeschreibung und bis zu fünf hervorgehobene Kanäle.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Beschreibung | [Text](#STRING) | Serverbeschreibung auf dem Willkommens-Bildschirm (max. 140 Zeichen), kann leer sein. Maximale Länge: 140 Zeichen. Kann leer sein. |
-| Willkommens-Kanäle | Liste von [Willkommens-Bildschirm-Kanal](#WELCOME_SCREEN_CHANNEL) | Bis zu fünf Kanäle, die auf dem Willkommens-Bildschirm hervorgehoben werden. Einträge: 0 bis 5. |
+| Eigenschaft        | Typ                                                               | Details                                                                                                                            |
+| ------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Beschreibung       | [Text](#STRING)                                                   | Serverbeschreibung auf dem Willkommens-Bildschirm (max. 140 Zeichen), kann leer sein. Maximale Länge: 140 Zeichen. Kann leer sein. |
+| Willkommens-Kanäle | Liste von [Willkommens-Bildschirm-Kanal](#WELCOME_SCREEN_CHANNEL) | Bis zu fünf Kanäle, die auf dem Willkommens-Bildschirm hervorgehoben werden. Einträge: 0 bis 5.                                    |
 
 ### Onboarding-Prompt-Option {#ONBOARDING_PROMPT_OPTION}
 
 Eine einzelne wählbare Option innerhalb eines Onboarding-Prompts, das Auswählen dieser Option weist die aufgelisteten Kanäle und Rollen dem neuen Mitglied zu.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Optionen-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID dieser Prompt-Option. |
-| Kanal-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Kanäle, die dem Mitglied gewährt werden, wenn diese Option ausgewählt wird. |
-| Rollen-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Rollen, die dem Mitglied gewährt werden, wenn diese Option ausgewählt wird. |
-| Emoji-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des benutzerdefinierten Emoji in der Option, oder leer bei Verwendung eines Unicode-Emoji. Kann leer sein. |
-| Emoji-Name | [Text](#STRING) | Name des benutzerdefinierten Emoji oder das Unicode-Emoji-Zeichen. Kann leer sein. |
-| Emoji Animiert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Emoji animiert ist. Kann leer sein. |
-| Titel | [Text](#STRING) | Titel der Option (max. 50 Zeichen). Maximale Länge: 50 Zeichen. |
-| Beschreibung | [Text](#STRING) | Optionale Sekundärlinie unter dem Titel (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein. |
+| Eigenschaft    | Typ                                | Details                                                                                                               |
+| -------------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Optionen-ID    | [Discord-ID](#SNOWFLAKE)           | Discord-ID dieser Prompt-Option.                                                                                      |
+| Kanal-IDs      | Liste von [Discord-ID](#SNOWFLAKE) | Kanäle, die dem Mitglied gewährt werden, wenn diese Option ausgewählt wird.                                           |
+| Rollen-IDs     | Liste von [Discord-ID](#SNOWFLAKE) | Rollen, die dem Mitglied gewährt werden, wenn diese Option ausgewählt wird.                                           |
+| Emoji-ID       | [Discord-ID](#SNOWFLAKE)           | Discord-ID des benutzerdefinierten Emoji in der Option, oder leer bei Verwendung eines Unicode-Emoji. Kann leer sein. |
+| Emoji-Name     | [Text](#STRING)                    | Name des benutzerdefinierten Emoji oder das Unicode-Emoji-Zeichen. Kann leer sein.                                    |
+| Emoji Animiert | [Ja/Nein](#BOOLEAN)                | Gibt an, ob das Emoji animiert ist. Kann leer sein.                                                                   |
+| Titel          | [Text](#STRING)                    | Titel der Option (max. 50 Zeichen). Maximale Länge: 50 Zeichen.                                                       |
+| Beschreibung   | [Text](#STRING)                    | Optionale Sekundärlinie unter dem Titel (max. 100 Zeichen). Maximale Länge: 100 Zeichen. Kann leer sein.              |
 
 ### Onboarding-Prompt {#ONBOARDING_PROMPT}
 
 Eine Frage, die neuen Mitgliedern während des Onboarding angezeigt wird, jeder Prompt hat eine Liste von Optionen, aus denen das Mitglied wählen kann.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Prompt-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID dieses Prompts. |
-| Typ | [Onboarding-Prompt-Typ](#ONBOARDING_PROMPT_TYPE) | Gibt an, ob der Prompt als Mehrfachauswahl oder als Dropdown gerendert wird. |
-| Optionen | Liste von [Onboarding-Prompt-Option](#ONBOARDING_PROMPT_OPTION) | Wählbare Antworten (1-50). Einträge: 1 bis 50. |
-| Titel | [Text](#STRING) | Titel des Prompts (max. 100 Zeichen). Maximale Länge: 100 Zeichen. |
-| Einzelauswahl | [Ja/Nein](#BOOLEAN) | Gibt an, ob nur eine Option ausgewählt werden kann. |
-| Erforderlich | [Ja/Nein](#BOOLEAN) | Gibt an, ob der Benutzer diesen Prompt beantworten muss, bevor das Onboarding abgeschlossen ist. |
-| Im Onboarding | [Ja/Nein](#BOOLEAN) | Gibt an, ob die Eingabeaufforderung im initialen Onboarding-Flow angezeigt wird oder nur später verfügbar ist. |
+| Eigenschaft   | Typ                                                             | Details                                                                                                        |
+| ------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Prompt-ID     | [Discord-ID](#SNOWFLAKE)                                        | Discord-ID dieses Prompts.                                                                                     |
+| Typ           | [Onboarding-Prompt-Typ](#ONBOARDING_PROMPT_TYPE)                | Gibt an, ob der Prompt als Mehrfachauswahl oder als Dropdown gerendert wird.                                   |
+| Optionen      | Liste von [Onboarding-Prompt-Option](#ONBOARDING_PROMPT_OPTION) | Wählbare Antworten (1-50). Einträge: 1 bis 50.                                                                 |
+| Titel         | [Text](#STRING)                                                 | Titel des Prompts (max. 100 Zeichen). Maximale Länge: 100 Zeichen.                                             |
+| Einzelauswahl | [Ja/Nein](#BOOLEAN)                                             | Gibt an, ob nur eine Option ausgewählt werden kann.                                                            |
+| Erforderlich  | [Ja/Nein](#BOOLEAN)                                             | Gibt an, ob der Benutzer diesen Prompt beantworten muss, bevor das Onboarding abgeschlossen ist.               |
+| Im Onboarding | [Ja/Nein](#BOOLEAN)                                             | Gibt an, ob die Eingabeaufforderung im initialen Onboarding-Flow angezeigt wird oder nur später verfügbar ist. |
 
 ### Server-Onboarding {#GUILD_ONBOARDING}
 
 Onboarding-Konfiguration eines Servers: Eingabeaufforderungen, Standard-Kanäle, Modus und aktivierter Status.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des Servers, dem dieses Onboarding angehört. |
-| Eingabeaufforderungen | Liste von [Onboarding-Prompt](#ONBOARDING_PROMPT) | Onboarding-Eingabeaufforderungen, die neuen Mitgliedern angezeigt werden. |
-| Standard-Kanal-IDs | Liste von [Discord-ID](#SNOWFLAKE) | Kanäle, die jedes Mitglied standardmäßig sieht. Mindestens sieben sind erforderlich. Mindestens 7 Einträge. |
-| Aktiviert | [Ja/Nein](#BOOLEAN) | Gibt an, ob das Onboarding derzeit aktiviert ist. |
-| Modus | [Onboarding-Modus](#ONBOARDING_MODE) | Gibt an, ob bei Onboarding-Anforderungen nur Standard-Kanäle oder auch Eingabeaufforderungs-Kanäle gezählt werden. |
+| Eigenschaft           | Typ                                               | Details                                                                                                            |
+| --------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Server-ID             | [Discord-ID](#SNOWFLAKE)                          | Discord-ID des Servers, dem dieses Onboarding angehört.                                                            |
+| Eingabeaufforderungen | Liste von [Onboarding-Prompt](#ONBOARDING_PROMPT) | Onboarding-Eingabeaufforderungen, die neuen Mitgliedern angezeigt werden.                                          |
+| Standard-Kanal-IDs    | Liste von [Discord-ID](#SNOWFLAKE)                | Kanäle, die jedes Mitglied standardmäßig sieht. Mindestens sieben sind erforderlich. Mindestens 7 Einträge.        |
+| Aktiviert             | [Ja/Nein](#BOOLEAN)                               | Gibt an, ob das Onboarding derzeit aktiviert ist.                                                                  |
+| Modus                 | [Onboarding-Modus](#ONBOARDING_MODE)              | Gibt an, ob bei Onboarding-Anforderungen nur Standard-Kanäle oder auch Eingabeaufforderungs-Kanäle gezählt werden. |
 
 ### Slash-Befehl-Berechtigung {#APPLICATION_COMMAND_PERMISSION}
 
 Eine Zulassungs-/Verweigerungs-Überschreibung für einen Slash-Befehl, der auf eine Rolle, einen Benutzer oder einen Kanal abzielt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ziel-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID der Rolle, des Benutzers oder des Kanals, auf den diese Überschreibung abzielt. |
-| Typ | [Slash-Befehl-Berechtigung-Typ](#APPLICATION_COMMAND_PERMISSION_TYPE) | Gibt an, ob das Ziel eine Rolle, ein Benutzer oder ein Kanal ist. |
-| Berechtigung | [Ja/Nein](#BOOLEAN) | True gibt dem Ziel Zugriff auf den Befehl, false verweigert ihn. |
+| Eigenschaft  | Typ                                                                   | Details                                                                                    |
+| ------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Ziel-ID      | [Discord-ID](#SNOWFLAKE)                                              | Discord-ID der Rolle, des Benutzers oder des Kanals, auf den diese Überschreibung abzielt. |
+| Typ          | [Slash-Befehl-Berechtigung-Typ](#APPLICATION_COMMAND_PERMISSION_TYPE) | Gibt an, ob das Ziel eine Rolle, ein Benutzer oder ein Kanal ist.                          |
+| Berechtigung | [Ja/Nein](#BOOLEAN)                                                   | True gibt dem Ziel Zugriff auf den Befehl, false verweigert ihn.                           |
 
 ### Server-Slash-Befehl-Berechtigungen {#GUILD_APPLICATION_COMMAND_PERMISSIONS}
 
 Alle Berechtigung-Überschreibungen für einen einzelnen Slash-Befehl auf einem Server (bis zu 100 Einträge).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Befehl-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des Slash-Befehls oder der Anwendung selbst für Standard-Befehl-Berechtigungen. |
-| Anwendungs-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID der Anwendung, die den Befehl besitzt. |
-| Server-ID | [Discord-ID](#SNOWFLAKE) | Discord-ID des Servers, auf den diese Berechtigungen zutreffen. |
+| Eigenschaft    | Typ                                                                    | Details                                                                                      |
+| -------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Befehl-ID      | [Discord-ID](#SNOWFLAKE)                                               | Discord-ID des Slash-Befehls oder der Anwendung selbst für Standard-Befehl-Berechtigungen.   |
+| Anwendungs-ID  | [Discord-ID](#SNOWFLAKE)                                               | Discord-ID der Anwendung, die den Befehl besitzt.                                            |
+| Server-ID      | [Discord-ID](#SNOWFLAKE)                                               | Discord-ID des Servers, auf den diese Berechtigungen zutreffen.                              |
 | Berechtigungen | Liste von [Slash-Befehl-Berechtigung](#APPLICATION_COMMAND_PERMISSION) | Bis zu 100 einzelne Berechtigung-Überschreibungen für diesen Befehl. Höchstens 100 Einträge. |
 
 ### Kanalpositions-Aktualisierung {#CHANNEL_POSITION_UPDATE}
 
 Ein Eintrag, der beschreibt, wie ein einzelner Kanal bei einer Massen-Kanal-Position-Aktualisierung neu positioniert werden soll.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Kanal | [Server-Kanal](#GUILD_CHANNEL) | Der Kanal, der neu positioniert wird. |
-| Position | [Ganzzahl](#INTEGER) | Die neue Sortierposition. |
-| Berechtigungen sperren | [Ja/Nein](#BOOLEAN) | Wenn wahr, synchronisiert die Berechtigungen des Kanals mit der neuen übergeordneten Kategorie. Kann leer sein. |
-| Übergeordnete ID | [Discord-ID](#SNOWFLAKE) | Discord-ID einer neuen übergeordneten Kategorie oder leer, um den Kanal aus einer Kategorie zu verschieben. Kann leer sein. |
+| Eigenschaft            | Typ                            | Details                                                                                                                     |
+| ---------------------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------- |
+| Kanal                  | [Server-Kanal](#GUILD_CHANNEL) | Der Kanal, der neu positioniert wird.                                                                                       |
+| Position               | [Ganzzahl](#INTEGER)           | Die neue Sortierposition.                                                                                                   |
+| Berechtigungen sperren | [Ja/Nein](#BOOLEAN)            | Wenn wahr, synchronisiert die Berechtigungen des Kanals mit der neuen übergeordneten Kategorie. Kann leer sein.             |
+| Übergeordnete ID       | [Discord-ID](#SNOWFLAKE)       | Discord-ID einer neuen übergeordneten Kategorie oder leer, um den Kanal aus einer Kategorie zu verschieben. Kann leer sein. |
 
 ### Rollenpositions-Aktualisierung {#ROLE_POSITION_UPDATE}
 
 Ein Eintrag, der beschreibt, wie eine einzelne Rolle bei einer Massen-Rolle-Position-Aktualisierung neu positioniert werden soll.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Rolle | [Rolle](#GUILD_ROLE) | Die Rolle, die neu positioniert wird. |
-| Position | [Ganzzahl](#INTEGER) | Die neue Sortierposition. |
+| Eigenschaft | Typ                  | Details                               |
+| ----------- | -------------------- | ------------------------------------- |
+| Rolle       | [Rolle](#GUILD_ROLE) | Die Rolle, die neu positioniert wird. |
+| Position    | [Ganzzahl](#INTEGER) | Die neue Sortierposition.             |
 
 ### Speichereintrag {#STORAGE_ENTRY}
 
 Ein einzelner Eintrag eines Speicherfelds.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Subjekt | [Text](#STRING) | Benutzer-ID oder Schlüssel, unter dem der Wert gespeichert ist. |
-| Wert | [Gespeicherter Wert](#STORAGE_VALUE) | Der gespeicherte Wert. |
-| Rang | [Ganzzahl](#INTEGER) | Position dieses Eintrags im sortierten Ergebnis, beginnend bei 1. Beispiel: `1`. |
+| Eigenschaft | Typ                                  | Details                                                                          |
+| ----------- | ------------------------------------ | -------------------------------------------------------------------------------- |
+| Subjekt     | [Text](#STRING)                      | Benutzer-ID oder Schlüssel, unter dem der Wert gespeichert ist.                  |
+| Wert        | [Gespeicherter Wert](#STORAGE_VALUE) | Der gespeicherte Wert.                                                           |
+| Rang        | [Ganzzahl](#INTEGER)                 | Position dieses Eintrags im sortierten Ergebnis, beginnend bei 1. Beispiel: `1`. |
 
 ### Benutzer-Speichereintrag {#USER_STORAGE_ENTRY}
 
 Ein benutzerbezogener Speichereintrag, dessen Discord-Benutzer direkt aufgelöst ist.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Benutzer | [Benutzer](#DISCORD_USER) | Der aufgelöste Discord-Benutzer oder leer, falls er nicht mehr existiert. Ein separater Abrufschritt ist nicht nötig. Kann leer sein. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die stabile Discord-Benutzer-ID dieses Eintrags. |
+| Eigenschaft | Typ                       | Details                                                                                                                               |
+| ----------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| Benutzer    | [Benutzer](#DISCORD_USER) | Der aufgelöste Discord-Benutzer oder leer, falls er nicht mehr existiert. Ein separater Abrufschritt ist nicht nötig. Kann leer sein. |
+| Benutzer-ID | [Discord-ID](#SNOWFLAKE)  | Die stabile Discord-Benutzer-ID dieses Eintrags.                                                                                      |
 
 ### Ausführungsübersicht {#EXECUTION_SUMMARY}
 
 Eine Zusammenfassung einer aufgezeichneten Flow-Ausführung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Nummer | [Ganzzahl](#INTEGER) | Die Ausführungsnummer. |
-| Status | [Text](#STRING) | Wie die Ausführung endete (z. B. SUCCESS, FAILED, STOPPED). |
-| Zeitstempel | [Datum und Uhrzeit](#DATETIME) | Wann die Ausführung aufgezeichnet wurde. |
-| Auslöser | [Text](#STRING) | Der Auslösertyp, der die Ausführung gestartet hat. |
+| Eigenschaft | Typ                            | Details                                                     |
+| ----------- | ------------------------------ | ----------------------------------------------------------- |
+| Nummer      | [Ganzzahl](#INTEGER)           | Die Ausführungsnummer.                                      |
+| Status      | [Text](#STRING)                | Wie die Ausführung endete (z. B. SUCCESS, FAILED, STOPPED). |
+| Zeitstempel | [Datum und Uhrzeit](#DATETIME) | Wann die Ausführung aufgezeichnet wurde.                    |
+| Auslöser    | [Text](#STRING)                | Der Auslösertyp, der die Ausführung gestartet hat.          |
 
 ### Geplante Ausführung {#SCHEDULED_RUN_SUMMARY}
 
 Eine Flow-Ausführung, die geplant ist, aber noch nicht stattgefunden hat.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ausführungs-ID | [Text](#STRING) | Kennung dieser geplanten Ausführung. An "Geplante Flow-Ausführung abbrechen" übergeben, um sie abzubrechen. |
-| Ziel-Flow | [Text](#STRING) | Der Flow, der ausgeführt wird. |
-| Ausführen am | [Datum und Uhrzeit](#DATETIME) | Wann die Ausführung stattfindet. |
+| Eigenschaft    | Typ                            | Details                                                                                                     |
+| -------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| Ausführungs-ID | [Text](#STRING)                | Kennung dieser geplanten Ausführung. An "Geplante Flow-Ausführung abbrechen" übergeben, um sie abzubrechen. |
+| Ziel-Flow      | [Text](#STRING)                | Der Flow, der ausgeführt wird.                                                                              |
+| Ausführen am   | [Datum und Uhrzeit](#DATETIME) | Wann die Ausführung stattfindet.                                                                            |
 
 ### Eintrag der Zuordnung {#MAP_ENTRY}
 
@@ -2567,292 +2567,292 @@ Ein einzelnes Paar aus Schlüssel und Wert einer Zuordnung.
 
 Beispiel: `Team Rot: 120`.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Schlüssel | [Text](#STRING) | Der Schlüssel, unter dem dieses Paar gespeichert ist. Beispiel: `Team Rot`. |
-| Wert | [Gespeicherter Wert](#STORAGE_VALUE) | Der unter diesem Schlüssel gespeicherte Wert. Beispiel: `120`. |
+| Eigenschaft | Typ                                  | Details                                                                     |
+| ----------- | ------------------------------------ | --------------------------------------------------------------------------- |
+| Schlüssel   | [Text](#STRING)                      | Der Schlüssel, unter dem dieses Paar gespeichert ist. Beispiel: `Team Rot`. |
+| Wert        | [Gespeicherter Wert](#STORAGE_VALUE) | Der unter diesem Schlüssel gespeicherte Wert. Beispiel: `120`.              |
 
 ### top.gg-Stimme {#topgg-Vote}
 
 Eine Stimme für dein Projekt auf top.gg.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID der Person, die abgestimmt hat. |
-| top.gg-Benutzer-ID | [ID](#ID) | Die ID der Person auf top.gg. |
-| Gewicht | [Ganzzahl](#INTEGER) | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. |
-| Abgestimmt am | [Datum und Uhrzeit](#DATETIME) | Wann die Person abgestimmt hat. |
-| Läuft ab am | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt, 12 Stunden nach der Abgabe. |
+| Eigenschaft        | Typ                            | Details                                                       |
+| ------------------ | ------------------------------ | ------------------------------------------------------------- |
+| Benutzer-ID        | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID der Person, die abgestimmt hat.                |
+| top.gg-Benutzer-ID | [ID](#ID)                      | Die ID der Person auf top.gg.                                 |
+| Gewicht            | [Ganzzahl](#INTEGER)           | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1.   |
+| Abgestimmt am      | [Datum und Uhrzeit](#DATETIME) | Wann die Person abgestimmt hat.                               |
+| Läuft ab am        | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt, 12 Stunden nach der Abgabe. |
 
 ### top.gg-Abstimmungsereignis {#topgg-VoteEvent}
 
 Alles, was top.gg zu einer Stimme gesendet hat.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Stimmen-ID | [ID](#ID) | Die ID dieser Stimme auf top.gg. Leer bei Testereignissen. Kann leer sein. |
-| Benutzer-ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID der Person, die abgestimmt hat. |
-| Benutzername | [Text](#STRING) | Der Discord-Benutzername der Person, die abgestimmt hat. Kann leer sein. |
-| Avatar-URL | [URL](#URL) | Das Avatarbild der Person, die abgestimmt hat. Kann leer sein. |
-| Gewicht | [Ganzzahl](#INTEGER) | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. Leer bei Testereignissen. Kann leer sein. |
-| Abgestimmt am | [Datum und Uhrzeit](#DATETIME) | Wann die Person abgestimmt hat. Leer bei Testereignissen. Kann leer sein. |
-| Läuft ab am | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein. |
-| Bot- oder Server-ID | [Discord-ID](#SNOWFLAKE) | Die Discord-ID des Bots oder Servers, der die Stimme bekommen hat. |
+| Eigenschaft         | Typ                            | Details                                                                                               |
+| ------------------- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| Stimmen-ID          | [ID](#ID)                      | Die ID dieser Stimme auf top.gg. Leer bei Testereignissen. Kann leer sein.                            |
+| Benutzer-ID         | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID der Person, die abgestimmt hat.                                                        |
+| Benutzername        | [Text](#STRING)                | Der Discord-Benutzername der Person, die abgestimmt hat. Kann leer sein.                              |
+| Avatar-URL          | [URL](#URL)                    | Das Avatarbild der Person, die abgestimmt hat. Kann leer sein.                                        |
+| Gewicht             | [Ganzzahl](#INTEGER)           | Wie viel die Stimme zählt: 2 bei Wochenendstimmen, sonst 1. Leer bei Testereignissen. Kann leer sein. |
+| Abgestimmt am       | [Datum und Uhrzeit](#DATETIME) | Wann die Person abgestimmt hat. Leer bei Testereignissen. Kann leer sein.                             |
+| Läuft ab am         | [Datum und Uhrzeit](#DATETIME) | Wann die Stimme nicht mehr zählt. Leer bei Testereignissen. Kann leer sein.                           |
+| Bot- oder Server-ID | [Discord-ID](#SNOWFLAKE)       | Die Discord-ID des Bots oder Servers, der die Stimme bekommen hat.                                    |
 
 ### Twitch-Clip {#twitch-Clip}
 
 Ein Clip eines Twitch-Kanals.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Clip-ID | [ID](#ID) | Die ID des Clips. |
-| Link | [URL](#URL) | Die Adresse des Clips. |
-| Titel | [Text](#STRING) | Der Titel des Clips. |
-| Geclippt von | [Text](#STRING) | Der Name der Person, die den Clip erstellt hat. |
-| Aufrufe | [Ganzzahl](#INTEGER) | Wie oft der Clip angesehen wurde. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann der Clip erstellt wurde. |
-| Länge in Sekunden | [Dezimalzahl](#FLOAT) | Wie lang der Clip ist, in Sekunden. |
-| Vorschaubild | [URL](#URL) | Das Vorschaubild des Clips. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                         |
+| ----------------- | ------------------------------ | ----------------------------------------------- |
+| Clip-ID           | [ID](#ID)                      | Die ID des Clips.                               |
+| Link              | [URL](#URL)                    | Die Adresse des Clips.                          |
+| Titel             | [Text](#STRING)                | Der Titel des Clips.                            |
+| Geclippt von      | [Text](#STRING)                | Der Name der Person, die den Clip erstellt hat. |
+| Aufrufe           | [Ganzzahl](#INTEGER)           | Wie oft der Clip angesehen wurde.               |
+| Erstellt am       | [Datum und Uhrzeit](#DATETIME) | Wann der Clip erstellt wurde.                   |
+| Länge in Sekunden | [Dezimalzahl](#FLOAT)          | Wie lang der Clip ist, in Sekunden.             |
+| Vorschaubild      | [URL](#URL)                    | Das Vorschaubild des Clips. Kann leer sein.     |
 
 ### Vorhersagetag {#open-meteo-Day}
 
 Die Wettervorhersage für einen Tag.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Tag | [Datum und Uhrzeit](#DATETIME) | Mitternacht zu Beginn des Tages, in der Zeitzone des Orts. |
-| Wettercode | [Ganzzahl](#INTEGER) | Der WMO-Wettercode: 0 klar, 1 bis 3 leicht bewölkt bis bedeckt, 45 und 48 Nebel, 51 bis 67 Niesel und Regen, 71 bis 77 Schnee, 80 bis 82 Regenschauer, 85 und 86 Schneeschauer, 95 bis 99 Gewitter. Kann leer sein. |
-| Höchsttemperatur | [Dezimalzahl](#FLOAT) | Die höchste Temperatur des Tages. Kann leer sein. |
-| Tiefsttemperatur | [Dezimalzahl](#FLOAT) | Die niedrigste Temperatur des Tages. Kann leer sein. |
-| Niederschlag in mm | [Dezimalzahl](#FLOAT) | Regen, Schauer und Schnee des Tages zusammen, in Millimetern. Kann leer sein. |
-| Regenwahrscheinlichkeit in % | [Ganzzahl](#INTEGER) | Die höchste Niederschlagswahrscheinlichkeit des Tages, in Prozent. Kann leer sein. |
-| Stärkster Wind | [Dezimalzahl](#FLOAT) | Die höchste Windgeschwindigkeit des Tages, in der gewählten Einheit. Kann leer sein. |
-| Sonnenaufgang | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne aufgeht. Kann leer sein. |
-| Sonnenuntergang | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne untergeht. Kann leer sein. |
+| Eigenschaft                  | Typ                            | Details                                                                                                                                                                                                             |
+| ---------------------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag                          | [Datum und Uhrzeit](#DATETIME) | Mitternacht zu Beginn des Tages, in der Zeitzone des Orts.                                                                                                                                                          |
+| Wettercode                   | [Ganzzahl](#INTEGER)           | Der WMO-Wettercode: 0 klar, 1 bis 3 leicht bewölkt bis bedeckt, 45 und 48 Nebel, 51 bis 67 Niesel und Regen, 71 bis 77 Schnee, 80 bis 82 Regenschauer, 85 und 86 Schneeschauer, 95 bis 99 Gewitter. Kann leer sein. |
+| Höchsttemperatur             | [Dezimalzahl](#FLOAT)          | Die höchste Temperatur des Tages. Kann leer sein.                                                                                                                                                                   |
+| Tiefsttemperatur             | [Dezimalzahl](#FLOAT)          | Die niedrigste Temperatur des Tages. Kann leer sein.                                                                                                                                                                |
+| Niederschlag in mm           | [Dezimalzahl](#FLOAT)          | Regen, Schauer und Schnee des Tages zusammen, in Millimetern. Kann leer sein.                                                                                                                                       |
+| Regenwahrscheinlichkeit in % | [Ganzzahl](#INTEGER)           | Die höchste Niederschlagswahrscheinlichkeit des Tages, in Prozent. Kann leer sein.                                                                                                                                  |
+| Stärkster Wind               | [Dezimalzahl](#FLOAT)          | Die höchste Windgeschwindigkeit des Tages, in der gewählten Einheit. Kann leer sein.                                                                                                                                |
+| Sonnenaufgang                | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne aufgeht. Kann leer sein.                                                                                                                                                                             |
+| Sonnenuntergang              | [Datum und Uhrzeit](#DATETIME) | Wann die Sonne untergeht. Kann leer sein.                                                                                                                                                                           |
 
 ### CoinGecko-Münze {#coingecko-Coin}
 
 Eine Münze in der Marktliste.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Coin-ID | [ID](#ID) | Die CoinGecko-API-ID, zum Beispiel bitcoin. |
-| Symbol | [Text](#STRING) | Das Börsenkürzel, zum Beispiel btc. |
-| Name | [Text](#STRING) | Der Name der Münze. |
-| Logo | [URL](#URL) | Das Logo der Münze. Leer, wenn sie keins hat. Kann leer sein. |
-| Preis | [Dezimalzahl](#FLOAT) | Der Preis in der gewählten Währung. Kann leer sein. |
-| Marktkapitalisierung | [Dezimalzahl](#FLOAT) | Die Marktkapitalisierung in der gewählten Währung. Kann leer sein. |
-| Rang | [Ganzzahl](#INTEGER) | Der Platz nach Marktkapitalisierung. Kann leer sein. |
+| Eigenschaft                 | Typ                   | Details                                                                                      |
+| --------------------------- | --------------------- | -------------------------------------------------------------------------------------------- |
+| Coin-ID                     | [ID](#ID)             | Die CoinGecko-API-ID, zum Beispiel bitcoin.                                                  |
+| Symbol                      | [Text](#STRING)       | Das Börsenkürzel, zum Beispiel btc.                                                          |
+| Name                        | [Text](#STRING)       | Der Name der Münze.                                                                          |
+| Logo                        | [URL](#URL)           | Das Logo der Münze. Leer, wenn sie keins hat. Kann leer sein.                                |
+| Preis                       | [Dezimalzahl](#FLOAT) | Der Preis in der gewählten Währung. Kann leer sein.                                          |
+| Marktkapitalisierung        | [Dezimalzahl](#FLOAT) | Die Marktkapitalisierung in der gewählten Währung. Kann leer sein.                           |
+| Rang                        | [Ganzzahl](#INTEGER)  | Der Platz nach Marktkapitalisierung. Kann leer sein.                                         |
 | Änderung in 24 Stunden in % | [Dezimalzahl](#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
 
 ### Anime {#jikan-Anime}
 
 Ein Anime auf MyAnimeList.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| MyAnimeList-ID | [ID](#ID) | Die ID des Animes auf MyAnimeList. |
-| Link | [URL](#URL) | Die MyAnimeList-Seite. |
-| Titel | [Text](#STRING) | Der Haupttitel. |
-| Englischer Titel | [Text](#STRING) | Der englische Titel, wenn es einen gibt. Kann leer sein. |
-| Art | [Text](#STRING) | TV, Movie, OVA, ONA, Special oder Music. Kann leer sein. |
-| Status | [Text](#STRING) | Finished Airing, Currently Airing oder Not yet aired. Kann leer sein. |
-| Bewertung | [Dezimalzahl](#FLOAT) | Die durchschnittliche Bewertung von 1 bis 10. Kann leer sein. |
-| Rang | [Ganzzahl](#INTEGER) | Der Platz nach Bewertung auf MyAnimeList. Kann leer sein. |
-| Inhalt | [Text](#STRING) | Die englische Zusammenfassung. Kann leer sein. |
-| Titelbild | [URL](#URL) | Das Titelbild. Kann leer sein. |
-| Folgen | [Ganzzahl](#INTEGER) | Wie viele Folgen er hat, wenn bekannt. Kann leer sein. |
-| Jahr | [Ganzzahl](#INTEGER) | Das Jahr, in dem er anlief, wenn bekannt. Kann leer sein. |
+| Eigenschaft      | Typ                   | Details                                                               |
+| ---------------- | --------------------- | --------------------------------------------------------------------- |
+| MyAnimeList-ID   | [ID](#ID)             | Die ID des Animes auf MyAnimeList.                                    |
+| Link             | [URL](#URL)           | Die MyAnimeList-Seite.                                                |
+| Titel            | [Text](#STRING)       | Der Haupttitel.                                                       |
+| Englischer Titel | [Text](#STRING)       | Der englische Titel, wenn es einen gibt. Kann leer sein.              |
+| Art              | [Text](#STRING)       | TV, Movie, OVA, ONA, Special oder Music. Kann leer sein.              |
+| Status           | [Text](#STRING)       | Finished Airing, Currently Airing oder Not yet aired. Kann leer sein. |
+| Bewertung        | [Dezimalzahl](#FLOAT) | Die durchschnittliche Bewertung von 1 bis 10. Kann leer sein.         |
+| Rang             | [Ganzzahl](#INTEGER)  | Der Platz nach Bewertung auf MyAnimeList. Kann leer sein.             |
+| Inhalt           | [Text](#STRING)       | Die englische Zusammenfassung. Kann leer sein.                        |
+| Titelbild        | [URL](#URL)           | Das Titelbild. Kann leer sein.                                        |
+| Folgen           | [Ganzzahl](#INTEGER)  | Wie viele Folgen er hat, wenn bekannt. Kann leer sein.                |
+| Jahr             | [Ganzzahl](#INTEGER)  | Das Jahr, in dem er anlief, wenn bekannt. Kann leer sein.             |
 
 ### Manga {#jikan-Manga}
 
 Ein Manga auf MyAnimeList.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| MyAnimeList-ID | [ID](#ID) | Die ID des Mangas auf MyAnimeList. |
-| Link | [URL](#URL) | Die MyAnimeList-Seite. |
-| Titel | [Text](#STRING) | Der Haupttitel. |
-| Englischer Titel | [Text](#STRING) | Der englische Titel, wenn es einen gibt. Kann leer sein. |
-| Art | [Text](#STRING) | Manga, Novel, Light Novel, One-shot, Doujinshi, Manhwa oder Manhua. Kann leer sein. |
-| Status | [Text](#STRING) | Finished, Publishing, On Hiatus, Discontinued oder Not yet published. Kann leer sein. |
-| Bewertung | [Dezimalzahl](#FLOAT) | Die durchschnittliche Bewertung von 1 bis 10. Kann leer sein. |
-| Rang | [Ganzzahl](#INTEGER) | Der Platz nach Bewertung auf MyAnimeList. Kann leer sein. |
-| Inhalt | [Text](#STRING) | Die englische Zusammenfassung. Kann leer sein. |
-| Titelbild | [URL](#URL) | Das Titelbild. Kann leer sein. |
-| Kapitel | [Ganzzahl](#INTEGER) | Wie viele Kapitel er hat, wenn bekannt. Kann leer sein. |
-| Bände | [Ganzzahl](#INTEGER) | Wie viele Bände er hat, wenn bekannt. Kann leer sein. |
+| Eigenschaft      | Typ                   | Details                                                                               |
+| ---------------- | --------------------- | ------------------------------------------------------------------------------------- |
+| MyAnimeList-ID   | [ID](#ID)             | Die ID des Mangas auf MyAnimeList.                                                    |
+| Link             | [URL](#URL)           | Die MyAnimeList-Seite.                                                                |
+| Titel            | [Text](#STRING)       | Der Haupttitel.                                                                       |
+| Englischer Titel | [Text](#STRING)       | Der englische Titel, wenn es einen gibt. Kann leer sein.                              |
+| Art              | [Text](#STRING)       | Manga, Novel, Light Novel, One-shot, Doujinshi, Manhwa oder Manhua. Kann leer sein.   |
+| Status           | [Text](#STRING)       | Finished, Publishing, On Hiatus, Discontinued oder Not yet published. Kann leer sein. |
+| Bewertung        | [Dezimalzahl](#FLOAT) | Die durchschnittliche Bewertung von 1 bis 10. Kann leer sein.                         |
+| Rang             | [Ganzzahl](#INTEGER)  | Der Platz nach Bewertung auf MyAnimeList. Kann leer sein.                             |
+| Inhalt           | [Text](#STRING)       | Die englische Zusammenfassung. Kann leer sein.                                        |
+| Titelbild        | [URL](#URL)           | Das Titelbild. Kann leer sein.                                                        |
+| Kapitel          | [Ganzzahl](#INTEGER)  | Wie viele Kapitel er hat, wenn bekannt. Kann leer sein.                               |
+| Bände            | [Ganzzahl](#INTEGER)  | Wie viele Bände er hat, wenn bekannt. Kann leer sein.                                 |
 
 ### GitHub-Issue {#github-Issue}
 
 Ein Issue oder Pull Request eines Repositorys.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Nummer | [Ganzzahl](#INTEGER) | Die Issue-Nummer, zum Beispiel 1347. |
-| Titel | [Text](#STRING) | Der Titel. |
-| Link | [URL](#URL) | Das Issue auf GitHub. |
-| Status | [Text](#STRING) | open oder closed. |
-| Autor | [Text](#STRING) | Der Benutzername des Autors. Kann leer sein. |
-| Kommentare | [Ganzzahl](#INTEGER) | Wie viele Kommentare es hat. Kann leer sein. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann es eröffnet wurde. |
-| Pull-Request-Link | [URL](#URL) | Der Pull Request auf GitHub. Leer bei Issues, damit kannst du sie unterscheiden. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                                                                          |
+| ----------------- | ------------------------------ | ------------------------------------------------------------------------------------------------ |
+| Nummer            | [Ganzzahl](#INTEGER)           | Die Issue-Nummer, zum Beispiel 1347.                                                             |
+| Titel             | [Text](#STRING)                | Der Titel.                                                                                       |
+| Link              | [URL](#URL)                    | Das Issue auf GitHub.                                                                            |
+| Status            | [Text](#STRING)                | open oder closed.                                                                                |
+| Autor             | [Text](#STRING)                | Der Benutzername des Autors. Kann leer sein.                                                     |
+| Kommentare        | [Ganzzahl](#INTEGER)           | Wie viele Kommentare es hat. Kann leer sein.                                                     |
+| Erstellt am       | [Datum und Uhrzeit](#DATETIME) | Wann es eröffnet wurde.                                                                          |
+| Pull-Request-Link | [URL](#URL)                    | Der Pull Request auf GitHub. Leer bei Issues, damit kannst du sie unterscheiden. Kann leer sein. |
 
 ### GitHub-Release {#github-Release}
 
 Ein Release eines Repositorys.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Tag | [Text](#STRING) | Der Tag des Releases, zum Beispiel v1.0.0. |
-| Name | [Text](#STRING) | Der Name des Releases. Kann leer sein. |
-| Link | [URL](#URL) | Das Release auf GitHub. |
-| Versionshinweise | [Text](#STRING) | Die Versionshinweise, als Markdown. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                                           |
+| ----------------- | ------------------------------ | ----------------------------------------------------------------- |
+| Tag               | [Text](#STRING)                | Der Tag des Releases, zum Beispiel v1.0.0.                        |
+| Name              | [Text](#STRING)                | Der Name des Releases. Kann leer sein.                            |
+| Link              | [URL](#URL)                    | Das Release auf GitHub.                                           |
+| Versionshinweise  | [Text](#STRING)                | Die Versionshinweise, als Markdown. Kann leer sein.               |
 | Veröffentlicht am | [Datum und Uhrzeit](#DATETIME) | Wann es veröffentlicht wurde. Leer bei Entwürfen. Kann leer sein. |
-| Vorabversion | [Ja/Nein](#BOOLEAN) | Ob es als Vorabversion markiert ist. |
-| Entwurf | [Ja/Nein](#BOOLEAN) | Ob es ein Entwurf ist. |
+| Vorabversion      | [Ja/Nein](#BOOLEAN)            | Ob es als Vorabversion markiert ist.                              |
+| Entwurf           | [Ja/Nein](#BOOLEAN)            | Ob es ein Entwurf ist.                                            |
 
 ### Roblox-Gruppenrolle {#roblox-Role}
 
 Eine Rolle (Rang) einer Roblox-Gruppe.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Rollen-ID | [ID](#ID) | Die ID der Rolle. |
-| Name | [Text](#STRING) | Der Name der Rolle. |
-| Rang | [Ganzzahl](#INTEGER) | Die Rangnummer, 0 bis 255. Der Besitzer hat 255. |
-| Mitglieder | [Ganzzahl](#INTEGER) | Wie viele Mitglieder die Rolle haben, wenn der Schlüssel das sehen darf. Kann leer sein. |
-| Beschreibung | [Text](#STRING) | Die Beschreibung der Rolle. Kann leer sein. |
+| Eigenschaft  | Typ                  | Details                                                                                  |
+| ------------ | -------------------- | ---------------------------------------------------------------------------------------- |
+| Rollen-ID    | [ID](#ID)            | Die ID der Rolle.                                                                        |
+| Name         | [Text](#STRING)      | Der Name der Rolle.                                                                      |
+| Rang         | [Ganzzahl](#INTEGER) | Die Rangnummer, 0 bis 255. Der Besitzer hat 255.                                         |
+| Mitglieder   | [Ganzzahl](#INTEGER) | Wie viele Mitglieder die Rolle haben, wenn der Schlüssel das sehen darf. Kann leer sein. |
+| Beschreibung | [Text](#STRING)      | Die Beschreibung der Rolle. Kann leer sein.                                              |
 
 ### Roblox-Gruppenmitglied {#roblox-Membership}
 
 Ein Mitglied einer Roblox-Gruppe und seine Rolle.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Roblox-Benutzer-ID | [ID](#ID) | Die Roblox-Benutzer-ID des Mitglieds. |
-| Rollen-ID | [ID](#ID) | Die ID der Rolle des Mitglieds. |
-| Beigetreten am | [Datum und Uhrzeit](#DATETIME) | Wann das Mitglied beigetreten ist. Kann leer sein. |
+| Eigenschaft        | Typ                            | Details                                            |
+| ------------------ | ------------------------------ | -------------------------------------------------- |
+| Roblox-Benutzer-ID | [ID](#ID)                      | Die Roblox-Benutzer-ID des Mitglieds.              |
+| Rollen-ID          | [ID](#ID)                      | Die ID der Rolle des Mitglieds.                    |
+| Beigetreten am     | [Datum und Uhrzeit](#DATETIME) | Wann das Mitglied beigetreten ist. Kann leer sein. |
 
 ### Roblox-Gruppenmitgliedschaft {#roblox-public-GroupRole}
 
 Eine Gruppe, in der ein Benutzer ist, und seine Rolle dort.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Gruppen-ID | [ID](#ID) | Die ID der Gruppe. |
-| Gruppenname | [Text](#STRING) | Der Name der Gruppe. |
-| Rollen-ID | [ID](#ID) | Die ID der Rolle des Benutzers. |
-| Rollenname | [Text](#STRING) | Der Name der Rolle des Benutzers. |
-| Rang | [Ganzzahl](#INTEGER) | Die Rangnummer der Rolle, 1 bis 255. |
+| Eigenschaft | Typ                  | Details                              |
+| ----------- | -------------------- | ------------------------------------ |
+| Gruppen-ID  | [ID](#ID)            | Die ID der Gruppe.                   |
+| Gruppenname | [Text](#STRING)      | Der Name der Gruppe.                 |
+| Rollen-ID   | [ID](#ID)            | Die ID der Rolle des Benutzers.      |
+| Rollenname  | [Text](#STRING)      | Der Name der Rolle des Benutzers.    |
+| Rang        | [Ganzzahl](#INTEGER) | Die Rangnummer der Rolle, 1 bis 255. |
 
 ### Airtable-Zeile {#airtable-Row}
 
 Eine Zeile einer Airtable-Tabelle.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Zeilen-ID | [ID](#ID) | Die ID der Zeile, beginnt mit rec. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Zeile erstellt wurde. |
-| Felder | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Die Feldwerte nach Feldname, als Text. Leere Felder und Listen-, Anhang- und Mitarbeiterfelder werden ausgelassen. |
+| Eigenschaft | Typ                                                       | Details                                                                                                            |
+| ----------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Zeilen-ID   | [ID](#ID)                                                 | Die ID der Zeile, beginnt mit rec.                                                                                 |
+| Erstellt am | [Datum und Uhrzeit](#DATETIME)                            | Wann die Zeile erstellt wurde.                                                                                     |
+| Felder      | Nachschlagetabelle von [Text](#STRING) zu [Text](#STRING) | Die Feldwerte nach Feldname, als Text. Leere Felder und Listen-, Anhang- und Mitarbeiterfelder werden ausgelassen. |
 
 ### Todoist-Aufgabe {#todoist-Task}
 
 Eine Todoist-Aufgabe.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Aufgaben-ID | [ID](#ID) | Die ID der Aufgabe. |
-| Aufgabe | [Text](#STRING) | Der Aufgabentext. |
-| Beschreibung | [Text](#STRING) | Die Beschreibung. Kann leer sein. |
-| Projekt-ID | [ID](#ID) | Das Projekt, in dem die Aufgabe ist. Kann leer sein. |
-| Priorität | [Ganzzahl](#INTEGER) | 1 (normal) bis 4 (dringend). Todoist zeigt 4 als P1. Kann leer sein. |
-| Fälligkeitsdatum | [Text](#STRING) | Das Fälligkeitsdatum wie 2026-10-20, oder Datum und Uhrzeit. Leer ohne Fälligkeit. Kann leer sein. |
-| Fälligkeitstext | [Text](#STRING) | Die Fälligkeit wie eingegeben, zum Beispiel every monday. Kann leer sein. |
-| Labels | Liste von [Text](#STRING) | Die Label-Namen. Kann leer sein. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann die Aufgabe hinzugefügt wurde. Kann leer sein. |
+| Eigenschaft      | Typ                            | Details                                                                                            |
+| ---------------- | ------------------------------ | -------------------------------------------------------------------------------------------------- |
+| Aufgaben-ID      | [ID](#ID)                      | Die ID der Aufgabe.                                                                                |
+| Aufgabe          | [Text](#STRING)                | Der Aufgabentext.                                                                                  |
+| Beschreibung     | [Text](#STRING)                | Die Beschreibung. Kann leer sein.                                                                  |
+| Projekt-ID       | [ID](#ID)                      | Das Projekt, in dem die Aufgabe ist. Kann leer sein.                                               |
+| Priorität        | [Ganzzahl](#INTEGER)           | 1 (normal) bis 4 (dringend). Todoist zeigt 4 als P1. Kann leer sein.                               |
+| Fälligkeitsdatum | [Text](#STRING)                | Das Fälligkeitsdatum wie 2026-10-20, oder Datum und Uhrzeit. Leer ohne Fälligkeit. Kann leer sein. |
+| Fälligkeitstext  | [Text](#STRING)                | Die Fälligkeit wie eingegeben, zum Beispiel every monday. Kann leer sein.                          |
+| Labels           | Liste von [Text](#STRING)      | Die Label-Namen. Kann leer sein.                                                                   |
+| Erstellt am      | [Datum und Uhrzeit](#DATETIME) | Wann die Aufgabe hinzugefügt wurde. Kann leer sein.                                                |
 
 ### Steam-Spiel {#steam-Game}
 
 Ein Spiel, das ein Steam-Benutzer besitzt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| App-ID | [ID](#ID) | Die Steam-App-ID des Spiels. |
-| Name | [Text](#STRING) | Der Name des Spiels. Kann leer sein. |
-| Spielzeit in Minuten | [Ganzzahl](#INTEGER) | Die gesamte Spielzeit, in Minuten. |
-| Letzte zwei Wochen in Minuten | [Ganzzahl](#INTEGER) | Spielzeit der letzten zwei Wochen, in Minuten. Leer, wenn nicht gespielt. Kann leer sein. |
-| Zuletzt gespielt | [Datum und Uhrzeit](#DATETIME) | Wann es zuletzt gespielt wurde. Kann leer sein. |
+| Eigenschaft                   | Typ                            | Details                                                                                   |
+| ----------------------------- | ------------------------------ | ----------------------------------------------------------------------------------------- |
+| App-ID                        | [ID](#ID)                      | Die Steam-App-ID des Spiels.                                                              |
+| Name                          | [Text](#STRING)                | Der Name des Spiels. Kann leer sein.                                                      |
+| Spielzeit in Minuten          | [Ganzzahl](#INTEGER)           | Die gesamte Spielzeit, in Minuten.                                                        |
+| Letzte zwei Wochen in Minuten | [Ganzzahl](#INTEGER)           | Spielzeit der letzten zwei Wochen, in Minuten. Leer, wenn nicht gespielt. Kann leer sein. |
+| Zuletzt gespielt              | [Datum und Uhrzeit](#DATETIME) | Wann es zuletzt gespielt wurde. Kann leer sein.                                           |
 
 ### Stripe-Zahlung {#stripe-Charge}
 
 Eine Zahlung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [ID](#ID) | Die ID, beginnt mit ch_. |
-| Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. |
-| Währung | [Text](#STRING) | Die Währung, zum Beispiel eur. |
-| Status | [Text](#STRING) | succeeded, pending oder failed. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann es erstellt wurde. |
-| Beschreibung | [Text](#STRING) | Die Beschreibung, wenn gesetzt. Kann leer sein. |
-| Kunden-ID | [ID](#ID) | Der Kunde, wenn es einen gibt. Kann leer sein. |
-| Bezahlt | [Ja/Nein](#BOOLEAN) | Ob die Zahlung durchgegangen ist. |
-| Voll erstattet | [Ja/Nein](#BOOLEAN) | Ob alles erstattet wurde. |
-| Erstatteter Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| E-Mail | [Text](#STRING) | Die Rechnungs-E-Mail, wenn angegeben. Kann leer sein. |
-| Beleg | [URL](#URL) | Die Belegseite. Kann leer sein. |
+| Eigenschaft        | Typ                            | Details                                                                                              |
+| ------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| ID                 | [ID](#ID)                      | Die ID, beginnt mit ch_.                                                                             |
+| Betrag             | [Ganzzahl](#INTEGER)           | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00.                 |
+| Währung            | [Text](#STRING)                | Die Währung, zum Beispiel eur.                                                                       |
+| Status             | [Text](#STRING)                | succeeded, pending oder failed.                                                                      |
+| Erstellt am        | [Datum und Uhrzeit](#DATETIME) | Wann es erstellt wurde.                                                                              |
+| Beschreibung       | [Text](#STRING)                | Die Beschreibung, wenn gesetzt. Kann leer sein.                                                      |
+| Kunden-ID          | [ID](#ID)                      | Der Kunde, wenn es einen gibt. Kann leer sein.                                                       |
+| Bezahlt            | [Ja/Nein](#BOOLEAN)            | Ob die Zahlung durchgegangen ist.                                                                    |
+| Voll erstattet     | [Ja/Nein](#BOOLEAN)            | Ob alles erstattet wurde.                                                                            |
+| Erstatteter Betrag | [Ganzzahl](#INTEGER)           | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
+| E-Mail             | [Text](#STRING)                | Die Rechnungs-E-Mail, wenn angegeben. Kann leer sein.                                                |
+| Beleg              | [URL](#URL)                    | Die Belegseite. Kann leer sein.                                                                      |
 
 ### Stripe-Zahlungsvorgang {#stripe-PaymentIntent}
 
 Ein Zahlungsvorgang (PaymentIntent).
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [ID](#ID) | Die ID, beginnt mit pi_. |
-| Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. |
-| Währung | [Text](#STRING) | Die Währung, zum Beispiel eur. |
-| Status | [Text](#STRING) | succeeded, processing, requires_payment_method, requires_action, canceled oder ein anderer Schritt. |
-| Erstellt am | [Datum und Uhrzeit](#DATETIME) | Wann es erstellt wurde. |
-| Beschreibung | [Text](#STRING) | Die Beschreibung, wenn gesetzt. Kann leer sein. |
-| Kunden-ID | [ID](#ID) | Der Kunde, wenn es einen gibt. Kann leer sein. |
-| Erhaltener Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
+| Eigenschaft       | Typ                            | Details                                                                                              |
+| ----------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| ID                | [ID](#ID)                      | Die ID, beginnt mit pi_.                                                                             |
+| Betrag            | [Ganzzahl](#INTEGER)           | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00.                 |
+| Währung           | [Text](#STRING)                | Die Währung, zum Beispiel eur.                                                                       |
+| Status            | [Text](#STRING)                | succeeded, processing, requires_payment_method, requires_action, canceled oder ein anderer Schritt.  |
+| Erstellt am       | [Datum und Uhrzeit](#DATETIME) | Wann es erstellt wurde.                                                                              |
+| Beschreibung      | [Text](#STRING)                | Die Beschreibung, wenn gesetzt. Kann leer sein.                                                      |
+| Kunden-ID         | [ID](#ID)                      | Der Kunde, wenn es einen gibt. Kann leer sein.                                                       |
+| Erhaltener Betrag | [Ganzzahl](#INTEGER)           | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
 
 ### Stripe-Checkout-Sitzung {#stripe-CheckoutSession}
 
 Eine Checkout-Sitzung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [ID](#ID) | Die ID, beginnt mit cs_. |
-| Zahlungsseite | [URL](#URL) | Die Stripe-Seite, auf der der Kunde zahlt. Leer, sobald die Sitzung abgelaufen ist. Kann leer sein. |
-| Status | [Text](#STRING) | open, complete oder expired. |
-| Zahlungsstatus | [Text](#STRING) | paid, unpaid oder no_payment_required. |
-| Summe | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
-| Währung | [Text](#STRING) | Die Währung, zum Beispiel eur. Kann leer sein. |
-| Referenz | [Text](#STRING) | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein. |
-| Zahlungsvorgang-ID | [ID](#ID) | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein. |
+| Eigenschaft        | Typ                  | Details                                                                                              |
+| ------------------ | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| ID                 | [ID](#ID)            | Die ID, beginnt mit cs_.                                                                             |
+| Zahlungsseite      | [URL](#URL)          | Die Stripe-Seite, auf der der Kunde zahlt. Leer, sobald die Sitzung abgelaufen ist. Kann leer sein.  |
+| Status             | [Text](#STRING)      | open, complete oder expired.                                                                         |
+| Zahlungsstatus     | [Text](#STRING)      | paid, unpaid oder no_payment_required.                                                               |
+| Summe              | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. Kann leer sein. |
+| Währung            | [Text](#STRING)      | Die Währung, zum Beispiel eur. Kann leer sein.                                                       |
+| Referenz           | [Text](#STRING)      | Die Referenz, die du beim Erstellen der Sitzung angegeben hast. Kann leer sein.                      |
+| Zahlungsvorgang-ID | [ID](#ID)            | Der Zahlungsvorgang (pi_...), sobald der Kunde mit dem Bezahlen begonnen hat. Kann leer sein.        |
 
 ### Stripe-Betrag {#stripe-Amount}
 
 Ein Betrag in einer Währung.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Betrag | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. |
-| Währung | [Text](#STRING) | Die Währung, zum Beispiel eur. |
+| Eigenschaft | Typ                  | Details                                                                              |
+| ----------- | -------------------- | ------------------------------------------------------------------------------------ |
+| Betrag      | [Ganzzahl](#INTEGER) | Der Betrag in der kleinsten Einheit der Währung, zum Beispiel Cent: 1000 sind 10,00. |
+| Währung     | [Text](#STRING)      | Die Währung, zum Beispiel eur.                                                       |
 
 ### Stripe-Ereignis {#stripe-Event}
 
 Alles, was Stripe zu einem Ereignis gesendet hat.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| Ereignis-ID | [ID](#ID) | Die ID dieses Ereignisses, beginnt mit evt_. Kann leer sein. |
-| Ereignistyp | [Text](#STRING) | Der Stripe-Ereignistyp, zum Beispiel checkout.session.completed. Kann leer sein. |
-| Live-Modus | [Ja/Nein](#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein. |
-| API-Version | [Text](#STRING) | Die Stripe-API-Version des Ereignisses. Kann leer sein. |
-| Objekt-ID | [ID](#ID) | Die ID der Sitzung, Zahlung oder Streitigkeit, um die es im Ereignis geht. Kann leer sein. |
+| Eigenschaft | Typ                 | Details                                                                                    |
+| ----------- | ------------------- | ------------------------------------------------------------------------------------------ |
+| Ereignis-ID | [ID](#ID)           | Die ID dieses Ereignisses, beginnt mit evt_. Kann leer sein.                               |
+| Ereignistyp | [Text](#STRING)     | Der Stripe-Ereignistyp, zum Beispiel checkout.session.completed. Kann leer sein.           |
+| Live-Modus  | [Ja/Nein](#BOOLEAN) | Wahr bei echten Zahlungen, falsch im Testmodus. Kann leer sein.                            |
+| API-Version | [Text](#STRING)     | Die Stripe-API-Version des Ereignisses. Kann leer sein.                                    |
+| Objekt-ID   | [ID](#ID)           | Die ID der Sitzung, Zahlung oder Streitigkeit, um die es im Ereignis geht. Kann leer sein. |
 
 ## Spezielle Typen {#special-types}
 

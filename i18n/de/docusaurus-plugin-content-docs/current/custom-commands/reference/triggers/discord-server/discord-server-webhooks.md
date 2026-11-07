@@ -17,6 +17,6 @@ Benötigte Intents: `GuildWebhooks`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                   | Details                                     |
+| ----- | ----------------------------------------------------- | ------------------------------------------- |
 | Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Kanal, dessen Webhooks sich geändert haben. |

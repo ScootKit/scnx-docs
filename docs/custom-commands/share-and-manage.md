@@ -28,12 +28,12 @@ When an app you installed gets a new version, the overview shows how many apps h
 
 ## Who can do what {#who}
 
-| Task                                                   | Who                                                                                              |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| Turn V3 on, or switch back to V2                       | Server owner and co-owners                                                                       |
-| Build flows, edit modules and apps, view data and runs | Owner, co-owners, and trusted admins with custom-command access                                  |
-| Emergency stop                                         | Owner, co-owners, and trusted admins who can manage the bot                                      |
-| Publish a module                                       | Members of the publishing organization with the Manage Content permission                        |
+| Task                                                   | Who                                                                       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------- |
+| Turn V3 on, or switch back to V2                       | Server owner and co-owners                                                |
+| Build flows, edit modules and apps, view data and runs | Owner, co-owners, and trusted admins with custom-command access           |
+| Emergency stop                                         | Owner, co-owners, and trusted admins who can manage the bot               |
+| Publish a module                                       | Members of the publishing organization with the Manage Content permission |
 
 Anyone who can edit flows can make your bot do anything its Discord permissions allow. Keep that access to people you'd trust with the bot itself.
 

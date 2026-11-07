@@ -15,22 +15,22 @@ Runs when another service sends a request to one of this server's webhooks. Crea
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Webhook | [Text](../../../value-types.md#STRING) | Yes | The webhook that starts this flow. Length: 1 to 64 characters. |
-| Only when header | [Text](../../../value-types.md#STRING) | No | Optional: only run when the request has this header, for example X-GitHub-Event. Set the header value too. Maximum length: 100 characters. |
-| Header value | [Text](../../../value-types.md#STRING) | No | Optional: the exact value the header must have, for example push. Maximum length: 500 characters. |
-| Body shape | [Shape](../../../value-types.md#RECORD_TYPE) | No | Optional: a shape the request body is read into. The result appears in "Body". |
+| Name             | Type                                         | Required | Details                                                                                                                                    |
+| ---------------- | -------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Webhook          | [Text](../../../value-types.md#STRING)       | Yes      | The webhook that starts this flow. Length: 1 to 64 characters.                                                                             |
+| Only when header | [Text](../../../value-types.md#STRING)       | No       | Optional: only run when the request has this header, for example X-GitHub-Event. Set the header value too. Maximum length: 100 characters. |
+| Header value     | [Text](../../../value-types.md#STRING)       | No       | Optional: the exact value the header must have, for example push. Maximum length: 500 characters.                                          |
+| Body shape       | [Shape](../../../value-types.md#RECORD_TYPE) | No       | Optional: a shape the request body is read into. The result appears in "Body".                                                             |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Body | [Any](../../../value-types.md#ANY) | The request body read from JSON or form data, as a shape value when a body shape is set. Empty when it could not be read. May be empty. |
-| Body problem | [Text](../../../value-types.md#STRING) | Why the body could not be read or did not fit the body shape. Empty when it worked. May be empty. |
-| Body text | [Text](../../../value-types.md#STRING) | The request body as text, exactly as it arrived. Empty when the body is not text. May be empty. |
-| Headers | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The request headers with lowercase names. Cookies and login headers are removed. |
-| Query parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The names and values after the ? in the address. |
-| Method | [Text](../../../value-types.md#STRING) | The HTTP method of the request: GET, POST, PUT or PATCH. |
-| Delivery ID | [Text](../../../value-types.md#STRING) | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats. |
-| Webhook name | [Text](../../../value-types.md#STRING) | The name of the webhook that received the request. |
+| Name             | Type                                                                                             | Details                                                                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Body             | [Any](../../../value-types.md#ANY)                                                               | The request body read from JSON or form data, as a shape value when a body shape is set. Empty when it could not be read. May be empty. |
+| Body problem     | [Text](../../../value-types.md#STRING)                                                           | Why the body could not be read or did not fit the body shape. Empty when it worked. May be empty.                                       |
+| Body text        | [Text](../../../value-types.md#STRING)                                                           | The request body as text, exactly as it arrived. Empty when the body is not text. May be empty.                                         |
+| Headers          | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The request headers with lowercase names. Cookies and login headers are removed.                                                        |
+| Query parameters | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The names and values after the ? in the address.                                                                                        |
+| Method           | [Text](../../../value-types.md#STRING)                                                           | The HTTP method of the request: GET, POST, PUT or PATCH.                                                                                |
+| Delivery ID      | [Text](../../../value-types.md#STRING)                                                           | A unique ID for this delivery. A delivery can arrive twice; store this ID to skip repeats.                                              |
+| Webhook name     | [Text](../../../value-types.md#STRING)                                                           | The name of the webhook that received the request.                                                                                      |

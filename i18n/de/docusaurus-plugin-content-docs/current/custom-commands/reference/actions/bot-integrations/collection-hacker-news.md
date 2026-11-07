@@ -15,9 +15,9 @@ Liest die IDs der Storys auf der Hacker-News-Startseite, die oberste zuerst.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen“. |
+| Name      | Typ                                        | Details                                                                                        |
+| --------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen". |
 
 ### Neueste Storys abrufen {#hacker-news-get-new-stories}
 
@@ -25,9 +25,9 @@ Liest die IDs der neuesten Hacker-News-Storys, die neueste zuerst.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen“. |
+| Name      | Typ                                        | Details                                                                                        |
+| --------- | ------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Story-IDs | Liste von [ID](../../../value-types.md#ID) | Bis zu 500 Story-IDs in Listenreihenfolge. Lies eine Story mit „Story oder Kommentar abrufen". |
 
 ### Story oder Kommentar abrufen {#hacker-news-get-item}
 
@@ -35,21 +35,21 @@ Liest eine Hacker-News-Story, einen Kommentar, einen Job oder eine Umfrage über
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Eintrags-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die Zahl nach id= in der Hacker-News-Adresse. Minimum: 1. |
+| Name        | Typ                                         | Pflicht | Details                                                   |
+| ----------- | ------------------------------------------- | ------- | --------------------------------------------------------- |
+| Eintrags-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die Zahl nach id= in der Hacker-News-Adresse. Minimum: 1. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Eintrag existiert. Wenn nicht, ist alles andere leer. |
-| Art | [Text](../../../value-types.md#STRING) | story, comment, job, poll oder pollopt. Kann leer sein. |
-| Titel | [Text](../../../value-types.md#STRING) | Der Titel. Leer bei Kommentaren. Kann leer sein. |
-| Link | [URL](../../../value-types.md#URL) | Die Seite, auf die die Story verlinkt. Leer bei Textbeiträgen. Kann leer sein. |
-| Text | [Text](../../../value-types.md#STRING) | Der Text eines Kommentars oder Textbeitrags, als HTML. Kann leer sein. |
-| Autor | [Text](../../../value-types.md#STRING) | Der Benutzername des Autors. Kann leer sein. |
-| Punkte | [Ganzzahl](../../../value-types.md#INTEGER) | Die Punkte einer Story. Kann leer sein. |
-| Kommentare | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Kommentare eine Story hat. Kann leer sein. |
-| Gepostet am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann es gepostet wurde. Kann leer sein. |
-| Hacker-News-Link | [URL](../../../value-types.md#URL) | Die Diskussionsseite auf Hacker News. Kann leer sein. |
+| Name             | Typ                                                   | Details                                                                        |
+| ---------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Gefunden         | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ob der Eintrag existiert. Wenn nicht, ist alles andere leer.                   |
+| Art              | [Text](../../../value-types.md#STRING)                | story, comment, job, poll oder pollopt. Kann leer sein.                        |
+| Titel            | [Text](../../../value-types.md#STRING)                | Der Titel. Leer bei Kommentaren. Kann leer sein.                               |
+| Link             | [URL](../../../value-types.md#URL)                    | Die Seite, auf die die Story verlinkt. Leer bei Textbeiträgen. Kann leer sein. |
+| Text             | [Text](../../../value-types.md#STRING)                | Der Text eines Kommentars oder Textbeitrags, als HTML. Kann leer sein.         |
+| Autor            | [Text](../../../value-types.md#STRING)                | Der Benutzername des Autors. Kann leer sein.                                   |
+| Punkte           | [Ganzzahl](../../../value-types.md#INTEGER)           | Die Punkte einer Story. Kann leer sein.                                        |
+| Kommentare       | [Ganzzahl](../../../value-types.md#INTEGER)           | Wie viele Kommentare eine Story hat. Kann leer sein.                           |
+| Gepostet am      | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann es gepostet wurde. Kann leer sein.                                        |
+| Hacker-News-Link | [URL](../../../value-types.md#URL)                    | Die Diskussionsseite auf Hacker News. Kann leer sein.                          |

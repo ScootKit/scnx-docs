@@ -29,11 +29,11 @@ This keeps apps from the marketplace from reading each other's data, and it mean
 
 The scope decides how many values a field holds.
 
-| Scope              | What it stores                                                                 | Example                           |
-| ------------------ | ------------------------------------------------------------------------------ | --------------------------------- |
-| **Per user**       | One value per Discord user.                                                    | XP, warnings, a coin balance      |
-| **Whole server**   | A single value shared across the entire server.                                | An event on/off switch, a counter |
-| **By custom key**  | One value per key you choose, such as a message ID, a channel ID or any text.  | Votes per suggestion, giveaway data |
+| Scope             | What it stores                                                                | Example                             |
+| ----------------- | ----------------------------------------------------------------------------- | ----------------------------------- |
+| **Per user**      | One value per Discord user.                                                   | XP, warnings, a coin balance        |
+| **Whole server**  | A single value shared across the entire server.                               | An event on/off switch, a counter   |
+| **By custom key** | One value per key you choose, such as a message ID, a channel ID or any text. | Votes per suggestion, giveaway data |
 
 When a step reads or writes a **Per user** field, you tell it which user. For a **By custom key** field you give it the key. A **Whole server** field needs neither.
 
@@ -47,14 +47,14 @@ You can create a field in three places:
 
 Each field has these settings:
 
-| Setting           | What it does                                                                                       |
-| ----------------- | -------------------------------------------------------------------------------------------------- |
-| **Name**          | What you and your flows call the field.                                                            |
-| **ID**            | Generated from the name. It can't be changed later.                                                |
-| **Type**          | What kind of value it holds. See [Value types](/docs/custom-commands/value-types).                 |
-| **Scope**         | **Per user**, **Whole server** or **By custom key**.                                               |
-| **Description**   | An optional note for you and your team.                                                            |
-| **Default value** | What a flow gets back when nothing has been stored yet, for types that support one.                |
+| Setting           | What it does                                                                        |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| **Name**          | What you and your flows call the field.                                             |
+| **ID**            | Generated from the name. It can't be changed later.                                 |
+| **Type**          | What kind of value it holds. See [Value types](/docs/custom-commands/value-types).  |
+| **Scope**         | **Per user**, **Whole server** or **By custom key**.                                |
+| **Description**   | An optional note for you and your team.                                             |
+| **Default value** | What a flow gets back when nothing has been stored yet, for types that support one. |
 
 The **Schema** view also holds two helpers for structured data:
 
@@ -73,21 +73,21 @@ Stored values only enter a flow through a step that reads them. When you pick a 
 
 The storage steps you'll use most:
 
-| Step                                 | What it does                                                                                     | Works on                    |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------ | --------------------------- |
-| **Read a stored value**              | Reads the value. It's empty if nothing has been stored yet.                                      | Any field                   |
-| **Store a value**                    | Writes a value, replacing what was there.                                                        | Any field                   |
-| **Increase a stored number**         | Adds to a number in one safe step. It can also subtract, which is what **Decrease** in the picker uses.                            | Number fields, number fields inside a shape |
-| **Delete a stored value**            | Removes the value for one user or key.                                                           | Any field                   |
-| **Is a value stored?**               | Checks whether there's a value, without reading it.                                              | Any field                   |
-| **List storage entries**             | Returns the top entries sorted by value, for leaderboards.                                       | Number fields               |
-| **Get rank of a stored value**       | Returns someone's position, like "#42 on the leaderboard".                                       | Number fields               |
-| **Format leaderboard**               | Builds a ready-to-send leaderboard text from the top entries.                                    | Number fields               |
-| **Add item to stored list** / **Remove item from stored list** | Changes a stored list in one safe step.                              | List fields                 |
-| **Set key in stored lookup table** / **Get key from stored lookup table** | Works with one key of a stored lookup table.              | Lookup table fields         |
-| **Increment if (atomic)** / **Set stored value if (atomic)** | Changes a value only if its current value meets a condition, like "spend coins only if the balance is high enough". | Any field |
-| **Check and set cooldown**           | Checks whether someone is on cooldown and starts a new one, in one step.                         | Any field                   |
-| **Clear storage field**              | Deletes every value of a field, or just one user's or key's.                                     | Any field                   |
+| Step                                                                      | What it does                                                                                                        | Works on                                    |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| **Read a stored value**                                                   | Reads the value. It's empty if nothing has been stored yet.                                                         | Any field                                   |
+| **Store a value**                                                         | Writes a value, replacing what was there.                                                                           | Any field                                   |
+| **Increase a stored number**                                              | Adds to a number in one safe step. It can also subtract, which is what **Decrease** in the picker uses.             | Number fields, number fields inside a shape |
+| **Delete a stored value**                                                 | Removes the value for one user or key.                                                                              | Any field                                   |
+| **Is a value stored?**                                                    | Checks whether there's a value, without reading it.                                                                 | Any field                                   |
+| **List storage entries**                                                  | Returns the top entries sorted by value, for leaderboards.                                                          | Number fields                               |
+| **Get rank of a stored value**                                            | Returns someone's position, like "#42 on the leaderboard".                                                          | Number fields                               |
+| **Format leaderboard**                                                    | Builds a ready-to-send leaderboard text from the top entries.                                                       | Number fields                               |
+| **Add item to stored list** / **Remove item from stored list**            | Changes a stored list in one safe step.                                                                             | List fields                                 |
+| **Set key in stored lookup table** / **Get key from stored lookup table** | Works with one key of a stored lookup table.                                                                        | Lookup table fields                         |
+| **Increment if (atomic)** / **Set stored value if (atomic)**              | Changes a value only if its current value meets a condition, like "spend coins only if the balance is high enough". | Any field                                   |
+| **Check and set cooldown**                                                | Checks whether someone is on cooldown and starts a new one, in one step.                                            | Any field                                   |
+| **Clear storage field**                                                   | Deletes every value of a field, or just one user's or key's.                                                        | Any field                                   |
 
 The full list, with every input and output, is in the [Data storage action reference](/docs/custom-commands/reference/actions/data-storage).
 
@@ -154,17 +154,17 @@ A few things about the table:
 
 ### When an edit is refused {#edit-errors}
 
-| Message                                                                 | Cause                                                                                   | Fix                                                                                                  |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| "This value is not valid for the field type."                           | The value doesn't fit the field, like text in a number field.                           | Enter a value of the field's type.                                                                   |
-| "Short test IDs cannot be stored from the dashboard."           | A user, channel or role field needs a full Discord ID.                                  | Copy the real ID from Discord. See [Discord IDs](/docs/discord-ids).                                  |
-| "Put long numbers such as Discord IDs in quotes"                        | In JSON, long numbers lose their last digits.                                           | Write IDs as text in quotes, like `"123456789012345678"`.                                            |
-| "This value is too large to store"                                      | The value is bigger than a single entry may be.                                         | Store less in one entry, or split it across keys.                                                    |
-| "This field has reached its entry limit."                               | The field is full.                                                                      | Delete entries you no longer need.                                                                   |
-| "This storage field is not in the saved storage schema"                 | The field was removed since you opened the page.                                        | Reload the page.                                                                                     |
-| "Your bot is still loading its flows"                                   | Your bot just started.                                                                  | Wait a moment and try again. If it keeps happening, reload your bot.                                 |
-| "This field was just set to be encrypted"                               | Your bot starts encrypting when it reloads its flows.                                   | Wait a moment and try again.                                                                         |
-| "This encrypted value cannot be decrypted"                              | The value was encrypted with a key your bot no longer has.                              | You can only delete it.                                                                              |
+| Message                                                 | Cause                                                         | Fix                                                                  |
+| ------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
+| "This value is not valid for the field type."           | The value doesn't fit the field, like text in a number field. | Enter a value of the field's type.                                   |
+| "Short test IDs cannot be stored from the dashboard."   | A user, channel or role field needs a full Discord ID.        | Copy the real ID from Discord. See [Discord IDs](/docs/discord-ids). |
+| "Put long numbers such as Discord IDs in quotes"        | In JSON, long numbers lose their last digits.                 | Write IDs as text in quotes, like `"123456789012345678"`.            |
+| "This value is too large to store"                      | The value is bigger than a single entry may be.               | Store less in one entry, or split it across keys.                    |
+| "This field has reached its entry limit."               | The field is full.                                            | Delete entries you no longer need.                                   |
+| "This storage field is not in the saved storage schema" | The field was removed since you opened the page.              | Reload the page.                                                     |
+| "Your bot is still loading its flows"                   | Your bot just started.                                        | Wait a moment and try again. If it keeps happening, reload your bot. |
+| "This field was just set to be encrypted"               | Your bot starts encrypting when it reloads its flows.         | Wait a moment and try again.                                         |
+| "This encrypted value cannot be decrypted"              | The value was encrypted with a key your bot no longer has.    | You can only delete it.                                              |
 
 :::caution Deleting can't be undone
 Deleted entries and purged fields are gone for good. If you only want to try something, test on a field you don't need.
@@ -176,13 +176,13 @@ The **Server storage** card shows how much of your server's storage is used. Thi
 
 The card shows one of these states:
 
-| State                                       | What to do                                                        |
-| ------------------------------------------- | ----------------------------------------------------------------- |
-| **Plenty of room**                          | Nothing.                                                          |
-| **Getting full** / **Nearly full**          | Look at **Where the space is going** and clean up the biggest one. |
-| **Full: new data is no longer being stored** | Free up space now. Flows are already failing to store data.      |
-| "Usage is being recounted after a purge"    | Wait a moment. The number comes back on its own.                  |
-| "Usage could not be measured: the bot is not running" | Start your bot.                                         |
+| State                                                 | What to do                                                         |
+| ----------------------------------------------------- | ------------------------------------------------------------------ |
+| **Plenty of room**                                    | Nothing.                                                           |
+| **Getting full** / **Nearly full**                    | Look at **Where the space is going** and clean up the biggest one. |
+| **Full: new data is no longer being stored**          | Free up space now. Flows are already failing to store data.        |
+| "Usage is being recounted after a purge"              | Wait a moment. The number comes back on its own.                   |
+| "Usage could not be measured: the bot is not running" | Start your bot.                                                    |
 
 Once the storage is full, your flows can no longer store new data until space is freed. Those steps fail with a storage error in the [run history](/docs/custom-commands/executions). Delete entries you no longer need, or purge a field you no longer use. Higher plans include more storage, see [Plans, limits & safety](/docs/custom-commands/limits-and-safety).
 
@@ -208,14 +208,14 @@ Instead of deleting a field, you can also move it into a shape with **Move into 
 
 ## What happens to stored data {#lifecycle}
 
-| When you...                                    | Stored data                                                                                                                                      |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Update an app** from the marketplace         | Is kept. The new version uses the same storage.                                                                                                  |
-| **Duplicate a module**                         | Isn't copied. The copy gets the same fields, but starts empty.                                                                                   |
-| **Delete a module or uninstall an app**        | Is deleted for good a while after the module is removed. You can't bring it back from the dashboard.                                              |
-| **Use the emergency stop**                     | Is kept. Nothing runs, but nothing is deleted.                                                                                                   |
-| **Switch back to Custom Commands V2**          | Is kept on your bot. Your flows stop running, so nothing reads or writes it until you turn V3 on again.                                          |
-| **Run a test**                                 | Isn't changed. Test runs read your real data but never write to it. See [test runs](/docs/custom-commands/executions#test-runs).                |
+| When you...                             | Stored data                                                                                                                      |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Update an app** from the marketplace  | Is kept. The new version uses the same storage.                                                                                  |
+| **Duplicate a module**                  | Isn't copied. The copy gets the same fields, but starts empty.                                                                   |
+| **Delete a module or uninstall an app** | Is deleted for good a while after the module is removed. You can't bring it back from the dashboard.                             |
+| **Use the emergency stop**              | Is kept. Nothing runs, but nothing is deleted.                                                                                   |
+| **Switch back to Custom Commands V2**   | Is kept on your bot. Your flows stop running, so nothing reads or writes it until you turn V3 on again.                          |
+| **Run a test**                          | Isn't changed. Test runs read your real data but never write to it. See [test runs](/docs/custom-commands/executions#test-runs). |
 
 ## Who can see stored data {#permissions}
 

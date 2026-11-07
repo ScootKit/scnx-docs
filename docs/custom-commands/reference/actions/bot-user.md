@@ -15,12 +15,12 @@ Updates the bot's online status and activity.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Status | [Presence status](../../value-types.md#PRESENCE_STATUS) | Yes | Online status to display. Default: Online. |
-| Activity type | [Activity type](../../value-types.md#ACTIVITY_TYPE) | No | Type of activity to show. |
-| Activity text | [Text](../../value-types.md#STRING) | No | Text shown after the activity verb. Maximum length: 128 characters. Shown when Activity type is Playing, Streaming, Listening, Watching, Custom status, Competing. |
-| Stream URL | [URL](../../value-types.md#URL) | No | Twitch / YouTube URL (streaming activity only). Shown when Activity type is. |
+| Name          | Type                                                    | Required | Details                                                                                                                                                            |
+| ------------- | ------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Status        | [Presence status](../../value-types.md#PRESENCE_STATUS) | Yes      | Online status to display. Default: Online.                                                                                                                         |
+| Activity type | [Activity type](../../value-types.md#ACTIVITY_TYPE)     | No       | Type of activity to show.                                                                                                                                          |
+| Activity text | [Text](../../value-types.md#STRING)                     | No       | Text shown after the activity verb. Maximum length: 128 characters. Shown when Activity type is Playing, Streaming, Listening, Watching, Custom status, Competing. |
+| Stream URL    | [URL](../../value-types.md#URL)                         | No       | Twitch / YouTube URL (streaming activity only). Shown when Activity type is.                                                                                       |
 
 ### Set bot username {#set-bot-username}
 
@@ -28,14 +28,14 @@ Change the bot's global username.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| New username | [Text](../../value-types.md#STRING) | Yes | The new global username (2-32 chars). Length: 2 to 32 characters. |
+| Name         | Type                                | Required | Details                                                           |
+| ------------ | ----------------------------------- | -------- | ----------------------------------------------------------------- |
+| New username | [Text](../../value-types.md#STRING) | Yes      | The new global username (2-32 chars). Length: 2 to 32 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details               |
+| -------- | ----------------------------------------- | --------------------- |
 | Bot user | [User](../../value-types.md#DISCORD_USER) | The updated bot user. |
 
 ### Set bot avatar {#set-bot-avatar}
@@ -44,14 +44,14 @@ Change or remove the bot's global avatar.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Avatar URL | [URL](../../value-types.md#URL) | Yes | URL of the new avatar image, or empty to remove. |
+| Name       | Type                            | Required | Details                                          |
+| ---------- | ------------------------------- | -------- | ------------------------------------------------ |
+| Avatar URL | [URL](../../value-types.md#URL) | Yes      | URL of the new avatar image, or empty to remove. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details               |
+| -------- | ----------------------------------------- | --------------------- |
 | Bot user | [User](../../value-types.md#DISCORD_USER) | The updated bot user. |
 
 ### Set bot banner {#set-bot-banner}
@@ -60,14 +60,14 @@ Change or remove the bot's profile banner.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Banner URL | [URL](../../value-types.md#URL) | Yes | URL of the new banner image, or empty to remove. |
+| Name       | Type                            | Required | Details                                          |
+| ---------- | ------------------------------- | -------- | ------------------------------------------------ |
+| Banner URL | [URL](../../value-types.md#URL) | Yes      | URL of the new banner image, or empty to remove. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details               |
+| -------- | ----------------------------------------- | --------------------- |
 | Bot user | [User](../../value-types.md#DISCORD_USER) | The updated bot user. |
 
 ### Fetch bot user (fresh from Discord) {#fetch-bot-user}
@@ -76,8 +76,8 @@ Requests the bot's own user account from Discord, so the data is always current.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details                                               |
+| -------- | ----------------------------------------- | ----------------------------------------------------- |
 | Bot user | [User](../../value-types.md#DISCORD_USER) | The bot's user account, freshly fetched from Discord. |
 
 ### Fetch application {#fetch-application}
@@ -86,8 +86,8 @@ Fetches the bot's own Discord application, including all public metadata.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                        |
+| ----------- | ----------------------------------------------- | ------------------------------ |
 | Application | [Application](../../value-types.md#APPLICATION) | The bot's Discord application. |
 
 ### Edit application {#edit-application}
@@ -96,22 +96,22 @@ Edits settings of the bot's Discord application.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Custom Install URL | [URL](../../value-types.md#URL) | No | Custom URL Discord redirects users to for installing the app. |
-| Description | [Text](../../value-types.md#STRING) | No | New description for the application. |
-| Role Connections Verification URL | [URL](../../value-types.md#URL) | No | URL Discord opens to verify role connections. |
-| Install Parameters | [Application install parameters](../../value-types.md#APPLICATION_INSTALL_PARAMS) | No | Default in-app authorization parameters. |
-| Flags | List of [Application flag](../../value-types.md#APPLICATION_FLAG) | No | Application flags to set (only some flags are settable). |
-| Icon | [URL](../../value-types.md#URL) | No | URL of the new icon image. |
-| Cover Image | [URL](../../value-types.md#URL) | No | URL of the new cover image. |
-| Interactions Endpoint URL | [URL](../../value-types.md#URL) | No | URL Discord sends interactions to instead of the gateway. |
-| Tags | List of [Text](../../value-types.md#STRING) | No | Up to 5 tags describing the application (each at most 20 chars). Maximum length: 20 characters. Maximum items: 5. |
+| Name                              | Type                                                                              | Required | Details                                                                                                           |
+| --------------------------------- | --------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------- |
+| Custom Install URL                | [URL](../../value-types.md#URL)                                                   | No       | Custom URL Discord redirects users to for installing the app.                                                     |
+| Description                       | [Text](../../value-types.md#STRING)                                               | No       | New description for the application.                                                                              |
+| Role Connections Verification URL | [URL](../../value-types.md#URL)                                                   | No       | URL Discord opens to verify role connections.                                                                     |
+| Install Parameters                | [Application install parameters](../../value-types.md#APPLICATION_INSTALL_PARAMS) | No       | Default in-app authorization parameters.                                                                          |
+| Flags                             | List of [Application flag](../../value-types.md#APPLICATION_FLAG)                 | No       | Application flags to set (only some flags are settable).                                                          |
+| Icon                              | [URL](../../value-types.md#URL)                                                   | No       | URL of the new icon image.                                                                                        |
+| Cover Image                       | [URL](../../value-types.md#URL)                                                   | No       | URL of the new cover image.                                                                                       |
+| Interactions Endpoint URL         | [URL](../../value-types.md#URL)                                                   | No       | URL Discord sends interactions to instead of the gateway.                                                         |
+| Tags                              | List of [Text](../../value-types.md#STRING)                                       | No       | Up to 5 tags describing the application (each at most 20 chars). Maximum length: 20 characters. Maximum items: 5. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                  |
+| ----------- | ----------------------------------------------- | ------------------------ |
 | Application | [Application](../../value-types.md#APPLICATION) | The updated application. |
 
 ### Fetch application role connection metadata {#fetch-application-role-connection-metadata}
@@ -120,8 +120,8 @@ Fetches the role-connection metadata entries currently registered for the applic
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                                              | Details                                                    |
+| ------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | Entries | List of [Role connection metadata](../../value-types.md#ROLE_CONNECTION_METADATA) | The role connection metadata entries currently registered. |
 
 ### Update application role connection metadata {#update-application-role-connection-metadata}
@@ -130,14 +130,14 @@ Replaces the role-connection metadata entries registered for the application (ma
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Entries | List of [Role connection metadata](../../value-types.md#ROLE_CONNECTION_METADATA) | Yes | Up to five metadata entries to register for the application. Maximum items: 5. |
+| Name    | Type                                                                              | Required | Details                                                                        |
+| ------- | --------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| Entries | List of [Role connection metadata](../../value-types.md#ROLE_CONNECTION_METADATA) | Yes      | Up to five metadata entries to register for the application. Maximum items: 5. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                                                              | Details                                          |
+| ------- | --------------------------------------------------------------------------------- | ------------------------------------------------ |
 | Entries | List of [Role connection metadata](../../value-types.md#ROLE_CONNECTION_METADATA) | The metadata entries as stored after the update. |
 
 ### Update user role connection {#update-user-application-role-connection}
@@ -146,17 +146,17 @@ Updates the application's role connection for a specific user (platform name, us
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| User | [User](../../value-types.md#DISCORD_USER) | Yes | The user whose role connection to update. |
-| Platform Name | [Text](../../value-types.md#STRING) | No | Name of the connected platform shown in Discord (max 50 chars). Maximum length: 50 characters. |
-| Platform Username | [Text](../../value-types.md#STRING) | No | User's name on the connected platform (max 100 chars). Maximum length: 100 characters. |
-| Metadata | Lookup table of [Text](../../value-types.md#STRING) to [Text](../../value-types.md#STRING) | No | Lookup table of metadata keys to text values reported to Discord. |
+| Name              | Type                                                                                       | Required | Details                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------ | -------- | ---------------------------------------------------------------------------------------------- |
+| User              | [User](../../value-types.md#DISCORD_USER)                                                  | Yes      | The user whose role connection to update.                                                      |
+| Platform Name     | [Text](../../value-types.md#STRING)                                                        | No       | Name of the connected platform shown in Discord (max 50 chars). Maximum length: 50 characters. |
+| Platform Username | [Text](../../value-types.md#STRING)                                                        | No       | User's name on the connected platform (max 100 chars). Maximum length: 100 characters.         |
+| Metadata          | Lookup table of [Text](../../value-types.md#STRING) to [Text](../../value-types.md#STRING) | No       | Lookup table of metadata keys to text values reported to Discord.                              |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                   | Details                                      |
+| ------- | -------------------------------------- | -------------------------------------------- |
 | Success | [Yes/No](../../value-types.md#BOOLEAN) | Whether the update was applied successfully. |
 
 ### Fetch bot user (from cache, no API call) {#fetch-current-bot-user}
@@ -165,8 +165,8 @@ Returns the bot's own user account from the local cache. Instant and free, with 
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details                                      |
+| -------- | ----------------------------------------- | -------------------------------------------- |
 | Bot user | [User](../../value-types.md#DISCORD_USER) | The bot's user account, read from the cache. |
 
 ### Fetch bot as server member {#fetch-current-bot-member}
@@ -175,6 +175,6 @@ Returns the bot resolved as a member of the given server.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name       | Type                                               | Details                      |
+| ---------- | -------------------------------------------------- | ---------------------------- |
 | Bot member | [Server member](../../value-types.md#GUILD_MEMBER) | The bot's server membership. |

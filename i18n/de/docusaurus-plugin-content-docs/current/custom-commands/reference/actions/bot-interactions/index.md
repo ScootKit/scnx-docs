@@ -15,20 +15,20 @@ Pausiert den Flow, bis eine zu einem Antwort-Zweig passende Nachricht im Kanal g
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja | Der Kanal, in dem auf eine Antwort gewartet wird. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange auf eine Nachricht gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Auf Benutzer beschränken | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur Nachrichten dieses Benutzers werden berücksichtigt; alle anderen werden ignoriert. |
+| Name                     | Typ                                                     | Pflicht | Details                                                                                                                                          |
+| ------------------------ | ------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Kanal                    | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Ja      | Der Kanal, in dem auf eine Antwort gewartet wird.                                                                                                |
+| Zeitlimit                | [Dauer](../../../value-types.md#DURATION)               | Ja      | Wie lange auf eine Nachricht gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Auf Benutzer beschränken | [Benutzer](../../../value-types.md#DISCORD_USER)        | Nein    | Nur Nachrichten dieses Benutzers werden berücksichtigt; alle anderen werden ignoriert.                                                           |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Bei Nachricht | Wird ausgeführt, wenn eine Nachricht im Kanal zu keinem Antwort-Zweig passt. Optional. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat) |
-| Bei Zeitablauf | Wird ausgeführt, wenn innerhalb des Zeitlimits keine passende Nachricht eintrifft. Optional. |
-| Match-Typ | Wie der Nachrichteninhalt abgeglichen wird. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat) |
-| Muster | Text oder Regex, der mit dem Nachrichteninhalt abgeglichen wird. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat) |
+| Name           | Details                                                                                                                                                                                                                                                                                     |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bei Nachricht  | Wird ausgeführt, wenn eine Nachricht im Kanal zu keinem Antwort-Zweig passt. Optional. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat)                   |
+| Bei Zeitablauf | Wird ausgeführt, wenn innerhalb des Zeitlimits keine passende Nachricht eintrifft. Optional.                                                                                                                                                                                                |
+| Match-Typ      | Wie der Nachrichteninhalt abgeglichen wird. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat)                      |
+| Muster         | Text oder Regex, der mit dem Nachrichteninhalt abgeglichen wird. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Nachricht (Die Nachricht, die das Warten beendet hat), Inhalt (Der Textinhalt der Nachricht), Autor (Der Benutzer, der die Nachricht gesendet hat) |
 
 ### Auf Interaktion warten {#wait-for-interaction}
 
@@ -36,20 +36,20 @@ Pausiert den Flow, bis jemand einen Button oder ein Auswahlmenü der beobachtete
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Ja | Eine von diesem Flow gesendete Nachricht, deren Buttons/Auswahlmenüs beobachtet werden. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange auf eine Antwort gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Auf Benutzer beschränken | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten; alle anderen erhalten einen ephemeren Hinweis. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit den beobachteten Komponenten passiert, sobald das Warten beendet ist oder die Zeit abläuft. Standard: Deaktivieren. |
+| Name                     | Typ                                                                       | Pflicht | Details                                                                                                                                        |
+| ------------------------ | ------------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nachricht                | [Nachricht](../../../value-types.md#MESSAGE)                              | Ja      | Eine von diesem Flow gesendete Nachricht, deren Buttons/Auswahlmenüs beobachtet werden.                                                        |
+| Zeitlimit                | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange auf eine Antwort gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Auf Benutzer beschränken | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten; alle anderen erhalten einen ephemeren Hinweis.                                                             |
+| Nach Abschluss           | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit den beobachteten Komponenten passiert, sobald das Warten beendet ist oder die Zeit abläuft. Standard: Deaktivieren.                    |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Bei Interaktion | Wird ausgeführt, wenn eine Interaktion auf der beobachteten Nachricht zu keinem Antwort-Zweig passt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Button-/Auswahl-Interaktion, die das Warten beendet hat), Custom-ID (Rohe Custom-ID der verwendeten Komponente), Werte (Gewählte Optionswerte (leer bei Buttons)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Bei Zeitablauf | Wird ausgeführt, wenn niemand innerhalb des Zeitlimits antwortet. Optional. |
-| Antwortwert | Führt diesen Zweig aus, wenn die Custom-ID des angeklickten Buttons oder der gewählte Optionswert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Interaktion (Die Button-/Auswahl-Interaktion, die das Warten beendet hat), Custom-ID (Rohe Custom-ID der verwendeten Komponente), Werte (Gewählte Optionswerte (leer bei Buttons)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Name            | Details                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bei Interaktion | Wird ausgeführt, wenn eine Interaktion auf der beobachteten Nachricht zu keinem Antwort-Zweig passt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Button-/Auswahl-Interaktion, die das Warten beendet hat), Custom-ID (Rohe Custom-ID der verwendeten Komponente), Werte (Gewählte Optionswerte (leer bei Buttons)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden)                                                    |
+| Bei Zeitablauf  | Wird ausgeführt, wenn niemand innerhalb des Zeitlimits antwortet. Optional.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Antwortwert     | Führt diesen Zweig aus, wenn die Custom-ID des angeklickten Buttons oder der gewählte Optionswert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Interaktion (Die Button-/Auswahl-Interaktion, die das Warten beendet hat), Custom-ID (Rohe Custom-ID der verwendeten Komponente), Werte (Gewählte Optionswerte (leer bei Buttons)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
 
 ### Bestätigung anfordern {#ask-confirmation}
 
@@ -57,22 +57,22 @@ Antwortet auf die Interaktion mit einer Rückfrage samt Bestätigen-/Abbrechen-B
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit der Rückfrage geantwortet wird. |
-| Rückfrage | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die anzuzeigende Frage, z. B. "Möchtest du wirklich 14 Nachrichten löschen?". |
-| Bestätigen-Text | [Text](../../../value-types.md#STRING) | Ja | Text auf dem Bestätigen-Button. Maximale Länge: 80 Zeichen. Standard: `Confirm`. |
-| Abbrechen-Text | [Text](../../../value-types.md#STRING) | Ja | Text auf dem Abbrechen-Button. Maximale Länge: 80 Zeichen. Standard: `Cancel`. |
-| Ephemer | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob nur der gefragte Benutzer die Rückfrage sehen kann. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange auf eine Antwort gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Name            | Typ                                                          | Pflicht | Details                                                                                                                                        |
+| --------------- | ------------------------------------------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Interaktion     | [Interaktion](../../../value-types.md#INTERACTION)           | Ja      | Die Interaktion, auf die mit der Rückfrage geantwortet wird.                                                                                   |
+| Rückfrage       | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja      | Die anzuzeigende Frage, z. B. "Möchtest du wirklich 14 Nachrichten löschen?".                                                                  |
+| Bestätigen-Text | [Text](../../../value-types.md#STRING)                       | Ja      | Text auf dem Bestätigen-Button. Maximale Länge: 80 Zeichen. Standard: `Confirm`.                                                               |
+| Abbrechen-Text  | [Text](../../../value-types.md#STRING)                       | Ja      | Text auf dem Abbrechen-Button. Maximale Länge: 80 Zeichen. Standard: `Cancel`.                                                                 |
+| Ephemer         | [Ja/Nein](../../../value-types.md#BOOLEAN)                   | Ja      | Ob nur der gefragte Benutzer die Rückfrage sehen kann. Standard: Ja.                                                                           |
+| Zeitlimit       | [Dauer](../../../value-types.md#DURATION)                    | Ja      | Wie lange auf eine Antwort gewartet wird (5 Sekunden bis maximal 30 Tage; Standard 10 Minuten). Wert: 5000 bis 2592000000. Standard: `600000`. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Bestätigt | Wird ausgeführt, wenn der Benutzer den Bestätigen-Button anklickt. Optional. Stellt seinen Schritten bereit: Interaktion (Der Klick auf den Bestätigen-Button (bereits bestätigt/acknowledged)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Abgebrochen | Wird ausgeführt, wenn der Benutzer den Abbrechen-Button anklickt. Optional. Stellt seinen Schritten bereit: Interaktion (Der Klick auf den Abbrechen-Button (bereits bestätigt/acknowledged)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Bei Zeitablauf | Wird ausgeführt, wenn der Benutzer nicht innerhalb des Zeitlimits antwortet. Optional. |
+| Name           | Details                                                                                                                                                                                                                                                                                                                      |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bestätigt      | Wird ausgeführt, wenn der Benutzer den Bestätigen-Button anklickt. Optional. Stellt seinen Schritten bereit: Interaktion (Der Klick auf den Bestätigen-Button (bereits bestätigt/acknowledged)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Abgebrochen    | Wird ausgeführt, wenn der Benutzer den Abbrechen-Button anklickt. Optional. Stellt seinen Schritten bereit: Interaktion (Der Klick auf den Abbrechen-Button (bereits bestätigt/acknowledged)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden)   |
+| Bei Zeitablauf | Wird ausgeführt, wenn der Benutzer nicht innerhalb des Zeitlimits antwortet. Optional.                                                                                                                                                                                                                                       |
 
 ### Frage mit Auswahlmenü stellen {#ask-choice}
 
@@ -80,31 +80,31 @@ Zeigt ein Auswahlmenü an und wartet, bis der Benutzer eine Option wählt, dann 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit dem Auswahlmenü geantwortet wird. |
-| Nachricht | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die über dem Auswahlmenü angezeigte Nachricht. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen. |
-| Optionen | Liste von [Auswahloption](../../../value-types.md#STRING_SELECT_OPTION) | Nein | Eine feste Liste von Optionen. Verwende dies oder "Einträge", nicht beides. Höchstens 25 Einträge. Nur eines davon verwenden: Einträge. |
-| Einträge | Liste von [Beliebig](../../../value-types.md#ANY) | Nein | Baut die Optionen aus einer Liste von Daten auf. Verwende dies oder "Optionen", nicht beides. Nur eines davon verwenden: Optionen. |
-| Beschriftungspfad | [Text](../../../value-types.md#STRING) | Nein | Welches Feld jedes Eintrags angezeigt wird, z. B. "name". Leer lassen, um den Eintrag selbst zu verwenden. Maximale Länge: 100 Zeichen. |
-| Wertpfad | [Text](../../../value-types.md#STRING) | Nein | Welches Feld jedes Eintrags als Wert verwendet wird, z. B. "id". Standardmäßig die Beschriftung. Maximale Länge: 100 Zeichen. |
-| Beschreibungspfad | [Text](../../../value-types.md#STRING) | Nein | Welches Feld jedes Eintrags als Untertitel angezeigt wird. Optional. Maximale Länge: 100 Zeichen. |
-| Vorausgewählte Werte | Liste von [Text](../../../value-types.md#STRING) | Nein | Werte, die von Anfang an bereits ausgewählt sind, z. B. die Rollen, die das Mitglied schon hat. Höchstens 25 Einträge. |
-| Minimale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie wenige Optionen mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`. |
-| Maximale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie viele Optionen höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`. |
-| Nur dieser Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis. |
-| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Zeigt das Auswahlmenü privat der Person, die es ausgelöst hat. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit dem Auswahlmenü passiert, sobald jemand geantwortet hat. Standard: Deaktivieren. |
+| Name                          | Typ                                                                       | Pflicht | Details                                                                                                                                 |
+| ----------------------------- | ------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Interaktion                   | [Interaktion](../../../value-types.md#INTERACTION)                        | Ja      | Die Interaktion, auf die mit dem Auswahlmenü geantwortet wird.                                                                          |
+| Nachricht                     | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)              | Ja      | Die über dem Auswahlmenü angezeigte Nachricht.                                                                                          |
+| Platzhalter                   | [Text](../../../value-types.md#STRING)                                    | Nein    | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen.                                    |
+| Optionen                      | Liste von [Auswahloption](../../../value-types.md#STRING_SELECT_OPTION)   | Nein    | Eine feste Liste von Optionen. Verwende dies oder "Einträge", nicht beides. Höchstens 25 Einträge. Nur eines davon verwenden: Einträge. |
+| Einträge                      | Liste von [Beliebig](../../../value-types.md#ANY)                         | Nein    | Baut die Optionen aus einer Liste von Daten auf. Verwende dies oder "Optionen", nicht beides. Nur eines davon verwenden: Optionen.      |
+| Beschriftungspfad             | [Text](../../../value-types.md#STRING)                                    | Nein    | Welches Feld jedes Eintrags angezeigt wird, z. B. "name". Leer lassen, um den Eintrag selbst zu verwenden. Maximale Länge: 100 Zeichen. |
+| Wertpfad                      | [Text](../../../value-types.md#STRING)                                    | Nein    | Welches Feld jedes Eintrags als Wert verwendet wird, z. B. "id". Standardmäßig die Beschriftung. Maximale Länge: 100 Zeichen.           |
+| Beschreibungspfad             | [Text](../../../value-types.md#STRING)                                    | Nein    | Welches Feld jedes Eintrags als Untertitel angezeigt wird. Optional. Maximale Länge: 100 Zeichen.                                       |
+| Vorausgewählte Werte          | Liste von [Text](../../../value-types.md#STRING)                          | Nein    | Werte, die von Anfang an bereits ausgewählt sind, z. B. die Rollen, die das Mitglied schon hat. Höchstens 25 Einträge.                  |
+| Minimale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie wenige Optionen mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`.                                                 |
+| Maximale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie viele Optionen höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`.                                      |
+| Nur dieser Benutzer           | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis.                                                       |
+| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN)                                | Ja      | Zeigt das Auswahlmenü privat der Person, die es ausgelöst hat. Standard: Ja.                                                            |
+| Zeitlimit                     | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`.                     |
+| Nach Abschluss                | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit dem Auswahlmenü passiert, sobald jemand geantwortet hat. Standard: Deaktivieren.                                                |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Etwas anderes wurde gewählt | Wird ausgeführt, wenn die Auswahl zu keinem der obigen Zweige passte. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Werte (Der/die gewählte(n) Optionswert(e)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional. |
-| Antwortwert | Führt diesen Zweig aus, wenn der gewählte Wert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Werte (Der/die gewählte(n) Optionswert(e)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Name                        | Details                                                                                                                                                                                                                                                                                                                                                                                       |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Etwas anderes wurde gewählt | Wird ausgeführt, wenn die Auswahl zu keinem der obigen Zweige passte. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Werte (Der/die gewählte(n) Optionswert(e)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden)                                |
+| Niemand hat geantwortet     | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional.                                                                                                                                                                                                                                                                                                                       |
+| Antwortwert                 | Führt diesen Zweig aus, wenn der gewählte Wert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Werte (Der/die gewählte(n) Optionswert(e)), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
 
 ### Benutzer Mitglieder auswählen lassen {#ask-to-pick-users}
 
@@ -112,24 +112,24 @@ Zeigt eine Mitgliederauswahl an und wartet, bis der Benutzer wählt, dann geht e
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit der Mitgliederauswahl geantwortet wird. |
-| Nachricht | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die über der Auswahl angezeigte Nachricht. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen. |
-| Minimale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie wenige Mitglieder mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`. |
-| Maximale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie viele Mitglieder höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`. |
-| Nur dieser Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis. |
-| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren. |
+| Name                          | Typ                                                                       | Pflicht | Details                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Interaktion                   | [Interaktion](../../../value-types.md#INTERACTION)                        | Ja      | Die Interaktion, auf die mit der Mitgliederauswahl geantwortet wird.                                                |
+| Nachricht                     | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)              | Ja      | Die über der Auswahl angezeigte Nachricht.                                                                          |
+| Platzhalter                   | [Text](../../../value-types.md#STRING)                                    | Nein    | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen.                |
+| Minimale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie wenige Mitglieder mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`.                           |
+| Maximale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie viele Mitglieder höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`.                |
+| Nur dieser Benutzer           | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis.                                   |
+| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN)                                | Ja      | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja.                                           |
+| Zeitlimit                     | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Nach Abschluss                | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren.                                |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Mitglieder ausgewählt | Wird ausgeführt, wenn der Benutzer ein oder mehrere Mitglieder auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Mitglieder (Die ausgewählten Mitglieder), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional. |
+| Name                    | Details                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mitglieder ausgewählt   | Wird ausgeführt, wenn der Benutzer ein oder mehrere Mitglieder auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Mitglieder (Die ausgewählten Mitglieder), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional.                                                                                                                                                                                                                                                                                                     |
 
 ### Benutzer Rollen auswählen lassen {#ask-to-pick-roles}
 
@@ -137,24 +137,24 @@ Zeigt eine Rollenauswahl an und wartet, bis der Benutzer wählt, dann geht es im
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit der Rollenauswahl geantwortet wird. |
-| Nachricht | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die über der Auswahl angezeigte Nachricht. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen. |
-| Minimale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie wenige Rollen mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`. |
-| Maximale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie viele Rollen höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`. |
-| Nur dieser Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis. |
-| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren. |
+| Name                          | Typ                                                                       | Pflicht | Details                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Interaktion                   | [Interaktion](../../../value-types.md#INTERACTION)                        | Ja      | Die Interaktion, auf die mit der Rollenauswahl geantwortet wird.                                                    |
+| Nachricht                     | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)              | Ja      | Die über der Auswahl angezeigte Nachricht.                                                                          |
+| Platzhalter                   | [Text](../../../value-types.md#STRING)                                    | Nein    | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen.                |
+| Minimale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie wenige Rollen mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`.                               |
+| Maximale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie viele Rollen höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`.                    |
+| Nur dieser Benutzer           | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis.                                   |
+| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN)                                | Ja      | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja.                                           |
+| Zeitlimit                     | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Nach Abschluss                | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren.                                |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Rollen ausgewählt | Wird ausgeführt, wenn der Benutzer eine oder mehrere Rollen auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Rollen (Die ausgewählten Rollen), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional. |
+| Name                    | Details                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rollen ausgewählt       | Wird ausgeführt, wenn der Benutzer eine oder mehrere Rollen auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Rollen (Die ausgewählten Rollen), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional.                                                                                                                                                                                                                                                                                          |
 
 ### Benutzer Kanäle auswählen lassen {#ask-to-pick-channels}
 
@@ -162,25 +162,25 @@ Zeigt eine Kanalauswahl an und wartet, bis der Benutzer wählt, dann geht es im 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit der Kanalauswahl geantwortet wird. |
-| Nachricht | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die über der Auswahl angezeigte Nachricht. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen. |
-| Kanaltypen | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE) | Nein | Beschränkt die Auswahl auf diese Kanaltypen. Leer lassen, um alle zuzulassen. |
-| Minimale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie wenige Kanäle mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`. |
-| Maximale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie viele Kanäle höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`. |
-| Nur dieser Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis. |
-| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren. |
+| Name                          | Typ                                                                       | Pflicht | Details                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Interaktion                   | [Interaktion](../../../value-types.md#INTERACTION)                        | Ja      | Die Interaktion, auf die mit der Kanalauswahl geantwortet wird.                                                     |
+| Nachricht                     | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)              | Ja      | Die über der Auswahl angezeigte Nachricht.                                                                          |
+| Platzhalter                   | [Text](../../../value-types.md#STRING)                                    | Nein    | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen.                |
+| Kanaltypen                    | Liste von [Kanaltyp](../../../value-types.md#CHANNEL_TYPE)                | Nein    | Beschränkt die Auswahl auf diese Kanaltypen. Leer lassen, um alle zuzulassen.                                       |
+| Minimale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie wenige Kanäle mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`.                               |
+| Maximale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie viele Kanäle höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`.                    |
+| Nur dieser Benutzer           | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis.                                   |
+| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN)                                | Ja      | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja.                                           |
+| Zeitlimit                     | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Nach Abschluss                | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren.                                |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Kanäle ausgewählt | Wird ausgeführt, wenn der Benutzer einen oder mehrere Kanäle auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Kanäle (Die ausgewählten Kanäle), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional. |
+| Name                    | Details                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kanäle ausgewählt       | Wird ausgeführt, wenn der Benutzer einen oder mehrere Kanäle auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Kanäle (Die ausgewählten Kanäle), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional.                                                                                                                                                                                                                                                                                           |
 
 ### Benutzer Mitglieder oder Rollen auswählen lassen {#ask-to-pick-mentionables}
 
@@ -188,21 +188,21 @@ Zeigt eine Auswahl an, die Mitglieder oder Rollen enthalten kann, und wartet, bi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Interaktion](../../../value-types.md#INTERACTION) | Ja | Die Interaktion, auf die mit der Auswahl geantwortet wird. |
-| Nachricht | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT) | Ja | Die über der Auswahl angezeigte Nachricht. |
-| Platzhalter | [Text](../../../value-types.md#STRING) | Nein | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen. |
-| Minimale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie wenige Einträge mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`. |
-| Maximale Auswahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie viele Einträge höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`. |
-| Nur dieser Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Nein | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis. |
-| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja. |
-| Zeitlimit | [Dauer](../../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
-| Nach Abschluss | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren. |
+| Name                          | Typ                                                                       | Pflicht | Details                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------- |
+| Interaktion                   | [Interaktion](../../../value-types.md#INTERACTION)                        | Ja      | Die Interaktion, auf die mit der Auswahl geantwortet wird.                                                          |
+| Nachricht                     | [Nachrichteninhalt](../../../value-types.md#MESSAGE_CONTENT)              | Ja      | Die über der Auswahl angezeigte Nachricht.                                                                          |
+| Platzhalter                   | [Text](../../../value-types.md#STRING)                                    | Nein    | Ausgegrauter Text, der angezeigt wird, solange nichts ausgewählt wurde. Maximale Länge: 150 Zeichen.                |
+| Minimale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie wenige Einträge mindestens ausgewählt werden dürfen. Wert: 0 bis 25. Standard: `1`.                             |
+| Maximale Auswahl              | [Ganzzahl](../../../value-types.md#INTEGER)                               | Ja      | Wie viele Einträge höchstens gleichzeitig ausgewählt werden dürfen. Wert: 1 bis 25. Standard: `1`.                  |
+| Nur dieser Benutzer           | [Benutzer](../../../value-types.md#DISCORD_USER)                          | Nein    | Nur dieser Benutzer darf antworten. Alle anderen erhalten einen privaten Hinweis.                                   |
+| Nur für den Benutzer sichtbar | [Ja/Nein](../../../value-types.md#BOOLEAN)                                | Ja      | Zeigt die Auswahl privat der Person, die sie ausgelöst hat. Standard: Ja.                                           |
+| Zeitlimit                     | [Dauer](../../../value-types.md#DURATION)                                 | Ja      | Wie lange gewartet wird, bevor der Zeitablauf-Zweig ausgeführt wird. Wert: 5000 bis 2592000000. Standard: `600000`. |
+| Nach Abschluss                | [Komponenten-Aufräumverhalten](../../../value-types.md#COMPONENT_CLEANUP) | Ja      | Was mit der Auswahl passiert, sobald jemand geantwortet hat. Standard: Deaktivieren.                                |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Ausgewählt | Wird ausgeführt, wenn der Benutzer ein oder mehrere Mitglieder oder Rollen auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Einträge (Die ausgewählten Mitglieder oder Rollen), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
-| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional. |
+| Name                    | Details                                                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Ausgewählt              | Wird ausgeführt, wenn der Benutzer ein oder mehrere Mitglieder oder Rollen auswählt. Optional. Stellt seinen Schritten bereit: Interaktion (Die Auswahlmenü-Interaktion, die das Warten beendet hat), Ausgewählte Einträge (Die ausgewählten Mitglieder oder Rollen), Status (Status-Wert, den die Komponente mitgeführt hat (die auf einer Flow-Komponente gesetzte Custom-ID), falls vorhanden) |
+| Niemand hat geantwortet | Wird ausgeführt, wenn das Zeitlimit ohne Antwort verstreicht. Optional.                                                                                                                                                                                                                                                                                                                           |

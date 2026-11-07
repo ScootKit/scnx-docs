@@ -15,15 +15,15 @@ Führt die "dann"-Aktionen aus, wenn die Bedingung wahr ist, andernfalls führt 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Bedingung | [Ja/Nein](../../value-types.md#BOOLEAN) | Ja | Ja/Nein-Wert, der ausgewertet wird. |
+| Name      | Typ                                     | Pflicht | Details                             |
+| --------- | --------------------------------------- | ------- | ----------------------------------- |
+| Bedingung | [Ja/Nein](../../value-types.md#BOOLEAN) | Ja      | Ja/Nein-Wert, der ausgewertet wird. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Dann | Wird ausgeführt, wenn die Bedingung wahr ist. |
+| Name        | Details                                                   |
+| ----------- | --------------------------------------------------------- |
+| Dann        | Wird ausgeführt, wenn die Bedingung wahr ist.             |
 | Andernfalls | Wird ausgeführt, wenn die Bedingung falsch ist. Optional. |
 
 ### Switch {#switch}
@@ -32,16 +32,16 @@ Führt den Zweig aus, dessen Fall-Wert mit dem Eingabewert übereinstimmt.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Text](../../value-types.md#STRING) | Ja | Wert, der mit den Fall-Werten verglichen wird. |
+| Name | Typ                                 | Pflicht | Details                                        |
+| ---- | ----------------------------------- | ------- | ---------------------------------------------- |
+| Wert | [Text](../../value-types.md#STRING) | Ja      | Wert, der mit den Fall-Werten verglichen wird. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Standardfall | Wird ausgeführt, wenn kein Fall zutrifft. Optional. |
-| Fall-Wert | Führt diesen Zweig aus, wenn der Eingabewert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. |
+| Name         | Details                                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| Standardfall | Wird ausgeführt, wenn kein Fall zutrifft. Optional.                                                          |
+| Fall-Wert    | Führt diesen Zweig aus, wenn der Eingabewert diesem Wert entspricht. Von dir hinzugefügt, einer pro Eintrag. |
 
 ### Wenn ein Wert da ist {#if-present}
 
@@ -49,16 +49,16 @@ Führt "Hat einen Wert" aus, wenn der Wert nicht leer ist (ein leerer Text oder 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../value-types.md#ANY) | Ja | Der zu prüfende Wert. |
+| Name | Typ                                  | Pflicht | Details               |
+| ---- | ------------------------------------ | ------- | --------------------- |
+| Wert | [Beliebig](../../value-types.md#ANY) | Ja      | Der zu prüfende Wert. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
+| Name           | Details                                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Hat einen Wert | Wird ausgeführt, wenn der Wert gesetzt ist. Stellt seinen Schritten bereit: Wert (Der Wert, der hier sicher nicht leer ist) |
-| Ist leer | Wird ausgeführt, wenn der Wert leer ist. Optional. |
+| Ist leer       | Wird ausgeführt, wenn der Wert leer ist. Optional.                                                                          |
 
 ### Nach Art verzweigen {#switch-on-type}
 
@@ -66,16 +66,16 @@ Führt den Zweig für die Art des Werts aus, bei einem Wert, der eine von mehrer
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Beliebig](../../value-types.md#ANY) | Ja | Der Wert, dessen Art den Zweig bestimmt. |
+| Name | Typ                                  | Pflicht | Details                                  |
+| ---- | ------------------------------------ | ------- | ---------------------------------------- |
+| Wert | [Beliebig](../../value-types.md#ANY) | Ja      | Der Wert, dessen Art den Zweig bestimmt. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Andere Arten | Läuft für jede Art ohne eigenen Zweig. Läuft nicht, wenn es keinen Wert gibt, zum Beispiel bei einem Audit-Log-Eintrag ohne Details. Optional. |
-| Art | Wird ausgeführt, wenn der Wert von dieser Art ist. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Wert (Der Wert als die Art dieses Zweigs) |
+| Name         | Details                                                                                                                                                              |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Andere Arten | Läuft für jede Art ohne eigenen Zweig. Läuft nicht, wenn es keinen Wert gibt, zum Beispiel bei einem Audit-Log-Eintrag ohne Details. Optional.                       |
+| Art          | Wird ausgeführt, wenn der Wert von dieser Art ist. Von dir hinzugefügt, einer pro Eintrag. Stellt seinen Schritten bereit: Wert (Der Wert als die Art dieses Zweigs) |
 
 ### Nach Unterbefehl verzweigen {#branch-on-subcommand}
 
@@ -83,16 +83,16 @@ Führt den Zweig aus, der zum aufgerufenen Unterbefehl (oder zur Unterbefehlsgru
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Interaktion | [Slash-Befehl](../../value-types.md#SLASH_COMMAND_INTERACTION) | Ja | Die Slash-Befehl-Interaktion, die diesen Ablauf ausgelöst hat. |
+| Name        | Typ                                                            | Pflicht | Details                                                        |
+| ----------- | -------------------------------------------------------------- | ------- | -------------------------------------------------------------- |
+| Interaktion | [Slash-Befehl](../../value-types.md#SLASH_COMMAND_INTERACTION) | Ja      | Die Slash-Befehl-Interaktion, die diesen Ablauf ausgelöst hat. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Gruppe | Die Unterbefehlsgruppe, zu der dieser Zweig passt (leer, wenn der Unterbefehl keiner Gruppe angehört). Von dir hinzugefügt, einer pro Eintrag. |
-| Unterbefehl | Der Unterbefehl, zu dem dieser Zweig passt. Von dir hinzugefügt, einer pro Eintrag. |
+| Name        | Details                                                                                                                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gruppe      | Die Unterbefehlsgruppe, zu der dieser Zweig passt (leer, wenn der Unterbefehl keiner Gruppe angehört). Von dir hinzugefügt, einer pro Eintrag. |
+| Unterbefehl | Der Unterbefehl, zu dem dieser Zweig passt. Von dir hinzugefügt, einer pro Eintrag.                                                            |
 
 ### Für jeden Eintrag {#for-each}
 
@@ -100,14 +100,14 @@ Führt den Body einmal für jeden Eintrag der Liste aus.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Einträge | Liste von [Beliebig](../../value-types.md#ANY) | Ja | Liste, die durchlaufen wird. |
+| Name     | Typ                                            | Pflicht | Details                      |
+| -------- | ---------------------------------------------- | ------- | ---------------------------- |
+| Einträge | Liste von [Beliebig](../../value-types.md#ANY) | Ja      | Liste, die durchlaufen wird. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
+| Name | Details                                                                                                                                                                          |
+| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Body | Wird einmal pro Eintrag ausgeführt. Stellt seinen Schritten bereit: Eintrag (Aktueller Eintrag, der durchlaufen wird), Index (Position des aktuellen Eintrags (beginnend bei 0)) |
 
 ### Für jeden Eintrag der Zuordnung {#iterate-map}
@@ -116,14 +116,14 @@ Führt den Body einmal für jeden Schlüssel und Wert der Zuordnung aus.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnung | Nachschlagetabelle von [Text](../../value-types.md#STRING) zu [Beliebig](../../value-types.md#ANY) | Ja | Zuordnung, die durchlaufen wird. |
+| Name      | Typ                                                                                                | Pflicht | Details                          |
+| --------- | -------------------------------------------------------------------------------------------------- | ------- | -------------------------------- |
+| Zuordnung | Nachschlagetabelle von [Text](../../value-types.md#STRING) zu [Beliebig](../../value-types.md#ANY) | Ja      | Zuordnung, die durchlaufen wird. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
+| Name | Details                                                                                                                                              |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Body | Wird einmal pro Eintrag ausgeführt. Stellt seinen Schritten bereit: Schlüssel (Schlüssel des aktuellen Eintrags), Wert (Wert des aktuellen Eintrags) |
 
 ### Warten {#wait}
@@ -132,9 +132,9 @@ Pausiert den Flow für die angegebene Dauer.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Dauer | [Dauer](../../value-types.md#DURATION) | Ja | Wie lange gewartet wird, bis zu 30 Tage. Ab 5 Sekunden wird der Flow pausiert und später fortgesetzt, auch nach einem Neustart. In einer Schleife sind nur wenige Sekunden möglich. Wert: 0 bis 2592000000. Standard: `1000`. |
+| Name  | Typ                                    | Pflicht | Details                                                                                                                                                                                                                       |
+| ----- | -------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Dauer | [Dauer](../../value-types.md#DURATION) | Ja      | Wie lange gewartet wird, bis zu 30 Tage. Ab 5 Sekunden wird der Flow pausiert und später fortgesetzt, auch nach einem Neustart. In einer Schleife sind nur wenige Sekunden möglich. Wert: 0 bis 2592000000. Standard: `1000`. |
 
 ### Flow stoppen {#stop-flow}
 
@@ -146,9 +146,9 @@ Ein Kommentar, der im Editor angezeigt wird. Hat keine Auswirkungen zur Laufzeit
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Notiz | [Text](../../value-types.md#STRING) | Ja | Text der Notiz. Maximale Länge: 1000 Zeichen. |
+| Name  | Typ                                 | Pflicht | Details                                       |
+| ----- | ----------------------------------- | ------- | --------------------------------------------- |
+| Notiz | [Text](../../value-types.md#STRING) | Ja      | Text der Notiz. Maximale Länge: 1000 Zeichen. |
 
 ### Wiederholen {#repeat}
 
@@ -156,14 +156,14 @@ Führt den Rumpf eine feste Anzahl an Durchläufen aus.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Anzahl | [Ganzzahl](../../value-types.md#INTEGER) | Ja | Wie oft der Rumpf ausgeführt wird (1-10000). Wert: 1 bis 10000. |
+| Name   | Typ                                      | Pflicht | Details                                                         |
+| ------ | ---------------------------------------- | ------- | --------------------------------------------------------------- |
+| Anzahl | [Ganzzahl](../../value-types.md#INTEGER) | Ja      | Wie oft der Rumpf ausgeführt wird (1-10000). Wert: 1 bis 10000. |
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
+| Name  | Details                                                                                                                         |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------- |
 | Rumpf | Wird einmal pro Durchlauf ausgeführt. Stellt seinen Schritten bereit: Index (Nummer des aktuellen Durchlaufs (beginnend bei 0)) |
 
 ### Versuchen {#try}
@@ -172,9 +172,9 @@ Führt die Aktionen im Versuch-Zweig aus; schlägt eine davon fehl, wird stattde
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
-| Versuch | Aktionen, die versucht werden sollen. |
+| Name       | Details                                                                                                                                                                                                               |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Versuch    | Aktionen, die versucht werden sollen.                                                                                                                                                                                 |
 | Bei Fehler | Wird ausgeführt, wenn eine Aktion im "Versuch"-Zweig fehlschlägt. Optional. Stellt seinen Schritten bereit: Fehlercode (Maschinenlesbarer Code des Fehlers), Fehlermeldung (Menschenlesbare Beschreibung des Fehlers) |
 
 ### Zufälliger Zweig {#random-branch}
@@ -183,8 +183,8 @@ Führt zufällig höchstens einen Zweig anhand der Gewichtungen aus. Ergeben die
 
 **Zweige**
 
-| Name | Details |
-| --- | --- |
+| Name       | Details                                                                                               |
+| ---------- | ----------------------------------------------------------------------------------------------------- |
 | Gewichtung | Chance in Prozent, dass dieser Zweig ausgeführt wird (0-100). Von dir hinzugefügt, einer pro Eintrag. |
 
 ### Schleife abbrechen {#break-loop}

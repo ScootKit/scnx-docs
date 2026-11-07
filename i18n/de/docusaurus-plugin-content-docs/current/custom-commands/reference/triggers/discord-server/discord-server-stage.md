@@ -15,8 +15,8 @@ Wird ausgelöst, wenn eine Stage-Instanz startet (ein Stage-Kanal geht live).
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                     | Details                            |
+| ----- | ------------------------------------------------------- | ---------------------------------- |
 | Stage | [Stage-Instanz](../../../value-types.md#STAGE_INSTANCE) | Stage-Instanz, die erstellt wurde. |
 
 ### Stage beendet {#stage-instance-deleted}
@@ -25,8 +25,8 @@ Wird ausgelöst, wenn eine Stage-Instanz endet.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                                     | Details                            |
+| ----- | ------------------------------------------------------- | ---------------------------------- |
 | Stage | [Stage-Instanz](../../../value-types.md#STAGE_INSTANCE) | Stage-Instanz, die gelöscht wurde. |
 
 ### Stage aktualisiert {#stage-instance-updated}
@@ -35,7 +35,7 @@ Wird ausgelöst, wenn eine Stage-Instanz aktualisiert wird (Thema oder Datenschu
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name            | Typ                                                     | Details                                              |
+| --------------- | ------------------------------------------------------- | ---------------------------------------------------- |
 | Vorherige Stage | [Stage-Instanz](../../../value-types.md#STAGE_INSTANCE) | Stage-Status vor der Aktualisierung. Kann leer sein. |
-| Aktuelle Stage | [Stage-Instanz](../../../value-types.md#STAGE_INSTANCE) | Stage-Status nach der Aktualisierung. |
+| Aktuelle Stage  | [Stage-Instanz](../../../value-types.md#STAGE_INSTANCE) | Stage-Status nach der Aktualisierung.                |

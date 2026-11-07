@@ -17,22 +17,22 @@ Benötigte Intents: `GuildMessages`, `MessageContent`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Nein | Löst nur in diesen Kanälen aus (leer lassen für alle Kanäle). Höchstens 25 Einträge. |
-| Vergleichstyp | [Nachricht-Übereinstimmung](../../../value-types.md#MESSAGE_MATCH_TYPE) | Ja | Wie der Nachrichteninhalt verglichen wird. Standard: Jede Nachricht. |
-| Muster | [Text](../../../value-types.md#STRING) | Nein | Text oder Regex, der mit der Nachricht verglichen wird. Maximale Länge: 4000 Zeichen. Wird angezeigt, wenn Vergleichstyp Enthält, Gleich, Beginnt mit, Endet mit, Regex ist. |
-| Groß-/Kleinschreibung ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Vergleicht ohne Berücksichtigung der Groß-/Kleinschreibung. Standard: Ja. Wird angezeigt, wenn Vergleichstyp Enthält, Gleich, Beginnt mit, Endet mit ist. |
-| Bots ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Überspringt Nachrichten, die von Bots gesendet wurden. Standard: Ja. |
+| Name                             | Typ                                                                     | Pflicht | Details                                                                                                                                                                      |
+| -------------------------------- | ----------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Kanäle                           | Liste von [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL)       | Nein    | Löst nur in diesen Kanälen aus (leer lassen für alle Kanäle). Höchstens 25 Einträge.                                                                                         |
+| Vergleichstyp                    | [Nachricht-Übereinstimmung](../../../value-types.md#MESSAGE_MATCH_TYPE) | Ja      | Wie der Nachrichteninhalt verglichen wird. Standard: Jede Nachricht.                                                                                                         |
+| Muster                           | [Text](../../../value-types.md#STRING)                                  | Nein    | Text oder Regex, der mit der Nachricht verglichen wird. Maximale Länge: 4000 Zeichen. Wird angezeigt, wenn Vergleichstyp Enthält, Gleich, Beginnt mit, Endet mit, Regex ist. |
+| Groß-/Kleinschreibung ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN)                              | Ja      | Vergleicht ohne Berücksichtigung der Groß-/Kleinschreibung. Standard: Ja. Wird angezeigt, wenn Vergleichstyp Enthält, Gleich, Beginnt mit, Endet mit ist.                    |
+| Bots ignorieren                  | [Ja/Nein](../../../value-types.md#BOOLEAN)                              | Ja      | Überspringt Nachrichten, die von Bots gesendet wurden. Standard: Ja.                                                                                                         |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Die gesendete Nachricht. |
-| Autor | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der die Nachricht gesendet hat. |
-| Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Autor als Server-Mitglied. Kann leer sein. |
-| Kanal | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Kanal, in dem die Nachricht gesendet wurde. |
+| Name      | Typ                                                     | Details                                     |
+| --------- | ------------------------------------------------------- | ------------------------------------------- |
+| Nachricht | [Nachricht](../../../value-types.md#MESSAGE)            | Die gesendete Nachricht.                    |
+| Autor     | [Benutzer](../../../value-types.md#DISCORD_USER)        | Benutzer, der die Nachricht gesendet hat.   |
+| Mitglied  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Autor als Server-Mitglied. Kann leer sein.  |
+| Kanal     | [Textkanal](../../../value-types.md#GUILD_TEXT_CHANNEL) | Kanal, in dem die Nachricht gesendet wurde. |
 
 ### Nachricht aktualisiert {#message-updated}
 
@@ -42,10 +42,10 @@ Benötigte Intents: `GuildMessages`, `MessageContent`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                | Typ                                          | Details                                            |
+| ------------------- | -------------------------------------------- | -------------------------------------------------- |
 | Vorherige Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Die Nachricht vor der Bearbeitung. Kann leer sein. |
-| Aktuelle Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Die Nachricht nach der Bearbeitung. |
+| Aktuelle Nachricht  | [Nachricht](../../../value-types.md#MESSAGE) | Die Nachricht nach der Bearbeitung.                |
 
 ### Nachricht gelöscht {#message-deleted}
 
@@ -55,8 +55,8 @@ Benötigte Intents: `GuildMessages`, `MessageContent`.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name                | Typ                                          | Details                  |
+| ------------------- | -------------------------------------------- | ------------------------ |
 | Gelöschte Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Die gelöschte Nachricht. |
 
 ### Reaktion hinzugefügt {#reaction-added}
@@ -67,20 +67,20 @@ Benötigte Intents: `GuildMessageReactions`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
-| Bestimmtes Emoji | [Text](../../../value-types.md#STRING) | Nein | Nur für dieses Emoji auslösen (Name oder Unicode). Leer lassen, um jedes Emoji zu erfassen. |
-| Bots ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Wenn aktiviert, werden von Bots hinzugefügte Reaktionen ignoriert. Standard: Ja. |
+| Name             | Typ                                                             | Pflicht | Details                                                                                     |
+| ---------------- | --------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------- |
+| Kanäle           | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle.                                |
+| Bestimmtes Emoji | [Text](../../../value-types.md#STRING)                          | Nein    | Nur für dieses Emoji auslösen (Name oder Unicode). Leer lassen, um jedes Emoji zu erfassen. |
+| Bots ignorieren  | [Ja/Nein](../../../value-types.md#BOOLEAN)                      | Ja      | Wenn aktiviert, werden von Bots hinzugefügte Reaktionen ignoriert. Standard: Ja.            |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Nachricht, zu der die Reaktion hinzugefügt wurde. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der die Reaktion hinzugefügt hat. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji, das verwendet wurde (Name oder Unicode). |
-| Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Server-Mitglied-Darstellung des reagierenden Benutzers, falls verfügbar. Kann leer sein. |
+| Name      | Typ                                                     | Details                                                                                  |
+| --------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Nachricht | [Nachricht](../../../value-types.md#MESSAGE)            | Nachricht, zu der die Reaktion hinzugefügt wurde.                                        |
+| Benutzer  | [Benutzer](../../../value-types.md#DISCORD_USER)        | Benutzer, der die Reaktion hinzugefügt hat.                                              |
+| Emoji     | [Text](../../../value-types.md#STRING)                  | Emoji, das verwendet wurde (Name oder Unicode).                                          |
+| Mitglied  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Server-Mitglied-Darstellung des reagierenden Benutzers, falls verfügbar. Kann leer sein. |
 
 ### Reaktion entfernt {#reaction-removed}
 
@@ -90,20 +90,20 @@ Benötigte Intents: `GuildMessageReactions`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle. |
-| Bestimmtes Emoji | [Text](../../../value-types.md#STRING) | Nein | Löst nur für dieses Emoji aus (Name oder Unicode). Leer lassen für alle Emojis. |
-| Bots ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Wenn aktiviert, werden von Bots entfernte Reaktionen ignoriert. Standard: Ja. |
+| Name             | Typ                                                             | Pflicht | Details                                                                         |
+| ---------------- | --------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------- |
+| Kanäle           | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle.                    |
+| Bestimmtes Emoji | [Text](../../../value-types.md#STRING)                          | Nein    | Löst nur für dieses Emoji aus (Name oder Unicode). Leer lassen für alle Emojis. |
+| Bots ignorieren  | [Ja/Nein](../../../value-types.md#BOOLEAN)                      | Ja      | Wenn aktiviert, werden von Bots entfernte Reaktionen ignoriert. Standard: Ja.   |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Nachricht, von der die Reaktion entfernt wurde. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der die Reaktion entfernt hat. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji, das entfernt wurde (Name oder Unicode). |
-| Mitglied | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Server-Mitglied-Darstellung des Benutzers, falls verfügbar. Kann leer sein. |
+| Name      | Typ                                                     | Details                                                                     |
+| --------- | ------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Nachricht | [Nachricht](../../../value-types.md#MESSAGE)            | Nachricht, von der die Reaktion entfernt wurde.                             |
+| Benutzer  | [Benutzer](../../../value-types.md#DISCORD_USER)        | Benutzer, der die Reaktion entfernt hat.                                    |
+| Emoji     | [Text](../../../value-types.md#STRING)                  | Emoji, das entfernt wurde (Name oder Unicode).                              |
+| Mitglied  | [Server-Mitglied](../../../value-types.md#GUILD_MEMBER) | Server-Mitglied-Darstellung des Benutzers, falls verfügbar. Kann leer sein. |
 
 ### Alle Reaktionen entfernt {#all-reactions-removed}
 
@@ -113,14 +113,14 @@ Benötigte Intents: `GuildMessageReactions`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                      |
+| ------ | --------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                          | Details                                      |
+| --------- | -------------------------------------------- | -------------------------------------------- |
 | Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Nachricht, deren Reaktionen gelöscht wurden. |
 
 ### Alle Reaktionen von Emoji entfernt {#reaction-emoji-removed}
@@ -131,16 +131,16 @@ Benötigte Intents: `GuildMessageReactions`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                      |
+| ------ | --------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                          | Details                                      |
+| --------- | -------------------------------------------- | -------------------------------------------- |
 | Nachricht | [Nachricht](../../../value-types.md#MESSAGE) | Nachricht, deren Reaktionen gelöscht wurden. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji, dessen Reaktionen gelöscht wurden. |
+| Emoji     | [Text](../../../value-types.md#STRING)       | Emoji, dessen Reaktionen gelöscht wurden.    |
 
 ### Nachrichten in Massen gelöscht {#messages-bulk-deleted}
 
@@ -150,16 +150,16 @@ Benötigte Intents: `GuildMessages`, `MessageContent`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                      |
+| ------ | --------------------------------------------------------------- | ------- | ------------------------------------------------------------ |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Löst nur in diesen Kanälen aus. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Kanal, aus dem die Nachrichten gelöscht wurden. |
-| Nachrichten | Liste von [Nachricht](../../../value-types.md#MESSAGE) | Nachrichten, die gelöscht wurden. |
+| Name        | Typ                                                    | Details                                         |
+| ----------- | ------------------------------------------------------ | ----------------------------------------------- |
+| Kanal       | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL)  | Kanal, aus dem die Nachrichten gelöscht wurden. |
+| Nachrichten | Liste von [Nachricht](../../../value-types.md#MESSAGE) | Nachrichten, die gelöscht wurden.               |
 
 ### Tippen gestartet {#typing-started}
 
@@ -169,15 +169,15 @@ Benötigte Intents: `GuildMessageTyping`.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle. |
-| Bots ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Wenn aktiviert, werden Tipp-Ereignisse von Bots ignoriert. Standard: Ja. |
+| Name            | Typ                                                             | Pflicht | Details                                                                  |
+| --------------- | --------------------------------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Kanäle          | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur in diesen Kanälen auslösen. Leer lassen für alle Kanäle.             |
+| Bots ignorieren | [Ja/Nein](../../../value-types.md#BOOLEAN)                      | Ja      | Wenn aktiviert, werden Tipp-Ereignisse von Bots ignoriert. Standard: Ja. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Kanal | [Kanal](../../../value-types.md#CHANNEL) | Kanal, in dem der Benutzer zu tippen begonnen hat. |
-| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER) | Benutzer, der zu tippen begonnen hat. |
-| Seit | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Zeitstempel, zu dem das Tippen begonnen hat. |
+| Name     | Typ                                                   | Details                                            |
+| -------- | ----------------------------------------------------- | -------------------------------------------------- |
+| Kanal    | [Kanal](../../../value-types.md#CHANNEL)              | Kanal, in dem der Benutzer zu tippen begonnen hat. |
+| Benutzer | [Benutzer](../../../value-types.md#DISCORD_USER)      | Benutzer, der zu tippen begonnen hat.              |
+| Seit     | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Zeitstempel, zu dem das Tippen begonnen hat.       |

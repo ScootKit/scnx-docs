@@ -15,14 +15,14 @@ Verbindet mehrere Texte nahtlos miteinander.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Text](../../../value-types.md#STRING) | Ja | Texte, die zusammengefügt werden. |
+| Name  | Typ                                              | Pflicht | Details                           |
+| ----- | ------------------------------------------------ | ------- | --------------------------------- |
+| Werte | Liste von [Text](../../../value-types.md#STRING) | Ja      | Texte, die zusammengefügt werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der kombinierte Text. |
 
 ### Textvorlage formatieren {#string-template}
@@ -31,15 +31,15 @@ Ersetzt \{placeholder\}-Tokens in einer Vorlage anhand einer Zuordnung von Schl�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Vorlage | [Text](../../../value-types.md#STRING) | Ja | Vorlagentext mit \{placeholder\}-Platzhaltern. |
-| Werte | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja | Zuordnung von Platzhalternamen zu Werten. |
+| Name    | Typ                                                                                                     | Pflicht | Details                                        |
+| ------- | ------------------------------------------------------------------------------------------------------- | ------- | ---------------------------------------------- |
+| Vorlage | [Text](../../../value-types.md#STRING)                                                                  | Ja      | Vorlagentext mit \{placeholder\}-Platzhaltern. |
+| Werte   | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Text](../../../value-types.md#STRING) | Ja      | Zuordnung von Platzhalternamen zu Werten.      |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der eingesetzte Text. |
 
 ### Im Text ersetzen {#string-replace}
@@ -48,17 +48,17 @@ Ersetzt Vorkommen eines Textteils durch einen anderen Wert.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, in dem gesucht wird. |
-| Suche | [Text](../../../value-types.md#STRING) | Ja | Der gesuchte Teilstring. |
-| Ersetzung | [Text](../../../value-types.md#STRING) | Ja | Text, durch den Treffer ersetzt werden. |
-| Alle ersetzen | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Ersetzt jedes Vorkommen (wahr) oder nur das erste (falsch). Standard: Ja. |
+| Name          | Typ                                        | Pflicht | Details                                                                   |
+| ------------- | ------------------------------------------ | ------- | ------------------------------------------------------------------------- |
+| Text          | [Text](../../../value-types.md#STRING)     | Ja      | Der Text, in dem gesucht wird.                                            |
+| Suche         | [Text](../../../value-types.md#STRING)     | Ja      | Der gesuchte Teilstring.                                                  |
+| Ersetzung     | [Text](../../../value-types.md#STRING)     | Ja      | Text, durch den Treffer ersetzt werden.                                   |
+| Alle ersetzen | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein    | Ersetzt jedes Vorkommen (wahr) oder nur das erste (falsch). Standard: Ja. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                 |
+| -------- | -------------------------------------- | ----------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der resultierende Text. |
 
 ### Mit Regex extrahieren {#regex-extract}
@@ -67,17 +67,17 @@ Gleicht den Text mit einem regulären Ausdruck ab und gibt die angeforderte Erfa
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der durchsucht wird. |
-| Muster | [Text](../../../value-types.md#STRING) | Ja | Das Muster des regulären Ausdrucks. |
-| Flags | [Text](../../../value-types.md#STRING) | Nein | Optionale Regex-Flags (z. B. "i" für Groß-/Kleinschreibung ignorieren). |
-| Gruppe | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Index der Erfassungsgruppe (0 = gesamter Treffer). Minimum: 0. Standard: `0`. |
+| Name   | Typ                                         | Pflicht | Details                                                                       |
+| ------ | ------------------------------------------- | ------- | ----------------------------------------------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING)      | Ja      | Text, der durchsucht wird.                                                    |
+| Muster | [Text](../../../value-types.md#STRING)      | Ja      | Das Muster des regulären Ausdrucks.                                           |
+| Flags  | [Text](../../../value-types.md#STRING)      | Nein    | Optionale Regex-Flags (z. B. "i" für Groß-/Kleinschreibung ignorieren).       |
+| Gruppe | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Index der Erfassungsgruppe (0 = gesamter Treffer). Minimum: 0. Standard: `0`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                                                                       |
+| -------- | -------------------------------------- | ----------------------------------------------------------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Die getroffene Gruppe oder leer, wenn es keinen Treffer gibt. Kann leer sein. |
 
 ### Discord-Markdown escapen {#escape-discord-markdown}
@@ -86,15 +86,15 @@ Escapt Discord-Markdown im Text, sodass Formatierungen (fett, kursiv, Code, Spoi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu escapende Text. |
-| Erwähnungen escapen | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein | Neutralisiert zusätzlich @everyone/@here sowie Benutzer-, Rollen- und Kanal-Erwähnungen, damit sie nicht pingen (standardmäßig aktiv). Standard: Ja. |
+| Name                | Typ                                        | Pflicht | Details                                                                                                                                              |
+| ------------------- | ------------------------------------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text                | [Text](../../../value-types.md#STRING)     | Ja      | Der zu escapende Text.                                                                                                                               |
+| Erwähnungen escapen | [Ja/Nein](../../../value-types.md#BOOLEAN) | Nein    | Neutralisiert zusätzlich @everyone/@here sowie Benutzer-, Rollen- und Kanal-Erwähnungen, damit sie nicht pingen (standardmäßig aktiv). Standard: Ja. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                |
+| ---- | -------------------------------------- | ------------------------------------------------------ |
 | Text | [Text](../../../value-types.md#STRING) | Der escapte Text, sicher als reiner Inhalt versendbar. |
 
 ### Großbuchstaben {#string-uppercase}
@@ -103,14 +103,14 @@ Konvertiert einen Text zu Großbuchstaben.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der umgewandelt wird. |
+| Name | Typ                                    | Pflicht | Details                         |
+| ---- | -------------------------------------- | ------- | ------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der umgewandelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                     |
+| -------- | -------------------------------------- | --------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der Text in Großbuchstaben. |
 
 ### Kleinbuchstaben {#string-lowercase}
@@ -119,14 +119,14 @@ Konvertiert einen Text zu Kleinbuchstaben.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der umgewandelt wird. |
+| Name | Typ                                    | Pflicht | Details                     |
+| ---- | -------------------------------------- | ------- | --------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Text, der umgewandelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                      |
+| -------- | -------------------------------------- | ---------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der Text in Kleinbuchstaben. |
 
 ### Titelformat {#string-title-case}
@@ -135,14 +135,14 @@ Setzt den ersten Buchstaben jedes Worts im Text groß.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der umgewandelt wird. |
+| Name | Typ                                    | Pflicht | Details                     |
+| ---- | -------------------------------------- | ------- | --------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Text, der umgewandelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                                 |
+| -------- | -------------------------------------- | --------------------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der Text in Wortanfangs-Großschreibung. |
 
 ### Text trimmen {#string-trim}
@@ -151,14 +151,14 @@ Entfernt führende und nachfolgende Leerzeichen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, dessen Leerzeichen am Anfang und Ende entfernt werden. |
+| Name | Typ                                    | Pflicht | Details                                                      |
+| ---- | -------------------------------------- | ------- | ------------------------------------------------------------ |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Text, dessen Leerzeichen am Anfang und Ende entfernt werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details            |
+| -------- | -------------------------------------- | ------------------ |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der gekürzte Text. |
 
 ### Text teilen {#string-split}
@@ -167,15 +167,15 @@ Teilt einen Text mit Trennzeichen in eine Liste.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der geteilt wird. |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Ja | Trennzeichen, an dem geteilt wird. |
+| Name         | Typ                                    | Pflicht | Details                            |
+| ------------ | -------------------------------------- | ------- | ---------------------------------- |
+| Text         | [Text](../../../value-types.md#STRING) | Ja      | Text, der geteilt wird.            |
+| Trennzeichen | [Text](../../../value-types.md#STRING) | Ja      | Trennzeichen, an dem geteilt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                              | Details                             |
+| -------- | ------------------------------------------------ | ----------------------------------- |
 | Ergebnis | Liste von [Text](../../../value-types.md#STRING) | Die resultierende Liste von Texten. |
 
 ### Textlänge {#string-length}
@@ -184,14 +184,14 @@ Gibt die Anzahl der Zeichen in einem Text zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, dessen Länge gemessen wird. |
+| Name | Typ                                    | Pflicht | Details                               |
+| ---- | -------------------------------------- | ------- | ------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der Text, dessen Länge gemessen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details               |
+| ----- | ------------------------------------------- | --------------------- |
 | Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Die Länge des Textes. |
 
 ### Beginnt mit {#string-starts-with}
@@ -200,15 +200,15 @@ Gibt die Anzahl der Zeichen in einem Text zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der geprüft wird. |
-| Präfix | [Text](../../../value-types.md#STRING) | Ja | Präfix, nach dem gesucht wird. |
+| Name   | Typ                                    | Pflicht | Details                        |
+| ------ | -------------------------------------- | ------- | ------------------------------ |
+| Text   | [Text](../../../value-types.md#STRING) | Ja      | Text, der geprüft wird.        |
+| Präfix | [Text](../../../value-types.md#STRING) | Ja      | Präfix, nach dem gesucht wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                     |
+| -------- | ------------------------------------------ | ------------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | True, wenn der Text mit dem Präfix beginnt. |
 
 ### Endet mit {#string-ends-with}
@@ -217,15 +217,15 @@ Gibt die Anzahl der Zeichen in einem Text zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu prüfende Text. |
-| Suffix | [Text](../../../value-types.md#STRING) | Ja | Das gesuchte Suffix. |
+| Name   | Typ                                    | Pflicht | Details               |
+| ------ | -------------------------------------- | ------- | --------------------- |
+| Text   | [Text](../../../value-types.md#STRING) | Ja      | Der zu prüfende Text. |
+| Suffix | [Text](../../../value-types.md#STRING) | Ja      | Das gesuchte Suffix.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                   |
+| -------- | ------------------------------------------ | ----------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | True, wenn der Text mit dem Suffix endet. |
 
 ### Enthält Text {#string-contains}
@@ -234,15 +234,15 @@ Gibt die Anzahl der Zeichen in einem Text zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der durchsucht wird. |
-| Suchtext | [Text](../../../value-types.md#STRING) | Ja | Teilzeichenfolge, nach der gesucht wird. |
+| Name     | Typ                                    | Pflicht | Details                                  |
+| -------- | -------------------------------------- | ------- | ---------------------------------------- |
+| Text     | [Text](../../../value-types.md#STRING) | Ja      | Text, der durchsucht wird.               |
+| Suchtext | [Text](../../../value-types.md#STRING) | Ja      | Teilzeichenfolge, nach der gesucht wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                                |
+| -------- | ------------------------------------------ | -------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | True, wenn der Textteil gefunden wird. |
 
 ### Teil eines Textes {#string-substring}
@@ -251,16 +251,16 @@ Extrahiert einen Teil eines Textes, der bei einem Index beginnt.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Ausgangstext. |
-| Start | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Startindex (beginnend bei 0). Minimum: 0. |
-| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Anzahl der zu extrahierenden Zeichen; leer lassen für den Rest des Textes. Minimum: 0. |
+| Name  | Typ                                         | Pflicht | Details                                                                                |
+| ----- | ------------------------------------------- | ------- | -------------------------------------------------------------------------------------- |
+| Text  | [Text](../../../value-types.md#STRING)      | Ja      | Der Ausgangstext.                                                                      |
+| Start | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Startindex (beginnend bei 0). Minimum: 0.                                              |
+| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Anzahl der zu extrahierenden Zeichen; leer lassen für den Rest des Textes. Minimum: 0. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der extrahierte Teil. |
 
 ### Text links auffüllen {#string-pad-left}
@@ -269,16 +269,16 @@ Füllt einen Text links auf, bis er die gewünschte Länge erreicht.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der aufgefüllt wird. |
-| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Gewünschte Gesamtlänge. Minimum: 0. |
-| Füllzeichen | [Text](../../../value-types.md#STRING) | Ja | Einzelnes Zeichen, mit dem aufgefüllt wird. Länge: 1 bis 1 Zeichen. |
+| Name        | Typ                                         | Pflicht | Details                                                             |
+| ----------- | ------------------------------------------- | ------- | ------------------------------------------------------------------- |
+| Text        | [Text](../../../value-types.md#STRING)      | Ja      | Text, der aufgefüllt wird.                                          |
+| Länge       | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Gewünschte Gesamtlänge. Minimum: 0.                                 |
+| Füllzeichen | [Text](../../../value-types.md#STRING)      | Ja      | Einzelnes Zeichen, mit dem aufgefüllt wird. Länge: 1 bis 1 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der aufgefüllte Text. |
 
 ### Text rechts auffüllen {#string-pad-right}
@@ -287,16 +287,16 @@ Füllt einen Text rechts auf, bis er die gewünschte Länge erreicht.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der aufgefüllt wird. |
-| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Gewünschte Gesamtlänge. Minimum: 0. |
-| Füllzeichen | [Text](../../../value-types.md#STRING) | Ja | Einzelnes Zeichen, mit dem aufgefüllt wird. Länge: 1 bis 1 Zeichen. |
+| Name        | Typ                                         | Pflicht | Details                                                             |
+| ----------- | ------------------------------------------- | ------- | ------------------------------------------------------------------- |
+| Text        | [Text](../../../value-types.md#STRING)      | Ja      | Text, der aufgefüllt wird.                                          |
+| Länge       | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Gewünschte Gesamtlänge. Minimum: 0.                                 |
+| Füllzeichen | [Text](../../../value-types.md#STRING)      | Ja      | Einzelnes Zeichen, mit dem aufgefüllt wird. Länge: 1 bis 1 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der aufgefüllte Text. |
 
 ### Text wiederholen {#string-repeat}
@@ -305,15 +305,15 @@ Wiederholt einen Text eine bestimmte Anzahl von Malen. Das Ergebnis ist auf 4096
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Text, der wiederholt wird. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Wie oft der Text wiederholt wird. Minimum: 0. |
+| Name   | Typ                                         | Pflicht | Details                                       |
+| ------ | ------------------------------------------- | ------- | --------------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING)      | Ja      | Text, der wiederholt wird.                    |
+| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Wie oft der Text wiederholt wird. Minimum: 0. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der wiederholte Text. |
 
 ### Pluralisieren {#pluralize}
@@ -322,21 +322,21 @@ Wählt anhand der Pluralregeln der Sprache die richtige Wortform für eine Zahl.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Anzahl | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die Zahl, für die die Wortform gewählt wird. |
-| Singularform | [Text](../../../value-types.md#STRING) | Ja | Form für die Kategorie "one", z. B. "%count% Eintrag". |
-| Pluralform | [Text](../../../value-types.md#STRING) | Ja | Form für die Kategorie "other" (der allgemeine Plural), z. B. "%count% Einträge". Wird auch als Ersatz verwendet, wenn eine benötigte Form fehlt. |
-| Nullform | [Text](../../../value-types.md#STRING) | Nein | Optionale Form für die Kategorie "zero" (von manchen Sprachen genutzt). |
-| Zweierform | [Text](../../../value-types.md#STRING) | Nein | Optionale Form für die Kategorie "two" (von manchen Sprachen genutzt). |
-| Wenige-Form | [Text](../../../value-types.md#STRING) | Nein | Optionale Form für die Kategorie "few" (von manchen Sprachen genutzt). |
-| Viele-Form | [Text](../../../value-types.md#STRING) | Nein | Optionale Form für die Kategorie "many" (von manchen Sprachen genutzt). |
-| Sprache | [Text](../../../value-types.md#STRING) | Nein | Sprache, deren Pluralregeln verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache. |
+| Name         | Typ                                          | Pflicht | Details                                                                                                                                           |
+| ------------ | -------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Anzahl       | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die Zahl, für die die Wortform gewählt wird.                                                                                                      |
+| Singularform | [Text](../../../value-types.md#STRING)       | Ja      | Form für die Kategorie "one", z. B. "%count% Eintrag".                                                                                            |
+| Pluralform   | [Text](../../../value-types.md#STRING)       | Ja      | Form für die Kategorie "other" (der allgemeine Plural), z. B. "%count% Einträge". Wird auch als Ersatz verwendet, wenn eine benötigte Form fehlt. |
+| Nullform     | [Text](../../../value-types.md#STRING)       | Nein    | Optionale Form für die Kategorie "zero" (von manchen Sprachen genutzt).                                                                           |
+| Zweierform   | [Text](../../../value-types.md#STRING)       | Nein    | Optionale Form für die Kategorie "two" (von manchen Sprachen genutzt).                                                                            |
+| Wenige-Form  | [Text](../../../value-types.md#STRING)       | Nein    | Optionale Form für die Kategorie "few" (von manchen Sprachen genutzt).                                                                            |
+| Viele-Form   | [Text](../../../value-types.md#STRING)       | Nein    | Optionale Form für die Kategorie "many" (von manchen Sprachen genutzt).                                                                           |
+| Sprache      | [Text](../../../value-types.md#STRING)       | Nein    | Sprache, deren Pluralregeln verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache.                                               |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                   |
+| ---- | -------------------------------------- | --------------------------------------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | Die gewählte Wortform mit %count% durch die Zahl ersetzt. |
 
 ### Ordinalzahl {#ordinal}
@@ -345,15 +345,15 @@ Formatiert eine Zahl als sprachrichtige Ordinalzahl, z. B. 1st, 2nd, 3rd (Englis
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die als Ordinalzahl zu formatierende Zahl. |
-| Sprache | [Text](../../../value-types.md#STRING) | Nein | Sprache, deren Ordinalregeln verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache. |
+| Name    | Typ                                         | Pflicht | Details                                                                                              |
+| ------- | ------------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------- |
+| Zahl    | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die als Ordinalzahl zu formatierende Zahl.                                                           |
+| Sprache | [Text](../../../value-types.md#STRING)      | Nein    | Sprache, deren Ordinalregeln verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                 |
+| ---- | -------------------------------------- | ------------------------------------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | Die Zahl mit ihrer Ordinalendung, z. B. "1." oder "1.". |
 
 ### Text kürzen {#string-truncate}
@@ -362,16 +362,16 @@ Kürzt Text auf eine Höchstlänge und hängt beim Abschneiden ein Auslassungsze
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu kürzende Text. |
-| Höchstlänge | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Größte erlaubte Ergebnislänge, inklusive Auslassungszeichen. Wert: 1 bis 100000. |
-| Auslassungszeichen | [Text](../../../value-types.md#STRING) | Nein | Wird beim Abschneiden angehängt (Standard ist ein einzelnes Auslassungszeichen). Maximale Länge: 32 Zeichen. Standard: `…`. |
+| Name               | Typ                                         | Pflicht | Details                                                                                                                       |
+| ------------------ | ------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Text               | [Text](../../../value-types.md#STRING)      | Ja      | Der zu kürzende Text.                                                                                                         |
+| Höchstlänge        | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Größte erlaubte Ergebnislänge, inklusive Auslassungszeichen. Wert: 1 bis 100000.                                              |
+| Auslassungszeichen | [Text](../../../value-types.md#STRING)      | Nein    | Wird beim Abschneiden angehängt (Standard ist ein einzelnes Auslassungszeichen). Maximale Länge: 32 Zeichen. Standard: `...`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details            |
+| -------- | -------------------------------------- | ------------------ |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der gekürzte Text. |
 
 ### Mit Regex ersetzen {#regex-replace}
@@ -380,17 +380,17 @@ Ersetzt Treffer eines regulären Ausdrucks im Text durch einen Ersatztext. Mit d
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu durchsuchende Text. |
-| Muster | [Text](../../../value-types.md#STRING) | Ja | Das Muster des regulären Ausdrucks. |
-| Ersatz | [Text](../../../value-types.md#STRING) | Ja | Text, durch den jeder Treffer ersetzt wird (unterstützt $1, $2 als Gruppenverweise). |
-| Flags | [Text](../../../value-types.md#STRING) | Nein | Optionale Regex-Flags (z. B. "g" für alle Treffer, "i" für Groß-/Kleinschreibung ignorieren). |
+| Name   | Typ                                    | Pflicht | Details                                                                                       |
+| ------ | -------------------------------------- | ------- | --------------------------------------------------------------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING) | Ja      | Der zu durchsuchende Text.                                                                    |
+| Muster | [Text](../../../value-types.md#STRING) | Ja      | Das Muster des regulären Ausdrucks.                                                           |
+| Ersatz | [Text](../../../value-types.md#STRING) | Ja      | Text, durch den jeder Treffer ersetzt wird (unterstützt $1, $2 als Gruppenverweise).          |
+| Flags  | [Text](../../../value-types.md#STRING) | Nein    | Optionale Regex-Flags (z. B. "g" für alle Treffer, "i" für Groß-/Kleinschreibung ignorieren). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                      |
+| -------- | -------------------------------------- | ---------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der Text nach der Ersetzung. |
 
 ### Mit Regex prüfen {#regex-test}
@@ -399,16 +399,16 @@ Gibt zurück, ob der Text zu einem regulären Ausdruck passt.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der zu prüfende Text. |
-| Muster | [Text](../../../value-types.md#STRING) | Ja | Das Muster des regulären Ausdrucks. |
-| Flags | [Text](../../../value-types.md#STRING) | Nein | Optionale Regex-Flags (z. B. "i" für Groß-/Kleinschreibung ignorieren). |
+| Name   | Typ                                    | Pflicht | Details                                                                 |
+| ------ | -------------------------------------- | ------- | ----------------------------------------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING) | Ja      | Der zu prüfende Text.                                                   |
+| Muster | [Text](../../../value-types.md#STRING) | Ja      | Das Muster des regulären Ausdrucks.                                     |
+| Flags  | [Text](../../../value-types.md#STRING) | Nein    | Optionale Regex-Flags (z. B. "i" für Groß-/Kleinschreibung ignorieren). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                        | Details                               |
+| -------- | ------------------------------------------ | ------------------------------------- |
 | Ergebnis | [Ja/Nein](../../../value-types.md#BOOLEAN) | Wahr, wenn der Text zum Muster passt. |
 
 ### Zufälliger Text {#random-string}
@@ -417,15 +417,15 @@ Erzeugt einen zufälligen Text der angegebenen Länge aus dem gewählten Zeichen
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Anzahl der zu erzeugenden Zeichen (1-4096). Wert: 1 bis 4096. |
-| Zeichensatz | [Zeichensatz](../../../value-types.md#RANDOM_CHARSET) | Nein | Welche Zeichen im Ergebnis vorkommen dürfen. Standard: Buchstaben und Ziffern. |
+| Name        | Typ                                                   | Pflicht | Details                                                                        |
+| ----------- | ----------------------------------------------------- | ------- | ------------------------------------------------------------------------------ |
+| Länge       | [Ganzzahl](../../../value-types.md#INTEGER)           | Ja      | Anzahl der zu erzeugenden Zeichen (1-4096). Wert: 1 bis 4096.                  |
+| Zeichensatz | [Zeichensatz](../../../value-types.md#RANDOM_CHARSET) | Nein    | Welche Zeichen im Ergebnis vorkommen dürfen. Standard: Buchstaben und Ziffern. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details                      |
+| -------- | -------------------------------------- | ---------------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der erzeugte zufällige Text. |
 
 ### Text-Ähnlichkeit {#string-similarity}
@@ -434,13 +434,13 @@ Vergleicht zwei Texte und gibt ihre Ähnlichkeit von 0 (völlig verschieden) bis
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Erster Text | [Text](../../../value-types.md#STRING) | Ja | Der erste zu vergleichende Text. Maximale Länge: 1000 Zeichen. |
-| Zweiter Text | [Text](../../../value-types.md#STRING) | Ja | Der zweite zu vergleichende Text. Maximale Länge: 1000 Zeichen. |
+| Name         | Typ                                    | Pflicht | Details                                                         |
+| ------------ | -------------------------------------- | ------- | --------------------------------------------------------------- |
+| Erster Text  | [Text](../../../value-types.md#STRING) | Ja      | Der erste zu vergleichende Text. Maximale Länge: 1000 Zeichen.  |
+| Zweiter Text | [Text](../../../value-types.md#STRING) | Ja      | Der zweite zu vergleichende Text. Maximale Länge: 1000 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                          | Details                       |
+| ----------- | -------------------------------------------- | ----------------------------- |
 | Ähnlichkeit | [Dezimalzahl](../../../value-types.md#FLOAT) | Ähnlichkeitswert von 0 bis 1. |

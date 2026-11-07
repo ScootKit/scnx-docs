@@ -15,12 +15,12 @@ Aktualisiert den Online-Status und die Aktivität des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Status | [Präsenzstatus](../../value-types.md#PRESENCE_STATUS) | Ja | Online-Status, der angezeigt wird. Standard: Online. |
-| Aktivitätstyp | [Aktivitätstyp](../../value-types.md#ACTIVITY_TYPE) | Nein | Art der angezeigten Aktivität. |
-| Aktivitätstext | [Text](../../value-types.md#STRING) | Nein | Text, der nach dem Aktivitätsverb angezeigt wird. Maximale Länge: 128 Zeichen. Wird angezeigt, wenn Aktivitätstyp Spielend, Streaming, Hört, Schaut, Benutzerdefinierter Status, Wettkampf ist. |
-| Stream-URL | [URL](../../value-types.md#URL) | Nein | Twitch-/YouTube-URL (nur bei Streaming-Aktivität). Wird angezeigt, wenn Aktivitätstyp  ist. |
+| Name           | Typ                                                   | Pflicht | Details                                                                                                                                                                                         |
+| -------------- | ----------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Status         | [Präsenzstatus](../../value-types.md#PRESENCE_STATUS) | Ja      | Online-Status, der angezeigt wird. Standard: Online.                                                                                                                                            |
+| Aktivitätstyp  | [Aktivitätstyp](../../value-types.md#ACTIVITY_TYPE)   | Nein    | Art der angezeigten Aktivität.                                                                                                                                                                  |
+| Aktivitätstext | [Text](../../value-types.md#STRING)                   | Nein    | Text, der nach dem Aktivitätsverb angezeigt wird. Maximale Länge: 128 Zeichen. Wird angezeigt, wenn Aktivitätstyp Spielend, Streaming, Hört, Schaut, Benutzerdefinierter Status, Wettkampf ist. |
+| Stream-URL     | [URL](../../value-types.md#URL)                       | Nein    | Twitch-/YouTube-URL (nur bei Streaming-Aktivität). Wird angezeigt, wenn Aktivitätstyp ist.                                                                                                      |
 
 ### Bot-Benutzername festlegen {#set-bot-username}
 
@@ -28,14 +28,14 @@ Aktualisiert den Online-Status und die Aktivität des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Neuer Benutzername | [Text](../../value-types.md#STRING) | Ja | Der neue globale Benutzername (2-32 Zeichen). Länge: 2 bis 32 Zeichen. |
+| Name               | Typ                                 | Pflicht | Details                                                                |
+| ------------------ | ----------------------------------- | ------- | ---------------------------------------------------------------------- |
+| Neuer Benutzername | [Text](../../value-types.md#STRING) | Ja      | Der neue globale Benutzername (2-32 Zeichen). Länge: 2 bis 32 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                           | Details                         |
+| ------------ | --------------------------------------------- | ------------------------------- |
 | Bot-Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Der aktualisierte Bot-Benutzer. |
 
 ### Bot-Avatar festlegen {#set-bot-avatar}
@@ -44,14 +44,14 @@ Aktualisiert den Online-Status und die Aktivität des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Avatar-URL | [URL](../../value-types.md#URL) | Ja | URL des neuen Avatarbilds, oder leer zum Entfernen. |
+| Name       | Typ                             | Pflicht | Details                                             |
+| ---------- | ------------------------------- | ------- | --------------------------------------------------- |
+| Avatar-URL | [URL](../../value-types.md#URL) | Ja      | URL des neuen Avatarbilds, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                           | Details                         |
+| ------------ | --------------------------------------------- | ------------------------------- |
 | Bot-Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Der aktualisierte Bot-Benutzer. |
 
 ### Bot-Banner festlegen {#set-bot-banner}
@@ -60,14 +60,14 @@ Aktualisiert den Online-Status und die Aktivität des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Banner-URL | [URL](../../value-types.md#URL) | Ja | URL des neuen Bannerbilds, oder leer zum Entfernen. |
+| Name       | Typ                             | Pflicht | Details                                             |
+| ---------- | ------------------------------- | ------- | --------------------------------------------------- |
+| Banner-URL | [URL](../../value-types.md#URL) | Ja      | URL des neuen Bannerbilds, oder leer zum Entfernen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                           | Details                         |
+| ------------ | --------------------------------------------- | ------------------------------- |
 | Bot-Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Der aktualisierte Bot-Benutzer. |
 
 ### Bot-Benutzer abrufen (frisch von Discord) {#fetch-bot-user}
@@ -76,8 +76,8 @@ Fragt das eigene Benutzerkonto des Bots direkt bei Discord ab und liefert immer 
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                           | Details                                                   |
+| ------------ | --------------------------------------------- | --------------------------------------------------------- |
 | Bot-Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Das frisch von Discord abgerufene Benutzerkonto des Bots. |
 
 ### Anwendung abrufen {#fetch-application}
@@ -86,8 +86,8 @@ Ruft die eigene Discord-Anwendung des Bots ab, einschließlich aller öffentlich
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                           | Details                         |
+| --------- | --------------------------------------------- | ------------------------------- |
 | Anwendung | [Anwendung](../../value-types.md#APPLICATION) | Die Discord-Anwendung des Bots. |
 
 ### Anwendung bearbeiten {#edit-application}
@@ -96,22 +96,22 @@ Bearbeitet Einstellungen der Discord-Anwendung des Bots.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Eigene Installations-URL | [URL](../../value-types.md#URL) | Nein | Eigene URL, zu der Discord Benutzer zur Installation der App weiterleitet. |
-| Beschreibung | [Text](../../value-types.md#STRING) | Nein | Neue Beschreibung der Anwendung. |
-| Rollenverknüpfungs-Verifizierungs-URL | [URL](../../value-types.md#URL) | Nein | URL, die Discord zur Verifizierung von Rollenverknüpfungen öffnet. |
-| Installationsparameter | [Anwendungs-Installationsparameter](../../value-types.md#APPLICATION_INSTALL_PARAMS) | Nein | Standardmäßige In-App-Autorisierungsparameter. |
-| Flags | Liste von [Anwendungs-Flag](../../value-types.md#APPLICATION_FLAG) | Nein | Zu setzende Anwendungs-Flags (nur einige Flags sind setzbar). |
-| Icon | [URL](../../value-types.md#URL) | Nein | URL des neuen Icons. |
-| Titelbild | [URL](../../value-types.md#URL) | Nein | URL des neuen Titelbilds. |
-| Interactions-Endpoint-URL | [URL](../../value-types.md#URL) | Nein | URL, an die Discord Interaktionen anstelle des Gateways sendet. |
-| Tags | Liste von [Text](../../value-types.md#STRING) | Nein | Bis zu 5 Tags, die die Anwendung beschreiben (je max. 20 Zeichen). Maximale Länge: 20 Zeichen. Höchstens 5 Einträge. |
+| Name                                  | Typ                                                                                  | Pflicht | Details                                                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------ | ------- | -------------------------------------------------------------------------------------------------------------------- |
+| Eigene Installations-URL              | [URL](../../value-types.md#URL)                                                      | Nein    | Eigene URL, zu der Discord Benutzer zur Installation der App weiterleitet.                                           |
+| Beschreibung                          | [Text](../../value-types.md#STRING)                                                  | Nein    | Neue Beschreibung der Anwendung.                                                                                     |
+| Rollenverknüpfungs-Verifizierungs-URL | [URL](../../value-types.md#URL)                                                      | Nein    | URL, die Discord zur Verifizierung von Rollenverknüpfungen öffnet.                                                   |
+| Installationsparameter                | [Anwendungs-Installationsparameter](../../value-types.md#APPLICATION_INSTALL_PARAMS) | Nein    | Standardmäßige In-App-Autorisierungsparameter.                                                                       |
+| Flags                                 | Liste von [Anwendungs-Flag](../../value-types.md#APPLICATION_FLAG)                   | Nein    | Zu setzende Anwendungs-Flags (nur einige Flags sind setzbar).                                                        |
+| Icon                                  | [URL](../../value-types.md#URL)                                                      | Nein    | URL des neuen Icons.                                                                                                 |
+| Titelbild                             | [URL](../../value-types.md#URL)                                                      | Nein    | URL des neuen Titelbilds.                                                                                            |
+| Interactions-Endpoint-URL             | [URL](../../value-types.md#URL)                                                      | Nein    | URL, an die Discord Interaktionen anstelle des Gateways sendet.                                                      |
+| Tags                                  | Liste von [Text](../../value-types.md#STRING)                                        | Nein    | Bis zu 5 Tags, die die Anwendung beschreiben (je max. 20 Zeichen). Maximale Länge: 20 Zeichen. Höchstens 5 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                           | Details                      |
+| --------- | --------------------------------------------- | ---------------------------- |
 | Anwendung | [Anwendung](../../value-types.md#APPLICATION) | Die aktualisierte Anwendung. |
 
 ### Anwendungs-Rollenverbindungs-Metadaten abrufen {#fetch-application-role-connection-metadata}
@@ -120,8 +120,8 @@ Ruft die Rollenverbindungs-Metadaten-Einträge ab, die derzeit für die Anwendun
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                                    | Details                                                                 |
+| -------- | -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Einträge | Liste von [Rollenverbindungs-Metadaten](../../value-types.md#ROLE_CONNECTION_METADATA) | Die Rollenverbindungs-Metadaten-Einträge, die derzeit registriert sind. |
 
 ### Anwendungs-Rollenverbindungs-Metadaten aktualisieren {#update-application-role-connection-metadata}
@@ -130,14 +130,14 @@ Ersetzt die Rollenverbindungs-Metadaten-Einträge, die für die Anwendung regist
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Einträge | Liste von [Rollenverbindungs-Metadaten](../../value-types.md#ROLE_CONNECTION_METADATA) | Ja | Bis zu fünf Metadaten-Einträge, die für die Anwendung registriert werden. Höchstens 5 Einträge. |
+| Name     | Typ                                                                                    | Pflicht | Details                                                                                         |
+| -------- | -------------------------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
+| Einträge | Liste von [Rollenverbindungs-Metadaten](../../value-types.md#ROLE_CONNECTION_METADATA) | Ja      | Bis zu fünf Metadaten-Einträge, die für die Anwendung registriert werden. Höchstens 5 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                                                                    | Details                                                         |
+| -------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | Einträge | Liste von [Rollenverbindungs-Metadaten](../../value-types.md#ROLE_CONNECTION_METADATA) | Die Metadaten-Einträge wie nach der Aktualisierung gespeichert. |
 
 ### Benutzer-Rollenverbindung aktualisieren {#update-user-application-role-connection}
@@ -146,17 +146,17 @@ Aktualisiert die Rollenverbindung der Anwendung für einen bestimmten Benutzer (
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Ja | Benutzer, dessen Rollenverbindung aktualisiert wird. |
-| Plattformname | [Text](../../value-types.md#STRING) | Nein | Name der verbundenen Plattform, der in Discord angezeigt wird (max. 50 Zeichen). Maximale Länge: 50 Zeichen. |
-| Plattform-Benutzername | [Text](../../value-types.md#STRING) | Nein | Name des Benutzers auf der verbundenen Plattform (max. 100 Zeichen). Maximale Länge: 100 Zeichen. |
-| Metadaten | Nachschlagetabelle von [Text](../../value-types.md#STRING) zu [Text](../../value-types.md#STRING) | Nein | Zuordnung von Metadaten-Schlüsseln zu Textwerten, die an Discord gemeldet werden. |
+| Name                   | Typ                                                                                               | Pflicht | Details                                                                                                      |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
+| Benutzer               | [Benutzer](../../value-types.md#DISCORD_USER)                                                     | Ja      | Benutzer, dessen Rollenverbindung aktualisiert wird.                                                         |
+| Plattformname          | [Text](../../value-types.md#STRING)                                                               | Nein    | Name der verbundenen Plattform, der in Discord angezeigt wird (max. 50 Zeichen). Maximale Länge: 50 Zeichen. |
+| Plattform-Benutzername | [Text](../../value-types.md#STRING)                                                               | Nein    | Name des Benutzers auf der verbundenen Plattform (max. 100 Zeichen). Maximale Länge: 100 Zeichen.            |
+| Metadaten              | Nachschlagetabelle von [Text](../../value-types.md#STRING) zu [Text](../../value-types.md#STRING) | Nein    | Zuordnung von Metadaten-Schlüsseln zu Textwerten, die an Discord gemeldet werden.                            |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                     | Details                                             |
+| ----------- | --------------------------------------- | --------------------------------------------------- |
 | Erfolgreich | [Ja/Nein](../../value-types.md#BOOLEAN) | Ob die Aktualisierung erfolgreich angewendet wurde. |
 
 ### Bot-Benutzer abrufen (aus dem Cache, ohne API-Anfrage) {#fetch-current-bot-user}
@@ -165,8 +165,8 @@ Gibt das eigene Benutzerkonto des Bots aus dem lokalen Cache zurück. Sofort ver
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                           | Details                                   |
+| ------------ | --------------------------------------------- | ----------------------------------------- |
 | Bot-Benutzer | [Benutzer](../../value-types.md#DISCORD_USER) | Das Benutzerkonto des Bots aus dem Cache. |
 
 ### Bot als Server-Mitglied abrufen {#fetch-current-bot-member}
@@ -175,6 +175,6 @@ Gibt den Bot als Mitglied des angegebenen Servers zurück.
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                  | Details                             |
+| ------------ | ---------------------------------------------------- | ----------------------------------- |
 | Bot-Mitglied | [Server-Mitglied](../../value-types.md#GUILD_MEMBER) | Die Server-Mitgliedschaft des Bots. |

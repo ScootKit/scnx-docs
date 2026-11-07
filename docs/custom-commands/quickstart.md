@@ -39,12 +39,12 @@ Both start as a **Draft**, so nothing happens in Discord yet. You find both on t
 
 The diagram starts with the trigger, the box that decides when the flow runs. Click it to open its **Trigger settings**:
 
-| Setting          | Value in this template                                                   | What it does                                                   |
-| ---------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| **Command name** | `remind`                                                                 | The name members type after the `/`.                           |
-| **Description**  | "DM me a reminder after the given number of minutes"                     | Shown under the command in Discord.                            |
-| **Options**      | `minutes` (**Whole number**, required) and `text` (**Text**, required)   | The values members fill in when they run the command.          |
-| **Cooldown**     | On, per **User**                                                         | Stops one member from running the command many times in a row. |
+| Setting          | Value in this template                                                 | What it does                                                   |
+| ---------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Command name** | `remind`                                                               | The name members type after the `/`.                           |
+| **Description**  | "DM me a reminder after the given number of minutes"                   | Shown under the command in Discord.                            |
+| **Options**      | `minutes` (**Whole number**, required) and `text` (**Text**, required) | The values members fill in when they run the command.          |
+| **Cooldown**     | On, per **User**                                                       | Stops one member from running the command many times in a row. |
 
 Above the options, a live preview shows the command the way Discord displays it. You can leave everything as it is. Slash commands need no privileged intent, so there is nothing to switch on in the Discord Developer Portal.
 
@@ -105,11 +105,11 @@ In your server, type `/remind`, set `minutes` to 1 and `text` to anything. Your 
 
 If something doesn't work:
 
-| What you see                                   | What to do                                                                                                                                                                                                                                  |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| What you see                                   | What to do                                                                                                                                                                                                                                                                |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `/remind` doesn't show up in Discord           | Check that the flow is **Active**. Then check your bot's issue list for "A Custom-Commands command conflicts with an existing command" and rename the command if needed. See also [Slash commands are not showing up](/docs/custom-bot/troubleshooting#missing-commands). |
-| Discord says "The application did not respond" | Open the run history (below). The run failed or took too long before the reply step.                                                                                                                                                        |
-| The reply comes, the DM doesn't                | Check that **Deliver reminder (scheduled)** is **Active**. If it is, the member probably doesn't accept DMs from server members. The run history shows the failed run.                                                                     |
+| Discord says "The application did not respond" | Open the run history (below). The run failed or took too long before the reply step.                                                                                                                                                                                      |
+| The reply comes, the DM doesn't                | Check that **Deliver reminder (scheduled)** is **Active**. If it is, the member probably doesn't accept DMs from server members. The run history shows the failed run.                                                                                                    |
 
 ## 8. See it in the run history {#history}
 

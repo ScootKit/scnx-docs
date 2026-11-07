@@ -15,15 +15,15 @@ Sucht Animes über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werd
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Suchtext | [Text](../../../value-types.md#STRING) | Ja | Der Titel oder ein Teil davon, zum Beispiel frieren. Maximale Länge: 100 Zeichen. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`. |
+| Name     | Typ                                         | Pflicht | Details                                                                               |
+| -------- | ------------------------------------------- | ------- | ------------------------------------------------------------------------------------- |
+| Suchtext | [Text](../../../value-types.md#STRING)      | Ja      | Der Titel oder ein Teil davon, zum Beispiel frieren. Maximale Länge: 100 Zeichen.     |
+| Anzahl   | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                    | Details                                      |
+| ------ | ------------------------------------------------------ | -------------------------------------------- |
 | Animes | Liste von [Anime](../../../value-types.md#jikan-Anime) | Die gefundenen Animes, beste Treffer zuerst. |
 
 ### Anime abrufen {#jikan-get-anime}
@@ -32,16 +32,16 @@ Liest einen Anime über seine MyAnimeList-ID.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| MyAnimeList-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die Zahl in der MyAnimeList-Adresse des Animes. Minimum: 1. |
+| Name           | Typ                                         | Pflicht | Details                                                     |
+| -------------- | ------------------------------------------- | ------- | ----------------------------------------------------------- |
+| MyAnimeList-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die Zahl in der MyAnimeList-Adresse des Animes. Minimum: 1. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
-| Anime | [Anime](../../../value-types.md#jikan-Anime) | Der Anime. Kann leer sein. |
+| Name     | Typ                                          | Details                                                     |
+| -------- | -------------------------------------------- | ----------------------------------------------------------- |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN)   | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
+| Anime    | [Anime](../../../value-types.md#jikan-Anime) | Der Anime. Kann leer sein.                                  |
 
 ### Mangas suchen {#jikan-search-manga}
 
@@ -49,15 +49,15 @@ Sucht Mangas über den Titel, beste Treffer zuerst. Inhalte für Erwachsene werd
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Suchtext | [Text](../../../value-types.md#STRING) | Ja | Der Titel oder ein Teil davon, zum Beispiel frieren. Maximale Länge: 100 Zeichen. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`. |
+| Name     | Typ                                         | Pflicht | Details                                                                               |
+| -------- | ------------------------------------------- | ------- | ------------------------------------------------------------------------------------- |
+| Suchtext | [Text](../../../value-types.md#STRING)      | Ja      | Der Titel oder ein Teil davon, zum Beispiel frieren. Maximale Länge: 100 Zeichen.     |
+| Anzahl   | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                    | Details                                      |
+| ------ | ------------------------------------------------------ | -------------------------------------------- |
 | Mangas | Liste von [Manga](../../../value-types.md#jikan-Manga) | Die gefundenen Mangas, beste Treffer zuerst. |
 
 ### Manga abrufen {#jikan-get-manga}
@@ -66,16 +66,16 @@ Liest einen Manga über seine MyAnimeList-ID.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| MyAnimeList-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die Zahl in der MyAnimeList-Adresse des Mangas. Minimum: 1. |
+| Name           | Typ                                         | Pflicht | Details                                                     |
+| -------------- | ------------------------------------------- | ------- | ----------------------------------------------------------- |
+| MyAnimeList-ID | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die Zahl in der MyAnimeList-Adresse des Mangas. Minimum: 1. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
-| Manga | [Manga](../../../value-types.md#jikan-Manga) | Der Manga. Kann leer sein. |
+| Name     | Typ                                          | Details                                                     |
+| -------- | -------------------------------------------- | ----------------------------------------------------------- |
+| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN)   | Ob der Eintrag existiert. Wenn nicht, ist der Eintrag leer. |
+| Manga    | [Manga](../../../value-types.md#jikan-Manga) | Der Manga. Kann leer sein.                                  |
 
 ### Top-Animes abrufen {#jikan-get-top-anime}
 
@@ -83,13 +83,13 @@ Liest die Top-Anime-Liste von MyAnimeList, erster Platz zuerst.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Liste | [Text](../../../value-types.md#STRING) | Nein | airing, upcoming, bypopularity oder favorite. Leer: nach Bewertung. Maximale Länge: 20 Zeichen. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`. |
+| Name   | Typ                                         | Pflicht | Details                                                                                         |
+| ------ | ------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------- |
+| Liste  | [Text](../../../value-types.md#STRING)      | Nein    | airing, upcoming, bypopularity oder favorite. Leer: nach Bewertung. Maximale Länge: 20 Zeichen. |
+| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Wie viele Ergebnisse geholt werden, 1 bis 25. Leer: 5. Wert: 1 bis 25. Standard: `5`.           |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                    | Details                          |
+| ------ | ------------------------------------------------------ | -------------------------------- |
 | Animes | Liste von [Anime](../../../value-types.md#jikan-Anime) | Die Animes, erster Platz zuerst. |

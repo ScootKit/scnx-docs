@@ -46,14 +46,14 @@ Der Kopfbereich zeigt das Symbol, den Namen und die Beschreibung des Moduls sowi
 
 Die Navigation daneben führt zu den Teilen des Moduls:
 
-| Eintrag           | Was du dort machst                                                                                                  |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **Flows**         | Die Flows und Ordner des Moduls. **Neuen eigenen Flow erstellen** und **Neuer Ordner** funktionieren genau wie in der Übersicht. |
-| **Konfiguration** | Die Einstellungsseite des Moduls und das Layout dieser Seite. Siehe [Moduleinstellungen](#settings).               |
+| Eintrag           | Was du dort machst                                                                                                                        |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Flows**         | Die Flows und Ordner des Moduls. **Neuen eigenen Flow erstellen** und **Neuer Ordner** funktionieren genau wie in der Übersicht.          |
+| **Konfiguration** | Die Einstellungsseite des Moduls und das Layout dieser Seite. Siehe [Moduleinstellungen](#settings).                                      |
 | **App**           | Die Seite, die Leute sehen, wenn du das Modul als App veröffentlichst. Siehe [Teilen & der Marktplatz](/de/docs/custom-commands/sharing). |
-| **Speicher**      | Die Speicherfelder des Moduls und die Daten, die seine Flows gespeichert haben. Siehe [Datenspeicher](/de/docs/custom-commands/storage). |
-| **Ausführungen**  | Jede Ausführung der Flows des Moduls. Siehe [Ausführungsverlauf & Debugging](/de/docs/custom-commands/executions). |
-| **Graph**         | Eine Karte, die zeigt, wie die Flows des Moduls zusammenhängen. Siehe [Der Modul-Graph](#graph).                  |
+| **Speicher**      | Die Speicherfelder des Moduls und die Daten, die seine Flows gespeichert haben. Siehe [Datenspeicher](/de/docs/custom-commands/storage).  |
+| **Ausführungen**  | Jede Ausführung der Flows des Moduls. Siehe [Ausführungsverlauf & Debugging](/de/docs/custom-commands/executions).                        |
+| **Graph**         | Eine Karte, die zeigt, wie die Flows des Moduls zusammenhängen. Siehe [Der Modul-Graph](#graph).                                          |
 
 ## Ein Modul ein- und ausschalten {#enable}
 
@@ -146,13 +146,13 @@ Wenn ein Admin das `%name%` eines Parameters aus der Nachricht entfernt, geht ni
 
 Wenn du einen Flow erstellst, bietet **Mit einer Vorlage starten** fertige Flows an. Jeder wird als Entwurf erstellt, sodass du ihn dir ansehen und anpassen kannst, bevor du ihn einschaltest.
 
-| Vorlage                   | Was sie macht                                                                                                      |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Leerer Flow**           | Startet ganz von vorne mit einem leeren Flow.                                                                      |
-| **Begrüßungs-Antwort**    | Antwortet im selben Kanal, wenn jemand "!hello" schreibt.                                                          |
-| **Neue Mitglieder begrüßen** | Begrüßt neue Mitglieder mit einer persönlichen Nachricht in einem Kanal deiner Wahl.                            |
-| **/warn-Befehl**          | Verwarnt ein Mitglied mit Benutzer und Grund, zählt seine Verwarnungen im Datenspeicher und schickt ihm eine DM, mit einer Ausweichlösung, wenn DMs geschlossen sind. |
-| **/remind-Befehl**        | Lässt Mitglieder eine Erinnerung planen. Ein zweiter Flow, "Erinnerung zustellen (geplant)", wird mit erstellt und sendet die DM, wenn sie fällig ist. |
+| Vorlage                      | Was sie macht                                                                                                                                                         |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Leerer Flow**              | Startet ganz von vorne mit einem leeren Flow.                                                                                                                         |
+| **Begrüßungs-Antwort**       | Antwortet im selben Kanal, wenn jemand "!hello" schreibt.                                                                                                             |
+| **Neue Mitglieder begrüßen** | Begrüßt neue Mitglieder mit einer persönlichen Nachricht in einem Kanal deiner Wahl.                                                                                  |
+| **/warn-Befehl**             | Verwarnt ein Mitglied mit Benutzer und Grund, zählt seine Verwarnungen im Datenspeicher und schickt ihm eine DM, mit einer Ausweichlösung, wenn DMs geschlossen sind. |
+| **/remind-Befehl**           | Lässt Mitglieder eine Erinnerung planen. Ein zweiter Flow, "Erinnerung zustellen (geplant)", wird mit erstellt und sendet die DM, wenn sie fällig ist.                |
 
 Vorlagen funktionieren in der Übersicht und in einem Modul gleich. Manche verwenden Kanäle oder Speicherfelder, die du noch auswählen oder anlegen musst. Der Tab **Probleme** sagt dir, was fehlt.
 
@@ -182,10 +182,10 @@ Innerhalb deines eigenen Servers kannst du einzelne Schritte mit `Ctrl+C` und `C
 
 ## Häufige Fehler {#mistakes}
 
-| Was passiert                                                  | Warum, und wie du es behebst                                                                                        |
-| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Eine Moduleinstellung taucht nicht in der Werteauswahl auf    | Der Flow ist nicht in diesem Modul, oder der Typ der Einstellung passt nicht zur Eingabe. Freie Flows können keine Moduleinstellungen nutzen. |
-| **Moduleinstellung verwenden** sagt "nur innerhalb eines Moduls" | Der Flow ist ein freier Flow. Erstelle ihn stattdessen in einem Modul.                                           |
-| Ein geänderter Zeitplan oder eine geänderte Einstellung wirkt nicht | Sie wird nur beim Start deines Bots gelesen. Klicke auf **Konfiguration neu laden**.                          |
-| Befehle reagieren nach dem Duplizieren doppelt                | Das Original und die Kopie sind beide aktiviert. Deaktiviere eines davon.                                           |
-| Ein Button in der Nachricht einer Moduleinstellung findet deinen Flow nicht | Modul-Flows können nur aus den eigenen Nachrichten und Schritten dieses Moduls verknüpft werden.       |
+| Was passiert                                                                | Warum, und wie du es behebst                                                                                                                  |
+| --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Eine Moduleinstellung taucht nicht in der Werteauswahl auf                  | Der Flow ist nicht in diesem Modul, oder der Typ der Einstellung passt nicht zur Eingabe. Freie Flows können keine Moduleinstellungen nutzen. |
+| **Moduleinstellung verwenden** sagt "nur innerhalb eines Moduls"            | Der Flow ist ein freier Flow. Erstelle ihn stattdessen in einem Modul.                                                                        |
+| Ein geänderter Zeitplan oder eine geänderte Einstellung wirkt nicht         | Sie wird nur beim Start deines Bots gelesen. Klicke auf **Konfiguration neu laden**.                                                          |
+| Befehle reagieren nach dem Duplizieren doppelt                              | Das Original und die Kopie sind beide aktiviert. Deaktiviere eines davon.                                                                     |
+| Ein Button in der Nachricht einer Moduleinstellung findet deinen Flow nicht | Modul-Flows können nur aus den eigenen Nachrichten und Schritten dieses Moduls verknüpft werden.                                              |

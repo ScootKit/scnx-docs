@@ -15,15 +15,15 @@ Addiert zwei Zahlen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Summand. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Summand. |
+| Name | Typ                                          | Pflicht | Details          |
+| ---- | -------------------------------------------- | ------- | ---------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Summand.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Summand. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details          |
+| -------- | -------------------------------------------- | ---------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Summe a + b. |
 
 ### Subtrahieren {#math-subtract}
@@ -32,15 +32,15 @@ Subtrahiert die zweite Zahl von der ersten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Minuend. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Subtrahend. |
+| Name | Typ                                          | Pflicht | Details     |
+| ---- | -------------------------------------------- | ------- | ----------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Minuend.    |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Subtrahend. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details              |
+| -------- | -------------------------------------------- | -------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Differenz a - b. |
 
 ### Multiplizieren {#math-multiply}
@@ -49,15 +49,15 @@ Multipliziert zwei Zahlen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Erster Faktor. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zweiter Faktor. |
+| Name | Typ                                          | Pflicht | Details         |
+| ---- | -------------------------------------------- | ------- | --------------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Erster Faktor.  |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zweiter Faktor. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details            |
+| -------- | -------------------------------------------- | ------------------ |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Das Produkt a * b. |
 
 ### Dividieren {#math-divide}
@@ -66,15 +66,15 @@ Dividiert die erste Zahl durch die zweite.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Dividend. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Divisor. |
+| Name | Typ                                          | Pflicht | Details   |
+| ---- | -------------------------------------------- | ------- | --------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Dividend. |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Divisor.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details             |
+| -------- | -------------------------------------------- | ------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Quotient a / b. |
 
 ### Rest nach Division {#math-modulo}
@@ -83,15 +83,15 @@ Gibt den Rest der Division von a durch b zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| A | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Dividend. |
-| B | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Divisor. |
+| Name | Typ                                          | Pflicht | Details   |
+| ---- | -------------------------------------------- | ------- | --------- |
+| A    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Dividend. |
+| B    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Divisor.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details         |
+| -------- | -------------------------------------------- | --------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Rest a % b. |
 
 ### Runden {#math-round}
@@ -100,14 +100,14 @@ Rundet eine Zahl zur nächsten ganzen Zahl.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahl, die gerundet wird. |
+| Name | Typ                                          | Pflicht | Details                  |
+| ---- | -------------------------------------------- | ------- | ------------------------ |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahl, die gerundet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                   |
+| -------- | ------------------------------------------- | ------------------------- |
 | Ergebnis | [Ganzzahl](../../../value-types.md#INTEGER) | Die gerundete ganze Zahl. |
 
 ### Auf Dezimalstellen runden {#math-round-to}
@@ -116,15 +116,15 @@ Rundet einen Wert auf die angegebene Anzahl von Dezimalstellen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der zu rundende Wert. |
-| Nachkommastellen | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Anzahl der beizubehaltenden Nachkommastellen. Minimum: 0. |
+| Name             | Typ                                          | Pflicht | Details                                                   |
+| ---------------- | -------------------------------------------- | ------- | --------------------------------------------------------- |
+| Wert             | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der zu rundende Wert.                                     |
+| Nachkommastellen | [Ganzzahl](../../../value-types.md#INTEGER)  | Ja      | Anzahl der beizubehaltenden Nachkommastellen. Minimum: 0. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details             |
+| -------- | -------------------------------------------- | ------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der gerundete Wert. |
 
 ### Abrunden {#math-floor}
@@ -133,14 +133,14 @@ Rundet eine Zahl ab zur nächsten ganzen Zahl.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahl, die abgerundet wird. |
+| Name | Typ                                          | Pflicht | Details                    |
+| ---- | -------------------------------------------- | ------- | -------------------------- |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahl, die abgerundet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                     |
+| -------- | ------------------------------------------- | --------------------------- |
 | Ergebnis | [Ganzzahl](../../../value-types.md#INTEGER) | Die abgerundete ganze Zahl. |
 
 ### Aufrunden {#math-ceil}
@@ -149,14 +149,14 @@ Rundet eine Zahl auf zur nächsten ganzen Zahl.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die Zahl, die aufgerundet wird. |
+| Name | Typ                                          | Pflicht | Details                         |
+| ---- | -------------------------------------------- | ------- | ------------------------------- |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die Zahl, die aufgerundet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                      |
+| -------- | ------------------------------------------- | ---------------------------- |
 | Ergebnis | [Ganzzahl](../../../value-types.md#INTEGER) | Die aufgerundete ganze Zahl. |
 
 ### Minimum {#math-min}
@@ -165,14 +165,14 @@ Gibt den kleinsten Wert in einer Liste zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahlen, die verglichen werden. Mindestens 1 Einträge. |
+| Name  | Typ                                                    | Pflicht | Details                                               |
+| ----- | ------------------------------------------------------ | ------- | ----------------------------------------------------- |
+| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahlen, die verglichen werden. Mindestens 1 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details            |
+| -------- | -------------------------------------------- | ------------------ |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der kleinste Wert. |
 
 ### Maximum {#math-max}
@@ -181,14 +181,14 @@ Gibt den größten Wert in einer Liste zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahlen, die verglichen werden. Mindestens 1 Einträge. |
+| Name  | Typ                                                    | Pflicht | Details                                               |
+| ----- | ------------------------------------------------------ | ------- | ----------------------------------------------------- |
+| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahlen, die verglichen werden. Mindestens 1 Einträge. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details          |
+| -------- | -------------------------------------------- | ---------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der größte Wert. |
 
 ### Zwischen Min und Max begrenzen {#math-clamp}
@@ -197,16 +197,16 @@ Begrenzt einen Wert auf den Bereich [min, max].
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der zu begrenzende Wert. |
-| Minimum | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die untere Grenze. |
-| Maximum | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die obere Grenze. |
+| Name    | Typ                                          | Pflicht | Details                  |
+| ------- | -------------------------------------------- | ------- | ------------------------ |
+| Wert    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der zu begrenzende Wert. |
+| Minimum | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die untere Grenze.       |
+| Maximum | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die obere Grenze.        |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details             |
+| -------- | -------------------------------------------- | ------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der begrenzte Wert. |
 
 ### Summe {#math-sum}
@@ -215,14 +215,14 @@ Addiert alle Werte in einer Liste. Eine leere Liste summiert zu 0.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahlen, die addiert werden. |
+| Name  | Typ                                                    | Pflicht | Details                     |
+| ----- | ------------------------------------------------------ | ------- | --------------------------- |
+| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahlen, die addiert werden. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details              |
+| -------- | -------------------------------------------- | -------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Summe der Werte. |
 
 ### Durchschnitt {#math-average}
@@ -231,14 +231,14 @@ Gibt den Durchschnittswert einer Liste von Werten zurück. Eine leere Liste ergi
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Zahlen, aus denen der Mittelwert gebildet wird. |
+| Name  | Typ                                                    | Pflicht | Details                                         |
+| ----- | ------------------------------------------------------ | ------- | ----------------------------------------------- |
+| Werte | Liste von [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Zahlen, aus denen der Mittelwert gebildet wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details                   |
+| -------- | -------------------------------------------- | ------------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Mittelwert der Werte. |
 
 ### Absolutwert {#math-abs}
@@ -247,14 +247,14 @@ Gibt den Absolutwert einer Zahl zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die Zahl. |
+| Name | Typ                                          | Pflicht | Details   |
+| ---- | -------------------------------------------- | ------- | --------- |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die Zahl. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details          |
+| -------- | -------------------------------------------- | ---------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Absolutwert. |
 
 ### Potenz {#math-power}
@@ -263,15 +263,15 @@ Erhebt eine Basis zu einem Exponenten.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Basis | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Basiswert. |
-| Exponent | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Exponent. |
+| Name     | Typ                                          | Pflicht | Details        |
+| -------- | -------------------------------------------- | ------- | -------------- |
+| Basis    | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Basiswert. |
+| Exponent | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Exponent.  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details                      |
+| -------- | -------------------------------------------- | ---------------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Basis erhöht zum Exponenten. |
 
 ### Quadratwurzel {#math-sqrt}
@@ -280,14 +280,14 @@ Gibt die Quadratwurzel einer nicht-negativen Zahl zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Nicht-negative Zahl. Minimum: 0. |
+| Name | Typ                                          | Pflicht | Details                          |
+| ---- | -------------------------------------------- | ------- | -------------------------------- |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Nicht-negative Zahl. Minimum: 0. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details            |
+| -------- | -------------------------------------------- | ------------------ |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Quadratwurzel. |
 
 ### Zufällige ganze Zahl {#math-random-integer}
@@ -296,15 +296,15 @@ Generiert eine zufällige ganze Zahl zwischen min und max (inklusive).
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Min | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Minimalwert (inklusive). |
-| Max | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Maximalwert (inklusive). |
+| Name | Typ                                         | Pflicht | Details                  |
+| ---- | ------------------------------------------- | ------- | ------------------------ |
+| Min  | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Minimalwert (inklusive). |
+| Max  | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Maximalwert (inklusive). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                   |
+| -------- | ------------------------------------------- | ------------------------- |
 | Ergebnis | [Ganzzahl](../../../value-types.md#INTEGER) | Die zufällige ganze Zahl. |
 
 ### Zufällige Dezimalzahl {#math-random-float}
@@ -313,15 +313,15 @@ Generiert eine zufällige Dezimalzahl zwischen min und max.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Min | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Minimalwert (inklusiv). |
-| Max | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Maximalwert (exklusiv). |
+| Name | Typ                                          | Pflicht | Details                 |
+| ---- | -------------------------------------------- | ------- | ----------------------- |
+| Min  | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Minimalwert (inklusiv). |
+| Max  | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Maximalwert (exklusiv). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details                    |
+| -------- | -------------------------------------------- | -------------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die zufällige Dezimalzahl. |
 
 ### Text in ganze Zahl umwandeln {#parse-integer}
@@ -330,14 +330,14 @@ Liest eine ganze Zahl aus einem Text. Gibt einen leeren Wert zurück, wenn ungü
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der gelesen wird. |
+| Name | Typ                                    | Pflicht | Details                     |
+| ---- | -------------------------------------- | ------- | --------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der gelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                         | Details                                   |
+| -------- | ------------------------------------------- | ----------------------------------------- |
 | Ergebnis | [Ganzzahl](../../../value-types.md#INTEGER) | Die ganze Zahl oder leer. Kann leer sein. |
 
 ### Text in Dezimalzahl umwandeln {#parse-float}
@@ -346,14 +346,14 @@ Liest eine Dezimalzahl aus einem Text. Gibt einen leeren Wert zurück, wenn ung�
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der gelesen wird. |
+| Name | Typ                                    | Pflicht | Details                     |
+| ---- | -------------------------------------- | ------- | --------------------------- |
+| Text | [Text](../../../value-types.md#STRING) | Ja      | Der Text, der gelesen wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details                                    |
+| -------- | -------------------------------------------- | ------------------------------------------ |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Dezimalzahl oder leer. Kann leer sein. |
 
 ### In große ganze Zahl umwandeln {#to-bigint}
@@ -362,15 +362,15 @@ Wandelt Text oder eine ganze Zahl in eine große ganze Zahl um, die bei jeder Gr
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Nein | Die Ziffern, zum Beispiel 9007199254740993. Nutze dies oder Zahl. Nur eines davon verwenden: Zahl. |
-| Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Eine ganze Zahl zum Umwandeln. Nutze dies oder Text. Nur eines davon verwenden: Text. |
+| Name | Typ                                         | Pflicht | Details                                                                                            |
+| ---- | ------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Text | [Text](../../../value-types.md#STRING)      | Nein    | Die Ziffern, zum Beispiel 9007199254740993. Nutze dies oder Zahl. Nur eines davon verwenden: Zahl. |
+| Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Eine ganze Zahl zum Umwandeln. Nutze dies oder Text. Nur eines davon verwenden: Text.              |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                              | Details               |
+| ---------------- | ------------------------------------------------ | --------------------- |
 | Große ganze Zahl | [Große Ganzzahl](../../../value-types.md#BIGINT) | Die große ganze Zahl. |
 
 ### Große ganze Zahl in ganze Zahl umwandeln {#bigint-to-integer}
@@ -379,14 +379,14 @@ Wandelt eine große ganze Zahl in eine normale ganze Zahl für die anderen Reche
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Große ganze Zahl | [Große Ganzzahl](../../../value-types.md#BIGINT) | Ja | Die große ganze Zahl, die umgewandelt wird. |
+| Name             | Typ                                              | Pflicht | Details                                     |
+| ---------------- | ------------------------------------------------ | ------- | ------------------------------------------- |
+| Große ganze Zahl | [Große Ganzzahl](../../../value-types.md#BIGINT) | Ja      | Die große ganze Zahl, die umgewandelt wird. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name       | Typ                                         | Details                               |
+| ---------- | ------------------------------------------- | ------------------------------------- |
 | Ganze Zahl | [Ganzzahl](../../../value-types.md#INTEGER) | Dieselbe Zahl als normale ganze Zahl. |
 
 ### Mit großen ganzen Zahlen rechnen {#bigint-math}
@@ -395,18 +395,18 @@ Addiert, subtrahiert, multipliziert, teilt oder bildet den Rest zweier großer g
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| a | [Große Ganzzahl](../../../value-types.md#BIGINT) | Ja | Die erste große ganze Zahl. |
-| Operation | [Rechenart für große ganze Zahlen](../../../value-types.md#BIGINT_OPERATION) | Ja | Was berechnet werden soll. Standard: Addieren. |
-| b | [Große Ganzzahl](../../../value-types.md#BIGINT) | Ja | Die zweite große ganze Zahl. |
+| Name      | Typ                                                                          | Pflicht | Details                                        |
+| --------- | ---------------------------------------------------------------------------- | ------- | ---------------------------------------------- |
+| a         | [Große Ganzzahl](../../../value-types.md#BIGINT)                             | Ja      | Die erste große ganze Zahl.                    |
+| Operation | [Rechenart für große ganze Zahlen](../../../value-types.md#BIGINT_OPERATION) | Ja      | Was berechnet werden soll. Standard: Addieren. |
+| b         | [Große Ganzzahl](../../../value-types.md#BIGINT)                             | Ja      | Die zweite große ganze Zahl.                   |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Ergebnis | [Große Ganzzahl](../../../value-types.md#BIGINT) | Das Ergebnis der Operation. |
-| Vergleich | [Ganzzahl](../../../value-types.md#INTEGER) | -1, wenn a kleiner als b ist, 0 bei Gleichheit, 1, wenn a größer ist. |
+| Name      | Typ                                              | Details                                                               |
+| --------- | ------------------------------------------------ | --------------------------------------------------------------------- |
+| Ergebnis  | [Große Ganzzahl](../../../value-types.md#BIGINT) | Das Ergebnis der Operation.                                           |
+| Vergleich | [Ganzzahl](../../../value-types.md#INTEGER)      | -1, wenn a kleiner als b ist, 0 bei Gleichheit, 1, wenn a größer ist. |
 
 ### Ganze Zahl formatieren {#format-integer}
 
@@ -414,14 +414,14 @@ Konvertiert eine ganze Zahl in einen Text.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Die ganze Zahl. |
+| Name | Typ                                         | Pflicht | Details         |
+| ---- | ------------------------------------------- | ------- | --------------- |
+| Wert | [Ganzzahl](../../../value-types.md#INTEGER) | Ja      | Die ganze Zahl. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details              |
+| -------- | -------------------------------------- | -------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Die Textdarstellung. |
 
 ### Dezimalzahl formatieren {#format-float}
@@ -430,15 +430,15 @@ Formatiert eine Zahl mit einer festen Anzahl von Dezimalstellen.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die Zahl. |
-| Dezimalstellen | [Ganzzahl](../../../value-types.md#INTEGER) | Ja | Anzahl der Dezimalstellen (0-20). Wert: 0 bis 20. Standard: `2`. |
+| Name           | Typ                                          | Pflicht | Details                                                          |
+| -------------- | -------------------------------------------- | ------- | ---------------------------------------------------------------- |
+| Wert           | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Die Zahl.                                                        |
+| Dezimalstellen | [Ganzzahl](../../../value-types.md#INTEGER)  | Ja      | Anzahl der Dezimalstellen (0-20). Wert: 0 bis 20. Standard: `2`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                    | Details               |
+| -------- | -------------------------------------- | --------------------- |
 | Ergebnis | [Text](../../../value-types.md#STRING) | Der formatierte Text. |
 
 ### Menschenlesbare Zahl {#format-number-human}
@@ -447,17 +447,17 @@ Formatiert eine Zahl gut lesbar nach den Konventionen der Sprache: gruppiert mit
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Die zu formatierende Zahl. |
-| Stil | [Zahlen-Stil](../../../value-types.md#NUMBER_FORMAT_STYLE) | Ja | Wie die Zahl dargestellt wird: gruppiert (Tausendertrennzeichen) oder kompakt (abgekürzt). Standard: Gruppiert. |
-| Dezimalstellen | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Optionale Anzahl der Dezimalstellen (0-20). Gruppiert zeigt genau so viele; kompakte Stile höchstens so viele (Standard 1). Wert: 0 bis 20. |
-| Sprache | [Text](../../../value-types.md#STRING) | Nein | Sprache, deren Zahlkonventionen verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache. |
+| Name           | Typ                                                        | Pflicht | Details                                                                                                                                     |
+| -------------- | ---------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Wert           | [Dezimalzahl](../../../value-types.md#FLOAT)               | Ja      | Die zu formatierende Zahl.                                                                                                                  |
+| Stil           | [Zahlen-Stil](../../../value-types.md#NUMBER_FORMAT_STYLE) | Ja      | Wie die Zahl dargestellt wird: gruppiert (Tausendertrennzeichen) oder kompakt (abgekürzt). Standard: Gruppiert.                             |
+| Dezimalstellen | [Ganzzahl](../../../value-types.md#INTEGER)                | Nein    | Optionale Anzahl der Dezimalstellen (0-20). Gruppiert zeigt genau so viele; kompakte Stile höchstens so viele (Standard 1). Wert: 0 bis 20. |
+| Sprache        | [Text](../../../value-types.md#STRING)                     | Nein    | Sprache, deren Zahlkonventionen verwendet werden, z. B. "en" oder "de". Standard ist die Serversprache.                                     |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name | Typ                                    | Details                                                |
+| ---- | -------------------------------------- | ------------------------------------------------------ |
 | Text | [Text](../../../value-types.md#STRING) | Die formatierte Zahl, z. B. "4.000.000" oder "4 Mio.". |
 
 ### Logarithmus {#math-log}
@@ -466,15 +466,15 @@ Gibt den Logarithmus eines Werts zurück. Basis leer lassen für den natürliche
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Wert, dessen Logarithmus berechnet wird (muss größer als 0 sein). |
-| Basis | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein | Logarithmus-Basis. Leer lassen für den natürlichen Logarithmus (Basis e). |
+| Name  | Typ                                          | Pflicht | Details                                                                   |
+| ----- | -------------------------------------------- | ------- | ------------------------------------------------------------------------- |
+| Wert  | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Wert, dessen Logarithmus berechnet wird (muss größer als 0 sein).     |
+| Basis | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein    | Logarithmus-Basis. Leer lassen für den natürlichen Logarithmus (Basis e). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details                    |
+| -------- | -------------------------------------------- | -------------------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Logarithmus des Werts. |
 
 ### Exponentialfunktion {#math-exp}
@@ -483,12 +483,12 @@ Gibt e hoch dem Wert zurück.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Exponent. |
+| Name | Typ                                          | Pflicht | Details       |
+| ---- | -------------------------------------------- | ------- | ------------- |
+| Wert | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Exponent. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name     | Typ                                          | Details          |
+| -------- | -------------------------------------------- | ---------------- |
 | Ergebnis | [Dezimalzahl](../../../value-types.md#FLOAT) | e hoch dem Wert. |

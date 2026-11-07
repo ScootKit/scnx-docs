@@ -15,17 +15,17 @@ Makes this flow callable from other flows via "Call another flow". Declared para
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters callers must pass. Each declared parameter can be used inside the flow. Maximum items: 25. Default: `[]`. |
-| Return values | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed values this flow hands back to its caller via "Return from flow". Every return value may be empty - a flow can end without returning. Maximum items: 25. Default: `[]`. |
+| Name          | Type                                                             | Required | Details                                                                                                                                                                       |
+| ------------- | ---------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters    | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes      | Typed parameters callers must pass. Each declared parameter can be used inside the flow. Maximum items: 25. Default: `[]`.                                                    |
+| Return values | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes      | Typed values this flow hands back to its caller via "Return from flow". Every return value may be empty - a flow can end without returning. Maximum items: 25. Default: `[]`. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Caller flow | [Flow](../../../value-types.md#FLOW_REFERENCE) | Flow that called this one (if any). May be empty. |
-| Caller interaction | [Interaction](../../../value-types.md#INTERACTION) | Interaction that triggered this flow (button click, modal submit, …). May be empty. |
+| Name               | Type                                               | Details                                                                               |
+| ------------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Caller flow        | [Flow](../../../value-types.md#FLOW_REFERENCE)     | Flow that called this one (if any). May be empty.                                     |
+| Caller interaction | [Interaction](../../../value-types.md#INTERACTION) | Interaction that triggered this flow (button click, modal submit, ...). May be empty. |
 
 ### Custom event received {#custom-event-received}
 
@@ -33,16 +33,16 @@ Runs when a custom event with a matching name is emitted in this server (via "Em
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Event name | [Text](../../../value-types.md#STRING) | Yes | Only run when a custom event with this exact name is emitted. Length: 1 to 100 characters. |
+| Name       | Type                                   | Required | Details                                                                                    |
+| ---------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------ |
+| Event name | [Text](../../../value-types.md#STRING) | Yes      | Only run when a custom event with this exact name is emitted. Length: 1 to 100 characters. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Event name | [Text](../../../value-types.md#STRING) | Name of the emitted event. |
-| Payload | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The data passed by the emitting flow. Typed when this server or module declares a payload type for the event name, otherwise text key/value pairs. A trigger whose event name comes from a config option always gets text key/value pairs, never a declared type. |
+| Name       | Type                                                                                             | Details                                                                                                                                                                                                                                                           |
+| ---------- | ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Event name | [Text](../../../value-types.md#STRING)                                                           | Name of the emitted event.                                                                                                                                                                                                                                        |
+| Payload    | Lookup table of [Text](../../../value-types.md#STRING) to [Text](../../../value-types.md#STRING) | The data passed by the emitting flow. Typed when this server or module declares a payload type for the event name, otherwise text key/value pairs. A trigger whose event name comes from a config option always gets text key/value pairs, never a declared type. |
 
 ### Scheduled run {#scheduled-run}
 
@@ -50,12 +50,12 @@ Runs when a run scheduled via "Schedule flow run" is due. Declared parameters ar
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes | Typed parameters the scheduling flow must pass. Each declared parameter can be used inside the flow when the run fires. Maximum items: 25. Default: `[]`. |
+| Name       | Type                                                             | Required | Details                                                                                                                                                   |
+| ---------- | ---------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parameters | List of [Flow parameter](../../../value-types.md#FLOW_PARAMETER) | Yes      | Typed parameters the scheduling flow must pass. Each declared parameter can be used inside the flow when the run fires. Maximum items: 25. Default: `[]`. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                              | Details                       |
+| -------- | ------------------------------------------------- | ----------------------------- |
 | Fired at | [Date and time](../../../value-types.md#DATETIME) | When the scheduled run fired. |

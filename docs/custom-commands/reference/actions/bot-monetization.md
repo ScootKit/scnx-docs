@@ -15,8 +15,8 @@ Fetches all SKUs for the bot's application.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                    | Details                      |
+| ---- | --------------------------------------- | ---------------------------- |
 | SKUs | List of [SKU](../../value-types.md#SKU) | All SKUs of the application. |
 
 ### Fetch SKU by ID {#fetch-sku-by-id}
@@ -25,15 +25,15 @@ Fetches a single SKU by ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | The Discord ID of the SKU. |
+| Name | Type                                         | Required | Details                    |
+| ---- | -------------------------------------------- | -------- | -------------------------- |
+| ID   | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | The Discord ID of the SKU. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| SKU | [SKU](../../value-types.md#SKU) | The SKU, or empty if not found. May be empty. |
+| Name | Type                            | Details                                       |
+| ---- | ------------------------------- | --------------------------------------------- |
+| SKU  | [SKU](../../value-types.md#SKU) | The SKU, or empty if not found. May be empty. |
 
 ### Fetch application entitlements {#fetch-application-entitlements}
 
@@ -41,19 +41,19 @@ Fetches entitlements for the application, optionally filtered by user, SKU, or s
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| User ID | [Discord ID](../../value-types.md#SNOWFLAKE) | No | Only return entitlements owned by this user. |
-| SKU IDs | List of [Discord ID](../../value-types.md#SNOWFLAKE) | No | Only return entitlements for these SKUs. |
-| Server ID | [Discord ID](../../value-types.md#SNOWFLAKE) | No | Only return entitlements owned by this server. |
-| Exclude Ended | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Whether to omit entitlements that have already ended. Default: No. |
-| Exclude Deleted | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Whether to omit deleted entitlements. Default: Yes. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of entitlements to return (1-100). Value: 1 to 100. Default: `100`. |
+| Name            | Type                                                 | Required | Details                                                                            |
+| --------------- | ---------------------------------------------------- | -------- | ---------------------------------------------------------------------------------- |
+| User ID         | [Discord ID](../../value-types.md#SNOWFLAKE)         | No       | Only return entitlements owned by this user.                                       |
+| SKU IDs         | List of [Discord ID](../../value-types.md#SNOWFLAKE) | No       | Only return entitlements for these SKUs.                                           |
+| Server ID       | [Discord ID](../../value-types.md#SNOWFLAKE)         | No       | Only return entitlements owned by this server.                                     |
+| Exclude Ended   | [Yes/No](../../value-types.md#BOOLEAN)               | Yes      | Whether to omit entitlements that have already ended. Default: No.                 |
+| Exclude Deleted | [Yes/No](../../value-types.md#BOOLEAN)               | Yes      | Whether to omit deleted entitlements. Default: Yes.                                |
+| Limit           | [Whole number](../../value-types.md#INTEGER)         | Yes      | Maximum number of entitlements to return (1-100). Value: 1 to 100. Default: `100`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                                    | Details                   |
+| ------------ | ------------------------------------------------------- | ------------------------- |
 | Entitlements | List of [Entitlement](../../value-types.md#ENTITLEMENT) | The matched entitlements. |
 
 ### Fetch entitlement by ID {#fetch-entitlement-by-id}
@@ -62,14 +62,14 @@ Fetches a single entitlement by its Discord ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | The ID of the entitlement to fetch. |
+| Name | Type                                         | Required | Details                             |
+| ---- | -------------------------------------------- | -------- | ----------------------------------- |
+| ID   | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | The ID of the entitlement to fetch. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                                               |
+| ----------- | ----------------------------------------------- | ----------------------------------------------------- |
 | Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | The entitlement, or empty if not found. May be empty. |
 
 ### Create test entitlement {#create-test-entitlement}
@@ -78,16 +78,16 @@ Creates a test entitlement for an SKU, useful when testing premium features in d
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| SKU ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | ID of the SKU to grant the entitlement for. |
-| Owner Type | [Entitlement owner type](../../value-types.md#ENTITLEMENT_OWNER_TYPE) | Yes | Whether the entitlement is owned by a user or a server. |
-| Owner ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | ID of the owning user or server. |
+| Name       | Type                                                                  | Required | Details                                                 |
+| ---------- | --------------------------------------------------------------------- | -------- | ------------------------------------------------------- |
+| SKU ID     | [Discord ID](../../value-types.md#SNOWFLAKE)                          | Yes      | ID of the SKU to grant the entitlement for.             |
+| Owner Type | [Entitlement owner type](../../value-types.md#ENTITLEMENT_OWNER_TYPE) | Yes      | Whether the entitlement is owned by a user or a server. |
+| Owner ID   | [Discord ID](../../value-types.md#SNOWFLAKE)                          | Yes      | ID of the owning user or server.                        |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                            | Details                             |
+| ----------- | ----------------------------------------------- | ----------------------------------- |
 | Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | The newly created test entitlement. |
 
 ### Delete test entitlement {#delete-test-entitlement}
@@ -96,9 +96,9 @@ Deletes a test entitlement previously created via the test endpoint.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Yes | The test entitlement to delete. |
+| Name        | Type                                            | Required | Details                         |
+| ----------- | ----------------------------------------------- | -------- | ------------------------------- |
+| Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Yes      | The test entitlement to delete. |
 
 ### Consume entitlement {#consume-entitlement}
 
@@ -106,9 +106,9 @@ Marks a one-time consumable entitlement as consumed.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Yes | The consumable entitlement to consume. |
+| Name        | Type                                            | Required | Details                                |
+| ----------- | ----------------------------------------------- | -------- | -------------------------------------- |
+| Entitlement | [Entitlement](../../value-types.md#ENTITLEMENT) | Yes      | The consumable entitlement to consume. |
 
 ### Fetch SKU subscriptions {#fetch-sku-subscriptions}
 
@@ -116,18 +116,18 @@ Fetches subscriptions for an SKU, optionally filtered by user and paginated.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| SKU ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | The SKU whose subscriptions should be fetched. |
-| User ID | [Discord ID](../../value-types.md#SNOWFLAKE) | No | Only return subscriptions of this user. |
-| Before | [Discord ID](../../value-types.md#SNOWFLAKE) | No | Return subscriptions whose IDs come before this Discord ID. |
-| After | [Discord ID](../../value-types.md#SNOWFLAKE) | No | Return subscriptions whose IDs come after this Discord ID. |
-| Limit | [Whole number](../../value-types.md#INTEGER) | Yes | Maximum number of subscriptions to return (1-100). Value: 1 to 100. Default: `50`. |
+| Name    | Type                                         | Required | Details                                                                            |
+| ------- | -------------------------------------------- | -------- | ---------------------------------------------------------------------------------- |
+| SKU ID  | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | The SKU whose subscriptions should be fetched.                                     |
+| User ID | [Discord ID](../../value-types.md#SNOWFLAKE) | No       | Only return subscriptions of this user.                                            |
+| Before  | [Discord ID](../../value-types.md#SNOWFLAKE) | No       | Return subscriptions whose IDs come before this Discord ID.                        |
+| After   | [Discord ID](../../value-types.md#SNOWFLAKE) | No       | Return subscriptions whose IDs come after this Discord ID.                         |
+| Limit   | [Whole number](../../value-types.md#INTEGER) | Yes      | Maximum number of subscriptions to return (1-100). Value: 1 to 100. Default: `50`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name          | Type                                                      | Details                    |
+| ------------- | --------------------------------------------------------- | -------------------------- |
 | Subscriptions | List of [Subscription](../../value-types.md#SUBSCRIPTION) | The matched subscriptions. |
 
 ### Fetch SKU subscription by ID {#fetch-sku-subscription-by-id}
@@ -136,13 +136,13 @@ Fetches a single subscription for an SKU by its ID.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| SKU ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | The SKU the subscription belongs to. |
-| Subscription ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes | The ID of the subscription. |
+| Name            | Type                                         | Required | Details                              |
+| --------------- | -------------------------------------------- | -------- | ------------------------------------ |
+| SKU ID          | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | The SKU the subscription belongs to. |
+| Subscription ID | [Discord ID](../../value-types.md#SNOWFLAKE) | Yes      | The ID of the subscription.          |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                              | Details                                                |
+| ------------ | ------------------------------------------------- | ------------------------------------------------------ |
 | Subscription | [Subscription](../../value-types.md#SUBSCRIPTION) | The subscription, or empty if not found. May be empty. |

@@ -17,22 +17,22 @@ Required intents: `GuildMessages`, `MessageContent`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Text channel](../../../value-types.md#GUILD_TEXT_CHANNEL) | No | Only fire in these channels (leave empty for all channels). Maximum items: 25. |
-| Match type | [Message match](../../../value-types.md#MESSAGE_MATCH_TYPE) | Yes | How to match the message content. Default: Any message. |
-| Pattern | [Text](../../../value-types.md#STRING) | No | Text or regex to match against the message. Maximum length: 4000 characters. Shown when Match type is Contains, Equals, Starts with, Ends with, Regex. |
-| Ignore casing | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Match without regard to upper/lower case. Default: Yes. Shown when Match type is Contains, Equals, Starts with, Ends with. |
-| Ignore bots | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Skip messages sent by bots. Default: Yes. |
+| Name          | Type                                                               | Required | Details                                                                                                                                                |
+| ------------- | ------------------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Channels      | List of [Text channel](../../../value-types.md#GUILD_TEXT_CHANNEL) | No       | Only fire in these channels (leave empty for all channels). Maximum items: 25.                                                                         |
+| Match type    | [Message match](../../../value-types.md#MESSAGE_MATCH_TYPE)        | Yes      | How to match the message content. Default: Any message.                                                                                                |
+| Pattern       | [Text](../../../value-types.md#STRING)                             | No       | Text or regex to match against the message. Maximum length: 4000 characters. Shown when Match type is Contains, Equals, Starts with, Ends with, Regex. |
+| Ignore casing | [Yes/No](../../../value-types.md#BOOLEAN)                          | Yes      | Match without regard to upper/lower case. Default: Yes. Shown when Match type is Contains, Equals, Starts with, Ends with.                             |
+| Ignore bots   | [Yes/No](../../../value-types.md#BOOLEAN)                          | Yes      | Skip messages sent by bots. Default: Yes.                                                                                                              |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Message | [Message](../../../value-types.md#MESSAGE) | The message that was sent. |
-| Author | [User](../../../value-types.md#DISCORD_USER) | User that sent the message. |
-| Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Author resolved as a server member. May be empty. |
-| Channel | [Text channel](../../../value-types.md#GUILD_TEXT_CHANNEL) | Channel the message was sent in. |
+| Name    | Type                                                       | Details                                           |
+| ------- | ---------------------------------------------------------- | ------------------------------------------------- |
+| Message | [Message](../../../value-types.md#MESSAGE)                 | The message that was sent.                        |
+| Author  | [User](../../../value-types.md#DISCORD_USER)               | User that sent the message.                       |
+| Member  | [Server member](../../../value-types.md#GUILD_MEMBER)      | Author resolved as a server member. May be empty. |
+| Channel | [Text channel](../../../value-types.md#GUILD_TEXT_CHANNEL) | Channel the message was sent in.                  |
 
 ### Message updated {#message-updated}
 
@@ -42,10 +42,10 @@ Required intents: `GuildMessages`, `MessageContent`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name             | Type                                       | Details                                              |
+| ---------------- | ------------------------------------------ | ---------------------------------------------------- |
 | Previous message | [Message](../../../value-types.md#MESSAGE) | The message as it was before the edit. May be empty. |
-| Current message | [Message](../../../value-types.md#MESSAGE) | The message as it is after the edit. |
+| Current message  | [Message](../../../value-types.md#MESSAGE) | The message as it is after the edit.                 |
 
 ### Message deleted {#message-deleted}
 
@@ -55,8 +55,8 @@ Required intents: `GuildMessages`, `MessageContent`.
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name            | Type                                       | Details                       |
+| --------------- | ------------------------------------------ | ----------------------------- |
 | Deleted message | [Message](../../../value-types.md#MESSAGE) | The message that was deleted. |
 
 ### Reaction added {#reaction-added}
@@ -67,20 +67,20 @@ Required intents: `GuildMessageReactions`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
-| Specific Emoji | [Text](../../../value-types.md#STRING) | No | Only fire for this emoji (name or unicode). Leave empty to match any emoji. |
-| Ignore Bots | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | If enabled, reactions added by bots are ignored. Default: Yes. |
+| Name           | Type                                                            | Required | Details                                                                     |
+| -------------- | --------------------------------------------------------------- | -------- | --------------------------------------------------------------------------- |
+| Channels       | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels.                  |
+| Specific Emoji | [Text](../../../value-types.md#STRING)                          | No       | Only fire for this emoji (name or unicode). Leave empty to match any emoji. |
+| Ignore Bots    | [Yes/No](../../../value-types.md#BOOLEAN)                       | Yes      | If enabled, reactions added by bots are ignored. Default: Yes.              |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Message | [Message](../../../value-types.md#MESSAGE) | Message the reaction was added to. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that added the reaction. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji that was used (name or unicode). |
-| Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Server member representation of the reacting user, when available. May be empty. |
+| Name    | Type                                                  | Details                                                                          |
+| ------- | ----------------------------------------------------- | -------------------------------------------------------------------------------- |
+| Message | [Message](../../../value-types.md#MESSAGE)            | Message the reaction was added to.                                               |
+| User    | [User](../../../value-types.md#DISCORD_USER)          | User that added the reaction.                                                    |
+| Emoji   | [Text](../../../value-types.md#STRING)                | Emoji that was used (name or unicode).                                           |
+| Member  | [Server member](../../../value-types.md#GUILD_MEMBER) | Server member representation of the reacting user, when available. May be empty. |
 
 ### Reaction removed {#reaction-removed}
 
@@ -90,20 +90,20 @@ Required intents: `GuildMessageReactions`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
-| Specific Emoji | [Text](../../../value-types.md#STRING) | No | Only fire for this emoji (name or unicode). Leave empty to match any emoji. |
-| Ignore Bots | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | If enabled, reactions removed by bots are ignored. Default: Yes. |
+| Name           | Type                                                            | Required | Details                                                                     |
+| -------------- | --------------------------------------------------------------- | -------- | --------------------------------------------------------------------------- |
+| Channels       | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels.                  |
+| Specific Emoji | [Text](../../../value-types.md#STRING)                          | No       | Only fire for this emoji (name or unicode). Leave empty to match any emoji. |
+| Ignore Bots    | [Yes/No](../../../value-types.md#BOOLEAN)                       | Yes      | If enabled, reactions removed by bots are ignored. Default: Yes.            |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Message | [Message](../../../value-types.md#MESSAGE) | Message the reaction was removed from. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that removed the reaction. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji that was removed (name or unicode). |
-| Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Server member representation of the user, when available. May be empty. |
+| Name    | Type                                                  | Details                                                                 |
+| ------- | ----------------------------------------------------- | ----------------------------------------------------------------------- |
+| Message | [Message](../../../value-types.md#MESSAGE)            | Message the reaction was removed from.                                  |
+| User    | [User](../../../value-types.md#DISCORD_USER)          | User that removed the reaction.                                         |
+| Emoji   | [Text](../../../value-types.md#STRING)                | Emoji that was removed (name or unicode).                               |
+| Member  | [Server member](../../../value-types.md#GUILD_MEMBER) | Server member representation of the user, when available. May be empty. |
 
 ### All reactions removed {#all-reactions-removed}
 
@@ -113,14 +113,14 @@ Required intents: `GuildMessageReactions`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                    |
+| -------- | --------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                       | Details                                 |
+| ------- | ------------------------------------------ | --------------------------------------- |
 | Message | [Message](../../../value-types.md#MESSAGE) | Message that had its reactions cleared. |
 
 ### All reactions of emoji removed {#reaction-emoji-removed}
@@ -131,16 +131,16 @@ Required intents: `GuildMessageReactions`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                    |
+| -------- | --------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                       | Details                             |
+| ------- | ------------------------------------------ | ----------------------------------- |
 | Message | [Message](../../../value-types.md#MESSAGE) | Message that had reactions cleared. |
-| Emoji | [Text](../../../value-types.md#STRING) | Emoji whose reactions were cleared. |
+| Emoji   | [Text](../../../value-types.md#STRING)     | Emoji whose reactions were cleared. |
 
 ### Messages bulk deleted {#messages-bulk-deleted}
 
@@ -150,16 +150,16 @@ Required intents: `GuildMessages`, `MessageContent`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
+| Name     | Type                                                            | Required | Details                                                    |
+| -------- | --------------------------------------------------------------- | -------- | ---------------------------------------------------------- |
+| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Channel | [Server channel](../../../value-types.md#GUILD_CHANNEL) | Channel the messages were deleted from. |
-| Messages | List of [Message](../../../value-types.md#MESSAGE) | Messages that were deleted. |
+| Name     | Type                                                    | Details                                 |
+| -------- | ------------------------------------------------------- | --------------------------------------- |
+| Channel  | [Server channel](../../../value-types.md#GUILD_CHANNEL) | Channel the messages were deleted from. |
+| Messages | List of [Message](../../../value-types.md#MESSAGE)      | Messages that were deleted.             |
 
 ### Typing started {#typing-started}
 
@@ -169,15 +169,15 @@ Required intents: `GuildMessageTyping`.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Channels | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No | Only fire in these channels. Leave empty for all channels. |
-| Ignore Bots | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | If enabled, typing events from bots are ignored. Default: Yes. |
+| Name        | Type                                                            | Required | Details                                                        |
+| ----------- | --------------------------------------------------------------- | -------- | -------------------------------------------------------------- |
+| Channels    | List of [Server channel](../../../value-types.md#GUILD_CHANNEL) | No       | Only fire in these channels. Leave empty for all channels.     |
+| Ignore Bots | [Yes/No](../../../value-types.md#BOOLEAN)                       | Yes      | If enabled, typing events from bots are ignored. Default: Yes. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Channel | [Channel](../../../value-types.md#CHANNEL) | Channel the user started typing in. |
-| User | [User](../../../value-types.md#DISCORD_USER) | User that started typing. |
-| Since | [Date and time](../../../value-types.md#DATETIME) | Timestamp at which typing started. |
+| Name    | Type                                              | Details                             |
+| ------- | ------------------------------------------------- | ----------------------------------- |
+| Channel | [Channel](../../../value-types.md#CHANNEL)        | Channel the user started typing in. |
+| User    | [User](../../../value-types.md#DISCORD_USER)      | User that started typing.           |
+| Since   | [Date and time](../../../value-types.md#DATETIME) | Timestamp at which typing started.  |

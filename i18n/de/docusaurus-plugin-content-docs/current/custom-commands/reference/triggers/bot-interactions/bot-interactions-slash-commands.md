@@ -15,19 +15,19 @@ Wird ausgelöst, wenn jemand den Slash-Befehl ausführt.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehlsname | [Text](../../../value-types.md#STRING) | Ja | Befehlsname in Kleinbuchstaben (a-z, 0-9, Bindestrich, Unterstrich). Länge: 1 bis 32 Zeichen. Muss zu `^[a-z0-9_-]+$` passen. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Ja | Beschreibung, die in Discords Befehlsauswahl angezeigt wird. Länge: 1 bis 100 Zeichen. |
-| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG) | Nein | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt. |
-| In DMs erlauben | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein. |
-| Altersbeschränkt | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein. |
-| Optionen | Liste von [Befehlsoption](../../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein | Optionen (Argumente) des Befehls. Eingegebene Werte sind über die Zuordnung der Optionen der Interaktion verfügbar. Höchstens 25 Einträge. |
+| Name                         | Typ                                                                           | Pflicht | Details                                                                                                                                    |
+| ---------------------------- | ----------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Befehlsname                  | [Text](../../../value-types.md#STRING)                                        | Ja      | Befehlsname in Kleinbuchstaben (a-z, 0-9, Bindestrich, Unterstrich). Länge: 1 bis 32 Zeichen. Muss zu `^[a-z0-9_-]+$` passen.              |
+| Beschreibung                 | [Text](../../../value-types.md#STRING)                                        | Ja      | Beschreibung, die in Discords Befehlsauswahl angezeigt wird. Länge: 1 bis 100 Zeichen.                                                     |
+| Erforderliche Berechtigungen | Liste von [Berechtigung](../../../value-types.md#PERMISSION_FLAG)             | Nein    | Berechtigungen, die ein Mitglied standardmäßig zur Nutzung des Befehls benötigt.                                                           |
+| In DMs erlauben              | [Ja/Nein](../../../value-types.md#BOOLEAN)                                    | Ja      | Ob der Befehl auch in Direktnachrichten verfügbar ist. Standard: Nein.                                                                     |
+| Altersbeschränkt             | [Ja/Nein](../../../value-types.md#BOOLEAN)                                    | Ja      | Beschränkt den Befehl auf NSFW-Kanäle. Standard: Nein.                                                                                     |
+| Optionen                     | Liste von [Befehlsoption](../../../value-types.md#APPLICATION_COMMAND_OPTION) | Nein    | Optionen (Argumente) des Befehls. Eingegebene Werte sind über die Zuordnung der Optionen der Interaktion verfügbar. Höchstens 25 Einträge. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                               | Details                       |
+| ----------- | ----------------------------------------------------------------- | ----------------------------- |
 | Interaktion | [Slash-Befehl](../../../value-types.md#SLASH_COMMAND_INTERACTION) | Die Slash-Befehl-Interaktion. |
 
 ### Automatische Vervollständigung angefordert {#autocomplete-requested}
@@ -36,17 +36,17 @@ Wird ausgelöst, wenn Discord Autocomplete-Vorschläge für eine Slash-Befehls-O
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Befehlsname | [Text](../../../value-types.md#STRING) | Nein | Löst nur für diesen Slash-Befehl aus. Leer lassen für alle Befehle. |
-| Optionsname | [Text](../../../value-types.md#STRING) | Nein | Löst nur aus, wenn diese Option vervollständigt wird. Leer lassen für alle Optionen. |
-| Unterbefehl | [Text](../../../value-types.md#STRING) | Nein | Löst nur aus, wenn der Benutzer in diesem Unterbefehl schreibt. Nützlich, wenn mehrere Unterbefehle denselben Optionsnamen haben. Leer lassen für alle Unterbefehle. |
-| Unterbefehlsgruppe | [Text](../../../value-types.md#STRING) | Nein | Löst nur aus, wenn der Unterbefehl zu dieser Unterbefehlsgruppe gehört. Leer lassen für jede Gruppe. |
+| Name               | Typ                                    | Pflicht | Details                                                                                                                                                              |
+| ------------------ | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Befehlsname        | [Text](../../../value-types.md#STRING) | Nein    | Löst nur für diesen Slash-Befehl aus. Leer lassen für alle Befehle.                                                                                                  |
+| Optionsname        | [Text](../../../value-types.md#STRING) | Nein    | Löst nur aus, wenn diese Option vervollständigt wird. Leer lassen für alle Optionen.                                                                                 |
+| Unterbefehl        | [Text](../../../value-types.md#STRING) | Nein    | Löst nur aus, wenn der Benutzer in diesem Unterbefehl schreibt. Nützlich, wenn mehrere Unterbefehle denselben Optionsnamen haben. Leer lassen für alle Unterbefehle. |
+| Unterbefehlsgruppe | [Text](../../../value-types.md#STRING) | Nein    | Löst nur aus, wenn der Unterbefehl zu dieser Unterbefehlsgruppe gehört. Leer lassen für jede Gruppe.                                                                 |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                                    | Details                                       |
+| ----------- | -------------------------------------------------------------------------------------- | --------------------------------------------- |
 | Interaktion | [Autovervollständigungs-Interaktion](../../../value-types.md#AUTOCOMPLETE_INTERACTION) | Autocomplete-Interaktion, die erstellt wurde. |
 
 ### Anwendungsbefehl-Berechtigungen aktualisiert {#application-command-permissions-updated}
@@ -55,8 +55,8 @@ Wird ausgelöst, wenn sich die Berechtigungsüberschreibungen eines Anwendungsbe
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | Server, in dem die Änderung stattgefunden hat. |
-| Befehl | [Anwendungsbefehl](../../../value-types.md#APPLICATION_COMMAND) | Befehl, dessen Berechtigungen sich geändert haben. |
-| Berechtigungen | Liste von [Slash-Befehl-Berechtigung](../../../value-types.md#APPLICATION_COMMAND_PERMISSION) | Die neuen Berechtigungsüberschreibungen. |
+| Name           | Typ                                                                                           | Details                                            |
+| -------------- | --------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Server         | [Server](../../../value-types.md#GUILD)                                                       | Server, in dem die Änderung stattgefunden hat.     |
+| Befehl         | [Anwendungsbefehl](../../../value-types.md#APPLICATION_COMMAND)                               | Befehl, dessen Berechtigungen sich geändert haben. |
+| Berechtigungen | Liste von [Slash-Befehl-Berechtigung](../../../value-types.md#APPLICATION_COMMAND_PERMISSION) | Die neuen Berechtigungsüberschreibungen.           |

@@ -15,12 +15,12 @@ Wird ausgelöst, wenn ein Benutzer ein Modal-Dialogfeld einreicht.
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein | Nur auslösen, wenn die Custom-ID des Modals diesem Muster entspricht. Leer lassen, um alle Modals zu erfassen. |
+| Name             | Typ                                    | Pflicht | Details                                                                                                        |
+| ---------------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------- |
+| Custom-ID-Muster | [Text](../../../value-types.md#STRING) | Nein    | Nur auslösen, wenn die Custom-ID des Modals diesem Muster entspricht. Leer lassen, um alle Modals zu erfassen. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name        | Typ                                                                | Details                                       |
+| ----------- | ------------------------------------------------------------------ | --------------------------------------------- |
 | Interaktion | [Modal absenden](../../../value-types.md#MODAL_SUBMIT_INTERACTION) | Modal-Submit-Interaktion, die erstellt wurde. |

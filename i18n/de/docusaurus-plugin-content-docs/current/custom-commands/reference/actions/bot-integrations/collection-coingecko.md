@@ -15,21 +15,21 @@ Liest den aktuellen Preis einer Münze in einer Währung.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Coin-ID | [Text](../../../value-types.md#STRING) | Ja | Die CoinGecko-API-ID der Münze, zum Beispiel bitcoin oder ethereum. Sie steht als „API ID“ auf der CoinGecko-Seite der Münze. Maximale Länge: 100 Zeichen. |
-| Währung | [Text](../../../value-types.md#STRING) | Nein | Die Währung für Preise, zum Beispiel usd, eur oder btc. Leer: usd. Maximale Länge: 10 Zeichen. Standard: `usd`. |
+| Name       | Typ                                    | Pflicht | Details                                                                                                                                                    |
+| ---------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verbindung | [Text](../../../value-types.md#STRING) | Nein    | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.                                                  |
+| Coin-ID    | [Text](../../../value-types.md#STRING) | Ja      | Die CoinGecko-API-ID der Münze, zum Beispiel bitcoin oder ethereum. Sie steht als „API ID" auf der CoinGecko-Seite der Münze. Maximale Länge: 100 Zeichen. |
+| Währung    | [Text](../../../value-types.md#STRING) | Nein    | Die Währung für Preise, zum Beispiel usd, eur oder btc. Leer: usd. Maximale Länge: 10 Zeichen. Standard: `usd`.                                            |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob CoinGecko die Münze und die Währung kennt. Wenn nicht, ist alles andere leer. |
-| Preis | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Preis in der gewählten Währung. Kann leer sein. |
-| Marktkapitalisierung | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Marktkapitalisierung in der gewählten Währung. Kann leer sein. |
-| Änderung in 24 Stunden in % | [Dezimalzahl](../../../value-types.md#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
-| Aktualisiert am | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann CoinGecko den Preis zuletzt aktualisiert hat. Kann leer sein. |
+| Name                        | Typ                                                   | Details                                                                                      |
+| --------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Gefunden                    | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ob CoinGecko die Münze und die Währung kennt. Wenn nicht, ist alles andere leer.             |
+| Preis                       | [Dezimalzahl](../../../value-types.md#FLOAT)          | Der Preis in der gewählten Währung. Kann leer sein.                                          |
+| Marktkapitalisierung        | [Dezimalzahl](../../../value-types.md#FLOAT)          | Die Marktkapitalisierung in der gewählten Währung. Kann leer sein.                           |
+| Änderung in 24 Stunden in % | [Dezimalzahl](../../../value-types.md#FLOAT)          | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
+| Aktualisiert am             | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Wann CoinGecko den Preis zuletzt aktualisiert hat. Kann leer sein.                           |
 
 ### Münzdetails abrufen {#coingecko-get-coin}
 
@@ -37,27 +37,27 @@ Liest Name, Logo, Links und die Preise in US-Dollar und Euro einer Münze.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Coin-ID | [Text](../../../value-types.md#STRING) | Ja | Die CoinGecko-API-ID der Münze, zum Beispiel bitcoin oder ethereum. Sie steht als „API ID“ auf der CoinGecko-Seite der Münze. Maximale Länge: 100 Zeichen. |
+| Name       | Typ                                    | Pflicht | Details                                                                                                                                                    |
+| ---------- | -------------------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Verbindung | [Text](../../../value-types.md#STRING) | Nein    | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.                                                  |
+| Coin-ID    | [Text](../../../value-types.md#STRING) | Ja      | Die CoinGecko-API-ID der Münze, zum Beispiel bitcoin oder ethereum. Sie steht als „API ID" auf der CoinGecko-Seite der Münze. Maximale Länge: 100 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob CoinGecko die Münze kennt. Wenn nicht, ist alles andere leer. |
-| Name | [Text](../../../value-types.md#STRING) | Der Name der Münze. Kann leer sein. |
-| Symbol | [Text](../../../value-types.md#STRING) | Das Börsenkürzel, zum Beispiel btc. Kann leer sein. |
-| Rang | [Ganzzahl](../../../value-types.md#INTEGER) | Der Platz nach Marktkapitalisierung. Kann leer sein. |
-| Logo | [URL](../../../value-types.md#URL) | Das Logo der Münze. Leer, wenn sie keins hat. Kann leer sein. |
-| Webseite | [URL](../../../value-types.md#URL) | Die Webseite der Münze. Kann leer sein. |
-| Beschreibung | [Text](../../../value-types.md#STRING) | Die englische Beschreibung. Sie kann HTML-Links enthalten. Kann leer sein. |
-| Preis in USD | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Preis in US-Dollar. Kann leer sein. |
-| Preis in EUR | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Preis in Euro. Kann leer sein. |
-| Marktkapitalisierung in USD | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Marktkapitalisierung in US-Dollar. Kann leer sein. |
+| Name                        | Typ                                          | Details                                                                                      |
+| --------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Gefunden                    | [Ja/Nein](../../../value-types.md#BOOLEAN)   | Ob CoinGecko die Münze kennt. Wenn nicht, ist alles andere leer.                             |
+| Name                        | [Text](../../../value-types.md#STRING)       | Der Name der Münze. Kann leer sein.                                                          |
+| Symbol                      | [Text](../../../value-types.md#STRING)       | Das Börsenkürzel, zum Beispiel btc. Kann leer sein.                                          |
+| Rang                        | [Ganzzahl](../../../value-types.md#INTEGER)  | Der Platz nach Marktkapitalisierung. Kann leer sein.                                         |
+| Logo                        | [URL](../../../value-types.md#URL)           | Das Logo der Münze. Leer, wenn sie keins hat. Kann leer sein.                                |
+| Webseite                    | [URL](../../../value-types.md#URL)           | Die Webseite der Münze. Kann leer sein.                                                      |
+| Beschreibung                | [Text](../../../value-types.md#STRING)       | Die englische Beschreibung. Sie kann HTML-Links enthalten. Kann leer sein.                   |
+| Preis in USD                | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Preis in US-Dollar. Kann leer sein.                                                      |
+| Preis in EUR                | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Preis in Euro. Kann leer sein.                                                           |
+| Marktkapitalisierung in USD | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Marktkapitalisierung in US-Dollar. Kann leer sein.                                       |
 | Änderung in 24 Stunden in % | [Dezimalzahl](../../../value-types.md#FLOAT) | Wie stark sich der Preis in den letzten 24 Stunden geändert hat, in Prozent. Kann leer sein. |
-| Allzeithoch in USD | [Dezimalzahl](../../../value-types.md#FLOAT) | Der höchste Preis aller Zeiten, in US-Dollar. Kann leer sein. |
+| Allzeithoch in USD          | [Dezimalzahl](../../../value-types.md#FLOAT) | Der höchste Preis aller Zeiten, in US-Dollar. Kann leer sein.                                |
 
 ### Top-Münzen abrufen {#coingecko-list-markets}
 
@@ -65,15 +65,15 @@ Listet die Münzen mit der höchsten Marktkapitalisierung, die größte zuerst.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Verbindung | [Text](../../../value-types.md#STRING) | Nein | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen. |
-| Währung | [Text](../../../value-types.md#STRING) | Nein | Die Währung für Preise, zum Beispiel usd, eur oder btc. Leer: usd. Maximale Länge: 10 Zeichen. Standard: `usd`. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Münzen geholt werden, 1 bis 100. Leer: 10. Wert: 1 bis 100. Standard: `10`. |
-| Seite | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Welche Seite der Liste, ab 1. Leer: 1. Wert: 1 bis 1000. Standard: `1`. |
+| Name       | Typ                                         | Pflicht | Details                                                                                                         |
+| ---------- | ------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------- |
+| Verbindung | [Text](../../../value-types.md#STRING)      | Nein    | Die CoinGecko-Verbindung von der Seite Integrationen, die diese Aktion nutzt. Maximale Länge: 64 Zeichen.       |
+| Währung    | [Text](../../../value-types.md#STRING)      | Nein    | Die Währung für Preise, zum Beispiel usd, eur oder btc. Leer: usd. Maximale Länge: 10 Zeichen. Standard: `usd`. |
+| Anzahl     | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Wie viele Münzen geholt werden, 1 bis 100. Leer: 10. Wert: 1 bis 100. Standard: `10`.                           |
+| Seite      | [Ganzzahl](../../../value-types.md#INTEGER) | Nein    | Welche Seite der Liste, ab 1. Leer: 1. Wert: 1 bis 1000. Standard: `1`.                                         |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name   | Typ                                                                 | Details                        |
+| ------ | ------------------------------------------------------------------- | ------------------------------ |
 | Münzen | Liste von [CoinGecko-Münze](../../../value-types.md#coingecko-Coin) | Die Münzen, die größte zuerst. |

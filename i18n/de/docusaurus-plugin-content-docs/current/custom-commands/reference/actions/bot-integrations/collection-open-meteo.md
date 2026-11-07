@@ -15,24 +15,24 @@ Sucht eine Stadt oder einen Ort über den Namen und gibt die Koordinaten für di
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Ortsname | [Text](../../../value-types.md#STRING) | Ja | Der Name der Stadt oder des Orts, zum Beispiel Berlin. Maximale Länge: 100 Zeichen. |
-| Sprache | [Text](../../../value-types.md#STRING) | Nein | Zweistelliger Sprachcode für die Ortsnamen, zum Beispiel de. Leer: en. Maximale Länge: 2 Zeichen. Standard: `en`. |
+| Name     | Typ                                    | Pflicht | Details                                                                                                           |
+| -------- | -------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
+| Ortsname | [Text](../../../value-types.md#STRING) | Ja      | Der Name der Stadt oder des Orts, zum Beispiel Berlin. Maximale Länge: 100 Zeichen.                               |
+| Sprache  | [Text](../../../value-types.md#STRING) | Nein    | Zweistelliger Sprachcode für die Ortsnamen, zum Beispiel de. Leer: en. Maximale Länge: 2 Zeichen. Standard: `en`. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gefunden | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob ein Ort gefunden wurde. Wenn nicht, ist alles andere leer. |
-| Name | [Text](../../../value-types.md#STRING) | Der Name des Orts. Kann leer sein. |
-| Breitengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Breitengrad des Orts. Kann leer sein. |
-| Längengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Längengrad des Orts. Kann leer sein. |
-| Land | [Text](../../../value-types.md#STRING) | Das Land, in dem der Ort liegt. Kann leer sein. |
-| Ländercode | [Text](../../../value-types.md#STRING) | Der zweistellige Ländercode, zum Beispiel DE. Kann leer sein. |
-| Region | [Text](../../../value-types.md#STRING) | Das Bundesland oder die Region, zum Beispiel Bayern. Kann leer sein. |
-| Zeitzone | [Text](../../../value-types.md#STRING) | Die Zeitzone, zum Beispiel Europe/Berlin. Kann leer sein. |
-| Einwohner | [Ganzzahl](../../../value-types.md#INTEGER) | Wie viele Menschen dort leben, wenn bekannt. Kann leer sein. |
+| Name        | Typ                                          | Details                                                              |
+| ----------- | -------------------------------------------- | -------------------------------------------------------------------- |
+| Gefunden    | [Ja/Nein](../../../value-types.md#BOOLEAN)   | Ob ein Ort gefunden wurde. Wenn nicht, ist alles andere leer.        |
+| Name        | [Text](../../../value-types.md#STRING)       | Der Name des Orts. Kann leer sein.                                   |
+| Breitengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Breitengrad des Orts. Kann leer sein.                            |
+| Längengrad  | [Dezimalzahl](../../../value-types.md#FLOAT) | Der Längengrad des Orts. Kann leer sein.                             |
+| Land        | [Text](../../../value-types.md#STRING)       | Das Land, in dem der Ort liegt. Kann leer sein.                      |
+| Ländercode  | [Text](../../../value-types.md#STRING)       | Der zweistellige Ländercode, zum Beispiel DE. Kann leer sein.        |
+| Region      | [Text](../../../value-types.md#STRING)       | Das Bundesland oder die Region, zum Beispiel Bayern. Kann leer sein. |
+| Zeitzone    | [Text](../../../value-types.md#STRING)       | Die Zeitzone, zum Beispiel Europe/Berlin. Kann leer sein.            |
+| Einwohner   | [Ganzzahl](../../../value-types.md#INTEGER)  | Wie viele Menschen dort leben, wenn bekannt. Kann leer sein.         |
 
 ### Aktuelles Wetter abrufen {#open-meteo-get-current-weather}
 
@@ -40,26 +40,26 @@ Liest das Wetter gerade an einem Ort.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Breitengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Breitengrad des Orts, zum Beispiel 52.52. Du bekommst ihn mit „Ort suchen“. Wert: -90 bis 90. |
-| Längengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Längengrad des Orts, zum Beispiel 13.41. Du bekommst ihn mit „Ort suchen“. Wert: -180 bis 180. |
-| Temperatureinheit | [Text](../../../value-types.md#STRING) | Nein | celsius oder fahrenheit. Leer: celsius. Maximale Länge: 10 Zeichen. Standard: `celsius`. |
-| Einheit der Windgeschwindigkeit | [Text](../../../value-types.md#STRING) | Nein | kmh, ms, mph oder kn. Leer: kmh. Maximale Länge: 3 Zeichen. Standard: `kmh`. |
+| Name                            | Typ                                          | Pflicht | Details                                                                                            |
+| ------------------------------- | -------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Breitengrad                     | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Breitengrad des Orts, zum Beispiel 52.52. Du bekommst ihn mit „Ort suchen". Wert: -90 bis 90.  |
+| Längengrad                      | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Längengrad des Orts, zum Beispiel 13.41. Du bekommst ihn mit „Ort suchen". Wert: -180 bis 180. |
+| Temperatureinheit               | [Text](../../../value-types.md#STRING)       | Nein    | celsius oder fahrenheit. Leer: celsius. Maximale Länge: 10 Zeichen. Standard: `celsius`.           |
+| Einheit der Windgeschwindigkeit | [Text](../../../value-types.md#STRING)       | Nein    | kmh, ms, mph oder kn. Leer: kmh. Maximale Länge: 3 Zeichen. Standard: `kmh`.                       |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Temperatur | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Lufttemperatur, in der gewählten Einheit. |
-| Gefühlt | [Dezimalzahl](../../../value-types.md#FLOAT) | Wie warm es sich anfühlt, in der gewählten Einheit. Kann leer sein. |
-| Temperatureinheit | [Text](../../../value-types.md#STRING) | Das Einheitenzeichen, zum Beispiel °C. Kann leer sein. |
-| Luftfeuchtigkeit in % | [Ganzzahl](../../../value-types.md#INTEGER) | Die relative Luftfeuchtigkeit, in Prozent. Kann leer sein. |
-| Niederschlag in mm | [Dezimalzahl](../../../value-types.md#FLOAT) | Regen, Schauer und Schnee in der aktuellen Stunde, in Millimetern. Kann leer sein. |
-| Wettercode | [Ganzzahl](../../../value-types.md#INTEGER) | Der WMO-Wettercode: 0 klar, 1 bis 3 leicht bewölkt bis bedeckt, 45 und 48 Nebel, 51 bis 67 Niesel und Regen, 71 bis 77 Schnee, 80 bis 82 Regenschauer, 85 und 86 Schneeschauer, 95 bis 99 Gewitter. Kann leer sein. |
-| Windgeschwindigkeit | [Dezimalzahl](../../../value-types.md#FLOAT) | Die Windgeschwindigkeit, in der gewählten Einheit. Kann leer sein. |
-| Ist Tag | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ob am Ort die Sonne scheint. |
-| Gemessen um | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Von wann diese Werte sind. Kann leer sein. |
+| Name                  | Typ                                                   | Details                                                                                                                                                                                                             |
+| --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Temperatur            | [Dezimalzahl](../../../value-types.md#FLOAT)          | Die Lufttemperatur, in der gewählten Einheit.                                                                                                                                                                       |
+| Gefühlt               | [Dezimalzahl](../../../value-types.md#FLOAT)          | Wie warm es sich anfühlt, in der gewählten Einheit. Kann leer sein.                                                                                                                                                 |
+| Temperatureinheit     | [Text](../../../value-types.md#STRING)                | Das Einheitenzeichen, zum Beispiel °C. Kann leer sein.                                                                                                                                                              |
+| Luftfeuchtigkeit in % | [Ganzzahl](../../../value-types.md#INTEGER)           | Die relative Luftfeuchtigkeit, in Prozent. Kann leer sein.                                                                                                                                                          |
+| Niederschlag in mm    | [Dezimalzahl](../../../value-types.md#FLOAT)          | Regen, Schauer und Schnee in der aktuellen Stunde, in Millimetern. Kann leer sein.                                                                                                                                  |
+| Wettercode            | [Ganzzahl](../../../value-types.md#INTEGER)           | Der WMO-Wettercode: 0 klar, 1 bis 3 leicht bewölkt bis bedeckt, 45 und 48 Nebel, 51 bis 67 Niesel und Regen, 71 bis 77 Schnee, 80 bis 82 Regenschauer, 85 und 86 Schneeschauer, 95 bis 99 Gewitter. Kann leer sein. |
+| Windgeschwindigkeit   | [Dezimalzahl](../../../value-types.md#FLOAT)          | Die Windgeschwindigkeit, in der gewählten Einheit. Kann leer sein.                                                                                                                                                  |
+| Ist Tag               | [Ja/Nein](../../../value-types.md#BOOLEAN)            | Ob am Ort die Sonne scheint.                                                                                                                                                                                        |
+| Gemessen um           | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Von wann diese Werte sind. Kann leer sein.                                                                                                                                                                          |
 
 ### Wettervorhersage abrufen {#open-meteo-get-forecast}
 
@@ -67,18 +67,18 @@ Liest die Tagesvorhersage für einen Ort, heute zuerst.
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Breitengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Breitengrad des Orts, zum Beispiel 52.52. Du bekommst ihn mit „Ort suchen“. Wert: -90 bis 90. |
-| Längengrad | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der Längengrad des Orts, zum Beispiel 13.41. Du bekommst ihn mit „Ort suchen“. Wert: -180 bis 180. |
-| Tage | [Ganzzahl](../../../value-types.md#INTEGER) | Nein | Wie viele Tage geholt werden, 1 bis 16. Leer: 7. Wert: 1 bis 16. Standard: `7`. |
-| Temperatureinheit | [Text](../../../value-types.md#STRING) | Nein | celsius oder fahrenheit. Leer: celsius. Maximale Länge: 10 Zeichen. Standard: `celsius`. |
-| Einheit der Windgeschwindigkeit | [Text](../../../value-types.md#STRING) | Nein | kmh, ms, mph oder kn. Leer: kmh. Maximale Länge: 3 Zeichen. Standard: `kmh`. |
+| Name                            | Typ                                          | Pflicht | Details                                                                                            |
+| ------------------------------- | -------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| Breitengrad                     | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Breitengrad des Orts, zum Beispiel 52.52. Du bekommst ihn mit „Ort suchen". Wert: -90 bis 90.  |
+| Längengrad                      | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja      | Der Längengrad des Orts, zum Beispiel 13.41. Du bekommst ihn mit „Ort suchen". Wert: -180 bis 180. |
+| Tage                            | [Ganzzahl](../../../value-types.md#INTEGER)  | Nein    | Wie viele Tage geholt werden, 1 bis 16. Leer: 7. Wert: 1 bis 16. Standard: `7`.                    |
+| Temperatureinheit               | [Text](../../../value-types.md#STRING)       | Nein    | celsius oder fahrenheit. Leer: celsius. Maximale Länge: 10 Zeichen. Standard: `celsius`.           |
+| Einheit der Windgeschwindigkeit | [Text](../../../value-types.md#STRING)       | Nein    | kmh, ms, mph oder kn. Leer: kmh. Maximale Länge: 3 Zeichen. Standard: `kmh`.                       |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Tage | Liste von [Vorhersagetag](../../../value-types.md#open-meteo-Day) | Die Vorhersage, ein Eintrag pro Tag, heute zuerst. |
-| Zeitzone | [Text](../../../value-types.md#STRING) | Die Zeitzone des Orts, zum Beispiel Europe/Berlin. Kann leer sein. |
-| Temperatureinheit | [Text](../../../value-types.md#STRING) | Das Einheitenzeichen, zum Beispiel °C. Kann leer sein. |
+| Name              | Typ                                                               | Details                                                            |
+| ----------------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Tage              | Liste von [Vorhersagetag](../../../value-types.md#open-meteo-Day) | Die Vorhersage, ein Eintrag pro Tag, heute zuerst.                 |
+| Zeitzone          | [Text](../../../value-types.md#STRING)                            | Die Zeitzone des Orts, zum Beispiel Europe/Berlin. Kann leer sein. |
+| Temperatureinheit | [Text](../../../value-types.md#STRING)                            | Das Einheitenzeichen, zum Beispiel °C. Kann leer sein.             |

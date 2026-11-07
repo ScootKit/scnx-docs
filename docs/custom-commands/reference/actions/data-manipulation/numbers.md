@@ -15,15 +15,15 @@ Adds two numbers.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First addend. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second addend. |
+| Name | Type                                            | Required | Details        |
+| ---- | ----------------------------------------------- | -------- | -------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First addend.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second addend. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details        |
+| ------ | ----------------------------------------------- | -------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The sum a + b. |
 
 ### Subtract {#math-subtract}
@@ -32,15 +32,15 @@ Subtracts the second number from the first.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | Minuend. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Subtrahend. |
+| Name | Type                                            | Required | Details     |
+| ---- | ----------------------------------------------- | -------- | ----------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Minuend.    |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Subtrahend. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details               |
+| ------ | ----------------------------------------------- | --------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The difference a - b. |
 
 ### Multiply {#math-multiply}
@@ -49,15 +49,15 @@ Multiplies two numbers.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | First factor. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Second factor. |
+| Name | Type                                            | Required | Details        |
+| ---- | ----------------------------------------------- | -------- | -------------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | First factor.  |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Second factor. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The product a * b. |
 
 ### Divide {#math-divide}
@@ -66,15 +66,15 @@ Divides the first number by the second.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | Dividend. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Divisor. |
+| Name | Type                                            | Required | Details   |
+| ---- | ----------------------------------------------- | -------- | --------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Dividend. |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Divisor.  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details             |
+| ------ | ----------------------------------------------- | ------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The quotient a / b. |
 
 ### Remainder after division {#math-modulo}
@@ -83,15 +83,15 @@ Returns the remainder of dividing a by b.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Decimal number](../../../value-types.md#FLOAT) | Yes | Dividend. |
-| B | [Decimal number](../../../value-types.md#FLOAT) | Yes | Divisor. |
+| Name | Type                                            | Required | Details   |
+| ---- | ----------------------------------------------- | -------- | --------- |
+| A    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Dividend. |
+| B    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Divisor.  |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details              |
+| ------ | ----------------------------------------------- | -------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The remainder a % b. |
 
 ### Round {#math-round}
@@ -100,14 +100,14 @@ Rounds a number to the nearest whole number.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number to round. |
+| Name  | Type                                            | Required | Details              |
+| ----- | ----------------------------------------------- | -------- | -------------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The number to round. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                   |
+| ------ | ----------------------------------------------- | ------------------------- |
 | Result | [Whole number](../../../value-types.md#INTEGER) | The rounded whole number. |
 
 ### Round to decimals {#math-round-to}
@@ -116,15 +116,15 @@ Rounds a value to the given number of decimal places.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The value to round. |
-| Decimals | [Whole number](../../../value-types.md#INTEGER) | Yes | Number of decimal places to keep. Minimum: 0. |
+| Name     | Type                                            | Required | Details                                       |
+| -------- | ----------------------------------------------- | -------- | --------------------------------------------- |
+| Value    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The value to round.                           |
+| Decimals | [Whole number](../../../value-types.md#INTEGER) | Yes      | Number of decimal places to keep. Minimum: 0. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The rounded value. |
 
 ### Floor {#math-floor}
@@ -133,14 +133,14 @@ Rounds a number down to the nearest whole number.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number to floor. |
+| Name  | Type                                            | Required | Details              |
+| ----- | ----------------------------------------------- | -------- | -------------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The number to floor. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                        |
+| ------ | ----------------------------------------------- | ------------------------------ |
 | Result | [Whole number](../../../value-types.md#INTEGER) | The rounded-down whole number. |
 
 ### Ceiling {#math-ceil}
@@ -149,14 +149,14 @@ Rounds a number up to the nearest whole number.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number to round up. |
+| Name  | Type                                            | Required | Details                 |
+| ----- | ----------------------------------------------- | -------- | ----------------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The number to round up. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                      |
+| ------ | ----------------------------------------------- | ---------------------------- |
 | Result | [Whole number](../../../value-types.md#INTEGER) | The rounded-up whole number. |
 
 ### Minimum {#math-min}
@@ -165,14 +165,14 @@ Returns the smallest value in a list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes | Numbers to compare. Minimum items: 1. |
+| Name   | Type                                                    | Required | Details                               |
+| ------ | ------------------------------------------------------- | -------- | ------------------------------------- |
+| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes      | Numbers to compare. Minimum items: 1. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details             |
+| ------ | ----------------------------------------------- | ------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The smallest value. |
 
 ### Maximum {#math-max}
@@ -181,14 +181,14 @@ Returns the largest value in a list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes | Numbers to compare. Minimum items: 1. |
+| Name   | Type                                                    | Required | Details                               |
+| ------ | ------------------------------------------------------- | -------- | ------------------------------------- |
+| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes      | Numbers to compare. Minimum items: 1. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The largest value. |
 
 ### Limit between min and max {#math-clamp}
@@ -197,16 +197,16 @@ Constrains a value to the range [min, max].
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The value to clamp. |
-| Minimum | [Decimal number](../../../value-types.md#FLOAT) | Yes | The lower bound. |
-| Maximum | [Decimal number](../../../value-types.md#FLOAT) | Yes | The upper bound. |
+| Name    | Type                                            | Required | Details             |
+| ------- | ----------------------------------------------- | -------- | ------------------- |
+| Value   | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The value to clamp. |
+| Minimum | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The lower bound.    |
+| Maximum | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The upper bound.    |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The clamped value. |
 
 ### Sum {#math-sum}
@@ -215,14 +215,14 @@ Adds together all values in a list. An empty list sums to 0.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes | Numbers to add. |
+| Name   | Type                                                    | Required | Details         |
+| ------ | ------------------------------------------------------- | -------- | --------------- |
+| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes      | Numbers to add. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                |
+| ------ | ----------------------------------------------- | ---------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The sum of the values. |
 
 ### Average {#math-average}
@@ -231,14 +231,14 @@ Returns the arithmetic mean of a list of values. An empty list averages to 0.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes | Numbers to average. |
+| Name   | Type                                                    | Required | Details             |
+| ------ | ------------------------------------------------------- | -------- | ------------------- |
+| Values | List of [Decimal number](../../../value-types.md#FLOAT) | Yes      | Numbers to average. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                 |
+| ------ | ----------------------------------------------- | ----------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The mean of the values. |
 
 ### Absolute value {#math-abs}
@@ -247,14 +247,14 @@ Returns the absolute value of a number.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number. |
+| Name  | Type                                            | Required | Details     |
+| ----- | ----------------------------------------------- | -------- | ----------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The number. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details             |
+| ------ | ----------------------------------------------- | ------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The absolute value. |
 
 ### Power {#math-power}
@@ -263,15 +263,15 @@ Raises a base to an exponent.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Base | [Decimal number](../../../value-types.md#FLOAT) | Yes | The base value. |
-| Exponent | [Decimal number](../../../value-types.md#FLOAT) | Yes | The exponent. |
+| Name     | Type                                            | Required | Details         |
+| -------- | ----------------------------------------------- | -------- | --------------- |
+| Base     | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The base value. |
+| Exponent | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The exponent.   |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                  |
+| ------ | ----------------------------------------------- | ------------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | base raised to exponent. |
 
 ### Square root {#math-sqrt}
@@ -280,14 +280,14 @@ Returns the square root of a non-negative number.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | Non-negative number. Minimum: 0. |
+| Name  | Type                                            | Required | Details                          |
+| ----- | ----------------------------------------------- | -------- | -------------------------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Non-negative number. Minimum: 0. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details          |
+| ------ | ----------------------------------------------- | ---------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The square root. |
 
 ### Random whole number {#math-random-integer}
@@ -296,15 +296,15 @@ Generates a random whole number between min and max (inclusive).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Min | [Whole number](../../../value-types.md#INTEGER) | Yes | Minimum value (inclusive). |
-| Max | [Whole number](../../../value-types.md#INTEGER) | Yes | Maximum value (inclusive). |
+| Name | Type                                            | Required | Details                    |
+| ---- | ----------------------------------------------- | -------- | -------------------------- |
+| Min  | [Whole number](../../../value-types.md#INTEGER) | Yes      | Minimum value (inclusive). |
+| Max  | [Whole number](../../../value-types.md#INTEGER) | Yes      | Maximum value (inclusive). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                  |
+| ------ | ----------------------------------------------- | ------------------------ |
 | Result | [Whole number](../../../value-types.md#INTEGER) | The random whole number. |
 
 ### Random decimal number {#math-random-float}
@@ -313,15 +313,15 @@ Generates a random decimal number between min and max.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Min | [Decimal number](../../../value-types.md#FLOAT) | Yes | Minimum value (inclusive). |
-| Max | [Decimal number](../../../value-types.md#FLOAT) | Yes | Maximum value (exclusive). |
+| Name | Type                                            | Required | Details                    |
+| ---- | ----------------------------------------------- | -------- | -------------------------- |
+| Min  | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Minimum value (inclusive). |
+| Max  | [Decimal number](../../../value-types.md#FLOAT) | Yes      | Maximum value (exclusive). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details            |
+| ------ | ----------------------------------------------- | ------------------ |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The random number. |
 
 ### Text to whole number {#parse-integer}
@@ -330,14 +330,14 @@ Reads a whole number from text. Returns an empty value if invalid.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to read. |
+| Name | Type                                   | Required | Details           |
+| ---- | -------------------------------------- | -------- | ----------------- |
+| Text | [Text](../../../value-types.md#STRING) | Yes      | The text to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                                   |
+| ------ | ----------------------------------------------- | ----------------------------------------- |
 | Result | [Whole number](../../../value-types.md#INTEGER) | The whole number, or empty. May be empty. |
 
 ### Text to decimal number {#parse-float}
@@ -346,14 +346,14 @@ Reads a decimal number from text. Returns an empty value if invalid.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to read. |
+| Name | Type                                   | Required | Details           |
+| ---- | -------------------------------------- | -------- | ----------------- |
+| Text | [Text](../../../value-types.md#STRING) | Yes      | The text to read. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                                     |
+| ------ | ----------------------------------------------- | ------------------------------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The decimal number, or empty. May be empty. |
 
 ### Convert to large whole number {#to-bigint}
@@ -362,15 +362,15 @@ Turns text or a whole number into a big whole number, which stays exact at any s
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | No | The digits to read, for example 9007199254740993. Use this or Number. Use only one of these: Number. |
-| Number | [Whole number](../../../value-types.md#INTEGER) | No | A whole number to convert. Use this or Text. Use only one of these: Text. |
+| Name   | Type                                            | Required | Details                                                                                              |
+| ------ | ----------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING)          | No       | The digits to read, for example 9007199254740993. Use this or Number. Use only one of these: Number. |
+| Number | [Whole number](../../../value-types.md#INTEGER) | No       | A whole number to convert. Use this or Text. Use only one of these: Text.                            |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name               | Type                                                 | Details               |
+| ------------------ | ---------------------------------------------------- | --------------------- |
 | Large whole number | [Large whole number](../../../value-types.md#BIGINT) | The big whole number. |
 
 ### Large whole number to whole number {#bigint-to-integer}
@@ -379,14 +379,14 @@ Turns a big whole number into a normal whole number for the other math actions. 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Large whole number | [Large whole number](../../../value-types.md#BIGINT) | Yes | The big whole number to convert. |
+| Name               | Type                                                 | Required | Details                          |
+| ------------------ | ---------------------------------------------------- | -------- | -------------------------------- |
+| Large whole number | [Large whole number](../../../value-types.md#BIGINT) | Yes      | The big whole number to convert. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                            | Details                                   |
+| ------------ | ----------------------------------------------- | ----------------------------------------- |
 | Whole number | [Whole number](../../../value-types.md#INTEGER) | The same number as a normal whole number. |
 
 ### Calculate with large whole numbers {#bigint-math}
@@ -395,18 +395,18 @@ Adds, subtracts, multiplies, divides or takes the remainder of two big whole num
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| a | [Large whole number](../../../value-types.md#BIGINT) | Yes | The first large whole number. |
-| Operation | [Large whole number operation](../../../value-types.md#BIGINT_OPERATION) | Yes | What to calculate. Default: Add. |
-| b | [Large whole number](../../../value-types.md#BIGINT) | Yes | The second large whole number. |
+| Name      | Type                                                                     | Required | Details                          |
+| --------- | ------------------------------------------------------------------------ | -------- | -------------------------------- |
+| a         | [Large whole number](../../../value-types.md#BIGINT)                     | Yes      | The first large whole number.    |
+| Operation | [Large whole number operation](../../../value-types.md#BIGINT_OPERATION) | Yes      | What to calculate. Default: Add. |
+| b         | [Large whole number](../../../value-types.md#BIGINT)                     | Yes      | The second large whole number.   |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Result | [Large whole number](../../../value-types.md#BIGINT) | The result of the operation. |
-| Comparison | [Whole number](../../../value-types.md#INTEGER) | -1 when a is smaller than b, 0 when they are equal, 1 when a is larger. |
+| Name       | Type                                                 | Details                                                                 |
+| ---------- | ---------------------------------------------------- | ----------------------------------------------------------------------- |
+| Result     | [Large whole number](../../../value-types.md#BIGINT) | The result of the operation.                                            |
+| Comparison | [Whole number](../../../value-types.md#INTEGER)      | -1 when a is smaller than b, 0 when they are equal, 1 when a is larger. |
 
 ### Format whole number {#format-integer}
 
@@ -414,14 +414,14 @@ Converts a whole number to a text.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Whole number](../../../value-types.md#INTEGER) | Yes | The whole number. |
+| Name  | Type                                            | Required | Details           |
+| ----- | ----------------------------------------------- | -------- | ----------------- |
+| Value | [Whole number](../../../value-types.md#INTEGER) | Yes      | The whole number. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details                  |
+| ------ | -------------------------------------- | ------------------------ |
 | Result | [Text](../../../value-types.md#STRING) | The text representation. |
 
 ### Format decimal number {#format-float}
@@ -430,15 +430,15 @@ Formats a number with a fixed number of decimal places.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number. |
-| Decimals | [Whole number](../../../value-types.md#INTEGER) | Yes | Number of decimal places (0-20). Value: 0 to 20. Default: `2`. |
+| Name     | Type                                            | Required | Details                                                        |
+| -------- | ----------------------------------------------- | -------- | -------------------------------------------------------------- |
+| Value    | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The number.                                                    |
+| Decimals | [Whole number](../../../value-types.md#INTEGER) | Yes      | Number of decimal places (0-20). Value: 0 to 20. Default: `2`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details             |
+| ------ | -------------------------------------- | ------------------- |
 | Result | [Text](../../../value-types.md#STRING) | The formatted text. |
 
 ### Human-readable number {#format-number-human}
@@ -447,17 +447,17 @@ Formats a number for humans, following the locale's conventions: grouped with th
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The number to format. |
-| Style | [Number style](../../../value-types.md#NUMBER_FORMAT_STYLE) | Yes | How the number is rendered: grouped (thousands separators) or compact (abbreviated). Default: Grouped. |
-| Decimals | [Whole number](../../../value-types.md#INTEGER) | No | Optional number of decimal places (0-20). Grouped style shows exactly this many; compact styles show at most this many (default 1). Value: 0 to 20. |
-| Locale | [Text](../../../value-types.md#STRING) | No | Locale whose number conventions are used, e.g. "en" or "de". Defaults to the server's language. |
+| Name     | Type                                                        | Required | Details                                                                                                                                             |
+| -------- | ----------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Value    | [Decimal number](../../../value-types.md#FLOAT)             | Yes      | The number to format.                                                                                                                               |
+| Style    | [Number style](../../../value-types.md#NUMBER_FORMAT_STYLE) | Yes      | How the number is rendered: grouped (thousands separators) or compact (abbreviated). Default: Grouped.                                              |
+| Decimals | [Whole number](../../../value-types.md#INTEGER)             | No       | Optional number of decimal places (0-20). Grouped style shows exactly this many; compact styles show at most this many (default 1). Value: 0 to 20. |
+| Locale   | [Text](../../../value-types.md#STRING)                      | No       | Locale whose number conventions are used, e.g. "en" or "de". Defaults to the server's language.                                                     |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                   | Details                                         |
+| ---- | -------------------------------------- | ----------------------------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | The formatted number, e.g. "4,000,000" or "4M". |
 
 ### Logarithm {#math-log}
@@ -466,15 +466,15 @@ Returns the logarithm of a value. Leave the base empty for the natural logarithm
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The value to take the logarithm of (must be greater than 0). |
-| Base | [Decimal number](../../../value-types.md#FLOAT) | No | Logarithm base. Leave empty for the natural logarithm (base e). |
+| Name  | Type                                            | Required | Details                                                         |
+| ----- | ----------------------------------------------- | -------- | --------------------------------------------------------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The value to take the logarithm of (must be greater than 0).    |
+| Base  | [Decimal number](../../../value-types.md#FLOAT) | No       | Logarithm base. Leave empty for the natural logarithm (base e). |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                     |
+| ------ | ----------------------------------------------- | --------------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | The logarithm of the value. |
 
 ### Exponential {#math-exp}
@@ -483,12 +483,12 @@ Returns e raised to the power of the value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes | The exponent. |
+| Name  | Type                                            | Required | Details       |
+| ----- | ----------------------------------------------- | -------- | ------------- |
+| Value | [Decimal number](../../../value-types.md#FLOAT) | Yes      | The exponent. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                            | Details                             |
+| ------ | ----------------------------------------------- | ----------------------------------- |
 | Result | [Decimal number](../../../value-types.md#FLOAT) | e raised to the power of the value. |

@@ -15,8 +15,8 @@ Wird ausgelöst, wenn ein neuer Kanal auf dem Server erstellt wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                   | Details                        |
+| ---------------- | ----------------------------------------------------- | ------------------------------ |
 | Erstellter Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal, der erstellt wurde. |
 
 ### Kanal gelöscht {#channel-deleted}
@@ -25,8 +25,8 @@ Wird ausgelöst, wenn ein Kanal auf dem Server gelöscht wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name             | Typ                                                   | Details                        |
+| ---------------- | ----------------------------------------------------- | ------------------------------ |
 | Gelöschter Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal, der gelöscht wurde. |
 
 ### Kanal aktualisiert {#channel-updated}
@@ -35,10 +35,10 @@ Wird ausgelöst, wenn ein Kanal auf dem Server aktualisiert wird.
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Vorheriger Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal vor der Aktualisierung. |
-| Aktueller Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal nach der Aktualisierung. |
+| Name             | Typ                                                   | Details                            |
+| ---------------- | ----------------------------------------------------- | ---------------------------------- |
+| Vorheriger Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal vor der Aktualisierung.  |
+| Aktueller Kanal  | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Der Kanal nach der Aktualisierung. |
 
 ### Kanal-Pins aktualisiert {#channel-pins-updated}
 
@@ -46,13 +46,13 @@ Wird ausgelöst, wenn die Pins eines Kanals sich ändern (eine Nachricht wurde a
 
 **Einstellungen**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein | Nur für diese Kanäle auslösen. Leer lassen für alle Kanäle. |
+| Name   | Typ                                                             | Pflicht | Details                                                     |
+| ------ | --------------------------------------------------------------- | ------- | ----------------------------------------------------------- |
+| Kanäle | Liste von [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Nein    | Nur für diese Kanäle auslösen. Leer lassen für alle Kanäle. |
 
 **Bereitgestellte Werte**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Kanal | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Kanal, dessen Pins aktualisiert wurden. |
+| Name          | Typ                                                   | Details                                                                      |
+| ------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Kanal         | [Server-Kanal](../../../value-types.md#GUILD_CHANNEL) | Kanal, dessen Pins aktualisiert wurden.                                      |
 | Angeheftet um | [Datum und Uhrzeit](../../../value-types.md#DATETIME) | Zeitstempel des letzten Pins im Kanal oder leer, wenn keine Pins verbleiben. |

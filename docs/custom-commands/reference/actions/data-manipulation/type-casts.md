@@ -15,14 +15,14 @@ Resolve a Discord user to their server member. Returns nothing if the user is no
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| User | [User](../../../value-types.md#DISCORD_USER) | Yes | User to resolve. |
+| Name | Type                                         | Required | Details          |
+| ---- | -------------------------------------------- | -------- | ---------------- |
+| User | [User](../../../value-types.md#DISCORD_USER) | Yes      | User to resolve. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                                  | Details                                                                        |
+| ------ | ----------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Member | [Server member](../../../value-types.md#GUILD_MEMBER) | Resolved server member, or empty if not a member of that server. May be empty. |
 
 ### Treat interaction as button click {#cast-interaction-as-button}
@@ -31,14 +31,14 @@ Narrow a generic interaction to a button click. Returns nothing if the interacti
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name               | Type                                                       | Details                                                              |
+| ------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------- |
 | Button interaction | [Button click](../../../value-types.md#BUTTON_INTERACTION) | Narrowed button click, or empty if not a button click. May be empty. |
 
 ### Treat interaction as dropdown {#cast-interaction-as-string-select}
@@ -47,14 +47,14 @@ Narrow a generic interaction to a dropdown submission. Returns nothing if the in
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                 | Type                                                                           | Details                                                                 |
+| -------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
 | Dropdown interaction | [Dropdown interaction](../../../value-types.md#STRING_SELECT_MENU_INTERACTION) | Narrowed dropdown submission, or empty if not a dropdown. May be empty. |
 
 ### Treat interaction as user dropdown {#cast-interaction-as-user-select}
@@ -63,14 +63,14 @@ Narrow a generic interaction to a user dropdown submission. Returns nothing if t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                      | Type                                                                              | Details                                                                                                                                    |
+| ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | User dropdown interaction | [User dropdown interaction](../../../value-types.md#USER_SELECT_MENU_INTERACTION) | Narrowed member select submission, or empty if not a member select. Its picked values come back as real members, not as IDs. May be empty. |
 
 ### Treat interaction as role dropdown {#cast-interaction-as-role-select}
@@ -79,14 +79,14 @@ Narrow a generic interaction to a role dropdown submission. Returns nothing if t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                      | Type                                                                              | Details                                                                                                                              |
+| ------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | Role dropdown interaction | [Role dropdown interaction](../../../value-types.md#ROLE_SELECT_MENU_INTERACTION) | Narrowed role select submission, or empty if not a role select. Its picked values come back as real roles, not as IDs. May be empty. |
 
 ### Treat interaction as channel dropdown {#cast-interaction-as-channel-select}
@@ -95,14 +95,14 @@ Narrow a generic interaction to a channel dropdown submission. Returns nothing i
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                         | Type                                                                                    | Details                                                                                                                                       |
+| ---------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | Channel dropdown interaction | [Channel dropdown interaction](../../../value-types.md#CHANNEL_SELECT_MENU_INTERACTION) | Narrowed channel select submission, or empty if not a channel select. Its picked values come back as real channels, not as IDs. May be empty. |
 
 ### Treat interaction as user-or-role dropdown {#cast-interaction-as-mentionable-select}
@@ -111,14 +111,14 @@ Narrow a generic interaction to a user-or-role dropdown submission. Returns noth
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                              | Type                                                                                             | Details                                                                                                                                       |
+| --------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | User-or-role dropdown interaction | [User-or-role dropdown interaction](../../../value-types.md#MENTIONABLE_SELECT_MENU_INTERACTION) | Narrowed member-or-role select submission, or empty if not one. Picked members and picked roles are kept in two separate lists. May be empty. |
 
 ### Treat interaction as modal submit {#cast-interaction-as-modal-submit}
@@ -127,14 +127,14 @@ Narrow a generic interaction to a modal submission. Returns nothing if the inter
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                     | Type                                                             | Details                                                                  |
+| ------------------------ | ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | Modal submit interaction | [Modal submit](../../../value-types.md#MODAL_SUBMIT_INTERACTION) | Narrowed modal submission, or empty if not a modal submit. May be empty. |
 
 ### Treat interaction as slash command {#cast-interaction-as-slash-command}
@@ -143,12 +143,12 @@ Narrow a generic interaction to a slash command invocation. Returns nothing if t
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes | Interaction to narrow. |
+| Name        | Type                                               | Required | Details                |
+| ----------- | -------------------------------------------------- | -------- | ---------------------- |
+| Interaction | [Interaction](../../../value-types.md#INTERACTION) | Yes      | Interaction to narrow. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name                      | Type                                                               | Details                                                                |
+| ------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------- |
 | Slash command interaction | [Slash command](../../../value-types.md#SLASH_COMMAND_INTERACTION) | Narrowed slash command, or empty if not a slash command. May be empty. |

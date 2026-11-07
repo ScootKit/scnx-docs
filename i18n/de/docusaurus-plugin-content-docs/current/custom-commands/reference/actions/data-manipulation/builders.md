@@ -15,14 +15,14 @@ Erstellt einen Text-Builder: Text, den spätere Schritte direkt ergänzen, sodas
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Anfangstext | [Text](../../../value-types.md#STRING) | Nein | Optionaler Text, mit dem der Builder beginnt (leer, wenn nicht gesetzt). |
+| Name        | Typ                                    | Pflicht | Details                                                                  |
+| ----------- | -------------------------------------- | ------- | ------------------------------------------------------------------------ |
+| Anfangstext | [Text](../../../value-types.md#STRING) | Nein    | Optionaler Text, mit dem der Builder beginnt (leer, wenn nicht gesetzt). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                                 | Details                                                                       |
+| ------------ | --------------------------------------------------- | ----------------------------------------------------------------------------- |
 | Text-Builder | [Text-Builder](../../../value-types.md#TEXT_BUFFER) | Der neue Text-Builder. Verbinde ihn mit den übrigen "Text-Builder"-Schritten. |
 
 ### Text-Builder: Text anhängen {#append-to-buffer}
@@ -31,11 +31,11 @@ Hängt Text an einen Text-Builder an. Das verändert den Builder selbst, es gibt
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text-Builder | [Text-Builder](../../../value-types.md#TEXT_BUFFER) | Ja | Der Text-Builder, an den angehängt wird. |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der anzuhängende Text. |
-| Trennzeichen | [Text](../../../value-types.md#STRING) | Nein | Optionales Trennzeichen, das vor dem Text eingefügt wird, wenn der Builder nicht leer ist (z. B. ", " oder ein Zeilenumbruch). |
+| Name         | Typ                                                 | Pflicht | Details                                                                                                                        |
+| ------------ | --------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Text-Builder | [Text-Builder](../../../value-types.md#TEXT_BUFFER) | Ja      | Der Text-Builder, an den angehängt wird.                                                                                       |
+| Text         | [Text](../../../value-types.md#STRING)              | Ja      | Der anzuhängende Text.                                                                                                         |
+| Trennzeichen | [Text](../../../value-types.md#STRING)              | Nein    | Optionales Trennzeichen, das vor dem Text eingefügt wird, wenn der Builder nicht leer ist (z. B. ", " oder ein Zeilenumbruch). |
 
 ### Text-Builder: Text auslesen {#buffer-to-string}
 
@@ -43,16 +43,16 @@ Liest einen Text-Builder als gewöhnlichen Text aus, den du an die übrigen Text
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text-Builder | [Text-Builder](../../../value-types.md#TEXT_BUFFER) | Ja | Der zu lesende Text-Builder. |
+| Name         | Typ                                                 | Pflicht | Details                      |
+| ------------ | --------------------------------------------------- | ------- | ---------------------------- |
+| Text-Builder | [Text-Builder](../../../value-types.md#TEXT_BUFFER) | Ja      | Der zu lesende Text-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Der gesamte Inhalt des Builders als Text. |
-| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Zeichen im Builder. |
+| Name  | Typ                                         | Details                                   |
+| ----- | ------------------------------------------- | ----------------------------------------- |
+| Text  | [Text](../../../value-types.md#STRING)      | Der gesamte Inhalt des Builders als Text. |
+| Länge | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Zeichen im Builder.        |
 
 ### Zuordnungs-Builder erstellen {#create-map-builder}
 
@@ -60,14 +60,14 @@ Erstellt einen Zuordnungs-Builder: eine Zuordnung, die spätere Schritte direkt 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Start-Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Nein | Optionale Zuordnung, mit der begonnen wird (leer, wenn nicht gesetzt). Sie wird kopiert, das Original bleibt unverändert. |
+| Name            | Typ                                                                                                      | Pflicht | Details                                                                                                                   |
+| --------------- | -------------------------------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
+| Start-Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Nein    | Optionale Zuordnung, mit der begonnen wird (leer, wenn nicht gesetzt). Sie wird kopiert, das Original bleibt unverändert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name               | Typ                                                       | Details                                                                                   |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Der neue Zuordnungs-Builder. Verbinde ihn mit den übrigen "Zuordnungs-Builder"-Schritten. |
 
 ### Zuordnungs-Builder: Wert setzen {#map-builder-set}
@@ -76,11 +76,11 @@ Setzt einen Schlüssel in einem Zuordnungs-Builder. Das verändert den Builder s
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja | Der zu ändernde Zuordnungs-Builder. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Der zu setzende Schlüssel. |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der Wert, der unter diesem Schlüssel gespeichert wird. Jeder Typ, nicht nur Text. |
+| Name               | Typ                                                       | Pflicht | Details                                                                           |
+| ------------------ | --------------------------------------------------------- | ------- | --------------------------------------------------------------------------------- |
+| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja      | Der zu ändernde Zuordnungs-Builder.                                               |
+| Schlüssel          | [Text](../../../value-types.md#STRING)                    | Ja      | Der zu setzende Schlüssel.                                                        |
+| Wert               | [Beliebig](../../../value-types.md#ANY)                   | Ja      | Der Wert, der unter diesem Schlüssel gespeichert wird. Jeder Typ, nicht nur Text. |
 
 ### Zuordnungs-Builder: Schlüssel entfernen {#map-builder-remove}
 
@@ -88,10 +88,10 @@ Entfernt einen Schlüssel aus einem Zuordnungs-Builder. Das verändert den Build
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja | Der zu ändernde Zuordnungs-Builder. |
-| Schlüssel | [Text](../../../value-types.md#STRING) | Ja | Der zu entfernende Schlüssel. |
+| Name               | Typ                                                       | Pflicht | Details                             |
+| ------------------ | --------------------------------------------------------- | ------- | ----------------------------------- |
+| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja      | Der zu ändernde Zuordnungs-Builder. |
+| Schlüssel          | [Text](../../../value-types.md#STRING)                    | Ja      | Der zu entfernende Schlüssel.       |
 
 ### Zuordnungs-Builder: Größe {#map-builder-size}
 
@@ -99,14 +99,14 @@ Wie viele Einträge ein Zuordnungs-Builder gerade enthält. Nutze das während d
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja | Der zu zählende Zuordnungs-Builder. |
+| Name               | Typ                                                       | Pflicht | Details                             |
+| ------------------ | --------------------------------------------------------- | ------- | ----------------------------------- |
+| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja      | Der zu zählende Zuordnungs-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details                             |
+| ----- | ------------------------------------------- | ----------------------------------- |
 | Größe | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Einträge im Builder. |
 
 ### Zuordnungs-Builder: Zuordnung auslesen {#map-builder-to-map}
@@ -115,16 +115,16 @@ Liest einen Zuordnungs-Builder als gewöhnliche Zuordnung aus, die du an die üb
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja | Der zu lesende Zuordnungs-Builder. |
+| Name               | Typ                                                       | Pflicht | Details                            |
+| ------------------ | --------------------------------------------------------- | ------- | ---------------------------------- |
+| Zuordnungs-Builder | [Zuordnungs-Builder](../../../value-types.md#MAP_BUILDER) | Ja      | Der zu lesende Zuordnungs-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name      | Typ                                                                                                      | Details                                              |
+| --------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | Zuordnung | Nachschlagetabelle von [Text](../../../value-types.md#STRING) zu [Beliebig](../../../value-types.md#ANY) | Die Einträge des Builders als gewöhnliche Zuordnung. |
-| Größe | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Einträge in der Zuordnung. |
+| Größe     | [Ganzzahl](../../../value-types.md#INTEGER)                                                              | Die Anzahl der Einträge in der Zuordnung.            |
 
 ### Listen-Builder erstellen {#create-array-builder}
 
@@ -132,14 +132,14 @@ Erstellt einen Listen-Builder: eine Liste, zu der spätere Schritte direkt hinzu
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Start-Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Nein | Optionale Liste, mit der begonnen wird (leer, wenn nicht gesetzt). Sie wird kopiert, das Original bleibt unverändert. |
+| Name        | Typ                                               | Pflicht | Details                                                                                                               |
+| ----------- | ------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------- |
+| Start-Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Nein    | Optionale Liste, mit der begonnen wird (leer, wenn nicht gesetzt). Sie wird kopiert, das Original bleibt unverändert. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name           | Typ                                                     | Details                                                                           |
+| -------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Der neue Listen-Builder. Verbinde ihn mit den übrigen "Listen-Builder"-Schritten. |
 
 ### Listen-Builder: Eintrag hinzufügen {#array-builder-push}
@@ -148,10 +148,10 @@ Fügt einen Wert am Ende eines Listen-Builders an. Das verändert den Builder se
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja | Der Listen-Builder, zu dem hinzugefügt wird. |
-| Wert | [Beliebig](../../../value-types.md#ANY) | Ja | Der hinzuzufügende Wert. Jeder Typ, nicht nur Text. |
+| Name           | Typ                                                     | Pflicht | Details                                             |
+| -------------- | ------------------------------------------------------- | ------- | --------------------------------------------------- |
+| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja      | Der Listen-Builder, zu dem hinzugefügt wird.        |
+| Wert           | [Beliebig](../../../value-types.md#ANY)                 | Ja      | Der hinzuzufügende Wert. Jeder Typ, nicht nur Text. |
 
 ### Listen-Builder: Größe {#array-builder-size}
 
@@ -159,14 +159,14 @@ Wie viele Einträge ein Listen-Builder gerade enthält. Nutze das während des A
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja | Der zu zählende Listen-Builder. |
+| Name           | Typ                                                     | Pflicht | Details                         |
+| -------------- | ------------------------------------------------------- | ------- | ------------------------------- |
+| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja      | Der zu zählende Listen-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                         | Details                             |
+| ----- | ------------------------------------------- | ----------------------------------- |
 | Größe | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Einträge im Builder. |
 
 ### Listen-Builder: Liste auslesen {#array-builder-to-array}
@@ -175,16 +175,16 @@ Liest einen Listen-Builder als gewöhnliche Liste aus, die du an die übrigen Li
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja | Der zu lesende Listen-Builder. |
+| Name           | Typ                                                     | Pflicht | Details                        |
+| -------------- | ------------------------------------------------------- | ------- | ------------------------------ |
+| Listen-Builder | [Listen-Builder](../../../value-types.md#ARRAY_BUILDER) | Ja      | Der zu lesende Listen-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name  | Typ                                               | Details                                          |
+| ----- | ------------------------------------------------- | ------------------------------------------------ |
 | Liste | Liste von [Beliebig](../../../value-types.md#ANY) | Die Einträge des Builders als gewöhnliche Liste. |
-| Größe | [Ganzzahl](../../../value-types.md#INTEGER) | Die Anzahl der Einträge in der Liste. |
+| Größe | [Ganzzahl](../../../value-types.md#INTEGER)       | Die Anzahl der Einträge in der Liste.            |
 
 ### Zahlen-Builder erstellen {#create-number-builder}
 
@@ -192,14 +192,14 @@ Erstellt einen Zahlen-Builder: einen laufenden Gesamtwert, zu dem spätere Schri
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Startwert | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein | Optionale Zahl, mit der der Gesamtwert beginnt (0, wenn nicht gesetzt). |
+| Name      | Typ                                          | Pflicht | Details                                                                 |
+| --------- | -------------------------------------------- | ------- | ----------------------------------------------------------------------- |
+| Startwert | [Dezimalzahl](../../../value-types.md#FLOAT) | Nein    | Optionale Zahl, mit der der Gesamtwert beginnt (0, wenn nicht gesetzt). |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name           | Typ                                                      | Details                                                                           |
+| -------------- | -------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | Zahlen-Builder | [Zahlen-Builder](../../../value-types.md#NUMBER_BUILDER) | Der neue Zahlen-Builder. Verbinde ihn mit den übrigen "Zahlen-Builder"-Schritten. |
 
 ### Zahlen-Builder: Betrag addieren {#number-builder-add}
@@ -208,10 +208,10 @@ Addiert einen Betrag zu einem Zahlen-Builder. Das verändert den Builder selbst,
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zahlen-Builder | [Zahlen-Builder](../../../value-types.md#NUMBER_BUILDER) | Ja | Der Zahlen-Builder, zu dem addiert wird. |
-| Betrag | [Dezimalzahl](../../../value-types.md#FLOAT) | Ja | Der zu addierende Betrag. Ein negativer Betrag subtrahiert. |
+| Name           | Typ                                                      | Pflicht | Details                                                     |
+| -------------- | -------------------------------------------------------- | ------- | ----------------------------------------------------------- |
+| Zahlen-Builder | [Zahlen-Builder](../../../value-types.md#NUMBER_BUILDER) | Ja      | Der Zahlen-Builder, zu dem addiert wird.                    |
+| Betrag         | [Dezimalzahl](../../../value-types.md#FLOAT)             | Ja      | Der zu addierende Betrag. Ein negativer Betrag subtrahiert. |
 
 ### Zahlen-Builder: Gesamtwert auslesen {#number-builder-to-number}
 
@@ -219,13 +219,13 @@ Liest den laufenden Gesamtwert eines Zahlen-Builders aus, zusammen mit der Anzah
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Zahlen-Builder | [Zahlen-Builder](../../../value-types.md#NUMBER_BUILDER) | Ja | Der zu lesende Zahlen-Builder. |
+| Name           | Typ                                                      | Pflicht | Details                        |
+| -------------- | -------------------------------------------------------- | ------- | ------------------------------ |
+| Zahlen-Builder | [Zahlen-Builder](../../../value-types.md#NUMBER_BUILDER) | Ja      | Der zu lesende Zahlen-Builder. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Gesamtwert | [Dezimalzahl](../../../value-types.md#FLOAT) | Der laufende Gesamtwert. |
-| Anzahl | [Ganzzahl](../../../value-types.md#INTEGER) | Wie oft ein Betrag addiert wurde. |
+| Name       | Typ                                          | Details                           |
+| ---------- | -------------------------------------------- | --------------------------------- |
+| Gesamtwert | [Dezimalzahl](../../../value-types.md#FLOAT) | Der laufende Gesamtwert.          |
+| Anzahl     | [Ganzzahl](../../../value-types.md#INTEGER)  | Wie oft ein Betrag addiert wurde. |

@@ -15,19 +15,19 @@ Runs when someone runs your slash command.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command name | [Text](../../../value-types.md#STRING) | Yes | Lowercase command name (a-z, 0-9, dash, underscore). Length: 1 to 32 characters. Must match `^[a-z0-9_-]+$`. |
-| Description | [Text](../../../value-types.md#STRING) | Yes | Description shown in Discord's command picker. Length: 1 to 100 characters. |
-| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG) | No | Permissions a member must have to use the command by default. |
-| Allow in DMs | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Whether the command is also available in direct messages. Default: No. |
-| Age-restricted | [Yes/No](../../../value-types.md#BOOLEAN) | Yes | Restrict the command to NSFW channels. Default: No. |
-| Options | List of [Command option](../../../value-types.md#APPLICATION_COMMAND_OPTION) | No | Options (arguments) of the command. Submitted values are available on the interaction's options lookup table. Maximum items: 25. |
+| Name                 | Type                                                                         | Required | Details                                                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Command name         | [Text](../../../value-types.md#STRING)                                       | Yes      | Lowercase command name (a-z, 0-9, dash, underscore). Length: 1 to 32 characters. Must match `^[a-z0-9_-]+$`.                     |
+| Description          | [Text](../../../value-types.md#STRING)                                       | Yes      | Description shown in Discord's command picker. Length: 1 to 100 characters.                                                      |
+| Required permissions | List of [Permission](../../../value-types.md#PERMISSION_FLAG)                | No       | Permissions a member must have to use the command by default.                                                                    |
+| Allow in DMs         | [Yes/No](../../../value-types.md#BOOLEAN)                                    | Yes      | Whether the command is also available in direct messages. Default: No.                                                           |
+| Age-restricted       | [Yes/No](../../../value-types.md#BOOLEAN)                                    | Yes      | Restrict the command to NSFW channels. Default: No.                                                                              |
+| Options              | List of [Command option](../../../value-types.md#APPLICATION_COMMAND_OPTION) | No       | Options (arguments) of the command. Submitted values are available on the interaction's options lookup table. Maximum items: 25. |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                               | Details                        |
+| ----------- | ------------------------------------------------------------------ | ------------------------------ |
 | Interaction | [Slash command](../../../value-types.md#SLASH_COMMAND_INTERACTION) | The slash command interaction. |
 
 ### Autocomplete requested {#autocomplete-requested}
@@ -36,17 +36,17 @@ Fires when Discord requests autocomplete suggestions for a slash-command option.
 
 **Settings**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Command Name | [Text](../../../value-types.md#STRING) | No | Only fire for this slash command. Leave empty to match all commands. |
-| Option Name | [Text](../../../value-types.md#STRING) | No | Only fire when this option is being autocompleted. Leave empty to match all options. |
-| Subcommand | [Text](../../../value-types.md#STRING) | No | Only fire when the user is typing in this subcommand. Use this when several subcommands share an option name. Leave empty to match all subcommands. |
-| Subcommand Group | [Text](../../../value-types.md#STRING) | No | Only fire when the subcommand belongs to this subcommand group. Leave empty to match any group. |
+| Name             | Type                                   | Required | Details                                                                                                                                             |
+| ---------------- | -------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Command Name     | [Text](../../../value-types.md#STRING) | No       | Only fire for this slash command. Leave empty to match all commands.                                                                                |
+| Option Name      | [Text](../../../value-types.md#STRING) | No       | Only fire when this option is being autocompleted. Leave empty to match all options.                                                                |
+| Subcommand       | [Text](../../../value-types.md#STRING) | No       | Only fire when the user is typing in this subcommand. Use this when several subcommands share an option name. Leave empty to match all subcommands. |
+| Subcommand Group | [Text](../../../value-types.md#STRING) | No       | Only fire when the subcommand belongs to this subcommand group. Leave empty to match any group.                                                     |
 
 **Provided values**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name        | Type                                                                         | Details                                    |
+| ----------- | ---------------------------------------------------------------------------- | ------------------------------------------ |
 | Interaction | [Autocomplete interaction](../../../value-types.md#AUTOCOMPLETE_INTERACTION) | Autocomplete interaction that was created. |
 
 ### Application command permissions updated {#application-command-permissions-updated}
@@ -55,8 +55,8 @@ Triggers when the permission overwrites of an application command in a server ch
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Server | [Server](../../../value-types.md#GUILD) | The server in which the change happened. |
-| Command | [Application command](../../../value-types.md#APPLICATION_COMMAND) | The command whose permissions changed. |
-| Permissions | List of [Application command permission](../../../value-types.md#APPLICATION_COMMAND_PERMISSION) | The new permission overwrites. |
+| Name        | Type                                                                                             | Details                                  |
+| ----------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------- |
+| Server      | [Server](../../../value-types.md#GUILD)                                                          | The server in which the change happened. |
+| Command     | [Application command](../../../value-types.md#APPLICATION_COMMAND)                               | The command whose permissions changed.   |
+| Permissions | List of [Application command permission](../../../value-types.md#APPLICATION_COMMAND_PERMISSION) | The new permission overwrites.           |

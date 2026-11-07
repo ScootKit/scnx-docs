@@ -15,15 +15,15 @@ Runs the "then" actions when the condition is true, otherwise runs the "else" ac
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Condition | [Yes/No](../../value-types.md#BOOLEAN) | Yes | Yes/No value to evaluate. |
+| Name      | Type                                   | Required | Details                   |
+| --------- | -------------------------------------- | -------- | ------------------------- |
+| Condition | [Yes/No](../../value-types.md#BOOLEAN) | Yes      | Yes/No value to evaluate. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
-| Then | Runs when the condition is true. |
+| Name      | Details                                     |
+| --------- | ------------------------------------------- |
+| Then      | Runs when the condition is true.            |
 | Otherwise | Runs when the condition is false. Optional. |
 
 ### Switch {#switch}
@@ -32,16 +32,16 @@ Runs the branch whose case value matches the input value.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Text](../../value-types.md#STRING) | Yes | Value to compare against the case values. |
+| Name  | Type                                | Required | Details                                   |
+| ----- | ----------------------------------- | -------- | ----------------------------------------- |
+| Value | [Text](../../value-types.md#STRING) | Yes      | Value to compare against the case values. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
-| Default case | Runs when no case matches. Optional. |
-| Case value | Runs this branch when the input value equals this value. Added by you, one per entry. |
+| Name         | Details                                                                               |
+| ------------ | ------------------------------------------------------------------------------------- |
+| Default case | Runs when no case matches. Optional.                                                  |
+| Case value   | Runs this branch when the input value equals this value. Added by you, one per entry. |
 
 ### If it has a value {#if-present}
 
@@ -49,16 +49,16 @@ Runs "Has a value" when the value is not empty (an empty text or list still coun
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../value-types.md#ANY) | Yes | The value to check. |
+| Name  | Type                            | Required | Details             |
+| ----- | ------------------------------- | -------- | ------------------- |
+| Value | [Any](../../value-types.md#ANY) | Yes      | The value to check. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
+| Name        | Details                                                                                          |
+| ----------- | ------------------------------------------------------------------------------------------------ |
 | Has a value | Runs when the value is set. Provides to its steps: Value (The value, known not to be empty here) |
-| Is empty | Runs when the value is empty. Optional. |
+| Is empty    | Runs when the value is empty. Optional.                                                          |
 
 ### Switch on kind {#switch-on-type}
 
@@ -66,16 +66,16 @@ Runs the branch for the kind of value it gets, for a value that can be one of se
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Value | [Any](../../value-types.md#ANY) | Yes | The value whose kind decides the branch. |
+| Name  | Type                            | Required | Details                                  |
+| ----- | ------------------------------- | -------- | ---------------------------------------- |
+| Value | [Any](../../value-types.md#ANY) | Yes      | The value whose kind decides the branch. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
-| Other kinds | Runs for every kind without its own branch. It does not run when there is no value, such as an audit log entry without details. Optional. |
-| Kind | Runs this branch when the value is this kind. Added by you, one per entry. Provides to its steps: Value (The value, as this branch's kind) |
+| Name        | Details                                                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Other kinds | Runs for every kind without its own branch. It does not run when there is no value, such as an audit log entry without details. Optional.  |
+| Kind        | Runs this branch when the value is this kind. Added by you, one per entry. Provides to its steps: Value (The value, as this branch's kind) |
 
 ### Branch on subcommand {#branch-on-subcommand}
 
@@ -83,16 +83,16 @@ Runs the branch matching the subcommand (or subcommand group) that invoked this 
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Interaction | [Slash command](../../value-types.md#SLASH_COMMAND_INTERACTION) | Yes | The slash-command interaction that invoked this flow. |
+| Name        | Type                                                            | Required | Details                                               |
+| ----------- | --------------------------------------------------------------- | -------- | ----------------------------------------------------- |
+| Interaction | [Slash command](../../value-types.md#SLASH_COMMAND_INTERACTION) | Yes      | The slash-command interaction that invoked this flow. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
-| Group | The subcommand group this branch matches (empty when the subcommand has no group). Added by you, one per entry. |
-| Subcommand | The subcommand this branch matches. Added by you, one per entry. |
+| Name       | Details                                                                                                         |
+| ---------- | --------------------------------------------------------------------------------------------------------------- |
+| Group      | The subcommand group this branch matches (empty when the subcommand has no group). Added by you, one per entry. |
+| Subcommand | The subcommand this branch matches. Added by you, one per entry.                                                |
 
 ### For each item {#for-each}
 
@@ -100,14 +100,14 @@ Runs the body once for each item in the list.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Items | List of [Any](../../value-types.md#ANY) | Yes | List to go through. |
+| Name  | Type                                    | Required | Details             |
+| ----- | --------------------------------------- | -------- | ------------------- |
+| Items | List of [Any](../../value-types.md#ANY) | Yes      | List to go through. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
+| Name | Details                                                                                                                             |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Body | Runs once per item. Provides to its steps: Item (Current item being iterated), Index (Position of the current item (starting at 0)) |
 
 ### For each lookup table entry {#iterate-map}
@@ -116,14 +116,14 @@ Runs the body once for each key and value of the lookup table.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Lookup table | Lookup table of [Text](../../value-types.md#STRING) to [Any](../../value-types.md#ANY) | Yes | Lookup table to go through. |
+| Name         | Type                                                                                   | Required | Details                     |
+| ------------ | -------------------------------------------------------------------------------------- | -------- | --------------------------- |
+| Lookup table | Lookup table of [Text](../../value-types.md#STRING) to [Any](../../value-types.md#ANY) | Yes      | Lookup table to go through. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
+| Name | Details                                                                                              |
+| ---- | ---------------------------------------------------------------------------------------------------- |
 | Body | Runs once per entry. Provides to its steps: Key (Current entry's key), Value (Current entry's value) |
 
 ### Wait {#wait}
@@ -132,9 +132,9 @@ Pauses the flow for the given duration.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Duration | [Duration](../../value-types.md#DURATION) | Yes | How long to wait, up to 30 days. A wait of 5 seconds or more pauses the flow and picks it up again later, even after a restart. Inside a loop, only a few seconds are possible. Value: 0 to 2592000000. Default: `1000`. |
+| Name     | Type                                      | Required | Details                                                                                                                                                                                                                  |
+| -------- | ----------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Duration | [Duration](../../value-types.md#DURATION) | Yes      | How long to wait, up to 30 days. A wait of 5 seconds or more pauses the flow and picks it up again later, even after a restart. Inside a loop, only a few seconds are possible. Value: 0 to 2592000000. Default: `1000`. |
 
 ### Stop flow {#stop-flow}
 
@@ -146,9 +146,9 @@ A comment shown in the editor. Has no effect at runtime.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Note | [Text](../../value-types.md#STRING) | Yes | Text of the note. Maximum length: 1000 characters. |
+| Name | Type                                | Required | Details                                            |
+| ---- | ----------------------------------- | -------- | -------------------------------------------------- |
+| Note | [Text](../../value-types.md#STRING) | Yes      | Text of the note. Maximum length: 1000 characters. |
 
 ### Repeat {#repeat}
 
@@ -156,14 +156,14 @@ Runs the body a fixed number of times.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Times | [Whole number](../../value-types.md#INTEGER) | Yes | How often the body runs (1-10000). Value: 1 to 10000. |
+| Name  | Type                                         | Required | Details                                               |
+| ----- | -------------------------------------------- | -------- | ----------------------------------------------------- |
+| Times | [Whole number](../../value-types.md#INTEGER) | Yes      | How often the body runs (1-10000). Value: 1 to 10000. |
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
+| Name | Details                                                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------- |
 | Body | Runs once per iteration. Provides to its steps: Index (Number of the current iteration (starting at 0)) |
 
 ### Try {#try}
@@ -172,9 +172,9 @@ Runs the attempt actions; when one of them fails, the error branch runs instead 
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
-| Attempt | Actions to try. |
+| Name     | Details                                                                                                                                                                               |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attempt  | Actions to try.                                                                                                                                                                       |
 | On error | Runs when an action inside "Attempt" fails. Optional. Provides to its steps: Error code (Machine-readable code of the error), Error message (Human-readable description of the error) |
 
 ### Random branch {#random-branch}
@@ -183,8 +183,8 @@ Randomly runs at most one branch based on the branch weights. If the weights add
 
 **Branches**
 
-| Name | Details |
-| --- | --- |
+| Name   | Details                                                                         |
+| ------ | ------------------------------------------------------------------------------- |
 | Weight | Chance of this branch running, in percent (0-100). Added by you, one per entry. |
 
 ### Break loop {#break-loop}

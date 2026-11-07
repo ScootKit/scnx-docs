@@ -15,9 +15,9 @@ Returns the current date and time.
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Now | [Date and time](../../../value-types.md#DATETIME) | The current moment. |
+| Name | Type                                              | Details             |
+| ---- | ------------------------------------------------- | ------------------- |
+| Now  | [Date and time](../../../value-types.md#DATETIME) | The current moment. |
 
 ### Text to date {#date-from-string}
 
@@ -25,15 +25,15 @@ Reads a date from a text, optionally with a format. Times without a timezone are
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | Text representation of the date. |
-| Format | [Text](../../../value-types.md#STRING) | No | Optional format pattern. |
+| Name   | Type                                   | Required | Details                          |
+| ------ | -------------------------------------- | -------- | -------------------------------- |
+| Text   | [Text](../../../value-types.md#STRING) | Yes      | Text representation of the date. |
+| Format | [Text](../../../value-types.md#STRING) | No       | Optional format pattern.         |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                              | Details                                                                   |
+| ---- | ------------------------------------------------- | ------------------------------------------------------------------------- |
 | Date | [Date and time](../../../value-types.md#DATETIME) | The date, or empty if the text could not be read as a date. May be empty. |
 
 ### Add to date {#date-add}
@@ -42,15 +42,15 @@ Adds a duration to a date and returns the new date.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The starting date. |
-| Duration | [Duration](../../../value-types.md#DURATION) | Yes | How much to add. |
+| Name     | Type                                              | Required | Details            |
+| -------- | ------------------------------------------------- | -------- | ------------------ |
+| Date     | [Date and time](../../../value-types.md#DATETIME) | Yes      | The starting date. |
+| Duration | [Duration](../../../value-types.md#DURATION)      | Yes      | How much to add.   |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                              | Details             |
+| ------ | ------------------------------------------------- | ------------------- |
 | Result | [Date and time](../../../value-types.md#DATETIME) | The resulting date. |
 
 ### Subtract from date {#date-subtract}
@@ -59,15 +59,15 @@ Subtracts a duration from a date and returns the new date.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The starting date. |
-| Duration | [Duration](../../../value-types.md#DURATION) | Yes | How much to subtract. |
+| Name     | Type                                              | Required | Details               |
+| -------- | ------------------------------------------------- | -------- | --------------------- |
+| Date     | [Date and time](../../../value-types.md#DATETIME) | Yes      | The starting date.    |
+| Duration | [Duration](../../../value-types.md#DURATION)      | Yes      | How much to subtract. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                              | Details             |
+| ------ | ------------------------------------------------- | ------------------- |
 | Result | [Date and time](../../../value-types.md#DATETIME) | The resulting date. |
 
 ### Date difference {#date-difference}
@@ -76,15 +76,15 @@ Returns the duration between two dates (a - b).
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| A | [Date and time](../../../value-types.md#DATETIME) | Yes | First date. |
-| B | [Date and time](../../../value-types.md#DATETIME) | Yes | Second date. |
+| Name | Type                                              | Required | Details      |
+| ---- | ------------------------------------------------- | -------- | ------------ |
+| A    | [Date and time](../../../value-types.md#DATETIME) | Yes      | First date.  |
+| B    | [Date and time](../../../value-types.md#DATETIME) | Yes      | Second date. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                         | Details                         |
+| -------- | -------------------------------------------- | ------------------------------- |
 | Duration | [Duration](../../../value-types.md#DURATION) | The duration between the dates. |
 
 ### Format date {#date-format}
@@ -93,16 +93,16 @@ Formats a date as a text using a format pattern, in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to format. |
-| Format | [Text](../../../value-types.md#STRING) | Yes | Format pattern (e.g. YYYY-MM-DD). |
-| Locale | [Text](../../../value-types.md#STRING) | No | Optional locale (e.g. de-DE). |
+| Name   | Type                                              | Required | Details                           |
+| ------ | ------------------------------------------------- | -------- | --------------------------------- |
+| Date   | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to format.               |
+| Format | [Text](../../../value-types.md#STRING)            | Yes      | Format pattern (e.g. YYYY-MM-DD). |
+| Locale | [Text](../../../value-types.md#STRING)            | No       | Optional locale (e.g. de-DE).     |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details             |
+| ------ | -------------------------------------- | ------------------- |
 | Result | [Text](../../../value-types.md#STRING) | The formatted text. |
 
 ### Extract year {#date-extract-year}
@@ -111,14 +111,14 @@ Returns the year part of a date, in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to inspect. |
+| Name | Type                                              | Required | Details              |
+| ---- | ------------------------------------------------- | -------- | -------------------- |
+| Date | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to inspect. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                            | Details               |
+| ---- | ----------------------------------------------- | --------------------- |
 | Year | [Whole number](../../../value-types.md#INTEGER) | The year (e.g. 2026). |
 
 ### Extract month {#date-extract-month}
@@ -127,14 +127,14 @@ Returns the month part of a date (1-12), in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to inspect. |
+| Name | Type                                              | Required | Details              |
+| ---- | ------------------------------------------------- | -------- | -------------------- |
+| Date | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to inspect. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name  | Type                                            | Details            |
+| ----- | ----------------------------------------------- | ------------------ |
 | Month | [Whole number](../../../value-types.md#INTEGER) | Month number 1-12. |
 
 ### Extract day {#date-extract-day}
@@ -143,15 +143,15 @@ Returns the day-of-month part of a date (1-31), in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to inspect. |
+| Name | Type                                              | Required | Details              |
+| ---- | ------------------------------------------------- | -------- | -------------------- |
+| Date | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to inspect. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Day | [Whole number](../../../value-types.md#INTEGER) | Day-of-month 1-31. |
+| Name | Type                                            | Details            |
+| ---- | ----------------------------------------------- | ------------------ |
+| Day  | [Whole number](../../../value-types.md#INTEGER) | Day-of-month 1-31. |
 
 ### Extract hour {#date-extract-hour}
 
@@ -159,14 +159,14 @@ Returns the hour-of-day part of a date (0-23), in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to inspect. |
+| Name | Type                                              | Required | Details              |
+| ---- | ------------------------------------------------- | -------- | -------------------- |
+| Date | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to inspect. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                            | Details    |
+| ---- | ----------------------------------------------- | ---------- |
 | Hour | [Whole number](../../../value-types.md#INTEGER) | Hour 0-23. |
 
 ### Extract weekday {#date-extract-weekday}
@@ -175,14 +175,14 @@ Returns the day-of-week index (0 = Sunday, 6 = Saturday), in the bot's timezone.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date to inspect. |
+| Name | Type                                              | Required | Details              |
+| ---- | ------------------------------------------------- | -------- | -------------------- |
+| Date | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date to inspect. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name    | Type                                            | Details                  |
+| ------- | ----------------------------------------------- | ------------------------ |
 | Weekday | [Whole number](../../../value-types.md#INTEGER) | Day-of-week index (0-6). |
 
 ### Duration from ms {#duration-from-ms}
@@ -191,14 +191,14 @@ Builds a duration from a number of milliseconds.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Milliseconds | [Whole number](../../../value-types.md#INTEGER) | Yes | Number of milliseconds. Minimum: 0. |
+| Name         | Type                                            | Required | Details                             |
+| ------------ | ----------------------------------------------- | -------- | ----------------------------------- |
+| Milliseconds | [Whole number](../../../value-types.md#INTEGER) | Yes      | Number of milliseconds. Minimum: 0. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                         | Details                 |
+| -------- | -------------------------------------------- | ----------------------- |
 | Duration | [Duration](../../../value-types.md#DURATION) | The resulting duration. |
 
 ### Duration to ms {#duration-to-ms}
@@ -207,14 +207,14 @@ Converts a duration to its total number of milliseconds.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Duration | [Duration](../../../value-types.md#DURATION) | Yes | The duration to convert. |
+| Name     | Type                                         | Required | Details                  |
+| -------- | -------------------------------------------- | -------- | ------------------------ |
+| Duration | [Duration](../../../value-types.md#DURATION) | Yes      | The duration to convert. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name         | Type                                            | Details             |
+| ------------ | ----------------------------------------------- | ------------------- |
 | Milliseconds | [Whole number](../../../value-types.md#INTEGER) | Total milliseconds. |
 
 ### Duration from parts {#duration-from-parts}
@@ -223,17 +223,17 @@ Builds a duration from days, hours, minutes, and seconds.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Days | [Whole number](../../../value-types.md#INTEGER) | No | Number of days. Default: `0`. |
-| Hours | [Whole number](../../../value-types.md#INTEGER) | No | Number of hours. Default: `0`. |
-| Minutes | [Whole number](../../../value-types.md#INTEGER) | No | Number of minutes. Default: `0`. |
-| Seconds | [Whole number](../../../value-types.md#INTEGER) | No | Number of seconds. Default: `0`. |
+| Name    | Type                                            | Required | Details                          |
+| ------- | ----------------------------------------------- | -------- | -------------------------------- |
+| Days    | [Whole number](../../../value-types.md#INTEGER) | No       | Number of days. Default: `0`.    |
+| Hours   | [Whole number](../../../value-types.md#INTEGER) | No       | Number of hours. Default: `0`.   |
+| Minutes | [Whole number](../../../value-types.md#INTEGER) | No       | Number of minutes. Default: `0`. |
+| Seconds | [Whole number](../../../value-types.md#INTEGER) | No       | Number of seconds. Default: `0`. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                         | Details                 |
+| -------- | -------------------------------------------- | ----------------------- |
 | Duration | [Duration](../../../value-types.md#DURATION) | The resulting duration. |
 
 ### Text to duration {#parse-duration}
@@ -242,15 +242,15 @@ Reads a human-readable duration such as "10m", "2h30m", "3d" or "1w2d" from text
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The duration text, e.g. "10m", "2h30m", "3d", "1w2d", "90s". |
-| Fallback | [Duration](../../../value-types.md#DURATION) | No | Returned instead of failing when the text cannot be read as a duration. Leave empty to raise a catchable error on invalid input. |
+| Name     | Type                                         | Required | Details                                                                                                                          |
+| -------- | -------------------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Text     | [Text](../../../value-types.md#STRING)       | Yes      | The duration text, e.g. "10m", "2h30m", "3d", "1w2d", "90s".                                                                     |
+| Fallback | [Duration](../../../value-types.md#DURATION) | No       | Returned instead of failing when the text cannot be read as a duration. Leave empty to raise a catchable error on invalid input. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                         | Details                                                                   |
+| -------- | -------------------------------------------- | ------------------------------------------------------------------------- |
 | Duration | [Duration](../../../value-types.md#DURATION) | The duration, or the fallback when the text cannot be read. May be empty. |
 
 ### Format duration {#format-duration}
@@ -259,15 +259,15 @@ Formats a duration as human-readable text.
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Duration | [Duration](../../../value-types.md#DURATION) | Yes | The duration to format. |
-| Style | [Duration style](../../../value-types.md#DURATION_STYLE) | Yes | How to render the duration: compact ("2h 30m"), long ("2 hours 30 minutes") or the largest unit only ("3 hours"). Default: Compact. |
+| Name     | Type                                                     | Required | Details                                                                                                                             |
+| -------- | -------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Duration | [Duration](../../../value-types.md#DURATION)             | Yes      | The duration to format.                                                                                                             |
+| Style    | [Duration style](../../../value-types.md#DURATION_STYLE) | Yes      | How to render the duration: compact ("2h 30m"), long ("2 hours 30 minutes") or the largest unit only ("3 hours"). Default: Compact. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                   | Details                      |
+| ---- | -------------------------------------- | ---------------------------- |
 | Text | [Text](../../../value-types.md#STRING) | The formatted duration text. |
 
 ### Text to date (everyday wording) {#parse-natural-date}
@@ -276,17 +276,17 @@ Reads everyday relative and absolute date and time wording into a date. Relative
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The date/time text, e.g. "in 3 days", "in 5 minuten", "tomorrow 8pm", "next monday", "2024-03-05", "05.03.2024". |
-| Reference time | [Date and time](../../../value-types.md#DATETIME) | No | The "now" used for relative forms like "tomorrow" or "in 3 days". Defaults to the current time. |
-| Timezone | [Text](../../../value-types.md#STRING) | No | IANA timezone (e.g. "Europe/Berlin") used to interpret wall-clock times like "tomorrow 8pm". Defaults to the bot's timezone. |
-| Fallback | [Date and time](../../../value-types.md#DATETIME) | No | Returned instead of failing when the text cannot be read as a date. Leave empty to raise a catchable error on invalid input. |
+| Name           | Type                                              | Required | Details                                                                                                                      |
+| -------------- | ------------------------------------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Text           | [Text](../../../value-types.md#STRING)            | Yes      | The date/time text, e.g. "in 3 days", "in 5 minuten", "tomorrow 8pm", "next monday", "2024-03-05", "05.03.2024".             |
+| Reference time | [Date and time](../../../value-types.md#DATETIME) | No       | The "now" used for relative forms like "tomorrow" or "in 3 days". Defaults to the current time.                              |
+| Timezone       | [Text](../../../value-types.md#STRING)            | No       | IANA timezone (e.g. "Europe/Berlin") used to interpret wall-clock times like "tomorrow 8pm". Defaults to the bot's timezone. |
+| Fallback       | [Date and time](../../../value-types.md#DATETIME) | No       | Returned instead of failing when the text cannot be read as a date. Leave empty to raise a catchable error on invalid input. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name | Type                                              | Details                                                                        |
+| ---- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 | Date | [Date and time](../../../value-types.md#DATETIME) | The date and time, or the fallback when the text cannot be read. May be empty. |
 
 ### Time until {#time-until}
@@ -295,15 +295,15 @@ Measures the distance from the reference time to a target date. The milliseconds
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Target date | [Date and time](../../../value-types.md#DATETIME) | Yes | The date and time to measure to. |
-| Reference time | [Date and time](../../../value-types.md#DATETIME) | No | The time to measure from. Defaults to the current time. |
+| Name           | Type                                              | Required | Details                                                 |
+| -------------- | ------------------------------------------------- | -------- | ------------------------------------------------------- |
+| Target date    | [Date and time](../../../value-types.md#DATETIME) | Yes      | The date and time to measure to.                        |
+| Reference time | [Date and time](../../../value-types.md#DATETIME) | No       | The time to measure from. Defaults to the current time. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Milliseconds | [Whole number](../../../value-types.md#INTEGER) | Signed milliseconds from the reference to the target (negative when the target is in the past). |
-| Is in the past | [Yes/No](../../../value-types.md#BOOLEAN) | True when the target is before the reference time. |
-| Humanized | [Text](../../../value-types.md#STRING) | A human-readable phrase such as "in 2 hours 30 minutes", "2 days ago" or "now". |
+| Name           | Type                                            | Details                                                                                         |
+| -------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Milliseconds   | [Whole number](../../../value-types.md#INTEGER) | Signed milliseconds from the reference to the target (negative when the target is in the past). |
+| Is in the past | [Yes/No](../../../value-types.md#BOOLEAN)       | True when the target is before the reference time.                                              |
+| Humanized      | [Text](../../../value-types.md#STRING)          | A human-readable phrase such as "in 2 hours 30 minutes", "2 days ago" or "now".                 |
