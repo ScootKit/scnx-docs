@@ -37,7 +37,7 @@ Der Befehl wird ausgeführt, sobald ein Nutzer einen Befehl verwendet, zum Beisp
 
 :::warning
 Beachte das Discord-Limit: Insgesamt sind nur 100 Slash-Commands pro Server möglich. Dies umfasst sowohl deine Eigenen Befehle als auch die Befehle aktivierter Module.
-Falls diese Grenze überschritten wird, kann die Funktionalität deines Bots beeinträchtigt werden.
+Falls diese Grenze überschritten wird, kann die Funktionalität deines Bots beeinträchtigt werden. Befehle, die eine Moduleinstellung ausschaltet, zählen nicht mit, siehe [Befehle über eine Einstellung ein- und ausschalten](#command-switches).
 :::
 
 :::info
@@ -47,6 +47,23 @@ Berechtigungen für Slash-Befehle werden in deinen Discord-Servereinstellungen v
 :::tip
 Benutzerdefinierte Slash-Befehle werden automatisch als eigene Gruppe „Eigene Befehle" im `/help`-Befehl angezeigt, sodass sie für deine Servermitglieder leichter zu finden sind.
 :::
+
+### Befehle über eine Einstellung ein- und ausschalten {#command-switches}
+
+Gehört ein Flow zu einem Modul, kannst du seinen Slash-Befehl an eine Ja/Nein-Einstellung auf der Konfigurationsseite des Moduls knüpfen. Solange die Einstellung aus ist, wird der Befehl auf deinem Server nicht registriert und belegt keinen deiner Befehls-Plätze. Das ist praktisch für Module mit vielen Befehlen, von denen ein Server nur einen Teil braucht.
+
+1. Der Modul-Ersteller fügt der Konfigurationsseite des Moduls eine Ja/Nein-Einstellung hinzu, zum Beispiel „Ich nutze Gruppenränge". Gib ihr den Standardwert „aus", wenn die Befehle erst nach einer bewussten Aktivierung existieren sollen.
+2. Setze im Slash-Befehl-Trigger **Aktiviert** auf diese Einstellung, indem du auf **Moduleinstellung verwenden** klickst.
+3. Möchtest du statt des ganzen Befehls nur einzelne Unterbefehle oder Unterbefehlsgruppen schalten, wähle die Einstellung bei **Angezeigt, wenn** am Unterbefehl oder an der Gruppe aus.
+
+Das solltest du wissen:
+
+- Nur eine ausgeschaltete Einstellung blendet einen Befehl aus. Eine Einstellung ohne gespeicherten Wert nutzt ihren Standardwert.
+- Sind alle Unterbefehle eines Befehls ausgeschaltet, verschwindet der Befehl komplett und gibt seinen Platz frei.
+- Die Änderung greift, nachdem dein Bot seine Konfiguration neu geladen hat. Die Konfigurationsseite fragt dich nach dem Speichern, ob du neu laden möchtest.
+- Ein Mitglied, dessen Discord den alten Befehl noch anzeigt, bekommt eine private Antwort, dass der Befehl durch die Serverkonfiguration deaktiviert ist. Es wird nichts ausgeführt.
+- In der Flow-Liste zeigt ein Befehl, der gerade ausgeschaltet ist, das Label **Per Konfiguration ausgeschaltet**.
+- Discord begrenzt, wie viele Befehle ein Server pro Tag erstellen darf. Der Bot erstellt höchstens 150 neue Befehle pro Server in 24 Stunden. Würde eine Einstellung mehr erzeugen, werden die übrigen übersprungen und **Einige neue Befehle wurden noch nicht erstellt** erscheint bei den [Problemen deines Discord-Bots](https://scnx.app/de/glink?page=bot/manage). Lade deinen Bot später neu, um sie zu erstellen. Das Ausschalten von Befehlen zählt nie zu diesem Limit.
 
 ### Knopf oder Select-Menü-Druck {#trigger-button}
 

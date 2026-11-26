@@ -40,7 +40,8 @@ The command runs when a user executes a slash command (e.g. `/mycommand`).
 
 :::warning
 Discord allows a maximum of 100 server slash commands. Custom commands and module commands both count toward this limit.
-Your bot will encounter issues if this limit is exceeded.
+Your bot will encounter issues if this limit is exceeded. Commands that a module setting switches off do not count, see
+[Switching commands on and off with a setting](#command-switches).
 :::
 
 :::info
@@ -53,6 +54,31 @@ may take up to 24 hours for new commands to appear in Discord. The command must 
 Custom slash commands automatically appear as their own **"Custom Commands"** group in the `/help` command, making them
 easier for your server members to discover.
 :::
+
+### Switching commands on and off with a setting {#command-switches}
+
+If a flow belongs to a module, you can tie its slash command to a Yes/No setting on the module's configuration page.
+While the setting is off, the command is not registered in your server and does not use up one of your command slots.
+This is useful for modules with many commands, where a server only needs some of them.
+
+1. The module owner adds a Yes/No setting to the module's configuration page, for example "I use group ranks". Give it
+   the default value "off" if the commands should only exist after someone opts in.
+2. In the slash command trigger, set **Enabled** to that setting by clicking **Use module setting**.
+3. To switch single subcommands or subcommand groups instead of the whole command, select the setting in **Shown when**
+   on the subcommand or group.
+
+Things to know:
+
+- Only a setting that is switched off hides a command. A setting without a saved value uses its default.
+- If all subcommands of a command are switched off, the command disappears completely and frees its slot.
+- The change applies after your bot reloads its configuration. The configuration page asks you to reload after saving.
+- A member whose Discord still shows the old command sees a private reply saying that the command is disabled by the
+  server configuration. Nothing runs.
+- In the flow list, a command that is currently switched off shows the badge **Switched off by configuration**.
+- Discord limits how many commands a server can create per day. The bot creates at most 150 new commands per server in
+  24 hours. If a setting would create more, the remaining commands are skipped and **Some new commands were not created
+  yet** appears in your [Discord bot issues](https://scnx.app/glink?page=bot/manage). Reload your bot later to create
+  them. Switching commands off never counts towards this limit.
 
 ### Button or Select Menu Click {#trigger-button}
 
