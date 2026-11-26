@@ -63,6 +63,8 @@ Ein Hook mit Voreinstellung, der noch auf sein Geheimnis wartet, nimmt keine Anf
 - Stripe und top.gg wiederholen fehlgeschlagene Zustellungen selbst. Bei Stripe führt SCNX einen Ablauf pro Ereignis-ID 24 Stunden lang nur einmal aus und überspringt die Zustellung eines Ereignisses, das schon verarbeitet wurde. Eine identische Kopie einer schon verarbeiteten Anfrage wird innerhalb von 300 Sekunden nach ihrem Zeitstempel mit HTTP 409 beantwortet. Eine Kopie mit älterem Zeitstempel besteht die Signaturprüfung nicht und bekommt HTTP 401. Siehe [Mit Stripe verkaufen](/de/docs/custom-commands/sell-with-stripe#repeated-events).
 - Das Zustellungsprotokoll des Hooks zeigt das Ergebnis jeder Anfrage, zum Beispiel zugestellt, verschoben, wiederholt oder abgelehnt.
 
+Google Forms hat keine eigenen Webhooks. [Google-Forms-Antworten](/de/docs/custom-commands/google-forms) zeigt, wie du mit einem kleinen Skript jede neue Antwort an einen Hook sendest.
+
 ## Erlaubte Dienste {#allowed-services}
 
 Welche Hosts der HTTP-Request-Schritt und Verbindungen aufrufen dürfen, hängt von deinem Plan ab:

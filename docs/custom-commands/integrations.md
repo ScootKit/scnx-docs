@@ -63,6 +63,8 @@ A hook with a preset that still waits for its secret does not accept any request
 - Stripe and top.gg retry failed deliveries themselves. For Stripe, SCNX runs a flow once per event ID for 24 hours and skips a delivery of an event that was already handled. An identical copy of a request that was already handled, within 300 seconds of its timestamp, is answered with HTTP 409. A copy with an older timestamp fails the signature check and gets HTTP 401. See [Sell with Stripe](/docs/custom-commands/sell-with-stripe#repeated-events).
 - The delivery log of the hook shows the outcome of every request, for example delivered, deferred, replayed or refused.
 
+Google Forms has no webhooks of its own. [Google Forms responses](/docs/custom-commands/google-forms) shows how to send every new response to a hook with a small script.
+
 ## Allowed services {#allowed-services}
 
 Which hosts the HTTP request step and connections may call depends on your plan:

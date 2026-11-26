@@ -201,6 +201,11 @@ const sidebars = {
                 },
                 {
                     type: 'link',
+                    label: 'Google Forms responses',
+                    href: '/docs/custom-commands/google-forms'
+                },
+                {
+                    type: 'link',
                     label: 'Moving from V2',
                     href: '/docs/custom-commands/migrating-from-v2'
                 }
@@ -413,6 +418,7 @@ const sidebars = {
                         {type: 'doc', id: 'custom-commands/shopify', label: 'Shopify'},
                         {type: 'doc', id: 'custom-commands/trello', label: 'Trello'},
                         {type: 'doc', id: 'custom-commands/sell-with-stripe', label: 'Sell with Stripe'},
+                        {type: 'doc', id: 'custom-commands/google-forms', label: 'Google Forms responses'},
                         {type: 'doc', id: 'custom-commands/mcp', label: 'Build with AI (MCP)'}
                     ]
                 },
