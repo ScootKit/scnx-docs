@@ -11,7 +11,7 @@ Integrate with APIs and supported third-party providers.
 
 ### Translate text with AI {#ai-translate-text}
 
-Translates text into another language using AI. Each translation costs one AI Coin from this server's balance; the coin is only used when a translation actually comes back. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try" to fall back to the original text. In a test run nothing is translated and no AI Coins are used.
+Translates text into another language using AI. Each translation costs one AI Coin from this server's balance; a coin is only used when the AI service produces a translation. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try" to fall back to the original text. In a test run nothing is translated and no AI Coins are used.
 
 **Inputs**
 
@@ -26,6 +26,71 @@ Translates text into another language using AI. Each translation costs one AI Co
 | Name            | Type                                   | Details              |
 | --------------- | -------------------------------------- | -------------------- |
 | Translated text | [Text](../../../value-types.md#STRING) | The translated text. |
+
+### Sort text into a category with AI {#ai-categorize}
+
+Sorts a text into one of the categories you list, using AI. Each run costs one AI Coin from this server's balance; a coin is only used when the AI service produces an answer. If none of the categories fits, "Matched" is No and "Category" is empty. The AI is told to treat the text as data only, but what the text says can still influence its answer, so do not rely on the AI alone for moderation decisions. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try". In a test run nothing is sent, no AI Coins are used and the first category is returned.
+
+**Inputs**
+
+| Name | Type | Required | Details |
+| --- | --- | --- | --- |
+| Text | [Text](../../../value-types.md#STRING) | Yes | The text to sort (up to 4000 characters). Length: 1 to 4000 characters. |
+| Categories | List of [Text](../../../value-types.md#STRING) | Yes | The categories the AI can choose from: 2 to 25 different names, each up to 40 characters. The result is always exactly one of them, or none. Maximum length: 40 characters. Items: 2 to 25. |
+| Explanation | [Text](../../../value-types.md#STRING) | No | Optional: explain what the categories mean or how to tell them apart (up to 500 characters). Maximum length: 500 characters. |
+
+**Outputs**
+
+| Name | Type | Details |
+| --- | --- | --- |
+| Category | [Text](../../../value-types.md#STRING) | The chosen category, exactly as you wrote it in the list. Empty if none fits. May be empty. |
+| Matched | [Yes/No](../../../value-types.md#BOOLEAN) | Yes if a category was chosen, No if none fits. |
+
+### Decide yes or no with AI {#ai-decide}
+
+Lets AI answer a yes-or-no question about a text. Each run costs one AI Coin from this server's balance; a coin is only used when the AI service produces an answer. The AI is told to treat the text as data only, but what the text says can still influence its answer, so do not rely on the AI alone for moderation decisions. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try". In a test run nothing is sent, no AI Coins are used and the answer is Yes.
+
+**Inputs**
+
+| Name | Type | Required | Details |
+| --- | --- | --- | --- |
+| Question | [Text](../../../value-types.md#STRING) | Yes | The yes-or-no question to answer, e.g. "Is this message an advertisement?" (up to 500 characters). Length: 1 to 500 characters. |
+| Text | [Text](../../../value-types.md#STRING) | Yes | The text the question is about (up to 4000 characters). Length: 1 to 4000 characters. |
+
+**Outputs**
+
+| Name | Type | Details |
+| --- | --- | --- |
+| Decision | [Yes/No](../../../value-types.md#BOOLEAN) | Yes or No, as answered by the AI. |
+
+### Ask AI {#ai-ask}
+
+Gives AI a task and returns its answer as text, e.g. a summary or a rewrite. Each run costs one AI Coin from this server's balance; a coin is only used when the AI service produces an answer. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try". In a test run nothing is sent, no AI Coins are used and the answer is a placeholder text.
+
+**Inputs**
+
+| Name | Type | Required | Details |
+| --- | --- | --- | --- |
+| Instruction | [Text](../../../value-types.md#STRING) | Yes | What the AI should do, e.g. "Summarize this in two sentences." (up to 2000 characters). Length: 1 to 2000 characters. |
+| Data | [Text](../../../value-types.md#STRING) | No | Optional: the text the AI works on, such as a member's message (up to 4000 characters). The AI is told to treat it as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 4000 characters. |
+
+**Outputs**
+
+| Name | Type | Details |
+| --- | --- | --- |
+| Answer | [Text](../../../value-types.md#STRING) | The AI's answer. |
+
+### Pull fields out of text with AI {#ai-extract}
+
+Reads a text and pulls out the values you ask for, using AI. You declare each field with an ID, a type (text, number or yes/no) and an optional description, and the action gives you one output per declared field. A field the AI cannot find in the text is empty. Each run costs one AI Coin from this server's balance; a coin is only used when the AI service produces an answer. The AI is told to treat the text as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. If the balance is empty, the action fails with the error code AI_CREDITS_EXHAUSTED, which you can catch with "Try". In a test run nothing is sent, no AI Coins are used and every field gets an empty value (empty text, 0 or No).
+
+**Inputs**
+
+| Name | Type | Required | Details |
+| --- | --- | --- | --- |
+| Text | [Text](../../../value-types.md#STRING) | Yes | The text to read the values from (up to 4000 characters). Length: 1 to 4000 characters. |
+| Fields | List of [Extracted field](../../../value-types.md#AI_EXTRACT_FIELD) | Yes | The values to pull out: 1 to 10 fields. Each field has an ID, a type and an optional description. The action gives you one output per field, named after its ID. Items: 1 to 10. |
+| Explanation | [Text](../../../value-types.md#STRING) | No | Optional: explain what the fields mean or where to look for them (up to 500 characters). The AI is told to treat the text as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 500 characters. |
 
 ### Send HTTP request {#http-request}
 
