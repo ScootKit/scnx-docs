@@ -16,7 +16,7 @@ Diese Seite behandelt die Shopify-Verbindung. Zu Verbindungen und vorgefertigten
 - **Produkte und Varianten** - Produkte auflisten, ein Produkt mit seinen Varianten nachschlagen sowie Titel, Status und Tags eines Produkts ändern.
 - **Kunden** - Kunden auflisten und einen Kunden nachschlagen. Adressen werden nicht gelesen.
 - **Lagerbestände** - den Bestand eines Artikels oder eines Standorts lesen, auf eine Zahl setzen oder erhöhen und verringern.
-- **Standorte** - die Standorte deines Shops auflisten. Adressen werden nicht gelesen.
+- **Standorte** - die Standorte deines Shops auflisten. Straßenadressen werden nicht gelesen.
 - **Versand** - die Versandaufträge einer Bestellung auflisten und einen davon versenden. Beim Versenden eines Versandauftrags werden alle offenen Artikel darin ausgeliefert. Der Kunde bekommt die Versandmail von Shopify nur, wenn du "Kunden benachrichtigen" auf wahr setzt.
 
 Jede Operation steht mit ihren Eingaben und Ausgaben in der [Referenz der Dienst-Aktionen](/docs/custom-commands/reference/actions/bot-integrations).
@@ -77,9 +77,9 @@ Die vorgefertigten Shopify-Operationen brauchen die Verbindung mit Client-ID und
 
 Der Dienst nutzt die Shopify Admin REST API in der Version `2026-04`. SCNX wechselt ungefähr jedes Quartal auf eine neuere Version.
 
-Shopify begrenzt, wie schnell ein Shop aufgerufen werden darf, und antwortet mit `429`, wenn du über dem Limit bist. SCNX beachtet die `Retry-After`-Zeit, die Shopify sendet. Ein Schritt kann trotzdem mit einem abfangbaren Fehler "Rate-Limit erreicht" fehlschlagen. Baue deshalb in Flows, die Shopify oft aufrufen, eine Ersatznachricht ein.
+Shopify begrenzt, wie schnell ein Shop aufgerufen werden darf, und antwortet mit `429`, wenn du über dem Limit bist. Ein Schritt kann mit einem abfangbaren Fehler "Rate-Limit erreicht" fehlschlagen. Baue deshalb in Flows, die Shopify oft aufrufen, eine Ersatznachricht ein.
 
 ## Fehlerbehebung {#troubleshooting}
 
-- **Die Verbindung zeigt "Neu verbinden nötig".** Shopify hat die Zugangsdaten mit `shop_not_permitted`, `invalid_client` oder `app_not_installed` abgelehnt. Häufige Ursachen: App und Shop liegen in verschiedenen Shopify-Organisationen, das Client-Secret ist falsch oder wurde erneuert, oder die App wurde aus dem Shop deinstalliert. Prüfe die App im Dev Dashboard, nutze dann **Schlüssel ändern** und gib beide Werte erneut ein.
+- **Ein Schritt schlägt fehl und meldet, dass die Verbindung auf der Integrationsseite neu verbunden werden muss.** Shopify hat die Zugangsdaten mit `shop_not_permitted`, `invalid_client` oder `app_not_installed` abgelehnt. Häufige Ursachen: App und Shop liegen in verschiedenen Shopify-Organisationen, das Client-Secret ist falsch oder wurde erneuert, die App wurde aus dem Shop deinstalliert, oder der Shop-Name ist falsch. Korrigiere die App, das Secret oder den Shop-Namen, nutze dann **Schlüssel ändern** und gib beide Werte erneut ein.
 - **SCNX erreicht den Shop nicht.** Der Shop-Name ist falsch. Gib nur den Teil vor `.myshopify.com` ein, ohne `https://` und ohne eigene Domain.

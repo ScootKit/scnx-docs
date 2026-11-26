@@ -16,7 +16,7 @@ This page covers the Shopify connection. For connections and ready-made services
 - **Products and variants** - list products, look up one product with its variations, and change the title, the status and the tags of a product.
 - **Customers** - list customers and look up one customer. Addresses are not read.
 - **Inventory levels** - read the stock of an item or of a location, set it to a number, or add to it and take from it.
-- **Locations** - list the locations of your shop. Addresses are not read.
+- **Locations** - list the locations of your shop. Street addresses are not read.
 - **Fulfillments** - list the fulfillment orders of an order and ship one of them. Shipping a fulfillment order fulfils every open item of it. The customer only gets Shopify's shipping email if you set Notify customer to true.
 
 Every operation is listed with its inputs and outputs in the [service actions reference](/docs/custom-commands/reference/actions/bot-integrations).
@@ -77,9 +77,9 @@ The ready-made Shopify operations need the connection with Client ID and Client 
 
 The service uses the Shopify Admin REST API in version `2026-04`. SCNX moves to a newer version roughly every quarter.
 
-Shopify limits how fast a shop can be called and answers `429` when you are over the limit. SCNX respects the `Retry-After` time Shopify sends. A step can still fail with a catchable "rate limited" error, so add a fallback to flows that call Shopify often.
+Shopify limits how fast a shop can be called and answers `429` when you are over the limit. A step can fail with a catchable "rate limited" error, so add a fallback to flows that call Shopify often.
 
 ## Troubleshooting {#troubleshooting}
 
-- **The connection shows "Needs reconnect".** Shopify refused the credentials with `shop_not_permitted`, `invalid_client` or `app_not_installed`. Common causes: the app and the store are in different Shopify organizations, the Client secret is wrong or was rotated, or the app was uninstalled from the store. Check the app in the Dev Dashboard, then use **Change key** and enter both values again.
+- **A step fails with "This connection must be reconnected on the Integrations page before it can be used again."** Shopify refused the credentials with `shop_not_permitted`, `invalid_client` or `app_not_installed`. Common causes: the app and the store are in different Shopify organizations, the Client secret is wrong or was rotated, the app was uninstalled from the store, or the shop name is wrong. Fix the app, the secret or the shop name, then use **Change key** and enter both values again.
 - **SCNX cannot reach the shop.** The shop name is wrong. Enter only the part before `.myshopify.com`, without `https://` and without a custom domain.
