@@ -63,7 +63,7 @@ Shopify stellt ein Zugriffstoken aus, das 24 Stunden gültig ist. SCNX fordert e
 
 :::warning
 
-Bestellungen und Kunden enthalten personenbezogene Daten der Kunden deines Shops, etwa Namen, Adressen und E-Mail-Adressen. Gib diese Daten nur dort weiter, wo du es beabsichtigst und wo es erlaubt ist. Als Shop-Betreiber gelten deine eigenen Datenschutzpflichten für alles, was ein Flow damit macht.
+Bestellungen und Kunden enthalten personenbezogene Daten der Kunden deines Shops, etwa Namen und E-Mail-Adressen. Gib diese Daten nur dort weiter, wo du es beabsichtigst und wo es erlaubt ist. Als Shop-Betreiber gelten deine eigenen Datenschutzpflichten für alles, was ein Flow damit macht.
 
 :::
 
@@ -77,9 +77,9 @@ Die vorgefertigten Shopify-Operationen brauchen die Verbindung mit Client-ID und
 
 Der Dienst nutzt die Shopify Admin REST API in der Version `2026-04`. SCNX wechselt ungefähr jedes Quartal auf eine neuere Version.
 
-Shopify begrenzt, wie schnell ein Shop aufgerufen werden darf, und antwortet mit `429`, wenn du über dem Limit bist. SCNX beachtet die `Retry-After`-Zeit, die Shopify sendet. Ein Schritt kann trotzdem mit einem abfangbaren Fehler "Rate-Limit erreicht" fehlschlagen. Baue deshalb in Flows, die Shopify oft aufrufen, eine Ersatzlösung ein.
+Shopify begrenzt, wie schnell ein Shop aufgerufen werden darf, und antwortet mit `429`, wenn du über dem Limit bist. SCNX beachtet die `Retry-After`-Zeit, die Shopify sendet. Ein Schritt kann trotzdem mit einem abfangbaren Fehler "Rate-Limit erreicht" fehlschlagen. Baue deshalb in Flows, die Shopify oft aufrufen, eine Ersatznachricht ein.
 
 ## Fehlerbehebung {#troubleshooting}
 
-- **Die Verbindung zeigt "Neu verbinden nötig".** Shopify hat die Zugangsdaten mit `shop_not_permitted` oder `invalid_client` abgelehnt. Häufige Ursachen: App und Shop liegen in verschiedenen Shopify-Organisationen, das Client-Secret ist falsch oder wurde erneuert, oder die App wurde aus dem Shop deinstalliert. Prüfe die App im Dev Dashboard, nutze dann **Schlüssel ändern** und gib beide Werte erneut ein.
+- **Die Verbindung zeigt "Neu verbinden nötig".** Shopify hat die Zugangsdaten mit `shop_not_permitted`, `invalid_client` oder `app_not_installed` abgelehnt. Häufige Ursachen: App und Shop liegen in verschiedenen Shopify-Organisationen, das Client-Secret ist falsch oder wurde erneuert, oder die App wurde aus dem Shop deinstalliert. Prüfe die App im Dev Dashboard, nutze dann **Schlüssel ändern** und gib beide Werte erneut ein.
 - **SCNX erreicht den Shop nicht.** Der Shop-Name ist falsch. Gib nur den Teil vor `.myshopify.com` ein, ohne `https://` und ohne eigene Domain.

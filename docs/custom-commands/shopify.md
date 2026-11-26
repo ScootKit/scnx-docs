@@ -63,7 +63,7 @@ Shopify issues an access token that is valid for 24 hours. SCNX requests it from
 
 :::warning
 
-Orders and customers contain personal data of your shop's customers, such as names, addresses and email addresses. Only send this data where you intend to and where you are allowed to. As the shop owner, your own privacy obligations apply to everything a flow does with it.
+Orders and customers contain personal data of your shop's customers, such as names and email addresses. Only send this data where you intend to and where you are allowed to. As the shop owner, your own privacy obligations apply to everything a flow does with it.
 
 :::
 
@@ -81,5 +81,5 @@ Shopify limits how fast a shop can be called and answers `429` when you are over
 
 ## Troubleshooting {#troubleshooting}
 
-- **The connection shows "Needs reconnect".** Shopify refused the credentials with `shop_not_permitted` or `invalid_client`. Common causes: the app and the store are in different Shopify organizations, the Client secret is wrong or was rotated, or the app was uninstalled from the store. Check the app in the Dev Dashboard, then use **Change key** and enter both values again.
+- **The connection shows "Needs reconnect".** Shopify refused the credentials with `shop_not_permitted`, `invalid_client` or `app_not_installed`. Common causes: the app and the store are in different Shopify organizations, the Client secret is wrong or was rotated, or the app was uninstalled from the store. Check the app in the Dev Dashboard, then use **Change key** and enter both values again.
 - **SCNX cannot reach the shop.** The shop name is wrong. Enter only the part before `.myshopify.com`, without `https://` and without a custom domain.
