@@ -359,6 +359,10 @@
     "message": "Shopify",
     "description": "The label for the doc item 'Shopify' in sidebar 'customCommandsSidebar'"
   },
+  "sidebar.customCommandsSidebar.doc.Trello": {
+    "message": "Trello",
+    "description": "The label for the doc item 'Trello' in sidebar 'customCommandsSidebar'"
+  },
   "sidebar.customCommandsSidebar.doc.Sell with Stripe": {
     "message": "Mit Stripe verkaufen",
     "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customCommandsSidebar'"
