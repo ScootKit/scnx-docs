@@ -414,11 +414,11 @@ const sidebars = {
                         {type: 'doc', id: 'custom-commands/variables', label: 'Values, variables & messages'},
                         {type: 'doc', id: 'custom-commands/modules', label: 'Modules & templates'},
                         {type: 'doc', id: 'custom-commands/integrations', label: 'Integrations'},
+                        {type: 'doc', id: 'custom-commands/google-forms', label: 'Google Forms responses'},
                         {type: 'doc', id: 'custom-commands/ai-actions', label: 'AI actions'},
                         {type: 'doc', id: 'custom-commands/shopify', label: 'Shopify'},
                         {type: 'doc', id: 'custom-commands/trello', label: 'Trello'},
                         {type: 'doc', id: 'custom-commands/sell-with-stripe', label: 'Sell with Stripe'},
-                        {type: 'doc', id: 'custom-commands/google-forms', label: 'Google Forms responses'},
                         {type: 'doc', id: 'custom-commands/mcp', label: 'Build with AI (MCP)'}
                     ]
                 },
