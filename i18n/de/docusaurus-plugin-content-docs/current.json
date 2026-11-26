@@ -355,6 +355,10 @@
     "message": "Mit Stripe verkaufen",
     "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customCommandsSidebar'"
   },
+  "sidebar.customCommandsSidebar.doc.Google Forms responses": {
+    "message": "Google-Forms-Antworten",
+    "description": "The label for the doc item 'Google Forms responses' in sidebar 'customCommandsSidebar'"
+  },
   "sidebar.customCommandsSidebar.doc.Build with AI (MCP)": {
     "message": "Mit KI bauen (MCP)",
     "description": "The label for the doc item 'Build with AI (MCP)' in sidebar 'customCommandsSidebar'"
@@ -414,6 +418,10 @@
   "sidebar.customBotSidebar.link.Sell with Stripe": {
     "message": "Mit Stripe verkaufen",
     "description": "The label for link Sell with Stripe in sidebar customBotSidebar, linking to /docs/custom-commands"
+  },
+  "sidebar.customBotSidebar.link.Google Forms responses": {
+    "message": "Google-Forms-Antworten",
+    "description": "The label for link Google Forms responses in sidebar customBotSidebar, linking to /docs/custom-commands"
   },
   "sidebar.customBotSidebar.link.Moving from V2": {
     "message": "Umstieg von V2",
