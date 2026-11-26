@@ -43,7 +43,7 @@ You declare 1 to 10 fields. Each field has:
 
 The step gives you one output per field, named after its ID. A value the text does not contain, or one that does not fit its type, comes back empty, so check every field before you use it, for example with **If it has a value**. A number can have decimals; round it before you use it where a whole number is needed.
 
-Declare the fields in the step first, then use their outputs. Fields are written into the flow, so you cannot add them from a variable. If you build flows with an AI assistant through the [MCP connector](/docs/custom-commands/mcp), it has to name each output (`field:<id>`) when it adds the step, because the outputs depend on the fields of that step.
+Declare the fields in the step first, then use their outputs. The editor can only name the outputs for a field list that is written into the flow itself; if the list comes from a variable, the outputs cannot be named in the editor. If you build flows with an AI assistant through the [MCP connector](/docs/custom-commands/mcp), it has to name each output (`field:<id>`) when it adds the step, because the outputs depend on the fields of that step.
 
 ## Member text and mentions {#member-text}
 
@@ -57,7 +57,7 @@ So treat every AI result like a member's message:
 
 ## Cost and failures {#cost}
 
-Each AI step costs AI Coins from your server's balance, currently one per answer. A coin is only used when the AI service actually returns an answer. AI steps have no hourly cap of their own: your balance is the limit. How many coins your plan includes and how to top up is explained on the [AI page](/docs/custom-bot/modules/ai).
+Each AI step costs AI Coins from your server's balance, currently one per answer. A coin is only used when the AI service actually returns an answer. AI steps have no hourly cap of their own: your balance is the limit, although the general activity budget of your server still applies. How many coins your plan includes and how to top up is explained on the [AI page](/docs/custom-bot/modules/ai).
 
 | What happened                                                                             | Error code             |
 | ----------------------------------------------------------------------------------------- | ---------------------- |
@@ -110,6 +110,7 @@ The flow flags the message instead of deleting it, because the message itself ca
 | Text to read                                                   | 1 to 4000 characters                                                                            |
 | Question of **Decide yes or no**, and the optional explanation | up to 500 characters                                                                            |
 | Instruction of **Ask AI**                                      | up to 2000 characters                                                                           |
+| Optional **Data** of **Ask AI**                                | up to 4000 characters                                                                           |
 | Categories                                                     | 2 to 25 different entries, each up to 40 characters                                             |
 | Fields                                                         | 1 to 10 fields; ID up to 16 characters (`a-z`, `0-9`, hyphen); description up to 200 characters |
 

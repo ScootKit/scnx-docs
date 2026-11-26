@@ -43,7 +43,7 @@ Du definierst 1 bis 10 Felder. Jedes Feld hat:
 
 Der Schritt liefert einen Ausgang pro Feld, benannt nach der ID. Ein Wert, der nicht im Text steht oder nicht zum Typ passt, kommt leer zurück. Prüfe deshalb jedes Feld, bevor du es nutzt, zum Beispiel mit **Wenn ein Wert da ist**. Eine Zahl kann Nachkommastellen haben; runde sie, bevor du sie dort verwendest, wo eine ganze Zahl nötig ist.
 
-Definiere die Felder zuerst im Schritt und nutze dann ihre Ausgänge. Die Felder werden fest in den Flow geschrieben, du kannst sie also nicht aus einer Variable hinzufügen. Wenn du Flows mit einem KI-Assistenten über den [MCP-Connector](/de/docs/custom-commands/mcp) baust, muss er beim Hinzufügen des Schritts jeden Ausgang (`field:<id>`) benennen, weil die Ausgänge von den Feldern des jeweiligen Schritts abhängen.
+Definiere die Felder zuerst im Schritt und nutze dann ihre Ausgänge. Der Editor kann die Ausgänge nur für eine Feldliste benennen, die direkt im Flow steht; stammt die Liste aus einer Variable, lassen sich die Ausgänge im Editor nicht benennen. Wenn du Flows mit einem KI-Assistenten über den [MCP-Connector](/de/docs/custom-commands/mcp) baust, muss er beim Hinzufügen des Schritts jeden Ausgang (`field:<id>`) benennen, weil die Ausgänge von den Feldern des jeweiligen Schritts abhängen.
 
 ## Text von Mitgliedern und Erwähnungen {#member-text}
 
@@ -51,13 +51,13 @@ Schreibe das, was ein Mitglied verfasst hat, in die Eingabe **Text** (bei **KI f
 
 Behandle deshalb jedes KI-Ergebnis wie die Nachricht eines Mitglieds:
 
-- Lass ein KI-Ergebnis nicht allein über einen Bann, ein Löschen oder eine Rollenänderung entscheiden. Melde die Nachricht bei der Moderation lieber einem Moderator.
-- Eine Antwort kann eine Nutzer-Erwähnung wie `<@id>` enthalten, und beim Posten wird diese Person gepingt. Pings von Rollen, `@everyone` und `@here` sind durch die Standard-Erwähnungseinstellungen der Sende-Aktionen blockiert, solange du sie nicht einschaltest.
+- Lass ein KI-Ergebnis nicht allein über einen Bann, ein Löschen oder eine Rollenänderung entscheiden. Lass die Nachricht stattdessen von einem Moderator prüfen.
+- Eine Antwort kann eine Benutzer-Erwähnung wie `<@id>` enthalten, und beim Posten wird diese Person gepingt. Pings von Rollen, `@everyone` und `@here` sind durch die Standard-Erwähnungseinstellungen der Sende-Aktionen blockiert, solange du sie nicht einschaltest.
 - Poste eine Antwort auf den Text eines Mitglieds nicht ungeprüft. **Discord-Markdown escapen** hilft bei Werten, die du in eine Nachricht einsetzt.
 
 ## Kosten und Fehler {#cost}
 
-Jeder KI-Schritt kostet AI Coins vom Guthaben deines Servers, aktuell einen pro Antwort. Ein Coin wird nur verbraucht, wenn der KI-Dienst tatsächlich eine Antwort liefert. KI-Schritte haben kein eigenes Stundenlimit: dein Guthaben ist die Grenze. Wie viele Coins dein Plan enthält und wie du aufstockst, steht auf der [KI-Seite](/de/docs/custom-bot/modules/ai).
+Jeder KI-Schritt kostet AI Coins vom Guthaben deines Servers, aktuell einen pro Antwort. Ein Coin wird nur verbraucht, wenn der KI-Dienst tatsächlich eine Antwort liefert. KI-Schritte haben kein eigenes Stundenlimit: dein Guthaben ist die Grenze, allerdings gilt weiterhin das allgemeine Aktivitätsbudget deines Servers. Wie viele Coins dein Plan enthält und wie du aufstockst, steht auf der [KI-Seite](/de/docs/custom-bot/modules/ai).
 
 | Was passiert ist                                                                                   | Fehlercode             |
 | -------------------------------------------------------------------------------------------------- | ---------------------- |
@@ -88,7 +88,7 @@ Alle drei Flows starten bei einer neuen Nachricht und setzen den KI-Schritt in e
 2. **Wenn** **Zugeordnet** Ja ist, antwortet ein **Switch** auf **Kategorie** für jede Kategorie mit einem anderen Text.
 3. Passt nichts oder schlägt der KI-Schritt fehl, bleibt der Flow still.
 
-Ein Cooldown von einer Minute pro Nutzer hält die Kosten niedrig.
+Ein Cooldown von einer Minute pro Benutzer hält die Kosten niedrig.
 
 ### Spam-Prüfung {#example-spam}
 
@@ -110,6 +110,7 @@ Der Flow meldet die Nachricht, statt sie zu löschen, weil die Nachricht selbst 
 | Zu lesender Text                                                          | 1 bis 4000 Zeichen                                                                                 |
 | Frage von **Mit KI Ja oder Nein entscheiden** und die optionale Erklärung | bis zu 500 Zeichen                                                                                 |
 | Anweisung von **KI fragen**                                               | bis zu 2000 Zeichen                                                                                |
+| Optionale **Daten** von **KI fragen**                                     | bis zu 4000 Zeichen                                                                                |
 | Kategorien                                                                | 2 bis 25 verschiedene Einträge, jeder bis zu 40 Zeichen                                            |
 | Felder                                                                    | 1 bis 10 Felder; ID bis zu 16 Zeichen (`a-z`, `0-9`, Bindestrich); Beschreibung bis zu 200 Zeichen |
 
