@@ -351,6 +351,10 @@
     "message": "Integrationen",
     "description": "The label for the doc item 'Integrations' in sidebar 'customCommandsSidebar'"
   },
+  "sidebar.customCommandsSidebar.doc.Shopify": {
+    "message": "Shopify",
+    "description": "The label for the doc item 'Shopify' in sidebar 'customCommandsSidebar'"
+  },
   "sidebar.customCommandsSidebar.doc.Sell with Stripe": {
     "message": "Mit Stripe verkaufen",
     "description": "The label for the doc item 'Sell with Stripe' in sidebar 'customCommandsSidebar'"
