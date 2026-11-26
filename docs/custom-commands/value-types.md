@@ -574,11 +574,11 @@ The type of an entitlement (premium SKU purchase, gift, subscription, etc.).
 
 The kind of value the AI pulls out for a field.
 
-| Value | Name | Details |
-| --- | --- | --- |
-| `text` | Text | Any text. Empty if the AI cannot find it. |
+| Value    | Name   | Details                                                                               |
+| -------- | ------ | ------------------------------------------------------------------------------------- |
+| `text`   | Text   | Any text. Empty if the AI cannot find it.                                             |
 | `number` | Number | A number, possibly with decimals, such as 42 or 2.5. Empty if the AI cannot find one. |
-| `yes-no` | Yes/No | A yes-or-no answer about the text. Empty if the text does not say. |
+| `yes-no` | Yes/No | A yes-or-no answer about the text. Empty if the text does not say.                    |
 
 ### Flow parameter type {#FLOW_PARAMETER_TYPE}
 
@@ -2156,11 +2156,11 @@ An interaction representing an autocomplete request for a slash-command option.
 
 Declares one value for the AI to pull out of the text. The ID names the output of the action; the type controls what kind of value comes back.
 
-| Property | Type | Details |
-| --- | --- | --- |
-| ID | [Text](#STRING) | Short ID for the field (lowercase letters, digits and dashes, up to 16 characters). The action's output for this field is named after it. Length: 1 to 16 characters. Must match `^[a-z0-9-]+$`. |
-| Type | [Extracted field type](#AI_EXTRACT_FIELD_TYPE) | What kind of value to pull out. |
-| Description | [Text](#STRING) | Optional: what this value is, e.g. "the order number" (up to 200 characters). Maximum length: 200 characters. May be empty. |
+| Property    | Type                                           | Details                                                                                                                                                                                          |
+| ----------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ID          | [Text](#STRING)                                | Short ID for the field (lowercase letters, digits and dashes, up to 16 characters). The action's output for this field is named after it. Length: 1 to 16 characters. Must match `^[a-z0-9-]+$`. |
+| Type        | [Extracted field type](#AI_EXTRACT_FIELD_TYPE) | What kind of value to pull out.                                                                                                                                                                  |
+| Description | [Text](#STRING)                                | Optional: what this value is, e.g. "the order number" (up to 200 characters). Maximum length: 200 characters. May be empty.                                                                      |
 
 ### Flow parameter {#FLOW_PARAMETER}
 

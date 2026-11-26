@@ -33,18 +33,18 @@ Ordnet einen Text mit KI einer der Kategorien zu, die du angibst. Jeder Durchlau
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, der einsortiert werden soll (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen. |
-| Kategorien | Liste von [Text](../../../value-types.md#STRING) | Ja | Die Kategorien, aus denen die KI wählen kann: 2 bis 25 verschiedene Namen mit je bis zu 40 Zeichen. Das Ergebnis ist immer genau eine davon oder keine. Maximale Länge: 40 Zeichen. Einträge: 2 bis 25. |
-| Erklärung | [Text](../../../value-types.md#STRING) | Nein | Optional: erkläre, was die Kategorien bedeuten oder wie man sie unterscheidet (bis zu 500 Zeichen). Maximale Länge: 500 Zeichen. |
+| Name       | Typ                                              | Pflicht | Details                                                                                                                                                                                                 |
+| ---------- | ------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text       | [Text](../../../value-types.md#STRING)           | Ja      | Der Text, der einsortiert werden soll (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen.                                                                                                                 |
+| Kategorien | Liste von [Text](../../../value-types.md#STRING) | Ja      | Die Kategorien, aus denen die KI wählen kann: 2 bis 25 verschiedene Namen mit je bis zu 40 Zeichen. Das Ergebnis ist immer genau eine davon oder keine. Maximale Länge: 40 Zeichen. Einträge: 2 bis 25. |
+| Erklärung  | [Text](../../../value-types.md#STRING)           | Nein    | Optional: erkläre, was die Kategorien bedeuten oder wie man sie unterscheidet (bis zu 500 Zeichen). Maximale Länge: 500 Zeichen.                                                                        |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
-| Kategorie | [Text](../../../value-types.md#STRING) | Die gewählte Kategorie, genau so geschrieben wie in deiner Liste. Leer, wenn keine passt. Kann leer sein. |
-| Zugeordnet | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja, wenn eine Kategorie gewählt wurde, Nein, wenn keine passt. |
+| Name       | Typ                                        | Details                                                                                                   |
+| ---------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Kategorie  | [Text](../../../value-types.md#STRING)     | Die gewählte Kategorie, genau so geschrieben wie in deiner Liste. Leer, wenn keine passt. Kann leer sein. |
+| Zugeordnet | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja, wenn eine Kategorie gewählt wurde, Nein, wenn keine passt.                                            |
 
 ### Mit KI Ja oder Nein entscheiden {#ai-decide}
 
@@ -52,15 +52,15 @@ Lässt eine KI eine Ja-Nein-Frage zu einem Text beantworten. Jeder Durchlauf kos
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Frage | [Text](../../../value-types.md#STRING) | Ja | Die Ja-Nein-Frage, die beantwortet werden soll, zum Beispiel "Ist diese Nachricht Werbung?" (bis zu 500 Zeichen). Länge: 1 bis 500 Zeichen. |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, auf den sich die Frage bezieht (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen. |
+| Name  | Typ                                    | Pflicht | Details                                                                                                                                     |
+| ----- | -------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frage | [Text](../../../value-types.md#STRING) | Ja      | Die Ja-Nein-Frage, die beantwortet werden soll, zum Beispiel "Ist diese Nachricht Werbung?" (bis zu 500 Zeichen). Länge: 1 bis 500 Zeichen. |
+| Text  | [Text](../../../value-types.md#STRING) | Ja      | Der Text, auf den sich die Frage bezieht (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen.                                                  |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name         | Typ                                        | Details                                      |
+| ------------ | ------------------------------------------ | -------------------------------------------- |
 | Entscheidung | [Ja/Nein](../../../value-types.md#BOOLEAN) | Ja oder Nein, so wie die KI geantwortet hat. |
 
 ### KI fragen {#ai-ask}
@@ -69,15 +69,15 @@ Gibt einer KI eine Aufgabe und liefert ihre Antwort als Text, zum Beispiel eine 
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Anweisung | [Text](../../../value-types.md#STRING) | Ja | Was die KI tun soll, zum Beispiel "Fasse das in zwei Sätzen zusammen." (bis zu 2000 Zeichen). Länge: 1 bis 2000 Zeichen. |
-| Daten | [Text](../../../value-types.md#STRING) | Nein | Optional: der Text, mit dem die KI arbeitet, etwa die Nachricht eines Mitglieds (bis zu 4000 Zeichen). Die KI wird angewiesen, ihn nur als Daten zu behandeln, aber was darin steht, kann ihre Antwort trotzdem beeinflussen. Verlass dich bei Moderationsentscheidungen deshalb nicht allein auf die KI. Maximale Länge: 4000 Zeichen. |
+| Name      | Typ                                    | Pflicht | Details                                                                                                                                                                                                                                                                                                                                 |
+| --------- | -------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Anweisung | [Text](../../../value-types.md#STRING) | Ja      | Was die KI tun soll, zum Beispiel "Fasse das in zwei Sätzen zusammen." (bis zu 2000 Zeichen). Länge: 1 bis 2000 Zeichen.                                                                                                                                                                                                                |
+| Daten     | [Text](../../../value-types.md#STRING) | Nein    | Optional: der Text, mit dem die KI arbeitet, etwa die Nachricht eines Mitglieds (bis zu 4000 Zeichen). Die KI wird angewiesen, ihn nur als Daten zu behandeln, aber was darin steht, kann ihre Antwort trotzdem beeinflussen. Verlass dich bei Moderationsentscheidungen deshalb nicht allein auf die KI. Maximale Länge: 4000 Zeichen. |
 
 **Ausgaben**
 
-| Name | Typ | Details |
-| --- | --- | --- |
+| Name    | Typ                                    | Details             |
+| ------- | -------------------------------------- | ------------------- |
 | Antwort | [Text](../../../value-types.md#STRING) | Die Antwort der KI. |
 
 ### Felder mit KI aus Text auslesen {#ai-extract}
@@ -86,11 +86,11 @@ Liest einen Text und zieht mit KI die Werte heraus, die du angibst. Du definiers
 
 **Eingaben**
 
-| Name | Typ | Pflicht | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Ja | Der Text, aus dem die Werte gelesen werden sollen (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen. |
-| Felder | Liste von [Ausgelesenes Feld](../../../value-types.md#AI_EXTRACT_FIELD) | Ja | Die Werte, die herausgezogen werden sollen: 1 bis 10 Felder. Jedes Feld hat eine ID, einen Typ und optional eine Beschreibung. Die Aktion liefert dir pro Feld einen Ausgang, benannt nach seiner ID. Einträge: 1 bis 10. |
-| Erklärung | [Text](../../../value-types.md#STRING) | Nein | Optional: erkläre, was die Felder bedeuten oder wo die KI danach suchen soll (bis zu 500 Zeichen). Die KI wird angewiesen, den Text nur als Daten zu behandeln, aber was im Text steht, kann ihre Antwort trotzdem beeinflussen. Verlass dich bei Moderationsentscheidungen deshalb nicht allein auf die KI. Maximale Länge: 500 Zeichen. |
+| Name      | Typ                                                                     | Pflicht | Details                                                                                                                                                                                                                                                                                                                                   |
+| --------- | ----------------------------------------------------------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text      | [Text](../../../value-types.md#STRING)                                  | Ja      | Der Text, aus dem die Werte gelesen werden sollen (bis zu 4000 Zeichen). Länge: 1 bis 4000 Zeichen.                                                                                                                                                                                                                                       |
+| Felder    | Liste von [Ausgelesenes Feld](../../../value-types.md#AI_EXTRACT_FIELD) | Ja      | Die Werte, die herausgezogen werden sollen: 1 bis 10 Felder. Jedes Feld hat eine ID, einen Typ und optional eine Beschreibung. Die Aktion liefert dir pro Feld einen Ausgang, benannt nach seiner ID. Einträge: 1 bis 10.                                                                                                                 |
+| Erklärung | [Text](../../../value-types.md#STRING)                                  | Nein    | Optional: erkläre, was die Felder bedeuten oder wo die KI danach suchen soll (bis zu 500 Zeichen). Die KI wird angewiesen, den Text nur als Daten zu behandeln, aber was im Text steht, kann ihre Antwort trotzdem beeinflussen. Verlass dich bei Moderationsentscheidungen deshalb nicht allein auf die KI. Maximale Länge: 500 Zeichen. |
 
 ### HTTP-Anfrage senden {#http-request}
 

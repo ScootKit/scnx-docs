@@ -33,18 +33,18 @@ Sorts a text into one of the categories you list, using AI. Each run costs one A
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to sort (up to 4000 characters). Length: 1 to 4000 characters. |
-| Categories | List of [Text](../../../value-types.md#STRING) | Yes | The categories the AI can choose from: 2 to 25 different names, each up to 40 characters. The result is always exactly one of them, or none. Maximum length: 40 characters. Items: 2 to 25. |
-| Explanation | [Text](../../../value-types.md#STRING) | No | Optional: explain what the categories mean or how to tell them apart (up to 500 characters). Maximum length: 500 characters. |
+| Name        | Type                                           | Required | Details                                                                                                                                                                                     |
+| ----------- | ---------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text        | [Text](../../../value-types.md#STRING)         | Yes      | The text to sort (up to 4000 characters). Length: 1 to 4000 characters.                                                                                                                     |
+| Categories  | List of [Text](../../../value-types.md#STRING) | Yes      | The categories the AI can choose from: 2 to 25 different names, each up to 40 characters. The result is always exactly one of them, or none. Maximum length: 40 characters. Items: 2 to 25. |
+| Explanation | [Text](../../../value-types.md#STRING)         | No       | Optional: explain what the categories mean or how to tell them apart (up to 500 characters). Maximum length: 500 characters.                                                                |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
-| Category | [Text](../../../value-types.md#STRING) | The chosen category, exactly as you wrote it in the list. Empty if none fits. May be empty. |
-| Matched | [Yes/No](../../../value-types.md#BOOLEAN) | Yes if a category was chosen, No if none fits. |
+| Name     | Type                                      | Details                                                                                     |
+| -------- | ----------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Category | [Text](../../../value-types.md#STRING)    | The chosen category, exactly as you wrote it in the list. Empty if none fits. May be empty. |
+| Matched  | [Yes/No](../../../value-types.md#BOOLEAN) | Yes if a category was chosen, No if none fits.                                              |
 
 ### Decide yes or no with AI {#ai-decide}
 
@@ -52,15 +52,15 @@ Lets AI answer a yes-or-no question about a text. Each run costs one AI Coin fro
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Question | [Text](../../../value-types.md#STRING) | Yes | The yes-or-no question to answer, e.g. "Is this message an advertisement?" (up to 500 characters). Length: 1 to 500 characters. |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text the question is about (up to 4000 characters). Length: 1 to 4000 characters. |
+| Name     | Type                                   | Required | Details                                                                                                                         |
+| -------- | -------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Question | [Text](../../../value-types.md#STRING) | Yes      | The yes-or-no question to answer, e.g. "Is this message an advertisement?" (up to 500 characters). Length: 1 to 500 characters. |
+| Text     | [Text](../../../value-types.md#STRING) | Yes      | The text the question is about (up to 4000 characters). Length: 1 to 4000 characters.                                           |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name     | Type                                      | Details                           |
+| -------- | ----------------------------------------- | --------------------------------- |
 | Decision | [Yes/No](../../../value-types.md#BOOLEAN) | Yes or No, as answered by the AI. |
 
 ### Ask AI {#ai-ask}
@@ -69,15 +69,15 @@ Gives AI a task and returns its answer as text, e.g. a summary or a rewrite. Eac
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Instruction | [Text](../../../value-types.md#STRING) | Yes | What the AI should do, e.g. "Summarize this in two sentences." (up to 2000 characters). Length: 1 to 2000 characters. |
-| Data | [Text](../../../value-types.md#STRING) | No | Optional: the text the AI works on, such as a member's message (up to 4000 characters). The AI is told to treat it as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 4000 characters. |
+| Name        | Type                                   | Required | Details                                                                                                                                                                                                                                                                     |
+| ----------- | -------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Instruction | [Text](../../../value-types.md#STRING) | Yes      | What the AI should do, e.g. "Summarize this in two sentences." (up to 2000 characters). Length: 1 to 2000 characters.                                                                                                                                                       |
+| Data        | [Text](../../../value-types.md#STRING) | No       | Optional: the text the AI works on, such as a member's message (up to 4000 characters). The AI is told to treat it as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 4000 characters. |
 
 **Outputs**
 
-| Name | Type | Details |
-| --- | --- | --- |
+| Name   | Type                                   | Details          |
+| ------ | -------------------------------------- | ---------------- |
 | Answer | [Text](../../../value-types.md#STRING) | The AI's answer. |
 
 ### Pull fields out of text with AI {#ai-extract}
@@ -86,11 +86,11 @@ Reads a text and pulls out the values you ask for, using AI. You declare each fi
 
 **Inputs**
 
-| Name | Type | Required | Details |
-| --- | --- | --- | --- |
-| Text | [Text](../../../value-types.md#STRING) | Yes | The text to read the values from (up to 4000 characters). Length: 1 to 4000 characters. |
-| Fields | List of [Extracted field](../../../value-types.md#AI_EXTRACT_FIELD) | Yes | The values to pull out: 1 to 10 fields. Each field has an ID, a type and an optional description. The action gives you one output per field, named after its ID. Items: 1 to 10. |
-| Explanation | [Text](../../../value-types.md#STRING) | No | Optional: explain what the fields mean or where to look for them (up to 500 characters). The AI is told to treat the text as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 500 characters. |
+| Name        | Type                                                                | Required | Details                                                                                                                                                                                                                                                                           |
+| ----------- | ------------------------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Text        | [Text](../../../value-types.md#STRING)                              | Yes      | The text to read the values from (up to 4000 characters). Length: 1 to 4000 characters.                                                                                                                                                                                           |
+| Fields      | List of [Extracted field](../../../value-types.md#AI_EXTRACT_FIELD) | Yes      | The values to pull out: 1 to 10 fields. Each field has an ID, a type and an optional description. The action gives you one output per field, named after its ID. Items: 1 to 10.                                                                                                  |
+| Explanation | [Text](../../../value-types.md#STRING)                              | No       | Optional: explain what the fields mean or where to look for them (up to 500 characters). The AI is told to treat the text as data only, but what it says can still influence the answer, so do not rely on the AI alone for moderation decisions. Maximum length: 500 characters. |
 
 ### Send HTTP request {#http-request}
 

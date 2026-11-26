@@ -574,11 +574,11 @@ Der Typ einer Lizenz (Premium-SKU-Kauf, Geschenk, Abonnement, usw.).
 
 Die Art von Wert, die die KI für ein Feld herauszieht.
 
-| Wert | Name | Details |
-| --- | --- | --- |
-| `text` | Text | Beliebiger Text. Leer, wenn die KI ihn nicht findet. |
-| `number` | Zahl | Eine Zahl, gegebenenfalls mit Nachkommastellen, zum Beispiel 42 oder 2,5. Leer, wenn die KI keine findet. |
-| `yes-no` | Ja/Nein | Eine Ja-Nein-Antwort zum Text. Leer, wenn der Text es nicht sagt. |
+| Wert     | Name    | Details                                                                                                   |
+| -------- | ------- | --------------------------------------------------------------------------------------------------------- |
+| `text`   | Text    | Beliebiger Text. Leer, wenn die KI ihn nicht findet.                                                      |
+| `number` | Zahl    | Eine Zahl, gegebenenfalls mit Nachkommastellen, zum Beispiel 42 oder 2,5. Leer, wenn die KI keine findet. |
+| `yes-no` | Ja/Nein | Eine Ja-Nein-Antwort zum Text. Leer, wenn der Text es nicht sagt.                                         |
 
 ### Flow-Parameter-Typ {#FLOW_PARAMETER_TYPE}
 
@@ -2156,11 +2156,11 @@ Eine Interaktion, die eine Autovervollständigungsanfrage für eine Slash-Befehl
 
 Definiert einen Wert, den die KI aus dem Text herausziehen soll. Die ID benennt den Ausgang der Aktion; der Typ bestimmt, welche Art von Wert zurückkommt.
 
-| Eigenschaft | Typ | Details |
-| --- | --- | --- |
-| ID | [Text](#STRING) | Kurze ID für das Feld (Kleinbuchstaben, Ziffern und Bindestriche, bis zu 16 Zeichen). Der Ausgang der Aktion für dieses Feld ist danach benannt. Länge: 1 bis 16 Zeichen. Muss zu `^[a-z0-9-]+$` passen. |
-| Typ | [Typ des ausgelesenen Felds](#AI_EXTRACT_FIELD_TYPE) | Welche Art von Wert herausgezogen werden soll. |
-| Beschreibung | [Text](#STRING) | Optional: was dieser Wert ist, zum Beispiel "die Bestellnummer" (bis zu 200 Zeichen). Maximale Länge: 200 Zeichen. Kann leer sein. |
+| Eigenschaft  | Typ                                                  | Details                                                                                                                                                                                                  |
+| ------------ | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ID           | [Text](#STRING)                                      | Kurze ID für das Feld (Kleinbuchstaben, Ziffern und Bindestriche, bis zu 16 Zeichen). Der Ausgang der Aktion für dieses Feld ist danach benannt. Länge: 1 bis 16 Zeichen. Muss zu `^[a-z0-9-]+$` passen. |
+| Typ          | [Typ des ausgelesenen Felds](#AI_EXTRACT_FIELD_TYPE) | Welche Art von Wert herausgezogen werden soll.                                                                                                                                                           |
+| Beschreibung | [Text](#STRING)                                      | Optional: was dieser Wert ist, zum Beispiel "die Bestellnummer" (bis zu 200 Zeichen). Maximale Länge: 200 Zeichen. Kann leer sein.                                                                       |
 
 ### Flow-Parameter {#FLOW_PARAMETER}
 
