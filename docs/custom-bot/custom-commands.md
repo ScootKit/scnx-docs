@@ -77,7 +77,7 @@ Things to know:
 - In the flow list, a command that is currently switched off shows the badge **Switched off by configuration**.
 - Discord limits how many commands a server can create per day. The bot creates at most 150 new commands per server in
   24 hours. If a setting would create more, the remaining commands are skipped and **Some new commands were not created
-  yet** appears in your [Discord bot issues](https://scnx.app/glink?page=bot/manage). Reload your bot later to create
+  yet** appears in your [Bot Status Panel](https://scnx.app/glink?page=bot/manage). Reload your bot after 24 hours to create
   them. Switching commands off never counts towards this limit.
 
 ### Button or Select Menu Click {#trigger-button}

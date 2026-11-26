@@ -63,7 +63,7 @@ Das solltest du wissen:
 - Die Änderung greift, nachdem dein Bot seine Konfiguration neu geladen hat. Die Konfigurationsseite fragt dich nach dem Speichern, ob du neu laden möchtest.
 - Ein Mitglied, dessen Discord den alten Befehl noch anzeigt, bekommt eine private Antwort, dass der Befehl durch die Serverkonfiguration deaktiviert ist. Es wird nichts ausgeführt.
 - In der Flow-Liste zeigt ein Befehl, der gerade ausgeschaltet ist, das Label **Per Konfiguration ausgeschaltet**.
-- Discord begrenzt, wie viele Befehle ein Server pro Tag erstellen darf. Der Bot erstellt höchstens 150 neue Befehle pro Server in 24 Stunden. Würde eine Einstellung mehr erzeugen, werden die übrigen übersprungen und **Einige neue Befehle wurden noch nicht erstellt** erscheint bei den [Problemen deines Discord-Bots](https://scnx.app/de/glink?page=bot/manage). Lade deinen Bot später neu, um sie zu erstellen. Das Ausschalten von Befehlen zählt nie zu diesem Limit.
+- Discord begrenzt, wie viele Befehle ein Server pro Tag erstellen darf. Der Bot erstellt höchstens 150 neue Befehle pro Server in 24 Stunden. Würde eine Einstellung mehr erzeugen, werden die übrigen übersprungen und **Einige neue Befehle wurden noch nicht erstellt** erscheint im [Bot-Status-Panel](https://scnx.app/de/glink?page=bot/manage). Lade deinen Bot nach 24 Stunden neu, um sie zu erstellen. Das Ausschalten von Befehlen zählt nie zu diesem Limit.
 
 ### Knopf oder Select-Menü-Druck {#trigger-button}
 
