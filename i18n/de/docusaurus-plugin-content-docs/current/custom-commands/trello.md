@@ -6,7 +6,7 @@ description: "Lies Boards, Listen und Karten deines Trello-Kontos und erstelle, 
 
 # Trello
 
-Mit dem vorgefertigten Dienst Trello können deine Flows mit deinen Trello-Boards arbeiten: eine Karte nachschlagen, eine Karte erstellen, sie in eine andere Liste verschieben, einen Kommentar hinzufügen. Du verbindest ihn einmal mit einem API-Schlüssel und einem Token, die du selbst in deinem eigenen Trello-Konto erstellst. SCNX hat keine eigene Trello-App, und deine Flows sehen weder den Schlüssel noch das Token.
+Mit dem vorgefertigten Dienst Trello können deine Flows mit deinen Trello-Boards arbeiten: eine Karte nachschlagen, eine Karte erstellen, sie in eine andere Liste verschieben, einen Kommentar hinzufügen. Du verbindest ihn einmal mit einem API-Schlüssel und einem Token, die du selbst in deinem eigenen Trello-Konto erstellst. SCNX hat keine eigene Trello-App, und deine Flows sehen weder den Schlüssel noch den Token.
 
 Diese Seite behandelt die Trello-Verbindung. Zu Verbindungen und vorgefertigten Diensten allgemein siehe [Integrationen](./integrations.md#ready-made-services).
 
@@ -19,14 +19,14 @@ Diese Seite behandelt die Trello-Verbindung. Zu Verbindungen und vorgefertigten 
 - **Board-Mitglieder** - die Mitglieder eines Boards auflisten.
 - **Kommentare** - die Kommentare einer Karte auflisten und einen Kommentar hinzufügen.
 
-Jede Operation steht mit ihren Eingaben und Ausgaben in der [Referenz der Dienst-Aktionen](/docs/custom-commands/reference/actions/bot-integrations).
+Jede Operation findest du im Flow-Editor in der Aktionsauswahl unter Trello, mit ihren Eingaben und Ausgaben. Andere vorgefertigte Dienste stehen in der [Referenz der Dienst-Aktionen](/de/docs/custom-commands/reference/actions/bot-integrations).
 
 Nicht enthalten: Webhook-Auslöser (ein Flow kann nicht starten, wenn sich eine Karte ändert), Power-Up-Funktionen, Board-Import und Enterprise-Endpunkte.
 
 ## Voraussetzungen {#requirements}
 
 - Ein Trello-Konto, das die Boards öffnen kann, die du nutzen möchtest.
-- Dein eigener API-Schlüssel und dein eigenes Token.
+- Dein eigener API-Schlüssel und dein eigener Token.
 
 SCNX hat keine eigene Trello-App. Schlüssel und Token gehören dir, deshalb gelten die Trello-Limits nur für dich und nicht für andere SCNX-Nutzer.
 
@@ -46,14 +46,14 @@ Das API-Secret brauchst du nicht.
    https://trello.com/1/authorize?expiration=never&scope=read,write&response_type=token&name=SCNX&key=YOUR_API_KEY
    ```
 
-2. Klicke auf **Allow** (Zulassen) und kopiere das Token, das Trello anzeigt.
+2. Klicke auf **Allow** (Zulassen) und kopiere den Token, den Trello anzeigt.
 
 Warum diese Werte:
 
 - `scope=read,write` erlaubt Flows, deine Boards zu lesen und zu ändern. Der Bereich `account` wird nicht angefordert.
-- `expiration=never` hält das Token gültig, bis du es entfernst. Eine kürzere Laufzeit würde dazu führen, dass die Verbindung nicht mehr funktioniert, sobald das Token abläuft.
+- `expiration=never` hält den Token gültig, bis du ihn entfernst. Eine kürzere Laufzeit würde dazu führen, dass die Verbindung nicht mehr funktioniert, sobald der Token abläuft.
 
-Das Token kann jedes Board lesen und ändern, das dein Trello-Konto öffnen kann. Behandle es so vertraulich wie ein Passwort.
+Der Token kann jedes Board lesen und ändern, das dein Trello-Konto öffnen kann. Behandle ihn so vertraulich wie ein Passwort.
 
 ## In SCNX verbinden {#connect}
 
@@ -61,11 +61,11 @@ Das Token kann jedes Board lesen und ändern, das dein Trello-Konto öffnen kann
 2. Klicke auf **Verbinden**.
 3. Fülle die Felder aus:
    - **API-Schlüssel** - der Schlüssel aus dem Tab API key.
-   - **Token** - das Token, das du nach dem Klick auf Allow kopiert hast.
+   - **Token** - der Token, den du nach dem Klick auf Allow kopiert hast.
 
 Füge nur die Werte ein, keine Adresse und nicht `key=` oder `token=`.
 
-Um einen Wert später zu ändern, nutze **Schlüssel ändern**. Es fragt immer wieder nach beiden Werten, weil SCNX gespeicherte Geheimnisse nie anzeigt.
+Um einen Wert später zu ändern, nutze **Schlüssel ändern**. **Schlüssel ändern** fragt immer beide Werte erneut ab, weil SCNX gespeicherte Geheimnisse nie anzeigt.
 
 ## Limits {#limits}
 
@@ -83,10 +83,10 @@ Schlüssel und Token gehören zu deiner eigenen Vereinbarung mit Atlassian, dem 
 
 ## Zugriff widerrufen {#revoke}
 
-Um den Zugriff zu beenden, entferne das Token unter den autorisierten Apps in den Einstellungen deines Trello-Kontos und lösche anschließend die Verbindung in SCNX. Beim Löschen der Verbindung in SCNX werden der gespeicherte Schlüssel und das Token entfernt.
+Um den Zugriff zu beenden, entferne den Token unter den autorisierten Apps in den Einstellungen deines Trello-Kontos und lösche anschließend die Verbindung in SCNX. Beim Löschen der Verbindung in SCNX werden der gespeicherte Schlüssel und der Token entfernt.
 
 ## Fehlerbehebung {#troubleshooting}
 
-- **Ein Schritt schlägt fehl und Trello hat die Verbindung abgelehnt (Status 401).** Trello hat Schlüssel und Token nicht akzeptiert. Häufige Ursachen: Schlüssel und Token wurden vertauscht oder einer von beiden ist falsch, statt des Tokens wurde das API-Secret eingefügt, das Token wurde ohne den Bereich `write` erstellt und ein Schritt will schreiben, oder das Trello-Konto des Tokens kann das Board nicht öffnen.
-- **Ein Schritt schlägt weiter fehl, obwohl du das Problem in Trello behoben hast.** Ein falscher Wert markiert die Verbindung nicht automatisch als "Neu verbinden nötig". Öffne die Verbindung, klicke auf **Schlüssel ändern** und gib sowohl den API-Schlüssel als auch das Token erneut ein. SCNX zeigt gespeicherte Geheimnisse nie an, deshalb werden immer beide Werte abgefragt.
+- **Ein Schritt schlägt fehl und Trello hat die Verbindung abgelehnt (Status 401).** Trello hat Schlüssel und Token nicht akzeptiert. Häufige Ursachen: Schlüssel und Token wurden vertauscht oder einer von beiden ist falsch, statt des Tokens wurde das API-Secret eingefügt, der Token wurde ohne den Bereich `write` erstellt und ein Schritt will schreiben, oder das Trello-Konto des Tokens kann das Board nicht öffnen.
+- **Ein Schritt schlägt weiter fehl, obwohl du das Problem in Trello behoben hast.** Ein falscher Wert markiert die Verbindung nicht automatisch als "Neu verbinden nötig". Öffne die Verbindung, klicke auf **Schlüssel ändern** und gib sowohl den API-Schlüssel als auch den Token erneut ein. SCNX zeigt gespeicherte Geheimnisse nie an, deshalb werden immer beide Werte abgefragt.
 - **Ein Schritt schlägt mit "rate limited" fehl.** Siehe [Limits](#limits).

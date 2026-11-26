@@ -19,7 +19,7 @@ This page covers the Trello connection. For connections and ready-made services 
 - **Board members** - list the members of a board.
 - **Comments** - list the comments of a card and add a comment.
 
-Every operation is listed with its inputs and outputs in the [service actions reference](/docs/custom-commands/reference/actions/bot-integrations).
+You find every operation under Trello in the action picker of the flow editor, with its inputs and outputs. Other ready-made services are listed in the [service actions reference](/docs/custom-commands/reference/actions/bot-integrations).
 
 Not included: webhook triggers (a flow cannot start when a card changes), Power-Up features, board import and enterprise endpoints.
 
