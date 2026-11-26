@@ -13,7 +13,7 @@ Dieser Weg ist nur lesend und nur ereignisbasiert: Dein Ablauf erfährt von neue
 ## Bevor du anfängst {#before-you-start}
 
 - Du musst das Formular bearbeiten können.
-- Genau eine Person fügt den Auslöser hinzu (siehe [Auslöser Bei Formularübermittlung hinzufügen](#add-trigger)). Fügen ihn zwei Personen hinzu, wird jede Antwort doppelt gesendet.
+- Genau eine Person fügt den Trigger hinzu (siehe [Den Trigger Bei Formularübermittlung hinzufügen](#add-trigger)). Fügen ihn zwei Personen hinzu, wird jede Antwort doppelt gesendet.
 - Lies die [Webhook-Grundlagen](/de/docs/custom-commands/integrations#webhooks), falls du noch keinen Webhook genutzt hast.
 
 ## Auslöser und Webhook erstellen {#create-webhook}
@@ -210,20 +210,20 @@ function post_(url, body) {
 Füge die Webhook-URL niemals in den Code ein. Lass sie in der Skripteigenschaft.
 :::
 
-## Den Auslöser Bei Formularübermittlung hinzufügen {#add-trigger}
+## Den Trigger Bei Formularübermittlung hinzufügen {#add-trigger}
 
-1. Öffne im Apps-Script-Editor **Auslöser** (Triggers, das Uhr-Symbol) und wähle **Auslöser hinzufügen** (Add Trigger).
+1. Öffne im Apps-Script-Editor **Trigger** (Triggers, das Uhr-Symbol) und wähle **Trigger hinzufügen** (Add Trigger).
 2. Wähle die Funktion `onSubmit`, die Bereitstellung **Head**, die Ereignisquelle **Aus Formular** (From form) und den Ereignistyp **Bei Formularübermittlung** (On form submit).
 3. Stelle die Fehlerbenachrichtigungen auf **Sofort benachrichtigen** (Notify me immediately).
 4. Wähle **Speichern**.
 
 :::warning
-Nur eine Person sollte diesen Auslöser hinzufügen. Ein zweiter Auslöser sendet jede Antwort doppelt.
+Nur eine Person sollte diesen Trigger hinzufügen. Ein zweiter Trigger sendet jede Antwort doppelt.
 :::
 
 ## Das Skript erlauben {#authorize}
 
-Beim Speichern des Auslösers bittet Google dich, dich anzumelden, und zeigt die Warnung "Google hat diese App nicht überprüft" (Google hasn't verified this app). Wähle **Erweitert** (Advanced) und dann **Weiter zu (dein Projektname) (unsicher)** (Go to (your project name) (unsafe)).
+Beim Speichern des Triggers bittet Google dich, dich anzumelden, und zeigt die Warnung "Google hat diese App nicht überprüft" (Google hasn't verified this app). Wähle **Erweitert** (Advanced) und dann **Weiter zu (dein Projektname) (unsicher)** (Go to (your project name) (unsafe)).
 
 Diese Warnung ist normal. Das Skript gehört dir, und Google überprüft nur Apps, die veröffentlicht sind. Die Berechtigungen, die das Skript anfragt, beschränken sich auf dieses Formular (`@OnlyCurrentDoc`) und die Verbindung zu einem externen Dienst (SCNX).
 
@@ -257,11 +257,11 @@ Kommt nichts an, sieh dir **Ausführungen** (Executions) in Apps Script und das 
 ## Limits {#limits}
 
 - Apps Script hat [Kontingente](https://developers.google.com/apps-script/guides/services/quotas), die für dein Google-Konto gelten.
-- Es werden nur neue Antworten gesendet. Antworten von vor dem Hinzufügen des Auslösers werden nicht gesendet.
-- Nimmt SCNX eine Zustellung nicht an, versucht das Skript es einmal erneut. Danach ist die Zustellung verloren, und Google sendet der Person, die den Auslöser hinzugefügt hat, eine E-Mail. Lies verpasste Antworten in Google Forms.
+- Es werden nur neue Antworten gesendet. Antworten von vor dem Hinzufügen des Triggers werden nicht gesendet.
+- Das Skript versucht es nach 3 Sekunden einmal erneut, aber nur nach einem Netzwerkfehler (HTTP 0), HTTP 429 oder einem 5xx-Serverfehler. Andere Fehler wie 401 oder 404 werden nicht wiederholt. Schlägt auch der zweite Versuch fehl, ist die Zustellung verloren, und Google sendet der Person, die den Trigger hinzugefügt hat, eine E-Mail. Lies verpasste Antworten in Google Forms.
 - Eine Antwort darf bis zu 200 KB groß sein. Längere Antworten werden gekürzt, und **Gekürzt** wird gesetzt.
 - Es werden höchstens 300 Fragen gesendet.
-- Der Auslöser läuft als die Person, die ihn hinzugefügt hat. Er hört auf, wenn diese Person den Zugriff auf das Formular verliert.
+- Der Trigger läuft als die Person, die ihn hinzugefügt hat. Er hört auf, wenn diese Person den Zugriff auf das Formular verliert.
 
 ## Datenschutz {#privacy}
 
@@ -273,7 +273,7 @@ Kommt nichts an, sieh dir **Ausführungen** (Executions) in Apps Script und das 
 
 ## Sicherheit {#security}
 
-Die Webhook-URL ist der einzige Schlüssel. Jeder, der das Formular bearbeiten kann, kann sie in den Skripteigenschaften lesen. Wenn sie bekannt wird, ersetze die URL in SCNX und aktualisiere die Skripteigenschaft. Vergleiche die **Formular-ID** in deinem Ablauf mit deinem Formular, damit eine Anfrage von einem anderen Formular nichts auslöst.
+Die Webhook-URL ist der einzige Schlüssel. Jeder, der das Formular bearbeiten kann, kann sie in den Skripteigenschaften lesen. Wenn sie bekannt wird, ersetze die URL in SCNX und aktualisiere die Skripteigenschaft. Jeder, der die Webhook-URL kennt, kann eine gefälschte Antwort senden, die deinen Ablauf startet. Halte die URL deshalb geheim. Vergleiche die **Formular-ID** in deinem Ablauf mit deinem Formular, damit eine Anfrage von einem anderen Formular nichts auslöst. Die Formular-ID ist die Bearbeiten-ID des Formulars, die Personen, die das Formular ausfüllen, nicht sehen.
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -281,9 +281,9 @@ Die Webhook-URL ist der einzige Schlüssel. Jeder, der das Formular bearbeiten k
 - **HTTP 401 oder 404**: Die Webhook-URL wurde ersetzt oder der Webhook gelöscht. Kopiere die aktuelle URL in die Skripteigenschaft.
 - **HTTP 429**: Es kamen zu viele Antworten auf einmal. Der erneute Versuch deckt kurze Spitzen ab.
 - **HTTP 0**: SCNX war nicht erreichbar.
-- **Gar nichts kommt an**: Prüfe **Auslöser** und **Ausführungen** in Apps Script.
+- **Gar nichts kommt an**: Prüfe **Trigger** und **Ausführungen** in Apps Script.
 - **"onSubmit only runs from the On form submit trigger"**: Du hast bei `onSubmit` auf **Ausführen** geklickt. Führe stattdessen `sendTest` aus.
 
 ## Das Skript aktualisieren {#update}
 
-Ersetze den gesamten Code im Editor durch das neue Skript. Behalte die Skripteigenschaft und den Auslöser. Die Version des Skripts steht im ersten Kommentar.
+Ersetze den gesamten Code im Editor durch das neue Skript. Behalte die Skripteigenschaft und den Trigger. Die Version des Skripts steht im Kopfkommentar, in der Zeile "SCNX Google Forms bridge, version".

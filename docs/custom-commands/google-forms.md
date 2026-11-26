@@ -258,7 +258,7 @@ If nothing arrives, look at **Executions** in Apps Script and at the delivery lo
 
 - Apps Script has [quotas](https://developers.google.com/apps-script/guides/services/quotas) that apply to your Google account.
 - Only new responses are sent. Responses from before you added the trigger are not.
-- If SCNX does not accept a delivery, the script retries once. After that the delivery is lost and Google emails the person who added the trigger. Read missed responses in Google Forms.
+- The script retries once after 3 seconds, but only after a network error (HTTP 0), HTTP 429 or a 5xx server error. Other errors, such as 401 or 404, are not retried. If the retry fails too, the delivery is lost and Google emails the person who added the trigger. Read missed responses in Google Forms.
 - A response can be up to 200 KB. Longer answers are cut and **Cut short** is set.
 - At most 300 questions are sent.
 - The trigger runs as the person who added it. It stops if that person loses access to the form.
@@ -273,7 +273,7 @@ If nothing arrives, look at **Executions** in Apps Script and at the delivery lo
 
 ## Security {#security}
 
-The webhook URL is the only key. Anyone who can edit the form can read it in the Script Properties. If it leaks, replace the URL in SCNX and update the script property. Compare **Form ID** in your flow with your form, so a request from another form does nothing.
+The webhook URL is the only key. Anyone who can edit the form can read it in the Script Properties. If it leaks, replace the URL in SCNX and update the script property. Anyone who has the webhook URL can send a forged response that starts your flow, so keep the URL secret. Compare **Form ID** in your flow with your form, so a request from another form does nothing. The Form ID is the edit ID of the form, which people who fill in the form do not see.
 
 ## Troubleshooting {#troubleshooting}
 
@@ -286,4 +286,4 @@ The webhook URL is the only key. Anyone who can edit the form can read it in the
 
 ## Update the script {#update}
 
-Replace the whole code in the editor with the new script. Keep the script property and the trigger. The version of the script is in the first comment.
+Replace the whole code in the editor with the new script. Keep the script property and the trigger. The version of the script is in the header comment, on the line "SCNX Google Forms bridge, version".
