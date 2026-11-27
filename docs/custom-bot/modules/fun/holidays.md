@@ -126,7 +126,7 @@ On January 3rd, right after the spend-only period ends (at the first day change 
 
 #### Leaderboard and countdown {#leaderboard}
 
-When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they hold plus what they spent in the shop, so buying things never costs a place. Grinch tricks and lost boss fights do. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
+When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they hold plus what they spent in the shop, so buying things never costs a place. Grinch tricks and lost boss fights do. While the event is live, the board ends with a countdown line: the days left to collect on most days, a Merry Christmas line on December 24 and "the last days to collect" on December 25 and 26. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
 
 The Christmas countdown channel is not part of the Christmas Event. It is set up in the separate [Christmas Countdown](#config-countdown) configuration and works independently of the event.
 
@@ -262,6 +262,13 @@ In this configuration file, you can give advent calendar doors a candy cane rewa
         <li>Make sure the countdown is enabled in the configuration.</li>
         <li>Ensure the bot has the "Manage Channels" permission for the selected channel.</li>
         <li>Note that the channel name updates hourly. Discord also rate-limits channel name changes.</li>
+    </ul>
+</details>
+<details>
+    <summary>My countdown or advent calendar channel was deleted</summary>
+    <ul>
+        <li>A channel that cannot be found is written to the bot log and that one feature is skipped. The rest of the module, including the Christmas event, keeps running.</li>
+        <li>Set a valid channel in the configuration or disable the feature.</li>
     </ul>
 </details>
 <details>

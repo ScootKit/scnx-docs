@@ -126,7 +126,7 @@ Am 3. Januar, direkt nach dem Ende der Nur-ausgeben-Phase (beim ersten Tageswech
 
 #### Bestenliste und Countdown {#leaderboard}
 
-Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie besitzen, plus dem, was sie im Shop ausgegeben haben. Käufe kosten also nie einen Platz, Grinch-Streiche und verlorene Bosskämpfe schon. Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
+Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie besitzen, plus dem, was sie im Shop ausgegeben haben. Käufe kosten also nie einen Platz, Grinch-Streiche und verlorene Bosskämpfe schon. Solange das Event live ist, endet die Bestenliste mit einer Countdown-Zeile: an den meisten Tagen mit den verbleibenden Tagen zum Sammeln, am 24. Dezember mit einem Frohe-Weihnachten-Text und am 25. und 26. Dezember mit "die letzten Tage zum Sammeln". Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
 
 Der Weihnachts-Countdown-Kanal gehört nicht zum Weihnachts-Event. Du richtest ihn in der separaten Konfiguration [Weihnachtscountdown](#config-countdown) ein, und er funktioniert unabhängig vom Event.
 
@@ -262,6 +262,13 @@ In dieser Konfigurationsdatei kannst du Türchen des Adventskalenders eine Zucke
         <li>Stelle sicher, dass der Countdown in der Konfiguration aktiviert ist.</li>
         <li>Stelle sicher, dass der Bot die Berechtigung "Kanäle verwalten" für den ausgewählten Kanal hat.</li>
         <li>Beachte, dass der Kanalname stündlich aktualisiert wird. Außerdem begrenzt Discord die Häufigkeit von Kanalnamen-Änderungen.</li>
+    </ul>
+</details>
+<details>
+    <summary>Mein Countdown- oder Adventskalender-Kanal wurde gelöscht</summary>
+    <ul>
+        <li>Ein Kanal, der nicht gefunden wird, landet im Bot-Log und nur diese eine Funktion wird übersprungen. Der Rest des Moduls, auch das Weihnachts-Event, läuft weiter.</li>
+        <li>Lege in der Konfiguration einen gültigen Kanal fest oder deaktiviere die Funktion.</li>
     </ul>
 </details>
 <details>
