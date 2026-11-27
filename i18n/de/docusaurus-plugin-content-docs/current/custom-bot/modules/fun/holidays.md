@@ -58,7 +58,6 @@ Der Bot benötigt diese Berechtigungen:
 
 - "Kanal ansehen", "Nachrichten senden" und "Links einbetten" in den Geschenk-Spawn-Kanälen, im Boss-Kanal, im Bestenlisten-Kanal und im Abwicklungs-Kanal, falls du einen festlegst.
 - "Kanal ansehen", "Nachrichten senden", "Links einbetten", "Nachrichtenverlauf anzeigen" und "Nachrichten anheften" im Test-Kanal.
-- "Kanäle verwalten" für den Countdown-Kanal des Events, damit er umbenannt werden kann.
 - "Rollen verwalten" für die Grinch-Rolle und für jede im Shop verkaufte Rolle. Die Rolle des Bots muss in der Rollenhierarchie darüber stehen.
 
 ### Das Event testen {#testing}
@@ -127,9 +126,9 @@ Am 3. Januar, direkt nach dem Ende der Nur-ausgeben-Phase (beim ersten Tageswech
 
 #### Bestenliste und Countdown {#leaderboard}
 
-Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie besitzen, plus dem, was sie im Shop ausgegeben haben. Käufe kosten also nie einen Platz, Grinch-Streiche und verlorene Bosskämpfe schon. Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
+Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie besitzen, plus dem, was sie im Shop ausgegeben haben. Käufe kosten also nie einen Platz, Grinch-Streiche und verlorene Bosskämpfe schon. Solange das Event live ist, endet die Bestenliste mit einer Countdown-Zeile: an den meisten Tagen mit den verbleibenden Tagen zum Sammeln, am 24. Dezember mit einem Frohe-Weihnachten-Text und am 25. und 26. Dezember mit "die letzten Tage zum Sammeln". Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
 
-Ist in der Konfiguration des Weihnachts-Events ein "Countdown-Kanal" festgelegt, wird dieser Kanal einmal täglich umbenannt, um bis Weihnachten herunterzuzählen. Das ist unabhängig von der Datei [Weihnachtscountdown](#config-countdown) oben. Wenn du beide auf denselben Kanal setzt, streiten sie sich um dessen Namen, nutze also zwei verschiedene Kanäle.
+Der Weihnachts-Countdown-Kanal gehört nicht zum Weihnachts-Event. Du richtest ihn in der separaten Konfiguration [Weihnachtscountdown](#config-countdown) ein, und er funktioniert unabhängig vom Event.
 
 Nach dem Event postet der Bot außerdem eine Abschlussnachricht, aber nur, wenn ein "Bestenlisten-Kanal" festgelegt ist und jemand in dieser Saison Währung verdient hat.
 
@@ -185,9 +184,6 @@ In dieser Konfigurationsdatei kannst du das Weihnachts-Event einrichten. Öffne 
 | Geschenk-Shop aktivieren                     | Erlaubt Mitgliedern, mit `/giftshop` Währung auszugeben.                                                            |
 | Name der Währung                             | Name der Event-Währung (Mehrzahl), Standard "Candy Canes".                                                          |
 | Emoji der Währung                            | Emoji neben den Beträgen, Standard 🍬. Nur Standard-Emojis werden unterstützt.                                      |
-| Countdown-Kanal                              | Kanal, der einmal täglich umbenannt wird, um bis Weihnachten herunterzuzählen. Leer lassen zum Deaktivieren.        |
-| Name des Countdown-Kanals                    | Name des Countdown-Kanals während des Jahres.                                                                       |
-| Name des Countdown-Kanals an Weihnachten     | Name, der am 24. Dezember verwendet wird.                                                                           |
 | Testmodus                                    | Probiere das Event mit getrennten Testdaten aus, siehe [Das Event testen](#testing).                                |
 | Test-Kanal                                   | Der Kanal, in dem das Test-Event läuft.                                                                             |
 | Geschenk-Chance (%)                          | Chance, dass `/candycane` Währung gibt statt eines Grinch-Streichs.                                                 |
@@ -266,6 +262,13 @@ In dieser Konfigurationsdatei kannst du Türchen des Adventskalenders eine Zucke
         <li>Stelle sicher, dass der Countdown in der Konfiguration aktiviert ist.</li>
         <li>Stelle sicher, dass der Bot die Berechtigung "Kanäle verwalten" für den ausgewählten Kanal hat.</li>
         <li>Beachte, dass der Kanalname stündlich aktualisiert wird. Außerdem begrenzt Discord die Häufigkeit von Kanalnamen-Änderungen.</li>
+    </ul>
+</details>
+<details>
+    <summary>Mein Countdown- oder Adventskalender-Kanal wurde gelöscht</summary>
+    <ul>
+        <li>Ein Kanal, der nicht gefunden wird, landet im Bot-Log und nur diese eine Funktion wird übersprungen. Der Rest des Moduls, auch das Weihnachts-Event, läuft weiter.</li>
+        <li>Lege in der Konfiguration einen gültigen Kanal fest oder deaktiviere die Funktion.</li>
     </ul>
 </details>
 <details>

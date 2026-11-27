@@ -58,7 +58,6 @@ The bot needs these permissions:
 
 - "View Channel", "Send Messages" and "Embed Links" in the gift spawn channels, the boss channel, the leaderboard channel and the fulfillment channel, if you set one.
 - "View Channel", "Send Messages", "Embed Links", "Read Message History" and "Pin Messages" in the test channel.
-- "Manage Channels" for the event's countdown channel, so it can be renamed.
 - "Manage Roles" for the Grinch Role and for every role sold in the shop. The bot's own role has to be above them in the role hierarchy.
 
 ### Testing the event {#testing}
@@ -127,9 +126,9 @@ On January 3rd, right after the spend-only period ends (at the first day change 
 
 #### Leaderboard and countdown {#leaderboard}
 
-When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they hold plus what they spent in the shop, so buying things never costs a place. Grinch tricks and lost boss fights do. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
+When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they hold plus what they spent in the shop, so buying things never costs a place. Grinch tricks and lost boss fights do. While the event is live, the board ends with a countdown line: the days left to collect on most days, a Merry Christmas line on December 24 and "the last days to collect" on December 25 and 26. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
 
-When a "Countdown Channel" is set in the Christmas Event configuration, that channel is renamed once a day to count down to Christmas. This is independent of the [Christmas Countdown](#config-countdown) file above. If you point both at the same channel, they fight over its name, so use two different channels.
+The Christmas countdown channel is not part of the Christmas Event. It is set up in the separate [Christmas Countdown](#config-countdown) configuration and works independently of the event.
 
 The bot also posts a closing announcement after the event, but only if a "Leaderboard Channel" is set and someone earned currency that season.
 
@@ -178,55 +177,52 @@ In this configuration file, you can set up the advent calendar. Open it in your 
 
 In this configuration file, you can set up the Christmas event. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/christmas-event). Most fields are hidden until you enable the event. The claim fields only appear once "Enable Daily Claim" is on, and "Fulfillment Channel" only once "Enable Gift Shop" is on.
 
-| Field                               | Description                                                                                    |
-| ----------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Enable Christmas Event              | Master switch, off by default. While off, the event does nothing at all.                       |
-| Enable Daily Claim                  | Allow members to collect currency with `/candycane`.                                           |
-| Enable Gift Shop                    | Allow members to spend currency with `/giftshop`.                                              |
-| Currency Name                       | Name of the event currency (plural), default "Candy Canes".                                    |
-| Currency Emoji                      | Emoji shown next to amounts, default 🍬. Only standard emojis are supported.                   |
-| Countdown Channel                   | Channel that is renamed once a day to count down to Christmas. Leave empty to disable.         |
-| Countdown Channel Name              | Name used for the countdown channel during the year.                                           |
-| Countdown Channel Name on Christmas | Name used on December 24th.                                                                    |
-| Test Mode                           | Try the event with separate test data, see [Testing the event](#testing).                      |
-| Test Channel                        | The channel the test event runs in.                                                            |
-| Gift Chance (%)                     | Chance that `/candycane` gives currency instead of a Grinch trick.                             |
-| Minimum Gift Reward                 | Lowest reward of a daily claim gift.                                                           |
-| Maximum Gift Reward                 | Highest reward of a daily claim gift.                                                          |
-| Jackpot Chance (%)                  | Chance that a won gift becomes a jackpot.                                                      |
-| Jackpot Reward                      | Reward of a jackpot.                                                                           |
-| Minimum Grinch Trick Loss           | Lowest amount a member can lose to a Grinch trick.                                             |
-| Maximum Grinch Trick Loss           | Highest amount a member can lose to a Grinch trick.                                            |
-| Show the daily claim to everybody   | Post the result of `/candycane` publicly instead of only to the member.                        |
-| Daily Claim Cooldown (hours)        | Cooldown between claims. 0 means once per day.                                                 |
-| Grinch Role                         | Role given for a while when the Grinch plays a trick. Leave empty to skip.                     |
-| Grinch Role Duration (minutes)      | How long the Grinch Role stays on a member.                                                    |
-| Gift Spawn Channels                 | Channels in which gifts spawn. Leave empty to disable gift spawns.                             |
-| Minimum Spawn Interval (hours)      | Shortest wait between two gifts that spawn from chat activity.                                 |
-| Maximum Spawn Interval (hours)      | Longest wait between two gifts that spawn from chat activity.                                  |
-| Minimum Gift Spawn Reward           | Lowest reward of a spawned gift.                                                               |
-| Maximum Gift Spawn Reward           | Highest reward of a spawned gift.                                                              |
-| Despawn Time (minutes)              | How long an unclaimed gift stays claimable.                                                    |
-| Wake-Up Spawns per Day              | Gifts dropped every day at random times even when nobody is talking. 0 means only on activity. |
-| Wake-Up Spawns: earliest hour       | Earliest hour of the day for these gifts.                                                      |
-| Wake-Up Spawns: latest hour         | Latest hour of the day for these gifts.                                                        |
-| Leaderboard Channel                 | Channel for the self-updating leaderboard. Leave empty to disable.                             |
-| Leaderboard Entries                 | How many members the leaderboard and closing announcement show.                                |
-| User Display Mode                   | Whether members are shown as mention, tag or nickname.                                         |
-| Fulfillment Channel                 | Channel where purchases of custom shop items are posted. Empty uses the bot's log channel.     |
-| Boss Channel                        | Channel in which bosses appear. Leave empty to disable the boss event.                         |
-| Boss Week Start Day                 | Day of December on which bosses start to appear. They keep appearing until December 24th.      |
-| Bosses per Day                      | Number of bosses per day of boss week. 0 pauses bosses.                                        |
-| Fight Duration (minutes)            | How long members can stake against a boss.                                                     |
-| Boss HP per Active Player           | How much the boss HP grows for every active member.                                            |
-| Minimum Active Players              | Boss HP is calculated with at least this many active members.                                  |
-| Activity Window (days)              | A member counts as active if they were active within this many days.                           |
-| Stake Limit per Member              | The most one member can stake against a single boss.                                           |
-| Base Win Chance (%)                 | Chance to beat a boss with almost nothing staked.                                              |
-| Maximum Win Chance (%)              | Chance to beat a boss once the pool reaches its HP.                                            |
-| Win Multiplier                      | Fighters get their stake back multiplied by this when the boss is beaten.                      |
-| Ping Fighters When a Boss Ends      | Reply to the boss message and ping every fighter when the fight is decided.                    |
-| Bosses                              | The bosses to pick from at random, each with a name and an optional image URL.                 |
+| Field                             | Description                                                                                    |
+| --------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Enable Christmas Event            | Master switch, off by default. While off, the event does nothing at all.                       |
+| Enable Daily Claim                | Allow members to collect currency with `/candycane`.                                           |
+| Enable Gift Shop                  | Allow members to spend currency with `/giftshop`.                                              |
+| Currency Name                     | Name of the event currency (plural), default "Candy Canes".                                    |
+| Currency Emoji                    | Emoji shown next to amounts, default 🍬. Only standard emojis are supported.                   |
+| Test Mode                         | Try the event with separate test data, see [Testing the event](#testing).                      |
+| Test Channel                      | The channel the test event runs in.                                                            |
+| Gift Chance (%)                   | Chance that `/candycane` gives currency instead of a Grinch trick.                             |
+| Minimum Gift Reward               | Lowest reward of a daily claim gift.                                                           |
+| Maximum Gift Reward               | Highest reward of a daily claim gift.                                                          |
+| Jackpot Chance (%)                | Chance that a won gift becomes a jackpot.                                                      |
+| Jackpot Reward                    | Reward of a jackpot.                                                                           |
+| Minimum Grinch Trick Loss         | Lowest amount a member can lose to a Grinch trick.                                             |
+| Maximum Grinch Trick Loss         | Highest amount a member can lose to a Grinch trick.                                            |
+| Show the daily claim to everybody | Post the result of `/candycane` publicly instead of only to the member.                        |
+| Daily Claim Cooldown (hours)      | Cooldown between claims. 0 means once per day.                                                 |
+| Grinch Role                       | Role given for a while when the Grinch plays a trick. Leave empty to skip.                     |
+| Grinch Role Duration (minutes)    | How long the Grinch Role stays on a member.                                                    |
+| Gift Spawn Channels               | Channels in which gifts spawn. Leave empty to disable gift spawns.                             |
+| Minimum Spawn Interval (hours)    | Shortest wait between two gifts that spawn from chat activity.                                 |
+| Maximum Spawn Interval (hours)    | Longest wait between two gifts that spawn from chat activity.                                  |
+| Minimum Gift Spawn Reward         | Lowest reward of a spawned gift.                                                               |
+| Maximum Gift Spawn Reward         | Highest reward of a spawned gift.                                                              |
+| Despawn Time (minutes)            | How long an unclaimed gift stays claimable.                                                    |
+| Wake-Up Spawns per Day            | Gifts dropped every day at random times even when nobody is talking. 0 means only on activity. |
+| Wake-Up Spawns: earliest hour     | Earliest hour of the day for these gifts.                                                      |
+| Wake-Up Spawns: latest hour       | Latest hour of the day for these gifts.                                                        |
+| Leaderboard Channel               | Channel for the self-updating leaderboard. Leave empty to disable.                             |
+| Leaderboard Entries               | How many members the leaderboard and closing announcement show.                                |
+| User Display Mode                 | Whether members are shown as mention, tag or nickname.                                         |
+| Fulfillment Channel               | Channel where purchases of custom shop items are posted. Empty uses the bot's log channel.     |
+| Boss Channel                      | Channel in which bosses appear. Leave empty to disable the boss event.                         |
+| Boss Week Start Day               | Day of December on which bosses start to appear. They keep appearing until December 24th.      |
+| Bosses per Day                    | Number of bosses per day of boss week. 0 pauses bosses.                                        |
+| Fight Duration (minutes)          | How long members can stake against a boss.                                                     |
+| Boss HP per Active Player         | How much the boss HP grows for every active member.                                            |
+| Minimum Active Players            | Boss HP is calculated with at least this many active members.                                  |
+| Activity Window (days)            | A member counts as active if they were active within this many days.                           |
+| Stake Limit per Member            | The most one member can stake against a single boss.                                           |
+| Base Win Chance (%)               | Chance to beat a boss with almost nothing staked.                                              |
+| Maximum Win Chance (%)            | Chance to beat a boss once the pool reaches its HP.                                            |
+| Win Multiplier                    | Fighters get their stake back multiplied by this when the boss is beaten.                      |
+| Ping Fighters When a Boss Ends    | Reply to the boss message and ping every fighter when the fight is decided.                    |
+| Bosses                            | The bosses to pick from at random, each with a name and an optional image URL.                 |
 
 ### Messages {#config-strings}
 
@@ -266,6 +262,13 @@ In this configuration file, you can give advent calendar doors a candy cane rewa
         <li>Make sure the countdown is enabled in the configuration.</li>
         <li>Ensure the bot has the "Manage Channels" permission for the selected channel.</li>
         <li>Note that the channel name updates hourly. Discord also rate-limits channel name changes.</li>
+    </ul>
+</details>
+<details>
+    <summary>My countdown or advent calendar channel was deleted</summary>
+    <ul>
+        <li>A channel that cannot be found is written to the bot log and that one feature is skipped. The rest of the module, including the Christmas event, keeps running.</li>
+        <li>Set a valid channel in the configuration or disable the feature.</li>
     </ul>
 </details>
 <details>
