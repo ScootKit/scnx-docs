@@ -66,6 +66,8 @@ Der Bot benötigt diese Berechtigungen:
 Du kannst das Event zu jeder Jahreszeit in einem Test-Kanal ausprobieren, ohne das echte Event zu beeinflussen. Aktiviere den "Testmodus" in der [Konfiguration des Weihnachts-Events](#config-event) und lege einen "Test-Kanal" fest. Über die Kanalberechtigungen bestimmst du, wer den Test-Kanal sehen und teilnehmen kann.
 
 - Der Test-Kanal verhält sich immer wie das Live-Event: `/candycane` und `/giftshop` funktionieren dort zu jeder Jahreszeit, Geschenke erscheinen dort und er bekommt eine eigene Test-Bestenliste.
+- Bosse erscheinen im Test-Kanal nie von selbst. Mitglieder mit der Berechtigung "Server verwalten" nutzen stattdessen den Button "Spawn test boss".
+- Die Ein/Aus-Schalter ("Weihnachts-Event aktivieren", "Tägliches Abholen aktivieren", "Geschenk-Shop aktivieren") werden im Test-Kanal nicht geprüft.
 - Test-Währung, Käufe und die Test-Bestenliste sind komplett vom echten Event getrennt.
 - Die Grinch-Rolle und im Shop gekaufte Rollen werden echt vergeben, damit du das ganze Setup prüfen kannst.
 - Wenn du den Testmodus ausschaltest oder den Test-Kanal änderst, werden alle Testdaten entfernt.
@@ -99,17 +101,18 @@ Alle Daten richten sich nach der für deinen Bot eingestellten Zeitzone.
 | Zeitraum                   | Was passiert                                                                                                                                                                                                  |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1. bis 26. Dezember        | Das Event ist live: `/candycane`, Geschenk-Spawns, Bosse, der Shop, Türchen-Belohnungen und die Live-Bestenliste funktionieren.                                                                               |
-| 24. Dezember               | Doppelter Belohnungstag. Zuckerstangen aus dem täglichen Abholen und aus Geschenken werden verdoppelt.                                                                                                        |
+| 24. Dezember               | Doppelter Belohnungstag. Zuckerstangen aus `/candycane` und aus Geschenken werden verdoppelt. Türchen-Belohnungen und Boss-Auszahlungen werden nicht verdoppelt.                                              |
 | 27. Dezember bis 2. Januar | Nur ausgeben. Das Sammeln ist vorbei, aber `/giftshop` bleibt offen, damit niemand auf ungenutzten Zuckerstangen sitzen bleibt. Der Bot sendet die Abschlussnachricht und die Bestenliste zeigt den Endstand. |
 | Alle anderen Tage          | Das Event ruht. Die Befehle antworten, dass das Event vorbei ist oder noch nicht begonnen hat, und die Bestenliste und der Countdown zeigen, wie lange es bis Weihnachten dauert.                             |
 
-Guthaben und Bestenliste werden jede Saison zurückgesetzt, übrige Währung ist also weg, wenn der nächste Dezember beginnt. Mit dem Testmodus kannst du das Event außerhalb dieser Daten ausprobieren.
+Am 3. Januar, direkt nach dem Ende der Nur-ausgeben-Phase (beim ersten Tageswechsel der Nebensaison), werden Guthaben, Käufe und Bosse der Saison zurückgesetzt, übrige Währung ist also weg. Das Zurücksetzen wartet, wenn die Abschlussnachricht noch aussteht, und entfällt, wenn niemand mitgespielt hat. Mit dem Testmodus kannst du das Event außerhalb dieser Daten ausprobieren.
 
 #### Zuckerstangen sammeln {#earning-candy}
 
-- **`/candycane`** kann einmal pro Tag genutzt werden, oder einmal pro Abklingzeit, wenn du eine "Abklingzeit des täglichen Abholens (Stunden)" festlegst. Meistens gibt es eine zufällige Menge Zuckerstangen, und ein Geschenk kann zu einem viel größeren Jackpot werden. Sonst spielt der Grinch einen Streich: Das Mitglied verliert etwas Währung (nie unter 0) und bekommt optional für eine Weile die Grinch-Rolle. Erfordert "Tägliches Abholen aktivieren".
+- **`/candycane`** kann einmal pro Tag genutzt werden, oder einmal pro Abklingzeit, wenn du eine "Abklingzeit des täglichen Abholens (Stunden)" festlegst. Meistens gibt es eine zufällige Menge Zuckerstangen, und ein Geschenk kann zu einem viel größeren Jackpot werden. Sonst spielt der Grinch einen Streich: Das Mitglied verliert etwas Währung (nie unter 0), bekommt für eine Weile die Grinch-Rolle (nur wenn du eine festlegst) oder erschrickt nur und behält alles. Die Rolle wird von einem stündlichen Durchlauf entfernt und kann deshalb bis zu eine Stunde länger bleiben als eingestellt. Erfordert "Tägliches Abholen aktivieren".
 - **Geschenke** erscheinen in deinen "Geschenk-Spawn-Kanälen". Nach einer zufälligen Wartezeit lässt die nächste Nachricht in einem der Kanäle ein Geschenk erscheinen, und zusätzlich lässt der Bot pro Tag eine einstellbare Anzahl Geschenke zu zufälligen Zeiten erscheinen, auch wenn niemand schreibt. Das erste Mitglied, das auf den Abholen-Button klickt, bekommt die Belohnung. Ein Geschenk, das niemand abholt, verschwindet nach der "Verfallszeit (Minuten)".
-- **Das Boss-Event** läuft im "Boss-Kanal" vom "Starttag der Boss-Woche" bis zum 24. Dezember. Bosse wie der Grinch erscheinen zu zufälligen Zeiten, und die ganze Community kämpft gemeinsam: Jedes Mitglied kann einen Teil seiner Währung gegen den Boss einsetzen, bis die Kampfdauer abgelaufen ist. Je mehr eingesetzt wird, desto höher die Siegchance, bis zu einer maximalen Chance, sobald der Pool die LP des Bosses erreicht, und die LP des Bosses skalieren mit der Zahl der aktiven Mitglieder. Wird der Boss besiegt, bekommt jeder Kämpfer seinen Einsatz multipliziert mit dem "Gewinn-Multiplikator" zurück. Gewinnt der Boss, sind die Einsätze verloren. Der Bot kann alle Kämpfer pingen, wenn der Kampf endet.
+- **Das Boss-Event** läuft im "Boss-Kanal" vom "Starttag der Boss-Woche" bis zum 24. Dezember. Bosse starten am "Starttag der Boss-Woche" (Standard 10), vom 1. bis 9. Dezember erscheinen also keine Bosse, solange du ihn nicht änderst. Bosse wie der Grinch erscheinen zu zufälligen Zeiten zwischen der frühesten und spätesten Stunde der "Automatischen Spawns", und die ganze Community kämpft gemeinsam: Jedes Mitglied kann einen Teil seiner Währung gegen den Boss einsetzen, bis die Kampfdauer abgelaufen ist. Je mehr eingesetzt wird, desto höher die Siegchance, bis zu einer maximalen Chance, sobald der Pool die LP des Bosses erreicht, und die LP des Bosses skalieren mit der Zahl der aktiven Mitglieder. Wird der Boss besiegt, bekommt jeder Kämpfer seinen Einsatz multipliziert mit dem "Gewinn-Multiplikator" zurück. Gewinnt der Boss, sind die Einsätze verloren. Der Bot kann alle Kämpfer pingen, wenn der Kampf endet.
+- Türchen-Belohnungen und Boss-Auszahlungen werden am 24. Dezember nie verdoppelt, nur `/candycane` und Geschenke.
 - Mitglieder können einander nichts stehlen. Im Weihnachts-Event gibt es kein Stehlen.
 - Auch Türchen des Adventskalenders können Zuckerstangen auszahlen, siehe [Adventskalender](#usage).
 
@@ -118,15 +121,17 @@ Guthaben und Bestenliste werden jede Saison zurückgesetzt, übrige Währung ist
 `/giftshop` zeigt die Artikelliste mit Preisen und Beschreibungen sowie das Guthaben des Mitglieds, nur für das Mitglied sichtbar, das den Befehl ausgeführt hat. Beim Auswählen eines Artikels erscheint eine Bestätigung mit dem Preis und dem Guthaben vor und nach dem Kauf, und der Button "Kauf bestätigen" ist mit Begründung deaktiviert, wenn das Mitglied den Artikel nicht kaufen kann (nicht genug Währung, ausverkauft, Limit erreicht).
 
 - Artikel vom Typ "Rolle (Standard)" vergeben die konfigurierte Rolle sofort und dauerhaft. Kann die Rolle nicht vergeben werden, wird der Kauf abgebrochen und die Währung erstattet.
-- Artikel vom Typ "Benutzerdefiniert (manuell abgewickelt)" werden im "Abwicklungs-Kanal" gepostet, damit du den Preis selbst vergeben kannst. Ist er leer, landen sie im Log-Kanal des Bots.
+- Artikel vom Typ "Benutzerdefiniert (manuell abgewickelt)" werden im "Abwicklungs-Kanal" gepostet, damit du den Gewinn selbst vergeben kannst. Ist er leer, landen sie im Log-Kanal des Bots.
 - Bestand und Limit pro Nutzer gelten für die ganze Saison.
 - Jeder Artikel kann eine eigene Kauf-Nachricht mit den Platzhaltern `%item%`, `%price%`, `%balance%` und `%user%` haben.
 
 #### Bestenliste und Countdown {#leaderboard}
 
-Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie in der ganzen Saison gesammelt haben, sodass Ausgeben im Shop nie einen Platz kostet. Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
+Sobald ein "Bestenlisten-Kanal" festgelegt ist, sendet der Bot eine einzelne Nachricht und hält sie aktuell, zu jeder Jahreszeit. Außerhalb des Events zeigt sie, wie lange es bis Weihnachten dauert. Solange das Event live ist, sortiert sie die Mitglieder nach der Währung, die sie besitzen, plus dem, was sie im Shop ausgegeben haben. Käufe kosten also nie einen Platz, Grinch-Streiche und verlorene Bosskämpfe schon. Nach dem Event zeigt sie den Endstand. Das Aussehen lässt sich in den [Nachrichten](#config-strings) anpassen.
 
-Ist in der Konfiguration des Weihnachts-Events ein "Countdown-Kanal" festgelegt, wird dieser Kanal einmal täglich umbenannt, um bis Weihnachten herunterzuzählen. Das ist unabhängig von der Datei [Weihnachtscountdown](#config-countdown) oben.
+Ist in der Konfiguration des Weihnachts-Events ein "Countdown-Kanal" festgelegt, wird dieser Kanal einmal täglich umbenannt, um bis Weihnachten herunterzuzählen. Das ist unabhängig von der Datei [Weihnachtscountdown](#config-countdown) oben. Wenn du beide auf denselben Kanal setzt, streiten sie sich um dessen Namen, nutze also zwei verschiedene Kanäle.
+
+Nach dem Event postet der Bot außerdem eine Abschlussnachricht, aber nur, wenn ein "Bestenlisten-Kanal" festgelegt ist und jemand in dieser Saison Währung verdient hat.
 
 ## Befehle {#commands}
 
@@ -171,7 +176,7 @@ In dieser Konfigurationsdatei kannst du den Adventskalender einrichten. Öffne s
 
 ### Weihnachts-Event {#config-event}
 
-In dieser Konfigurationsdatei kannst du das Weihnachts-Event einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=holidays%7Cconfigs/christmas-event). Alles außer "Weihnachts-Event aktivieren" ist ausgeblendet, bis du das Event aktivierst.
+In dieser Konfigurationsdatei kannst du das Weihnachts-Event einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=holidays%7Cconfigs/christmas-event). Die meisten Felder sind ausgeblendet, bis du das Event aktivierst. Die Felder zum täglichen Abholen erscheinen erst, wenn "Tägliches Abholen aktivieren" an ist, und der "Abwicklungs-Kanal" erst, wenn "Geschenk-Shop aktivieren" an ist.
 
 | Feld                                         | Beschreibung                                                                                                        |
 | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -182,7 +187,7 @@ In dieser Konfigurationsdatei kannst du das Weihnachts-Event einrichten. Öffne 
 | Emoji der Währung                            | Emoji neben den Beträgen, Standard 🍬. Nur Standard-Emojis werden unterstützt.                                      |
 | Countdown-Kanal                              | Kanal, der einmal täglich umbenannt wird, um bis Weihnachten herunterzuzählen. Leer lassen zum Deaktivieren.        |
 | Name des Countdown-Kanals                    | Name des Countdown-Kanals während des Jahres.                                                                       |
-| Name des Countdown-Kanals an Weihnachten     | Name am 26. Dezember, dem letzten Tag des Events.                                                                   |
+| Name des Countdown-Kanals an Weihnachten     | Name, der am 24. Dezember verwendet wird.                                                                           |
 | Testmodus                                    | Probiere das Event mit getrennten Testdaten aus, siehe [Das Event testen](#testing).                                |
 | Test-Kanal                                   | Der Kanal, in dem das Test-Event läuft.                                                                             |
 | Geschenk-Chance (%)                          | Chance, dass `/candycane` Währung gibt statt eines Grinch-Streichs.                                                 |
@@ -246,12 +251,12 @@ In dieser Konfigurationsdatei kannst du festlegen, was deine Mitglieder in `/gif
 
 In dieser Konfigurationsdatei kannst du Türchen des Adventskalenders eine Zuckerstangen-Belohnung und eine private Nachricht geben. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=holidays%7Cconfigs/advent-rewards). Belohnungen werden nur ausgezahlt, solange das Weihnachts-Event aktiviert und live ist.
 
-| Feld                         | Beschreibung                                                                                                                   |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| Türchen                      | Das Türchen (Tag im Dezember, 1-24), zu dem dieser Eintrag gehört.                                                             |
-| Minimale Zuckerstangen       | Kleinste Menge Zuckerstangen für das Öffnen dieses Türchens. 0 bedeutet keine Belohnung.                                       |
-| Maximale Zuckerstangen       | Größte Menge Zuckerstangen. Gezahlt wird eine zufällige Menge zwischen Minimum und Maximum.                                    |
-| (optional) Private Nachricht | Nachricht, die dem Mitglied privat gesendet wird, wenn es das Türchen öffnet. Unterstützt `%day%`, `%daysToGo%` und `%candy%`. |
+| Feld                         | Beschreibung                                                                                                                                                                            |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Türchen                      | Das Türchen (Tag im Dezember, 1-24), zu dem dieser Eintrag gehört.                                                                                                                      |
+| Minimale Zuckerstangen       | Kleinste Menge Zuckerstangen für das Öffnen dieses Türchens.                                                                                                                            |
+| Maximale Zuckerstangen       | Größte Menge Zuckerstangen. Pro Mitglied und Türchen wird einmal eine zufällige Menge zwischen Minimum und Maximum ausgewürfelt. Setze beide auf 0, wenn es keine Belohnung geben soll. |
+| (optional) Private Nachricht | Nachricht, die dem Mitglied privat gesendet wird, wenn es das Türchen öffnet. Unterstützt `%day%`, `%daysToGo%` und `%candy%`.                                                          |
 
 ## Fehlerbehebung {#troubleshooting}
 
@@ -280,7 +285,7 @@ In dieser Konfigurationsdatei kannst du Türchen des Adventskalenders eine Zucke
 <details>
     <summary>Nichts passiert, das Weihnachts-Event tut nichts</summary>
     <ul>
-        <li>Stelle sicher, dass "Weihnachts-Event aktivieren" eingeschaltet ist. Solange es aus ist, funktioniert nichts im Event.</li>
+        <li>Stelle sicher, dass "Weihnachts-Event aktivieren" eingeschaltet ist. Solange es aus ist, funktioniert nichts im Event, auch nicht `/candycane` und `/giftshop`.</li>
         <li>Stelle sicher, dass der Schalter der Funktion an ist: "Tägliches Abholen aktivieren" für `/candycane`, "Geschenk-Shop aktivieren" für `/giftshop`. Geschenke, Bosse und die Bestenliste brauchen jeweils einen festgelegten Kanal.</li>
         <li>Prüfe die Saisondaten: Das Event ist vom 1. bis 26. Dezember live und bis zum 2. Januar nur zum Ausgeben offen. An anderen Tagen ruht es. Alle Daten richten sich nach der für deinen Bot eingestellten Zeitzone. Mit dem <strong>Testmodus</strong> kannst du es jederzeit ausprobieren.</li>
     </ul>
@@ -288,14 +293,14 @@ In dieser Konfigurationsdatei kannst du Türchen des Adventskalenders eine Zucke
 <details>
     <summary>Ein Befehl sagt, dass die Funktion nicht aktiv ist</summary>
     <ul>
-        <li>`/candycane` und `/giftshop` sind auf jedem Server mit dem Modul registriert. Sie antworten, dass sie nicht aktiv sind, solange "Weihnachts-Event aktivieren" oder ihr eigener Schalter aus ist.</li>
+        <li>`/candycane` und `/giftshop` sind auf jedem Server mit dem Modul registriert. Sie antworten, dass sie nicht aktiv sind, solange "Weihnachts-Event aktivieren" oder ihr eigener Schalter ("Tägliches Abholen aktivieren" für `/candycane`, "Geschenk-Shop aktivieren" für `/giftshop`) aus ist.</li>
     </ul>
 </details>
 <details>
     <summary>Der Boss erscheint nie</summary>
     <ul>
         <li>Stelle sicher, dass ein "Boss-Kanal" festgelegt ist und der Bot dort Nachrichten senden kann.</li>
-        <li>Bosse erscheinen nur vom "Starttag der Boss-Woche" bis zum 24. Dezember, und "Bosse pro Tag" muss über 0 liegen.</li>
+        <li>Bosse erscheinen nur vom "Starttag der Boss-Woche" bis zum 24. Dezember (Standard 10), und "Bosse pro Tag" muss über 0 liegen.</li>
     </ul>
 </details>
 <details>
@@ -331,12 +336,12 @@ Die folgenden Daten werden für jedes geöffnete Türchen des Adventskalenders g
 
 Wenn das Weihnachts-Event aktiviert ist, werden zusätzlich diese Daten gespeichert:
 
-- Für jedes teilnehmende Mitglied: die Discord-Benutzer-ID, das aktuelle Guthaben und die in dieser Saison insgesamt gesammelte Menge, wann es zuletzt abgeholt hat und wann die Grinch-Rolle abläuft
+- Für jedes teilnehmende Mitglied: die Discord-Benutzer-ID, das aktuelle Guthaben, wann es zuletzt abgeholt hat und wann die Grinch-Rolle abläuft
 - Für jeden Kauf: die Discord-Benutzer-ID des Käufers sowie Name, Typ und Preis des Artikels
 - Für Bosse: der Bosskampf und für jeden Kämpfer die Discord-Benutzer-ID und sein Einsatz
 - Die Kanal-ID und Nachrichten-ID der Bestenlisten-Nachricht und welche Saison ihre Abschlussnachricht schon erhalten hat
 - Solange der Testmodus an ist: dieselben Daten für den Test-Kanal, die gelöscht werden, wenn der Testmodus ausgeschaltet oder der Test-Kanal geändert wird
 
-Alle Mitgliederdaten und Käufe des Weihnachts-Events werden automatisch gelöscht, wenn die nächste Saison beginnt.
+Guthaben, Käufe und Bosse einer Saison werden automatisch am 3. Januar nach der Nur-ausgeben-Phase gelöscht. Die insgesamt gesammelte Menge wird gespeichert, aber nicht für die Rangfolge der Bestenliste verwendet.
 
 Um alle von diesem Modul gespeicherten Daten zu löschen, [setze die Modul-Datenbank zurück](/de/docs/custom-bot/additional-features/#reset-module-database).

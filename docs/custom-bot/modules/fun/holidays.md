@@ -66,6 +66,8 @@ The bot needs these permissions:
 You can try the event at any time of the year in a test channel without affecting the real event. Enable "Test Mode" in the [Christmas Event configuration](#config-event) and set a "Test Channel". Use channel permissions to decide who can see the test channel and take part.
 
 - The test channel always behaves like the live event: `/candycane` and `/giftshop` work there at any time of the year, gifts spawn there and it gets its own test leaderboard.
+- Bosses never appear on their own in the test channel. Members with the Manage Server permission use the "Spawn test boss" button instead.
+- The on/off toggles ("Enable Christmas Event", "Enable Daily Claim", "Enable Gift Shop") are not checked in the test channel.
 - Test currency, purchases and the test leaderboard are completely separate from the real event.
 - The Grinch Role and roles bought in the shop are handed out for real, so you can check the whole setup.
 - When you turn Test Mode off or change the Test Channel, all test data is removed.
@@ -99,17 +101,18 @@ All dates use the timezone configured for your bot.
 | Period                       | What happens                                                                                                                                                                   |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | December 1st to 26th         | The event is live: `/candycane`, gift spawns, bosses, the shop, advent door rewards and the live leaderboard all work.                                                         |
-| December 24th                | Double reward day. Candy earned from the daily claim and from gifts is doubled.                                                                                                |
+| December 24th                | Double reward day. Candy earned from `/candycane` and from gifts is doubled. Advent door rewards and boss payouts are not doubled.                                             |
 | December 27th to January 2nd | Spend-only. Earning is over, but `/giftshop` stays open so nobody sits on unspent candy. The bot posts the closing announcement and the leaderboard shows the final standings. |
 | All other days               | The event is dormant. The commands answer that the event is over or not started yet, and the leaderboard and countdown show how long it is until Christmas.                    |
 
-Balances and the leaderboard reset every season, so leftover currency is gone when the next December starts. Test Mode lets you try the event outside these dates.
+On January 3rd, right after the spend-only period ends (at the first day change of the off-season), the balances, purchases and bosses of the season are reset, so leftover currency is gone. The reset waits if the closing announcement is still owed and is skipped if nobody played. Test Mode lets you try the event outside these dates.
 
 #### Earning candy {#earning-candy}
 
-- **`/candycane`** can be used once per day, or once per cooldown if you set a "Daily Claim Cooldown (hours)". Most of the time it gives a random amount of candy canes, and a gift can turn into a much larger jackpot. Otherwise the Grinch plays a trick: the member loses a little currency (never below 0) and optionally gets the Grinch Role for a while. Requires "Enable Daily Claim".
+- **`/candycane`** can be used once per day, or once per cooldown if you set a "Daily Claim Cooldown (hours)". Most of the time it gives a random amount of candy canes, and a gift can turn into a much larger jackpot. Otherwise the Grinch plays a trick: the member loses a little currency (never below 0), gets the Grinch Role for a while (only if you set one), or just gets a scare and keeps everything. The role is removed by an hourly sweep, so it can stay up to an hour longer than configured. Requires "Enable Daily Claim".
 - **Gifts** spawn in your "Gift Spawn Channels". After a random waiting time the next message in one of the channels drops a gift, and on top of that the bot drops a number of gifts per day at random times, even when nobody is talking. The first member to click the claim button gets the reward. A gift nobody claims is gone after the "Despawn Time (minutes)".
-- **The boss event** runs in the "Boss Channel" from the "Boss Week Start Day" until December 24th. Bosses such as the Grinch appear at random times, and the whole community fights together: every member can stake some of their currency against the boss until the fight duration runs out. The more is staked, the higher the chance to win, up to a maximum chance once the pool reaches the boss's HP, and the boss's HP scales with the number of active members. If the boss is beaten, every fighter gets their stake back multiplied by the "Win Multiplier". If the boss wins, the stakes are lost. The bot can ping all fighters when the fight ends.
+- **The boss event** runs in the "Boss Channel" from the "Boss Week Start Day" until December 24th. Bosses start on the "Boss Week Start Day" (default 10), so no bosses appear on December 1st to 9th unless you change it. Bosses such as the Grinch appear at random times between the earliest and latest hour of "Wake-Up Spawns", and the whole community fights together: every member can stake some of their currency against the boss until the fight duration runs out. The more is staked, the higher the chance to win, up to a maximum chance once the pool reaches the boss's HP, and the boss's HP scales with the number of active members. If the boss is beaten, every fighter gets their stake back multiplied by the "Win Multiplier". If the boss wins, the stakes are lost. The bot can ping all fighters when the fight ends.
+- Advent door rewards and boss payouts are never doubled on December 24th, only `/candycane` and gifts are.
 - Members cannot steal from each other. There is no stealing in the Christmas event.
 - Advent calendar doors can pay candy canes too, see [Advent Calendar](#usage).
 
@@ -124,9 +127,11 @@ Balances and the leaderboard reset every season, so leftover currency is gone wh
 
 #### Leaderboard and countdown {#leaderboard}
 
-When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they collected over the whole season, so spending it in the shop never costs a place. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
+When a "Leaderboard Channel" is set, the bot posts a single message and keeps it up to date, in every phase of the year. Outside the event it shows how long it is until Christmas. While the event is live it ranks members by the currency they hold plus what they spent in the shop, so buying things never costs a place. Grinch tricks and lost boss fights do. After the event it shows the final standings. Its look can be customized in [Messages](#config-strings).
 
-When a "Countdown Channel" is set in the Christmas Event configuration, that channel is renamed once a day to count down to Christmas. This is independent of the [Christmas Countdown](#config-countdown) file above.
+When a "Countdown Channel" is set in the Christmas Event configuration, that channel is renamed once a day to count down to Christmas. This is independent of the [Christmas Countdown](#config-countdown) file above. If you point both at the same channel, they fight over its name, so use two different channels.
+
+The bot also posts a closing announcement after the event, but only if a "Leaderboard Channel" is set and someone earned currency that season.
 
 ## Commands {#commands}
 
@@ -171,7 +176,7 @@ In this configuration file, you can set up the advent calendar. Open it in your 
 
 ### Christmas Event {#config-event}
 
-In this configuration file, you can set up the Christmas event. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/christmas-event). Everything except "Enable Christmas Event" is hidden until you enable the event.
+In this configuration file, you can set up the Christmas event. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/christmas-event). Most fields are hidden until you enable the event. The claim fields only appear once "Enable Daily Claim" is on, and "Fulfillment Channel" only once "Enable Gift Shop" is on.
 
 | Field                               | Description                                                                                    |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------- |
@@ -182,7 +187,7 @@ In this configuration file, you can set up the Christmas event. Open it in your 
 | Currency Emoji                      | Emoji shown next to amounts, default 🍬. Only standard emojis are supported.                   |
 | Countdown Channel                   | Channel that is renamed once a day to count down to Christmas. Leave empty to disable.         |
 | Countdown Channel Name              | Name used for the countdown channel during the year.                                           |
-| Countdown Channel Name on Christmas | Name used on December 26th, the last day of the event.                                         |
+| Countdown Channel Name on Christmas | Name used on December 24th.                                                                    |
 | Test Mode                           | Try the event with separate test data, see [Testing the event](#testing).                      |
 | Test Channel                        | The channel the test event runs in.                                                            |
 | Gift Chance (%)                     | Chance that `/candycane` gives currency instead of a Grinch trick.                             |
@@ -246,12 +251,12 @@ In this configuration file, you can set up what your members can buy in `/giftsh
 
 In this configuration file, you can give advent calendar doors a candy cane reward and a private message. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=holidays%7Cconfigs/advent-rewards). Rewards are only paid while the Christmas event is enabled and live.
 
-| Field                      | Description                                                                                                            |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Door                       | The door (day of December, 1-24) this entry belongs to.                                                                |
-| Minimum Candy Canes        | Lowest amount of candy canes for opening this door. 0 means no reward.                                                 |
-| Maximum Candy Canes        | Highest amount of candy canes. A random amount between minimum and maximum is paid.                                    |
-| (optional) Private Message | Message sent to the member in a private message when they open the door. Supports `%day%`, `%daysToGo%` and `%candy%`. |
+| Field                      | Description                                                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Door                       | The door (day of December, 1-24) this entry belongs to.                                                                                     |
+| Minimum Candy Canes        | Lowest amount of candy canes for opening this door.                                                                                         |
+| Maximum Candy Canes        | Highest amount of candy canes. A random amount between minimum and maximum is rolled once per member and door. Set both to 0 for no reward. |
+| (optional) Private Message | Message sent to the member in a private message when they open the door. Supports `%day%`, `%daysToGo%` and `%candy%`.                      |
 
 ## Troubleshooting {#troubleshooting}
 
@@ -280,7 +285,7 @@ In this configuration file, you can give advent calendar doors a candy cane rewa
 <details>
     <summary>Nothing happens, the Christmas event does not do anything</summary>
     <ul>
-        <li>Make sure "Enable Christmas Event" is turned on. While it is off, nothing in the event works.</li>
+        <li>Make sure "Enable Christmas Event" is turned on. While it is off, nothing in the event works, `/candycane` and `/giftshop` included.</li>
         <li>Make sure the toggle for the feature is on: "Enable Daily Claim" for `/candycane`, "Enable Gift Shop" for `/giftshop`. Gifts, bosses and the leaderboard each need their channel to be set.</li>
         <li>Check the season dates: the event is live from December 1st to 26th and spend-only until January 2nd. On other days it is dormant. All dates use the timezone configured for your bot. Use <strong>Test Mode</strong> to try it at any time.</li>
     </ul>
@@ -288,14 +293,14 @@ In this configuration file, you can give advent calendar doors a candy cane rewa
 <details>
     <summary>A command says that the feature is not active</summary>
     <ul>
-        <li>`/candycane` and `/giftshop` are registered on every server with the module. They answer that they are not active while "Enable Christmas Event" or their own toggle is off.</li>
+        <li>`/candycane` and `/giftshop` are registered on every server with the module. They answer that they are not active while "Enable Christmas Event" or their own toggle ("Enable Daily Claim" for `/candycane`, "Enable Gift Shop" for `/giftshop`) is off.</li>
     </ul>
 </details>
 <details>
     <summary>The boss never appears</summary>
     <ul>
         <li>Make sure a "Boss Channel" is set and the bot can send messages there.</li>
-        <li>Bosses only appear from the "Boss Week Start Day" until December 24th, and "Bosses per Day" must be above 0.</li>
+        <li>Bosses only appear from the "Boss Week Start Day" (default 10) until December 24th, and "Bosses per Day" must be above 0.</li>
     </ul>
 </details>
 <details>
@@ -331,12 +336,12 @@ The following data is being stored about every advent calendar door opening:
 
 If the Christmas event is enabled, the following data is stored as well:
 
-- For every participating member: the Discord User ID, the current balance and the total earned this season, when they last claimed, and when the Grinch Role expires
+- For every participating member: the Discord User ID, the current balance, when they last claimed, and when the Grinch Role expires
 - For every purchase: the Discord User ID of the buyer and the name, type and price of the item
 - For bosses: the boss fight and, for every fighter, the Discord User ID and their stake
 - The channel ID and message ID of the leaderboard message and which season already got its closing announcement
 - While Test Mode is on: the same data for the test channel, deleted when Test Mode is turned off or the Test Channel is changed
 
-All member data and purchases of the Christmas event are deleted automatically when the next season starts.
+The balances, purchases and bosses of a season are deleted automatically on January 3rd, after the spend-only period. The total earned is stored but not used for the leaderboard ranking.
 
 To remove all data stored by this module, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
