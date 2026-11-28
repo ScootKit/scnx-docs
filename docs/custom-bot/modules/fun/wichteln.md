@@ -8,30 +8,53 @@ Run a Secret Santa on your server: members sign up, get a giftee drawn at random
 
 - Members join with a button on a signup message and write a letter with their wishes, hobbies and things to avoid.
 - Every participant gets exactly one giftee and is the giftee of exactly one other member. Nobody draws themselves.
-- The draw happens automatically at a date you set, or manually with `/wichteln draw`.
+- The round starts by itself at a date you set, or manually with `/secret-santa start`. Until then, the bot shows a "starts at" message with a live countdown.
+- The draw happens automatically at a date you set, or manually with `/secret-santa draw`.
 - After the draw, every Secret Santa receives a private message with the giftee and their letter.
 - Secret Santas mark their gift as sent, and giftees mark it as received, with buttons.
 - Optional letter requirement, gift reminders and a reveal post at the end of the round.
-- Members who press "Leave" or are removed with `/wichteln kick` are replaced in the gift chain. Members who leave the server itself are not repaired automatically, so use `/wichteln kick` for them.
+- Optional anonymous gift messages: Secret Santas can send their giftee a message and a file through the bot, delivered at the reveal.
+- Members can leave with the Leave button of their join confirmation. After the draw, members who press "Leave" or are removed with `/secret-santa kick` are replaced in the gift chain. Members who leave the server itself are not repaired automatically, so use `/secret-santa kick` for them.
 - Every text, button label and message is editable.
-- The module is opt-in: nothing happens until an admin starts a round with `/wichteln start`.
+- If the dashboard message is deleted by accident, the bot posts it again.
+- The module is opt-in: nothing happens until an admin starts a round with `/secret-santa start` or you set a start date.
 
 ## Setup {#setup}
 
 1. Enable the module in [your SCNX dashboard](https://scnx.app/glink?page=bot/modules?query=wichteln&ref=scnx-app-docs).
 2. Open the [configuration](#configuration-config) and select the "Secret Santa Channel". The bot needs the "View Channel", "Send Messages" and "Embed Links" permissions there.
-3. Optionally set the [dates](#dates), a "Reveal Channel", a "Log Channel" and the texts in the [messages](#configuration-messages) (for example the budget in "Budget Text").
-4. Start a round with `/wichteln start`. The bot posts the signup message in the Secret Santa channel.
+3. Optionally set the [dates](#dates), a "Reveal Channel", a "Log Channel" and the texts in the [messages](#configuration-messages) (for example the optional budget in "Budget Text").
+4. Start a round with `/secret-santa start`, or set the "Start" date and the bot opens the sign-up by itself. The bot posts the signup message in the Secret Santa channel.
 
 ## Usage {#usage}
 
+### Start {#start}
+
+A round starts in one of two ways:
+
+- **Manually:** `/secret-santa start` opens the sign-up right away. If a round is already scheduled, the command starts it now.
+- **Automatically:** set the "Start" date. Until then, the bot posts a "starts at" message in the Secret Santa channel with a live countdown, so the channel always has a dashboard. The message first appears at the next hourly check after you save the date. At the first hourly check after the start time, the same message turns into the signup message and the bot writes a line in the log channel.
+
+The automatic start has some rules:
+
+- The Secret Santa Channel needs to be set and usable. Otherwise nothing is posted, the problem is reported once in the log channel and the bot log, and the bot tries again every hour.
+- The bot checks once per hour, so the sign-up opens up to about an hour after the start time. A start date that has already passed starts the round at the next hourly check, but only up to 7 days after the date. Later than that, nothing happens.
+- Every start date starts one round. After it has started, been cancelled or finished, the same date does not start another one. Set a new date for the next round.
+- No round is scheduled or started while another round is running.
+- If you change the date while the round is scheduled, the countdown moves with it. If you clear it, the scheduled round is cancelled.
+- If you change the bot timezone after a start date was used, the same wall-clock time can count as a new value.
+- Members cannot join the scheduled round. They can join once the sign-up has opened.
+
 ### Signup {#signup}
 
-The signup message shows the budget, the rules, the signup deadline and the number of participants. Members use the buttons below it:
+The signup message shows the rules, the signup deadline and the number of participants, and the budget if you have set one. Members use the buttons below it:
 
 - **Join** adds the member to the round.
 - **Write letter** opens a window where the member writes their letter. The letter can be changed until the draw.
-- **Leave** removes the member from the round.
+
+When a member presses **Join**, they get a private confirmation with the buttons **Write letter** and **Leave**. To leave before the draw, a member presses **Join** again and then **Leave**. The same buttons appear when someone who is already in the round presses **Join**.
+
+The bot posts the signup message again if it is deleted. This happens at the next hourly check or when someone presses a button. Rounds that have already ended keep their message deleted.
 
 Joining is possible until the signup deadline, or until the draw if you have not set a deadline. Members need to allow direct messages from server members, otherwise the bot cannot reach them.
 
@@ -39,7 +62,7 @@ Other members cannot see the letter. After the draw, the member's Secret Santa r
 
 ### Draw {#draw}
 
-At least 3 participants are needed. If there are fewer, the round is cancelled. The draw runs automatically at the configured draw date. If you leave the draw date empty, the round is drawn only when an admin runs `/wichteln draw`.
+At least 3 participants are needed. If there are fewer, the round is cancelled. The draw runs automatically at the configured draw date. If you leave the draw date empty, the round is drawn only when an admin runs `/secret-santa draw`.
 
 If "Require Letter" is enabled, members without a letter receive a warning about a day before the automatic draw. Members who still have no letter at the draw are left out and are told so by a direct message. Members without a letter get a warning, not a reminder, and only when a draw date is set.
 
@@ -52,23 +75,41 @@ After the draw, every Secret Santa gets a direct message with their giftee and t
 
 If you set "Reminder Days Before Reveal", Secret Santas who have not yet marked their gift as sent receive a reminder that many days before the reveal.
 
+### Gift messages {#gift-messages}
+
+As a second step after the draw, Secret Santas can send their giftee an anonymous message, and optionally a file, through the bot. The bot holds it and delivers it to the giftee at the reveal time. It is one way only: the giftee cannot answer through the bot. Gift messages are on by default. Turn off "Gift messages" in the [configuration](#configuration-config) to hide the feature everywhere. While it is off, nothing is delivered, including messages that were already submitted, so switch it back on before the reveal if you want them delivered.
+
+- **Where:** the **Send a gift message** button is on the dashboard message next to "Show my giftee", in the draw message and in the reminder message. Only a Secret Santa with a giftee can use it, and only until the delivery.
+- **The form:** it asks for a message of up to 1500 characters. If the bot can store files, the form also has an optional file field. Secret Santas can open the form again and change the message or the file until the reveal. A new message replaces the old one. A new file replaces the old file, and without a new file the old file stays.
+- **Files:** one file of up to 8 MB per gift, and up to 3 file uploads per Secret Santa and round with a pause of 30 seconds between uploads. Every uploaded file counts, and changing only the message is never limited. Executable, script, web page and macro files (such as `exe`, `bat`, `cmd`, `js`, `ps1`, `sh`, `html`, `svg`, `docm` and `py`) are refused, also behind another extension like `photo.png.exe`. The file name and the file content are visible to the giftee, so Secret Santas should not include anything that identifies them. Files are stored with SCNX file storage. If it is not available on your bot, the form is text only and the bot shows a hint at the start. The bot never keeps files from a failed upload, so a Secret Santa who sees an error can try again or send the message without a file. After the round, the files stay in your server's SCNX library.
+- **Delivery:** at the reveal date, before the reveal post, the giftee receives a direct message with the message and the link to the file. Without a reveal date, the delivery happens when the round ends, 14 days after the draw. If a giftee cannot be reached by direct message, the bot does not try again, and the giftee can press **View my gift** on the dashboard message. This button also stays on the finished dashboard until the round data is deleted, but only if a gift message exists. Before the delivery, **View my gift** only says that the gift is not delivered yet. If a giftee received several gift messages, for example after the gift chain was repaired, they see up to 3 of them, and moderators see all of them in the lookup.
+- **Anonymity:** the delivery message and the **View my gift** reply never contain the sender, so the giftee does not learn who sent it through the bot. Keep in mind that the reveal post lists who gifted whom, if you set a reveal channel. The Secret Santa is told that moderators can look it up. With `/secret-santa submission user:<User>`, members with the "Manage Server" permission see what a member received, from whom, and what they sent, and whether it was delivered.
+- **Members who leave:** if a Secret Santa leaves or is removed, only a message that is not delivered yet is deleted. If a giftee changes through the repair of the gift chain, a message that is not delivered yet goes to the new giftee. Delivered messages stay as they are until the round data is deleted, so moderators can still look them up and the original giftee can still view them.
+
+The gift messages are deleted 30 days after the round ends, together with the other round data.
+
 ### Reveal and end of the round {#reveal}
 
-At the reveal date, the bot posts a message in the reveal channel that lists who gifted whom, followed by the totals of sent and received gifts. The totals are a separate message that is posted only if its text in the messages configuration is not empty. The round then finishes and the dashboard message shows the closing text. The pairs are public in the reveal channel. A long list of pairs is split over several messages, and the continuation messages use the "Reveal Post Continuation" text. The round ends at the reveal date, or up to 3 days later if the reveal post could not be posted. Without a reveal date, the round finishes 14 days after the draw. Without a reveal channel, no reveal post is made and the round still ends at the reveal date.
+At the reveal date, the bot first delivers the gift messages, then posts a message in the reveal channel that lists who gifted whom, followed by the totals of sent and received gifts. The totals are a separate message that is posted only if its text in the messages configuration is not empty. The round then finishes and the dashboard message shows the closing text. The pairs are public in the reveal channel. A long list of pairs is split over several messages, and the continuation messages use the "Reveal Post Continuation" text. The round ends at the reveal date, or up to 3 days later if the reveal post could not be posted. Without a reveal date, the round finishes 14 days after the draw. Without a reveal channel, no reveal post is made and the round still ends at the reveal date.
 
 ### Members who leave {#repair}
 
 If a member presses "Leave" or is removed by an admin after the draw, the bot repairs the gift chain: the Secret Santa of the missing member gets the missing member's giftee, and both sides are told by a direct message. If fewer than 3 participants remain, the round is cancelled.
 
-**Limitation:** the bot does not notice when a member leaves the server itself. Their gift chain stays as it is until an admin removes them with `/wichteln kick user:<User>`.
+**Limitation:** the bot does not notice when a member leaves the server itself. Their gift chain stays as it is until an admin removes them with `/secret-santa kick user:<User>`.
 
 ### Dates {#dates}
 
-The signup deadline, the draw and the reveal each use three fields: month, day and hour. The times use the timezone of your server (the bot timezone). Setting the month to 0 leaves a date unset. A day that does not exist in the month, such as February 31, rolls over into the next month.
+The start, the sign-up deadline, the draw and the reveal are each set with one date and time field. The times are read in the timezone of your server (the bot timezone). Every date is absolute, including the year, so set the real dates for each round. A date you leave empty is not used.
 
-The year is not entered. The bot uses the year in which the round was started and applies a rolling rule: a later date that is earlier in the calendar than the previous date belongs to the next year. For example, a deadline on November 20, a draw on December 1 and a reveal on January 6 spans the turn of the year.
+- **Start:** the bot opens the sign-up at this time, see [Start](#start). Leave it empty to start manually with `/secret-santa start`. A start in the past is allowed and starts the round at the next hourly check, up to 7 days after the date.
+- **Sign-up Deadline:** members can no longer join afterwards. Without a deadline, members can sign up until the draw. A deadline that is already in the past stops `/secret-santa start`, because nobody could join.
+- **Draw:** the bot draws automatically at this time. Leave it empty to draw only manually with `/secret-santa draw`.
+- **Reveal:** the reveal post is published at this time and the round ends.
 
-If a date has already passed in that year when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
+If the draw or reveal date has already passed when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
+
+If you type an invalid or out-of-range date by hand into the configuration file, the bot resets that field to empty when it loads the file and writes a warning to the bot log.
 
 ## Commands {#commands}
 
@@ -76,14 +117,15 @@ If a date has already passed in that year when the round is started, the matchin
 
 All commands require the "Manage Server" permission.
 
-| Command                      | Description                                                                  |
-| ---------------------------- | ---------------------------------------------------------------------------- |
-| `/wichteln start`            | Starts a new round and posts the signup message in the Secret Santa channel. |
-| `/wichteln draw`             | Draws the giftees now, without waiting for the draw date.                    |
-| `/wichteln cancel`           | Cancels the current round.                                                   |
-| `/wichteln kick user:<User>` | Removes a member from the round. After the draw, the gift chain is repaired. |
+| Command                                | Description                                                                                                                                       |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/secret-santa start`                  | Starts a new round and posts the signup message in the Secret Santa channel. A scheduled round is started now.                                    |
+| `/secret-santa draw`                   | Draws the giftees now, without waiting for the draw date.                                                                                         |
+| `/secret-santa cancel`                 | Cancels the current round, scheduled or running.                                                                                                  |
+| `/secret-santa kick user:<User>`       | Removes a member from the round. After the draw, the gift chain is repaired.                                                                      |
+| `/secret-santa submission user:<User>` | Shows the gift messages that a member received and sent in the current or most recent round, with the sender, the giftee and the delivery status. |
 
-Only one round can be active at a time.
+Only one round can be active at a time. A scheduled round counts as active. `/secret-santa draw` needs the sign-up phase, so on a scheduled round it answers that there is no active round.
 
 ## Configuration {#configuration}
 
@@ -91,44 +133,75 @@ Only one round can be active at a time.
 
 In this configuration file, you can set up the channels, dates and rules of the Secret Santa. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=wichteln%7Cconfigs/wichteln).
 
-| Field                       | Description                                                                                                                                                                                                                                   |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Secret Santa Channel        | Channel where the signup message is posted. Members join, write letters and mark gifts here.                                                                                                                                                  |
-| Signup Deadline Month       | Month of the signup deadline (1-12). 0 means not set.                                                                                                                                                                                         |
-| Signup Deadline Day         | Day of the month of the signup deadline (1-31).                                                                                                                                                                                               |
-| Signup Deadline Hour        | Hour of the signup deadline (0-23, server time).                                                                                                                                                                                              |
-| Draw Month                  | Month of the automatic draw (1-12). 0 means not set.                                                                                                                                                                                          |
-| Draw Day                    | Day of the month of the automatic draw (1-31).                                                                                                                                                                                                |
-| Draw Hour                   | Hour of the automatic draw (0-23, server time).                                                                                                                                                                                               |
-| Reveal Month                | Month of the reveal (1-12). 0 means not set.                                                                                                                                                                                                  |
-| Reveal Day                  | Day of the month of the reveal (1-31).                                                                                                                                                                                                        |
-| Reveal Hour                 | Hour of the reveal (0-23, server time).                                                                                                                                                                                                       |
-| Reveal Channel              | Channel where the reveal post is published at the end of the round.                                                                                                                                                                           |
-| Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations and the draw. Log lines do not name who gifts whom unless you add the participant placeholders to the sent and received log texts. |
-| Require Letter              | If enabled, only members who wrote a letter before the draw take part. Members without a letter get a warning about a day before the draw and are left out, with a direct message, if they still have none at the draw.                       |
-| Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder.                                                                                                                   |
+| Field                       | Description                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Secret Santa Channel        | Channel where the signup message is posted. Members join, write letters and mark gifts here.                                                                                                                                                                                                                                                                 |
+| Reveal Channel              | Channel where the reveal post is published at the end of the round.                                                                                                                                                                                                                                                                                          |
+| Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations, the automatic start, a restored dashboard and the draw. Log lines do not name who gifts whom unless you add the participant placeholders to the sent and received log texts.                                                                     |
+| Require Letter              | If enabled, only members who wrote a letter before the draw take part. Members without a letter get a warning about a day before the draw and are left out, with a direct message, if they still have none at the draw.                                                                                                                                      |
+| Gift messages               | Lets Secret Santas send their giftee an anonymous message after the draw, and a file when SCNX file storage is available. The bot delivers it at the reveal time, and moderators can look submissions up. Turn this off to hide the feature. Messages that were already submitted are not delivered while it is off, so switch it back on before the reveal. |
+| Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder.                                                                                                                                                                                                                                  |
+| Start                       | From the next hourly check on, the bot posts a "starts at" message in the Secret Santa channel and opens the sign-up by itself at the first hourly check after this time, no command needed. Leave empty to start manually with /secret-santa start. The time is read in the bot's timezone.                                                                 |
+| Sign-up Deadline            | Sign-up closes at this time. Members can no longer join afterwards. Leave empty for no deadline. The time is read in the bot's timezone.                                                                                                                                                                                                                     |
+| Draw                        | The draw runs automatically at this time. Leave empty to draw manually with /secret-santa draw only. The time is read in the bot's timezone.                                                                                                                                                                                                                 |
+| Reveal                      | The reveal post is published at this time and the round ends. The time is read in the bot's timezone.                                                                                                                                                                                                                                                        |
 
 ### Messages {#configuration-messages}
 
 In this configuration file, you can edit every text of the module. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=wichteln%7Cconfigs/wichteln-messages). The following placeholders can be used, written with a percent sign in front, for example `%giftee%`. Each message lists the placeholders it supports in the dashboard.
 
-| Message group   | Contents                                                                                                                                                                                   | Placeholders                                                                                |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------- |
-| Dashboards      | The signup, drawn, finished and cancelled messages in the Secret Santa channel, plus the budget and rules.                                                                                 | `%budget%`, `%deadline%`, `%count%`, `%sent%`, `%received%`, `%server%`                     |
-| Buttons         | Labels of the Join, Letter, Leave, Giftee, Sent and Received buttons and the letter window.                                                                                                | none                                                                                        |
-| Direct messages | The draw message, sent and received notices, letter warnings, reminders, repair notices and removal notice.                                                                                | `%giftee%`, `%letter%`, `%budget%`, `%deadline%`, `%server%`                                |
-| Replies         | Short private answers when members or admins press a button or use a command.                                                                                                              | `%giftee%`, `%letter%`, `%count%`, `%user%`, `%server%`                                     |
-| Reveal          | The reveal post and the totals message. Leave the totals empty to skip it.                                                                                                                 | `%pairs%`, `%count%`, `%sent%`, `%received%`                                                |
-| Log             | Lines for joins, leaves, sent and received gifts, removals, cancellations and the draw. By default, sent and received lines do not name anyone, so the pairs stay secret until the reveal. | `%user%`, `%count%`, and optionally `%santa%` and `%giftee%` in the sent and received lines |
+| Message group   | Contents                                                                                                                                                                                                                                             | Placeholders                                                                                                                 |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Dashboards      | The scheduled, signup, drawn, finished and cancelled messages in the Secret Santa channel, plus the rules and the optional budget. The budget is empty by default. Write it in "Budget Text" and add `%budget%` to the messages that should show it. | `%budget%`, `%deadline%`, `%start%`, `%relative%`, `%count%`, `%sent%`, `%received%`, `%server%`                             |
+| Buttons         | Labels of the Join, Letter, Leave, Giftee, Sent and Received buttons and the letter window.                                                                                                                                                          | none                                                                                                                         |
+| Gift messages   | The Send a gift message and View my gift buttons, the form texts, the delivery message to the giftee, the replies of Secret Santas and giftees and the texts of the moderator lookup.                                                                | `%reveal%`, `%max%`, `%message%`, `%file%`, `%fileName%`, `%fileUrl%`, `%user%`, `%santa%`, `%giftee%`, `%status%`, `%time%` |
+| Direct messages | The draw message, sent and received notices, letter warnings, reminders, repair notices and removal notice.                                                                                                                                          | `%giftee%`, `%letter%`, `%budget%`, `%deadline%`, `%server%`                                                                 |
+| Replies         | Short private answers when members or admins press a button or use a command. The join answers come with the Write letter and Leave buttons.                                                                                                         | `%giftee%`, `%letter%`, `%count%`, `%user%`, `%server%`                                                                      |
+| Reveal          | The reveal post and the totals message. Leave the totals empty to skip it.                                                                                                                                                                           | `%pairs%`, `%count%`, `%sent%`, `%received%`                                                                                 |
+| Log             | Lines for joins, leaves, sent and received gifts, removals, cancellations and the draw. By default, sent and received lines do not name anyone, so the pairs stay secret until the reveal.                                                           | `%user%`, `%count%`, and optionally `%santa%` and `%giftee%` in the sent and received lines                                  |
+| Problems        | The texts of the configuration problems: the refusal when a round cannot be started, the warnings, the log line and the description of each problem.                                                                                                 | `%setting%`, `%problem%`, `%warnings%`, `%detail%`, `%channel%`, `%permissions%`                                             |
 
 ## Troubleshooting {#troubleshooting}
+
+### Configuration problems {#config-problems}
+
+The module checks your configuration when the bot starts, when you use `/secret-santa start` and every hour while a round is active, and tells you when a setting stops it from doing something instead of staying silent.
+
+- The automatic start does not start a round with an error, such as a missing Secret Santa Channel or a sign-up deadline in the past. It reports the error like the other problems and tries again every hour.
+- `/secret-santa start` refuses to start a round when the "Secret Santa Channel" is not set, cannot be found or is missing permissions. The private reply names the setting and what is wrong. Other problems are shown in a second private message after the round was started. `/secret-santa draw` shows problems with the reveal channel, the reveal date and the reminders.
+- In the "Log Channel", each problem is posted once per round and per bot start. It is only posted again if you fix the problem and it comes back.
+- The bot log contains the same lines. Problems with the "Log Channel" itself are only reported there.
+- On SCNX bots, the problems that apply right now are also shown in the dashboard under the issues of your bot. They disappear automatically once you have fixed them.
+- Hints without a consequence for a working setup, such as a missing draw date, are only shown when you start a round.
+
+| Problem                                                               | Consequence                                                     |
+| --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Secret Santa Channel not set, not found or missing permissions        | The round cannot be started.                                    |
+| Reveal date set, but no Reveal Channel, or the channel cannot be used | No reveal post is sent.                                         |
+| Reveal Channel set, but no reveal date                                | No reveal post is sent.                                         |
+| Reminder Days Before Reveal set, but no reveal date                   | No gift reminders are sent.                                     |
+| Gift messages enabled, but SCNX file storage not available            | Gift messages are text only. Only shown when you start a round. |
+| Require Letter enabled, but no draw date                              | Members get no letter warning before the draw.                  |
+| No draw date                                                          | The draw is not automatic. Use `/secret-santa draw`.            |
+| No signup deadline                                                    | Members can sign up until the draw.                             |
+| Dates in the wrong order                                              | A step can run before the one it should follow.                 |
+| Sign-up Deadline is already in the past when the round starts         | The round cannot be started. Change or clear the deadline.      |
+| Start date set, but the Secret Santa Channel is unusable              | Nothing is posted. The bot retries every hour for 7 days.       |
+| Draw or Reveal date is already in the past when the round starts      | The step runs at the next hourly check.                         |
+| Log Channel not found or missing permissions                          | Log lines are lost. Only the bot log reports this.              |
+| Dashboard message deleted while the round is running                  | The bot posts it again. If the channel is gone, it is reported. |
+| Automatic draw with fewer than 3 participants                         | The round is cancelled.                                         |
+
+You can edit all of these texts in the "Problems" group of the [messages](#configuration-messages).
 
 <details>
     <summary>The signup message is not posted</summary>
     <ul>
+        <li>If the bot names a setting when you use <code>/secret-santa start</code>, fix it as described in <a href="#config-problems">Configuration problems</a>.</li>
         <li>Make sure a "Secret Santa Channel" is set in the configuration.</li>
+        <li>With a "Start" date, the message appears at the next hourly check. A date more than 7 days in the past is ignored.</li>
         <li>Ensure the bot has the "View Channel", "Send Messages" and "Embed Links" permissions in that channel.</li>
-        <li>Only one round can be active. Cancel the current round with <code>/wichteln cancel</code> first.</li>
+        <li>Only one round can be active. Cancel the current round with <code>/secret-santa cancel</code> first.</li>
     </ul>
 </details>
 <details>
@@ -165,7 +238,16 @@ The following data is stored about every participant:
 
 The following data is stored about every round:
 
-- The year, the phase of the round and the signup message
+- The year, the phase of the round, the start time it was created for and the signup message
 - The time of the draw and the end of the round
+
+The following data is stored about every gift message:
+
+- The Discord user ID of the Secret Santa and of the giftee
+- The message, and the link, name and size of the file if there is one
+- When it was sent, when it was delivered and whether the delivery failed
+- Metadata about the entry (date when created and last updated)
+
+The files themselves are stored in your server's SCNX library and are not deleted with the round.
 
 The data of a round is deleted automatically 30 days after the round ends. To remove all data stored by this module right away, [purge the module database](/docs/custom-bot/additional-features#reset-module-database).
