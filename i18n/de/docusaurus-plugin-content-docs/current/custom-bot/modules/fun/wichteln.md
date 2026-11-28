@@ -128,8 +128,8 @@ In dieser Konfigurationsdatei kannst du jeden Text des Moduls anpassen. Öffne s
 
 Das Modul prüft deine Konfiguration beim Start des Bots, bei `/wichteln start` und stündlich, solange eine Runde läuft. Wenn eine Einstellung das Modul an etwas hindert, sagt es dir das, statt still nichts zu tun.
 
-- `/wichteln start` startet keine Runde, wenn der "Wichtel-Kanal" nicht gesetzt ist, nicht gefunden wird oder Berechtigungen fehlen. Die private Antwort nennt die Einstellung und was nicht stimmt. Andere Probleme siehst du in einer zweiten privaten Nachricht, nachdem die Runde gestartet wurde. `/wichteln draw` zeigt Probleme, die die Auflösung betreffen.
-- Im "Log-Kanal" wird jedes Problem pro Runde einmal gepostet. Erst wenn du es behebst und es wiederkommt, steht es erneut dort.
+- `/wichteln start` startet keine Runde, wenn der "Wichtel-Kanal" nicht gesetzt ist, nicht gefunden wird oder Berechtigungen fehlen. Die private Antwort nennt die Einstellung und was nicht stimmt. Andere Probleme siehst du in einer zweiten privaten Nachricht, nachdem die Runde gestartet wurde. `/wichteln draw` zeigt Probleme mit dem Auflösungs-Kanal, dem Auflösungs-Termin und den Erinnerungen.
+- Im "Log-Kanal" wird jedes Problem einmal pro Runde und pro Bot-Start gepostet. Erst wenn du es behebst und es wiederkommt, steht es erneut dort.
 - Das Bot-Log enthält dieselben Zeilen. Probleme mit dem "Log-Kanal" selbst werden nur dort gemeldet.
 - Hinweise ohne Folgen für eine funktionierende Einrichtung, zum Beispiel ein fehlender Auslosungs-Termin, siehst du nur beim Start einer Runde.
 

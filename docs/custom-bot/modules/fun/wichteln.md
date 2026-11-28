@@ -128,8 +128,8 @@ In this configuration file, you can edit every text of the module. Open it in yo
 
 The module checks your configuration when the bot starts, when you use `/wichteln start` and every hour while a round is active, and tells you when a setting stops it from doing something instead of staying silent.
 
-- `/wichteln start` refuses to start a round when the "Secret Santa Channel" is not set, cannot be found or is missing permissions. The private reply names the setting and what is wrong. Other problems are shown in a second private message after the round was started. `/wichteln draw` shows problems that affect the reveal.
-- In the "Log Channel", each problem is posted once per round. It is only posted again if you fix the problem and it comes back.
+- `/wichteln start` refuses to start a round when the "Secret Santa Channel" is not set, cannot be found or is missing permissions. The private reply names the setting and what is wrong. Other problems are shown in a second private message after the round was started. `/wichteln draw` shows problems with the reveal channel, the reveal date and the reminders.
+- In the "Log Channel", each problem is posted once per round and per bot start. It is only posted again if you fix the problem and it comes back.
 - The bot log contains the same lines. Problems with the "Log Channel" itself are only reported there.
 - Hints without a consequence for a working setup, such as a missing draw date, are only shown when you start a round.
 
