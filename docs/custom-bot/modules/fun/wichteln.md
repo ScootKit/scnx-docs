@@ -32,15 +32,16 @@ Run a Secret Santa on your server: members sign up, get a giftee drawn at random
 A round starts in one of two ways:
 
 - **Manually:** `/wichteln start` opens the sign-up right away. If a round is already scheduled, the command starts it now.
-- **Automatically:** set the "Start" date. Until then, the bot posts a "starts at" message in the Secret Santa channel with a live countdown, so the channel always has a dashboard. At the start time, the same message turns into the signup message and the bot writes a line in the log channel.
+- **Automatically:** set the "Start" date. Until then, the bot posts a "starts at" message in the Secret Santa channel with a live countdown, so the channel always has a dashboard. The message first appears at the next hourly check after you save the date. At the first hourly check after the start time, the same message turns into the signup message and the bot writes a line in the log channel.
 
 The automatic start has some rules:
 
 - The Secret Santa Channel needs to be set and usable. Otherwise nothing is posted, the problem is reported once in the log channel and the bot log, and the bot tries again every hour.
-- A start date that has already passed starts the round at the next hourly check, but only up to 7 days after the date. Later than that, nothing happens.
+- The bot checks once per hour, so the sign-up opens up to about an hour after the start time. A start date that has already passed starts the round at the next hourly check, but only up to 7 days after the date. Later than that, nothing happens.
 - Every start date starts one round. After it has started, been cancelled or finished, the same date does not start another one. Set a new date for the next round.
 - No round is scheduled or started while another round is running.
 - If you change the date while the round is scheduled, the countdown moves with it. If you clear it, the scheduled round is cancelled.
+- If you change the bot timezone after a start date was used, the same wall-clock time can count as a new value.
 - Members cannot join the scheduled round. They can join once the sign-up has opened.
 
 ### Signup {#signup}
@@ -109,7 +110,7 @@ All commands require the "Manage Server" permission.
 | `/wichteln cancel`           | Cancels the current round, scheduled or running.                                                               |
 | `/wichteln kick user:<User>` | Removes a member from the round. After the draw, the gift chain is repaired.                                   |
 
-Only one round can be active at a time. A scheduled round counts as active.
+Only one round can be active at a time. A scheduled round counts as active. `/wichteln draw` needs the sign-up phase, so on a scheduled round it answers that there is no active round.
 
 ## Configuration {#configuration}
 
@@ -124,7 +125,7 @@ In this configuration file, you can set up the channels, dates and rules of the 
 | Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations, the automatic start, a restored dashboard and the draw. Log lines do not name who gifts whom unless you add the participant placeholders to the sent and received log texts. |
 | Require Letter              | If enabled, only members who wrote a letter before the draw take part. Members without a letter get a warning about a day before the draw and are left out, with a direct message, if they still have none at the draw.                                                                  |
 | Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder.                                                                                                                                                              |
-| Start                       | The bot posts a "starts at" message in the Secret Santa channel until this time and then opens the sign-up by itself, no command needed. Leave empty to start manually with /wichteln start. The time is read in the bot's timezone.                                                     |
+| Start                       | From the next hourly check on, the bot posts a "starts at" message in the Secret Santa channel and opens the sign-up by itself at the first hourly check after this time, no command needed. Leave empty to start manually with /wichteln start. The time is read in the bot's timezone. |
 | Sign-up Deadline            | Sign-up closes at this time. Members can no longer join afterwards. Leave empty for no deadline. The time is read in the bot's timezone.                                                                                                                                                 |
 | Draw                        | The draw runs automatically at this time. Leave empty to draw manually with /wichteln draw only. The time is read in the bot's timezone.                                                                                                                                                 |
 | Reveal                      | The reveal post is published at this time and the round ends. The time is read in the bot's timezone.                                                                                                                                                                                    |

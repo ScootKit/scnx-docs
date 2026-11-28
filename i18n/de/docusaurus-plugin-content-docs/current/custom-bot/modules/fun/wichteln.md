@@ -32,15 +32,16 @@ Veranstalte Wichteln auf deinem Server: Mitglieder melden sich an, bekommen zuf�
 Eine Runde startet auf zwei Arten:
 
 - **Manuell:** `/wichteln start` öffnet die Anmeldung sofort. Ist schon eine Runde geplant, startet der Befehl sie jetzt.
-- **Automatisch:** lege den "Rundenstart" fest. Bis dahin postet der Bot eine "Start am ..."-Nachricht mit Live-Countdown im Wichtel-Kanal, damit der Kanal immer ein Dashboard hat. Zum Startzeitpunkt wird dieselbe Nachricht zur Anmeldenachricht, und der Bot schreibt eine Zeile in den Log-Kanal.
+- **Automatisch:** lege den "Rundenstart" fest. Bis dahin postet der Bot eine "Start am ..."-Nachricht mit Live-Countdown im Wichtel-Kanal, damit der Kanal immer ein Dashboard hat. Die Nachricht erscheint beim nächsten stündlichen Check, nachdem du den Termin gespeichert hast. Beim ersten stündlichen Check nach dem Rundenstart wird dieselbe Nachricht zur Anmeldenachricht, und der Bot schreibt eine Zeile in den Log-Kanal.
 
 Für den automatischen Start gelten einige Regeln:
 
 - Der Wichtel-Kanal muss gesetzt und nutzbar sein. Sonst wird nichts gepostet, das Problem wird einmal im Log-Kanal und im Bot-Log gemeldet, und der Bot versucht es jede Stunde erneut.
-- Ein Rundenstart, der schon vorbei ist, startet die Runde bei der nächsten stündlichen Prüfung, aber nur bis zu 7 Tage nach dem Termin. Danach passiert nichts.
+- Der Bot prüft einmal pro Stunde, die Anmeldung öffnet sich daher bis zu etwa eine Stunde nach dem Rundenstart. Ein Rundenstart, der schon vorbei ist, startet die Runde bei der nächsten stündlichen Prüfung, aber nur bis zu 7 Tage nach dem Termin. Danach passiert nichts.
 - Jeder Rundenstart startet genau eine Runde. Wurde sie gestartet, abgebrochen oder beendet, startet derselbe Termin keine weitere. Lege für die nächste Runde einen neuen Termin fest.
 - Solange eine andere Runde läuft, wird keine Runde geplant oder gestartet.
 - Änderst du den Termin, während die Runde geplant ist, wandert der Countdown mit. Leerst du ihn, wird die geplante Runde abgebrochen.
+- Änderst du die Zeitzone des Bots, nachdem ein Rundenstart verwendet wurde, kann dieselbe Uhrzeit als neuer Wert zählen.
 - Mitglieder können der geplanten Runde nicht beitreten. Das geht, sobald die Anmeldung geöffnet ist.
 
 ### Anmeldung {#signup}
@@ -109,7 +110,7 @@ Alle Befehle benötigen die Berechtigung "Server verwalten".
 | `/wichteln cancel`           | Bricht die aktuelle Runde ab, geplant oder laufend.                                                           |
 | `/wichteln kick user:<User>` | Entfernt ein Mitglied aus der Runde. Nach der Auslosung wird die Geschenkkette repariert.                     |
 
-Es kann immer nur eine Runde aktiv sein. Eine geplante Runde zählt als aktiv.
+Es kann immer nur eine Runde aktiv sein. Eine geplante Runde zählt als aktiv. `/wichteln draw` braucht die Anmeldephase, bei einer geplanten Runde antwortet es daher, dass es keine aktive Runde gibt.
 
 ## Konfiguration {#configuration}
 
@@ -124,7 +125,7 @@ In dieser Konfigurationsdatei kannst du die Kanäle, Termine und Regeln des Wich
 | Log-Kanal                         | Optionaler Kanal, in den eine Log-Zeile für Beitritte, Austritte, verschickte und erhaltene Geschenke, Entfernungen, Abbrüche und die Auslosung geschrieben wird. Die Log-Zeilen verraten keine Paare, außer du fügst den Texten für "verschickt" und "erhalten" die Platzhalter für Wichtel und beschenkte Person hinzu. |
 | Wunschzettel erforderlich         | Wenn aktiviert, nehmen nur Mitglieder teil, die vor der Auslosung einen Wunschzettel geschrieben haben. Wer noch keinen hat, bekommt etwa einen Tag vor der Auslosung eine Warnung. Fehlt der Wunschzettel bei der Auslosung weiterhin, wird die Person per Direktnachricht informiert und nicht mitgelost.               |
 | Erinnerungstage vor der Auflösung | Anzahl der Tage vor der Auflösung, an denen Wichtel, die ihr Geschenk noch nicht verschickt haben, eine Erinnerung bekommen. 0 schaltet die Erinnerung aus.                                                                                                                                                               |
-| Rundenstart                       | Bis zu diesem Zeitpunkt postet der Bot eine "Start am ..."-Nachricht im Wichtel-Kanal und öffnet dann selbst die Anmeldung, ein Befehl ist nicht nötig. Leer lassen, um manuell mit /wichteln start zu starten. Die Uhrzeit gilt in der Zeitzone des Bots.                                                                |
+| Rundenstart                       | Ab dem nächsten stündlichen Check postet der Bot eine "Start am ..."-Nachricht im Wichtel-Kanal und öffnet beim ersten stündlichen Check nach dem Rundenstart selbst die Anmeldung, ein Befehl ist nicht nötig. Leer lassen, um manuell mit /wichteln start zu starten. Die Uhrzeit gilt in der Zeitzone des Bots.        |
 | Anmeldeschluss                    | Zu diesem Zeitpunkt endet die Anmeldung. Danach können keine Mitglieder mehr beitreten. Leer lassen für keinen Anmeldeschluss. Die Uhrzeit gilt in der Zeitzone des Bots.                                                                                                                                                 |
 | Auslosung                         | Zu diesem Zeitpunkt wird automatisch ausgelost. Leer lassen, wenn du nur manuell mit /wichteln draw auslosen willst. Die Uhrzeit gilt in der Zeitzone des Bots.                                                                                                                                                           |
 | Auflösung                         | Zu diesem Zeitpunkt wird der Auflösungs-Beitrag veröffentlicht und die Runde endet. Die Uhrzeit gilt in der Zeitzone des Bots.                                                                                                                                                                                            |
