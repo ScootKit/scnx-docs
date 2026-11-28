@@ -12,7 +12,7 @@ Run a Secret Santa on your server: members sign up, get a giftee drawn at random
 - After the draw, every Secret Santa receives a private message with the giftee and their letter.
 - Secret Santas mark their gift as sent, and giftees mark it as received, with buttons.
 - Optional letter requirement, gift reminders and a reveal post at the end of the round.
-- Members who leave or are removed are replaced in the gift chain automatically.
+- Members who press "Leave" or are removed with `/wichteln kick` are replaced in the gift chain. Members who leave the server itself are not repaired automatically, so use `/wichteln kick` for them.
 - Every text, button label and message is editable.
 - The module is opt-in: nothing happens until an admin starts a round with `/wichteln start`.
 
@@ -35,13 +35,13 @@ The signup message shows the budget, the rules, the signup deadline and the numb
 
 Joining is possible until the signup deadline, or until the draw if you have not set a deadline. Members need to allow direct messages from server members, otherwise the bot cannot reach them.
 
-The letter is visible to the member's Secret Santa after the draw and to admins. Other members never see it.
+Other members cannot see the letter. After the draw, the member's Secret Santa receives it by direct message.
 
 ### Draw {#draw}
 
 At least 3 participants are needed. If there are fewer, the round is cancelled. The draw runs automatically at the configured draw date. If you leave the draw date empty, the round is drawn only when an admin runs `/wichteln draw`.
 
-If "Require Letter" is enabled, members without a letter receive a reminder about a day before the automatic draw. Members who still have no letter at the draw are left out and are told so by a direct message.
+If "Require Letter" is enabled, members without a letter receive a warning about a day before the automatic draw. Members who still have no letter at the draw are left out and are told so by a direct message. Members without a letter get a warning, not a reminder, and only when a draw date is set.
 
 ### Gifting {#gifting}
 
@@ -54,17 +54,21 @@ If you set "Reminder Days Before Reveal", Secret Santas who have not yet marked 
 
 ### Reveal and end of the round {#reveal}
 
-At the reveal date, the bot posts a message in the reveal channel that lists who gifted whom, followed by the totals of sent and received gifts. The round then finishes and the dashboard message shows the closing text. The pairs are public in the reveal channel. Without a reveal date, the round finishes 14 days after the draw. Without a reveal channel, no reveal post is made.
+At the reveal date, the bot posts a message in the reveal channel that lists who gifted whom, followed by the totals of sent and received gifts. The totals are a separate message that is posted only if its text in the messages configuration is not empty. The round then finishes and the dashboard message shows the closing text. The pairs are public in the reveal channel. The round ends at the reveal date, or up to 3 days later if the reveal post could not be posted. Without a reveal date, the round finishes 14 days after the draw. Without a reveal channel, no reveal post is made and the round still ends at the reveal date.
 
 ### Members who leave {#repair}
 
 If a member presses "Leave" or is removed by an admin after the draw, the bot repairs the gift chain: the Secret Santa of the missing member gets the missing member's giftee, and both sides are told by a direct message. If fewer than 3 participants remain, the round is cancelled.
 
+**Limitation:** the bot does not notice when a member leaves the server itself. Their gift chain stays as it is until an admin removes them with `/wichteln kick user:<User>`.
+
 ### Dates {#dates}
 
-The signup deadline, the draw and the reveal each use three fields: month, day and hour. The times use the timezone of your server (the bot timezone). Setting the month to 0 leaves a date unset.
+The signup deadline, the draw and the reveal each use three fields: month, day and hour. The times use the timezone of your server (the bot timezone). Setting the month to 0 leaves a date unset. A day that does not exist in the month, such as February 31, rolls over into the next month.
 
-The year is not entered. The bot picks it automatically: a later date that is earlier in the calendar than the previous date belongs to the next year. For example, a deadline on November 20, a draw on December 1 and a reveal on January 6 spans the turn of the year.
+The year is not entered. The bot uses the year in which the round was started and applies a rolling rule: a later date that is earlier in the calendar than the previous date belongs to the next year. For example, a deadline on November 20, a draw on December 1 and a reveal on January 6 spans the turn of the year.
+
+If a date has already passed in that year when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
 
 ## Commands {#commands}
 
@@ -87,22 +91,22 @@ Only one round can be active at a time.
 
 In this configuration file, you can set up the channels, dates and rules of the Secret Santa. Open it in your [dashboard](https://scnx.app/glink?page=bot/configuration?file=wichteln%7Cconfigs/wichteln).
 
-| Field                       | Description                                                                                                                 |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Secret Santa Channel        | Channel where the signup message is posted. Members join, write letters and mark gifts here.                                |
-| Signup Deadline Month       | Month of the signup deadline (1-12). 0 means not set.                                                                       |
-| Signup Deadline Day         | Day of the month of the signup deadline (1-31).                                                                             |
-| Signup Deadline Hour        | Hour of the signup deadline (0-23, server time).                                                                            |
-| Draw Month                  | Month of the automatic draw (1-12). 0 means not set.                                                                        |
-| Draw Day                    | Day of the month of the automatic draw (1-31).                                                                              |
-| Draw Hour                   | Hour of the automatic draw (0-23, server time).                                                                             |
-| Reveal Month                | Month of the reveal (1-12). 0 means not set.                                                                                |
-| Reveal Day                  | Day of the month of the reveal (1-31).                                                                                      |
-| Reveal Hour                 | Hour of the reveal (0-23, server time).                                                                                     |
-| Reveal Channel              | Channel where the reveal post is published at the end of the round.                                                         |
-| Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations and the draw.    |
-| Require Letter              | If enabled, only members who wrote a letter before the draw take part. Everyone else is left out and receives a reminder.   |
-| Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder. |
+| Field                       | Description                                                                                                                                                                                                             |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Secret Santa Channel        | Channel where the signup message is posted. Members join, write letters and mark gifts here.                                                                                                                            |
+| Signup Deadline Month       | Month of the signup deadline (1-12). 0 means not set.                                                                                                                                                                   |
+| Signup Deadline Day         | Day of the month of the signup deadline (1-31).                                                                                                                                                                         |
+| Signup Deadline Hour        | Hour of the signup deadline (0-23, server time).                                                                                                                                                                        |
+| Draw Month                  | Month of the automatic draw (1-12). 0 means not set.                                                                                                                                                                    |
+| Draw Day                    | Day of the month of the automatic draw (1-31).                                                                                                                                                                          |
+| Draw Hour                   | Hour of the automatic draw (0-23, server time).                                                                                                                                                                         |
+| Reveal Month                | Month of the reveal (1-12). 0 means not set.                                                                                                                                                                            |
+| Reveal Day                  | Day of the month of the reveal (1-31).                                                                                                                                                                                  |
+| Reveal Hour                 | Hour of the reveal (0-23, server time).                                                                                                                                                                                 |
+| Reveal Channel              | Channel where the reveal post is published at the end of the round.                                                                                                                                                     |
+| Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations and the draw.                                                                                                |
+| Require Letter              | If enabled, only members who wrote a letter before the draw take part. Members without a letter get a warning about a day before the draw and are left out, with a direct message, if they still have none at the draw. |
+| Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder.                                                                                             |
 
 ### Messages {#configuration-messages}
 
@@ -130,7 +134,8 @@ In this configuration file, you can edit every text of the module. Open it in yo
 <details>
     <summary>A member did not get their direct message</summary>
     <ul>
-        <li>The member must allow direct messages from server members. The bot tells them when a message could not be delivered.</li>
+        <li>The member must allow direct messages from server members. If the draw message or a repair message cannot be delivered, this is only reported in the Log Channel, if you set one. The member can still use "Show my giftee" on the dashboard message.</li>
+        <li>If a Secret Santa presses "Gift sent" and the giftee cannot be reached by direct message, the gift is not marked as sent and the Secret Santa is told to try again later.</li>
         <li>The member can press "Show my giftee" on the dashboard message at any time to see their giftee again.</li>
     </ul>
 </details>

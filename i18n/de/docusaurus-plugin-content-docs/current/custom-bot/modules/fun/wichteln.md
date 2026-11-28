@@ -12,7 +12,7 @@ Veranstalte Wichteln auf deinem Server: Mitglieder melden sich an, bekommen zuf�
 - Nach der Auslosung bekommt jeder Wichtel eine private Nachricht mit der beschenkten Person und deren Wunschzettel.
 - Wichtel markieren ihr Geschenk per Button als verschickt, die beschenkten Personen als erhalten.
 - Optionaler Wunschzettel-Zwang, Geschenk-Erinnerungen und ein Enthüllungs-Beitrag am Ende der Runde.
-- Mitglieder, die austreten oder entfernt werden, werden automatisch in der Geschenkkette ersetzt.
+- Mitglieder, die auf "Verlassen" drücken oder mit `/wichteln kick` entfernt werden, werden in der Geschenkkette ersetzt. Mitglieder, die den Server selbst verlassen, werden nicht automatisch ersetzt, nutze dafür `/wichteln kick`.
 - Jeder Text, jede Button-Beschriftung und jede Nachricht ist anpassbar.
 - Das Modul ist optional: Es passiert nichts, bis ein Admin mit `/wichteln start` eine Runde startet.
 
@@ -35,13 +35,13 @@ Die Anmeldenachricht zeigt das Budget, die Regeln, den Anmeldeschluss und die Za
 
 Beitreten ist bis zum Anmeldeschluss möglich, oder bis zur Auslosung, wenn du keinen Anmeldeschluss festgelegt hast. Mitglieder müssen Direktnachrichten von Servermitgliedern erlauben, sonst kann der Bot sie nicht erreichen.
 
-Der Wunschzettel ist nach der Auslosung für den Wichtel des Mitglieds und für Admins sichtbar. Andere Mitglieder sehen ihn nie.
+Andere Mitglieder können den Wunschzettel nicht sehen. Nach der Auslosung erhält ihn der Wichtel des Mitglieds per Direktnachricht.
 
 ### Auslosung {#draw}
 
 Es werden mindestens 3 Teilnehmende benötigt. Sind es weniger, wird die Runde abgebrochen. Die Auslosung läuft automatisch zum eingestellten Auslosungs-Termin. Lässt du den Auslosungs-Termin leer, wird nur gelost, wenn ein Admin `/wichteln draw` ausführt.
 
-Ist "Wunschzettel erforderlich" aktiviert, bekommen Mitglieder ohne Wunschzettel etwa einen Tag vor der automatischen Auslosung eine Erinnerung. Mitglieder, die bei der Auslosung noch keinen Wunschzettel haben, werden ausgeschlossen und per Direktnachricht darüber informiert.
+Ist "Wunschzettel erforderlich" aktiviert, bekommen Mitglieder ohne Wunschzettel etwa einen Tag vor der automatischen Auslosung eine Warnung. Mitglieder, die bei der Auslosung noch keinen Wunschzettel haben, werden ausgeschlossen und per Direktnachricht darüber informiert. Mitglieder ohne Wunschzettel erhalten eine Warnung statt einer Erinnerung, und nur wenn ein Auslosungs-Termin gesetzt ist.
 
 ### Schenken {#gifting}
 
@@ -54,17 +54,21 @@ Wenn du "Erinnerungstage vor der Enthüllung" einstellst, erhalten Wichtel, die 
 
 ### Enthüllung und Ende der Runde {#reveal}
 
-Zum Enthüllungs-Termin postet der Bot im Enthüllungs-Kanal eine Nachricht, die auflistet, wer wen beschenkt hat, gefolgt von den Summen der verschickten und erhaltenen Geschenke. Danach endet die Runde und die Dashboard-Nachricht zeigt den Abschlusstext. Die Paare sind im Enthüllungs-Kanal öffentlich sichtbar. Ohne Enthüllungs-Termin endet die Runde 14 Tage nach der Auslosung. Ohne Enthüllungs-Kanal gibt es keinen Enthüllungs-Beitrag.
+Zum Enthüllungs-Termin postet der Bot im Enthüllungs-Kanal eine Nachricht, die auflistet, wer wen beschenkt hat, gefolgt von den Summen der verschickten und erhaltenen Geschenke. Die Summen sind eine eigene Nachricht, die nur gepostet wird, wenn ihr Text in der Nachrichten-Konfiguration nicht leer ist. Danach endet die Runde und die Dashboard-Nachricht zeigt den Abschlusstext. Die Paare sind im Enthüllungs-Kanal öffentlich sichtbar. Die Runde endet zum Enthüllungs-Termin, oder bis zu 3 Tage später, falls der Enthüllungs-Beitrag nicht gepostet werden konnte. Ohne Enthüllungs-Termin endet die Runde 14 Tage nach der Auslosung. Ohne Enthüllungs-Kanal gibt es keinen Enthüllungs-Beitrag und die Runde endet trotzdem zum Enthüllungs-Termin.
 
 ### Mitglieder, die austreten {#repair}
 
 Wenn ein Mitglied nach der Auslosung auf "Verlassen" drückt oder von einem Admin entfernt wird, repariert der Bot die Geschenkkette: Der Wichtel des fehlenden Mitglieds bekommt dessen beschenkte Person, und beide Seiten werden per Direktnachricht informiert. Bleiben weniger als 3 Teilnehmende übrig, wird die Runde abgebrochen.
 
+**Einschränkung:** Der Bot bemerkt nicht, wenn ein Mitglied den Server selbst verlässt. Die Geschenkkette bleibt dann unverändert, bis ein Admin das Mitglied mit `/wichteln kick user:<User>` entfernt.
+
 ### Termine {#dates}
 
-Anmeldeschluss, Auslosung und Enthüllung bestehen jeweils aus drei Feldern: Monat, Tag und Stunde. Die Zeiten richten sich nach der Zeitzone deines Servers (der Zeitzone des Bots). Setzt du den Monat auf 0, bleibt der Termin ungesetzt.
+Anmeldeschluss, Auslosung und Enthüllung bestehen jeweils aus drei Feldern: Monat, Tag und Stunde. Die Zeiten richten sich nach der Zeitzone deines Servers (der Zeitzone des Bots). Setzt du den Monat auf 0, bleibt der Termin ungesetzt. Ein Tag, den es im Monat nicht gibt, etwa der 31. Februar, springt in den nächsten Monat.
 
-Das Jahr gibst du nicht an. Der Bot wählt es automatisch: Ein späterer Termin, der im Kalender vor dem vorherigen Termin liegt, gehört zum nächsten Jahr. Zum Beispiel reicht ein Anmeldeschluss am 20. November, eine Auslosung am 1. Dezember und eine Enthüllung am 6. Januar über den Jahreswechsel.
+Das Jahr gibst du nicht an. Der Bot verwendet das Jahr, in dem die Runde gestartet wurde, und wendet eine fortlaufende Regel an: Ein späterer Termin, der im Kalender vor dem vorherigen Termin liegt, gehört zum nächsten Jahr. Zum Beispiel reicht ein Anmeldeschluss am 20. November, eine Auslosung am 1. Dezember und eine Enthüllung am 6. Januar über den Jahreswechsel.
+
+Ist ein Termin in diesem Jahr beim Start der Runde schon vorbei, läuft der passende Schritt bei der nächsten stündlichen Prüfung. Startest du eine Runde zum Beispiel nach dem eingestellten Auslosungs-Termin, wird sofort gelost. Der Zeitplaner läuft einmal pro Stunde, automatische Schritte passieren daher bis zu etwa eine Stunde nach der eingestellten Zeit.
 
 ## Befehle {#commands}
 
@@ -87,22 +91,22 @@ Es kann immer nur eine Runde aktiv sein.
 
 In dieser Konfigurationsdatei kannst du die Kanäle, Termine und Regeln des Wichtelns einrichten. Öffne sie in deinem [Dashboard](https://scnx.app/de/glink?page=bot/configuration?file=wichteln%7Cconfigs/wichteln).
 
-| Feld                               | Beschreibung                                                                                                                                                          |
-| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Wichtel-Kanal                      | Kanal, in dem die Anmeldenachricht gepostet wird. Hier treten Mitglieder bei, schreiben Wunschzettel und markieren Geschenke.                                         |
-| Anmeldeschluss Monat               | Monat des Anmeldeschlusses (1-12). 0 bedeutet nicht gesetzt.                                                                                                          |
-| Anmeldeschluss Tag                 | Tag des Monats des Anmeldeschlusses (1-31).                                                                                                                           |
-| Anmeldeschluss Stunde              | Stunde des Anmeldeschlusses (0-23, Serverzeit).                                                                                                                       |
-| Auslosung Monat                    | Monat der automatischen Auslosung (1-12). 0 bedeutet nicht gesetzt.                                                                                                   |
-| Auslosung Tag                      | Tag des Monats der automatischen Auslosung (1-31).                                                                                                                    |
-| Auslosung Stunde                   | Stunde der automatischen Auslosung (0-23, Serverzeit).                                                                                                                |
-| Enthüllung Monat                   | Monat der Enthüllung (1-12). 0 bedeutet nicht gesetzt.                                                                                                                |
-| Enthüllung Tag                     | Tag des Monats der Enthüllung (1-31).                                                                                                                                 |
-| Enthüllung Stunde                  | Stunde der Enthüllung (0-23, Serverzeit).                                                                                                                             |
-| Enthüllungs-Kanal                  | Kanal, in dem der Enthüllungs-Beitrag am Ende der Runde veröffentlicht wird.                                                                                          |
-| Log-Kanal                          | Optionaler Kanal, der eine Log-Zeile für Beitritte, Austritte, versendete und erhaltene Geschenke, Entfernungen, Abbrüche und die Auslosung erhält.                   |
-| Wunschzettel erforderlich          | Wenn aktiviert, nehmen nur Mitglieder teil, die vor der Auslosung einen Wunschzettel geschrieben haben. Alle anderen werden ausgelassen und erhalten eine Erinnerung. |
-| Erinnerungstage vor der Enthüllung | Tage vor der Enthüllung, an denen Wichtel, die ihr Geschenk noch nicht verschickt haben, eine Erinnerung erhalten. 0 deaktiviert die Erinnerung.                      |
+| Feld                               | Beschreibung                                                                                                                                                                                                                                                                                           |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Wichtel-Kanal                      | Kanal, in dem die Anmeldenachricht gepostet wird. Hier treten Mitglieder bei, schreiben Wunschzettel und markieren Geschenke.                                                                                                                                                                          |
+| Anmeldeschluss Monat               | Monat des Anmeldeschlusses (1-12). 0 bedeutet nicht gesetzt.                                                                                                                                                                                                                                           |
+| Anmeldeschluss Tag                 | Tag des Monats des Anmeldeschlusses (1-31).                                                                                                                                                                                                                                                            |
+| Anmeldeschluss Stunde              | Stunde des Anmeldeschlusses (0-23, Serverzeit).                                                                                                                                                                                                                                                        |
+| Auslosung Monat                    | Monat der automatischen Auslosung (1-12). 0 bedeutet nicht gesetzt.                                                                                                                                                                                                                                    |
+| Auslosung Tag                      | Tag des Monats der automatischen Auslosung (1-31).                                                                                                                                                                                                                                                     |
+| Auslosung Stunde                   | Stunde der automatischen Auslosung (0-23, Serverzeit).                                                                                                                                                                                                                                                 |
+| Enthüllung Monat                   | Monat der Enthüllung (1-12). 0 bedeutet nicht gesetzt.                                                                                                                                                                                                                                                 |
+| Enthüllung Tag                     | Tag des Monats der Enthüllung (1-31).                                                                                                                                                                                                                                                                  |
+| Enthüllung Stunde                  | Stunde der Enthüllung (0-23, Serverzeit).                                                                                                                                                                                                                                                              |
+| Enthüllungs-Kanal                  | Kanal, in dem der Enthüllungs-Beitrag am Ende der Runde veröffentlicht wird.                                                                                                                                                                                                                           |
+| Log-Kanal                          | Optionaler Kanal, der eine Log-Zeile für Beitritte, Austritte, versendete und erhaltene Geschenke, Entfernungen, Abbrüche und die Auslosung erhält.                                                                                                                                                    |
+| Wunschzettel erforderlich          | Wenn aktiviert, nehmen nur Mitglieder teil, die vor der Auslosung einen Wunschzettel geschrieben haben. Mitglieder ohne Wunschzettel bekommen etwa einen Tag vor der Auslosung eine Warnung und werden, falls sie bei der Auslosung noch keinen haben, per Direktnachricht informiert und ausgelassen. |
+| Erinnerungstage vor der Enthüllung | Tage vor der Enthüllung, an denen Wichtel, die ihr Geschenk noch nicht verschickt haben, eine Erinnerung erhalten. 0 deaktiviert die Erinnerung.                                                                                                                                                       |
 
 ### Nachrichten {#configuration-messages}
 
@@ -130,7 +134,8 @@ In dieser Konfigurationsdatei kannst du jeden Text des Moduls anpassen. Öffne s
 <details>
     <summary>Ein Mitglied hat seine Direktnachricht nicht erhalten</summary>
     <ul>
-        <li>Das Mitglied muss Direktnachrichten von Servermitgliedern erlauben. Der Bot informiert das Mitglied, wenn eine Nachricht nicht zugestellt werden konnte.</li>
+        <li>Das Mitglied muss Direktnachrichten von Servermitgliedern erlauben. Kann die Auslosungs-Nachricht oder eine Reparatur-Nachricht nicht zugestellt werden, wird das nur im Log-Kanal gemeldet, falls du einen festgelegt hast. Das Mitglied kann trotzdem "Beschenkte Person anzeigen" auf der Dashboard-Nachricht nutzen.</li>
+        <li>Drückt ein Wichtel "Geschenk verschickt" und die beschenkte Person ist per Direktnachricht nicht erreichbar, wird das Geschenk nicht als verschickt markiert und der Wichtel wird gebeten, es später erneut zu versuchen.</li>
         <li>Das Mitglied kann jederzeit auf der Dashboard-Nachricht auf "Beschenkte Person anzeigen" drücken, um seine beschenkte Person erneut zu sehen.</li>
     </ul>
 </details>
