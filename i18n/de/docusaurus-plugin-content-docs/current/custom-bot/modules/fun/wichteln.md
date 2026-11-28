@@ -154,6 +154,7 @@ Das Modul prüft deine Konfiguration beim Start des Bots, bei `/wichteln start` 
 - `/wichteln start` startet keine Runde, wenn der "Wichtel-Kanal" nicht gesetzt ist, nicht gefunden wird oder Berechtigungen fehlen. Die private Antwort nennt die Einstellung und was nicht stimmt. Andere Probleme siehst du in einer zweiten privaten Nachricht, nachdem die Runde gestartet wurde. `/wichteln draw` zeigt Probleme mit dem Auflösungs-Kanal, dem Auflösungs-Termin und den Erinnerungen.
 - Im "Log-Kanal" wird jedes Problem einmal pro Runde und pro Bot-Start gepostet. Erst wenn du es behebst und es wiederkommt, steht es erneut dort.
 - Das Bot-Log enthält dieselben Zeilen. Probleme mit dem "Log-Kanal" selbst werden nur dort gemeldet.
+- Bei SCNX-Bots werden die Probleme, die gerade zutreffen, zusätzlich im Dashboard unter den Problemen deines Bots angezeigt. Sie verschwinden automatisch, sobald du sie behoben hast.
 - Hinweise ohne Folgen für eine funktionierende Einrichtung, zum Beispiel ein fehlender Auslosungs-Termin, siehst du nur beim Start einer Runde.
 
 | Problem                                                                                       | Folge                                                                                |

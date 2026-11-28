@@ -154,6 +154,7 @@ The module checks your configuration when the bot starts, when you use `/wichtel
 - `/wichteln start` refuses to start a round when the "Secret Santa Channel" is not set, cannot be found or is missing permissions. The private reply names the setting and what is wrong. Other problems are shown in a second private message after the round was started. `/wichteln draw` shows problems with the reveal channel, the reveal date and the reminders.
 - In the "Log Channel", each problem is posted once per round and per bot start. It is only posted again if you fix the problem and it comes back.
 - The bot log contains the same lines. Problems with the "Log Channel" itself are only reported there.
+- On SCNX bots, the problems that apply right now are also shown in the dashboard under the issues of your bot. They disappear automatically once you have fixed them.
 - Hints without a consequence for a working setup, such as a missing draw date, are only shown when you start a round.
 
 | Problem                                                               | Consequence                                                     |
