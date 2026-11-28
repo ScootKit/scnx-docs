@@ -64,11 +64,13 @@ If a member presses "Leave" or is removed by an admin after the draw, the bot re
 
 ### Dates {#dates}
 
-The signup deadline, the draw and the reveal each use three fields: month, day and hour. The times use the timezone of your server (the bot timezone). Setting the month to 0 leaves a date unset. A day that does not exist in the month, such as February 31, rolls over into the next month.
+The sign-up deadline, the draw and the reveal are each set with one date and time field. The times are read in the timezone of your server (the bot timezone). Every date is absolute, including the year, so set the real dates for each round. A date you leave empty is not used.
 
-The year is not entered. The bot uses the year in which the round was started and applies a rolling rule: a later date that is earlier in the calendar than the previous date belongs to the next year. For example, a deadline on November 20, a draw on December 1 and a reveal on January 6 spans the turn of the year.
+- **Sign-up Deadline:** members can no longer join afterwards. Without a deadline, members can sign up until the draw.
+- **Draw:** the bot draws automatically at this time. Leave it empty to draw only manually with `/wichteln draw`.
+- **Reveal:** the reveal post is published at this time and the round ends.
 
-If a date has already passed in that year when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
+If a date has already passed when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
 
 ## Commands {#commands}
 
@@ -94,19 +96,13 @@ In this configuration file, you can set up the channels, dates and rules of the 
 | Field                       | Description                                                                                                                                                                                                                                   |
 | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Secret Santa Channel        | Channel where the signup message is posted. Members join, write letters and mark gifts here.                                                                                                                                                  |
-| Signup Deadline Month       | Month of the signup deadline (1-12). 0 means not set.                                                                                                                                                                                         |
-| Signup Deadline Day         | Day of the month of the signup deadline (1-31).                                                                                                                                                                                               |
-| Signup Deadline Hour        | Hour of the signup deadline (0-23, server time).                                                                                                                                                                                              |
-| Draw Month                  | Month of the automatic draw (1-12). 0 means not set.                                                                                                                                                                                          |
-| Draw Day                    | Day of the month of the automatic draw (1-31).                                                                                                                                                                                                |
-| Draw Hour                   | Hour of the automatic draw (0-23, server time).                                                                                                                                                                                               |
-| Reveal Month                | Month of the reveal (1-12). 0 means not set.                                                                                                                                                                                                  |
-| Reveal Day                  | Day of the month of the reveal (1-31).                                                                                                                                                                                                        |
-| Reveal Hour                 | Hour of the reveal (0-23, server time).                                                                                                                                                                                                       |
 | Reveal Channel              | Channel where the reveal post is published at the end of the round.                                                                                                                                                                           |
 | Log Channel                 | Optional channel that receives a log line for joins, leaves, sent and received gifts, kicks, cancellations and the draw. Log lines do not name who gifts whom unless you add the participant placeholders to the sent and received log texts. |
 | Require Letter              | If enabled, only members who wrote a letter before the draw take part. Members without a letter get a warning about a day before the draw and are left out, with a direct message, if they still have none at the draw.                       |
 | Reminder Days Before Reveal | Days before the reveal on which Secret Santas who have not yet sent their gift receive a reminder. 0 disables the reminder.                                                                                                                   |
+| Sign-up Deadline            | Sign-up closes at this time. Members can no longer join afterwards. Leave empty for no deadline. The time is read in the bot's timezone.                                                                                                      |
+| Draw                        | The draw runs automatically at this time. Leave empty to draw manually with /wichteln draw only. The time is read in the bot's timezone.                                                                                                      |
+| Reveal                      | The reveal post is published at this time and the round ends. The time is read in the bot's timezone.                                                                                                                                         |
 
 ### Messages {#configuration-messages}
 
@@ -142,7 +138,8 @@ The module checks your configuration when the bot starts, when you use `/wichtel
 | Require Letter enabled, but no draw date                              | Members get no letter warning before the draw.                  |
 | No draw date                                                          | The draw is not automatic. Use `/wichteln draw`.                |
 | No signup deadline                                                    | Members can sign up until the draw.                             |
-| Impossible values such as February 31, or dates in the wrong order    | The date can fire at an unexpected time.                        |
+| Dates in the wrong order                                              | A step can run before the one it should follow.                 |
+| A date is already in the past when the round starts                   | The step runs at the next hourly check.                         |
 | Log Channel not found or missing permissions                          | Log lines are lost. Only the bot log reports this.              |
 | Signup message deleted or not reachable after the round started       | The buttons stop working. Cancel the round and start a new one. |
 | Automatic draw with fewer than 3 participants                         | The round is cancelled.                                         |
