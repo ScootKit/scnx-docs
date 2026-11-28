@@ -66,11 +66,13 @@ If a member presses "Leave" or is removed by an admin after the draw, the bot re
 
 The sign-up deadline, the draw and the reveal are each set with one date and time field. The times are read in the timezone of your server (the bot timezone). Every date is absolute, including the year, so set the real dates for each round. A date you leave empty is not used.
 
-- **Sign-up Deadline:** members can no longer join afterwards. Without a deadline, members can sign up until the draw.
+- **Sign-up Deadline:** members can no longer join afterwards. Without a deadline, members can sign up until the draw. A deadline that is already in the past stops `/wichteln start`, because nobody could join.
 - **Draw:** the bot draws automatically at this time. Leave it empty to draw only manually with `/wichteln draw`.
 - **Reveal:** the reveal post is published at this time and the round ends.
 
-If a date has already passed when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
+If the draw or reveal date has already passed when the round is started, the matching step runs at the next hourly check. For example, starting a round after the configured draw date draws it right away. The scheduler runs once per hour, so automatic steps happen up to about an hour after the configured time.
+
+If you type an invalid or out-of-range date by hand into the configuration file, the bot resets that field to empty when it loads the file and writes a warning to the bot log.
 
 ## Commands {#commands}
 
@@ -139,7 +141,8 @@ The module checks your configuration when the bot starts, when you use `/wichtel
 | No draw date                                                          | The draw is not automatic. Use `/wichteln draw`.                |
 | No signup deadline                                                    | Members can sign up until the draw.                             |
 | Dates in the wrong order                                              | A step can run before the one it should follow.                 |
-| A date is already in the past when the round starts                   | The step runs at the next hourly check.                         |
+| Sign-up Deadline is already in the past when the round starts         | The round cannot be started. Change or clear the deadline.      |
+| Draw or Reveal date is already in the past when the round starts      | The step runs at the next hourly check.                         |
 | Log Channel not found or missing permissions                          | Log lines are lost. Only the bot log reports this.              |
 | Signup message deleted or not reachable after the round started       | The buttons stop working. Cancel the round and start a new one. |
 | Automatic draw with fewer than 3 participants                         | The round is cancelled.                                         |

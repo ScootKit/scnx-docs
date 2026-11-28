@@ -66,11 +66,13 @@ Wenn ein Mitglied nach der Auslosung auf "Verlassen" drückt oder von einem Admi
 
 Anmeldeschluss, Auslosung und Auflösung stellst du jeweils mit einem Feld für Datum und Uhrzeit ein. Die Uhrzeiten gelten in der Zeitzone deines Servers (der Zeitzone des Bots). Jeder Termin ist absolut und enthält das Jahr, trage also für jede Runde die echten Termine ein. Ein leer gelassener Termin wird nicht verwendet.
 
-- **Anmeldeschluss:** danach können keine Mitglieder mehr beitreten. Ohne Anmeldeschluss können sich Mitglieder bis zur Auslosung anmelden.
+- **Anmeldeschluss:** danach können keine Mitglieder mehr beitreten. Ohne Anmeldeschluss können sich Mitglieder bis zur Auslosung anmelden. Ein Anmeldeschluss, der schon in der Vergangenheit liegt, verhindert `/wichteln start`, weil niemand beitreten könnte.
 - **Auslosung:** der Bot lost zu diesem Zeitpunkt automatisch aus. Lass das Feld leer, um nur manuell mit `/wichteln draw` auszulosen.
 - **Auflösung:** zu diesem Zeitpunkt wird der Auflösungs-Beitrag veröffentlicht und die Runde endet.
 
-Ist ein Termin beim Start der Runde schon vorbei, läuft der passende Schritt bei der nächsten stündlichen Prüfung. Startest du eine Runde zum Beispiel nach dem eingestellten Auslosungs-Termin, wird sofort gelost. Der Zeitplaner läuft einmal pro Stunde, automatische Schritte passieren daher bis zu etwa eine Stunde nach der eingestellten Zeit.
+Ist der Termin für Auslosung oder Auflösung beim Start der Runde schon vorbei, läuft der passende Schritt bei der nächsten stündlichen Prüfung. Startest du eine Runde zum Beispiel nach dem eingestellten Auslosungs-Termin, wird sofort gelost. Der Zeitplaner läuft einmal pro Stunde, automatische Schritte passieren daher bis zu etwa eine Stunde nach der eingestellten Zeit.
+
+Trägst du einen ungültigen oder unzulässigen Termin von Hand in die Konfigurationsdatei ein, setzt der Bot das Feld beim Laden der Datei auf leer zurück und schreibt eine Warnung ins Bot-Log.
 
 ## Befehle {#commands}
 
@@ -129,20 +131,21 @@ Das Modul prüft deine Konfiguration beim Start des Bots, bei `/wichteln start` 
 - Das Bot-Log enthält dieselben Zeilen. Probleme mit dem "Log-Kanal" selbst werden nur dort gemeldet.
 - Hinweise ohne Folgen für eine funktionierende Einrichtung, zum Beispiel ein fehlender Auslosungs-Termin, siehst du nur beim Start einer Runde.
 
-| Problem                                                                                | Folge                                                                          |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| Wichtel-Kanal nicht gesetzt, nicht gefunden oder Berechtigungen fehlen                 | Die Runde kann nicht gestartet werden.                                         |
-| Auflösungs-Termin gesetzt, aber kein Auflösungs-Kanal oder der Kanal ist nicht nutzbar | Es wird kein Auflösungs-Beitrag gesendet.                                      |
-| Auflösungs-Kanal gesetzt, aber kein Auflösungs-Termin                                  | Es wird kein Auflösungs-Beitrag gesendet.                                      |
-| Erinnerungstage vor der Auflösung gesetzt, aber kein Auflösungs-Termin                 | Es werden keine Geschenk-Erinnerungen gesendet.                                |
-| Wunschzettel erforderlich, aber kein Auslosungs-Termin                                 | Mitglieder bekommen vor der Auslosung keine Wunschzettel-Warnung.              |
-| Kein Auslosungs-Termin                                                                 | Es wird nicht automatisch ausgelost. Nutze `/wichteln draw`.                   |
-| Kein Anmeldeschluss                                                                    | Mitglieder können sich bis zur Auslosung anmelden.                             |
-| Termine in falscher Reihenfolge                                                        | Ein Schritt kann vor dem Schritt laufen, auf den er folgen sollte.             |
-| Ein Termin liegt beim Start der Runde schon in der Vergangenheit                       | Der Schritt läuft bei der nächsten stündlichen Prüfung.                        |
-| Log-Kanal nicht gefunden oder Berechtigungen fehlen                                    | Log-Zeilen gehen verloren. Nur das Bot-Log meldet das.                         |
-| Anmelde-Nachricht nach dem Rundenstart gelöscht oder nicht erreichbar                  | Die Buttons funktionieren nicht mehr. Brich die Runde ab und starte eine neue. |
-| Automatische Auslosung mit weniger als 3 Teilnehmenden                                 | Die Runde wird abgebrochen.                                                    |
+| Problem                                                                                       | Folge                                                                                |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Wichtel-Kanal nicht gesetzt, nicht gefunden oder Berechtigungen fehlen                        | Die Runde kann nicht gestartet werden.                                               |
+| Auflösungs-Termin gesetzt, aber kein Auflösungs-Kanal oder der Kanal ist nicht nutzbar        | Es wird kein Auflösungs-Beitrag gesendet.                                            |
+| Auflösungs-Kanal gesetzt, aber kein Auflösungs-Termin                                         | Es wird kein Auflösungs-Beitrag gesendet.                                            |
+| Erinnerungstage vor der Auflösung gesetzt, aber kein Auflösungs-Termin                        | Es werden keine Geschenk-Erinnerungen gesendet.                                      |
+| Wunschzettel erforderlich, aber kein Auslosungs-Termin                                        | Mitglieder bekommen vor der Auslosung keine Wunschzettel-Warnung.                    |
+| Kein Auslosungs-Termin                                                                        | Es wird nicht automatisch ausgelost. Nutze `/wichteln draw`.                         |
+| Kein Anmeldeschluss                                                                           | Mitglieder können sich bis zur Auslosung anmelden.                                   |
+| Termine in falscher Reihenfolge                                                               | Ein Schritt kann vor dem Schritt laufen, auf den er folgen sollte.                   |
+| Der Anmeldeschluss liegt beim Start der Runde schon in der Vergangenheit                      | Die Runde kann nicht gestartet werden. Ändere den Anmeldeschluss oder lass ihn leer. |
+| Der Termin für Auslosung oder Auflösung liegt beim Start der Runde schon in der Vergangenheit | Der Schritt läuft bei der nächsten stündlichen Prüfung.                              |
+| Log-Kanal nicht gefunden oder Berechtigungen fehlen                                           | Log-Zeilen gehen verloren. Nur das Bot-Log meldet das.                               |
+| Anmelde-Nachricht nach dem Rundenstart gelöscht oder nicht erreichbar                         | Die Buttons funktionieren nicht mehr. Brich die Runde ab und starte eine neue.       |
+| Automatische Auslosung mit weniger als 3 Teilnehmenden                                        | Die Runde wird abgebrochen.                                                          |
 
 Alle diese Texte kannst du in der Gruppe "Probleme" der [Nachrichten](#configuration-messages) anpassen.
 
