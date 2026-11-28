@@ -120,12 +120,39 @@ In dieser Konfigurationsdatei kannst du jeden Text des Moduls anpassen. Öffne s
 | Antworten         | Kurze private Antworten, wenn Mitglieder oder Admins einen Button drücken oder einen Befehl nutzen.                                                                                                                                      | `%giftee%`, `%letter%`, `%count%`, `%user%`, `%server%`                                             |
 | Auflösung         | Der Auflösungs-Beitrag und die Summen-Nachricht. Lass die Summen leer, um sie zu überspringen.                                                                                                                                           | `%pairs%`, `%count%`, `%sent%`, `%received%`                                                        |
 | Log               | Zeilen für Beitritte, Austritte, verschickte und erhaltene Geschenke, Entfernungen, Abbrüche und die Auslosung. Standardmäßig nennen die Zeilen für verschickt und erhalten niemanden, damit die Paare bis zur Auflösung geheim bleiben. | `%user%`, `%count%` und optional `%santa%` und `%giftee%` in den Zeilen für verschickt und erhalten |
+| Probleme          | Die Texte der Konfigurationsprobleme: die Absage, wenn keine Runde gestartet werden kann, die Hinweise, die Log-Zeile und die Beschreibung jedes Problems.                                                                               | `%setting%`, `%problem%`, `%warnings%`, `%detail%`, `%channel%`, `%permissions%`                    |
 
 ## Fehlerbehebung {#troubleshooting}
+
+### Konfigurationsprobleme {#config-problems}
+
+Das Modul prüft deine Konfiguration beim Start des Bots, bei `/wichteln start` und stündlich, solange eine Runde läuft. Wenn eine Einstellung das Modul an etwas hindert, sagt es dir das, statt still nichts zu tun.
+
+- `/wichteln start` startet keine Runde, wenn der "Wichtel-Kanal" nicht gesetzt ist, nicht gefunden wird oder Berechtigungen fehlen. Die private Antwort nennt die Einstellung und was nicht stimmt. Andere Probleme siehst du in einer zweiten privaten Nachricht, nachdem die Runde gestartet wurde. `/wichteln draw` zeigt Probleme, die die Auflösung betreffen.
+- Im "Log-Kanal" wird jedes Problem pro Runde einmal gepostet. Erst wenn du es behebst und es wiederkommt, steht es erneut dort.
+- Das Bot-Log enthält dieselben Zeilen. Probleme mit dem "Log-Kanal" selbst werden nur dort gemeldet.
+- Hinweise ohne Folgen für eine funktionierende Einrichtung, zum Beispiel ein fehlender Auslosungs-Termin, siehst du nur beim Start einer Runde.
+
+| Problem                                                                                | Folge                                                                          |
+| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Wichtel-Kanal nicht gesetzt, nicht gefunden oder Berechtigungen fehlen                 | Die Runde kann nicht gestartet werden.                                         |
+| Auflösungs-Termin gesetzt, aber kein Auflösungs-Kanal oder der Kanal ist nicht nutzbar | Es wird kein Auflösungs-Beitrag gesendet.                                      |
+| Auflösungs-Kanal gesetzt, aber kein Auflösungs-Termin                                  | Es wird kein Auflösungs-Beitrag gesendet.                                      |
+| Erinnerungstage vor der Auflösung gesetzt, aber kein Auflösungs-Termin                 | Es werden keine Geschenk-Erinnerungen gesendet.                                |
+| Wunschzettel erforderlich, aber kein Auslosungs-Termin                                 | Mitglieder bekommen vor der Auslosung keine Wunschzettel-Warnung.              |
+| Kein Auslosungs-Termin                                                                 | Es wird nicht automatisch ausgelost. Nutze `/wichteln draw`.                   |
+| Kein Anmeldeschluss                                                                    | Mitglieder können sich bis zur Auslosung anmelden.                             |
+| Unmögliche Werte wie der 31. Februar oder Termine in falscher Reihenfolge              | Der Termin kann zu einer unerwarteten Zeit ausgelöst werden.                   |
+| Log-Kanal nicht gefunden oder Berechtigungen fehlen                                    | Log-Zeilen gehen verloren. Nur das Bot-Log meldet das.                         |
+| Anmelde-Nachricht nach dem Rundenstart gelöscht oder nicht erreichbar                  | Die Buttons funktionieren nicht mehr. Brich die Runde ab und starte eine neue. |
+| Automatische Auslosung mit weniger als 3 Teilnehmenden                                 | Die Runde wird abgebrochen.                                                    |
+
+Alle diese Texte kannst du in der Gruppe "Probleme" der [Nachrichten](#configuration-messages) anpassen.
 
 <details>
     <summary>Die Anmeldenachricht wird nicht gepostet</summary>
     <ul>
+        <li>Nennt der Bot bei <code>/wichteln start</code> eine Einstellung, behebe sie wie unter <a href="#config-problems">Konfigurationsprobleme</a> beschrieben.</li>
         <li>Stelle sicher, dass in der Konfiguration ein "Wichtel-Kanal" festgelegt ist.</li>
         <li>Stelle sicher, dass der Bot in diesem Kanal die Berechtigungen "Kanal ansehen", "Nachrichten senden" und "Links einbetten" hat.</li>
         <li>Es kann nur eine Runde aktiv sein. Brich die aktuelle Runde zuerst mit <code>/wichteln cancel</code> ab.</li>

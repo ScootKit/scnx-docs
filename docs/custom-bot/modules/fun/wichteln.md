@@ -120,12 +120,39 @@ In this configuration file, you can edit every text of the module. Open it in yo
 | Replies         | Short private answers when members or admins press a button or use a command.                                                                                                              | `%giftee%`, `%letter%`, `%count%`, `%user%`, `%server%`                                     |
 | Reveal          | The reveal post and the totals message. Leave the totals empty to skip it.                                                                                                                 | `%pairs%`, `%count%`, `%sent%`, `%received%`                                                |
 | Log             | Lines for joins, leaves, sent and received gifts, removals, cancellations and the draw. By default, sent and received lines do not name anyone, so the pairs stay secret until the reveal. | `%user%`, `%count%`, and optionally `%santa%` and `%giftee%` in the sent and received lines |
+| Problems        | The texts of the configuration problems: the refusal when a round cannot be started, the warnings, the log line and the description of each problem.                                       | `%setting%`, `%problem%`, `%warnings%`, `%detail%`, `%channel%`, `%permissions%`            |
 
 ## Troubleshooting {#troubleshooting}
+
+### Configuration problems {#config-problems}
+
+The module checks your configuration when the bot starts, when you use `/wichteln start` and every hour while a round is active, and tells you when a setting stops it from doing something instead of staying silent.
+
+- `/wichteln start` refuses to start a round when the "Secret Santa Channel" is not set, cannot be found or is missing permissions. The private reply names the setting and what is wrong. Other problems are shown in a second private message after the round was started. `/wichteln draw` shows problems that affect the reveal.
+- In the "Log Channel", each problem is posted once per round. It is only posted again if you fix the problem and it comes back.
+- The bot log contains the same lines. Problems with the "Log Channel" itself are only reported there.
+- Hints without a consequence for a working setup, such as a missing draw date, are only shown when you start a round.
+
+| Problem                                                               | Consequence                                                     |
+| --------------------------------------------------------------------- | --------------------------------------------------------------- |
+| Secret Santa Channel not set, not found or missing permissions        | The round cannot be started.                                    |
+| Reveal date set, but no Reveal Channel, or the channel cannot be used | No reveal post is sent.                                         |
+| Reveal Channel set, but no reveal date                                | No reveal post is sent.                                         |
+| Reminder Days Before Reveal set, but no reveal date                   | No gift reminders are sent.                                     |
+| Require Letter enabled, but no draw date                              | Members get no letter warning before the draw.                  |
+| No draw date                                                          | The draw is not automatic. Use `/wichteln draw`.                |
+| No signup deadline                                                    | Members can sign up until the draw.                             |
+| Impossible values such as February 31, or dates in the wrong order    | The date can fire at an unexpected time.                        |
+| Log Channel not found or missing permissions                          | Log lines are lost. Only the bot log reports this.              |
+| Signup message deleted or not reachable after the round started       | The buttons stop working. Cancel the round and start a new one. |
+| Automatic draw with fewer than 3 participants                         | The round is cancelled.                                         |
+
+You can edit all of these texts in the "Problems" group of the [messages](#configuration-messages).
 
 <details>
     <summary>The signup message is not posted</summary>
     <ul>
+        <li>If the bot names a setting when you use <code>/wichteln start</code>, fix it as described in <a href="#config-problems">Configuration problems</a>.</li>
         <li>Make sure a "Secret Santa Channel" is set in the configuration.</li>
         <li>Ensure the bot has the "View Channel", "Send Messages" and "Embed Links" permissions in that channel.</li>
         <li>Only one round can be active. Cancel the current round with <code>/wichteln cancel</code> first.</li>
